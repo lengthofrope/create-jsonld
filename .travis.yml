@@ -18,6 +18,3 @@ matrix:
 before_script:
   - composer self-update
   - composer update
-  
-script:
-  - phpunit --bootstrap vendor/autoload.php tests
