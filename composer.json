@@ -1,0 +1,23 @@
+{
+    "name": "lengthofrope/create-jsonld",
+    "description": "Simple PHP library to create JSON-LD output.",
+    "type": "library",
+    "keywords": ["JSON-LD", "jsonld"],
+    "homepage": "https://github.com/lengthofrope/create-jsonld",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bas de Kort",
+            "email": "bdekort@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "5.1.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "LengthOfRope\\JSONLD\\": "src/"
+        }
+    }
+}

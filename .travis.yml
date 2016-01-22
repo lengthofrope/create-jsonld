@@ -1,4 +1,5 @@
 language: php
+
 php:
   - '5.3'
   - '5.4'
@@ -7,3 +8,13 @@ php:
   - '7.0'
   - hhvm
   - nightly
+
+matrix:
+  fast_finish: true
+  allow_failures:
+    - php: hhvm
+    - php: nightly
+
+before_script:
+  - composer self-update
+  - composer install
