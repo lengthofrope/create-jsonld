@@ -24,13 +24,13 @@
  * THE SOFTWARE.
  */
 
-namespace LengthOfRope\JSONLD;
+namespace LengthOfRope\JSONLD\Interfaces;
 
 /**
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  */
-class Create extends Elements\ElementGroup
+interface IElement
 {
 
     /**
@@ -39,26 +39,33 @@ class Create extends Elements\ElementGroup
      * 
      * @return IElement
      */
-    public static function factory()
-    {
-        return new Create();
-    }
+    public static function factory();
+
+    /**
+     * Add a JSONLD Element
+     * 
+     * @param IElement $element
+     */
+    public function add(IElement $element);
+
+    /**
+     * Remove a JSONLD Element
+     * 
+     * @param IElement $element
+     */
+    public function remove(IElement $element);
+
+    /**
+     * Validate the current element and all it's children
+     * 
+     * @return boolean
+     */
+    public function validate();
 
     /**
      * Retrieve the elements (and all childrens) as an array
      * 
      * @return array
      */
-    public function getDataArray()
-    {
-        $return = array();
-
-        foreach ($this->elements as $element)
-        {
-            $return[] = $element->getDataArray();
-        }
-
-        return $return;
-    }
-
+    public function getDataArray();
 }

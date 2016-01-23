@@ -24,41 +24,69 @@
  * THE SOFTWARE.
  */
 
-namespace LengthOfRope\JSONLD;
+namespace LengthOfRope\JSONLD\Elements;
+
+use LengthOfRope\JSONLD\Interfaces;
 
 /**
+ * Description of ElementGroup
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  */
-class Create extends Elements\ElementGroup
+abstract class ElementGroup implements Interfaces\IElement
 {
 
-    /**
-     * Create an instance of the class and return it, so everyone
-     * can use chaining.
-     * 
-     * @return IElement
-     */
-    public static function factory()
+    /** @var Interfaces\IElement[] */
+    protected $elements;
+
+    protected function __construct()
     {
-        return new Create();
+        $this->elements = new \SplObjectStorage();
     }
 
     /**
-     * Retrieve the elements (and all childrens) as an array
+     * Add a JSONLD Element
      * 
-     * @return array
+     * @param Interfaces\IElement $element
+     * @return ElementGroup
      */
-    public function getDataArray()
+    public function add(Interfaces\IElement $element)
     {
-        $return = array();
+        $this->elements->attach($element);
 
-        foreach ($this->elements as $element)
-        {
-            $return[] = $element->getDataArray();
+        return $this;
+    }
+
+    /**
+     * Remove a JSONLD element
+     * 
+     * @param Interfaces\IElement $element
+     * @return ElementGroup
+     */
+    public function remove(Interfaces\IElement $element)
+    {
+        if ($this->elements->contains($element)) {
+            $this->elements->detach($element);
         }
 
-        return $return;
+        return $this;
+    }
+
+    /**
+     * Validate all children
+     * 
+     * @return boolean
+     */
+    public function validate()
+    {
+        foreach ($this->elements as $element)
+        {
+            if (!$element->validate()) {
+                return false;
+            }
+        }
+
+        return true;
     }
 
 }
