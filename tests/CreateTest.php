@@ -33,11 +33,49 @@ class CreateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test if the getDataArray() returns an array
+     * Test if the getDataArray() returns an array with children
      */
     public function testReturnsADataArray()
     {
-        $this->assertTrue(is_array(Create::factory()->getDataArray()));
+        $obj1 = Create::factory();
+        $obj2 = Create::factory()->add($obj1);
+        $this->assertArraySubset($obj1->getDataArray(), $obj2->getDataArray());
+    }
+
+    /**
+     * Test if we can validate an empty IElement
+     */
+    public function testIfWeCanValidate()
+    {
+        $obj1 = Create::factory();
+
+        $this->assertTrue($obj1->validate());
+    }
+
+    /**
+     * Test if we can add a IElement and validate
+     */
+    public function testIfWeCanAddAndValidate()
+    {
+        $obj1 = Create::factory();
+        $obj2 = Create::factory();
+
+        $obj1->add($obj2);
+
+        $this->assertTrue($obj1->validate());
+    }
+
+    /**
+     * Test if we can add and remove an IElement
+     */
+    public function testIfWeCanAddAndRemoveAndValidate()
+    {
+        $obj1 = Create::factory();
+        $obj2 = Create::factory();
+
+        $obj1->add($obj2)->remove($obj2);
+
+        $this->assertTrue($obj1->validate());
     }
 
 }
