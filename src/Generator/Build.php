@@ -41,6 +41,8 @@ class Build
      * @var string
      */
     private $schema;
+    private $ids = array();
+    private $types = array();
 
     /**
      * Factory
@@ -53,9 +55,10 @@ class Build
 
     private function __construct()
     {
+        set_time_limit(0);
         $this->getJSONVersionOfSchema();
 
-        //print_r(json_decode($this->schema));
+        $this->parse();
     }
 
     /**
@@ -66,11 +69,13 @@ class Build
     private function getJSONVersionOfSchema()
     {
         // Set cachefile
-        $cacheFile = dirname(dirname(__DIR__)) . '/data/schemaorg.cache.jsonld';
+        $cacheFile = dirname(dirname(__DIR__)) . '/data/schemaorg.cache';
 
         if (!file_exists($cacheFile)) {
             // Create dir
-            mkdir(dirname($cacheFile), 0777, true);
+            if (!file_exists(dirname($cacheFile))) {
+                mkdir(dirname($cacheFile), 0777, true);
+            }
 
             // Load RDFA Schema
             $graph = new \EasyRdf_Graph(self::RDFA_SCHEMA);
@@ -86,13 +91,31 @@ class Build
                 $output = var_export($output, true);
             }
 
-            $this->schema = $graph->serialise($format);
+            $this->schema = \ML\JsonLD\JsonLD::compact($graph->serialise($format), 'http://schema.org/');
 
             // Write cache file
-            file_put_contents($cacheFile, $this->schema);
+            file_put_contents($cacheFile, serialize($this->schema));
         } else {
-            $this->schema = file_get_contents($cacheFile);
+            $this->schema = unserialize(file_get_contents($cacheFile));
         }
+    }
+
+    private function parse()
+    {
+        echo "<pre>";
+        foreach ($this->schema->{'@graph'} as $key => $item)
+        {
+            $types = $item->type;
+            if (is_array($types)) {
+                foreach($types as $type) {
+                    $this->types[$type][] = $item->id;
+                }
+            } else if (!empty($types)) {
+                $this->types[$types][] = $item->id;
+            }
+        }
+        
+        print_r($this->types);
     }
 
 }
