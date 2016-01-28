@@ -41,8 +41,8 @@ class Build
      * @var string
      */
     private $schema;
-    private $ids = array();
     private $types = array();
+    private $props = array();
 
     /**
      * Factory
@@ -59,6 +59,8 @@ class Build
         $this->getJSONVersionOfSchema();
 
         $this->parse();
+        
+        $this->write();
     }
 
     /**
@@ -102,20 +104,99 @@ class Build
 
     private function parse()
     {
-        echo "<pre>";
         foreach ($this->schema->{'@graph'} as $key => $item)
         {
             $types = $item->type;
-            if (is_array($types)) {
-                foreach($types as $type) {
-                    $this->types[$type][] = $item->id;
-                }
-            } else if (!empty($types)) {
-                $this->types[$types][] = $item->id;
+            if ($types !== 'rdf:Property') {
+                // Skip all but properties
+                continue;
             }
+            
+            // Convert domain and range to arrays
+            $domains = array();
+            if (!is_array($item->domainIncludes)) {
+                $item->domainIncludes = array($item->domainIncludes);
+            }
+            
+            foreach($item->domainIncludes as $dom) {
+                $domains[] = $dom->id;
+            }
+            
+            $item->domainIncludes = $domains;
+            
+            
+            $range = array();
+            if (!is_array($item->rangeIncludes)) {
+                $item->rangeIncludes = array($item->rangeIncludes);
+            }
+            
+            foreach($item->rangeIncludes as $ran) {
+                $range[] = $ran->id;
+            }
+            
+            $item->rangeIncludes = $range;
+            
+            $this->props[$item->id] = $item;
         }
         
-        print_r($this->types);
+        
+        foreach ($this->schema->{'@graph'} as $key => $item)
+        {
+            $types = $item->type;
+            if ($types === 'rdf:Property') {
+                // Skip properties in first run
+                continue;
+            }
+            
+            $item->props = array();
+            
+            // Add properties to item
+            foreach($this->props as $prop) {
+                if (in_array($item->id, $prop->domainIncludes)) {
+                    $item->props[] = $prop;
+                }
+            }
+            
+            if (is_array($types)) {
+                foreach($types as $type) {
+                    $this->types[$type][$item->id] = $item;
+                }
+            } else if (!empty($types)) {
+                $this->types[$types][$item->id] = $item;
+            }
+        }
+    }
+    
+    private function write()
+    {
+        $dir = dirname(__DIR__) . '/Schema/';
+        if (!is_dir($dir)) {
+            mkdir($dir, 0777, true);
+        }
+        
+        $loader = new \Twig_Loader_Filesystem(dirname(dirname(__DIR__)) . '/tools/');
+        $twig = new \Twig_Environment($loader);
+        
+        foreach($this->types['rdfs:Class'] as $item) {
+            $class = $item->{'rdfs:label'};
+            if (in_array($class, array('DataType', 'Class'))) {
+                continue;
+            }
+            $classextends = $item->{'rdfs:subClassOf'};
+            $classextends = str_replace('schema:', '', $classextends->id);
+            if (empty($classextends)) {
+                $classextends = '\LengthOfRope\JSONLD\Elements\ElementGroup';
+            }
+            $file = $dir . $item->{'rdfs:label'} . '.php';
+            
+            $content = $twig->render('template.twig', array(
+                'class' => $class,
+                'classcomment' => $item->{'rdfs:comment'},
+                'classExtends' => $classextends
+            ));
+            
+            file_put_contents($file, $content);
+        }
     }
 
 }
