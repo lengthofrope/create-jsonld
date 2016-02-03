@@ -36,7 +36,7 @@ class Create extends Elements\ElementGroup
     /**
      * Create an instance of the class and return it, so everyone
      * can use chaining.
-     * 
+     *
      * @return IElement
      */
     public static function factory()
@@ -46,7 +46,7 @@ class Create extends Elements\ElementGroup
 
     /**
      * Retrieve the elements (and all childrens) as an array
-     * 
+     *
      * @return array
      */
     public function getDataArray()
@@ -59,6 +59,23 @@ class Create extends Elements\ElementGroup
         }
 
         return $return;
+    }
+
+    public function getJSONLD()
+    {
+        $data = $this->getDataArray();
+        if (count($data) === 1) {
+            $return = json_encode($data[0]);
+        } else {
+            $return = json_encode($data);
+        }
+
+        return $return;
+    }
+
+    public function getJSONLDScript()
+    {
+        return '<script type="application/ld+json">' . $this->getJSONLD() . '</script>';
     }
 
 }
