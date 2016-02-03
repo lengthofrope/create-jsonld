@@ -104,8 +104,7 @@ class Build
 
     private function parse()
     {
-        foreach ($this->schema->{'@graph'} as $key => $item)
-        {
+        foreach ($this->schema->{'@graph'} as $key => $item) {
             $types = $item->type;
             if ($types !== 'rdf:Property') {
                 // Skip all but properties
@@ -118,7 +117,7 @@ class Build
                 $item->domainIncludes = array($item->domainIncludes);
             }
 
-            foreach($item->domainIncludes as $dom) {
+            foreach ($item->domainIncludes as $dom) {
                 $domains[] = $dom->id;
             }
 
@@ -130,9 +129,9 @@ class Build
                 $item->rangeIncludes = array($item->rangeIncludes);
             }
 
-            foreach($item->rangeIncludes as $ran) {
+            foreach ($item->rangeIncludes as $ran) {
                 $range[] = array(
-                    'id' => $ran->id,
+                    'id'    => $ran->id,
                     'class' => str_replace('schema:', '', $ran->id) . 'Schema'
                 );
             }
@@ -143,8 +142,7 @@ class Build
         }
 
 
-        foreach ($this->schema->{'@graph'} as $key => $item)
-        {
+        foreach ($this->schema->{'@graph'} as $key => $item) {
             $types = $item->type;
             if ($types === 'rdf:Property') {
                 // Skip properties in first run
@@ -154,22 +152,22 @@ class Build
             $item->props = array();
 
             // Add properties to item
-            foreach($this->props as $prop) {
+            foreach ($this->props as $prop) {
                 if (in_array($item->id, $prop->domainIncludes)) {
                     $item->props[] = array(
-                        'id' => $prop->id,
+                        'id'             => $prop->id,
                         'domainIncludes' => $prop->domainIncludes,
-                        'rangeIncludes' => $prop->rangeIncludes,
-                        'comment' => $prop->{'rdfs:comment'},
-                        'label' => $prop->{'rdfs:label'},
-                        'getter' => 'get' . ucfirst($prop->{'rdfs:label'}),
-                        'setter' => 'set' . ucfirst($prop->{'rdfs:label'}),
+                        'rangeIncludes'  => $prop->rangeIncludes,
+                        'comment'        => $prop->{'rdfs:comment'},
+                        'label'          => $prop->{'rdfs:label'},
+                        'getter'         => 'get' . ucfirst($prop->{'rdfs:label'}),
+                        'setter'         => 'set' . ucfirst($prop->{'rdfs:label'}),
                     );
                 }
             }
 
             if (is_array($types)) {
-                foreach($types as $type) {
+                foreach ($types as $type) {
                     $this->types[$type][$item->id] = $item;
                 }
             } else if (!empty($types)) {
@@ -186,11 +184,16 @@ class Build
         }
 
         $loader = new \Twig_Loader_Filesystem(dirname(dirname(__DIR__)) . '/tools/');
-        $twig = new \Twig_Environment($loader);
+        $twig   = new \Twig_Environment($loader);
 
-        foreach($this->types['rdfs:Class'] as $item) {
+        foreach ($this->types['rdfs:Class'] as $item) {
             // Add Schema to all classes to prevent failures (classes Class or Float) are reserved.
             $class = $item->{'rdfs:label'} . 'Schema';
+
+            if (in_array($class, array('DataTypeSchema'))) {
+                continue;
+            }
+
             $classextends = $item->{'rdfs:subClassOf'};
             $classextends = str_replace('schema:', '', $classextends->id);
             if (empty($classextends)) {
@@ -201,10 +204,10 @@ class Build
             $file = $dir . $class . '.php';
 
             $content = $twig->render('template.twig', array(
-                'class' => $class,
+                'class'        => $class,
                 'classcomment' => $item->{'rdfs:comment'},
                 'classExtends' => $classextends,
-                'properties' => $item->props
+                'properties'   => $item->props
             ));
 
 
