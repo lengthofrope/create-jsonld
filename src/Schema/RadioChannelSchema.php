@@ -35,12 +35,7 @@ class RadioChannelSchema extends BroadcastChannelSchema
 {
     public static function factory()
     {
-        return new RadioChannelSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new RadioChannelSchema('http://schema.org/', 'RadioChannel');
     }
 
 

@@ -35,46 +35,43 @@ class SportsTeamSchema extends SportsOrganizationSchema
 {
     public static function factory()
     {
-        return new SportsTeamSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new SportsTeamSchema('http://schema.org/', 'SportsTeam');
     }
 
     /**
      * A person that acts as performing member of a sports team; a player as opposed to a coach.
+     *
+     * @param $athlete PersonSchema
      **/
-    private $athlete;
     public function setAthlete($athlete) {
-        $this->athlete = $athlete;
+        $this->properties['athlete'] = $athlete;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema     
+     * @return PersonSchema
      **/
     public function getAthlete() {
-        return $this->athlete;
+        return $this->properties['athlete'];
     }
 
     /**
      * A person that acts in a coaching role for a sports team.
+     *
+     * @param $coach PersonSchema
      **/
-    private $coach;
     public function setCoach($coach) {
-        $this->coach = $coach;
+        $this->properties['coach'] = $coach;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema     
+     * @return PersonSchema
      **/
     public function getCoach() {
-        return $this->coach;
+        return $this->properties['coach'];
     }
 
 

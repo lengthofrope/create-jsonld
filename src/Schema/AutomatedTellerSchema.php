@@ -35,12 +35,7 @@ class AutomatedTellerSchema extends FinancialServiceSchema
 {
     public static function factory()
     {
-        return new AutomatedTellerSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new AutomatedTellerSchema('http://schema.org/', 'AutomatedTeller');
     }
 
 

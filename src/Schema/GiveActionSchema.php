@@ -35,29 +35,25 @@ class GiveActionSchema extends TransferActionSchema
 {
     public static function factory()
     {
-        return new GiveActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new GiveActionSchema('http://schema.org/', 'GiveAction');
     }
 
     /**
      * A sub property of participant. The participant who is at the receiving end of the action.
+     *
+     * @param $recipient AudienceSchema|OrganizationSchema|PersonSchema
      **/
-    private $recipient;
     public function setRecipient($recipient) {
-        $this->recipient = $recipient;
+        $this->properties['recipient'] = $recipient;
 
         return $this;
     }
 
     /**
-     * @return AudienceSchema|OrganizationSchema|PersonSchema     
+     * @return AudienceSchema|OrganizationSchema|PersonSchema
      **/
     public function getRecipient() {
-        return $this->recipient;
+        return $this->properties['recipient'];
     }
 
 

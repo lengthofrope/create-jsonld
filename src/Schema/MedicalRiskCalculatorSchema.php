@@ -35,12 +35,7 @@ class MedicalRiskCalculatorSchema extends MedicalRiskEstimatorSchema
 {
     public static function factory()
     {
-        return new MedicalRiskCalculatorSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MedicalRiskCalculatorSchema('http://schema.org/', 'MedicalRiskCalculator');
     }
 
 

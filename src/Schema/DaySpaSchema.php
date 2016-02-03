@@ -35,12 +35,7 @@ class DaySpaSchema extends HealthAndBeautyBusinessSchema
 {
     public static function factory()
     {
-        return new DaySpaSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new DaySpaSchema('http://schema.org/', 'DaySpa');
     }
 
 

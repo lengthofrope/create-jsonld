@@ -31,16 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class DrugPrescriptionStatusSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
+class DrugPrescriptionStatusSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new DrugPrescriptionStatusSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new DrugPrescriptionStatusSchema('http://schema.org/', 'DrugPrescriptionStatus');
     }
 
 

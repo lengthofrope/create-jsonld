@@ -35,63 +35,61 @@ class RatingSchema extends IntangibleSchema
 {
     public static function factory()
     {
-        return new RatingSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new RatingSchema('http://schema.org/', 'Rating');
     }
 
     /**
      * The highest value allowed in this rating system. If bestRating is omitted, 5 is assumed.
+     *
+     * @param $bestRating NumberSchema|TextSchema
      **/
-    private $bestRating;
     public function setBestRating($bestRating) {
-        $this->bestRating = $bestRating;
+        $this->properties['bestRating'] = $bestRating;
 
         return $this;
     }
 
     /**
-     * @return NumberSchema|TextSchema     
+     * @return NumberSchema|TextSchema
      **/
     public function getBestRating() {
-        return $this->bestRating;
+        return $this->properties['bestRating'];
     }
 
     /**
      * The rating for the content.
+     *
+     * @param $ratingValue TextSchema
      **/
-    private $ratingValue;
     public function setRatingValue($ratingValue) {
-        $this->ratingValue = $ratingValue;
+        $this->properties['ratingValue'] = $ratingValue;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getRatingValue() {
-        return $this->ratingValue;
+        return $this->properties['ratingValue'];
     }
 
     /**
      * The lowest value allowed in this rating system. If worstRating is omitted, 1 is assumed.
+     *
+     * @param $worstRating NumberSchema|TextSchema
      **/
-    private $worstRating;
     public function setWorstRating($worstRating) {
-        $this->worstRating = $worstRating;
+        $this->properties['worstRating'] = $worstRating;
 
         return $this;
     }
 
     /**
-     * @return NumberSchema|TextSchema     
+     * @return NumberSchema|TextSchema
      **/
     public function getWorstRating() {
-        return $this->worstRating;
+        return $this->properties['worstRating'];
     }
 
 

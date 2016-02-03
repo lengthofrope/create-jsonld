@@ -35,29 +35,25 @@ class SocialMediaPostingSchema extends ArticleSchema
 {
     public static function factory()
     {
-        return new SocialMediaPostingSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new SocialMediaPostingSchema('http://schema.org/', 'SocialMediaPosting');
     }
 
     /**
      * A CreativeWork such as an image, video, or audio clip shared as part of this posting.
+     *
+     * @param $sharedContent CreativeWorkSchema
      **/
-    private $sharedContent;
     public function setSharedContent($sharedContent) {
-        $this->sharedContent = $sharedContent;
+        $this->properties['sharedContent'] = $sharedContent;
 
         return $this;
     }
 
     /**
-     * @return CreativeWorkSchema     
+     * @return CreativeWorkSchema
      **/
     public function getSharedContent() {
-        return $this->sharedContent;
+        return $this->properties['sharedContent'];
     }
 
 

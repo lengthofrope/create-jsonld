@@ -35,29 +35,25 @@ class WebApplicationSchema extends SoftwareApplicationSchema
 {
     public static function factory()
     {
-        return new WebApplicationSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new WebApplicationSchema('http://schema.org/', 'WebApplication');
     }
 
     /**
      * Specifies browser requirements in human-readable text. For example,"requires HTML5 support".
+     *
+     * @param $browserRequirements TextSchema
      **/
-    private $browserRequirements;
     public function setBrowserRequirements($browserRequirements) {
-        $this->browserRequirements = $browserRequirements;
+        $this->properties['browserRequirements'] = $browserRequirements;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getBrowserRequirements() {
-        return $this->browserRequirements;
+        return $this->properties['browserRequirements'];
     }
 
 

@@ -35,80 +35,79 @@ class MedicalProcedureSchema extends MedicalEntitySchema
 {
     public static function factory()
     {
-        return new MedicalProcedureSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MedicalProcedureSchema('http://schema.org/', 'MedicalProcedure');
     }
 
     /**
      * Typical or recommended followup care after the procedure is performed.
+     *
+     * @param $followup TextSchema
      **/
-    private $followup;
     public function setFollowup($followup) {
-        $this->followup = $followup;
+        $this->properties['followup'] = $followup;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getFollowup() {
-        return $this->followup;
+        return $this->properties['followup'];
     }
 
     /**
      * How the procedure is performed.
+     *
+     * @param $howPerformed TextSchema
      **/
-    private $howPerformed;
     public function setHowPerformed($howPerformed) {
-        $this->howPerformed = $howPerformed;
+        $this->properties['howPerformed'] = $howPerformed;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getHowPerformed() {
-        return $this->howPerformed;
+        return $this->properties['howPerformed'];
     }
 
     /**
      * Typical preparation that a patient must undergo before having the procedure performed.
+     *
+     * @param $preparation TextSchema
      **/
-    private $preparation;
     public function setPreparation($preparation) {
-        $this->preparation = $preparation;
+        $this->properties['preparation'] = $preparation;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getPreparation() {
-        return $this->preparation;
+        return $this->properties['preparation'];
     }
 
     /**
      * The type of procedure, for example Surgical, Noninvasive, or Percutaneous.
+     *
+     * @param $procedureType MedicalProcedureTypeSchema
      **/
-    private $procedureType;
     public function setProcedureType($procedureType) {
-        $this->procedureType = $procedureType;
+        $this->properties['procedureType'] = $procedureType;
 
         return $this;
     }
 
     /**
-     * @return MedicalProcedureTypeSchema     
+     * @return MedicalProcedureTypeSchema
      **/
     public function getProcedureType() {
-        return $this->procedureType;
+        return $this->properties['procedureType'];
     }
 
 

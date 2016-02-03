@@ -35,12 +35,7 @@ class CreateActionSchema extends ActionSchema
 {
     public static function factory()
     {
-        return new CreateActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new CreateActionSchema('http://schema.org/', 'CreateAction');
     }
 
 

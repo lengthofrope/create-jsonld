@@ -35,12 +35,7 @@ class MarryActionSchema extends InteractActionSchema
 {
     public static function factory()
     {
-        return new MarryActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MarryActionSchema('http://schema.org/', 'MarryAction');
     }
 
 

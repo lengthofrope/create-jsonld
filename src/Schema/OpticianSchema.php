@@ -35,12 +35,7 @@ class OpticianSchema extends MedicalOrganizationSchema
 {
     public static function factory()
     {
-        return new OpticianSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new OpticianSchema('http://schema.org/', 'Optician');
     }
 
 

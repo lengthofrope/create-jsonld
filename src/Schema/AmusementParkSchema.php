@@ -35,12 +35,7 @@ class AmusementParkSchema extends EntertainmentBusinessSchema
 {
     public static function factory()
     {
-        return new AmusementParkSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new AmusementParkSchema('http://schema.org/', 'AmusementPark');
     }
 
 

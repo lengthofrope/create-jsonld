@@ -35,12 +35,7 @@ class RoofingContractorSchema extends HomeAndConstructionBusinessSchema
 {
     public static function factory()
     {
-        return new RoofingContractorSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new RoofingContractorSchema('http://schema.org/', 'RoofingContractor');
     }
 
 

@@ -35,12 +35,7 @@ class EventVenueSchema extends CivicStructureSchema
 {
     public static function factory()
     {
-        return new EventVenueSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new EventVenueSchema('http://schema.org/', 'EventVenue');
     }
 
 

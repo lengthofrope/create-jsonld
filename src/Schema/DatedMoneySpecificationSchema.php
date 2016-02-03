@@ -35,80 +35,79 @@ class DatedMoneySpecificationSchema extends StructuredValueSchema
 {
     public static function factory()
     {
-        return new DatedMoneySpecificationSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new DatedMoneySpecificationSchema('http://schema.org/', 'DatedMoneySpecification');
     }
 
     /**
      * The amount of money.
+     *
+     * @param $amount NumberSchema
      **/
-    private $amount;
     public function setAmount($amount) {
-        $this->amount = $amount;
+        $this->properties['amount'] = $amount;
 
         return $this;
     }
 
     /**
-     * @return NumberSchema     
+     * @return NumberSchema
      **/
     public function getAmount() {
-        return $this->amount;
+        return $this->properties['amount'];
     }
 
     /**
      * The currency in which the monetary amount is expressed (in 3-letter <a href='http://en.wikipedia.org/wiki/ISO_4217'">ISO 4217</a> format).
+     *
+     * @param $currency TextSchema
      **/
-    private $currency;
     public function setCurrency($currency) {
-        $this->currency = $currency;
+        $this->properties['currency'] = $currency;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getCurrency() {
-        return $this->currency;
+        return $this->properties['currency'];
     }
 
     /**
      * The end date and time of the item (in <a href='http://en.wikipedia.org/wiki/ISO_8601'>ISO 8601 date format</a>).
+     *
+     * @param $endDate DateSchema
      **/
-    private $endDate;
     public function setEndDate($endDate) {
-        $this->endDate = $endDate;
+        $this->properties['endDate'] = $endDate;
 
         return $this;
     }
 
     /**
-     * @return DateSchema     
+     * @return DateSchema
      **/
     public function getEndDate() {
-        return $this->endDate;
+        return $this->properties['endDate'];
     }
 
     /**
      * The start date and time of the item (in <a href='http://en.wikipedia.org/wiki/ISO_8601'>ISO 8601 date format</a>).
+     *
+     * @param $startDate DateSchema
      **/
-    private $startDate;
     public function setStartDate($startDate) {
-        $this->startDate = $startDate;
+        $this->properties['startDate'] = $startDate;
 
         return $this;
     }
 
     /**
-     * @return DateSchema     
+     * @return DateSchema
      **/
     public function getStartDate() {
-        return $this->startDate;
+        return $this->properties['startDate'];
     }
 
 

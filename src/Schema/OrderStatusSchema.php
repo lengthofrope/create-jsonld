@@ -35,12 +35,7 @@ class OrderStatusSchema extends EnumerationSchema
 {
     public static function factory()
     {
-        return new OrderStatusSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new OrderStatusSchema('http://schema.org/', 'OrderStatus');
     }
 
 

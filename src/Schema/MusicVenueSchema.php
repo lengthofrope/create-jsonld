@@ -35,12 +35,7 @@ class MusicVenueSchema extends CivicStructureSchema
 {
     public static function factory()
     {
-        return new MusicVenueSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MusicVenueSchema('http://schema.org/', 'MusicVenue');
     }
 
 

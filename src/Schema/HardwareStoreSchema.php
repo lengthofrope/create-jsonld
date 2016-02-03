@@ -35,12 +35,7 @@ class HardwareStoreSchema extends StoreSchema
 {
     public static function factory()
     {
-        return new HardwareStoreSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new HardwareStoreSchema('http://schema.org/', 'HardwareStore');
     }
 
 

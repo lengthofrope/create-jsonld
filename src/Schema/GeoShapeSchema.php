@@ -35,148 +35,151 @@ class GeoShapeSchema extends StructuredValueSchema
 {
     public static function factory()
     {
-        return new GeoShapeSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new GeoShapeSchema('http://schema.org/', 'GeoShape');
     }
 
     /**
      * Physical address of the item.
+     *
+     * @param $address PostalAddressSchema|TextSchema
      **/
-    private $address;
     public function setAddress($address) {
-        $this->address = $address;
+        $this->properties['address'] = $address;
 
         return $this;
     }
 
     /**
-     * @return PostalAddressSchema|TextSchema     
+     * @return PostalAddressSchema|TextSchema
      **/
     public function getAddress() {
-        return $this->address;
+        return $this->properties['address'];
     }
 
     /**
      * The country. For example, USA. You can also provide the two-letter <a href='http://en.wikipedia.org/wiki/ISO_3166-1'>ISO 3166-1 alpha-2 country code</a>.
+     *
+     * @param $addressCountry TextSchema|CountrySchema
      **/
-    private $addressCountry;
     public function setAddressCountry($addressCountry) {
-        $this->addressCountry = $addressCountry;
+        $this->properties['addressCountry'] = $addressCountry;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|CountrySchema     
+     * @return TextSchema|CountrySchema
      **/
     public function getAddressCountry() {
-        return $this->addressCountry;
+        return $this->properties['addressCountry'];
     }
 
     /**
      * A box is the area enclosed by the rectangle formed by two points. The first point is the lower corner, the second point is the upper corner. A box is expressed as two points separated by a space character.
+     *
+     * @param $box TextSchema
      **/
-    private $box;
     public function setBox($box) {
-        $this->box = $box;
+        $this->properties['box'] = $box;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getBox() {
-        return $this->box;
+        return $this->properties['box'];
     }
 
     /**
      * A circle is the circular region of a specified radius centered at a specified latitude and longitude. A circle is expressed as a pair followed by a radius in meters.
+     *
+     * @param $circle TextSchema
      **/
-    private $circle;
     public function setCircle($circle) {
-        $this->circle = $circle;
+        $this->properties['circle'] = $circle;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getCircle() {
-        return $this->circle;
+        return $this->properties['circle'];
     }
 
     /**
      * The elevation of a location (<a href="https://en.wikipedia.org/wiki/World_Geodetic_System">WGS 84</a>).
+     *
+     * @param $elevation NumberSchema|TextSchema
      **/
-    private $elevation;
     public function setElevation($elevation) {
-        $this->elevation = $elevation;
+        $this->properties['elevation'] = $elevation;
 
         return $this;
     }
 
     /**
-     * @return NumberSchema|TextSchema     
+     * @return NumberSchema|TextSchema
      **/
     public function getElevation() {
-        return $this->elevation;
+        return $this->properties['elevation'];
     }
 
     /**
      * A line is a point-to-point path consisting of two or more points. A line is expressed as a series of two or more point objects separated by space.
+     *
+     * @param $line TextSchema
      **/
-    private $line;
     public function setLine($line) {
-        $this->line = $line;
+        $this->properties['line'] = $line;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getLine() {
-        return $this->line;
+        return $this->properties['line'];
     }
 
     /**
      * A polygon is the area enclosed by a point-to-point path for which the starting and ending points are the same. A polygon is expressed as a series of four or more space delimited points where the first and final points are identical.
+     *
+     * @param $polygon TextSchema
      **/
-    private $polygon;
     public function setPolygon($polygon) {
-        $this->polygon = $polygon;
+        $this->properties['polygon'] = $polygon;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getPolygon() {
-        return $this->polygon;
+        return $this->properties['polygon'];
     }
 
     /**
      * The postal code. For example, 94043.
+     *
+     * @param $postalCode TextSchema
      **/
-    private $postalCode;
     public function setPostalCode($postalCode) {
-        $this->postalCode = $postalCode;
+        $this->properties['postalCode'] = $postalCode;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getPostalCode() {
-        return $this->postalCode;
+        return $this->properties['postalCode'];
     }
 
 

@@ -35,12 +35,7 @@ class ArtGallerySchema extends EntertainmentBusinessSchema
 {
     public static function factory()
     {
-        return new ArtGallerySchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ArtGallerySchema('http://schema.org/', 'ArtGallery');
     }
 
 

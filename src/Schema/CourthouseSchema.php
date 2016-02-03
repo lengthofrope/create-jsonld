@@ -35,12 +35,7 @@ class CourthouseSchema extends GovernmentBuildingSchema
 {
     public static function factory()
     {
-        return new CourthouseSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new CourthouseSchema('http://schema.org/', 'Courthouse');
     }
 
 

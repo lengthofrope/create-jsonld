@@ -31,16 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class FireStationSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
+class FireStationSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new FireStationSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new FireStationSchema('http://schema.org/', 'FireStation');
     }
 
 

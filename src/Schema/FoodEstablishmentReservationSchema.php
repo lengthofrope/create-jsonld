@@ -35,67 +35,65 @@ class FoodEstablishmentReservationSchema extends ReservationSchema
 {
     public static function factory()
     {
-        return new FoodEstablishmentReservationSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new FoodEstablishmentReservationSchema('http://schema.org/', 'FoodEstablishmentReservation');
     }
 
     /**
      * The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. e.g. John wrote a book from January to *December*.
 
 Note that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
+     *
+     * @param $endTime DateTimeSchema
      **/
-    private $endTime;
     public function setEndTime($endTime) {
-        $this->endTime = $endTime;
+        $this->properties['endTime'] = $endTime;
 
         return $this;
     }
 
     /**
-     * @return DateTimeSchema     
+     * @return DateTimeSchema
      **/
     public function getEndTime() {
-        return $this->endTime;
+        return $this->properties['endTime'];
     }
 
     /**
      * Number of people the reservation should accommodate.
+     *
+     * @param $partySize IntegerSchema|QuantitativeValueSchema
      **/
-    private $partySize;
     public function setPartySize($partySize) {
-        $this->partySize = $partySize;
+        $this->properties['partySize'] = $partySize;
 
         return $this;
     }
 
     /**
-     * @return IntegerSchema|QuantitativeValueSchema     
+     * @return IntegerSchema|QuantitativeValueSchema
      **/
     public function getPartySize() {
-        return $this->partySize;
+        return $this->properties['partySize'];
     }
 
     /**
      * The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For actions that span a period of time, when the action was performed. e.g. John wrote a book from *January* to December.
 
 Note that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
+     *
+     * @param $startTime DateTimeSchema
      **/
-    private $startTime;
     public function setStartTime($startTime) {
-        $this->startTime = $startTime;
+        $this->properties['startTime'] = $startTime;
 
         return $this;
     }
 
     /**
-     * @return DateTimeSchema     
+     * @return DateTimeSchema
      **/
     public function getStartTime() {
-        return $this->startTime;
+        return $this->properties['startTime'];
     }
 
 

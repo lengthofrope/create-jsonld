@@ -35,80 +35,79 @@ class PhysicalActivitySchema extends LifestyleModificationSchema
 {
     public static function factory()
     {
-        return new PhysicalActivitySchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new PhysicalActivitySchema('http://schema.org/', 'PhysicalActivity');
     }
 
     /**
      * The anatomy of the underlying organ system or structures associated with this entity.
+     *
+     * @param $associatedAnatomy AnatomicalStructureSchema|AnatomicalSystemSchema|SuperficialAnatomySchema
      **/
-    private $associatedAnatomy;
     public function setAssociatedAnatomy($associatedAnatomy) {
-        $this->associatedAnatomy = $associatedAnatomy;
+        $this->properties['associatedAnatomy'] = $associatedAnatomy;
 
         return $this;
     }
 
     /**
-     * @return AnatomicalStructureSchema|AnatomicalSystemSchema|SuperficialAnatomySchema     
+     * @return AnatomicalStructureSchema|AnatomicalSystemSchema|SuperficialAnatomySchema
      **/
     public function getAssociatedAnatomy() {
-        return $this->associatedAnatomy;
+        return $this->properties['associatedAnatomy'];
     }
 
     /**
      * A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
+     *
+     * @param $category PhysicalActivityCategorySchema|TextSchema|ThingSchema
      **/
-    private $category;
     public function setCategory($category) {
-        $this->category = $category;
+        $this->properties['category'] = $category;
 
         return $this;
     }
 
     /**
-     * @return PhysicalActivityCategorySchema|TextSchema|ThingSchema     
+     * @return PhysicalActivityCategorySchema|TextSchema|ThingSchema
      **/
     public function getCategory() {
-        return $this->category;
+        return $this->properties['category'];
     }
 
     /**
      * The characteristics of associated patients, such as age, gender, race etc.
+     *
+     * @param $epidemiology TextSchema
      **/
-    private $epidemiology;
     public function setEpidemiology($epidemiology) {
-        $this->epidemiology = $epidemiology;
+        $this->properties['epidemiology'] = $epidemiology;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getEpidemiology() {
-        return $this->epidemiology;
+        return $this->properties['epidemiology'];
     }
 
     /**
      * Changes in the normal mechanical, physical, and biochemical functions that are associated with this activity or condition.
+     *
+     * @param $pathophysiology TextSchema
      **/
-    private $pathophysiology;
     public function setPathophysiology($pathophysiology) {
-        $this->pathophysiology = $pathophysiology;
+        $this->properties['pathophysiology'] = $pathophysiology;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getPathophysiology() {
-        return $this->pathophysiology;
+        return $this->properties['pathophysiology'];
     }
 
 

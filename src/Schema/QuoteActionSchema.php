@@ -35,12 +35,7 @@ class QuoteActionSchema extends TradeActionSchema
 {
     public static function factory()
     {
-        return new QuoteActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new QuoteActionSchema('http://schema.org/', 'QuoteAction');
     }
 
 

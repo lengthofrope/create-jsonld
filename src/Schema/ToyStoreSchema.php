@@ -35,12 +35,7 @@ class ToyStoreSchema extends StoreSchema
 {
     public static function factory()
     {
-        return new ToyStoreSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ToyStoreSchema('http://schema.org/', 'ToyStore');
     }
 
 

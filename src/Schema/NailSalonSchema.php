@@ -35,12 +35,7 @@ class NailSalonSchema extends HealthAndBeautyBusinessSchema
 {
     public static function factory()
     {
-        return new NailSalonSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new NailSalonSchema('http://schema.org/', 'NailSalon');
     }
 
 

@@ -35,12 +35,7 @@ class GardenStoreSchema extends StoreSchema
 {
     public static function factory()
     {
-        return new GardenStoreSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new GardenStoreSchema('http://schema.org/', 'GardenStore');
     }
 
 

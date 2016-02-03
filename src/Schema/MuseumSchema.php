@@ -35,12 +35,7 @@ class MuseumSchema extends CivicStructureSchema
 {
     public static function factory()
     {
-        return new MuseumSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MuseumSchema('http://schema.org/', 'Museum');
     }
 
 

@@ -35,46 +35,43 @@ class ReceiveActionSchema extends TransferActionSchema
 {
     public static function factory()
     {
-        return new ReceiveActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ReceiveActionSchema('http://schema.org/', 'ReceiveAction');
     }
 
     /**
      * A sub property of instrument. The method of delivery.
+     *
+     * @param $deliveryMethod DeliveryMethodSchema
      **/
-    private $deliveryMethod;
     public function setDeliveryMethod($deliveryMethod) {
-        $this->deliveryMethod = $deliveryMethod;
+        $this->properties['deliveryMethod'] = $deliveryMethod;
 
         return $this;
     }
 
     /**
-     * @return DeliveryMethodSchema     
+     * @return DeliveryMethodSchema
      **/
     public function getDeliveryMethod() {
-        return $this->deliveryMethod;
+        return $this->properties['deliveryMethod'];
     }
 
     /**
      * A sub property of participant. The participant who is at the sending end of the action.
+     *
+     * @param $sender AudienceSchema|OrganizationSchema|PersonSchema
      **/
-    private $sender;
     public function setSender($sender) {
-        $this->sender = $sender;
+        $this->properties['sender'] = $sender;
 
         return $this;
     }
 
     /**
-     * @return AudienceSchema|OrganizationSchema|PersonSchema     
+     * @return AudienceSchema|OrganizationSchema|PersonSchema
      **/
     public function getSender() {
-        return $this->sender;
+        return $this->properties['sender'];
     }
 
 

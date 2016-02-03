@@ -36,31 +36,28 @@ class {{ class }} extends {{ classExtends }}
 {
     public static function factory()
     {
-        return new {{ class }}();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new {{ class }}('{{ context }}', '{{ type }}');
     }
 
 {% for property in properties %}
     /**
      * {{ property.comment }}
+     *
+     * @param ${{ property.label }} {% for range in property.rangeIncludes %}{{ range.class }}{% if loop.last == false %}|{% endif %}{% endfor %}
+
      **/
-    private ${{ property.label }};
     public function {{ property.setter }}(${{ property.label }}) {
-        $this->{{ property.label }} = ${{ property.label }};
+        $this->properties['{{ property.label }}'] = ${{ property.label }};
 
         return $this;
     }
 
     /**
      * @return {% for range in property.rangeIncludes %}{{ range.class }}{% if loop.last == false %}|{% endif %}{% endfor %}
-     
+
      **/
     public function {{ property.getter }}() {
-        return $this->{{ property.label }};
+        return $this->properties['{{ property.label }}'];
     }
 
 {% endfor %}

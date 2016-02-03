@@ -35,29 +35,25 @@ class FollowActionSchema extends InteractActionSchema
 {
     public static function factory()
     {
-        return new FollowActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new FollowActionSchema('http://schema.org/', 'FollowAction');
     }
 
     /**
      * A sub property of object. The person or organization being followed.
+     *
+     * @param $followee OrganizationSchema|PersonSchema
      **/
-    private $followee;
     public function setFollowee($followee) {
-        $this->followee = $followee;
+        $this->properties['followee'] = $followee;
 
         return $this;
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema     
+     * @return OrganizationSchema|PersonSchema
      **/
     public function getFollowee() {
-        return $this->followee;
+        return $this->properties['followee'];
     }
 
 

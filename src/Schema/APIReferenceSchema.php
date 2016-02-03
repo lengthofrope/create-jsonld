@@ -35,97 +35,97 @@ class APIReferenceSchema extends TechArticleSchema
 {
     public static function factory()
     {
-        return new APIReferenceSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new APIReferenceSchema('http://schema.org/', 'APIReference');
     }
 
     /**
      * Library file name e.g., mscorlib.dll, system.web.dll.
+     *
+     * @param $assembly TextSchema
      **/
-    private $assembly;
     public function setAssembly($assembly) {
-        $this->assembly = $assembly;
+        $this->properties['assembly'] = $assembly;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getAssembly() {
-        return $this->assembly;
+        return $this->properties['assembly'];
     }
 
     /**
      * Associated product/technology version. e.g., .NET Framework 4.5.
+     *
+     * @param $assemblyVersion TextSchema
      **/
-    private $assemblyVersion;
     public function setAssemblyVersion($assemblyVersion) {
-        $this->assemblyVersion = $assemblyVersion;
+        $this->properties['assemblyVersion'] = $assemblyVersion;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getAssemblyVersion() {
-        return $this->assemblyVersion;
+        return $this->properties['assemblyVersion'];
     }
 
     /**
      * Library file name e.g., mscorlib.dll, system.web.dll.
+     *
+     * @param $executableLibraryName TextSchema
      **/
-    private $executableLibraryName;
     public function setExecutableLibraryName($executableLibraryName) {
-        $this->executableLibraryName = $executableLibraryName;
+        $this->properties['executableLibraryName'] = $executableLibraryName;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getExecutableLibraryName() {
-        return $this->executableLibraryName;
+        return $this->properties['executableLibraryName'];
     }
 
     /**
      * Indicates whether API is managed or unmanaged.
+     *
+     * @param $programmingModel TextSchema
      **/
-    private $programmingModel;
     public function setProgrammingModel($programmingModel) {
-        $this->programmingModel = $programmingModel;
+        $this->properties['programmingModel'] = $programmingModel;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getProgrammingModel() {
-        return $this->programmingModel;
+        return $this->properties['programmingModel'];
     }
 
     /**
      * Type of app development: phone, Metro style, desktop, XBox, etc.
+     *
+     * @param $targetPlatform TextSchema
      **/
-    private $targetPlatform;
     public function setTargetPlatform($targetPlatform) {
-        $this->targetPlatform = $targetPlatform;
+        $this->properties['targetPlatform'] = $targetPlatform;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getTargetPlatform() {
-        return $this->targetPlatform;
+        return $this->properties['targetPlatform'];
     }
 
 

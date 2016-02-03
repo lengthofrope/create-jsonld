@@ -35,12 +35,7 @@ class DownloadActionSchema extends TransferActionSchema
 {
     public static function factory()
     {
-        return new DownloadActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new DownloadActionSchema('http://schema.org/', 'DownloadAction');
     }
 
 

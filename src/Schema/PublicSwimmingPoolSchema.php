@@ -35,12 +35,7 @@ class PublicSwimmingPoolSchema extends SportsActivityLocationSchema
 {
     public static function factory()
     {
-        return new PublicSwimmingPoolSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new PublicSwimmingPoolSchema('http://schema.org/', 'PublicSwimmingPool');
     }
 
 

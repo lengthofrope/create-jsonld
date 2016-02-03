@@ -35,12 +35,7 @@ class AddActionSchema extends UpdateActionSchema
 {
     public static function factory()
     {
-        return new AddActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new AddActionSchema('http://schema.org/', 'AddAction');
     }
 
 

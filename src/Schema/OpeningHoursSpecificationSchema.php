@@ -35,97 +35,97 @@ class OpeningHoursSpecificationSchema extends StructuredValueSchema
 {
     public static function factory()
     {
-        return new OpeningHoursSpecificationSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new OpeningHoursSpecificationSchema('http://schema.org/', 'OpeningHoursSpecification');
     }
 
     /**
      * The closing hour of the place or service on the given day(s) of the week.
+     *
+     * @param $closes TimeSchema
      **/
-    private $closes;
     public function setCloses($closes) {
-        $this->closes = $closes;
+        $this->properties['closes'] = $closes;
 
         return $this;
     }
 
     /**
-     * @return TimeSchema     
+     * @return TimeSchema
      **/
     public function getCloses() {
-        return $this->closes;
+        return $this->properties['closes'];
     }
 
     /**
      * The day of the week for which these opening hours are valid.
+     *
+     * @param $dayOfWeek DayOfWeekSchema
      **/
-    private $dayOfWeek;
     public function setDayOfWeek($dayOfWeek) {
-        $this->dayOfWeek = $dayOfWeek;
+        $this->properties['dayOfWeek'] = $dayOfWeek;
 
         return $this;
     }
 
     /**
-     * @return DayOfWeekSchema     
+     * @return DayOfWeekSchema
      **/
     public function getDayOfWeek() {
-        return $this->dayOfWeek;
+        return $this->properties['dayOfWeek'];
     }
 
     /**
      * The opening hour of the place or service on the given day(s) of the week.
+     *
+     * @param $opens TimeSchema
      **/
-    private $opens;
     public function setOpens($opens) {
-        $this->opens = $opens;
+        $this->properties['opens'] = $opens;
 
         return $this;
     }
 
     /**
-     * @return TimeSchema     
+     * @return TimeSchema
      **/
     public function getOpens() {
-        return $this->opens;
+        return $this->properties['opens'];
     }
 
     /**
      * The date when the item becomes valid.
+     *
+     * @param $validFrom DateTimeSchema
      **/
-    private $validFrom;
     public function setValidFrom($validFrom) {
-        $this->validFrom = $validFrom;
+        $this->properties['validFrom'] = $validFrom;
 
         return $this;
     }
 
     /**
-     * @return DateTimeSchema     
+     * @return DateTimeSchema
      **/
     public function getValidFrom() {
-        return $this->validFrom;
+        return $this->properties['validFrom'];
     }
 
     /**
      * The end of the validity of offer, price specification, or opening hours data.
+     *
+     * @param $validThrough DateTimeSchema
      **/
-    private $validThrough;
     public function setValidThrough($validThrough) {
-        $this->validThrough = $validThrough;
+        $this->properties['validThrough'] = $validThrough;
 
         return $this;
     }
 
     /**
-     * @return DateTimeSchema     
+     * @return DateTimeSchema
      **/
     public function getValidThrough() {
-        return $this->validThrough;
+        return $this->properties['validThrough'];
     }
 
 

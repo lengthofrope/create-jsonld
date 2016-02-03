@@ -35,12 +35,7 @@ class PrependActionSchema extends InsertActionSchema
 {
     public static function factory()
     {
-        return new PrependActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new PrependActionSchema('http://schema.org/', 'PrependAction');
     }
 
 

@@ -35,12 +35,7 @@ class CancelActionSchema extends PlanActionSchema
 {
     public static function factory()
     {
-        return new CancelActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new CancelActionSchema('http://schema.org/', 'CancelAction');
     }
 
 

@@ -35,80 +35,79 @@ class DrugStrengthSchema extends MedicalIntangibleSchema
 {
     public static function factory()
     {
-        return new DrugStrengthSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new DrugStrengthSchema('http://schema.org/', 'DrugStrength');
     }
 
     /**
      * An active ingredient, typically chemical compounds and/or biologic substances.
+     *
+     * @param $activeIngredient TextSchema
      **/
-    private $activeIngredient;
     public function setActiveIngredient($activeIngredient) {
-        $this->activeIngredient = $activeIngredient;
+        $this->properties['activeIngredient'] = $activeIngredient;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getActiveIngredient() {
-        return $this->activeIngredient;
+        return $this->properties['activeIngredient'];
     }
 
     /**
      * The location in which the strength is available.
+     *
+     * @param $availableIn AdministrativeAreaSchema
      **/
-    private $availableIn;
     public function setAvailableIn($availableIn) {
-        $this->availableIn = $availableIn;
+        $this->properties['availableIn'] = $availableIn;
 
         return $this;
     }
 
     /**
-     * @return AdministrativeAreaSchema     
+     * @return AdministrativeAreaSchema
      **/
     public function getAvailableIn() {
-        return $this->availableIn;
+        return $this->properties['availableIn'];
     }
 
     /**
      * The units of an active ingredient's strength, e.g. mg.
+     *
+     * @param $strengthUnit TextSchema
      **/
-    private $strengthUnit;
     public function setStrengthUnit($strengthUnit) {
-        $this->strengthUnit = $strengthUnit;
+        $this->properties['strengthUnit'] = $strengthUnit;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getStrengthUnit() {
-        return $this->strengthUnit;
+        return $this->properties['strengthUnit'];
     }
 
     /**
      * The value of an active ingredient's strength, e.g. 325.
+     *
+     * @param $strengthValue NumberSchema
      **/
-    private $strengthValue;
     public function setStrengthValue($strengthValue) {
-        $this->strengthValue = $strengthValue;
+        $this->properties['strengthValue'] = $strengthValue;
 
         return $this;
     }
 
     /**
-     * @return NumberSchema     
+     * @return NumberSchema
      **/
     public function getStrengthValue() {
-        return $this->strengthValue;
+        return $this->properties['strengthValue'];
     }
 
 

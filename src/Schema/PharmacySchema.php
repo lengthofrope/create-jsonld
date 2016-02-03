@@ -35,12 +35,7 @@ class PharmacySchema extends MedicalOrganizationSchema
 {
     public static function factory()
     {
-        return new PharmacySchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new PharmacySchema('http://schema.org/', 'Pharmacy');
     }
 
 

@@ -35,29 +35,25 @@ class PathologyTestSchema extends MedicalTestSchema
 {
     public static function factory()
     {
-        return new PathologyTestSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new PathologyTestSchema('http://schema.org/', 'PathologyTest');
     }
 
     /**
      * The type of tissue sample required for the test.
+     *
+     * @param $tissueSample TextSchema
      **/
-    private $tissueSample;
     public function setTissueSample($tissueSample) {
-        $this->tissueSample = $tissueSample;
+        $this->properties['tissueSample'] = $tissueSample;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getTissueSample() {
-        return $this->tissueSample;
+        return $this->properties['tissueSample'];
     }
 
 

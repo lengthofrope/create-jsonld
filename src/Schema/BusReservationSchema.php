@@ -35,12 +35,7 @@ class BusReservationSchema extends ReservationSchema
 {
     public static function factory()
     {
-        return new BusReservationSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new BusReservationSchema('http://schema.org/', 'BusReservation');
     }
 
 

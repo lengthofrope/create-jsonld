@@ -35,216 +35,223 @@ class DietarySupplementSchema extends MedicalTherapySchema
 {
     public static function factory()
     {
-        return new DietarySupplementSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new DietarySupplementSchema('http://schema.org/', 'DietarySupplement');
     }
 
     /**
      * An active ingredient, typically chemical compounds and/or biologic substances.
+     *
+     * @param $activeIngredient TextSchema
      **/
-    private $activeIngredient;
     public function setActiveIngredient($activeIngredient) {
-        $this->activeIngredient = $activeIngredient;
+        $this->properties['activeIngredient'] = $activeIngredient;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getActiveIngredient() {
-        return $this->activeIngredient;
+        return $this->properties['activeIngredient'];
     }
 
     /**
      * Descriptive information establishing a historical perspective on the supplement. May include the rationale for the name, the population where the supplement first came to prominence, etc.
+     *
+     * @param $background TextSchema
      **/
-    private $background;
     public function setBackground($background) {
-        $this->background = $background;
+        $this->properties['background'] = $background;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getBackground() {
-        return $this->background;
+        return $this->properties['background'];
     }
 
     /**
      * A dosage form in which this drug/supplement is available, e.g. 'tablet', 'suspension', 'injection'.
+     *
+     * @param $dosageForm TextSchema
      **/
-    private $dosageForm;
     public function setDosageForm($dosageForm) {
-        $this->dosageForm = $dosageForm;
+        $this->properties['dosageForm'] = $dosageForm;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getDosageForm() {
-        return $this->dosageForm;
+        return $this->properties['dosageForm'];
     }
 
     /**
      * True if this item's name is a proprietary/brand name (vs. generic name).
+     *
+     * @param $isProprietary BooleanSchema
      **/
-    private $isProprietary;
     public function setIsProprietary($isProprietary) {
-        $this->isProprietary = $isProprietary;
+        $this->properties['isProprietary'] = $isProprietary;
 
         return $this;
     }
 
     /**
-     * @return BooleanSchema     
+     * @return BooleanSchema
      **/
     public function getIsProprietary() {
-        return $this->isProprietary;
+        return $this->properties['isProprietary'];
     }
 
     /**
      * The drug or supplement's legal status, including any controlled substance schedules that apply.
+     *
+     * @param $legalStatus DrugLegalStatusSchema
      **/
-    private $legalStatus;
     public function setLegalStatus($legalStatus) {
-        $this->legalStatus = $legalStatus;
+        $this->properties['legalStatus'] = $legalStatus;
 
         return $this;
     }
 
     /**
-     * @return DrugLegalStatusSchema     
+     * @return DrugLegalStatusSchema
      **/
     public function getLegalStatus() {
-        return $this->legalStatus;
+        return $this->properties['legalStatus'];
     }
 
     /**
      * The manufacturer of the product.
+     *
+     * @param $manufacturer OrganizationSchema
      **/
-    private $manufacturer;
     public function setManufacturer($manufacturer) {
-        $this->manufacturer = $manufacturer;
+        $this->properties['manufacturer'] = $manufacturer;
 
         return $this;
     }
 
     /**
-     * @return OrganizationSchema     
+     * @return OrganizationSchema
      **/
     public function getManufacturer() {
-        return $this->manufacturer;
+        return $this->properties['manufacturer'];
     }
 
     /**
      * Recommended intake of this supplement for a given population as defined by a specific recommending authority.
+     *
+     * @param $maximumIntake MaximumDoseScheduleSchema
      **/
-    private $maximumIntake;
     public function setMaximumIntake($maximumIntake) {
-        $this->maximumIntake = $maximumIntake;
+        $this->properties['maximumIntake'] = $maximumIntake;
 
         return $this;
     }
 
     /**
-     * @return MaximumDoseScheduleSchema     
+     * @return MaximumDoseScheduleSchema
      **/
     public function getMaximumIntake() {
-        return $this->maximumIntake;
+        return $this->properties['maximumIntake'];
     }
 
     /**
      * The specific biochemical interaction through which this drug or supplement produces its pharmacological effect.
+     *
+     * @param $mechanismOfAction TextSchema
      **/
-    private $mechanismOfAction;
     public function setMechanismOfAction($mechanismOfAction) {
-        $this->mechanismOfAction = $mechanismOfAction;
+        $this->properties['mechanismOfAction'] = $mechanismOfAction;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getMechanismOfAction() {
-        return $this->mechanismOfAction;
+        return $this->properties['mechanismOfAction'];
     }
 
     /**
      * The generic name of this drug or supplement.
+     *
+     * @param $nonProprietaryName TextSchema
      **/
-    private $nonProprietaryName;
     public function setNonProprietaryName($nonProprietaryName) {
-        $this->nonProprietaryName = $nonProprietaryName;
+        $this->properties['nonProprietaryName'] = $nonProprietaryName;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getNonProprietaryName() {
-        return $this->nonProprietaryName;
+        return $this->properties['nonProprietaryName'];
     }
 
     /**
      * Recommended intake of this supplement for a given population as defined by a specific recommending authority.
+     *
+     * @param $recommendedIntake RecommendedDoseScheduleSchema
      **/
-    private $recommendedIntake;
     public function setRecommendedIntake($recommendedIntake) {
-        $this->recommendedIntake = $recommendedIntake;
+        $this->properties['recommendedIntake'] = $recommendedIntake;
 
         return $this;
     }
 
     /**
-     * @return RecommendedDoseScheduleSchema     
+     * @return RecommendedDoseScheduleSchema
      **/
     public function getRecommendedIntake() {
-        return $this->recommendedIntake;
+        return $this->properties['recommendedIntake'];
     }
 
     /**
      * Any potential safety concern associated with the supplement. May include interactions with other drugs and foods, pregnancy, breastfeeding, known adverse reactions, and documented efficacy of the supplement.
+     *
+     * @param $safetyConsideration TextSchema
      **/
-    private $safetyConsideration;
     public function setSafetyConsideration($safetyConsideration) {
-        $this->safetyConsideration = $safetyConsideration;
+        $this->properties['safetyConsideration'] = $safetyConsideration;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getSafetyConsideration() {
-        return $this->safetyConsideration;
+        return $this->properties['safetyConsideration'];
     }
 
     /**
      * Characteristics of the population for which this is intended, or which typically uses it, e.g. 'adults'.
+     *
+     * @param $targetPopulation TextSchema
      **/
-    private $targetPopulation;
     public function setTargetPopulation($targetPopulation) {
-        $this->targetPopulation = $targetPopulation;
+        $this->properties['targetPopulation'] = $targetPopulation;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getTargetPopulation() {
-        return $this->targetPopulation;
+        return $this->properties['targetPopulation'];
     }
 
 

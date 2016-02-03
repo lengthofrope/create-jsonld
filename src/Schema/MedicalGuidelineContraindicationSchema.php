@@ -35,12 +35,7 @@ class MedicalGuidelineContraindicationSchema extends MedicalGuidelineSchema
 {
     public static function factory()
     {
-        return new MedicalGuidelineContraindicationSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MedicalGuidelineContraindicationSchema('http://schema.org/', 'MedicalGuidelineContraindication');
     }
 
 

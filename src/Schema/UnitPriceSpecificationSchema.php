@@ -35,81 +35,80 @@ class UnitPriceSpecificationSchema extends PriceSpecificationSchema
 {
     public static function factory()
     {
-        return new UnitPriceSpecificationSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new UnitPriceSpecificationSchema('http://schema.org/', 'UnitPriceSpecification');
     }
 
     /**
      * This property specifies the minimal quantity and rounding increment that will be the basis for the billing. The unit of measurement is specified by the unitCode property.
+     *
+     * @param $billingIncrement NumberSchema
      **/
-    private $billingIncrement;
     public function setBillingIncrement($billingIncrement) {
-        $this->billingIncrement = $billingIncrement;
+        $this->properties['billingIncrement'] = $billingIncrement;
 
         return $this;
     }
 
     /**
-     * @return NumberSchema     
+     * @return NumberSchema
      **/
     public function getBillingIncrement() {
-        return $this->billingIncrement;
+        return $this->properties['billingIncrement'];
     }
 
     /**
      * A short text or acronym indicating multiple price specifications for the same offer, e.g. SRP for the suggested retail price or INVOICE for the invoice price, mostly used in the car industry.
+     *
+     * @param $priceType TextSchema
      **/
-    private $priceType;
     public function setPriceType($priceType) {
-        $this->priceType = $priceType;
+        $this->properties['priceType'] = $priceType;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getPriceType() {
-        return $this->priceType;
+        return $this->properties['priceType'];
     }
 
     /**
      * The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes than the UN/CEFACT Common Code may be used with a prefix followed by a colon.
+     *
+     * @param $unitCode TextSchema|URLSchema
      **/
-    private $unitCode;
     public function setUnitCode($unitCode) {
-        $this->unitCode = $unitCode;
+        $this->properties['unitCode'] = $unitCode;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|URLSchema     
+     * @return TextSchema|URLSchema
      **/
     public function getUnitCode() {
-        return $this->unitCode;
+        return $this->properties['unitCode'];
     }
 
     /**
      * A string or text indicating the unit of measurement. Useful if you cannot provide a standard unit code for
 <a href='unitCode'>unitCode</a>.
+     *
+     * @param $unitText TextSchema
      **/
-    private $unitText;
     public function setUnitText($unitText) {
-        $this->unitText = $unitText;
+        $this->properties['unitText'] = $unitText;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getUnitText() {
-        return $this->unitText;
+        return $this->properties['unitText'];
     }
 
 

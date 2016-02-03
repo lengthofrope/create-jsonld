@@ -35,12 +35,7 @@ class DeactivateActionSchema extends ControlActionSchema
 {
     public static function factory()
     {
-        return new DeactivateActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new DeactivateActionSchema('http://schema.org/', 'DeactivateAction');
     }
 
 

@@ -35,12 +35,7 @@ class AdministrativeAreaSchema extends PlaceSchema
 {
     public static function factory()
     {
-        return new AdministrativeAreaSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new AdministrativeAreaSchema('http://schema.org/', 'AdministrativeArea');
     }
 
 

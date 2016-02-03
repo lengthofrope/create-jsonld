@@ -48,12 +48,7 @@ class PaymentMethodSchema extends EnumerationSchema
 {
     public static function factory()
     {
-        return new PaymentMethodSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new PaymentMethodSchema('http://schema.org/', 'PaymentMethod');
     }
 
 

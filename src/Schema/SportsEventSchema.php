@@ -35,63 +35,61 @@ class SportsEventSchema extends EventSchema
 {
     public static function factory()
     {
-        return new SportsEventSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new SportsEventSchema('http://schema.org/', 'SportsEvent');
     }
 
     /**
      * The away team in a sports event.
+     *
+     * @param $awayTeam PersonSchema|SportsTeamSchema
      **/
-    private $awayTeam;
     public function setAwayTeam($awayTeam) {
-        $this->awayTeam = $awayTeam;
+        $this->properties['awayTeam'] = $awayTeam;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema|SportsTeamSchema     
+     * @return PersonSchema|SportsTeamSchema
      **/
     public function getAwayTeam() {
-        return $this->awayTeam;
+        return $this->properties['awayTeam'];
     }
 
     /**
      * A competitor in a sports event.
+     *
+     * @param $competitor PersonSchema|SportsTeamSchema
      **/
-    private $competitor;
     public function setCompetitor($competitor) {
-        $this->competitor = $competitor;
+        $this->properties['competitor'] = $competitor;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema|SportsTeamSchema     
+     * @return PersonSchema|SportsTeamSchema
      **/
     public function getCompetitor() {
-        return $this->competitor;
+        return $this->properties['competitor'];
     }
 
     /**
      * The home team in a sports event.
+     *
+     * @param $homeTeam PersonSchema|SportsTeamSchema
      **/
-    private $homeTeam;
     public function setHomeTeam($homeTeam) {
-        $this->homeTeam = $homeTeam;
+        $this->properties['homeTeam'] = $homeTeam;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema|SportsTeamSchema     
+     * @return PersonSchema|SportsTeamSchema
      **/
     public function getHomeTeam() {
-        return $this->homeTeam;
+        return $this->properties['homeTeam'];
     }
 
 

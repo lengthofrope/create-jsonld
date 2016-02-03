@@ -35,12 +35,7 @@ class WearActionSchema extends UseActionSchema
 {
     public static function factory()
     {
-        return new WearActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new WearActionSchema('http://schema.org/', 'WearAction');
     }
 
 

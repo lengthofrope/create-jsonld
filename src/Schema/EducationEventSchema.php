@@ -35,12 +35,7 @@ class EducationEventSchema extends EventSchema
 {
     public static function factory()
     {
-        return new EducationEventSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new EducationEventSchema('http://schema.org/', 'EducationEvent');
     }
 
 

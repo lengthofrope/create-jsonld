@@ -35,12 +35,7 @@ class EmploymentAgencySchema extends LocalBusinessSchema
 {
     public static function factory()
     {
-        return new EmploymentAgencySchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new EmploymentAgencySchema('http://schema.org/', 'EmploymentAgency');
     }
 
 

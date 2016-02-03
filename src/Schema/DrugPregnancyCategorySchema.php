@@ -31,16 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class DrugPregnancyCategorySchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
+class DrugPregnancyCategorySchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new DrugPregnancyCategorySchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new DrugPregnancyCategorySchema('http://schema.org/', 'DrugPregnancyCategory');
     }
 
 

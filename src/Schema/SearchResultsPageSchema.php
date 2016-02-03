@@ -35,12 +35,7 @@ class SearchResultsPageSchema extends WebPageSchema
 {
     public static function factory()
     {
-        return new SearchResultsPageSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new SearchResultsPageSchema('http://schema.org/', 'SearchResultsPage');
     }
 
 

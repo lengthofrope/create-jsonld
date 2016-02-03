@@ -35,12 +35,7 @@ class SubwayStationSchema extends CivicStructureSchema
 {
     public static function factory()
     {
-        return new SubwayStationSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new SubwayStationSchema('http://schema.org/', 'SubwayStation');
     }
 
 

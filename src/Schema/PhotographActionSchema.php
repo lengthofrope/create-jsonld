@@ -35,12 +35,7 @@ class PhotographActionSchema extends CreateActionSchema
 {
     public static function factory()
     {
-        return new PhotographActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new PhotographActionSchema('http://schema.org/', 'PhotographAction');
     }
 
 

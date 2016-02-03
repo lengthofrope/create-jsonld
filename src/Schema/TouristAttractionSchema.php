@@ -35,12 +35,7 @@ class TouristAttractionSchema extends PlaceSchema
 {
     public static function factory()
     {
-        return new TouristAttractionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new TouristAttractionSchema('http://schema.org/', 'TouristAttraction');
     }
 
 

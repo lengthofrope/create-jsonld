@@ -35,12 +35,7 @@ class FestivalSchema extends EventSchema
 {
     public static function factory()
     {
-        return new FestivalSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new FestivalSchema('http://schema.org/', 'Festival');
     }
 
 

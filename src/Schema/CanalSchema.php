@@ -35,12 +35,7 @@ class CanalSchema extends BodyOfWaterSchema
 {
     public static function factory()
     {
-        return new CanalSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new CanalSchema('http://schema.org/', 'Canal');
     }
 
 

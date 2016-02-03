@@ -37,12 +37,7 @@ class UserPageVisitsSchema extends UserInteractionSchema
 {
     public static function factory()
     {
-        return new UserPageVisitsSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new UserPageVisitsSchema('http://schema.org/', 'UserPageVisits');
     }
 
 

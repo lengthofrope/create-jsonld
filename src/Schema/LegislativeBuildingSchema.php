@@ -35,12 +35,7 @@ class LegislativeBuildingSchema extends GovernmentBuildingSchema
 {
     public static function factory()
     {
-        return new LegislativeBuildingSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new LegislativeBuildingSchema('http://schema.org/', 'LegislativeBuilding');
     }
 
 

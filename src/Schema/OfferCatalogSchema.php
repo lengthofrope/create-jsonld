@@ -35,12 +35,7 @@ class OfferCatalogSchema extends ItemListSchema
 {
     public static function factory()
     {
-        return new OfferCatalogSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new OfferCatalogSchema('http://schema.org/', 'OfferCatalog');
     }
 
 

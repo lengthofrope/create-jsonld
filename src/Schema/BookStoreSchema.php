@@ -35,12 +35,7 @@ class BookStoreSchema extends StoreSchema
 {
     public static function factory()
     {
-        return new BookStoreSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new BookStoreSchema('http://schema.org/', 'BookStore');
     }
 
 

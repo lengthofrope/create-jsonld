@@ -35,29 +35,25 @@ class DataCatalogSchema extends CreativeWorkSchema
 {
     public static function factory()
     {
-        return new DataCatalogSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new DataCatalogSchema('http://schema.org/', 'DataCatalog');
     }
 
     /**
      * A dataset contained in a catalog.
+     *
+     * @param $dataset DatasetSchema
      **/
-    private $dataset;
     public function setDataset($dataset) {
-        $this->dataset = $dataset;
+        $this->properties['dataset'] = $dataset;
 
         return $this;
     }
 
     /**
-     * @return DatasetSchema     
+     * @return DatasetSchema
      **/
     public function getDataset() {
-        return $this->dataset;
+        return $this->properties['dataset'];
     }
 
 

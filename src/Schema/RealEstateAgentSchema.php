@@ -35,12 +35,7 @@ class RealEstateAgentSchema extends LocalBusinessSchema
 {
     public static function factory()
     {
-        return new RealEstateAgentSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new RealEstateAgentSchema('http://schema.org/', 'RealEstateAgent');
     }
 
 

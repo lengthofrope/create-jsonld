@@ -35,12 +35,7 @@ class BridgeSchema extends CivicStructureSchema
 {
     public static function factory()
     {
-        return new BridgeSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new BridgeSchema('http://schema.org/', 'Bridge');
     }
 
 

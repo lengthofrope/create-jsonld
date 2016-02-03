@@ -35,29 +35,25 @@ class SomeProductsSchema extends ProductSchema
 {
     public static function factory()
     {
-        return new SomeProductsSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new SomeProductsSchema('http://schema.org/', 'SomeProducts');
     }
 
     /**
      * The current approximate inventory level for the item or items.
+     *
+     * @param $inventoryLevel QuantitativeValueSchema
      **/
-    private $inventoryLevel;
     public function setInventoryLevel($inventoryLevel) {
-        $this->inventoryLevel = $inventoryLevel;
+        $this->properties['inventoryLevel'] = $inventoryLevel;
 
         return $this;
     }
 
     /**
-     * @return QuantitativeValueSchema     
+     * @return QuantitativeValueSchema
      **/
     public function getInventoryLevel() {
-        return $this->inventoryLevel;
+        return $this->properties['inventoryLevel'];
     }
 
 

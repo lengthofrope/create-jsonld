@@ -35,777 +35,817 @@ class OrganizationSchema extends ThingSchema
 {
     public static function factory()
     {
-        return new OrganizationSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new OrganizationSchema('http://schema.org/', 'Organization');
     }
 
     /**
      * Physical address of the item.
+     *
+     * @param $address PostalAddressSchema|TextSchema
      **/
-    private $address;
     public function setAddress($address) {
-        $this->address = $address;
+        $this->properties['address'] = $address;
 
         return $this;
     }
 
     /**
-     * @return PostalAddressSchema|TextSchema     
+     * @return PostalAddressSchema|TextSchema
      **/
     public function getAddress() {
-        return $this->address;
+        return $this->properties['address'];
     }
 
     /**
      * The overall rating, based on a collection of reviews or ratings, of the item.
+     *
+     * @param $aggregateRating AggregateRatingSchema
      **/
-    private $aggregateRating;
     public function setAggregateRating($aggregateRating) {
-        $this->aggregateRating = $aggregateRating;
+        $this->properties['aggregateRating'] = $aggregateRating;
 
         return $this;
     }
 
     /**
-     * @return AggregateRatingSchema     
+     * @return AggregateRatingSchema
      **/
     public function getAggregateRating() {
-        return $this->aggregateRating;
+        return $this->properties['aggregateRating'];
     }
 
     /**
      * Alumni of an organization.
+     *
+     * @param $alumni PersonSchema
      **/
-    private $alumni;
     public function setAlumni($alumni) {
-        $this->alumni = $alumni;
+        $this->properties['alumni'] = $alumni;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema     
+     * @return PersonSchema
      **/
     public function getAlumni() {
-        return $this->alumni;
+        return $this->properties['alumni'];
     }
 
     /**
      * The geographic area where a service or offered item is provided.
+     *
+     * @param $areaServed PlaceSchema|AdministrativeAreaSchema|GeoShapeSchema|TextSchema
      **/
-    private $areaServed;
     public function setAreaServed($areaServed) {
-        $this->areaServed = $areaServed;
+        $this->properties['areaServed'] = $areaServed;
 
         return $this;
     }
 
     /**
-     * @return PlaceSchema|AdministrativeAreaSchema|GeoShapeSchema|TextSchema     
+     * @return PlaceSchema|AdministrativeAreaSchema|GeoShapeSchema|TextSchema
      **/
     public function getAreaServed() {
-        return $this->areaServed;
+        return $this->properties['areaServed'];
     }
 
     /**
      * An award won by or for this item.
+     *
+     * @param $award TextSchema
      **/
-    private $award;
     public function setAward($award) {
-        $this->award = $award;
+        $this->properties['award'] = $award;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getAward() {
-        return $this->award;
+        return $this->properties['award'];
     }
 
     /**
      * Awards won by or for this item.
+     *
+     * @param $awards TextSchema
      **/
-    private $awards;
     public function setAwards($awards) {
-        $this->awards = $awards;
+        $this->properties['awards'] = $awards;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getAwards() {
-        return $this->awards;
+        return $this->properties['awards'];
     }
 
     /**
      * The brand(s) associated with a product or service, or the brand(s) maintained by an organization or business person.
+     *
+     * @param $brand BrandSchema|OrganizationSchema
      **/
-    private $brand;
     public function setBrand($brand) {
-        $this->brand = $brand;
+        $this->properties['brand'] = $brand;
 
         return $this;
     }
 
     /**
-     * @return BrandSchema|OrganizationSchema     
+     * @return BrandSchema|OrganizationSchema
      **/
     public function getBrand() {
-        return $this->brand;
+        return $this->properties['brand'];
     }
 
     /**
      * A contact point for a person or organization.
+     *
+     * @param $contactPoint ContactPointSchema
      **/
-    private $contactPoint;
     public function setContactPoint($contactPoint) {
-        $this->contactPoint = $contactPoint;
+        $this->properties['contactPoint'] = $contactPoint;
 
         return $this;
     }
 
     /**
-     * @return ContactPointSchema     
+     * @return ContactPointSchema
      **/
     public function getContactPoint() {
-        return $this->contactPoint;
+        return $this->properties['contactPoint'];
     }
 
     /**
      * A contact point for a person or organization.
+     *
+     * @param $contactPoints ContactPointSchema
      **/
-    private $contactPoints;
     public function setContactPoints($contactPoints) {
-        $this->contactPoints = $contactPoints;
+        $this->properties['contactPoints'] = $contactPoints;
 
         return $this;
     }
 
     /**
-     * @return ContactPointSchema     
+     * @return ContactPointSchema
      **/
     public function getContactPoints() {
-        return $this->contactPoints;
+        return $this->properties['contactPoints'];
     }
 
     /**
      * A relationship between an organization and a department of that organization, also described as an organization (allowing different urls, logos, opening hours). For example: a store with a pharmacy, or a bakery with a cafe.
+     *
+     * @param $department OrganizationSchema
      **/
-    private $department;
     public function setDepartment($department) {
-        $this->department = $department;
+        $this->properties['department'] = $department;
 
         return $this;
     }
 
     /**
-     * @return OrganizationSchema     
+     * @return OrganizationSchema
      **/
     public function getDepartment() {
-        return $this->department;
+        return $this->properties['department'];
     }
 
     /**
      * The date that this organization was dissolved.
+     *
+     * @param $dissolutionDate DateSchema
      **/
-    private $dissolutionDate;
     public function setDissolutionDate($dissolutionDate) {
-        $this->dissolutionDate = $dissolutionDate;
+        $this->properties['dissolutionDate'] = $dissolutionDate;
 
         return $this;
     }
 
     /**
-     * @return DateSchema     
+     * @return DateSchema
      **/
     public function getDissolutionDate() {
-        return $this->dissolutionDate;
+        return $this->properties['dissolutionDate'];
     }
 
     /**
      * The Dun & Bradstreet DUNS number for identifying an organization or business person.
+     *
+     * @param $duns TextSchema
      **/
-    private $duns;
     public function setDuns($duns) {
-        $this->duns = $duns;
+        $this->properties['duns'] = $duns;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getDuns() {
-        return $this->duns;
+        return $this->properties['duns'];
     }
 
     /**
      * Email address.
+     *
+     * @param $email TextSchema
      **/
-    private $email;
     public function setEmail($email) {
-        $this->email = $email;
+        $this->properties['email'] = $email;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getEmail() {
-        return $this->email;
+        return $this->properties['email'];
     }
 
     /**
      * Someone working for this organization.
+     *
+     * @param $employee PersonSchema
      **/
-    private $employee;
     public function setEmployee($employee) {
-        $this->employee = $employee;
+        $this->properties['employee'] = $employee;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema     
+     * @return PersonSchema
      **/
     public function getEmployee() {
-        return $this->employee;
+        return $this->properties['employee'];
     }
 
     /**
      * People working for this organization.
+     *
+     * @param $employees PersonSchema
      **/
-    private $employees;
     public function setEmployees($employees) {
-        $this->employees = $employees;
+        $this->properties['employees'] = $employees;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema     
+     * @return PersonSchema
      **/
     public function getEmployees() {
-        return $this->employees;
+        return $this->properties['employees'];
     }
 
     /**
      * Upcoming or past event associated with this place, organization, or action.
+     *
+     * @param $event EventSchema
      **/
-    private $event;
     public function setEvent($event) {
-        $this->event = $event;
+        $this->properties['event'] = $event;
 
         return $this;
     }
 
     /**
-     * @return EventSchema     
+     * @return EventSchema
      **/
     public function getEvent() {
-        return $this->event;
+        return $this->properties['event'];
     }
 
     /**
      * Upcoming or past events associated with this place or organization.
+     *
+     * @param $events EventSchema
      **/
-    private $events;
     public function setEvents($events) {
-        $this->events = $events;
+        $this->properties['events'] = $events;
 
         return $this;
     }
 
     /**
-     * @return EventSchema     
+     * @return EventSchema
      **/
     public function getEvents() {
-        return $this->events;
+        return $this->properties['events'];
     }
 
     /**
      * The fax number.
+     *
+     * @param $faxNumber TextSchema
      **/
-    private $faxNumber;
     public function setFaxNumber($faxNumber) {
-        $this->faxNumber = $faxNumber;
+        $this->properties['faxNumber'] = $faxNumber;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getFaxNumber() {
-        return $this->faxNumber;
+        return $this->properties['faxNumber'];
     }
 
     /**
      * A person who founded this organization.
+     *
+     * @param $founder PersonSchema
      **/
-    private $founder;
     public function setFounder($founder) {
-        $this->founder = $founder;
+        $this->properties['founder'] = $founder;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema     
+     * @return PersonSchema
      **/
     public function getFounder() {
-        return $this->founder;
+        return $this->properties['founder'];
     }
 
     /**
      * A person who founded this organization.
+     *
+     * @param $founders PersonSchema
      **/
-    private $founders;
     public function setFounders($founders) {
-        $this->founders = $founders;
+        $this->properties['founders'] = $founders;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema     
+     * @return PersonSchema
      **/
     public function getFounders() {
-        return $this->founders;
+        return $this->properties['founders'];
     }
 
     /**
      * The date that this organization was founded.
+     *
+     * @param $foundingDate DateSchema
      **/
-    private $foundingDate;
     public function setFoundingDate($foundingDate) {
-        $this->foundingDate = $foundingDate;
+        $this->properties['foundingDate'] = $foundingDate;
 
         return $this;
     }
 
     /**
-     * @return DateSchema     
+     * @return DateSchema
      **/
     public function getFoundingDate() {
-        return $this->foundingDate;
+        return $this->properties['foundingDate'];
     }
 
     /**
      * The place where the Organization was founded.
+     *
+     * @param $foundingLocation PlaceSchema
      **/
-    private $foundingLocation;
     public function setFoundingLocation($foundingLocation) {
-        $this->foundingLocation = $foundingLocation;
+        $this->properties['foundingLocation'] = $foundingLocation;
 
         return $this;
     }
 
     /**
-     * @return PlaceSchema     
+     * @return PlaceSchema
      **/
     public function getFoundingLocation() {
-        return $this->foundingLocation;
+        return $this->properties['foundingLocation'];
     }
 
     /**
      * The <a href="http://www.gs1.org/gln">Global Location Number</a> (GLN, sometimes also referred to as International Location Number or ILN) of the respective organization, person, or place. The GLN is a 13-digit number used to identify parties and physical locations.
+     *
+     * @param $globalLocationNumber TextSchema
      **/
-    private $globalLocationNumber;
     public function setGlobalLocationNumber($globalLocationNumber) {
-        $this->globalLocationNumber = $globalLocationNumber;
+        $this->properties['globalLocationNumber'] = $globalLocationNumber;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getGlobalLocationNumber() {
-        return $this->globalLocationNumber;
+        return $this->properties['globalLocationNumber'];
     }
 
     /**
      * Indicates an OfferCatalog listing for this Organization, Person, or Service.
+     *
+     * @param $hasOfferCatalog OfferCatalogSchema
      **/
-    private $hasOfferCatalog;
     public function setHasOfferCatalog($hasOfferCatalog) {
-        $this->hasOfferCatalog = $hasOfferCatalog;
+        $this->properties['hasOfferCatalog'] = $hasOfferCatalog;
 
         return $this;
     }
 
     /**
-     * @return OfferCatalogSchema     
+     * @return OfferCatalogSchema
      **/
     public function getHasOfferCatalog() {
-        return $this->hasOfferCatalog;
+        return $this->properties['hasOfferCatalog'];
     }
 
     /**
      * Points-of-Sales operated by the organization or person.
+     *
+     * @param $hasPOS PlaceSchema
      **/
-    private $hasPOS;
     public function setHasPOS($hasPOS) {
-        $this->hasPOS = $hasPOS;
+        $this->properties['hasPOS'] = $hasPOS;
 
         return $this;
     }
 
     /**
-     * @return PlaceSchema     
+     * @return PlaceSchema
      **/
     public function getHasPOS() {
-        return $this->hasPOS;
+        return $this->properties['hasPOS'];
     }
 
     /**
      * The International Standard of Industrial Classification of All Economic Activities (ISIC), Revision 4 code for a particular organization, business person, or place.
+     *
+     * @param $isicV4 TextSchema
      **/
-    private $isicV4;
     public function setIsicV4($isicV4) {
-        $this->isicV4 = $isicV4;
+        $this->properties['isicV4'] = $isicV4;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getIsicV4() {
-        return $this->isicV4;
+        return $this->properties['isicV4'];
     }
 
     /**
      * The official name of the organization, e.g. the registered company name.
+     *
+     * @param $legalName TextSchema
      **/
-    private $legalName;
     public function setLegalName($legalName) {
-        $this->legalName = $legalName;
+        $this->properties['legalName'] = $legalName;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getLegalName() {
-        return $this->legalName;
+        return $this->properties['legalName'];
     }
 
     /**
      * The location of for example where the event is happening, an organization is located, or where an action takes place.
+     *
+     * @param $location PlaceSchema|PostalAddressSchema|TextSchema
      **/
-    private $location;
     public function setLocation($location) {
-        $this->location = $location;
+        $this->properties['location'] = $location;
 
         return $this;
     }
 
     /**
-     * @return PlaceSchema|PostalAddressSchema|TextSchema     
+     * @return PlaceSchema|PostalAddressSchema|TextSchema
      **/
     public function getLocation() {
-        return $this->location;
+        return $this->properties['location'];
     }
 
     /**
      * An associated logo.
+     *
+     * @param $logo ImageObjectSchema|URLSchema
      **/
-    private $logo;
     public function setLogo($logo) {
-        $this->logo = $logo;
+        $this->properties['logo'] = $logo;
 
         return $this;
     }
 
     /**
-     * @return ImageObjectSchema|URLSchema     
+     * @return ImageObjectSchema|URLSchema
      **/
     public function getLogo() {
-        return $this->logo;
+        return $this->properties['logo'];
     }
 
     /**
      * A pointer to products or services offered by the organization or person.
+     *
+     * @param $makesOffer OfferSchema
      **/
-    private $makesOffer;
     public function setMakesOffer($makesOffer) {
-        $this->makesOffer = $makesOffer;
+        $this->properties['makesOffer'] = $makesOffer;
 
         return $this;
     }
 
     /**
-     * @return OfferSchema     
+     * @return OfferSchema
      **/
     public function getMakesOffer() {
-        return $this->makesOffer;
+        return $this->properties['makesOffer'];
     }
 
     /**
      * A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals.
+     *
+     * @param $member OrganizationSchema|PersonSchema
      **/
-    private $member;
     public function setMember($member) {
-        $this->member = $member;
+        $this->properties['member'] = $member;
 
         return $this;
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema     
+     * @return OrganizationSchema|PersonSchema
      **/
     public function getMember() {
-        return $this->member;
+        return $this->properties['member'];
     }
 
     /**
      * An Organization (or ProgramMembership) to which this Person or Organization belongs.
+     *
+     * @param $memberOf OrganizationSchema|ProgramMembershipSchema
      **/
-    private $memberOf;
     public function setMemberOf($memberOf) {
-        $this->memberOf = $memberOf;
+        $this->properties['memberOf'] = $memberOf;
 
         return $this;
     }
 
     /**
-     * @return OrganizationSchema|ProgramMembershipSchema     
+     * @return OrganizationSchema|ProgramMembershipSchema
      **/
     public function getMemberOf() {
-        return $this->memberOf;
+        return $this->properties['memberOf'];
     }
 
     /**
      * A member of this organization.
+     *
+     * @param $members OrganizationSchema|PersonSchema
      **/
-    private $members;
     public function setMembers($members) {
-        $this->members = $members;
+        $this->properties['members'] = $members;
 
         return $this;
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema     
+     * @return OrganizationSchema|PersonSchema
      **/
     public function getMembers() {
-        return $this->members;
+        return $this->properties['members'];
     }
 
     /**
      * The North American Industry Classification System (NAICS) code for a particular organization or business person.
+     *
+     * @param $naics TextSchema
      **/
-    private $naics;
     public function setNaics($naics) {
-        $this->naics = $naics;
+        $this->properties['naics'] = $naics;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getNaics() {
-        return $this->naics;
+        return $this->properties['naics'];
     }
 
     /**
      * The number of employees in an organization e.g. business.
+     *
+     * @param $numberOfEmployees QuantitativeValueSchema
      **/
-    private $numberOfEmployees;
     public function setNumberOfEmployees($numberOfEmployees) {
-        $this->numberOfEmployees = $numberOfEmployees;
+        $this->properties['numberOfEmployees'] = $numberOfEmployees;
 
         return $this;
     }
 
     /**
-     * @return QuantitativeValueSchema     
+     * @return QuantitativeValueSchema
      **/
     public function getNumberOfEmployees() {
-        return $this->numberOfEmployees;
+        return $this->properties['numberOfEmployees'];
     }
 
     /**
      * Products owned by the organization or person.
+     *
+     * @param $owns OwnershipInfoSchema|ProductSchema
      **/
-    private $owns;
     public function setOwns($owns) {
-        $this->owns = $owns;
+        $this->properties['owns'] = $owns;
 
         return $this;
     }
 
     /**
-     * @return OwnershipInfoSchema|ProductSchema     
+     * @return OwnershipInfoSchema|ProductSchema
      **/
     public function getOwns() {
-        return $this->owns;
+        return $this->properties['owns'];
     }
 
     /**
      * The larger organization that this organization is a branch of, if any.
+     *
+     * @param $parentOrganization OrganizationSchema
      **/
-    private $parentOrganization;
     public function setParentOrganization($parentOrganization) {
-        $this->parentOrganization = $parentOrganization;
+        $this->properties['parentOrganization'] = $parentOrganization;
 
         return $this;
     }
 
     /**
-     * @return OrganizationSchema     
+     * @return OrganizationSchema
      **/
     public function getParentOrganization() {
-        return $this->parentOrganization;
+        return $this->properties['parentOrganization'];
     }
 
     /**
      * A review of the item.
+     *
+     * @param $review ReviewSchema
      **/
-    private $review;
     public function setReview($review) {
-        $this->review = $review;
+        $this->properties['review'] = $review;
 
         return $this;
     }
 
     /**
-     * @return ReviewSchema     
+     * @return ReviewSchema
      **/
     public function getReview() {
-        return $this->review;
+        return $this->properties['review'];
     }
 
     /**
      * Review of the item.
+     *
+     * @param $reviews ReviewSchema
      **/
-    private $reviews;
     public function setReviews($reviews) {
-        $this->reviews = $reviews;
+        $this->properties['reviews'] = $reviews;
 
         return $this;
     }
 
     /**
-     * @return ReviewSchema     
+     * @return ReviewSchema
      **/
     public function getReviews() {
-        return $this->reviews;
+        return $this->properties['reviews'];
     }
 
     /**
      * A pointer to products or services sought by the organization or person (demand).
+     *
+     * @param $seeks DemandSchema
      **/
-    private $seeks;
     public function setSeeks($seeks) {
-        $this->seeks = $seeks;
+        $this->properties['seeks'] = $seeks;
 
         return $this;
     }
 
     /**
-     * @return DemandSchema     
+     * @return DemandSchema
      **/
     public function getSeeks() {
-        return $this->seeks;
+        return $this->properties['seeks'];
     }
 
     /**
      * The geographic area where the service is provided.
+     *
+     * @param $serviceArea PlaceSchema|AdministrativeAreaSchema|GeoShapeSchema
      **/
-    private $serviceArea;
     public function setServiceArea($serviceArea) {
-        $this->serviceArea = $serviceArea;
+        $this->properties['serviceArea'] = $serviceArea;
 
         return $this;
     }
 
     /**
-     * @return PlaceSchema|AdministrativeAreaSchema|GeoShapeSchema     
+     * @return PlaceSchema|AdministrativeAreaSchema|GeoShapeSchema
      **/
     public function getServiceArea() {
-        return $this->serviceArea;
+        return $this->properties['serviceArea'];
     }
 
     /**
      * A relationship between two organizations where the first includes the second, e.g., as a subsidiary. See also: the more specific 'department' property.
+     *
+     * @param $subOrganization OrganizationSchema
      **/
-    private $subOrganization;
     public function setSubOrganization($subOrganization) {
-        $this->subOrganization = $subOrganization;
+        $this->properties['subOrganization'] = $subOrganization;
 
         return $this;
     }
 
     /**
-     * @return OrganizationSchema     
+     * @return OrganizationSchema
      **/
     public function getSubOrganization() {
-        return $this->subOrganization;
+        return $this->properties['subOrganization'];
     }
 
     /**
      * The Tax / Fiscal ID of the organization or person, e.g. the TIN in the US or the CIF/NIF in Spain.
+     *
+     * @param $taxID TextSchema
      **/
-    private $taxID;
     public function setTaxID($taxID) {
-        $this->taxID = $taxID;
+        $this->properties['taxID'] = $taxID;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getTaxID() {
-        return $this->taxID;
+        return $this->properties['taxID'];
     }
 
     /**
      * The telephone number.
+     *
+     * @param $telephone TextSchema
      **/
-    private $telephone;
     public function setTelephone($telephone) {
-        $this->telephone = $telephone;
+        $this->properties['telephone'] = $telephone;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getTelephone() {
-        return $this->telephone;
+        return $this->properties['telephone'];
     }
 
     /**
      * The Value-added Tax ID of the organization or person.
+     *
+     * @param $vatID TextSchema
      **/
-    private $vatID;
     public function setVatID($vatID) {
-        $this->vatID = $vatID;
+        $this->properties['vatID'] = $vatID;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getVatID() {
-        return $this->vatID;
+        return $this->properties['vatID'];
     }
 
 

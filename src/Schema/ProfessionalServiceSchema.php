@@ -53,12 +53,7 @@ class ProfessionalServiceSchema extends LocalBusinessSchema
 {
     public static function factory()
     {
-        return new ProfessionalServiceSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ProfessionalServiceSchema('http://schema.org/', 'ProfessionalService');
     }
 
 

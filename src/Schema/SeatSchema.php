@@ -35,80 +35,79 @@ class SeatSchema extends IntangibleSchema
 {
     public static function factory()
     {
-        return new SeatSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new SeatSchema('http://schema.org/', 'Seat');
     }
 
     /**
      * The location of the reserved seat (e.g., 27).
+     *
+     * @param $seatNumber TextSchema
      **/
-    private $seatNumber;
     public function setSeatNumber($seatNumber) {
-        $this->seatNumber = $seatNumber;
+        $this->properties['seatNumber'] = $seatNumber;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getSeatNumber() {
-        return $this->seatNumber;
+        return $this->properties['seatNumber'];
     }
 
     /**
      * The row location of the reserved seat (e.g., B).
+     *
+     * @param $seatRow TextSchema
      **/
-    private $seatRow;
     public function setSeatRow($seatRow) {
-        $this->seatRow = $seatRow;
+        $this->properties['seatRow'] = $seatRow;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getSeatRow() {
-        return $this->seatRow;
+        return $this->properties['seatRow'];
     }
 
     /**
      * The section location of the reserved seat (e.g. Orchestra).
+     *
+     * @param $seatSection TextSchema
      **/
-    private $seatSection;
     public function setSeatSection($seatSection) {
-        $this->seatSection = $seatSection;
+        $this->properties['seatSection'] = $seatSection;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getSeatSection() {
-        return $this->seatSection;
+        return $this->properties['seatSection'];
     }
 
     /**
      * The type/class of the seat.
+     *
+     * @param $seatingType TextSchema|QualitativeValueSchema
      **/
-    private $seatingType;
     public function setSeatingType($seatingType) {
-        $this->seatingType = $seatingType;
+        $this->properties['seatingType'] = $seatingType;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|QualitativeValueSchema     
+     * @return TextSchema|QualitativeValueSchema
      **/
     public function getSeatingType() {
-        return $this->seatingType;
+        return $this->properties['seatingType'];
     }
 
 

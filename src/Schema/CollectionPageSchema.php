@@ -35,12 +35,7 @@ class CollectionPageSchema extends WebPageSchema
 {
     public static function factory()
     {
-        return new CollectionPageSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new CollectionPageSchema('http://schema.org/', 'CollectionPage');
     }
 
 

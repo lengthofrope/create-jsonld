@@ -31,16 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class DateTimeSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
+class DateTimeSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new DateTimeSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new DateTimeSchema('http://schema.org/', 'DateTime');
     }
 
 

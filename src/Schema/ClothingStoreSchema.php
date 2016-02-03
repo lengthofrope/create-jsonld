@@ -35,12 +35,7 @@ class ClothingStoreSchema extends StoreSchema
 {
     public static function factory()
     {
-        return new ClothingStoreSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ClothingStoreSchema('http://schema.org/', 'ClothingStore');
     }
 
 

@@ -35,12 +35,7 @@ class PetStoreSchema extends StoreSchema
 {
     public static function factory()
     {
-        return new PetStoreSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new PetStoreSchema('http://schema.org/', 'PetStore');
     }
 
 

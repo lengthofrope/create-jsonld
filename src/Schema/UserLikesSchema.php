@@ -37,12 +37,7 @@ class UserLikesSchema extends UserInteractionSchema
 {
     public static function factory()
     {
-        return new UserLikesSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new UserLikesSchema('http://schema.org/', 'UserLikes');
     }
 
 

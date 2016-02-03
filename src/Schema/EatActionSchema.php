@@ -35,12 +35,7 @@ class EatActionSchema extends ConsumeActionSchema
 {
     public static function factory()
     {
-        return new EatActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new EatActionSchema('http://schema.org/', 'EatAction');
     }
 
 

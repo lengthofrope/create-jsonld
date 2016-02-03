@@ -35,12 +35,7 @@ class MusicStoreSchema extends StoreSchema
 {
     public static function factory()
     {
-        return new MusicStoreSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MusicStoreSchema('http://schema.org/', 'MusicStore');
     }
 
 

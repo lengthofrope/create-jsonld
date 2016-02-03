@@ -35,12 +35,7 @@ class LikeActionSchema extends ReactActionSchema
 {
     public static function factory()
     {
-        return new LikeActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new LikeActionSchema('http://schema.org/', 'LikeAction');
     }
 
 

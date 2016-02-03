@@ -35,284 +35,295 @@ class InvoiceSchema extends IntangibleSchema
 {
     public static function factory()
     {
-        return new InvoiceSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new InvoiceSchema('http://schema.org/', 'Invoice');
     }
 
     /**
      * The identifier for the account the payment will be applied to.
+     *
+     * @param $accountId TextSchema
      **/
-    private $accountId;
     public function setAccountId($accountId) {
-        $this->accountId = $accountId;
+        $this->properties['accountId'] = $accountId;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getAccountId() {
-        return $this->accountId;
+        return $this->properties['accountId'];
     }
 
     /**
      * The time interval used to compute the invoice.
+     *
+     * @param $billingPeriod DurationSchema
      **/
-    private $billingPeriod;
     public function setBillingPeriod($billingPeriod) {
-        $this->billingPeriod = $billingPeriod;
+        $this->properties['billingPeriod'] = $billingPeriod;
 
         return $this;
     }
 
     /**
-     * @return DurationSchema     
+     * @return DurationSchema
      **/
     public function getBillingPeriod() {
-        return $this->billingPeriod;
+        return $this->properties['billingPeriod'];
     }
 
     /**
      * An entity that arranges for an exchange between a buyer and a seller.  In most cases a broker never acquires or releases ownership of a product or service involved in an exchange.  If it is not clear whether an entity is a broker, seller, or buyer, the latter two terms are preferred.
+     *
+     * @param $broker PersonSchema|OrganizationSchema
      **/
-    private $broker;
     public function setBroker($broker) {
-        $this->broker = $broker;
+        $this->properties['broker'] = $broker;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema|OrganizationSchema     
+     * @return PersonSchema|OrganizationSchema
      **/
     public function getBroker() {
-        return $this->broker;
+        return $this->properties['broker'];
     }
 
     /**
      * A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
+     *
+     * @param $category PhysicalActivityCategorySchema|TextSchema|ThingSchema
      **/
-    private $category;
     public function setCategory($category) {
-        $this->category = $category;
+        $this->properties['category'] = $category;
 
         return $this;
     }
 
     /**
-     * @return PhysicalActivityCategorySchema|TextSchema|ThingSchema     
+     * @return PhysicalActivityCategorySchema|TextSchema|ThingSchema
      **/
     public function getCategory() {
-        return $this->category;
+        return $this->properties['category'];
     }
 
     /**
      * A number that confirms the given order or payment has been received.
+     *
+     * @param $confirmationNumber TextSchema
      **/
-    private $confirmationNumber;
     public function setConfirmationNumber($confirmationNumber) {
-        $this->confirmationNumber = $confirmationNumber;
+        $this->properties['confirmationNumber'] = $confirmationNumber;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getConfirmationNumber() {
-        return $this->confirmationNumber;
+        return $this->properties['confirmationNumber'];
     }
 
     /**
      * Party placing the order or paying the invoice.
+     *
+     * @param $customer OrganizationSchema|PersonSchema
      **/
-    private $customer;
     public function setCustomer($customer) {
-        $this->customer = $customer;
+        $this->properties['customer'] = $customer;
 
         return $this;
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema     
+     * @return OrganizationSchema|PersonSchema
      **/
     public function getCustomer() {
-        return $this->customer;
+        return $this->properties['customer'];
     }
 
     /**
      * The minimum payment required at this time.
+     *
+     * @param $minimumPaymentDue PriceSpecificationSchema
      **/
-    private $minimumPaymentDue;
     public function setMinimumPaymentDue($minimumPaymentDue) {
-        $this->minimumPaymentDue = $minimumPaymentDue;
+        $this->properties['minimumPaymentDue'] = $minimumPaymentDue;
 
         return $this;
     }
 
     /**
-     * @return PriceSpecificationSchema     
+     * @return PriceSpecificationSchema
      **/
     public function getMinimumPaymentDue() {
-        return $this->minimumPaymentDue;
+        return $this->properties['minimumPaymentDue'];
     }
 
     /**
      * The date that payment is due.
+     *
+     * @param $paymentDue DateTimeSchema
      **/
-    private $paymentDue;
     public function setPaymentDue($paymentDue) {
-        $this->paymentDue = $paymentDue;
+        $this->properties['paymentDue'] = $paymentDue;
 
         return $this;
     }
 
     /**
-     * @return DateTimeSchema     
+     * @return DateTimeSchema
      **/
     public function getPaymentDue() {
-        return $this->paymentDue;
+        return $this->properties['paymentDue'];
     }
 
     /**
      * The date that payment is due.
+     *
+     * @param $paymentDueDate DateTimeSchema
      **/
-    private $paymentDueDate;
     public function setPaymentDueDate($paymentDueDate) {
-        $this->paymentDueDate = $paymentDueDate;
+        $this->properties['paymentDueDate'] = $paymentDueDate;
 
         return $this;
     }
 
     /**
-     * @return DateTimeSchema     
+     * @return DateTimeSchema
      **/
     public function getPaymentDueDate() {
-        return $this->paymentDueDate;
+        return $this->properties['paymentDueDate'];
     }
 
     /**
      * The name of the credit card or other method of payment for the order.
+     *
+     * @param $paymentMethod PaymentMethodSchema
      **/
-    private $paymentMethod;
     public function setPaymentMethod($paymentMethod) {
-        $this->paymentMethod = $paymentMethod;
+        $this->properties['paymentMethod'] = $paymentMethod;
 
         return $this;
     }
 
     /**
-     * @return PaymentMethodSchema     
+     * @return PaymentMethodSchema
      **/
     public function getPaymentMethod() {
-        return $this->paymentMethod;
+        return $this->properties['paymentMethod'];
     }
 
     /**
      * An identifier for the method of payment used (e.g. the last 4 digits of the credit card).
+     *
+     * @param $paymentMethodId TextSchema
      **/
-    private $paymentMethodId;
     public function setPaymentMethodId($paymentMethodId) {
-        $this->paymentMethodId = $paymentMethodId;
+        $this->properties['paymentMethodId'] = $paymentMethodId;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getPaymentMethodId() {
-        return $this->paymentMethodId;
+        return $this->properties['paymentMethodId'];
     }
 
     /**
      * The status of payment; whether the invoice has been paid or not.
+     *
+     * @param $paymentStatus TextSchema|PaymentStatusTypeSchema
      **/
-    private $paymentStatus;
     public function setPaymentStatus($paymentStatus) {
-        $this->paymentStatus = $paymentStatus;
+        $this->properties['paymentStatus'] = $paymentStatus;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|PaymentStatusTypeSchema     
+     * @return TextSchema|PaymentStatusTypeSchema
      **/
     public function getPaymentStatus() {
-        return $this->paymentStatus;
+        return $this->properties['paymentStatus'];
     }
 
     /**
      * The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.
+     *
+     * @param $provider PersonSchema|OrganizationSchema
      **/
-    private $provider;
     public function setProvider($provider) {
-        $this->provider = $provider;
+        $this->properties['provider'] = $provider;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema|OrganizationSchema     
+     * @return PersonSchema|OrganizationSchema
      **/
     public function getProvider() {
-        return $this->provider;
+        return $this->properties['provider'];
     }
 
     /**
      * The Order(s) related to this Invoice. One or more Orders may be combined into a single Invoice.
+     *
+     * @param $referencesOrder OrderSchema
      **/
-    private $referencesOrder;
     public function setReferencesOrder($referencesOrder) {
-        $this->referencesOrder = $referencesOrder;
+        $this->properties['referencesOrder'] = $referencesOrder;
 
         return $this;
     }
 
     /**
-     * @return OrderSchema     
+     * @return OrderSchema
      **/
     public function getReferencesOrder() {
-        return $this->referencesOrder;
+        return $this->properties['referencesOrder'];
     }
 
     /**
      * The date the invoice is scheduled to be paid.
+     *
+     * @param $scheduledPaymentDate DateSchema
      **/
-    private $scheduledPaymentDate;
     public function setScheduledPaymentDate($scheduledPaymentDate) {
-        $this->scheduledPaymentDate = $scheduledPaymentDate;
+        $this->properties['scheduledPaymentDate'] = $scheduledPaymentDate;
 
         return $this;
     }
 
     /**
-     * @return DateSchema     
+     * @return DateSchema
      **/
     public function getScheduledPaymentDate() {
-        return $this->scheduledPaymentDate;
+        return $this->properties['scheduledPaymentDate'];
     }
 
     /**
      * The total amount due.
+     *
+     * @param $totalPaymentDue PriceSpecificationSchema
      **/
-    private $totalPaymentDue;
     public function setTotalPaymentDue($totalPaymentDue) {
-        $this->totalPaymentDue = $totalPaymentDue;
+        $this->properties['totalPaymentDue'] = $totalPaymentDue;
 
         return $this;
     }
 
     /**
-     * @return PriceSpecificationSchema     
+     * @return PriceSpecificationSchema
      **/
     public function getTotalPaymentDue() {
-        return $this->totalPaymentDue;
+        return $this->properties['totalPaymentDue'];
     }
 
 

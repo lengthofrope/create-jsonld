@@ -35,12 +35,7 @@ class MotelSchema extends LodgingBusinessSchema
 {
     public static function factory()
     {
-        return new MotelSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MotelSchema('http://schema.org/', 'Motel');
     }
 
 

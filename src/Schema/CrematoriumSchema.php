@@ -35,12 +35,7 @@ class CrematoriumSchema extends CivicStructureSchema
 {
     public static function factory()
     {
-        return new CrematoriumSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new CrematoriumSchema('http://schema.org/', 'Crematorium');
     }
 
 

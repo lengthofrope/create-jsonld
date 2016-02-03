@@ -35,97 +35,97 @@ class QuestionSchema extends CreativeWorkSchema
 {
     public static function factory()
     {
-        return new QuestionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new QuestionSchema('http://schema.org/', 'Question');
     }
 
     /**
      * The answer that has been accepted as best, typically on a Question/Answer site. Sites vary in their selection mechanisms, e.g. drawing on community opinion and/or the view of the Question author.
+     *
+     * @param $acceptedAnswer AnswerSchema
      **/
-    private $acceptedAnswer;
     public function setAcceptedAnswer($acceptedAnswer) {
-        $this->acceptedAnswer = $acceptedAnswer;
+        $this->properties['acceptedAnswer'] = $acceptedAnswer;
 
         return $this;
     }
 
     /**
-     * @return AnswerSchema     
+     * @return AnswerSchema
      **/
     public function getAcceptedAnswer() {
-        return $this->acceptedAnswer;
+        return $this->properties['acceptedAnswer'];
     }
 
     /**
      * The number of answers this question has received.
+     *
+     * @param $answerCount IntegerSchema
      **/
-    private $answerCount;
     public function setAnswerCount($answerCount) {
-        $this->answerCount = $answerCount;
+        $this->properties['answerCount'] = $answerCount;
 
         return $this;
     }
 
     /**
-     * @return IntegerSchema     
+     * @return IntegerSchema
      **/
     public function getAnswerCount() {
-        return $this->answerCount;
+        return $this->properties['answerCount'];
     }
 
     /**
      * The number of downvotes this question, answer or comment has received from the community.
+     *
+     * @param $downvoteCount IntegerSchema
      **/
-    private $downvoteCount;
     public function setDownvoteCount($downvoteCount) {
-        $this->downvoteCount = $downvoteCount;
+        $this->properties['downvoteCount'] = $downvoteCount;
 
         return $this;
     }
 
     /**
-     * @return IntegerSchema     
+     * @return IntegerSchema
      **/
     public function getDownvoteCount() {
-        return $this->downvoteCount;
+        return $this->properties['downvoteCount'];
     }
 
     /**
      * An answer (possibly one of several, possibly incorrect) to a Question, e.g. on a Question/Answer site.
+     *
+     * @param $suggestedAnswer AnswerSchema
      **/
-    private $suggestedAnswer;
     public function setSuggestedAnswer($suggestedAnswer) {
-        $this->suggestedAnswer = $suggestedAnswer;
+        $this->properties['suggestedAnswer'] = $suggestedAnswer;
 
         return $this;
     }
 
     /**
-     * @return AnswerSchema     
+     * @return AnswerSchema
      **/
     public function getSuggestedAnswer() {
-        return $this->suggestedAnswer;
+        return $this->properties['suggestedAnswer'];
     }
 
     /**
      * The number of upvotes this question, answer or comment has received from the community.
+     *
+     * @param $upvoteCount IntegerSchema
      **/
-    private $upvoteCount;
     public function setUpvoteCount($upvoteCount) {
-        $this->upvoteCount = $upvoteCount;
+        $this->properties['upvoteCount'] = $upvoteCount;
 
         return $this;
     }
 
     /**
-     * @return IntegerSchema     
+     * @return IntegerSchema
      **/
     public function getUpvoteCount() {
-        return $this->upvoteCount;
+        return $this->properties['upvoteCount'];
     }
 
 

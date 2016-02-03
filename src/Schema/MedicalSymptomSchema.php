@@ -35,12 +35,7 @@ class MedicalSymptomSchema extends MedicalSignOrSymptomSchema
 {
     public static function factory()
     {
-        return new MedicalSymptomSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MedicalSymptomSchema('http://schema.org/', 'MedicalSymptom');
     }
 
 

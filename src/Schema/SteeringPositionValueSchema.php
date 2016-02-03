@@ -35,12 +35,7 @@ class SteeringPositionValueSchema extends QualitativeValueSchema
 {
     public static function factory()
     {
-        return new SteeringPositionValueSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new SteeringPositionValueSchema('http://schema.org/', 'SteeringPositionValue');
     }
 
 

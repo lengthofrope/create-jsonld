@@ -35,12 +35,7 @@ class BusStopSchema extends CivicStructureSchema
 {
     public static function factory()
     {
-        return new BusStopSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new BusStopSchema('http://schema.org/', 'BusStop');
     }
 
 

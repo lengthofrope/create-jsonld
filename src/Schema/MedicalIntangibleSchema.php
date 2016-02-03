@@ -35,12 +35,7 @@ class MedicalIntangibleSchema extends MedicalEntitySchema
 {
     public static function factory()
     {
-        return new MedicalIntangibleSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MedicalIntangibleSchema('http://schema.org/', 'MedicalIntangible');
     }
 
 

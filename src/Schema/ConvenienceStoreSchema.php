@@ -35,12 +35,7 @@ class ConvenienceStoreSchema extends StoreSchema
 {
     public static function factory()
     {
-        return new ConvenienceStoreSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ConvenienceStoreSchema('http://schema.org/', 'ConvenienceStore');
     }
 
 

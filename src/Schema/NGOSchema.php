@@ -35,12 +35,7 @@ class NGOSchema extends OrganizationSchema
 {
     public static function factory()
     {
-        return new NGOSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new NGOSchema('http://schema.org/', 'NGO');
     }
 
 

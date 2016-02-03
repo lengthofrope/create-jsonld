@@ -35,12 +35,7 @@ class EnergySchema extends QuantitySchema
 {
     public static function factory()
     {
-        return new EnergySchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new EnergySchema('http://schema.org/', 'Energy');
     }
 
 

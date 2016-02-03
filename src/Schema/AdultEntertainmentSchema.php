@@ -35,12 +35,7 @@ class AdultEntertainmentSchema extends EntertainmentBusinessSchema
 {
     public static function factory()
     {
-        return new AdultEntertainmentSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new AdultEntertainmentSchema('http://schema.org/', 'AdultEntertainment');
     }
 
 

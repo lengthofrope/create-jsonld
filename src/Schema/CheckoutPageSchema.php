@@ -35,12 +35,7 @@ class CheckoutPageSchema extends WebPageSchema
 {
     public static function factory()
     {
-        return new CheckoutPageSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new CheckoutPageSchema('http://schema.org/', 'CheckoutPage');
     }
 
 

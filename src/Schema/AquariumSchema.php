@@ -35,12 +35,7 @@ class AquariumSchema extends CivicStructureSchema
 {
     public static function factory()
     {
-        return new AquariumSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new AquariumSchema('http://schema.org/', 'Aquarium');
     }
 
 

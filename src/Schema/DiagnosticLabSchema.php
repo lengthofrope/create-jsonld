@@ -35,29 +35,25 @@ class DiagnosticLabSchema extends MedicalOrganizationSchema
 {
     public static function factory()
     {
-        return new DiagnosticLabSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new DiagnosticLabSchema('http://schema.org/', 'DiagnosticLab');
     }
 
     /**
      * A diagnostic test or procedure offered by this lab.
+     *
+     * @param $availableTest MedicalTestSchema
      **/
-    private $availableTest;
     public function setAvailableTest($availableTest) {
-        $this->availableTest = $availableTest;
+        $this->properties['availableTest'] = $availableTest;
 
         return $this;
     }
 
     /**
-     * @return MedicalTestSchema     
+     * @return MedicalTestSchema
      **/
     public function getAvailableTest() {
-        return $this->availableTest;
+        return $this->properties['availableTest'];
     }
 
 

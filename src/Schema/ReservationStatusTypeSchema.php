@@ -35,12 +35,7 @@ class ReservationStatusTypeSchema extends EnumerationSchema
 {
     public static function factory()
     {
-        return new ReservationStatusTypeSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ReservationStatusTypeSchema('http://schema.org/', 'ReservationStatusType');
     }
 
 

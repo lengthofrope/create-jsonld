@@ -35,12 +35,7 @@ class ExerciseGymSchema extends SportsActivityLocationSchema
 {
     public static function factory()
     {
-        return new ExerciseGymSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ExerciseGymSchema('http://schema.org/', 'ExerciseGym');
     }
 
 

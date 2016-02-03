@@ -35,12 +35,7 @@ class IceCreamShopSchema extends FoodEstablishmentSchema
 {
     public static function factory()
     {
-        return new IceCreamShopSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new IceCreamShopSchema('http://schema.org/', 'IceCreamShop');
     }
 
 

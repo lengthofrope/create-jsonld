@@ -35,46 +35,43 @@ class AirportSchema extends CivicStructureSchema
 {
     public static function factory()
     {
-        return new AirportSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new AirportSchema('http://schema.org/', 'Airport');
     }
 
     /**
      * IATA identifier for an airline or airport.
+     *
+     * @param $iataCode TextSchema
      **/
-    private $iataCode;
     public function setIataCode($iataCode) {
-        $this->iataCode = $iataCode;
+        $this->properties['iataCode'] = $iataCode;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getIataCode() {
-        return $this->iataCode;
+        return $this->properties['iataCode'];
     }
 
     /**
      * IACO identifier for an airport.
+     *
+     * @param $iacoCode TextSchema
      **/
-    private $iacoCode;
     public function setIacoCode($iacoCode) {
-        $this->iacoCode = $iacoCode;
+        $this->properties['iacoCode'] = $iacoCode;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getIacoCode() {
-        return $this->iacoCode;
+        return $this->properties['iacoCode'];
     }
 
 

@@ -35,12 +35,7 @@ class FloristSchema extends StoreSchema
 {
     public static function factory()
     {
-        return new FloristSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new FloristSchema('http://schema.org/', 'Florist');
     }
 
 

@@ -37,12 +37,7 @@ class UserBlocksSchema extends UserInteractionSchema
 {
     public static function factory()
     {
-        return new UserBlocksSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new UserBlocksSchema('http://schema.org/', 'UserBlocks');
     }
 
 

@@ -37,97 +37,97 @@ class UserCommentsSchema extends UserInteractionSchema
 {
     public static function factory()
     {
-        return new UserCommentsSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new UserCommentsSchema('http://schema.org/', 'UserComments');
     }
 
     /**
      * The text of the UserComment.
+     *
+     * @param $commentText TextSchema
      **/
-    private $commentText;
     public function setCommentText($commentText) {
-        $this->commentText = $commentText;
+        $this->properties['commentText'] = $commentText;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getCommentText() {
-        return $this->commentText;
+        return $this->properties['commentText'];
     }
 
     /**
      * The time at which the UserComment was made.
+     *
+     * @param $commentTime DateSchema
      **/
-    private $commentTime;
     public function setCommentTime($commentTime) {
-        $this->commentTime = $commentTime;
+        $this->properties['commentTime'] = $commentTime;
 
         return $this;
     }
 
     /**
-     * @return DateSchema     
+     * @return DateSchema
      **/
     public function getCommentTime() {
-        return $this->commentTime;
+        return $this->properties['commentTime'];
     }
 
     /**
      * The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.
+     *
+     * @param $creator OrganizationSchema|PersonSchema
      **/
-    private $creator;
     public function setCreator($creator) {
-        $this->creator = $creator;
+        $this->properties['creator'] = $creator;
 
         return $this;
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema     
+     * @return OrganizationSchema|PersonSchema
      **/
     public function getCreator() {
-        return $this->creator;
+        return $this->properties['creator'];
     }
 
     /**
      * Specifies the CreativeWork associated with the UserComment.
+     *
+     * @param $discusses CreativeWorkSchema
      **/
-    private $discusses;
     public function setDiscusses($discusses) {
-        $this->discusses = $discusses;
+        $this->properties['discusses'] = $discusses;
 
         return $this;
     }
 
     /**
-     * @return CreativeWorkSchema     
+     * @return CreativeWorkSchema
      **/
     public function getDiscusses() {
-        return $this->discusses;
+        return $this->properties['discusses'];
     }
 
     /**
      * The URL at which a reply may be posted to the specified UserComment.
+     *
+     * @param $replyToUrl URLSchema
      **/
-    private $replyToUrl;
     public function setReplyToUrl($replyToUrl) {
-        $this->replyToUrl = $replyToUrl;
+        $this->properties['replyToUrl'] = $replyToUrl;
 
         return $this;
     }
 
     /**
-     * @return URLSchema     
+     * @return URLSchema
      **/
     public function getReplyToUrl() {
-        return $this->replyToUrl;
+        return $this->properties['replyToUrl'];
     }
 
 

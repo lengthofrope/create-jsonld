@@ -35,12 +35,7 @@ class MotorcycleDealerSchema extends AutomotiveBusinessSchema
 {
     public static function factory()
     {
-        return new MotorcycleDealerSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MotorcycleDealerSchema('http://schema.org/', 'MotorcycleDealer');
     }
 
 

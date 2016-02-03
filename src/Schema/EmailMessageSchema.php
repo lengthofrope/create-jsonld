@@ -35,12 +35,7 @@ class EmailMessageSchema extends CreativeWorkSchema
 {
     public static function factory()
     {
-        return new EmailMessageSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new EmailMessageSchema('http://schema.org/', 'EmailMessage');
     }
 
 

@@ -35,12 +35,7 @@ class AcceptActionSchema extends AllocateActionSchema
 {
     public static function factory()
     {
-        return new AcceptActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new AcceptActionSchema('http://schema.org/', 'AcceptAction');
     }
 
 

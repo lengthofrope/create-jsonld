@@ -35,46 +35,43 @@ class SendActionSchema extends TransferActionSchema
 {
     public static function factory()
     {
-        return new SendActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new SendActionSchema('http://schema.org/', 'SendAction');
     }
 
     /**
      * A sub property of instrument. The method of delivery.
+     *
+     * @param $deliveryMethod DeliveryMethodSchema
      **/
-    private $deliveryMethod;
     public function setDeliveryMethod($deliveryMethod) {
-        $this->deliveryMethod = $deliveryMethod;
+        $this->properties['deliveryMethod'] = $deliveryMethod;
 
         return $this;
     }
 
     /**
-     * @return DeliveryMethodSchema     
+     * @return DeliveryMethodSchema
      **/
     public function getDeliveryMethod() {
-        return $this->deliveryMethod;
+        return $this->properties['deliveryMethod'];
     }
 
     /**
      * A sub property of participant. The participant who is at the receiving end of the action.
+     *
+     * @param $recipient AudienceSchema|OrganizationSchema|PersonSchema
      **/
-    private $recipient;
     public function setRecipient($recipient) {
-        $this->recipient = $recipient;
+        $this->properties['recipient'] = $recipient;
 
         return $this;
     }
 
     /**
-     * @return AudienceSchema|OrganizationSchema|PersonSchema     
+     * @return AudienceSchema|OrganizationSchema|PersonSchema
      **/
     public function getRecipient() {
-        return $this->recipient;
+        return $this->properties['recipient'];
     }
 
 

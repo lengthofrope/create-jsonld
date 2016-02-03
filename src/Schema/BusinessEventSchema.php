@@ -35,12 +35,7 @@ class BusinessEventSchema extends EventSchema
 {
     public static function factory()
     {
-        return new BusinessEventSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new BusinessEventSchema('http://schema.org/', 'BusinessEvent');
     }
 
 

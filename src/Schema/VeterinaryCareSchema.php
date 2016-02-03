@@ -35,12 +35,7 @@ class VeterinaryCareSchema extends MedicalOrganizationSchema
 {
     public static function factory()
     {
-        return new VeterinaryCareSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new VeterinaryCareSchema('http://schema.org/', 'VeterinaryCare');
     }
 
 

@@ -35,63 +35,61 @@ class ProductModelSchema extends ProductSchema
 {
     public static function factory()
     {
-        return new ProductModelSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ProductModelSchema('http://schema.org/', 'ProductModel');
     }
 
     /**
      * A pointer to a base product from which this product is a variant. It is safe to infer that the variant inherits all product features from the base model, unless defined locally. This is not transitive.
+     *
+     * @param $isVariantOf ProductModelSchema
      **/
-    private $isVariantOf;
     public function setIsVariantOf($isVariantOf) {
-        $this->isVariantOf = $isVariantOf;
+        $this->properties['isVariantOf'] = $isVariantOf;
 
         return $this;
     }
 
     /**
-     * @return ProductModelSchema     
+     * @return ProductModelSchema
      **/
     public function getIsVariantOf() {
-        return $this->isVariantOf;
+        return $this->properties['isVariantOf'];
     }
 
     /**
      * A pointer from a previous, often discontinued variant of the product to its newer variant.
+     *
+     * @param $predecessorOf ProductModelSchema
      **/
-    private $predecessorOf;
     public function setPredecessorOf($predecessorOf) {
-        $this->predecessorOf = $predecessorOf;
+        $this->properties['predecessorOf'] = $predecessorOf;
 
         return $this;
     }
 
     /**
-     * @return ProductModelSchema     
+     * @return ProductModelSchema
      **/
     public function getPredecessorOf() {
-        return $this->predecessorOf;
+        return $this->properties['predecessorOf'];
     }
 
     /**
      * A pointer from a newer variant of a product  to its previous, often discontinued predecessor.
+     *
+     * @param $successorOf ProductModelSchema
      **/
-    private $successorOf;
     public function setSuccessorOf($successorOf) {
-        $this->successorOf = $successorOf;
+        $this->properties['successorOf'] = $successorOf;
 
         return $this;
     }
 
     /**
-     * @return ProductModelSchema     
+     * @return ProductModelSchema
      **/
     public function getSuccessorOf() {
-        return $this->successorOf;
+        return $this->properties['successorOf'];
     }
 
 

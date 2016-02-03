@@ -35,80 +35,79 @@ class ImageObjectSchema extends MediaObjectSchema
 {
     public static function factory()
     {
-        return new ImageObjectSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ImageObjectSchema('http://schema.org/', 'ImageObject');
     }
 
     /**
      * The caption for this object.
+     *
+     * @param $caption TextSchema
      **/
-    private $caption;
     public function setCaption($caption) {
-        $this->caption = $caption;
+        $this->properties['caption'] = $caption;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getCaption() {
-        return $this->caption;
+        return $this->properties['caption'];
     }
 
     /**
      * exif data for this object.
+     *
+     * @param $exifData TextSchema|PropertyValueSchema
      **/
-    private $exifData;
     public function setExifData($exifData) {
-        $this->exifData = $exifData;
+        $this->properties['exifData'] = $exifData;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|PropertyValueSchema     
+     * @return TextSchema|PropertyValueSchema
      **/
     public function getExifData() {
-        return $this->exifData;
+        return $this->properties['exifData'];
     }
 
     /**
      * Indicates whether this image is representative of the content of the page.
+     *
+     * @param $representativeOfPage BooleanSchema
      **/
-    private $representativeOfPage;
     public function setRepresentativeOfPage($representativeOfPage) {
-        $this->representativeOfPage = $representativeOfPage;
+        $this->properties['representativeOfPage'] = $representativeOfPage;
 
         return $this;
     }
 
     /**
-     * @return BooleanSchema     
+     * @return BooleanSchema
      **/
     public function getRepresentativeOfPage() {
-        return $this->representativeOfPage;
+        return $this->properties['representativeOfPage'];
     }
 
     /**
      * Thumbnail image for an image or video.
+     *
+     * @param $thumbnail ImageObjectSchema
      **/
-    private $thumbnail;
     public function setThumbnail($thumbnail) {
-        $this->thumbnail = $thumbnail;
+        $this->properties['thumbnail'] = $thumbnail;
 
         return $this;
     }
 
     /**
-     * @return ImageObjectSchema     
+     * @return ImageObjectSchema
      **/
     public function getThumbnail() {
-        return $this->thumbnail;
+        return $this->properties['thumbnail'];
     }
 
 

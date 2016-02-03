@@ -35,12 +35,7 @@ class GeneralContractorSchema extends HomeAndConstructionBusinessSchema
 {
     public static function factory()
     {
-        return new GeneralContractorSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new GeneralContractorSchema('http://schema.org/', 'GeneralContractor');
     }
 
 

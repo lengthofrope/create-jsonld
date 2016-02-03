@@ -35,12 +35,7 @@ class FindActionSchema extends ActionSchema
 {
     public static function factory()
     {
-        return new FindActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new FindActionSchema('http://schema.org/', 'FindAction');
     }
 
 

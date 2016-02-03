@@ -35,80 +35,79 @@ class PriceSpecificationSchema extends StructuredValueSchema
 {
     public static function factory()
     {
-        return new PriceSpecificationSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new PriceSpecificationSchema('http://schema.org/', 'PriceSpecification');
     }
 
     /**
      * The interval and unit of measurement of ordering quantities for which the offer or price specification is valid. This allows e.g. specifying that a certain freight charge is valid only for a certain quantity.
+     *
+     * @param $eligibleQuantity QuantitativeValueSchema
      **/
-    private $eligibleQuantity;
     public function setEligibleQuantity($eligibleQuantity) {
-        $this->eligibleQuantity = $eligibleQuantity;
+        $this->properties['eligibleQuantity'] = $eligibleQuantity;
 
         return $this;
     }
 
     /**
-     * @return QuantitativeValueSchema     
+     * @return QuantitativeValueSchema
      **/
     public function getEligibleQuantity() {
-        return $this->eligibleQuantity;
+        return $this->properties['eligibleQuantity'];
     }
 
     /**
      * The transaction volume, in a monetary unit, for which the offer or price specification is valid, e.g. for indicating a minimal purchasing volume, to express free shipping above a certain order volume, or to limit the acceptance of credit cards to purchases to a certain minimal amount.
+     *
+     * @param $eligibleTransactionVolume PriceSpecificationSchema
      **/
-    private $eligibleTransactionVolume;
     public function setEligibleTransactionVolume($eligibleTransactionVolume) {
-        $this->eligibleTransactionVolume = $eligibleTransactionVolume;
+        $this->properties['eligibleTransactionVolume'] = $eligibleTransactionVolume;
 
         return $this;
     }
 
     /**
-     * @return PriceSpecificationSchema     
+     * @return PriceSpecificationSchema
      **/
     public function getEligibleTransactionVolume() {
-        return $this->eligibleTransactionVolume;
+        return $this->properties['eligibleTransactionVolume'];
     }
 
     /**
      * The highest price if the price is a range.
+     *
+     * @param $maxPrice NumberSchema
      **/
-    private $maxPrice;
     public function setMaxPrice($maxPrice) {
-        $this->maxPrice = $maxPrice;
+        $this->properties['maxPrice'] = $maxPrice;
 
         return $this;
     }
 
     /**
-     * @return NumberSchema     
+     * @return NumberSchema
      **/
     public function getMaxPrice() {
-        return $this->maxPrice;
+        return $this->properties['maxPrice'];
     }
 
     /**
      * The lowest price if the price is a range.
+     *
+     * @param $minPrice NumberSchema
      **/
-    private $minPrice;
     public function setMinPrice($minPrice) {
-        $this->minPrice = $minPrice;
+        $this->properties['minPrice'] = $minPrice;
 
         return $this;
     }
 
     /**
-     * @return NumberSchema     
+     * @return NumberSchema
      **/
     public function getMinPrice() {
-        return $this->minPrice;
+        return $this->properties['minPrice'];
     }
 
     /**
@@ -133,87 +132,92 @@ class PriceSpecificationSchema extends StructuredValueSchema
 </li>
 </ul>
       
+     *
+     * @param $price NumberSchema|TextSchema
      **/
-    private $price;
     public function setPrice($price) {
-        $this->price = $price;
+        $this->properties['price'] = $price;
 
         return $this;
     }
 
     /**
-     * @return NumberSchema|TextSchema     
+     * @return NumberSchema|TextSchema
      **/
     public function getPrice() {
-        return $this->price;
+        return $this->properties['price'];
     }
 
     /**
      * The currency (in 3-letter ISO 4217 format) of the price or a price component, when attached to PriceSpecification and its subtypes.
+     *
+     * @param $priceCurrency TextSchema
      **/
-    private $priceCurrency;
     public function setPriceCurrency($priceCurrency) {
-        $this->priceCurrency = $priceCurrency;
+        $this->properties['priceCurrency'] = $priceCurrency;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getPriceCurrency() {
-        return $this->priceCurrency;
+        return $this->properties['priceCurrency'];
     }
 
     /**
      * The date when the item becomes valid.
+     *
+     * @param $validFrom DateTimeSchema
      **/
-    private $validFrom;
     public function setValidFrom($validFrom) {
-        $this->validFrom = $validFrom;
+        $this->properties['validFrom'] = $validFrom;
 
         return $this;
     }
 
     /**
-     * @return DateTimeSchema     
+     * @return DateTimeSchema
      **/
     public function getValidFrom() {
-        return $this->validFrom;
+        return $this->properties['validFrom'];
     }
 
     /**
      * The end of the validity of offer, price specification, or opening hours data.
+     *
+     * @param $validThrough DateTimeSchema
      **/
-    private $validThrough;
     public function setValidThrough($validThrough) {
-        $this->validThrough = $validThrough;
+        $this->properties['validThrough'] = $validThrough;
 
         return $this;
     }
 
     /**
-     * @return DateTimeSchema     
+     * @return DateTimeSchema
      **/
     public function getValidThrough() {
-        return $this->validThrough;
+        return $this->properties['validThrough'];
     }
 
     /**
      * Specifies whether the applicable value-added tax (VAT) is included in the price specification or not.
+     *
+     * @param $valueAddedTaxIncluded BooleanSchema
      **/
-    private $valueAddedTaxIncluded;
     public function setValueAddedTaxIncluded($valueAddedTaxIncluded) {
-        $this->valueAddedTaxIncluded = $valueAddedTaxIncluded;
+        $this->properties['valueAddedTaxIncluded'] = $valueAddedTaxIncluded;
 
         return $this;
     }
 
     /**
-     * @return BooleanSchema     
+     * @return BooleanSchema
      **/
     public function getValueAddedTaxIncluded() {
-        return $this->valueAddedTaxIncluded;
+        return $this->properties['valueAddedTaxIncluded'];
     }
 
 

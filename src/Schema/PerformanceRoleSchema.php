@@ -35,29 +35,25 @@ class PerformanceRoleSchema extends RoleSchema
 {
     public static function factory()
     {
-        return new PerformanceRoleSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new PerformanceRoleSchema('http://schema.org/', 'PerformanceRole');
     }
 
     /**
      * The name of a character played in some acting or performing role, i.e. in a PerformanceRole.
+     *
+     * @param $characterName TextSchema
      **/
-    private $characterName;
     public function setCharacterName($characterName) {
-        $this->characterName = $characterName;
+        $this->properties['characterName'] = $characterName;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getCharacterName() {
-        return $this->characterName;
+        return $this->properties['characterName'];
     }
 
 

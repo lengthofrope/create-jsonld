@@ -36,12 +36,7 @@ class SeriesSchema extends CreativeWorkSchema
 {
     public static function factory()
     {
-        return new SeriesSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new SeriesSchema('http://schema.org/', 'Series');
     }
 
 

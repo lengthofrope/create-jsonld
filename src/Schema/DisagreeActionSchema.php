@@ -35,12 +35,7 @@ class DisagreeActionSchema extends ReactActionSchema
 {
     public static function factory()
     {
-        return new DisagreeActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new DisagreeActionSchema('http://schema.org/', 'DisagreeAction');
     }
 
 

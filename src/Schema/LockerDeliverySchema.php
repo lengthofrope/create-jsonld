@@ -35,12 +35,7 @@ class LockerDeliverySchema extends DeliveryMethodSchema
 {
     public static function factory()
     {
-        return new LockerDeliverySchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new LockerDeliverySchema('http://schema.org/', 'LockerDelivery');
     }
 
 

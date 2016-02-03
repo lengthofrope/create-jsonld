@@ -35,80 +35,79 @@ class BroadcastChannelSchema extends IntangibleSchema
 {
     public static function factory()
     {
-        return new BroadcastChannelSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new BroadcastChannelSchema('http://schema.org/', 'BroadcastChannel');
     }
 
     /**
      * The unique address by which the BroadcastService can be identified in a provider lineup. In US, this is typically a number.
+     *
+     * @param $broadcastChannelId TextSchema
      **/
-    private $broadcastChannelId;
     public function setBroadcastChannelId($broadcastChannelId) {
-        $this->broadcastChannelId = $broadcastChannelId;
+        $this->properties['broadcastChannelId'] = $broadcastChannelId;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getBroadcastChannelId() {
-        return $this->broadcastChannelId;
+        return $this->properties['broadcastChannelId'];
     }
 
     /**
      * The type of service required to have access to the channel (e.g. Standard or Premium).
+     *
+     * @param $broadcastServiceTier TextSchema
      **/
-    private $broadcastServiceTier;
     public function setBroadcastServiceTier($broadcastServiceTier) {
-        $this->broadcastServiceTier = $broadcastServiceTier;
+        $this->properties['broadcastServiceTier'] = $broadcastServiceTier;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getBroadcastServiceTier() {
-        return $this->broadcastServiceTier;
+        return $this->properties['broadcastServiceTier'];
     }
 
     /**
      * The CableOrSatelliteService offering the channel.
+     *
+     * @param $inBroadcastLineup CableOrSatelliteServiceSchema
      **/
-    private $inBroadcastLineup;
     public function setInBroadcastLineup($inBroadcastLineup) {
-        $this->inBroadcastLineup = $inBroadcastLineup;
+        $this->properties['inBroadcastLineup'] = $inBroadcastLineup;
 
         return $this;
     }
 
     /**
-     * @return CableOrSatelliteServiceSchema     
+     * @return CableOrSatelliteServiceSchema
      **/
     public function getInBroadcastLineup() {
-        return $this->inBroadcastLineup;
+        return $this->properties['inBroadcastLineup'];
     }
 
     /**
      * The BroadcastService offered on this channel.
+     *
+     * @param $providesBroadcastService BroadcastServiceSchema
      **/
-    private $providesBroadcastService;
     public function setProvidesBroadcastService($providesBroadcastService) {
-        $this->providesBroadcastService = $providesBroadcastService;
+        $this->properties['providesBroadcastService'] = $providesBroadcastService;
 
         return $this;
     }
 
     /**
-     * @return BroadcastServiceSchema     
+     * @return BroadcastServiceSchema
      **/
     public function getProvidesBroadcastService() {
-        return $this->providesBroadcastService;
+        return $this->properties['providesBroadcastService'];
     }
 
 

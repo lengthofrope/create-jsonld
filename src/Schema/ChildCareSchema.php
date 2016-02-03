@@ -35,12 +35,7 @@ class ChildCareSchema extends LocalBusinessSchema
 {
     public static function factory()
     {
-        return new ChildCareSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ChildCareSchema('http://schema.org/', 'ChildCare');
     }
 
 

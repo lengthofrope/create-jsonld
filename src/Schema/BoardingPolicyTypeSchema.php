@@ -35,12 +35,7 @@ class BoardingPolicyTypeSchema extends EnumerationSchema
 {
     public static function factory()
     {
-        return new BoardingPolicyTypeSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new BoardingPolicyTypeSchema('http://schema.org/', 'BoardingPolicyType');
     }
 
 

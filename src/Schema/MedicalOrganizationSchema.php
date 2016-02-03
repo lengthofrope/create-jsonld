@@ -35,12 +35,7 @@ class MedicalOrganizationSchema extends LocalBusinessSchema
 {
     public static function factory()
     {
-        return new MedicalOrganizationSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MedicalOrganizationSchema('http://schema.org/', 'MedicalOrganization');
     }
 
 

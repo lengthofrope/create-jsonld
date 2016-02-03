@@ -35,12 +35,7 @@ class ElectricianSchema extends HomeAndConstructionBusinessSchema
 {
     public static function factory()
     {
-        return new ElectricianSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ElectricianSchema('http://schema.org/', 'Electrician');
     }
 
 

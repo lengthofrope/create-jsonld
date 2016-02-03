@@ -35,80 +35,79 @@ class OwnershipInfoSchema extends StructuredValueSchema
 {
     public static function factory()
     {
-        return new OwnershipInfoSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new OwnershipInfoSchema('http://schema.org/', 'OwnershipInfo');
     }
 
     /**
      * The organization or person from which the product was acquired.
+     *
+     * @param $acquiredFrom OrganizationSchema|PersonSchema
      **/
-    private $acquiredFrom;
     public function setAcquiredFrom($acquiredFrom) {
-        $this->acquiredFrom = $acquiredFrom;
+        $this->properties['acquiredFrom'] = $acquiredFrom;
 
         return $this;
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema     
+     * @return OrganizationSchema|PersonSchema
      **/
     public function getAcquiredFrom() {
-        return $this->acquiredFrom;
+        return $this->properties['acquiredFrom'];
     }
 
     /**
      * The date and time of obtaining the product.
+     *
+     * @param $ownedFrom DateTimeSchema
      **/
-    private $ownedFrom;
     public function setOwnedFrom($ownedFrom) {
-        $this->ownedFrom = $ownedFrom;
+        $this->properties['ownedFrom'] = $ownedFrom;
 
         return $this;
     }
 
     /**
-     * @return DateTimeSchema     
+     * @return DateTimeSchema
      **/
     public function getOwnedFrom() {
-        return $this->ownedFrom;
+        return $this->properties['ownedFrom'];
     }
 
     /**
      * The date and time of giving up ownership on the product.
+     *
+     * @param $ownedThrough DateTimeSchema
      **/
-    private $ownedThrough;
     public function setOwnedThrough($ownedThrough) {
-        $this->ownedThrough = $ownedThrough;
+        $this->properties['ownedThrough'] = $ownedThrough;
 
         return $this;
     }
 
     /**
-     * @return DateTimeSchema     
+     * @return DateTimeSchema
      **/
     public function getOwnedThrough() {
-        return $this->ownedThrough;
+        return $this->properties['ownedThrough'];
     }
 
     /**
      * The product that this structured value is referring to.
+     *
+     * @param $typeOfGood ProductSchema
      **/
-    private $typeOfGood;
     public function setTypeOfGood($typeOfGood) {
-        $this->typeOfGood = $typeOfGood;
+        $this->properties['typeOfGood'] = $typeOfGood;
 
         return $this;
     }
 
     /**
-     * @return ProductSchema     
+     * @return ProductSchema
      **/
     public function getTypeOfGood() {
-        return $this->typeOfGood;
+        return $this->properties['typeOfGood'];
     }
 
 

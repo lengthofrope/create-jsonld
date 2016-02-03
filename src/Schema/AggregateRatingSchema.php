@@ -35,63 +35,61 @@ class AggregateRatingSchema extends RatingSchema
 {
     public static function factory()
     {
-        return new AggregateRatingSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new AggregateRatingSchema('http://schema.org/', 'AggregateRating');
     }
 
     /**
      * The item that is being reviewed/rated.
+     *
+     * @param $itemReviewed ThingSchema
      **/
-    private $itemReviewed;
     public function setItemReviewed($itemReviewed) {
-        $this->itemReviewed = $itemReviewed;
+        $this->properties['itemReviewed'] = $itemReviewed;
 
         return $this;
     }
 
     /**
-     * @return ThingSchema     
+     * @return ThingSchema
      **/
     public function getItemReviewed() {
-        return $this->itemReviewed;
+        return $this->properties['itemReviewed'];
     }
 
     /**
      * The count of total number of ratings.
+     *
+     * @param $ratingCount IntegerSchema
      **/
-    private $ratingCount;
     public function setRatingCount($ratingCount) {
-        $this->ratingCount = $ratingCount;
+        $this->properties['ratingCount'] = $ratingCount;
 
         return $this;
     }
 
     /**
-     * @return IntegerSchema     
+     * @return IntegerSchema
      **/
     public function getRatingCount() {
-        return $this->ratingCount;
+        return $this->properties['ratingCount'];
     }
 
     /**
      * The count of total number of reviews.
+     *
+     * @param $reviewCount IntegerSchema
      **/
-    private $reviewCount;
     public function setReviewCount($reviewCount) {
-        $this->reviewCount = $reviewCount;
+        $this->properties['reviewCount'] = $reviewCount;
 
         return $this;
     }
 
     /**
-     * @return IntegerSchema     
+     * @return IntegerSchema
      **/
     public function getReviewCount() {
-        return $this->reviewCount;
+        return $this->properties['reviewCount'];
     }
 
 

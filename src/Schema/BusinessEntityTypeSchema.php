@@ -44,12 +44,7 @@ class BusinessEntityTypeSchema extends EnumerationSchema
 {
     public static function factory()
     {
-        return new BusinessEntityTypeSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new BusinessEntityTypeSchema('http://schema.org/', 'BusinessEntityType');
     }
 
 

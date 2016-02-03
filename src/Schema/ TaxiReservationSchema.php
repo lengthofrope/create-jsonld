@@ -35,63 +35,61 @@ class  TaxiReservationSchema extends ReservationSchema
 {
     public static function factory()
     {
-        return new  TaxiReservationSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new  TaxiReservationSchema('http://schema.org/', ' TaxiReservation');
     }
 
     /**
      * Number of people the reservation should accommodate.
+     *
+     * @param $partySize IntegerSchema|QuantitativeValueSchema
      **/
-    private $partySize;
     public function setPartySize($partySize) {
-        $this->partySize = $partySize;
+        $this->properties['partySize'] = $partySize;
 
         return $this;
     }
 
     /**
-     * @return IntegerSchema|QuantitativeValueSchema     
+     * @return IntegerSchema|QuantitativeValueSchema
      **/
     public function getPartySize() {
-        return $this->partySize;
+        return $this->properties['partySize'];
     }
 
     /**
      * Where a taxi will pick up a passenger or a rental car can be picked up.
+     *
+     * @param $pickupLocation PlaceSchema
      **/
-    private $pickupLocation;
     public function setPickupLocation($pickupLocation) {
-        $this->pickupLocation = $pickupLocation;
+        $this->properties['pickupLocation'] = $pickupLocation;
 
         return $this;
     }
 
     /**
-     * @return PlaceSchema     
+     * @return PlaceSchema
      **/
     public function getPickupLocation() {
-        return $this->pickupLocation;
+        return $this->properties['pickupLocation'];
     }
 
     /**
      * When a taxi will pickup a passenger or a rental car can be picked up.
+     *
+     * @param $pickupTime DateTimeSchema
      **/
-    private $pickupTime;
     public function setPickupTime($pickupTime) {
-        $this->pickupTime = $pickupTime;
+        $this->properties['pickupTime'] = $pickupTime;
 
         return $this;
     }
 
     /**
-     * @return DateTimeSchema     
+     * @return DateTimeSchema
      **/
     public function getPickupTime() {
-        return $this->pickupTime;
+        return $this->properties['pickupTime'];
     }
 
 

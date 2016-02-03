@@ -35,12 +35,7 @@ class IntangibleSchema extends ThingSchema
 {
     public static function factory()
     {
-        return new IntangibleSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new IntangibleSchema('http://schema.org/', 'Intangible');
     }
 
 

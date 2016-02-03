@@ -35,12 +35,7 @@ class AnimalShelterSchema extends LocalBusinessSchema
 {
     public static function factory()
     {
-        return new AnimalShelterSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new AnimalShelterSchema('http://schema.org/', 'AnimalShelter');
     }
 
 

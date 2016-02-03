@@ -35,12 +35,7 @@ class QuantitativeValueSchema extends StructuredValueSchema
 {
     public static function factory()
     {
-        return new QuantitativeValueSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new QuantitativeValueSchema('http://schema.org/', 'QuantitativeValue');
     }
 
     /**
@@ -48,122 +43,129 @@ class QuantitativeValueSchema extends StructuredValueSchema
 
 Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.
 
+     *
+     * @param $additionalProperty PropertyValueSchema
      **/
-    private $additionalProperty;
     public function setAdditionalProperty($additionalProperty) {
-        $this->additionalProperty = $additionalProperty;
+        $this->properties['additionalProperty'] = $additionalProperty;
 
         return $this;
     }
 
     /**
-     * @return PropertyValueSchema     
+     * @return PropertyValueSchema
      **/
     public function getAdditionalProperty() {
-        return $this->additionalProperty;
+        return $this->properties['additionalProperty'];
     }
 
     /**
      * The upper value of some characteristic or property.
+     *
+     * @param $maxValue NumberSchema
      **/
-    private $maxValue;
     public function setMaxValue($maxValue) {
-        $this->maxValue = $maxValue;
+        $this->properties['maxValue'] = $maxValue;
 
         return $this;
     }
 
     /**
-     * @return NumberSchema     
+     * @return NumberSchema
      **/
     public function getMaxValue() {
-        return $this->maxValue;
+        return $this->properties['maxValue'];
     }
 
     /**
      * The lower value of some characteristic or property.
+     *
+     * @param $minValue NumberSchema
      **/
-    private $minValue;
     public function setMinValue($minValue) {
-        $this->minValue = $minValue;
+        $this->properties['minValue'] = $minValue;
 
         return $this;
     }
 
     /**
-     * @return NumberSchema     
+     * @return NumberSchema
      **/
     public function getMinValue() {
-        return $this->minValue;
+        return $this->properties['minValue'];
     }
 
     /**
      * The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes than the UN/CEFACT Common Code may be used with a prefix followed by a colon.
+     *
+     * @param $unitCode TextSchema|URLSchema
      **/
-    private $unitCode;
     public function setUnitCode($unitCode) {
-        $this->unitCode = $unitCode;
+        $this->properties['unitCode'] = $unitCode;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|URLSchema     
+     * @return TextSchema|URLSchema
      **/
     public function getUnitCode() {
-        return $this->unitCode;
+        return $this->properties['unitCode'];
     }
 
     /**
      * A string or text indicating the unit of measurement. Useful if you cannot provide a standard unit code for
 <a href='unitCode'>unitCode</a>.
+     *
+     * @param $unitText TextSchema
      **/
-    private $unitText;
     public function setUnitText($unitText) {
-        $this->unitText = $unitText;
+        $this->properties['unitText'] = $unitText;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getUnitText() {
-        return $this->unitText;
+        return $this->properties['unitText'];
     }
 
     /**
      * The value of the quantitative value or property value node. For QuantitativeValue, the recommended type for values is 'Number'. For PropertyValue, it can be 'Text;', 'Number', 'Boolean', or 'StructuredValue'.
+     *
+     * @param $value NumberSchema|TextSchema|BooleanSchema|StructuredValueSchema
      **/
-    private $value;
     public function setValue($value) {
-        $this->value = $value;
+        $this->properties['value'] = $value;
 
         return $this;
     }
 
     /**
-     * @return NumberSchema|TextSchema|BooleanSchema|StructuredValueSchema     
+     * @return NumberSchema|TextSchema|BooleanSchema|StructuredValueSchema
      **/
     public function getValue() {
-        return $this->value;
+        return $this->properties['value'];
     }
 
     /**
      * A pointer to a secondary value that provides additional information on the original value, e.g. a reference temperature.
+     *
+     * @param $valueReference EnumerationSchema|StructuredValueSchema|PropertyValueSchema|QualitativeValueSchema|QuantitativeValueSchema
      **/
-    private $valueReference;
     public function setValueReference($valueReference) {
-        $this->valueReference = $valueReference;
+        $this->properties['valueReference'] = $valueReference;
 
         return $this;
     }
 
     /**
-     * @return EnumerationSchema|StructuredValueSchema|PropertyValueSchema|QualitativeValueSchema|QuantitativeValueSchema     
+     * @return EnumerationSchema|StructuredValueSchema|PropertyValueSchema|QualitativeValueSchema|QuantitativeValueSchema
      **/
     public function getValueReference() {
-        return $this->valueReference;
+        return $this->properties['valueReference'];
     }
 
 

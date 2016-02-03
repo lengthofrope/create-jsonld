@@ -35,63 +35,61 @@ class InfectiousDiseaseSchema extends MedicalConditionSchema
 {
     public static function factory()
     {
-        return new InfectiousDiseaseSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new InfectiousDiseaseSchema('http://schema.org/', 'InfectiousDisease');
     }
 
     /**
      * The actual infectious agent, such as a specific bacterium.
+     *
+     * @param $infectiousAgent TextSchema
      **/
-    private $infectiousAgent;
     public function setInfectiousAgent($infectiousAgent) {
-        $this->infectiousAgent = $infectiousAgent;
+        $this->properties['infectiousAgent'] = $infectiousAgent;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getInfectiousAgent() {
-        return $this->infectiousAgent;
+        return $this->properties['infectiousAgent'];
     }
 
     /**
      * The class of infectious agent (bacteria, prion, etc.) that causes the disease.
+     *
+     * @param $infectiousAgentClass InfectiousAgentClassSchema
      **/
-    private $infectiousAgentClass;
     public function setInfectiousAgentClass($infectiousAgentClass) {
-        $this->infectiousAgentClass = $infectiousAgentClass;
+        $this->properties['infectiousAgentClass'] = $infectiousAgentClass;
 
         return $this;
     }
 
     /**
-     * @return InfectiousAgentClassSchema     
+     * @return InfectiousAgentClassSchema
      **/
     public function getInfectiousAgentClass() {
-        return $this->infectiousAgentClass;
+        return $this->properties['infectiousAgentClass'];
     }
 
     /**
      * How the disease spreads, either as a route or vector, for example 'direct contact', 'Aedes aegypti', etc.
+     *
+     * @param $transmissionMethod TextSchema
      **/
-    private $transmissionMethod;
     public function setTransmissionMethod($transmissionMethod) {
-        $this->transmissionMethod = $transmissionMethod;
+        $this->properties['transmissionMethod'] = $transmissionMethod;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getTransmissionMethod() {
-        return $this->transmissionMethod;
+        return $this->properties['transmissionMethod'];
     }
 
 

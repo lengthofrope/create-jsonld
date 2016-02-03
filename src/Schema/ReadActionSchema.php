@@ -35,12 +35,7 @@ class ReadActionSchema extends ConsumeActionSchema
 {
     public static function factory()
     {
-        return new ReadActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ReadActionSchema('http://schema.org/', 'ReadAction');
     }
 
 

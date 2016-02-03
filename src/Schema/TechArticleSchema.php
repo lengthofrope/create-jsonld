@@ -35,46 +35,43 @@ class TechArticleSchema extends ArticleSchema
 {
     public static function factory()
     {
-        return new TechArticleSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new TechArticleSchema('http://schema.org/', 'TechArticle');
     }
 
     /**
      * Prerequisites needed to fulfill steps in article.
+     *
+     * @param $dependencies TextSchema
      **/
-    private $dependencies;
     public function setDependencies($dependencies) {
-        $this->dependencies = $dependencies;
+        $this->properties['dependencies'] = $dependencies;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getDependencies() {
-        return $this->dependencies;
+        return $this->properties['dependencies'];
     }
 
     /**
      * Proficiency needed for this content; expected values: 'Beginner', 'Expert'.
+     *
+     * @param $proficiencyLevel TextSchema
      **/
-    private $proficiencyLevel;
     public function setProficiencyLevel($proficiencyLevel) {
-        $this->proficiencyLevel = $proficiencyLevel;
+        $this->properties['proficiencyLevel'] = $proficiencyLevel;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getProficiencyLevel() {
-        return $this->proficiencyLevel;
+        return $this->properties['proficiencyLevel'];
     }
 
 

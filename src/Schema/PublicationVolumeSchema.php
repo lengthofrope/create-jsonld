@@ -37,80 +37,79 @@ class PublicationVolumeSchema extends CreativeWorkSchema
 {
     public static function factory()
     {
-        return new PublicationVolumeSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new PublicationVolumeSchema('http://schema.org/', 'PublicationVolume');
     }
 
     /**
      * The page on which the work ends; for example "138" or "xvi".
+     *
+     * @param $pageEnd IntegerSchema|TextSchema
      **/
-    private $pageEnd;
     public function setPageEnd($pageEnd) {
-        $this->pageEnd = $pageEnd;
+        $this->properties['pageEnd'] = $pageEnd;
 
         return $this;
     }
 
     /**
-     * @return IntegerSchema|TextSchema     
+     * @return IntegerSchema|TextSchema
      **/
     public function getPageEnd() {
-        return $this->pageEnd;
+        return $this->properties['pageEnd'];
     }
 
     /**
      * The page on which the work starts; for example "135" or "xiii".
+     *
+     * @param $pageStart IntegerSchema|TextSchema
      **/
-    private $pageStart;
     public function setPageStart($pageStart) {
-        $this->pageStart = $pageStart;
+        $this->properties['pageStart'] = $pageStart;
 
         return $this;
     }
 
     /**
-     * @return IntegerSchema|TextSchema     
+     * @return IntegerSchema|TextSchema
      **/
     public function getPageStart() {
-        return $this->pageStart;
+        return $this->properties['pageStart'];
     }
 
     /**
      * Any description of pages that is not separated into pageStart and pageEnd; for example, "1-6, 9, 55" or "10-12, 46-49".
+     *
+     * @param $pagination TextSchema
      **/
-    private $pagination;
     public function setPagination($pagination) {
-        $this->pagination = $pagination;
+        $this->properties['pagination'] = $pagination;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getPagination() {
-        return $this->pagination;
+        return $this->properties['pagination'];
     }
 
     /**
      * Identifies the volume of publication or multi-part work; for example, "iii" or "2".
+     *
+     * @param $volumeNumber IntegerSchema|TextSchema
      **/
-    private $volumeNumber;
     public function setVolumeNumber($volumeNumber) {
-        $this->volumeNumber = $volumeNumber;
+        $this->properties['volumeNumber'] = $volumeNumber;
 
         return $this;
     }
 
     /**
-     * @return IntegerSchema|TextSchema     
+     * @return IntegerSchema|TextSchema
      **/
     public function getVolumeNumber() {
-        return $this->volumeNumber;
+        return $this->properties['volumeNumber'];
     }
 
 

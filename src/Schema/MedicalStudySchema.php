@@ -35,114 +35,115 @@ class MedicalStudySchema extends MedicalEntitySchema
 {
     public static function factory()
     {
-        return new MedicalStudySchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MedicalStudySchema('http://schema.org/', 'MedicalStudy');
     }
 
     /**
      * Expected or actual outcomes of the study.
+     *
+     * @param $outcome TextSchema
      **/
-    private $outcome;
     public function setOutcome($outcome) {
-        $this->outcome = $outcome;
+        $this->properties['outcome'] = $outcome;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getOutcome() {
-        return $this->outcome;
+        return $this->properties['outcome'];
     }
 
     /**
      * Any characteristics of the population used in the study, e.g. 'males under 65'.
+     *
+     * @param $population TextSchema
      **/
-    private $population;
     public function setPopulation($population) {
-        $this->population = $population;
+        $this->properties['population'] = $population;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getPopulation() {
-        return $this->population;
+        return $this->properties['population'];
     }
 
     /**
      * Sponsor of the study.
+     *
+     * @param $sponsor OrganizationSchema
      **/
-    private $sponsor;
     public function setSponsor($sponsor) {
-        $this->sponsor = $sponsor;
+        $this->properties['sponsor'] = $sponsor;
 
         return $this;
     }
 
     /**
-     * @return OrganizationSchema     
+     * @return OrganizationSchema
      **/
     public function getSponsor() {
-        return $this->sponsor;
+        return $this->properties['sponsor'];
     }
 
     /**
      * The status of the study (enumerated).
+     *
+     * @param $status MedicalStudyStatusSchema
      **/
-    private $status;
     public function setStatus($status) {
-        $this->status = $status;
+        $this->properties['status'] = $status;
 
         return $this;
     }
 
     /**
-     * @return MedicalStudyStatusSchema     
+     * @return MedicalStudyStatusSchema
      **/
     public function getStatus() {
-        return $this->status;
+        return $this->properties['status'];
     }
 
     /**
      * The location in which the study is taking/took place.
+     *
+     * @param $studyLocation AdministrativeAreaSchema
      **/
-    private $studyLocation;
     public function setStudyLocation($studyLocation) {
-        $this->studyLocation = $studyLocation;
+        $this->properties['studyLocation'] = $studyLocation;
 
         return $this;
     }
 
     /**
-     * @return AdministrativeAreaSchema     
+     * @return AdministrativeAreaSchema
      **/
     public function getStudyLocation() {
-        return $this->studyLocation;
+        return $this->properties['studyLocation'];
     }
 
     /**
      * A subject of the study, i.e. one of the medical conditions, therapies, devices, drugs, etc. investigated by the study.
+     *
+     * @param $studySubject MedicalEntitySchema
      **/
-    private $studySubject;
     public function setStudySubject($studySubject) {
-        $this->studySubject = $studySubject;
+        $this->properties['studySubject'] = $studySubject;
 
         return $this;
     }
 
     /**
-     * @return MedicalEntitySchema     
+     * @return MedicalEntitySchema
      **/
     public function getStudySubject() {
-        return $this->studySubject;
+        return $this->properties['studySubject'];
     }
 
 

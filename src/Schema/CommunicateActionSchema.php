@@ -35,80 +35,79 @@ class CommunicateActionSchema extends InteractActionSchema
 {
     public static function factory()
     {
-        return new CommunicateActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new CommunicateActionSchema('http://schema.org/', 'CommunicateAction');
     }
 
     /**
      * The subject matter of the content.
+     *
+     * @param $about ThingSchema
      **/
-    private $about;
     public function setAbout($about) {
-        $this->about = $about;
+        $this->properties['about'] = $about;
 
         return $this;
     }
 
     /**
-     * @return ThingSchema     
+     * @return ThingSchema
      **/
     public function getAbout() {
-        return $this->about;
+        return $this->properties['about'];
     }
 
     /**
      * The language of the content or performance or used in an action. Please use one of the language codes from the <a href='http://tools.ietf.org/html/bcp47'>IETF BCP 47 standard</a>.
+     *
+     * @param $inLanguage TextSchema|LanguageSchema
      **/
-    private $inLanguage;
     public function setInLanguage($inLanguage) {
-        $this->inLanguage = $inLanguage;
+        $this->properties['inLanguage'] = $inLanguage;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|LanguageSchema     
+     * @return TextSchema|LanguageSchema
      **/
     public function getInLanguage() {
-        return $this->inLanguage;
+        return $this->properties['inLanguage'];
     }
 
     /**
      * A sub property of instrument. The language used on this action.
+     *
+     * @param $language LanguageSchema
      **/
-    private $language;
     public function setLanguage($language) {
-        $this->language = $language;
+        $this->properties['language'] = $language;
 
         return $this;
     }
 
     /**
-     * @return LanguageSchema     
+     * @return LanguageSchema
      **/
     public function getLanguage() {
-        return $this->language;
+        return $this->properties['language'];
     }
 
     /**
      * A sub property of participant. The participant who is at the receiving end of the action.
+     *
+     * @param $recipient AudienceSchema|OrganizationSchema|PersonSchema
      **/
-    private $recipient;
     public function setRecipient($recipient) {
-        $this->recipient = $recipient;
+        $this->properties['recipient'] = $recipient;
 
         return $this;
     }
 
     /**
-     * @return AudienceSchema|OrganizationSchema|PersonSchema     
+     * @return AudienceSchema|OrganizationSchema|PersonSchema
      **/
     public function getRecipient() {
-        return $this->recipient;
+        return $this->properties['recipient'];
     }
 
 

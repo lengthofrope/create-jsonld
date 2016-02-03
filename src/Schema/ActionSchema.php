@@ -37,203 +37,209 @@ class ActionSchema extends ThingSchema
 {
     public static function factory()
     {
-        return new ActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ActionSchema('http://schema.org/', 'Action');
     }
 
     /**
      * Indicates the current disposition of the Action.
+     *
+     * @param $actionStatus ActionStatusTypeSchema
      **/
-    private $actionStatus;
     public function setActionStatus($actionStatus) {
-        $this->actionStatus = $actionStatus;
+        $this->properties['actionStatus'] = $actionStatus;
 
         return $this;
     }
 
     /**
-     * @return ActionStatusTypeSchema     
+     * @return ActionStatusTypeSchema
      **/
     public function getActionStatus() {
-        return $this->actionStatus;
+        return $this->properties['actionStatus'];
     }
 
     /**
      * The direct performer or driver of the action (animate or inanimate). e.g. *John* wrote a book.
+     *
+     * @param $agent OrganizationSchema|PersonSchema
      **/
-    private $agent;
     public function setAgent($agent) {
-        $this->agent = $agent;
+        $this->properties['agent'] = $agent;
 
         return $this;
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema     
+     * @return OrganizationSchema|PersonSchema
      **/
     public function getAgent() {
-        return $this->agent;
+        return $this->properties['agent'];
     }
 
     /**
      * The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. e.g. John wrote a book from January to *December*.
 
 Note that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
+     *
+     * @param $endTime DateTimeSchema
      **/
-    private $endTime;
     public function setEndTime($endTime) {
-        $this->endTime = $endTime;
+        $this->properties['endTime'] = $endTime;
 
         return $this;
     }
 
     /**
-     * @return DateTimeSchema     
+     * @return DateTimeSchema
      **/
     public function getEndTime() {
-        return $this->endTime;
+        return $this->properties['endTime'];
     }
 
     /**
      * For failed actions, more information on the cause of the failure.
+     *
+     * @param $error ThingSchema
      **/
-    private $error;
     public function setError($error) {
-        $this->error = $error;
+        $this->properties['error'] = $error;
 
         return $this;
     }
 
     /**
-     * @return ThingSchema     
+     * @return ThingSchema
      **/
     public function getError() {
-        return $this->error;
+        return $this->properties['error'];
     }
 
     /**
      * The object that helped the agent perform the action. e.g. John wrote a book with *a pen*.
+     *
+     * @param $instrument ThingSchema
      **/
-    private $instrument;
     public function setInstrument($instrument) {
-        $this->instrument = $instrument;
+        $this->properties['instrument'] = $instrument;
 
         return $this;
     }
 
     /**
-     * @return ThingSchema     
+     * @return ThingSchema
      **/
     public function getInstrument() {
-        return $this->instrument;
+        return $this->properties['instrument'];
     }
 
     /**
      * The location of for example where the event is happening, an organization is located, or where an action takes place.
+     *
+     * @param $location PlaceSchema|PostalAddressSchema|TextSchema
      **/
-    private $location;
     public function setLocation($location) {
-        $this->location = $location;
+        $this->properties['location'] = $location;
 
         return $this;
     }
 
     /**
-     * @return PlaceSchema|PostalAddressSchema|TextSchema     
+     * @return PlaceSchema|PostalAddressSchema|TextSchema
      **/
     public function getLocation() {
-        return $this->location;
+        return $this->properties['location'];
     }
 
     /**
      * The object upon the action is carried out, whose state is kept intact or changed. Also known as the semantic roles patient, affected or undergoer (which change their state) or theme (which doesn't). e.g. John read *a book*.
+     *
+     * @param $object ThingSchema
      **/
-    private $object;
     public function setObject($object) {
-        $this->object = $object;
+        $this->properties['object'] = $object;
 
         return $this;
     }
 
     /**
-     * @return ThingSchema     
+     * @return ThingSchema
      **/
     public function getObject() {
-        return $this->object;
+        return $this->properties['object'];
     }
 
     /**
      * Other co-agents that participated in the action indirectly. e.g. John wrote a book with *Steve*.
+     *
+     * @param $participant OrganizationSchema|PersonSchema
      **/
-    private $participant;
     public function setParticipant($participant) {
-        $this->participant = $participant;
+        $this->properties['participant'] = $participant;
 
         return $this;
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema     
+     * @return OrganizationSchema|PersonSchema
      **/
     public function getParticipant() {
-        return $this->participant;
+        return $this->properties['participant'];
     }
 
     /**
      * The result produced in the action. e.g. John wrote *a book*.
+     *
+     * @param $result ThingSchema
      **/
-    private $result;
     public function setResult($result) {
-        $this->result = $result;
+        $this->properties['result'] = $result;
 
         return $this;
     }
 
     /**
-     * @return ThingSchema     
+     * @return ThingSchema
      **/
     public function getResult() {
-        return $this->result;
+        return $this->properties['result'];
     }
 
     /**
      * The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For actions that span a period of time, when the action was performed. e.g. John wrote a book from *January* to December.
 
 Note that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
+     *
+     * @param $startTime DateTimeSchema
      **/
-    private $startTime;
     public function setStartTime($startTime) {
-        $this->startTime = $startTime;
+        $this->properties['startTime'] = $startTime;
 
         return $this;
     }
 
     /**
-     * @return DateTimeSchema     
+     * @return DateTimeSchema
      **/
     public function getStartTime() {
-        return $this->startTime;
+        return $this->properties['startTime'];
     }
 
     /**
      * Indicates a target EntryPoint for an Action.
+     *
+     * @param $target EntryPointSchema
      **/
-    private $target;
     public function setTarget($target) {
-        $this->target = $target;
+        $this->properties['target'] = $target;
 
         return $this;
     }
 
     /**
-     * @return EntryPointSchema     
+     * @return EntryPointSchema
      **/
     public function getTarget() {
-        return $this->target;
+        return $this->properties['target'];
     }
 
 

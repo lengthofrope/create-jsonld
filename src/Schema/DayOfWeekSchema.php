@@ -47,12 +47,7 @@ class DayOfWeekSchema extends EnumerationSchema
 {
     public static function factory()
     {
-        return new DayOfWeekSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new DayOfWeekSchema('http://schema.org/', 'DayOfWeek');
     }
 
 

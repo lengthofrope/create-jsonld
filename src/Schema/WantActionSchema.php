@@ -35,12 +35,7 @@ class WantActionSchema extends ReactActionSchema
 {
     public static function factory()
     {
-        return new WantActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new WantActionSchema('http://schema.org/', 'WantAction');
     }
 
 

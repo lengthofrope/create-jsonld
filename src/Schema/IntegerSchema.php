@@ -35,12 +35,7 @@ class IntegerSchema extends NumberSchema
 {
     public static function factory()
     {
-        return new IntegerSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new IntegerSchema('http://schema.org/', 'Integer');
     }
 
 

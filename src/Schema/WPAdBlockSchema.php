@@ -35,12 +35,7 @@ class WPAdBlockSchema extends WebPageElementSchema
 {
     public static function factory()
     {
-        return new WPAdBlockSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new WPAdBlockSchema('http://schema.org/', 'WPAdBlock');
     }
 
 

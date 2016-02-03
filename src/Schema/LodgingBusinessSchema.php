@@ -35,12 +35,7 @@ class LodgingBusinessSchema extends LocalBusinessSchema
 {
     public static function factory()
     {
-        return new LodgingBusinessSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new LodgingBusinessSchema('http://schema.org/', 'LodgingBusiness');
     }
 
 

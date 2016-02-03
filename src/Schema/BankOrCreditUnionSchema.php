@@ -35,12 +35,7 @@ class BankOrCreditUnionSchema extends FinancialServiceSchema
 {
     public static function factory()
     {
-        return new BankOrCreditUnionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new BankOrCreditUnionSchema('http://schema.org/', 'BankOrCreditUnion');
     }
 
 

@@ -35,46 +35,43 @@ class ChooseActionSchema extends AssessActionSchema
 {
     public static function factory()
     {
-        return new ChooseActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ChooseActionSchema('http://schema.org/', 'ChooseAction');
     }
 
     /**
      * A sub property of object. The options subject to this action.
+     *
+     * @param $actionOption TextSchema|ThingSchema
      **/
-    private $actionOption;
     public function setActionOption($actionOption) {
-        $this->actionOption = $actionOption;
+        $this->properties['actionOption'] = $actionOption;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|ThingSchema     
+     * @return TextSchema|ThingSchema
      **/
     public function getActionOption() {
-        return $this->actionOption;
+        return $this->properties['actionOption'];
     }
 
     /**
      * A sub property of object. The options subject to this action.
+     *
+     * @param $option TextSchema|ThingSchema
      **/
-    private $option;
     public function setOption($option) {
-        $this->option = $option;
+        $this->properties['option'] = $option;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|ThingSchema     
+     * @return TextSchema|ThingSchema
      **/
     public function getOption() {
-        return $this->option;
+        return $this->properties['option'];
     }
 
 

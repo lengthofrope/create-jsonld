@@ -35,560 +35,587 @@ class DemandSchema extends IntangibleSchema
 {
     public static function factory()
     {
-        return new DemandSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new DemandSchema('http://schema.org/', 'Demand');
     }
 
     /**
      * The payment method(s) accepted by seller for this offer.
+     *
+     * @param $acceptedPaymentMethod PaymentMethodSchema
      **/
-    private $acceptedPaymentMethod;
     public function setAcceptedPaymentMethod($acceptedPaymentMethod) {
-        $this->acceptedPaymentMethod = $acceptedPaymentMethod;
+        $this->properties['acceptedPaymentMethod'] = $acceptedPaymentMethod;
 
         return $this;
     }
 
     /**
-     * @return PaymentMethodSchema     
+     * @return PaymentMethodSchema
      **/
     public function getAcceptedPaymentMethod() {
-        return $this->acceptedPaymentMethod;
+        return $this->properties['acceptedPaymentMethod'];
     }
 
     /**
      * The amount of time that is required between accepting the offer and the actual usage of the resource or service.
+     *
+     * @param $advanceBookingRequirement QuantitativeValueSchema
      **/
-    private $advanceBookingRequirement;
     public function setAdvanceBookingRequirement($advanceBookingRequirement) {
-        $this->advanceBookingRequirement = $advanceBookingRequirement;
+        $this->properties['advanceBookingRequirement'] = $advanceBookingRequirement;
 
         return $this;
     }
 
     /**
-     * @return QuantitativeValueSchema     
+     * @return QuantitativeValueSchema
      **/
     public function getAdvanceBookingRequirement() {
-        return $this->advanceBookingRequirement;
+        return $this->properties['advanceBookingRequirement'];
     }
 
     /**
      * The geographic area where a service or offered item is provided.
+     *
+     * @param $areaServed PlaceSchema|AdministrativeAreaSchema|GeoShapeSchema|TextSchema
      **/
-    private $areaServed;
     public function setAreaServed($areaServed) {
-        $this->areaServed = $areaServed;
+        $this->properties['areaServed'] = $areaServed;
 
         return $this;
     }
 
     /**
-     * @return PlaceSchema|AdministrativeAreaSchema|GeoShapeSchema|TextSchema     
+     * @return PlaceSchema|AdministrativeAreaSchema|GeoShapeSchema|TextSchema
      **/
     public function getAreaServed() {
-        return $this->areaServed;
+        return $this->properties['areaServed'];
     }
 
     /**
      * The availability of this item&#x2014;for example In stock, Out of stock, Pre-order, etc.
+     *
+     * @param $availability ItemAvailabilitySchema
      **/
-    private $availability;
     public function setAvailability($availability) {
-        $this->availability = $availability;
+        $this->properties['availability'] = $availability;
 
         return $this;
     }
 
     /**
-     * @return ItemAvailabilitySchema     
+     * @return ItemAvailabilitySchema
      **/
     public function getAvailability() {
-        return $this->availability;
+        return $this->properties['availability'];
     }
 
     /**
      * The end of the availability of the product or service included in the offer.
+     *
+     * @param $availabilityEnds DateTimeSchema
      **/
-    private $availabilityEnds;
     public function setAvailabilityEnds($availabilityEnds) {
-        $this->availabilityEnds = $availabilityEnds;
+        $this->properties['availabilityEnds'] = $availabilityEnds;
 
         return $this;
     }
 
     /**
-     * @return DateTimeSchema     
+     * @return DateTimeSchema
      **/
     public function getAvailabilityEnds() {
-        return $this->availabilityEnds;
+        return $this->properties['availabilityEnds'];
     }
 
     /**
      * The beginning of the availability of the product or service included in the offer.
+     *
+     * @param $availabilityStarts DateTimeSchema
      **/
-    private $availabilityStarts;
     public function setAvailabilityStarts($availabilityStarts) {
-        $this->availabilityStarts = $availabilityStarts;
+        $this->properties['availabilityStarts'] = $availabilityStarts;
 
         return $this;
     }
 
     /**
-     * @return DateTimeSchema     
+     * @return DateTimeSchema
      **/
     public function getAvailabilityStarts() {
-        return $this->availabilityStarts;
+        return $this->properties['availabilityStarts'];
     }
 
     /**
      * The place(s) from which the offer can be obtained (e.g. store locations).
+     *
+     * @param $availableAtOrFrom PlaceSchema
      **/
-    private $availableAtOrFrom;
     public function setAvailableAtOrFrom($availableAtOrFrom) {
-        $this->availableAtOrFrom = $availableAtOrFrom;
+        $this->properties['availableAtOrFrom'] = $availableAtOrFrom;
 
         return $this;
     }
 
     /**
-     * @return PlaceSchema     
+     * @return PlaceSchema
      **/
     public function getAvailableAtOrFrom() {
-        return $this->availableAtOrFrom;
+        return $this->properties['availableAtOrFrom'];
     }
 
     /**
      * The delivery method(s) available for this offer.
+     *
+     * @param $availableDeliveryMethod DeliveryMethodSchema
      **/
-    private $availableDeliveryMethod;
     public function setAvailableDeliveryMethod($availableDeliveryMethod) {
-        $this->availableDeliveryMethod = $availableDeliveryMethod;
+        $this->properties['availableDeliveryMethod'] = $availableDeliveryMethod;
 
         return $this;
     }
 
     /**
-     * @return DeliveryMethodSchema     
+     * @return DeliveryMethodSchema
      **/
     public function getAvailableDeliveryMethod() {
-        return $this->availableDeliveryMethod;
+        return $this->properties['availableDeliveryMethod'];
     }
 
     /**
      * The business function (e.g. sell, lease, repair, dispose) of the offer or component of a bundle (TypeAndQuantityNode). The default is http://purl.org/goodrelations/v1#Sell.
+     *
+     * @param $businessFunction BusinessFunctionSchema
      **/
-    private $businessFunction;
     public function setBusinessFunction($businessFunction) {
-        $this->businessFunction = $businessFunction;
+        $this->properties['businessFunction'] = $businessFunction;
 
         return $this;
     }
 
     /**
-     * @return BusinessFunctionSchema     
+     * @return BusinessFunctionSchema
      **/
     public function getBusinessFunction() {
-        return $this->businessFunction;
+        return $this->properties['businessFunction'];
     }
 
     /**
      * The typical delay between the receipt of the order and the goods leaving the warehouse.
+     *
+     * @param $deliveryLeadTime QuantitativeValueSchema
      **/
-    private $deliveryLeadTime;
     public function setDeliveryLeadTime($deliveryLeadTime) {
-        $this->deliveryLeadTime = $deliveryLeadTime;
+        $this->properties['deliveryLeadTime'] = $deliveryLeadTime;
 
         return $this;
     }
 
     /**
-     * @return QuantitativeValueSchema     
+     * @return QuantitativeValueSchema
      **/
     public function getDeliveryLeadTime() {
-        return $this->deliveryLeadTime;
+        return $this->properties['deliveryLeadTime'];
     }
 
     /**
      * The type(s) of customers for which the given offer is valid.
+     *
+     * @param $eligibleCustomerType BusinessEntityTypeSchema
      **/
-    private $eligibleCustomerType;
     public function setEligibleCustomerType($eligibleCustomerType) {
-        $this->eligibleCustomerType = $eligibleCustomerType;
+        $this->properties['eligibleCustomerType'] = $eligibleCustomerType;
 
         return $this;
     }
 
     /**
-     * @return BusinessEntityTypeSchema     
+     * @return BusinessEntityTypeSchema
      **/
     public function getEligibleCustomerType() {
-        return $this->eligibleCustomerType;
+        return $this->properties['eligibleCustomerType'];
     }
 
     /**
      * The duration for which the given offer is valid.
+     *
+     * @param $eligibleDuration QuantitativeValueSchema
      **/
-    private $eligibleDuration;
     public function setEligibleDuration($eligibleDuration) {
-        $this->eligibleDuration = $eligibleDuration;
+        $this->properties['eligibleDuration'] = $eligibleDuration;
 
         return $this;
     }
 
     /**
-     * @return QuantitativeValueSchema     
+     * @return QuantitativeValueSchema
      **/
     public function getEligibleDuration() {
-        return $this->eligibleDuration;
+        return $this->properties['eligibleDuration'];
     }
 
     /**
      * The interval and unit of measurement of ordering quantities for which the offer or price specification is valid. This allows e.g. specifying that a certain freight charge is valid only for a certain quantity.
+     *
+     * @param $eligibleQuantity QuantitativeValueSchema
      **/
-    private $eligibleQuantity;
     public function setEligibleQuantity($eligibleQuantity) {
-        $this->eligibleQuantity = $eligibleQuantity;
+        $this->properties['eligibleQuantity'] = $eligibleQuantity;
 
         return $this;
     }
 
     /**
-     * @return QuantitativeValueSchema     
+     * @return QuantitativeValueSchema
      **/
     public function getEligibleQuantity() {
-        return $this->eligibleQuantity;
+        return $this->properties['eligibleQuantity'];
     }
 
     /**
      * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which the offer or delivery charge specification is valid.
       <br><br> See also <a href="/ineligibleRegion">ineligibleRegion</a>.
     
+     *
+     * @param $eligibleRegion GeoShapeSchema|PlaceSchema|TextSchema
      **/
-    private $eligibleRegion;
     public function setEligibleRegion($eligibleRegion) {
-        $this->eligibleRegion = $eligibleRegion;
+        $this->properties['eligibleRegion'] = $eligibleRegion;
 
         return $this;
     }
 
     /**
-     * @return GeoShapeSchema|PlaceSchema|TextSchema     
+     * @return GeoShapeSchema|PlaceSchema|TextSchema
      **/
     public function getEligibleRegion() {
-        return $this->eligibleRegion;
+        return $this->properties['eligibleRegion'];
     }
 
     /**
      * The transaction volume, in a monetary unit, for which the offer or price specification is valid, e.g. for indicating a minimal purchasing volume, to express free shipping above a certain order volume, or to limit the acceptance of credit cards to purchases to a certain minimal amount.
+     *
+     * @param $eligibleTransactionVolume PriceSpecificationSchema
      **/
-    private $eligibleTransactionVolume;
     public function setEligibleTransactionVolume($eligibleTransactionVolume) {
-        $this->eligibleTransactionVolume = $eligibleTransactionVolume;
+        $this->properties['eligibleTransactionVolume'] = $eligibleTransactionVolume;
 
         return $this;
     }
 
     /**
-     * @return PriceSpecificationSchema     
+     * @return PriceSpecificationSchema
      **/
     public function getEligibleTransactionVolume() {
-        return $this->eligibleTransactionVolume;
+        return $this->properties['eligibleTransactionVolume'];
     }
 
     /**
      * The <a href="http://apps.gs1.org/GDD/glossary/Pages/GTIN-12.aspx">GTIN-12</a> code of the product, or the product to which the offer refers. The GTIN-12 is the 12-digit GS1 Identification Key composed of a U.P.C. Company Prefix, Item Reference, and Check Digit used to identify trade items. See <a href="http://www.gs1.org/barcodes/technical/idkeys/gtin">GS1 GTIN Summary</a> for more details.
+     *
+     * @param $gtin12 TextSchema
      **/
-    private $gtin12;
     public function setGtin12($gtin12) {
-        $this->gtin12 = $gtin12;
+        $this->properties['gtin12'] = $gtin12;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getGtin12() {
-        return $this->gtin12;
+        return $this->properties['gtin12'];
     }
 
     /**
      * The <a href="http://apps.gs1.org/GDD/glossary/Pages/GTIN-13.aspx">GTIN-13</a> code of the product, or the product to which the offer refers. This is equivalent to 13-digit ISBN codes and EAN UCC-13. Former 12-digit UPC codes can be converted into a GTIN-13 code by simply adding a preceeding zero. See <a href="http://www.gs1.org/barcodes/technical/idkeys/gtin">GS1 GTIN Summary</a> for more details.
+     *
+     * @param $gtin13 TextSchema
      **/
-    private $gtin13;
     public function setGtin13($gtin13) {
-        $this->gtin13 = $gtin13;
+        $this->properties['gtin13'] = $gtin13;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getGtin13() {
-        return $this->gtin13;
+        return $this->properties['gtin13'];
     }
 
     /**
      * The <a href="http://apps.gs1.org/GDD/glossary/Pages/GTIN-14.aspx">GTIN-14</a> code of the product, or the product to which the offer refers. See <a href="http://www.gs1.org/barcodes/technical/idkeys/gtin">GS1 GTIN Summary</a> for more details.
+     *
+     * @param $gtin14 TextSchema
      **/
-    private $gtin14;
     public function setGtin14($gtin14) {
-        $this->gtin14 = $gtin14;
+        $this->properties['gtin14'] = $gtin14;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getGtin14() {
-        return $this->gtin14;
+        return $this->properties['gtin14'];
     }
 
     /**
      * The <a href="http://apps.gs1.org/GDD/glossary/Pages/GTIN-8.aspx">GTIN-8</a> code of the product, or the product to which the offer refers. This code is also known as EAN/UCC-8 or 8-digit EAN. See <a href="http://www.gs1.org/barcodes/technical/idkeys/gtin">GS1 GTIN Summary</a> for more details.
+     *
+     * @param $gtin8 TextSchema
      **/
-    private $gtin8;
     public function setGtin8($gtin8) {
-        $this->gtin8 = $gtin8;
+        $this->properties['gtin8'] = $gtin8;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getGtin8() {
-        return $this->gtin8;
+        return $this->properties['gtin8'];
     }
 
     /**
      * This links to a node or nodes indicating the exact quantity of the products included in the offer.
+     *
+     * @param $includesObject TypeAndQuantityNodeSchema
      **/
-    private $includesObject;
     public function setIncludesObject($includesObject) {
-        $this->includesObject = $includesObject;
+        $this->properties['includesObject'] = $includesObject;
 
         return $this;
     }
 
     /**
-     * @return TypeAndQuantityNodeSchema     
+     * @return TypeAndQuantityNodeSchema
      **/
     public function getIncludesObject() {
-        return $this->includesObject;
+        return $this->properties['includesObject'];
     }
 
     /**
      * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which the offer or delivery charge specification is not valid, e.g. a region where the transaction is not allowed.
       <br><br> See also <a href="/eligibleRegion">eligibleRegion</a>.
       
+     *
+     * @param $ineligibleRegion GeoShapeSchema|PlaceSchema|TextSchema
      **/
-    private $ineligibleRegion;
     public function setIneligibleRegion($ineligibleRegion) {
-        $this->ineligibleRegion = $ineligibleRegion;
+        $this->properties['ineligibleRegion'] = $ineligibleRegion;
 
         return $this;
     }
 
     /**
-     * @return GeoShapeSchema|PlaceSchema|TextSchema     
+     * @return GeoShapeSchema|PlaceSchema|TextSchema
      **/
     public function getIneligibleRegion() {
-        return $this->ineligibleRegion;
+        return $this->properties['ineligibleRegion'];
     }
 
     /**
      * The current approximate inventory level for the item or items.
+     *
+     * @param $inventoryLevel QuantitativeValueSchema
      **/
-    private $inventoryLevel;
     public function setInventoryLevel($inventoryLevel) {
-        $this->inventoryLevel = $inventoryLevel;
+        $this->properties['inventoryLevel'] = $inventoryLevel;
 
         return $this;
     }
 
     /**
-     * @return QuantitativeValueSchema     
+     * @return QuantitativeValueSchema
      **/
     public function getInventoryLevel() {
-        return $this->inventoryLevel;
+        return $this->properties['inventoryLevel'];
     }
 
     /**
      * A predefined value from OfferItemCondition or a textual description of the condition of the product or service, or the products or services included in the offer.
+     *
+     * @param $itemCondition OfferItemConditionSchema
      **/
-    private $itemCondition;
     public function setItemCondition($itemCondition) {
-        $this->itemCondition = $itemCondition;
+        $this->properties['itemCondition'] = $itemCondition;
 
         return $this;
     }
 
     /**
-     * @return OfferItemConditionSchema     
+     * @return OfferItemConditionSchema
      **/
     public function getItemCondition() {
-        return $this->itemCondition;
+        return $this->properties['itemCondition'];
     }
 
     /**
      * The item being offered.
+     *
+     * @param $itemOffered ProductSchema|ServiceSchema
      **/
-    private $itemOffered;
     public function setItemOffered($itemOffered) {
-        $this->itemOffered = $itemOffered;
+        $this->properties['itemOffered'] = $itemOffered;
 
         return $this;
     }
 
     /**
-     * @return ProductSchema|ServiceSchema     
+     * @return ProductSchema|ServiceSchema
      **/
     public function getItemOffered() {
-        return $this->itemOffered;
+        return $this->properties['itemOffered'];
     }
 
     /**
      * The Manufacturer Part Number (MPN) of the product, or the product to which the offer refers.
+     *
+     * @param $mpn TextSchema
      **/
-    private $mpn;
     public function setMpn($mpn) {
-        $this->mpn = $mpn;
+        $this->properties['mpn'] = $mpn;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getMpn() {
-        return $this->mpn;
+        return $this->properties['mpn'];
     }
 
     /**
      * One or more detailed price specifications, indicating the unit price and delivery or payment charges.
+     *
+     * @param $priceSpecification PriceSpecificationSchema
      **/
-    private $priceSpecification;
     public function setPriceSpecification($priceSpecification) {
-        $this->priceSpecification = $priceSpecification;
+        $this->properties['priceSpecification'] = $priceSpecification;
 
         return $this;
     }
 
     /**
-     * @return PriceSpecificationSchema     
+     * @return PriceSpecificationSchema
      **/
     public function getPriceSpecification() {
-        return $this->priceSpecification;
+        return $this->properties['priceSpecification'];
     }
 
     /**
      * An entity which offers (sells / leases / lends / loans) the services / goods.  A seller may also be a provider.
+     *
+     * @param $seller OrganizationSchema|PersonSchema
      **/
-    private $seller;
     public function setSeller($seller) {
-        $this->seller = $seller;
+        $this->properties['seller'] = $seller;
 
         return $this;
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema     
+     * @return OrganizationSchema|PersonSchema
      **/
     public function getSeller() {
-        return $this->seller;
+        return $this->properties['seller'];
     }
 
     /**
      * The serial number or any alphanumeric identifier of a particular product. When attached to an offer, it is a shortcut for the serial number of the product included in the offer.
+     *
+     * @param $serialNumber TextSchema
      **/
-    private $serialNumber;
     public function setSerialNumber($serialNumber) {
-        $this->serialNumber = $serialNumber;
+        $this->properties['serialNumber'] = $serialNumber;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getSerialNumber() {
-        return $this->serialNumber;
+        return $this->properties['serialNumber'];
     }
 
     /**
      * The Stock Keeping Unit (SKU), i.e. a merchant-specific identifier for a product or service, or the product to which the offer refers.
+     *
+     * @param $sku TextSchema
      **/
-    private $sku;
     public function setSku($sku) {
-        $this->sku = $sku;
+        $this->properties['sku'] = $sku;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getSku() {
-        return $this->sku;
+        return $this->properties['sku'];
     }
 
     /**
      * The date when the item becomes valid.
+     *
+     * @param $validFrom DateTimeSchema
      **/
-    private $validFrom;
     public function setValidFrom($validFrom) {
-        $this->validFrom = $validFrom;
+        $this->properties['validFrom'] = $validFrom;
 
         return $this;
     }
 
     /**
-     * @return DateTimeSchema     
+     * @return DateTimeSchema
      **/
     public function getValidFrom() {
-        return $this->validFrom;
+        return $this->properties['validFrom'];
     }
 
     /**
      * The end of the validity of offer, price specification, or opening hours data.
+     *
+     * @param $validThrough DateTimeSchema
      **/
-    private $validThrough;
     public function setValidThrough($validThrough) {
-        $this->validThrough = $validThrough;
+        $this->properties['validThrough'] = $validThrough;
 
         return $this;
     }
 
     /**
-     * @return DateTimeSchema     
+     * @return DateTimeSchema
      **/
     public function getValidThrough() {
-        return $this->validThrough;
+        return $this->properties['validThrough'];
     }
 
     /**
      * The warranty promise(s) included in the offer.
+     *
+     * @param $warranty WarrantyPromiseSchema
      **/
-    private $warranty;
     public function setWarranty($warranty) {
-        $this->warranty = $warranty;
+        $this->properties['warranty'] = $warranty;
 
         return $this;
     }
 
     /**
-     * @return WarrantyPromiseSchema     
+     * @return WarrantyPromiseSchema
      **/
     public function getWarranty() {
-        return $this->warranty;
+        return $this->properties['warranty'];
     }
 
 

@@ -35,12 +35,7 @@ class StateSchema extends AdministrativeAreaSchema
 {
     public static function factory()
     {
-        return new StateSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new StateSchema('http://schema.org/', 'State');
     }
 
 

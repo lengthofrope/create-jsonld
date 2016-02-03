@@ -37,114 +37,115 @@ class ArticleSchema extends CreativeWorkSchema
 {
     public static function factory()
     {
-        return new ArticleSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ArticleSchema('http://schema.org/', 'Article');
     }
 
     /**
      * The actual body of the article.
+     *
+     * @param $articleBody TextSchema
      **/
-    private $articleBody;
     public function setArticleBody($articleBody) {
-        $this->articleBody = $articleBody;
+        $this->properties['articleBody'] = $articleBody;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getArticleBody() {
-        return $this->articleBody;
+        return $this->properties['articleBody'];
     }
 
     /**
      * Articles may belong to one or more 'sections' in a magazine or newspaper, such as Sports, Lifestyle, etc.
+     *
+     * @param $articleSection TextSchema
      **/
-    private $articleSection;
     public function setArticleSection($articleSection) {
-        $this->articleSection = $articleSection;
+        $this->properties['articleSection'] = $articleSection;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getArticleSection() {
-        return $this->articleSection;
+        return $this->properties['articleSection'];
     }
 
     /**
      * The page on which the work ends; for example "138" or "xvi".
+     *
+     * @param $pageEnd IntegerSchema|TextSchema
      **/
-    private $pageEnd;
     public function setPageEnd($pageEnd) {
-        $this->pageEnd = $pageEnd;
+        $this->properties['pageEnd'] = $pageEnd;
 
         return $this;
     }
 
     /**
-     * @return IntegerSchema|TextSchema     
+     * @return IntegerSchema|TextSchema
      **/
     public function getPageEnd() {
-        return $this->pageEnd;
+        return $this->properties['pageEnd'];
     }
 
     /**
      * The page on which the work starts; for example "135" or "xiii".
+     *
+     * @param $pageStart IntegerSchema|TextSchema
      **/
-    private $pageStart;
     public function setPageStart($pageStart) {
-        $this->pageStart = $pageStart;
+        $this->properties['pageStart'] = $pageStart;
 
         return $this;
     }
 
     /**
-     * @return IntegerSchema|TextSchema     
+     * @return IntegerSchema|TextSchema
      **/
     public function getPageStart() {
-        return $this->pageStart;
+        return $this->properties['pageStart'];
     }
 
     /**
      * Any description of pages that is not separated into pageStart and pageEnd; for example, "1-6, 9, 55" or "10-12, 46-49".
+     *
+     * @param $pagination TextSchema
      **/
-    private $pagination;
     public function setPagination($pagination) {
-        $this->pagination = $pagination;
+        $this->properties['pagination'] = $pagination;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getPagination() {
-        return $this->pagination;
+        return $this->properties['pagination'];
     }
 
     /**
      * The number of words in the text of the Article.
+     *
+     * @param $wordCount IntegerSchema
      **/
-    private $wordCount;
     public function setWordCount($wordCount) {
-        $this->wordCount = $wordCount;
+        $this->properties['wordCount'] = $wordCount;
 
         return $this;
     }
 
     /**
-     * @return IntegerSchema     
+     * @return IntegerSchema
      **/
     public function getWordCount() {
-        return $this->wordCount;
+        return $this->properties['wordCount'];
     }
 
 

@@ -35,46 +35,43 @@ class EmployeeRoleSchema extends OrganizationRoleSchema
 {
     public static function factory()
     {
-        return new EmployeeRoleSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new EmployeeRoleSchema('http://schema.org/', 'EmployeeRole');
     }
 
     /**
      * The base salary of the job or of an employee in an EmployeeRole.
+     *
+     * @param $baseSalary NumberSchema|PriceSpecificationSchema
      **/
-    private $baseSalary;
     public function setBaseSalary($baseSalary) {
-        $this->baseSalary = $baseSalary;
+        $this->properties['baseSalary'] = $baseSalary;
 
         return $this;
     }
 
     /**
-     * @return NumberSchema|PriceSpecificationSchema     
+     * @return NumberSchema|PriceSpecificationSchema
      **/
     public function getBaseSalary() {
-        return $this->baseSalary;
+        return $this->properties['baseSalary'];
     }
 
     /**
      * The currency (coded using ISO 4217, http://en.wikipedia.org/wiki/ISO_4217 ) used for the main salary information in this job posting or for this employee.
+     *
+     * @param $salaryCurrency TextSchema
      **/
-    private $salaryCurrency;
     public function setSalaryCurrency($salaryCurrency) {
-        $this->salaryCurrency = $salaryCurrency;
+        $this->properties['salaryCurrency'] = $salaryCurrency;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getSalaryCurrency() {
-        return $this->salaryCurrency;
+        return $this->properties['salaryCurrency'];
     }
 
 

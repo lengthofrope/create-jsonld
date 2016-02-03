@@ -35,63 +35,61 @@ class JointSchema extends AnatomicalStructureSchema
 {
     public static function factory()
     {
-        return new JointSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new JointSchema('http://schema.org/', 'Joint');
     }
 
     /**
      * The biomechanical properties of the bone.
+     *
+     * @param $biomechnicalClass TextSchema
      **/
-    private $biomechnicalClass;
     public function setBiomechnicalClass($biomechnicalClass) {
-        $this->biomechnicalClass = $biomechnicalClass;
+        $this->properties['biomechnicalClass'] = $biomechnicalClass;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getBiomechnicalClass() {
-        return $this->biomechnicalClass;
+        return $this->properties['biomechnicalClass'];
     }
 
     /**
      * The degree of mobility the joint allows.
+     *
+     * @param $functionalClass TextSchema
      **/
-    private $functionalClass;
     public function setFunctionalClass($functionalClass) {
-        $this->functionalClass = $functionalClass;
+        $this->properties['functionalClass'] = $functionalClass;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getFunctionalClass() {
-        return $this->functionalClass;
+        return $this->properties['functionalClass'];
     }
 
     /**
      * The name given to how bone physically connects to each other.
+     *
+     * @param $structuralClass TextSchema
      **/
-    private $structuralClass;
     public function setStructuralClass($structuralClass) {
-        $this->structuralClass = $structuralClass;
+        $this->properties['structuralClass'] = $structuralClass;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getStructuralClass() {
-        return $this->structuralClass;
+        return $this->properties['structuralClass'];
     }
 
 

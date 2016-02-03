@@ -35,12 +35,7 @@ class GasStationSchema extends AutomotiveBusinessSchema
 {
     public static function factory()
     {
-        return new GasStationSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new GasStationSchema('http://schema.org/', 'GasStation');
     }
 
 

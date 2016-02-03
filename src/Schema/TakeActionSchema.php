@@ -35,12 +35,7 @@ class TakeActionSchema extends TransferActionSchema
 {
     public static function factory()
     {
-        return new TakeActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new TakeActionSchema('http://schema.org/', 'TakeAction');
     }
 
 

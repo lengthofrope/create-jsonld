@@ -35,29 +35,25 @@ class LoseActionSchema extends AchieveActionSchema
 {
     public static function factory()
     {
-        return new LoseActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new LoseActionSchema('http://schema.org/', 'LoseAction');
     }
 
     /**
      * A sub property of participant. The winner of the action.
+     *
+     * @param $winner PersonSchema
      **/
-    private $winner;
     public function setWinner($winner) {
-        $this->winner = $winner;
+        $this->properties['winner'] = $winner;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema     
+     * @return PersonSchema
      **/
     public function getWinner() {
-        return $this->winner;
+        return $this->properties['winner'];
     }
 
 

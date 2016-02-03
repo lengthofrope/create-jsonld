@@ -35,12 +35,7 @@ class DrinkActionSchema extends ConsumeActionSchema
 {
     public static function factory()
     {
-        return new DrinkActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new DrinkActionSchema('http://schema.org/', 'DrinkAction');
     }
 
 

@@ -37,12 +37,7 @@ class UserPlusOnesSchema extends UserInteractionSchema
 {
     public static function factory()
     {
-        return new UserPlusOnesSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new UserPlusOnesSchema('http://schema.org/', 'UserPlusOnes');
     }
 
 

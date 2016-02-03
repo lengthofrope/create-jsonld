@@ -35,46 +35,43 @@ class ReplaceActionSchema extends UpdateActionSchema
 {
     public static function factory()
     {
-        return new ReplaceActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ReplaceActionSchema('http://schema.org/', 'ReplaceAction');
     }
 
     /**
      * A sub property of object. The object that is being replaced.
+     *
+     * @param $replacee ThingSchema
      **/
-    private $replacee;
     public function setReplacee($replacee) {
-        $this->replacee = $replacee;
+        $this->properties['replacee'] = $replacee;
 
         return $this;
     }
 
     /**
-     * @return ThingSchema     
+     * @return ThingSchema
      **/
     public function getReplacee() {
-        return $this->replacee;
+        return $this->properties['replacee'];
     }
 
     /**
      * A sub property of object. The object that replaces.
+     *
+     * @param $replacer ThingSchema
      **/
-    private $replacer;
     public function setReplacer($replacer) {
-        $this->replacer = $replacer;
+        $this->properties['replacer'] = $replacer;
 
         return $this;
     }
 
     /**
-     * @return ThingSchema     
+     * @return ThingSchema
      **/
     public function getReplacer() {
-        return $this->replacer;
+        return $this->properties['replacer'];
     }
 
 

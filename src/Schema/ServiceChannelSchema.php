@@ -35,148 +35,151 @@ class ServiceChannelSchema extends IntangibleSchema
 {
     public static function factory()
     {
-        return new ServiceChannelSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ServiceChannelSchema('http://schema.org/', 'ServiceChannel');
     }
 
     /**
      * A language someone may use with the item.
+     *
+     * @param $availableLanguage LanguageSchema
      **/
-    private $availableLanguage;
     public function setAvailableLanguage($availableLanguage) {
-        $this->availableLanguage = $availableLanguage;
+        $this->properties['availableLanguage'] = $availableLanguage;
 
         return $this;
     }
 
     /**
-     * @return LanguageSchema     
+     * @return LanguageSchema
      **/
     public function getAvailableLanguage() {
-        return $this->availableLanguage;
+        return $this->properties['availableLanguage'];
     }
 
     /**
      * Estimated processing time for the service using this channel.
+     *
+     * @param $processingTime DurationSchema
      **/
-    private $processingTime;
     public function setProcessingTime($processingTime) {
-        $this->processingTime = $processingTime;
+        $this->properties['processingTime'] = $processingTime;
 
         return $this;
     }
 
     /**
-     * @return DurationSchema     
+     * @return DurationSchema
      **/
     public function getProcessingTime() {
-        return $this->processingTime;
+        return $this->properties['processingTime'];
     }
 
     /**
      * The service provided by this channel.
+     *
+     * @param $providesService ServiceSchema
      **/
-    private $providesService;
     public function setProvidesService($providesService) {
-        $this->providesService = $providesService;
+        $this->properties['providesService'] = $providesService;
 
         return $this;
     }
 
     /**
-     * @return ServiceSchema     
+     * @return ServiceSchema
      **/
     public function getProvidesService() {
-        return $this->providesService;
+        return $this->properties['providesService'];
     }
 
     /**
      * The location (e.g. civic structure, local business, etc.) where a person can go to access the service.
+     *
+     * @param $serviceLocation PlaceSchema
      **/
-    private $serviceLocation;
     public function setServiceLocation($serviceLocation) {
-        $this->serviceLocation = $serviceLocation;
+        $this->properties['serviceLocation'] = $serviceLocation;
 
         return $this;
     }
 
     /**
-     * @return PlaceSchema     
+     * @return PlaceSchema
      **/
     public function getServiceLocation() {
-        return $this->serviceLocation;
+        return $this->properties['serviceLocation'];
     }
 
     /**
      * The phone number to use to access the service.
+     *
+     * @param $servicePhone ContactPointSchema
      **/
-    private $servicePhone;
     public function setServicePhone($servicePhone) {
-        $this->servicePhone = $servicePhone;
+        $this->properties['servicePhone'] = $servicePhone;
 
         return $this;
     }
 
     /**
-     * @return ContactPointSchema     
+     * @return ContactPointSchema
      **/
     public function getServicePhone() {
-        return $this->servicePhone;
+        return $this->properties['servicePhone'];
     }
 
     /**
      * The address for accessing the service by mail.
+     *
+     * @param $servicePostalAddress PostalAddressSchema
      **/
-    private $servicePostalAddress;
     public function setServicePostalAddress($servicePostalAddress) {
-        $this->servicePostalAddress = $servicePostalAddress;
+        $this->properties['servicePostalAddress'] = $servicePostalAddress;
 
         return $this;
     }
 
     /**
-     * @return PostalAddressSchema     
+     * @return PostalAddressSchema
      **/
     public function getServicePostalAddress() {
-        return $this->servicePostalAddress;
+        return $this->properties['servicePostalAddress'];
     }
 
     /**
      * The number to access the service by text message.
+     *
+     * @param $serviceSmsNumber ContactPointSchema
      **/
-    private $serviceSmsNumber;
     public function setServiceSmsNumber($serviceSmsNumber) {
-        $this->serviceSmsNumber = $serviceSmsNumber;
+        $this->properties['serviceSmsNumber'] = $serviceSmsNumber;
 
         return $this;
     }
 
     /**
-     * @return ContactPointSchema     
+     * @return ContactPointSchema
      **/
     public function getServiceSmsNumber() {
-        return $this->serviceSmsNumber;
+        return $this->properties['serviceSmsNumber'];
     }
 
     /**
      * The website to access the service.
+     *
+     * @param $serviceUrl URLSchema
      **/
-    private $serviceUrl;
     public function setServiceUrl($serviceUrl) {
-        $this->serviceUrl = $serviceUrl;
+        $this->properties['serviceUrl'] = $serviceUrl;
 
         return $this;
     }
 
     /**
-     * @return URLSchema     
+     * @return URLSchema
      **/
     public function getServiceUrl() {
-        return $this->serviceUrl;
+        return $this->properties['serviceUrl'];
     }
 
 

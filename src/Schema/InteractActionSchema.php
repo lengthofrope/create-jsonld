@@ -35,12 +35,7 @@ class InteractActionSchema extends ActionSchema
 {
     public static function factory()
     {
-        return new InteractActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new InteractActionSchema('http://schema.org/', 'InteractAction');
     }
 
 

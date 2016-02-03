@@ -35,63 +35,61 @@ class CookActionSchema extends CreateActionSchema
 {
     public static function factory()
     {
-        return new CookActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new CookActionSchema('http://schema.org/', 'CookAction');
     }
 
     /**
      * A sub property of location. The specific food establishment where the action occurred.
+     *
+     * @param $foodEstablishment FoodEstablishmentSchema|PlaceSchema
      **/
-    private $foodEstablishment;
     public function setFoodEstablishment($foodEstablishment) {
-        $this->foodEstablishment = $foodEstablishment;
+        $this->properties['foodEstablishment'] = $foodEstablishment;
 
         return $this;
     }
 
     /**
-     * @return FoodEstablishmentSchema|PlaceSchema     
+     * @return FoodEstablishmentSchema|PlaceSchema
      **/
     public function getFoodEstablishment() {
-        return $this->foodEstablishment;
+        return $this->properties['foodEstablishment'];
     }
 
     /**
      * A sub property of location. The specific food event where the action occurred.
+     *
+     * @param $foodEvent FoodEventSchema
      **/
-    private $foodEvent;
     public function setFoodEvent($foodEvent) {
-        $this->foodEvent = $foodEvent;
+        $this->properties['foodEvent'] = $foodEvent;
 
         return $this;
     }
 
     /**
-     * @return FoodEventSchema     
+     * @return FoodEventSchema
      **/
     public function getFoodEvent() {
-        return $this->foodEvent;
+        return $this->properties['foodEvent'];
     }
 
     /**
      * A sub property of instrument. The recipe/instructions used to perform the action.
+     *
+     * @param $recipe RecipeSchema
      **/
-    private $recipe;
     public function setRecipe($recipe) {
-        $this->recipe = $recipe;
+        $this->properties['recipe'] = $recipe;
 
         return $this;
     }
 
     /**
-     * @return RecipeSchema     
+     * @return RecipeSchema
      **/
     public function getRecipe() {
-        return $this->recipe;
+        return $this->properties['recipe'];
     }
 
 

@@ -35,63 +35,61 @@ class LiveBlogSchema extends BlogPostingSchema
 {
     public static function factory()
     {
-        return new LiveBlogSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new LiveBlogSchema('http://schema.org/', 'LiveBlog');
     }
 
     /**
      * The time when the live blog will stop covering the Event. Note that coverage may continue after the Event concludes.
+     *
+     * @param $coverageEndTime DateTimeSchema
      **/
-    private $coverageEndTime;
     public function setCoverageEndTime($coverageEndTime) {
-        $this->coverageEndTime = $coverageEndTime;
+        $this->properties['coverageEndTime'] = $coverageEndTime;
 
         return $this;
     }
 
     /**
-     * @return DateTimeSchema     
+     * @return DateTimeSchema
      **/
     public function getCoverageEndTime() {
-        return $this->coverageEndTime;
+        return $this->properties['coverageEndTime'];
     }
 
     /**
      * The time when the live blog will begin covering the Event. Note that coverage may begin before the Event's start time. The LiveBlogPosting may also be created before coverage begins.
+     *
+     * @param $coverageStartTime DateTimeSchema
      **/
-    private $coverageStartTime;
     public function setCoverageStartTime($coverageStartTime) {
-        $this->coverageStartTime = $coverageStartTime;
+        $this->properties['coverageStartTime'] = $coverageStartTime;
 
         return $this;
     }
 
     /**
-     * @return DateTimeSchema     
+     * @return DateTimeSchema
      **/
     public function getCoverageStartTime() {
-        return $this->coverageStartTime;
+        return $this->properties['coverageStartTime'];
     }
 
     /**
      * An update to the LiveBlog.
+     *
+     * @param $liveBlogUpdate BlogPostingSchema
      **/
-    private $liveBlogUpdate;
     public function setLiveBlogUpdate($liveBlogUpdate) {
-        $this->liveBlogUpdate = $liveBlogUpdate;
+        $this->properties['liveBlogUpdate'] = $liveBlogUpdate;
 
         return $this;
     }
 
     /**
-     * @return BlogPostingSchema     
+     * @return BlogPostingSchema
      **/
     public function getLiveBlogUpdate() {
-        return $this->liveBlogUpdate;
+        return $this->properties['liveBlogUpdate'];
     }
 
 

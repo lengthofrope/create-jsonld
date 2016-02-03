@@ -35,29 +35,25 @@ class MedicalGuidelineRecommendationSchema extends MedicalGuidelineSchema
 {
     public static function factory()
     {
-        return new MedicalGuidelineRecommendationSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MedicalGuidelineRecommendationSchema('http://schema.org/', 'MedicalGuidelineRecommendation');
     }
 
     /**
      * Strength of the guideline's recommendation (e.g. 'class I').
+     *
+     * @param $recommendationStrength TextSchema
      **/
-    private $recommendationStrength;
     public function setRecommendationStrength($recommendationStrength) {
-        $this->recommendationStrength = $recommendationStrength;
+        $this->properties['recommendationStrength'] = $recommendationStrength;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getRecommendationStrength() {
-        return $this->recommendationStrength;
+        return $this->properties['recommendationStrength'];
     }
 
 

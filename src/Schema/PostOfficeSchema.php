@@ -35,12 +35,7 @@ class PostOfficeSchema extends GovernmentOfficeSchema
 {
     public static function factory()
     {
-        return new PostOfficeSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new PostOfficeSchema('http://schema.org/', 'PostOffice');
     }
 
 

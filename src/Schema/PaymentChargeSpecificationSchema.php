@@ -35,46 +35,43 @@ class PaymentChargeSpecificationSchema extends PriceSpecificationSchema
 {
     public static function factory()
     {
-        return new PaymentChargeSpecificationSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new PaymentChargeSpecificationSchema('http://schema.org/', 'PaymentChargeSpecification');
     }
 
     /**
      * The delivery method(s) to which the delivery charge or payment charge specification applies.
+     *
+     * @param $appliesToDeliveryMethod DeliveryMethodSchema
      **/
-    private $appliesToDeliveryMethod;
     public function setAppliesToDeliveryMethod($appliesToDeliveryMethod) {
-        $this->appliesToDeliveryMethod = $appliesToDeliveryMethod;
+        $this->properties['appliesToDeliveryMethod'] = $appliesToDeliveryMethod;
 
         return $this;
     }
 
     /**
-     * @return DeliveryMethodSchema     
+     * @return DeliveryMethodSchema
      **/
     public function getAppliesToDeliveryMethod() {
-        return $this->appliesToDeliveryMethod;
+        return $this->properties['appliesToDeliveryMethod'];
     }
 
     /**
      * The payment method(s) to which the payment charge specification applies.
+     *
+     * @param $appliesToPaymentMethod PaymentMethodSchema
      **/
-    private $appliesToPaymentMethod;
     public function setAppliesToPaymentMethod($appliesToPaymentMethod) {
-        $this->appliesToPaymentMethod = $appliesToPaymentMethod;
+        $this->properties['appliesToPaymentMethod'] = $appliesToPaymentMethod;
 
         return $this;
     }
 
     /**
-     * @return PaymentMethodSchema     
+     * @return PaymentMethodSchema
      **/
     public function getAppliesToPaymentMethod() {
-        return $this->appliesToPaymentMethod;
+        return $this->properties['appliesToPaymentMethod'];
     }
 
 

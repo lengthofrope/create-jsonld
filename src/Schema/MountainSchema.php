@@ -35,12 +35,7 @@ class MountainSchema extends LandformSchema
 {
     public static function factory()
     {
-        return new MountainSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MountainSchema('http://schema.org/', 'Mountain');
     }
 
 

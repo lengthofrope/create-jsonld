@@ -35,12 +35,7 @@ class CodeSchema extends CreativeWorkSchema
 {
     public static function factory()
     {
-        return new CodeSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new CodeSchema('http://schema.org/', 'Code');
     }
 
 

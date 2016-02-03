@@ -35,233 +35,241 @@ class ExerciseActionSchema extends PlayActionSchema
 {
     public static function factory()
     {
-        return new ExerciseActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ExerciseActionSchema('http://schema.org/', 'ExerciseAction');
     }
 
     /**
      * A sub property of location. The course where this action was taken.
+     *
+     * @param $course PlaceSchema
      **/
-    private $course;
     public function setCourse($course) {
-        $this->course = $course;
+        $this->properties['course'] = $course;
 
         return $this;
     }
 
     /**
-     * @return PlaceSchema     
+     * @return PlaceSchema
      **/
     public function getCourse() {
-        return $this->course;
+        return $this->properties['course'];
     }
 
     /**
      * A sub property of instrument. The diet used in this action.
+     *
+     * @param $diet DietSchema
      **/
-    private $diet;
     public function setDiet($diet) {
-        $this->diet = $diet;
+        $this->properties['diet'] = $diet;
 
         return $this;
     }
 
     /**
-     * @return DietSchema     
+     * @return DietSchema
      **/
     public function getDiet() {
-        return $this->diet;
+        return $this->properties['diet'];
     }
 
     /**
      * The distance travelled, e.g. exercising or travelling.
+     *
+     * @param $distance DistanceSchema
      **/
-    private $distance;
     public function setDistance($distance) {
-        $this->distance = $distance;
+        $this->properties['distance'] = $distance;
 
         return $this;
     }
 
     /**
-     * @return DistanceSchema     
+     * @return DistanceSchema
      **/
     public function getDistance() {
-        return $this->distance;
+        return $this->properties['distance'];
     }
 
     /**
      * A sub property of location. The course where this action was taken.
+     *
+     * @param $exerciseCourse PlaceSchema
      **/
-    private $exerciseCourse;
     public function setExerciseCourse($exerciseCourse) {
-        $this->exerciseCourse = $exerciseCourse;
+        $this->properties['exerciseCourse'] = $exerciseCourse;
 
         return $this;
     }
 
     /**
-     * @return PlaceSchema     
+     * @return PlaceSchema
      **/
     public function getExerciseCourse() {
-        return $this->exerciseCourse;
+        return $this->properties['exerciseCourse'];
     }
 
     /**
      * A sub property of instrument. The exercise plan used on this action.
+     *
+     * @param $exercisePlan ExercisePlanSchema
      **/
-    private $exercisePlan;
     public function setExercisePlan($exercisePlan) {
-        $this->exercisePlan = $exercisePlan;
+        $this->properties['exercisePlan'] = $exercisePlan;
 
         return $this;
     }
 
     /**
-     * @return ExercisePlanSchema     
+     * @return ExercisePlanSchema
      **/
     public function getExercisePlan() {
-        return $this->exercisePlan;
+        return $this->properties['exercisePlan'];
     }
 
     /**
      * A sub property of instrument. The diet used in this action.
+     *
+     * @param $exerciseRelatedDiet DietSchema
      **/
-    private $exerciseRelatedDiet;
     public function setExerciseRelatedDiet($exerciseRelatedDiet) {
-        $this->exerciseRelatedDiet = $exerciseRelatedDiet;
+        $this->properties['exerciseRelatedDiet'] = $exerciseRelatedDiet;
 
         return $this;
     }
 
     /**
-     * @return DietSchema     
+     * @return DietSchema
      **/
     public function getExerciseRelatedDiet() {
-        return $this->exerciseRelatedDiet;
+        return $this->properties['exerciseRelatedDiet'];
     }
 
     /**
      * Type(s) of exercise or activity, such as strength training, flexibility training, aerobics, cardiac rehabilitation, etc.
+     *
+     * @param $exerciseType TextSchema
      **/
-    private $exerciseType;
     public function setExerciseType($exerciseType) {
-        $this->exerciseType = $exerciseType;
+        $this->properties['exerciseType'] = $exerciseType;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getExerciseType() {
-        return $this->exerciseType;
+        return $this->properties['exerciseType'];
     }
 
     /**
      * A sub property of location. The original location of the object or the agent before the action.
+     *
+     * @param $fromLocation PlaceSchema
      **/
-    private $fromLocation;
     public function setFromLocation($fromLocation) {
-        $this->fromLocation = $fromLocation;
+        $this->properties['fromLocation'] = $fromLocation;
 
         return $this;
     }
 
     /**
-     * @return PlaceSchema     
+     * @return PlaceSchema
      **/
     public function getFromLocation() {
-        return $this->fromLocation;
+        return $this->properties['fromLocation'];
     }
 
     /**
      * A sub property of participant. The opponent on this action.
+     *
+     * @param $opponent PersonSchema
      **/
-    private $opponent;
     public function setOpponent($opponent) {
-        $this->opponent = $opponent;
+        $this->properties['opponent'] = $opponent;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema     
+     * @return PersonSchema
      **/
     public function getOpponent() {
-        return $this->opponent;
+        return $this->properties['opponent'];
     }
 
     /**
      * A sub property of location. The sports activity location where this action occurred.
+     *
+     * @param $sportsActivityLocation SportsActivityLocationSchema
      **/
-    private $sportsActivityLocation;
     public function setSportsActivityLocation($sportsActivityLocation) {
-        $this->sportsActivityLocation = $sportsActivityLocation;
+        $this->properties['sportsActivityLocation'] = $sportsActivityLocation;
 
         return $this;
     }
 
     /**
-     * @return SportsActivityLocationSchema     
+     * @return SportsActivityLocationSchema
      **/
     public function getSportsActivityLocation() {
-        return $this->sportsActivityLocation;
+        return $this->properties['sportsActivityLocation'];
     }
 
     /**
      * A sub property of location. The sports event where this action occurred.
+     *
+     * @param $sportsEvent SportsEventSchema
      **/
-    private $sportsEvent;
     public function setSportsEvent($sportsEvent) {
-        $this->sportsEvent = $sportsEvent;
+        $this->properties['sportsEvent'] = $sportsEvent;
 
         return $this;
     }
 
     /**
-     * @return SportsEventSchema     
+     * @return SportsEventSchema
      **/
     public function getSportsEvent() {
-        return $this->sportsEvent;
+        return $this->properties['sportsEvent'];
     }
 
     /**
      * A sub property of participant. The sports team that participated on this action.
+     *
+     * @param $sportsTeam SportsTeamSchema
      **/
-    private $sportsTeam;
     public function setSportsTeam($sportsTeam) {
-        $this->sportsTeam = $sportsTeam;
+        $this->properties['sportsTeam'] = $sportsTeam;
 
         return $this;
     }
 
     /**
-     * @return SportsTeamSchema     
+     * @return SportsTeamSchema
      **/
     public function getSportsTeam() {
-        return $this->sportsTeam;
+        return $this->properties['sportsTeam'];
     }
 
     /**
      * A sub property of location. The final location of the object or the agent after the action.
+     *
+     * @param $toLocation PlaceSchema
      **/
-    private $toLocation;
     public function setToLocation($toLocation) {
-        $this->toLocation = $toLocation;
+        $this->properties['toLocation'] = $toLocation;
 
         return $this;
     }
 
     /**
-     * @return PlaceSchema     
+     * @return PlaceSchema
      **/
     public function getToLocation() {
-        return $this->toLocation;
+        return $this->properties['toLocation'];
     }
 
 

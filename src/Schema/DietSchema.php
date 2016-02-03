@@ -31,135 +31,137 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class DietSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
+class DietSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new DietSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new DietSchema('http://schema.org/', 'Diet');
     }
 
     /**
      * Nutritional information specific to the dietary plan. May include dietary recommendations on what foods to avoid, what foods to consume, and specific alterations/deviations from the USDA or other regulatory body's approved dietary guidelines.
+     *
+     * @param $dietFeatures TextSchema
      **/
-    private $dietFeatures;
     public function setDietFeatures($dietFeatures) {
-        $this->dietFeatures = $dietFeatures;
+        $this->properties['dietFeatures'] = $dietFeatures;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getDietFeatures() {
-        return $this->dietFeatures;
+        return $this->properties['dietFeatures'];
     }
 
     /**
      * People or organizations that endorse the plan.
+     *
+     * @param $endorsers OrganizationSchema|PersonSchema
      **/
-    private $endorsers;
     public function setEndorsers($endorsers) {
-        $this->endorsers = $endorsers;
+        $this->properties['endorsers'] = $endorsers;
 
         return $this;
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema     
+     * @return OrganizationSchema|PersonSchema
      **/
     public function getEndorsers() {
-        return $this->endorsers;
+        return $this->properties['endorsers'];
     }
 
     /**
      * Medical expert advice related to the plan.
+     *
+     * @param $expertConsiderations TextSchema
      **/
-    private $expertConsiderations;
     public function setExpertConsiderations($expertConsiderations) {
-        $this->expertConsiderations = $expertConsiderations;
+        $this->properties['expertConsiderations'] = $expertConsiderations;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getExpertConsiderations() {
-        return $this->expertConsiderations;
+        return $this->properties['expertConsiderations'];
     }
 
     /**
      * Descriptive information establishing the overarching theory/philosophy of the plan. May include the rationale for the name, the population where the plan first came to prominence, etc.
+     *
+     * @param $overview TextSchema
      **/
-    private $overview;
     public function setOverview($overview) {
-        $this->overview = $overview;
+        $this->properties['overview'] = $overview;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getOverview() {
-        return $this->overview;
+        return $this->properties['overview'];
     }
 
     /**
      * Specific physiologic benefits associated to the plan.
+     *
+     * @param $physiologicalBenefits TextSchema
      **/
-    private $physiologicalBenefits;
     public function setPhysiologicalBenefits($physiologicalBenefits) {
-        $this->physiologicalBenefits = $physiologicalBenefits;
+        $this->properties['physiologicalBenefits'] = $physiologicalBenefits;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getPhysiologicalBenefits() {
-        return $this->physiologicalBenefits;
+        return $this->properties['physiologicalBenefits'];
     }
 
     /**
      * Proprietary name given to the diet plan, typically by its originator or creator.
+     *
+     * @param $proprietaryName TextSchema
      **/
-    private $proprietaryName;
     public function setProprietaryName($proprietaryName) {
-        $this->proprietaryName = $proprietaryName;
+        $this->properties['proprietaryName'] = $proprietaryName;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getProprietaryName() {
-        return $this->proprietaryName;
+        return $this->properties['proprietaryName'];
     }
 
     /**
      * Specific physiologic risks associated to the plan.
+     *
+     * @param $risks TextSchema
      **/
-    private $risks;
     public function setRisks($risks) {
-        $this->risks = $risks;
+        $this->properties['risks'] = $risks;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getRisks() {
-        return $this->risks;
+        return $this->properties['risks'];
     }
 
 

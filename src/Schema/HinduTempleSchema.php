@@ -35,12 +35,7 @@ class HinduTempleSchema extends PlaceOfWorshipSchema
 {
     public static function factory()
     {
-        return new HinduTempleSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new HinduTempleSchema('http://schema.org/', 'HinduTemple');
     }
 
 

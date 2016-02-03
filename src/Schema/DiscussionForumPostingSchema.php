@@ -35,12 +35,7 @@ class DiscussionForumPostingSchema extends SocialMediaPostingSchema
 {
     public static function factory()
     {
-        return new DiscussionForumPostingSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new DiscussionForumPostingSchema('http://schema.org/', 'DiscussionForumPosting');
     }
 
 

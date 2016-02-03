@@ -35,131 +35,133 @@ class EntryPointSchema extends IntangibleSchema
 {
     public static function factory()
     {
-        return new EntryPointSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new EntryPointSchema('http://schema.org/', 'EntryPoint');
     }
 
     /**
      * An application that can complete the request.
+     *
+     * @param $actionApplication SoftwareApplicationSchema
      **/
-    private $actionApplication;
     public function setActionApplication($actionApplication) {
-        $this->actionApplication = $actionApplication;
+        $this->properties['actionApplication'] = $actionApplication;
 
         return $this;
     }
 
     /**
-     * @return SoftwareApplicationSchema     
+     * @return SoftwareApplicationSchema
      **/
     public function getActionApplication() {
-        return $this->actionApplication;
+        return $this->properties['actionApplication'];
     }
 
     /**
      * The high level platform(s) where the Action can be performed for the given URL. To specify a specific application or operating system instance, use actionApplication.
+     *
+     * @param $actionPlatform TextSchema|URLSchema
      **/
-    private $actionPlatform;
     public function setActionPlatform($actionPlatform) {
-        $this->actionPlatform = $actionPlatform;
+        $this->properties['actionPlatform'] = $actionPlatform;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|URLSchema     
+     * @return TextSchema|URLSchema
      **/
     public function getActionPlatform() {
-        return $this->actionPlatform;
+        return $this->properties['actionPlatform'];
     }
 
     /**
      * An application that can complete the request.
+     *
+     * @param $application SoftwareApplicationSchema
      **/
-    private $application;
     public function setApplication($application) {
-        $this->application = $application;
+        $this->properties['application'] = $application;
 
         return $this;
     }
 
     /**
-     * @return SoftwareApplicationSchema     
+     * @return SoftwareApplicationSchema
      **/
     public function getApplication() {
-        return $this->application;
+        return $this->properties['application'];
     }
 
     /**
      * The supported content type(s) for an EntryPoint response.
+     *
+     * @param $contentType TextSchema
      **/
-    private $contentType;
     public function setContentType($contentType) {
-        $this->contentType = $contentType;
+        $this->properties['contentType'] = $contentType;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getContentType() {
-        return $this->contentType;
+        return $this->properties['contentType'];
     }
 
     /**
      * The supported encoding type(s) for an EntryPoint request.
+     *
+     * @param $encodingType TextSchema
      **/
-    private $encodingType;
     public function setEncodingType($encodingType) {
-        $this->encodingType = $encodingType;
+        $this->properties['encodingType'] = $encodingType;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getEncodingType() {
-        return $this->encodingType;
+        return $this->properties['encodingType'];
     }
 
     /**
      * An HTTP method that specifies the appropriate HTTP method for a request to an HTTP EntryPoint. Values are capitalized strings as used in HTTP.
+     *
+     * @param $httpMethod TextSchema
      **/
-    private $httpMethod;
     public function setHttpMethod($httpMethod) {
-        $this->httpMethod = $httpMethod;
+        $this->properties['httpMethod'] = $httpMethod;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getHttpMethod() {
-        return $this->httpMethod;
+        return $this->properties['httpMethod'];
     }
 
     /**
      * A url template (RFC6570) that will be used to construct the target of the execution of the action.
+     *
+     * @param $urlTemplate TextSchema
      **/
-    private $urlTemplate;
     public function setUrlTemplate($urlTemplate) {
-        $this->urlTemplate = $urlTemplate;
+        $this->properties['urlTemplate'] = $urlTemplate;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getUrlTemplate() {
-        return $this->urlTemplate;
+        return $this->properties['urlTemplate'];
     }
 
 

@@ -35,12 +35,7 @@ class SynagogueSchema extends PlaceOfWorshipSchema
 {
     public static function factory()
     {
-        return new SynagogueSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new SynagogueSchema('http://schema.org/', 'Synagogue');
     }
 
 

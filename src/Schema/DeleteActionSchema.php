@@ -35,12 +35,7 @@ class DeleteActionSchema extends UpdateActionSchema
 {
     public static function factory()
     {
-        return new DeleteActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new DeleteActionSchema('http://schema.org/', 'DeleteAction');
     }
 
 

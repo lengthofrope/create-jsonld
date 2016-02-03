@@ -35,12 +35,7 @@ class PhotographSchema extends CreativeWorkSchema
 {
     public static function factory()
     {
-        return new PhotographSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new PhotographSchema('http://schema.org/', 'Photograph');
     }
 
 

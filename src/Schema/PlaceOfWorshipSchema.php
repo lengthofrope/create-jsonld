@@ -35,12 +35,7 @@ class PlaceOfWorshipSchema extends CivicStructureSchema
 {
     public static function factory()
     {
-        return new PlaceOfWorshipSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new PlaceOfWorshipSchema('http://schema.org/', 'PlaceOfWorship');
     }
 
 

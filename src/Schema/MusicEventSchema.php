@@ -35,12 +35,7 @@ class MusicEventSchema extends EventSchema
 {
     public static function factory()
     {
-        return new MusicEventSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MusicEventSchema('http://schema.org/', 'MusicEvent');
     }
 
 

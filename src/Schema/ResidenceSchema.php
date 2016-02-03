@@ -35,12 +35,7 @@ class ResidenceSchema extends PlaceSchema
 {
     public static function factory()
     {
-        return new ResidenceSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ResidenceSchema('http://schema.org/', 'Residence');
     }
 
 

@@ -35,12 +35,7 @@ class AutoWashSchema extends AutomotiveBusinessSchema
 {
     public static function factory()
     {
-        return new AutoWashSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new AutoWashSchema('http://schema.org/', 'AutoWash');
     }
 
 

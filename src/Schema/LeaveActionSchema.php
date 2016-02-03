@@ -35,29 +35,25 @@ class LeaveActionSchema extends InteractActionSchema
 {
     public static function factory()
     {
-        return new LeaveActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new LeaveActionSchema('http://schema.org/', 'LeaveAction');
     }
 
     /**
      * Upcoming or past event associated with this place, organization, or action.
+     *
+     * @param $event EventSchema
      **/
-    private $event;
     public function setEvent($event) {
-        $this->event = $event;
+        $this->properties['event'] = $event;
 
         return $this;
     }
 
     /**
-     * @return EventSchema     
+     * @return EventSchema
      **/
     public function getEvent() {
-        return $this->event;
+        return $this->properties['event'];
     }
 
 

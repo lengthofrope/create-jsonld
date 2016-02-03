@@ -35,12 +35,7 @@ class PlumberSchema extends HomeAndConstructionBusinessSchema
 {
     public static function factory()
     {
-        return new PlumberSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new PlumberSchema('http://schema.org/', 'Plumber');
     }
 
 

@@ -35,97 +35,97 @@ class AlignmentObjectSchema extends IntangibleSchema
 {
     public static function factory()
     {
-        return new AlignmentObjectSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new AlignmentObjectSchema('http://schema.org/', 'AlignmentObject');
     }
 
     /**
      * A category of alignment between the learning resource and the framework node. Recommended values include: 'assesses', 'teaches', 'requires', 'textComplexity', 'readingLevel', 'educationalSubject', and 'educationLevel'.
+     *
+     * @param $alignmentType TextSchema
      **/
-    private $alignmentType;
     public function setAlignmentType($alignmentType) {
-        $this->alignmentType = $alignmentType;
+        $this->properties['alignmentType'] = $alignmentType;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getAlignmentType() {
-        return $this->alignmentType;
+        return $this->properties['alignmentType'];
     }
 
     /**
      * The framework to which the resource being described is aligned.
+     *
+     * @param $educationalFramework TextSchema
      **/
-    private $educationalFramework;
     public function setEducationalFramework($educationalFramework) {
-        $this->educationalFramework = $educationalFramework;
+        $this->properties['educationalFramework'] = $educationalFramework;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getEducationalFramework() {
-        return $this->educationalFramework;
+        return $this->properties['educationalFramework'];
     }
 
     /**
      * The description of a node in an established educational framework.
+     *
+     * @param $targetDescription TextSchema
      **/
-    private $targetDescription;
     public function setTargetDescription($targetDescription) {
-        $this->targetDescription = $targetDescription;
+        $this->properties['targetDescription'] = $targetDescription;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getTargetDescription() {
-        return $this->targetDescription;
+        return $this->properties['targetDescription'];
     }
 
     /**
      * The name of a node in an established educational framework.
+     *
+     * @param $targetName TextSchema
      **/
-    private $targetName;
     public function setTargetName($targetName) {
-        $this->targetName = $targetName;
+        $this->properties['targetName'] = $targetName;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getTargetName() {
-        return $this->targetName;
+        return $this->properties['targetName'];
     }
 
     /**
      * The URL of a node in an established educational framework.
+     *
+     * @param $targetUrl URLSchema
      **/
-    private $targetUrl;
     public function setTargetUrl($targetUrl) {
-        $this->targetUrl = $targetUrl;
+        $this->properties['targetUrl'] = $targetUrl;
 
         return $this;
     }
 
     /**
-     * @return URLSchema     
+     * @return URLSchema
      **/
     public function getTargetUrl() {
-        return $this->targetUrl;
+        return $this->properties['targetUrl'];
     }
 
 

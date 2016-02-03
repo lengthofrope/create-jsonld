@@ -35,12 +35,7 @@ class VisualArtsEventSchema extends EventSchema
 {
     public static function factory()
     {
-        return new VisualArtsEventSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new VisualArtsEventSchema('http://schema.org/', 'VisualArtsEvent');
     }
 
 

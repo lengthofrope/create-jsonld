@@ -35,12 +35,7 @@ class CollegeOrUniversitySchema extends EducationalOrganizationSchema
 {
     public static function factory()
     {
-        return new CollegeOrUniversitySchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new CollegeOrUniversitySchema('http://schema.org/', 'CollegeOrUniversity');
     }
 
 

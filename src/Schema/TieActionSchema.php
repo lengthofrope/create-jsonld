@@ -35,12 +35,7 @@ class TieActionSchema extends AchieveActionSchema
 {
     public static function factory()
     {
-        return new TieActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new TieActionSchema('http://schema.org/', 'TieAction');
     }
 
 

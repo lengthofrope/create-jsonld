@@ -35,80 +35,79 @@ class DeliveryEventSchema extends EventSchema
 {
     public static function factory()
     {
-        return new DeliveryEventSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new DeliveryEventSchema('http://schema.org/', 'DeliveryEvent');
     }
 
     /**
      * Password, PIN, or access code needed for delivery (e.g. from a locker).
+     *
+     * @param $accessCode TextSchema
      **/
-    private $accessCode;
     public function setAccessCode($accessCode) {
-        $this->accessCode = $accessCode;
+        $this->properties['accessCode'] = $accessCode;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getAccessCode() {
-        return $this->accessCode;
+        return $this->properties['accessCode'];
     }
 
     /**
      * When the item is available for pickup from the store, locker, etc.
+     *
+     * @param $availableFrom DateTimeSchema
      **/
-    private $availableFrom;
     public function setAvailableFrom($availableFrom) {
-        $this->availableFrom = $availableFrom;
+        $this->properties['availableFrom'] = $availableFrom;
 
         return $this;
     }
 
     /**
-     * @return DateTimeSchema     
+     * @return DateTimeSchema
      **/
     public function getAvailableFrom() {
-        return $this->availableFrom;
+        return $this->properties['availableFrom'];
     }
 
     /**
      * After this date, the item will no longer be available for pickup.
+     *
+     * @param $availableThrough DateTimeSchema
      **/
-    private $availableThrough;
     public function setAvailableThrough($availableThrough) {
-        $this->availableThrough = $availableThrough;
+        $this->properties['availableThrough'] = $availableThrough;
 
         return $this;
     }
 
     /**
-     * @return DateTimeSchema     
+     * @return DateTimeSchema
      **/
     public function getAvailableThrough() {
-        return $this->availableThrough;
+        return $this->properties['availableThrough'];
     }
 
     /**
      * Method used for delivery or shipping.
+     *
+     * @param $hasDeliveryMethod DeliveryMethodSchema
      **/
-    private $hasDeliveryMethod;
     public function setHasDeliveryMethod($hasDeliveryMethod) {
-        $this->hasDeliveryMethod = $hasDeliveryMethod;
+        $this->properties['hasDeliveryMethod'] = $hasDeliveryMethod;
 
         return $this;
     }
 
     /**
-     * @return DeliveryMethodSchema     
+     * @return DeliveryMethodSchema
      **/
     public function getHasDeliveryMethod() {
-        return $this->hasDeliveryMethod;
+        return $this->properties['hasDeliveryMethod'];
     }
 
 

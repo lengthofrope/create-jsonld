@@ -35,80 +35,79 @@ class MedicalGuidelineSchema extends MedicalEntitySchema
 {
     public static function factory()
     {
-        return new MedicalGuidelineSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MedicalGuidelineSchema('http://schema.org/', 'MedicalGuideline');
     }
 
     /**
      * Strength of evidence of the data used to formulate the guideline (enumerated).
+     *
+     * @param $evidenceLevel MedicalEvidenceLevelSchema
      **/
-    private $evidenceLevel;
     public function setEvidenceLevel($evidenceLevel) {
-        $this->evidenceLevel = $evidenceLevel;
+        $this->properties['evidenceLevel'] = $evidenceLevel;
 
         return $this;
     }
 
     /**
-     * @return MedicalEvidenceLevelSchema     
+     * @return MedicalEvidenceLevelSchema
      **/
     public function getEvidenceLevel() {
-        return $this->evidenceLevel;
+        return $this->properties['evidenceLevel'];
     }
 
     /**
      * Source of the data used to formulate the guidance, e.g. RCT, consensus opinion, etc.
+     *
+     * @param $evidenceOrigin TextSchema
      **/
-    private $evidenceOrigin;
     public function setEvidenceOrigin($evidenceOrigin) {
-        $this->evidenceOrigin = $evidenceOrigin;
+        $this->properties['evidenceOrigin'] = $evidenceOrigin;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getEvidenceOrigin() {
-        return $this->evidenceOrigin;
+        return $this->properties['evidenceOrigin'];
     }
 
     /**
      * Date on which this guideline's recommendation was made.
+     *
+     * @param $guidelineDate DateSchema
      **/
-    private $guidelineDate;
     public function setGuidelineDate($guidelineDate) {
-        $this->guidelineDate = $guidelineDate;
+        $this->properties['guidelineDate'] = $guidelineDate;
 
         return $this;
     }
 
     /**
-     * @return DateSchema     
+     * @return DateSchema
      **/
     public function getGuidelineDate() {
-        return $this->guidelineDate;
+        return $this->properties['guidelineDate'];
     }
 
     /**
      * The medical conditions, treatments, etc. that are the subject of the guideline.
+     *
+     * @param $guidelineSubject MedicalEntitySchema
      **/
-    private $guidelineSubject;
     public function setGuidelineSubject($guidelineSubject) {
-        $this->guidelineSubject = $guidelineSubject;
+        $this->properties['guidelineSubject'] = $guidelineSubject;
 
         return $this;
     }
 
     /**
-     * @return MedicalEntitySchema     
+     * @return MedicalEntitySchema
      **/
     public function getGuidelineSubject() {
-        return $this->guidelineSubject;
+        return $this->properties['guidelineSubject'];
     }
 
 

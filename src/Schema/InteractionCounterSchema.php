@@ -35,63 +35,61 @@ class InteractionCounterSchema extends StructuredValueSchema
 {
     public static function factory()
     {
-        return new InteractionCounterSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new InteractionCounterSchema('http://schema.org/', 'InteractionCounter');
     }
 
     /**
      * The WebSite or SoftwareApplication where the interactions took place.
+     *
+     * @param $interactionService SoftwareApplicationSchema|WebSiteSchema
      **/
-    private $interactionService;
     public function setInteractionService($interactionService) {
-        $this->interactionService = $interactionService;
+        $this->properties['interactionService'] = $interactionService;
 
         return $this;
     }
 
     /**
-     * @return SoftwareApplicationSchema|WebSiteSchema     
+     * @return SoftwareApplicationSchema|WebSiteSchema
      **/
     public function getInteractionService() {
-        return $this->interactionService;
+        return $this->properties['interactionService'];
     }
 
     /**
      * The Action representing the type of interaction. For up votes, +1s, etc. use <a href="/LikeAction";>LikeAction</a>. For down votes use <a href="/DislikeAction">DislikeAction</a>. Otherwise, use the most specific Action.
+     *
+     * @param $interactionType ActionSchema
      **/
-    private $interactionType;
     public function setInteractionType($interactionType) {
-        $this->interactionType = $interactionType;
+        $this->properties['interactionType'] = $interactionType;
 
         return $this;
     }
 
     /**
-     * @return ActionSchema     
+     * @return ActionSchema
      **/
     public function getInteractionType() {
-        return $this->interactionType;
+        return $this->properties['interactionType'];
     }
 
     /**
      * The number of interactions for the CreativeWork using the WebSite or SoftwareApplication.
+     *
+     * @param $userInteractionCount IntegerSchema
      **/
-    private $userInteractionCount;
     public function setUserInteractionCount($userInteractionCount) {
-        $this->userInteractionCount = $userInteractionCount;
+        $this->properties['userInteractionCount'] = $userInteractionCount;
 
         return $this;
     }
 
     /**
-     * @return IntegerSchema     
+     * @return IntegerSchema
      **/
     public function getUserInteractionCount() {
-        return $this->userInteractionCount;
+        return $this->properties['userInteractionCount'];
     }
 
 

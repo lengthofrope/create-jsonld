@@ -35,12 +35,7 @@ class EntertainmentBusinessSchema extends LocalBusinessSchema
 {
     public static function factory()
     {
-        return new EntertainmentBusinessSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new EntertainmentBusinessSchema('http://schema.org/', 'EntertainmentBusiness');
     }
 
 

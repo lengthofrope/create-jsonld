@@ -35,97 +35,97 @@ class AnatomicalSystemSchema extends MedicalEntitySchema
 {
     public static function factory()
     {
-        return new AnatomicalSystemSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new AnatomicalSystemSchema('http://schema.org/', 'AnatomicalSystem');
     }
 
     /**
      * If applicable, a description of the pathophysiology associated with the anatomical system, including potential abnormal changes in the mechanical, physical, and biochemical functions of the system.
+     *
+     * @param $associatedPathophysiology TextSchema
      **/
-    private $associatedPathophysiology;
     public function setAssociatedPathophysiology($associatedPathophysiology) {
-        $this->associatedPathophysiology = $associatedPathophysiology;
+        $this->properties['associatedPathophysiology'] = $associatedPathophysiology;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getAssociatedPathophysiology() {
-        return $this->associatedPathophysiology;
+        return $this->properties['associatedPathophysiology'];
     }
 
     /**
      * The underlying anatomical structures, such as organs, that comprise the anatomical system.
+     *
+     * @param $comprisedOf AnatomicalStructureSchema|AnatomicalSystemSchema
      **/
-    private $comprisedOf;
     public function setComprisedOf($comprisedOf) {
-        $this->comprisedOf = $comprisedOf;
+        $this->properties['comprisedOf'] = $comprisedOf;
 
         return $this;
     }
 
     /**
-     * @return AnatomicalStructureSchema|AnatomicalSystemSchema     
+     * @return AnatomicalStructureSchema|AnatomicalSystemSchema
      **/
     public function getComprisedOf() {
-        return $this->comprisedOf;
+        return $this->properties['comprisedOf'];
     }
 
     /**
      * A medical condition associated with this anatomy.
+     *
+     * @param $relatedCondition MedicalConditionSchema
      **/
-    private $relatedCondition;
     public function setRelatedCondition($relatedCondition) {
-        $this->relatedCondition = $relatedCondition;
+        $this->properties['relatedCondition'] = $relatedCondition;
 
         return $this;
     }
 
     /**
-     * @return MedicalConditionSchema     
+     * @return MedicalConditionSchema
      **/
     public function getRelatedCondition() {
-        return $this->relatedCondition;
+        return $this->properties['relatedCondition'];
     }
 
     /**
      * Related anatomical structure(s) that are not part of the system but relate or connect to it, such as vascular bundles associated with an organ system.
+     *
+     * @param $relatedStructure AnatomicalStructureSchema
      **/
-    private $relatedStructure;
     public function setRelatedStructure($relatedStructure) {
-        $this->relatedStructure = $relatedStructure;
+        $this->properties['relatedStructure'] = $relatedStructure;
 
         return $this;
     }
 
     /**
-     * @return AnatomicalStructureSchema     
+     * @return AnatomicalStructureSchema
      **/
     public function getRelatedStructure() {
-        return $this->relatedStructure;
+        return $this->properties['relatedStructure'];
     }
 
     /**
      * A medical therapy related to this anatomy.
+     *
+     * @param $relatedTherapy MedicalTherapySchema
      **/
-    private $relatedTherapy;
     public function setRelatedTherapy($relatedTherapy) {
-        $this->relatedTherapy = $relatedTherapy;
+        $this->properties['relatedTherapy'] = $relatedTherapy;
 
         return $this;
     }
 
     /**
-     * @return MedicalTherapySchema     
+     * @return MedicalTherapySchema
      **/
     public function getRelatedTherapy() {
-        return $this->relatedTherapy;
+        return $this->properties['relatedTherapy'];
     }
 
 

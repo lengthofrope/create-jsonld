@@ -35,12 +35,7 @@ class PsychologicalTreatmentSchema extends MedicalTherapySchema
 {
     public static function factory()
     {
-        return new PsychologicalTreatmentSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new PsychologicalTreatmentSchema('http://schema.org/', 'PsychologicalTreatment');
     }
 
 

@@ -35,12 +35,7 @@ class PondSchema extends BodyOfWaterSchema
 {
     public static function factory()
     {
-        return new PondSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new PondSchema('http://schema.org/', 'Pond');
     }
 
 

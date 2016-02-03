@@ -35,63 +35,61 @@ class VeinSchema extends VesselSchema
 {
     public static function factory()
     {
-        return new VeinSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new VeinSchema('http://schema.org/', 'Vein');
     }
 
     /**
      * The vasculature that the vein drains into.
+     *
+     * @param $drainsTo VesselSchema
      **/
-    private $drainsTo;
     public function setDrainsTo($drainsTo) {
-        $this->drainsTo = $drainsTo;
+        $this->properties['drainsTo'] = $drainsTo;
 
         return $this;
     }
 
     /**
-     * @return VesselSchema     
+     * @return VesselSchema
      **/
     public function getDrainsTo() {
-        return $this->drainsTo;
+        return $this->properties['drainsTo'];
     }
 
     /**
      * The anatomical or organ system drained by this vessel; generally refers to a specific part of an organ.
+     *
+     * @param $regionDrained AnatomicalStructureSchema|AnatomicalSystemSchema
      **/
-    private $regionDrained;
     public function setRegionDrained($regionDrained) {
-        $this->regionDrained = $regionDrained;
+        $this->properties['regionDrained'] = $regionDrained;
 
         return $this;
     }
 
     /**
-     * @return AnatomicalStructureSchema|AnatomicalSystemSchema     
+     * @return AnatomicalStructureSchema|AnatomicalSystemSchema
      **/
     public function getRegionDrained() {
-        return $this->regionDrained;
+        return $this->properties['regionDrained'];
     }
 
     /**
      * The anatomical or organ system that the vein flows into; a larger structure that the vein connects to.
+     *
+     * @param $tributary AnatomicalStructureSchema
      **/
-    private $tributary;
     public function setTributary($tributary) {
-        $this->tributary = $tributary;
+        $this->properties['tributary'] = $tributary;
 
         return $this;
     }
 
     /**
-     * @return AnatomicalStructureSchema     
+     * @return AnatomicalStructureSchema
      **/
     public function getTributary() {
-        return $this->tributary;
+        return $this->properties['tributary'];
     }
 
 

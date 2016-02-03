@@ -35,12 +35,7 @@ class WPFooterSchema extends WebPageElementSchema
 {
     public static function factory()
     {
-        return new WPFooterSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new WPFooterSchema('http://schema.org/', 'WPFooter');
     }
 
 

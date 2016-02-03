@@ -37,12 +37,7 @@ class UserPlaysSchema extends UserInteractionSchema
 {
     public static function factory()
     {
-        return new UserPlaysSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new UserPlaysSchema('http://schema.org/', 'UserPlays');
     }
 
 

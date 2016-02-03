@@ -35,12 +35,7 @@ class LandformSchema extends PlaceSchema
 {
     public static function factory()
     {
-        return new LandformSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new LandformSchema('http://schema.org/', 'Landform');
     }
 
 

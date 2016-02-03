@@ -42,12 +42,7 @@ class HomeAndConstructionBusinessSchema extends LocalBusinessSchema
 {
     public static function factory()
     {
-        return new HomeAndConstructionBusinessSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new HomeAndConstructionBusinessSchema('http://schema.org/', 'HomeAndConstructionBusiness');
     }
 
 

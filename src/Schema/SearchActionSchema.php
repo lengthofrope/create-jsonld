@@ -35,29 +35,25 @@ class SearchActionSchema extends ActionSchema
 {
     public static function factory()
     {
-        return new SearchActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new SearchActionSchema('http://schema.org/', 'SearchAction');
     }
 
     /**
      * A sub property of instrument. The query used on this action.
+     *
+     * @param $query TextSchema
      **/
-    private $query;
     public function setQuery($query) {
-        $this->query = $query;
+        $this->properties['query'] = $query;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getQuery() {
-        return $this->query;
+        return $this->properties['query'];
     }
 
 

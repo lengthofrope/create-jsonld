@@ -35,29 +35,25 @@ class CommentActionSchema extends CommunicateActionSchema
 {
     public static function factory()
     {
-        return new CommentActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new CommentActionSchema('http://schema.org/', 'CommentAction');
     }
 
     /**
      * A sub property of result. The Comment created or sent as a result of this action.
+     *
+     * @param $resultComment CommentSchema
      **/
-    private $resultComment;
     public function setResultComment($resultComment) {
-        $this->resultComment = $resultComment;
+        $this->properties['resultComment'] = $resultComment;
 
         return $this;
     }
 
     /**
-     * @return CommentSchema     
+     * @return CommentSchema
      **/
     public function getResultComment() {
-        return $this->resultComment;
+        return $this->properties['resultComment'];
     }
 
 

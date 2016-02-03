@@ -35,12 +35,7 @@ class FilmActionSchema extends CreateActionSchema
 {
     public static function factory()
     {
-        return new FilmActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new FilmActionSchema('http://schema.org/', 'FilmAction');
     }
 
 

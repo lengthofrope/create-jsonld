@@ -35,84 +35,83 @@ class DeliveryChargeSpecificationSchema extends PriceSpecificationSchema
 {
     public static function factory()
     {
-        return new DeliveryChargeSpecificationSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new DeliveryChargeSpecificationSchema('http://schema.org/', 'DeliveryChargeSpecification');
     }
 
     /**
      * The delivery method(s) to which the delivery charge or payment charge specification applies.
+     *
+     * @param $appliesToDeliveryMethod DeliveryMethodSchema
      **/
-    private $appliesToDeliveryMethod;
     public function setAppliesToDeliveryMethod($appliesToDeliveryMethod) {
-        $this->appliesToDeliveryMethod = $appliesToDeliveryMethod;
+        $this->properties['appliesToDeliveryMethod'] = $appliesToDeliveryMethod;
 
         return $this;
     }
 
     /**
-     * @return DeliveryMethodSchema     
+     * @return DeliveryMethodSchema
      **/
     public function getAppliesToDeliveryMethod() {
-        return $this->appliesToDeliveryMethod;
+        return $this->properties['appliesToDeliveryMethod'];
     }
 
     /**
      * The geographic area where a service or offered item is provided.
+     *
+     * @param $areaServed PlaceSchema|AdministrativeAreaSchema|GeoShapeSchema|TextSchema
      **/
-    private $areaServed;
     public function setAreaServed($areaServed) {
-        $this->areaServed = $areaServed;
+        $this->properties['areaServed'] = $areaServed;
 
         return $this;
     }
 
     /**
-     * @return PlaceSchema|AdministrativeAreaSchema|GeoShapeSchema|TextSchema     
+     * @return PlaceSchema|AdministrativeAreaSchema|GeoShapeSchema|TextSchema
      **/
     public function getAreaServed() {
-        return $this->areaServed;
+        return $this->properties['areaServed'];
     }
 
     /**
      * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which the offer or delivery charge specification is valid.
       <br><br> See also <a href="/ineligibleRegion">ineligibleRegion</a>.
     
+     *
+     * @param $eligibleRegion GeoShapeSchema|PlaceSchema|TextSchema
      **/
-    private $eligibleRegion;
     public function setEligibleRegion($eligibleRegion) {
-        $this->eligibleRegion = $eligibleRegion;
+        $this->properties['eligibleRegion'] = $eligibleRegion;
 
         return $this;
     }
 
     /**
-     * @return GeoShapeSchema|PlaceSchema|TextSchema     
+     * @return GeoShapeSchema|PlaceSchema|TextSchema
      **/
     public function getEligibleRegion() {
-        return $this->eligibleRegion;
+        return $this->properties['eligibleRegion'];
     }
 
     /**
      * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which the offer or delivery charge specification is not valid, e.g. a region where the transaction is not allowed.
       <br><br> See also <a href="/eligibleRegion">eligibleRegion</a>.
       
+     *
+     * @param $ineligibleRegion GeoShapeSchema|PlaceSchema|TextSchema
      **/
-    private $ineligibleRegion;
     public function setIneligibleRegion($ineligibleRegion) {
-        $this->ineligibleRegion = $ineligibleRegion;
+        $this->properties['ineligibleRegion'] = $ineligibleRegion;
 
         return $this;
     }
 
     /**
-     * @return GeoShapeSchema|PlaceSchema|TextSchema     
+     * @return GeoShapeSchema|PlaceSchema|TextSchema
      **/
     public function getIneligibleRegion() {
-        return $this->ineligibleRegion;
+        return $this->properties['ineligibleRegion'];
     }
 
 

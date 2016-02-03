@@ -35,80 +35,79 @@ class RentalCarReservationSchema extends ReservationSchema
 {
     public static function factory()
     {
-        return new RentalCarReservationSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new RentalCarReservationSchema('http://schema.org/', 'RentalCarReservation');
     }
 
     /**
      * Where a rental car can be dropped off.
+     *
+     * @param $dropoffLocation PlaceSchema
      **/
-    private $dropoffLocation;
     public function setDropoffLocation($dropoffLocation) {
-        $this->dropoffLocation = $dropoffLocation;
+        $this->properties['dropoffLocation'] = $dropoffLocation;
 
         return $this;
     }
 
     /**
-     * @return PlaceSchema     
+     * @return PlaceSchema
      **/
     public function getDropoffLocation() {
-        return $this->dropoffLocation;
+        return $this->properties['dropoffLocation'];
     }
 
     /**
      * When a rental car can be dropped off.
+     *
+     * @param $dropoffTime DateTimeSchema
      **/
-    private $dropoffTime;
     public function setDropoffTime($dropoffTime) {
-        $this->dropoffTime = $dropoffTime;
+        $this->properties['dropoffTime'] = $dropoffTime;
 
         return $this;
     }
 
     /**
-     * @return DateTimeSchema     
+     * @return DateTimeSchema
      **/
     public function getDropoffTime() {
-        return $this->dropoffTime;
+        return $this->properties['dropoffTime'];
     }
 
     /**
      * Where a taxi will pick up a passenger or a rental car can be picked up.
+     *
+     * @param $pickupLocation PlaceSchema
      **/
-    private $pickupLocation;
     public function setPickupLocation($pickupLocation) {
-        $this->pickupLocation = $pickupLocation;
+        $this->properties['pickupLocation'] = $pickupLocation;
 
         return $this;
     }
 
     /**
-     * @return PlaceSchema     
+     * @return PlaceSchema
      **/
     public function getPickupLocation() {
-        return $this->pickupLocation;
+        return $this->properties['pickupLocation'];
     }
 
     /**
      * When a taxi will pickup a passenger or a rental car can be picked up.
+     *
+     * @param $pickupTime DateTimeSchema
      **/
-    private $pickupTime;
     public function setPickupTime($pickupTime) {
-        $this->pickupTime = $pickupTime;
+        $this->properties['pickupTime'] = $pickupTime;
 
         return $this;
     }
 
     /**
-     * @return DateTimeSchema     
+     * @return DateTimeSchema
      **/
     public function getPickupTime() {
-        return $this->pickupTime;
+        return $this->properties['pickupTime'];
     }
 
 

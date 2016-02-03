@@ -35,131 +35,133 @@ class SoftwareSourceCodeSchema extends CreativeWorkSchema
 {
     public static function factory()
     {
-        return new SoftwareSourceCodeSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new SoftwareSourceCodeSchema('http://schema.org/', 'SoftwareSourceCode');
     }
 
     /**
      * Link to the repository where the un-compiled, human readable code and related code is located (SVN, github, CodePlex).
+     *
+     * @param $codeRepository URLSchema
      **/
-    private $codeRepository;
     public function setCodeRepository($codeRepository) {
-        $this->codeRepository = $codeRepository;
+        $this->properties['codeRepository'] = $codeRepository;
 
         return $this;
     }
 
     /**
-     * @return URLSchema     
+     * @return URLSchema
      **/
     public function getCodeRepository() {
-        return $this->codeRepository;
+        return $this->properties['codeRepository'];
     }
 
     /**
      * What type of code sample: full (compile ready) solution, code snippet, inline code, scripts, template.
+     *
+     * @param $codeSampleType TextSchema
      **/
-    private $codeSampleType;
     public function setCodeSampleType($codeSampleType) {
-        $this->codeSampleType = $codeSampleType;
+        $this->properties['codeSampleType'] = $codeSampleType;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getCodeSampleType() {
-        return $this->codeSampleType;
+        return $this->properties['codeSampleType'];
     }
 
     /**
      * The computer programming language.
+     *
+     * @param $programmingLanguage LanguageSchema
      **/
-    private $programmingLanguage;
     public function setProgrammingLanguage($programmingLanguage) {
-        $this->programmingLanguage = $programmingLanguage;
+        $this->properties['programmingLanguage'] = $programmingLanguage;
 
         return $this;
     }
 
     /**
-     * @return LanguageSchema     
+     * @return LanguageSchema
      **/
     public function getProgrammingLanguage() {
-        return $this->programmingLanguage;
+        return $this->properties['programmingLanguage'];
     }
 
     /**
      * Runtime platform or script interpreter dependencies (Example - Java v1, Python2.3, .Net Framework 3.0).
+     *
+     * @param $runtime TextSchema
      **/
-    private $runtime;
     public function setRuntime($runtime) {
-        $this->runtime = $runtime;
+        $this->properties['runtime'] = $runtime;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getRuntime() {
-        return $this->runtime;
+        return $this->properties['runtime'];
     }
 
     /**
      * Runtime platform or script interpreter dependencies (Example - Java v1, Python2.3, .Net Framework 3.0).
+     *
+     * @param $runtimePlatform TextSchema
      **/
-    private $runtimePlatform;
     public function setRuntimePlatform($runtimePlatform) {
-        $this->runtimePlatform = $runtimePlatform;
+        $this->properties['runtimePlatform'] = $runtimePlatform;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getRuntimePlatform() {
-        return $this->runtimePlatform;
+        return $this->properties['runtimePlatform'];
     }
 
     /**
      * What type of sample: full (compile ready) solution, code snippet, inline code, scripts, template.
+     *
+     * @param $sampleType TextSchema
      **/
-    private $sampleType;
     public function setSampleType($sampleType) {
-        $this->sampleType = $sampleType;
+        $this->properties['sampleType'] = $sampleType;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getSampleType() {
-        return $this->sampleType;
+        return $this->properties['sampleType'];
     }
 
     /**
      * Target Operating System / Product to which the code applies.  If applies to several versions, just the product name can be used.
+     *
+     * @param $targetProduct SoftwareApplicationSchema
      **/
-    private $targetProduct;
     public function setTargetProduct($targetProduct) {
-        $this->targetProduct = $targetProduct;
+        $this->properties['targetProduct'] = $targetProduct;
 
         return $this;
     }
 
     /**
-     * @return SoftwareApplicationSchema     
+     * @return SoftwareApplicationSchema
      **/
     public function getTargetProduct() {
-        return $this->targetProduct;
+        return $this->properties['targetProduct'];
     }
 
 

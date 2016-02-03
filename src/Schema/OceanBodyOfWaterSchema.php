@@ -35,12 +35,7 @@ class OceanBodyOfWaterSchema extends BodyOfWaterSchema
 {
     public static function factory()
     {
-        return new OceanBodyOfWaterSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new OceanBodyOfWaterSchema('http://schema.org/', 'OceanBodyOfWater');
     }
 
 

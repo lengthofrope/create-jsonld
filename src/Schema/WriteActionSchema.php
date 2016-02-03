@@ -35,46 +35,43 @@ class WriteActionSchema extends CreateActionSchema
 {
     public static function factory()
     {
-        return new WriteActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new WriteActionSchema('http://schema.org/', 'WriteAction');
     }
 
     /**
      * The language of the content or performance or used in an action. Please use one of the language codes from the <a href='http://tools.ietf.org/html/bcp47'>IETF BCP 47 standard</a>.
+     *
+     * @param $inLanguage TextSchema|LanguageSchema
      **/
-    private $inLanguage;
     public function setInLanguage($inLanguage) {
-        $this->inLanguage = $inLanguage;
+        $this->properties['inLanguage'] = $inLanguage;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|LanguageSchema     
+     * @return TextSchema|LanguageSchema
      **/
     public function getInLanguage() {
-        return $this->inLanguage;
+        return $this->properties['inLanguage'];
     }
 
     /**
      * A sub property of instrument. The language used on this action.
+     *
+     * @param $language LanguageSchema
      **/
-    private $language;
     public function setLanguage($language) {
-        $this->language = $language;
+        $this->properties['language'] = $language;
 
         return $this;
     }
 
     /**
-     * @return LanguageSchema     
+     * @return LanguageSchema
      **/
     public function getLanguage() {
-        return $this->language;
+        return $this->properties['language'];
     }
 
 

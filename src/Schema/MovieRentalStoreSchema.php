@@ -35,12 +35,7 @@ class MovieRentalStoreSchema extends StoreSchema
 {
     public static function factory()
     {
-        return new MovieRentalStoreSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MovieRentalStoreSchema('http://schema.org/', 'MovieRentalStore');
     }
 
 

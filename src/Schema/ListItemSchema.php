@@ -35,80 +35,79 @@ class ListItemSchema extends IntangibleSchema
 {
     public static function factory()
     {
-        return new ListItemSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ListItemSchema('http://schema.org/', 'ListItem');
     }
 
     /**
      * An entity represented by an entry in a list or data feed (e.g. an 'artist' in a list of 'artists')’.
+     *
+     * @param $item ThingSchema
      **/
-    private $item;
     public function setItem($item) {
-        $this->item = $item;
+        $this->properties['item'] = $item;
 
         return $this;
     }
 
     /**
-     * @return ThingSchema     
+     * @return ThingSchema
      **/
     public function getItem() {
-        return $this->item;
+        return $this->properties['item'];
     }
 
     /**
      * A link to the ListItem that follows the current one.
+     *
+     * @param $nextItem ListItemSchema
      **/
-    private $nextItem;
     public function setNextItem($nextItem) {
-        $this->nextItem = $nextItem;
+        $this->properties['nextItem'] = $nextItem;
 
         return $this;
     }
 
     /**
-     * @return ListItemSchema     
+     * @return ListItemSchema
      **/
     public function getNextItem() {
-        return $this->nextItem;
+        return $this->properties['nextItem'];
     }
 
     /**
      * The position of an item in a series or sequence of items.
+     *
+     * @param $position TextSchema|IntegerSchema
      **/
-    private $position;
     public function setPosition($position) {
-        $this->position = $position;
+        $this->properties['position'] = $position;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|IntegerSchema     
+     * @return TextSchema|IntegerSchema
      **/
     public function getPosition() {
-        return $this->position;
+        return $this->properties['position'];
     }
 
     /**
      * A link to the ListItem that preceeds the current one.
+     *
+     * @param $previousItem ListItemSchema
      **/
-    private $previousItem;
     public function setPreviousItem($previousItem) {
-        $this->previousItem = $previousItem;
+        $this->properties['previousItem'] = $previousItem;
 
         return $this;
     }
 
     /**
-     * @return ListItemSchema     
+     * @return ListItemSchema
      **/
     public function getPreviousItem() {
-        return $this->previousItem;
+        return $this->properties['previousItem'];
     }
 
 

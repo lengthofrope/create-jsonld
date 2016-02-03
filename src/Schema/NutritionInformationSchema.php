@@ -35,216 +35,223 @@ class NutritionInformationSchema extends StructuredValueSchema
 {
     public static function factory()
     {
-        return new NutritionInformationSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new NutritionInformationSchema('http://schema.org/', 'NutritionInformation');
     }
 
     /**
      * The number of calories.
+     *
+     * @param $calories EnergySchema
      **/
-    private $calories;
     public function setCalories($calories) {
-        $this->calories = $calories;
+        $this->properties['calories'] = $calories;
 
         return $this;
     }
 
     /**
-     * @return EnergySchema     
+     * @return EnergySchema
      **/
     public function getCalories() {
-        return $this->calories;
+        return $this->properties['calories'];
     }
 
     /**
      * The number of grams of carbohydrates.
+     *
+     * @param $carbohydrateContent MassSchema
      **/
-    private $carbohydrateContent;
     public function setCarbohydrateContent($carbohydrateContent) {
-        $this->carbohydrateContent = $carbohydrateContent;
+        $this->properties['carbohydrateContent'] = $carbohydrateContent;
 
         return $this;
     }
 
     /**
-     * @return MassSchema     
+     * @return MassSchema
      **/
     public function getCarbohydrateContent() {
-        return $this->carbohydrateContent;
+        return $this->properties['carbohydrateContent'];
     }
 
     /**
      * The number of milligrams of cholesterol.
+     *
+     * @param $cholesterolContent MassSchema
      **/
-    private $cholesterolContent;
     public function setCholesterolContent($cholesterolContent) {
-        $this->cholesterolContent = $cholesterolContent;
+        $this->properties['cholesterolContent'] = $cholesterolContent;
 
         return $this;
     }
 
     /**
-     * @return MassSchema     
+     * @return MassSchema
      **/
     public function getCholesterolContent() {
-        return $this->cholesterolContent;
+        return $this->properties['cholesterolContent'];
     }
 
     /**
      * The number of grams of fat.
+     *
+     * @param $fatContent MassSchema
      **/
-    private $fatContent;
     public function setFatContent($fatContent) {
-        $this->fatContent = $fatContent;
+        $this->properties['fatContent'] = $fatContent;
 
         return $this;
     }
 
     /**
-     * @return MassSchema     
+     * @return MassSchema
      **/
     public function getFatContent() {
-        return $this->fatContent;
+        return $this->properties['fatContent'];
     }
 
     /**
      * The number of grams of fiber.
+     *
+     * @param $fiberContent MassSchema
      **/
-    private $fiberContent;
     public function setFiberContent($fiberContent) {
-        $this->fiberContent = $fiberContent;
+        $this->properties['fiberContent'] = $fiberContent;
 
         return $this;
     }
 
     /**
-     * @return MassSchema     
+     * @return MassSchema
      **/
     public function getFiberContent() {
-        return $this->fiberContent;
+        return $this->properties['fiberContent'];
     }
 
     /**
      * The number of grams of protein.
+     *
+     * @param $proteinContent MassSchema
      **/
-    private $proteinContent;
     public function setProteinContent($proteinContent) {
-        $this->proteinContent = $proteinContent;
+        $this->properties['proteinContent'] = $proteinContent;
 
         return $this;
     }
 
     /**
-     * @return MassSchema     
+     * @return MassSchema
      **/
     public function getProteinContent() {
-        return $this->proteinContent;
+        return $this->properties['proteinContent'];
     }
 
     /**
      * The number of grams of saturated fat.
+     *
+     * @param $saturatedFatContent MassSchema
      **/
-    private $saturatedFatContent;
     public function setSaturatedFatContent($saturatedFatContent) {
-        $this->saturatedFatContent = $saturatedFatContent;
+        $this->properties['saturatedFatContent'] = $saturatedFatContent;
 
         return $this;
     }
 
     /**
-     * @return MassSchema     
+     * @return MassSchema
      **/
     public function getSaturatedFatContent() {
-        return $this->saturatedFatContent;
+        return $this->properties['saturatedFatContent'];
     }
 
     /**
      * The serving size, in terms of the number of volume or mass.
+     *
+     * @param $servingSize TextSchema
      **/
-    private $servingSize;
     public function setServingSize($servingSize) {
-        $this->servingSize = $servingSize;
+        $this->properties['servingSize'] = $servingSize;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getServingSize() {
-        return $this->servingSize;
+        return $this->properties['servingSize'];
     }
 
     /**
      * The number of milligrams of sodium.
+     *
+     * @param $sodiumContent MassSchema
      **/
-    private $sodiumContent;
     public function setSodiumContent($sodiumContent) {
-        $this->sodiumContent = $sodiumContent;
+        $this->properties['sodiumContent'] = $sodiumContent;
 
         return $this;
     }
 
     /**
-     * @return MassSchema     
+     * @return MassSchema
      **/
     public function getSodiumContent() {
-        return $this->sodiumContent;
+        return $this->properties['sodiumContent'];
     }
 
     /**
      * The number of grams of sugar.
+     *
+     * @param $sugarContent MassSchema
      **/
-    private $sugarContent;
     public function setSugarContent($sugarContent) {
-        $this->sugarContent = $sugarContent;
+        $this->properties['sugarContent'] = $sugarContent;
 
         return $this;
     }
 
     /**
-     * @return MassSchema     
+     * @return MassSchema
      **/
     public function getSugarContent() {
-        return $this->sugarContent;
+        return $this->properties['sugarContent'];
     }
 
     /**
      * The number of grams of trans fat.
+     *
+     * @param $transFatContent MassSchema
      **/
-    private $transFatContent;
     public function setTransFatContent($transFatContent) {
-        $this->transFatContent = $transFatContent;
+        $this->properties['transFatContent'] = $transFatContent;
 
         return $this;
     }
 
     /**
-     * @return MassSchema     
+     * @return MassSchema
      **/
     public function getTransFatContent() {
-        return $this->transFatContent;
+        return $this->properties['transFatContent'];
     }
 
     /**
      * The number of grams of unsaturated fat.
+     *
+     * @param $unsaturatedFatContent MassSchema
      **/
-    private $unsaturatedFatContent;
     public function setUnsaturatedFatContent($unsaturatedFatContent) {
-        $this->unsaturatedFatContent = $unsaturatedFatContent;
+        $this->properties['unsaturatedFatContent'] = $unsaturatedFatContent;
 
         return $this;
     }
 
     /**
-     * @return MassSchema     
+     * @return MassSchema
      **/
     public function getUnsaturatedFatContent() {
-        return $this->unsaturatedFatContent;
+        return $this->properties['unsaturatedFatContent'];
     }
 
 

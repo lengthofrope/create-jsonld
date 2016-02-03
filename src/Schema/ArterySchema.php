@@ -35,63 +35,61 @@ class ArterySchema extends VesselSchema
 {
     public static function factory()
     {
-        return new ArterySchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ArterySchema('http://schema.org/', 'Artery');
     }
 
     /**
      * The branches that comprise the arterial structure.
+     *
+     * @param $arterialBranch AnatomicalStructureSchema
      **/
-    private $arterialBranch;
     public function setArterialBranch($arterialBranch) {
-        $this->arterialBranch = $arterialBranch;
+        $this->properties['arterialBranch'] = $arterialBranch;
 
         return $this;
     }
 
     /**
-     * @return AnatomicalStructureSchema     
+     * @return AnatomicalStructureSchema
      **/
     public function getArterialBranch() {
-        return $this->arterialBranch;
+        return $this->properties['arterialBranch'];
     }
 
     /**
      * The anatomical or organ system that the artery originates from.
+     *
+     * @param $source AnatomicalStructureSchema
      **/
-    private $source;
     public function setSource($source) {
-        $this->source = $source;
+        $this->properties['source'] = $source;
 
         return $this;
     }
 
     /**
-     * @return AnatomicalStructureSchema     
+     * @return AnatomicalStructureSchema
      **/
     public function getSource() {
-        return $this->source;
+        return $this->properties['source'];
     }
 
     /**
      * The area to which the artery supplies blood.
+     *
+     * @param $supplyTo AnatomicalStructureSchema
      **/
-    private $supplyTo;
     public function setSupplyTo($supplyTo) {
-        $this->supplyTo = $supplyTo;
+        $this->properties['supplyTo'] = $supplyTo;
 
         return $this;
     }
 
     /**
-     * @return AnatomicalStructureSchema     
+     * @return AnatomicalStructureSchema
      **/
     public function getSupplyTo() {
-        return $this->supplyTo;
+        return $this->properties['supplyTo'];
     }
 
 

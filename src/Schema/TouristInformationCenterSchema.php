@@ -35,12 +35,7 @@ class TouristInformationCenterSchema extends LocalBusinessSchema
 {
     public static function factory()
     {
-        return new TouristInformationCenterSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new TouristInformationCenterSchema('http://schema.org/', 'TouristInformationCenter');
     }
 
 

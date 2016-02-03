@@ -35,12 +35,7 @@ class ControlActionSchema extends ActionSchema
 {
     public static function factory()
     {
-        return new ControlActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ControlActionSchema('http://schema.org/', 'ControlAction');
     }
 
 

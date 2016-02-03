@@ -35,29 +35,25 @@ class InsertActionSchema extends AddActionSchema
 {
     public static function factory()
     {
-        return new InsertActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new InsertActionSchema('http://schema.org/', 'InsertAction');
     }
 
     /**
      * A sub property of location. The final location of the object or the agent after the action.
+     *
+     * @param $toLocation PlaceSchema
      **/
-    private $toLocation;
     public function setToLocation($toLocation) {
-        $this->toLocation = $toLocation;
+        $this->properties['toLocation'] = $toLocation;
 
         return $this;
     }
 
     /**
-     * @return PlaceSchema     
+     * @return PlaceSchema
      **/
     public function getToLocation() {
-        return $this->toLocation;
+        return $this->properties['toLocation'];
     }
 
 

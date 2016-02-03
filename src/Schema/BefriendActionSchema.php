@@ -35,12 +35,7 @@ class BefriendActionSchema extends InteractActionSchema
 {
     public static function factory()
     {
-        return new BefriendActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new BefriendActionSchema('http://schema.org/', 'BefriendAction');
     }
 
 

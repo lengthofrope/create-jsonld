@@ -35,12 +35,7 @@ class ActionStatusTypeSchema extends EnumerationSchema
 {
     public static function factory()
     {
-        return new ActionStatusTypeSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ActionStatusTypeSchema('http://schema.org/', 'ActionStatusType');
     }
 
 

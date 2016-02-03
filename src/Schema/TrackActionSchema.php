@@ -35,29 +35,25 @@ class TrackActionSchema extends FindActionSchema
 {
     public static function factory()
     {
-        return new TrackActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new TrackActionSchema('http://schema.org/', 'TrackAction');
     }
 
     /**
      * A sub property of instrument. The method of delivery.
+     *
+     * @param $deliveryMethod DeliveryMethodSchema
      **/
-    private $deliveryMethod;
     public function setDeliveryMethod($deliveryMethod) {
-        $this->deliveryMethod = $deliveryMethod;
+        $this->properties['deliveryMethod'] = $deliveryMethod;
 
         return $this;
     }
 
     /**
-     * @return DeliveryMethodSchema     
+     * @return DeliveryMethodSchema
      **/
     public function getDeliveryMethod() {
-        return $this->deliveryMethod;
+        return $this->properties['deliveryMethod'];
     }
 
 

@@ -35,12 +35,7 @@ class BodyOfWaterSchema extends LandformSchema
 {
     public static function factory()
     {
-        return new BodyOfWaterSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new BodyOfWaterSchema('http://schema.org/', 'BodyOfWater');
     }
 
 

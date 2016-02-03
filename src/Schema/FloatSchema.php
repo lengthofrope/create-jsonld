@@ -35,12 +35,7 @@ class FloatSchema extends NumberSchema
 {
     public static function factory()
     {
-        return new FloatSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new FloatSchema('http://schema.org/', 'Float');
     }
 
 

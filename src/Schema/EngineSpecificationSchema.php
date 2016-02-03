@@ -35,29 +35,25 @@ class EngineSpecificationSchema extends StructuredValueSchema
 {
     public static function factory()
     {
-        return new EngineSpecificationSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new EngineSpecificationSchema('http://schema.org/', 'EngineSpecification');
     }
 
     /**
      * The type of fuel suitable for the engine or engines of the vehicle. If the vehicle has only one engine, this property can be attached directly to the vehicle.
+     *
+     * @param $fuelType TextSchema|QualitativeValueSchema|URLSchema
      **/
-    private $fuelType;
     public function setFuelType($fuelType) {
-        $this->fuelType = $fuelType;
+        $this->properties['fuelType'] = $fuelType;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|QualitativeValueSchema|URLSchema     
+     * @return TextSchema|QualitativeValueSchema|URLSchema
      **/
     public function getFuelType() {
-        return $this->fuelType;
+        return $this->properties['fuelType'];
     }
 
 

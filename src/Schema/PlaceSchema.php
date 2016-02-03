@@ -35,12 +35,7 @@ class PlaceSchema extends ThingSchema
 {
     public static function factory()
     {
-        return new PlaceSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new PlaceSchema('http://schema.org/', 'Place');
     }
 
     /**
@@ -48,395 +43,418 @@ class PlaceSchema extends ThingSchema
 
 Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.
 
+     *
+     * @param $additionalProperty PropertyValueSchema
      **/
-    private $additionalProperty;
     public function setAdditionalProperty($additionalProperty) {
-        $this->additionalProperty = $additionalProperty;
+        $this->properties['additionalProperty'] = $additionalProperty;
 
         return $this;
     }
 
     /**
-     * @return PropertyValueSchema     
+     * @return PropertyValueSchema
      **/
     public function getAdditionalProperty() {
-        return $this->additionalProperty;
+        return $this->properties['additionalProperty'];
     }
 
     /**
      * Physical address of the item.
+     *
+     * @param $address PostalAddressSchema|TextSchema
      **/
-    private $address;
     public function setAddress($address) {
-        $this->address = $address;
+        $this->properties['address'] = $address;
 
         return $this;
     }
 
     /**
-     * @return PostalAddressSchema|TextSchema     
+     * @return PostalAddressSchema|TextSchema
      **/
     public function getAddress() {
-        return $this->address;
+        return $this->properties['address'];
     }
 
     /**
      * The overall rating, based on a collection of reviews or ratings, of the item.
+     *
+     * @param $aggregateRating AggregateRatingSchema
      **/
-    private $aggregateRating;
     public function setAggregateRating($aggregateRating) {
-        $this->aggregateRating = $aggregateRating;
+        $this->properties['aggregateRating'] = $aggregateRating;
 
         return $this;
     }
 
     /**
-     * @return AggregateRatingSchema     
+     * @return AggregateRatingSchema
      **/
     public function getAggregateRating() {
-        return $this->aggregateRating;
+        return $this->properties['aggregateRating'];
     }
 
     /**
      * A short textual code (also called "store code") that uniquely identifies a place of business. The code is typically assigned by the parentOrganization and used in structured URLs.
 <br /><br /> For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047 the code "3047" is a branchCode for a particular branch.
       
+     *
+     * @param $branchCode TextSchema
      **/
-    private $branchCode;
     public function setBranchCode($branchCode) {
-        $this->branchCode = $branchCode;
+        $this->properties['branchCode'] = $branchCode;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getBranchCode() {
-        return $this->branchCode;
+        return $this->properties['branchCode'];
     }
 
     /**
      * The basic containment relation between a place and one that contains it.
+     *
+     * @param $containedIn PlaceSchema
      **/
-    private $containedIn;
     public function setContainedIn($containedIn) {
-        $this->containedIn = $containedIn;
+        $this->properties['containedIn'] = $containedIn;
 
         return $this;
     }
 
     /**
-     * @return PlaceSchema     
+     * @return PlaceSchema
      **/
     public function getContainedIn() {
-        return $this->containedIn;
+        return $this->properties['containedIn'];
     }
 
     /**
      * The basic containment relation between a place and one that contains it.
+     *
+     * @param $containedInPlace PlaceSchema
      **/
-    private $containedInPlace;
     public function setContainedInPlace($containedInPlace) {
-        $this->containedInPlace = $containedInPlace;
+        $this->properties['containedInPlace'] = $containedInPlace;
 
         return $this;
     }
 
     /**
-     * @return PlaceSchema     
+     * @return PlaceSchema
      **/
     public function getContainedInPlace() {
-        return $this->containedInPlace;
+        return $this->properties['containedInPlace'];
     }
 
     /**
      * The basic containment relation between a place and another that it contains.
+     *
+     * @param $containsPlace PlaceSchema
      **/
-    private $containsPlace;
     public function setContainsPlace($containsPlace) {
-        $this->containsPlace = $containsPlace;
+        $this->properties['containsPlace'] = $containsPlace;
 
         return $this;
     }
 
     /**
-     * @return PlaceSchema     
+     * @return PlaceSchema
      **/
     public function getContainsPlace() {
-        return $this->containsPlace;
+        return $this->properties['containsPlace'];
     }
 
     /**
      * Upcoming or past event associated with this place, organization, or action.
+     *
+     * @param $event EventSchema
      **/
-    private $event;
     public function setEvent($event) {
-        $this->event = $event;
+        $this->properties['event'] = $event;
 
         return $this;
     }
 
     /**
-     * @return EventSchema     
+     * @return EventSchema
      **/
     public function getEvent() {
-        return $this->event;
+        return $this->properties['event'];
     }
 
     /**
      * Upcoming or past events associated with this place or organization.
+     *
+     * @param $events EventSchema
      **/
-    private $events;
     public function setEvents($events) {
-        $this->events = $events;
+        $this->properties['events'] = $events;
 
         return $this;
     }
 
     /**
-     * @return EventSchema     
+     * @return EventSchema
      **/
     public function getEvents() {
-        return $this->events;
+        return $this->properties['events'];
     }
 
     /**
      * The fax number.
+     *
+     * @param $faxNumber TextSchema
      **/
-    private $faxNumber;
     public function setFaxNumber($faxNumber) {
-        $this->faxNumber = $faxNumber;
+        $this->properties['faxNumber'] = $faxNumber;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getFaxNumber() {
-        return $this->faxNumber;
+        return $this->properties['faxNumber'];
     }
 
     /**
      * The geo coordinates of the place.
+     *
+     * @param $geo GeoCoordinatesSchema|GeoShapeSchema
      **/
-    private $geo;
     public function setGeo($geo) {
-        $this->geo = $geo;
+        $this->properties['geo'] = $geo;
 
         return $this;
     }
 
     /**
-     * @return GeoCoordinatesSchema|GeoShapeSchema     
+     * @return GeoCoordinatesSchema|GeoShapeSchema
      **/
     public function getGeo() {
-        return $this->geo;
+        return $this->properties['geo'];
     }
 
     /**
      * The <a href="http://www.gs1.org/gln">Global Location Number</a> (GLN, sometimes also referred to as International Location Number or ILN) of the respective organization, person, or place. The GLN is a 13-digit number used to identify parties and physical locations.
+     *
+     * @param $globalLocationNumber TextSchema
      **/
-    private $globalLocationNumber;
     public function setGlobalLocationNumber($globalLocationNumber) {
-        $this->globalLocationNumber = $globalLocationNumber;
+        $this->properties['globalLocationNumber'] = $globalLocationNumber;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getGlobalLocationNumber() {
-        return $this->globalLocationNumber;
+        return $this->properties['globalLocationNumber'];
     }
 
     /**
      * A URL to a map of the place.
+     *
+     * @param $hasMap URLSchema|MapSchema
      **/
-    private $hasMap;
     public function setHasMap($hasMap) {
-        $this->hasMap = $hasMap;
+        $this->properties['hasMap'] = $hasMap;
 
         return $this;
     }
 
     /**
-     * @return URLSchema|MapSchema     
+     * @return URLSchema|MapSchema
      **/
     public function getHasMap() {
-        return $this->hasMap;
+        return $this->properties['hasMap'];
     }
 
     /**
      * The International Standard of Industrial Classification of All Economic Activities (ISIC), Revision 4 code for a particular organization, business person, or place.
+     *
+     * @param $isicV4 TextSchema
      **/
-    private $isicV4;
     public function setIsicV4($isicV4) {
-        $this->isicV4 = $isicV4;
+        $this->properties['isicV4'] = $isicV4;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getIsicV4() {
-        return $this->isicV4;
+        return $this->properties['isicV4'];
     }
 
     /**
      * An associated logo.
+     *
+     * @param $logo ImageObjectSchema|URLSchema
      **/
-    private $logo;
     public function setLogo($logo) {
-        $this->logo = $logo;
+        $this->properties['logo'] = $logo;
 
         return $this;
     }
 
     /**
-     * @return ImageObjectSchema|URLSchema     
+     * @return ImageObjectSchema|URLSchema
      **/
     public function getLogo() {
-        return $this->logo;
+        return $this->properties['logo'];
     }
 
     /**
      * A URL to a map of the place.
+     *
+     * @param $map URLSchema
      **/
-    private $map;
     public function setMap($map) {
-        $this->map = $map;
+        $this->properties['map'] = $map;
 
         return $this;
     }
 
     /**
-     * @return URLSchema     
+     * @return URLSchema
      **/
     public function getMap() {
-        return $this->map;
+        return $this->properties['map'];
     }
 
     /**
      * A URL to a map of the place.
+     *
+     * @param $maps URLSchema
      **/
-    private $maps;
     public function setMaps($maps) {
-        $this->maps = $maps;
+        $this->properties['maps'] = $maps;
 
         return $this;
     }
 
     /**
-     * @return URLSchema     
+     * @return URLSchema
      **/
     public function getMaps() {
-        return $this->maps;
+        return $this->properties['maps'];
     }
 
     /**
      * The opening hours of a certain place.
+     *
+     * @param $openingHoursSpecification OpeningHoursSpecificationSchema
      **/
-    private $openingHoursSpecification;
     public function setOpeningHoursSpecification($openingHoursSpecification) {
-        $this->openingHoursSpecification = $openingHoursSpecification;
+        $this->properties['openingHoursSpecification'] = $openingHoursSpecification;
 
         return $this;
     }
 
     /**
-     * @return OpeningHoursSpecificationSchema     
+     * @return OpeningHoursSpecificationSchema
      **/
     public function getOpeningHoursSpecification() {
-        return $this->openingHoursSpecification;
+        return $this->properties['openingHoursSpecification'];
     }
 
     /**
      * A photograph of this place.
+     *
+     * @param $photo ImageObjectSchema|PhotographSchema
      **/
-    private $photo;
     public function setPhoto($photo) {
-        $this->photo = $photo;
+        $this->properties['photo'] = $photo;
 
         return $this;
     }
 
     /**
-     * @return ImageObjectSchema|PhotographSchema     
+     * @return ImageObjectSchema|PhotographSchema
      **/
     public function getPhoto() {
-        return $this->photo;
+        return $this->properties['photo'];
     }
 
     /**
      * Photographs of this place.
+     *
+     * @param $photos ImageObjectSchema|PhotographSchema
      **/
-    private $photos;
     public function setPhotos($photos) {
-        $this->photos = $photos;
+        $this->properties['photos'] = $photos;
 
         return $this;
     }
 
     /**
-     * @return ImageObjectSchema|PhotographSchema     
+     * @return ImageObjectSchema|PhotographSchema
      **/
     public function getPhotos() {
-        return $this->photos;
+        return $this->properties['photos'];
     }
 
     /**
      * A review of the item.
+     *
+     * @param $review ReviewSchema
      **/
-    private $review;
     public function setReview($review) {
-        $this->review = $review;
+        $this->properties['review'] = $review;
 
         return $this;
     }
 
     /**
-     * @return ReviewSchema     
+     * @return ReviewSchema
      **/
     public function getReview() {
-        return $this->review;
+        return $this->properties['review'];
     }
 
     /**
      * Review of the item.
+     *
+     * @param $reviews ReviewSchema
      **/
-    private $reviews;
     public function setReviews($reviews) {
-        $this->reviews = $reviews;
+        $this->properties['reviews'] = $reviews;
 
         return $this;
     }
 
     /**
-     * @return ReviewSchema     
+     * @return ReviewSchema
      **/
     public function getReviews() {
-        return $this->reviews;
+        return $this->properties['reviews'];
     }
 
     /**
      * The telephone number.
+     *
+     * @param $telephone TextSchema
      **/
-    private $telephone;
     public function setTelephone($telephone) {
-        $this->telephone = $telephone;
+        $this->properties['telephone'] = $telephone;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getTelephone() {
-        return $this->telephone;
+        return $this->properties['telephone'];
     }
 
 

@@ -35,131 +35,133 @@ class PeopleAudienceSchema extends AudienceSchema
 {
     public static function factory()
     {
-        return new PeopleAudienceSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new PeopleAudienceSchema('http://schema.org/', 'PeopleAudience');
     }
 
     /**
      * Expectations for health conditions of target audience.
+     *
+     * @param $healthCondition MedicalConditionSchema
      **/
-    private $healthCondition;
     public function setHealthCondition($healthCondition) {
-        $this->healthCondition = $healthCondition;
+        $this->properties['healthCondition'] = $healthCondition;
 
         return $this;
     }
 
     /**
-     * @return MedicalConditionSchema     
+     * @return MedicalConditionSchema
      **/
     public function getHealthCondition() {
-        return $this->healthCondition;
+        return $this->properties['healthCondition'];
     }
 
     /**
      * Audiences defined by a person's gender.
+     *
+     * @param $requiredGender TextSchema
      **/
-    private $requiredGender;
     public function setRequiredGender($requiredGender) {
-        $this->requiredGender = $requiredGender;
+        $this->properties['requiredGender'] = $requiredGender;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getRequiredGender() {
-        return $this->requiredGender;
+        return $this->properties['requiredGender'];
     }
 
     /**
      * Audiences defined by a person's maximum age.
+     *
+     * @param $requiredMaxAge IntegerSchema
      **/
-    private $requiredMaxAge;
     public function setRequiredMaxAge($requiredMaxAge) {
-        $this->requiredMaxAge = $requiredMaxAge;
+        $this->properties['requiredMaxAge'] = $requiredMaxAge;
 
         return $this;
     }
 
     /**
-     * @return IntegerSchema     
+     * @return IntegerSchema
      **/
     public function getRequiredMaxAge() {
-        return $this->requiredMaxAge;
+        return $this->properties['requiredMaxAge'];
     }
 
     /**
      * Audiences defined by a person's minimum age.
+     *
+     * @param $requiredMinAge IntegerSchema
      **/
-    private $requiredMinAge;
     public function setRequiredMinAge($requiredMinAge) {
-        $this->requiredMinAge = $requiredMinAge;
+        $this->properties['requiredMinAge'] = $requiredMinAge;
 
         return $this;
     }
 
     /**
-     * @return IntegerSchema     
+     * @return IntegerSchema
      **/
     public function getRequiredMinAge() {
-        return $this->requiredMinAge;
+        return $this->properties['requiredMinAge'];
     }
 
     /**
      * The gender of the person or audience.
+     *
+     * @param $suggestedGender TextSchema
      **/
-    private $suggestedGender;
     public function setSuggestedGender($suggestedGender) {
-        $this->suggestedGender = $suggestedGender;
+        $this->properties['suggestedGender'] = $suggestedGender;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getSuggestedGender() {
-        return $this->suggestedGender;
+        return $this->properties['suggestedGender'];
     }
 
     /**
      * Maximal age recommended for viewing content.
+     *
+     * @param $suggestedMaxAge NumberSchema
      **/
-    private $suggestedMaxAge;
     public function setSuggestedMaxAge($suggestedMaxAge) {
-        $this->suggestedMaxAge = $suggestedMaxAge;
+        $this->properties['suggestedMaxAge'] = $suggestedMaxAge;
 
         return $this;
     }
 
     /**
-     * @return NumberSchema     
+     * @return NumberSchema
      **/
     public function getSuggestedMaxAge() {
-        return $this->suggestedMaxAge;
+        return $this->properties['suggestedMaxAge'];
     }
 
     /**
      * Minimal age recommended for viewing content.
+     *
+     * @param $suggestedMinAge NumberSchema
      **/
-    private $suggestedMinAge;
     public function setSuggestedMinAge($suggestedMinAge) {
-        $this->suggestedMinAge = $suggestedMinAge;
+        $this->properties['suggestedMinAge'] = $suggestedMinAge;
 
         return $this;
     }
 
     /**
-     * @return NumberSchema     
+     * @return NumberSchema
      **/
     public function getSuggestedMinAge() {
-        return $this->suggestedMinAge;
+        return $this->properties['suggestedMinAge'];
     }
 
 

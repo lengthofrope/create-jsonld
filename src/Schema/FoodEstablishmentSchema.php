@@ -35,63 +35,61 @@ class FoodEstablishmentSchema extends LocalBusinessSchema
 {
     public static function factory()
     {
-        return new FoodEstablishmentSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new FoodEstablishmentSchema('http://schema.org/', 'FoodEstablishment');
     }
 
     /**
      * Indicates whether a FoodEstablishment accepts reservations. Values can be Boolean, a URL at which reservations can be made or (for backwards compatibility) the strings <code>Yes</code> or <code>No</code>.
+     *
+     * @param $acceptsReservations TextSchema|URLSchema|BooleanSchema
      **/
-    private $acceptsReservations;
     public function setAcceptsReservations($acceptsReservations) {
-        $this->acceptsReservations = $acceptsReservations;
+        $this->properties['acceptsReservations'] = $acceptsReservations;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|URLSchema|BooleanSchema     
+     * @return TextSchema|URLSchema|BooleanSchema
      **/
     public function getAcceptsReservations() {
-        return $this->acceptsReservations;
+        return $this->properties['acceptsReservations'];
     }
 
     /**
      * Either the actual menu or a URL of the menu.
+     *
+     * @param $menu TextSchema|URLSchema
      **/
-    private $menu;
     public function setMenu($menu) {
-        $this->menu = $menu;
+        $this->properties['menu'] = $menu;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|URLSchema     
+     * @return TextSchema|URLSchema
      **/
     public function getMenu() {
-        return $this->menu;
+        return $this->properties['menu'];
     }
 
     /**
      * The cuisine of the restaurant.
+     *
+     * @param $servesCuisine TextSchema
      **/
-    private $servesCuisine;
     public function setServesCuisine($servesCuisine) {
-        $this->servesCuisine = $servesCuisine;
+        $this->properties['servesCuisine'] = $servesCuisine;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getServesCuisine() {
-        return $this->servesCuisine;
+        return $this->properties['servesCuisine'];
     }
 
 

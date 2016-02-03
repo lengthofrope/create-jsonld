@@ -35,46 +35,43 @@ class MedicalCodeSchema extends MedicalIntangibleSchema
 {
     public static function factory()
     {
-        return new MedicalCodeSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MedicalCodeSchema('http://schema.org/', 'MedicalCode');
     }
 
     /**
      * The actual code.
+     *
+     * @param $codeValue TextSchema
      **/
-    private $codeValue;
     public function setCodeValue($codeValue) {
-        $this->codeValue = $codeValue;
+        $this->properties['codeValue'] = $codeValue;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getCodeValue() {
-        return $this->codeValue;
+        return $this->properties['codeValue'];
     }
 
     /**
      * The coding system, e.g. 'ICD-10'.
+     *
+     * @param $codingSystem TextSchema
      **/
-    private $codingSystem;
     public function setCodingSystem($codingSystem) {
-        $this->codingSystem = $codingSystem;
+        $this->properties['codingSystem'] = $codingSystem;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getCodingSystem() {
-        return $this->codingSystem;
+        return $this->properties['codingSystem'];
     }
 
 

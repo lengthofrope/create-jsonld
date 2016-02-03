@@ -35,46 +35,43 @@ class MedicalRiskEstimatorSchema extends MedicalEntitySchema
 {
     public static function factory()
     {
-        return new MedicalRiskEstimatorSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MedicalRiskEstimatorSchema('http://schema.org/', 'MedicalRiskEstimator');
     }
 
     /**
      * The condition, complication, or symptom whose risk is being estimated.
+     *
+     * @param $estimatesRiskOf MedicalEntitySchema
      **/
-    private $estimatesRiskOf;
     public function setEstimatesRiskOf($estimatesRiskOf) {
-        $this->estimatesRiskOf = $estimatesRiskOf;
+        $this->properties['estimatesRiskOf'] = $estimatesRiskOf;
 
         return $this;
     }
 
     /**
-     * @return MedicalEntitySchema     
+     * @return MedicalEntitySchema
      **/
     public function getEstimatesRiskOf() {
-        return $this->estimatesRiskOf;
+        return $this->properties['estimatesRiskOf'];
     }
 
     /**
      * A modifiable or non-modifiable risk factor included in the calculation, e.g. age, coexisting condition.
+     *
+     * @param $includedRiskFactor MedicalRiskFactorSchema
      **/
-    private $includedRiskFactor;
     public function setIncludedRiskFactor($includedRiskFactor) {
-        $this->includedRiskFactor = $includedRiskFactor;
+        $this->properties['includedRiskFactor'] = $includedRiskFactor;
 
         return $this;
     }
 
     /**
-     * @return MedicalRiskFactorSchema     
+     * @return MedicalRiskFactorSchema
      **/
     public function getIncludedRiskFactor() {
-        return $this->includedRiskFactor;
+        return $this->properties['includedRiskFactor'];
     }
 
 

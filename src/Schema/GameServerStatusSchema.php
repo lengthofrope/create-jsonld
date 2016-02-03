@@ -35,12 +35,7 @@ class GameServerStatusSchema extends EnumerationSchema
 {
     public static function factory()
     {
-        return new GameServerStatusSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new GameServerStatusSchema('http://schema.org/', 'GameServerStatus');
     }
 
 

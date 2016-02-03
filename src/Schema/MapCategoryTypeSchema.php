@@ -35,12 +35,7 @@ class MapCategoryTypeSchema extends EnumerationSchema
 {
     public static function factory()
     {
-        return new MapCategoryTypeSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MapCategoryTypeSchema('http://schema.org/', 'MapCategoryType');
     }
 
 

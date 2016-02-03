@@ -35,12 +35,7 @@ class ResumeActionSchema extends ControlActionSchema
 {
     public static function factory()
     {
-        return new ResumeActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ResumeActionSchema('http://schema.org/', 'ResumeAction');
     }
 
 

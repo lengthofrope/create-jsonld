@@ -35,46 +35,43 @@ class PayActionSchema extends TradeActionSchema
 {
     public static function factory()
     {
-        return new PayActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new PayActionSchema('http://schema.org/', 'PayAction');
     }
 
     /**
      * A goal towards an action is taken. Can be concrete or abstract.
+     *
+     * @param $purpose MedicalDevicePurposeSchema|ThingSchema
      **/
-    private $purpose;
     public function setPurpose($purpose) {
-        $this->purpose = $purpose;
+        $this->properties['purpose'] = $purpose;
 
         return $this;
     }
 
     /**
-     * @return MedicalDevicePurposeSchema|ThingSchema     
+     * @return MedicalDevicePurposeSchema|ThingSchema
      **/
     public function getPurpose() {
-        return $this->purpose;
+        return $this->properties['purpose'];
     }
 
     /**
      * A sub property of participant. The participant who is at the receiving end of the action.
+     *
+     * @param $recipient AudienceSchema|OrganizationSchema|PersonSchema
      **/
-    private $recipient;
     public function setRecipient($recipient) {
-        $this->recipient = $recipient;
+        $this->properties['recipient'] = $recipient;
 
         return $this;
     }
 
     /**
-     * @return AudienceSchema|OrganizationSchema|PersonSchema     
+     * @return AudienceSchema|OrganizationSchema|PersonSchema
      **/
     public function getRecipient() {
-        return $this->recipient;
+        return $this->properties['recipient'];
     }
 
 

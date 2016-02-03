@@ -31,16 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class TimeSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
+class TimeSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new TimeSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new TimeSchema('http://schema.org/', 'Time');
     }
 
 

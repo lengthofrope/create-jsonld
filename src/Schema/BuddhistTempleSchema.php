@@ -35,12 +35,7 @@ class BuddhistTempleSchema extends PlaceOfWorshipSchema
 {
     public static function factory()
     {
-        return new BuddhistTempleSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new BuddhistTempleSchema('http://schema.org/', 'BuddhistTemple');
     }
 
 

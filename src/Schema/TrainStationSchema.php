@@ -35,12 +35,7 @@ class TrainStationSchema extends CivicStructureSchema
 {
     public static function factory()
     {
-        return new TrainStationSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new TrainStationSchema('http://schema.org/', 'TrainStation');
     }
 
 

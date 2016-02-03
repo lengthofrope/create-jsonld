@@ -35,165 +35,169 @@ class WebPageSchema extends CreativeWorkSchema
 {
     public static function factory()
     {
-        return new WebPageSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new WebPageSchema('http://schema.org/', 'WebPage');
     }
 
     /**
      * A set of links that can help a user understand and navigate a website hierarchy.
+     *
+     * @param $breadcrumb TextSchema|BreadcrumbListSchema
      **/
-    private $breadcrumb;
     public function setBreadcrumb($breadcrumb) {
-        $this->breadcrumb = $breadcrumb;
+        $this->properties['breadcrumb'] = $breadcrumb;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|BreadcrumbListSchema     
+     * @return TextSchema|BreadcrumbListSchema
      **/
     public function getBreadcrumb() {
-        return $this->breadcrumb;
+        return $this->properties['breadcrumb'];
     }
 
     /**
      * Date on which the content on this web page was last reviewed for accuracy and/or completeness.
+     *
+     * @param $lastReviewed DateSchema
      **/
-    private $lastReviewed;
     public function setLastReviewed($lastReviewed) {
-        $this->lastReviewed = $lastReviewed;
+        $this->properties['lastReviewed'] = $lastReviewed;
 
         return $this;
     }
 
     /**
-     * @return DateSchema     
+     * @return DateSchema
      **/
     public function getLastReviewed() {
-        return $this->lastReviewed;
+        return $this->properties['lastReviewed'];
     }
 
     /**
      * Indicates if this web page element is the main subject of the page.
+     *
+     * @param $mainContentOfPage WebPageElementSchema
      **/
-    private $mainContentOfPage;
     public function setMainContentOfPage($mainContentOfPage) {
-        $this->mainContentOfPage = $mainContentOfPage;
+        $this->properties['mainContentOfPage'] = $mainContentOfPage;
 
         return $this;
     }
 
     /**
-     * @return WebPageElementSchema     
+     * @return WebPageElementSchema
      **/
     public function getMainContentOfPage() {
-        return $this->mainContentOfPage;
+        return $this->properties['mainContentOfPage'];
     }
 
     /**
      * Indicates the main image on the page.
+     *
+     * @param $primaryImageOfPage ImageObjectSchema
      **/
-    private $primaryImageOfPage;
     public function setPrimaryImageOfPage($primaryImageOfPage) {
-        $this->primaryImageOfPage = $primaryImageOfPage;
+        $this->properties['primaryImageOfPage'] = $primaryImageOfPage;
 
         return $this;
     }
 
     /**
-     * @return ImageObjectSchema     
+     * @return ImageObjectSchema
      **/
     public function getPrimaryImageOfPage() {
-        return $this->primaryImageOfPage;
+        return $this->properties['primaryImageOfPage'];
     }
 
     /**
      * A link related to this web page, for example to other related web pages.
+     *
+     * @param $relatedLink URLSchema
      **/
-    private $relatedLink;
     public function setRelatedLink($relatedLink) {
-        $this->relatedLink = $relatedLink;
+        $this->properties['relatedLink'] = $relatedLink;
 
         return $this;
     }
 
     /**
-     * @return URLSchema     
+     * @return URLSchema
      **/
     public function getRelatedLink() {
-        return $this->relatedLink;
+        return $this->properties['relatedLink'];
     }
 
     /**
      * People or organizations that have reviewed the content on this web page for accuracy and/or completeness.
+     *
+     * @param $reviewedBy OrganizationSchema|PersonSchema
      **/
-    private $reviewedBy;
     public function setReviewedBy($reviewedBy) {
-        $this->reviewedBy = $reviewedBy;
+        $this->properties['reviewedBy'] = $reviewedBy;
 
         return $this;
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema     
+     * @return OrganizationSchema|PersonSchema
      **/
     public function getReviewedBy() {
-        return $this->reviewedBy;
+        return $this->properties['reviewedBy'];
     }
 
     /**
      * One of the more significant URLs on the page. Typically, these are the non-navigation links that are clicked on the most.
+     *
+     * @param $significantLink URLSchema
      **/
-    private $significantLink;
     public function setSignificantLink($significantLink) {
-        $this->significantLink = $significantLink;
+        $this->properties['significantLink'] = $significantLink;
 
         return $this;
     }
 
     /**
-     * @return URLSchema     
+     * @return URLSchema
      **/
     public function getSignificantLink() {
-        return $this->significantLink;
+        return $this->properties['significantLink'];
     }
 
     /**
      * The most significant URLs on the page. Typically, these are the non-navigation links that are clicked on the most.
+     *
+     * @param $significantLinks URLSchema
      **/
-    private $significantLinks;
     public function setSignificantLinks($significantLinks) {
-        $this->significantLinks = $significantLinks;
+        $this->properties['significantLinks'] = $significantLinks;
 
         return $this;
     }
 
     /**
-     * @return URLSchema     
+     * @return URLSchema
      **/
     public function getSignificantLinks() {
-        return $this->significantLinks;
+        return $this->properties['significantLinks'];
     }
 
     /**
      * One of the domain specialities to which this web page's content applies.
+     *
+     * @param $specialty SpecialtySchema
      **/
-    private $specialty;
     public function setSpecialty($specialty) {
-        $this->specialty = $specialty;
+        $this->properties['specialty'] = $specialty;
 
         return $this;
     }
 
     /**
-     * @return SpecialtySchema     
+     * @return SpecialtySchema
      **/
     public function getSpecialty() {
-        return $this->specialty;
+        return $this->properties['specialty'];
     }
 
 

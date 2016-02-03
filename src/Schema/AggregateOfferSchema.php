@@ -35,80 +35,79 @@ class AggregateOfferSchema extends OfferSchema
 {
     public static function factory()
     {
-        return new AggregateOfferSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new AggregateOfferSchema('http://schema.org/', 'AggregateOffer');
     }
 
     /**
      * The highest price of all offers available.
+     *
+     * @param $highPrice NumberSchema|TextSchema
      **/
-    private $highPrice;
     public function setHighPrice($highPrice) {
-        $this->highPrice = $highPrice;
+        $this->properties['highPrice'] = $highPrice;
 
         return $this;
     }
 
     /**
-     * @return NumberSchema|TextSchema     
+     * @return NumberSchema|TextSchema
      **/
     public function getHighPrice() {
-        return $this->highPrice;
+        return $this->properties['highPrice'];
     }
 
     /**
      * The lowest price of all offers available.
+     *
+     * @param $lowPrice NumberSchema|TextSchema
      **/
-    private $lowPrice;
     public function setLowPrice($lowPrice) {
-        $this->lowPrice = $lowPrice;
+        $this->properties['lowPrice'] = $lowPrice;
 
         return $this;
     }
 
     /**
-     * @return NumberSchema|TextSchema     
+     * @return NumberSchema|TextSchema
      **/
     public function getLowPrice() {
-        return $this->lowPrice;
+        return $this->properties['lowPrice'];
     }
 
     /**
      * The number of offers for the product.
+     *
+     * @param $offerCount IntegerSchema
      **/
-    private $offerCount;
     public function setOfferCount($offerCount) {
-        $this->offerCount = $offerCount;
+        $this->properties['offerCount'] = $offerCount;
 
         return $this;
     }
 
     /**
-     * @return IntegerSchema     
+     * @return IntegerSchema
      **/
     public function getOfferCount() {
-        return $this->offerCount;
+        return $this->properties['offerCount'];
     }
 
     /**
      * An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event.
+     *
+     * @param $offers OfferSchema
      **/
-    private $offers;
     public function setOffers($offers) {
-        $this->offers = $offers;
+        $this->properties['offers'] = $offers;
 
         return $this;
     }
 
     /**
-     * @return OfferSchema     
+     * @return OfferSchema
      **/
     public function getOffers() {
-        return $this->offers;
+        return $this->properties['offers'];
     }
 
 

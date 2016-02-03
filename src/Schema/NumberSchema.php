@@ -31,16 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class NumberSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
+class NumberSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new NumberSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new NumberSchema('http://schema.org/', 'Number');
     }
 
 

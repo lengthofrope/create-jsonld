@@ -35,12 +35,7 @@ class ScheduleActionSchema extends PlanActionSchema
 {
     public static function factory()
     {
-        return new ScheduleActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ScheduleActionSchema('http://schema.org/', 'ScheduleAction');
     }
 
 

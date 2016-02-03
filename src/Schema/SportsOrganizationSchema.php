@@ -35,29 +35,25 @@ class SportsOrganizationSchema extends OrganizationSchema
 {
     public static function factory()
     {
-        return new SportsOrganizationSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new SportsOrganizationSchema('http://schema.org/', 'SportsOrganization');
     }
 
     /**
      * A type of sport (e.g. Baseball).
+     *
+     * @param $sport TextSchema|URLSchema
      **/
-    private $sport;
     public function setSport($sport) {
-        $this->sport = $sport;
+        $this->properties['sport'] = $sport;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|URLSchema     
+     * @return TextSchema|URLSchema
      **/
     public function getSport() {
-        return $this->sport;
+        return $this->properties['sport'];
     }
 
 

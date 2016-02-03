@@ -35,12 +35,7 @@ class RadioClipSchema extends ClipSchema
 {
     public static function factory()
     {
-        return new RadioClipSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new RadioClipSchema('http://schema.org/', 'RadioClip');
     }
 
 

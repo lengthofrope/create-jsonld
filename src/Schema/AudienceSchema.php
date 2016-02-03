@@ -35,46 +35,43 @@ class AudienceSchema extends IntangibleSchema
 {
     public static function factory()
     {
-        return new AudienceSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new AudienceSchema('http://schema.org/', 'Audience');
     }
 
     /**
      * The target group associated with a given audience (e.g. veterans, car owners, musicians, etc.).
+     *
+     * @param $audienceType TextSchema
      **/
-    private $audienceType;
     public function setAudienceType($audienceType) {
-        $this->audienceType = $audienceType;
+        $this->properties['audienceType'] = $audienceType;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getAudienceType() {
-        return $this->audienceType;
+        return $this->properties['audienceType'];
     }
 
     /**
      * The geographic area associated with the audience.
+     *
+     * @param $geographicArea AdministrativeAreaSchema
      **/
-    private $geographicArea;
     public function setGeographicArea($geographicArea) {
-        $this->geographicArea = $geographicArea;
+        $this->properties['geographicArea'] = $geographicArea;
 
         return $this;
     }
 
     /**
-     * @return AdministrativeAreaSchema     
+     * @return AdministrativeAreaSchema
      **/
     public function getGeographicArea() {
-        return $this->geographicArea;
+        return $this->properties['geographicArea'];
     }
 
 

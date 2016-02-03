@@ -42,12 +42,7 @@ class WarrantyScopeSchema extends EnumerationSchema
 {
     public static function factory()
     {
-        return new WarrantyScopeSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new WarrantyScopeSchema('http://schema.org/', 'WarrantyScope');
     }
 
 

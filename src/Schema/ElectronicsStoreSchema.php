@@ -35,12 +35,7 @@ class ElectronicsStoreSchema extends StoreSchema
 {
     public static function factory()
     {
-        return new ElectronicsStoreSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ElectronicsStoreSchema('http://schema.org/', 'ElectronicsStore');
     }
 
 

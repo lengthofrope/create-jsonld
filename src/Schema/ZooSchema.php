@@ -35,12 +35,7 @@ class ZooSchema extends CivicStructureSchema
 {
     public static function factory()
     {
-        return new ZooSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ZooSchema('http://schema.org/', 'Zoo');
     }
 
 

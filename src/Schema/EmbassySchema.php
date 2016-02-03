@@ -35,12 +35,7 @@ class EmbassySchema extends GovernmentBuildingSchema
 {
     public static function factory()
     {
-        return new EmbassySchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new EmbassySchema('http://schema.org/', 'Embassy');
     }
 
 

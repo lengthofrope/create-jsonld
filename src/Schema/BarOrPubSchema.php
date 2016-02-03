@@ -35,12 +35,7 @@ class BarOrPubSchema extends FoodEstablishmentSchema
 {
     public static function factory()
     {
-        return new BarOrPubSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new BarOrPubSchema('http://schema.org/', 'BarOrPub');
     }
 
 

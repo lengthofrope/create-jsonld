@@ -35,29 +35,25 @@ class PerformActionSchema extends PlayActionSchema
 {
     public static function factory()
     {
-        return new PerformActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new PerformActionSchema('http://schema.org/', 'PerformAction');
     }
 
     /**
      * A sub property of location. The entertainment business where the action occurred.
+     *
+     * @param $entertainmentBusiness EntertainmentBusinessSchema
      **/
-    private $entertainmentBusiness;
     public function setEntertainmentBusiness($entertainmentBusiness) {
-        $this->entertainmentBusiness = $entertainmentBusiness;
+        $this->properties['entertainmentBusiness'] = $entertainmentBusiness;
 
         return $this;
     }
 
     /**
-     * @return EntertainmentBusinessSchema     
+     * @return EntertainmentBusinessSchema
      **/
     public function getEntertainmentBusiness() {
-        return $this->entertainmentBusiness;
+        return $this->properties['entertainmentBusiness'];
     }
 
 

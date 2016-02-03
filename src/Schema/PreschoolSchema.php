@@ -35,12 +35,7 @@ class PreschoolSchema extends EducationalOrganizationSchema
 {
     public static function factory()
     {
-        return new PreschoolSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new PreschoolSchema('http://schema.org/', 'Preschool');
     }
 
 

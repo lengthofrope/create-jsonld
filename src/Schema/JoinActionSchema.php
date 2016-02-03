@@ -35,29 +35,25 @@ class JoinActionSchema extends InteractActionSchema
 {
     public static function factory()
     {
-        return new JoinActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new JoinActionSchema('http://schema.org/', 'JoinAction');
     }
 
     /**
      * Upcoming or past event associated with this place, organization, or action.
+     *
+     * @param $event EventSchema
      **/
-    private $event;
     public function setEvent($event) {
-        $this->event = $event;
+        $this->properties['event'] = $event;
 
         return $this;
     }
 
     /**
-     * @return EventSchema     
+     * @return EventSchema
      **/
     public function getEvent() {
-        return $this->event;
+        return $this->properties['event'];
     }
 
 

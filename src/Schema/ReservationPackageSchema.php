@@ -35,29 +35,25 @@ class ReservationPackageSchema extends ReservationSchema
 {
     public static function factory()
     {
-        return new ReservationPackageSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ReservationPackageSchema('http://schema.org/', 'ReservationPackage');
     }
 
     /**
      * The individual reservations included in the package. Typically a repeated property.
+     *
+     * @param $subReservation ReservationSchema
      **/
-    private $subReservation;
     public function setSubReservation($subReservation) {
-        $this->subReservation = $subReservation;
+        $this->properties['subReservation'] = $subReservation;
 
         return $this;
     }
 
     /**
-     * @return ReservationSchema     
+     * @return ReservationSchema
      **/
     public function getSubReservation() {
-        return $this->subReservation;
+        return $this->properties['subReservation'];
     }
 
 

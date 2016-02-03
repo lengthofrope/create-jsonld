@@ -35,12 +35,7 @@ class VesselSchema extends AnatomicalStructureSchema
 {
     public static function factory()
     {
-        return new VesselSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new VesselSchema('http://schema.org/', 'Vessel');
     }
 
 

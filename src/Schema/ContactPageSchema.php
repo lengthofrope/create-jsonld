@@ -35,12 +35,7 @@ class ContactPageSchema extends WebPageSchema
 {
     public static function factory()
     {
-        return new ContactPageSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ContactPageSchema('http://schema.org/', 'ContactPage');
     }
 
 

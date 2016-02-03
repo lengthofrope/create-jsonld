@@ -35,12 +35,7 @@ class MovingCompanySchema extends HomeAndConstructionBusinessSchema
 {
     public static function factory()
     {
-        return new MovingCompanySchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MovingCompanySchema('http://schema.org/', 'MovingCompany');
     }
 
 

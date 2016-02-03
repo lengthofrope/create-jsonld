@@ -37,80 +37,79 @@ class RoleSchema extends IntangibleSchema
 {
     public static function factory()
     {
-        return new RoleSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new RoleSchema('http://schema.org/', 'Role');
     }
 
     /**
      * The end date and time of the item (in <a href='http://en.wikipedia.org/wiki/ISO_8601'>ISO 8601 date format</a>).
+     *
+     * @param $endDate DateSchema
      **/
-    private $endDate;
     public function setEndDate($endDate) {
-        $this->endDate = $endDate;
+        $this->properties['endDate'] = $endDate;
 
         return $this;
     }
 
     /**
-     * @return DateSchema     
+     * @return DateSchema
      **/
     public function getEndDate() {
-        return $this->endDate;
+        return $this->properties['endDate'];
     }
 
     /**
      * A position played, performed or filled by a person or organization, as part of an organization. For example, an athlete in a SportsTeam might play in the position named 'Quarterback'.
+     *
+     * @param $namedPosition TextSchema|URLSchema
      **/
-    private $namedPosition;
     public function setNamedPosition($namedPosition) {
-        $this->namedPosition = $namedPosition;
+        $this->properties['namedPosition'] = $namedPosition;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|URLSchema     
+     * @return TextSchema|URLSchema
      **/
     public function getNamedPosition() {
-        return $this->namedPosition;
+        return $this->properties['namedPosition'];
     }
 
     /**
      * A role played, performed or filled by a person or organization. For example, the team of creators for a comic book might fill the roles named 'inker', 'penciller', and 'letterer'; or an athlete in a SportsTeam might play in the position named 'Quarterback'.
+     *
+     * @param $roleName TextSchema|URLSchema
      **/
-    private $roleName;
     public function setRoleName($roleName) {
-        $this->roleName = $roleName;
+        $this->properties['roleName'] = $roleName;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|URLSchema     
+     * @return TextSchema|URLSchema
      **/
     public function getRoleName() {
-        return $this->roleName;
+        return $this->properties['roleName'];
     }
 
     /**
      * The start date and time of the item (in <a href='http://en.wikipedia.org/wiki/ISO_8601'>ISO 8601 date format</a>).
+     *
+     * @param $startDate DateSchema
      **/
-    private $startDate;
     public function setStartDate($startDate) {
-        $this->startDate = $startDate;
+        $this->properties['startDate'] = $startDate;
 
         return $this;
     }
 
     /**
-     * @return DateSchema     
+     * @return DateSchema
      **/
     public function getStartDate() {
-        return $this->startDate;
+        return $this->properties['startDate'];
     }
 
 

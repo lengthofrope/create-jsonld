@@ -35,12 +35,7 @@ class PerformingGroupSchema extends OrganizationSchema
 {
     public static function factory()
     {
-        return new PerformingGroupSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new PerformingGroupSchema('http://schema.org/', 'PerformingGroup');
     }
 
 

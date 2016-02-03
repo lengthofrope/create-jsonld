@@ -35,46 +35,43 @@ class PlayActionSchema extends ActionSchema
 {
     public static function factory()
     {
-        return new PlayActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new PlayActionSchema('http://schema.org/', 'PlayAction');
     }
 
     /**
      * An intended audience, i.e. a group for whom something was created.
+     *
+     * @param $audience AudienceSchema
      **/
-    private $audience;
     public function setAudience($audience) {
-        $this->audience = $audience;
+        $this->properties['audience'] = $audience;
 
         return $this;
     }
 
     /**
-     * @return AudienceSchema     
+     * @return AudienceSchema
      **/
     public function getAudience() {
-        return $this->audience;
+        return $this->properties['audience'];
     }
 
     /**
      * Upcoming or past event associated with this place, organization, or action.
+     *
+     * @param $event EventSchema
      **/
-    private $event;
     public function setEvent($event) {
-        $this->event = $event;
+        $this->properties['event'] = $event;
 
         return $this;
     }
 
     /**
-     * @return EventSchema     
+     * @return EventSchema
      **/
     public function getEvent() {
-        return $this->event;
+        return $this->properties['event'];
     }
 
 

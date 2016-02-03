@@ -35,29 +35,25 @@ class MedicalTestPanelSchema extends MedicalTestSchema
 {
     public static function factory()
     {
-        return new MedicalTestPanelSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MedicalTestPanelSchema('http://schema.org/', 'MedicalTestPanel');
     }
 
     /**
      * A component test of the panel.
+     *
+     * @param $subTest MedicalTestSchema
      **/
-    private $subTest;
     public function setSubTest($subTest) {
-        $this->subTest = $subTest;
+        $this->properties['subTest'] = $subTest;
 
         return $this;
     }
 
     /**
-     * @return MedicalTestSchema     
+     * @return MedicalTestSchema
      **/
     public function getSubTest() {
-        return $this->subTest;
+        return $this->properties['subTest'];
     }
 
 

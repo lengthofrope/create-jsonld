@@ -35,12 +35,7 @@ class ConfirmActionSchema extends InformActionSchema
 {
     public static function factory()
     {
-        return new ConfirmActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ConfirmActionSchema('http://schema.org/', 'ConfirmAction');
     }
 
 

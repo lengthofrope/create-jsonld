@@ -35,12 +35,7 @@ class OfferItemConditionSchema extends EnumerationSchema
 {
     public static function factory()
     {
-        return new OfferItemConditionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new OfferItemConditionSchema('http://schema.org/', 'OfferItemCondition');
     }
 
 

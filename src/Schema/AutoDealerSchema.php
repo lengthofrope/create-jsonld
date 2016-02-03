@@ -35,12 +35,7 @@ class AutoDealerSchema extends AutomotiveBusinessSchema
 {
     public static function factory()
     {
-        return new AutoDealerSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new AutoDealerSchema('http://schema.org/', 'AutoDealer');
     }
 
 

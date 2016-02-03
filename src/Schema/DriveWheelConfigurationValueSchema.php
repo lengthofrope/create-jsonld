@@ -35,12 +35,7 @@ class DriveWheelConfigurationValueSchema extends QualitativeValueSchema
 {
     public static function factory()
     {
-        return new DriveWheelConfigurationValueSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new DriveWheelConfigurationValueSchema('http://schema.org/', 'DriveWheelConfigurationValue');
     }
 
 

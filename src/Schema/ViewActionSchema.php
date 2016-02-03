@@ -35,12 +35,7 @@ class ViewActionSchema extends ConsumeActionSchema
 {
     public static function factory()
     {
-        return new ViewActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ViewActionSchema('http://schema.org/', 'ViewAction');
     }
 
 

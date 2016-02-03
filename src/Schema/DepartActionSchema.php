@@ -35,12 +35,7 @@ class DepartActionSchema extends MoveActionSchema
 {
     public static function factory()
     {
-        return new DepartActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new DepartActionSchema('http://schema.org/', 'DepartAction');
     }
 
 

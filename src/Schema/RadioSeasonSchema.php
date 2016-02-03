@@ -35,12 +35,7 @@ class RadioSeasonSchema extends CreativeWorkSeasonSchema
 {
     public static function factory()
     {
-        return new RadioSeasonSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new RadioSeasonSchema('http://schema.org/', 'RadioSeason');
     }
 
 

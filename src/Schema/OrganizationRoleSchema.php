@@ -35,29 +35,25 @@ class OrganizationRoleSchema extends RoleSchema
 {
     public static function factory()
     {
-        return new OrganizationRoleSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new OrganizationRoleSchema('http://schema.org/', 'OrganizationRole');
     }
 
     /**
      * A number associated with a role in an organization, for example, the number on an athlete's jersey.
+     *
+     * @param $numberedPosition NumberSchema
      **/
-    private $numberedPosition;
     public function setNumberedPosition($numberedPosition) {
-        $this->numberedPosition = $numberedPosition;
+        $this->properties['numberedPosition'] = $numberedPosition;
 
         return $this;
     }
 
     /**
-     * @return NumberSchema     
+     * @return NumberSchema
      **/
     public function getNumberedPosition() {
-        return $this->numberedPosition;
+        return $this->properties['numberedPosition'];
     }
 
 

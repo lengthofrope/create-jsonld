@@ -35,29 +35,25 @@ class LendActionSchema extends TransferActionSchema
 {
     public static function factory()
     {
-        return new LendActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new LendActionSchema('http://schema.org/', 'LendAction');
     }
 
     /**
      * A sub property of participant. The person that borrows the object being lent.
+     *
+     * @param $borrower PersonSchema
      **/
-    private $borrower;
     public function setBorrower($borrower) {
-        $this->borrower = $borrower;
+        $this->properties['borrower'] = $borrower;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema     
+     * @return PersonSchema
      **/
     public function getBorrower() {
-        return $this->borrower;
+        return $this->properties['borrower'];
     }
 
 

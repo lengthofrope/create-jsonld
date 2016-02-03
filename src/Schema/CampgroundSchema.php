@@ -35,12 +35,7 @@ class CampgroundSchema extends CivicStructureSchema
 {
     public static function factory()
     {
-        return new CampgroundSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new CampgroundSchema('http://schema.org/', 'Campground');
     }
 
 

@@ -35,12 +35,7 @@ class PhysicalTherapySchema extends MedicalTherapySchema
 {
     public static function factory()
     {
-        return new PhysicalTherapySchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new PhysicalTherapySchema('http://schema.org/', 'PhysicalTherapy');
     }
 
 

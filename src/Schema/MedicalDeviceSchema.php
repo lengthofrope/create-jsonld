@@ -35,148 +35,151 @@ class MedicalDeviceSchema extends MedicalEntitySchema
 {
     public static function factory()
     {
-        return new MedicalDeviceSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MedicalDeviceSchema('http://schema.org/', 'MedicalDevice');
     }
 
     /**
      * A possible complication and/or side effect of this therapy. If it is known that an adverse outcome is serious (resulting in death, disability, or permanent damage; requiring hospitalization; or is otherwise life-threatening or requires immediate medical attention), tag it as a seriouseAdverseOutcome instead.
+     *
+     * @param $adverseOutcome MedicalEntitySchema
      **/
-    private $adverseOutcome;
     public function setAdverseOutcome($adverseOutcome) {
-        $this->adverseOutcome = $adverseOutcome;
+        $this->properties['adverseOutcome'] = $adverseOutcome;
 
         return $this;
     }
 
     /**
-     * @return MedicalEntitySchema     
+     * @return MedicalEntitySchema
      **/
     public function getAdverseOutcome() {
-        return $this->adverseOutcome;
+        return $this->properties['adverseOutcome'];
     }
 
     /**
      * A contraindication for this therapy.
+     *
+     * @param $contraindication MedicalContraindicationSchema
      **/
-    private $contraindication;
     public function setContraindication($contraindication) {
-        $this->contraindication = $contraindication;
+        $this->properties['contraindication'] = $contraindication;
 
         return $this;
     }
 
     /**
-     * @return MedicalContraindicationSchema     
+     * @return MedicalContraindicationSchema
      **/
     public function getContraindication() {
-        return $this->contraindication;
+        return $this->properties['contraindication'];
     }
 
     /**
      * A factor that indicates use of this therapy for treatment and/or prevention of a condition, symptom, etc. For therapies such as drugs, indications can include both officially-approved indications as well as off-label uses. These can be distinguished by using the ApprovedIndication subtype of MedicalIndication.
+     *
+     * @param $indication MedicalIndicationSchema
      **/
-    private $indication;
     public function setIndication($indication) {
-        $this->indication = $indication;
+        $this->properties['indication'] = $indication;
 
         return $this;
     }
 
     /**
-     * @return MedicalIndicationSchema     
+     * @return MedicalIndicationSchema
      **/
     public function getIndication() {
-        return $this->indication;
+        return $this->properties['indication'];
     }
 
     /**
      * A description of the postoperative procedures, care, and/or followups for this device.
+     *
+     * @param $postOp TextSchema
      **/
-    private $postOp;
     public function setPostOp($postOp) {
-        $this->postOp = $postOp;
+        $this->properties['postOp'] = $postOp;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getPostOp() {
-        return $this->postOp;
+        return $this->properties['postOp'];
     }
 
     /**
      * A description of the workup, testing, and other preparations required before implanting this device.
+     *
+     * @param $preOp TextSchema
      **/
-    private $preOp;
     public function setPreOp($preOp) {
-        $this->preOp = $preOp;
+        $this->properties['preOp'] = $preOp;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getPreOp() {
-        return $this->preOp;
+        return $this->properties['preOp'];
     }
 
     /**
      * A description of the procedure involved in setting up, using, and/or installing the device.
+     *
+     * @param $procedure TextSchema
      **/
-    private $procedure;
     public function setProcedure($procedure) {
-        $this->procedure = $procedure;
+        $this->properties['procedure'] = $procedure;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getProcedure() {
-        return $this->procedure;
+        return $this->properties['procedure'];
     }
 
     /**
      * A goal towards an action is taken. Can be concrete or abstract.
+     *
+     * @param $purpose MedicalDevicePurposeSchema|ThingSchema
      **/
-    private $purpose;
     public function setPurpose($purpose) {
-        $this->purpose = $purpose;
+        $this->properties['purpose'] = $purpose;
 
         return $this;
     }
 
     /**
-     * @return MedicalDevicePurposeSchema|ThingSchema     
+     * @return MedicalDevicePurposeSchema|ThingSchema
      **/
     public function getPurpose() {
-        return $this->purpose;
+        return $this->properties['purpose'];
     }
 
     /**
      * A possible serious complication and/or serious side effect of this therapy. Serious adverse outcomes include those that are life-threatening; result in death, disability, or permanent damage; require hospitalization or prolong existing hospitalization; cause congenital anomalies or birth defects; or jeopardize the patient and may require medical or surgical intervention to prevent one of the outcomes in this definition.
+     *
+     * @param $seriousAdverseOutcome MedicalEntitySchema
      **/
-    private $seriousAdverseOutcome;
     public function setSeriousAdverseOutcome($seriousAdverseOutcome) {
-        $this->seriousAdverseOutcome = $seriousAdverseOutcome;
+        $this->properties['seriousAdverseOutcome'] = $seriousAdverseOutcome;
 
         return $this;
     }
 
     /**
-     * @return MedicalEntitySchema     
+     * @return MedicalEntitySchema
      **/
     public function getSeriousAdverseOutcome() {
-        return $this->seriousAdverseOutcome;
+        return $this->properties['seriousAdverseOutcome'];
     }
 
 

@@ -35,29 +35,25 @@ class VoteActionSchema extends ChooseActionSchema
 {
     public static function factory()
     {
-        return new VoteActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new VoteActionSchema('http://schema.org/', 'VoteAction');
     }
 
     /**
      * A sub property of object. The candidate subject of this action.
+     *
+     * @param $candidate PersonSchema
      **/
-    private $candidate;
     public function setCandidate($candidate) {
-        $this->candidate = $candidate;
+        $this->properties['candidate'] = $candidate;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema     
+     * @return PersonSchema
      **/
     public function getCandidate() {
-        return $this->candidate;
+        return $this->properties['candidate'];
     }
 
 

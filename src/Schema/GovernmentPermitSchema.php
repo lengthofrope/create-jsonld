@@ -35,12 +35,7 @@ class GovernmentPermitSchema extends PermitSchema
 {
     public static function factory()
     {
-        return new GovernmentPermitSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new GovernmentPermitSchema('http://schema.org/', 'GovernmentPermit');
     }
 
 

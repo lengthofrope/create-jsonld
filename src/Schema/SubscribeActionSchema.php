@@ -35,12 +35,7 @@ class SubscribeActionSchema extends InteractActionSchema
 {
     public static function factory()
     {
-        return new SubscribeActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new SubscribeActionSchema('http://schema.org/', 'SubscribeAction');
     }
 
 

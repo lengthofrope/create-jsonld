@@ -35,12 +35,7 @@ class BedAndBreakfastSchema extends LodgingBusinessSchema
 {
     public static function factory()
     {
-        return new BedAndBreakfastSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new BedAndBreakfastSchema('http://schema.org/', 'BedAndBreakfast');
     }
 
 

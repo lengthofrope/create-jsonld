@@ -35,12 +35,7 @@ class CityHallSchema extends GovernmentBuildingSchema
 {
     public static function factory()
     {
-        return new CityHallSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new CityHallSchema('http://schema.org/', 'CityHall');
     }
 
 

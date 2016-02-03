@@ -35,12 +35,7 @@ class ReactActionSchema extends AssessActionSchema
 {
     public static function factory()
     {
-        return new ReactActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ReactActionSchema('http://schema.org/', 'ReactAction');
     }
 
 

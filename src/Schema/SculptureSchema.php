@@ -35,12 +35,7 @@ class SculptureSchema extends CreativeWorkSchema
 {
     public static function factory()
     {
-        return new SculptureSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new SculptureSchema('http://schema.org/', 'Sculpture');
     }
 
 

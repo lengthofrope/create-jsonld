@@ -35,46 +35,43 @@ class WarrantyPromiseSchema extends StructuredValueSchema
 {
     public static function factory()
     {
-        return new WarrantyPromiseSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new WarrantyPromiseSchema('http://schema.org/', 'WarrantyPromise');
     }
 
     /**
      * The duration of the warranty promise. Common unitCode values are ANN for year, MON for months, or DAY for days.
+     *
+     * @param $durationOfWarranty QuantitativeValueSchema
      **/
-    private $durationOfWarranty;
     public function setDurationOfWarranty($durationOfWarranty) {
-        $this->durationOfWarranty = $durationOfWarranty;
+        $this->properties['durationOfWarranty'] = $durationOfWarranty;
 
         return $this;
     }
 
     /**
-     * @return QuantitativeValueSchema     
+     * @return QuantitativeValueSchema
      **/
     public function getDurationOfWarranty() {
-        return $this->durationOfWarranty;
+        return $this->properties['durationOfWarranty'];
     }
 
     /**
      * The scope of the warranty promise.
+     *
+     * @param $warrantyScope WarrantyScopeSchema
      **/
-    private $warrantyScope;
     public function setWarrantyScope($warrantyScope) {
-        $this->warrantyScope = $warrantyScope;
+        $this->properties['warrantyScope'] = $warrantyScope;
 
         return $this;
     }
 
     /**
-     * @return WarrantyScopeSchema     
+     * @return WarrantyScopeSchema
      **/
     public function getWarrantyScope() {
-        return $this->warrantyScope;
+        return $this->properties['warrantyScope'];
     }
 
 

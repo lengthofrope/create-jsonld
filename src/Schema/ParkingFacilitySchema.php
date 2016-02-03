@@ -35,12 +35,7 @@ class ParkingFacilitySchema extends CivicStructureSchema
 {
     public static function factory()
     {
-        return new ParkingFacilitySchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ParkingFacilitySchema('http://schema.org/', 'ParkingFacility');
     }
 
 

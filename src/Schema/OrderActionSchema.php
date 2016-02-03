@@ -35,29 +35,25 @@ class OrderActionSchema extends TradeActionSchema
 {
     public static function factory()
     {
-        return new OrderActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new OrderActionSchema('http://schema.org/', 'OrderAction');
     }
 
     /**
      * A sub property of instrument. The method of delivery.
+     *
+     * @param $deliveryMethod DeliveryMethodSchema
      **/
-    private $deliveryMethod;
     public function setDeliveryMethod($deliveryMethod) {
-        $this->deliveryMethod = $deliveryMethod;
+        $this->properties['deliveryMethod'] = $deliveryMethod;
 
         return $this;
     }
 
     /**
-     * @return DeliveryMethodSchema     
+     * @return DeliveryMethodSchema
      **/
     public function getDeliveryMethod() {
-        return $this->deliveryMethod;
+        return $this->properties['deliveryMethod'];
     }
 
 

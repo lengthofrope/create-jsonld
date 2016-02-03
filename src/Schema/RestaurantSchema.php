@@ -35,12 +35,7 @@ class RestaurantSchema extends FoodEstablishmentSchema
 {
     public static function factory()
     {
-        return new RestaurantSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new RestaurantSchema('http://schema.org/', 'Restaurant');
     }
 
 

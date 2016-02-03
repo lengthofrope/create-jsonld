@@ -35,12 +35,7 @@ class LanguageSchema extends IntangibleSchema
 {
     public static function factory()
     {
-        return new LanguageSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new LanguageSchema('http://schema.org/', 'Language');
     }
 
 

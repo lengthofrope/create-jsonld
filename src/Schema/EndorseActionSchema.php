@@ -35,29 +35,25 @@ class EndorseActionSchema extends ReactActionSchema
 {
     public static function factory()
     {
-        return new EndorseActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new EndorseActionSchema('http://schema.org/', 'EndorseAction');
     }
 
     /**
      * A sub property of participant. The person/organization being supported.
+     *
+     * @param $endorsee OrganizationSchema|PersonSchema
      **/
-    private $endorsee;
     public function setEndorsee($endorsee) {
-        $this->endorsee = $endorsee;
+        $this->properties['endorsee'] = $endorsee;
 
         return $this;
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema     
+     * @return OrganizationSchema|PersonSchema
      **/
     public function getEndorsee() {
-        return $this->endorsee;
+        return $this->properties['endorsee'];
     }
 
 

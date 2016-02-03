@@ -35,29 +35,25 @@ class GovernmentServiceSchema extends ServiceSchema
 {
     public static function factory()
     {
-        return new GovernmentServiceSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new GovernmentServiceSchema('http://schema.org/', 'GovernmentService');
     }
 
     /**
      * The operating organization, if different from the provider.  This enables the representation of services that are provided by an organization, but operated by another organization like a subcontractor.
+     *
+     * @param $serviceOperator OrganizationSchema
      **/
-    private $serviceOperator;
     public function setServiceOperator($serviceOperator) {
-        $this->serviceOperator = $serviceOperator;
+        $this->properties['serviceOperator'] = $serviceOperator;
 
         return $this;
     }
 
     /**
-     * @return OrganizationSchema     
+     * @return OrganizationSchema
      **/
     public function getServiceOperator() {
-        return $this->serviceOperator;
+        return $this->properties['serviceOperator'];
     }
 
 

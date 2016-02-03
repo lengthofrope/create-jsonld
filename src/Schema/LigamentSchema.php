@@ -35,12 +35,7 @@ class LigamentSchema extends AnatomicalStructureSchema
 {
     public static function factory()
     {
-        return new LigamentSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new LigamentSchema('http://schema.org/', 'Ligament');
     }
 
 

@@ -35,12 +35,7 @@ class BowlingAlleySchema extends SportsActivityLocationSchema
 {
     public static function factory()
     {
-        return new BowlingAlleySchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new BowlingAlleySchema('http://schema.org/', 'BowlingAlley');
     }
 
 

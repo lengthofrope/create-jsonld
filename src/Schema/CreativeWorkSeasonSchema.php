@@ -35,199 +35,205 @@ class CreativeWorkSeasonSchema extends CreativeWorkSchema
 {
     public static function factory()
     {
-        return new CreativeWorkSeasonSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new CreativeWorkSeasonSchema('http://schema.org/', 'CreativeWorkSeason');
     }
 
     /**
      * An actor, e.g. in tv, radio, movie, video games etc. Actors can be associated with individual items or with a series, episode, clip.
+     *
+     * @param $actor PersonSchema
      **/
-    private $actor;
     public function setActor($actor) {
-        $this->actor = $actor;
+        $this->properties['actor'] = $actor;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema     
+     * @return PersonSchema
      **/
     public function getActor() {
-        return $this->actor;
+        return $this->properties['actor'];
     }
 
     /**
      * A director of e.g. tv, radio, movie, video games etc. content. Directors can be associated with individual items or with a series, episode, clip.
+     *
+     * @param $director PersonSchema
      **/
-    private $director;
     public function setDirector($director) {
-        $this->director = $director;
+        $this->properties['director'] = $director;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema     
+     * @return PersonSchema
      **/
     public function getDirector() {
-        return $this->director;
+        return $this->properties['director'];
     }
 
     /**
      * The end date and time of the item (in <a href='http://en.wikipedia.org/wiki/ISO_8601'>ISO 8601 date format</a>).
+     *
+     * @param $endDate DateSchema
      **/
-    private $endDate;
     public function setEndDate($endDate) {
-        $this->endDate = $endDate;
+        $this->properties['endDate'] = $endDate;
 
         return $this;
     }
 
     /**
-     * @return DateSchema     
+     * @return DateSchema
      **/
     public function getEndDate() {
-        return $this->endDate;
+        return $this->properties['endDate'];
     }
 
     /**
      * An episode of a tv, radio or game media within a series or season.
+     *
+     * @param $episode EpisodeSchema
      **/
-    private $episode;
     public function setEpisode($episode) {
-        $this->episode = $episode;
+        $this->properties['episode'] = $episode;
 
         return $this;
     }
 
     /**
-     * @return EpisodeSchema     
+     * @return EpisodeSchema
      **/
     public function getEpisode() {
-        return $this->episode;
+        return $this->properties['episode'];
     }
 
     /**
      * An episode of a TV/radio series or season.
+     *
+     * @param $episodes EpisodeSchema
      **/
-    private $episodes;
     public function setEpisodes($episodes) {
-        $this->episodes = $episodes;
+        $this->properties['episodes'] = $episodes;
 
         return $this;
     }
 
     /**
-     * @return EpisodeSchema     
+     * @return EpisodeSchema
      **/
     public function getEpisodes() {
-        return $this->episodes;
+        return $this->properties['episodes'];
     }
 
     /**
      * The number of episodes in this season or series.
+     *
+     * @param $numberOfEpisodes IntegerSchema
      **/
-    private $numberOfEpisodes;
     public function setNumberOfEpisodes($numberOfEpisodes) {
-        $this->numberOfEpisodes = $numberOfEpisodes;
+        $this->properties['numberOfEpisodes'] = $numberOfEpisodes;
 
         return $this;
     }
 
     /**
-     * @return IntegerSchema     
+     * @return IntegerSchema
      **/
     public function getNumberOfEpisodes() {
-        return $this->numberOfEpisodes;
+        return $this->properties['numberOfEpisodes'];
     }
 
     /**
      * The series to which this episode or season belongs.
+     *
+     * @param $partOfSeries CreativeWorkSeriesSchema
      **/
-    private $partOfSeries;
     public function setPartOfSeries($partOfSeries) {
-        $this->partOfSeries = $partOfSeries;
+        $this->properties['partOfSeries'] = $partOfSeries;
 
         return $this;
     }
 
     /**
-     * @return CreativeWorkSeriesSchema     
+     * @return CreativeWorkSeriesSchema
      **/
     public function getPartOfSeries() {
-        return $this->partOfSeries;
+        return $this->properties['partOfSeries'];
     }
 
     /**
      * The production company or studio responsible for the item e.g. series, video game, episode etc.
+     *
+     * @param $productionCompany OrganizationSchema
      **/
-    private $productionCompany;
     public function setProductionCompany($productionCompany) {
-        $this->productionCompany = $productionCompany;
+        $this->properties['productionCompany'] = $productionCompany;
 
         return $this;
     }
 
     /**
-     * @return OrganizationSchema     
+     * @return OrganizationSchema
      **/
     public function getProductionCompany() {
-        return $this->productionCompany;
+        return $this->properties['productionCompany'];
     }
 
     /**
      * Position of the season within an ordered group of seasons.
+     *
+     * @param $seasonNumber IntegerSchema|TextSchema
      **/
-    private $seasonNumber;
     public function setSeasonNumber($seasonNumber) {
-        $this->seasonNumber = $seasonNumber;
+        $this->properties['seasonNumber'] = $seasonNumber;
 
         return $this;
     }
 
     /**
-     * @return IntegerSchema|TextSchema     
+     * @return IntegerSchema|TextSchema
      **/
     public function getSeasonNumber() {
-        return $this->seasonNumber;
+        return $this->properties['seasonNumber'];
     }
 
     /**
      * The start date and time of the item (in <a href='http://en.wikipedia.org/wiki/ISO_8601'>ISO 8601 date format</a>).
+     *
+     * @param $startDate DateSchema
      **/
-    private $startDate;
     public function setStartDate($startDate) {
-        $this->startDate = $startDate;
+        $this->properties['startDate'] = $startDate;
 
         return $this;
     }
 
     /**
-     * @return DateSchema     
+     * @return DateSchema
      **/
     public function getStartDate() {
-        return $this->startDate;
+        return $this->properties['startDate'];
     }
 
     /**
      * The trailer of a movie or tv/radio series, season, episode, etc.
+     *
+     * @param $trailer VideoObjectSchema
      **/
-    private $trailer;
     public function setTrailer($trailer) {
-        $this->trailer = $trailer;
+        $this->properties['trailer'] = $trailer;
 
         return $this;
     }
 
     /**
-     * @return VideoObjectSchema     
+     * @return VideoObjectSchema
      **/
     public function getTrailer() {
-        return $this->trailer;
+        return $this->properties['trailer'];
     }
 
 

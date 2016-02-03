@@ -35,29 +35,25 @@ class ImagingTestSchema extends MedicalTestSchema
 {
     public static function factory()
     {
-        return new ImagingTestSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ImagingTestSchema('http://schema.org/', 'ImagingTest');
     }
 
     /**
      * Imaging technique used.
+     *
+     * @param $imagingTechnique MedicalImagingTechniqueSchema
      **/
-    private $imagingTechnique;
     public function setImagingTechnique($imagingTechnique) {
-        $this->imagingTechnique = $imagingTechnique;
+        $this->properties['imagingTechnique'] = $imagingTechnique;
 
         return $this;
     }
 
     /**
-     * @return MedicalImagingTechniqueSchema     
+     * @return MedicalImagingTechniqueSchema
      **/
     public function getImagingTechnique() {
-        return $this->imagingTechnique;
+        return $this->properties['imagingTechnique'];
     }
 
 

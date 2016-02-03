@@ -35,12 +35,7 @@ class ListenActionSchema extends ConsumeActionSchema
 {
     public static function factory()
     {
-        return new ListenActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ListenActionSchema('http://schema.org/', 'ListenAction');
     }
 
 

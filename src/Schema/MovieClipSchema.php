@@ -35,12 +35,7 @@ class MovieClipSchema extends ClipSchema
 {
     public static function factory()
     {
-        return new MovieClipSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MovieClipSchema('http://schema.org/', 'MovieClip');
     }
 
 

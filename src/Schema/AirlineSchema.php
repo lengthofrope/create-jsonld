@@ -35,46 +35,43 @@ class AirlineSchema extends OrganizationSchema
 {
     public static function factory()
     {
-        return new AirlineSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new AirlineSchema('http://schema.org/', 'Airline');
     }
 
     /**
      * The type of boarding policy used by the airline (e.g. zone-based or group-based).
+     *
+     * @param $boardingPolicy BoardingPolicyTypeSchema
      **/
-    private $boardingPolicy;
     public function setBoardingPolicy($boardingPolicy) {
-        $this->boardingPolicy = $boardingPolicy;
+        $this->properties['boardingPolicy'] = $boardingPolicy;
 
         return $this;
     }
 
     /**
-     * @return BoardingPolicyTypeSchema     
+     * @return BoardingPolicyTypeSchema
      **/
     public function getBoardingPolicy() {
-        return $this->boardingPolicy;
+        return $this->properties['boardingPolicy'];
     }
 
     /**
      * IATA identifier for an airline or airport.
+     *
+     * @param $iataCode TextSchema
      **/
-    private $iataCode;
     public function setIataCode($iataCode) {
-        $this->iataCode = $iataCode;
+        $this->properties['iataCode'] = $iataCode;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getIataCode() {
-        return $this->iataCode;
+        return $this->properties['iataCode'];
     }
 
 

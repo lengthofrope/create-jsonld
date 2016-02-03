@@ -35,46 +35,43 @@ class MedicalConditionStageSchema extends MedicalIntangibleSchema
 {
     public static function factory()
     {
-        return new MedicalConditionStageSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MedicalConditionStageSchema('http://schema.org/', 'MedicalConditionStage');
     }
 
     /**
      * The stage represented as a number, e.g. 3.
+     *
+     * @param $stageAsNumber NumberSchema
      **/
-    private $stageAsNumber;
     public function setStageAsNumber($stageAsNumber) {
-        $this->stageAsNumber = $stageAsNumber;
+        $this->properties['stageAsNumber'] = $stageAsNumber;
 
         return $this;
     }
 
     /**
-     * @return NumberSchema     
+     * @return NumberSchema
      **/
     public function getStageAsNumber() {
-        return $this->stageAsNumber;
+        return $this->properties['stageAsNumber'];
     }
 
     /**
      * The substage, e.g. 'a' for Stage IIIa.
+     *
+     * @param $subStageSuffix TextSchema
      **/
-    private $subStageSuffix;
     public function setSubStageSuffix($subStageSuffix) {
-        $this->subStageSuffix = $subStageSuffix;
+        $this->properties['subStageSuffix'] = $subStageSuffix;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getSubStageSuffix() {
-        return $this->subStageSuffix;
+        return $this->properties['subStageSuffix'];
     }
 
 

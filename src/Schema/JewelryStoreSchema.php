@@ -35,12 +35,7 @@ class JewelryStoreSchema extends StoreSchema
 {
     public static function factory()
     {
-        return new JewelryStoreSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new JewelryStoreSchema('http://schema.org/', 'JewelryStore');
     }
 
 

@@ -35,12 +35,7 @@ class LiquorStoreSchema extends StoreSchema
 {
     public static function factory()
     {
-        return new LiquorStoreSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new LiquorStoreSchema('http://schema.org/', 'LiquorStore');
     }
 
 

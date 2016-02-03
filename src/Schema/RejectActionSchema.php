@@ -35,12 +35,7 @@ class RejectActionSchema extends AllocateActionSchema
 {
     public static function factory()
     {
-        return new RejectActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new RejectActionSchema('http://schema.org/', 'RejectAction');
     }
 
 

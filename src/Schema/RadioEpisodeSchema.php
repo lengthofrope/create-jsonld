@@ -35,12 +35,7 @@ class RadioEpisodeSchema extends EpisodeSchema
 {
     public static function factory()
     {
-        return new RadioEpisodeSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new RadioEpisodeSchema('http://schema.org/', 'RadioEpisode');
     }
 
 

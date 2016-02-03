@@ -35,29 +35,25 @@ class TVClipSchema extends ClipSchema
 {
     public static function factory()
     {
-        return new TVClipSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new TVClipSchema('http://schema.org/', 'TVClip');
     }
 
     /**
      * The TV series to which this episode or season belongs.
+     *
+     * @param $partOfTVSeries TVSeriesSchema
      **/
-    private $partOfTVSeries;
     public function setPartOfTVSeries($partOfTVSeries) {
-        $this->partOfTVSeries = $partOfTVSeries;
+        $this->properties['partOfTVSeries'] = $partOfTVSeries;
 
         return $this;
     }
 
     /**
-     * @return TVSeriesSchema     
+     * @return TVSeriesSchema
      **/
     public function getPartOfTVSeries() {
-        return $this->partOfTVSeries;
+        return $this->properties['partOfTVSeries'];
     }
 
 

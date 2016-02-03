@@ -35,165 +35,169 @@ class AnatomicalStructureSchema extends MedicalEntitySchema
 {
     public static function factory()
     {
-        return new AnatomicalStructureSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new AnatomicalStructureSchema('http://schema.org/', 'AnatomicalStructure');
     }
 
     /**
      * If applicable, a description of the pathophysiology associated with the anatomical system, including potential abnormal changes in the mechanical, physical, and biochemical functions of the system.
+     *
+     * @param $associatedPathophysiology TextSchema
      **/
-    private $associatedPathophysiology;
     public function setAssociatedPathophysiology($associatedPathophysiology) {
-        $this->associatedPathophysiology = $associatedPathophysiology;
+        $this->properties['associatedPathophysiology'] = $associatedPathophysiology;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getAssociatedPathophysiology() {
-        return $this->associatedPathophysiology;
+        return $this->properties['associatedPathophysiology'];
     }
 
     /**
      * Location in the body of the anatomical structure.
+     *
+     * @param $bodyLocation TextSchema
      **/
-    private $bodyLocation;
     public function setBodyLocation($bodyLocation) {
-        $this->bodyLocation = $bodyLocation;
+        $this->properties['bodyLocation'] = $bodyLocation;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getBodyLocation() {
-        return $this->bodyLocation;
+        return $this->properties['bodyLocation'];
     }
 
     /**
      * Other anatomical structures to which this structure is connected.
+     *
+     * @param $connectedTo AnatomicalStructureSchema
      **/
-    private $connectedTo;
     public function setConnectedTo($connectedTo) {
-        $this->connectedTo = $connectedTo;
+        $this->properties['connectedTo'] = $connectedTo;
 
         return $this;
     }
 
     /**
-     * @return AnatomicalStructureSchema     
+     * @return AnatomicalStructureSchema
      **/
     public function getConnectedTo() {
-        return $this->connectedTo;
+        return $this->properties['connectedTo'];
     }
 
     /**
      * An image containing a diagram that illustrates the structure and/or its component substructures and/or connections with other structures.
+     *
+     * @param $diagram ImageObjectSchema
      **/
-    private $diagram;
     public function setDiagram($diagram) {
-        $this->diagram = $diagram;
+        $this->properties['diagram'] = $diagram;
 
         return $this;
     }
 
     /**
-     * @return ImageObjectSchema     
+     * @return ImageObjectSchema
      **/
     public function getDiagram() {
-        return $this->diagram;
+        return $this->properties['diagram'];
     }
 
     /**
      * Function of the anatomical structure.
+     *
+     * @param $function TextSchema
      **/
-    private $function;
     public function setFunction($function) {
-        $this->function = $function;
+        $this->properties['function'] = $function;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getFunction() {
-        return $this->function;
+        return $this->properties['function'];
     }
 
     /**
      * The anatomical or organ system that this structure is part of.
+     *
+     * @param $partOfSystem AnatomicalSystemSchema
      **/
-    private $partOfSystem;
     public function setPartOfSystem($partOfSystem) {
-        $this->partOfSystem = $partOfSystem;
+        $this->properties['partOfSystem'] = $partOfSystem;
 
         return $this;
     }
 
     /**
-     * @return AnatomicalSystemSchema     
+     * @return AnatomicalSystemSchema
      **/
     public function getPartOfSystem() {
-        return $this->partOfSystem;
+        return $this->properties['partOfSystem'];
     }
 
     /**
      * A medical condition associated with this anatomy.
+     *
+     * @param $relatedCondition MedicalConditionSchema
      **/
-    private $relatedCondition;
     public function setRelatedCondition($relatedCondition) {
-        $this->relatedCondition = $relatedCondition;
+        $this->properties['relatedCondition'] = $relatedCondition;
 
         return $this;
     }
 
     /**
-     * @return MedicalConditionSchema     
+     * @return MedicalConditionSchema
      **/
     public function getRelatedCondition() {
-        return $this->relatedCondition;
+        return $this->properties['relatedCondition'];
     }
 
     /**
      * A medical therapy related to this anatomy.
+     *
+     * @param $relatedTherapy MedicalTherapySchema
      **/
-    private $relatedTherapy;
     public function setRelatedTherapy($relatedTherapy) {
-        $this->relatedTherapy = $relatedTherapy;
+        $this->properties['relatedTherapy'] = $relatedTherapy;
 
         return $this;
     }
 
     /**
-     * @return MedicalTherapySchema     
+     * @return MedicalTherapySchema
      **/
     public function getRelatedTherapy() {
-        return $this->relatedTherapy;
+        return $this->properties['relatedTherapy'];
     }
 
     /**
      * Component (sub-)structure(s) that comprise this anatomical structure.
+     *
+     * @param $subStructure AnatomicalStructureSchema
      **/
-    private $subStructure;
     public function setSubStructure($subStructure) {
-        $this->subStructure = $subStructure;
+        $this->properties['subStructure'] = $subStructure;
 
         return $this;
     }
 
     /**
-     * @return AnatomicalStructureSchema     
+     * @return AnatomicalStructureSchema
      **/
     public function getSubStructure() {
-        return $this->subStructure;
+        return $this->properties['subStructure'];
     }
 
 

@@ -35,12 +35,7 @@ class RVParkSchema extends CivicStructureSchema
 {
     public static function factory()
     {
-        return new RVParkSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new RVParkSchema('http://schema.org/', 'RVPark');
     }
 
 

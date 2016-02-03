@@ -35,12 +35,7 @@ class RiverBodyOfWaterSchema extends BodyOfWaterSchema
 {
     public static function factory()
     {
-        return new RiverBodyOfWaterSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new RiverBodyOfWaterSchema('http://schema.org/', 'RiverBodyOfWater');
     }
 
 

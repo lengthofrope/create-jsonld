@@ -35,12 +35,7 @@ class ImageGallerySchema extends CollectionPageSchema
 {
     public static function factory()
     {
-        return new ImageGallerySchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ImageGallerySchema('http://schema.org/', 'ImageGallery');
     }
 
 

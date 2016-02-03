@@ -35,12 +35,7 @@ class WPSideBarSchema extends WebPageElementSchema
 {
     public static function factory()
     {
-        return new WPSideBarSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new WPSideBarSchema('http://schema.org/', 'WPSideBar');
     }
 
 

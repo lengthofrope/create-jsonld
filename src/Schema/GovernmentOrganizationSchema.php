@@ -35,12 +35,7 @@ class GovernmentOrganizationSchema extends OrganizationSchema
 {
     public static function factory()
     {
-        return new GovernmentOrganizationSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new GovernmentOrganizationSchema('http://schema.org/', 'GovernmentOrganization');
     }
 
 

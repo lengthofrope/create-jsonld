@@ -35,199 +35,205 @@ class RecipeSchema extends CreativeWorkSchema
 {
     public static function factory()
     {
-        return new RecipeSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new RecipeSchema('http://schema.org/', 'Recipe');
     }
 
     /**
      * The time it takes to actually cook the dish, in <a href='http://en.wikipedia.org/wiki/ISO_8601'>ISO 8601 duration format</a>.
+     *
+     * @param $cookTime DurationSchema
      **/
-    private $cookTime;
     public function setCookTime($cookTime) {
-        $this->cookTime = $cookTime;
+        $this->properties['cookTime'] = $cookTime;
 
         return $this;
     }
 
     /**
-     * @return DurationSchema     
+     * @return DurationSchema
      **/
     public function getCookTime() {
-        return $this->cookTime;
+        return $this->properties['cookTime'];
     }
 
     /**
      * The method of cooking, such as Frying, Steaming, ...
+     *
+     * @param $cookingMethod TextSchema
      **/
-    private $cookingMethod;
     public function setCookingMethod($cookingMethod) {
-        $this->cookingMethod = $cookingMethod;
+        $this->properties['cookingMethod'] = $cookingMethod;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getCookingMethod() {
-        return $this->cookingMethod;
+        return $this->properties['cookingMethod'];
     }
 
     /**
      * A single ingredient used in the recipe, e.g. sugar, flour or garlic.
+     *
+     * @param $ingredients TextSchema
      **/
-    private $ingredients;
     public function setIngredients($ingredients) {
-        $this->ingredients = $ingredients;
+        $this->properties['ingredients'] = $ingredients;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getIngredients() {
-        return $this->ingredients;
+        return $this->properties['ingredients'];
     }
 
     /**
      * Nutrition information about the recipe.
+     *
+     * @param $nutrition NutritionInformationSchema
      **/
-    private $nutrition;
     public function setNutrition($nutrition) {
-        $this->nutrition = $nutrition;
+        $this->properties['nutrition'] = $nutrition;
 
         return $this;
     }
 
     /**
-     * @return NutritionInformationSchema     
+     * @return NutritionInformationSchema
      **/
     public function getNutrition() {
-        return $this->nutrition;
+        return $this->properties['nutrition'];
     }
 
     /**
      * The length of time it takes to prepare the recipe, in <a href='http://en.wikipedia.org/wiki/ISO_8601'>ISO 8601 duration format</a>.
+     *
+     * @param $prepTime DurationSchema
      **/
-    private $prepTime;
     public function setPrepTime($prepTime) {
-        $this->prepTime = $prepTime;
+        $this->properties['prepTime'] = $prepTime;
 
         return $this;
     }
 
     /**
-     * @return DurationSchema     
+     * @return DurationSchema
      **/
     public function getPrepTime() {
-        return $this->prepTime;
+        return $this->properties['prepTime'];
     }
 
     /**
      * The category of the recipe&#x2014;for example, appetizer, entree, etc.
+     *
+     * @param $recipeCategory TextSchema
      **/
-    private $recipeCategory;
     public function setRecipeCategory($recipeCategory) {
-        $this->recipeCategory = $recipeCategory;
+        $this->properties['recipeCategory'] = $recipeCategory;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getRecipeCategory() {
-        return $this->recipeCategory;
+        return $this->properties['recipeCategory'];
     }
 
     /**
      * The cuisine of the recipe (for example, French or Ethiopian).
+     *
+     * @param $recipeCuisine TextSchema
      **/
-    private $recipeCuisine;
     public function setRecipeCuisine($recipeCuisine) {
-        $this->recipeCuisine = $recipeCuisine;
+        $this->properties['recipeCuisine'] = $recipeCuisine;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getRecipeCuisine() {
-        return $this->recipeCuisine;
+        return $this->properties['recipeCuisine'];
     }
 
     /**
      * A single ingredient used in the recipe, e.g. sugar, flour or garlic.
+     *
+     * @param $recipeIngredient TextSchema
      **/
-    private $recipeIngredient;
     public function setRecipeIngredient($recipeIngredient) {
-        $this->recipeIngredient = $recipeIngredient;
+        $this->properties['recipeIngredient'] = $recipeIngredient;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getRecipeIngredient() {
-        return $this->recipeIngredient;
+        return $this->properties['recipeIngredient'];
     }
 
     /**
      * A step or instruction involved in making the recipe.
+     *
+     * @param $recipeInstructions TextSchema|ItemListSchema
      **/
-    private $recipeInstructions;
     public function setRecipeInstructions($recipeInstructions) {
-        $this->recipeInstructions = $recipeInstructions;
+        $this->properties['recipeInstructions'] = $recipeInstructions;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|ItemListSchema     
+     * @return TextSchema|ItemListSchema
      **/
     public function getRecipeInstructions() {
-        return $this->recipeInstructions;
+        return $this->properties['recipeInstructions'];
     }
 
     /**
      * The quantity produced by the recipe (for example, number of people served, number of servings, etc).
+     *
+     * @param $recipeYield TextSchema
      **/
-    private $recipeYield;
     public function setRecipeYield($recipeYield) {
-        $this->recipeYield = $recipeYield;
+        $this->properties['recipeYield'] = $recipeYield;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getRecipeYield() {
-        return $this->recipeYield;
+        return $this->properties['recipeYield'];
     }
 
     /**
      * The total time it takes to prepare and cook the recipe, in <a href='http://en.wikipedia.org/wiki/ISO_8601'>ISO 8601 duration format</a>.
+     *
+     * @param $totalTime DurationSchema
      **/
-    private $totalTime;
     public function setTotalTime($totalTime) {
-        $this->totalTime = $totalTime;
+        $this->properties['totalTime'] = $totalTime;
 
         return $this;
     }
 
     /**
-     * @return DurationSchema     
+     * @return DurationSchema
      **/
     public function getTotalTime() {
-        return $this->totalTime;
+        return $this->properties['totalTime'];
     }
 
 

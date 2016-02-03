@@ -35,63 +35,61 @@ class CommentSchema extends CreativeWorkSchema
 {
     public static function factory()
     {
-        return new CommentSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new CommentSchema('http://schema.org/', 'Comment');
     }
 
     /**
      * The number of downvotes this question, answer or comment has received from the community.
+     *
+     * @param $downvoteCount IntegerSchema
      **/
-    private $downvoteCount;
     public function setDownvoteCount($downvoteCount) {
-        $this->downvoteCount = $downvoteCount;
+        $this->properties['downvoteCount'] = $downvoteCount;
 
         return $this;
     }
 
     /**
-     * @return IntegerSchema     
+     * @return IntegerSchema
      **/
     public function getDownvoteCount() {
-        return $this->downvoteCount;
+        return $this->properties['downvoteCount'];
     }
 
     /**
      * The parent of a question, answer or item in general.
+     *
+     * @param $parentItem QuestionSchema
      **/
-    private $parentItem;
     public function setParentItem($parentItem) {
-        $this->parentItem = $parentItem;
+        $this->properties['parentItem'] = $parentItem;
 
         return $this;
     }
 
     /**
-     * @return QuestionSchema     
+     * @return QuestionSchema
      **/
     public function getParentItem() {
-        return $this->parentItem;
+        return $this->properties['parentItem'];
     }
 
     /**
      * The number of upvotes this question, answer or comment has received from the community.
+     *
+     * @param $upvoteCount IntegerSchema
      **/
-    private $upvoteCount;
     public function setUpvoteCount($upvoteCount) {
-        $this->upvoteCount = $upvoteCount;
+        $this->properties['upvoteCount'] = $upvoteCount;
 
         return $this;
     }
 
     /**
-     * @return IntegerSchema     
+     * @return IntegerSchema
      **/
     public function getUpvoteCount() {
-        return $this->upvoteCount;
+        return $this->properties['upvoteCount'];
     }
 
 

@@ -35,12 +35,7 @@ class MassSchema extends QuantitySchema
 {
     public static function factory()
     {
-        return new MassSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MassSchema('http://schema.org/', 'Mass');
     }
 
 

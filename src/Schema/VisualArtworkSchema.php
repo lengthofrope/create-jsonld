@@ -35,165 +35,169 @@ class VisualArtworkSchema extends CreativeWorkSchema
 {
     public static function factory()
     {
-        return new VisualArtworkSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new VisualArtworkSchema('http://schema.org/', 'VisualArtwork');
     }
 
     /**
      * The number of copies when multiple copies of a piece of artwork are produced - e.g. for a limited edition of 20 prints, 'artEdition' refers to the total number of copies (in this example "20").
+     *
+     * @param $artEdition TextSchema|IntegerSchema
      **/
-    private $artEdition;
     public function setArtEdition($artEdition) {
-        $this->artEdition = $artEdition;
+        $this->properties['artEdition'] = $artEdition;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|IntegerSchema     
+     * @return TextSchema|IntegerSchema
      **/
     public function getArtEdition() {
-        return $this->artEdition;
+        return $this->properties['artEdition'];
     }
 
     /**
      * The material used. (e.g. Oil, Watercolour, Acrylic, Linoprint, Marble, Cyanotype, Digital, Lithograph, DryPoint, Intaglio, Pastel, Woodcut, Pencil, Mixed Media, etc.)
+     *
+     * @param $artMedium TextSchema|URLSchema
      **/
-    private $artMedium;
     public function setArtMedium($artMedium) {
-        $this->artMedium = $artMedium;
+        $this->properties['artMedium'] = $artMedium;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|URLSchema     
+     * @return TextSchema|URLSchema
      **/
     public function getArtMedium() {
-        return $this->artMedium;
+        return $this->properties['artMedium'];
     }
 
     /**
      * e.g. Painting, Drawing, Sculpture, Print, Photograph, Assemblage, Collage, etc.
+     *
+     * @param $artform TextSchema|URLSchema
      **/
-    private $artform;
     public function setArtform($artform) {
-        $this->artform = $artform;
+        $this->properties['artform'] = $artform;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|URLSchema     
+     * @return TextSchema|URLSchema
      **/
     public function getArtform() {
-        return $this->artform;
+        return $this->properties['artform'];
     }
 
     /**
      * The supporting materials for the artwork, e.g. Canvas, Paper, Wood, Board, etc.
+     *
+     * @param $artworkSurface TextSchema|URLSchema
      **/
-    private $artworkSurface;
     public function setArtworkSurface($artworkSurface) {
-        $this->artworkSurface = $artworkSurface;
+        $this->properties['artworkSurface'] = $artworkSurface;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|URLSchema     
+     * @return TextSchema|URLSchema
      **/
     public function getArtworkSurface() {
-        return $this->artworkSurface;
+        return $this->properties['artworkSurface'];
     }
 
     /**
      * The depth of the item.
+     *
+     * @param $depth DistanceSchema|QuantitativeValueSchema
      **/
-    private $depth;
     public function setDepth($depth) {
-        $this->depth = $depth;
+        $this->properties['depth'] = $depth;
 
         return $this;
     }
 
     /**
-     * @return DistanceSchema|QuantitativeValueSchema     
+     * @return DistanceSchema|QuantitativeValueSchema
      **/
     public function getDepth() {
-        return $this->depth;
+        return $this->properties['depth'];
     }
 
     /**
      * The height of the item.
+     *
+     * @param $height DistanceSchema|QuantitativeValueSchema
      **/
-    private $height;
     public function setHeight($height) {
-        $this->height = $height;
+        $this->properties['height'] = $height;
 
         return $this;
     }
 
     /**
-     * @return DistanceSchema|QuantitativeValueSchema     
+     * @return DistanceSchema|QuantitativeValueSchema
      **/
     public function getHeight() {
-        return $this->height;
+        return $this->properties['height'];
     }
 
     /**
      * e.g. Oil, Watercolour, Acrylic, Linoprint, Marble, Cyanotype, Digital, Lithograph, DryPoint, Intaglio, Pastel, Woodcut, Pencil, Mixed Media, etc.
+     *
+     * @param $material TextSchema|URLSchema
      **/
-    private $material;
     public function setMaterial($material) {
-        $this->material = $material;
+        $this->properties['material'] = $material;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|URLSchema     
+     * @return TextSchema|URLSchema
      **/
     public function getMaterial() {
-        return $this->material;
+        return $this->properties['material'];
     }
 
     /**
      * e.g. Canvas, Paper, Wood, Board, etc.
+     *
+     * @param $surface TextSchema|URLSchema
      **/
-    private $surface;
     public function setSurface($surface) {
-        $this->surface = $surface;
+        $this->properties['surface'] = $surface;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|URLSchema     
+     * @return TextSchema|URLSchema
      **/
     public function getSurface() {
-        return $this->surface;
+        return $this->properties['surface'];
     }
 
     /**
      * The width of the item.
+     *
+     * @param $width DistanceSchema|QuantitativeValueSchema
      **/
-    private $width;
     public function setWidth($width) {
-        $this->width = $width;
+        $this->properties['width'] = $width;
 
         return $this;
     }
 
     /**
-     * @return DistanceSchema|QuantitativeValueSchema     
+     * @return DistanceSchema|QuantitativeValueSchema
      **/
     public function getWidth() {
-        return $this->width;
+        return $this->properties['width'];
     }
 
 

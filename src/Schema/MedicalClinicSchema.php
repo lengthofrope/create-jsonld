@@ -35,46 +35,43 @@ class MedicalClinicSchema extends MedicalOrganizationSchema
 {
     public static function factory()
     {
-        return new MedicalClinicSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MedicalClinicSchema('http://schema.org/', 'MedicalClinic');
     }
 
     /**
      * A medical service available from this provider.
+     *
+     * @param $availableService MedicalProcedureSchema|MedicalTestSchema|MedicalTherapySchema
      **/
-    private $availableService;
     public function setAvailableService($availableService) {
-        $this->availableService = $availableService;
+        $this->properties['availableService'] = $availableService;
 
         return $this;
     }
 
     /**
-     * @return MedicalProcedureSchema|MedicalTestSchema|MedicalTherapySchema     
+     * @return MedicalProcedureSchema|MedicalTestSchema|MedicalTherapySchema
      **/
     public function getAvailableService() {
-        return $this->availableService;
+        return $this->properties['availableService'];
     }
 
     /**
      * A medical specialty of the provider.
+     *
+     * @param $medicalSpecialty MedicalSpecialtySchema
      **/
-    private $medicalSpecialty;
     public function setMedicalSpecialty($medicalSpecialty) {
-        $this->medicalSpecialty = $medicalSpecialty;
+        $this->properties['medicalSpecialty'] = $medicalSpecialty;
 
         return $this;
     }
 
     /**
-     * @return MedicalSpecialtySchema     
+     * @return MedicalSpecialtySchema
      **/
     public function getMedicalSpecialty() {
-        return $this->medicalSpecialty;
+        return $this->properties['medicalSpecialty'];
     }
 
 

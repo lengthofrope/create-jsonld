@@ -35,12 +35,7 @@ class VideoGameClipSchema extends ClipSchema
 {
     public static function factory()
     {
-        return new VideoGameClipSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new VideoGameClipSchema('http://schema.org/', 'VideoGameClip');
     }
 
 

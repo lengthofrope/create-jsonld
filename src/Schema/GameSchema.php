@@ -35,97 +35,97 @@ class GameSchema extends CreativeWorkSchema
 {
     public static function factory()
     {
-        return new GameSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new GameSchema('http://schema.org/', 'Game');
     }
 
     /**
      * A piece of data that represents a particular aspect of a fictional character (skill, power, character points, advantage, disadvantage).
+     *
+     * @param $characterAttribute ThingSchema
      **/
-    private $characterAttribute;
     public function setCharacterAttribute($characterAttribute) {
-        $this->characterAttribute = $characterAttribute;
+        $this->properties['characterAttribute'] = $characterAttribute;
 
         return $this;
     }
 
     /**
-     * @return ThingSchema     
+     * @return ThingSchema
      **/
     public function getCharacterAttribute() {
-        return $this->characterAttribute;
+        return $this->properties['characterAttribute'];
     }
 
     /**
      * An item is an object within the game world that can be collected by a player or, occasionally, a non-player character.
+     *
+     * @param $gameItem ThingSchema
      **/
-    private $gameItem;
     public function setGameItem($gameItem) {
-        $this->gameItem = $gameItem;
+        $this->properties['gameItem'] = $gameItem;
 
         return $this;
     }
 
     /**
-     * @return ThingSchema     
+     * @return ThingSchema
      **/
     public function getGameItem() {
-        return $this->gameItem;
+        return $this->properties['gameItem'];
     }
 
     /**
      * Real or fictional location of the game (or part of game).
+     *
+     * @param $gameLocation URLSchema|PlaceSchema|PostalAddressSchema
      **/
-    private $gameLocation;
     public function setGameLocation($gameLocation) {
-        $this->gameLocation = $gameLocation;
+        $this->properties['gameLocation'] = $gameLocation;
 
         return $this;
     }
 
     /**
-     * @return URLSchema|PlaceSchema|PostalAddressSchema     
+     * @return URLSchema|PlaceSchema|PostalAddressSchema
      **/
     public function getGameLocation() {
-        return $this->gameLocation;
+        return $this->properties['gameLocation'];
     }
 
     /**
      * Indicate how many people can play this game (minimum, maximum, or range).
+     *
+     * @param $numberOfPlayers QuantitativeValueSchema
      **/
-    private $numberOfPlayers;
     public function setNumberOfPlayers($numberOfPlayers) {
-        $this->numberOfPlayers = $numberOfPlayers;
+        $this->properties['numberOfPlayers'] = $numberOfPlayers;
 
         return $this;
     }
 
     /**
-     * @return QuantitativeValueSchema     
+     * @return QuantitativeValueSchema
      **/
     public function getNumberOfPlayers() {
-        return $this->numberOfPlayers;
+        return $this->properties['numberOfPlayers'];
     }
 
     /**
      * The task that a player-controlled character, or group of characters may complete in order to gain a reward.
+     *
+     * @param $quest ThingSchema
      **/
-    private $quest;
     public function setQuest($quest) {
-        $this->quest = $quest;
+        $this->properties['quest'] = $quest;
 
         return $this;
     }
 
     /**
-     * @return ThingSchema     
+     * @return ThingSchema
      **/
     public function getQuest() {
-        return $this->quest;
+        return $this->properties['quest'];
     }
 
 

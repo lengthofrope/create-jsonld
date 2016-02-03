@@ -35,12 +35,7 @@ class EventReservationSchema extends ReservationSchema
 {
     public static function factory()
     {
-        return new EventReservationSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new EventReservationSchema('http://schema.org/', 'EventReservation');
     }
 
 

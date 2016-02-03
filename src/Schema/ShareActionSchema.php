@@ -35,12 +35,7 @@ class ShareActionSchema extends CommunicateActionSchema
 {
     public static function factory()
     {
-        return new ShareActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ShareActionSchema('http://schema.org/', 'ShareAction');
     }
 
 

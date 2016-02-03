@@ -35,12 +35,7 @@ class ComputerStoreSchema extends StoreSchema
 {
     public static function factory()
     {
-        return new ComputerStoreSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ComputerStoreSchema('http://schema.org/', 'ComputerStore');
     }
 
 

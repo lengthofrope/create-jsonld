@@ -35,29 +35,25 @@ class MedicalRiskScoreSchema extends MedicalRiskEstimatorSchema
 {
     public static function factory()
     {
-        return new MedicalRiskScoreSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MedicalRiskScoreSchema('http://schema.org/', 'MedicalRiskScore');
     }
 
     /**
      * The algorithm or rules to follow to compute the score.
+     *
+     * @param $algorithm TextSchema
      **/
-    private $algorithm;
     public function setAlgorithm($algorithm) {
-        $this->algorithm = $algorithm;
+        $this->properties['algorithm'] = $algorithm;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getAlgorithm() {
-        return $this->algorithm;
+        return $this->properties['algorithm'];
     }
 
 

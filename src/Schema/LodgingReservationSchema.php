@@ -35,114 +35,115 @@ class LodgingReservationSchema extends ReservationSchema
 {
     public static function factory()
     {
-        return new LodgingReservationSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new LodgingReservationSchema('http://schema.org/', 'LodgingReservation');
     }
 
     /**
      * The earliest someone may check into a lodging establishment.
+     *
+     * @param $checkinTime DateTimeSchema
      **/
-    private $checkinTime;
     public function setCheckinTime($checkinTime) {
-        $this->checkinTime = $checkinTime;
+        $this->properties['checkinTime'] = $checkinTime;
 
         return $this;
     }
 
     /**
-     * @return DateTimeSchema     
+     * @return DateTimeSchema
      **/
     public function getCheckinTime() {
-        return $this->checkinTime;
+        return $this->properties['checkinTime'];
     }
 
     /**
      * The latest someone may check out of a lodging establishment.
+     *
+     * @param $checkoutTime DateTimeSchema
      **/
-    private $checkoutTime;
     public function setCheckoutTime($checkoutTime) {
-        $this->checkoutTime = $checkoutTime;
+        $this->properties['checkoutTime'] = $checkoutTime;
 
         return $this;
     }
 
     /**
-     * @return DateTimeSchema     
+     * @return DateTimeSchema
      **/
     public function getCheckoutTime() {
-        return $this->checkoutTime;
+        return $this->properties['checkoutTime'];
     }
 
     /**
      * A full description of the lodging unit.
+     *
+     * @param $lodgingUnitDescription TextSchema
      **/
-    private $lodgingUnitDescription;
     public function setLodgingUnitDescription($lodgingUnitDescription) {
-        $this->lodgingUnitDescription = $lodgingUnitDescription;
+        $this->properties['lodgingUnitDescription'] = $lodgingUnitDescription;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getLodgingUnitDescription() {
-        return $this->lodgingUnitDescription;
+        return $this->properties['lodgingUnitDescription'];
     }
 
     /**
      * Textual description of the unit type (including suite vs. room, size of bed, etc.).
+     *
+     * @param $lodgingUnitType TextSchema|QualitativeValueSchema
      **/
-    private $lodgingUnitType;
     public function setLodgingUnitType($lodgingUnitType) {
-        $this->lodgingUnitType = $lodgingUnitType;
+        $this->properties['lodgingUnitType'] = $lodgingUnitType;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|QualitativeValueSchema     
+     * @return TextSchema|QualitativeValueSchema
      **/
     public function getLodgingUnitType() {
-        return $this->lodgingUnitType;
+        return $this->properties['lodgingUnitType'];
     }
 
     /**
      * The number of adults staying in the unit.
+     *
+     * @param $numAdults IntegerSchema|QuantitativeValueSchema
      **/
-    private $numAdults;
     public function setNumAdults($numAdults) {
-        $this->numAdults = $numAdults;
+        $this->properties['numAdults'] = $numAdults;
 
         return $this;
     }
 
     /**
-     * @return IntegerSchema|QuantitativeValueSchema     
+     * @return IntegerSchema|QuantitativeValueSchema
      **/
     public function getNumAdults() {
-        return $this->numAdults;
+        return $this->properties['numAdults'];
     }
 
     /**
      * The number of children staying in the unit.
+     *
+     * @param $numChildren IntegerSchema|QuantitativeValueSchema
      **/
-    private $numChildren;
     public function setNumChildren($numChildren) {
-        $this->numChildren = $numChildren;
+        $this->properties['numChildren'] = $numChildren;
 
         return $this;
     }
 
     /**
-     * @return IntegerSchema|QuantitativeValueSchema     
+     * @return IntegerSchema|QuantitativeValueSchema
      **/
     public function getNumChildren() {
-        return $this->numChildren;
+        return $this->properties['numChildren'];
     }
 
 

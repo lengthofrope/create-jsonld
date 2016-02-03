@@ -35,63 +35,61 @@ class BroadcastEventSchema extends PublicationEventSchema
 {
     public static function factory()
     {
-        return new BroadcastEventSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new BroadcastEventSchema('http://schema.org/', 'BroadcastEvent');
     }
 
     /**
      * The event being broadcast such as a sporting event or awards ceremony.
+     *
+     * @param $broadcastOfEvent EventSchema
      **/
-    private $broadcastOfEvent;
     public function setBroadcastOfEvent($broadcastOfEvent) {
-        $this->broadcastOfEvent = $broadcastOfEvent;
+        $this->properties['broadcastOfEvent'] = $broadcastOfEvent;
 
         return $this;
     }
 
     /**
-     * @return EventSchema     
+     * @return EventSchema
      **/
     public function getBroadcastOfEvent() {
-        return $this->broadcastOfEvent;
+        return $this->properties['broadcastOfEvent'];
     }
 
     /**
      * True is the broadcast is of a live event.
+     *
+     * @param $isLiveBroadcast BooleanSchema
      **/
-    private $isLiveBroadcast;
     public function setIsLiveBroadcast($isLiveBroadcast) {
-        $this->isLiveBroadcast = $isLiveBroadcast;
+        $this->properties['isLiveBroadcast'] = $isLiveBroadcast;
 
         return $this;
     }
 
     /**
-     * @return BooleanSchema     
+     * @return BooleanSchema
      **/
     public function getIsLiveBroadcast() {
-        return $this->isLiveBroadcast;
+        return $this->properties['isLiveBroadcast'];
     }
 
     /**
      * The type of screening or video broadcast used (e.g. IMAX, 3D, SD, HD, etc.).
+     *
+     * @param $videoFormat TextSchema
      **/
-    private $videoFormat;
     public function setVideoFormat($videoFormat) {
-        $this->videoFormat = $videoFormat;
+        $this->properties['videoFormat'] = $videoFormat;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getVideoFormat() {
-        return $this->videoFormat;
+        return $this->properties['videoFormat'];
     }
 
 

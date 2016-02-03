@@ -35,12 +35,7 @@ class DanceEventSchema extends EventSchema
 {
     public static function factory()
     {
-        return new DanceEventSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new DanceEventSchema('http://schema.org/', 'DanceEvent');
     }
 
 

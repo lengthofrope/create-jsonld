@@ -201,17 +201,22 @@ class Build
             $classextends = $item->{'rdfs:subClassOf'};
             $classextends = str_replace('schema:', '', $classextends->id);
             if (empty($classextends)) {
-                $classextends = '\LengthOfRope\JSONLD\Elements\ElementGroup';
+                $classextends = '\LengthOfRope\JSONLD\Elements\Element';
             } else {
                 $classextends .= 'Schema';
             }
             $file = $dir . $class . '.php';
 
+            $context = explode(":", $item->id);
+            $context = $this->schema->{'@context'}->$context[0];
+
             $content = $twig->render('template.twig', array(
                 'class'        => $class,
                 'classcomment' => $item->{'rdfs:comment'},
                 'classExtends' => $classextends,
-                'properties'   => $item->props
+                'properties'   => $item->props,
+                'context'      => $context,
+                'type'         => $item->{'rdfs:label'},
             ));
 
 

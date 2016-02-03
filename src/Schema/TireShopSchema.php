@@ -35,12 +35,7 @@ class TireShopSchema extends StoreSchema
 {
     public static function factory()
     {
-        return new TireShopSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new TireShopSchema('http://schema.org/', 'TireShop');
     }
 
 

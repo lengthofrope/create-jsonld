@@ -35,12 +35,7 @@ class EmergencyServiceSchema extends LocalBusinessSchema
 {
     public static function factory()
     {
-        return new EmergencyServiceSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new EmergencyServiceSchema('http://schema.org/', 'EmergencyService');
     }
 
 

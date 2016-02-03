@@ -35,12 +35,7 @@ class AutoBodyShopSchema extends AutomotiveBusinessSchema
 {
     public static function factory()
     {
-        return new AutoBodyShopSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new AutoBodyShopSchema('http://schema.org/', 'AutoBodyShop');
     }
 
 

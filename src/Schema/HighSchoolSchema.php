@@ -35,12 +35,7 @@ class HighSchoolSchema extends EducationalOrganizationSchema
 {
     public static function factory()
     {
-        return new HighSchoolSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new HighSchoolSchema('http://schema.org/', 'HighSchool');
     }
 
 

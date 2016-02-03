@@ -35,12 +35,7 @@ class WPHeaderSchema extends WebPageElementSchema
 {
     public static function factory()
     {
-        return new WPHeaderSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new WPHeaderSchema('http://schema.org/', 'WPHeader');
     }
 
 

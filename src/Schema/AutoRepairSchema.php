@@ -35,12 +35,7 @@ class AutoRepairSchema extends AutomotiveBusinessSchema
 {
     public static function factory()
     {
-        return new AutoRepairSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new AutoRepairSchema('http://schema.org/', 'AutoRepair');
     }
 
 

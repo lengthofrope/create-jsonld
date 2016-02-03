@@ -35,12 +35,7 @@ class LakeBodyOfWaterSchema extends BodyOfWaterSchema
 {
     public static function factory()
     {
-        return new LakeBodyOfWaterSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new LakeBodyOfWaterSchema('http://schema.org/', 'LakeBodyOfWater');
     }
 
 

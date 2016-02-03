@@ -35,12 +35,7 @@ class ApprovedIndicationSchema extends MedicalIndicationSchema
 {
     public static function factory()
     {
-        return new ApprovedIndicationSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ApprovedIndicationSchema('http://schema.org/', 'ApprovedIndication');
     }
 
 

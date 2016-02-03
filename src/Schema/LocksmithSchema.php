@@ -35,12 +35,7 @@ class LocksmithSchema extends HomeAndConstructionBusinessSchema
 {
     public static function factory()
     {
-        return new LocksmithSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new LocksmithSchema('http://schema.org/', 'Locksmith');
     }
 
 

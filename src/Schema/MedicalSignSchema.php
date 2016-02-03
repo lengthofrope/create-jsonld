@@ -35,46 +35,43 @@ class MedicalSignSchema extends MedicalSignOrSymptomSchema
 {
     public static function factory()
     {
-        return new MedicalSignSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MedicalSignSchema('http://schema.org/', 'MedicalSign');
     }
 
     /**
      * A physical examination that can identify this sign.
+     *
+     * @param $identifyingExam PhysicalExamSchema
      **/
-    private $identifyingExam;
     public function setIdentifyingExam($identifyingExam) {
-        $this->identifyingExam = $identifyingExam;
+        $this->properties['identifyingExam'] = $identifyingExam;
 
         return $this;
     }
 
     /**
-     * @return PhysicalExamSchema     
+     * @return PhysicalExamSchema
      **/
     public function getIdentifyingExam() {
-        return $this->identifyingExam;
+        return $this->properties['identifyingExam'];
     }
 
     /**
      * A diagnostic test that can identify this sign.
+     *
+     * @param $identifyingTest MedicalTestSchema
      **/
-    private $identifyingTest;
     public function setIdentifyingTest($identifyingTest) {
-        $this->identifyingTest = $identifyingTest;
+        $this->properties['identifyingTest'] = $identifyingTest;
 
         return $this;
     }
 
     /**
-     * @return MedicalTestSchema     
+     * @return MedicalTestSchema
      **/
     public function getIdentifyingTest() {
-        return $this->identifyingTest;
+        return $this->properties['identifyingTest'];
     }
 
 

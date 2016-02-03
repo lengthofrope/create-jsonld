@@ -35,29 +35,25 @@ class EducationalOrganizationSchema extends OrganizationSchema
 {
     public static function factory()
     {
-        return new EducationalOrganizationSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new EducationalOrganizationSchema('http://schema.org/', 'EducationalOrganization');
     }
 
     /**
      * Alumni of an organization.
+     *
+     * @param $alumni PersonSchema
      **/
-    private $alumni;
     public function setAlumni($alumni) {
-        $this->alumni = $alumni;
+        $this->properties['alumni'] = $alumni;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema     
+     * @return PersonSchema
      **/
     public function getAlumni() {
-        return $this->alumni;
+        return $this->properties['alumni'];
     }
 
 

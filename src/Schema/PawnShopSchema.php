@@ -35,12 +35,7 @@ class PawnShopSchema extends StoreSchema
 {
     public static function factory()
     {
-        return new PawnShopSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new PawnShopSchema('http://schema.org/', 'PawnShop');
     }
 
 

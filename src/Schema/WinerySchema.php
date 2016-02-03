@@ -35,12 +35,7 @@ class WinerySchema extends FoodEstablishmentSchema
 {
     public static function factory()
     {
-        return new WinerySchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new WinerySchema('http://schema.org/', 'Winery');
     }
 
 

@@ -35,29 +35,25 @@ class EducationalAudienceSchema extends AudienceSchema
 {
     public static function factory()
     {
-        return new EducationalAudienceSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new EducationalAudienceSchema('http://schema.org/', 'EducationalAudience');
     }
 
     /**
      * An educationalRole of an EducationalAudience.
+     *
+     * @param $educationalRole TextSchema
      **/
-    private $educationalRole;
     public function setEducationalRole($educationalRole) {
-        $this->educationalRole = $educationalRole;
+        $this->properties['educationalRole'] = $educationalRole;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getEducationalRole() {
-        return $this->educationalRole;
+        return $this->properties['educationalRole'];
     }
 
 

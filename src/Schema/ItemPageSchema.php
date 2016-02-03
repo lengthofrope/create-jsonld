@@ -35,12 +35,7 @@ class ItemPageSchema extends WebPageSchema
 {
     public static function factory()
     {
-        return new ItemPageSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ItemPageSchema('http://schema.org/', 'ItemPage');
     }
 
 

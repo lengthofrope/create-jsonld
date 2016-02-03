@@ -35,12 +35,7 @@ class SportsClubSchema extends SportsActivityLocationSchema
 {
     public static function factory()
     {
-        return new SportsClubSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new SportsClubSchema('http://schema.org/', 'SportsClub');
     }
 
 

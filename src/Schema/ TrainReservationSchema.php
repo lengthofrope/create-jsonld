@@ -35,12 +35,7 @@ class  TrainReservationSchema extends ReservationSchema
 {
     public static function factory()
     {
-        return new  TrainReservationSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new  TrainReservationSchema('http://schema.org/', ' TrainReservation');
     }
 
 

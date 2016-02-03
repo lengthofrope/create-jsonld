@@ -35,63 +35,61 @@ class LymphaticVesselSchema extends VesselSchema
 {
     public static function factory()
     {
-        return new LymphaticVesselSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new LymphaticVesselSchema('http://schema.org/', 'LymphaticVessel');
     }
 
     /**
      * The vasculature the lymphatic structure originates, or afferents, from.
+     *
+     * @param $originatesFrom VesselSchema
      **/
-    private $originatesFrom;
     public function setOriginatesFrom($originatesFrom) {
-        $this->originatesFrom = $originatesFrom;
+        $this->properties['originatesFrom'] = $originatesFrom;
 
         return $this;
     }
 
     /**
-     * @return VesselSchema     
+     * @return VesselSchema
      **/
     public function getOriginatesFrom() {
-        return $this->originatesFrom;
+        return $this->properties['originatesFrom'];
     }
 
     /**
      * The anatomical or organ system drained by this vessel; generally refers to a specific part of an organ.
+     *
+     * @param $regionDrained AnatomicalStructureSchema|AnatomicalSystemSchema
      **/
-    private $regionDrained;
     public function setRegionDrained($regionDrained) {
-        $this->regionDrained = $regionDrained;
+        $this->properties['regionDrained'] = $regionDrained;
 
         return $this;
     }
 
     /**
-     * @return AnatomicalStructureSchema|AnatomicalSystemSchema     
+     * @return AnatomicalStructureSchema|AnatomicalSystemSchema
      **/
     public function getRegionDrained() {
-        return $this->regionDrained;
+        return $this->properties['regionDrained'];
     }
 
     /**
      * The vasculature the lymphatic structure runs, or efferents, to.
+     *
+     * @param $runsTo VesselSchema
      **/
-    private $runsTo;
     public function setRunsTo($runsTo) {
-        $this->runsTo = $runsTo;
+        $this->properties['runsTo'] = $runsTo;
 
         return $this;
     }
 
     /**
-     * @return VesselSchema     
+     * @return VesselSchema
      **/
     public function getRunsTo() {
-        return $this->runsTo;
+        return $this->properties['runsTo'];
     }
 
 

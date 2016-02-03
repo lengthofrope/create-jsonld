@@ -35,29 +35,25 @@ class DrugClassSchema extends MedicalTherapySchema
 {
     public static function factory()
     {
-        return new DrugClassSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new DrugClassSchema('http://schema.org/', 'DrugClass');
     }
 
     /**
      * A drug in this drug class.
+     *
+     * @param $drug DrugSchema
      **/
-    private $drug;
     public function setDrug($drug) {
-        $this->drug = $drug;
+        $this->properties['drug'] = $drug;
 
         return $this;
     }
 
     /**
-     * @return DrugSchema     
+     * @return DrugSchema
      **/
     public function getDrug() {
-        return $this->drug;
+        return $this->properties['drug'];
     }
 
 

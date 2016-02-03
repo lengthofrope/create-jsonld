@@ -35,97 +35,97 @@ class BookSchema extends CreativeWorkSchema
 {
     public static function factory()
     {
-        return new BookSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new BookSchema('http://schema.org/', 'Book');
     }
 
     /**
      * The edition of the book.
+     *
+     * @param $bookEdition TextSchema
      **/
-    private $bookEdition;
     public function setBookEdition($bookEdition) {
-        $this->bookEdition = $bookEdition;
+        $this->properties['bookEdition'] = $bookEdition;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getBookEdition() {
-        return $this->bookEdition;
+        return $this->properties['bookEdition'];
     }
 
     /**
      * The format of the book.
+     *
+     * @param $bookFormat BookFormatTypeSchema
      **/
-    private $bookFormat;
     public function setBookFormat($bookFormat) {
-        $this->bookFormat = $bookFormat;
+        $this->properties['bookFormat'] = $bookFormat;
 
         return $this;
     }
 
     /**
-     * @return BookFormatTypeSchema     
+     * @return BookFormatTypeSchema
      **/
     public function getBookFormat() {
-        return $this->bookFormat;
+        return $this->properties['bookFormat'];
     }
 
     /**
      * The illustrator of the book.
+     *
+     * @param $illustrator PersonSchema
      **/
-    private $illustrator;
     public function setIllustrator($illustrator) {
-        $this->illustrator = $illustrator;
+        $this->properties['illustrator'] = $illustrator;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema     
+     * @return PersonSchema
      **/
     public function getIllustrator() {
-        return $this->illustrator;
+        return $this->properties['illustrator'];
     }
 
     /**
      * The ISBN of the book.
+     *
+     * @param $isbn TextSchema
      **/
-    private $isbn;
     public function setIsbn($isbn) {
-        $this->isbn = $isbn;
+        $this->properties['isbn'] = $isbn;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getIsbn() {
-        return $this->isbn;
+        return $this->properties['isbn'];
     }
 
     /**
      * The number of pages in the book.
+     *
+     * @param $numberOfPages IntegerSchema
      **/
-    private $numberOfPages;
     public function setNumberOfPages($numberOfPages) {
-        $this->numberOfPages = $numberOfPages;
+        $this->properties['numberOfPages'] = $numberOfPages;
 
         return $this;
     }
 
     /**
-     * @return IntegerSchema     
+     * @return IntegerSchema
      **/
     public function getNumberOfPages() {
-        return $this->numberOfPages;
+        return $this->properties['numberOfPages'];
     }
 
 

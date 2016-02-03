@@ -35,46 +35,43 @@ class UpdateActionSchema extends ActionSchema
 {
     public static function factory()
     {
-        return new UpdateActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new UpdateActionSchema('http://schema.org/', 'UpdateAction');
     }
 
     /**
      * A sub property of object. The collection target of the action.
+     *
+     * @param $collection ThingSchema
      **/
-    private $collection;
     public function setCollection($collection) {
-        $this->collection = $collection;
+        $this->properties['collection'] = $collection;
 
         return $this;
     }
 
     /**
-     * @return ThingSchema     
+     * @return ThingSchema
      **/
     public function getCollection() {
-        return $this->collection;
+        return $this->properties['collection'];
     }
 
     /**
      * A sub property of object. The collection target of the action.
+     *
+     * @param $targetCollection ThingSchema
      **/
-    private $targetCollection;
     public function setTargetCollection($targetCollection) {
-        $this->targetCollection = $targetCollection;
+        $this->properties['targetCollection'] = $targetCollection;
 
         return $this;
     }
 
     /**
-     * @return ThingSchema     
+     * @return ThingSchema
      **/
     public function getTargetCollection() {
-        return $this->targetCollection;
+        return $this->properties['targetCollection'];
     }
 
 

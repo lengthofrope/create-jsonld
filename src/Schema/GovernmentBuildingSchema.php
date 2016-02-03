@@ -35,12 +35,7 @@ class GovernmentBuildingSchema extends CivicStructureSchema
 {
     public static function factory()
     {
-        return new GovernmentBuildingSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new GovernmentBuildingSchema('http://schema.org/', 'GovernmentBuilding');
     }
 
 

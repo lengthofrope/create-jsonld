@@ -35,12 +35,7 @@ class TennisComplexSchema extends SportsActivityLocationSchema
 {
     public static function factory()
     {
-        return new TennisComplexSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new TennisComplexSchema('http://schema.org/', 'TennisComplex');
     }
 
 

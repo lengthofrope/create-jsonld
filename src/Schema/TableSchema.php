@@ -35,12 +35,7 @@ class TableSchema extends WebPageElementSchema
 {
     public static function factory()
     {
-        return new TableSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new TableSchema('http://schema.org/', 'Table');
     }
 
 

@@ -35,12 +35,7 @@ class RegisterActionSchema extends InteractActionSchema
 {
     public static function factory()
     {
-        return new RegisterActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new RegisterActionSchema('http://schema.org/', 'RegisterAction');
     }
 
 

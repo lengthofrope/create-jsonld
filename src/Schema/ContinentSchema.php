@@ -35,12 +35,7 @@ class ContinentSchema extends LandformSchema
 {
     public static function factory()
     {
-        return new ContinentSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ContinentSchema('http://schema.org/', 'Continent');
     }
 
 

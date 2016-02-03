@@ -35,12 +35,7 @@ class SpecialtySchema extends EnumerationSchema
 {
     public static function factory()
     {
-        return new SpecialtySchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new SpecialtySchema('http://schema.org/', 'Specialty');
     }
 
 

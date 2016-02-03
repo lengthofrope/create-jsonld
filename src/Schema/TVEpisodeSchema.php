@@ -35,63 +35,61 @@ class TVEpisodeSchema extends EpisodeSchema
 {
     public static function factory()
     {
-        return new TVEpisodeSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new TVEpisodeSchema('http://schema.org/', 'TVEpisode');
     }
 
     /**
      * The country of the principal offices of the production company or individual responsible for the movie or program.
+     *
+     * @param $countryOfOrigin CountrySchema
      **/
-    private $countryOfOrigin;
     public function setCountryOfOrigin($countryOfOrigin) {
-        $this->countryOfOrigin = $countryOfOrigin;
+        $this->properties['countryOfOrigin'] = $countryOfOrigin;
 
         return $this;
     }
 
     /**
-     * @return CountrySchema     
+     * @return CountrySchema
      **/
     public function getCountryOfOrigin() {
-        return $this->countryOfOrigin;
+        return $this->properties['countryOfOrigin'];
     }
 
     /**
      * The TV series to which this episode or season belongs.
+     *
+     * @param $partOfTVSeries TVSeriesSchema
      **/
-    private $partOfTVSeries;
     public function setPartOfTVSeries($partOfTVSeries) {
-        $this->partOfTVSeries = $partOfTVSeries;
+        $this->properties['partOfTVSeries'] = $partOfTVSeries;
 
         return $this;
     }
 
     /**
-     * @return TVSeriesSchema     
+     * @return TVSeriesSchema
      **/
     public function getPartOfTVSeries() {
-        return $this->partOfTVSeries;
+        return $this->properties['partOfTVSeries'];
     }
 
     /**
      * Languages in which subtitles/captions are available, in <a href='http://tools.ietf.org/html/bcp47'>IETF BCP 47 standard format.</a>
+     *
+     * @param $subtitleLanguage TextSchema|LanguageSchema
      **/
-    private $subtitleLanguage;
     public function setSubtitleLanguage($subtitleLanguage) {
-        $this->subtitleLanguage = $subtitleLanguage;
+        $this->properties['subtitleLanguage'] = $subtitleLanguage;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|LanguageSchema     
+     * @return TextSchema|LanguageSchema
      **/
     public function getSubtitleLanguage() {
-        return $this->subtitleLanguage;
+        return $this->properties['subtitleLanguage'];
     }
 
 

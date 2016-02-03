@@ -35,12 +35,7 @@ class CafeOrCoffeeShopSchema extends FoodEstablishmentSchema
 {
     public static function factory()
     {
-        return new CafeOrCoffeeShopSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new CafeOrCoffeeShopSchema('http://schema.org/', 'CafeOrCoffeeShop');
     }
 
 

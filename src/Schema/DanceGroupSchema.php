@@ -35,12 +35,7 @@ class DanceGroupSchema extends PerformingGroupSchema
 {
     public static function factory()
     {
-        return new DanceGroupSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new DanceGroupSchema('http://schema.org/', 'DanceGroup');
     }
 
 

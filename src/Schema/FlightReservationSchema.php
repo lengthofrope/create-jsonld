@@ -35,80 +35,79 @@ class FlightReservationSchema extends ReservationSchema
 {
     public static function factory()
     {
-        return new FlightReservationSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new FlightReservationSchema('http://schema.org/', 'FlightReservation');
     }
 
     /**
      * The airline-specific indicator of boarding order / preference.
+     *
+     * @param $boardingGroup TextSchema
      **/
-    private $boardingGroup;
     public function setBoardingGroup($boardingGroup) {
-        $this->boardingGroup = $boardingGroup;
+        $this->properties['boardingGroup'] = $boardingGroup;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getBoardingGroup() {
-        return $this->boardingGroup;
+        return $this->properties['boardingGroup'];
     }
 
     /**
      * The priority status assigned to a passenger for security or boarding (e.g. FastTrack or Priority).
+     *
+     * @param $passengerPriorityStatus TextSchema|QualitativeValueSchema
      **/
-    private $passengerPriorityStatus;
     public function setPassengerPriorityStatus($passengerPriorityStatus) {
-        $this->passengerPriorityStatus = $passengerPriorityStatus;
+        $this->properties['passengerPriorityStatus'] = $passengerPriorityStatus;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|QualitativeValueSchema     
+     * @return TextSchema|QualitativeValueSchema
      **/
     public function getPassengerPriorityStatus() {
-        return $this->passengerPriorityStatus;
+        return $this->properties['passengerPriorityStatus'];
     }
 
     /**
      * The passenger's sequence number as assigned by the airline.
+     *
+     * @param $passengerSequenceNumber TextSchema
      **/
-    private $passengerSequenceNumber;
     public function setPassengerSequenceNumber($passengerSequenceNumber) {
-        $this->passengerSequenceNumber = $passengerSequenceNumber;
+        $this->properties['passengerSequenceNumber'] = $passengerSequenceNumber;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getPassengerSequenceNumber() {
-        return $this->passengerSequenceNumber;
+        return $this->properties['passengerSequenceNumber'];
     }
 
     /**
      * The type of security screening the passenger is subject to.
+     *
+     * @param $securityScreening TextSchema
      **/
-    private $securityScreening;
     public function setSecurityScreening($securityScreening) {
-        $this->securityScreening = $securityScreening;
+        $this->properties['securityScreening'] = $securityScreening;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getSecurityScreening() {
-        return $this->securityScreening;
+        return $this->properties['securityScreening'];
     }
 
 

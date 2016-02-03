@@ -35,12 +35,7 @@ class CableOrSatelliteServiceSchema extends ServiceSchema
 {
     public static function factory()
     {
-        return new CableOrSatelliteServiceSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new CableOrSatelliteServiceSchema('http://schema.org/', 'CableOrSatelliteService');
     }
 
 

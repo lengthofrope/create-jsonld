@@ -35,12 +35,7 @@ class HomeGoodsStoreSchema extends StoreSchema
 {
     public static function factory()
     {
-        return new HomeGoodsStoreSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new HomeGoodsStoreSchema('http://schema.org/', 'HomeGoodsStore');
     }
 
 

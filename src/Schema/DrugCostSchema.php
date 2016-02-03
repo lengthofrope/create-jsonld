@@ -35,114 +35,115 @@ class DrugCostSchema extends MedicalIntangibleSchema
 {
     public static function factory()
     {
-        return new DrugCostSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new DrugCostSchema('http://schema.org/', 'DrugCost');
     }
 
     /**
      * The location in which the status applies.
+     *
+     * @param $applicableLocation AdministrativeAreaSchema
      **/
-    private $applicableLocation;
     public function setApplicableLocation($applicableLocation) {
-        $this->applicableLocation = $applicableLocation;
+        $this->properties['applicableLocation'] = $applicableLocation;
 
         return $this;
     }
 
     /**
-     * @return AdministrativeAreaSchema     
+     * @return AdministrativeAreaSchema
      **/
     public function getApplicableLocation() {
-        return $this->applicableLocation;
+        return $this->properties['applicableLocation'];
     }
 
     /**
      * The category of cost, such as wholesale, retail, reimbursement cap, etc.
+     *
+     * @param $costCategory DrugCostCategorySchema
      **/
-    private $costCategory;
     public function setCostCategory($costCategory) {
-        $this->costCategory = $costCategory;
+        $this->properties['costCategory'] = $costCategory;
 
         return $this;
     }
 
     /**
-     * @return DrugCostCategorySchema     
+     * @return DrugCostCategorySchema
      **/
     public function getCostCategory() {
-        return $this->costCategory;
+        return $this->properties['costCategory'];
     }
 
     /**
      * The currency (in 3-letter <a href=http://en.wikipedia.org/wiki/ISO_4217>ISO 4217 format</a>) of the drug cost.
+     *
+     * @param $costCurrency TextSchema
      **/
-    private $costCurrency;
     public function setCostCurrency($costCurrency) {
-        $this->costCurrency = $costCurrency;
+        $this->properties['costCurrency'] = $costCurrency;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getCostCurrency() {
-        return $this->costCurrency;
+        return $this->properties['costCurrency'];
     }
 
     /**
      * Additional details to capture the origin of the cost data. For example, 'Medicare Part B'.
+     *
+     * @param $costOrigin TextSchema
      **/
-    private $costOrigin;
     public function setCostOrigin($costOrigin) {
-        $this->costOrigin = $costOrigin;
+        $this->properties['costOrigin'] = $costOrigin;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getCostOrigin() {
-        return $this->costOrigin;
+        return $this->properties['costOrigin'];
     }
 
     /**
      * The cost per unit of the drug.
+     *
+     * @param $costPerUnit NumberSchema|TextSchema
      **/
-    private $costPerUnit;
     public function setCostPerUnit($costPerUnit) {
-        $this->costPerUnit = $costPerUnit;
+        $this->properties['costPerUnit'] = $costPerUnit;
 
         return $this;
     }
 
     /**
-     * @return NumberSchema|TextSchema     
+     * @return NumberSchema|TextSchema
      **/
     public function getCostPerUnit() {
-        return $this->costPerUnit;
+        return $this->properties['costPerUnit'];
     }
 
     /**
      * The unit in which the drug is measured, e.g. '5 mg tablet'.
+     *
+     * @param $drugUnit TextSchema
      **/
-    private $drugUnit;
     public function setDrugUnit($drugUnit) {
-        $this->drugUnit = $drugUnit;
+        $this->properties['drugUnit'] = $drugUnit;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getDrugUnit() {
-        return $this->drugUnit;
+        return $this->properties['drugUnit'];
     }
 
 

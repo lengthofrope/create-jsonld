@@ -35,29 +35,25 @@ class ReviewActionSchema extends AssessActionSchema
 {
     public static function factory()
     {
-        return new ReviewActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ReviewActionSchema('http://schema.org/', 'ReviewAction');
     }
 
     /**
      * A sub property of result. The review that resulted in the performing of the action.
+     *
+     * @param $resultReview ReviewSchema
      **/
-    private $resultReview;
     public function setResultReview($resultReview) {
-        $this->resultReview = $resultReview;
+        $this->properties['resultReview'] = $resultReview;
 
         return $this;
     }
 
     /**
-     * @return ReviewSchema     
+     * @return ReviewSchema
      **/
     public function getResultReview() {
-        return $this->resultReview;
+        return $this->properties['resultReview'];
     }
 
 

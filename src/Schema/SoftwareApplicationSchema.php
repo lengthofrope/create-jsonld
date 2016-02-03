@@ -35,420 +35,439 @@ class SoftwareApplicationSchema extends CreativeWorkSchema
 {
     public static function factory()
     {
-        return new SoftwareApplicationSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new SoftwareApplicationSchema('http://schema.org/', 'SoftwareApplication');
     }
 
     /**
      * Type of software application, e.g. "Game, Multimedia".
+     *
+     * @param $applicationCategory TextSchema|URLSchema
      **/
-    private $applicationCategory;
     public function setApplicationCategory($applicationCategory) {
-        $this->applicationCategory = $applicationCategory;
+        $this->properties['applicationCategory'] = $applicationCategory;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|URLSchema     
+     * @return TextSchema|URLSchema
      **/
     public function getApplicationCategory() {
-        return $this->applicationCategory;
+        return $this->properties['applicationCategory'];
     }
 
     /**
      * Subcategory of the application, e.g. "Arcade Game".
+     *
+     * @param $applicationSubCategory TextSchema|URLSchema
      **/
-    private $applicationSubCategory;
     public function setApplicationSubCategory($applicationSubCategory) {
-        $this->applicationSubCategory = $applicationSubCategory;
+        $this->properties['applicationSubCategory'] = $applicationSubCategory;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|URLSchema     
+     * @return TextSchema|URLSchema
      **/
     public function getApplicationSubCategory() {
-        return $this->applicationSubCategory;
+        return $this->properties['applicationSubCategory'];
     }
 
     /**
      * The name of the application suite to which the application belongs (e.g. Excel belongs to Office).
+     *
+     * @param $applicationSuite TextSchema
      **/
-    private $applicationSuite;
     public function setApplicationSuite($applicationSuite) {
-        $this->applicationSuite = $applicationSuite;
+        $this->properties['applicationSuite'] = $applicationSuite;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getApplicationSuite() {
-        return $this->applicationSuite;
+        return $this->properties['applicationSuite'];
     }
 
     /**
      * Device required to run the application. Used in cases where a specific make/model is required to run the application.
+     *
+     * @param $availableOnDevice TextSchema
      **/
-    private $availableOnDevice;
     public function setAvailableOnDevice($availableOnDevice) {
-        $this->availableOnDevice = $availableOnDevice;
+        $this->properties['availableOnDevice'] = $availableOnDevice;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getAvailableOnDevice() {
-        return $this->availableOnDevice;
+        return $this->properties['availableOnDevice'];
     }
 
     /**
      * Countries for which the application is not supported. You can also provide the two-letter ISO 3166-1 alpha-2 country code.
+     *
+     * @param $countriesNotSupported TextSchema
      **/
-    private $countriesNotSupported;
     public function setCountriesNotSupported($countriesNotSupported) {
-        $this->countriesNotSupported = $countriesNotSupported;
+        $this->properties['countriesNotSupported'] = $countriesNotSupported;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getCountriesNotSupported() {
-        return $this->countriesNotSupported;
+        return $this->properties['countriesNotSupported'];
     }
 
     /**
      * Countries for which the application is supported. You can also provide the two-letter ISO 3166-1 alpha-2 country code.
+     *
+     * @param $countriesSupported TextSchema
      **/
-    private $countriesSupported;
     public function setCountriesSupported($countriesSupported) {
-        $this->countriesSupported = $countriesSupported;
+        $this->properties['countriesSupported'] = $countriesSupported;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getCountriesSupported() {
-        return $this->countriesSupported;
+        return $this->properties['countriesSupported'];
     }
 
     /**
      * Device required to run the application. Used in cases where a specific make/model is required to run the application.
+     *
+     * @param $device TextSchema
      **/
-    private $device;
     public function setDevice($device) {
-        $this->device = $device;
+        $this->properties['device'] = $device;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getDevice() {
-        return $this->device;
+        return $this->properties['device'];
     }
 
     /**
      * If the file can be downloaded, URL to download the binary.
+     *
+     * @param $downloadUrl URLSchema
      **/
-    private $downloadUrl;
     public function setDownloadUrl($downloadUrl) {
-        $this->downloadUrl = $downloadUrl;
+        $this->properties['downloadUrl'] = $downloadUrl;
 
         return $this;
     }
 
     /**
-     * @return URLSchema     
+     * @return URLSchema
      **/
     public function getDownloadUrl() {
-        return $this->downloadUrl;
+        return $this->properties['downloadUrl'];
     }
 
     /**
      * Features or modules provided by this application (and possibly required by other applications).
+     *
+     * @param $featureList TextSchema|URLSchema
      **/
-    private $featureList;
     public function setFeatureList($featureList) {
-        $this->featureList = $featureList;
+        $this->properties['featureList'] = $featureList;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|URLSchema     
+     * @return TextSchema|URLSchema
      **/
     public function getFeatureList() {
-        return $this->featureList;
+        return $this->properties['featureList'];
     }
 
     /**
      * Size of the application / package (e.g. 18MB). In the absence of a unit (MB, KB etc.), KB will be assumed.
+     *
+     * @param $fileSize TextSchema
      **/
-    private $fileSize;
     public function setFileSize($fileSize) {
-        $this->fileSize = $fileSize;
+        $this->properties['fileSize'] = $fileSize;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getFileSize() {
-        return $this->fileSize;
+        return $this->properties['fileSize'];
     }
 
     /**
      * URL at which the app may be installed, if different from the URL of the item.
+     *
+     * @param $installUrl URLSchema
      **/
-    private $installUrl;
     public function setInstallUrl($installUrl) {
-        $this->installUrl = $installUrl;
+        $this->properties['installUrl'] = $installUrl;
 
         return $this;
     }
 
     /**
-     * @return URLSchema     
+     * @return URLSchema
      **/
     public function getInstallUrl() {
-        return $this->installUrl;
+        return $this->properties['installUrl'];
     }
 
     /**
      * Minimum memory requirements.
+     *
+     * @param $memoryRequirements TextSchema|URLSchema
      **/
-    private $memoryRequirements;
     public function setMemoryRequirements($memoryRequirements) {
-        $this->memoryRequirements = $memoryRequirements;
+        $this->properties['memoryRequirements'] = $memoryRequirements;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|URLSchema     
+     * @return TextSchema|URLSchema
      **/
     public function getMemoryRequirements() {
-        return $this->memoryRequirements;
+        return $this->properties['memoryRequirements'];
     }
 
     /**
      * Operating systems supported (Windows 7, OSX 10.6, Android 1.6).
+     *
+     * @param $operatingSystem TextSchema
      **/
-    private $operatingSystem;
     public function setOperatingSystem($operatingSystem) {
-        $this->operatingSystem = $operatingSystem;
+        $this->properties['operatingSystem'] = $operatingSystem;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getOperatingSystem() {
-        return $this->operatingSystem;
+        return $this->properties['operatingSystem'];
     }
 
     /**
      * Permission(s) required to run the app (for example, a mobile app may require full internet access or may run only on wifi).
+     *
+     * @param $permissions TextSchema
      **/
-    private $permissions;
     public function setPermissions($permissions) {
-        $this->permissions = $permissions;
+        $this->properties['permissions'] = $permissions;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getPermissions() {
-        return $this->permissions;
+        return $this->properties['permissions'];
     }
 
     /**
      * Processor architecture required to run the application (e.g. IA64).
+     *
+     * @param $processorRequirements TextSchema
      **/
-    private $processorRequirements;
     public function setProcessorRequirements($processorRequirements) {
-        $this->processorRequirements = $processorRequirements;
+        $this->properties['processorRequirements'] = $processorRequirements;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getProcessorRequirements() {
-        return $this->processorRequirements;
+        return $this->properties['processorRequirements'];
     }
 
     /**
      * Description of what changed in this version.
+     *
+     * @param $releaseNotes TextSchema|URLSchema
      **/
-    private $releaseNotes;
     public function setReleaseNotes($releaseNotes) {
-        $this->releaseNotes = $releaseNotes;
+        $this->properties['releaseNotes'] = $releaseNotes;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|URLSchema     
+     * @return TextSchema|URLSchema
      **/
     public function getReleaseNotes() {
-        return $this->releaseNotes;
+        return $this->properties['releaseNotes'];
     }
 
     /**
      * Component dependency requirements for application. This includes runtime environments and shared libraries that are not included in the application distribution package, but required to run the application (Examples: DirectX, Java or .NET runtime).
+     *
+     * @param $requirements TextSchema|URLSchema
      **/
-    private $requirements;
     public function setRequirements($requirements) {
-        $this->requirements = $requirements;
+        $this->properties['requirements'] = $requirements;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|URLSchema     
+     * @return TextSchema|URLSchema
      **/
     public function getRequirements() {
-        return $this->requirements;
+        return $this->properties['requirements'];
     }
 
     /**
      * A link to a screenshot image of the app.
+     *
+     * @param $screenshot ImageObjectSchema|URLSchema
      **/
-    private $screenshot;
     public function setScreenshot($screenshot) {
-        $this->screenshot = $screenshot;
+        $this->properties['screenshot'] = $screenshot;
 
         return $this;
     }
 
     /**
-     * @return ImageObjectSchema|URLSchema     
+     * @return ImageObjectSchema|URLSchema
      **/
     public function getScreenshot() {
-        return $this->screenshot;
+        return $this->properties['screenshot'];
     }
 
     /**
      * Additional content for a software application.
+     *
+     * @param $softwareAddOn SoftwareApplicationSchema
      **/
-    private $softwareAddOn;
     public function setSoftwareAddOn($softwareAddOn) {
-        $this->softwareAddOn = $softwareAddOn;
+        $this->properties['softwareAddOn'] = $softwareAddOn;
 
         return $this;
     }
 
     /**
-     * @return SoftwareApplicationSchema     
+     * @return SoftwareApplicationSchema
      **/
     public function getSoftwareAddOn() {
-        return $this->softwareAddOn;
+        return $this->properties['softwareAddOn'];
     }
 
     /**
      * Software application help.
+     *
+     * @param $softwareHelp CreativeWorkSchema
      **/
-    private $softwareHelp;
     public function setSoftwareHelp($softwareHelp) {
-        $this->softwareHelp = $softwareHelp;
+        $this->properties['softwareHelp'] = $softwareHelp;
 
         return $this;
     }
 
     /**
-     * @return CreativeWorkSchema     
+     * @return CreativeWorkSchema
      **/
     public function getSoftwareHelp() {
-        return $this->softwareHelp;
+        return $this->properties['softwareHelp'];
     }
 
     /**
      * Component dependency requirements for application. This includes runtime environments and shared libraries that are not included in the application distribution package, but required to run the application (Examples: DirectX, Java or .NET runtime).
+     *
+     * @param $softwareRequirements TextSchema|URLSchema
      **/
-    private $softwareRequirements;
     public function setSoftwareRequirements($softwareRequirements) {
-        $this->softwareRequirements = $softwareRequirements;
+        $this->properties['softwareRequirements'] = $softwareRequirements;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|URLSchema     
+     * @return TextSchema|URLSchema
      **/
     public function getSoftwareRequirements() {
-        return $this->softwareRequirements;
+        return $this->properties['softwareRequirements'];
     }
 
     /**
      * Version of the software instance.
+     *
+     * @param $softwareVersion TextSchema
      **/
-    private $softwareVersion;
     public function setSoftwareVersion($softwareVersion) {
-        $this->softwareVersion = $softwareVersion;
+        $this->properties['softwareVersion'] = $softwareVersion;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getSoftwareVersion() {
-        return $this->softwareVersion;
+        return $this->properties['softwareVersion'];
     }
 
     /**
      * Storage requirements (free space required).
+     *
+     * @param $storageRequirements TextSchema|URLSchema
      **/
-    private $storageRequirements;
     public function setStorageRequirements($storageRequirements) {
-        $this->storageRequirements = $storageRequirements;
+        $this->properties['storageRequirements'] = $storageRequirements;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|URLSchema     
+     * @return TextSchema|URLSchema
      **/
     public function getStorageRequirements() {
-        return $this->storageRequirements;
+        return $this->properties['storageRequirements'];
     }
 
     /**
      * Supporting data for a SoftwareApplication.
+     *
+     * @param $supportingData DataFeedSchema
      **/
-    private $supportingData;
     public function setSupportingData($supportingData) {
-        $this->supportingData = $supportingData;
+        $this->properties['supportingData'] = $supportingData;
 
         return $this;
     }
 
     /**
-     * @return DataFeedSchema     
+     * @return DataFeedSchema
      **/
     public function getSupportingData() {
-        return $this->supportingData;
+        return $this->properties['supportingData'];
     }
 
 

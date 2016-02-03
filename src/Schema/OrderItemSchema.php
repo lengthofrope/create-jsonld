@@ -35,97 +35,97 @@ class OrderItemSchema extends IntangibleSchema
 {
     public static function factory()
     {
-        return new OrderItemSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new OrderItemSchema('http://schema.org/', 'OrderItem');
     }
 
     /**
      * The delivery of the parcel related to this order or order item.
+     *
+     * @param $orderDelivery ParcelDeliverySchema
      **/
-    private $orderDelivery;
     public function setOrderDelivery($orderDelivery) {
-        $this->orderDelivery = $orderDelivery;
+        $this->properties['orderDelivery'] = $orderDelivery;
 
         return $this;
     }
 
     /**
-     * @return ParcelDeliverySchema     
+     * @return ParcelDeliverySchema
      **/
     public function getOrderDelivery() {
-        return $this->orderDelivery;
+        return $this->properties['orderDelivery'];
     }
 
     /**
      * The identifier of the order item.
+     *
+     * @param $orderItemNumber TextSchema
      **/
-    private $orderItemNumber;
     public function setOrderItemNumber($orderItemNumber) {
-        $this->orderItemNumber = $orderItemNumber;
+        $this->properties['orderItemNumber'] = $orderItemNumber;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getOrderItemNumber() {
-        return $this->orderItemNumber;
+        return $this->properties['orderItemNumber'];
     }
 
     /**
      * The current status of the order item.
+     *
+     * @param $orderItemStatus OrderStatusSchema
      **/
-    private $orderItemStatus;
     public function setOrderItemStatus($orderItemStatus) {
-        $this->orderItemStatus = $orderItemStatus;
+        $this->properties['orderItemStatus'] = $orderItemStatus;
 
         return $this;
     }
 
     /**
-     * @return OrderStatusSchema     
+     * @return OrderStatusSchema
      **/
     public function getOrderItemStatus() {
-        return $this->orderItemStatus;
+        return $this->properties['orderItemStatus'];
     }
 
     /**
      * The number of the item ordered. If the property is not set, assume the quantity is one.
+     *
+     * @param $orderQuantity NumberSchema
      **/
-    private $orderQuantity;
     public function setOrderQuantity($orderQuantity) {
-        $this->orderQuantity = $orderQuantity;
+        $this->properties['orderQuantity'] = $orderQuantity;
 
         return $this;
     }
 
     /**
-     * @return NumberSchema     
+     * @return NumberSchema
      **/
     public function getOrderQuantity() {
-        return $this->orderQuantity;
+        return $this->properties['orderQuantity'];
     }
 
     /**
      * The item ordered.
+     *
+     * @param $orderedItem ProductSchema|OrderItemSchema
      **/
-    private $orderedItem;
     public function setOrderedItem($orderedItem) {
-        $this->orderedItem = $orderedItem;
+        $this->properties['orderedItem'] = $orderedItem;
 
         return $this;
     }
 
     /**
-     * @return ProductSchema|OrderItemSchema     
+     * @return ProductSchema|OrderItemSchema
      **/
     public function getOrderedItem() {
-        return $this->orderedItem;
+        return $this->properties['orderedItem'];
     }
 
 

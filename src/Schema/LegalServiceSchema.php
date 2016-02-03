@@ -40,12 +40,7 @@ class LegalServiceSchema extends LocalBusinessSchema
 {
     public static function factory()
     {
-        return new LegalServiceSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new LegalServiceSchema('http://schema.org/', 'LegalService');
     }
 
 

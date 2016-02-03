@@ -35,12 +35,7 @@ class MaximumDoseScheduleSchema extends DoseScheduleSchema
 {
     public static function factory()
     {
-        return new MaximumDoseScheduleSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MaximumDoseScheduleSchema('http://schema.org/', 'MaximumDoseSchedule');
     }
 
 

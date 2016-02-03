@@ -31,16 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MedicalEnumerationSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
+class MedicalEnumerationSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MedicalEnumerationSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MedicalEnumerationSchema('http://schema.org/', 'MedicalEnumeration');
     }
 
 

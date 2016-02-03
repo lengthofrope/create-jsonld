@@ -35,12 +35,7 @@ class BookFormatTypeSchema extends EnumerationSchema
 {
     public static function factory()
     {
-        return new BookFormatTypeSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new BookFormatTypeSchema('http://schema.org/', 'BookFormatType');
     }
 
 

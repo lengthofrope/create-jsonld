@@ -35,12 +35,7 @@ class BrewerySchema extends FoodEstablishmentSchema
 {
     public static function factory()
     {
-        return new BrewerySchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new BrewerySchema('http://schema.org/', 'Brewery');
     }
 
 

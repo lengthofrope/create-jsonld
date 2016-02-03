@@ -35,12 +35,7 @@ class QAPageSchema extends WebPageSchema
 {
     public static function factory()
     {
-        return new QAPageSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new QAPageSchema('http://schema.org/', 'QAPage');
     }
 
 

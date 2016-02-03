@@ -47,12 +47,7 @@ class DeliveryMethodSchema extends EnumerationSchema
 {
     public static function factory()
     {
-        return new DeliveryMethodSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new DeliveryMethodSchema('http://schema.org/', 'DeliveryMethod');
     }
 
 

@@ -35,12 +35,7 @@ class OfficeEquipmentStoreSchema extends StoreSchema
 {
     public static function factory()
     {
-        return new OfficeEquipmentStoreSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new OfficeEquipmentStoreSchema('http://schema.org/', 'OfficeEquipmentStore');
     }
 
 

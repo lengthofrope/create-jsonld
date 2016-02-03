@@ -35,12 +35,7 @@ class RadiationTherapySchema extends MedicalTherapySchema
 {
     public static function factory()
     {
-        return new RadiationTherapySchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new RadiationTherapySchema('http://schema.org/', 'RadiationTherapy');
     }
 
 

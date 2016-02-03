@@ -35,12 +35,7 @@ class CitySchema extends AdministrativeAreaSchema
 {
     public static function factory()
     {
-        return new CitySchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new CitySchema('http://schema.org/', 'City');
     }
 
 

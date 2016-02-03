@@ -35,12 +35,7 @@ class TheaterGroupSchema extends PerformingGroupSchema
 {
     public static function factory()
     {
-        return new TheaterGroupSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new TheaterGroupSchema('http://schema.org/', 'TheaterGroup');
     }
 
 

@@ -35,12 +35,7 @@ class TelevisionChannelSchema extends BroadcastChannelSchema
 {
     public static function factory()
     {
-        return new TelevisionChannelSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new TelevisionChannelSchema('http://schema.org/', 'TelevisionChannel');
     }
 
 

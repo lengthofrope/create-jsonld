@@ -35,97 +35,97 @@ class SuperficialAnatomySchema extends MedicalEntitySchema
 {
     public static function factory()
     {
-        return new SuperficialAnatomySchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new SuperficialAnatomySchema('http://schema.org/', 'SuperficialAnatomy');
     }
 
     /**
      * If applicable, a description of the pathophysiology associated with the anatomical system, including potential abnormal changes in the mechanical, physical, and biochemical functions of the system.
+     *
+     * @param $associatedPathophysiology TextSchema
      **/
-    private $associatedPathophysiology;
     public function setAssociatedPathophysiology($associatedPathophysiology) {
-        $this->associatedPathophysiology = $associatedPathophysiology;
+        $this->properties['associatedPathophysiology'] = $associatedPathophysiology;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getAssociatedPathophysiology() {
-        return $this->associatedPathophysiology;
+        return $this->properties['associatedPathophysiology'];
     }
 
     /**
      * Anatomical systems or structures that relate to the superficial anatomy.
+     *
+     * @param $relatedAnatomy AnatomicalStructureSchema|AnatomicalSystemSchema
      **/
-    private $relatedAnatomy;
     public function setRelatedAnatomy($relatedAnatomy) {
-        $this->relatedAnatomy = $relatedAnatomy;
+        $this->properties['relatedAnatomy'] = $relatedAnatomy;
 
         return $this;
     }
 
     /**
-     * @return AnatomicalStructureSchema|AnatomicalSystemSchema     
+     * @return AnatomicalStructureSchema|AnatomicalSystemSchema
      **/
     public function getRelatedAnatomy() {
-        return $this->relatedAnatomy;
+        return $this->properties['relatedAnatomy'];
     }
 
     /**
      * A medical condition associated with this anatomy.
+     *
+     * @param $relatedCondition MedicalConditionSchema
      **/
-    private $relatedCondition;
     public function setRelatedCondition($relatedCondition) {
-        $this->relatedCondition = $relatedCondition;
+        $this->properties['relatedCondition'] = $relatedCondition;
 
         return $this;
     }
 
     /**
-     * @return MedicalConditionSchema     
+     * @return MedicalConditionSchema
      **/
     public function getRelatedCondition() {
-        return $this->relatedCondition;
+        return $this->properties['relatedCondition'];
     }
 
     /**
      * A medical therapy related to this anatomy.
+     *
+     * @param $relatedTherapy MedicalTherapySchema
      **/
-    private $relatedTherapy;
     public function setRelatedTherapy($relatedTherapy) {
-        $this->relatedTherapy = $relatedTherapy;
+        $this->properties['relatedTherapy'] = $relatedTherapy;
 
         return $this;
     }
 
     /**
-     * @return MedicalTherapySchema     
+     * @return MedicalTherapySchema
      **/
     public function getRelatedTherapy() {
-        return $this->relatedTherapy;
+        return $this->properties['relatedTherapy'];
     }
 
     /**
      * The significance associated with the superficial anatomy; as an example, how characteristics of the superficial anatomy can suggest underlying medical conditions or courses of treatment.
+     *
+     * @param $significance TextSchema
      **/
-    private $significance;
     public function setSignificance($significance) {
-        $this->significance = $significance;
+        $this->properties['significance'] = $significance;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getSignificance() {
-        return $this->significance;
+        return $this->properties['significance'];
     }
 
 

@@ -35,12 +35,7 @@ class ExhibitionEventSchema extends EventSchema
 {
     public static function factory()
     {
-        return new ExhibitionEventSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ExhibitionEventSchema('http://schema.org/', 'ExhibitionEvent');
     }
 
 

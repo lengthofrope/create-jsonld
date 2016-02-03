@@ -35,12 +35,7 @@ class ArriveActionSchema extends MoveActionSchema
 {
     public static function factory()
     {
-        return new ArriveActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ArriveActionSchema('http://schema.org/', 'ArriveAction');
     }
 
 

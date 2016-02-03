@@ -35,12 +35,7 @@ class PaintActionSchema extends CreateActionSchema
 {
     public static function factory()
     {
-        return new PaintActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new PaintActionSchema('http://schema.org/', 'PaintAction');
     }
 
 

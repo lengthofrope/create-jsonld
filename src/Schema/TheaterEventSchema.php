@@ -35,12 +35,7 @@ class TheaterEventSchema extends EventSchema
 {
     public static function factory()
     {
-        return new TheaterEventSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new TheaterEventSchema('http://schema.org/', 'TheaterEvent');
     }
 
 

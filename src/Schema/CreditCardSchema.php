@@ -45,12 +45,7 @@ class CreditCardSchema extends PaymentMethodSchema
 {
     public static function factory()
     {
-        return new CreditCardSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new CreditCardSchema('http://schema.org/', 'CreditCard');
     }
 
 

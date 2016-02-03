@@ -35,12 +35,7 @@ class WholesaleStoreSchema extends StoreSchema
 {
     public static function factory()
     {
-        return new WholesaleStoreSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new WholesaleStoreSchema('http://schema.org/', 'WholesaleStore');
     }
 
 

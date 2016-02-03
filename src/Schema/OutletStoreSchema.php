@@ -35,12 +35,7 @@ class OutletStoreSchema extends StoreSchema
 {
     public static function factory()
     {
-        return new OutletStoreSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new OutletStoreSchema('http://schema.org/', 'OutletStore');
     }
 
 

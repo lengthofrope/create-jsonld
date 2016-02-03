@@ -35,29 +35,25 @@ class PlanActionSchema extends OrganizeActionSchema
 {
     public static function factory()
     {
-        return new PlanActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new PlanActionSchema('http://schema.org/', 'PlanAction');
     }
 
     /**
      * The time the object is scheduled to.
+     *
+     * @param $scheduledTime DateTimeSchema
      **/
-    private $scheduledTime;
     public function setScheduledTime($scheduledTime) {
-        $this->scheduledTime = $scheduledTime;
+        $this->properties['scheduledTime'] = $scheduledTime;
 
         return $this;
     }
 
     /**
-     * @return DateTimeSchema     
+     * @return DateTimeSchema
      **/
     public function getScheduledTime() {
-        return $this->scheduledTime;
+        return $this->properties['scheduledTime'];
     }
 
 

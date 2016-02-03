@@ -35,12 +35,7 @@ class SiteNavigationElementSchema extends WebPageElementSchema
 {
     public static function factory()
     {
-        return new SiteNavigationElementSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new SiteNavigationElementSchema('http://schema.org/', 'SiteNavigationElement');
     }
 
 

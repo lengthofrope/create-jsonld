@@ -35,12 +35,7 @@ class SportingGoodsStoreSchema extends StoreSchema
 {
     public static function factory()
     {
-        return new SportingGoodsStoreSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new SportingGoodsStoreSchema('http://schema.org/', 'SportingGoodsStore');
     }
 
 

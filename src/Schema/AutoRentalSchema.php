@@ -35,12 +35,7 @@ class AutoRentalSchema extends AutomotiveBusinessSchema
 {
     public static function factory()
     {
-        return new AutoRentalSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new AutoRentalSchema('http://schema.org/', 'AutoRental');
     }
 
 

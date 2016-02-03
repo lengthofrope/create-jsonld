@@ -35,12 +35,7 @@ class HealthAndBeautyBusinessSchema extends LocalBusinessSchema
 {
     public static function factory()
     {
-        return new HealthAndBeautyBusinessSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new HealthAndBeautyBusinessSchema('http://schema.org/', 'HealthAndBeautyBusiness');
     }
 
 

@@ -35,12 +35,7 @@ class ShoppingCenterSchema extends LocalBusinessSchema
 {
     public static function factory()
     {
-        return new ShoppingCenterSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ShoppingCenterSchema('http://schema.org/', 'ShoppingCenter');
     }
 
 

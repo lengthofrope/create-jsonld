@@ -35,63 +35,61 @@ class PublicationEventSchema extends EventSchema
 {
     public static function factory()
     {
-        return new PublicationEventSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new PublicationEventSchema('http://schema.org/', 'PublicationEvent');
     }
 
     /**
      * A flag to signal that the publication is accessible for free.
+     *
+     * @param $free BooleanSchema
      **/
-    private $free;
     public function setFree($free) {
-        $this->free = $free;
+        $this->properties['free'] = $free;
 
         return $this;
     }
 
     /**
-     * @return BooleanSchema     
+     * @return BooleanSchema
      **/
     public function getFree() {
-        return $this->free;
+        return $this->properties['free'];
     }
 
     /**
      * A flag to signal that the publication is accessible for free.
+     *
+     * @param $isAccessibleForFree BooleanSchema
      **/
-    private $isAccessibleForFree;
     public function setIsAccessibleForFree($isAccessibleForFree) {
-        $this->isAccessibleForFree = $isAccessibleForFree;
+        $this->properties['isAccessibleForFree'] = $isAccessibleForFree;
 
         return $this;
     }
 
     /**
-     * @return BooleanSchema     
+     * @return BooleanSchema
      **/
     public function getIsAccessibleForFree() {
-        return $this->isAccessibleForFree;
+        return $this->properties['isAccessibleForFree'];
     }
 
     /**
      * A broadcast service associated with the publication event.
+     *
+     * @param $publishedOn BroadcastServiceSchema
      **/
-    private $publishedOn;
     public function setPublishedOn($publishedOn) {
-        $this->publishedOn = $publishedOn;
+        $this->properties['publishedOn'] = $publishedOn;
 
         return $this;
     }
 
     /**
-     * @return BroadcastServiceSchema     
+     * @return BroadcastServiceSchema
      **/
     public function getPublishedOn() {
-        return $this->publishedOn;
+        return $this->properties['publishedOn'];
     }
 
 

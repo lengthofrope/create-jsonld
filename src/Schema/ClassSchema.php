@@ -35,29 +35,25 @@ class ClassSchema extends IntangibleSchema
 {
     public static function factory()
     {
-        return new ClassSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ClassSchema('http://schema.org/', 'Class');
     }
 
     /**
      * Relates a term (i.e. a property, class or enumeration) to one that supersedes it.
+     *
+     * @param $supersededBy PropertySchema|ClassSchema|EnumerationSchema
      **/
-    private $supersededBy;
     public function setSupersededBy($supersededBy) {
-        $this->supersededBy = $supersededBy;
+        $this->properties['supersededBy'] = $supersededBy;
 
         return $this;
     }
 
     /**
-     * @return PropertySchema|ClassSchema|EnumerationSchema     
+     * @return PropertySchema|ClassSchema|EnumerationSchema
      **/
     public function getSupersededBy() {
-        return $this->supersededBy;
+        return $this->properties['supersededBy'];
     }
 
 

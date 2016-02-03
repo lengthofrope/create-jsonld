@@ -35,12 +35,7 @@ class WaterfallSchema extends BodyOfWaterSchema
 {
     public static function factory()
     {
-        return new WaterfallSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new WaterfallSchema('http://schema.org/', 'Waterfall');
     }
 
 

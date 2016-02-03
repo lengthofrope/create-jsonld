@@ -31,50 +31,47 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class TVSeasonSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
+class TVSeasonSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new TVSeasonSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new TVSeasonSchema('http://schema.org/', 'TVSeason');
     }
 
     /**
      * The country of the principal offices of the production company or individual responsible for the movie or program.
+     *
+     * @param $countryOfOrigin CountrySchema
      **/
-    private $countryOfOrigin;
     public function setCountryOfOrigin($countryOfOrigin) {
-        $this->countryOfOrigin = $countryOfOrigin;
+        $this->properties['countryOfOrigin'] = $countryOfOrigin;
 
         return $this;
     }
 
     /**
-     * @return CountrySchema     
+     * @return CountrySchema
      **/
     public function getCountryOfOrigin() {
-        return $this->countryOfOrigin;
+        return $this->properties['countryOfOrigin'];
     }
 
     /**
      * The TV series to which this episode or season belongs.
+     *
+     * @param $partOfTVSeries TVSeriesSchema
      **/
-    private $partOfTVSeries;
     public function setPartOfTVSeries($partOfTVSeries) {
-        $this->partOfTVSeries = $partOfTVSeries;
+        $this->properties['partOfTVSeries'] = $partOfTVSeries;
 
         return $this;
     }
 
     /**
-     * @return TVSeriesSchema     
+     * @return TVSeriesSchema
      **/
     public function getPartOfTVSeries() {
-        return $this->partOfTVSeries;
+        return $this->properties['partOfTVSeries'];
     }
 
 

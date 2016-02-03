@@ -35,114 +35,115 @@ class DatasetSchema extends CreativeWorkSchema
 {
     public static function factory()
     {
-        return new DatasetSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new DatasetSchema('http://schema.org/', 'Dataset');
     }
 
     /**
      * A data catalog which contains a dataset.
+     *
+     * @param $catalog DataCatalogSchema
      **/
-    private $catalog;
     public function setCatalog($catalog) {
-        $this->catalog = $catalog;
+        $this->properties['catalog'] = $catalog;
 
         return $this;
     }
 
     /**
-     * @return DataCatalogSchema     
+     * @return DataCatalogSchema
      **/
     public function getCatalog() {
-        return $this->catalog;
+        return $this->properties['catalog'];
     }
 
     /**
      * The range of temporal applicability of a dataset, e.g. for a 2011 census dataset, the year 2011 (in ISO 8601 time interval format).
+     *
+     * @param $datasetTimeInterval DateTimeSchema
      **/
-    private $datasetTimeInterval;
     public function setDatasetTimeInterval($datasetTimeInterval) {
-        $this->datasetTimeInterval = $datasetTimeInterval;
+        $this->properties['datasetTimeInterval'] = $datasetTimeInterval;
 
         return $this;
     }
 
     /**
-     * @return DateTimeSchema     
+     * @return DateTimeSchema
      **/
     public function getDatasetTimeInterval() {
-        return $this->datasetTimeInterval;
+        return $this->properties['datasetTimeInterval'];
     }
 
     /**
      * A downloadable form of this dataset, at a specific location, in a specific format.
+     *
+     * @param $distribution DataDownloadSchema
      **/
-    private $distribution;
     public function setDistribution($distribution) {
-        $this->distribution = $distribution;
+        $this->properties['distribution'] = $distribution;
 
         return $this;
     }
 
     /**
-     * @return DataDownloadSchema     
+     * @return DataDownloadSchema
      **/
     public function getDistribution() {
-        return $this->distribution;
+        return $this->properties['distribution'];
     }
 
     /**
      * A data catalog contained in the dataset.
+     *
+     * @param $includedDataCatalog DataCatalogSchema
      **/
-    private $includedDataCatalog;
     public function setIncludedDataCatalog($includedDataCatalog) {
-        $this->includedDataCatalog = $includedDataCatalog;
+        $this->properties['includedDataCatalog'] = $includedDataCatalog;
 
         return $this;
     }
 
     /**
-     * @return DataCatalogSchema     
+     * @return DataCatalogSchema
      **/
     public function getIncludedDataCatalog() {
-        return $this->includedDataCatalog;
+        return $this->properties['includedDataCatalog'];
     }
 
     /**
      * The range of spatial applicability of a dataset, e.g. for a dataset of New York weather, the state of New York.
+     *
+     * @param $spatial PlaceSchema
      **/
-    private $spatial;
     public function setSpatial($spatial) {
-        $this->spatial = $spatial;
+        $this->properties['spatial'] = $spatial;
 
         return $this;
     }
 
     /**
-     * @return PlaceSchema     
+     * @return PlaceSchema
      **/
     public function getSpatial() {
-        return $this->spatial;
+        return $this->properties['spatial'];
     }
 
     /**
      * The range of temporal applicability of a dataset, e.g. for a 2011 census dataset, the year 2011 (in ISO 8601 time interval format).
+     *
+     * @param $temporal DateTimeSchema
      **/
-    private $temporal;
     public function setTemporal($temporal) {
-        $this->temporal = $temporal;
+        $this->properties['temporal'] = $temporal;
 
         return $this;
     }
 
     /**
-     * @return DateTimeSchema     
+     * @return DateTimeSchema
      **/
     public function getTemporal() {
-        return $this->temporal;
+        return $this->properties['temporal'];
     }
 
 

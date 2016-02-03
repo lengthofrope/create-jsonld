@@ -35,12 +35,7 @@ class LandmarksOrHistoricalBuildingsSchema extends PlaceSchema
 {
     public static function factory()
     {
-        return new LandmarksOrHistoricalBuildingsSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new LandmarksOrHistoricalBuildingsSchema('http://schema.org/', 'LandmarksOrHistoricalBuildings');
     }
 
 

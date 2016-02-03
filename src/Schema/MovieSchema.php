@@ -35,182 +35,187 @@ class MovieSchema extends CreativeWorkSchema
 {
     public static function factory()
     {
-        return new MovieSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MovieSchema('http://schema.org/', 'Movie');
     }
 
     /**
      * An actor, e.g. in tv, radio, movie, video games etc. Actors can be associated with individual items or with a series, episode, clip.
+     *
+     * @param $actor PersonSchema
      **/
-    private $actor;
     public function setActor($actor) {
-        $this->actor = $actor;
+        $this->properties['actor'] = $actor;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema     
+     * @return PersonSchema
      **/
     public function getActor() {
-        return $this->actor;
+        return $this->properties['actor'];
     }
 
     /**
      * An actor, e.g. in tv, radio, movie, video games etc. Actors can be associated with individual items or with a series, episode, clip.
+     *
+     * @param $actors PersonSchema
      **/
-    private $actors;
     public function setActors($actors) {
-        $this->actors = $actors;
+        $this->properties['actors'] = $actors;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema     
+     * @return PersonSchema
      **/
     public function getActors() {
-        return $this->actors;
+        return $this->properties['actors'];
     }
 
     /**
      * The country of the principal offices of the production company or individual responsible for the movie or program.
+     *
+     * @param $countryOfOrigin CountrySchema
      **/
-    private $countryOfOrigin;
     public function setCountryOfOrigin($countryOfOrigin) {
-        $this->countryOfOrigin = $countryOfOrigin;
+        $this->properties['countryOfOrigin'] = $countryOfOrigin;
 
         return $this;
     }
 
     /**
-     * @return CountrySchema     
+     * @return CountrySchema
      **/
     public function getCountryOfOrigin() {
-        return $this->countryOfOrigin;
+        return $this->properties['countryOfOrigin'];
     }
 
     /**
      * A director of e.g. tv, radio, movie, video games etc. content. Directors can be associated with individual items or with a series, episode, clip.
+     *
+     * @param $director PersonSchema
      **/
-    private $director;
     public function setDirector($director) {
-        $this->director = $director;
+        $this->properties['director'] = $director;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema     
+     * @return PersonSchema
      **/
     public function getDirector() {
-        return $this->director;
+        return $this->properties['director'];
     }
 
     /**
      * A director of e.g. tv, radio, movie, video games etc. content. Directors can be associated with individual items or with a series, episode, clip.
+     *
+     * @param $directors PersonSchema
      **/
-    private $directors;
     public function setDirectors($directors) {
-        $this->directors = $directors;
+        $this->properties['directors'] = $directors;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema     
+     * @return PersonSchema
      **/
     public function getDirectors() {
-        return $this->directors;
+        return $this->properties['directors'];
     }
 
     /**
      * The duration of the item (movie, audio recording, event, etc.) in <a href='http://en.wikipedia.org/wiki/ISO_8601'>ISO 8601 date format</a>.
+     *
+     * @param $duration DurationSchema
      **/
-    private $duration;
     public function setDuration($duration) {
-        $this->duration = $duration;
+        $this->properties['duration'] = $duration;
 
         return $this;
     }
 
     /**
-     * @return DurationSchema     
+     * @return DurationSchema
      **/
     public function getDuration() {
-        return $this->duration;
+        return $this->properties['duration'];
     }
 
     /**
      * The composer of the soundtrack.
+     *
+     * @param $musicBy MusicGroupSchema|PersonSchema
      **/
-    private $musicBy;
     public function setMusicBy($musicBy) {
-        $this->musicBy = $musicBy;
+        $this->properties['musicBy'] = $musicBy;
 
         return $this;
     }
 
     /**
-     * @return MusicGroupSchema|PersonSchema     
+     * @return MusicGroupSchema|PersonSchema
      **/
     public function getMusicBy() {
-        return $this->musicBy;
+        return $this->properties['musicBy'];
     }
 
     /**
      * The production company or studio responsible for the item e.g. series, video game, episode etc.
+     *
+     * @param $productionCompany OrganizationSchema
      **/
-    private $productionCompany;
     public function setProductionCompany($productionCompany) {
-        $this->productionCompany = $productionCompany;
+        $this->properties['productionCompany'] = $productionCompany;
 
         return $this;
     }
 
     /**
-     * @return OrganizationSchema     
+     * @return OrganizationSchema
      **/
     public function getProductionCompany() {
-        return $this->productionCompany;
+        return $this->properties['productionCompany'];
     }
 
     /**
      * Languages in which subtitles/captions are available, in <a href='http://tools.ietf.org/html/bcp47'>IETF BCP 47 standard format.</a>
+     *
+     * @param $subtitleLanguage TextSchema|LanguageSchema
      **/
-    private $subtitleLanguage;
     public function setSubtitleLanguage($subtitleLanguage) {
-        $this->subtitleLanguage = $subtitleLanguage;
+        $this->properties['subtitleLanguage'] = $subtitleLanguage;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|LanguageSchema     
+     * @return TextSchema|LanguageSchema
      **/
     public function getSubtitleLanguage() {
-        return $this->subtitleLanguage;
+        return $this->properties['subtitleLanguage'];
     }
 
     /**
      * The trailer of a movie or tv/radio series, season, episode, etc.
+     *
+     * @param $trailer VideoObjectSchema
      **/
-    private $trailer;
     public function setTrailer($trailer) {
-        $this->trailer = $trailer;
+        $this->properties['trailer'] = $trailer;
 
         return $this;
     }
 
     /**
-     * @return VideoObjectSchema     
+     * @return VideoObjectSchema
      **/
     public function getTrailer() {
-        return $this->trailer;
+        return $this->properties['trailer'];
     }
 
 

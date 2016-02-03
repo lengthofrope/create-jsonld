@@ -35,29 +35,25 @@ class CorporationSchema extends OrganizationSchema
 {
     public static function factory()
     {
-        return new CorporationSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new CorporationSchema('http://schema.org/', 'Corporation');
     }
 
     /**
      * The exchange traded instrument associated with a Corporation object. The tickerSymbol is expressed as an exchange and an instrument name separated by a space character. For the exchange component of the tickerSymbol attribute, we reccommend using the controlled vocaulary of Market Identifier Codes (MIC) specified in ISO15022.
+     *
+     * @param $tickerSymbol TextSchema
      **/
-    private $tickerSymbol;
     public function setTickerSymbol($tickerSymbol) {
-        $this->tickerSymbol = $tickerSymbol;
+        $this->properties['tickerSymbol'] = $tickerSymbol;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getTickerSymbol() {
-        return $this->tickerSymbol;
+        return $this->properties['tickerSymbol'];
     }
 
 

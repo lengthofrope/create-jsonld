@@ -35,12 +35,7 @@ class HVACBusinessSchema extends HomeAndConstructionBusinessSchema
 {
     public static function factory()
     {
-        return new HVACBusinessSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new HVACBusinessSchema('http://schema.org/', 'HVACBusiness');
     }
 
 

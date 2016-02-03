@@ -35,12 +35,7 @@ class SeasonSchema extends CreativeWorkSchema
 {
     public static function factory()
     {
-        return new SeasonSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new SeasonSchema('http://schema.org/', 'Season');
     }
 
 

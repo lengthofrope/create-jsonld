@@ -35,12 +35,7 @@ class CarUsageTypeSchema extends QualitativeValueSchema
 {
     public static function factory()
     {
-        return new CarUsageTypeSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new CarUsageTypeSchema('http://schema.org/', 'CarUsageType');
     }
 
 

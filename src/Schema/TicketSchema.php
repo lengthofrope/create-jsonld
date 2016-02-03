@@ -35,148 +35,151 @@ class TicketSchema extends IntangibleSchema
 {
     public static function factory()
     {
-        return new TicketSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new TicketSchema('http://schema.org/', 'Ticket');
     }
 
     /**
      * The date the ticket was issued.
+     *
+     * @param $dateIssued DateTimeSchema
      **/
-    private $dateIssued;
     public function setDateIssued($dateIssued) {
-        $this->dateIssued = $dateIssued;
+        $this->properties['dateIssued'] = $dateIssued;
 
         return $this;
     }
 
     /**
-     * @return DateTimeSchema     
+     * @return DateTimeSchema
      **/
     public function getDateIssued() {
-        return $this->dateIssued;
+        return $this->properties['dateIssued'];
     }
 
     /**
      * The organization issuing the ticket or permit.
+     *
+     * @param $issuedBy OrganizationSchema
      **/
-    private $issuedBy;
     public function setIssuedBy($issuedBy) {
-        $this->issuedBy = $issuedBy;
+        $this->properties['issuedBy'] = $issuedBy;
 
         return $this;
     }
 
     /**
-     * @return OrganizationSchema     
+     * @return OrganizationSchema
      **/
     public function getIssuedBy() {
-        return $this->issuedBy;
+        return $this->properties['issuedBy'];
     }
 
     /**
      * The currency (in 3-letter ISO 4217 format) of the price or a price component, when attached to PriceSpecification and its subtypes.
+     *
+     * @param $priceCurrency TextSchema
      **/
-    private $priceCurrency;
     public function setPriceCurrency($priceCurrency) {
-        $this->priceCurrency = $priceCurrency;
+        $this->properties['priceCurrency'] = $priceCurrency;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getPriceCurrency() {
-        return $this->priceCurrency;
+        return $this->properties['priceCurrency'];
     }
 
     /**
      * The unique identifier for the ticket.
+     *
+     * @param $ticketNumber TextSchema
      **/
-    private $ticketNumber;
     public function setTicketNumber($ticketNumber) {
-        $this->ticketNumber = $ticketNumber;
+        $this->properties['ticketNumber'] = $ticketNumber;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getTicketNumber() {
-        return $this->ticketNumber;
+        return $this->properties['ticketNumber'];
     }
 
     /**
      * Reference to an asset (e.g., Barcode, QR code image or PDF) usable for entrance.
+     *
+     * @param $ticketToken TextSchema|URLSchema
      **/
-    private $ticketToken;
     public function setTicketToken($ticketToken) {
-        $this->ticketToken = $ticketToken;
+        $this->properties['ticketToken'] = $ticketToken;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|URLSchema     
+     * @return TextSchema|URLSchema
      **/
     public function getTicketToken() {
-        return $this->ticketToken;
+        return $this->properties['ticketToken'];
     }
 
     /**
      * The seat associated with the ticket.
+     *
+     * @param $ticketedSeat SeatSchema
      **/
-    private $ticketedSeat;
     public function setTicketedSeat($ticketedSeat) {
-        $this->ticketedSeat = $ticketedSeat;
+        $this->properties['ticketedSeat'] = $ticketedSeat;
 
         return $this;
     }
 
     /**
-     * @return SeatSchema     
+     * @return SeatSchema
      **/
     public function getTicketedSeat() {
-        return $this->ticketedSeat;
+        return $this->properties['ticketedSeat'];
     }
 
     /**
      * The total price for the reservation or ticket, including applicable taxes, shipping, etc.
+     *
+     * @param $totalPrice NumberSchema|TextSchema|PriceSpecificationSchema
      **/
-    private $totalPrice;
     public function setTotalPrice($totalPrice) {
-        $this->totalPrice = $totalPrice;
+        $this->properties['totalPrice'] = $totalPrice;
 
         return $this;
     }
 
     /**
-     * @return NumberSchema|TextSchema|PriceSpecificationSchema     
+     * @return NumberSchema|TextSchema|PriceSpecificationSchema
      **/
     public function getTotalPrice() {
-        return $this->totalPrice;
+        return $this->properties['totalPrice'];
     }
 
     /**
      * The person or organization the reservation or ticket is for.
+     *
+     * @param $underName PersonSchema|OrganizationSchema
      **/
-    private $underName;
     public function setUnderName($underName) {
-        $this->underName = $underName;
+        $this->properties['underName'] = $underName;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema|OrganizationSchema     
+     * @return PersonSchema|OrganizationSchema
      **/
     public function getUnderName() {
-        return $this->underName;
+        return $this->properties['underName'];
     }
 
 

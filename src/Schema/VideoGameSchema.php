@@ -31,203 +31,209 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class VideoGameSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
+class VideoGameSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new VideoGameSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new VideoGameSchema('http://schema.org/', 'VideoGame');
     }
 
     /**
      * An actor, e.g. in tv, radio, movie, video games etc. Actors can be associated with individual items or with a series, episode, clip.
+     *
+     * @param $actor PersonSchema
      **/
-    private $actor;
     public function setActor($actor) {
-        $this->actor = $actor;
+        $this->properties['actor'] = $actor;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema     
+     * @return PersonSchema
      **/
     public function getActor() {
-        return $this->actor;
+        return $this->properties['actor'];
     }
 
     /**
      * An actor, e.g. in tv, radio, movie, video games etc. Actors can be associated with individual items or with a series, episode, clip.
+     *
+     * @param $actors PersonSchema
      **/
-    private $actors;
     public function setActors($actors) {
-        $this->actors = $actors;
+        $this->properties['actors'] = $actors;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema     
+     * @return PersonSchema
      **/
     public function getActors() {
-        return $this->actors;
+        return $this->properties['actors'];
     }
 
     /**
      * Cheat codes to the game.
+     *
+     * @param $cheatCode CreativeWorkSchema
      **/
-    private $cheatCode;
     public function setCheatCode($cheatCode) {
-        $this->cheatCode = $cheatCode;
+        $this->properties['cheatCode'] = $cheatCode;
 
         return $this;
     }
 
     /**
-     * @return CreativeWorkSchema     
+     * @return CreativeWorkSchema
      **/
     public function getCheatCode() {
-        return $this->cheatCode;
+        return $this->properties['cheatCode'];
     }
 
     /**
      * A director of e.g. tv, radio, movie, video games etc. content. Directors can be associated with individual items or with a series, episode, clip.
+     *
+     * @param $director PersonSchema
      **/
-    private $director;
     public function setDirector($director) {
-        $this->director = $director;
+        $this->properties['director'] = $director;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema     
+     * @return PersonSchema
      **/
     public function getDirector() {
-        return $this->director;
+        return $this->properties['director'];
     }
 
     /**
      * A director of e.g. tv, radio, movie, video games etc. content. Directors can be associated with individual items or with a series, episode, clip.
+     *
+     * @param $directors PersonSchema
      **/
-    private $directors;
     public function setDirectors($directors) {
-        $this->directors = $directors;
+        $this->properties['directors'] = $directors;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema     
+     * @return PersonSchema
      **/
     public function getDirectors() {
-        return $this->directors;
+        return $this->properties['directors'];
     }
 
     /**
      * The electronic systems used to play <a href="http://en.wikipedia.org/wiki/Category:Video_game_platforms">video games</a>.
+     *
+     * @param $gamePlatform TextSchema|URLSchema|ThingSchema
      **/
-    private $gamePlatform;
     public function setGamePlatform($gamePlatform) {
-        $this->gamePlatform = $gamePlatform;
+        $this->properties['gamePlatform'] = $gamePlatform;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|URLSchema|ThingSchema     
+     * @return TextSchema|URLSchema|ThingSchema
      **/
     public function getGamePlatform() {
-        return $this->gamePlatform;
+        return $this->properties['gamePlatform'];
     }
 
     /**
      * The server on which  it is possible to play the game.
+     *
+     * @param $gameServer GameServerSchema
      **/
-    private $gameServer;
     public function setGameServer($gameServer) {
-        $this->gameServer = $gameServer;
+        $this->properties['gameServer'] = $gameServer;
 
         return $this;
     }
 
     /**
-     * @return GameServerSchema     
+     * @return GameServerSchema
      **/
     public function getGameServer() {
-        return $this->gameServer;
+        return $this->properties['gameServer'];
     }
 
     /**
      * Links to tips, tactics, etc.
+     *
+     * @param $gameTip CreativeWorkSchema
      **/
-    private $gameTip;
     public function setGameTip($gameTip) {
-        $this->gameTip = $gameTip;
+        $this->properties['gameTip'] = $gameTip;
 
         return $this;
     }
 
     /**
-     * @return CreativeWorkSchema     
+     * @return CreativeWorkSchema
      **/
     public function getGameTip() {
-        return $this->gameTip;
+        return $this->properties['gameTip'];
     }
 
     /**
      * The composer of the soundtrack.
+     *
+     * @param $musicBy MusicGroupSchema|PersonSchema
      **/
-    private $musicBy;
     public function setMusicBy($musicBy) {
-        $this->musicBy = $musicBy;
+        $this->properties['musicBy'] = $musicBy;
 
         return $this;
     }
 
     /**
-     * @return MusicGroupSchema|PersonSchema     
+     * @return MusicGroupSchema|PersonSchema
      **/
     public function getMusicBy() {
-        return $this->musicBy;
+        return $this->properties['musicBy'];
     }
 
     /**
      * Indicates whether this game is multi-player, co-op or single-player.  The game can be marked as multi-player, co-op and single-player at the same time.
+     *
+     * @param $playMode GamePlayModeSchema
      **/
-    private $playMode;
     public function setPlayMode($playMode) {
-        $this->playMode = $playMode;
+        $this->properties['playMode'] = $playMode;
 
         return $this;
     }
 
     /**
-     * @return GamePlayModeSchema     
+     * @return GamePlayModeSchema
      **/
     public function getPlayMode() {
-        return $this->playMode;
+        return $this->properties['playMode'];
     }
 
     /**
      * The trailer of a movie or tv/radio series, season, episode, etc.
+     *
+     * @param $trailer VideoObjectSchema
      **/
-    private $trailer;
     public function setTrailer($trailer) {
-        $this->trailer = $trailer;
+        $this->properties['trailer'] = $trailer;
 
         return $this;
     }
 
     /**
-     * @return VideoObjectSchema     
+     * @return VideoObjectSchema
      **/
     public function getTrailer() {
-        return $this->trailer;
+        return $this->properties['trailer'];
     }
 
 

@@ -35,63 +35,61 @@ class GameServerSchema extends IntangibleSchema
 {
     public static function factory()
     {
-        return new GameServerSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new GameServerSchema('http://schema.org/', 'GameServer');
     }
 
     /**
      * Video game which is played on this server.
+     *
+     * @param $game VideoGameSchema
      **/
-    private $game;
     public function setGame($game) {
-        $this->game = $game;
+        $this->properties['game'] = $game;
 
         return $this;
     }
 
     /**
-     * @return VideoGameSchema     
+     * @return VideoGameSchema
      **/
     public function getGame() {
-        return $this->game;
+        return $this->properties['game'];
     }
 
     /**
      * Number of players on the server.
+     *
+     * @param $playersOnline IntegerSchema
      **/
-    private $playersOnline;
     public function setPlayersOnline($playersOnline) {
-        $this->playersOnline = $playersOnline;
+        $this->properties['playersOnline'] = $playersOnline;
 
         return $this;
     }
 
     /**
-     * @return IntegerSchema     
+     * @return IntegerSchema
      **/
     public function getPlayersOnline() {
-        return $this->playersOnline;
+        return $this->properties['playersOnline'];
     }
 
     /**
      * Status of a game server.
+     *
+     * @param $serverStatus GameServerStatusSchema
      **/
-    private $serverStatus;
     public function setServerStatus($serverStatus) {
-        $this->serverStatus = $serverStatus;
+        $this->properties['serverStatus'] = $serverStatus;
 
         return $this;
     }
 
     /**
-     * @return GameServerStatusSchema     
+     * @return GameServerStatusSchema
      **/
     public function getServerStatus() {
-        return $this->serverStatus;
+        return $this->properties['serverStatus'];
     }
 
 

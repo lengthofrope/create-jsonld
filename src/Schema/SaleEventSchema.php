@@ -35,12 +35,7 @@ class SaleEventSchema extends EventSchema
 {
     public static function factory()
     {
-        return new SaleEventSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new SaleEventSchema('http://schema.org/', 'SaleEvent');
     }
 
 

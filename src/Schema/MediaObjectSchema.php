@@ -35,284 +35,295 @@ class MediaObjectSchema extends CreativeWorkSchema
 {
     public static function factory()
     {
-        return new MediaObjectSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MediaObjectSchema('http://schema.org/', 'MediaObject');
     }
 
     /**
      * A NewsArticle associated with the Media Object.
+     *
+     * @param $associatedArticle NewsArticleSchema
      **/
-    private $associatedArticle;
     public function setAssociatedArticle($associatedArticle) {
-        $this->associatedArticle = $associatedArticle;
+        $this->properties['associatedArticle'] = $associatedArticle;
 
         return $this;
     }
 
     /**
-     * @return NewsArticleSchema     
+     * @return NewsArticleSchema
      **/
     public function getAssociatedArticle() {
-        return $this->associatedArticle;
+        return $this->properties['associatedArticle'];
     }
 
     /**
      * The bitrate of the media object.
+     *
+     * @param $bitrate TextSchema
      **/
-    private $bitrate;
     public function setBitrate($bitrate) {
-        $this->bitrate = $bitrate;
+        $this->properties['bitrate'] = $bitrate;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getBitrate() {
-        return $this->bitrate;
+        return $this->properties['bitrate'];
     }
 
     /**
      * File size in (mega/kilo) bytes.
+     *
+     * @param $contentSize TextSchema
      **/
-    private $contentSize;
     public function setContentSize($contentSize) {
-        $this->contentSize = $contentSize;
+        $this->properties['contentSize'] = $contentSize;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getContentSize() {
-        return $this->contentSize;
+        return $this->properties['contentSize'];
     }
 
     /**
      * Actual bytes of the media object, for example the image file or video file.
+     *
+     * @param $contentUrl URLSchema
      **/
-    private $contentUrl;
     public function setContentUrl($contentUrl) {
-        $this->contentUrl = $contentUrl;
+        $this->properties['contentUrl'] = $contentUrl;
 
         return $this;
     }
 
     /**
-     * @return URLSchema     
+     * @return URLSchema
      **/
     public function getContentUrl() {
-        return $this->contentUrl;
+        return $this->properties['contentUrl'];
     }
 
     /**
      * The duration of the item (movie, audio recording, event, etc.) in <a href='http://en.wikipedia.org/wiki/ISO_8601'>ISO 8601 date format</a>.
+     *
+     * @param $duration DurationSchema
      **/
-    private $duration;
     public function setDuration($duration) {
-        $this->duration = $duration;
+        $this->properties['duration'] = $duration;
 
         return $this;
     }
 
     /**
-     * @return DurationSchema     
+     * @return DurationSchema
      **/
     public function getDuration() {
-        return $this->duration;
+        return $this->properties['duration'];
     }
 
     /**
      * A URL pointing to a player for a specific video. In general, this is the information in the <code>src</code> element of an <code>embed</code> tag and should not be the same as the content of the <code>loc</code> tag.
+     *
+     * @param $embedUrl URLSchema
      **/
-    private $embedUrl;
     public function setEmbedUrl($embedUrl) {
-        $this->embedUrl = $embedUrl;
+        $this->properties['embedUrl'] = $embedUrl;
 
         return $this;
     }
 
     /**
-     * @return URLSchema     
+     * @return URLSchema
      **/
     public function getEmbedUrl() {
-        return $this->embedUrl;
+        return $this->properties['embedUrl'];
     }
 
     /**
      * The CreativeWork encoded by this media object.
+     *
+     * @param $encodesCreativeWork CreativeWorkSchema
      **/
-    private $encodesCreativeWork;
     public function setEncodesCreativeWork($encodesCreativeWork) {
-        $this->encodesCreativeWork = $encodesCreativeWork;
+        $this->properties['encodesCreativeWork'] = $encodesCreativeWork;
 
         return $this;
     }
 
     /**
-     * @return CreativeWorkSchema     
+     * @return CreativeWorkSchema
      **/
     public function getEncodesCreativeWork() {
-        return $this->encodesCreativeWork;
+        return $this->properties['encodesCreativeWork'];
     }
 
     /**
      * mp3, mpeg4, etc.
+     *
+     * @param $encodingFormat TextSchema
      **/
-    private $encodingFormat;
     public function setEncodingFormat($encodingFormat) {
-        $this->encodingFormat = $encodingFormat;
+        $this->properties['encodingFormat'] = $encodingFormat;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getEncodingFormat() {
-        return $this->encodingFormat;
+        return $this->properties['encodingFormat'];
     }
 
     /**
      * Date the content expires and is no longer useful or available. Useful for videos.
+     *
+     * @param $expires DateSchema
      **/
-    private $expires;
     public function setExpires($expires) {
-        $this->expires = $expires;
+        $this->properties['expires'] = $expires;
 
         return $this;
     }
 
     /**
-     * @return DateSchema     
+     * @return DateSchema
      **/
     public function getExpires() {
-        return $this->expires;
+        return $this->properties['expires'];
     }
 
     /**
      * The height of the item.
+     *
+     * @param $height DistanceSchema|QuantitativeValueSchema
      **/
-    private $height;
     public function setHeight($height) {
-        $this->height = $height;
+        $this->properties['height'] = $height;
 
         return $this;
     }
 
     /**
-     * @return DistanceSchema|QuantitativeValueSchema     
+     * @return DistanceSchema|QuantitativeValueSchema
      **/
     public function getHeight() {
-        return $this->height;
+        return $this->properties['height'];
     }
 
     /**
      * Player type required&#x2014;for example, Flash or Silverlight.
+     *
+     * @param $playerType TextSchema
      **/
-    private $playerType;
     public function setPlayerType($playerType) {
-        $this->playerType = $playerType;
+        $this->properties['playerType'] = $playerType;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getPlayerType() {
-        return $this->playerType;
+        return $this->properties['playerType'];
     }
 
     /**
      * The production company or studio responsible for the item e.g. series, video game, episode etc.
+     *
+     * @param $productionCompany OrganizationSchema
      **/
-    private $productionCompany;
     public function setProductionCompany($productionCompany) {
-        $this->productionCompany = $productionCompany;
+        $this->properties['productionCompany'] = $productionCompany;
 
         return $this;
     }
 
     /**
-     * @return OrganizationSchema     
+     * @return OrganizationSchema
      **/
     public function getProductionCompany() {
-        return $this->productionCompany;
+        return $this->properties['productionCompany'];
     }
 
     /**
      * The regions where the media is allowed. If not specified, then it's assumed to be allowed everywhere. Specify the countries in <a href='http://en.wikipedia.org/wiki/ISO_3166'>ISO 3166 format</a>.
+     *
+     * @param $regionsAllowed PlaceSchema
      **/
-    private $regionsAllowed;
     public function setRegionsAllowed($regionsAllowed) {
-        $this->regionsAllowed = $regionsAllowed;
+        $this->properties['regionsAllowed'] = $regionsAllowed;
 
         return $this;
     }
 
     /**
-     * @return PlaceSchema     
+     * @return PlaceSchema
      **/
     public function getRegionsAllowed() {
-        return $this->regionsAllowed;
+        return $this->properties['regionsAllowed'];
     }
 
     /**
      * Indicates if use of the media require a subscription  (either paid or free). Allowed values are <code>true</code> or <code>false</code> (note that an earlier version had 'yes', 'no').
+     *
+     * @param $requiresSubscription BooleanSchema
      **/
-    private $requiresSubscription;
     public function setRequiresSubscription($requiresSubscription) {
-        $this->requiresSubscription = $requiresSubscription;
+        $this->properties['requiresSubscription'] = $requiresSubscription;
 
         return $this;
     }
 
     /**
-     * @return BooleanSchema     
+     * @return BooleanSchema
      **/
     public function getRequiresSubscription() {
-        return $this->requiresSubscription;
+        return $this->properties['requiresSubscription'];
     }
 
     /**
      * Date when this media object was uploaded to this site.
+     *
+     * @param $uploadDate DateSchema
      **/
-    private $uploadDate;
     public function setUploadDate($uploadDate) {
-        $this->uploadDate = $uploadDate;
+        $this->properties['uploadDate'] = $uploadDate;
 
         return $this;
     }
 
     /**
-     * @return DateSchema     
+     * @return DateSchema
      **/
     public function getUploadDate() {
-        return $this->uploadDate;
+        return $this->properties['uploadDate'];
     }
 
     /**
      * The width of the item.
+     *
+     * @param $width DistanceSchema|QuantitativeValueSchema
      **/
-    private $width;
     public function setWidth($width) {
-        $this->width = $width;
+        $this->properties['width'] = $width;
 
         return $this;
     }
 
     /**
-     * @return DistanceSchema|QuantitativeValueSchema     
+     * @return DistanceSchema|QuantitativeValueSchema
      **/
     public function getWidth() {
-        return $this->width;
+        return $this->properties['width'];
     }
 
 

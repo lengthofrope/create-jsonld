@@ -35,12 +35,7 @@ class DepartmentStoreSchema extends StoreSchema
 {
     public static function factory()
     {
-        return new DepartmentStoreSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new DepartmentStoreSchema('http://schema.org/', 'DepartmentStore');
     }
 
 

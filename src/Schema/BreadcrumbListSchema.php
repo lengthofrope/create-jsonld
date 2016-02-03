@@ -44,12 +44,7 @@ class BreadcrumbListSchema extends ItemListSchema
 {
     public static function factory()
     {
-        return new BreadcrumbListSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new BreadcrumbListSchema('http://schema.org/', 'BreadcrumbList');
     }
 
 

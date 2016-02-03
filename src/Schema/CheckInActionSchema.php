@@ -35,12 +35,7 @@ class CheckInActionSchema extends CommunicateActionSchema
 {
     public static function factory()
     {
-        return new CheckInActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new CheckInActionSchema('http://schema.org/', 'CheckInAction');
     }
 
 

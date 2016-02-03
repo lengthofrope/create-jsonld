@@ -31,16 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class TextSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
+class TextSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new TextSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new TextSchema('http://schema.org/', 'Text');
     }
 
 

@@ -35,12 +35,7 @@ class NotarySchema extends LegalServiceSchema
 {
     public static function factory()
     {
-        return new NotarySchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new NotarySchema('http://schema.org/', 'Notary');
     }
 
 

@@ -35,12 +35,7 @@ class ParkSchema extends CivicStructureSchema
 {
     public static function factory()
     {
-        return new ParkSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ParkSchema('http://schema.org/', 'Park');
     }
 
 

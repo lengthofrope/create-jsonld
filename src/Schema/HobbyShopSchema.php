@@ -35,12 +35,7 @@ class HobbyShopSchema extends StoreSchema
 {
     public static function factory()
     {
-        return new HobbyShopSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new HobbyShopSchema('http://schema.org/', 'HobbyShop');
     }
 
 

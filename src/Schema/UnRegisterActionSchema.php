@@ -35,12 +35,7 @@ class UnRegisterActionSchema extends InteractActionSchema
 {
     public static function factory()
     {
-        return new UnRegisterActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new UnRegisterActionSchema('http://schema.org/', 'UnRegisterAction');
     }
 
 

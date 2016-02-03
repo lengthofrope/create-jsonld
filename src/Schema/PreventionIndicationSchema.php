@@ -35,12 +35,7 @@ class PreventionIndicationSchema extends MedicalIndicationSchema
 {
     public static function factory()
     {
-        return new PreventionIndicationSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new PreventionIndicationSchema('http://schema.org/', 'PreventionIndication');
     }
 
 

@@ -35,12 +35,7 @@ class InsuranceAgencySchema extends FinancialServiceSchema
 {
     public static function factory()
     {
-        return new InsuranceAgencySchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new InsuranceAgencySchema('http://schema.org/', 'InsuranceAgency');
     }
 
 

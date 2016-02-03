@@ -35,12 +35,7 @@ class DataDownloadSchema extends MediaObjectSchema
 {
     public static function factory()
     {
-        return new DataDownloadSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new DataDownloadSchema('http://schema.org/', 'DataDownload');
     }
 
 

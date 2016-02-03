@@ -35,12 +35,7 @@ class ItemListOrderTypeSchema extends EnumerationSchema
 {
     public static function factory()
     {
-        return new ItemListOrderTypeSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ItemListOrderTypeSchema('http://schema.org/', 'ItemListOrderType');
     }
 
 

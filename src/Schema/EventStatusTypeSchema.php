@@ -35,12 +35,7 @@ class EventStatusTypeSchema extends EnumerationSchema
 {
     public static function factory()
     {
-        return new EventStatusTypeSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new EventStatusTypeSchema('http://schema.org/', 'EventStatusType');
     }
 
 

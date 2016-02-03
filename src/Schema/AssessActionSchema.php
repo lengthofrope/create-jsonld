@@ -35,12 +35,7 @@ class AssessActionSchema extends ActionSchema
 {
     public static function factory()
     {
-        return new AssessActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new AssessActionSchema('http://schema.org/', 'AssessAction');
     }
 
 

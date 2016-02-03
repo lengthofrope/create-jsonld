@@ -35,12 +35,7 @@ class FurnitureStoreSchema extends StoreSchema
 {
     public static function factory()
     {
-        return new FurnitureStoreSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new FurnitureStoreSchema('http://schema.org/', 'FurnitureStore');
     }
 
 

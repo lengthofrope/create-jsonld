@@ -35,12 +35,7 @@ class LiteraryEventSchema extends EventSchema
 {
     public static function factory()
     {
-        return new LiteraryEventSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new LiteraryEventSchema('http://schema.org/', 'LiteraryEvent');
     }
 
 

@@ -31,33 +31,29 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MovieTheaterSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
+class MovieTheaterSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MovieTheaterSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MovieTheaterSchema('http://schema.org/', 'MovieTheater');
     }
 
     /**
      * The number of screens in the movie theater.
+     *
+     * @param $screenCount NumberSchema
      **/
-    private $screenCount;
     public function setScreenCount($screenCount) {
-        $this->screenCount = $screenCount;
+        $this->properties['screenCount'] = $screenCount;
 
         return $this;
     }
 
     /**
-     * @return NumberSchema     
+     * @return NumberSchema
      **/
     public function getScreenCount() {
-        return $this->screenCount;
+        return $this->properties['screenCount'];
     }
 
 

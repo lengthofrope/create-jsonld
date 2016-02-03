@@ -35,12 +35,7 @@ class ReservoirSchema extends BodyOfWaterSchema
 {
     public static function factory()
     {
-        return new ReservoirSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ReservoirSchema('http://schema.org/', 'Reservoir');
     }
 
 

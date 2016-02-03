@@ -35,12 +35,7 @@ class RecyclingCenterSchema extends LocalBusinessSchema
 {
     public static function factory()
     {
-        return new RecyclingCenterSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new RecyclingCenterSchema('http://schema.org/', 'RecyclingCenter');
     }
 
 

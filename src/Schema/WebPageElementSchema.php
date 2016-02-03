@@ -35,12 +35,7 @@ class WebPageElementSchema extends CreativeWorkSchema
 {
     public static function factory()
     {
-        return new WebPageElementSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new WebPageElementSchema('http://schema.org/', 'WebPageElement');
     }
 
 

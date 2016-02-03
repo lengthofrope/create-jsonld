@@ -35,12 +35,7 @@ class CatholicChurchSchema extends PlaceOfWorshipSchema
 {
     public static function factory()
     {
-        return new CatholicChurchSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new CatholicChurchSchema('http://schema.org/', 'CatholicChurch');
     }
 
 

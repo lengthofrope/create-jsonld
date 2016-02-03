@@ -35,12 +35,7 @@ class HousePainterSchema extends HomeAndConstructionBusinessSchema
 {
     public static function factory()
     {
-        return new HousePainterSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new HousePainterSchema('http://schema.org/', 'HousePainter');
     }
 
 

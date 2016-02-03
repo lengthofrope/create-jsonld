@@ -35,12 +35,7 @@ class TravelAgencySchema extends LocalBusinessSchema
 {
     public static function factory()
     {
-        return new TravelAgencySchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new TravelAgencySchema('http://schema.org/', 'TravelAgency');
     }
 
 

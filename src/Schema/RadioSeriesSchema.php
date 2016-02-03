@@ -35,250 +35,259 @@ class RadioSeriesSchema extends CreativeWorkSeriesSchema
 {
     public static function factory()
     {
-        return new RadioSeriesSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new RadioSeriesSchema('http://schema.org/', 'RadioSeries');
     }
 
     /**
      * An actor, e.g. in tv, radio, movie, video games etc. Actors can be associated with individual items or with a series, episode, clip.
+     *
+     * @param $actor PersonSchema
      **/
-    private $actor;
     public function setActor($actor) {
-        $this->actor = $actor;
+        $this->properties['actor'] = $actor;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema     
+     * @return PersonSchema
      **/
     public function getActor() {
-        return $this->actor;
+        return $this->properties['actor'];
     }
 
     /**
      * An actor, e.g. in tv, radio, movie, video games etc. Actors can be associated with individual items or with a series, episode, clip.
+     *
+     * @param $actors PersonSchema
      **/
-    private $actors;
     public function setActors($actors) {
-        $this->actors = $actors;
+        $this->properties['actors'] = $actors;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema     
+     * @return PersonSchema
      **/
     public function getActors() {
-        return $this->actors;
+        return $this->properties['actors'];
     }
 
     /**
      * A season that is part of the media series.
+     *
+     * @param $containsSeason CreativeWorkSeasonSchema
      **/
-    private $containsSeason;
     public function setContainsSeason($containsSeason) {
-        $this->containsSeason = $containsSeason;
+        $this->properties['containsSeason'] = $containsSeason;
 
         return $this;
     }
 
     /**
-     * @return CreativeWorkSeasonSchema     
+     * @return CreativeWorkSeasonSchema
      **/
     public function getContainsSeason() {
-        return $this->containsSeason;
+        return $this->properties['containsSeason'];
     }
 
     /**
      * A director of e.g. tv, radio, movie, video games etc. content. Directors can be associated with individual items or with a series, episode, clip.
+     *
+     * @param $director PersonSchema
      **/
-    private $director;
     public function setDirector($director) {
-        $this->director = $director;
+        $this->properties['director'] = $director;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema     
+     * @return PersonSchema
      **/
     public function getDirector() {
-        return $this->director;
+        return $this->properties['director'];
     }
 
     /**
      * A director of e.g. tv, radio, movie, video games etc. content. Directors can be associated with individual items or with a series, episode, clip.
+     *
+     * @param $directors PersonSchema
      **/
-    private $directors;
     public function setDirectors($directors) {
-        $this->directors = $directors;
+        $this->properties['directors'] = $directors;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema     
+     * @return PersonSchema
      **/
     public function getDirectors() {
-        return $this->directors;
+        return $this->properties['directors'];
     }
 
     /**
      * An episode of a tv, radio or game media within a series or season.
+     *
+     * @param $episode EpisodeSchema
      **/
-    private $episode;
     public function setEpisode($episode) {
-        $this->episode = $episode;
+        $this->properties['episode'] = $episode;
 
         return $this;
     }
 
     /**
-     * @return EpisodeSchema     
+     * @return EpisodeSchema
      **/
     public function getEpisode() {
-        return $this->episode;
+        return $this->properties['episode'];
     }
 
     /**
      * An episode of a TV/radio series or season.
+     *
+     * @param $episodes EpisodeSchema
      **/
-    private $episodes;
     public function setEpisodes($episodes) {
-        $this->episodes = $episodes;
+        $this->properties['episodes'] = $episodes;
 
         return $this;
     }
 
     /**
-     * @return EpisodeSchema     
+     * @return EpisodeSchema
      **/
     public function getEpisodes() {
-        return $this->episodes;
+        return $this->properties['episodes'];
     }
 
     /**
      * The composer of the soundtrack.
+     *
+     * @param $musicBy MusicGroupSchema|PersonSchema
      **/
-    private $musicBy;
     public function setMusicBy($musicBy) {
-        $this->musicBy = $musicBy;
+        $this->properties['musicBy'] = $musicBy;
 
         return $this;
     }
 
     /**
-     * @return MusicGroupSchema|PersonSchema     
+     * @return MusicGroupSchema|PersonSchema
      **/
     public function getMusicBy() {
-        return $this->musicBy;
+        return $this->properties['musicBy'];
     }
 
     /**
      * The number of episodes in this season or series.
+     *
+     * @param $numberOfEpisodes IntegerSchema
      **/
-    private $numberOfEpisodes;
     public function setNumberOfEpisodes($numberOfEpisodes) {
-        $this->numberOfEpisodes = $numberOfEpisodes;
+        $this->properties['numberOfEpisodes'] = $numberOfEpisodes;
 
         return $this;
     }
 
     /**
-     * @return IntegerSchema     
+     * @return IntegerSchema
      **/
     public function getNumberOfEpisodes() {
-        return $this->numberOfEpisodes;
+        return $this->properties['numberOfEpisodes'];
     }
 
     /**
      * The number of seasons in this series.
+     *
+     * @param $numberOfSeasons IntegerSchema
      **/
-    private $numberOfSeasons;
     public function setNumberOfSeasons($numberOfSeasons) {
-        $this->numberOfSeasons = $numberOfSeasons;
+        $this->properties['numberOfSeasons'] = $numberOfSeasons;
 
         return $this;
     }
 
     /**
-     * @return IntegerSchema     
+     * @return IntegerSchema
      **/
     public function getNumberOfSeasons() {
-        return $this->numberOfSeasons;
+        return $this->properties['numberOfSeasons'];
     }
 
     /**
      * The production company or studio responsible for the item e.g. series, video game, episode etc.
+     *
+     * @param $productionCompany OrganizationSchema
      **/
-    private $productionCompany;
     public function setProductionCompany($productionCompany) {
-        $this->productionCompany = $productionCompany;
+        $this->properties['productionCompany'] = $productionCompany;
 
         return $this;
     }
 
     /**
-     * @return OrganizationSchema     
+     * @return OrganizationSchema
      **/
     public function getProductionCompany() {
-        return $this->productionCompany;
+        return $this->properties['productionCompany'];
     }
 
     /**
      * A season in a media series.
+     *
+     * @param $season CreativeWorkSeasonSchema
      **/
-    private $season;
     public function setSeason($season) {
-        $this->season = $season;
+        $this->properties['season'] = $season;
 
         return $this;
     }
 
     /**
-     * @return CreativeWorkSeasonSchema     
+     * @return CreativeWorkSeasonSchema
      **/
     public function getSeason() {
-        return $this->season;
+        return $this->properties['season'];
     }
 
     /**
      * A season in a media series.
+     *
+     * @param $seasons CreativeWorkSeasonSchema
      **/
-    private $seasons;
     public function setSeasons($seasons) {
-        $this->seasons = $seasons;
+        $this->properties['seasons'] = $seasons;
 
         return $this;
     }
 
     /**
-     * @return CreativeWorkSeasonSchema     
+     * @return CreativeWorkSeasonSchema
      **/
     public function getSeasons() {
-        return $this->seasons;
+        return $this->properties['seasons'];
     }
 
     /**
      * The trailer of a movie or tv/radio series, season, episode, etc.
+     *
+     * @param $trailer VideoObjectSchema
      **/
-    private $trailer;
     public function setTrailer($trailer) {
-        $this->trailer = $trailer;
+        $this->properties['trailer'] = $trailer;
 
         return $this;
     }
 
     /**
-     * @return VideoObjectSchema     
+     * @return VideoObjectSchema
      **/
     public function getTrailer() {
-        return $this->trailer;
+        return $this->properties['trailer'];
     }
 
 

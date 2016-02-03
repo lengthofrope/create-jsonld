@@ -35,12 +35,7 @@ class SkiResortSchema extends SportsActivityLocationSchema
 {
     public static function factory()
     {
-        return new SkiResortSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new SkiResortSchema('http://schema.org/', 'SkiResort');
     }
 
 

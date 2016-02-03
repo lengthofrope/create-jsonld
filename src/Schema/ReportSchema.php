@@ -35,29 +35,25 @@ class ReportSchema extends ArticleSchema
 {
     public static function factory()
     {
-        return new ReportSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ReportSchema('http://schema.org/', 'Report');
     }
 
     /**
      * The number or other unique designator assigned to a Report by the publishing organization.
+     *
+     * @param $reportNumber TextSchema
      **/
-    private $reportNumber;
     public function setReportNumber($reportNumber) {
-        $this->reportNumber = $reportNumber;
+        $this->properties['reportNumber'] = $reportNumber;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getReportNumber() {
-        return $this->reportNumber;
+        return $this->properties['reportNumber'];
     }
 
 

@@ -35,114 +35,115 @@ class MusicReleaseSchema extends MusicPlaylistSchema
 {
     public static function factory()
     {
-        return new MusicReleaseSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MusicReleaseSchema('http://schema.org/', 'MusicRelease');
     }
 
     /**
      * The catalog number for the release.
+     *
+     * @param $catalogNumber TextSchema
      **/
-    private $catalogNumber;
     public function setCatalogNumber($catalogNumber) {
-        $this->catalogNumber = $catalogNumber;
+        $this->properties['catalogNumber'] = $catalogNumber;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getCatalogNumber() {
-        return $this->catalogNumber;
+        return $this->properties['catalogNumber'];
     }
 
     /**
      * The group the release is credited to if different than the byArtist. For example, Red and Blue is credited to "Stefani Germanotta Band", but by Lady Gaga.
+     *
+     * @param $creditedTo PersonSchema|OrganizationSchema
      **/
-    private $creditedTo;
     public function setCreditedTo($creditedTo) {
-        $this->creditedTo = $creditedTo;
+        $this->properties['creditedTo'] = $creditedTo;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema|OrganizationSchema     
+     * @return PersonSchema|OrganizationSchema
      **/
     public function getCreditedTo() {
-        return $this->creditedTo;
+        return $this->properties['creditedTo'];
     }
 
     /**
      * The duration of the item (movie, audio recording, event, etc.) in <a href='http://en.wikipedia.org/wiki/ISO_8601'>ISO 8601 date format</a>.
+     *
+     * @param $duration DurationSchema
      **/
-    private $duration;
     public function setDuration($duration) {
-        $this->duration = $duration;
+        $this->properties['duration'] = $duration;
 
         return $this;
     }
 
     /**
-     * @return DurationSchema     
+     * @return DurationSchema
      **/
     public function getDuration() {
-        return $this->duration;
+        return $this->properties['duration'];
     }
 
     /**
      * Format of this release (the type of recording media used, ie. compact disc, digital media, LP, etc.).
+     *
+     * @param $musicReleaseFormat MusicReleaseFormatTypeSchema
      **/
-    private $musicReleaseFormat;
     public function setMusicReleaseFormat($musicReleaseFormat) {
-        $this->musicReleaseFormat = $musicReleaseFormat;
+        $this->properties['musicReleaseFormat'] = $musicReleaseFormat;
 
         return $this;
     }
 
     /**
-     * @return MusicReleaseFormatTypeSchema     
+     * @return MusicReleaseFormatTypeSchema
      **/
     public function getMusicReleaseFormat() {
-        return $this->musicReleaseFormat;
+        return $this->properties['musicReleaseFormat'];
     }
 
     /**
      * The label that issued the release.
+     *
+     * @param $recordLabel OrganizationSchema
      **/
-    private $recordLabel;
     public function setRecordLabel($recordLabel) {
-        $this->recordLabel = $recordLabel;
+        $this->properties['recordLabel'] = $recordLabel;
 
         return $this;
     }
 
     /**
-     * @return OrganizationSchema     
+     * @return OrganizationSchema
      **/
     public function getRecordLabel() {
-        return $this->recordLabel;
+        return $this->properties['recordLabel'];
     }
 
     /**
      * The album this is a release of.
+     *
+     * @param $releaseOf MusicAlbumSchema
      **/
-    private $releaseOf;
     public function setReleaseOf($releaseOf) {
-        $this->releaseOf = $releaseOf;
+        $this->properties['releaseOf'] = $releaseOf;
 
         return $this;
     }
 
     /**
-     * @return MusicAlbumSchema     
+     * @return MusicAlbumSchema
      **/
     public function getReleaseOf() {
-        return $this->releaseOf;
+        return $this->properties['releaseOf'];
     }
 
 

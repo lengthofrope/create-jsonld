@@ -35,12 +35,7 @@ class TelevisionStationSchema extends LocalBusinessSchema
 {
     public static function factory()
     {
-        return new TelevisionStationSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new TelevisionStationSchema('http://schema.org/', 'TelevisionStation');
     }
 
 

@@ -35,29 +35,25 @@ class MedicalScholarlyArticleSchema extends ScholarlyArticleSchema
 {
     public static function factory()
     {
-        return new MedicalScholarlyArticleSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MedicalScholarlyArticleSchema('http://schema.org/', 'MedicalScholarlyArticle');
     }
 
     /**
      * The type of the medical article, taken from the US NLM MeSH <a href=http://www.nlm.nih.gov/mesh/pubtypes.html>publication type catalog.
+     *
+     * @param $publicationType TextSchema
      **/
-    private $publicationType;
     public function setPublicationType($publicationType) {
-        $this->publicationType = $publicationType;
+        $this->properties['publicationType'] = $publicationType;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getPublicationType() {
-        return $this->publicationType;
+        return $this->properties['publicationType'];
     }
 
 

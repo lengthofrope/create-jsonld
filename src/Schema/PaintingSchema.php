@@ -35,12 +35,7 @@ class PaintingSchema extends CreativeWorkSchema
 {
     public static function factory()
     {
-        return new PaintingSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new PaintingSchema('http://schema.org/', 'Painting');
     }
 
 

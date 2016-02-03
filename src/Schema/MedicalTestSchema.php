@@ -35,97 +35,97 @@ class MedicalTestSchema extends MedicalEntitySchema
 {
     public static function factory()
     {
-        return new MedicalTestSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MedicalTestSchema('http://schema.org/', 'MedicalTest');
     }
 
     /**
      * Drugs that affect the test's results.
+     *
+     * @param $affectedBy DrugSchema
      **/
-    private $affectedBy;
     public function setAffectedBy($affectedBy) {
-        $this->affectedBy = $affectedBy;
+        $this->properties['affectedBy'] = $affectedBy;
 
         return $this;
     }
 
     /**
-     * @return DrugSchema     
+     * @return DrugSchema
      **/
     public function getAffectedBy() {
-        return $this->affectedBy;
+        return $this->properties['affectedBy'];
     }
 
     /**
      * Range of acceptable values for a typical patient, when applicable.
+     *
+     * @param $normalRange TextSchema
      **/
-    private $normalRange;
     public function setNormalRange($normalRange) {
-        $this->normalRange = $normalRange;
+        $this->properties['normalRange'] = $normalRange;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getNormalRange() {
-        return $this->normalRange;
+        return $this->properties['normalRange'];
     }
 
     /**
      * A sign detected by the test.
+     *
+     * @param $signDetected MedicalSignSchema
      **/
-    private $signDetected;
     public function setSignDetected($signDetected) {
-        $this->signDetected = $signDetected;
+        $this->properties['signDetected'] = $signDetected;
 
         return $this;
     }
 
     /**
-     * @return MedicalSignSchema     
+     * @return MedicalSignSchema
      **/
     public function getSignDetected() {
-        return $this->signDetected;
+        return $this->properties['signDetected'];
     }
 
     /**
      * A condition the test is used to diagnose.
+     *
+     * @param $usedToDiagnose MedicalConditionSchema
      **/
-    private $usedToDiagnose;
     public function setUsedToDiagnose($usedToDiagnose) {
-        $this->usedToDiagnose = $usedToDiagnose;
+        $this->properties['usedToDiagnose'] = $usedToDiagnose;
 
         return $this;
     }
 
     /**
-     * @return MedicalConditionSchema     
+     * @return MedicalConditionSchema
      **/
     public function getUsedToDiagnose() {
-        return $this->usedToDiagnose;
+        return $this->properties['usedToDiagnose'];
     }
 
     /**
      * Device used to perform the test.
+     *
+     * @param $usesDevice MedicalDeviceSchema
      **/
-    private $usesDevice;
     public function setUsesDevice($usesDevice) {
-        $this->usesDevice = $usesDevice;
+        $this->properties['usesDevice'] = $usesDevice;
 
         return $this;
     }
 
     /**
-     * @return MedicalDeviceSchema     
+     * @return MedicalDeviceSchema
      **/
     public function getUsesDevice() {
-        return $this->usesDevice;
+        return $this->properties['usesDevice'];
     }
 
 

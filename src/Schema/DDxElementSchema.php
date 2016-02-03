@@ -35,46 +35,43 @@ class DDxElementSchema extends MedicalIntangibleSchema
 {
     public static function factory()
     {
-        return new DDxElementSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new DDxElementSchema('http://schema.org/', 'DDxElement');
     }
 
     /**
      * One or more alternative conditions considered in the differential diagnosis process.
+     *
+     * @param $diagnosis MedicalConditionSchema
      **/
-    private $diagnosis;
     public function setDiagnosis($diagnosis) {
-        $this->diagnosis = $diagnosis;
+        $this->properties['diagnosis'] = $diagnosis;
 
         return $this;
     }
 
     /**
-     * @return MedicalConditionSchema     
+     * @return MedicalConditionSchema
      **/
     public function getDiagnosis() {
-        return $this->diagnosis;
+        return $this->properties['diagnosis'];
     }
 
     /**
      * One of a set of signs and symptoms that can be used to distinguish this diagnosis from others in the differential diagnosis.
+     *
+     * @param $distinguishingSign MedicalSignOrSymptomSchema
      **/
-    private $distinguishingSign;
     public function setDistinguishingSign($distinguishingSign) {
-        $this->distinguishingSign = $distinguishingSign;
+        $this->properties['distinguishingSign'] = $distinguishingSign;
 
         return $this;
     }
 
     /**
-     * @return MedicalSignOrSymptomSchema     
+     * @return MedicalSignOrSymptomSchema
      **/
     public function getDistinguishingSign() {
-        return $this->distinguishingSign;
+        return $this->properties['distinguishingSign'];
     }
 
 

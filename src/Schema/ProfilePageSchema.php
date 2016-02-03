@@ -35,12 +35,7 @@ class ProfilePageSchema extends WebPageSchema
 {
     public static function factory()
     {
-        return new ProfilePageSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ProfilePageSchema('http://schema.org/', 'ProfilePage');
     }
 
 

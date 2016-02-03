@@ -35,12 +35,7 @@ class ItemListSchema extends IntangibleSchema
 {
     public static function factory()
     {
-        return new ItemListSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ItemListSchema('http://schema.org/', 'ItemList');
     }
 
     /**
@@ -49,53 +44,56 @@ class ItemListSchema extends IntangibleSchema
     Text values are best if the elements in the list are plain strings. Existing entities are best for a simple, unordered list of existing things in your data. ListItem is used with ordered lists when you want to provide additional context about the element in that list or when the same item might be in different places in different lists.
     <br/><br/>
     Note: The order of elements in your mark-up is not sufficient for indicating the order or elements.  Use ListItem with a 'position' property in such cases.
+     *
+     * @param $itemListElement TextSchema|ListItemSchema|ThingSchema
      **/
-    private $itemListElement;
     public function setItemListElement($itemListElement) {
-        $this->itemListElement = $itemListElement;
+        $this->properties['itemListElement'] = $itemListElement;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|ListItemSchema|ThingSchema     
+     * @return TextSchema|ListItemSchema|ThingSchema
      **/
     public function getItemListElement() {
-        return $this->itemListElement;
+        return $this->properties['itemListElement'];
     }
 
     /**
      * Type of ordering (e.g. Ascending, Descending, Unordered).
+     *
+     * @param $itemListOrder ItemListOrderTypeSchema|TextSchema
      **/
-    private $itemListOrder;
     public function setItemListOrder($itemListOrder) {
-        $this->itemListOrder = $itemListOrder;
+        $this->properties['itemListOrder'] = $itemListOrder;
 
         return $this;
     }
 
     /**
-     * @return ItemListOrderTypeSchema|TextSchema     
+     * @return ItemListOrderTypeSchema|TextSchema
      **/
     public function getItemListOrder() {
-        return $this->itemListOrder;
+        return $this->properties['itemListOrder'];
     }
 
     /**
      * The number of items in an ItemList. Note that some descriptions might not fully describe all items in a list (e.g., multi-page pagination); in such cases, the numberOfItems would be for the entire list.
+     *
+     * @param $numberOfItems IntegerSchema
      **/
-    private $numberOfItems;
     public function setNumberOfItems($numberOfItems) {
-        $this->numberOfItems = $numberOfItems;
+        $this->properties['numberOfItems'] = $numberOfItems;
 
         return $this;
     }
 
     /**
-     * @return IntegerSchema     
+     * @return IntegerSchema
      **/
     public function getNumberOfItems() {
-        return $this->numberOfItems;
+        return $this->properties['numberOfItems'];
     }
 
 

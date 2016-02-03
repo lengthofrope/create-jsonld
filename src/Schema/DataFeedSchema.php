@@ -35,29 +35,25 @@ class DataFeedSchema extends DatasetSchema
 {
     public static function factory()
     {
-        return new DataFeedSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new DataFeedSchema('http://schema.org/', 'DataFeed');
     }
 
     /**
      * An item within in a data feed. Data feeds may have many elements.
+     *
+     * @param $dataFeedElement TextSchema|ThingSchema|DataFeedItemSchema
      **/
-    private $dataFeedElement;
     public function setDataFeedElement($dataFeedElement) {
-        $this->dataFeedElement = $dataFeedElement;
+        $this->properties['dataFeedElement'] = $dataFeedElement;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|ThingSchema|DataFeedItemSchema     
+     * @return TextSchema|ThingSchema|DataFeedItemSchema
      **/
     public function getDataFeedElement() {
-        return $this->dataFeedElement;
+        return $this->properties['dataFeedElement'];
     }
 
 

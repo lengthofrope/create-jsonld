@@ -35,12 +35,7 @@ class DislikeActionSchema extends ReactActionSchema
 {
     public static function factory()
     {
-        return new DislikeActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new DislikeActionSchema('http://schema.org/', 'DislikeAction');
     }
 
 

@@ -35,12 +35,7 @@ class SocialEventSchema extends EventSchema
 {
     public static function factory()
     {
-        return new SocialEventSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new SocialEventSchema('http://schema.org/', 'SocialEvent');
     }
 
 

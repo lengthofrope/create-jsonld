@@ -35,12 +35,7 @@ class TaxiSchema extends ServiceSchema
 {
     public static function factory()
     {
-        return new TaxiSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new TaxiSchema('http://schema.org/', 'Taxi');
     }
 
 

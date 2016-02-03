@@ -35,80 +35,79 @@ class PropertySchema extends IntangibleSchema
 {
     public static function factory()
     {
-        return new PropertySchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new PropertySchema('http://schema.org/', 'Property');
     }
 
     /**
      * Relates a property to a class that is (one of) the type(s) the property is expected to be used on.
+     *
+     * @param $domainIncludes ClassSchema
      **/
-    private $domainIncludes;
     public function setDomainIncludes($domainIncludes) {
-        $this->domainIncludes = $domainIncludes;
+        $this->properties['domainIncludes'] = $domainIncludes;
 
         return $this;
     }
 
     /**
-     * @return ClassSchema     
+     * @return ClassSchema
      **/
     public function getDomainIncludes() {
-        return $this->domainIncludes;
+        return $this->properties['domainIncludes'];
     }
 
     /**
      * Relates a property to a property that is its inverse. Inverse properties relate the same pairs of items to each other, but in reversed direction. For example, the 'alumni' and 'alumniOf' properties are inverseOf each other. Some properties don't have explicit inverses; in these situations RDFa and JSON-LD syntax for reverse properties can be used.
+     *
+     * @param $inverseOf PropertySchema
      **/
-    private $inverseOf;
     public function setInverseOf($inverseOf) {
-        $this->inverseOf = $inverseOf;
+        $this->properties['inverseOf'] = $inverseOf;
 
         return $this;
     }
 
     /**
-     * @return PropertySchema     
+     * @return PropertySchema
      **/
     public function getInverseOf() {
-        return $this->inverseOf;
+        return $this->properties['inverseOf'];
     }
 
     /**
      * Relates a property to a class that constitutes (one of) the expected type(s) for values of the property.
+     *
+     * @param $rangeIncludes ClassSchema
      **/
-    private $rangeIncludes;
     public function setRangeIncludes($rangeIncludes) {
-        $this->rangeIncludes = $rangeIncludes;
+        $this->properties['rangeIncludes'] = $rangeIncludes;
 
         return $this;
     }
 
     /**
-     * @return ClassSchema     
+     * @return ClassSchema
      **/
     public function getRangeIncludes() {
-        return $this->rangeIncludes;
+        return $this->properties['rangeIncludes'];
     }
 
     /**
      * Relates a term (i.e. a property, class or enumeration) to one that supersedes it.
+     *
+     * @param $supersededBy PropertySchema|ClassSchema|EnumerationSchema
      **/
-    private $supersededBy;
     public function setSupersededBy($supersededBy) {
-        $this->supersededBy = $supersededBy;
+        $this->properties['supersededBy'] = $supersededBy;
 
         return $this;
     }
 
     /**
-     * @return PropertySchema|ClassSchema|EnumerationSchema     
+     * @return PropertySchema|ClassSchema|EnumerationSchema
      **/
     public function getSupersededBy() {
-        return $this->supersededBy;
+        return $this->properties['supersededBy'];
     }
 
 

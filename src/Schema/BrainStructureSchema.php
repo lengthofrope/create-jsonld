@@ -35,12 +35,7 @@ class BrainStructureSchema extends AnatomicalStructureSchema
 {
     public static function factory()
     {
-        return new BrainStructureSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new BrainStructureSchema('http://schema.org/', 'BrainStructure');
     }
 
 

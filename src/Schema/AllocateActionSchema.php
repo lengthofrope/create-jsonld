@@ -35,29 +35,25 @@ class AllocateActionSchema extends OrganizeActionSchema
 {
     public static function factory()
     {
-        return new AllocateActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new AllocateActionSchema('http://schema.org/', 'AllocateAction');
     }
 
     /**
      * A goal towards an action is taken. Can be concrete or abstract.
+     *
+     * @param $purpose MedicalDevicePurposeSchema|ThingSchema
      **/
-    private $purpose;
     public function setPurpose($purpose) {
-        $this->purpose = $purpose;
+        $this->properties['purpose'] = $purpose;
 
         return $this;
     }
 
     /**
-     * @return MedicalDevicePurposeSchema|ThingSchema     
+     * @return MedicalDevicePurposeSchema|ThingSchema
      **/
     public function getPurpose() {
-        return $this->purpose;
+        return $this->properties['purpose'];
     }
 
 

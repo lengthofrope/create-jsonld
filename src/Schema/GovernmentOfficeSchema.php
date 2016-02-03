@@ -35,12 +35,7 @@ class GovernmentOfficeSchema extends LocalBusinessSchema
 {
     public static function factory()
     {
-        return new GovernmentOfficeSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new GovernmentOfficeSchema('http://schema.org/', 'GovernmentOffice');
     }
 
 

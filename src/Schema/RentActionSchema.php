@@ -35,46 +35,43 @@ class RentActionSchema extends TradeActionSchema
 {
     public static function factory()
     {
-        return new RentActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new RentActionSchema('http://schema.org/', 'RentAction');
     }
 
     /**
      * A sub property of participant. The owner of the real estate property.
+     *
+     * @param $landlord OrganizationSchema|PersonSchema
      **/
-    private $landlord;
     public function setLandlord($landlord) {
-        $this->landlord = $landlord;
+        $this->properties['landlord'] = $landlord;
 
         return $this;
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema     
+     * @return OrganizationSchema|PersonSchema
      **/
     public function getLandlord() {
-        return $this->landlord;
+        return $this->properties['landlord'];
     }
 
     /**
      * A sub property of participant. The real estate agent involved in the action.
+     *
+     * @param $realEstateAgent RealEstateAgentSchema
      **/
-    private $realEstateAgent;
     public function setRealEstateAgent($realEstateAgent) {
-        $this->realEstateAgent = $realEstateAgent;
+        $this->properties['realEstateAgent'] = $realEstateAgent;
 
         return $this;
     }
 
     /**
-     * @return RealEstateAgentSchema     
+     * @return RealEstateAgentSchema
      **/
     public function getRealEstateAgent() {
-        return $this->realEstateAgent;
+        return $this->properties['realEstateAgent'];
     }
 
 

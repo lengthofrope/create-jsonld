@@ -35,12 +35,7 @@ class DistanceSchema extends QuantitySchema
 {
     public static function factory()
     {
-        return new DistanceSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new DistanceSchema('http://schema.org/', 'Distance');
     }
 
 

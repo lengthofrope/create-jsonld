@@ -31,120 +31,121 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class LocalBusinessSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
+class LocalBusinessSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new LocalBusinessSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new LocalBusinessSchema('http://schema.org/', 'LocalBusiness');
     }
 
     /**
      * A short textual code (also called "store code") that uniquely identifies a place of business. The code is typically assigned by the parentOrganization and used in structured URLs.
 <br /><br /> For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047 the code "3047" is a branchCode for a particular branch.
       
+     *
+     * @param $branchCode TextSchema
      **/
-    private $branchCode;
     public function setBranchCode($branchCode) {
-        $this->branchCode = $branchCode;
+        $this->properties['branchCode'] = $branchCode;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getBranchCode() {
-        return $this->branchCode;
+        return $this->properties['branchCode'];
     }
 
     /**
      * The larger organization that this local business is a branch of, if any.
+     *
+     * @param $branchOf OrganizationSchema
      **/
-    private $branchOf;
     public function setBranchOf($branchOf) {
-        $this->branchOf = $branchOf;
+        $this->properties['branchOf'] = $branchOf;
 
         return $this;
     }
 
     /**
-     * @return OrganizationSchema     
+     * @return OrganizationSchema
      **/
     public function getBranchOf() {
-        return $this->branchOf;
+        return $this->properties['branchOf'];
     }
 
     /**
      * The currency accepted (in <a href='http://en.wikipedia.org/wiki/ISO_4217'>ISO 4217 currency format</a>).
+     *
+     * @param $currenciesAccepted TextSchema
      **/
-    private $currenciesAccepted;
     public function setCurrenciesAccepted($currenciesAccepted) {
-        $this->currenciesAccepted = $currenciesAccepted;
+        $this->properties['currenciesAccepted'] = $currenciesAccepted;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getCurrenciesAccepted() {
-        return $this->currenciesAccepted;
+        return $this->properties['currenciesAccepted'];
     }
 
     /**
      * The opening hours for a business. Opening hours can be specified as a weekly time range, starting with days, then times per day. Multiple days can be listed with commas ',' separating each day. Day or time ranges are specified using a hyphen '-'.<br />- Days are specified using the following two-letter combinations: <code>Mo</code>, <code>Tu</code>, <code>We</code>, <code>Th</code>, <code>Fr</code>, <code>Sa</code>, <code>Su</code>.<br />- Times are specified using 24:00 time. For example, 3pm is specified as <code>15:00</code>. <br />- Here is an example: <code>&lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Tu,Th 16:00-20:00&quot;&gt;Tuesdays and Thursdays 4-8pm&lt;/time&gt;</code>. <br />- If a business is open 7 days a week, then it can be specified as <code>&lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Mo-Su&quot;&gt;Monday through Sunday, all day&lt;/time&gt;</code>.
+     *
+     * @param $openingHours TextSchema
      **/
-    private $openingHours;
     public function setOpeningHours($openingHours) {
-        $this->openingHours = $openingHours;
+        $this->properties['openingHours'] = $openingHours;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getOpeningHours() {
-        return $this->openingHours;
+        return $this->properties['openingHours'];
     }
 
     /**
      * Cash, credit card, etc.
+     *
+     * @param $paymentAccepted TextSchema
      **/
-    private $paymentAccepted;
     public function setPaymentAccepted($paymentAccepted) {
-        $this->paymentAccepted = $paymentAccepted;
+        $this->properties['paymentAccepted'] = $paymentAccepted;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getPaymentAccepted() {
-        return $this->paymentAccepted;
+        return $this->properties['paymentAccepted'];
     }
 
     /**
      * The price range of the business, for example <code>$$$</code>.
+     *
+     * @param $priceRange TextSchema
      **/
-    private $priceRange;
     public function setPriceRange($priceRange) {
-        $this->priceRange = $priceRange;
+        $this->properties['priceRange'] = $priceRange;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getPriceRange() {
-        return $this->priceRange;
+        return $this->properties['priceRange'];
     }
 
 

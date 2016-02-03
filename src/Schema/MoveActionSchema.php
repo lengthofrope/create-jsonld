@@ -35,46 +35,43 @@ class MoveActionSchema extends ActionSchema
 {
     public static function factory()
     {
-        return new MoveActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MoveActionSchema('http://schema.org/', 'MoveAction');
     }
 
     /**
      * A sub property of location. The original location of the object or the agent before the action.
+     *
+     * @param $fromLocation PlaceSchema
      **/
-    private $fromLocation;
     public function setFromLocation($fromLocation) {
-        $this->fromLocation = $fromLocation;
+        $this->properties['fromLocation'] = $fromLocation;
 
         return $this;
     }
 
     /**
-     * @return PlaceSchema     
+     * @return PlaceSchema
      **/
     public function getFromLocation() {
-        return $this->fromLocation;
+        return $this->properties['fromLocation'];
     }
 
     /**
      * A sub property of location. The final location of the object or the agent after the action.
+     *
+     * @param $toLocation PlaceSchema
      **/
-    private $toLocation;
     public function setToLocation($toLocation) {
-        $this->toLocation = $toLocation;
+        $this->properties['toLocation'] = $toLocation;
 
         return $this;
     }
 
     /**
-     * @return PlaceSchema     
+     * @return PlaceSchema
      **/
     public function getToLocation() {
-        return $this->toLocation;
+        return $this->properties['toLocation'];
     }
 
 

@@ -35,46 +35,43 @@ class BlogSchema extends CreativeWorkSchema
 {
     public static function factory()
     {
-        return new BlogSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new BlogSchema('http://schema.org/', 'Blog');
     }
 
     /**
      * A posting that is part of this blog.
+     *
+     * @param $blogPost BlogPostingSchema
      **/
-    private $blogPost;
     public function setBlogPost($blogPost) {
-        $this->blogPost = $blogPost;
+        $this->properties['blogPost'] = $blogPost;
 
         return $this;
     }
 
     /**
-     * @return BlogPostingSchema     
+     * @return BlogPostingSchema
      **/
     public function getBlogPost() {
-        return $this->blogPost;
+        return $this->properties['blogPost'];
     }
 
     /**
      * The postings that are part of this blog.
+     *
+     * @param $blogPosts BlogPostingSchema
      **/
-    private $blogPosts;
     public function setBlogPosts($blogPosts) {
-        $this->blogPosts = $blogPosts;
+        $this->properties['blogPosts'] = $blogPosts;
 
         return $this;
     }
 
     /**
-     * @return BlogPostingSchema     
+     * @return BlogPostingSchema
      **/
     public function getBlogPosts() {
-        return $this->blogPosts;
+        return $this->properties['blogPosts'];
     }
 
 

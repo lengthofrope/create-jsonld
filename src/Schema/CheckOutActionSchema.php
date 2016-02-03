@@ -35,12 +35,7 @@ class CheckOutActionSchema extends CommunicateActionSchema
 {
     public static function factory()
     {
-        return new CheckOutActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new CheckOutActionSchema('http://schema.org/', 'CheckOutAction');
     }
 
 

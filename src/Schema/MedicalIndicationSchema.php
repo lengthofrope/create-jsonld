@@ -35,12 +35,7 @@ class MedicalIndicationSchema extends MedicalEntitySchema
 {
     public static function factory()
     {
-        return new MedicalIndicationSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MedicalIndicationSchema('http://schema.org/', 'MedicalIndication');
     }
 
 

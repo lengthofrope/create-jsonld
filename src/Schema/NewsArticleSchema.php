@@ -35,97 +35,97 @@ class NewsArticleSchema extends ArticleSchema
 {
     public static function factory()
     {
-        return new NewsArticleSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new NewsArticleSchema('http://schema.org/', 'NewsArticle');
     }
 
     /**
      * The location where the NewsArticle was produced.
+     *
+     * @param $dateline TextSchema
      **/
-    private $dateline;
     public function setDateline($dateline) {
-        $this->dateline = $dateline;
+        $this->properties['dateline'] = $dateline;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getDateline() {
-        return $this->dateline;
+        return $this->properties['dateline'];
     }
 
     /**
      * The number of the column in which the NewsArticle appears in the print edition.
+     *
+     * @param $printColumn TextSchema
      **/
-    private $printColumn;
     public function setPrintColumn($printColumn) {
-        $this->printColumn = $printColumn;
+        $this->properties['printColumn'] = $printColumn;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getPrintColumn() {
-        return $this->printColumn;
+        return $this->properties['printColumn'];
     }
 
     /**
      * The edition of the print product in which the NewsArticle appears.
+     *
+     * @param $printEdition TextSchema
      **/
-    private $printEdition;
     public function setPrintEdition($printEdition) {
-        $this->printEdition = $printEdition;
+        $this->properties['printEdition'] = $printEdition;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getPrintEdition() {
-        return $this->printEdition;
+        return $this->properties['printEdition'];
     }
 
     /**
      * If this NewsArticle appears in print, this field indicates the name of the page on which the article is found. Please note that this field is intended for the exact page name (e.g. A5, B18).
+     *
+     * @param $printPage TextSchema
      **/
-    private $printPage;
     public function setPrintPage($printPage) {
-        $this->printPage = $printPage;
+        $this->properties['printPage'] = $printPage;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getPrintPage() {
-        return $this->printPage;
+        return $this->properties['printPage'];
     }
 
     /**
      * If this NewsArticle appears in print, this field indicates the print section in which the article appeared.
+     *
+     * @param $printSection TextSchema
      **/
-    private $printSection;
     public function setPrintSection($printSection) {
-        $this->printSection = $printSection;
+        $this->properties['printSection'] = $printSection;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getPrintSection() {
-        return $this->printSection;
+        return $this->properties['printSection'];
     }
 
 

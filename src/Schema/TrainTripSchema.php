@@ -35,165 +35,169 @@ class TrainTripSchema extends IntangibleSchema
 {
     public static function factory()
     {
-        return new TrainTripSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new TrainTripSchema('http://schema.org/', 'TrainTrip');
     }
 
     /**
      * The platform where the train arrives.
+     *
+     * @param $arrivalPlatform TextSchema
      **/
-    private $arrivalPlatform;
     public function setArrivalPlatform($arrivalPlatform) {
-        $this->arrivalPlatform = $arrivalPlatform;
+        $this->properties['arrivalPlatform'] = $arrivalPlatform;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getArrivalPlatform() {
-        return $this->arrivalPlatform;
+        return $this->properties['arrivalPlatform'];
     }
 
     /**
      * The station where the train trip ends.
+     *
+     * @param $arrivalStation TrainStationSchema
      **/
-    private $arrivalStation;
     public function setArrivalStation($arrivalStation) {
-        $this->arrivalStation = $arrivalStation;
+        $this->properties['arrivalStation'] = $arrivalStation;
 
         return $this;
     }
 
     /**
-     * @return TrainStationSchema     
+     * @return TrainStationSchema
      **/
     public function getArrivalStation() {
-        return $this->arrivalStation;
+        return $this->properties['arrivalStation'];
     }
 
     /**
      * The expected arrival time.
+     *
+     * @param $arrivalTime DateTimeSchema
      **/
-    private $arrivalTime;
     public function setArrivalTime($arrivalTime) {
-        $this->arrivalTime = $arrivalTime;
+        $this->properties['arrivalTime'] = $arrivalTime;
 
         return $this;
     }
 
     /**
-     * @return DateTimeSchema     
+     * @return DateTimeSchema
      **/
     public function getArrivalTime() {
-        return $this->arrivalTime;
+        return $this->properties['arrivalTime'];
     }
 
     /**
      * The platform from which the train departs.
+     *
+     * @param $departurePlatform TextSchema
      **/
-    private $departurePlatform;
     public function setDeparturePlatform($departurePlatform) {
-        $this->departurePlatform = $departurePlatform;
+        $this->properties['departurePlatform'] = $departurePlatform;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getDeparturePlatform() {
-        return $this->departurePlatform;
+        return $this->properties['departurePlatform'];
     }
 
     /**
      * The station from which the train departs.
+     *
+     * @param $departureStation TrainStationSchema
      **/
-    private $departureStation;
     public function setDepartureStation($departureStation) {
-        $this->departureStation = $departureStation;
+        $this->properties['departureStation'] = $departureStation;
 
         return $this;
     }
 
     /**
-     * @return TrainStationSchema     
+     * @return TrainStationSchema
      **/
     public function getDepartureStation() {
-        return $this->departureStation;
+        return $this->properties['departureStation'];
     }
 
     /**
      * The expected departure time.
+     *
+     * @param $departureTime DateTimeSchema
      **/
-    private $departureTime;
     public function setDepartureTime($departureTime) {
-        $this->departureTime = $departureTime;
+        $this->properties['departureTime'] = $departureTime;
 
         return $this;
     }
 
     /**
-     * @return DateTimeSchema     
+     * @return DateTimeSchema
      **/
     public function getDepartureTime() {
-        return $this->departureTime;
+        return $this->properties['departureTime'];
     }
 
     /**
      * The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.
+     *
+     * @param $provider PersonSchema|OrganizationSchema
      **/
-    private $provider;
     public function setProvider($provider) {
-        $this->provider = $provider;
+        $this->properties['provider'] = $provider;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema|OrganizationSchema     
+     * @return PersonSchema|OrganizationSchema
      **/
     public function getProvider() {
-        return $this->provider;
+        return $this->properties['provider'];
     }
 
     /**
      * The name of the train (e.g. The Orient Express).
+     *
+     * @param $trainName TextSchema
      **/
-    private $trainName;
     public function setTrainName($trainName) {
-        $this->trainName = $trainName;
+        $this->properties['trainName'] = $trainName;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getTrainName() {
-        return $this->trainName;
+        return $this->properties['trainName'];
     }
 
     /**
      * The unique identifier for the train.
+     *
+     * @param $trainNumber TextSchema
      **/
-    private $trainNumber;
     public function setTrainNumber($trainNumber) {
-        $this->trainNumber = $trainNumber;
+        $this->properties['trainNumber'] = $trainNumber;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getTrainNumber() {
-        return $this->trainNumber;
+        return $this->properties['trainNumber'];
     }
 
 

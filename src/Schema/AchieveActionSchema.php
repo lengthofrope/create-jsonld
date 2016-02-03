@@ -35,12 +35,7 @@ class AchieveActionSchema extends ActionSchema
 {
     public static function factory()
     {
-        return new AchieveActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new AchieveActionSchema('http://schema.org/', 'AchieveAction');
     }
 
 

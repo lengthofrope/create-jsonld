@@ -57,46 +57,43 @@ class CreativeWorkSeriesSchema extends CreativeWorkSchema
 {
     public static function factory()
     {
-        return new CreativeWorkSeriesSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new CreativeWorkSeriesSchema('http://schema.org/', 'CreativeWorkSeries');
     }
 
     /**
      * The end date and time of the item (in <a href='http://en.wikipedia.org/wiki/ISO_8601'>ISO 8601 date format</a>).
+     *
+     * @param $endDate DateSchema
      **/
-    private $endDate;
     public function setEndDate($endDate) {
-        $this->endDate = $endDate;
+        $this->properties['endDate'] = $endDate;
 
         return $this;
     }
 
     /**
-     * @return DateSchema     
+     * @return DateSchema
      **/
     public function getEndDate() {
-        return $this->endDate;
+        return $this->properties['endDate'];
     }
 
     /**
      * The start date and time of the item (in <a href='http://en.wikipedia.org/wiki/ISO_8601'>ISO 8601 date format</a>).
+     *
+     * @param $startDate DateSchema
      **/
-    private $startDate;
     public function setStartDate($startDate) {
-        $this->startDate = $startDate;
+        $this->properties['startDate'] = $startDate;
 
         return $this;
     }
 
     /**
-     * @return DateSchema     
+     * @return DateSchema
      **/
     public function getStartDate() {
-        return $this->startDate;
+        return $this->properties['startDate'];
     }
 
 

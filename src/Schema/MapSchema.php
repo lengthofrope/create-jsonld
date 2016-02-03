@@ -35,29 +35,25 @@ class MapSchema extends CreativeWorkSchema
 {
     public static function factory()
     {
-        return new MapSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MapSchema('http://schema.org/', 'Map');
     }
 
     /**
      * Indicates the kind of Map, from the MapCategoryType Enumeration.
+     *
+     * @param $mapType MapCategoryTypeSchema
      **/
-    private $mapType;
     public function setMapType($mapType) {
-        $this->mapType = $mapType;
+        $this->properties['mapType'] = $mapType;
 
         return $this;
     }
 
     /**
-     * @return MapCategoryTypeSchema     
+     * @return MapCategoryTypeSchema
      **/
     public function getMapType() {
-        return $this->mapType;
+        return $this->properties['mapType'];
     }
 
 

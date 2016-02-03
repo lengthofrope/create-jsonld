@@ -35,12 +35,7 @@ class MedicalContraindicationSchema extends MedicalEntitySchema
 {
     public static function factory()
     {
-        return new MedicalContraindicationSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MedicalContraindicationSchema('http://schema.org/', 'MedicalContraindication');
     }
 
 

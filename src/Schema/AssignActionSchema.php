@@ -35,12 +35,7 @@ class AssignActionSchema extends AllocateActionSchema
 {
     public static function factory()
     {
-        return new AssignActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new AssignActionSchema('http://schema.org/', 'AssignAction');
     }
 
 

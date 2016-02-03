@@ -35,284 +35,295 @@ class ServiceSchema extends IntangibleSchema
 {
     public static function factory()
     {
-        return new ServiceSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ServiceSchema('http://schema.org/', 'Service');
     }
 
     /**
      * The overall rating, based on a collection of reviews or ratings, of the item.
+     *
+     * @param $aggregateRating AggregateRatingSchema
      **/
-    private $aggregateRating;
     public function setAggregateRating($aggregateRating) {
-        $this->aggregateRating = $aggregateRating;
+        $this->properties['aggregateRating'] = $aggregateRating;
 
         return $this;
     }
 
     /**
-     * @return AggregateRatingSchema     
+     * @return AggregateRatingSchema
      **/
     public function getAggregateRating() {
-        return $this->aggregateRating;
+        return $this->properties['aggregateRating'];
     }
 
     /**
      * The geographic area where a service or offered item is provided.
+     *
+     * @param $areaServed PlaceSchema|AdministrativeAreaSchema|GeoShapeSchema|TextSchema
      **/
-    private $areaServed;
     public function setAreaServed($areaServed) {
-        $this->areaServed = $areaServed;
+        $this->properties['areaServed'] = $areaServed;
 
         return $this;
     }
 
     /**
-     * @return PlaceSchema|AdministrativeAreaSchema|GeoShapeSchema|TextSchema     
+     * @return PlaceSchema|AdministrativeAreaSchema|GeoShapeSchema|TextSchema
      **/
     public function getAreaServed() {
-        return $this->areaServed;
+        return $this->properties['areaServed'];
     }
 
     /**
      * A means of accessing the service (e.g. a phone bank, a web site, a location, etc.).
+     *
+     * @param $availableChannel ServiceChannelSchema
      **/
-    private $availableChannel;
     public function setAvailableChannel($availableChannel) {
-        $this->availableChannel = $availableChannel;
+        $this->properties['availableChannel'] = $availableChannel;
 
         return $this;
     }
 
     /**
-     * @return ServiceChannelSchema     
+     * @return ServiceChannelSchema
      **/
     public function getAvailableChannel() {
-        return $this->availableChannel;
+        return $this->properties['availableChannel'];
     }
 
     /**
      * An award won by or for this item.
+     *
+     * @param $award TextSchema
      **/
-    private $award;
     public function setAward($award) {
-        $this->award = $award;
+        $this->properties['award'] = $award;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getAward() {
-        return $this->award;
+        return $this->properties['award'];
     }
 
     /**
      * A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
+     *
+     * @param $category PhysicalActivityCategorySchema|TextSchema|ThingSchema
      **/
-    private $category;
     public function setCategory($category) {
-        $this->category = $category;
+        $this->properties['category'] = $category;
 
         return $this;
     }
 
     /**
-     * @return PhysicalActivityCategorySchema|TextSchema|ThingSchema     
+     * @return PhysicalActivityCategorySchema|TextSchema|ThingSchema
      **/
     public function getCategory() {
-        return $this->category;
+        return $this->properties['category'];
     }
 
     /**
      * Indicates an OfferCatalog listing for this Organization, Person, or Service.
+     *
+     * @param $hasOfferCatalog OfferCatalogSchema
      **/
-    private $hasOfferCatalog;
     public function setHasOfferCatalog($hasOfferCatalog) {
-        $this->hasOfferCatalog = $hasOfferCatalog;
+        $this->properties['hasOfferCatalog'] = $hasOfferCatalog;
 
         return $this;
     }
 
     /**
-     * @return OfferCatalogSchema     
+     * @return OfferCatalogSchema
      **/
     public function getHasOfferCatalog() {
-        return $this->hasOfferCatalog;
+        return $this->properties['hasOfferCatalog'];
     }
 
     /**
      * The hours during which this service or contact is available.
+     *
+     * @param $hoursAvailable OpeningHoursSpecificationSchema
      **/
-    private $hoursAvailable;
     public function setHoursAvailable($hoursAvailable) {
-        $this->hoursAvailable = $hoursAvailable;
+        $this->properties['hoursAvailable'] = $hoursAvailable;
 
         return $this;
     }
 
     /**
-     * @return OpeningHoursSpecificationSchema     
+     * @return OpeningHoursSpecificationSchema
      **/
     public function getHoursAvailable() {
-        return $this->hoursAvailable;
+        return $this->properties['hoursAvailable'];
     }
 
     /**
      * An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event.
+     *
+     * @param $offers OfferSchema
      **/
-    private $offers;
     public function setOffers($offers) {
-        $this->offers = $offers;
+        $this->properties['offers'] = $offers;
 
         return $this;
     }
 
     /**
-     * @return OfferSchema     
+     * @return OfferSchema
      **/
     public function getOffers() {
-        return $this->offers;
+        return $this->properties['offers'];
     }
 
     /**
      * The tangible thing generated by the service, e.g. a passport, permit, etc.
+     *
+     * @param $produces ThingSchema
      **/
-    private $produces;
     public function setProduces($produces) {
-        $this->produces = $produces;
+        $this->properties['produces'] = $produces;
 
         return $this;
     }
 
     /**
-     * @return ThingSchema     
+     * @return ThingSchema
      **/
     public function getProduces() {
-        return $this->produces;
+        return $this->properties['produces'];
     }
 
     /**
      * The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.
+     *
+     * @param $provider PersonSchema|OrganizationSchema
      **/
-    private $provider;
     public function setProvider($provider) {
-        $this->provider = $provider;
+        $this->properties['provider'] = $provider;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema|OrganizationSchema     
+     * @return PersonSchema|OrganizationSchema
      **/
     public function getProvider() {
-        return $this->provider;
+        return $this->properties['provider'];
     }
 
     /**
      * Indicates the mobility of a provided service (e.g. 'static', 'dynamic').
+     *
+     * @param $providerMobility TextSchema
      **/
-    private $providerMobility;
     public function setProviderMobility($providerMobility) {
-        $this->providerMobility = $providerMobility;
+        $this->properties['providerMobility'] = $providerMobility;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getProviderMobility() {
-        return $this->providerMobility;
+        return $this->properties['providerMobility'];
     }
 
     /**
      * A review of the item.
+     *
+     * @param $review ReviewSchema
      **/
-    private $review;
     public function setReview($review) {
-        $this->review = $review;
+        $this->properties['review'] = $review;
 
         return $this;
     }
 
     /**
-     * @return ReviewSchema     
+     * @return ReviewSchema
      **/
     public function getReview() {
-        return $this->review;
+        return $this->properties['review'];
     }
 
     /**
      * The geographic area where the service is provided.
+     *
+     * @param $serviceArea PlaceSchema|AdministrativeAreaSchema|GeoShapeSchema
      **/
-    private $serviceArea;
     public function setServiceArea($serviceArea) {
-        $this->serviceArea = $serviceArea;
+        $this->properties['serviceArea'] = $serviceArea;
 
         return $this;
     }
 
     /**
-     * @return PlaceSchema|AdministrativeAreaSchema|GeoShapeSchema     
+     * @return PlaceSchema|AdministrativeAreaSchema|GeoShapeSchema
      **/
     public function getServiceArea() {
-        return $this->serviceArea;
+        return $this->properties['serviceArea'];
     }
 
     /**
      * The audience eligible for this service.
+     *
+     * @param $serviceAudience AudienceSchema
      **/
-    private $serviceAudience;
     public function setServiceAudience($serviceAudience) {
-        $this->serviceAudience = $serviceAudience;
+        $this->properties['serviceAudience'] = $serviceAudience;
 
         return $this;
     }
 
     /**
-     * @return AudienceSchema     
+     * @return AudienceSchema
      **/
     public function getServiceAudience() {
-        return $this->serviceAudience;
+        return $this->properties['serviceAudience'];
     }
 
     /**
      * The tangible thing generated by the service, e.g. a passport, permit, etc.
+     *
+     * @param $serviceOutput ThingSchema
      **/
-    private $serviceOutput;
     public function setServiceOutput($serviceOutput) {
-        $this->serviceOutput = $serviceOutput;
+        $this->properties['serviceOutput'] = $serviceOutput;
 
         return $this;
     }
 
     /**
-     * @return ThingSchema     
+     * @return ThingSchema
      **/
     public function getServiceOutput() {
-        return $this->serviceOutput;
+        return $this->properties['serviceOutput'];
     }
 
     /**
      * The type of service being offered, e.g. veterans' benefits, emergency relief, etc.
+     *
+     * @param $serviceType TextSchema
      **/
-    private $serviceType;
     public function setServiceType($serviceType) {
-        $this->serviceType = $serviceType;
+        $this->properties['serviceType'] = $serviceType;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getServiceType() {
-        return $this->serviceType;
+        return $this->properties['serviceType'];
     }
 
 

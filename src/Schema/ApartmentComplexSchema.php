@@ -35,12 +35,7 @@ class ApartmentComplexSchema extends ResidenceSchema
 {
     public static function factory()
     {
-        return new ApartmentComplexSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ApartmentComplexSchema('http://schema.org/', 'ApartmentComplex');
     }
 
 

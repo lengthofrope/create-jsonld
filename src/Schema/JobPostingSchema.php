@@ -35,352 +35,367 @@ class JobPostingSchema extends IntangibleSchema
 {
     public static function factory()
     {
-        return new JobPostingSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new JobPostingSchema('http://schema.org/', 'JobPosting');
     }
 
     /**
      * The base salary of the job or of an employee in an EmployeeRole.
+     *
+     * @param $baseSalary NumberSchema|PriceSpecificationSchema
      **/
-    private $baseSalary;
     public function setBaseSalary($baseSalary) {
-        $this->baseSalary = $baseSalary;
+        $this->properties['baseSalary'] = $baseSalary;
 
         return $this;
     }
 
     /**
-     * @return NumberSchema|PriceSpecificationSchema     
+     * @return NumberSchema|PriceSpecificationSchema
      **/
     public function getBaseSalary() {
-        return $this->baseSalary;
+        return $this->properties['baseSalary'];
     }
 
     /**
      * Description of benefits associated with the job.
+     *
+     * @param $benefits TextSchema
      **/
-    private $benefits;
     public function setBenefits($benefits) {
-        $this->benefits = $benefits;
+        $this->properties['benefits'] = $benefits;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getBenefits() {
-        return $this->benefits;
+        return $this->properties['benefits'];
     }
 
     /**
      * Publication date for the job posting.
+     *
+     * @param $datePosted DateSchema
      **/
-    private $datePosted;
     public function setDatePosted($datePosted) {
-        $this->datePosted = $datePosted;
+        $this->properties['datePosted'] = $datePosted;
 
         return $this;
     }
 
     /**
-     * @return DateSchema     
+     * @return DateSchema
      **/
     public function getDatePosted() {
-        return $this->datePosted;
+        return $this->properties['datePosted'];
     }
 
     /**
      * Educational background needed for the position.
+     *
+     * @param $educationRequirements TextSchema
      **/
-    private $educationRequirements;
     public function setEducationRequirements($educationRequirements) {
-        $this->educationRequirements = $educationRequirements;
+        $this->properties['educationRequirements'] = $educationRequirements;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getEducationRequirements() {
-        return $this->educationRequirements;
+        return $this->properties['educationRequirements'];
     }
 
     /**
      * Type of employment (e.g. full-time, part-time, contract, temporary, seasonal, internship).
+     *
+     * @param $employmentType TextSchema
      **/
-    private $employmentType;
     public function setEmploymentType($employmentType) {
-        $this->employmentType = $employmentType;
+        $this->properties['employmentType'] = $employmentType;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getEmploymentType() {
-        return $this->employmentType;
+        return $this->properties['employmentType'];
     }
 
     /**
      * Description of skills and experience needed for the position.
+     *
+     * @param $experienceRequirements TextSchema
      **/
-    private $experienceRequirements;
     public function setExperienceRequirements($experienceRequirements) {
-        $this->experienceRequirements = $experienceRequirements;
+        $this->properties['experienceRequirements'] = $experienceRequirements;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getExperienceRequirements() {
-        return $this->experienceRequirements;
+        return $this->properties['experienceRequirements'];
     }
 
     /**
      * Organization offering the job position.
+     *
+     * @param $hiringOrganization OrganizationSchema
      **/
-    private $hiringOrganization;
     public function setHiringOrganization($hiringOrganization) {
-        $this->hiringOrganization = $hiringOrganization;
+        $this->properties['hiringOrganization'] = $hiringOrganization;
 
         return $this;
     }
 
     /**
-     * @return OrganizationSchema     
+     * @return OrganizationSchema
      **/
     public function getHiringOrganization() {
-        return $this->hiringOrganization;
+        return $this->properties['hiringOrganization'];
     }
 
     /**
      * Description of bonus and commission compensation aspects of the job.
+     *
+     * @param $incentiveCompensation TextSchema
      **/
-    private $incentiveCompensation;
     public function setIncentiveCompensation($incentiveCompensation) {
-        $this->incentiveCompensation = $incentiveCompensation;
+        $this->properties['incentiveCompensation'] = $incentiveCompensation;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getIncentiveCompensation() {
-        return $this->incentiveCompensation;
+        return $this->properties['incentiveCompensation'];
     }
 
     /**
      * Description of bonus and commission compensation aspects of the job.
+     *
+     * @param $incentives TextSchema
      **/
-    private $incentives;
     public function setIncentives($incentives) {
-        $this->incentives = $incentives;
+        $this->properties['incentives'] = $incentives;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getIncentives() {
-        return $this->incentives;
+        return $this->properties['incentives'];
     }
 
     /**
      * The industry associated with the job position.
+     *
+     * @param $industry TextSchema
      **/
-    private $industry;
     public function setIndustry($industry) {
-        $this->industry = $industry;
+        $this->properties['industry'] = $industry;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getIndustry() {
-        return $this->industry;
+        return $this->properties['industry'];
     }
 
     /**
      * Description of benefits associated with the job.
+     *
+     * @param $jobBenefits TextSchema
      **/
-    private $jobBenefits;
     public function setJobBenefits($jobBenefits) {
-        $this->jobBenefits = $jobBenefits;
+        $this->properties['jobBenefits'] = $jobBenefits;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getJobBenefits() {
-        return $this->jobBenefits;
+        return $this->properties['jobBenefits'];
     }
 
     /**
      * A (typically single) geographic location associated with the job position.
+     *
+     * @param $jobLocation PlaceSchema
      **/
-    private $jobLocation;
     public function setJobLocation($jobLocation) {
-        $this->jobLocation = $jobLocation;
+        $this->properties['jobLocation'] = $jobLocation;
 
         return $this;
     }
 
     /**
-     * @return PlaceSchema     
+     * @return PlaceSchema
      **/
     public function getJobLocation() {
-        return $this->jobLocation;
+        return $this->properties['jobLocation'];
     }
 
     /**
      * Category or categories describing the job. Use BLS O*NET-SOC taxonomy: http://www.onetcenter.org/taxonomy.html. Ideally includes textual label and formal code, with the property repeated for each applicable value.
+     *
+     * @param $occupationalCategory TextSchema
      **/
-    private $occupationalCategory;
     public function setOccupationalCategory($occupationalCategory) {
-        $this->occupationalCategory = $occupationalCategory;
+        $this->properties['occupationalCategory'] = $occupationalCategory;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getOccupationalCategory() {
-        return $this->occupationalCategory;
+        return $this->properties['occupationalCategory'];
     }
 
     /**
      * Specific qualifications required for this role.
+     *
+     * @param $qualifications TextSchema
      **/
-    private $qualifications;
     public function setQualifications($qualifications) {
-        $this->qualifications = $qualifications;
+        $this->properties['qualifications'] = $qualifications;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getQualifications() {
-        return $this->qualifications;
+        return $this->properties['qualifications'];
     }
 
     /**
      * Responsibilities associated with this role.
+     *
+     * @param $responsibilities TextSchema
      **/
-    private $responsibilities;
     public function setResponsibilities($responsibilities) {
-        $this->responsibilities = $responsibilities;
+        $this->properties['responsibilities'] = $responsibilities;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getResponsibilities() {
-        return $this->responsibilities;
+        return $this->properties['responsibilities'];
     }
 
     /**
      * The currency (coded using ISO 4217, http://en.wikipedia.org/wiki/ISO_4217 ) used for the main salary information in this job posting or for this employee.
+     *
+     * @param $salaryCurrency TextSchema
      **/
-    private $salaryCurrency;
     public function setSalaryCurrency($salaryCurrency) {
-        $this->salaryCurrency = $salaryCurrency;
+        $this->properties['salaryCurrency'] = $salaryCurrency;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getSalaryCurrency() {
-        return $this->salaryCurrency;
+        return $this->properties['salaryCurrency'];
     }
 
     /**
      * Skills required to fulfill this role.
+     *
+     * @param $skills TextSchema
      **/
-    private $skills;
     public function setSkills($skills) {
-        $this->skills = $skills;
+        $this->properties['skills'] = $skills;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getSkills() {
-        return $this->skills;
+        return $this->properties['skills'];
     }
 
     /**
      * Any special commitments associated with this job posting. Valid entries include VeteranCommit, MilitarySpouseCommit, etc.
+     *
+     * @param $specialCommitments TextSchema
      **/
-    private $specialCommitments;
     public function setSpecialCommitments($specialCommitments) {
-        $this->specialCommitments = $specialCommitments;
+        $this->properties['specialCommitments'] = $specialCommitments;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getSpecialCommitments() {
-        return $this->specialCommitments;
+        return $this->properties['specialCommitments'];
     }
 
     /**
      * The title of the job.
+     *
+     * @param $title TextSchema
      **/
-    private $title;
     public function setTitle($title) {
-        $this->title = $title;
+        $this->properties['title'] = $title;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getTitle() {
-        return $this->title;
+        return $this->properties['title'];
     }
 
     /**
      * The typical working hours for this job (e.g. 1st shift, night shift, 8am-5pm).
+     *
+     * @param $workHours TextSchema
      **/
-    private $workHours;
     public function setWorkHours($workHours) {
-        $this->workHours = $workHours;
+        $this->properties['workHours'] = $workHours;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getWorkHours() {
-        return $this->workHours;
+        return $this->properties['workHours'];
     }
 
 

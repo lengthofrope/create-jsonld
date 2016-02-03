@@ -35,63 +35,61 @@ class ReviewSchema extends CreativeWorkSchema
 {
     public static function factory()
     {
-        return new ReviewSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ReviewSchema('http://schema.org/', 'Review');
     }
 
     /**
      * The item that is being reviewed/rated.
+     *
+     * @param $itemReviewed ThingSchema
      **/
-    private $itemReviewed;
     public function setItemReviewed($itemReviewed) {
-        $this->itemReviewed = $itemReviewed;
+        $this->properties['itemReviewed'] = $itemReviewed;
 
         return $this;
     }
 
     /**
-     * @return ThingSchema     
+     * @return ThingSchema
      **/
     public function getItemReviewed() {
-        return $this->itemReviewed;
+        return $this->properties['itemReviewed'];
     }
 
     /**
      * The actual body of the review.
+     *
+     * @param $reviewBody TextSchema
      **/
-    private $reviewBody;
     public function setReviewBody($reviewBody) {
-        $this->reviewBody = $reviewBody;
+        $this->properties['reviewBody'] = $reviewBody;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getReviewBody() {
-        return $this->reviewBody;
+        return $this->properties['reviewBody'];
     }
 
     /**
      * The rating given in this review. Note that reviews can themselves be rated. The <code>reviewRating</code> applies to rating given by the review. The <code>aggregateRating</code> property applies to the review itself, as a creative work.
+     *
+     * @param $reviewRating RatingSchema
      **/
-    private $reviewRating;
     public function setReviewRating($reviewRating) {
-        $this->reviewRating = $reviewRating;
+        $this->properties['reviewRating'] = $reviewRating;
 
         return $this;
     }
 
     /**
-     * @return RatingSchema     
+     * @return RatingSchema
      **/
     public function getReviewRating() {
-        return $this->reviewRating;
+        return $this->properties['reviewRating'];
     }
 
 

@@ -35,131 +35,133 @@ class BroadcastServiceSchema extends ServiceSchema
 {
     public static function factory()
     {
-        return new BroadcastServiceSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new BroadcastServiceSchema('http://schema.org/', 'BroadcastService');
     }
 
     /**
      * The area within which users can expect to reach the broadcast service.
+     *
+     * @param $area PlaceSchema
      **/
-    private $area;
     public function setArea($area) {
-        $this->area = $area;
+        $this->properties['area'] = $area;
 
         return $this;
     }
 
     /**
-     * @return PlaceSchema     
+     * @return PlaceSchema
      **/
     public function getArea() {
-        return $this->area;
+        return $this->properties['area'];
     }
 
     /**
      * The media network(s) whose content is broadcast on this station.
+     *
+     * @param $broadcastAffiliateOf OrganizationSchema
      **/
-    private $broadcastAffiliateOf;
     public function setBroadcastAffiliateOf($broadcastAffiliateOf) {
-        $this->broadcastAffiliateOf = $broadcastAffiliateOf;
+        $this->properties['broadcastAffiliateOf'] = $broadcastAffiliateOf;
 
         return $this;
     }
 
     /**
-     * @return OrganizationSchema     
+     * @return OrganizationSchema
      **/
     public function getBroadcastAffiliateOf() {
-        return $this->broadcastAffiliateOf;
+        return $this->properties['broadcastAffiliateOf'];
     }
 
     /**
      * The name displayed in the channel guide. For many US affiliates, it is the network name.
+     *
+     * @param $broadcastDisplayName TextSchema
      **/
-    private $broadcastDisplayName;
     public function setBroadcastDisplayName($broadcastDisplayName) {
-        $this->broadcastDisplayName = $broadcastDisplayName;
+        $this->properties['broadcastDisplayName'] = $broadcastDisplayName;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getBroadcastDisplayName() {
-        return $this->broadcastDisplayName;
+        return $this->properties['broadcastDisplayName'];
     }
 
     /**
      * The timezone in <a href='http://en.wikipedia.org/wiki/ISO_8601'>ISO 8601 format</a> for which the service bases its broadcasts.
+     *
+     * @param $timezone TextSchema
      **/
-    private $timezone;
     public function setTimezone($timezone) {
-        $this->timezone = $timezone;
+        $this->properties['timezone'] = $timezone;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getTimezone() {
-        return $this->timezone;
+        return $this->properties['timezone'];
     }
 
     /**
      * The organization owning or operating the broadcast service.
+     *
+     * @param $broadcaster OrganizationSchema
      **/
-    private $broadcaster;
     public function setBroadcaster($broadcaster) {
-        $this->broadcaster = $broadcaster;
+        $this->properties['broadcaster'] = $broadcaster;
 
         return $this;
     }
 
     /**
-     * @return OrganizationSchema     
+     * @return OrganizationSchema
      **/
     public function getBroadcaster() {
-        return $this->broadcaster;
+        return $this->properties['broadcaster'];
     }
 
     /**
      * A broadcast service to which the broadcast service may belong to such as regional variations of a national channel.
+     *
+     * @param $parentService BroadcastServiceSchema
      **/
-    private $parentService;
     public function setParentService($parentService) {
-        $this->parentService = $parentService;
+        $this->properties['parentService'] = $parentService;
 
         return $this;
     }
 
     /**
-     * @return BroadcastServiceSchema     
+     * @return BroadcastServiceSchema
      **/
     public function getParentService() {
-        return $this->parentService;
+        return $this->properties['parentService'];
     }
 
     /**
      * The type of screening or video broadcast used (e.g. IMAX, 3D, SD, HD, etc.).
+     *
+     * @param $videoFormat TextSchema
      **/
-    private $videoFormat;
     public function setVideoFormat($videoFormat) {
-        $this->videoFormat = $videoFormat;
+        $this->properties['videoFormat'] = $videoFormat;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getVideoFormat() {
-        return $this->videoFormat;
+        return $this->properties['videoFormat'];
     }
 
 

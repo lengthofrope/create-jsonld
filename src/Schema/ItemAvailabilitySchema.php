@@ -35,12 +35,7 @@ class ItemAvailabilitySchema extends EnumerationSchema
 {
     public static function factory()
     {
-        return new ItemAvailabilitySchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ItemAvailabilitySchema('http://schema.org/', 'ItemAvailability');
     }
 
 

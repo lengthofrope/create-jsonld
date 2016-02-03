@@ -35,12 +35,7 @@ class SchoolSchema extends EducationalOrganizationSchema
 {
     public static function factory()
     {
-        return new SchoolSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new SchoolSchema('http://schema.org/', 'School');
     }
 
 

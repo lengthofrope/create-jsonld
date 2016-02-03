@@ -35,12 +35,7 @@ class MobilePhoneStoreSchema extends StoreSchema
 {
     public static function factory()
     {
-        return new MobilePhoneStoreSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MobilePhoneStoreSchema('http://schema.org/', 'MobilePhoneStore');
     }
 
 

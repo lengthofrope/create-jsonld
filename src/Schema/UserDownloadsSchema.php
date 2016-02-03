@@ -37,12 +37,7 @@ class UserDownloadsSchema extends UserInteractionSchema
 {
     public static function factory()
     {
-        return new UserDownloadsSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new UserDownloadsSchema('http://schema.org/', 'UserDownloads');
     }
 
 

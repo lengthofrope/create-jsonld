@@ -35,12 +35,7 @@ class StructuredValueSchema extends IntangibleSchema
 {
     public static function factory()
     {
-        return new StructuredValueSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new StructuredValueSchema('http://schema.org/', 'StructuredValue');
     }
 
 

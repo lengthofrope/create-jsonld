@@ -35,12 +35,7 @@ class NightClubSchema extends EntertainmentBusinessSchema
 {
     public static function factory()
     {
-        return new NightClubSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new NightClubSchema('http://schema.org/', 'NightClub');
     }
 
 

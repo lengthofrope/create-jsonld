@@ -35,12 +35,7 @@ class AppendActionSchema extends InsertActionSchema
 {
     public static function factory()
     {
-        return new AppendActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new AppendActionSchema('http://schema.org/', 'AppendAction');
     }
 
 

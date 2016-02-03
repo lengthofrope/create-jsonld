@@ -40,12 +40,7 @@ class AccountingServiceSchema extends FinancialServiceSchema
 {
     public static function factory()
     {
-        return new AccountingServiceSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new AccountingServiceSchema('http://schema.org/', 'AccountingService');
     }
 
 

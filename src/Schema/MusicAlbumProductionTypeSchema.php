@@ -35,12 +35,7 @@ class MusicAlbumProductionTypeSchema extends EnumerationSchema
 {
     public static function factory()
     {
-        return new MusicAlbumProductionTypeSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MusicAlbumProductionTypeSchema('http://schema.org/', 'MusicAlbumProductionType');
     }
 
 

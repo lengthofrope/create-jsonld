@@ -35,12 +35,7 @@ class BeautySalonSchema extends HealthAndBeautyBusinessSchema
 {
     public static function factory()
     {
-        return new BeautySalonSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new BeautySalonSchema('http://schema.org/', 'BeautySalon');
     }
 
 

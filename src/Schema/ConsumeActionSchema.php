@@ -35,29 +35,25 @@ class ConsumeActionSchema extends ActionSchema
 {
     public static function factory()
     {
-        return new ConsumeActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ConsumeActionSchema('http://schema.org/', 'ConsumeAction');
     }
 
     /**
      * An Offer which must be accepted before the user can perform the Action. For example, the user may need to buy a movie before being able to watch it.
+     *
+     * @param $expectsAcceptanceOf OfferSchema
      **/
-    private $expectsAcceptanceOf;
     public function setExpectsAcceptanceOf($expectsAcceptanceOf) {
-        $this->expectsAcceptanceOf = $expectsAcceptanceOf;
+        $this->properties['expectsAcceptanceOf'] = $expectsAcceptanceOf;
 
         return $this;
     }
 
     /**
-     * @return OfferSchema     
+     * @return OfferSchema
      **/
     public function getExpectsAcceptanceOf() {
-        return $this->expectsAcceptanceOf;
+        return $this->properties['expectsAcceptanceOf'];
     }
 
 

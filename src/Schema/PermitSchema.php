@@ -35,131 +35,133 @@ class PermitSchema extends IntangibleSchema
 {
     public static function factory()
     {
-        return new PermitSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new PermitSchema('http://schema.org/', 'Permit');
     }
 
     /**
      * The organization issuing the ticket or permit.
+     *
+     * @param $issuedBy OrganizationSchema
      **/
-    private $issuedBy;
     public function setIssuedBy($issuedBy) {
-        $this->issuedBy = $issuedBy;
+        $this->properties['issuedBy'] = $issuedBy;
 
         return $this;
     }
 
     /**
-     * @return OrganizationSchema     
+     * @return OrganizationSchema
      **/
     public function getIssuedBy() {
-        return $this->issuedBy;
+        return $this->properties['issuedBy'];
     }
 
     /**
      * The service through with the permit was granted.
+     *
+     * @param $issuedThrough ServiceSchema
      **/
-    private $issuedThrough;
     public function setIssuedThrough($issuedThrough) {
-        $this->issuedThrough = $issuedThrough;
+        $this->properties['issuedThrough'] = $issuedThrough;
 
         return $this;
     }
 
     /**
-     * @return ServiceSchema     
+     * @return ServiceSchema
      **/
     public function getIssuedThrough() {
-        return $this->issuedThrough;
+        return $this->properties['issuedThrough'];
     }
 
     /**
      * The target audience for this permit.
+     *
+     * @param $permitAudience AudienceSchema
      **/
-    private $permitAudience;
     public function setPermitAudience($permitAudience) {
-        $this->permitAudience = $permitAudience;
+        $this->properties['permitAudience'] = $permitAudience;
 
         return $this;
     }
 
     /**
-     * @return AudienceSchema     
+     * @return AudienceSchema
      **/
     public function getPermitAudience() {
-        return $this->permitAudience;
+        return $this->properties['permitAudience'];
     }
 
     /**
      * The time validity of the permit.
+     *
+     * @param $validFor DurationSchema
      **/
-    private $validFor;
     public function setValidFor($validFor) {
-        $this->validFor = $validFor;
+        $this->properties['validFor'] = $validFor;
 
         return $this;
     }
 
     /**
-     * @return DurationSchema     
+     * @return DurationSchema
      **/
     public function getValidFor() {
-        return $this->validFor;
+        return $this->properties['validFor'];
     }
 
     /**
      * The date when the item becomes valid.
+     *
+     * @param $validFrom DateTimeSchema
      **/
-    private $validFrom;
     public function setValidFrom($validFrom) {
-        $this->validFrom = $validFrom;
+        $this->properties['validFrom'] = $validFrom;
 
         return $this;
     }
 
     /**
-     * @return DateTimeSchema     
+     * @return DateTimeSchema
      **/
     public function getValidFrom() {
-        return $this->validFrom;
+        return $this->properties['validFrom'];
     }
 
     /**
      * The geographic area where the permit is valid.
+     *
+     * @param $validIn AdministrativeAreaSchema
      **/
-    private $validIn;
     public function setValidIn($validIn) {
-        $this->validIn = $validIn;
+        $this->properties['validIn'] = $validIn;
 
         return $this;
     }
 
     /**
-     * @return AdministrativeAreaSchema     
+     * @return AdministrativeAreaSchema
      **/
     public function getValidIn() {
-        return $this->validIn;
+        return $this->properties['validIn'];
     }
 
     /**
      * The date when the item is no longer valid.
+     *
+     * @param $validUntil DateSchema
      **/
-    private $validUntil;
     public function setValidUntil($validUntil) {
-        $this->validUntil = $validUntil;
+        $this->properties['validUntil'] = $validUntil;
 
         return $this;
     }
 
     /**
-     * @return DateSchema     
+     * @return DateSchema
      **/
     public function getValidUntil() {
-        return $this->validUntil;
+        return $this->properties['validUntil'];
     }
 
 

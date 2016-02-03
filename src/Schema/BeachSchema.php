@@ -35,12 +35,7 @@ class BeachSchema extends CivicStructureSchema
 {
     public static function factory()
     {
-        return new BeachSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new BeachSchema('http://schema.org/', 'Beach');
     }
 
 

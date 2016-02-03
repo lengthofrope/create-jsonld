@@ -35,12 +35,7 @@ class VolcanoSchema extends LandformSchema
 {
     public static function factory()
     {
-        return new VolcanoSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new VolcanoSchema('http://schema.org/', 'Volcano');
     }
 
 

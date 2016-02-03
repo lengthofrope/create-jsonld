@@ -35,12 +35,7 @@ class QuantitySchema extends IntangibleSchema
 {
     public static function factory()
     {
-        return new QuantitySchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new QuantitySchema('http://schema.org/', 'Quantity');
     }
 
 

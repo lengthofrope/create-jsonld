@@ -35,12 +35,7 @@ class InternetCafeSchema extends LocalBusinessSchema
 {
     public static function factory()
     {
-        return new InternetCafeSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new InternetCafeSchema('http://schema.org/', 'InternetCafe');
     }
 
 

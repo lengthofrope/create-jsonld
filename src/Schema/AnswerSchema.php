@@ -35,12 +35,7 @@ class AnswerSchema extends CommentSchema
 {
     public static function factory()
     {
-        return new AnswerSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new AnswerSchema('http://schema.org/', 'Answer');
     }
 
 

@@ -35,12 +35,7 @@ class AutomotiveBusinessSchema extends LocalBusinessSchema
 {
     public static function factory()
     {
-        return new AutomotiveBusinessSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new AutomotiveBusinessSchema('http://schema.org/', 'AutomotiveBusiness');
     }
 
 

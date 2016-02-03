@@ -35,12 +35,7 @@ class BoneSchema extends AnatomicalStructureSchema
 {
     public static function factory()
     {
-        return new BoneSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new BoneSchema('http://schema.org/', 'Bone');
     }
 
 

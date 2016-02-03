@@ -35,12 +35,7 @@ class GatedResidenceCommunitySchema extends ResidenceSchema
 {
     public static function factory()
     {
-        return new GatedResidenceCommunitySchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new GatedResidenceCommunitySchema('http://schema.org/', 'GatedResidenceCommunity');
     }
 
 

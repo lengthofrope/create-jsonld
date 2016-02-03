@@ -35,80 +35,79 @@ class DoseScheduleSchema extends MedicalIntangibleSchema
 {
     public static function factory()
     {
-        return new DoseScheduleSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new DoseScheduleSchema('http://schema.org/', 'DoseSchedule');
     }
 
     /**
      * The unit of the dose, e.g. 'mg'.
+     *
+     * @param $doseUnit TextSchema
      **/
-    private $doseUnit;
     public function setDoseUnit($doseUnit) {
-        $this->doseUnit = $doseUnit;
+        $this->properties['doseUnit'] = $doseUnit;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getDoseUnit() {
-        return $this->doseUnit;
+        return $this->properties['doseUnit'];
     }
 
     /**
      * The value of the dose, e.g. 500.
+     *
+     * @param $doseValue NumberSchema
      **/
-    private $doseValue;
     public function setDoseValue($doseValue) {
-        $this->doseValue = $doseValue;
+        $this->properties['doseValue'] = $doseValue;
 
         return $this;
     }
 
     /**
-     * @return NumberSchema     
+     * @return NumberSchema
      **/
     public function getDoseValue() {
-        return $this->doseValue;
+        return $this->properties['doseValue'];
     }
 
     /**
      * How often the dose is taken, e.g. 'daily'.
+     *
+     * @param $frequency TextSchema
      **/
-    private $frequency;
     public function setFrequency($frequency) {
-        $this->frequency = $frequency;
+        $this->properties['frequency'] = $frequency;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getFrequency() {
-        return $this->frequency;
+        return $this->properties['frequency'];
     }
 
     /**
      * Characteristics of the population for which this is intended, or which typically uses it, e.g. 'adults'.
+     *
+     * @param $targetPopulation TextSchema
      **/
-    private $targetPopulation;
     public function setTargetPopulation($targetPopulation) {
-        $this->targetPopulation = $targetPopulation;
+        $this->properties['targetPopulation'] = $targetPopulation;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getTargetPopulation() {
-        return $this->targetPopulation;
+        return $this->properties['targetPopulation'];
     }
 
 

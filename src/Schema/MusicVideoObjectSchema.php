@@ -35,12 +35,7 @@ class MusicVideoObjectSchema extends MediaObjectSchema
 {
     public static function factory()
     {
-        return new MusicVideoObjectSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MusicVideoObjectSchema('http://schema.org/', 'MusicVideoObject');
     }
 
 

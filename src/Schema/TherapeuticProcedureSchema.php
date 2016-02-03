@@ -31,16 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class TherapeuticProcedureSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
+class TherapeuticProcedureSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new TherapeuticProcedureSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new TherapeuticProcedureSchema('http://schema.org/', 'TherapeuticProcedure');
     }
 
 

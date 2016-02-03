@@ -35,12 +35,7 @@ class BlogPostingSchema extends SocialMediaPostingSchema
 {
     public static function factory()
     {
-        return new BlogPostingSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new BlogPostingSchema('http://schema.org/', 'BlogPosting');
     }
 
 

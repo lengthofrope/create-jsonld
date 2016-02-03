@@ -35,12 +35,7 @@ class AboutPageSchema extends WebPageSchema
 {
     public static function factory()
     {
-        return new AboutPageSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new AboutPageSchema('http://schema.org/', 'AboutPage');
     }
 
 

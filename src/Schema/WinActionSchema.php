@@ -35,29 +35,25 @@ class WinActionSchema extends AchieveActionSchema
 {
     public static function factory()
     {
-        return new WinActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new WinActionSchema('http://schema.org/', 'WinAction');
     }
 
     /**
      * A sub property of participant. The loser of the action.
+     *
+     * @param $loser PersonSchema
      **/
-    private $loser;
     public function setLoser($loser) {
-        $this->loser = $loser;
+        $this->properties['loser'] = $loser;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema     
+     * @return PersonSchema
      **/
     public function getLoser() {
-        return $this->loser;
+        return $this->properties['loser'];
     }
 
 

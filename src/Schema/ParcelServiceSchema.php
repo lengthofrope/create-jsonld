@@ -42,12 +42,7 @@ class ParcelServiceSchema extends DeliveryMethodSchema
 {
     public static function factory()
     {
-        return new ParcelServiceSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ParcelServiceSchema('http://schema.org/', 'ParcelService');
     }
 
 

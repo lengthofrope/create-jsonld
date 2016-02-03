@@ -35,12 +35,7 @@ class TattooParlorSchema extends HealthAndBeautyBusinessSchema
 {
     public static function factory()
     {
-        return new TattooParlorSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new TattooParlorSchema('http://schema.org/', 'TattooParlor');
     }
 
 

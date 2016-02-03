@@ -35,12 +35,7 @@ class ComedyClubSchema extends EntertainmentBusinessSchema
 {
     public static function factory()
     {
-        return new ComedyClubSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ComedyClubSchema('http://schema.org/', 'ComedyClub');
     }
 
 

@@ -35,29 +35,25 @@ class MedicalCauseSchema extends MedicalEntitySchema
 {
     public static function factory()
     {
-        return new MedicalCauseSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MedicalCauseSchema('http://schema.org/', 'MedicalCause');
     }
 
     /**
      * The condition, complication, symptom, sign, etc. caused.
+     *
+     * @param $causeOf MedicalEntitySchema
      **/
-    private $causeOf;
     public function setCauseOf($causeOf) {
-        $this->causeOf = $causeOf;
+        $this->properties['causeOf'] = $causeOf;
 
         return $this;
     }
 
     /**
-     * @return MedicalEntitySchema     
+     * @return MedicalEntitySchema
      **/
     public function getCauseOf() {
-        return $this->causeOf;
+        return $this->properties['causeOf'];
     }
 
 

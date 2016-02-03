@@ -37,12 +37,7 @@ class UserInteractionSchema extends EventSchema
 {
     public static function factory()
     {
-        return new UserInteractionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new UserInteractionSchema('http://schema.org/', 'UserInteraction');
     }
 
 

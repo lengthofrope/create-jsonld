@@ -35,12 +35,7 @@ class RsvpResponseTypeSchema extends EnumerationSchema
 {
     public static function factory()
     {
-        return new RsvpResponseTypeSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new RsvpResponseTypeSchema('http://schema.org/', 'RsvpResponseType');
     }
 
 

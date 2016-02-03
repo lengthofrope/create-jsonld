@@ -35,12 +35,7 @@ class DurationSchema extends QuantitySchema
 {
     public static function factory()
     {
-        return new DurationSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new DurationSchema('http://schema.org/', 'Duration');
     }
 
 

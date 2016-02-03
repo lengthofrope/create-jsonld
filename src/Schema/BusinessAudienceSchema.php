@@ -35,63 +35,61 @@ class BusinessAudienceSchema extends AudienceSchema
 {
     public static function factory()
     {
-        return new BusinessAudienceSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new BusinessAudienceSchema('http://schema.org/', 'BusinessAudience');
     }
 
     /**
      * The number of employees in an organization e.g. business.
+     *
+     * @param $numberOfEmployees QuantitativeValueSchema
      **/
-    private $numberOfEmployees;
     public function setNumberOfEmployees($numberOfEmployees) {
-        $this->numberOfEmployees = $numberOfEmployees;
+        $this->properties['numberOfEmployees'] = $numberOfEmployees;
 
         return $this;
     }
 
     /**
-     * @return QuantitativeValueSchema     
+     * @return QuantitativeValueSchema
      **/
     public function getNumberOfEmployees() {
-        return $this->numberOfEmployees;
+        return $this->properties['numberOfEmployees'];
     }
 
     /**
      * The size of the business in annual revenue.
+     *
+     * @param $yearlyRevenue QuantitativeValueSchema
      **/
-    private $yearlyRevenue;
     public function setYearlyRevenue($yearlyRevenue) {
-        $this->yearlyRevenue = $yearlyRevenue;
+        $this->properties['yearlyRevenue'] = $yearlyRevenue;
 
         return $this;
     }
 
     /**
-     * @return QuantitativeValueSchema     
+     * @return QuantitativeValueSchema
      **/
     public function getYearlyRevenue() {
-        return $this->yearlyRevenue;
+        return $this->properties['yearlyRevenue'];
     }
 
     /**
      * The age of the business.
+     *
+     * @param $yearsInOperation QuantitativeValueSchema
      **/
-    private $yearsInOperation;
     public function setYearsInOperation($yearsInOperation) {
-        $this->yearsInOperation = $yearsInOperation;
+        $this->properties['yearsInOperation'] = $yearsInOperation;
 
         return $this;
     }
 
     /**
-     * @return QuantitativeValueSchema     
+     * @return QuantitativeValueSchema
      **/
     public function getYearsInOperation() {
-        return $this->yearsInOperation;
+        return $this->properties['yearsInOperation'];
     }
 
 

@@ -35,12 +35,7 @@ class GamePlayModeSchema extends EnumerationSchema
 {
     public static function factory()
     {
-        return new GamePlayModeSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new GamePlayModeSchema('http://schema.org/', 'GamePlayMode');
     }
 
 

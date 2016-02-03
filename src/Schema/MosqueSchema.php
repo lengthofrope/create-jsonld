@@ -35,12 +35,7 @@ class MosqueSchema extends PlaceOfWorshipSchema
 {
     public static function factory()
     {
-        return new MosqueSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MosqueSchema('http://schema.org/', 'Mosque');
     }
 
 

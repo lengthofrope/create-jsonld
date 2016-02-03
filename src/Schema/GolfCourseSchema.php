@@ -35,12 +35,7 @@ class GolfCourseSchema extends SportsActivityLocationSchema
 {
     public static function factory()
     {
-        return new GolfCourseSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new GolfCourseSchema('http://schema.org/', 'GolfCourse');
     }
 
 

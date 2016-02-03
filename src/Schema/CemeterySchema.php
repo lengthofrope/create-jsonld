@@ -35,12 +35,7 @@ class CemeterySchema extends CivicStructureSchema
 {
     public static function factory()
     {
-        return new CemeterySchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new CemeterySchema('http://schema.org/', 'Cemetery');
     }
 
 

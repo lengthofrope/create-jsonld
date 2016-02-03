@@ -35,12 +35,7 @@ class IgnoreActionSchema extends AssessActionSchema
 {
     public static function factory()
     {
-        return new IgnoreActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new IgnoreActionSchema('http://schema.org/', 'IgnoreAction');
     }
 
 

@@ -35,12 +35,7 @@ class RecommendedDoseScheduleSchema extends DoseScheduleSchema
 {
     public static function factory()
     {
-        return new RecommendedDoseScheduleSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new RecommendedDoseScheduleSchema('http://schema.org/', 'RecommendedDoseSchedule');
     }
 
 

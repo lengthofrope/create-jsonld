@@ -35,12 +35,7 @@ class OnDemandEventSchema extends PublicationEventSchema
 {
     public static function factory()
     {
-        return new OnDemandEventSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new OnDemandEventSchema('http://schema.org/', 'OnDemandEvent');
     }
 
 

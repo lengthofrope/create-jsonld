@@ -35,386 +35,403 @@ class OrderSchema extends IntangibleSchema
 {
     public static function factory()
     {
-        return new OrderSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new OrderSchema('http://schema.org/', 'Order');
     }
 
     /**
      * The offer(s) -- e.g., product, quantity and price combinations -- included in the order.
+     *
+     * @param $acceptedOffer OfferSchema
      **/
-    private $acceptedOffer;
     public function setAcceptedOffer($acceptedOffer) {
-        $this->acceptedOffer = $acceptedOffer;
+        $this->properties['acceptedOffer'] = $acceptedOffer;
 
         return $this;
     }
 
     /**
-     * @return OfferSchema     
+     * @return OfferSchema
      **/
     public function getAcceptedOffer() {
-        return $this->acceptedOffer;
+        return $this->properties['acceptedOffer'];
     }
 
     /**
      * The billing address for the order.
+     *
+     * @param $billingAddress PostalAddressSchema
      **/
-    private $billingAddress;
     public function setBillingAddress($billingAddress) {
-        $this->billingAddress = $billingAddress;
+        $this->properties['billingAddress'] = $billingAddress;
 
         return $this;
     }
 
     /**
-     * @return PostalAddressSchema     
+     * @return PostalAddressSchema
      **/
     public function getBillingAddress() {
-        return $this->billingAddress;
+        return $this->properties['billingAddress'];
     }
 
     /**
      * An entity that arranges for an exchange between a buyer and a seller.  In most cases a broker never acquires or releases ownership of a product or service involved in an exchange.  If it is not clear whether an entity is a broker, seller, or buyer, the latter two terms are preferred.
+     *
+     * @param $broker PersonSchema|OrganizationSchema
      **/
-    private $broker;
     public function setBroker($broker) {
-        $this->broker = $broker;
+        $this->properties['broker'] = $broker;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema|OrganizationSchema     
+     * @return PersonSchema|OrganizationSchema
      **/
     public function getBroker() {
-        return $this->broker;
+        return $this->properties['broker'];
     }
 
     /**
      * A number that confirms the given order or payment has been received.
+     *
+     * @param $confirmationNumber TextSchema
      **/
-    private $confirmationNumber;
     public function setConfirmationNumber($confirmationNumber) {
-        $this->confirmationNumber = $confirmationNumber;
+        $this->properties['confirmationNumber'] = $confirmationNumber;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getConfirmationNumber() {
-        return $this->confirmationNumber;
+        return $this->properties['confirmationNumber'];
     }
 
     /**
      * Party placing the order or paying the invoice.
+     *
+     * @param $customer OrganizationSchema|PersonSchema
      **/
-    private $customer;
     public function setCustomer($customer) {
-        $this->customer = $customer;
+        $this->properties['customer'] = $customer;
 
         return $this;
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema     
+     * @return OrganizationSchema|PersonSchema
      **/
     public function getCustomer() {
-        return $this->customer;
+        return $this->properties['customer'];
     }
 
     /**
      * Any discount applied (to an Order).
+     *
+     * @param $discount NumberSchema|TextSchema
      **/
-    private $discount;
     public function setDiscount($discount) {
-        $this->discount = $discount;
+        $this->properties['discount'] = $discount;
 
         return $this;
     }
 
     /**
-     * @return NumberSchema|TextSchema     
+     * @return NumberSchema|TextSchema
      **/
     public function getDiscount() {
-        return $this->discount;
+        return $this->properties['discount'];
     }
 
     /**
      * Code used to redeem a discount.
+     *
+     * @param $discountCode TextSchema
      **/
-    private $discountCode;
     public function setDiscountCode($discountCode) {
-        $this->discountCode = $discountCode;
+        $this->properties['discountCode'] = $discountCode;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getDiscountCode() {
-        return $this->discountCode;
+        return $this->properties['discountCode'];
     }
 
     /**
      * The currency (in 3-letter ISO 4217 format) of the discount.
+     *
+     * @param $discountCurrency TextSchema
      **/
-    private $discountCurrency;
     public function setDiscountCurrency($discountCurrency) {
-        $this->discountCurrency = $discountCurrency;
+        $this->properties['discountCurrency'] = $discountCurrency;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getDiscountCurrency() {
-        return $this->discountCurrency;
+        return $this->properties['discountCurrency'];
     }
 
     /**
      * Was the offer accepted as a gift for someone other than the buyer.
+     *
+     * @param $isGift BooleanSchema
      **/
-    private $isGift;
     public function setIsGift($isGift) {
-        $this->isGift = $isGift;
+        $this->properties['isGift'] = $isGift;
 
         return $this;
     }
 
     /**
-     * @return BooleanSchema     
+     * @return BooleanSchema
      **/
     public function getIsGift() {
-        return $this->isGift;
+        return $this->properties['isGift'];
     }
 
     /**
      * 'merchant' is an out-dated term for 'seller'.
+     *
+     * @param $merchant OrganizationSchema|PersonSchema
      **/
-    private $merchant;
     public function setMerchant($merchant) {
-        $this->merchant = $merchant;
+        $this->properties['merchant'] = $merchant;
 
         return $this;
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema     
+     * @return OrganizationSchema|PersonSchema
      **/
     public function getMerchant() {
-        return $this->merchant;
+        return $this->properties['merchant'];
     }
 
     /**
      * Date order was placed.
+     *
+     * @param $orderDate DateTimeSchema
      **/
-    private $orderDate;
     public function setOrderDate($orderDate) {
-        $this->orderDate = $orderDate;
+        $this->properties['orderDate'] = $orderDate;
 
         return $this;
     }
 
     /**
-     * @return DateTimeSchema     
+     * @return DateTimeSchema
      **/
     public function getOrderDate() {
-        return $this->orderDate;
+        return $this->properties['orderDate'];
     }
 
     /**
      * The delivery of the parcel related to this order or order item.
+     *
+     * @param $orderDelivery ParcelDeliverySchema
      **/
-    private $orderDelivery;
     public function setOrderDelivery($orderDelivery) {
-        $this->orderDelivery = $orderDelivery;
+        $this->properties['orderDelivery'] = $orderDelivery;
 
         return $this;
     }
 
     /**
-     * @return ParcelDeliverySchema     
+     * @return ParcelDeliverySchema
      **/
     public function getOrderDelivery() {
-        return $this->orderDelivery;
+        return $this->properties['orderDelivery'];
     }
 
     /**
      * The identifier of the transaction.
+     *
+     * @param $orderNumber TextSchema
      **/
-    private $orderNumber;
     public function setOrderNumber($orderNumber) {
-        $this->orderNumber = $orderNumber;
+        $this->properties['orderNumber'] = $orderNumber;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getOrderNumber() {
-        return $this->orderNumber;
+        return $this->properties['orderNumber'];
     }
 
     /**
      * The current status of the order.
+     *
+     * @param $orderStatus OrderStatusSchema
      **/
-    private $orderStatus;
     public function setOrderStatus($orderStatus) {
-        $this->orderStatus = $orderStatus;
+        $this->properties['orderStatus'] = $orderStatus;
 
         return $this;
     }
 
     /**
-     * @return OrderStatusSchema     
+     * @return OrderStatusSchema
      **/
     public function getOrderStatus() {
-        return $this->orderStatus;
+        return $this->properties['orderStatus'];
     }
 
     /**
      * The item ordered.
+     *
+     * @param $orderedItem ProductSchema|OrderItemSchema
      **/
-    private $orderedItem;
     public function setOrderedItem($orderedItem) {
-        $this->orderedItem = $orderedItem;
+        $this->properties['orderedItem'] = $orderedItem;
 
         return $this;
     }
 
     /**
-     * @return ProductSchema|OrderItemSchema     
+     * @return ProductSchema|OrderItemSchema
      **/
     public function getOrderedItem() {
-        return $this->orderedItem;
+        return $this->properties['orderedItem'];
     }
 
     /**
      * The order is being paid as part of the referenced Invoice.
+     *
+     * @param $partOfInvoice InvoiceSchema
      **/
-    private $partOfInvoice;
     public function setPartOfInvoice($partOfInvoice) {
-        $this->partOfInvoice = $partOfInvoice;
+        $this->properties['partOfInvoice'] = $partOfInvoice;
 
         return $this;
     }
 
     /**
-     * @return InvoiceSchema     
+     * @return InvoiceSchema
      **/
     public function getPartOfInvoice() {
-        return $this->partOfInvoice;
+        return $this->properties['partOfInvoice'];
     }
 
     /**
      * The date that payment is due.
+     *
+     * @param $paymentDue DateTimeSchema
      **/
-    private $paymentDue;
     public function setPaymentDue($paymentDue) {
-        $this->paymentDue = $paymentDue;
+        $this->properties['paymentDue'] = $paymentDue;
 
         return $this;
     }
 
     /**
-     * @return DateTimeSchema     
+     * @return DateTimeSchema
      **/
     public function getPaymentDue() {
-        return $this->paymentDue;
+        return $this->properties['paymentDue'];
     }
 
     /**
      * The date that payment is due.
+     *
+     * @param $paymentDueDate DateTimeSchema
      **/
-    private $paymentDueDate;
     public function setPaymentDueDate($paymentDueDate) {
-        $this->paymentDueDate = $paymentDueDate;
+        $this->properties['paymentDueDate'] = $paymentDueDate;
 
         return $this;
     }
 
     /**
-     * @return DateTimeSchema     
+     * @return DateTimeSchema
      **/
     public function getPaymentDueDate() {
-        return $this->paymentDueDate;
+        return $this->properties['paymentDueDate'];
     }
 
     /**
      * The name of the credit card or other method of payment for the order.
+     *
+     * @param $paymentMethod PaymentMethodSchema
      **/
-    private $paymentMethod;
     public function setPaymentMethod($paymentMethod) {
-        $this->paymentMethod = $paymentMethod;
+        $this->properties['paymentMethod'] = $paymentMethod;
 
         return $this;
     }
 
     /**
-     * @return PaymentMethodSchema     
+     * @return PaymentMethodSchema
      **/
     public function getPaymentMethod() {
-        return $this->paymentMethod;
+        return $this->properties['paymentMethod'];
     }
 
     /**
      * An identifier for the method of payment used (e.g. the last 4 digits of the credit card).
+     *
+     * @param $paymentMethodId TextSchema
      **/
-    private $paymentMethodId;
     public function setPaymentMethodId($paymentMethodId) {
-        $this->paymentMethodId = $paymentMethodId;
+        $this->properties['paymentMethodId'] = $paymentMethodId;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getPaymentMethodId() {
-        return $this->paymentMethodId;
+        return $this->properties['paymentMethodId'];
     }
 
     /**
      * The URL for sending a payment.
+     *
+     * @param $paymentUrl URLSchema
      **/
-    private $paymentUrl;
     public function setPaymentUrl($paymentUrl) {
-        $this->paymentUrl = $paymentUrl;
+        $this->properties['paymentUrl'] = $paymentUrl;
 
         return $this;
     }
 
     /**
-     * @return URLSchema     
+     * @return URLSchema
      **/
     public function getPaymentUrl() {
-        return $this->paymentUrl;
+        return $this->properties['paymentUrl'];
     }
 
     /**
      * An entity which offers (sells / leases / lends / loans) the services / goods.  A seller may also be a provider.
+     *
+     * @param $seller OrganizationSchema|PersonSchema
      **/
-    private $seller;
     public function setSeller($seller) {
-        $this->seller = $seller;
+        $this->properties['seller'] = $seller;
 
         return $this;
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema     
+     * @return OrganizationSchema|PersonSchema
      **/
     public function getSeller() {
-        return $this->seller;
+        return $this->properties['seller'];
     }
 
 

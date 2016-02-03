@@ -35,12 +35,7 @@ class DefenceEstablishmentSchema extends GovernmentBuildingSchema
 {
     public static function factory()
     {
-        return new DefenceEstablishmentSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new DefenceEstablishmentSchema('http://schema.org/', 'DefenceEstablishment');
     }
 
 

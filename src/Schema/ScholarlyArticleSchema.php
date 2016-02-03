@@ -35,12 +35,7 @@ class ScholarlyArticleSchema extends ArticleSchema
 {
     public static function factory()
     {
-        return new ScholarlyArticleSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ScholarlyArticleSchema('http://schema.org/', 'ScholarlyArticle');
     }
 
 

@@ -35,12 +35,7 @@ class FoodEventSchema extends EventSchema
 {
     public static function factory()
     {
-        return new FoodEventSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new FoodEventSchema('http://schema.org/', 'FoodEvent');
     }
 
 

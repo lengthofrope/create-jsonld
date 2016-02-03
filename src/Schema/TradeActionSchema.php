@@ -35,12 +35,7 @@ class TradeActionSchema extends ActionSchema
 {
     public static function factory()
     {
-        return new TradeActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new TradeActionSchema('http://schema.org/', 'TradeAction');
     }
 
     /**
@@ -65,36 +60,38 @@ class TradeActionSchema extends ActionSchema
 </li>
 </ul>
       
+     *
+     * @param $price NumberSchema|TextSchema
      **/
-    private $price;
     public function setPrice($price) {
-        $this->price = $price;
+        $this->properties['price'] = $price;
 
         return $this;
     }
 
     /**
-     * @return NumberSchema|TextSchema     
+     * @return NumberSchema|TextSchema
      **/
     public function getPrice() {
-        return $this->price;
+        return $this->properties['price'];
     }
 
     /**
      * One or more detailed price specifications, indicating the unit price and delivery or payment charges.
+     *
+     * @param $priceSpecification PriceSpecificationSchema
      **/
-    private $priceSpecification;
     public function setPriceSpecification($priceSpecification) {
-        $this->priceSpecification = $priceSpecification;
+        $this->properties['priceSpecification'] = $priceSpecification;
 
         return $this;
     }
 
     /**
-     * @return PriceSpecificationSchema     
+     * @return PriceSpecificationSchema
      **/
     public function getPriceSpecification() {
-        return $this->priceSpecification;
+        return $this->properties['priceSpecification'];
     }
 
 

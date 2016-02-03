@@ -35,12 +35,7 @@ class MiddleSchoolSchema extends EducationalOrganizationSchema
 {
     public static function factory()
     {
-        return new MiddleSchoolSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MiddleSchoolSchema('http://schema.org/', 'MiddleSchool');
     }
 
 

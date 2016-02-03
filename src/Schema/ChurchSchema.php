@@ -35,12 +35,7 @@ class ChurchSchema extends PlaceOfWorshipSchema
 {
     public static function factory()
     {
-        return new ChurchSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ChurchSchema('http://schema.org/', 'Church');
     }
 
 

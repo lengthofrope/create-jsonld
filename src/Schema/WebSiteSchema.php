@@ -35,12 +35,7 @@ class WebSiteSchema extends CreativeWorkSchema
 {
     public static function factory()
     {
-        return new WebSiteSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new WebSiteSchema('http://schema.org/', 'WebSite');
     }
 
 

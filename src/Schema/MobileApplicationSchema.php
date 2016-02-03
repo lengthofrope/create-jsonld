@@ -35,29 +35,25 @@ class MobileApplicationSchema extends SoftwareApplicationSchema
 {
     public static function factory()
     {
-        return new MobileApplicationSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MobileApplicationSchema('http://schema.org/', 'MobileApplication');
     }
 
     /**
      * Specifies specific carrier(s) requirements for the application (e.g. an application may only work on a specific carrier network).
+     *
+     * @param $carrierRequirements TextSchema
      **/
-    private $carrierRequirements;
     public function setCarrierRequirements($carrierRequirements) {
-        $this->carrierRequirements = $carrierRequirements;
+        $this->properties['carrierRequirements'] = $carrierRequirements;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getCarrierRequirements() {
-        return $this->carrierRequirements;
+        return $this->properties['carrierRequirements'];
     }
 
 

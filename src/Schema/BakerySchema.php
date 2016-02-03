@@ -35,12 +35,7 @@ class BakerySchema extends FoodEstablishmentSchema
 {
     public static function factory()
     {
-        return new BakerySchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new BakerySchema('http://schema.org/', 'Bakery');
     }
 
 

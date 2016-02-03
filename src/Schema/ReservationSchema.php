@@ -35,233 +35,241 @@ class ReservationSchema extends IntangibleSchema
 {
     public static function factory()
     {
-        return new ReservationSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ReservationSchema('http://schema.org/', 'Reservation');
     }
 
     /**
      * 'bookingAgent' is an out-dated term indicating a 'broker' that serves as a booking agent.
+     *
+     * @param $bookingAgent PersonSchema|OrganizationSchema
      **/
-    private $bookingAgent;
     public function setBookingAgent($bookingAgent) {
-        $this->bookingAgent = $bookingAgent;
+        $this->properties['bookingAgent'] = $bookingAgent;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema|OrganizationSchema     
+     * @return PersonSchema|OrganizationSchema
      **/
     public function getBookingAgent() {
-        return $this->bookingAgent;
+        return $this->properties['bookingAgent'];
     }
 
     /**
      * The date and time the reservation was booked.
+     *
+     * @param $bookingTime DateTimeSchema
      **/
-    private $bookingTime;
     public function setBookingTime($bookingTime) {
-        $this->bookingTime = $bookingTime;
+        $this->properties['bookingTime'] = $bookingTime;
 
         return $this;
     }
 
     /**
-     * @return DateTimeSchema     
+     * @return DateTimeSchema
      **/
     public function getBookingTime() {
-        return $this->bookingTime;
+        return $this->properties['bookingTime'];
     }
 
     /**
      * An entity that arranges for an exchange between a buyer and a seller.  In most cases a broker never acquires or releases ownership of a product or service involved in an exchange.  If it is not clear whether an entity is a broker, seller, or buyer, the latter two terms are preferred.
+     *
+     * @param $broker PersonSchema|OrganizationSchema
      **/
-    private $broker;
     public function setBroker($broker) {
-        $this->broker = $broker;
+        $this->properties['broker'] = $broker;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema|OrganizationSchema     
+     * @return PersonSchema|OrganizationSchema
      **/
     public function getBroker() {
-        return $this->broker;
+        return $this->properties['broker'];
     }
 
     /**
      * The date and time the reservation was modified.
+     *
+     * @param $modifiedTime DateTimeSchema
      **/
-    private $modifiedTime;
     public function setModifiedTime($modifiedTime) {
-        $this->modifiedTime = $modifiedTime;
+        $this->properties['modifiedTime'] = $modifiedTime;
 
         return $this;
     }
 
     /**
-     * @return DateTimeSchema     
+     * @return DateTimeSchema
      **/
     public function getModifiedTime() {
-        return $this->modifiedTime;
+        return $this->properties['modifiedTime'];
     }
 
     /**
      * The currency (in 3-letter ISO 4217 format) of the price or a price component, when attached to PriceSpecification and its subtypes.
+     *
+     * @param $priceCurrency TextSchema
      **/
-    private $priceCurrency;
     public function setPriceCurrency($priceCurrency) {
-        $this->priceCurrency = $priceCurrency;
+        $this->properties['priceCurrency'] = $priceCurrency;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getPriceCurrency() {
-        return $this->priceCurrency;
+        return $this->properties['priceCurrency'];
     }
 
     /**
      * Any membership in a frequent flyer, hotel loyalty program, etc. being applied to the reservation.
+     *
+     * @param $programMembershipUsed ProgramMembershipSchema
      **/
-    private $programMembershipUsed;
     public function setProgramMembershipUsed($programMembershipUsed) {
-        $this->programMembershipUsed = $programMembershipUsed;
+        $this->properties['programMembershipUsed'] = $programMembershipUsed;
 
         return $this;
     }
 
     /**
-     * @return ProgramMembershipSchema     
+     * @return ProgramMembershipSchema
      **/
     public function getProgramMembershipUsed() {
-        return $this->programMembershipUsed;
+        return $this->properties['programMembershipUsed'];
     }
 
     /**
      * The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.
+     *
+     * @param $provider PersonSchema|OrganizationSchema
      **/
-    private $provider;
     public function setProvider($provider) {
-        $this->provider = $provider;
+        $this->properties['provider'] = $provider;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema|OrganizationSchema     
+     * @return PersonSchema|OrganizationSchema
      **/
     public function getProvider() {
-        return $this->provider;
+        return $this->properties['provider'];
     }
 
     /**
      * The thing -- flight, event, restaurant,etc. being reserved.
+     *
+     * @param $reservationFor ThingSchema
      **/
-    private $reservationFor;
     public function setReservationFor($reservationFor) {
-        $this->reservationFor = $reservationFor;
+        $this->properties['reservationFor'] = $reservationFor;
 
         return $this;
     }
 
     /**
-     * @return ThingSchema     
+     * @return ThingSchema
      **/
     public function getReservationFor() {
-        return $this->reservationFor;
+        return $this->properties['reservationFor'];
     }
 
     /**
      * A unique identifier for the reservation.
+     *
+     * @param $reservationId TextSchema
      **/
-    private $reservationId;
     public function setReservationId($reservationId) {
-        $this->reservationId = $reservationId;
+        $this->properties['reservationId'] = $reservationId;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getReservationId() {
-        return $this->reservationId;
+        return $this->properties['reservationId'];
     }
 
     /**
      * The current status of the reservation.
+     *
+     * @param $reservationStatus ReservationStatusTypeSchema
      **/
-    private $reservationStatus;
     public function setReservationStatus($reservationStatus) {
-        $this->reservationStatus = $reservationStatus;
+        $this->properties['reservationStatus'] = $reservationStatus;
 
         return $this;
     }
 
     /**
-     * @return ReservationStatusTypeSchema     
+     * @return ReservationStatusTypeSchema
      **/
     public function getReservationStatus() {
-        return $this->reservationStatus;
+        return $this->properties['reservationStatus'];
     }
 
     /**
      * A ticket associated with the reservation.
+     *
+     * @param $reservedTicket TicketSchema
      **/
-    private $reservedTicket;
     public function setReservedTicket($reservedTicket) {
-        $this->reservedTicket = $reservedTicket;
+        $this->properties['reservedTicket'] = $reservedTicket;
 
         return $this;
     }
 
     /**
-     * @return TicketSchema     
+     * @return TicketSchema
      **/
     public function getReservedTicket() {
-        return $this->reservedTicket;
+        return $this->properties['reservedTicket'];
     }
 
     /**
      * The total price for the reservation or ticket, including applicable taxes, shipping, etc.
+     *
+     * @param $totalPrice NumberSchema|TextSchema|PriceSpecificationSchema
      **/
-    private $totalPrice;
     public function setTotalPrice($totalPrice) {
-        $this->totalPrice = $totalPrice;
+        $this->properties['totalPrice'] = $totalPrice;
 
         return $this;
     }
 
     /**
-     * @return NumberSchema|TextSchema|PriceSpecificationSchema     
+     * @return NumberSchema|TextSchema|PriceSpecificationSchema
      **/
     public function getTotalPrice() {
-        return $this->totalPrice;
+        return $this->properties['totalPrice'];
     }
 
     /**
      * The person or organization the reservation or ticket is for.
+     *
+     * @param $underName PersonSchema|OrganizationSchema
      **/
-    private $underName;
     public function setUnderName($underName) {
-        $this->underName = $underName;
+        $this->properties['underName'] = $underName;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema|OrganizationSchema     
+     * @return PersonSchema|OrganizationSchema
      **/
     public function getUnderName() {
-        return $this->underName;
+        return $this->properties['underName'];
     }
 
 

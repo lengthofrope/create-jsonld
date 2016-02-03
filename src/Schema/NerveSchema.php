@@ -35,80 +35,79 @@ class NerveSchema extends AnatomicalStructureSchema
 {
     public static function factory()
     {
-        return new NerveSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new NerveSchema('http://schema.org/', 'Nerve');
     }
 
     /**
      * The branches that delineate from the nerve bundle.
+     *
+     * @param $branch AnatomicalStructureSchema
      **/
-    private $branch;
     public function setBranch($branch) {
-        $this->branch = $branch;
+        $this->properties['branch'] = $branch;
 
         return $this;
     }
 
     /**
-     * @return AnatomicalStructureSchema     
+     * @return AnatomicalStructureSchema
      **/
     public function getBranch() {
-        return $this->branch;
+        return $this->properties['branch'];
     }
 
     /**
      * The neurological pathway extension that involves muscle control.
+     *
+     * @param $nerveMotor MuscleSchema
      **/
-    private $nerveMotor;
     public function setNerveMotor($nerveMotor) {
-        $this->nerveMotor = $nerveMotor;
+        $this->properties['nerveMotor'] = $nerveMotor;
 
         return $this;
     }
 
     /**
-     * @return MuscleSchema     
+     * @return MuscleSchema
      **/
     public function getNerveMotor() {
-        return $this->nerveMotor;
+        return $this->properties['nerveMotor'];
     }
 
     /**
      * The neurological pathway extension that inputs and sends information to the brain or spinal cord.
+     *
+     * @param $sensoryUnit AnatomicalStructureSchema|SuperficialAnatomySchema
      **/
-    private $sensoryUnit;
     public function setSensoryUnit($sensoryUnit) {
-        $this->sensoryUnit = $sensoryUnit;
+        $this->properties['sensoryUnit'] = $sensoryUnit;
 
         return $this;
     }
 
     /**
-     * @return AnatomicalStructureSchema|SuperficialAnatomySchema     
+     * @return AnatomicalStructureSchema|SuperficialAnatomySchema
      **/
     public function getSensoryUnit() {
-        return $this->sensoryUnit;
+        return $this->properties['sensoryUnit'];
     }
 
     /**
      * The neurological pathway that originates the neurons.
+     *
+     * @param $sourcedFrom BrainStructureSchema
      **/
-    private $sourcedFrom;
     public function setSourcedFrom($sourcedFrom) {
-        $this->sourcedFrom = $sourcedFrom;
+        $this->properties['sourcedFrom'] = $sourcedFrom;
 
         return $this;
     }
 
     /**
-     * @return BrainStructureSchema     
+     * @return BrainStructureSchema
      **/
     public function getSourcedFrom() {
-        return $this->sourcedFrom;
+        return $this->properties['sourcedFrom'];
     }
 
 

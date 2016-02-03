@@ -35,12 +35,7 @@ class VideoGallerySchema extends CollectionPageSchema
 {
     public static function factory()
     {
-        return new VideoGallerySchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new VideoGallerySchema('http://schema.org/', 'VideoGallery');
     }
 
 

@@ -35,12 +35,7 @@ class BookmarkActionSchema extends OrganizeActionSchema
 {
     public static function factory()
     {
-        return new BookmarkActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new BookmarkActionSchema('http://schema.org/', 'BookmarkAction');
     }
 
 

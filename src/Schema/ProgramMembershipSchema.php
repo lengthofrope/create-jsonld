@@ -35,97 +35,97 @@ class ProgramMembershipSchema extends IntangibleSchema
 {
     public static function factory()
     {
-        return new ProgramMembershipSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ProgramMembershipSchema('http://schema.org/', 'ProgramMembership');
     }
 
     /**
      * The organization (airline, travelers' club, etc.) the membership is made with.
+     *
+     * @param $hostingOrganization OrganizationSchema
      **/
-    private $hostingOrganization;
     public function setHostingOrganization($hostingOrganization) {
-        $this->hostingOrganization = $hostingOrganization;
+        $this->properties['hostingOrganization'] = $hostingOrganization;
 
         return $this;
     }
 
     /**
-     * @return OrganizationSchema     
+     * @return OrganizationSchema
      **/
     public function getHostingOrganization() {
-        return $this->hostingOrganization;
+        return $this->properties['hostingOrganization'];
     }
 
     /**
      * A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals.
+     *
+     * @param $member OrganizationSchema|PersonSchema
      **/
-    private $member;
     public function setMember($member) {
-        $this->member = $member;
+        $this->properties['member'] = $member;
 
         return $this;
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema     
+     * @return OrganizationSchema|PersonSchema
      **/
     public function getMember() {
-        return $this->member;
+        return $this->properties['member'];
     }
 
     /**
      * A member of this organization.
+     *
+     * @param $members OrganizationSchema|PersonSchema
      **/
-    private $members;
     public function setMembers($members) {
-        $this->members = $members;
+        $this->properties['members'] = $members;
 
         return $this;
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema     
+     * @return OrganizationSchema|PersonSchema
      **/
     public function getMembers() {
-        return $this->members;
+        return $this->properties['members'];
     }
 
     /**
      * A unique identifier for the membership.
+     *
+     * @param $membershipNumber TextSchema
      **/
-    private $membershipNumber;
     public function setMembershipNumber($membershipNumber) {
-        $this->membershipNumber = $membershipNumber;
+        $this->properties['membershipNumber'] = $membershipNumber;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getMembershipNumber() {
-        return $this->membershipNumber;
+        return $this->properties['membershipNumber'];
     }
 
     /**
      * The program providing the membership.
+     *
+     * @param $programName TextSchema
      **/
-    private $programName;
     public function setProgramName($programName) {
-        $this->programName = $programName;
+        $this->properties['programName'] = $programName;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getProgramName() {
-        return $this->programName;
+        return $this->properties['programName'];
     }
 
 

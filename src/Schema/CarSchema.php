@@ -35,12 +35,7 @@ class CarSchema extends VehicleSchema
 {
     public static function factory()
     {
-        return new CarSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new CarSchema('http://schema.org/', 'Car');
     }
 
 

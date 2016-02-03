@@ -35,29 +35,25 @@ class TravelActionSchema extends MoveActionSchema
 {
     public static function factory()
     {
-        return new TravelActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new TravelActionSchema('http://schema.org/', 'TravelAction');
     }
 
     /**
      * The distance travelled, e.g. exercising or travelling.
+     *
+     * @param $distance DistanceSchema
      **/
-    private $distance;
     public function setDistance($distance) {
-        $this->distance = $distance;
+        $this->properties['distance'] = $distance;
 
         return $this;
     }
 
     /**
-     * @return DistanceSchema     
+     * @return DistanceSchema
      **/
     public function getDistance() {
-        return $this->distance;
+        return $this->properties['distance'];
     }
 
 

@@ -35,29 +35,25 @@ class IndividualProductSchema extends ProductSchema
 {
     public static function factory()
     {
-        return new IndividualProductSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new IndividualProductSchema('http://schema.org/', 'IndividualProduct');
     }
 
     /**
      * The serial number or any alphanumeric identifier of a particular product. When attached to an offer, it is a shortcut for the serial number of the product included in the offer.
+     *
+     * @param $serialNumber TextSchema
      **/
-    private $serialNumber;
     public function setSerialNumber($serialNumber) {
-        $this->serialNumber = $serialNumber;
+        $this->properties['serialNumber'] = $serialNumber;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getSerialNumber() {
-        return $this->serialNumber;
+        return $this->properties['serialNumber'];
     }
 
 

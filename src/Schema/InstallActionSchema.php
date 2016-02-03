@@ -35,12 +35,7 @@ class InstallActionSchema extends ConsumeActionSchema
 {
     public static function factory()
     {
-        return new InstallActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new InstallActionSchema('http://schema.org/', 'InstallAction');
     }
 
 

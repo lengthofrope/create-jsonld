@@ -35,63 +35,61 @@ class BrandSchema extends IntangibleSchema
 {
     public static function factory()
     {
-        return new BrandSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new BrandSchema('http://schema.org/', 'Brand');
     }
 
     /**
      * The overall rating, based on a collection of reviews or ratings, of the item.
+     *
+     * @param $aggregateRating AggregateRatingSchema
      **/
-    private $aggregateRating;
     public function setAggregateRating($aggregateRating) {
-        $this->aggregateRating = $aggregateRating;
+        $this->properties['aggregateRating'] = $aggregateRating;
 
         return $this;
     }
 
     /**
-     * @return AggregateRatingSchema     
+     * @return AggregateRatingSchema
      **/
     public function getAggregateRating() {
-        return $this->aggregateRating;
+        return $this->properties['aggregateRating'];
     }
 
     /**
      * An associated logo.
+     *
+     * @param $logo ImageObjectSchema|URLSchema
      **/
-    private $logo;
     public function setLogo($logo) {
-        $this->logo = $logo;
+        $this->properties['logo'] = $logo;
 
         return $this;
     }
 
     /**
-     * @return ImageObjectSchema|URLSchema     
+     * @return ImageObjectSchema|URLSchema
      **/
     public function getLogo() {
-        return $this->logo;
+        return $this->properties['logo'];
     }
 
     /**
      * A review of the item.
+     *
+     * @param $review ReviewSchema
      **/
-    private $review;
     public function setReview($review) {
-        $this->review = $review;
+        $this->properties['review'] = $review;
 
         return $this;
     }
 
     /**
-     * @return ReviewSchema     
+     * @return ReviewSchema
      **/
     public function getReview() {
-        return $this->review;
+        return $this->properties['review'];
     }
 
 

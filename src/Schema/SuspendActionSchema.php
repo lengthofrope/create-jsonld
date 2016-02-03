@@ -35,12 +35,7 @@ class SuspendActionSchema extends ControlActionSchema
 {
     public static function factory()
     {
-        return new SuspendActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new SuspendActionSchema('http://schema.org/', 'SuspendAction');
     }
 
 

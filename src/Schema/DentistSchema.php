@@ -35,12 +35,7 @@ class DentistSchema extends MedicalOrganizationSchema
 {
     public static function factory()
     {
-        return new DentistSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new DentistSchema('http://schema.org/', 'Dentist');
     }
 
 

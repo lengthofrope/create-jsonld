@@ -35,12 +35,7 @@ class CasinoSchema extends EntertainmentBusinessSchema
 {
     public static function factory()
     {
-        return new CasinoSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new CasinoSchema('http://schema.org/', 'Casino');
     }
 
 

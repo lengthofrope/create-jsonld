@@ -35,12 +35,7 @@ class OrganizeActionSchema extends ActionSchema
 {
     public static function factory()
     {
-        return new OrganizeActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new OrganizeActionSchema('http://schema.org/', 'OrganizeAction');
     }
 
 

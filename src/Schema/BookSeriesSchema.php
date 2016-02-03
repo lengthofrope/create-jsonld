@@ -35,12 +35,7 @@ class BookSeriesSchema extends CreativeWorkSeriesSchema
 {
     public static function factory()
     {
-        return new BookSeriesSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new BookSeriesSchema('http://schema.org/', 'BookSeries');
     }
 
 

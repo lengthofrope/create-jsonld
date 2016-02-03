@@ -35,31 +35,27 @@ class StoreSchema extends LocalBusinessSchema
 {
     public static function factory()
     {
-        return new StoreSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new StoreSchema('http://schema.org/', 'Store');
     }
 
     /**
      * A short textual code (also called "store code") that uniquely identifies a place of business. The code is typically assigned by the parentOrganization and used in structured URLs.
 <br /><br /> For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047 the code "3047" is a branchCode for a particular branch.
       
+     *
+     * @param $branchCode TextSchema
      **/
-    private $branchCode;
     public function setBranchCode($branchCode) {
-        $this->branchCode = $branchCode;
+        $this->properties['branchCode'] = $branchCode;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getBranchCode() {
-        return $this->branchCode;
+        return $this->properties['branchCode'];
     }
 
 

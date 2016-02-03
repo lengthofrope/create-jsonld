@@ -31,16 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MedicalImagingTechniqueSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
+class MedicalImagingTechniqueSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MedicalImagingTechniqueSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MedicalImagingTechniqueSchema('http://schema.org/', 'MedicalImagingTechnique');
     }
 
 

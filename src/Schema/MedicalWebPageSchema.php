@@ -35,29 +35,25 @@ class MedicalWebPageSchema extends WebPageSchema
 {
     public static function factory()
     {
-        return new MedicalWebPageSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MedicalWebPageSchema('http://schema.org/', 'MedicalWebPage');
     }
 
     /**
      * An aspect of medical practice that is considered on the page, such as 'diagnosis', 'treatment', 'causes', 'prognosis', 'etiology', 'epidemiology', etc.
+     *
+     * @param $aspect TextSchema
      **/
-    private $aspect;
     public function setAspect($aspect) {
-        $this->aspect = $aspect;
+        $this->properties['aspect'] = $aspect;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getAspect() {
-        return $this->aspect;
+        return $this->properties['aspect'];
     }
 
 

@@ -35,29 +35,25 @@ class AskActionSchema extends CommunicateActionSchema
 {
     public static function factory()
     {
-        return new AskActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new AskActionSchema('http://schema.org/', 'AskAction');
     }
 
     /**
      * A sub property of object. A question.
+     *
+     * @param $question QuestionSchema
      **/
-    private $question;
     public function setQuestion($question) {
-        $this->question = $question;
+        $this->properties['question'] = $question;
 
         return $this;
     }
 
     /**
-     * @return QuestionSchema     
+     * @return QuestionSchema
      **/
     public function getQuestion() {
-        return $this->question;
+        return $this->properties['question'];
     }
 
 

@@ -35,12 +35,7 @@ class CheckActionSchema extends FindActionSchema
 {
     public static function factory()
     {
-        return new CheckActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new CheckActionSchema('http://schema.org/', 'CheckAction');
     }
 
 

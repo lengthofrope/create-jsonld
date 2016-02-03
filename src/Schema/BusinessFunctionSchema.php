@@ -47,12 +47,7 @@ class BusinessFunctionSchema extends EnumerationSchema
 {
     public static function factory()
     {
-        return new BusinessFunctionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new BusinessFunctionSchema('http://schema.org/', 'BusinessFunction');
     }
 
 

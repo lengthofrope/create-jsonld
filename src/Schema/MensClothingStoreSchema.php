@@ -35,12 +35,7 @@ class MensClothingStoreSchema extends StoreSchema
 {
     public static function factory()
     {
-        return new MensClothingStoreSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MensClothingStoreSchema('http://schema.org/', 'MensClothingStore');
     }
 
 

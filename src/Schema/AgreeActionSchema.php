@@ -35,12 +35,7 @@ class AgreeActionSchema extends ReactActionSchema
 {
     public static function factory()
     {
-        return new AgreeActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new AgreeActionSchema('http://schema.org/', 'AgreeAction');
     }
 
 

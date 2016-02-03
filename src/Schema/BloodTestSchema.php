@@ -35,12 +35,7 @@ class BloodTestSchema extends MedicalTestSchema
 {
     public static function factory()
     {
-        return new BloodTestSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new BloodTestSchema('http://schema.org/', 'BloodTest');
     }
 
 

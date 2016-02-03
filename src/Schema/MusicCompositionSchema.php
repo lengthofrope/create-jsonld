@@ -35,182 +35,187 @@ class MusicCompositionSchema extends CreativeWorkSchema
 {
     public static function factory()
     {
-        return new MusicCompositionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MusicCompositionSchema('http://schema.org/', 'MusicComposition');
     }
 
     /**
      * The person or organization who wrote the composition.
+     *
+     * @param $composer PersonSchema|OrganizationSchema
      **/
-    private $composer;
     public function setComposer($composer) {
-        $this->composer = $composer;
+        $this->properties['composer'] = $composer;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema|OrganizationSchema     
+     * @return PersonSchema|OrganizationSchema
      **/
     public function getComposer() {
-        return $this->composer;
+        return $this->properties['composer'];
     }
 
     /**
      * The date and place the work was first performed.
+     *
+     * @param $firstPerformance EventSchema
      **/
-    private $firstPerformance;
     public function setFirstPerformance($firstPerformance) {
-        $this->firstPerformance = $firstPerformance;
+        $this->properties['firstPerformance'] = $firstPerformance;
 
         return $this;
     }
 
     /**
-     * @return EventSchema     
+     * @return EventSchema
      **/
     public function getFirstPerformance() {
-        return $this->firstPerformance;
+        return $this->properties['firstPerformance'];
     }
 
     /**
      * Smaller compositions included in this work (e.g. a movement in a symphony).
+     *
+     * @param $includedComposition MusicCompositionSchema
      **/
-    private $includedComposition;
     public function setIncludedComposition($includedComposition) {
-        $this->includedComposition = $includedComposition;
+        $this->properties['includedComposition'] = $includedComposition;
 
         return $this;
     }
 
     /**
-     * @return MusicCompositionSchema     
+     * @return MusicCompositionSchema
      **/
     public function getIncludedComposition() {
-        return $this->includedComposition;
+        return $this->properties['includedComposition'];
     }
 
     /**
      * The International Standard Musical Work Code for the composition.
+     *
+     * @param $iswcCode TextSchema
      **/
-    private $iswcCode;
     public function setIswcCode($iswcCode) {
-        $this->iswcCode = $iswcCode;
+        $this->properties['iswcCode'] = $iswcCode;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getIswcCode() {
-        return $this->iswcCode;
+        return $this->properties['iswcCode'];
     }
 
     /**
      * The person who wrote the words.
+     *
+     * @param $lyricist PersonSchema
      **/
-    private $lyricist;
     public function setLyricist($lyricist) {
-        $this->lyricist = $lyricist;
+        $this->properties['lyricist'] = $lyricist;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema     
+     * @return PersonSchema
      **/
     public function getLyricist() {
-        return $this->lyricist;
+        return $this->properties['lyricist'];
     }
 
     /**
      * The words in the song.
+     *
+     * @param $lyrics CreativeWorkSchema
      **/
-    private $lyrics;
     public function setLyrics($lyrics) {
-        $this->lyrics = $lyrics;
+        $this->properties['lyrics'] = $lyrics;
 
         return $this;
     }
 
     /**
-     * @return CreativeWorkSchema     
+     * @return CreativeWorkSchema
      **/
     public function getLyrics() {
-        return $this->lyrics;
+        return $this->properties['lyrics'];
     }
 
     /**
      * An arrangement derived from the composition.
+     *
+     * @param $musicArrangement MusicCompositionSchema
      **/
-    private $musicArrangement;
     public function setMusicArrangement($musicArrangement) {
-        $this->musicArrangement = $musicArrangement;
+        $this->properties['musicArrangement'] = $musicArrangement;
 
         return $this;
     }
 
     /**
-     * @return MusicCompositionSchema     
+     * @return MusicCompositionSchema
      **/
     public function getMusicArrangement() {
-        return $this->musicArrangement;
+        return $this->properties['musicArrangement'];
     }
 
     /**
      * The type of composition (e.g. overture, sonata, symphony, etc.).
+     *
+     * @param $musicCompositionForm TextSchema
      **/
-    private $musicCompositionForm;
     public function setMusicCompositionForm($musicCompositionForm) {
-        $this->musicCompositionForm = $musicCompositionForm;
+        $this->properties['musicCompositionForm'] = $musicCompositionForm;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getMusicCompositionForm() {
-        return $this->musicCompositionForm;
+        return $this->properties['musicCompositionForm'];
     }
 
     /**
      * The key, mode, or scale this composition uses.
+     *
+     * @param $musicalKey TextSchema
      **/
-    private $musicalKey;
     public function setMusicalKey($musicalKey) {
-        $this->musicalKey = $musicalKey;
+        $this->properties['musicalKey'] = $musicalKey;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getMusicalKey() {
-        return $this->musicalKey;
+        return $this->properties['musicalKey'];
     }
 
     /**
      * An audio recording of the work.
+     *
+     * @param $recordedAs MusicRecordingSchema
      **/
-    private $recordedAs;
     public function setRecordedAs($recordedAs) {
-        $this->recordedAs = $recordedAs;
+        $this->properties['recordedAs'] = $recordedAs;
 
         return $this;
     }
 
     /**
-     * @return MusicRecordingSchema     
+     * @return MusicRecordingSchema
      **/
     public function getRecordedAs() {
-        return $this->recordedAs;
+        return $this->properties['recordedAs'];
     }
 
 

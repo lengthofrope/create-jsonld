@@ -35,12 +35,7 @@ class FinancialServiceSchema extends LocalBusinessSchema
 {
     public static function factory()
     {
-        return new FinancialServiceSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new FinancialServiceSchema('http://schema.org/', 'FinancialService');
     }
 
 

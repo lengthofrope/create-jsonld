@@ -35,12 +35,7 @@ class BarcodeSchema extends ImageObjectSchema
 {
     public static function factory()
     {
-        return new BarcodeSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new BarcodeSchema('http://schema.org/', 'Barcode');
     }
 
 

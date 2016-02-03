@@ -35,12 +35,7 @@ class PaymentStatusTypeSchema extends EnumerationSchema
 {
     public static function factory()
     {
-        return new PaymentStatusTypeSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new PaymentStatusTypeSchema('http://schema.org/', 'PaymentStatusType');
     }
 
 

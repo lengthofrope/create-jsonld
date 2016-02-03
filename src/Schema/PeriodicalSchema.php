@@ -37,29 +37,25 @@ class PeriodicalSchema extends CreativeWorkSeriesSchema
 {
     public static function factory()
     {
-        return new PeriodicalSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new PeriodicalSchema('http://schema.org/', 'Periodical');
     }
 
     /**
      * The International Standard Serial Number (ISSN) that identifies this periodical. You can repeat this property to (for example) identify different formats of this periodical.
+     *
+     * @param $issn TextSchema
      **/
-    private $issn;
     public function setIssn($issn) {
-        $this->issn = $issn;
+        $this->properties['issn'] = $issn;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getIssn() {
-        return $this->issn;
+        return $this->properties['issn'];
     }
 
 

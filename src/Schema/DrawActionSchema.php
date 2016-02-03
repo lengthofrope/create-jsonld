@@ -35,12 +35,7 @@ class DrawActionSchema extends CreateActionSchema
 {
     public static function factory()
     {
-        return new DrawActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new DrawActionSchema('http://schema.org/', 'DrawAction');
     }
 
 

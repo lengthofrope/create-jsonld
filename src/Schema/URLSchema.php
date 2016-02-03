@@ -35,12 +35,7 @@ class URLSchema extends TextSchema
 {
     public static function factory()
     {
-        return new URLSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new URLSchema('http://schema.org/', 'URL');
     }
 
 

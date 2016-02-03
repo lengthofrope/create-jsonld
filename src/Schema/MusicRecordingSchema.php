@@ -35,114 +35,115 @@ class MusicRecordingSchema extends CreativeWorkSchema
 {
     public static function factory()
     {
-        return new MusicRecordingSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MusicRecordingSchema('http://schema.org/', 'MusicRecording');
     }
 
     /**
      * The artist that performed this album or recording.
+     *
+     * @param $byArtist MusicGroupSchema
      **/
-    private $byArtist;
     public function setByArtist($byArtist) {
-        $this->byArtist = $byArtist;
+        $this->properties['byArtist'] = $byArtist;
 
         return $this;
     }
 
     /**
-     * @return MusicGroupSchema     
+     * @return MusicGroupSchema
      **/
     public function getByArtist() {
-        return $this->byArtist;
+        return $this->properties['byArtist'];
     }
 
     /**
      * The duration of the item (movie, audio recording, event, etc.) in <a href='http://en.wikipedia.org/wiki/ISO_8601'>ISO 8601 date format</a>.
+     *
+     * @param $duration DurationSchema
      **/
-    private $duration;
     public function setDuration($duration) {
-        $this->duration = $duration;
+        $this->properties['duration'] = $duration;
 
         return $this;
     }
 
     /**
-     * @return DurationSchema     
+     * @return DurationSchema
      **/
     public function getDuration() {
-        return $this->duration;
+        return $this->properties['duration'];
     }
 
     /**
      * The album to which this recording belongs.
+     *
+     * @param $inAlbum MusicAlbumSchema
      **/
-    private $inAlbum;
     public function setInAlbum($inAlbum) {
-        $this->inAlbum = $inAlbum;
+        $this->properties['inAlbum'] = $inAlbum;
 
         return $this;
     }
 
     /**
-     * @return MusicAlbumSchema     
+     * @return MusicAlbumSchema
      **/
     public function getInAlbum() {
-        return $this->inAlbum;
+        return $this->properties['inAlbum'];
     }
 
     /**
      * The playlist to which this recording belongs.
+     *
+     * @param $inPlaylist MusicPlaylistSchema
      **/
-    private $inPlaylist;
     public function setInPlaylist($inPlaylist) {
-        $this->inPlaylist = $inPlaylist;
+        $this->properties['inPlaylist'] = $inPlaylist;
 
         return $this;
     }
 
     /**
-     * @return MusicPlaylistSchema     
+     * @return MusicPlaylistSchema
      **/
     public function getInPlaylist() {
-        return $this->inPlaylist;
+        return $this->properties['inPlaylist'];
     }
 
     /**
      * The International Standard Recording Code for the recording.
+     *
+     * @param $isrcCode TextSchema
      **/
-    private $isrcCode;
     public function setIsrcCode($isrcCode) {
-        $this->isrcCode = $isrcCode;
+        $this->properties['isrcCode'] = $isrcCode;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getIsrcCode() {
-        return $this->isrcCode;
+        return $this->properties['isrcCode'];
     }
 
     /**
      * The composition this track is a recording of.
+     *
+     * @param $recordingOf MusicCompositionSchema
      **/
-    private $recordingOf;
     public function setRecordingOf($recordingOf) {
-        $this->recordingOf = $recordingOf;
+        $this->properties['recordingOf'] = $recordingOf;
 
         return $this;
     }
 
     /**
-     * @return MusicCompositionSchema     
+     * @return MusicCompositionSchema
      **/
     public function getRecordingOf() {
-        return $this->recordingOf;
+        return $this->properties['recordingOf'];
     }
 
 

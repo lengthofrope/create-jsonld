@@ -37,12 +37,7 @@ class UserCheckinsSchema extends UserInteractionSchema
 {
     public static function factory()
     {
-        return new UserCheckinsSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new UserCheckinsSchema('http://schema.org/', 'UserCheckins');
     }
 
 

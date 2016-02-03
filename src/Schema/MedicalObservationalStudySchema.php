@@ -35,29 +35,25 @@ class MedicalObservationalStudySchema extends MedicalStudySchema
 {
     public static function factory()
     {
-        return new MedicalObservationalStudySchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MedicalObservationalStudySchema('http://schema.org/', 'MedicalObservationalStudy');
     }
 
     /**
      * Specifics about the observational study design (enumerated).
+     *
+     * @param $studyDesign MedicalObservationalStudyDesignSchema
      **/
-    private $studyDesign;
     public function setStudyDesign($studyDesign) {
-        $this->studyDesign = $studyDesign;
+        $this->properties['studyDesign'] = $studyDesign;
 
         return $this;
     }
 
     /**
-     * @return MedicalObservationalStudyDesignSchema     
+     * @return MedicalObservationalStudyDesignSchema
      **/
     public function getStudyDesign() {
-        return $this->studyDesign;
+        return $this->properties['studyDesign'];
     }
 
 

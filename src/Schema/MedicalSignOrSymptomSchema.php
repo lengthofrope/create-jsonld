@@ -35,46 +35,43 @@ class MedicalSignOrSymptomSchema extends MedicalEntitySchema
 {
     public static function factory()
     {
-        return new MedicalSignOrSymptomSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MedicalSignOrSymptomSchema('http://schema.org/', 'MedicalSignOrSymptom');
     }
 
     /**
      * An underlying cause. More specifically, one of the causative agent(s) that are most directly responsible for the pathophysiologic process that eventually results in the occurrence.
+     *
+     * @param $cause MedicalCauseSchema
      **/
-    private $cause;
     public function setCause($cause) {
-        $this->cause = $cause;
+        $this->properties['cause'] = $cause;
 
         return $this;
     }
 
     /**
-     * @return MedicalCauseSchema     
+     * @return MedicalCauseSchema
      **/
     public function getCause() {
-        return $this->cause;
+        return $this->properties['cause'];
     }
 
     /**
      * A possible treatment to address this condition, sign or symptom.
+     *
+     * @param $possibleTreatment MedicalTherapySchema
      **/
-    private $possibleTreatment;
     public function setPossibleTreatment($possibleTreatment) {
-        $this->possibleTreatment = $possibleTreatment;
+        $this->properties['possibleTreatment'] = $possibleTreatment;
 
         return $this;
     }
 
     /**
-     * @return MedicalTherapySchema     
+     * @return MedicalTherapySchema
      **/
     public function getPossibleTreatment() {
-        return $this->possibleTreatment;
+        return $this->properties['possibleTreatment'];
     }
 
 

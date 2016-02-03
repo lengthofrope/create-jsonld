@@ -35,12 +35,7 @@ class DryCleaningOrLaundrySchema extends LocalBusinessSchema
 {
     public static function factory()
     {
-        return new DryCleaningOrLaundrySchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new DryCleaningOrLaundrySchema('http://schema.org/', 'DryCleaningOrLaundry');
     }
 
 

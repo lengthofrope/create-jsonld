@@ -35,12 +35,7 @@ class WatchActionSchema extends ConsumeActionSchema
 {
     public static function factory()
     {
-        return new WatchActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new WatchActionSchema('http://schema.org/', 'WatchAction');
     }
 
 

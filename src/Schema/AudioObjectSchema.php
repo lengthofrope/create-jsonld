@@ -35,29 +35,25 @@ class AudioObjectSchema extends MediaObjectSchema
 {
     public static function factory()
     {
-        return new AudioObjectSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new AudioObjectSchema('http://schema.org/', 'AudioObject');
     }
 
     /**
      * If this MediaObject is an AudioObject or VideoObject, the transcript of that object.
+     *
+     * @param $transcript TextSchema
      **/
-    private $transcript;
     public function setTranscript($transcript) {
-        $this->transcript = $transcript;
+        $this->properties['transcript'] = $transcript;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getTranscript() {
-        return $this->transcript;
+        return $this->properties['transcript'];
     }
 
 

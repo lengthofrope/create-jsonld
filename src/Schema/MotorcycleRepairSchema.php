@@ -35,12 +35,7 @@ class MotorcycleRepairSchema extends AutomotiveBusinessSchema
 {
     public static function factory()
     {
-        return new MotorcycleRepairSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MotorcycleRepairSchema('http://schema.org/', 'MotorcycleRepair');
     }
 
 

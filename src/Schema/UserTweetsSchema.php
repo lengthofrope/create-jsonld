@@ -37,12 +37,7 @@ class UserTweetsSchema extends UserInteractionSchema
 {
     public static function factory()
     {
-        return new UserTweetsSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new UserTweetsSchema('http://schema.org/', 'UserTweets');
     }
 
 

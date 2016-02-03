@@ -35,12 +35,7 @@ class SingleFamilyResidenceSchema extends ResidenceSchema
 {
     public static function factory()
     {
-        return new SingleFamilyResidenceSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new SingleFamilyResidenceSchema('http://schema.org/', 'SingleFamilyResidence');
     }
 
 

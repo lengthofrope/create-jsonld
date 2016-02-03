@@ -35,12 +35,7 @@ class HotelSchema extends LodgingBusinessSchema
 {
     public static function factory()
     {
-        return new HotelSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new HotelSchema('http://schema.org/', 'Hotel');
     }
 
 

@@ -35,12 +35,7 @@ class QualitativeValueSchema extends EnumerationSchema
 {
     public static function factory()
     {
-        return new QualitativeValueSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new QualitativeValueSchema('http://schema.org/', 'QualitativeValue');
     }
 
     /**
@@ -48,138 +43,146 @@ class QualitativeValueSchema extends EnumerationSchema
 
 Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.
 
+     *
+     * @param $additionalProperty PropertyValueSchema
      **/
-    private $additionalProperty;
     public function setAdditionalProperty($additionalProperty) {
-        $this->additionalProperty = $additionalProperty;
+        $this->properties['additionalProperty'] = $additionalProperty;
 
         return $this;
     }
 
     /**
-     * @return PropertyValueSchema     
+     * @return PropertyValueSchema
      **/
     public function getAdditionalProperty() {
-        return $this->additionalProperty;
+        return $this->properties['additionalProperty'];
     }
 
     /**
      * This ordering relation for qualitative values indicates that the subject is equal to the object.
+     *
+     * @param $equal QualitativeValueSchema
      **/
-    private $equal;
     public function setEqual($equal) {
-        $this->equal = $equal;
+        $this->properties['equal'] = $equal;
 
         return $this;
     }
 
     /**
-     * @return QualitativeValueSchema     
+     * @return QualitativeValueSchema
      **/
     public function getEqual() {
-        return $this->equal;
+        return $this->properties['equal'];
     }
 
     /**
      * This ordering relation for qualitative values indicates that the subject is greater than the object.
+     *
+     * @param $greater QualitativeValueSchema
      **/
-    private $greater;
     public function setGreater($greater) {
-        $this->greater = $greater;
+        $this->properties['greater'] = $greater;
 
         return $this;
     }
 
     /**
-     * @return QualitativeValueSchema     
+     * @return QualitativeValueSchema
      **/
     public function getGreater() {
-        return $this->greater;
+        return $this->properties['greater'];
     }
 
     /**
      * This ordering relation for qualitative values indicates that the subject is greater than or equal to the object.
+     *
+     * @param $greaterOrEqual QualitativeValueSchema
      **/
-    private $greaterOrEqual;
     public function setGreaterOrEqual($greaterOrEqual) {
-        $this->greaterOrEqual = $greaterOrEqual;
+        $this->properties['greaterOrEqual'] = $greaterOrEqual;
 
         return $this;
     }
 
     /**
-     * @return QualitativeValueSchema     
+     * @return QualitativeValueSchema
      **/
     public function getGreaterOrEqual() {
-        return $this->greaterOrEqual;
+        return $this->properties['greaterOrEqual'];
     }
 
     /**
      * This ordering relation for qualitative values indicates that the subject is lesser than the object.
+     *
+     * @param $lesser QualitativeValueSchema
      **/
-    private $lesser;
     public function setLesser($lesser) {
-        $this->lesser = $lesser;
+        $this->properties['lesser'] = $lesser;
 
         return $this;
     }
 
     /**
-     * @return QualitativeValueSchema     
+     * @return QualitativeValueSchema
      **/
     public function getLesser() {
-        return $this->lesser;
+        return $this->properties['lesser'];
     }
 
     /**
      * This ordering relation for qualitative values indicates that the subject is lesser than or equal to the object.
+     *
+     * @param $lesserOrEqual QualitativeValueSchema
      **/
-    private $lesserOrEqual;
     public function setLesserOrEqual($lesserOrEqual) {
-        $this->lesserOrEqual = $lesserOrEqual;
+        $this->properties['lesserOrEqual'] = $lesserOrEqual;
 
         return $this;
     }
 
     /**
-     * @return QualitativeValueSchema     
+     * @return QualitativeValueSchema
      **/
     public function getLesserOrEqual() {
-        return $this->lesserOrEqual;
+        return $this->properties['lesserOrEqual'];
     }
 
     /**
      * This ordering relation for qualitative values indicates that the subject is not equal to the object.
+     *
+     * @param $nonEqual QualitativeValueSchema
      **/
-    private $nonEqual;
     public function setNonEqual($nonEqual) {
-        $this->nonEqual = $nonEqual;
+        $this->properties['nonEqual'] = $nonEqual;
 
         return $this;
     }
 
     /**
-     * @return QualitativeValueSchema     
+     * @return QualitativeValueSchema
      **/
     public function getNonEqual() {
-        return $this->nonEqual;
+        return $this->properties['nonEqual'];
     }
 
     /**
      * A pointer to a secondary value that provides additional information on the original value, e.g. a reference temperature.
+     *
+     * @param $valueReference EnumerationSchema|StructuredValueSchema|PropertyValueSchema|QualitativeValueSchema|QuantitativeValueSchema
      **/
-    private $valueReference;
     public function setValueReference($valueReference) {
-        $this->valueReference = $valueReference;
+        $this->properties['valueReference'] = $valueReference;
 
         return $this;
     }
 
     /**
-     * @return EnumerationSchema|StructuredValueSchema|PropertyValueSchema|QualitativeValueSchema|QuantitativeValueSchema     
+     * @return EnumerationSchema|StructuredValueSchema|PropertyValueSchema|QualitativeValueSchema|QuantitativeValueSchema
      **/
     public function getValueReference() {
-        return $this->valueReference;
+        return $this->properties['valueReference'];
     }
 
 

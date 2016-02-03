@@ -35,29 +35,25 @@ class MedicalRiskFactorSchema extends MedicalEntitySchema
 {
     public static function factory()
     {
-        return new MedicalRiskFactorSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MedicalRiskFactorSchema('http://schema.org/', 'MedicalRiskFactor');
     }
 
     /**
      * The condition, complication, etc. influenced by this factor.
+     *
+     * @param $increasesRiskOf MedicalEntitySchema
      **/
-    private $increasesRiskOf;
     public function setIncreasesRiskOf($increasesRiskOf) {
-        $this->increasesRiskOf = $increasesRiskOf;
+        $this->properties['increasesRiskOf'] = $increasesRiskOf;
 
         return $this;
     }
 
     /**
-     * @return MedicalEntitySchema     
+     * @return MedicalEntitySchema
      **/
     public function getIncreasesRiskOf() {
-        return $this->increasesRiskOf;
+        return $this->properties['increasesRiskOf'];
     }
 
 

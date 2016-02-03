@@ -35,12 +35,7 @@ class PlaygroundSchema extends CivicStructureSchema
 {
     public static function factory()
     {
-        return new PlaygroundSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new PlaygroundSchema('http://schema.org/', 'Playground');
     }
 
 

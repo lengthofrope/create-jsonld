@@ -35,12 +35,7 @@ class GroceryStoreSchema extends StoreSchema
 {
     public static function factory()
     {
-        return new GroceryStoreSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new GroceryStoreSchema('http://schema.org/', 'GroceryStore');
     }
 
 

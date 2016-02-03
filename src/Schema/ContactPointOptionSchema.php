@@ -35,12 +35,7 @@ class ContactPointOptionSchema extends EnumerationSchema
 {
     public static function factory()
     {
-        return new ContactPointOptionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ContactPointOptionSchema('http://schema.org/', 'ContactPointOption');
     }
 
 

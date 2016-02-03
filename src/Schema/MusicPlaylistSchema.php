@@ -35,63 +35,61 @@ class MusicPlaylistSchema extends CreativeWorkSchema
 {
     public static function factory()
     {
-        return new MusicPlaylistSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MusicPlaylistSchema('http://schema.org/', 'MusicPlaylist');
     }
 
     /**
      * The number of tracks in this album or playlist.
+     *
+     * @param $numTracks IntegerSchema
      **/
-    private $numTracks;
     public function setNumTracks($numTracks) {
-        $this->numTracks = $numTracks;
+        $this->properties['numTracks'] = $numTracks;
 
         return $this;
     }
 
     /**
-     * @return IntegerSchema     
+     * @return IntegerSchema
      **/
     public function getNumTracks() {
-        return $this->numTracks;
+        return $this->properties['numTracks'];
     }
 
     /**
      * A music recording (track)&#x2014;usually a single song. If an ItemList is given, the list should contain items of type MusicRecording.
+     *
+     * @param $track ItemListSchema|MusicRecordingSchema
      **/
-    private $track;
     public function setTrack($track) {
-        $this->track = $track;
+        $this->properties['track'] = $track;
 
         return $this;
     }
 
     /**
-     * @return ItemListSchema|MusicRecordingSchema     
+     * @return ItemListSchema|MusicRecordingSchema
      **/
     public function getTrack() {
-        return $this->track;
+        return $this->properties['track'];
     }
 
     /**
      * A music recording (track)&#x2014;usually a single song.
+     *
+     * @param $tracks MusicRecordingSchema
      **/
-    private $tracks;
     public function setTracks($tracks) {
-        $this->tracks = $tracks;
+        $this->properties['tracks'] = $tracks;
 
         return $this;
     }
 
     /**
-     * @return MusicRecordingSchema     
+     * @return MusicRecordingSchema
      **/
     public function getTracks() {
-        return $this->tracks;
+        return $this->properties['tracks'];
     }
 
 

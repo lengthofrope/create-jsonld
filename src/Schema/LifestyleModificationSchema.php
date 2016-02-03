@@ -35,12 +35,7 @@ class LifestyleModificationSchema extends MedicalTherapySchema
 {
     public static function factory()
     {
-        return new LifestyleModificationSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new LifestyleModificationSchema('http://schema.org/', 'LifestyleModification');
     }
 
 

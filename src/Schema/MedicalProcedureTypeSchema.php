@@ -31,16 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MedicalProcedureTypeSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
+class MedicalProcedureTypeSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MedicalProcedureTypeSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MedicalProcedureTypeSchema('http://schema.org/', 'MedicalProcedureType');
     }
 
 

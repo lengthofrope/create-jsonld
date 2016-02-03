@@ -35,12 +35,7 @@ class CountrySchema extends AdministrativeAreaSchema
 {
     public static function factory()
     {
-        return new CountrySchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new CountrySchema('http://schema.org/', 'Country');
     }
 
 

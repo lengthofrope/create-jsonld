@@ -35,12 +35,7 @@ class RadioStationSchema extends LocalBusinessSchema
 {
     public static function factory()
     {
-        return new RadioStationSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new RadioStationSchema('http://schema.org/', 'RadioStation');
     }
 
 

@@ -35,12 +35,7 @@ class PerformingArtsTheaterSchema extends CivicStructureSchema
 {
     public static function factory()
     {
-        return new PerformingArtsTheaterSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new PerformingArtsTheaterSchema('http://schema.org/', 'PerformingArtsTheater');
     }
 
 

@@ -35,114 +35,115 @@ class PostalAddressSchema extends ContactPointSchema
 {
     public static function factory()
     {
-        return new PostalAddressSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new PostalAddressSchema('http://schema.org/', 'PostalAddress');
     }
 
     /**
      * The country. For example, USA. You can also provide the two-letter <a href='http://en.wikipedia.org/wiki/ISO_3166-1'>ISO 3166-1 alpha-2 country code</a>.
+     *
+     * @param $addressCountry TextSchema|CountrySchema
      **/
-    private $addressCountry;
     public function setAddressCountry($addressCountry) {
-        $this->addressCountry = $addressCountry;
+        $this->properties['addressCountry'] = $addressCountry;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|CountrySchema     
+     * @return TextSchema|CountrySchema
      **/
     public function getAddressCountry() {
-        return $this->addressCountry;
+        return $this->properties['addressCountry'];
     }
 
     /**
      * The locality. For example, Mountain View.
+     *
+     * @param $addressLocality TextSchema
      **/
-    private $addressLocality;
     public function setAddressLocality($addressLocality) {
-        $this->addressLocality = $addressLocality;
+        $this->properties['addressLocality'] = $addressLocality;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getAddressLocality() {
-        return $this->addressLocality;
+        return $this->properties['addressLocality'];
     }
 
     /**
      * The region. For example, CA.
+     *
+     * @param $addressRegion TextSchema
      **/
-    private $addressRegion;
     public function setAddressRegion($addressRegion) {
-        $this->addressRegion = $addressRegion;
+        $this->properties['addressRegion'] = $addressRegion;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getAddressRegion() {
-        return $this->addressRegion;
+        return $this->properties['addressRegion'];
     }
 
     /**
      * The post office box number for PO box addresses.
+     *
+     * @param $postOfficeBoxNumber TextSchema
      **/
-    private $postOfficeBoxNumber;
     public function setPostOfficeBoxNumber($postOfficeBoxNumber) {
-        $this->postOfficeBoxNumber = $postOfficeBoxNumber;
+        $this->properties['postOfficeBoxNumber'] = $postOfficeBoxNumber;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getPostOfficeBoxNumber() {
-        return $this->postOfficeBoxNumber;
+        return $this->properties['postOfficeBoxNumber'];
     }
 
     /**
      * The postal code. For example, 94043.
+     *
+     * @param $postalCode TextSchema
      **/
-    private $postalCode;
     public function setPostalCode($postalCode) {
-        $this->postalCode = $postalCode;
+        $this->properties['postalCode'] = $postalCode;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getPostalCode() {
-        return $this->postalCode;
+        return $this->properties['postalCode'];
     }
 
     /**
      * The street address. For example, 1600 Amphitheatre Pkwy.
+     *
+     * @param $streetAddress TextSchema
      **/
-    private $streetAddress;
     public function setStreetAddress($streetAddress) {
-        $this->streetAddress = $streetAddress;
+        $this->properties['streetAddress'] = $streetAddress;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getStreetAddress() {
-        return $this->streetAddress;
+        return $this->properties['streetAddress'];
     }
 
 

@@ -35,131 +35,133 @@ class BusTripSchema extends IntangibleSchema
 {
     public static function factory()
     {
-        return new BusTripSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new BusTripSchema('http://schema.org/', 'BusTrip');
     }
 
     /**
      * The stop or station from which the bus arrives.
+     *
+     * @param $arrivalBusStop BusStationSchema|BusStopSchema
      **/
-    private $arrivalBusStop;
     public function setArrivalBusStop($arrivalBusStop) {
-        $this->arrivalBusStop = $arrivalBusStop;
+        $this->properties['arrivalBusStop'] = $arrivalBusStop;
 
         return $this;
     }
 
     /**
-     * @return BusStationSchema|BusStopSchema     
+     * @return BusStationSchema|BusStopSchema
      **/
     public function getArrivalBusStop() {
-        return $this->arrivalBusStop;
+        return $this->properties['arrivalBusStop'];
     }
 
     /**
      * The expected arrival time.
+     *
+     * @param $arrivalTime DateTimeSchema
      **/
-    private $arrivalTime;
     public function setArrivalTime($arrivalTime) {
-        $this->arrivalTime = $arrivalTime;
+        $this->properties['arrivalTime'] = $arrivalTime;
 
         return $this;
     }
 
     /**
-     * @return DateTimeSchema     
+     * @return DateTimeSchema
      **/
     public function getArrivalTime() {
-        return $this->arrivalTime;
+        return $this->properties['arrivalTime'];
     }
 
     /**
      * The name of the bus (e.g. Bolt Express).
+     *
+     * @param $busName TextSchema
      **/
-    private $busName;
     public function setBusName($busName) {
-        $this->busName = $busName;
+        $this->properties['busName'] = $busName;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getBusName() {
-        return $this->busName;
+        return $this->properties['busName'];
     }
 
     /**
      * The unique identifier for the bus.
+     *
+     * @param $busNumber TextSchema
      **/
-    private $busNumber;
     public function setBusNumber($busNumber) {
-        $this->busNumber = $busNumber;
+        $this->properties['busNumber'] = $busNumber;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getBusNumber() {
-        return $this->busNumber;
+        return $this->properties['busNumber'];
     }
 
     /**
      * The stop or station from which the bus departs.
+     *
+     * @param $departureBusStop BusStationSchema|BusStopSchema
      **/
-    private $departureBusStop;
     public function setDepartureBusStop($departureBusStop) {
-        $this->departureBusStop = $departureBusStop;
+        $this->properties['departureBusStop'] = $departureBusStop;
 
         return $this;
     }
 
     /**
-     * @return BusStationSchema|BusStopSchema     
+     * @return BusStationSchema|BusStopSchema
      **/
     public function getDepartureBusStop() {
-        return $this->departureBusStop;
+        return $this->properties['departureBusStop'];
     }
 
     /**
      * The expected departure time.
+     *
+     * @param $departureTime DateTimeSchema
      **/
-    private $departureTime;
     public function setDepartureTime($departureTime) {
-        $this->departureTime = $departureTime;
+        $this->properties['departureTime'] = $departureTime;
 
         return $this;
     }
 
     /**
-     * @return DateTimeSchema     
+     * @return DateTimeSchema
      **/
     public function getDepartureTime() {
-        return $this->departureTime;
+        return $this->properties['departureTime'];
     }
 
     /**
      * The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.
+     *
+     * @param $provider PersonSchema|OrganizationSchema
      **/
-    private $provider;
     public function setProvider($provider) {
-        $this->provider = $provider;
+        $this->properties['provider'] = $provider;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema|OrganizationSchema     
+     * @return PersonSchema|OrganizationSchema
      **/
     public function getProvider() {
-        return $this->provider;
+        return $this->properties['provider'];
     }
 
 

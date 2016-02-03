@@ -35,12 +35,7 @@ class BikeStoreSchema extends StoreSchema
 {
     public static function factory()
     {
-        return new BikeStoreSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new BikeStoreSchema('http://schema.org/', 'BikeStore');
     }
 
 

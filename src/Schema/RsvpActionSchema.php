@@ -35,63 +35,61 @@ class RsvpActionSchema extends InformActionSchema
 {
     public static function factory()
     {
-        return new RsvpActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new RsvpActionSchema('http://schema.org/', 'RsvpAction');
     }
 
     /**
      * If responding yes, the number of guests who will attend in addition to the invitee.
+     *
+     * @param $additionalNumberOfGuests NumberSchema
      **/
-    private $additionalNumberOfGuests;
     public function setAdditionalNumberOfGuests($additionalNumberOfGuests) {
-        $this->additionalNumberOfGuests = $additionalNumberOfGuests;
+        $this->properties['additionalNumberOfGuests'] = $additionalNumberOfGuests;
 
         return $this;
     }
 
     /**
-     * @return NumberSchema     
+     * @return NumberSchema
      **/
     public function getAdditionalNumberOfGuests() {
-        return $this->additionalNumberOfGuests;
+        return $this->properties['additionalNumberOfGuests'];
     }
 
     /**
      * Comments, typically from users.
+     *
+     * @param $comment CommentSchema
      **/
-    private $comment;
     public function setComment($comment) {
-        $this->comment = $comment;
+        $this->properties['comment'] = $comment;
 
         return $this;
     }
 
     /**
-     * @return CommentSchema     
+     * @return CommentSchema
      **/
     public function getComment() {
-        return $this->comment;
+        return $this->properties['comment'];
     }
 
     /**
      * The response (yes, no, maybe) to the RSVP.
+     *
+     * @param $rsvpResponse RsvpResponseTypeSchema
      **/
-    private $rsvpResponse;
     public function setRsvpResponse($rsvpResponse) {
-        $this->rsvpResponse = $rsvpResponse;
+        $this->properties['rsvpResponse'] = $rsvpResponse;
 
         return $this;
     }
 
     /**
-     * @return RsvpResponseTypeSchema     
+     * @return RsvpResponseTypeSchema
      **/
     public function getRsvpResponse() {
-        return $this->rsvpResponse;
+        return $this->properties['rsvpResponse'];
     }
 
 

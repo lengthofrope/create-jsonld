@@ -35,12 +35,7 @@ class UseActionSchema extends ConsumeActionSchema
 {
     public static function factory()
     {
-        return new UseActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new UseActionSchema('http://schema.org/', 'UseAction');
     }
 
 

@@ -35,63 +35,61 @@ class ScreeningEventSchema extends EventSchema
 {
     public static function factory()
     {
-        return new ScreeningEventSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ScreeningEventSchema('http://schema.org/', 'ScreeningEvent');
     }
 
     /**
      * Languages in which subtitles/captions are available, in <a href='http://tools.ietf.org/html/bcp47'>IETF BCP 47 standard format.</a>
+     *
+     * @param $subtitleLanguage TextSchema|LanguageSchema
      **/
-    private $subtitleLanguage;
     public function setSubtitleLanguage($subtitleLanguage) {
-        $this->subtitleLanguage = $subtitleLanguage;
+        $this->properties['subtitleLanguage'] = $subtitleLanguage;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|LanguageSchema     
+     * @return TextSchema|LanguageSchema
      **/
     public function getSubtitleLanguage() {
-        return $this->subtitleLanguage;
+        return $this->properties['subtitleLanguage'];
     }
 
     /**
      * The type of screening or video broadcast used (e.g. IMAX, 3D, SD, HD, etc.).
+     *
+     * @param $videoFormat TextSchema
      **/
-    private $videoFormat;
     public function setVideoFormat($videoFormat) {
-        $this->videoFormat = $videoFormat;
+        $this->properties['videoFormat'] = $videoFormat;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getVideoFormat() {
-        return $this->videoFormat;
+        return $this->properties['videoFormat'];
     }
 
     /**
      * The movie presented during this event.
+     *
+     * @param $workPresented MovieSchema
      **/
-    private $workPresented;
     public function setWorkPresented($workPresented) {
-        $this->workPresented = $workPresented;
+        $this->properties['workPresented'] = $workPresented;
 
         return $this;
     }
 
     /**
-     * @return MovieSchema     
+     * @return MovieSchema
      **/
     public function getWorkPresented() {
-        return $this->workPresented;
+        return $this->properties['workPresented'];
     }
 
 

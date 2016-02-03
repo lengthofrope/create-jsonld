@@ -35,12 +35,7 @@ class ComedyEventSchema extends EventSchema
 {
     public static function factory()
     {
-        return new ComedyEventSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ComedyEventSchema('http://schema.org/', 'ComedyEvent');
     }
 
 

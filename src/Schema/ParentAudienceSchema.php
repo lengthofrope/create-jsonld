@@ -35,46 +35,43 @@ class ParentAudienceSchema extends PeopleAudienceSchema
 {
     public static function factory()
     {
-        return new ParentAudienceSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ParentAudienceSchema('http://schema.org/', 'ParentAudience');
     }
 
     /**
      * Maximal age of the child.
+     *
+     * @param $childMaxAge NumberSchema
      **/
-    private $childMaxAge;
     public function setChildMaxAge($childMaxAge) {
-        $this->childMaxAge = $childMaxAge;
+        $this->properties['childMaxAge'] = $childMaxAge;
 
         return $this;
     }
 
     /**
-     * @return NumberSchema     
+     * @return NumberSchema
      **/
     public function getChildMaxAge() {
-        return $this->childMaxAge;
+        return $this->properties['childMaxAge'];
     }
 
     /**
      * Minimal age of the child.
+     *
+     * @param $childMinAge NumberSchema
      **/
-    private $childMinAge;
     public function setChildMinAge($childMinAge) {
-        $this->childMinAge = $childMinAge;
+        $this->properties['childMinAge'] = $childMinAge;
 
         return $this;
     }
 
     /**
-     * @return NumberSchema     
+     * @return NumberSchema
      **/
     public function getChildMinAge() {
-        return $this->childMinAge;
+        return $this->properties['childMinAge'];
     }
 
 

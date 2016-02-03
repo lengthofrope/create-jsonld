@@ -35,12 +35,7 @@ class SelfStorageSchema extends LocalBusinessSchema
 {
     public static function factory()
     {
-        return new SelfStorageSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new SelfStorageSchema('http://schema.org/', 'SelfStorage');
     }
 
 

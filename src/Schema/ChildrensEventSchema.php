@@ -35,12 +35,7 @@ class ChildrensEventSchema extends EventSchema
 {
     public static function factory()
     {
-        return new ChildrensEventSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ChildrensEventSchema('http://schema.org/', 'ChildrensEvent');
     }
 
 

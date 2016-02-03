@@ -35,12 +35,7 @@ class TreatmentIndicationSchema extends MedicalIndicationSchema
 {
     public static function factory()
     {
-        return new TreatmentIndicationSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new TreatmentIndicationSchema('http://schema.org/', 'TreatmentIndication');
     }
 
 

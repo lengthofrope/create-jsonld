@@ -35,12 +35,7 @@ class SportsActivityLocationSchema extends LocalBusinessSchema
 {
     public static function factory()
     {
-        return new SportsActivityLocationSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new SportsActivityLocationSchema('http://schema.org/', 'SportsActivityLocation');
     }
 
 

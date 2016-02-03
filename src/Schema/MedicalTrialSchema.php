@@ -35,46 +35,43 @@ class MedicalTrialSchema extends MedicalStudySchema
 {
     public static function factory()
     {
-        return new MedicalTrialSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new MedicalTrialSchema('http://schema.org/', 'MedicalTrial');
     }
 
     /**
      * The phase of the trial.
+     *
+     * @param $phase TextSchema
      **/
-    private $phase;
     public function setPhase($phase) {
-        $this->phase = $phase;
+        $this->properties['phase'] = $phase;
 
         return $this;
     }
 
     /**
-     * @return TextSchema     
+     * @return TextSchema
      **/
     public function getPhase() {
-        return $this->phase;
+        return $this->properties['phase'];
     }
 
     /**
      * Specifics about the trial design (enumerated).
+     *
+     * @param $trialDesign MedicalTrialDesignSchema
      **/
-    private $trialDesign;
     public function setTrialDesign($trialDesign) {
-        $this->trialDesign = $trialDesign;
+        $this->properties['trialDesign'] = $trialDesign;
 
         return $this;
     }
 
     /**
-     * @return MedicalTrialDesignSchema     
+     * @return MedicalTrialDesignSchema
      **/
     public function getTrialDesign() {
-        return $this->trialDesign;
+        return $this->properties['trialDesign'];
     }
 
 

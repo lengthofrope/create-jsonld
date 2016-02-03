@@ -35,12 +35,7 @@ class LibrarySchema extends LocalBusinessSchema
 {
     public static function factory()
     {
-        return new LibrarySchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new LibrarySchema('http://schema.org/', 'Library');
     }
 
 

@@ -35,12 +35,7 @@ class ReserveActionSchema extends PlanActionSchema
 {
     public static function factory()
     {
-        return new ReserveActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new ReserveActionSchema('http://schema.org/', 'ReserveAction');
     }
 
 

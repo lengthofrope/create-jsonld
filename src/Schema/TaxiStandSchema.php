@@ -35,12 +35,7 @@ class TaxiStandSchema extends CivicStructureSchema
 {
     public static function factory()
     {
-        return new TaxiStandSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new TaxiStandSchema('http://schema.org/', 'TaxiStand');
     }
 
 

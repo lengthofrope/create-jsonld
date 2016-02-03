@@ -35,46 +35,43 @@ class SellActionSchema extends TradeActionSchema
 {
     public static function factory()
     {
-        return new SellActionSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new SellActionSchema('http://schema.org/', 'SellAction');
     }
 
     /**
      * A sub property of participant. The participant/person/organization that bought the object.
+     *
+     * @param $buyer PersonSchema
      **/
-    private $buyer;
     public function setBuyer($buyer) {
-        $this->buyer = $buyer;
+        $this->properties['buyer'] = $buyer;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema     
+     * @return PersonSchema
      **/
     public function getBuyer() {
-        return $this->buyer;
+        return $this->properties['buyer'];
     }
 
     /**
      * The warranty promise(s) included in the offer.
+     *
+     * @param $warrantyPromise WarrantyPromiseSchema
      **/
-    private $warrantyPromise;
     public function setWarrantyPromise($warrantyPromise) {
-        $this->warrantyPromise = $warrantyPromise;
+        $this->properties['warrantyPromise'] = $warrantyPromise;
 
         return $this;
     }
 
     /**
-     * @return WarrantyPromiseSchema     
+     * @return WarrantyPromiseSchema
      **/
     public function getWarrantyPromise() {
-        return $this->warrantyPromise;
+        return $this->properties['warrantyPromise'];
     }
 
 

@@ -35,29 +35,25 @@ class DrugLegalStatusSchema extends MedicalIntangibleSchema
 {
     public static function factory()
     {
-        return new DrugLegalStatusSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new DrugLegalStatusSchema('http://schema.org/', 'DrugLegalStatus');
     }
 
     /**
      * The location in which the status applies.
+     *
+     * @param $applicableLocation AdministrativeAreaSchema
      **/
-    private $applicableLocation;
     public function setApplicableLocation($applicableLocation) {
-        $this->applicableLocation = $applicableLocation;
+        $this->properties['applicableLocation'] = $applicableLocation;
 
         return $this;
     }
 
     /**
-     * @return AdministrativeAreaSchema     
+     * @return AdministrativeAreaSchema
      **/
     public function getApplicableLocation() {
-        return $this->applicableLocation;
+        return $this->properties['applicableLocation'];
     }
 
 

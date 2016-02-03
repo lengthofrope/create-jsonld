@@ -38,46 +38,43 @@ class GeoCircleSchema extends GeoShapeSchema
 {
     public static function factory()
     {
-        return new GeoCircleSchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new GeoCircleSchema('http://schema.org/', 'GeoCircle');
     }
 
     /**
      * Indicates the GeoCoordinates at the centre of a GeoShape e.g. GeoCircle.
+     *
+     * @param $geoMidpoint GeoCoordinatesSchema
      **/
-    private $geoMidpoint;
     public function setGeoMidpoint($geoMidpoint) {
-        $this->geoMidpoint = $geoMidpoint;
+        $this->properties['geoMidpoint'] = $geoMidpoint;
 
         return $this;
     }
 
     /**
-     * @return GeoCoordinatesSchema     
+     * @return GeoCoordinatesSchema
      **/
     public function getGeoMidpoint() {
-        return $this->geoMidpoint;
+        return $this->properties['geoMidpoint'];
     }
 
     /**
      * Indicates the approximate radius of a GeoCircle (metres unless indicated otherwise via Distance notation).
+     *
+     * @param $geoRadius TextSchema|NumberSchema|DistanceSchema
      **/
-    private $geoRadius;
     public function setGeoRadius($geoRadius) {
-        $this->geoRadius = $geoRadius;
+        $this->properties['geoRadius'] = $geoRadius;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|NumberSchema|DistanceSchema     
+     * @return TextSchema|NumberSchema|DistanceSchema
      **/
     public function getGeoRadius() {
-        return $this->geoRadius;
+        return $this->properties['geoRadius'];
     }
 
 

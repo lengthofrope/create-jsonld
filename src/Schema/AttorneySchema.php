@@ -38,12 +38,7 @@ class AttorneySchema extends LegalServiceSchema
 {
     public static function factory()
     {
-        return new AttorneySchema();
-    }
-
-    public function getDataArray()
-    {
-        return array();
+        return new AttorneySchema('http://schema.org/', 'Attorney');
     }
 
 
