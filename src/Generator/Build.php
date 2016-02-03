@@ -198,8 +198,8 @@ class Build
                 continue;
             }
 
-            $classextends = $item->{'rdfs:subClassOf'};
-            $classextends = str_replace('schema:', '', $classextends->id);
+            $classextends = @$item->{'rdfs:subClassOf'};
+            $classextends = @str_replace('schema:', '', $classextends->id);
             if (empty($classextends)) {
                 $classextends = '\LengthOfRope\JSONLD\Elements\Element';
             } else {
@@ -207,8 +207,8 @@ class Build
             }
             $file = $dir . $class . '.php';
 
-            $context = explode(":", $item->id);
-            $context = $this->schema->{'@context'}->$context[0];
+            $context = @explode(":", $item->id);
+            $context = @$this->schema->{'@context'}->$context[0];
 
             $content = $twig->render('template.twig', array(
                 'class'        => $class,
