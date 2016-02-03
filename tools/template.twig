@@ -23,7 +23,7 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
- */
+ **/
 
 namespace LengthOfRope\JSONLD\Schema;
 
@@ -31,17 +31,38 @@ namespace LengthOfRope\JSONLD\Schema;
  * {{ classcomment }}
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
- */
+ **/
 class {{ class }} extends {{ classExtends }}
 {
     public static function factory()
     {
         return new {{ class }}();
     }
-    
+
     public function getDataArray()
     {
         return array();
     }
+
+{% for property in properties %}
+    /**
+     * {{ property.comment }}
+     **/
+    private ${{ property.label }};
+    public function {{ property.setter }}(${{ property.label }}) {
+        $this->{{ property.label }} = ${{ property.label }};
+
+        return $this;
+    }
+
+    /**
+     * @return {% for range in property.rangeIncludes %}{{ range.class }}{% if loop.last == false %}|{% endif %}{% endfor %}
+     **/
+    public function {{ property.getter }}() {
+        return $this->{{ property.label }};
+    }
+
+{% endfor %}
+
 }
 {% endautoescape %}

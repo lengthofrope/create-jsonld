@@ -59,13 +59,13 @@ class Build
         $this->getJSONVersionOfSchema();
 
         $this->parse();
-        
+
         $this->write();
     }
 
     /**
      * Retrieve the latest RDFA version of schema.org and converts it to JSON-LD.
-     * 
+     *
      * Note: caches the file in data and retrieves it from there as long as it exists.
      */
     private function getJSONVersionOfSchema()
@@ -111,35 +111,38 @@ class Build
                 // Skip all but properties
                 continue;
             }
-            
+
             // Convert domain and range to arrays
             $domains = array();
             if (!is_array($item->domainIncludes)) {
                 $item->domainIncludes = array($item->domainIncludes);
             }
-            
+
             foreach($item->domainIncludes as $dom) {
                 $domains[] = $dom->id;
             }
-            
+
             $item->domainIncludes = $domains;
-            
-            
+
+
             $range = array();
             if (!is_array($item->rangeIncludes)) {
                 $item->rangeIncludes = array($item->rangeIncludes);
             }
-            
+
             foreach($item->rangeIncludes as $ran) {
-                $range[] = $ran->id;
+                $range[] = array(
+                    'id' => $ran->id,
+                    'class' => str_replace('schema:', '', $ran->id) . 'Schema'
+                );
             }
-            
+
             $item->rangeIncludes = $range;
-            
+
             $this->props[$item->id] = $item;
         }
-        
-        
+
+
         foreach ($this->schema->{'@graph'} as $key => $item)
         {
             $types = $item->type;
@@ -147,16 +150,24 @@ class Build
                 // Skip properties in first run
                 continue;
             }
-            
+
             $item->props = array();
-            
+
             // Add properties to item
             foreach($this->props as $prop) {
                 if (in_array($item->id, $prop->domainIncludes)) {
-                    $item->props[] = $prop;
+                    $item->props[] = array(
+                        'id' => $prop->id,
+                        'domainIncludes' => $prop->domainIncludes,
+                        'rangeIncludes' => $prop->rangeIncludes,
+                        'comment' => $prop->{'rdfs:comment'},
+                        'label' => $prop->{'rdfs:label'},
+                        'getter' => 'get' . ucfirst($prop->{'rdfs:label'}),
+                        'setter' => 'set' . ucfirst($prop->{'rdfs:label'}),
+                    );
                 }
             }
-            
+
             if (is_array($types)) {
                 foreach($types as $type) {
                     $this->types[$type][$item->id] = $item;
@@ -166,35 +177,37 @@ class Build
             }
         }
     }
-    
+
     private function write()
     {
         $dir = dirname(__DIR__) . '/Schema/';
         if (!is_dir($dir)) {
             mkdir($dir, 0777, true);
         }
-        
+
         $loader = new \Twig_Loader_Filesystem(dirname(dirname(__DIR__)) . '/tools/');
         $twig = new \Twig_Environment($loader);
-        
+
         foreach($this->types['rdfs:Class'] as $item) {
-            $class = $item->{'rdfs:label'};
-            if (in_array($class, array('DataType', 'Class'))) {
-                continue;
-            }
+            // Add Schema to all classes to prevent failures (classes Class or Float) are reserved.
+            $class = $item->{'rdfs:label'} . 'Schema';
             $classextends = $item->{'rdfs:subClassOf'};
             $classextends = str_replace('schema:', '', $classextends->id);
             if (empty($classextends)) {
                 $classextends = '\LengthOfRope\JSONLD\Elements\ElementGroup';
+            } else {
+                $classextends .= 'Schema';
             }
-            $file = $dir . $item->{'rdfs:label'} . '.php';
-            
+            $file = $dir . $class . '.php';
+
             $content = $twig->render('template.twig', array(
                 'class' => $class,
                 'classcomment' => $item->{'rdfs:comment'},
-                'classExtends' => $classextends
+                'classExtends' => $classextends,
+                'properties' => $item->props
             ));
-            
+
+
             file_put_contents($file, $content);
         }
     }
