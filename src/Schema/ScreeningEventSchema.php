@@ -54,7 +54,8 @@ class ScreeningEventSchema extends EventSchema
     }
 
     /**
-     * @return TextSchema|LanguageSchema     **/
+     * @return TextSchema|LanguageSchema     
+     **/
     public function getSubtitleLanguage() {
         return $this->subtitleLanguage;
     }
@@ -70,7 +71,8 @@ class ScreeningEventSchema extends EventSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getVideoFormat() {
         return $this->videoFormat;
     }
@@ -86,7 +88,8 @@ class ScreeningEventSchema extends EventSchema
     }
 
     /**
-     * @return MovieSchema     **/
+     * @return MovieSchema     
+     **/
     public function getWorkPresented() {
         return $this->workPresented;
     }

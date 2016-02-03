@@ -54,7 +54,8 @@ class TVSeasonSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return CountrySchema     **/
+     * @return CountrySchema     
+     **/
     public function getCountryOfOrigin() {
         return $this->countryOfOrigin;
     }
@@ -70,7 +71,8 @@ class TVSeasonSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return TVSeriesSchema     **/
+     * @return TVSeriesSchema     
+     **/
     public function getPartOfTVSeries() {
         return $this->partOfTVSeries;
     }

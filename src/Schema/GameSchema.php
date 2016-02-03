@@ -54,7 +54,8 @@ class GameSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return ThingSchema     **/
+     * @return ThingSchema     
+     **/
     public function getCharacterAttribute() {
         return $this->characterAttribute;
     }
@@ -70,7 +71,8 @@ class GameSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return ThingSchema     **/
+     * @return ThingSchema     
+     **/
     public function getGameItem() {
         return $this->gameItem;
     }
@@ -86,7 +88,8 @@ class GameSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return URLSchema|PlaceSchema|PostalAddressSchema     **/
+     * @return URLSchema|PlaceSchema|PostalAddressSchema     
+     **/
     public function getGameLocation() {
         return $this->gameLocation;
     }
@@ -102,7 +105,8 @@ class GameSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return QuantitativeValueSchema     **/
+     * @return QuantitativeValueSchema     
+     **/
     public function getNumberOfPlayers() {
         return $this->numberOfPlayers;
     }
@@ -118,7 +122,8 @@ class GameSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return ThingSchema     **/
+     * @return ThingSchema     
+     **/
     public function getQuest() {
         return $this->quest;
     }

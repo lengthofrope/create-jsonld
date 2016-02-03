@@ -54,7 +54,8 @@ class ReviewActionSchema extends AssessActionSchema
     }
 
     /**
-     * @return ReviewSchema     **/
+     * @return ReviewSchema     
+     **/
     public function getResultReview() {
         return $this->resultReview;
     }

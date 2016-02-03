@@ -54,7 +54,8 @@ class MedicalStudySchema extends MedicalEntitySchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getOutcome() {
         return $this->outcome;
     }
@@ -70,7 +71,8 @@ class MedicalStudySchema extends MedicalEntitySchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getPopulation() {
         return $this->population;
     }
@@ -86,7 +88,8 @@ class MedicalStudySchema extends MedicalEntitySchema
     }
 
     /**
-     * @return OrganizationSchema     **/
+     * @return OrganizationSchema     
+     **/
     public function getSponsor() {
         return $this->sponsor;
     }
@@ -102,7 +105,8 @@ class MedicalStudySchema extends MedicalEntitySchema
     }
 
     /**
-     * @return MedicalStudyStatusSchema     **/
+     * @return MedicalStudyStatusSchema     
+     **/
     public function getStatus() {
         return $this->status;
     }
@@ -118,7 +122,8 @@ class MedicalStudySchema extends MedicalEntitySchema
     }
 
     /**
-     * @return AdministrativeAreaSchema     **/
+     * @return AdministrativeAreaSchema     
+     **/
     public function getStudyLocation() {
         return $this->studyLocation;
     }
@@ -134,7 +139,8 @@ class MedicalStudySchema extends MedicalEntitySchema
     }
 
     /**
-     * @return MedicalEntitySchema     **/
+     * @return MedicalEntitySchema     
+     **/
     public function getStudySubject() {
         return $this->studySubject;
     }

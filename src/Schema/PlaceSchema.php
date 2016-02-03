@@ -57,7 +57,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return PropertyValueSchema     **/
+     * @return PropertyValueSchema     
+     **/
     public function getAdditionalProperty() {
         return $this->additionalProperty;
     }
@@ -73,7 +74,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return PostalAddressSchema|TextSchema     **/
+     * @return PostalAddressSchema|TextSchema     
+     **/
     public function getAddress() {
         return $this->address;
     }
@@ -89,7 +91,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return AggregateRatingSchema     **/
+     * @return AggregateRatingSchema     
+     **/
     public function getAggregateRating() {
         return $this->aggregateRating;
     }
@@ -107,7 +110,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getBranchCode() {
         return $this->branchCode;
     }
@@ -123,7 +127,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return PlaceSchema     **/
+     * @return PlaceSchema     
+     **/
     public function getContainedIn() {
         return $this->containedIn;
     }
@@ -139,7 +144,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return PlaceSchema     **/
+     * @return PlaceSchema     
+     **/
     public function getContainedInPlace() {
         return $this->containedInPlace;
     }
@@ -155,7 +161,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return PlaceSchema     **/
+     * @return PlaceSchema     
+     **/
     public function getContainsPlace() {
         return $this->containsPlace;
     }
@@ -171,7 +178,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return EventSchema     **/
+     * @return EventSchema     
+     **/
     public function getEvent() {
         return $this->event;
     }
@@ -187,7 +195,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return EventSchema     **/
+     * @return EventSchema     
+     **/
     public function getEvents() {
         return $this->events;
     }
@@ -203,7 +212,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getFaxNumber() {
         return $this->faxNumber;
     }
@@ -219,7 +229,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return GeoCoordinatesSchema|GeoShapeSchema     **/
+     * @return GeoCoordinatesSchema|GeoShapeSchema     
+     **/
     public function getGeo() {
         return $this->geo;
     }
@@ -235,7 +246,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getGlobalLocationNumber() {
         return $this->globalLocationNumber;
     }
@@ -251,7 +263,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return URLSchema|MapSchema     **/
+     * @return URLSchema|MapSchema     
+     **/
     public function getHasMap() {
         return $this->hasMap;
     }
@@ -267,7 +280,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getIsicV4() {
         return $this->isicV4;
     }
@@ -283,7 +297,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return ImageObjectSchema|URLSchema     **/
+     * @return ImageObjectSchema|URLSchema     
+     **/
     public function getLogo() {
         return $this->logo;
     }
@@ -299,7 +314,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return URLSchema     **/
+     * @return URLSchema     
+     **/
     public function getMap() {
         return $this->map;
     }
@@ -315,7 +331,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return URLSchema     **/
+     * @return URLSchema     
+     **/
     public function getMaps() {
         return $this->maps;
     }
@@ -331,7 +348,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return OpeningHoursSpecificationSchema     **/
+     * @return OpeningHoursSpecificationSchema     
+     **/
     public function getOpeningHoursSpecification() {
         return $this->openingHoursSpecification;
     }
@@ -347,7 +365,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return ImageObjectSchema|PhotographSchema     **/
+     * @return ImageObjectSchema|PhotographSchema     
+     **/
     public function getPhoto() {
         return $this->photo;
     }
@@ -363,7 +382,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return ImageObjectSchema|PhotographSchema     **/
+     * @return ImageObjectSchema|PhotographSchema     
+     **/
     public function getPhotos() {
         return $this->photos;
     }
@@ -379,7 +399,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return ReviewSchema     **/
+     * @return ReviewSchema     
+     **/
     public function getReview() {
         return $this->review;
     }
@@ -395,7 +416,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return ReviewSchema     **/
+     * @return ReviewSchema     
+     **/
     public function getReviews() {
         return $this->reviews;
     }
@@ -411,7 +433,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getTelephone() {
         return $this->telephone;
     }

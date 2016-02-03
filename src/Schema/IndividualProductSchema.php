@@ -54,7 +54,8 @@ class IndividualProductSchema extends ProductSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getSerialNumber() {
         return $this->serialNumber;
     }

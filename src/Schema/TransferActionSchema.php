@@ -54,7 +54,8 @@ class TransferActionSchema extends ActionSchema
     }
 
     /**
-     * @return PlaceSchema     **/
+     * @return PlaceSchema     
+     **/
     public function getFromLocation() {
         return $this->fromLocation;
     }
@@ -70,7 +71,8 @@ class TransferActionSchema extends ActionSchema
     }
 
     /**
-     * @return PlaceSchema     **/
+     * @return PlaceSchema     
+     **/
     public function getToLocation() {
         return $this->toLocation;
     }

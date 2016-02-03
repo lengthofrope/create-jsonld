@@ -76,7 +76,8 @@ class CreativeWorkSeriesSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return DateSchema     **/
+     * @return DateSchema     
+     **/
     public function getEndDate() {
         return $this->endDate;
     }
@@ -92,7 +93,8 @@ class CreativeWorkSeriesSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return DateSchema     **/
+     * @return DateSchema     
+     **/
     public function getStartDate() {
         return $this->startDate;
     }

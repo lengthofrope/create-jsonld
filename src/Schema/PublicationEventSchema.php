@@ -54,7 +54,8 @@ class PublicationEventSchema extends EventSchema
     }
 
     /**
-     * @return BooleanSchema     **/
+     * @return BooleanSchema     
+     **/
     public function getFree() {
         return $this->free;
     }
@@ -70,7 +71,8 @@ class PublicationEventSchema extends EventSchema
     }
 
     /**
-     * @return BooleanSchema     **/
+     * @return BooleanSchema     
+     **/
     public function getIsAccessibleForFree() {
         return $this->isAccessibleForFree;
     }
@@ -86,7 +88,8 @@ class PublicationEventSchema extends EventSchema
     }
 
     /**
-     * @return BroadcastServiceSchema     **/
+     * @return BroadcastServiceSchema     
+     **/
     public function getPublishedOn() {
         return $this->publishedOn;
     }

@@ -54,7 +54,8 @@ class MedicalGuidelineSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return MedicalEvidenceLevelSchema     **/
+     * @return MedicalEvidenceLevelSchema     
+     **/
     public function getEvidenceLevel() {
         return $this->evidenceLevel;
     }
@@ -70,7 +71,8 @@ class MedicalGuidelineSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getEvidenceOrigin() {
         return $this->evidenceOrigin;
     }
@@ -86,7 +88,8 @@ class MedicalGuidelineSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return DateSchema     **/
+     * @return DateSchema     
+     **/
     public function getGuidelineDate() {
         return $this->guidelineDate;
     }
@@ -102,7 +105,8 @@ class MedicalGuidelineSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return MedicalEntitySchema     **/
+     * @return MedicalEntitySchema     
+     **/
     public function getGuidelineSubject() {
         return $this->guidelineSubject;
     }

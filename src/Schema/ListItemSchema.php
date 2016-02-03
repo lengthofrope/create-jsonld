@@ -54,7 +54,8 @@ class ListItemSchema extends IntangibleSchema
     }
 
     /**
-     * @return ThingSchema     **/
+     * @return ThingSchema     
+     **/
     public function getItem() {
         return $this->item;
     }
@@ -70,7 +71,8 @@ class ListItemSchema extends IntangibleSchema
     }
 
     /**
-     * @return ListItemSchema     **/
+     * @return ListItemSchema     
+     **/
     public function getNextItem() {
         return $this->nextItem;
     }
@@ -86,7 +88,8 @@ class ListItemSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema|IntegerSchema     **/
+     * @return TextSchema|IntegerSchema     
+     **/
     public function getPosition() {
         return $this->position;
     }
@@ -102,7 +105,8 @@ class ListItemSchema extends IntangibleSchema
     }
 
     /**
-     * @return ListItemSchema     **/
+     * @return ListItemSchema     
+     **/
     public function getPreviousItem() {
         return $this->previousItem;
     }

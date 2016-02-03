@@ -54,7 +54,8 @@ class InfectiousDiseaseSchema extends MedicalConditionSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getInfectiousAgent() {
         return $this->infectiousAgent;
     }
@@ -70,7 +71,8 @@ class InfectiousDiseaseSchema extends MedicalConditionSchema
     }
 
     /**
-     * @return InfectiousAgentClassSchema     **/
+     * @return InfectiousAgentClassSchema     
+     **/
     public function getInfectiousAgentClass() {
         return $this->infectiousAgentClass;
     }
@@ -86,7 +88,8 @@ class InfectiousDiseaseSchema extends MedicalConditionSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getTransmissionMethod() {
         return $this->transmissionMethod;
     }

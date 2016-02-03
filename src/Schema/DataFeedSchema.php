@@ -54,7 +54,8 @@ class DataFeedSchema extends DatasetSchema
     }
 
     /**
-     * @return TextSchema|ThingSchema|DataFeedItemSchema     **/
+     * @return TextSchema|ThingSchema|DataFeedItemSchema     
+     **/
     public function getDataFeedElement() {
         return $this->dataFeedElement;
     }

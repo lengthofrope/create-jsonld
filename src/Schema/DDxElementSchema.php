@@ -54,7 +54,8 @@ class DDxElementSchema extends MedicalIntangibleSchema
     }
 
     /**
-     * @return MedicalConditionSchema     **/
+     * @return MedicalConditionSchema     
+     **/
     public function getDiagnosis() {
         return $this->diagnosis;
     }
@@ -70,7 +71,8 @@ class DDxElementSchema extends MedicalIntangibleSchema
     }
 
     /**
-     * @return MedicalSignOrSymptomSchema     **/
+     * @return MedicalSignOrSymptomSchema     
+     **/
     public function getDistinguishingSign() {
         return $this->distinguishingSign;
     }

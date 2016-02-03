@@ -54,7 +54,8 @@ class PayActionSchema extends TradeActionSchema
     }
 
     /**
-     * @return MedicalDevicePurposeSchema|ThingSchema     **/
+     * @return MedicalDevicePurposeSchema|ThingSchema     
+     **/
     public function getPurpose() {
         return $this->purpose;
     }
@@ -70,7 +71,8 @@ class PayActionSchema extends TradeActionSchema
     }
 
     /**
-     * @return AudienceSchema|OrganizationSchema|PersonSchema     **/
+     * @return AudienceSchema|OrganizationSchema|PersonSchema     
+     **/
     public function getRecipient() {
         return $this->recipient;
     }

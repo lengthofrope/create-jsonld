@@ -54,7 +54,8 @@ class NerveSchema extends AnatomicalStructureSchema
     }
 
     /**
-     * @return AnatomicalStructureSchema     **/
+     * @return AnatomicalStructureSchema     
+     **/
     public function getBranch() {
         return $this->branch;
     }
@@ -70,7 +71,8 @@ class NerveSchema extends AnatomicalStructureSchema
     }
 
     /**
-     * @return MuscleSchema     **/
+     * @return MuscleSchema     
+     **/
     public function getNerveMotor() {
         return $this->nerveMotor;
     }
@@ -86,7 +88,8 @@ class NerveSchema extends AnatomicalStructureSchema
     }
 
     /**
-     * @return AnatomicalStructureSchema|SuperficialAnatomySchema     **/
+     * @return AnatomicalStructureSchema|SuperficialAnatomySchema     
+     **/
     public function getSensoryUnit() {
         return $this->sensoryUnit;
     }
@@ -102,7 +105,8 @@ class NerveSchema extends AnatomicalStructureSchema
     }
 
     /**
-     * @return BrainStructureSchema     **/
+     * @return BrainStructureSchema     
+     **/
     public function getSourcedFrom() {
         return $this->sourcedFrom;
     }

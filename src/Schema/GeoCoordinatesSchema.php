@@ -54,7 +54,8 @@ class GeoCoordinatesSchema extends StructuredValueSchema
     }
 
     /**
-     * @return PostalAddressSchema|TextSchema     **/
+     * @return PostalAddressSchema|TextSchema     
+     **/
     public function getAddress() {
         return $this->address;
     }
@@ -70,7 +71,8 @@ class GeoCoordinatesSchema extends StructuredValueSchema
     }
 
     /**
-     * @return TextSchema|CountrySchema     **/
+     * @return TextSchema|CountrySchema     
+     **/
     public function getAddressCountry() {
         return $this->addressCountry;
     }
@@ -86,7 +88,8 @@ class GeoCoordinatesSchema extends StructuredValueSchema
     }
 
     /**
-     * @return NumberSchema|TextSchema     **/
+     * @return NumberSchema|TextSchema     
+     **/
     public function getElevation() {
         return $this->elevation;
     }
@@ -102,7 +105,8 @@ class GeoCoordinatesSchema extends StructuredValueSchema
     }
 
     /**
-     * @return NumberSchema|TextSchema     **/
+     * @return NumberSchema|TextSchema     
+     **/
     public function getLatitude() {
         return $this->latitude;
     }
@@ -118,7 +122,8 @@ class GeoCoordinatesSchema extends StructuredValueSchema
     }
 
     /**
-     * @return NumberSchema|TextSchema     **/
+     * @return NumberSchema|TextSchema     
+     **/
     public function getLongitude() {
         return $this->longitude;
     }
@@ -134,7 +139,8 @@ class GeoCoordinatesSchema extends StructuredValueSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getPostalCode() {
         return $this->postalCode;
     }

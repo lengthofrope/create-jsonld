@@ -54,7 +54,8 @@ class DatasetSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return DataCatalogSchema     **/
+     * @return DataCatalogSchema     
+     **/
     public function getCatalog() {
         return $this->catalog;
     }
@@ -70,7 +71,8 @@ class DatasetSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getDatasetTimeInterval() {
         return $this->datasetTimeInterval;
     }
@@ -86,7 +88,8 @@ class DatasetSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return DataDownloadSchema     **/
+     * @return DataDownloadSchema     
+     **/
     public function getDistribution() {
         return $this->distribution;
     }
@@ -102,7 +105,8 @@ class DatasetSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return DataCatalogSchema     **/
+     * @return DataCatalogSchema     
+     **/
     public function getIncludedDataCatalog() {
         return $this->includedDataCatalog;
     }
@@ -118,7 +122,8 @@ class DatasetSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return PlaceSchema     **/
+     * @return PlaceSchema     
+     **/
     public function getSpatial() {
         return $this->spatial;
     }
@@ -134,7 +139,8 @@ class DatasetSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getTemporal() {
         return $this->temporal;
     }

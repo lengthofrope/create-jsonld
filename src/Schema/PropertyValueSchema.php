@@ -57,7 +57,8 @@ class PropertyValueSchema extends StructuredValueSchema
     }
 
     /**
-     * @return NumberSchema     **/
+     * @return NumberSchema     
+     **/
     public function getMaxValue() {
         return $this->maxValue;
     }
@@ -73,7 +74,8 @@ class PropertyValueSchema extends StructuredValueSchema
     }
 
     /**
-     * @return NumberSchema     **/
+     * @return NumberSchema     
+     **/
     public function getMinValue() {
         return $this->minValue;
     }
@@ -92,7 +94,8 @@ Standards bodies should promote a standard prefix for the identifiers of propert
     }
 
     /**
-     * @return TextSchema|URLSchema     **/
+     * @return TextSchema|URLSchema     
+     **/
     public function getPropertyID() {
         return $this->propertyID;
     }
@@ -108,7 +111,8 @@ Standards bodies should promote a standard prefix for the identifiers of propert
     }
 
     /**
-     * @return TextSchema|URLSchema     **/
+     * @return TextSchema|URLSchema     
+     **/
     public function getUnitCode() {
         return $this->unitCode;
     }
@@ -125,7 +129,8 @@ Standards bodies should promote a standard prefix for the identifiers of propert
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getUnitText() {
         return $this->unitText;
     }
@@ -141,7 +146,8 @@ Standards bodies should promote a standard prefix for the identifiers of propert
     }
 
     /**
-     * @return NumberSchema|TextSchema|BooleanSchema|StructuredValueSchema     **/
+     * @return NumberSchema|TextSchema|BooleanSchema|StructuredValueSchema     
+     **/
     public function getValue() {
         return $this->value;
     }
@@ -157,7 +163,8 @@ Standards bodies should promote a standard prefix for the identifiers of propert
     }
 
     /**
-     * @return EnumerationSchema|StructuredValueSchema|PropertyValueSchema|QualitativeValueSchema|QuantitativeValueSchema     **/
+     * @return EnumerationSchema|StructuredValueSchema|PropertyValueSchema|QualitativeValueSchema|QuantitativeValueSchema     
+     **/
     public function getValueReference() {
         return $this->valueReference;
     }

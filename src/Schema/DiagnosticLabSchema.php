@@ -54,7 +54,8 @@ class DiagnosticLabSchema extends MedicalOrganizationSchema
     }
 
     /**
-     * @return MedicalTestSchema     **/
+     * @return MedicalTestSchema     
+     **/
     public function getAvailableTest() {
         return $this->availableTest;
     }

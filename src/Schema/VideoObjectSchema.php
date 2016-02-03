@@ -54,7 +54,8 @@ class VideoObjectSchema extends MediaObjectSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getActor() {
         return $this->actor;
     }
@@ -70,7 +71,8 @@ class VideoObjectSchema extends MediaObjectSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getActors() {
         return $this->actors;
     }
@@ -86,7 +88,8 @@ class VideoObjectSchema extends MediaObjectSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getCaption() {
         return $this->caption;
     }
@@ -102,7 +105,8 @@ class VideoObjectSchema extends MediaObjectSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getDirector() {
         return $this->director;
     }
@@ -118,7 +122,8 @@ class VideoObjectSchema extends MediaObjectSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getDirectors() {
         return $this->directors;
     }
@@ -134,7 +139,8 @@ class VideoObjectSchema extends MediaObjectSchema
     }
 
     /**
-     * @return MusicGroupSchema|PersonSchema     **/
+     * @return MusicGroupSchema|PersonSchema     
+     **/
     public function getMusicBy() {
         return $this->musicBy;
     }
@@ -150,7 +156,8 @@ class VideoObjectSchema extends MediaObjectSchema
     }
 
     /**
-     * @return ImageObjectSchema     **/
+     * @return ImageObjectSchema     
+     **/
     public function getThumbnail() {
         return $this->thumbnail;
     }
@@ -166,7 +173,8 @@ class VideoObjectSchema extends MediaObjectSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getTranscript() {
         return $this->transcript;
     }
@@ -182,7 +190,8 @@ class VideoObjectSchema extends MediaObjectSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getVideoFrameSize() {
         return $this->videoFrameSize;
     }
@@ -198,7 +207,8 @@ class VideoObjectSchema extends MediaObjectSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getVideoQuality() {
         return $this->videoQuality;
     }

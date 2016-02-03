@@ -54,7 +54,8 @@ class CreativeWorkSeasonSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getActor() {
         return $this->actor;
     }
@@ -70,7 +71,8 @@ class CreativeWorkSeasonSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getDirector() {
         return $this->director;
     }
@@ -86,7 +88,8 @@ class CreativeWorkSeasonSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return DateSchema     **/
+     * @return DateSchema     
+     **/
     public function getEndDate() {
         return $this->endDate;
     }
@@ -102,7 +105,8 @@ class CreativeWorkSeasonSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return EpisodeSchema     **/
+     * @return EpisodeSchema     
+     **/
     public function getEpisode() {
         return $this->episode;
     }
@@ -118,7 +122,8 @@ class CreativeWorkSeasonSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return EpisodeSchema     **/
+     * @return EpisodeSchema     
+     **/
     public function getEpisodes() {
         return $this->episodes;
     }
@@ -134,7 +139,8 @@ class CreativeWorkSeasonSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return IntegerSchema     **/
+     * @return IntegerSchema     
+     **/
     public function getNumberOfEpisodes() {
         return $this->numberOfEpisodes;
     }
@@ -150,7 +156,8 @@ class CreativeWorkSeasonSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return CreativeWorkSeriesSchema     **/
+     * @return CreativeWorkSeriesSchema     
+     **/
     public function getPartOfSeries() {
         return $this->partOfSeries;
     }
@@ -166,7 +173,8 @@ class CreativeWorkSeasonSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return OrganizationSchema     **/
+     * @return OrganizationSchema     
+     **/
     public function getProductionCompany() {
         return $this->productionCompany;
     }
@@ -182,7 +190,8 @@ class CreativeWorkSeasonSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return IntegerSchema|TextSchema     **/
+     * @return IntegerSchema|TextSchema     
+     **/
     public function getSeasonNumber() {
         return $this->seasonNumber;
     }
@@ -198,7 +207,8 @@ class CreativeWorkSeasonSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return DateSchema     **/
+     * @return DateSchema     
+     **/
     public function getStartDate() {
         return $this->startDate;
     }
@@ -214,7 +224,8 @@ class CreativeWorkSeasonSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return VideoObjectSchema     **/
+     * @return VideoObjectSchema     
+     **/
     public function getTrailer() {
         return $this->trailer;
     }

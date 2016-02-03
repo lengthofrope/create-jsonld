@@ -54,7 +54,8 @@ class ReplaceActionSchema extends UpdateActionSchema
     }
 
     /**
-     * @return ThingSchema     **/
+     * @return ThingSchema     
+     **/
     public function getReplacee() {
         return $this->replacee;
     }
@@ -70,7 +71,8 @@ class ReplaceActionSchema extends UpdateActionSchema
     }
 
     /**
-     * @return ThingSchema     **/
+     * @return ThingSchema     
+     **/
     public function getReplacer() {
         return $this->replacer;
     }

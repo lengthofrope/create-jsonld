@@ -56,7 +56,8 @@ class ActionSchema extends ThingSchema
     }
 
     /**
-     * @return ActionStatusTypeSchema     **/
+     * @return ActionStatusTypeSchema     
+     **/
     public function getActionStatus() {
         return $this->actionStatus;
     }
@@ -72,7 +73,8 @@ class ActionSchema extends ThingSchema
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema     **/
+     * @return OrganizationSchema|PersonSchema     
+     **/
     public function getAgent() {
         return $this->agent;
     }
@@ -90,7 +92,8 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getEndTime() {
         return $this->endTime;
     }
@@ -106,7 +109,8 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
     }
 
     /**
-     * @return ThingSchema     **/
+     * @return ThingSchema     
+     **/
     public function getError() {
         return $this->error;
     }
@@ -122,7 +126,8 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
     }
 
     /**
-     * @return ThingSchema     **/
+     * @return ThingSchema     
+     **/
     public function getInstrument() {
         return $this->instrument;
     }
@@ -138,7 +143,8 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
     }
 
     /**
-     * @return PlaceSchema|PostalAddressSchema|TextSchema     **/
+     * @return PlaceSchema|PostalAddressSchema|TextSchema     
+     **/
     public function getLocation() {
         return $this->location;
     }
@@ -154,7 +160,8 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
     }
 
     /**
-     * @return ThingSchema     **/
+     * @return ThingSchema     
+     **/
     public function getObject() {
         return $this->object;
     }
@@ -170,7 +177,8 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema     **/
+     * @return OrganizationSchema|PersonSchema     
+     **/
     public function getParticipant() {
         return $this->participant;
     }
@@ -186,7 +194,8 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
     }
 
     /**
-     * @return ThingSchema     **/
+     * @return ThingSchema     
+     **/
     public function getResult() {
         return $this->result;
     }
@@ -204,7 +213,8 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getStartTime() {
         return $this->startTime;
     }
@@ -220,7 +230,8 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
     }
 
     /**
-     * @return EntryPointSchema     **/
+     * @return EntryPointSchema     
+     **/
     public function getTarget() {
         return $this->target;
     }

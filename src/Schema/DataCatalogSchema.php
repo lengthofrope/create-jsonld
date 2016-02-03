@@ -54,7 +54,8 @@ class DataCatalogSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return DatasetSchema     **/
+     * @return DatasetSchema     
+     **/
     public function getDataset() {
         return $this->dataset;
     }

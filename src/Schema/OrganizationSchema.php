@@ -54,7 +54,8 @@ class OrganizationSchema extends ThingSchema
     }
 
     /**
-     * @return PostalAddressSchema|TextSchema     **/
+     * @return PostalAddressSchema|TextSchema     
+     **/
     public function getAddress() {
         return $this->address;
     }
@@ -70,7 +71,8 @@ class OrganizationSchema extends ThingSchema
     }
 
     /**
-     * @return AggregateRatingSchema     **/
+     * @return AggregateRatingSchema     
+     **/
     public function getAggregateRating() {
         return $this->aggregateRating;
     }
@@ -86,7 +88,8 @@ class OrganizationSchema extends ThingSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getAlumni() {
         return $this->alumni;
     }
@@ -102,7 +105,8 @@ class OrganizationSchema extends ThingSchema
     }
 
     /**
-     * @return PlaceSchema|AdministrativeAreaSchema|GeoShapeSchema|TextSchema     **/
+     * @return PlaceSchema|AdministrativeAreaSchema|GeoShapeSchema|TextSchema     
+     **/
     public function getAreaServed() {
         return $this->areaServed;
     }
@@ -118,7 +122,8 @@ class OrganizationSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getAward() {
         return $this->award;
     }
@@ -134,7 +139,8 @@ class OrganizationSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getAwards() {
         return $this->awards;
     }
@@ -150,7 +156,8 @@ class OrganizationSchema extends ThingSchema
     }
 
     /**
-     * @return BrandSchema|OrganizationSchema     **/
+     * @return BrandSchema|OrganizationSchema     
+     **/
     public function getBrand() {
         return $this->brand;
     }
@@ -166,7 +173,8 @@ class OrganizationSchema extends ThingSchema
     }
 
     /**
-     * @return ContactPointSchema     **/
+     * @return ContactPointSchema     
+     **/
     public function getContactPoint() {
         return $this->contactPoint;
     }
@@ -182,7 +190,8 @@ class OrganizationSchema extends ThingSchema
     }
 
     /**
-     * @return ContactPointSchema     **/
+     * @return ContactPointSchema     
+     **/
     public function getContactPoints() {
         return $this->contactPoints;
     }
@@ -198,7 +207,8 @@ class OrganizationSchema extends ThingSchema
     }
 
     /**
-     * @return OrganizationSchema     **/
+     * @return OrganizationSchema     
+     **/
     public function getDepartment() {
         return $this->department;
     }
@@ -214,7 +224,8 @@ class OrganizationSchema extends ThingSchema
     }
 
     /**
-     * @return DateSchema     **/
+     * @return DateSchema     
+     **/
     public function getDissolutionDate() {
         return $this->dissolutionDate;
     }
@@ -230,7 +241,8 @@ class OrganizationSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getDuns() {
         return $this->duns;
     }
@@ -246,7 +258,8 @@ class OrganizationSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getEmail() {
         return $this->email;
     }
@@ -262,7 +275,8 @@ class OrganizationSchema extends ThingSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getEmployee() {
         return $this->employee;
     }
@@ -278,7 +292,8 @@ class OrganizationSchema extends ThingSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getEmployees() {
         return $this->employees;
     }
@@ -294,7 +309,8 @@ class OrganizationSchema extends ThingSchema
     }
 
     /**
-     * @return EventSchema     **/
+     * @return EventSchema     
+     **/
     public function getEvent() {
         return $this->event;
     }
@@ -310,7 +326,8 @@ class OrganizationSchema extends ThingSchema
     }
 
     /**
-     * @return EventSchema     **/
+     * @return EventSchema     
+     **/
     public function getEvents() {
         return $this->events;
     }
@@ -326,7 +343,8 @@ class OrganizationSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getFaxNumber() {
         return $this->faxNumber;
     }
@@ -342,7 +360,8 @@ class OrganizationSchema extends ThingSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getFounder() {
         return $this->founder;
     }
@@ -358,7 +377,8 @@ class OrganizationSchema extends ThingSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getFounders() {
         return $this->founders;
     }
@@ -374,7 +394,8 @@ class OrganizationSchema extends ThingSchema
     }
 
     /**
-     * @return DateSchema     **/
+     * @return DateSchema     
+     **/
     public function getFoundingDate() {
         return $this->foundingDate;
     }
@@ -390,7 +411,8 @@ class OrganizationSchema extends ThingSchema
     }
 
     /**
-     * @return PlaceSchema     **/
+     * @return PlaceSchema     
+     **/
     public function getFoundingLocation() {
         return $this->foundingLocation;
     }
@@ -406,7 +428,8 @@ class OrganizationSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getGlobalLocationNumber() {
         return $this->globalLocationNumber;
     }
@@ -422,7 +445,8 @@ class OrganizationSchema extends ThingSchema
     }
 
     /**
-     * @return OfferCatalogSchema     **/
+     * @return OfferCatalogSchema     
+     **/
     public function getHasOfferCatalog() {
         return $this->hasOfferCatalog;
     }
@@ -438,7 +462,8 @@ class OrganizationSchema extends ThingSchema
     }
 
     /**
-     * @return PlaceSchema     **/
+     * @return PlaceSchema     
+     **/
     public function getHasPOS() {
         return $this->hasPOS;
     }
@@ -454,7 +479,8 @@ class OrganizationSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getIsicV4() {
         return $this->isicV4;
     }
@@ -470,7 +496,8 @@ class OrganizationSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getLegalName() {
         return $this->legalName;
     }
@@ -486,7 +513,8 @@ class OrganizationSchema extends ThingSchema
     }
 
     /**
-     * @return PlaceSchema|PostalAddressSchema|TextSchema     **/
+     * @return PlaceSchema|PostalAddressSchema|TextSchema     
+     **/
     public function getLocation() {
         return $this->location;
     }
@@ -502,7 +530,8 @@ class OrganizationSchema extends ThingSchema
     }
 
     /**
-     * @return ImageObjectSchema|URLSchema     **/
+     * @return ImageObjectSchema|URLSchema     
+     **/
     public function getLogo() {
         return $this->logo;
     }
@@ -518,7 +547,8 @@ class OrganizationSchema extends ThingSchema
     }
 
     /**
-     * @return OfferSchema     **/
+     * @return OfferSchema     
+     **/
     public function getMakesOffer() {
         return $this->makesOffer;
     }
@@ -534,7 +564,8 @@ class OrganizationSchema extends ThingSchema
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema     **/
+     * @return OrganizationSchema|PersonSchema     
+     **/
     public function getMember() {
         return $this->member;
     }
@@ -550,7 +581,8 @@ class OrganizationSchema extends ThingSchema
     }
 
     /**
-     * @return OrganizationSchema|ProgramMembershipSchema     **/
+     * @return OrganizationSchema|ProgramMembershipSchema     
+     **/
     public function getMemberOf() {
         return $this->memberOf;
     }
@@ -566,7 +598,8 @@ class OrganizationSchema extends ThingSchema
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema     **/
+     * @return OrganizationSchema|PersonSchema     
+     **/
     public function getMembers() {
         return $this->members;
     }
@@ -582,7 +615,8 @@ class OrganizationSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getNaics() {
         return $this->naics;
     }
@@ -598,7 +632,8 @@ class OrganizationSchema extends ThingSchema
     }
 
     /**
-     * @return QuantitativeValueSchema     **/
+     * @return QuantitativeValueSchema     
+     **/
     public function getNumberOfEmployees() {
         return $this->numberOfEmployees;
     }
@@ -614,7 +649,8 @@ class OrganizationSchema extends ThingSchema
     }
 
     /**
-     * @return OwnershipInfoSchema|ProductSchema     **/
+     * @return OwnershipInfoSchema|ProductSchema     
+     **/
     public function getOwns() {
         return $this->owns;
     }
@@ -630,7 +666,8 @@ class OrganizationSchema extends ThingSchema
     }
 
     /**
-     * @return OrganizationSchema     **/
+     * @return OrganizationSchema     
+     **/
     public function getParentOrganization() {
         return $this->parentOrganization;
     }
@@ -646,7 +683,8 @@ class OrganizationSchema extends ThingSchema
     }
 
     /**
-     * @return ReviewSchema     **/
+     * @return ReviewSchema     
+     **/
     public function getReview() {
         return $this->review;
     }
@@ -662,7 +700,8 @@ class OrganizationSchema extends ThingSchema
     }
 
     /**
-     * @return ReviewSchema     **/
+     * @return ReviewSchema     
+     **/
     public function getReviews() {
         return $this->reviews;
     }
@@ -678,7 +717,8 @@ class OrganizationSchema extends ThingSchema
     }
 
     /**
-     * @return DemandSchema     **/
+     * @return DemandSchema     
+     **/
     public function getSeeks() {
         return $this->seeks;
     }
@@ -694,7 +734,8 @@ class OrganizationSchema extends ThingSchema
     }
 
     /**
-     * @return PlaceSchema|AdministrativeAreaSchema|GeoShapeSchema     **/
+     * @return PlaceSchema|AdministrativeAreaSchema|GeoShapeSchema     
+     **/
     public function getServiceArea() {
         return $this->serviceArea;
     }
@@ -710,7 +751,8 @@ class OrganizationSchema extends ThingSchema
     }
 
     /**
-     * @return OrganizationSchema     **/
+     * @return OrganizationSchema     
+     **/
     public function getSubOrganization() {
         return $this->subOrganization;
     }
@@ -726,7 +768,8 @@ class OrganizationSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getTaxID() {
         return $this->taxID;
     }
@@ -742,7 +785,8 @@ class OrganizationSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getTelephone() {
         return $this->telephone;
     }
@@ -758,7 +802,8 @@ class OrganizationSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getVatID() {
         return $this->vatID;
     }

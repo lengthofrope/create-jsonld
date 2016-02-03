@@ -54,7 +54,8 @@ class MapSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return MapCategoryTypeSchema     **/
+     * @return MapCategoryTypeSchema     
+     **/
     public function getMapType() {
         return $this->mapType;
     }

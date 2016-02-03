@@ -54,7 +54,8 @@ class ReviewSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return ThingSchema     **/
+     * @return ThingSchema     
+     **/
     public function getItemReviewed() {
         return $this->itemReviewed;
     }
@@ -70,7 +71,8 @@ class ReviewSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getReviewBody() {
         return $this->reviewBody;
     }
@@ -86,7 +88,8 @@ class ReviewSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return RatingSchema     **/
+     * @return RatingSchema     
+     **/
     public function getReviewRating() {
         return $this->reviewRating;
     }

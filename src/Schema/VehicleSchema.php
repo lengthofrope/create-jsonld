@@ -57,7 +57,8 @@ Note: You can use <a href="minValue">minValue</a> and <a href="maxValue">maxValu
     }
 
     /**
-     * @return QuantitativeValueSchema     **/
+     * @return QuantitativeValueSchema     
+     **/
     public function getCargoVolume() {
         return $this->cargoVolume;
     }
@@ -73,7 +74,8 @@ Note: You can use <a href="minValue">minValue</a> and <a href="maxValue">maxValu
     }
 
     /**
-     * @return DateSchema     **/
+     * @return DateSchema     
+     **/
     public function getDateVehicleFirstRegistered() {
         return $this->dateVehicleFirstRegistered;
     }
@@ -89,7 +91,8 @@ Note: You can use <a href="minValue">minValue</a> and <a href="maxValue">maxValu
     }
 
     /**
-     * @return DriveWheelConfigurationValueSchema|TextSchema     **/
+     * @return DriveWheelConfigurationValueSchema|TextSchema     
+     **/
     public function getDriveWheelConfiguration() {
         return $this->driveWheelConfiguration;
     }
@@ -109,7 +112,8 @@ Note 3: Often, the absolute value is useful only when related to driving speed (
     }
 
     /**
-     * @return QuantitativeValueSchema     **/
+     * @return QuantitativeValueSchema     
+     **/
     public function getFuelConsumption() {
         return $this->fuelConsumption;
     }
@@ -129,7 +133,8 @@ Note 3: Often, the absolute value is useful only when related to driving speed (
     }
 
     /**
-     * @return QuantitativeValueSchema     **/
+     * @return QuantitativeValueSchema     
+     **/
     public function getFuelEfficiency() {
         return $this->fuelEfficiency;
     }
@@ -145,7 +150,8 @@ Note 3: Often, the absolute value is useful only when related to driving speed (
     }
 
     /**
-     * @return TextSchema|QualitativeValueSchema|URLSchema     **/
+     * @return TextSchema|QualitativeValueSchema|URLSchema     
+     **/
     public function getFuelType() {
         return $this->fuelType;
     }
@@ -161,7 +167,8 @@ Note 3: Often, the absolute value is useful only when related to driving speed (
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getKnownVehicleDamages() {
         return $this->knownVehicleDamages;
     }
@@ -178,7 +185,8 @@ Typical unit code(s): KMT for kilometers, SMI for statute miles
     }
 
     /**
-     * @return QuantitativeValueSchema     **/
+     * @return QuantitativeValueSchema     
+     **/
     public function getMileageFromOdometer() {
         return $this->mileageFromOdometer;
     }
@@ -194,7 +202,8 @@ Typical unit code(s): KMT for kilometers, SMI for statute miles
     }
 
     /**
-     * @return NumberSchema|TextSchema     **/
+     * @return NumberSchema|TextSchema     
+     **/
     public function getNumberOfAirbags() {
         return $this->numberOfAirbags;
     }
@@ -211,7 +220,8 @@ Typical unit code(s): C62
     }
 
     /**
-     * @return QuantitativeValueSchema|NumberSchema     **/
+     * @return QuantitativeValueSchema|NumberSchema     
+     **/
     public function getNumberOfAxles() {
         return $this->numberOfAxles;
     }
@@ -228,7 +238,8 @@ Typical unit code(s): C62
     }
 
     /**
-     * @return QuantitativeValueSchema|NumberSchema     **/
+     * @return QuantitativeValueSchema|NumberSchema     
+     **/
     public function getNumberOfDoors() {
         return $this->numberOfDoors;
     }
@@ -245,7 +256,8 @@ Typical unit code(s): C62
     }
 
     /**
-     * @return QuantitativeValueSchema|NumberSchema     **/
+     * @return QuantitativeValueSchema|NumberSchema     
+     **/
     public function getNumberOfForwardGears() {
         return $this->numberOfForwardGears;
     }
@@ -262,7 +274,8 @@ Typical unit code(s): C62
     }
 
     /**
-     * @return QuantitativeValueSchema|NumberSchema     **/
+     * @return QuantitativeValueSchema|NumberSchema     
+     **/
     public function getNumberOfPreviousOwners() {
         return $this->numberOfPreviousOwners;
     }
@@ -278,7 +291,8 @@ Typical unit code(s): C62
     }
 
     /**
-     * @return DateSchema     **/
+     * @return DateSchema     
+     **/
     public function getProductionDate() {
         return $this->productionDate;
     }
@@ -294,7 +308,8 @@ Typical unit code(s): C62
     }
 
     /**
-     * @return DateSchema     **/
+     * @return DateSchema     
+     **/
     public function getPurchaseDate() {
         return $this->purchaseDate;
     }
@@ -310,7 +325,8 @@ Typical unit code(s): C62
     }
 
     /**
-     * @return SteeringPositionValueSchema     **/
+     * @return SteeringPositionValueSchema     
+     **/
     public function getSteeringPosition() {
         return $this->steeringPosition;
     }
@@ -326,7 +342,8 @@ Typical unit code(s): C62
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getVehicleConfiguration() {
         return $this->vehicleConfiguration;
     }
@@ -342,7 +359,8 @@ Typical unit code(s): C62
     }
 
     /**
-     * @return EngineSpecificationSchema     **/
+     * @return EngineSpecificationSchema     
+     **/
     public function getVehicleEngine() {
         return $this->vehicleEngine;
     }
@@ -358,7 +376,8 @@ Typical unit code(s): C62
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getVin() {
         return $this->vin;
     }
@@ -374,7 +393,8 @@ Typical unit code(s): C62
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getVehicleInteriorColor() {
         return $this->vehicleInteriorColor;
     }
@@ -390,7 +410,8 @@ Typical unit code(s): C62
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getVehicleInteriorType() {
         return $this->vehicleInteriorType;
     }
@@ -406,7 +427,8 @@ Typical unit code(s): C62
     }
 
     /**
-     * @return DateSchema     **/
+     * @return DateSchema     
+     **/
     public function getVehicleModelDate() {
         return $this->vehicleModelDate;
     }
@@ -423,7 +445,8 @@ Typical unit code(s): C62 for persons.
     }
 
     /**
-     * @return QuantitativeValueSchema|NumberSchema     **/
+     * @return QuantitativeValueSchema|NumberSchema     
+     **/
     public function getVehicleSeatingCapacity() {
         return $this->vehicleSeatingCapacity;
     }
@@ -439,7 +462,8 @@ Typical unit code(s): C62 for persons.
     }
 
     /**
-     * @return TextSchema|QualitativeValueSchema|URLSchema     **/
+     * @return TextSchema|QualitativeValueSchema|URLSchema     
+     **/
     public function getVehicleTransmission() {
         return $this->vehicleTransmission;
     }

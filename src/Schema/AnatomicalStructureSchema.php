@@ -54,7 +54,8 @@ class AnatomicalStructureSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getAssociatedPathophysiology() {
         return $this->associatedPathophysiology;
     }
@@ -70,7 +71,8 @@ class AnatomicalStructureSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getBodyLocation() {
         return $this->bodyLocation;
     }
@@ -86,7 +88,8 @@ class AnatomicalStructureSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return AnatomicalStructureSchema     **/
+     * @return AnatomicalStructureSchema     
+     **/
     public function getConnectedTo() {
         return $this->connectedTo;
     }
@@ -102,7 +105,8 @@ class AnatomicalStructureSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return ImageObjectSchema     **/
+     * @return ImageObjectSchema     
+     **/
     public function getDiagram() {
         return $this->diagram;
     }
@@ -118,7 +122,8 @@ class AnatomicalStructureSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getFunction() {
         return $this->function;
     }
@@ -134,7 +139,8 @@ class AnatomicalStructureSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return AnatomicalSystemSchema     **/
+     * @return AnatomicalSystemSchema     
+     **/
     public function getPartOfSystem() {
         return $this->partOfSystem;
     }
@@ -150,7 +156,8 @@ class AnatomicalStructureSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return MedicalConditionSchema     **/
+     * @return MedicalConditionSchema     
+     **/
     public function getRelatedCondition() {
         return $this->relatedCondition;
     }
@@ -166,7 +173,8 @@ class AnatomicalStructureSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return MedicalTherapySchema     **/
+     * @return MedicalTherapySchema     
+     **/
     public function getRelatedTherapy() {
         return $this->relatedTherapy;
     }
@@ -182,7 +190,8 @@ class AnatomicalStructureSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return AnatomicalStructureSchema     **/
+     * @return AnatomicalStructureSchema     
+     **/
     public function getSubStructure() {
         return $this->subStructure;
     }

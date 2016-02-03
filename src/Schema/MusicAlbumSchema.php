@@ -54,7 +54,8 @@ class MusicAlbumSchema extends MusicPlaylistSchema
     }
 
     /**
-     * @return MusicAlbumProductionTypeSchema     **/
+     * @return MusicAlbumProductionTypeSchema     
+     **/
     public function getAlbumProductionType() {
         return $this->albumProductionType;
     }
@@ -70,7 +71,8 @@ class MusicAlbumSchema extends MusicPlaylistSchema
     }
 
     /**
-     * @return MusicReleaseSchema     **/
+     * @return MusicReleaseSchema     
+     **/
     public function getAlbumRelease() {
         return $this->albumRelease;
     }
@@ -86,7 +88,8 @@ class MusicAlbumSchema extends MusicPlaylistSchema
     }
 
     /**
-     * @return MusicAlbumReleaseTypeSchema     **/
+     * @return MusicAlbumReleaseTypeSchema     
+     **/
     public function getAlbumReleaseType() {
         return $this->albumReleaseType;
     }
@@ -102,7 +105,8 @@ class MusicAlbumSchema extends MusicPlaylistSchema
     }
 
     /**
-     * @return MusicGroupSchema     **/
+     * @return MusicGroupSchema     
+     **/
     public function getByArtist() {
         return $this->byArtist;
     }

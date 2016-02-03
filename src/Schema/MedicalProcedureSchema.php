@@ -54,7 +54,8 @@ class MedicalProcedureSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getFollowup() {
         return $this->followup;
     }
@@ -70,7 +71,8 @@ class MedicalProcedureSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getHowPerformed() {
         return $this->howPerformed;
     }
@@ -86,7 +88,8 @@ class MedicalProcedureSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getPreparation() {
         return $this->preparation;
     }
@@ -102,7 +105,8 @@ class MedicalProcedureSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return MedicalProcedureTypeSchema     **/
+     * @return MedicalProcedureTypeSchema     
+     **/
     public function getProcedureType() {
         return $this->procedureType;
     }

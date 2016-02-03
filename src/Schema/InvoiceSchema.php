@@ -54,7 +54,8 @@ class InvoiceSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getAccountId() {
         return $this->accountId;
     }
@@ -70,7 +71,8 @@ class InvoiceSchema extends IntangibleSchema
     }
 
     /**
-     * @return DurationSchema     **/
+     * @return DurationSchema     
+     **/
     public function getBillingPeriod() {
         return $this->billingPeriod;
     }
@@ -86,7 +88,8 @@ class InvoiceSchema extends IntangibleSchema
     }
 
     /**
-     * @return PersonSchema|OrganizationSchema     **/
+     * @return PersonSchema|OrganizationSchema     
+     **/
     public function getBroker() {
         return $this->broker;
     }
@@ -102,7 +105,8 @@ class InvoiceSchema extends IntangibleSchema
     }
 
     /**
-     * @return PhysicalActivityCategorySchema|TextSchema|ThingSchema     **/
+     * @return PhysicalActivityCategorySchema|TextSchema|ThingSchema     
+     **/
     public function getCategory() {
         return $this->category;
     }
@@ -118,7 +122,8 @@ class InvoiceSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getConfirmationNumber() {
         return $this->confirmationNumber;
     }
@@ -134,7 +139,8 @@ class InvoiceSchema extends IntangibleSchema
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema     **/
+     * @return OrganizationSchema|PersonSchema     
+     **/
     public function getCustomer() {
         return $this->customer;
     }
@@ -150,7 +156,8 @@ class InvoiceSchema extends IntangibleSchema
     }
 
     /**
-     * @return PriceSpecificationSchema     **/
+     * @return PriceSpecificationSchema     
+     **/
     public function getMinimumPaymentDue() {
         return $this->minimumPaymentDue;
     }
@@ -166,7 +173,8 @@ class InvoiceSchema extends IntangibleSchema
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getPaymentDue() {
         return $this->paymentDue;
     }
@@ -182,7 +190,8 @@ class InvoiceSchema extends IntangibleSchema
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getPaymentDueDate() {
         return $this->paymentDueDate;
     }
@@ -198,7 +207,8 @@ class InvoiceSchema extends IntangibleSchema
     }
 
     /**
-     * @return PaymentMethodSchema     **/
+     * @return PaymentMethodSchema     
+     **/
     public function getPaymentMethod() {
         return $this->paymentMethod;
     }
@@ -214,7 +224,8 @@ class InvoiceSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getPaymentMethodId() {
         return $this->paymentMethodId;
     }
@@ -230,7 +241,8 @@ class InvoiceSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema|PaymentStatusTypeSchema     **/
+     * @return TextSchema|PaymentStatusTypeSchema     
+     **/
     public function getPaymentStatus() {
         return $this->paymentStatus;
     }
@@ -246,7 +258,8 @@ class InvoiceSchema extends IntangibleSchema
     }
 
     /**
-     * @return PersonSchema|OrganizationSchema     **/
+     * @return PersonSchema|OrganizationSchema     
+     **/
     public function getProvider() {
         return $this->provider;
     }
@@ -262,7 +275,8 @@ class InvoiceSchema extends IntangibleSchema
     }
 
     /**
-     * @return OrderSchema     **/
+     * @return OrderSchema     
+     **/
     public function getReferencesOrder() {
         return $this->referencesOrder;
     }
@@ -278,7 +292,8 @@ class InvoiceSchema extends IntangibleSchema
     }
 
     /**
-     * @return DateSchema     **/
+     * @return DateSchema     
+     **/
     public function getScheduledPaymentDate() {
         return $this->scheduledPaymentDate;
     }
@@ -294,7 +309,8 @@ class InvoiceSchema extends IntangibleSchema
     }
 
     /**
-     * @return PriceSpecificationSchema     **/
+     * @return PriceSpecificationSchema     
+     **/
     public function getTotalPaymentDue() {
         return $this->totalPaymentDue;
     }

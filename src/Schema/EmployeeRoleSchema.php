@@ -54,7 +54,8 @@ class EmployeeRoleSchema extends OrganizationRoleSchema
     }
 
     /**
-     * @return NumberSchema|PriceSpecificationSchema     **/
+     * @return NumberSchema|PriceSpecificationSchema     
+     **/
     public function getBaseSalary() {
         return $this->baseSalary;
     }
@@ -70,7 +71,8 @@ class EmployeeRoleSchema extends OrganizationRoleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getSalaryCurrency() {
         return $this->salaryCurrency;
     }

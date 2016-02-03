@@ -54,7 +54,8 @@ class UpdateActionSchema extends ActionSchema
     }
 
     /**
-     * @return ThingSchema     **/
+     * @return ThingSchema     
+     **/
     public function getCollection() {
         return $this->collection;
     }
@@ -70,7 +71,8 @@ class UpdateActionSchema extends ActionSchema
     }
 
     /**
-     * @return ThingSchema     **/
+     * @return ThingSchema     
+     **/
     public function getTargetCollection() {
         return $this->targetCollection;
     }

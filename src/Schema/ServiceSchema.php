@@ -54,7 +54,8 @@ class ServiceSchema extends IntangibleSchema
     }
 
     /**
-     * @return AggregateRatingSchema     **/
+     * @return AggregateRatingSchema     
+     **/
     public function getAggregateRating() {
         return $this->aggregateRating;
     }
@@ -70,7 +71,8 @@ class ServiceSchema extends IntangibleSchema
     }
 
     /**
-     * @return PlaceSchema|AdministrativeAreaSchema|GeoShapeSchema|TextSchema     **/
+     * @return PlaceSchema|AdministrativeAreaSchema|GeoShapeSchema|TextSchema     
+     **/
     public function getAreaServed() {
         return $this->areaServed;
     }
@@ -86,7 +88,8 @@ class ServiceSchema extends IntangibleSchema
     }
 
     /**
-     * @return ServiceChannelSchema     **/
+     * @return ServiceChannelSchema     
+     **/
     public function getAvailableChannel() {
         return $this->availableChannel;
     }
@@ -102,7 +105,8 @@ class ServiceSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getAward() {
         return $this->award;
     }
@@ -118,7 +122,8 @@ class ServiceSchema extends IntangibleSchema
     }
 
     /**
-     * @return PhysicalActivityCategorySchema|TextSchema|ThingSchema     **/
+     * @return PhysicalActivityCategorySchema|TextSchema|ThingSchema     
+     **/
     public function getCategory() {
         return $this->category;
     }
@@ -134,7 +139,8 @@ class ServiceSchema extends IntangibleSchema
     }
 
     /**
-     * @return OfferCatalogSchema     **/
+     * @return OfferCatalogSchema     
+     **/
     public function getHasOfferCatalog() {
         return $this->hasOfferCatalog;
     }
@@ -150,7 +156,8 @@ class ServiceSchema extends IntangibleSchema
     }
 
     /**
-     * @return OpeningHoursSpecificationSchema     **/
+     * @return OpeningHoursSpecificationSchema     
+     **/
     public function getHoursAvailable() {
         return $this->hoursAvailable;
     }
@@ -166,7 +173,8 @@ class ServiceSchema extends IntangibleSchema
     }
 
     /**
-     * @return OfferSchema     **/
+     * @return OfferSchema     
+     **/
     public function getOffers() {
         return $this->offers;
     }
@@ -182,7 +190,8 @@ class ServiceSchema extends IntangibleSchema
     }
 
     /**
-     * @return ThingSchema     **/
+     * @return ThingSchema     
+     **/
     public function getProduces() {
         return $this->produces;
     }
@@ -198,7 +207,8 @@ class ServiceSchema extends IntangibleSchema
     }
 
     /**
-     * @return PersonSchema|OrganizationSchema     **/
+     * @return PersonSchema|OrganizationSchema     
+     **/
     public function getProvider() {
         return $this->provider;
     }
@@ -214,7 +224,8 @@ class ServiceSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getProviderMobility() {
         return $this->providerMobility;
     }
@@ -230,7 +241,8 @@ class ServiceSchema extends IntangibleSchema
     }
 
     /**
-     * @return ReviewSchema     **/
+     * @return ReviewSchema     
+     **/
     public function getReview() {
         return $this->review;
     }
@@ -246,7 +258,8 @@ class ServiceSchema extends IntangibleSchema
     }
 
     /**
-     * @return PlaceSchema|AdministrativeAreaSchema|GeoShapeSchema     **/
+     * @return PlaceSchema|AdministrativeAreaSchema|GeoShapeSchema     
+     **/
     public function getServiceArea() {
         return $this->serviceArea;
     }
@@ -262,7 +275,8 @@ class ServiceSchema extends IntangibleSchema
     }
 
     /**
-     * @return AudienceSchema     **/
+     * @return AudienceSchema     
+     **/
     public function getServiceAudience() {
         return $this->serviceAudience;
     }
@@ -278,7 +292,8 @@ class ServiceSchema extends IntangibleSchema
     }
 
     /**
-     * @return ThingSchema     **/
+     * @return ThingSchema     
+     **/
     public function getServiceOutput() {
         return $this->serviceOutput;
     }
@@ -294,7 +309,8 @@ class ServiceSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getServiceType() {
         return $this->serviceType;
     }

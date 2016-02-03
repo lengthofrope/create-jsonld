@@ -54,7 +54,8 @@ class MedicalSignOrSymptomSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return MedicalCauseSchema     **/
+     * @return MedicalCauseSchema     
+     **/
     public function getCause() {
         return $this->cause;
     }
@@ -70,7 +71,8 @@ class MedicalSignOrSymptomSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return MedicalTherapySchema     **/
+     * @return MedicalTherapySchema     
+     **/
     public function getPossibleTreatment() {
         return $this->possibleTreatment;
     }

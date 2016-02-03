@@ -54,7 +54,8 @@ class MusicReleaseSchema extends MusicPlaylistSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getCatalogNumber() {
         return $this->catalogNumber;
     }
@@ -70,7 +71,8 @@ class MusicReleaseSchema extends MusicPlaylistSchema
     }
 
     /**
-     * @return PersonSchema|OrganizationSchema     **/
+     * @return PersonSchema|OrganizationSchema     
+     **/
     public function getCreditedTo() {
         return $this->creditedTo;
     }
@@ -86,7 +88,8 @@ class MusicReleaseSchema extends MusicPlaylistSchema
     }
 
     /**
-     * @return DurationSchema     **/
+     * @return DurationSchema     
+     **/
     public function getDuration() {
         return $this->duration;
     }
@@ -102,7 +105,8 @@ class MusicReleaseSchema extends MusicPlaylistSchema
     }
 
     /**
-     * @return MusicReleaseFormatTypeSchema     **/
+     * @return MusicReleaseFormatTypeSchema     
+     **/
     public function getMusicReleaseFormat() {
         return $this->musicReleaseFormat;
     }
@@ -118,7 +122,8 @@ class MusicReleaseSchema extends MusicPlaylistSchema
     }
 
     /**
-     * @return OrganizationSchema     **/
+     * @return OrganizationSchema     
+     **/
     public function getRecordLabel() {
         return $this->recordLabel;
     }
@@ -134,7 +139,8 @@ class MusicReleaseSchema extends MusicPlaylistSchema
     }
 
     /**
-     * @return MusicAlbumSchema     **/
+     * @return MusicAlbumSchema     
+     **/
     public function getReleaseOf() {
         return $this->releaseOf;
     }

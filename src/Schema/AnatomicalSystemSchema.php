@@ -54,7 +54,8 @@ class AnatomicalSystemSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getAssociatedPathophysiology() {
         return $this->associatedPathophysiology;
     }
@@ -70,7 +71,8 @@ class AnatomicalSystemSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return AnatomicalStructureSchema|AnatomicalSystemSchema     **/
+     * @return AnatomicalStructureSchema|AnatomicalSystemSchema     
+     **/
     public function getComprisedOf() {
         return $this->comprisedOf;
     }
@@ -86,7 +88,8 @@ class AnatomicalSystemSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return MedicalConditionSchema     **/
+     * @return MedicalConditionSchema     
+     **/
     public function getRelatedCondition() {
         return $this->relatedCondition;
     }
@@ -102,7 +105,8 @@ class AnatomicalSystemSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return AnatomicalStructureSchema     **/
+     * @return AnatomicalStructureSchema     
+     **/
     public function getRelatedStructure() {
         return $this->relatedStructure;
     }
@@ -118,7 +122,8 @@ class AnatomicalSystemSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return MedicalTherapySchema     **/
+     * @return MedicalTherapySchema     
+     **/
     public function getRelatedTherapy() {
         return $this->relatedTherapy;
     }

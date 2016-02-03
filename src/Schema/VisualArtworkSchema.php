@@ -54,7 +54,8 @@ class VisualArtworkSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema|IntegerSchema     **/
+     * @return TextSchema|IntegerSchema     
+     **/
     public function getArtEdition() {
         return $this->artEdition;
     }
@@ -70,7 +71,8 @@ class VisualArtworkSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema|URLSchema     **/
+     * @return TextSchema|URLSchema     
+     **/
     public function getArtMedium() {
         return $this->artMedium;
     }
@@ -86,7 +88,8 @@ class VisualArtworkSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema|URLSchema     **/
+     * @return TextSchema|URLSchema     
+     **/
     public function getArtform() {
         return $this->artform;
     }
@@ -102,7 +105,8 @@ class VisualArtworkSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema|URLSchema     **/
+     * @return TextSchema|URLSchema     
+     **/
     public function getArtworkSurface() {
         return $this->artworkSurface;
     }
@@ -118,7 +122,8 @@ class VisualArtworkSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return DistanceSchema|QuantitativeValueSchema     **/
+     * @return DistanceSchema|QuantitativeValueSchema     
+     **/
     public function getDepth() {
         return $this->depth;
     }
@@ -134,7 +139,8 @@ class VisualArtworkSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return DistanceSchema|QuantitativeValueSchema     **/
+     * @return DistanceSchema|QuantitativeValueSchema     
+     **/
     public function getHeight() {
         return $this->height;
     }
@@ -150,7 +156,8 @@ class VisualArtworkSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema|URLSchema     **/
+     * @return TextSchema|URLSchema     
+     **/
     public function getMaterial() {
         return $this->material;
     }
@@ -166,7 +173,8 @@ class VisualArtworkSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema|URLSchema     **/
+     * @return TextSchema|URLSchema     
+     **/
     public function getSurface() {
         return $this->surface;
     }
@@ -182,7 +190,8 @@ class VisualArtworkSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return DistanceSchema|QuantitativeValueSchema     **/
+     * @return DistanceSchema|QuantitativeValueSchema     
+     **/
     public function getWidth() {
         return $this->width;
     }

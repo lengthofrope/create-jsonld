@@ -59,7 +59,8 @@ class OfferSchema extends IntangibleSchema
     }
 
     /**
-     * @return PaymentMethodSchema     **/
+     * @return PaymentMethodSchema     
+     **/
     public function getAcceptedPaymentMethod() {
         return $this->acceptedPaymentMethod;
     }
@@ -75,7 +76,8 @@ class OfferSchema extends IntangibleSchema
     }
 
     /**
-     * @return OfferSchema     **/
+     * @return OfferSchema     
+     **/
     public function getAddOn() {
         return $this->addOn;
     }
@@ -91,7 +93,8 @@ class OfferSchema extends IntangibleSchema
     }
 
     /**
-     * @return QuantitativeValueSchema     **/
+     * @return QuantitativeValueSchema     
+     **/
     public function getAdvanceBookingRequirement() {
         return $this->advanceBookingRequirement;
     }
@@ -107,7 +110,8 @@ class OfferSchema extends IntangibleSchema
     }
 
     /**
-     * @return AggregateRatingSchema     **/
+     * @return AggregateRatingSchema     
+     **/
     public function getAggregateRating() {
         return $this->aggregateRating;
     }
@@ -123,7 +127,8 @@ class OfferSchema extends IntangibleSchema
     }
 
     /**
-     * @return PlaceSchema|AdministrativeAreaSchema|GeoShapeSchema|TextSchema     **/
+     * @return PlaceSchema|AdministrativeAreaSchema|GeoShapeSchema|TextSchema     
+     **/
     public function getAreaServed() {
         return $this->areaServed;
     }
@@ -139,7 +144,8 @@ class OfferSchema extends IntangibleSchema
     }
 
     /**
-     * @return ItemAvailabilitySchema     **/
+     * @return ItemAvailabilitySchema     
+     **/
     public function getAvailability() {
         return $this->availability;
     }
@@ -155,7 +161,8 @@ class OfferSchema extends IntangibleSchema
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getAvailabilityEnds() {
         return $this->availabilityEnds;
     }
@@ -171,7 +178,8 @@ class OfferSchema extends IntangibleSchema
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getAvailabilityStarts() {
         return $this->availabilityStarts;
     }
@@ -187,7 +195,8 @@ class OfferSchema extends IntangibleSchema
     }
 
     /**
-     * @return PlaceSchema     **/
+     * @return PlaceSchema     
+     **/
     public function getAvailableAtOrFrom() {
         return $this->availableAtOrFrom;
     }
@@ -203,7 +212,8 @@ class OfferSchema extends IntangibleSchema
     }
 
     /**
-     * @return DeliveryMethodSchema     **/
+     * @return DeliveryMethodSchema     
+     **/
     public function getAvailableDeliveryMethod() {
         return $this->availableDeliveryMethod;
     }
@@ -219,7 +229,8 @@ class OfferSchema extends IntangibleSchema
     }
 
     /**
-     * @return BusinessFunctionSchema     **/
+     * @return BusinessFunctionSchema     
+     **/
     public function getBusinessFunction() {
         return $this->businessFunction;
     }
@@ -235,7 +246,8 @@ class OfferSchema extends IntangibleSchema
     }
 
     /**
-     * @return PhysicalActivityCategorySchema|TextSchema|ThingSchema     **/
+     * @return PhysicalActivityCategorySchema|TextSchema|ThingSchema     
+     **/
     public function getCategory() {
         return $this->category;
     }
@@ -251,7 +263,8 @@ class OfferSchema extends IntangibleSchema
     }
 
     /**
-     * @return QuantitativeValueSchema     **/
+     * @return QuantitativeValueSchema     
+     **/
     public function getDeliveryLeadTime() {
         return $this->deliveryLeadTime;
     }
@@ -267,7 +280,8 @@ class OfferSchema extends IntangibleSchema
     }
 
     /**
-     * @return BusinessEntityTypeSchema     **/
+     * @return BusinessEntityTypeSchema     
+     **/
     public function getEligibleCustomerType() {
         return $this->eligibleCustomerType;
     }
@@ -283,7 +297,8 @@ class OfferSchema extends IntangibleSchema
     }
 
     /**
-     * @return QuantitativeValueSchema     **/
+     * @return QuantitativeValueSchema     
+     **/
     public function getEligibleDuration() {
         return $this->eligibleDuration;
     }
@@ -299,7 +314,8 @@ class OfferSchema extends IntangibleSchema
     }
 
     /**
-     * @return QuantitativeValueSchema     **/
+     * @return QuantitativeValueSchema     
+     **/
     public function getEligibleQuantity() {
         return $this->eligibleQuantity;
     }
@@ -317,7 +333,8 @@ class OfferSchema extends IntangibleSchema
     }
 
     /**
-     * @return GeoShapeSchema|PlaceSchema|TextSchema     **/
+     * @return GeoShapeSchema|PlaceSchema|TextSchema     
+     **/
     public function getEligibleRegion() {
         return $this->eligibleRegion;
     }
@@ -333,7 +350,8 @@ class OfferSchema extends IntangibleSchema
     }
 
     /**
-     * @return PriceSpecificationSchema     **/
+     * @return PriceSpecificationSchema     
+     **/
     public function getEligibleTransactionVolume() {
         return $this->eligibleTransactionVolume;
     }
@@ -349,7 +367,8 @@ class OfferSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getGtin12() {
         return $this->gtin12;
     }
@@ -365,7 +384,8 @@ class OfferSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getGtin13() {
         return $this->gtin13;
     }
@@ -381,7 +401,8 @@ class OfferSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getGtin14() {
         return $this->gtin14;
     }
@@ -397,7 +418,8 @@ class OfferSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getGtin8() {
         return $this->gtin8;
     }
@@ -413,7 +435,8 @@ class OfferSchema extends IntangibleSchema
     }
 
     /**
-     * @return TypeAndQuantityNodeSchema     **/
+     * @return TypeAndQuantityNodeSchema     
+     **/
     public function getIncludesObject() {
         return $this->includesObject;
     }
@@ -431,7 +454,8 @@ class OfferSchema extends IntangibleSchema
     }
 
     /**
-     * @return GeoShapeSchema|PlaceSchema|TextSchema     **/
+     * @return GeoShapeSchema|PlaceSchema|TextSchema     
+     **/
     public function getIneligibleRegion() {
         return $this->ineligibleRegion;
     }
@@ -447,7 +471,8 @@ class OfferSchema extends IntangibleSchema
     }
 
     /**
-     * @return QuantitativeValueSchema     **/
+     * @return QuantitativeValueSchema     
+     **/
     public function getInventoryLevel() {
         return $this->inventoryLevel;
     }
@@ -463,7 +488,8 @@ class OfferSchema extends IntangibleSchema
     }
 
     /**
-     * @return OfferItemConditionSchema     **/
+     * @return OfferItemConditionSchema     
+     **/
     public function getItemCondition() {
         return $this->itemCondition;
     }
@@ -479,7 +505,8 @@ class OfferSchema extends IntangibleSchema
     }
 
     /**
-     * @return ProductSchema|ServiceSchema     **/
+     * @return ProductSchema|ServiceSchema     
+     **/
     public function getItemOffered() {
         return $this->itemOffered;
     }
@@ -495,7 +522,8 @@ class OfferSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getMpn() {
         return $this->mpn;
     }
@@ -511,7 +539,8 @@ class OfferSchema extends IntangibleSchema
     }
 
     /**
-     * @return PersonSchema|OrganizationSchema     **/
+     * @return PersonSchema|OrganizationSchema     
+     **/
     public function getOfferedBy() {
         return $this->offeredBy;
     }
@@ -547,7 +576,8 @@ class OfferSchema extends IntangibleSchema
     }
 
     /**
-     * @return NumberSchema|TextSchema     **/
+     * @return NumberSchema|TextSchema     
+     **/
     public function getPrice() {
         return $this->price;
     }
@@ -563,7 +593,8 @@ class OfferSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getPriceCurrency() {
         return $this->priceCurrency;
     }
@@ -579,7 +610,8 @@ class OfferSchema extends IntangibleSchema
     }
 
     /**
-     * @return PriceSpecificationSchema     **/
+     * @return PriceSpecificationSchema     
+     **/
     public function getPriceSpecification() {
         return $this->priceSpecification;
     }
@@ -595,7 +627,8 @@ class OfferSchema extends IntangibleSchema
     }
 
     /**
-     * @return DateSchema     **/
+     * @return DateSchema     
+     **/
     public function getPriceValidUntil() {
         return $this->priceValidUntil;
     }
@@ -611,7 +644,8 @@ class OfferSchema extends IntangibleSchema
     }
 
     /**
-     * @return ReviewSchema     **/
+     * @return ReviewSchema     
+     **/
     public function getReview() {
         return $this->review;
     }
@@ -627,7 +661,8 @@ class OfferSchema extends IntangibleSchema
     }
 
     /**
-     * @return ReviewSchema     **/
+     * @return ReviewSchema     
+     **/
     public function getReviews() {
         return $this->reviews;
     }
@@ -643,7 +678,8 @@ class OfferSchema extends IntangibleSchema
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema     **/
+     * @return OrganizationSchema|PersonSchema     
+     **/
     public function getSeller() {
         return $this->seller;
     }
@@ -659,7 +695,8 @@ class OfferSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getSerialNumber() {
         return $this->serialNumber;
     }
@@ -675,7 +712,8 @@ class OfferSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getSku() {
         return $this->sku;
     }
@@ -691,7 +729,8 @@ class OfferSchema extends IntangibleSchema
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getValidFrom() {
         return $this->validFrom;
     }
@@ -707,7 +746,8 @@ class OfferSchema extends IntangibleSchema
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getValidThrough() {
         return $this->validThrough;
     }
@@ -723,7 +763,8 @@ class OfferSchema extends IntangibleSchema
     }
 
     /**
-     * @return WarrantyPromiseSchema     **/
+     * @return WarrantyPromiseSchema     
+     **/
     public function getWarranty() {
         return $this->warranty;
     }

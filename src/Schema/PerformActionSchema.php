@@ -54,7 +54,8 @@ class PerformActionSchema extends PlayActionSchema
     }
 
     /**
-     * @return EntertainmentBusinessSchema     **/
+     * @return EntertainmentBusinessSchema     
+     **/
     public function getEntertainmentBusiness() {
         return $this->entertainmentBusiness;
     }

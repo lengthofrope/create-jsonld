@@ -54,7 +54,8 @@ class PhysicalActivitySchema extends LifestyleModificationSchema
     }
 
     /**
-     * @return AnatomicalStructureSchema|AnatomicalSystemSchema|SuperficialAnatomySchema     **/
+     * @return AnatomicalStructureSchema|AnatomicalSystemSchema|SuperficialAnatomySchema     
+     **/
     public function getAssociatedAnatomy() {
         return $this->associatedAnatomy;
     }
@@ -70,7 +71,8 @@ class PhysicalActivitySchema extends LifestyleModificationSchema
     }
 
     /**
-     * @return PhysicalActivityCategorySchema|TextSchema|ThingSchema     **/
+     * @return PhysicalActivityCategorySchema|TextSchema|ThingSchema     
+     **/
     public function getCategory() {
         return $this->category;
     }
@@ -86,7 +88,8 @@ class PhysicalActivitySchema extends LifestyleModificationSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getEpidemiology() {
         return $this->epidemiology;
     }
@@ -102,7 +105,8 @@ class PhysicalActivitySchema extends LifestyleModificationSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getPathophysiology() {
         return $this->pathophysiology;
     }

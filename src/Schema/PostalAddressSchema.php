@@ -54,7 +54,8 @@ class PostalAddressSchema extends ContactPointSchema
     }
 
     /**
-     * @return TextSchema|CountrySchema     **/
+     * @return TextSchema|CountrySchema     
+     **/
     public function getAddressCountry() {
         return $this->addressCountry;
     }
@@ -70,7 +71,8 @@ class PostalAddressSchema extends ContactPointSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getAddressLocality() {
         return $this->addressLocality;
     }
@@ -86,7 +88,8 @@ class PostalAddressSchema extends ContactPointSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getAddressRegion() {
         return $this->addressRegion;
     }
@@ -102,7 +105,8 @@ class PostalAddressSchema extends ContactPointSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getPostOfficeBoxNumber() {
         return $this->postOfficeBoxNumber;
     }
@@ -118,7 +122,8 @@ class PostalAddressSchema extends ContactPointSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getPostalCode() {
         return $this->postalCode;
     }
@@ -134,7 +139,8 @@ class PostalAddressSchema extends ContactPointSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getStreetAddress() {
         return $this->streetAddress;
     }

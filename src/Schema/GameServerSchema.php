@@ -54,7 +54,8 @@ class GameServerSchema extends IntangibleSchema
     }
 
     /**
-     * @return VideoGameSchema     **/
+     * @return VideoGameSchema     
+     **/
     public function getGame() {
         return $this->game;
     }
@@ -70,7 +71,8 @@ class GameServerSchema extends IntangibleSchema
     }
 
     /**
-     * @return IntegerSchema     **/
+     * @return IntegerSchema     
+     **/
     public function getPlayersOnline() {
         return $this->playersOnline;
     }
@@ -86,7 +88,8 @@ class GameServerSchema extends IntangibleSchema
     }
 
     /**
-     * @return GameServerStatusSchema     **/
+     * @return GameServerStatusSchema     
+     **/
     public function getServerStatus() {
         return $this->serverStatus;
     }

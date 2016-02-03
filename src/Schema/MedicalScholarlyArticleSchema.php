@@ -54,7 +54,8 @@ class MedicalScholarlyArticleSchema extends ScholarlyArticleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getPublicationType() {
         return $this->publicationType;
     }

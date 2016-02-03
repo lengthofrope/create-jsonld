@@ -54,7 +54,8 @@ class MedicalTrialSchema extends MedicalStudySchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getPhase() {
         return $this->phase;
     }
@@ -70,7 +71,8 @@ class MedicalTrialSchema extends MedicalStudySchema
     }
 
     /**
-     * @return MedicalTrialDesignSchema     **/
+     * @return MedicalTrialDesignSchema     
+     **/
     public function getTrialDesign() {
         return $this->trialDesign;
     }

@@ -54,7 +54,8 @@ class MusicRecordingSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return MusicGroupSchema     **/
+     * @return MusicGroupSchema     
+     **/
     public function getByArtist() {
         return $this->byArtist;
     }
@@ -70,7 +71,8 @@ class MusicRecordingSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return DurationSchema     **/
+     * @return DurationSchema     
+     **/
     public function getDuration() {
         return $this->duration;
     }
@@ -86,7 +88,8 @@ class MusicRecordingSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return MusicAlbumSchema     **/
+     * @return MusicAlbumSchema     
+     **/
     public function getInAlbum() {
         return $this->inAlbum;
     }
@@ -102,7 +105,8 @@ class MusicRecordingSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return MusicPlaylistSchema     **/
+     * @return MusicPlaylistSchema     
+     **/
     public function getInPlaylist() {
         return $this->inPlaylist;
     }
@@ -118,7 +122,8 @@ class MusicRecordingSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getIsrcCode() {
         return $this->isrcCode;
     }
@@ -134,7 +139,8 @@ class MusicRecordingSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return MusicCompositionSchema     **/
+     * @return MusicCompositionSchema     
+     **/
     public function getRecordingOf() {
         return $this->recordingOf;
     }

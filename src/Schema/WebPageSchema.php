@@ -54,7 +54,8 @@ class WebPageSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema|BreadcrumbListSchema     **/
+     * @return TextSchema|BreadcrumbListSchema     
+     **/
     public function getBreadcrumb() {
         return $this->breadcrumb;
     }
@@ -70,7 +71,8 @@ class WebPageSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return DateSchema     **/
+     * @return DateSchema     
+     **/
     public function getLastReviewed() {
         return $this->lastReviewed;
     }
@@ -86,7 +88,8 @@ class WebPageSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return WebPageElementSchema     **/
+     * @return WebPageElementSchema     
+     **/
     public function getMainContentOfPage() {
         return $this->mainContentOfPage;
     }
@@ -102,7 +105,8 @@ class WebPageSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return ImageObjectSchema     **/
+     * @return ImageObjectSchema     
+     **/
     public function getPrimaryImageOfPage() {
         return $this->primaryImageOfPage;
     }
@@ -118,7 +122,8 @@ class WebPageSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return URLSchema     **/
+     * @return URLSchema     
+     **/
     public function getRelatedLink() {
         return $this->relatedLink;
     }
@@ -134,7 +139,8 @@ class WebPageSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema     **/
+     * @return OrganizationSchema|PersonSchema     
+     **/
     public function getReviewedBy() {
         return $this->reviewedBy;
     }
@@ -150,7 +156,8 @@ class WebPageSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return URLSchema     **/
+     * @return URLSchema     
+     **/
     public function getSignificantLink() {
         return $this->significantLink;
     }
@@ -166,7 +173,8 @@ class WebPageSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return URLSchema     **/
+     * @return URLSchema     
+     **/
     public function getSignificantLinks() {
         return $this->significantLinks;
     }
@@ -182,7 +190,8 @@ class WebPageSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return SpecialtySchema     **/
+     * @return SpecialtySchema     
+     **/
     public function getSpecialty() {
         return $this->specialty;
     }

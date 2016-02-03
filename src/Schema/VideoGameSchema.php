@@ -54,7 +54,8 @@ class VideoGameSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getActor() {
         return $this->actor;
     }
@@ -70,7 +71,8 @@ class VideoGameSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getActors() {
         return $this->actors;
     }
@@ -86,7 +88,8 @@ class VideoGameSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return CreativeWorkSchema     **/
+     * @return CreativeWorkSchema     
+     **/
     public function getCheatCode() {
         return $this->cheatCode;
     }
@@ -102,7 +105,8 @@ class VideoGameSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getDirector() {
         return $this->director;
     }
@@ -118,7 +122,8 @@ class VideoGameSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getDirectors() {
         return $this->directors;
     }
@@ -134,7 +139,8 @@ class VideoGameSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return TextSchema|URLSchema|ThingSchema     **/
+     * @return TextSchema|URLSchema|ThingSchema     
+     **/
     public function getGamePlatform() {
         return $this->gamePlatform;
     }
@@ -150,7 +156,8 @@ class VideoGameSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return GameServerSchema     **/
+     * @return GameServerSchema     
+     **/
     public function getGameServer() {
         return $this->gameServer;
     }
@@ -166,7 +173,8 @@ class VideoGameSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return CreativeWorkSchema     **/
+     * @return CreativeWorkSchema     
+     **/
     public function getGameTip() {
         return $this->gameTip;
     }
@@ -182,7 +190,8 @@ class VideoGameSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return MusicGroupSchema|PersonSchema     **/
+     * @return MusicGroupSchema|PersonSchema     
+     **/
     public function getMusicBy() {
         return $this->musicBy;
     }
@@ -198,7 +207,8 @@ class VideoGameSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return GamePlayModeSchema     **/
+     * @return GamePlayModeSchema     
+     **/
     public function getPlayMode() {
         return $this->playMode;
     }
@@ -214,7 +224,8 @@ class VideoGameSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return VideoObjectSchema     **/
+     * @return VideoObjectSchema     
+     **/
     public function getTrailer() {
         return $this->trailer;
     }

@@ -54,7 +54,8 @@ class WarrantyPromiseSchema extends StructuredValueSchema
     }
 
     /**
-     * @return QuantitativeValueSchema     **/
+     * @return QuantitativeValueSchema     
+     **/
     public function getDurationOfWarranty() {
         return $this->durationOfWarranty;
     }
@@ -70,7 +71,8 @@ class WarrantyPromiseSchema extends StructuredValueSchema
     }
 
     /**
-     * @return WarrantyScopeSchema     **/
+     * @return WarrantyScopeSchema     
+     **/
     public function getWarrantyScope() {
         return $this->warrantyScope;
     }

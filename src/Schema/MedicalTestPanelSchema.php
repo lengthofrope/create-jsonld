@@ -54,7 +54,8 @@ class MedicalTestPanelSchema extends MedicalTestSchema
     }
 
     /**
-     * @return MedicalTestSchema     **/
+     * @return MedicalTestSchema     
+     **/
     public function getSubTest() {
         return $this->subTest;
     }

@@ -54,7 +54,8 @@ class TrackActionSchema extends FindActionSchema
     }
 
     /**
-     * @return DeliveryMethodSchema     **/
+     * @return DeliveryMethodSchema     
+     **/
     public function getDeliveryMethod() {
         return $this->deliveryMethod;
     }

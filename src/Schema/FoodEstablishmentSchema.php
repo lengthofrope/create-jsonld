@@ -54,7 +54,8 @@ class FoodEstablishmentSchema extends LocalBusinessSchema
     }
 
     /**
-     * @return TextSchema|URLSchema|BooleanSchema     **/
+     * @return TextSchema|URLSchema|BooleanSchema     
+     **/
     public function getAcceptsReservations() {
         return $this->acceptsReservations;
     }
@@ -70,7 +71,8 @@ class FoodEstablishmentSchema extends LocalBusinessSchema
     }
 
     /**
-     * @return TextSchema|URLSchema     **/
+     * @return TextSchema|URLSchema     
+     **/
     public function getMenu() {
         return $this->menu;
     }
@@ -86,7 +88,8 @@ class FoodEstablishmentSchema extends LocalBusinessSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getServesCuisine() {
         return $this->servesCuisine;
     }

@@ -54,7 +54,8 @@ class DrugCostSchema extends MedicalIntangibleSchema
     }
 
     /**
-     * @return AdministrativeAreaSchema     **/
+     * @return AdministrativeAreaSchema     
+     **/
     public function getApplicableLocation() {
         return $this->applicableLocation;
     }
@@ -70,7 +71,8 @@ class DrugCostSchema extends MedicalIntangibleSchema
     }
 
     /**
-     * @return DrugCostCategorySchema     **/
+     * @return DrugCostCategorySchema     
+     **/
     public function getCostCategory() {
         return $this->costCategory;
     }
@@ -86,7 +88,8 @@ class DrugCostSchema extends MedicalIntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getCostCurrency() {
         return $this->costCurrency;
     }
@@ -102,7 +105,8 @@ class DrugCostSchema extends MedicalIntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getCostOrigin() {
         return $this->costOrigin;
     }
@@ -118,7 +122,8 @@ class DrugCostSchema extends MedicalIntangibleSchema
     }
 
     /**
-     * @return NumberSchema|TextSchema     **/
+     * @return NumberSchema|TextSchema     
+     **/
     public function getCostPerUnit() {
         return $this->costPerUnit;
     }
@@ -134,7 +139,8 @@ class DrugCostSchema extends MedicalIntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getDrugUnit() {
         return $this->drugUnit;
     }

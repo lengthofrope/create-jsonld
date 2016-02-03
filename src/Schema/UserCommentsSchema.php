@@ -56,7 +56,8 @@ class UserCommentsSchema extends UserInteractionSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getCommentText() {
         return $this->commentText;
     }
@@ -72,7 +73,8 @@ class UserCommentsSchema extends UserInteractionSchema
     }
 
     /**
-     * @return DateSchema     **/
+     * @return DateSchema     
+     **/
     public function getCommentTime() {
         return $this->commentTime;
     }
@@ -88,7 +90,8 @@ class UserCommentsSchema extends UserInteractionSchema
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema     **/
+     * @return OrganizationSchema|PersonSchema     
+     **/
     public function getCreator() {
         return $this->creator;
     }
@@ -104,7 +107,8 @@ class UserCommentsSchema extends UserInteractionSchema
     }
 
     /**
-     * @return CreativeWorkSchema     **/
+     * @return CreativeWorkSchema     
+     **/
     public function getDiscusses() {
         return $this->discusses;
     }
@@ -120,7 +124,8 @@ class UserCommentsSchema extends UserInteractionSchema
     }
 
     /**
-     * @return URLSchema     **/
+     * @return URLSchema     
+     **/
     public function getReplyToUrl() {
         return $this->replyToUrl;
     }

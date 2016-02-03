@@ -54,7 +54,8 @@ class MedicalRiskScoreSchema extends MedicalRiskEstimatorSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getAlgorithm() {
         return $this->algorithm;
     }

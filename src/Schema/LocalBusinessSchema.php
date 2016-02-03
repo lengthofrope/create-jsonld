@@ -56,7 +56,8 @@ class LocalBusinessSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getBranchCode() {
         return $this->branchCode;
     }
@@ -72,7 +73,8 @@ class LocalBusinessSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return OrganizationSchema     **/
+     * @return OrganizationSchema     
+     **/
     public function getBranchOf() {
         return $this->branchOf;
     }
@@ -88,7 +90,8 @@ class LocalBusinessSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getCurrenciesAccepted() {
         return $this->currenciesAccepted;
     }
@@ -104,7 +107,8 @@ class LocalBusinessSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getOpeningHours() {
         return $this->openingHours;
     }
@@ -120,7 +124,8 @@ class LocalBusinessSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getPaymentAccepted() {
         return $this->paymentAccepted;
     }
@@ -136,7 +141,8 @@ class LocalBusinessSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getPriceRange() {
         return $this->priceRange;
     }

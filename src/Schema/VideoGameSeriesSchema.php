@@ -54,7 +54,8 @@ class VideoGameSeriesSchema extends CreativeWorkSeriesSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getActor() {
         return $this->actor;
     }
@@ -70,7 +71,8 @@ class VideoGameSeriesSchema extends CreativeWorkSeriesSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getActors() {
         return $this->actors;
     }
@@ -86,7 +88,8 @@ class VideoGameSeriesSchema extends CreativeWorkSeriesSchema
     }
 
     /**
-     * @return ThingSchema     **/
+     * @return ThingSchema     
+     **/
     public function getCharacterAttribute() {
         return $this->characterAttribute;
     }
@@ -102,7 +105,8 @@ class VideoGameSeriesSchema extends CreativeWorkSeriesSchema
     }
 
     /**
-     * @return CreativeWorkSchema     **/
+     * @return CreativeWorkSchema     
+     **/
     public function getCheatCode() {
         return $this->cheatCode;
     }
@@ -118,7 +122,8 @@ class VideoGameSeriesSchema extends CreativeWorkSeriesSchema
     }
 
     /**
-     * @return CreativeWorkSeasonSchema     **/
+     * @return CreativeWorkSeasonSchema     
+     **/
     public function getContainsSeason() {
         return $this->containsSeason;
     }
@@ -134,7 +139,8 @@ class VideoGameSeriesSchema extends CreativeWorkSeriesSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getDirector() {
         return $this->director;
     }
@@ -150,7 +156,8 @@ class VideoGameSeriesSchema extends CreativeWorkSeriesSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getDirectors() {
         return $this->directors;
     }
@@ -166,7 +173,8 @@ class VideoGameSeriesSchema extends CreativeWorkSeriesSchema
     }
 
     /**
-     * @return EpisodeSchema     **/
+     * @return EpisodeSchema     
+     **/
     public function getEpisode() {
         return $this->episode;
     }
@@ -182,7 +190,8 @@ class VideoGameSeriesSchema extends CreativeWorkSeriesSchema
     }
 
     /**
-     * @return EpisodeSchema     **/
+     * @return EpisodeSchema     
+     **/
     public function getEpisodes() {
         return $this->episodes;
     }
@@ -198,7 +207,8 @@ class VideoGameSeriesSchema extends CreativeWorkSeriesSchema
     }
 
     /**
-     * @return ThingSchema     **/
+     * @return ThingSchema     
+     **/
     public function getGameItem() {
         return $this->gameItem;
     }
@@ -214,7 +224,8 @@ class VideoGameSeriesSchema extends CreativeWorkSeriesSchema
     }
 
     /**
-     * @return URLSchema|PlaceSchema|PostalAddressSchema     **/
+     * @return URLSchema|PlaceSchema|PostalAddressSchema     
+     **/
     public function getGameLocation() {
         return $this->gameLocation;
     }
@@ -230,7 +241,8 @@ class VideoGameSeriesSchema extends CreativeWorkSeriesSchema
     }
 
     /**
-     * @return TextSchema|URLSchema|ThingSchema     **/
+     * @return TextSchema|URLSchema|ThingSchema     
+     **/
     public function getGamePlatform() {
         return $this->gamePlatform;
     }
@@ -246,7 +258,8 @@ class VideoGameSeriesSchema extends CreativeWorkSeriesSchema
     }
 
     /**
-     * @return MusicGroupSchema|PersonSchema     **/
+     * @return MusicGroupSchema|PersonSchema     
+     **/
     public function getMusicBy() {
         return $this->musicBy;
     }
@@ -262,7 +275,8 @@ class VideoGameSeriesSchema extends CreativeWorkSeriesSchema
     }
 
     /**
-     * @return IntegerSchema     **/
+     * @return IntegerSchema     
+     **/
     public function getNumberOfEpisodes() {
         return $this->numberOfEpisodes;
     }
@@ -278,7 +292,8 @@ class VideoGameSeriesSchema extends CreativeWorkSeriesSchema
     }
 
     /**
-     * @return QuantitativeValueSchema     **/
+     * @return QuantitativeValueSchema     
+     **/
     public function getNumberOfPlayers() {
         return $this->numberOfPlayers;
     }
@@ -294,7 +309,8 @@ class VideoGameSeriesSchema extends CreativeWorkSeriesSchema
     }
 
     /**
-     * @return IntegerSchema     **/
+     * @return IntegerSchema     
+     **/
     public function getNumberOfSeasons() {
         return $this->numberOfSeasons;
     }
@@ -310,7 +326,8 @@ class VideoGameSeriesSchema extends CreativeWorkSeriesSchema
     }
 
     /**
-     * @return GamePlayModeSchema     **/
+     * @return GamePlayModeSchema     
+     **/
     public function getPlayMode() {
         return $this->playMode;
     }
@@ -326,7 +343,8 @@ class VideoGameSeriesSchema extends CreativeWorkSeriesSchema
     }
 
     /**
-     * @return OrganizationSchema     **/
+     * @return OrganizationSchema     
+     **/
     public function getProductionCompany() {
         return $this->productionCompany;
     }
@@ -342,7 +360,8 @@ class VideoGameSeriesSchema extends CreativeWorkSeriesSchema
     }
 
     /**
-     * @return ThingSchema     **/
+     * @return ThingSchema     
+     **/
     public function getQuest() {
         return $this->quest;
     }
@@ -358,7 +377,8 @@ class VideoGameSeriesSchema extends CreativeWorkSeriesSchema
     }
 
     /**
-     * @return CreativeWorkSeasonSchema     **/
+     * @return CreativeWorkSeasonSchema     
+     **/
     public function getSeason() {
         return $this->season;
     }
@@ -374,7 +394,8 @@ class VideoGameSeriesSchema extends CreativeWorkSeriesSchema
     }
 
     /**
-     * @return CreativeWorkSeasonSchema     **/
+     * @return CreativeWorkSeasonSchema     
+     **/
     public function getSeasons() {
         return $this->seasons;
     }
@@ -390,7 +411,8 @@ class VideoGameSeriesSchema extends CreativeWorkSeriesSchema
     }
 
     /**
-     * @return VideoObjectSchema     **/
+     * @return VideoObjectSchema     
+     **/
     public function getTrailer() {
         return $this->trailer;
     }

@@ -54,7 +54,8 @@ class MedicalWebPageSchema extends WebPageSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getAspect() {
         return $this->aspect;
     }

@@ -54,7 +54,8 @@ class AirportSchema extends CivicStructureSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getIataCode() {
         return $this->iataCode;
     }
@@ -70,7 +71,8 @@ class AirportSchema extends CivicStructureSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getIacoCode() {
         return $this->iacoCode;
     }

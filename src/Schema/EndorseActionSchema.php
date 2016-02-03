@@ -54,7 +54,8 @@ class EndorseActionSchema extends ReactActionSchema
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema     **/
+     * @return OrganizationSchema|PersonSchema     
+     **/
     public function getEndorsee() {
         return $this->endorsee;
     }

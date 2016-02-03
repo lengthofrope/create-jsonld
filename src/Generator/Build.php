@@ -118,7 +118,9 @@ class Build
             }
 
             foreach ($item->domainIncludes as $dom) {
-                $domains[] = $dom->id;
+                if (!in_array($dom->id, $domains)) {
+                    $domains[] = $dom->id;
+                }
             }
 
             $item->domainIncludes = $domains;
@@ -154,15 +156,17 @@ class Build
             // Add properties to item
             foreach ($this->props as $prop) {
                 if (in_array($item->id, $prop->domainIncludes)) {
-                    $item->props[] = array(
-                        'id'             => $prop->id,
-                        'domainIncludes' => $prop->domainIncludes,
-                        'rangeIncludes'  => $prop->rangeIncludes,
-                        'comment'        => $prop->{'rdfs:comment'},
-                        'label'          => $prop->{'rdfs:label'},
-                        'getter'         => 'get' . ucfirst($prop->{'rdfs:label'}),
-                        'setter'         => 'set' . ucfirst($prop->{'rdfs:label'}),
-                    );
+                    if (!isset($item->props[$prop->{'rdfs:label'}])) {
+                        $item->props[$prop->{'rdfs:label'}] = array(
+                            'id'             => $prop->id,
+                            'domainIncludes' => $prop->domainIncludes,
+                            'rangeIncludes'  => $prop->rangeIncludes,
+                            'comment'        => $prop->{'rdfs:comment'},
+                            'label'          => $prop->{'rdfs:label'},
+                            'getter'         => 'get' . ucfirst($prop->{'rdfs:label'}),
+                            'setter'         => 'set' . ucfirst($prop->{'rdfs:label'}),
+                        );
+                    }
                 }
             }
 

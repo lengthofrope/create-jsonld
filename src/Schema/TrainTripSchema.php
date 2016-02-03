@@ -54,7 +54,8 @@ class TrainTripSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getArrivalPlatform() {
         return $this->arrivalPlatform;
     }
@@ -70,7 +71,8 @@ class TrainTripSchema extends IntangibleSchema
     }
 
     /**
-     * @return TrainStationSchema     **/
+     * @return TrainStationSchema     
+     **/
     public function getArrivalStation() {
         return $this->arrivalStation;
     }
@@ -86,7 +88,8 @@ class TrainTripSchema extends IntangibleSchema
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getArrivalTime() {
         return $this->arrivalTime;
     }
@@ -102,7 +105,8 @@ class TrainTripSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getDeparturePlatform() {
         return $this->departurePlatform;
     }
@@ -118,7 +122,8 @@ class TrainTripSchema extends IntangibleSchema
     }
 
     /**
-     * @return TrainStationSchema     **/
+     * @return TrainStationSchema     
+     **/
     public function getDepartureStation() {
         return $this->departureStation;
     }
@@ -134,7 +139,8 @@ class TrainTripSchema extends IntangibleSchema
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getDepartureTime() {
         return $this->departureTime;
     }
@@ -150,7 +156,8 @@ class TrainTripSchema extends IntangibleSchema
     }
 
     /**
-     * @return PersonSchema|OrganizationSchema     **/
+     * @return PersonSchema|OrganizationSchema     
+     **/
     public function getProvider() {
         return $this->provider;
     }
@@ -166,7 +173,8 @@ class TrainTripSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getTrainName() {
         return $this->trainName;
     }
@@ -182,7 +190,8 @@ class TrainTripSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getTrainNumber() {
         return $this->trainNumber;
     }

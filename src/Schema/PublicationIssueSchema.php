@@ -56,7 +56,8 @@ class PublicationIssueSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return IntegerSchema|TextSchema     **/
+     * @return IntegerSchema|TextSchema     
+     **/
     public function getIssueNumber() {
         return $this->issueNumber;
     }
@@ -72,7 +73,8 @@ class PublicationIssueSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return IntegerSchema|TextSchema     **/
+     * @return IntegerSchema|TextSchema     
+     **/
     public function getPageEnd() {
         return $this->pageEnd;
     }
@@ -88,7 +90,8 @@ class PublicationIssueSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return IntegerSchema|TextSchema     **/
+     * @return IntegerSchema|TextSchema     
+     **/
     public function getPageStart() {
         return $this->pageStart;
     }
@@ -104,7 +107,8 @@ class PublicationIssueSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getPagination() {
         return $this->pagination;
     }

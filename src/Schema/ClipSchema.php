@@ -54,7 +54,8 @@ class ClipSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getActor() {
         return $this->actor;
     }
@@ -70,7 +71,8 @@ class ClipSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getActors() {
         return $this->actors;
     }
@@ -86,7 +88,8 @@ class ClipSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return IntegerSchema|TextSchema     **/
+     * @return IntegerSchema|TextSchema     
+     **/
     public function getClipNumber() {
         return $this->clipNumber;
     }
@@ -102,7 +105,8 @@ class ClipSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getDirector() {
         return $this->director;
     }
@@ -118,7 +122,8 @@ class ClipSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getDirectors() {
         return $this->directors;
     }
@@ -134,7 +139,8 @@ class ClipSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return MusicGroupSchema|PersonSchema     **/
+     * @return MusicGroupSchema|PersonSchema     
+     **/
     public function getMusicBy() {
         return $this->musicBy;
     }
@@ -150,7 +156,8 @@ class ClipSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return EpisodeSchema     **/
+     * @return EpisodeSchema     
+     **/
     public function getPartOfEpisode() {
         return $this->partOfEpisode;
     }
@@ -166,7 +173,8 @@ class ClipSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return CreativeWorkSeasonSchema     **/
+     * @return CreativeWorkSeasonSchema     
+     **/
     public function getPartOfSeason() {
         return $this->partOfSeason;
     }
@@ -182,7 +190,8 @@ class ClipSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return CreativeWorkSeriesSchema     **/
+     * @return CreativeWorkSeriesSchema     
+     **/
     public function getPartOfSeries() {
         return $this->partOfSeries;
     }

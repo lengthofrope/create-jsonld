@@ -54,7 +54,8 @@ class MedicalCodeSchema extends MedicalIntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getCodeValue() {
         return $this->codeValue;
     }
@@ -70,7 +71,8 @@ class MedicalCodeSchema extends MedicalIntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getCodingSystem() {
         return $this->codingSystem;
     }

@@ -54,7 +54,8 @@ class MovieSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getActor() {
         return $this->actor;
     }
@@ -70,7 +71,8 @@ class MovieSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getActors() {
         return $this->actors;
     }
@@ -86,7 +88,8 @@ class MovieSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return CountrySchema     **/
+     * @return CountrySchema     
+     **/
     public function getCountryOfOrigin() {
         return $this->countryOfOrigin;
     }
@@ -102,7 +105,8 @@ class MovieSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getDirector() {
         return $this->director;
     }
@@ -118,7 +122,8 @@ class MovieSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getDirectors() {
         return $this->directors;
     }
@@ -134,7 +139,8 @@ class MovieSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return DurationSchema     **/
+     * @return DurationSchema     
+     **/
     public function getDuration() {
         return $this->duration;
     }
@@ -150,7 +156,8 @@ class MovieSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return MusicGroupSchema|PersonSchema     **/
+     * @return MusicGroupSchema|PersonSchema     
+     **/
     public function getMusicBy() {
         return $this->musicBy;
     }
@@ -166,7 +173,8 @@ class MovieSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return OrganizationSchema     **/
+     * @return OrganizationSchema     
+     **/
     public function getProductionCompany() {
         return $this->productionCompany;
     }
@@ -182,7 +190,8 @@ class MovieSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema|LanguageSchema     **/
+     * @return TextSchema|LanguageSchema     
+     **/
     public function getSubtitleLanguage() {
         return $this->subtitleLanguage;
     }
@@ -198,7 +207,8 @@ class MovieSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return VideoObjectSchema     **/
+     * @return VideoObjectSchema     
+     **/
     public function getTrailer() {
         return $this->trailer;
     }

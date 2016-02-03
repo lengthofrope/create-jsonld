@@ -54,7 +54,8 @@ class LymphaticVesselSchema extends VesselSchema
     }
 
     /**
-     * @return VesselSchema     **/
+     * @return VesselSchema     
+     **/
     public function getOriginatesFrom() {
         return $this->originatesFrom;
     }
@@ -70,7 +71,8 @@ class LymphaticVesselSchema extends VesselSchema
     }
 
     /**
-     * @return AnatomicalStructureSchema|AnatomicalSystemSchema     **/
+     * @return AnatomicalStructureSchema|AnatomicalSystemSchema     
+     **/
     public function getRegionDrained() {
         return $this->regionDrained;
     }
@@ -86,7 +88,8 @@ class LymphaticVesselSchema extends VesselSchema
     }
 
     /**
-     * @return VesselSchema     **/
+     * @return VesselSchema     
+     **/
     public function getRunsTo() {
         return $this->runsTo;
     }

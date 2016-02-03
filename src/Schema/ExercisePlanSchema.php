@@ -54,7 +54,8 @@ class ExercisePlanSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return DurationSchema     **/
+     * @return DurationSchema     
+     **/
     public function getActivityDuration() {
         return $this->activityDuration;
     }
@@ -70,7 +71,8 @@ class ExercisePlanSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getActivityFrequency() {
         return $this->activityFrequency;
     }
@@ -86,7 +88,8 @@ class ExercisePlanSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getAdditionalVariable() {
         return $this->additionalVariable;
     }
@@ -102,7 +105,8 @@ class ExercisePlanSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getExerciseType() {
         return $this->exerciseType;
     }
@@ -118,7 +122,8 @@ class ExercisePlanSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getIntensity() {
         return $this->intensity;
     }
@@ -134,7 +139,8 @@ class ExercisePlanSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return NumberSchema     **/
+     * @return NumberSchema     
+     **/
     public function getRepetitions() {
         return $this->repetitions;
     }
@@ -150,7 +156,8 @@ class ExercisePlanSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getRestPeriods() {
         return $this->restPeriods;
     }
@@ -166,7 +173,8 @@ class ExercisePlanSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return EnergySchema     **/
+     * @return EnergySchema     
+     **/
     public function getWorkload() {
         return $this->workload;
     }

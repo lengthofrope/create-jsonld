@@ -54,7 +54,8 @@ class MedicalObservationalStudySchema extends MedicalStudySchema
     }
 
     /**
-     * @return MedicalObservationalStudyDesignSchema     **/
+     * @return MedicalObservationalStudyDesignSchema     
+     **/
     public function getStudyDesign() {
         return $this->studyDesign;
     }

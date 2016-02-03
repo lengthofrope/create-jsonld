@@ -56,7 +56,8 @@ class PeriodicalSchema extends CreativeWorkSeriesSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getIssn() {
         return $this->issn;
     }

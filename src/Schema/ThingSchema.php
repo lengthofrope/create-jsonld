@@ -54,7 +54,8 @@ class ThingSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return URLSchema     **/
+     * @return URLSchema     
+     **/
     public function getAdditionalType() {
         return $this->additionalType;
     }
@@ -70,7 +71,8 @@ class ThingSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getAlternateName() {
         return $this->alternateName;
     }
@@ -86,7 +88,8 @@ class ThingSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getDescription() {
         return $this->description;
     }
@@ -102,7 +105,8 @@ class ThingSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return URLSchema|ImageObjectSchema     **/
+     * @return URLSchema|ImageObjectSchema     
+     **/
     public function getImage() {
         return $this->image;
     }
@@ -121,7 +125,8 @@ class ThingSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return CreativeWorkSchema|URLSchema     **/
+     * @return CreativeWorkSchema|URLSchema     
+     **/
     public function getMainEntityOfPage() {
         return $this->mainEntityOfPage;
     }
@@ -137,7 +142,8 @@ class ThingSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getName() {
         return $this->name;
     }
@@ -153,7 +159,8 @@ class ThingSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return ActionSchema     **/
+     * @return ActionSchema     
+     **/
     public function getPotentialAction() {
         return $this->potentialAction;
     }
@@ -169,7 +176,8 @@ class ThingSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return URLSchema     **/
+     * @return URLSchema     
+     **/
     public function getSameAs() {
         return $this->sameAs;
     }
@@ -185,7 +193,8 @@ class ThingSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return URLSchema     **/
+     * @return URLSchema     
+     **/
     public function getUrl() {
         return $this->url;
     }

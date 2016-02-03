@@ -54,7 +54,8 @@ class ContactPointSchema extends StructuredValueSchema
     }
 
     /**
-     * @return PlaceSchema|AdministrativeAreaSchema|GeoShapeSchema|TextSchema     **/
+     * @return PlaceSchema|AdministrativeAreaSchema|GeoShapeSchema|TextSchema     
+     **/
     public function getAreaServed() {
         return $this->areaServed;
     }
@@ -70,7 +71,8 @@ class ContactPointSchema extends StructuredValueSchema
     }
 
     /**
-     * @return LanguageSchema     **/
+     * @return LanguageSchema     
+     **/
     public function getAvailableLanguage() {
         return $this->availableLanguage;
     }
@@ -86,7 +88,8 @@ class ContactPointSchema extends StructuredValueSchema
     }
 
     /**
-     * @return ContactPointOptionSchema     **/
+     * @return ContactPointOptionSchema     
+     **/
     public function getContactOption() {
         return $this->contactOption;
     }
@@ -102,7 +105,8 @@ class ContactPointSchema extends StructuredValueSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getContactType() {
         return $this->contactType;
     }
@@ -118,7 +122,8 @@ class ContactPointSchema extends StructuredValueSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getEmail() {
         return $this->email;
     }
@@ -134,7 +139,8 @@ class ContactPointSchema extends StructuredValueSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getFaxNumber() {
         return $this->faxNumber;
     }
@@ -150,7 +156,8 @@ class ContactPointSchema extends StructuredValueSchema
     }
 
     /**
-     * @return OpeningHoursSpecificationSchema     **/
+     * @return OpeningHoursSpecificationSchema     
+     **/
     public function getHoursAvailable() {
         return $this->hoursAvailable;
     }
@@ -166,7 +173,8 @@ class ContactPointSchema extends StructuredValueSchema
     }
 
     /**
-     * @return ProductSchema|TextSchema     **/
+     * @return ProductSchema|TextSchema     
+     **/
     public function getProductSupported() {
         return $this->productSupported;
     }
@@ -182,7 +190,8 @@ class ContactPointSchema extends StructuredValueSchema
     }
 
     /**
-     * @return PlaceSchema|AdministrativeAreaSchema|GeoShapeSchema     **/
+     * @return PlaceSchema|AdministrativeAreaSchema|GeoShapeSchema     
+     **/
     public function getServiceArea() {
         return $this->serviceArea;
     }
@@ -198,7 +207,8 @@ class ContactPointSchema extends StructuredValueSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getTelephone() {
         return $this->telephone;
     }

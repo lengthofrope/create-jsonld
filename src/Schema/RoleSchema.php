@@ -56,7 +56,8 @@ class RoleSchema extends IntangibleSchema
     }
 
     /**
-     * @return DateSchema     **/
+     * @return DateSchema     
+     **/
     public function getEndDate() {
         return $this->endDate;
     }
@@ -72,7 +73,8 @@ class RoleSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema|URLSchema     **/
+     * @return TextSchema|URLSchema     
+     **/
     public function getNamedPosition() {
         return $this->namedPosition;
     }
@@ -88,7 +90,8 @@ class RoleSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema|URLSchema     **/
+     * @return TextSchema|URLSchema     
+     **/
     public function getRoleName() {
         return $this->roleName;
     }
@@ -104,7 +107,8 @@ class RoleSchema extends IntangibleSchema
     }
 
     /**
-     * @return DateSchema     **/
+     * @return DateSchema     
+     **/
     public function getStartDate() {
         return $this->startDate;
     }

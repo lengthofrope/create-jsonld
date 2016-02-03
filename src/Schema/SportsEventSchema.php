@@ -54,7 +54,8 @@ class SportsEventSchema extends EventSchema
     }
 
     /**
-     * @return PersonSchema|SportsTeamSchema     **/
+     * @return PersonSchema|SportsTeamSchema     
+     **/
     public function getAwayTeam() {
         return $this->awayTeam;
     }
@@ -70,7 +71,8 @@ class SportsEventSchema extends EventSchema
     }
 
     /**
-     * @return PersonSchema|SportsTeamSchema     **/
+     * @return PersonSchema|SportsTeamSchema     
+     **/
     public function getCompetitor() {
         return $this->competitor;
     }
@@ -86,7 +88,8 @@ class SportsEventSchema extends EventSchema
     }
 
     /**
-     * @return PersonSchema|SportsTeamSchema     **/
+     * @return PersonSchema|SportsTeamSchema     
+     **/
     public function getHomeTeam() {
         return $this->homeTeam;
     }

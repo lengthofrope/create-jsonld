@@ -54,7 +54,8 @@ class MovieSeriesSchema extends CreativeWorkSeriesSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getActor() {
         return $this->actor;
     }
@@ -70,7 +71,8 @@ class MovieSeriesSchema extends CreativeWorkSeriesSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getActors() {
         return $this->actors;
     }
@@ -86,7 +88,8 @@ class MovieSeriesSchema extends CreativeWorkSeriesSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getDirector() {
         return $this->director;
     }
@@ -102,7 +105,8 @@ class MovieSeriesSchema extends CreativeWorkSeriesSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getDirectors() {
         return $this->directors;
     }
@@ -118,7 +122,8 @@ class MovieSeriesSchema extends CreativeWorkSeriesSchema
     }
 
     /**
-     * @return MusicGroupSchema|PersonSchema     **/
+     * @return MusicGroupSchema|PersonSchema     
+     **/
     public function getMusicBy() {
         return $this->musicBy;
     }
@@ -134,7 +139,8 @@ class MovieSeriesSchema extends CreativeWorkSeriesSchema
     }
 
     /**
-     * @return OrganizationSchema     **/
+     * @return OrganizationSchema     
+     **/
     public function getProductionCompany() {
         return $this->productionCompany;
     }
@@ -150,7 +156,8 @@ class MovieSeriesSchema extends CreativeWorkSeriesSchema
     }
 
     /**
-     * @return VideoObjectSchema     **/
+     * @return VideoObjectSchema     
+     **/
     public function getTrailer() {
         return $this->trailer;
     }

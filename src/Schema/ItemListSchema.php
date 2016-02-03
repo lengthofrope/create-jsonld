@@ -58,7 +58,8 @@ class ItemListSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema|ListItemSchema|ThingSchema     **/
+     * @return TextSchema|ListItemSchema|ThingSchema     
+     **/
     public function getItemListElement() {
         return $this->itemListElement;
     }
@@ -74,7 +75,8 @@ class ItemListSchema extends IntangibleSchema
     }
 
     /**
-     * @return ItemListOrderTypeSchema|TextSchema     **/
+     * @return ItemListOrderTypeSchema|TextSchema     
+     **/
     public function getItemListOrder() {
         return $this->itemListOrder;
     }
@@ -90,7 +92,8 @@ class ItemListSchema extends IntangibleSchema
     }
 
     /**
-     * @return IntegerSchema     **/
+     * @return IntegerSchema     
+     **/
     public function getNumberOfItems() {
         return $this->numberOfItems;
     }

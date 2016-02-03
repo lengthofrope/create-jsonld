@@ -54,7 +54,8 @@ class ReportSchema extends ArticleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getReportNumber() {
         return $this->reportNumber;
     }

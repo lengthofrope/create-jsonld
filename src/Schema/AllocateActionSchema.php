@@ -54,7 +54,8 @@ class AllocateActionSchema extends OrganizeActionSchema
     }
 
     /**
-     * @return MedicalDevicePurposeSchema|ThingSchema     **/
+     * @return MedicalDevicePurposeSchema|ThingSchema     
+     **/
     public function getPurpose() {
         return $this->purpose;
     }

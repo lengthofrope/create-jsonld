@@ -54,7 +54,8 @@ class ArterySchema extends VesselSchema
     }
 
     /**
-     * @return AnatomicalStructureSchema     **/
+     * @return AnatomicalStructureSchema     
+     **/
     public function getArterialBranch() {
         return $this->arterialBranch;
     }
@@ -70,7 +71,8 @@ class ArterySchema extends VesselSchema
     }
 
     /**
-     * @return AnatomicalStructureSchema     **/
+     * @return AnatomicalStructureSchema     
+     **/
     public function getSource() {
         return $this->source;
     }
@@ -86,7 +88,8 @@ class ArterySchema extends VesselSchema
     }
 
     /**
-     * @return AnatomicalStructureSchema     **/
+     * @return AnatomicalStructureSchema     
+     **/
     public function getSupplyTo() {
         return $this->supplyTo;
     }

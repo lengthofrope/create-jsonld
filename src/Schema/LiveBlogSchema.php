@@ -54,7 +54,8 @@ class LiveBlogSchema extends BlogPostingSchema
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getCoverageEndTime() {
         return $this->coverageEndTime;
     }
@@ -70,7 +71,8 @@ class LiveBlogSchema extends BlogPostingSchema
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getCoverageStartTime() {
         return $this->coverageStartTime;
     }
@@ -86,7 +88,8 @@ class LiveBlogSchema extends BlogPostingSchema
     }
 
     /**
-     * @return BlogPostingSchema     **/
+     * @return BlogPostingSchema     
+     **/
     public function getLiveBlogUpdate() {
         return $this->liveBlogUpdate;
     }

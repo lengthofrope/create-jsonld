@@ -54,7 +54,8 @@ class EducationalAudienceSchema extends AudienceSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getEducationalRole() {
         return $this->educationalRole;
     }

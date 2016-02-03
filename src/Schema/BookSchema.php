@@ -54,7 +54,8 @@ class BookSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getBookEdition() {
         return $this->bookEdition;
     }
@@ -70,7 +71,8 @@ class BookSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return BookFormatTypeSchema     **/
+     * @return BookFormatTypeSchema     
+     **/
     public function getBookFormat() {
         return $this->bookFormat;
     }
@@ -86,7 +88,8 @@ class BookSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getIllustrator() {
         return $this->illustrator;
     }
@@ -102,7 +105,8 @@ class BookSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getIsbn() {
         return $this->isbn;
     }
@@ -118,7 +122,8 @@ class BookSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return IntegerSchema     **/
+     * @return IntegerSchema     
+     **/
     public function getNumberOfPages() {
         return $this->numberOfPages;
     }

@@ -54,7 +54,8 @@ class MedicalConditionStageSchema extends MedicalIntangibleSchema
     }
 
     /**
-     * @return NumberSchema     **/
+     * @return NumberSchema     
+     **/
     public function getStageAsNumber() {
         return $this->stageAsNumber;
     }
@@ -70,7 +71,8 @@ class MedicalConditionStageSchema extends MedicalIntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getSubStageSuffix() {
         return $this->subStageSuffix;
     }

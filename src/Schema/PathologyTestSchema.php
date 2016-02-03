@@ -54,7 +54,8 @@ class PathologyTestSchema extends MedicalTestSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getTissueSample() {
         return $this->tissueSample;
     }

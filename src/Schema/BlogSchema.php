@@ -54,7 +54,8 @@ class BlogSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return BlogPostingSchema     **/
+     * @return BlogPostingSchema     
+     **/
     public function getBlogPost() {
         return $this->blogPost;
     }
@@ -70,7 +71,8 @@ class BlogSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return BlogPostingSchema     **/
+     * @return BlogPostingSchema     
+     **/
     public function getBlogPosts() {
         return $this->blogPosts;
     }

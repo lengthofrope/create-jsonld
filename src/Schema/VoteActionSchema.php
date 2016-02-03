@@ -54,7 +54,8 @@ class VoteActionSchema extends ChooseActionSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getCandidate() {
         return $this->candidate;
     }

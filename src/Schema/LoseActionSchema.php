@@ -54,7 +54,8 @@ class LoseActionSchema extends AchieveActionSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getWinner() {
         return $this->winner;
     }

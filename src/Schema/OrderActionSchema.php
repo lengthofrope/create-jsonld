@@ -54,7 +54,8 @@ class OrderActionSchema extends TradeActionSchema
     }
 
     /**
-     * @return DeliveryMethodSchema     **/
+     * @return DeliveryMethodSchema     
+     **/
     public function getDeliveryMethod() {
         return $this->deliveryMethod;
     }

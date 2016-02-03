@@ -54,7 +54,8 @@ class CommentSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return IntegerSchema     **/
+     * @return IntegerSchema     
+     **/
     public function getDownvoteCount() {
         return $this->downvoteCount;
     }
@@ -70,7 +71,8 @@ class CommentSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return QuestionSchema     **/
+     * @return QuestionSchema     
+     **/
     public function getParentItem() {
         return $this->parentItem;
     }
@@ -86,7 +88,8 @@ class CommentSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return IntegerSchema     **/
+     * @return IntegerSchema     
+     **/
     public function getUpvoteCount() {
         return $this->upvoteCount;
     }

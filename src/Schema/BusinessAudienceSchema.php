@@ -54,7 +54,8 @@ class BusinessAudienceSchema extends AudienceSchema
     }
 
     /**
-     * @return QuantitativeValueSchema     **/
+     * @return QuantitativeValueSchema     
+     **/
     public function getNumberOfEmployees() {
         return $this->numberOfEmployees;
     }
@@ -70,7 +71,8 @@ class BusinessAudienceSchema extends AudienceSchema
     }
 
     /**
-     * @return QuantitativeValueSchema     **/
+     * @return QuantitativeValueSchema     
+     **/
     public function getYearlyRevenue() {
         return $this->yearlyRevenue;
     }
@@ -86,7 +88,8 @@ class BusinessAudienceSchema extends AudienceSchema
     }
 
     /**
-     * @return QuantitativeValueSchema     **/
+     * @return QuantitativeValueSchema     
+     **/
     public function getYearsInOperation() {
         return $this->yearsInOperation;
     }

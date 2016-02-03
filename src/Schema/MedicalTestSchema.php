@@ -54,7 +54,8 @@ class MedicalTestSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return DrugSchema     **/
+     * @return DrugSchema     
+     **/
     public function getAffectedBy() {
         return $this->affectedBy;
     }
@@ -70,7 +71,8 @@ class MedicalTestSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getNormalRange() {
         return $this->normalRange;
     }
@@ -86,7 +88,8 @@ class MedicalTestSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return MedicalSignSchema     **/
+     * @return MedicalSignSchema     
+     **/
     public function getSignDetected() {
         return $this->signDetected;
     }
@@ -102,7 +105,8 @@ class MedicalTestSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return MedicalConditionSchema     **/
+     * @return MedicalConditionSchema     
+     **/
     public function getUsedToDiagnose() {
         return $this->usedToDiagnose;
     }
@@ -118,7 +122,8 @@ class MedicalTestSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return MedicalDeviceSchema     **/
+     * @return MedicalDeviceSchema     
+     **/
     public function getUsesDevice() {
         return $this->usesDevice;
     }

@@ -54,7 +54,8 @@ class DietarySupplementSchema extends MedicalTherapySchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getActiveIngredient() {
         return $this->activeIngredient;
     }
@@ -70,7 +71,8 @@ class DietarySupplementSchema extends MedicalTherapySchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getBackground() {
         return $this->background;
     }
@@ -86,7 +88,8 @@ class DietarySupplementSchema extends MedicalTherapySchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getDosageForm() {
         return $this->dosageForm;
     }
@@ -102,7 +105,8 @@ class DietarySupplementSchema extends MedicalTherapySchema
     }
 
     /**
-     * @return BooleanSchema     **/
+     * @return BooleanSchema     
+     **/
     public function getIsProprietary() {
         return $this->isProprietary;
     }
@@ -118,7 +122,8 @@ class DietarySupplementSchema extends MedicalTherapySchema
     }
 
     /**
-     * @return DrugLegalStatusSchema     **/
+     * @return DrugLegalStatusSchema     
+     **/
     public function getLegalStatus() {
         return $this->legalStatus;
     }
@@ -134,7 +139,8 @@ class DietarySupplementSchema extends MedicalTherapySchema
     }
 
     /**
-     * @return OrganizationSchema     **/
+     * @return OrganizationSchema     
+     **/
     public function getManufacturer() {
         return $this->manufacturer;
     }
@@ -150,7 +156,8 @@ class DietarySupplementSchema extends MedicalTherapySchema
     }
 
     /**
-     * @return MaximumDoseScheduleSchema     **/
+     * @return MaximumDoseScheduleSchema     
+     **/
     public function getMaximumIntake() {
         return $this->maximumIntake;
     }
@@ -166,7 +173,8 @@ class DietarySupplementSchema extends MedicalTherapySchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getMechanismOfAction() {
         return $this->mechanismOfAction;
     }
@@ -182,7 +190,8 @@ class DietarySupplementSchema extends MedicalTherapySchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getNonProprietaryName() {
         return $this->nonProprietaryName;
     }
@@ -198,7 +207,8 @@ class DietarySupplementSchema extends MedicalTherapySchema
     }
 
     /**
-     * @return RecommendedDoseScheduleSchema     **/
+     * @return RecommendedDoseScheduleSchema     
+     **/
     public function getRecommendedIntake() {
         return $this->recommendedIntake;
     }
@@ -214,7 +224,8 @@ class DietarySupplementSchema extends MedicalTherapySchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getSafetyConsideration() {
         return $this->safetyConsideration;
     }
@@ -230,7 +241,8 @@ class DietarySupplementSchema extends MedicalTherapySchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getTargetPopulation() {
         return $this->targetPopulation;
     }

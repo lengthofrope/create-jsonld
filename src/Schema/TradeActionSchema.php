@@ -74,7 +74,8 @@ class TradeActionSchema extends ActionSchema
     }
 
     /**
-     * @return NumberSchema|TextSchema     **/
+     * @return NumberSchema|TextSchema     
+     **/
     public function getPrice() {
         return $this->price;
     }
@@ -90,7 +91,8 @@ class TradeActionSchema extends ActionSchema
     }
 
     /**
-     * @return PriceSpecificationSchema     **/
+     * @return PriceSpecificationSchema     
+     **/
     public function getPriceSpecification() {
         return $this->priceSpecification;
     }

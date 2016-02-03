@@ -54,7 +54,8 @@ class RentalCarReservationSchema extends ReservationSchema
     }
 
     /**
-     * @return PlaceSchema     **/
+     * @return PlaceSchema     
+     **/
     public function getDropoffLocation() {
         return $this->dropoffLocation;
     }
@@ -70,7 +71,8 @@ class RentalCarReservationSchema extends ReservationSchema
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getDropoffTime() {
         return $this->dropoffTime;
     }
@@ -86,7 +88,8 @@ class RentalCarReservationSchema extends ReservationSchema
     }
 
     /**
-     * @return PlaceSchema     **/
+     * @return PlaceSchema     
+     **/
     public function getPickupLocation() {
         return $this->pickupLocation;
     }
@@ -102,7 +105,8 @@ class RentalCarReservationSchema extends ReservationSchema
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getPickupTime() {
         return $this->pickupTime;
     }

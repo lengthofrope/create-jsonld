@@ -54,7 +54,8 @@ class InsertActionSchema extends AddActionSchema
     }
 
     /**
-     * @return PlaceSchema     **/
+     * @return PlaceSchema     
+     **/
     public function getToLocation() {
         return $this->toLocation;
     }

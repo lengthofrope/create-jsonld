@@ -54,7 +54,8 @@ class OrderItemSchema extends IntangibleSchema
     }
 
     /**
-     * @return ParcelDeliverySchema     **/
+     * @return ParcelDeliverySchema     
+     **/
     public function getOrderDelivery() {
         return $this->orderDelivery;
     }
@@ -70,7 +71,8 @@ class OrderItemSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getOrderItemNumber() {
         return $this->orderItemNumber;
     }
@@ -86,7 +88,8 @@ class OrderItemSchema extends IntangibleSchema
     }
 
     /**
-     * @return OrderStatusSchema     **/
+     * @return OrderStatusSchema     
+     **/
     public function getOrderItemStatus() {
         return $this->orderItemStatus;
     }
@@ -102,7 +105,8 @@ class OrderItemSchema extends IntangibleSchema
     }
 
     /**
-     * @return NumberSchema     **/
+     * @return NumberSchema     
+     **/
     public function getOrderQuantity() {
         return $this->orderQuantity;
     }
@@ -118,7 +122,8 @@ class OrderItemSchema extends IntangibleSchema
     }
 
     /**
-     * @return ProductSchema|OrderItemSchema     **/
+     * @return ProductSchema|OrderItemSchema     
+     **/
     public function getOrderedItem() {
         return $this->orderedItem;
     }

@@ -54,7 +54,8 @@ class CommunicateActionSchema extends InteractActionSchema
     }
 
     /**
-     * @return ThingSchema     **/
+     * @return ThingSchema     
+     **/
     public function getAbout() {
         return $this->about;
     }
@@ -70,7 +71,8 @@ class CommunicateActionSchema extends InteractActionSchema
     }
 
     /**
-     * @return TextSchema|LanguageSchema     **/
+     * @return TextSchema|LanguageSchema     
+     **/
     public function getInLanguage() {
         return $this->inLanguage;
     }
@@ -86,7 +88,8 @@ class CommunicateActionSchema extends InteractActionSchema
     }
 
     /**
-     * @return LanguageSchema     **/
+     * @return LanguageSchema     
+     **/
     public function getLanguage() {
         return $this->language;
     }
@@ -102,7 +105,8 @@ class CommunicateActionSchema extends InteractActionSchema
     }
 
     /**
-     * @return AudienceSchema|OrganizationSchema|PersonSchema     **/
+     * @return AudienceSchema|OrganizationSchema|PersonSchema     
+     **/
     public function getRecipient() {
         return $this->recipient;
     }

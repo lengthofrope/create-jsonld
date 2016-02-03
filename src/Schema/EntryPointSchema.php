@@ -54,7 +54,8 @@ class EntryPointSchema extends IntangibleSchema
     }
 
     /**
-     * @return SoftwareApplicationSchema     **/
+     * @return SoftwareApplicationSchema     
+     **/
     public function getActionApplication() {
         return $this->actionApplication;
     }
@@ -70,7 +71,8 @@ class EntryPointSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema|URLSchema     **/
+     * @return TextSchema|URLSchema     
+     **/
     public function getActionPlatform() {
         return $this->actionPlatform;
     }
@@ -86,7 +88,8 @@ class EntryPointSchema extends IntangibleSchema
     }
 
     /**
-     * @return SoftwareApplicationSchema     **/
+     * @return SoftwareApplicationSchema     
+     **/
     public function getApplication() {
         return $this->application;
     }
@@ -102,7 +105,8 @@ class EntryPointSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getContentType() {
         return $this->contentType;
     }
@@ -118,7 +122,8 @@ class EntryPointSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getEncodingType() {
         return $this->encodingType;
     }
@@ -134,7 +139,8 @@ class EntryPointSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getHttpMethod() {
         return $this->httpMethod;
     }
@@ -150,7 +156,8 @@ class EntryPointSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getUrlTemplate() {
         return $this->urlTemplate;
     }

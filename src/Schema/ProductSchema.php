@@ -57,7 +57,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return PropertyValueSchema     **/
+     * @return PropertyValueSchema     
+     **/
     public function getAdditionalProperty() {
         return $this->additionalProperty;
     }
@@ -73,7 +74,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return AggregateRatingSchema     **/
+     * @return AggregateRatingSchema     
+     **/
     public function getAggregateRating() {
         return $this->aggregateRating;
     }
@@ -89,7 +91,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return AudienceSchema     **/
+     * @return AudienceSchema     
+     **/
     public function getAudience() {
         return $this->audience;
     }
@@ -105,7 +108,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getAward() {
         return $this->award;
     }
@@ -121,7 +125,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getAwards() {
         return $this->awards;
     }
@@ -137,7 +142,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return BrandSchema|OrganizationSchema     **/
+     * @return BrandSchema|OrganizationSchema     
+     **/
     public function getBrand() {
         return $this->brand;
     }
@@ -153,7 +159,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return PhysicalActivityCategorySchema|TextSchema|ThingSchema     **/
+     * @return PhysicalActivityCategorySchema|TextSchema|ThingSchema     
+     **/
     public function getCategory() {
         return $this->category;
     }
@@ -169,7 +176,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getColor() {
         return $this->color;
     }
@@ -185,7 +193,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return DistanceSchema|QuantitativeValueSchema     **/
+     * @return DistanceSchema|QuantitativeValueSchema     
+     **/
     public function getDepth() {
         return $this->depth;
     }
@@ -201,7 +210,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getGtin12() {
         return $this->gtin12;
     }
@@ -217,7 +227,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getGtin13() {
         return $this->gtin13;
     }
@@ -233,7 +244,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getGtin14() {
         return $this->gtin14;
     }
@@ -249,7 +261,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getGtin8() {
         return $this->gtin8;
     }
@@ -265,7 +278,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return DistanceSchema|QuantitativeValueSchema     **/
+     * @return DistanceSchema|QuantitativeValueSchema     
+     **/
     public function getHeight() {
         return $this->height;
     }
@@ -281,7 +295,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return ProductSchema     **/
+     * @return ProductSchema     
+     **/
     public function getIsAccessoryOrSparePartFor() {
         return $this->isAccessoryOrSparePartFor;
     }
@@ -297,7 +312,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return ProductSchema     **/
+     * @return ProductSchema     
+     **/
     public function getIsConsumableFor() {
         return $this->isConsumableFor;
     }
@@ -313,7 +329,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return ProductSchema     **/
+     * @return ProductSchema     
+     **/
     public function getIsRelatedTo() {
         return $this->isRelatedTo;
     }
@@ -329,7 +346,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return ProductSchema     **/
+     * @return ProductSchema     
+     **/
     public function getIsSimilarTo() {
         return $this->isSimilarTo;
     }
@@ -345,7 +363,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return OfferItemConditionSchema     **/
+     * @return OfferItemConditionSchema     
+     **/
     public function getItemCondition() {
         return $this->itemCondition;
     }
@@ -361,7 +380,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return ImageObjectSchema|URLSchema     **/
+     * @return ImageObjectSchema|URLSchema     
+     **/
     public function getLogo() {
         return $this->logo;
     }
@@ -377,7 +397,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return OrganizationSchema     **/
+     * @return OrganizationSchema     
+     **/
     public function getManufacturer() {
         return $this->manufacturer;
     }
@@ -393,7 +414,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return ProductModelSchema|TextSchema     **/
+     * @return ProductModelSchema|TextSchema     
+     **/
     public function getModel() {
         return $this->model;
     }
@@ -409,7 +431,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getMpn() {
         return $this->mpn;
     }
@@ -425,7 +448,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return OfferSchema     **/
+     * @return OfferSchema     
+     **/
     public function getOffers() {
         return $this->offers;
     }
@@ -441,7 +465,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getProductID() {
         return $this->productID;
     }
@@ -457,7 +482,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return DateSchema     **/
+     * @return DateSchema     
+     **/
     public function getProductionDate() {
         return $this->productionDate;
     }
@@ -473,7 +499,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return DateSchema     **/
+     * @return DateSchema     
+     **/
     public function getPurchaseDate() {
         return $this->purchaseDate;
     }
@@ -489,7 +516,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return DateSchema     **/
+     * @return DateSchema     
+     **/
     public function getReleaseDate() {
         return $this->releaseDate;
     }
@@ -505,7 +533,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return ReviewSchema     **/
+     * @return ReviewSchema     
+     **/
     public function getReview() {
         return $this->review;
     }
@@ -521,7 +550,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return ReviewSchema     **/
+     * @return ReviewSchema     
+     **/
     public function getReviews() {
         return $this->reviews;
     }
@@ -537,7 +567,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getSku() {
         return $this->sku;
     }
@@ -553,7 +584,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return QuantitativeValueSchema     **/
+     * @return QuantitativeValueSchema     
+     **/
     public function getWeight() {
         return $this->weight;
     }
@@ -569,7 +601,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return DistanceSchema|QuantitativeValueSchema     **/
+     * @return DistanceSchema|QuantitativeValueSchema     
+     **/
     public function getWidth() {
         return $this->width;
     }

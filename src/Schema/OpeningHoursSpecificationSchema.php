@@ -54,7 +54,8 @@ class OpeningHoursSpecificationSchema extends StructuredValueSchema
     }
 
     /**
-     * @return TimeSchema     **/
+     * @return TimeSchema     
+     **/
     public function getCloses() {
         return $this->closes;
     }
@@ -70,7 +71,8 @@ class OpeningHoursSpecificationSchema extends StructuredValueSchema
     }
 
     /**
-     * @return DayOfWeekSchema     **/
+     * @return DayOfWeekSchema     
+     **/
     public function getDayOfWeek() {
         return $this->dayOfWeek;
     }
@@ -86,7 +88,8 @@ class OpeningHoursSpecificationSchema extends StructuredValueSchema
     }
 
     /**
-     * @return TimeSchema     **/
+     * @return TimeSchema     
+     **/
     public function getOpens() {
         return $this->opens;
     }
@@ -102,7 +105,8 @@ class OpeningHoursSpecificationSchema extends StructuredValueSchema
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getValidFrom() {
         return $this->validFrom;
     }
@@ -118,7 +122,8 @@ class OpeningHoursSpecificationSchema extends StructuredValueSchema
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getValidThrough() {
         return $this->validThrough;
     }

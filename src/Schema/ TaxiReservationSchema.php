@@ -54,7 +54,8 @@ class  TaxiReservationSchema extends ReservationSchema
     }
 
     /**
-     * @return IntegerSchema|QuantitativeValueSchema     **/
+     * @return IntegerSchema|QuantitativeValueSchema     
+     **/
     public function getPartySize() {
         return $this->partySize;
     }
@@ -70,7 +71,8 @@ class  TaxiReservationSchema extends ReservationSchema
     }
 
     /**
-     * @return PlaceSchema     **/
+     * @return PlaceSchema     
+     **/
     public function getPickupLocation() {
         return $this->pickupLocation;
     }
@@ -86,7 +88,8 @@ class  TaxiReservationSchema extends ReservationSchema
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getPickupTime() {
         return $this->pickupTime;
     }

@@ -54,7 +54,8 @@ class DemandSchema extends IntangibleSchema
     }
 
     /**
-     * @return PaymentMethodSchema     **/
+     * @return PaymentMethodSchema     
+     **/
     public function getAcceptedPaymentMethod() {
         return $this->acceptedPaymentMethod;
     }
@@ -70,7 +71,8 @@ class DemandSchema extends IntangibleSchema
     }
 
     /**
-     * @return QuantitativeValueSchema     **/
+     * @return QuantitativeValueSchema     
+     **/
     public function getAdvanceBookingRequirement() {
         return $this->advanceBookingRequirement;
     }
@@ -86,7 +88,8 @@ class DemandSchema extends IntangibleSchema
     }
 
     /**
-     * @return PlaceSchema|AdministrativeAreaSchema|GeoShapeSchema|TextSchema     **/
+     * @return PlaceSchema|AdministrativeAreaSchema|GeoShapeSchema|TextSchema     
+     **/
     public function getAreaServed() {
         return $this->areaServed;
     }
@@ -102,7 +105,8 @@ class DemandSchema extends IntangibleSchema
     }
 
     /**
-     * @return ItemAvailabilitySchema     **/
+     * @return ItemAvailabilitySchema     
+     **/
     public function getAvailability() {
         return $this->availability;
     }
@@ -118,7 +122,8 @@ class DemandSchema extends IntangibleSchema
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getAvailabilityEnds() {
         return $this->availabilityEnds;
     }
@@ -134,7 +139,8 @@ class DemandSchema extends IntangibleSchema
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getAvailabilityStarts() {
         return $this->availabilityStarts;
     }
@@ -150,7 +156,8 @@ class DemandSchema extends IntangibleSchema
     }
 
     /**
-     * @return PlaceSchema     **/
+     * @return PlaceSchema     
+     **/
     public function getAvailableAtOrFrom() {
         return $this->availableAtOrFrom;
     }
@@ -166,7 +173,8 @@ class DemandSchema extends IntangibleSchema
     }
 
     /**
-     * @return DeliveryMethodSchema     **/
+     * @return DeliveryMethodSchema     
+     **/
     public function getAvailableDeliveryMethod() {
         return $this->availableDeliveryMethod;
     }
@@ -182,7 +190,8 @@ class DemandSchema extends IntangibleSchema
     }
 
     /**
-     * @return BusinessFunctionSchema     **/
+     * @return BusinessFunctionSchema     
+     **/
     public function getBusinessFunction() {
         return $this->businessFunction;
     }
@@ -198,7 +207,8 @@ class DemandSchema extends IntangibleSchema
     }
 
     /**
-     * @return QuantitativeValueSchema     **/
+     * @return QuantitativeValueSchema     
+     **/
     public function getDeliveryLeadTime() {
         return $this->deliveryLeadTime;
     }
@@ -214,7 +224,8 @@ class DemandSchema extends IntangibleSchema
     }
 
     /**
-     * @return BusinessEntityTypeSchema     **/
+     * @return BusinessEntityTypeSchema     
+     **/
     public function getEligibleCustomerType() {
         return $this->eligibleCustomerType;
     }
@@ -230,7 +241,8 @@ class DemandSchema extends IntangibleSchema
     }
 
     /**
-     * @return QuantitativeValueSchema     **/
+     * @return QuantitativeValueSchema     
+     **/
     public function getEligibleDuration() {
         return $this->eligibleDuration;
     }
@@ -246,7 +258,8 @@ class DemandSchema extends IntangibleSchema
     }
 
     /**
-     * @return QuantitativeValueSchema     **/
+     * @return QuantitativeValueSchema     
+     **/
     public function getEligibleQuantity() {
         return $this->eligibleQuantity;
     }
@@ -264,7 +277,8 @@ class DemandSchema extends IntangibleSchema
     }
 
     /**
-     * @return GeoShapeSchema|PlaceSchema|TextSchema     **/
+     * @return GeoShapeSchema|PlaceSchema|TextSchema     
+     **/
     public function getEligibleRegion() {
         return $this->eligibleRegion;
     }
@@ -280,7 +294,8 @@ class DemandSchema extends IntangibleSchema
     }
 
     /**
-     * @return PriceSpecificationSchema     **/
+     * @return PriceSpecificationSchema     
+     **/
     public function getEligibleTransactionVolume() {
         return $this->eligibleTransactionVolume;
     }
@@ -296,7 +311,8 @@ class DemandSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getGtin12() {
         return $this->gtin12;
     }
@@ -312,7 +328,8 @@ class DemandSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getGtin13() {
         return $this->gtin13;
     }
@@ -328,7 +345,8 @@ class DemandSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getGtin14() {
         return $this->gtin14;
     }
@@ -344,7 +362,8 @@ class DemandSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getGtin8() {
         return $this->gtin8;
     }
@@ -360,7 +379,8 @@ class DemandSchema extends IntangibleSchema
     }
 
     /**
-     * @return TypeAndQuantityNodeSchema     **/
+     * @return TypeAndQuantityNodeSchema     
+     **/
     public function getIncludesObject() {
         return $this->includesObject;
     }
@@ -378,7 +398,8 @@ class DemandSchema extends IntangibleSchema
     }
 
     /**
-     * @return GeoShapeSchema|PlaceSchema|TextSchema     **/
+     * @return GeoShapeSchema|PlaceSchema|TextSchema     
+     **/
     public function getIneligibleRegion() {
         return $this->ineligibleRegion;
     }
@@ -394,7 +415,8 @@ class DemandSchema extends IntangibleSchema
     }
 
     /**
-     * @return QuantitativeValueSchema     **/
+     * @return QuantitativeValueSchema     
+     **/
     public function getInventoryLevel() {
         return $this->inventoryLevel;
     }
@@ -410,7 +432,8 @@ class DemandSchema extends IntangibleSchema
     }
 
     /**
-     * @return OfferItemConditionSchema     **/
+     * @return OfferItemConditionSchema     
+     **/
     public function getItemCondition() {
         return $this->itemCondition;
     }
@@ -426,7 +449,8 @@ class DemandSchema extends IntangibleSchema
     }
 
     /**
-     * @return ProductSchema|ServiceSchema     **/
+     * @return ProductSchema|ServiceSchema     
+     **/
     public function getItemOffered() {
         return $this->itemOffered;
     }
@@ -442,7 +466,8 @@ class DemandSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getMpn() {
         return $this->mpn;
     }
@@ -458,7 +483,8 @@ class DemandSchema extends IntangibleSchema
     }
 
     /**
-     * @return PriceSpecificationSchema     **/
+     * @return PriceSpecificationSchema     
+     **/
     public function getPriceSpecification() {
         return $this->priceSpecification;
     }
@@ -474,7 +500,8 @@ class DemandSchema extends IntangibleSchema
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema     **/
+     * @return OrganizationSchema|PersonSchema     
+     **/
     public function getSeller() {
         return $this->seller;
     }
@@ -490,7 +517,8 @@ class DemandSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getSerialNumber() {
         return $this->serialNumber;
     }
@@ -506,7 +534,8 @@ class DemandSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getSku() {
         return $this->sku;
     }
@@ -522,7 +551,8 @@ class DemandSchema extends IntangibleSchema
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getValidFrom() {
         return $this->validFrom;
     }
@@ -538,7 +568,8 @@ class DemandSchema extends IntangibleSchema
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getValidThrough() {
         return $this->validThrough;
     }
@@ -554,7 +585,8 @@ class DemandSchema extends IntangibleSchema
     }
 
     /**
-     * @return WarrantyPromiseSchema     **/
+     * @return WarrantyPromiseSchema     
+     **/
     public function getWarranty() {
         return $this->warranty;
     }

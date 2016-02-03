@@ -54,7 +54,8 @@ class UnitPriceSpecificationSchema extends PriceSpecificationSchema
     }
 
     /**
-     * @return NumberSchema     **/
+     * @return NumberSchema     
+     **/
     public function getBillingIncrement() {
         return $this->billingIncrement;
     }
@@ -70,7 +71,8 @@ class UnitPriceSpecificationSchema extends PriceSpecificationSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getPriceType() {
         return $this->priceType;
     }
@@ -86,7 +88,8 @@ class UnitPriceSpecificationSchema extends PriceSpecificationSchema
     }
 
     /**
-     * @return TextSchema|URLSchema     **/
+     * @return TextSchema|URLSchema     
+     **/
     public function getUnitCode() {
         return $this->unitCode;
     }
@@ -103,7 +106,8 @@ class UnitPriceSpecificationSchema extends PriceSpecificationSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getUnitText() {
         return $this->unitText;
     }

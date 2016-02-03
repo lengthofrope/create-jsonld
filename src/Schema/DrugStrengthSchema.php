@@ -54,7 +54,8 @@ class DrugStrengthSchema extends MedicalIntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getActiveIngredient() {
         return $this->activeIngredient;
     }
@@ -70,7 +71,8 @@ class DrugStrengthSchema extends MedicalIntangibleSchema
     }
 
     /**
-     * @return AdministrativeAreaSchema     **/
+     * @return AdministrativeAreaSchema     
+     **/
     public function getAvailableIn() {
         return $this->availableIn;
     }
@@ -86,7 +88,8 @@ class DrugStrengthSchema extends MedicalIntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getStrengthUnit() {
         return $this->strengthUnit;
     }
@@ -102,7 +105,8 @@ class DrugStrengthSchema extends MedicalIntangibleSchema
     }
 
     /**
-     * @return NumberSchema     **/
+     * @return NumberSchema     
+     **/
     public function getStrengthValue() {
         return $this->strengthValue;
     }

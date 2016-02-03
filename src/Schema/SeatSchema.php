@@ -54,7 +54,8 @@ class SeatSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getSeatNumber() {
         return $this->seatNumber;
     }
@@ -70,7 +71,8 @@ class SeatSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getSeatRow() {
         return $this->seatRow;
     }
@@ -86,7 +88,8 @@ class SeatSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getSeatSection() {
         return $this->seatSection;
     }
@@ -102,7 +105,8 @@ class SeatSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema|QualitativeValueSchema     **/
+     * @return TextSchema|QualitativeValueSchema     
+     **/
     public function getSeatingType() {
         return $this->seatingType;
     }

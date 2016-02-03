@@ -54,7 +54,8 @@ class TypeAndQuantityNodeSchema extends StructuredValueSchema
     }
 
     /**
-     * @return NumberSchema     **/
+     * @return NumberSchema     
+     **/
     public function getAmountOfThisGood() {
         return $this->amountOfThisGood;
     }
@@ -70,7 +71,8 @@ class TypeAndQuantityNodeSchema extends StructuredValueSchema
     }
 
     /**
-     * @return BusinessFunctionSchema     **/
+     * @return BusinessFunctionSchema     
+     **/
     public function getBusinessFunction() {
         return $this->businessFunction;
     }
@@ -86,7 +88,8 @@ class TypeAndQuantityNodeSchema extends StructuredValueSchema
     }
 
     /**
-     * @return ProductSchema     **/
+     * @return ProductSchema     
+     **/
     public function getTypeOfGood() {
         return $this->typeOfGood;
     }
@@ -102,7 +105,8 @@ class TypeAndQuantityNodeSchema extends StructuredValueSchema
     }
 
     /**
-     * @return TextSchema|URLSchema     **/
+     * @return TextSchema|URLSchema     
+     **/
     public function getUnitCode() {
         return $this->unitCode;
     }
@@ -119,7 +123,8 @@ class TypeAndQuantityNodeSchema extends StructuredValueSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getUnitText() {
         return $this->unitText;
     }

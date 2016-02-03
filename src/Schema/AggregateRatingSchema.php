@@ -54,7 +54,8 @@ class AggregateRatingSchema extends RatingSchema
     }
 
     /**
-     * @return ThingSchema     **/
+     * @return ThingSchema     
+     **/
     public function getItemReviewed() {
         return $this->itemReviewed;
     }
@@ -70,7 +71,8 @@ class AggregateRatingSchema extends RatingSchema
     }
 
     /**
-     * @return IntegerSchema     **/
+     * @return IntegerSchema     
+     **/
     public function getRatingCount() {
         return $this->ratingCount;
     }
@@ -86,7 +88,8 @@ class AggregateRatingSchema extends RatingSchema
     }
 
     /**
-     * @return IntegerSchema     **/
+     * @return IntegerSchema     
+     **/
     public function getReviewCount() {
         return $this->reviewCount;
     }

@@ -54,7 +54,8 @@ class CookActionSchema extends CreateActionSchema
     }
 
     /**
-     * @return FoodEstablishmentSchema|PlaceSchema     **/
+     * @return FoodEstablishmentSchema|PlaceSchema     
+     **/
     public function getFoodEstablishment() {
         return $this->foodEstablishment;
     }
@@ -70,7 +71,8 @@ class CookActionSchema extends CreateActionSchema
     }
 
     /**
-     * @return FoodEventSchema     **/
+     * @return FoodEventSchema     
+     **/
     public function getFoodEvent() {
         return $this->foodEvent;
     }
@@ -86,7 +88,8 @@ class CookActionSchema extends CreateActionSchema
     }
 
     /**
-     * @return RecipeSchema     **/
+     * @return RecipeSchema     
+     **/
     public function getRecipe() {
         return $this->recipe;
     }

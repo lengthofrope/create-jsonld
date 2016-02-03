@@ -54,7 +54,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getAdditionalName() {
         return $this->additionalName;
     }
@@ -70,7 +71,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return PostalAddressSchema|TextSchema     **/
+     * @return PostalAddressSchema|TextSchema     
+     **/
     public function getAddress() {
         return $this->address;
     }
@@ -86,7 +88,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return OrganizationSchema     **/
+     * @return OrganizationSchema     
+     **/
     public function getAffiliation() {
         return $this->affiliation;
     }
@@ -102,7 +105,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return EducationalOrganizationSchema|OrganizationSchema     **/
+     * @return EducationalOrganizationSchema|OrganizationSchema     
+     **/
     public function getAlumniOf() {
         return $this->alumniOf;
     }
@@ -118,7 +122,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getAward() {
         return $this->award;
     }
@@ -134,7 +139,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getAwards() {
         return $this->awards;
     }
@@ -150,7 +156,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return DateSchema     **/
+     * @return DateSchema     
+     **/
     public function getBirthDate() {
         return $this->birthDate;
     }
@@ -166,7 +173,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return PlaceSchema     **/
+     * @return PlaceSchema     
+     **/
     public function getBirthPlace() {
         return $this->birthPlace;
     }
@@ -182,7 +190,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return BrandSchema|OrganizationSchema     **/
+     * @return BrandSchema|OrganizationSchema     
+     **/
     public function getBrand() {
         return $this->brand;
     }
@@ -198,7 +207,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getChildren() {
         return $this->children;
     }
@@ -214,7 +224,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getColleague() {
         return $this->colleague;
     }
@@ -230,7 +241,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getColleagues() {
         return $this->colleagues;
     }
@@ -246,7 +258,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return ContactPointSchema     **/
+     * @return ContactPointSchema     
+     **/
     public function getContactPoint() {
         return $this->contactPoint;
     }
@@ -262,7 +275,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return ContactPointSchema     **/
+     * @return ContactPointSchema     
+     **/
     public function getContactPoints() {
         return $this->contactPoints;
     }
@@ -278,7 +292,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return DateSchema     **/
+     * @return DateSchema     
+     **/
     public function getDeathDate() {
         return $this->deathDate;
     }
@@ -294,7 +309,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return PlaceSchema     **/
+     * @return PlaceSchema     
+     **/
     public function getDeathPlace() {
         return $this->deathPlace;
     }
@@ -310,7 +326,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getDuns() {
         return $this->duns;
     }
@@ -326,7 +343,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getEmail() {
         return $this->email;
     }
@@ -342,7 +360,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getFamilyName() {
         return $this->familyName;
     }
@@ -358,7 +377,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getFaxNumber() {
         return $this->faxNumber;
     }
@@ -374,7 +394,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getFollows() {
         return $this->follows;
     }
@@ -390,7 +411,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getGender() {
         return $this->gender;
     }
@@ -406,7 +428,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getGivenName() {
         return $this->givenName;
     }
@@ -422,7 +445,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getGlobalLocationNumber() {
         return $this->globalLocationNumber;
     }
@@ -438,7 +462,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return OfferCatalogSchema     **/
+     * @return OfferCatalogSchema     
+     **/
     public function getHasOfferCatalog() {
         return $this->hasOfferCatalog;
     }
@@ -454,7 +479,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return PlaceSchema     **/
+     * @return PlaceSchema     
+     **/
     public function getHasPOS() {
         return $this->hasPOS;
     }
@@ -470,7 +496,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return DistanceSchema|QuantitativeValueSchema     **/
+     * @return DistanceSchema|QuantitativeValueSchema     
+     **/
     public function getHeight() {
         return $this->height;
     }
@@ -486,7 +513,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return ContactPointSchema|PlaceSchema     **/
+     * @return ContactPointSchema|PlaceSchema     
+     **/
     public function getHomeLocation() {
         return $this->homeLocation;
     }
@@ -502,7 +530,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getHonorificPrefix() {
         return $this->honorificPrefix;
     }
@@ -518,7 +547,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getHonorificSuffix() {
         return $this->honorificSuffix;
     }
@@ -534,7 +564,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getIsicV4() {
         return $this->isicV4;
     }
@@ -550,7 +581,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getJobTitle() {
         return $this->jobTitle;
     }
@@ -566,7 +598,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getKnows() {
         return $this->knows;
     }
@@ -582,7 +615,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return OfferSchema     **/
+     * @return OfferSchema     
+     **/
     public function getMakesOffer() {
         return $this->makesOffer;
     }
@@ -598,7 +632,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return OrganizationSchema|ProgramMembershipSchema     **/
+     * @return OrganizationSchema|ProgramMembershipSchema     
+     **/
     public function getMemberOf() {
         return $this->memberOf;
     }
@@ -614,7 +649,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getNaics() {
         return $this->naics;
     }
@@ -630,7 +666,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return CountrySchema     **/
+     * @return CountrySchema     
+     **/
     public function getNationality() {
         return $this->nationality;
     }
@@ -646,7 +683,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return PriceSpecificationSchema     **/
+     * @return PriceSpecificationSchema     
+     **/
     public function getNetWorth() {
         return $this->netWorth;
     }
@@ -662,7 +700,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return OwnershipInfoSchema|ProductSchema     **/
+     * @return OwnershipInfoSchema|ProductSchema     
+     **/
     public function getOwns() {
         return $this->owns;
     }
@@ -678,7 +717,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getParent() {
         return $this->parent;
     }
@@ -694,7 +734,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getParents() {
         return $this->parents;
     }
@@ -710,7 +751,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return EventSchema     **/
+     * @return EventSchema     
+     **/
     public function getPerformerIn() {
         return $this->performerIn;
     }
@@ -726,7 +768,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getRelatedTo() {
         return $this->relatedTo;
     }
@@ -742,7 +785,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return DemandSchema     **/
+     * @return DemandSchema     
+     **/
     public function getSeeks() {
         return $this->seeks;
     }
@@ -758,7 +802,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getSibling() {
         return $this->sibling;
     }
@@ -774,7 +819,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getSiblings() {
         return $this->siblings;
     }
@@ -790,7 +836,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getSpouse() {
         return $this->spouse;
     }
@@ -806,7 +853,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getTaxID() {
         return $this->taxID;
     }
@@ -822,7 +870,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getTelephone() {
         return $this->telephone;
     }
@@ -838,7 +887,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getVatID() {
         return $this->vatID;
     }
@@ -854,7 +904,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return QuantitativeValueSchema     **/
+     * @return QuantitativeValueSchema     
+     **/
     public function getWeight() {
         return $this->weight;
     }
@@ -870,7 +921,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return ContactPointSchema|PlaceSchema     **/
+     * @return ContactPointSchema|PlaceSchema     
+     **/
     public function getWorkLocation() {
         return $this->workLocation;
     }
@@ -886,7 +938,8 @@ class PersonSchema extends ThingSchema
     }
 
     /**
-     * @return OrganizationSchema     **/
+     * @return OrganizationSchema     
+     **/
     public function getWorksFor() {
         return $this->worksFor;
     }

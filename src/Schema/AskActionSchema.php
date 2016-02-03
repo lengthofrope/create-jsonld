@@ -54,7 +54,8 @@ class AskActionSchema extends CommunicateActionSchema
     }
 
     /**
-     * @return QuestionSchema     **/
+     * @return QuestionSchema     
+     **/
     public function getQuestion() {
         return $this->question;
     }

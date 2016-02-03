@@ -54,7 +54,8 @@ class MedicalDeviceSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return MedicalEntitySchema     **/
+     * @return MedicalEntitySchema     
+     **/
     public function getAdverseOutcome() {
         return $this->adverseOutcome;
     }
@@ -70,7 +71,8 @@ class MedicalDeviceSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return MedicalContraindicationSchema     **/
+     * @return MedicalContraindicationSchema     
+     **/
     public function getContraindication() {
         return $this->contraindication;
     }
@@ -86,7 +88,8 @@ class MedicalDeviceSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return MedicalIndicationSchema     **/
+     * @return MedicalIndicationSchema     
+     **/
     public function getIndication() {
         return $this->indication;
     }
@@ -102,7 +105,8 @@ class MedicalDeviceSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getPostOp() {
         return $this->postOp;
     }
@@ -118,7 +122,8 @@ class MedicalDeviceSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getPreOp() {
         return $this->preOp;
     }
@@ -134,7 +139,8 @@ class MedicalDeviceSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getProcedure() {
         return $this->procedure;
     }
@@ -150,7 +156,8 @@ class MedicalDeviceSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return MedicalDevicePurposeSchema|ThingSchema     **/
+     * @return MedicalDevicePurposeSchema|ThingSchema     
+     **/
     public function getPurpose() {
         return $this->purpose;
     }
@@ -166,7 +173,8 @@ class MedicalDeviceSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return MedicalEntitySchema     **/
+     * @return MedicalEntitySchema     
+     **/
     public function getSeriousAdverseOutcome() {
         return $this->seriousAdverseOutcome;
     }

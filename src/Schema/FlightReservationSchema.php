@@ -54,7 +54,8 @@ class FlightReservationSchema extends ReservationSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getBoardingGroup() {
         return $this->boardingGroup;
     }
@@ -70,7 +71,8 @@ class FlightReservationSchema extends ReservationSchema
     }
 
     /**
-     * @return TextSchema|QualitativeValueSchema     **/
+     * @return TextSchema|QualitativeValueSchema     
+     **/
     public function getPassengerPriorityStatus() {
         return $this->passengerPriorityStatus;
     }
@@ -86,7 +88,8 @@ class FlightReservationSchema extends ReservationSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getPassengerSequenceNumber() {
         return $this->passengerSequenceNumber;
     }
@@ -102,7 +105,8 @@ class FlightReservationSchema extends ReservationSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getSecurityScreening() {
         return $this->securityScreening;
     }

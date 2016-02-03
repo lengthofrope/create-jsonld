@@ -54,7 +54,8 @@ class BroadcastChannelSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getBroadcastChannelId() {
         return $this->broadcastChannelId;
     }
@@ -70,7 +71,8 @@ class BroadcastChannelSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getBroadcastServiceTier() {
         return $this->broadcastServiceTier;
     }
@@ -86,7 +88,8 @@ class BroadcastChannelSchema extends IntangibleSchema
     }
 
     /**
-     * @return CableOrSatelliteServiceSchema     **/
+     * @return CableOrSatelliteServiceSchema     
+     **/
     public function getInBroadcastLineup() {
         return $this->inBroadcastLineup;
     }
@@ -102,7 +105,8 @@ class BroadcastChannelSchema extends IntangibleSchema
     }
 
     /**
-     * @return BroadcastServiceSchema     **/
+     * @return BroadcastServiceSchema     
+     **/
     public function getProvidesBroadcastService() {
         return $this->providesBroadcastService;
     }

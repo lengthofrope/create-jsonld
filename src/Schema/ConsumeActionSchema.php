@@ -54,7 +54,8 @@ class ConsumeActionSchema extends ActionSchema
     }
 
     /**
-     * @return OfferSchema     **/
+     * @return OfferSchema     
+     **/
     public function getExpectsAcceptanceOf() {
         return $this->expectsAcceptanceOf;
     }

@@ -54,7 +54,8 @@ class LeaveActionSchema extends InteractActionSchema
     }
 
     /**
-     * @return EventSchema     **/
+     * @return EventSchema     
+     **/
     public function getEvent() {
         return $this->event;
     }

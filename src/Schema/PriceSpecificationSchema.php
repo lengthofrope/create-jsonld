@@ -54,7 +54,8 @@ class PriceSpecificationSchema extends StructuredValueSchema
     }
 
     /**
-     * @return QuantitativeValueSchema     **/
+     * @return QuantitativeValueSchema     
+     **/
     public function getEligibleQuantity() {
         return $this->eligibleQuantity;
     }
@@ -70,7 +71,8 @@ class PriceSpecificationSchema extends StructuredValueSchema
     }
 
     /**
-     * @return PriceSpecificationSchema     **/
+     * @return PriceSpecificationSchema     
+     **/
     public function getEligibleTransactionVolume() {
         return $this->eligibleTransactionVolume;
     }
@@ -86,7 +88,8 @@ class PriceSpecificationSchema extends StructuredValueSchema
     }
 
     /**
-     * @return NumberSchema     **/
+     * @return NumberSchema     
+     **/
     public function getMaxPrice() {
         return $this->maxPrice;
     }
@@ -102,7 +105,8 @@ class PriceSpecificationSchema extends StructuredValueSchema
     }
 
     /**
-     * @return NumberSchema     **/
+     * @return NumberSchema     
+     **/
     public function getMinPrice() {
         return $this->minPrice;
     }
@@ -138,7 +142,8 @@ class PriceSpecificationSchema extends StructuredValueSchema
     }
 
     /**
-     * @return NumberSchema|TextSchema     **/
+     * @return NumberSchema|TextSchema     
+     **/
     public function getPrice() {
         return $this->price;
     }
@@ -154,7 +159,8 @@ class PriceSpecificationSchema extends StructuredValueSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getPriceCurrency() {
         return $this->priceCurrency;
     }
@@ -170,7 +176,8 @@ class PriceSpecificationSchema extends StructuredValueSchema
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getValidFrom() {
         return $this->validFrom;
     }
@@ -186,7 +193,8 @@ class PriceSpecificationSchema extends StructuredValueSchema
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getValidThrough() {
         return $this->validThrough;
     }
@@ -202,7 +210,8 @@ class PriceSpecificationSchema extends StructuredValueSchema
     }
 
     /**
-     * @return BooleanSchema     **/
+     * @return BooleanSchema     
+     **/
     public function getValueAddedTaxIncluded() {
         return $this->valueAddedTaxIncluded;
     }

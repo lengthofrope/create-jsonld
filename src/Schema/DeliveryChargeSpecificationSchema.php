@@ -54,7 +54,8 @@ class DeliveryChargeSpecificationSchema extends PriceSpecificationSchema
     }
 
     /**
-     * @return DeliveryMethodSchema     **/
+     * @return DeliveryMethodSchema     
+     **/
     public function getAppliesToDeliveryMethod() {
         return $this->appliesToDeliveryMethod;
     }
@@ -70,7 +71,8 @@ class DeliveryChargeSpecificationSchema extends PriceSpecificationSchema
     }
 
     /**
-     * @return PlaceSchema|AdministrativeAreaSchema|GeoShapeSchema|TextSchema     **/
+     * @return PlaceSchema|AdministrativeAreaSchema|GeoShapeSchema|TextSchema     
+     **/
     public function getAreaServed() {
         return $this->areaServed;
     }
@@ -88,7 +90,8 @@ class DeliveryChargeSpecificationSchema extends PriceSpecificationSchema
     }
 
     /**
-     * @return GeoShapeSchema|PlaceSchema|TextSchema     **/
+     * @return GeoShapeSchema|PlaceSchema|TextSchema     
+     **/
     public function getEligibleRegion() {
         return $this->eligibleRegion;
     }
@@ -106,7 +109,8 @@ class DeliveryChargeSpecificationSchema extends PriceSpecificationSchema
     }
 
     /**
-     * @return GeoShapeSchema|PlaceSchema|TextSchema     **/
+     * @return GeoShapeSchema|PlaceSchema|TextSchema     
+     **/
     public function getIneligibleRegion() {
         return $this->ineligibleRegion;
     }

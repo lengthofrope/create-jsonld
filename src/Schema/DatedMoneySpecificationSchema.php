@@ -54,7 +54,8 @@ class DatedMoneySpecificationSchema extends StructuredValueSchema
     }
 
     /**
-     * @return NumberSchema     **/
+     * @return NumberSchema     
+     **/
     public function getAmount() {
         return $this->amount;
     }
@@ -70,7 +71,8 @@ class DatedMoneySpecificationSchema extends StructuredValueSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getCurrency() {
         return $this->currency;
     }
@@ -86,7 +88,8 @@ class DatedMoneySpecificationSchema extends StructuredValueSchema
     }
 
     /**
-     * @return DateSchema     **/
+     * @return DateSchema     
+     **/
     public function getEndDate() {
         return $this->endDate;
     }
@@ -102,7 +105,8 @@ class DatedMoneySpecificationSchema extends StructuredValueSchema
     }
 
     /**
-     * @return DateSchema     **/
+     * @return DateSchema     
+     **/
     public function getStartDate() {
         return $this->startDate;
     }

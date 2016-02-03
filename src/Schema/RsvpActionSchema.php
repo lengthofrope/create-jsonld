@@ -54,7 +54,8 @@ class RsvpActionSchema extends InformActionSchema
     }
 
     /**
-     * @return NumberSchema     **/
+     * @return NumberSchema     
+     **/
     public function getAdditionalNumberOfGuests() {
         return $this->additionalNumberOfGuests;
     }
@@ -70,7 +71,8 @@ class RsvpActionSchema extends InformActionSchema
     }
 
     /**
-     * @return CommentSchema     **/
+     * @return CommentSchema     
+     **/
     public function getComment() {
         return $this->comment;
     }
@@ -86,7 +88,8 @@ class RsvpActionSchema extends InformActionSchema
     }
 
     /**
-     * @return RsvpResponseTypeSchema     **/
+     * @return RsvpResponseTypeSchema     
+     **/
     public function getRsvpResponse() {
         return $this->rsvpResponse;
     }

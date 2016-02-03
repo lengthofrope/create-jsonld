@@ -56,7 +56,8 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getEndTime() {
         return $this->endTime;
     }
@@ -72,7 +73,8 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
     }
 
     /**
-     * @return IntegerSchema|QuantitativeValueSchema     **/
+     * @return IntegerSchema|QuantitativeValueSchema     
+     **/
     public function getPartySize() {
         return $this->partySize;
     }
@@ -90,7 +92,8 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getStartTime() {
         return $this->startTime;
     }

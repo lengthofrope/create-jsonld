@@ -54,7 +54,8 @@ class ProgramMembershipSchema extends IntangibleSchema
     }
 
     /**
-     * @return OrganizationSchema     **/
+     * @return OrganizationSchema     
+     **/
     public function getHostingOrganization() {
         return $this->hostingOrganization;
     }
@@ -70,7 +71,8 @@ class ProgramMembershipSchema extends IntangibleSchema
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema     **/
+     * @return OrganizationSchema|PersonSchema     
+     **/
     public function getMember() {
         return $this->member;
     }
@@ -86,7 +88,8 @@ class ProgramMembershipSchema extends IntangibleSchema
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema     **/
+     * @return OrganizationSchema|PersonSchema     
+     **/
     public function getMembers() {
         return $this->members;
     }
@@ -102,7 +105,8 @@ class ProgramMembershipSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getMembershipNumber() {
         return $this->membershipNumber;
     }
@@ -118,7 +122,8 @@ class ProgramMembershipSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getProgramName() {
         return $this->programName;
     }

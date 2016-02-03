@@ -54,7 +54,8 @@ class ChooseActionSchema extends AssessActionSchema
     }
 
     /**
-     * @return TextSchema|ThingSchema     **/
+     * @return TextSchema|ThingSchema     
+     **/
     public function getActionOption() {
         return $this->actionOption;
     }
@@ -70,7 +71,8 @@ class ChooseActionSchema extends AssessActionSchema
     }
 
     /**
-     * @return TextSchema|ThingSchema     **/
+     * @return TextSchema|ThingSchema     
+     **/
     public function getOption() {
         return $this->option;
     }

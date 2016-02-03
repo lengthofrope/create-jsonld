@@ -54,7 +54,8 @@ class BuyActionSchema extends TradeActionSchema
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema     **/
+     * @return OrganizationSchema|PersonSchema     
+     **/
     public function getSeller() {
         return $this->seller;
     }
@@ -70,7 +71,8 @@ class BuyActionSchema extends TradeActionSchema
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema     **/
+     * @return OrganizationSchema|PersonSchema     
+     **/
     public function getVendor() {
         return $this->vendor;
     }
@@ -86,7 +88,8 @@ class BuyActionSchema extends TradeActionSchema
     }
 
     /**
-     * @return WarrantyPromiseSchema     **/
+     * @return WarrantyPromiseSchema     
+     **/
     public function getWarrantyPromise() {
         return $this->warrantyPromise;
     }

@@ -54,7 +54,8 @@ class TVEpisodeSchema extends EpisodeSchema
     }
 
     /**
-     * @return CountrySchema     **/
+     * @return CountrySchema     
+     **/
     public function getCountryOfOrigin() {
         return $this->countryOfOrigin;
     }
@@ -70,7 +71,8 @@ class TVEpisodeSchema extends EpisodeSchema
     }
 
     /**
-     * @return TVSeriesSchema     **/
+     * @return TVSeriesSchema     
+     **/
     public function getPartOfTVSeries() {
         return $this->partOfTVSeries;
     }
@@ -86,7 +88,8 @@ class TVEpisodeSchema extends EpisodeSchema
     }
 
     /**
-     * @return TextSchema|LanguageSchema     **/
+     * @return TextSchema|LanguageSchema     
+     **/
     public function getSubtitleLanguage() {
         return $this->subtitleLanguage;
     }

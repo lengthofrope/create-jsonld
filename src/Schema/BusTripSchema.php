@@ -54,7 +54,8 @@ class BusTripSchema extends IntangibleSchema
     }
 
     /**
-     * @return BusStationSchema|BusStopSchema     **/
+     * @return BusStationSchema|BusStopSchema     
+     **/
     public function getArrivalBusStop() {
         return $this->arrivalBusStop;
     }
@@ -70,7 +71,8 @@ class BusTripSchema extends IntangibleSchema
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getArrivalTime() {
         return $this->arrivalTime;
     }
@@ -86,7 +88,8 @@ class BusTripSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getBusName() {
         return $this->busName;
     }
@@ -102,7 +105,8 @@ class BusTripSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getBusNumber() {
         return $this->busNumber;
     }
@@ -118,7 +122,8 @@ class BusTripSchema extends IntangibleSchema
     }
 
     /**
-     * @return BusStationSchema|BusStopSchema     **/
+     * @return BusStationSchema|BusStopSchema     
+     **/
     public function getDepartureBusStop() {
         return $this->departureBusStop;
     }
@@ -134,7 +139,8 @@ class BusTripSchema extends IntangibleSchema
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getDepartureTime() {
         return $this->departureTime;
     }
@@ -150,7 +156,8 @@ class BusTripSchema extends IntangibleSchema
     }
 
     /**
-     * @return PersonSchema|OrganizationSchema     **/
+     * @return PersonSchema|OrganizationSchema     
+     **/
     public function getProvider() {
         return $this->provider;
     }

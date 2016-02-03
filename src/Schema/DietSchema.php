@@ -54,7 +54,8 @@ class DietSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getDietFeatures() {
         return $this->dietFeatures;
     }
@@ -70,7 +71,8 @@ class DietSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema     **/
+     * @return OrganizationSchema|PersonSchema     
+     **/
     public function getEndorsers() {
         return $this->endorsers;
     }
@@ -86,7 +88,8 @@ class DietSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getExpertConsiderations() {
         return $this->expertConsiderations;
     }
@@ -102,7 +105,8 @@ class DietSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getOverview() {
         return $this->overview;
     }
@@ -118,7 +122,8 @@ class DietSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getPhysiologicalBenefits() {
         return $this->physiologicalBenefits;
     }
@@ -134,7 +139,8 @@ class DietSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getProprietaryName() {
         return $this->proprietaryName;
     }
@@ -150,7 +156,8 @@ class DietSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getRisks() {
         return $this->risks;
     }

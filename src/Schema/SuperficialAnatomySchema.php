@@ -54,7 +54,8 @@ class SuperficialAnatomySchema extends MedicalEntitySchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getAssociatedPathophysiology() {
         return $this->associatedPathophysiology;
     }
@@ -70,7 +71,8 @@ class SuperficialAnatomySchema extends MedicalEntitySchema
     }
 
     /**
-     * @return AnatomicalStructureSchema|AnatomicalSystemSchema     **/
+     * @return AnatomicalStructureSchema|AnatomicalSystemSchema     
+     **/
     public function getRelatedAnatomy() {
         return $this->relatedAnatomy;
     }
@@ -86,7 +88,8 @@ class SuperficialAnatomySchema extends MedicalEntitySchema
     }
 
     /**
-     * @return MedicalConditionSchema     **/
+     * @return MedicalConditionSchema     
+     **/
     public function getRelatedCondition() {
         return $this->relatedCondition;
     }
@@ -102,7 +105,8 @@ class SuperficialAnatomySchema extends MedicalEntitySchema
     }
 
     /**
-     * @return MedicalTherapySchema     **/
+     * @return MedicalTherapySchema     
+     **/
     public function getRelatedTherapy() {
         return $this->relatedTherapy;
     }
@@ -118,7 +122,8 @@ class SuperficialAnatomySchema extends MedicalEntitySchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getSignificance() {
         return $this->significance;
     }

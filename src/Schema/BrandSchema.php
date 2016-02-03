@@ -54,7 +54,8 @@ class BrandSchema extends IntangibleSchema
     }
 
     /**
-     * @return AggregateRatingSchema     **/
+     * @return AggregateRatingSchema     
+     **/
     public function getAggregateRating() {
         return $this->aggregateRating;
     }
@@ -70,7 +71,8 @@ class BrandSchema extends IntangibleSchema
     }
 
     /**
-     * @return ImageObjectSchema|URLSchema     **/
+     * @return ImageObjectSchema|URLSchema     
+     **/
     public function getLogo() {
         return $this->logo;
     }
@@ -86,7 +88,8 @@ class BrandSchema extends IntangibleSchema
     }
 
     /**
-     * @return ReviewSchema     **/
+     * @return ReviewSchema     
+     **/
     public function getReview() {
         return $this->review;
     }

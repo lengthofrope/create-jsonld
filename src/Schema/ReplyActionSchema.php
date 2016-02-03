@@ -54,7 +54,8 @@ class ReplyActionSchema extends CommunicateActionSchema
     }
 
     /**
-     * @return CommentSchema     **/
+     * @return CommentSchema     
+     **/
     public function getResultComment() {
         return $this->resultComment;
     }

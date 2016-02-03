@@ -54,7 +54,8 @@ class PlanActionSchema extends OrganizeActionSchema
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getScheduledTime() {
         return $this->scheduledTime;
     }

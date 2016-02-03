@@ -54,7 +54,8 @@ class NewsArticleSchema extends ArticleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getDateline() {
         return $this->dateline;
     }
@@ -70,7 +71,8 @@ class NewsArticleSchema extends ArticleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getPrintColumn() {
         return $this->printColumn;
     }
@@ -86,7 +88,8 @@ class NewsArticleSchema extends ArticleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getPrintEdition() {
         return $this->printEdition;
     }
@@ -102,7 +105,8 @@ class NewsArticleSchema extends ArticleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getPrintPage() {
         return $this->printPage;
     }
@@ -118,7 +122,8 @@ class NewsArticleSchema extends ArticleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getPrintSection() {
         return $this->printSection;
     }

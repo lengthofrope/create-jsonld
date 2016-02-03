@@ -54,7 +54,8 @@ class TicketSchema extends IntangibleSchema
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getDateIssued() {
         return $this->dateIssued;
     }
@@ -70,7 +71,8 @@ class TicketSchema extends IntangibleSchema
     }
 
     /**
-     * @return OrganizationSchema     **/
+     * @return OrganizationSchema     
+     **/
     public function getIssuedBy() {
         return $this->issuedBy;
     }
@@ -86,7 +88,8 @@ class TicketSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getPriceCurrency() {
         return $this->priceCurrency;
     }
@@ -102,7 +105,8 @@ class TicketSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getTicketNumber() {
         return $this->ticketNumber;
     }
@@ -118,7 +122,8 @@ class TicketSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema|URLSchema     **/
+     * @return TextSchema|URLSchema     
+     **/
     public function getTicketToken() {
         return $this->ticketToken;
     }
@@ -134,7 +139,8 @@ class TicketSchema extends IntangibleSchema
     }
 
     /**
-     * @return SeatSchema     **/
+     * @return SeatSchema     
+     **/
     public function getTicketedSeat() {
         return $this->ticketedSeat;
     }
@@ -150,7 +156,8 @@ class TicketSchema extends IntangibleSchema
     }
 
     /**
-     * @return NumberSchema|TextSchema|PriceSpecificationSchema     **/
+     * @return NumberSchema|TextSchema|PriceSpecificationSchema     
+     **/
     public function getTotalPrice() {
         return $this->totalPrice;
     }
@@ -166,7 +173,8 @@ class TicketSchema extends IntangibleSchema
     }
 
     /**
-     * @return PersonSchema|OrganizationSchema     **/
+     * @return PersonSchema|OrganizationSchema     
+     **/
     public function getUnderName() {
         return $this->underName;
     }

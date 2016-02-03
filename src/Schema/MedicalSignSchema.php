@@ -54,7 +54,8 @@ class MedicalSignSchema extends MedicalSignOrSymptomSchema
     }
 
     /**
-     * @return PhysicalExamSchema     **/
+     * @return PhysicalExamSchema     
+     **/
     public function getIdentifyingExam() {
         return $this->identifyingExam;
     }
@@ -70,7 +71,8 @@ class MedicalSignSchema extends MedicalSignOrSymptomSchema
     }
 
     /**
-     * @return MedicalTestSchema     **/
+     * @return MedicalTestSchema     
+     **/
     public function getIdentifyingTest() {
         return $this->identifyingTest;
     }

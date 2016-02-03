@@ -54,7 +54,8 @@ class OrderSchema extends IntangibleSchema
     }
 
     /**
-     * @return OfferSchema     **/
+     * @return OfferSchema     
+     **/
     public function getAcceptedOffer() {
         return $this->acceptedOffer;
     }
@@ -70,7 +71,8 @@ class OrderSchema extends IntangibleSchema
     }
 
     /**
-     * @return PostalAddressSchema     **/
+     * @return PostalAddressSchema     
+     **/
     public function getBillingAddress() {
         return $this->billingAddress;
     }
@@ -86,7 +88,8 @@ class OrderSchema extends IntangibleSchema
     }
 
     /**
-     * @return PersonSchema|OrganizationSchema     **/
+     * @return PersonSchema|OrganizationSchema     
+     **/
     public function getBroker() {
         return $this->broker;
     }
@@ -102,7 +105,8 @@ class OrderSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getConfirmationNumber() {
         return $this->confirmationNumber;
     }
@@ -118,7 +122,8 @@ class OrderSchema extends IntangibleSchema
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema     **/
+     * @return OrganizationSchema|PersonSchema     
+     **/
     public function getCustomer() {
         return $this->customer;
     }
@@ -134,7 +139,8 @@ class OrderSchema extends IntangibleSchema
     }
 
     /**
-     * @return NumberSchema|TextSchema     **/
+     * @return NumberSchema|TextSchema     
+     **/
     public function getDiscount() {
         return $this->discount;
     }
@@ -150,7 +156,8 @@ class OrderSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getDiscountCode() {
         return $this->discountCode;
     }
@@ -166,7 +173,8 @@ class OrderSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getDiscountCurrency() {
         return $this->discountCurrency;
     }
@@ -182,7 +190,8 @@ class OrderSchema extends IntangibleSchema
     }
 
     /**
-     * @return BooleanSchema     **/
+     * @return BooleanSchema     
+     **/
     public function getIsGift() {
         return $this->isGift;
     }
@@ -198,7 +207,8 @@ class OrderSchema extends IntangibleSchema
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema     **/
+     * @return OrganizationSchema|PersonSchema     
+     **/
     public function getMerchant() {
         return $this->merchant;
     }
@@ -214,7 +224,8 @@ class OrderSchema extends IntangibleSchema
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getOrderDate() {
         return $this->orderDate;
     }
@@ -230,7 +241,8 @@ class OrderSchema extends IntangibleSchema
     }
 
     /**
-     * @return ParcelDeliverySchema     **/
+     * @return ParcelDeliverySchema     
+     **/
     public function getOrderDelivery() {
         return $this->orderDelivery;
     }
@@ -246,7 +258,8 @@ class OrderSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getOrderNumber() {
         return $this->orderNumber;
     }
@@ -262,7 +275,8 @@ class OrderSchema extends IntangibleSchema
     }
 
     /**
-     * @return OrderStatusSchema     **/
+     * @return OrderStatusSchema     
+     **/
     public function getOrderStatus() {
         return $this->orderStatus;
     }
@@ -278,7 +292,8 @@ class OrderSchema extends IntangibleSchema
     }
 
     /**
-     * @return ProductSchema|OrderItemSchema     **/
+     * @return ProductSchema|OrderItemSchema     
+     **/
     public function getOrderedItem() {
         return $this->orderedItem;
     }
@@ -294,7 +309,8 @@ class OrderSchema extends IntangibleSchema
     }
 
     /**
-     * @return InvoiceSchema     **/
+     * @return InvoiceSchema     
+     **/
     public function getPartOfInvoice() {
         return $this->partOfInvoice;
     }
@@ -310,7 +326,8 @@ class OrderSchema extends IntangibleSchema
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getPaymentDue() {
         return $this->paymentDue;
     }
@@ -326,7 +343,8 @@ class OrderSchema extends IntangibleSchema
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getPaymentDueDate() {
         return $this->paymentDueDate;
     }
@@ -342,7 +360,8 @@ class OrderSchema extends IntangibleSchema
     }
 
     /**
-     * @return PaymentMethodSchema     **/
+     * @return PaymentMethodSchema     
+     **/
     public function getPaymentMethod() {
         return $this->paymentMethod;
     }
@@ -358,7 +377,8 @@ class OrderSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getPaymentMethodId() {
         return $this->paymentMethodId;
     }
@@ -374,7 +394,8 @@ class OrderSchema extends IntangibleSchema
     }
 
     /**
-     * @return URLSchema     **/
+     * @return URLSchema     
+     **/
     public function getPaymentUrl() {
         return $this->paymentUrl;
     }
@@ -390,7 +411,8 @@ class OrderSchema extends IntangibleSchema
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema     **/
+     * @return OrganizationSchema|PersonSchema     
+     **/
     public function getSeller() {
         return $this->seller;
     }

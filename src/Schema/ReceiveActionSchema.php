@@ -54,7 +54,8 @@ class ReceiveActionSchema extends TransferActionSchema
     }
 
     /**
-     * @return DeliveryMethodSchema     **/
+     * @return DeliveryMethodSchema     
+     **/
     public function getDeliveryMethod() {
         return $this->deliveryMethod;
     }
@@ -70,7 +71,8 @@ class ReceiveActionSchema extends TransferActionSchema
     }
 
     /**
-     * @return AudienceSchema|OrganizationSchema|PersonSchema     **/
+     * @return AudienceSchema|OrganizationSchema|PersonSchema     
+     **/
     public function getSender() {
         return $this->sender;
     }

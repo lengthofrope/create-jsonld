@@ -54,7 +54,8 @@ class PlayActionSchema extends ActionSchema
     }
 
     /**
-     * @return AudienceSchema     **/
+     * @return AudienceSchema     
+     **/
     public function getAudience() {
         return $this->audience;
     }
@@ -70,7 +71,8 @@ class PlayActionSchema extends ActionSchema
     }
 
     /**
-     * @return EventSchema     **/
+     * @return EventSchema     
+     **/
     public function getEvent() {
         return $this->event;
     }

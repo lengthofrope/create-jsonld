@@ -54,7 +54,8 @@ class QuestionSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return AnswerSchema     **/
+     * @return AnswerSchema     
+     **/
     public function getAcceptedAnswer() {
         return $this->acceptedAnswer;
     }
@@ -70,7 +71,8 @@ class QuestionSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return IntegerSchema     **/
+     * @return IntegerSchema     
+     **/
     public function getAnswerCount() {
         return $this->answerCount;
     }
@@ -86,7 +88,8 @@ class QuestionSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return IntegerSchema     **/
+     * @return IntegerSchema     
+     **/
     public function getDownvoteCount() {
         return $this->downvoteCount;
     }
@@ -102,7 +105,8 @@ class QuestionSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return AnswerSchema     **/
+     * @return AnswerSchema     
+     **/
     public function getSuggestedAnswer() {
         return $this->suggestedAnswer;
     }
@@ -118,7 +122,8 @@ class QuestionSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return IntegerSchema     **/
+     * @return IntegerSchema     
+     **/
     public function getUpvoteCount() {
         return $this->upvoteCount;
     }

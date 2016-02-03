@@ -54,7 +54,8 @@ class WriteActionSchema extends CreateActionSchema
     }
 
     /**
-     * @return TextSchema|LanguageSchema     **/
+     * @return TextSchema|LanguageSchema     
+     **/
     public function getInLanguage() {
         return $this->inLanguage;
     }
@@ -70,7 +71,8 @@ class WriteActionSchema extends CreateActionSchema
     }
 
     /**
-     * @return LanguageSchema     **/
+     * @return LanguageSchema     
+     **/
     public function getLanguage() {
         return $this->language;
     }

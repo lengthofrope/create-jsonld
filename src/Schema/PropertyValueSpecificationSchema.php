@@ -54,7 +54,8 @@ class PropertyValueSpecificationSchema extends IntangibleSchema
     }
 
     /**
-     * @return ThingSchema|TextSchema     **/
+     * @return ThingSchema|TextSchema     
+     **/
     public function getDefaultValue() {
         return $this->defaultValue;
     }
@@ -70,7 +71,8 @@ class PropertyValueSpecificationSchema extends IntangibleSchema
     }
 
     /**
-     * @return NumberSchema     **/
+     * @return NumberSchema     
+     **/
     public function getMaxValue() {
         return $this->maxValue;
     }
@@ -86,7 +88,8 @@ class PropertyValueSpecificationSchema extends IntangibleSchema
     }
 
     /**
-     * @return NumberSchema     **/
+     * @return NumberSchema     
+     **/
     public function getMinValue() {
         return $this->minValue;
     }
@@ -102,7 +105,8 @@ class PropertyValueSpecificationSchema extends IntangibleSchema
     }
 
     /**
-     * @return BooleanSchema     **/
+     * @return BooleanSchema     
+     **/
     public function getMultipleValues() {
         return $this->multipleValues;
     }
@@ -118,7 +122,8 @@ class PropertyValueSpecificationSchema extends IntangibleSchema
     }
 
     /**
-     * @return BooleanSchema     **/
+     * @return BooleanSchema     
+     **/
     public function getReadonlyValue() {
         return $this->readonlyValue;
     }
@@ -134,7 +139,8 @@ class PropertyValueSpecificationSchema extends IntangibleSchema
     }
 
     /**
-     * @return NumberSchema     **/
+     * @return NumberSchema     
+     **/
     public function getStepValue() {
         return $this->stepValue;
     }
@@ -150,7 +156,8 @@ class PropertyValueSpecificationSchema extends IntangibleSchema
     }
 
     /**
-     * @return NumberSchema     **/
+     * @return NumberSchema     
+     **/
     public function getValueMaxLength() {
         return $this->valueMaxLength;
     }
@@ -166,7 +173,8 @@ class PropertyValueSpecificationSchema extends IntangibleSchema
     }
 
     /**
-     * @return NumberSchema     **/
+     * @return NumberSchema     
+     **/
     public function getValueMinLength() {
         return $this->valueMinLength;
     }
@@ -182,7 +190,8 @@ class PropertyValueSpecificationSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getValueName() {
         return $this->valueName;
     }
@@ -198,7 +207,8 @@ class PropertyValueSpecificationSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getValuePattern() {
         return $this->valuePattern;
     }
@@ -214,7 +224,8 @@ class PropertyValueSpecificationSchema extends IntangibleSchema
     }
 
     /**
-     * @return BooleanSchema     **/
+     * @return BooleanSchema     
+     **/
     public function getValueRequired() {
         return $this->valueRequired;
     }

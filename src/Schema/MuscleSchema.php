@@ -54,7 +54,8 @@ class MuscleSchema extends AnatomicalStructureSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getAction() {
         return $this->action;
     }
@@ -70,7 +71,8 @@ class MuscleSchema extends AnatomicalStructureSchema
     }
 
     /**
-     * @return MuscleSchema     **/
+     * @return MuscleSchema     
+     **/
     public function getAntagonist() {
         return $this->antagonist;
     }
@@ -86,7 +88,8 @@ class MuscleSchema extends AnatomicalStructureSchema
     }
 
     /**
-     * @return VesselSchema     **/
+     * @return VesselSchema     
+     **/
     public function getBloodSupply() {
         return $this->bloodSupply;
     }
@@ -102,7 +105,8 @@ class MuscleSchema extends AnatomicalStructureSchema
     }
 
     /**
-     * @return AnatomicalStructureSchema     **/
+     * @return AnatomicalStructureSchema     
+     **/
     public function getInsertion() {
         return $this->insertion;
     }
@@ -118,7 +122,8 @@ class MuscleSchema extends AnatomicalStructureSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getMuscleAction() {
         return $this->muscleAction;
     }
@@ -134,7 +139,8 @@ class MuscleSchema extends AnatomicalStructureSchema
     }
 
     /**
-     * @return NerveSchema     **/
+     * @return NerveSchema     
+     **/
     public function getNerve() {
         return $this->nerve;
     }
@@ -150,7 +156,8 @@ class MuscleSchema extends AnatomicalStructureSchema
     }
 
     /**
-     * @return AnatomicalStructureSchema     **/
+     * @return AnatomicalStructureSchema     
+     **/
     public function getOrigin() {
         return $this->origin;
     }

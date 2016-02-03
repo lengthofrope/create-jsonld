@@ -54,7 +54,8 @@ class PeopleAudienceSchema extends AudienceSchema
     }
 
     /**
-     * @return MedicalConditionSchema     **/
+     * @return MedicalConditionSchema     
+     **/
     public function getHealthCondition() {
         return $this->healthCondition;
     }
@@ -70,7 +71,8 @@ class PeopleAudienceSchema extends AudienceSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getRequiredGender() {
         return $this->requiredGender;
     }
@@ -86,7 +88,8 @@ class PeopleAudienceSchema extends AudienceSchema
     }
 
     /**
-     * @return IntegerSchema     **/
+     * @return IntegerSchema     
+     **/
     public function getRequiredMaxAge() {
         return $this->requiredMaxAge;
     }
@@ -102,7 +105,8 @@ class PeopleAudienceSchema extends AudienceSchema
     }
 
     /**
-     * @return IntegerSchema     **/
+     * @return IntegerSchema     
+     **/
     public function getRequiredMinAge() {
         return $this->requiredMinAge;
     }
@@ -118,7 +122,8 @@ class PeopleAudienceSchema extends AudienceSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getSuggestedGender() {
         return $this->suggestedGender;
     }
@@ -134,7 +139,8 @@ class PeopleAudienceSchema extends AudienceSchema
     }
 
     /**
-     * @return NumberSchema     **/
+     * @return NumberSchema     
+     **/
     public function getSuggestedMaxAge() {
         return $this->suggestedMaxAge;
     }
@@ -150,7 +156,8 @@ class PeopleAudienceSchema extends AudienceSchema
     }
 
     /**
-     * @return NumberSchema     **/
+     * @return NumberSchema     
+     **/
     public function getSuggestedMinAge() {
         return $this->suggestedMinAge;
     }

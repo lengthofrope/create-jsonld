@@ -54,7 +54,8 @@ class MedicalGuidelineRecommendationSchema extends MedicalGuidelineSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getRecommendationStrength() {
         return $this->recommendationStrength;
     }

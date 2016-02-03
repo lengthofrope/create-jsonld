@@ -54,7 +54,8 @@ class PaymentChargeSpecificationSchema extends PriceSpecificationSchema
     }
 
     /**
-     * @return DeliveryMethodSchema     **/
+     * @return DeliveryMethodSchema     
+     **/
     public function getAppliesToDeliveryMethod() {
         return $this->appliesToDeliveryMethod;
     }
@@ -70,7 +71,8 @@ class PaymentChargeSpecificationSchema extends PriceSpecificationSchema
     }
 
     /**
-     * @return PaymentMethodSchema     **/
+     * @return PaymentMethodSchema     
+     **/
     public function getAppliesToPaymentMethod() {
         return $this->appliesToPaymentMethod;
     }

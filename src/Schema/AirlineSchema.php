@@ -54,7 +54,8 @@ class AirlineSchema extends OrganizationSchema
     }
 
     /**
-     * @return BoardingPolicyTypeSchema     **/
+     * @return BoardingPolicyTypeSchema     
+     **/
     public function getBoardingPolicy() {
         return $this->boardingPolicy;
     }
@@ -70,7 +71,8 @@ class AirlineSchema extends OrganizationSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getIataCode() {
         return $this->iataCode;
     }

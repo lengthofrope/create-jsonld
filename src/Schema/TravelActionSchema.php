@@ -54,7 +54,8 @@ class TravelActionSchema extends MoveActionSchema
     }
 
     /**
-     * @return DistanceSchema     **/
+     * @return DistanceSchema     
+     **/
     public function getDistance() {
         return $this->distance;
     }

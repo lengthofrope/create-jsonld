@@ -54,7 +54,8 @@ class APIReferenceSchema extends TechArticleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getAssembly() {
         return $this->assembly;
     }
@@ -70,7 +71,8 @@ class APIReferenceSchema extends TechArticleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getAssemblyVersion() {
         return $this->assemblyVersion;
     }
@@ -86,7 +88,8 @@ class APIReferenceSchema extends TechArticleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getExecutableLibraryName() {
         return $this->executableLibraryName;
     }
@@ -102,7 +105,8 @@ class APIReferenceSchema extends TechArticleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getProgrammingModel() {
         return $this->programmingModel;
     }
@@ -118,7 +122,8 @@ class APIReferenceSchema extends TechArticleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getTargetPlatform() {
         return $this->targetPlatform;
     }

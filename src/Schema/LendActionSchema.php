@@ -54,7 +54,8 @@ class LendActionSchema extends TransferActionSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getBorrower() {
         return $this->borrower;
     }

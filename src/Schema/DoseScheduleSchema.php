@@ -54,7 +54,8 @@ class DoseScheduleSchema extends MedicalIntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getDoseUnit() {
         return $this->doseUnit;
     }
@@ -70,7 +71,8 @@ class DoseScheduleSchema extends MedicalIntangibleSchema
     }
 
     /**
-     * @return NumberSchema     **/
+     * @return NumberSchema     
+     **/
     public function getDoseValue() {
         return $this->doseValue;
     }
@@ -86,7 +88,8 @@ class DoseScheduleSchema extends MedicalIntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getFrequency() {
         return $this->frequency;
     }
@@ -102,7 +105,8 @@ class DoseScheduleSchema extends MedicalIntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getTargetPopulation() {
         return $this->targetPopulation;
     }

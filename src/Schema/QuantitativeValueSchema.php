@@ -57,7 +57,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return PropertyValueSchema     **/
+     * @return PropertyValueSchema     
+     **/
     public function getAdditionalProperty() {
         return $this->additionalProperty;
     }
@@ -73,7 +74,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return NumberSchema     **/
+     * @return NumberSchema     
+     **/
     public function getMaxValue() {
         return $this->maxValue;
     }
@@ -89,7 +91,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return NumberSchema     **/
+     * @return NumberSchema     
+     **/
     public function getMinValue() {
         return $this->minValue;
     }
@@ -105,7 +108,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return TextSchema|URLSchema     **/
+     * @return TextSchema|URLSchema     
+     **/
     public function getUnitCode() {
         return $this->unitCode;
     }
@@ -122,7 +126,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getUnitText() {
         return $this->unitText;
     }
@@ -138,7 +143,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return NumberSchema|TextSchema|BooleanSchema|StructuredValueSchema     **/
+     * @return NumberSchema|TextSchema|BooleanSchema|StructuredValueSchema     
+     **/
     public function getValue() {
         return $this->value;
     }
@@ -154,7 +160,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return EnumerationSchema|StructuredValueSchema|PropertyValueSchema|QualitativeValueSchema|QuantitativeValueSchema     **/
+     * @return EnumerationSchema|StructuredValueSchema|PropertyValueSchema|QualitativeValueSchema|QuantitativeValueSchema     
+     **/
     public function getValueReference() {
         return $this->valueReference;
     }

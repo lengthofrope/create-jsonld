@@ -54,7 +54,8 @@ class DrugSchema extends MedicalTherapySchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getActiveIngredient() {
         return $this->activeIngredient;
     }
@@ -70,7 +71,8 @@ class DrugSchema extends MedicalTherapySchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getAdministrationRoute() {
         return $this->administrationRoute;
     }
@@ -86,7 +88,8 @@ class DrugSchema extends MedicalTherapySchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getAlcoholWarning() {
         return $this->alcoholWarning;
     }
@@ -102,7 +105,8 @@ class DrugSchema extends MedicalTherapySchema
     }
 
     /**
-     * @return DrugStrengthSchema     **/
+     * @return DrugStrengthSchema     
+     **/
     public function getAvailableStrength() {
         return $this->availableStrength;
     }
@@ -118,7 +122,8 @@ class DrugSchema extends MedicalTherapySchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getBreastfeedingWarning() {
         return $this->breastfeedingWarning;
     }
@@ -134,23 +139,8 @@ class DrugSchema extends MedicalTherapySchema
     }
 
     /**
-     * @return TextSchema     **/
-    public function getClinicalPharmacology() {
-        return $this->clinicalPharmacology;
-    }
-
-    /**
-     * Description of the absorption and elimination of drugs, including their concentration (pharmacokinetics, pK) and biological effects (pharmacodynamics, pD).
+     * @return TextSchema     
      **/
-    private $clinicalPharmacology;
-    public function setClinicalPharmacology($clinicalPharmacology) {
-        $this->clinicalPharmacology = $clinicalPharmacology;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema     **/
     public function getClinicalPharmacology() {
         return $this->clinicalPharmacology;
     }
@@ -166,7 +156,8 @@ class DrugSchema extends MedicalTherapySchema
     }
 
     /**
-     * @return DrugCostSchema     **/
+     * @return DrugCostSchema     
+     **/
     public function getCost() {
         return $this->cost;
     }
@@ -182,7 +173,8 @@ class DrugSchema extends MedicalTherapySchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getDosageForm() {
         return $this->dosageForm;
     }
@@ -198,7 +190,8 @@ class DrugSchema extends MedicalTherapySchema
     }
 
     /**
-     * @return DoseScheduleSchema     **/
+     * @return DoseScheduleSchema     
+     **/
     public function getDoseSchedule() {
         return $this->doseSchedule;
     }
@@ -214,7 +207,8 @@ class DrugSchema extends MedicalTherapySchema
     }
 
     /**
-     * @return DrugClassSchema     **/
+     * @return DrugClassSchema     
+     **/
     public function getDrugClass() {
         return $this->drugClass;
     }
@@ -230,7 +224,8 @@ class DrugSchema extends MedicalTherapySchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getFoodWarning() {
         return $this->foodWarning;
     }
@@ -246,7 +241,8 @@ class DrugSchema extends MedicalTherapySchema
     }
 
     /**
-     * @return DrugSchema     **/
+     * @return DrugSchema     
+     **/
     public function getInteractingDrug() {
         return $this->interactingDrug;
     }
@@ -262,7 +258,8 @@ class DrugSchema extends MedicalTherapySchema
     }
 
     /**
-     * @return BooleanSchema     **/
+     * @return BooleanSchema     
+     **/
     public function getIsAvailableGenerically() {
         return $this->isAvailableGenerically;
     }
@@ -278,7 +275,8 @@ class DrugSchema extends MedicalTherapySchema
     }
 
     /**
-     * @return BooleanSchema     **/
+     * @return BooleanSchema     
+     **/
     public function getIsProprietary() {
         return $this->isProprietary;
     }
@@ -294,7 +292,8 @@ class DrugSchema extends MedicalTherapySchema
     }
 
     /**
-     * @return URLSchema     **/
+     * @return URLSchema     
+     **/
     public function getLabelDetails() {
         return $this->labelDetails;
     }
@@ -310,7 +309,8 @@ class DrugSchema extends MedicalTherapySchema
     }
 
     /**
-     * @return DrugLegalStatusSchema     **/
+     * @return DrugLegalStatusSchema     
+     **/
     public function getLegalStatus() {
         return $this->legalStatus;
     }
@@ -326,7 +326,8 @@ class DrugSchema extends MedicalTherapySchema
     }
 
     /**
-     * @return OrganizationSchema     **/
+     * @return OrganizationSchema     
+     **/
     public function getManufacturer() {
         return $this->manufacturer;
     }
@@ -342,7 +343,8 @@ class DrugSchema extends MedicalTherapySchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getMechanismOfAction() {
         return $this->mechanismOfAction;
     }
@@ -358,7 +360,8 @@ class DrugSchema extends MedicalTherapySchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getNonProprietaryName() {
         return $this->nonProprietaryName;
     }
@@ -374,7 +377,8 @@ class DrugSchema extends MedicalTherapySchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getOverdosage() {
         return $this->overdosage;
     }
@@ -390,7 +394,8 @@ class DrugSchema extends MedicalTherapySchema
     }
 
     /**
-     * @return DrugPregnancyCategorySchema     **/
+     * @return DrugPregnancyCategorySchema     
+     **/
     public function getPregnancyCategory() {
         return $this->pregnancyCategory;
     }
@@ -406,7 +411,8 @@ class DrugSchema extends MedicalTherapySchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getPregnancyWarning() {
         return $this->pregnancyWarning;
     }
@@ -422,7 +428,8 @@ class DrugSchema extends MedicalTherapySchema
     }
 
     /**
-     * @return URLSchema     **/
+     * @return URLSchema     
+     **/
     public function getPrescribingInfo() {
         return $this->prescribingInfo;
     }
@@ -438,7 +445,8 @@ class DrugSchema extends MedicalTherapySchema
     }
 
     /**
-     * @return DrugPrescriptionStatusSchema     **/
+     * @return DrugPrescriptionStatusSchema     
+     **/
     public function getPrescriptionStatus() {
         return $this->prescriptionStatus;
     }
@@ -454,7 +462,8 @@ class DrugSchema extends MedicalTherapySchema
     }
 
     /**
-     * @return DrugSchema     **/
+     * @return DrugSchema     
+     **/
     public function getRelatedDrug() {
         return $this->relatedDrug;
     }
@@ -470,7 +479,8 @@ class DrugSchema extends MedicalTherapySchema
     }
 
     /**
-     * @return TextSchema|URLSchema     **/
+     * @return TextSchema|URLSchema     
+     **/
     public function getWarning() {
         return $this->warning;
     }

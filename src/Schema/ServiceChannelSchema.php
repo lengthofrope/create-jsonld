@@ -54,7 +54,8 @@ class ServiceChannelSchema extends IntangibleSchema
     }
 
     /**
-     * @return LanguageSchema     **/
+     * @return LanguageSchema     
+     **/
     public function getAvailableLanguage() {
         return $this->availableLanguage;
     }
@@ -70,7 +71,8 @@ class ServiceChannelSchema extends IntangibleSchema
     }
 
     /**
-     * @return DurationSchema     **/
+     * @return DurationSchema     
+     **/
     public function getProcessingTime() {
         return $this->processingTime;
     }
@@ -86,7 +88,8 @@ class ServiceChannelSchema extends IntangibleSchema
     }
 
     /**
-     * @return ServiceSchema     **/
+     * @return ServiceSchema     
+     **/
     public function getProvidesService() {
         return $this->providesService;
     }
@@ -102,7 +105,8 @@ class ServiceChannelSchema extends IntangibleSchema
     }
 
     /**
-     * @return PlaceSchema     **/
+     * @return PlaceSchema     
+     **/
     public function getServiceLocation() {
         return $this->serviceLocation;
     }
@@ -118,7 +122,8 @@ class ServiceChannelSchema extends IntangibleSchema
     }
 
     /**
-     * @return ContactPointSchema     **/
+     * @return ContactPointSchema     
+     **/
     public function getServicePhone() {
         return $this->servicePhone;
     }
@@ -134,7 +139,8 @@ class ServiceChannelSchema extends IntangibleSchema
     }
 
     /**
-     * @return PostalAddressSchema     **/
+     * @return PostalAddressSchema     
+     **/
     public function getServicePostalAddress() {
         return $this->servicePostalAddress;
     }
@@ -150,7 +156,8 @@ class ServiceChannelSchema extends IntangibleSchema
     }
 
     /**
-     * @return ContactPointSchema     **/
+     * @return ContactPointSchema     
+     **/
     public function getServiceSmsNumber() {
         return $this->serviceSmsNumber;
     }
@@ -166,7 +173,8 @@ class ServiceChannelSchema extends IntangibleSchema
     }
 
     /**
-     * @return URLSchema     **/
+     * @return URLSchema     
+     **/
     public function getServiceUrl() {
         return $this->serviceUrl;
     }

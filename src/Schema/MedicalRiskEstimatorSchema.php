@@ -54,7 +54,8 @@ class MedicalRiskEstimatorSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return MedicalEntitySchema     **/
+     * @return MedicalEntitySchema     
+     **/
     public function getEstimatesRiskOf() {
         return $this->estimatesRiskOf;
     }
@@ -70,7 +71,8 @@ class MedicalRiskEstimatorSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return MedicalRiskFactorSchema     **/
+     * @return MedicalRiskFactorSchema     
+     **/
     public function getIncludedRiskFactor() {
         return $this->includedRiskFactor;
     }

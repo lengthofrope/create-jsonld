@@ -54,7 +54,8 @@ class BroadcastEventSchema extends PublicationEventSchema
     }
 
     /**
-     * @return EventSchema     **/
+     * @return EventSchema     
+     **/
     public function getBroadcastOfEvent() {
         return $this->broadcastOfEvent;
     }
@@ -70,7 +71,8 @@ class BroadcastEventSchema extends PublicationEventSchema
     }
 
     /**
-     * @return BooleanSchema     **/
+     * @return BooleanSchema     
+     **/
     public function getIsLiveBroadcast() {
         return $this->isLiveBroadcast;
     }
@@ -86,7 +88,8 @@ class BroadcastEventSchema extends PublicationEventSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getVideoFormat() {
         return $this->videoFormat;
     }

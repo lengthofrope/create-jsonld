@@ -56,7 +56,8 @@ class ArticleSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getArticleBody() {
         return $this->articleBody;
     }
@@ -72,7 +73,8 @@ class ArticleSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getArticleSection() {
         return $this->articleSection;
     }
@@ -88,7 +90,8 @@ class ArticleSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return IntegerSchema|TextSchema     **/
+     * @return IntegerSchema|TextSchema     
+     **/
     public function getPageEnd() {
         return $this->pageEnd;
     }
@@ -104,7 +107,8 @@ class ArticleSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return IntegerSchema|TextSchema     **/
+     * @return IntegerSchema|TextSchema     
+     **/
     public function getPageStart() {
         return $this->pageStart;
     }
@@ -120,7 +124,8 @@ class ArticleSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getPagination() {
         return $this->pagination;
     }
@@ -136,7 +141,8 @@ class ArticleSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return IntegerSchema     **/
+     * @return IntegerSchema     
+     **/
     public function getWordCount() {
         return $this->wordCount;
     }

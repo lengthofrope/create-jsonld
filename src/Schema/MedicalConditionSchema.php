@@ -54,7 +54,8 @@ class MedicalConditionSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return AnatomicalStructureSchema|AnatomicalSystemSchema|SuperficialAnatomySchema     **/
+     * @return AnatomicalStructureSchema|AnatomicalSystemSchema|SuperficialAnatomySchema     
+     **/
     public function getAssociatedAnatomy() {
         return $this->associatedAnatomy;
     }
@@ -70,7 +71,8 @@ class MedicalConditionSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return MedicalCauseSchema     **/
+     * @return MedicalCauseSchema     
+     **/
     public function getCause() {
         return $this->cause;
     }
@@ -86,7 +88,8 @@ class MedicalConditionSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return DDxElementSchema     **/
+     * @return DDxElementSchema     
+     **/
     public function getDifferentialDiagnosis() {
         return $this->differentialDiagnosis;
     }
@@ -102,7 +105,8 @@ class MedicalConditionSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getEpidemiology() {
         return $this->epidemiology;
     }
@@ -118,7 +122,8 @@ class MedicalConditionSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getExpectedPrognosis() {
         return $this->expectedPrognosis;
     }
@@ -134,7 +139,8 @@ class MedicalConditionSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getNaturalProgression() {
         return $this->naturalProgression;
     }
@@ -150,7 +156,8 @@ class MedicalConditionSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getPathophysiology() {
         return $this->pathophysiology;
     }
@@ -166,7 +173,8 @@ class MedicalConditionSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getPossibleComplication() {
         return $this->possibleComplication;
     }
@@ -182,7 +190,8 @@ class MedicalConditionSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return MedicalTherapySchema     **/
+     * @return MedicalTherapySchema     
+     **/
     public function getPossibleTreatment() {
         return $this->possibleTreatment;
     }
@@ -198,7 +207,8 @@ class MedicalConditionSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return MedicalTherapySchema     **/
+     * @return MedicalTherapySchema     
+     **/
     public function getPrimaryPrevention() {
         return $this->primaryPrevention;
     }
@@ -214,7 +224,8 @@ class MedicalConditionSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return MedicalRiskFactorSchema     **/
+     * @return MedicalRiskFactorSchema     
+     **/
     public function getRiskFactor() {
         return $this->riskFactor;
     }
@@ -230,7 +241,8 @@ class MedicalConditionSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return MedicalTherapySchema     **/
+     * @return MedicalTherapySchema     
+     **/
     public function getSecondaryPrevention() {
         return $this->secondaryPrevention;
     }
@@ -246,7 +258,8 @@ class MedicalConditionSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return MedicalSignOrSymptomSchema     **/
+     * @return MedicalSignOrSymptomSchema     
+     **/
     public function getSignOrSymptom() {
         return $this->signOrSymptom;
     }
@@ -262,7 +275,8 @@ class MedicalConditionSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return MedicalConditionStageSchema     **/
+     * @return MedicalConditionStageSchema     
+     **/
     public function getStage() {
         return $this->stage;
     }
@@ -278,7 +292,8 @@ class MedicalConditionSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getSubtype() {
         return $this->subtype;
     }
@@ -294,7 +309,8 @@ class MedicalConditionSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return MedicalTestSchema     **/
+     * @return MedicalTestSchema     
+     **/
     public function getTypicalTest() {
         return $this->typicalTest;
     }

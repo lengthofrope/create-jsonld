@@ -54,7 +54,8 @@ class EducationalOrganizationSchema extends OrganizationSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getAlumni() {
         return $this->alumni;
     }

@@ -54,7 +54,8 @@ class JointSchema extends AnatomicalStructureSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getBiomechnicalClass() {
         return $this->biomechnicalClass;
     }
@@ -70,7 +71,8 @@ class JointSchema extends AnatomicalStructureSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getFunctionalClass() {
         return $this->functionalClass;
     }
@@ -86,7 +88,8 @@ class JointSchema extends AnatomicalStructureSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getStructuralClass() {
         return $this->structuralClass;
     }

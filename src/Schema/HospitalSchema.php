@@ -54,7 +54,8 @@ class HospitalSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return MedicalProcedureSchema|MedicalTestSchema|MedicalTherapySchema     **/
+     * @return MedicalProcedureSchema|MedicalTestSchema|MedicalTherapySchema     
+     **/
     public function getAvailableService() {
         return $this->availableService;
     }
@@ -70,7 +71,8 @@ class HospitalSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return MedicalSpecialtySchema     **/
+     * @return MedicalSpecialtySchema     
+     **/
     public function getMedicalSpecialty() {
         return $this->medicalSpecialty;
     }

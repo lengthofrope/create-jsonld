@@ -54,7 +54,8 @@ class EventSchema extends ThingSchema
     }
 
     /**
-     * @return AggregateRatingSchema     **/
+     * @return AggregateRatingSchema     
+     **/
     public function getAggregateRating() {
         return $this->aggregateRating;
     }
@@ -70,7 +71,8 @@ class EventSchema extends ThingSchema
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema     **/
+     * @return OrganizationSchema|PersonSchema     
+     **/
     public function getAttendee() {
         return $this->attendee;
     }
@@ -86,7 +88,8 @@ class EventSchema extends ThingSchema
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema     **/
+     * @return OrganizationSchema|PersonSchema     
+     **/
     public function getAttendees() {
         return $this->attendees;
     }
@@ -102,7 +105,8 @@ class EventSchema extends ThingSchema
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getDoorTime() {
         return $this->doorTime;
     }
@@ -118,7 +122,8 @@ class EventSchema extends ThingSchema
     }
 
     /**
-     * @return DurationSchema     **/
+     * @return DurationSchema     
+     **/
     public function getDuration() {
         return $this->duration;
     }
@@ -134,7 +139,8 @@ class EventSchema extends ThingSchema
     }
 
     /**
-     * @return DateSchema     **/
+     * @return DateSchema     
+     **/
     public function getEndDate() {
         return $this->endDate;
     }
@@ -150,7 +156,8 @@ class EventSchema extends ThingSchema
     }
 
     /**
-     * @return EventStatusTypeSchema     **/
+     * @return EventStatusTypeSchema     
+     **/
     public function getEventStatus() {
         return $this->eventStatus;
     }
@@ -166,7 +173,8 @@ class EventSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema|LanguageSchema     **/
+     * @return TextSchema|LanguageSchema     
+     **/
     public function getInLanguage() {
         return $this->inLanguage;
     }
@@ -182,7 +190,8 @@ class EventSchema extends ThingSchema
     }
 
     /**
-     * @return PlaceSchema|PostalAddressSchema|TextSchema     **/
+     * @return PlaceSchema|PostalAddressSchema|TextSchema     
+     **/
     public function getLocation() {
         return $this->location;
     }
@@ -198,7 +207,8 @@ class EventSchema extends ThingSchema
     }
 
     /**
-     * @return OfferSchema     **/
+     * @return OfferSchema     
+     **/
     public function getOffers() {
         return $this->offers;
     }
@@ -214,7 +224,8 @@ class EventSchema extends ThingSchema
     }
 
     /**
-     * @return PersonSchema|OrganizationSchema     **/
+     * @return PersonSchema|OrganizationSchema     
+     **/
     public function getOrganizer() {
         return $this->organizer;
     }
@@ -230,7 +241,8 @@ class EventSchema extends ThingSchema
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema     **/
+     * @return OrganizationSchema|PersonSchema     
+     **/
     public function getPerformer() {
         return $this->performer;
     }
@@ -246,7 +258,8 @@ class EventSchema extends ThingSchema
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema     **/
+     * @return OrganizationSchema|PersonSchema     
+     **/
     public function getPerformers() {
         return $this->performers;
     }
@@ -262,7 +275,8 @@ class EventSchema extends ThingSchema
     }
 
     /**
-     * @return DateSchema     **/
+     * @return DateSchema     
+     **/
     public function getPreviousStartDate() {
         return $this->previousStartDate;
     }
@@ -278,7 +292,8 @@ class EventSchema extends ThingSchema
     }
 
     /**
-     * @return CreativeWorkSchema     **/
+     * @return CreativeWorkSchema     
+     **/
     public function getRecordedIn() {
         return $this->recordedIn;
     }
@@ -294,7 +309,8 @@ class EventSchema extends ThingSchema
     }
 
     /**
-     * @return ReviewSchema     **/
+     * @return ReviewSchema     
+     **/
     public function getReview() {
         return $this->review;
     }
@@ -310,7 +326,8 @@ class EventSchema extends ThingSchema
     }
 
     /**
-     * @return DateSchema     **/
+     * @return DateSchema     
+     **/
     public function getStartDate() {
         return $this->startDate;
     }
@@ -326,7 +343,8 @@ class EventSchema extends ThingSchema
     }
 
     /**
-     * @return EventSchema     **/
+     * @return EventSchema     
+     **/
     public function getSubEvent() {
         return $this->subEvent;
     }
@@ -342,7 +360,8 @@ class EventSchema extends ThingSchema
     }
 
     /**
-     * @return EventSchema     **/
+     * @return EventSchema     
+     **/
     public function getSubEvents() {
         return $this->subEvents;
     }
@@ -358,7 +377,8 @@ class EventSchema extends ThingSchema
     }
 
     /**
-     * @return EventSchema     **/
+     * @return EventSchema     
+     **/
     public function getSuperEvent() {
         return $this->superEvent;
     }
@@ -374,7 +394,8 @@ class EventSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getTypicalAgeRange() {
         return $this->typicalAgeRange;
     }
@@ -391,7 +412,8 @@ class EventSchema extends ThingSchema
     }
 
     /**
-     * @return CreativeWorkSchema     **/
+     * @return CreativeWorkSchema     
+     **/
     public function getWorkFeatured() {
         return $this->workFeatured;
     }
@@ -407,7 +429,8 @@ class EventSchema extends ThingSchema
     }
 
     /**
-     * @return CreativeWorkSchema     **/
+     * @return CreativeWorkSchema     
+     **/
     public function getWorkPerformed() {
         return $this->workPerformed;
     }

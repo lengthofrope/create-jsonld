@@ -54,7 +54,8 @@ class SoftwareSourceCodeSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return URLSchema     **/
+     * @return URLSchema     
+     **/
     public function getCodeRepository() {
         return $this->codeRepository;
     }
@@ -70,7 +71,8 @@ class SoftwareSourceCodeSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getCodeSampleType() {
         return $this->codeSampleType;
     }
@@ -86,7 +88,8 @@ class SoftwareSourceCodeSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return LanguageSchema     **/
+     * @return LanguageSchema     
+     **/
     public function getProgrammingLanguage() {
         return $this->programmingLanguage;
     }
@@ -102,7 +105,8 @@ class SoftwareSourceCodeSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getRuntime() {
         return $this->runtime;
     }
@@ -118,7 +122,8 @@ class SoftwareSourceCodeSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getRuntimePlatform() {
         return $this->runtimePlatform;
     }
@@ -134,7 +139,8 @@ class SoftwareSourceCodeSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getSampleType() {
         return $this->sampleType;
     }
@@ -150,7 +156,8 @@ class SoftwareSourceCodeSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return SoftwareApplicationSchema     **/
+     * @return SoftwareApplicationSchema     
+     **/
     public function getTargetProduct() {
         return $this->targetProduct;
     }

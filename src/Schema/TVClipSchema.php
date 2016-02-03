@@ -54,7 +54,8 @@ class TVClipSchema extends ClipSchema
     }
 
     /**
-     * @return TVSeriesSchema     **/
+     * @return TVSeriesSchema     
+     **/
     public function getPartOfTVSeries() {
         return $this->partOfTVSeries;
     }

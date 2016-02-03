@@ -54,7 +54,8 @@ class OrganizationRoleSchema extends RoleSchema
     }
 
     /**
-     * @return NumberSchema     **/
+     * @return NumberSchema     
+     **/
     public function getNumberedPosition() {
         return $this->numberedPosition;
     }

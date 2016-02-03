@@ -54,7 +54,8 @@ class FlightSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema|VehicleSchema     **/
+     * @return TextSchema|VehicleSchema     
+     **/
     public function getAircraft() {
         return $this->aircraft;
     }
@@ -70,7 +71,8 @@ class FlightSchema extends IntangibleSchema
     }
 
     /**
-     * @return AirportSchema     **/
+     * @return AirportSchema     
+     **/
     public function getArrivalAirport() {
         return $this->arrivalAirport;
     }
@@ -86,7 +88,8 @@ class FlightSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getArrivalGate() {
         return $this->arrivalGate;
     }
@@ -102,7 +105,8 @@ class FlightSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getArrivalTerminal() {
         return $this->arrivalTerminal;
     }
@@ -118,7 +122,8 @@ class FlightSchema extends IntangibleSchema
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getArrivalTime() {
         return $this->arrivalTime;
     }
@@ -134,7 +139,8 @@ class FlightSchema extends IntangibleSchema
     }
 
     /**
-     * @return BoardingPolicyTypeSchema     **/
+     * @return BoardingPolicyTypeSchema     
+     **/
     public function getBoardingPolicy() {
         return $this->boardingPolicy;
     }
@@ -150,7 +156,8 @@ class FlightSchema extends IntangibleSchema
     }
 
     /**
-     * @return OrganizationSchema     **/
+     * @return OrganizationSchema     
+     **/
     public function getCarrier() {
         return $this->carrier;
     }
@@ -166,7 +173,8 @@ class FlightSchema extends IntangibleSchema
     }
 
     /**
-     * @return AirportSchema     **/
+     * @return AirportSchema     
+     **/
     public function getDepartureAirport() {
         return $this->departureAirport;
     }
@@ -182,7 +190,8 @@ class FlightSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getDepartureGate() {
         return $this->departureGate;
     }
@@ -198,7 +207,8 @@ class FlightSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getDepartureTerminal() {
         return $this->departureTerminal;
     }
@@ -214,7 +224,8 @@ class FlightSchema extends IntangibleSchema
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getDepartureTime() {
         return $this->departureTime;
     }
@@ -230,7 +241,8 @@ class FlightSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema|DurationSchema     **/
+     * @return TextSchema|DurationSchema     
+     **/
     public function getEstimatedFlightDuration() {
         return $this->estimatedFlightDuration;
     }
@@ -246,7 +258,8 @@ class FlightSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema|DistanceSchema     **/
+     * @return TextSchema|DistanceSchema     
+     **/
     public function getFlightDistance() {
         return $this->flightDistance;
     }
@@ -262,7 +275,8 @@ class FlightSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getFlightNumber() {
         return $this->flightNumber;
     }
@@ -278,7 +292,8 @@ class FlightSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getMealService() {
         return $this->mealService;
     }
@@ -294,7 +309,8 @@ class FlightSchema extends IntangibleSchema
     }
 
     /**
-     * @return PersonSchema|OrganizationSchema     **/
+     * @return PersonSchema|OrganizationSchema     
+     **/
     public function getProvider() {
         return $this->provider;
     }
@@ -310,7 +326,8 @@ class FlightSchema extends IntangibleSchema
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema     **/
+     * @return OrganizationSchema|PersonSchema     
+     **/
     public function getSeller() {
         return $this->seller;
     }
@@ -326,7 +343,8 @@ class FlightSchema extends IntangibleSchema
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getWebCheckinTime() {
         return $this->webCheckinTime;
     }

@@ -54,7 +54,8 @@ class DrugClassSchema extends MedicalTherapySchema
     }
 
     /**
-     * @return DrugSchema     **/
+     * @return DrugSchema     
+     **/
     public function getDrug() {
         return $this->drug;
     }

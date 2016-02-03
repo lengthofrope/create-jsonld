@@ -56,7 +56,8 @@ class StoreSchema extends LocalBusinessSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getBranchCode() {
         return $this->branchCode;
     }

@@ -54,7 +54,8 @@ class MusicPlaylistSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return IntegerSchema     **/
+     * @return IntegerSchema     
+     **/
     public function getNumTracks() {
         return $this->numTracks;
     }
@@ -70,7 +71,8 @@ class MusicPlaylistSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return ItemListSchema|MusicRecordingSchema     **/
+     * @return ItemListSchema|MusicRecordingSchema     
+     **/
     public function getTrack() {
         return $this->track;
     }
@@ -86,7 +88,8 @@ class MusicPlaylistSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return MusicRecordingSchema     **/
+     * @return MusicRecordingSchema     
+     **/
     public function getTracks() {
         return $this->tracks;
     }

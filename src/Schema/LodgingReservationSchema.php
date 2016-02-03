@@ -54,7 +54,8 @@ class LodgingReservationSchema extends ReservationSchema
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getCheckinTime() {
         return $this->checkinTime;
     }
@@ -70,7 +71,8 @@ class LodgingReservationSchema extends ReservationSchema
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getCheckoutTime() {
         return $this->checkoutTime;
     }
@@ -86,7 +88,8 @@ class LodgingReservationSchema extends ReservationSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getLodgingUnitDescription() {
         return $this->lodgingUnitDescription;
     }
@@ -102,7 +105,8 @@ class LodgingReservationSchema extends ReservationSchema
     }
 
     /**
-     * @return TextSchema|QualitativeValueSchema     **/
+     * @return TextSchema|QualitativeValueSchema     
+     **/
     public function getLodgingUnitType() {
         return $this->lodgingUnitType;
     }
@@ -118,7 +122,8 @@ class LodgingReservationSchema extends ReservationSchema
     }
 
     /**
-     * @return IntegerSchema|QuantitativeValueSchema     **/
+     * @return IntegerSchema|QuantitativeValueSchema     
+     **/
     public function getNumAdults() {
         return $this->numAdults;
     }
@@ -134,7 +139,8 @@ class LodgingReservationSchema extends ReservationSchema
     }
 
     /**
-     * @return IntegerSchema|QuantitativeValueSchema     **/
+     * @return IntegerSchema|QuantitativeValueSchema     
+     **/
     public function getNumChildren() {
         return $this->numChildren;
     }

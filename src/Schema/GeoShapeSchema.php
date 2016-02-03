@@ -54,7 +54,8 @@ class GeoShapeSchema extends StructuredValueSchema
     }
 
     /**
-     * @return PostalAddressSchema|TextSchema     **/
+     * @return PostalAddressSchema|TextSchema     
+     **/
     public function getAddress() {
         return $this->address;
     }
@@ -70,7 +71,8 @@ class GeoShapeSchema extends StructuredValueSchema
     }
 
     /**
-     * @return TextSchema|CountrySchema     **/
+     * @return TextSchema|CountrySchema     
+     **/
     public function getAddressCountry() {
         return $this->addressCountry;
     }
@@ -86,7 +88,8 @@ class GeoShapeSchema extends StructuredValueSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getBox() {
         return $this->box;
     }
@@ -102,7 +105,8 @@ class GeoShapeSchema extends StructuredValueSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getCircle() {
         return $this->circle;
     }
@@ -118,7 +122,8 @@ class GeoShapeSchema extends StructuredValueSchema
     }
 
     /**
-     * @return NumberSchema|TextSchema     **/
+     * @return NumberSchema|TextSchema     
+     **/
     public function getElevation() {
         return $this->elevation;
     }
@@ -134,7 +139,8 @@ class GeoShapeSchema extends StructuredValueSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getLine() {
         return $this->line;
     }
@@ -150,7 +156,8 @@ class GeoShapeSchema extends StructuredValueSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getPolygon() {
         return $this->polygon;
     }
@@ -166,7 +173,8 @@ class GeoShapeSchema extends StructuredValueSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getPostalCode() {
         return $this->postalCode;
     }

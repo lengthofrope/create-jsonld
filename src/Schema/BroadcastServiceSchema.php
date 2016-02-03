@@ -54,7 +54,8 @@ class BroadcastServiceSchema extends ServiceSchema
     }
 
     /**
-     * @return PlaceSchema     **/
+     * @return PlaceSchema     
+     **/
     public function getArea() {
         return $this->area;
     }
@@ -70,7 +71,8 @@ class BroadcastServiceSchema extends ServiceSchema
     }
 
     /**
-     * @return OrganizationSchema     **/
+     * @return OrganizationSchema     
+     **/
     public function getBroadcastAffiliateOf() {
         return $this->broadcastAffiliateOf;
     }
@@ -86,7 +88,8 @@ class BroadcastServiceSchema extends ServiceSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getBroadcastDisplayName() {
         return $this->broadcastDisplayName;
     }
@@ -102,7 +105,8 @@ class BroadcastServiceSchema extends ServiceSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getTimezone() {
         return $this->timezone;
     }
@@ -118,7 +122,8 @@ class BroadcastServiceSchema extends ServiceSchema
     }
 
     /**
-     * @return OrganizationSchema     **/
+     * @return OrganizationSchema     
+     **/
     public function getBroadcaster() {
         return $this->broadcaster;
     }
@@ -134,7 +139,8 @@ class BroadcastServiceSchema extends ServiceSchema
     }
 
     /**
-     * @return BroadcastServiceSchema     **/
+     * @return BroadcastServiceSchema     
+     **/
     public function getParentService() {
         return $this->parentService;
     }
@@ -150,7 +156,8 @@ class BroadcastServiceSchema extends ServiceSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getVideoFormat() {
         return $this->videoFormat;
     }

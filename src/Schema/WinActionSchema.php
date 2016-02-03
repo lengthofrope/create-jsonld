@@ -54,7 +54,8 @@ class WinActionSchema extends AchieveActionSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getLoser() {
         return $this->loser;
     }

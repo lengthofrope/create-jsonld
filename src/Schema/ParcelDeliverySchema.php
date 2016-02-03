@@ -54,7 +54,8 @@ class ParcelDeliverySchema extends IntangibleSchema
     }
 
     /**
-     * @return OrganizationSchema     **/
+     * @return OrganizationSchema     
+     **/
     public function getCarrier() {
         return $this->carrier;
     }
@@ -70,7 +71,8 @@ class ParcelDeliverySchema extends IntangibleSchema
     }
 
     /**
-     * @return PostalAddressSchema     **/
+     * @return PostalAddressSchema     
+     **/
     public function getDeliveryAddress() {
         return $this->deliveryAddress;
     }
@@ -86,7 +88,8 @@ class ParcelDeliverySchema extends IntangibleSchema
     }
 
     /**
-     * @return DeliveryEventSchema     **/
+     * @return DeliveryEventSchema     
+     **/
     public function getDeliveryStatus() {
         return $this->deliveryStatus;
     }
@@ -102,7 +105,8 @@ class ParcelDeliverySchema extends IntangibleSchema
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getExpectedArrivalFrom() {
         return $this->expectedArrivalFrom;
     }
@@ -118,7 +122,8 @@ class ParcelDeliverySchema extends IntangibleSchema
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getExpectedArrivalUntil() {
         return $this->expectedArrivalUntil;
     }
@@ -134,7 +139,8 @@ class ParcelDeliverySchema extends IntangibleSchema
     }
 
     /**
-     * @return DeliveryMethodSchema     **/
+     * @return DeliveryMethodSchema     
+     **/
     public function getHasDeliveryMethod() {
         return $this->hasDeliveryMethod;
     }
@@ -150,7 +156,8 @@ class ParcelDeliverySchema extends IntangibleSchema
     }
 
     /**
-     * @return ProductSchema     **/
+     * @return ProductSchema     
+     **/
     public function getItemShipped() {
         return $this->itemShipped;
     }
@@ -166,7 +173,8 @@ class ParcelDeliverySchema extends IntangibleSchema
     }
 
     /**
-     * @return PostalAddressSchema     **/
+     * @return PostalAddressSchema     
+     **/
     public function getOriginAddress() {
         return $this->originAddress;
     }
@@ -182,7 +190,8 @@ class ParcelDeliverySchema extends IntangibleSchema
     }
 
     /**
-     * @return OrderSchema     **/
+     * @return OrderSchema     
+     **/
     public function getPartOfOrder() {
         return $this->partOfOrder;
     }
@@ -198,7 +207,8 @@ class ParcelDeliverySchema extends IntangibleSchema
     }
 
     /**
-     * @return PersonSchema|OrganizationSchema     **/
+     * @return PersonSchema|OrganizationSchema     
+     **/
     public function getProvider() {
         return $this->provider;
     }
@@ -214,7 +224,8 @@ class ParcelDeliverySchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getTrackingNumber() {
         return $this->trackingNumber;
     }
@@ -230,7 +241,8 @@ class ParcelDeliverySchema extends IntangibleSchema
     }
 
     /**
-     * @return URLSchema     **/
+     * @return URLSchema     
+     **/
     public function getTrackingUrl() {
         return $this->trackingUrl;
     }

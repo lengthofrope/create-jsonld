@@ -54,7 +54,8 @@ class AlignmentObjectSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getAlignmentType() {
         return $this->alignmentType;
     }
@@ -70,7 +71,8 @@ class AlignmentObjectSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getEducationalFramework() {
         return $this->educationalFramework;
     }
@@ -86,7 +88,8 @@ class AlignmentObjectSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getTargetDescription() {
         return $this->targetDescription;
     }
@@ -102,7 +105,8 @@ class AlignmentObjectSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getTargetName() {
         return $this->targetName;
     }
@@ -118,7 +122,8 @@ class AlignmentObjectSchema extends IntangibleSchema
     }
 
     /**
-     * @return URLSchema     **/
+     * @return URLSchema     
+     **/
     public function getTargetUrl() {
         return $this->targetUrl;
     }

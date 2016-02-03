@@ -54,7 +54,8 @@ class DataFeedItemSchema extends IntangibleSchema
     }
 
     /**
-     * @return DateSchema|DateTimeSchema     **/
+     * @return DateSchema|DateTimeSchema     
+     **/
     public function getDateCreated() {
         return $this->dateCreated;
     }
@@ -70,7 +71,8 @@ class DataFeedItemSchema extends IntangibleSchema
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getDateDeleted() {
         return $this->dateDeleted;
     }
@@ -86,7 +88,8 @@ class DataFeedItemSchema extends IntangibleSchema
     }
 
     /**
-     * @return DateSchema|DateTimeSchema     **/
+     * @return DateSchema|DateTimeSchema     
+     **/
     public function getDateModified() {
         return $this->dateModified;
     }
@@ -102,7 +105,8 @@ class DataFeedItemSchema extends IntangibleSchema
     }
 
     /**
-     * @return ThingSchema     **/
+     * @return ThingSchema     
+     **/
     public function getItem() {
         return $this->item;
     }

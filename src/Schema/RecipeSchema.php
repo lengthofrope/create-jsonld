@@ -54,7 +54,8 @@ class RecipeSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return DurationSchema     **/
+     * @return DurationSchema     
+     **/
     public function getCookTime() {
         return $this->cookTime;
     }
@@ -70,7 +71,8 @@ class RecipeSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getCookingMethod() {
         return $this->cookingMethod;
     }
@@ -86,7 +88,8 @@ class RecipeSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getIngredients() {
         return $this->ingredients;
     }
@@ -102,7 +105,8 @@ class RecipeSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return NutritionInformationSchema     **/
+     * @return NutritionInformationSchema     
+     **/
     public function getNutrition() {
         return $this->nutrition;
     }
@@ -118,7 +122,8 @@ class RecipeSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return DurationSchema     **/
+     * @return DurationSchema     
+     **/
     public function getPrepTime() {
         return $this->prepTime;
     }
@@ -134,7 +139,8 @@ class RecipeSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getRecipeCategory() {
         return $this->recipeCategory;
     }
@@ -150,7 +156,8 @@ class RecipeSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getRecipeCuisine() {
         return $this->recipeCuisine;
     }
@@ -166,7 +173,8 @@ class RecipeSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getRecipeIngredient() {
         return $this->recipeIngredient;
     }
@@ -182,7 +190,8 @@ class RecipeSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema|ItemListSchema     **/
+     * @return TextSchema|ItemListSchema     
+     **/
     public function getRecipeInstructions() {
         return $this->recipeInstructions;
     }
@@ -198,7 +207,8 @@ class RecipeSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getRecipeYield() {
         return $this->recipeYield;
     }
@@ -214,7 +224,8 @@ class RecipeSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return DurationSchema     **/
+     * @return DurationSchema     
+     **/
     public function getTotalTime() {
         return $this->totalTime;
     }

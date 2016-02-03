@@ -54,7 +54,8 @@ class ProductModelSchema extends ProductSchema
     }
 
     /**
-     * @return ProductModelSchema     **/
+     * @return ProductModelSchema     
+     **/
     public function getIsVariantOf() {
         return $this->isVariantOf;
     }
@@ -70,7 +71,8 @@ class ProductModelSchema extends ProductSchema
     }
 
     /**
-     * @return ProductModelSchema     **/
+     * @return ProductModelSchema     
+     **/
     public function getPredecessorOf() {
         return $this->predecessorOf;
     }
@@ -86,7 +88,8 @@ class ProductModelSchema extends ProductSchema
     }
 
     /**
-     * @return ProductModelSchema     **/
+     * @return ProductModelSchema     
+     **/
     public function getSuccessorOf() {
         return $this->successorOf;
     }

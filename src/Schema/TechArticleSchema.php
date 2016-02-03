@@ -54,7 +54,8 @@ class TechArticleSchema extends ArticleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getDependencies() {
         return $this->dependencies;
     }
@@ -70,7 +71,8 @@ class TechArticleSchema extends ArticleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getProficiencyLevel() {
         return $this->proficiencyLevel;
     }

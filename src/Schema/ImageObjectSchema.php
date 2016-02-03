@@ -54,7 +54,8 @@ class ImageObjectSchema extends MediaObjectSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getCaption() {
         return $this->caption;
     }
@@ -70,7 +71,8 @@ class ImageObjectSchema extends MediaObjectSchema
     }
 
     /**
-     * @return TextSchema|PropertyValueSchema     **/
+     * @return TextSchema|PropertyValueSchema     
+     **/
     public function getExifData() {
         return $this->exifData;
     }
@@ -86,7 +88,8 @@ class ImageObjectSchema extends MediaObjectSchema
     }
 
     /**
-     * @return BooleanSchema     **/
+     * @return BooleanSchema     
+     **/
     public function getRepresentativeOfPage() {
         return $this->representativeOfPage;
     }
@@ -102,7 +105,8 @@ class ImageObjectSchema extends MediaObjectSchema
     }
 
     /**
-     * @return ImageObjectSchema     **/
+     * @return ImageObjectSchema     
+     **/
     public function getThumbnail() {
         return $this->thumbnail;
     }

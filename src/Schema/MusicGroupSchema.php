@@ -54,7 +54,8 @@ class MusicGroupSchema extends PerformingGroupSchema
     }
 
     /**
-     * @return MusicAlbumSchema     **/
+     * @return MusicAlbumSchema     
+     **/
     public function getAlbum() {
         return $this->album;
     }
@@ -70,7 +71,8 @@ class MusicGroupSchema extends PerformingGroupSchema
     }
 
     /**
-     * @return MusicAlbumSchema     **/
+     * @return MusicAlbumSchema     
+     **/
     public function getAlbums() {
         return $this->albums;
     }
@@ -86,7 +88,8 @@ class MusicGroupSchema extends PerformingGroupSchema
     }
 
     /**
-     * @return TextSchema|URLSchema     **/
+     * @return TextSchema|URLSchema     
+     **/
     public function getGenre() {
         return $this->genre;
     }
@@ -102,7 +105,8 @@ class MusicGroupSchema extends PerformingGroupSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getMusicGroupMember() {
         return $this->musicGroupMember;
     }
@@ -118,7 +122,8 @@ class MusicGroupSchema extends PerformingGroupSchema
     }
 
     /**
-     * @return ItemListSchema|MusicRecordingSchema     **/
+     * @return ItemListSchema|MusicRecordingSchema     
+     **/
     public function getTrack() {
         return $this->track;
     }
@@ -134,7 +139,8 @@ class MusicGroupSchema extends PerformingGroupSchema
     }
 
     /**
-     * @return MusicRecordingSchema     **/
+     * @return MusicRecordingSchema     
+     **/
     public function getTracks() {
         return $this->tracks;
     }

@@ -57,6 +57,7 @@ class {{ class }} extends {{ classExtends }}
 
     /**
      * @return {% for range in property.rangeIncludes %}{{ range.class }}{% if loop.last == false %}|{% endif %}{% endfor %}
+     
      **/
     public function {{ property.getter }}() {
         return $this->{{ property.label }};

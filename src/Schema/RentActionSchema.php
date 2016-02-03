@@ -54,7 +54,8 @@ class RentActionSchema extends TradeActionSchema
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema     **/
+     * @return OrganizationSchema|PersonSchema     
+     **/
     public function getLandlord() {
         return $this->landlord;
     }
@@ -70,7 +71,8 @@ class RentActionSchema extends TradeActionSchema
     }
 
     /**
-     * @return RealEstateAgentSchema     **/
+     * @return RealEstateAgentSchema     
+     **/
     public function getRealEstateAgent() {
         return $this->realEstateAgent;
     }

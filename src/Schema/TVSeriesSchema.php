@@ -54,7 +54,8 @@ class TVSeriesSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getActor() {
         return $this->actor;
     }
@@ -70,7 +71,8 @@ class TVSeriesSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getActors() {
         return $this->actors;
     }
@@ -86,7 +88,8 @@ class TVSeriesSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return CreativeWorkSeasonSchema     **/
+     * @return CreativeWorkSeasonSchema     
+     **/
     public function getContainsSeason() {
         return $this->containsSeason;
     }
@@ -102,7 +105,8 @@ class TVSeriesSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return CountrySchema     **/
+     * @return CountrySchema     
+     **/
     public function getCountryOfOrigin() {
         return $this->countryOfOrigin;
     }
@@ -118,7 +122,8 @@ class TVSeriesSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getDirector() {
         return $this->director;
     }
@@ -134,7 +139,8 @@ class TVSeriesSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getDirectors() {
         return $this->directors;
     }
@@ -150,7 +156,8 @@ class TVSeriesSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return EpisodeSchema     **/
+     * @return EpisodeSchema     
+     **/
     public function getEpisode() {
         return $this->episode;
     }
@@ -166,7 +173,8 @@ class TVSeriesSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return EpisodeSchema     **/
+     * @return EpisodeSchema     
+     **/
     public function getEpisodes() {
         return $this->episodes;
     }
@@ -182,7 +190,8 @@ class TVSeriesSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return MusicGroupSchema|PersonSchema     **/
+     * @return MusicGroupSchema|PersonSchema     
+     **/
     public function getMusicBy() {
         return $this->musicBy;
     }
@@ -198,7 +207,8 @@ class TVSeriesSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return IntegerSchema     **/
+     * @return IntegerSchema     
+     **/
     public function getNumberOfEpisodes() {
         return $this->numberOfEpisodes;
     }
@@ -214,7 +224,8 @@ class TVSeriesSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return IntegerSchema     **/
+     * @return IntegerSchema     
+     **/
     public function getNumberOfSeasons() {
         return $this->numberOfSeasons;
     }
@@ -230,7 +241,8 @@ class TVSeriesSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return OrganizationSchema     **/
+     * @return OrganizationSchema     
+     **/
     public function getProductionCompany() {
         return $this->productionCompany;
     }
@@ -246,7 +258,8 @@ class TVSeriesSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return CreativeWorkSeasonSchema     **/
+     * @return CreativeWorkSeasonSchema     
+     **/
     public function getSeason() {
         return $this->season;
     }
@@ -262,7 +275,8 @@ class TVSeriesSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return CreativeWorkSeasonSchema     **/
+     * @return CreativeWorkSeasonSchema     
+     **/
     public function getSeasons() {
         return $this->seasons;
     }
@@ -278,7 +292,8 @@ class TVSeriesSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return VideoObjectSchema     **/
+     * @return VideoObjectSchema     
+     **/
     public function getTrailer() {
         return $this->trailer;
     }

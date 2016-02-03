@@ -54,7 +54,8 @@ class PermitSchema extends IntangibleSchema
     }
 
     /**
-     * @return OrganizationSchema     **/
+     * @return OrganizationSchema     
+     **/
     public function getIssuedBy() {
         return $this->issuedBy;
     }
@@ -70,7 +71,8 @@ class PermitSchema extends IntangibleSchema
     }
 
     /**
-     * @return ServiceSchema     **/
+     * @return ServiceSchema     
+     **/
     public function getIssuedThrough() {
         return $this->issuedThrough;
     }
@@ -86,7 +88,8 @@ class PermitSchema extends IntangibleSchema
     }
 
     /**
-     * @return AudienceSchema     **/
+     * @return AudienceSchema     
+     **/
     public function getPermitAudience() {
         return $this->permitAudience;
     }
@@ -102,7 +105,8 @@ class PermitSchema extends IntangibleSchema
     }
 
     /**
-     * @return DurationSchema     **/
+     * @return DurationSchema     
+     **/
     public function getValidFor() {
         return $this->validFor;
     }
@@ -118,7 +122,8 @@ class PermitSchema extends IntangibleSchema
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getValidFrom() {
         return $this->validFrom;
     }
@@ -134,7 +139,8 @@ class PermitSchema extends IntangibleSchema
     }
 
     /**
-     * @return AdministrativeAreaSchema     **/
+     * @return AdministrativeAreaSchema     
+     **/
     public function getValidIn() {
         return $this->validIn;
     }
@@ -150,7 +156,8 @@ class PermitSchema extends IntangibleSchema
     }
 
     /**
-     * @return DateSchema     **/
+     * @return DateSchema     
+     **/
     public function getValidUntil() {
         return $this->validUntil;
     }

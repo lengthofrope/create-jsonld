@@ -54,7 +54,8 @@ class GovernmentServiceSchema extends ServiceSchema
     }
 
     /**
-     * @return OrganizationSchema     **/
+     * @return OrganizationSchema     
+     **/
     public function getServiceOperator() {
         return $this->serviceOperator;
     }

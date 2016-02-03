@@ -54,7 +54,8 @@ class OwnershipInfoSchema extends StructuredValueSchema
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema     **/
+     * @return OrganizationSchema|PersonSchema     
+     **/
     public function getAcquiredFrom() {
         return $this->acquiredFrom;
     }
@@ -70,7 +71,8 @@ class OwnershipInfoSchema extends StructuredValueSchema
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getOwnedFrom() {
         return $this->ownedFrom;
     }
@@ -86,7 +88,8 @@ class OwnershipInfoSchema extends StructuredValueSchema
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getOwnedThrough() {
         return $this->ownedThrough;
     }
@@ -102,7 +105,8 @@ class OwnershipInfoSchema extends StructuredValueSchema
     }
 
     /**
-     * @return ProductSchema     **/
+     * @return ProductSchema     
+     **/
     public function getTypeOfGood() {
         return $this->typeOfGood;
     }

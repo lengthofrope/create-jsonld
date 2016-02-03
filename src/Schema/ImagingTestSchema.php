@@ -54,7 +54,8 @@ class ImagingTestSchema extends MedicalTestSchema
     }
 
     /**
-     * @return MedicalImagingTechniqueSchema     **/
+     * @return MedicalImagingTechniqueSchema     
+     **/
     public function getImagingTechnique() {
         return $this->imagingTechnique;
     }

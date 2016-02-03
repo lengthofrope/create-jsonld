@@ -54,7 +54,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return ThingSchema     **/
+     * @return ThingSchema     
+     **/
     public function getAbout() {
         return $this->about;
     }
@@ -70,7 +71,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getAccessibilityAPI() {
         return $this->accessibilityAPI;
     }
@@ -86,7 +88,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getAccessibilityControl() {
         return $this->accessibilityControl;
     }
@@ -102,7 +105,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getAccessibilityFeature() {
         return $this->accessibilityFeature;
     }
@@ -118,7 +122,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getAccessibilityHazard() {
         return $this->accessibilityHazard;
     }
@@ -134,7 +139,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getAccountablePerson() {
         return $this->accountablePerson;
     }
@@ -150,7 +156,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return AggregateRatingSchema     **/
+     * @return AggregateRatingSchema     
+     **/
     public function getAggregateRating() {
         return $this->aggregateRating;
     }
@@ -166,7 +173,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getAlternativeHeadline() {
         return $this->alternativeHeadline;
     }
@@ -182,7 +190,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return MediaObjectSchema     **/
+     * @return MediaObjectSchema     
+     **/
     public function getAssociatedMedia() {
         return $this->associatedMedia;
     }
@@ -198,7 +207,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return AudienceSchema     **/
+     * @return AudienceSchema     
+     **/
     public function getAudience() {
         return $this->audience;
     }
@@ -214,7 +224,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return AudioObjectSchema     **/
+     * @return AudioObjectSchema     
+     **/
     public function getAudio() {
         return $this->audio;
     }
@@ -230,7 +241,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema     **/
+     * @return OrganizationSchema|PersonSchema     
+     **/
     public function getAuthor() {
         return $this->author;
     }
@@ -246,7 +258,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getAward() {
         return $this->award;
     }
@@ -262,7 +275,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getAwards() {
         return $this->awards;
     }
@@ -278,7 +292,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getCharacter() {
         return $this->character;
     }
@@ -294,7 +309,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return CreativeWorkSchema|TextSchema     **/
+     * @return CreativeWorkSchema|TextSchema     
+     **/
     public function getCitation() {
         return $this->citation;
     }
@@ -310,7 +326,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return CommentSchema     **/
+     * @return CommentSchema     
+     **/
     public function getComment() {
         return $this->comment;
     }
@@ -326,7 +343,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return IntegerSchema     **/
+     * @return IntegerSchema     
+     **/
     public function getCommentCount() {
         return $this->commentCount;
     }
@@ -342,7 +360,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return PlaceSchema     **/
+     * @return PlaceSchema     
+     **/
     public function getContentLocation() {
         return $this->contentLocation;
     }
@@ -358,7 +377,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getContentRating() {
         return $this->contentRating;
     }
@@ -374,7 +394,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema     **/
+     * @return OrganizationSchema|PersonSchema     
+     **/
     public function getContributor() {
         return $this->contributor;
     }
@@ -390,7 +411,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema     **/
+     * @return OrganizationSchema|PersonSchema     
+     **/
     public function getCopyrightHolder() {
         return $this->copyrightHolder;
     }
@@ -406,7 +428,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return NumberSchema     **/
+     * @return NumberSchema     
+     **/
     public function getCopyrightYear() {
         return $this->copyrightYear;
     }
@@ -422,7 +445,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema     **/
+     * @return OrganizationSchema|PersonSchema     
+     **/
     public function getCreator() {
         return $this->creator;
     }
@@ -438,7 +462,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return DateSchema|DateTimeSchema     **/
+     * @return DateSchema|DateTimeSchema     
+     **/
     public function getDateCreated() {
         return $this->dateCreated;
     }
@@ -454,7 +479,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return DateSchema|DateTimeSchema     **/
+     * @return DateSchema|DateTimeSchema     
+     **/
     public function getDateModified() {
         return $this->dateModified;
     }
@@ -470,7 +496,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return DateSchema     **/
+     * @return DateSchema     
+     **/
     public function getDatePublished() {
         return $this->datePublished;
     }
@@ -486,7 +513,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return URLSchema     **/
+     * @return URLSchema     
+     **/
     public function getDiscussionUrl() {
         return $this->discussionUrl;
     }
@@ -502,7 +530,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getEditor() {
         return $this->editor;
     }
@@ -518,7 +547,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return AlignmentObjectSchema     **/
+     * @return AlignmentObjectSchema     
+     **/
     public function getEducationalAlignment() {
         return $this->educationalAlignment;
     }
@@ -534,7 +564,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getEducationalUse() {
         return $this->educationalUse;
     }
@@ -550,7 +581,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return MediaObjectSchema     **/
+     * @return MediaObjectSchema     
+     **/
     public function getEncoding() {
         return $this->encoding;
     }
@@ -566,7 +598,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return MediaObjectSchema     **/
+     * @return MediaObjectSchema     
+     **/
     public function getEncodings() {
         return $this->encodings;
     }
@@ -582,7 +615,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return CreativeWorkSchema     **/
+     * @return CreativeWorkSchema     
+     **/
     public function getExampleOfWork() {
         return $this->exampleOfWork;
     }
@@ -598,7 +632,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getFileFormat() {
         return $this->fileFormat;
     }
@@ -614,7 +649,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema|URLSchema     **/
+     * @return TextSchema|URLSchema     
+     **/
     public function getGenre() {
         return $this->genre;
     }
@@ -630,7 +666,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return CreativeWorkSchema     **/
+     * @return CreativeWorkSchema     
+     **/
     public function getHasPart() {
         return $this->hasPart;
     }
@@ -646,7 +683,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getHeadline() {
         return $this->headline;
     }
@@ -662,7 +700,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema|LanguageSchema     **/
+     * @return TextSchema|LanguageSchema     
+     **/
     public function getInLanguage() {
         return $this->inLanguage;
     }
@@ -678,7 +717,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return InteractionCounterSchema     **/
+     * @return InteractionCounterSchema     
+     **/
     public function getInteractionStatistic() {
         return $this->interactionStatistic;
     }
@@ -694,7 +734,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getInteractivityType() {
         return $this->interactivityType;
     }
@@ -710,7 +751,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return URLSchema     **/
+     * @return URLSchema     
+     **/
     public function getIsBasedOnUrl() {
         return $this->isBasedOnUrl;
     }
@@ -726,7 +768,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return BooleanSchema     **/
+     * @return BooleanSchema     
+     **/
     public function getIsFamilyFriendly() {
         return $this->isFamilyFriendly;
     }
@@ -742,7 +785,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return CreativeWorkSchema     **/
+     * @return CreativeWorkSchema     
+     **/
     public function getIsPartOf() {
         return $this->isPartOf;
     }
@@ -758,7 +802,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getKeywords() {
         return $this->keywords;
     }
@@ -774,7 +819,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getLearningResourceType() {
         return $this->learningResourceType;
     }
@@ -790,7 +836,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return CreativeWorkSchema|URLSchema     **/
+     * @return CreativeWorkSchema|URLSchema     
+     **/
     public function getLicense() {
         return $this->license;
     }
@@ -806,7 +853,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return PlaceSchema     **/
+     * @return PlaceSchema     
+     **/
     public function getLocationCreated() {
         return $this->locationCreated;
     }
@@ -822,7 +870,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return ThingSchema     **/
+     * @return ThingSchema     
+     **/
     public function getMainEntity() {
         return $this->mainEntity;
     }
@@ -838,7 +887,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return ThingSchema     **/
+     * @return ThingSchema     
+     **/
     public function getMentions() {
         return $this->mentions;
     }
@@ -854,7 +904,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return OfferSchema     **/
+     * @return OfferSchema     
+     **/
     public function getOffers() {
         return $this->offers;
     }
@@ -870,7 +921,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema|IntegerSchema     **/
+     * @return TextSchema|IntegerSchema     
+     **/
     public function getPosition() {
         return $this->position;
     }
@@ -886,7 +938,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return PersonSchema|OrganizationSchema     **/
+     * @return PersonSchema|OrganizationSchema     
+     **/
     public function getProducer() {
         return $this->producer;
     }
@@ -902,7 +955,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return PersonSchema|OrganizationSchema     **/
+     * @return PersonSchema|OrganizationSchema     
+     **/
     public function getProvider() {
         return $this->provider;
     }
@@ -918,7 +972,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return PublicationEventSchema     **/
+     * @return PublicationEventSchema     
+     **/
     public function getPublication() {
         return $this->publication;
     }
@@ -934,7 +989,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema     **/
+     * @return OrganizationSchema|PersonSchema     
+     **/
     public function getPublisher() {
         return $this->publisher;
     }
@@ -950,7 +1006,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return URLSchema     **/
+     * @return URLSchema     
+     **/
     public function getPublishingPrinciples() {
         return $this->publishingPrinciples;
     }
@@ -966,7 +1023,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return EventSchema     **/
+     * @return EventSchema     
+     **/
     public function getRecordedAt() {
         return $this->recordedAt;
     }
@@ -982,7 +1040,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return PublicationEventSchema     **/
+     * @return PublicationEventSchema     
+     **/
     public function getReleasedEvent() {
         return $this->releasedEvent;
     }
@@ -998,7 +1057,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return ReviewSchema     **/
+     * @return ReviewSchema     
+     **/
     public function getReview() {
         return $this->review;
     }
@@ -1014,7 +1074,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return ReviewSchema     **/
+     * @return ReviewSchema     
+     **/
     public function getReviews() {
         return $this->reviews;
     }
@@ -1030,7 +1091,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return URLSchema|TextSchema     **/
+     * @return URLSchema|TextSchema     
+     **/
     public function getSchemaVersion() {
         return $this->schemaVersion;
     }
@@ -1046,7 +1108,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return OrganizationSchema     **/
+     * @return OrganizationSchema     
+     **/
     public function getSourceOrganization() {
         return $this->sourceOrganization;
     }
@@ -1062,7 +1125,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getText() {
         return $this->text;
     }
@@ -1078,7 +1142,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return URLSchema     **/
+     * @return URLSchema     
+     **/
     public function getThumbnailUrl() {
         return $this->thumbnailUrl;
     }
@@ -1094,7 +1159,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return DurationSchema     **/
+     * @return DurationSchema     
+     **/
     public function getTimeRequired() {
         return $this->timeRequired;
     }
@@ -1110,7 +1176,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return PersonSchema|OrganizationSchema     **/
+     * @return PersonSchema|OrganizationSchema     
+     **/
     public function getTranslator() {
         return $this->translator;
     }
@@ -1126,7 +1193,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getTypicalAgeRange() {
         return $this->typicalAgeRange;
     }
@@ -1142,7 +1210,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return NumberSchema     **/
+     * @return NumberSchema     
+     **/
     public function getVersion() {
         return $this->version;
     }
@@ -1158,7 +1227,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return VideoObjectSchema     **/
+     * @return VideoObjectSchema     
+     **/
     public function getVideo() {
         return $this->video;
     }
@@ -1174,7 +1244,8 @@ class CreativeWorkSchema extends ThingSchema
     }
 
     /**
-     * @return CreativeWorkSchema     **/
+     * @return CreativeWorkSchema     
+     **/
     public function getWorkExample() {
         return $this->workExample;
     }

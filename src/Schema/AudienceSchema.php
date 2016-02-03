@@ -54,7 +54,8 @@ class AudienceSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getAudienceType() {
         return $this->audienceType;
     }
@@ -70,7 +71,8 @@ class AudienceSchema extends IntangibleSchema
     }
 
     /**
-     * @return AdministrativeAreaSchema     **/
+     * @return AdministrativeAreaSchema     
+     **/
     public function getGeographicArea() {
         return $this->geographicArea;
     }

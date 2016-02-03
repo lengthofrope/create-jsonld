@@ -54,7 +54,8 @@ class DrugLegalStatusSchema extends MedicalIntangibleSchema
     }
 
     /**
-     * @return AdministrativeAreaSchema     **/
+     * @return AdministrativeAreaSchema     
+     **/
     public function getApplicableLocation() {
         return $this->applicableLocation;
     }

@@ -54,7 +54,8 @@ class ParentAudienceSchema extends PeopleAudienceSchema
     }
 
     /**
-     * @return NumberSchema     **/
+     * @return NumberSchema     
+     **/
     public function getChildMaxAge() {
         return $this->childMaxAge;
     }
@@ -70,7 +71,8 @@ class ParentAudienceSchema extends PeopleAudienceSchema
     }
 
     /**
-     * @return NumberSchema     **/
+     * @return NumberSchema     
+     **/
     public function getChildMinAge() {
         return $this->childMinAge;
     }

@@ -56,7 +56,8 @@ class PublicationVolumeSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return IntegerSchema|TextSchema     **/
+     * @return IntegerSchema|TextSchema     
+     **/
     public function getPageEnd() {
         return $this->pageEnd;
     }
@@ -72,7 +73,8 @@ class PublicationVolumeSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return IntegerSchema|TextSchema     **/
+     * @return IntegerSchema|TextSchema     
+     **/
     public function getPageStart() {
         return $this->pageStart;
     }
@@ -88,7 +90,8 @@ class PublicationVolumeSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getPagination() {
         return $this->pagination;
     }
@@ -104,7 +107,8 @@ class PublicationVolumeSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return IntegerSchema|TextSchema     **/
+     * @return IntegerSchema|TextSchema     
+     **/
     public function getVolumeNumber() {
         return $this->volumeNumber;
     }

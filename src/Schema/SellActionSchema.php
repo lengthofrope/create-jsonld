@@ -54,7 +54,8 @@ class SellActionSchema extends TradeActionSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getBuyer() {
         return $this->buyer;
     }
@@ -70,7 +71,8 @@ class SellActionSchema extends TradeActionSchema
     }
 
     /**
-     * @return WarrantyPromiseSchema     **/
+     * @return WarrantyPromiseSchema     
+     **/
     public function getWarrantyPromise() {
         return $this->warrantyPromise;
     }

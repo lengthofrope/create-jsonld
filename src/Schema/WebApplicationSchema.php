@@ -54,7 +54,8 @@ class WebApplicationSchema extends SoftwareApplicationSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getBrowserRequirements() {
         return $this->browserRequirements;
     }

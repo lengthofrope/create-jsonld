@@ -54,7 +54,8 @@ class PhysicianSchema extends MedicalOrganizationSchema
     }
 
     /**
-     * @return MedicalProcedureSchema|MedicalTestSchema|MedicalTherapySchema     **/
+     * @return MedicalProcedureSchema|MedicalTestSchema|MedicalTherapySchema     
+     **/
     public function getAvailableService() {
         return $this->availableService;
     }
@@ -70,7 +71,8 @@ class PhysicianSchema extends MedicalOrganizationSchema
     }
 
     /**
-     * @return HospitalSchema     **/
+     * @return HospitalSchema     
+     **/
     public function getHospitalAffiliation() {
         return $this->hospitalAffiliation;
     }
@@ -86,7 +88,8 @@ class PhysicianSchema extends MedicalOrganizationSchema
     }
 
     /**
-     * @return MedicalSpecialtySchema     **/
+     * @return MedicalSpecialtySchema     
+     **/
     public function getMedicalSpecialty() {
         return $this->medicalSpecialty;
     }

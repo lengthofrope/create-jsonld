@@ -54,7 +54,8 @@ class ClassSchema extends IntangibleSchema
     }
 
     /**
-     * @return PropertySchema|ClassSchema|EnumerationSchema     **/
+     * @return PropertySchema|ClassSchema|EnumerationSchema     
+     **/
     public function getSupersededBy() {
         return $this->supersededBy;
     }

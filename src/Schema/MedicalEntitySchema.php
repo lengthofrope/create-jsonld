@@ -54,7 +54,8 @@ class MedicalEntitySchema extends ThingSchema
     }
 
     /**
-     * @return MedicalCodeSchema     **/
+     * @return MedicalCodeSchema     
+     **/
     public function getCode() {
         return $this->code;
     }
@@ -70,7 +71,8 @@ class MedicalEntitySchema extends ThingSchema
     }
 
     /**
-     * @return MedicalGuidelineSchema     **/
+     * @return MedicalGuidelineSchema     
+     **/
     public function getGuideline() {
         return $this->guideline;
     }
@@ -86,7 +88,8 @@ class MedicalEntitySchema extends ThingSchema
     }
 
     /**
-     * @return MedicineSystemSchema     **/
+     * @return MedicineSystemSchema     
+     **/
     public function getMedicineSystem() {
         return $this->medicineSystem;
     }
@@ -102,7 +105,8 @@ class MedicalEntitySchema extends ThingSchema
     }
 
     /**
-     * @return OrganizationSchema     **/
+     * @return OrganizationSchema     
+     **/
     public function getRecognizingAuthority() {
         return $this->recognizingAuthority;
     }
@@ -118,7 +122,8 @@ class MedicalEntitySchema extends ThingSchema
     }
 
     /**
-     * @return MedicalSpecialtySchema     **/
+     * @return MedicalSpecialtySchema     
+     **/
     public function getRelevantSpecialty() {
         return $this->relevantSpecialty;
     }
@@ -134,7 +139,8 @@ class MedicalEntitySchema extends ThingSchema
     }
 
     /**
-     * @return MedicalStudySchema     **/
+     * @return MedicalStudySchema     
+     **/
     public function getStudy() {
         return $this->study;
     }

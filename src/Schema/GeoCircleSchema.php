@@ -57,7 +57,8 @@ class GeoCircleSchema extends GeoShapeSchema
     }
 
     /**
-     * @return GeoCoordinatesSchema     **/
+     * @return GeoCoordinatesSchema     
+     **/
     public function getGeoMidpoint() {
         return $this->geoMidpoint;
     }
@@ -73,7 +74,8 @@ class GeoCircleSchema extends GeoShapeSchema
     }
 
     /**
-     * @return TextSchema|NumberSchema|DistanceSchema     **/
+     * @return TextSchema|NumberSchema|DistanceSchema     
+     **/
     public function getGeoRadius() {
         return $this->geoRadius;
     }

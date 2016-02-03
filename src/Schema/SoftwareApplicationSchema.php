@@ -54,7 +54,8 @@ class SoftwareApplicationSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema|URLSchema     **/
+     * @return TextSchema|URLSchema     
+     **/
     public function getApplicationCategory() {
         return $this->applicationCategory;
     }
@@ -70,7 +71,8 @@ class SoftwareApplicationSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema|URLSchema     **/
+     * @return TextSchema|URLSchema     
+     **/
     public function getApplicationSubCategory() {
         return $this->applicationSubCategory;
     }
@@ -86,7 +88,8 @@ class SoftwareApplicationSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getApplicationSuite() {
         return $this->applicationSuite;
     }
@@ -102,7 +105,8 @@ class SoftwareApplicationSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getAvailableOnDevice() {
         return $this->availableOnDevice;
     }
@@ -118,7 +122,8 @@ class SoftwareApplicationSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getCountriesNotSupported() {
         return $this->countriesNotSupported;
     }
@@ -134,7 +139,8 @@ class SoftwareApplicationSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getCountriesSupported() {
         return $this->countriesSupported;
     }
@@ -150,7 +156,8 @@ class SoftwareApplicationSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getDevice() {
         return $this->device;
     }
@@ -166,7 +173,8 @@ class SoftwareApplicationSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return URLSchema     **/
+     * @return URLSchema     
+     **/
     public function getDownloadUrl() {
         return $this->downloadUrl;
     }
@@ -182,7 +190,8 @@ class SoftwareApplicationSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema|URLSchema     **/
+     * @return TextSchema|URLSchema     
+     **/
     public function getFeatureList() {
         return $this->featureList;
     }
@@ -198,7 +207,8 @@ class SoftwareApplicationSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getFileSize() {
         return $this->fileSize;
     }
@@ -214,7 +224,8 @@ class SoftwareApplicationSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return URLSchema     **/
+     * @return URLSchema     
+     **/
     public function getInstallUrl() {
         return $this->installUrl;
     }
@@ -230,7 +241,8 @@ class SoftwareApplicationSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema|URLSchema     **/
+     * @return TextSchema|URLSchema     
+     **/
     public function getMemoryRequirements() {
         return $this->memoryRequirements;
     }
@@ -246,7 +258,8 @@ class SoftwareApplicationSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getOperatingSystem() {
         return $this->operatingSystem;
     }
@@ -262,7 +275,8 @@ class SoftwareApplicationSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getPermissions() {
         return $this->permissions;
     }
@@ -278,7 +292,8 @@ class SoftwareApplicationSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getProcessorRequirements() {
         return $this->processorRequirements;
     }
@@ -294,7 +309,8 @@ class SoftwareApplicationSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema|URLSchema     **/
+     * @return TextSchema|URLSchema     
+     **/
     public function getReleaseNotes() {
         return $this->releaseNotes;
     }
@@ -310,7 +326,8 @@ class SoftwareApplicationSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema|URLSchema     **/
+     * @return TextSchema|URLSchema     
+     **/
     public function getRequirements() {
         return $this->requirements;
     }
@@ -326,7 +343,8 @@ class SoftwareApplicationSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return ImageObjectSchema|URLSchema     **/
+     * @return ImageObjectSchema|URLSchema     
+     **/
     public function getScreenshot() {
         return $this->screenshot;
     }
@@ -342,7 +360,8 @@ class SoftwareApplicationSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return SoftwareApplicationSchema     **/
+     * @return SoftwareApplicationSchema     
+     **/
     public function getSoftwareAddOn() {
         return $this->softwareAddOn;
     }
@@ -358,7 +377,8 @@ class SoftwareApplicationSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return CreativeWorkSchema     **/
+     * @return CreativeWorkSchema     
+     **/
     public function getSoftwareHelp() {
         return $this->softwareHelp;
     }
@@ -374,7 +394,8 @@ class SoftwareApplicationSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema|URLSchema     **/
+     * @return TextSchema|URLSchema     
+     **/
     public function getSoftwareRequirements() {
         return $this->softwareRequirements;
     }
@@ -390,7 +411,8 @@ class SoftwareApplicationSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getSoftwareVersion() {
         return $this->softwareVersion;
     }
@@ -406,7 +428,8 @@ class SoftwareApplicationSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema|URLSchema     **/
+     * @return TextSchema|URLSchema     
+     **/
     public function getStorageRequirements() {
         return $this->storageRequirements;
     }
@@ -422,7 +445,8 @@ class SoftwareApplicationSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return DataFeedSchema     **/
+     * @return DataFeedSchema     
+     **/
     public function getSupportingData() {
         return $this->supportingData;
     }

@@ -54,7 +54,8 @@ class MediaObjectSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return NewsArticleSchema     **/
+     * @return NewsArticleSchema     
+     **/
     public function getAssociatedArticle() {
         return $this->associatedArticle;
     }
@@ -70,7 +71,8 @@ class MediaObjectSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getBitrate() {
         return $this->bitrate;
     }
@@ -86,7 +88,8 @@ class MediaObjectSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getContentSize() {
         return $this->contentSize;
     }
@@ -102,7 +105,8 @@ class MediaObjectSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return URLSchema     **/
+     * @return URLSchema     
+     **/
     public function getContentUrl() {
         return $this->contentUrl;
     }
@@ -118,7 +122,8 @@ class MediaObjectSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return DurationSchema     **/
+     * @return DurationSchema     
+     **/
     public function getDuration() {
         return $this->duration;
     }
@@ -134,7 +139,8 @@ class MediaObjectSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return URLSchema     **/
+     * @return URLSchema     
+     **/
     public function getEmbedUrl() {
         return $this->embedUrl;
     }
@@ -150,7 +156,8 @@ class MediaObjectSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return CreativeWorkSchema     **/
+     * @return CreativeWorkSchema     
+     **/
     public function getEncodesCreativeWork() {
         return $this->encodesCreativeWork;
     }
@@ -166,7 +173,8 @@ class MediaObjectSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getEncodingFormat() {
         return $this->encodingFormat;
     }
@@ -182,7 +190,8 @@ class MediaObjectSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return DateSchema     **/
+     * @return DateSchema     
+     **/
     public function getExpires() {
         return $this->expires;
     }
@@ -198,7 +207,8 @@ class MediaObjectSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return DistanceSchema|QuantitativeValueSchema     **/
+     * @return DistanceSchema|QuantitativeValueSchema     
+     **/
     public function getHeight() {
         return $this->height;
     }
@@ -214,7 +224,8 @@ class MediaObjectSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getPlayerType() {
         return $this->playerType;
     }
@@ -230,7 +241,8 @@ class MediaObjectSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return OrganizationSchema     **/
+     * @return OrganizationSchema     
+     **/
     public function getProductionCompany() {
         return $this->productionCompany;
     }
@@ -246,7 +258,8 @@ class MediaObjectSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return PlaceSchema     **/
+     * @return PlaceSchema     
+     **/
     public function getRegionsAllowed() {
         return $this->regionsAllowed;
     }
@@ -262,7 +275,8 @@ class MediaObjectSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return BooleanSchema     **/
+     * @return BooleanSchema     
+     **/
     public function getRequiresSubscription() {
         return $this->requiresSubscription;
     }
@@ -278,7 +292,8 @@ class MediaObjectSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return DateSchema     **/
+     * @return DateSchema     
+     **/
     public function getUploadDate() {
         return $this->uploadDate;
     }
@@ -294,7 +309,8 @@ class MediaObjectSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return DistanceSchema|QuantitativeValueSchema     **/
+     * @return DistanceSchema|QuantitativeValueSchema     
+     **/
     public function getWidth() {
         return $this->width;
     }

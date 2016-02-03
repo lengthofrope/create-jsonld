@@ -54,7 +54,8 @@ class ExerciseActionSchema extends PlayActionSchema
     }
 
     /**
-     * @return PlaceSchema     **/
+     * @return PlaceSchema     
+     **/
     public function getCourse() {
         return $this->course;
     }
@@ -70,7 +71,8 @@ class ExerciseActionSchema extends PlayActionSchema
     }
 
     /**
-     * @return DietSchema     **/
+     * @return DietSchema     
+     **/
     public function getDiet() {
         return $this->diet;
     }
@@ -86,7 +88,8 @@ class ExerciseActionSchema extends PlayActionSchema
     }
 
     /**
-     * @return DistanceSchema     **/
+     * @return DistanceSchema     
+     **/
     public function getDistance() {
         return $this->distance;
     }
@@ -102,7 +105,8 @@ class ExerciseActionSchema extends PlayActionSchema
     }
 
     /**
-     * @return PlaceSchema     **/
+     * @return PlaceSchema     
+     **/
     public function getExerciseCourse() {
         return $this->exerciseCourse;
     }
@@ -118,7 +122,8 @@ class ExerciseActionSchema extends PlayActionSchema
     }
 
     /**
-     * @return ExercisePlanSchema     **/
+     * @return ExercisePlanSchema     
+     **/
     public function getExercisePlan() {
         return $this->exercisePlan;
     }
@@ -134,7 +139,8 @@ class ExerciseActionSchema extends PlayActionSchema
     }
 
     /**
-     * @return DietSchema     **/
+     * @return DietSchema     
+     **/
     public function getExerciseRelatedDiet() {
         return $this->exerciseRelatedDiet;
     }
@@ -150,7 +156,8 @@ class ExerciseActionSchema extends PlayActionSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getExerciseType() {
         return $this->exerciseType;
     }
@@ -166,7 +173,8 @@ class ExerciseActionSchema extends PlayActionSchema
     }
 
     /**
-     * @return PlaceSchema     **/
+     * @return PlaceSchema     
+     **/
     public function getFromLocation() {
         return $this->fromLocation;
     }
@@ -182,7 +190,8 @@ class ExerciseActionSchema extends PlayActionSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getOpponent() {
         return $this->opponent;
     }
@@ -198,7 +207,8 @@ class ExerciseActionSchema extends PlayActionSchema
     }
 
     /**
-     * @return SportsActivityLocationSchema     **/
+     * @return SportsActivityLocationSchema     
+     **/
     public function getSportsActivityLocation() {
         return $this->sportsActivityLocation;
     }
@@ -214,7 +224,8 @@ class ExerciseActionSchema extends PlayActionSchema
     }
 
     /**
-     * @return SportsEventSchema     **/
+     * @return SportsEventSchema     
+     **/
     public function getSportsEvent() {
         return $this->sportsEvent;
     }
@@ -230,7 +241,8 @@ class ExerciseActionSchema extends PlayActionSchema
     }
 
     /**
-     * @return SportsTeamSchema     **/
+     * @return SportsTeamSchema     
+     **/
     public function getSportsTeam() {
         return $this->sportsTeam;
     }
@@ -246,7 +258,8 @@ class ExerciseActionSchema extends PlayActionSchema
     }
 
     /**
-     * @return PlaceSchema     **/
+     * @return PlaceSchema     
+     **/
     public function getToLocation() {
         return $this->toLocation;
     }

@@ -54,7 +54,8 @@ class MusicCompositionSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return PersonSchema|OrganizationSchema     **/
+     * @return PersonSchema|OrganizationSchema     
+     **/
     public function getComposer() {
         return $this->composer;
     }
@@ -70,7 +71,8 @@ class MusicCompositionSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return EventSchema     **/
+     * @return EventSchema     
+     **/
     public function getFirstPerformance() {
         return $this->firstPerformance;
     }
@@ -86,7 +88,8 @@ class MusicCompositionSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return MusicCompositionSchema     **/
+     * @return MusicCompositionSchema     
+     **/
     public function getIncludedComposition() {
         return $this->includedComposition;
     }
@@ -102,7 +105,8 @@ class MusicCompositionSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getIswcCode() {
         return $this->iswcCode;
     }
@@ -118,7 +122,8 @@ class MusicCompositionSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getLyricist() {
         return $this->lyricist;
     }
@@ -134,7 +139,8 @@ class MusicCompositionSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return CreativeWorkSchema     **/
+     * @return CreativeWorkSchema     
+     **/
     public function getLyrics() {
         return $this->lyrics;
     }
@@ -150,7 +156,8 @@ class MusicCompositionSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return MusicCompositionSchema     **/
+     * @return MusicCompositionSchema     
+     **/
     public function getMusicArrangement() {
         return $this->musicArrangement;
     }
@@ -166,7 +173,8 @@ class MusicCompositionSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getMusicCompositionForm() {
         return $this->musicCompositionForm;
     }
@@ -182,7 +190,8 @@ class MusicCompositionSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getMusicalKey() {
         return $this->musicalKey;
     }
@@ -198,7 +207,8 @@ class MusicCompositionSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return MusicRecordingSchema     **/
+     * @return MusicRecordingSchema     
+     **/
     public function getRecordedAs() {
         return $this->recordedAs;
     }

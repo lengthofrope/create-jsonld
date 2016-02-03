@@ -54,7 +54,8 @@ class AudioObjectSchema extends MediaObjectSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getTranscript() {
         return $this->transcript;
     }

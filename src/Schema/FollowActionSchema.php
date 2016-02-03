@@ -54,7 +54,8 @@ class FollowActionSchema extends InteractActionSchema
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema     **/
+     * @return OrganizationSchema|PersonSchema     
+     **/
     public function getFollowee() {
         return $this->followee;
     }

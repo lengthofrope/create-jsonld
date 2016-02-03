@@ -54,7 +54,8 @@ class SocialMediaPostingSchema extends ArticleSchema
     }
 
     /**
-     * @return CreativeWorkSchema     **/
+     * @return CreativeWorkSchema     
+     **/
     public function getSharedContent() {
         return $this->sharedContent;
     }

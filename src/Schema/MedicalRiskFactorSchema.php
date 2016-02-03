@@ -54,7 +54,8 @@ class MedicalRiskFactorSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return MedicalEntitySchema     **/
+     * @return MedicalEntitySchema     
+     **/
     public function getIncreasesRiskOf() {
         return $this->increasesRiskOf;
     }

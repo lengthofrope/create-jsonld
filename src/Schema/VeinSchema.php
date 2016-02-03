@@ -54,7 +54,8 @@ class VeinSchema extends VesselSchema
     }
 
     /**
-     * @return VesselSchema     **/
+     * @return VesselSchema     
+     **/
     public function getDrainsTo() {
         return $this->drainsTo;
     }
@@ -70,7 +71,8 @@ class VeinSchema extends VesselSchema
     }
 
     /**
-     * @return AnatomicalStructureSchema|AnatomicalSystemSchema     **/
+     * @return AnatomicalStructureSchema|AnatomicalSystemSchema     
+     **/
     public function getRegionDrained() {
         return $this->regionDrained;
     }
@@ -86,7 +88,8 @@ class VeinSchema extends VesselSchema
     }
 
     /**
-     * @return AnatomicalStructureSchema     **/
+     * @return AnatomicalStructureSchema     
+     **/
     public function getTributary() {
         return $this->tributary;
     }

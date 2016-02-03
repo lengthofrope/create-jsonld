@@ -54,7 +54,8 @@ class InformActionSchema extends CommunicateActionSchema
     }
 
     /**
-     * @return EventSchema     **/
+     * @return EventSchema     
+     **/
     public function getEvent() {
         return $this->event;
     }

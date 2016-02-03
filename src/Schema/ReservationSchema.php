@@ -54,7 +54,8 @@ class ReservationSchema extends IntangibleSchema
     }
 
     /**
-     * @return PersonSchema|OrganizationSchema     **/
+     * @return PersonSchema|OrganizationSchema     
+     **/
     public function getBookingAgent() {
         return $this->bookingAgent;
     }
@@ -70,7 +71,8 @@ class ReservationSchema extends IntangibleSchema
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getBookingTime() {
         return $this->bookingTime;
     }
@@ -86,7 +88,8 @@ class ReservationSchema extends IntangibleSchema
     }
 
     /**
-     * @return PersonSchema|OrganizationSchema     **/
+     * @return PersonSchema|OrganizationSchema     
+     **/
     public function getBroker() {
         return $this->broker;
     }
@@ -102,7 +105,8 @@ class ReservationSchema extends IntangibleSchema
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getModifiedTime() {
         return $this->modifiedTime;
     }
@@ -118,7 +122,8 @@ class ReservationSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getPriceCurrency() {
         return $this->priceCurrency;
     }
@@ -134,7 +139,8 @@ class ReservationSchema extends IntangibleSchema
     }
 
     /**
-     * @return ProgramMembershipSchema     **/
+     * @return ProgramMembershipSchema     
+     **/
     public function getProgramMembershipUsed() {
         return $this->programMembershipUsed;
     }
@@ -150,7 +156,8 @@ class ReservationSchema extends IntangibleSchema
     }
 
     /**
-     * @return PersonSchema|OrganizationSchema     **/
+     * @return PersonSchema|OrganizationSchema     
+     **/
     public function getProvider() {
         return $this->provider;
     }
@@ -166,7 +173,8 @@ class ReservationSchema extends IntangibleSchema
     }
 
     /**
-     * @return ThingSchema     **/
+     * @return ThingSchema     
+     **/
     public function getReservationFor() {
         return $this->reservationFor;
     }
@@ -182,7 +190,8 @@ class ReservationSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getReservationId() {
         return $this->reservationId;
     }
@@ -198,7 +207,8 @@ class ReservationSchema extends IntangibleSchema
     }
 
     /**
-     * @return ReservationStatusTypeSchema     **/
+     * @return ReservationStatusTypeSchema     
+     **/
     public function getReservationStatus() {
         return $this->reservationStatus;
     }
@@ -214,7 +224,8 @@ class ReservationSchema extends IntangibleSchema
     }
 
     /**
-     * @return TicketSchema     **/
+     * @return TicketSchema     
+     **/
     public function getReservedTicket() {
         return $this->reservedTicket;
     }
@@ -230,7 +241,8 @@ class ReservationSchema extends IntangibleSchema
     }
 
     /**
-     * @return NumberSchema|TextSchema|PriceSpecificationSchema     **/
+     * @return NumberSchema|TextSchema|PriceSpecificationSchema     
+     **/
     public function getTotalPrice() {
         return $this->totalPrice;
     }
@@ -246,7 +258,8 @@ class ReservationSchema extends IntangibleSchema
     }
 
     /**
-     * @return PersonSchema|OrganizationSchema     **/
+     * @return PersonSchema|OrganizationSchema     
+     **/
     public function getUnderName() {
         return $this->underName;
     }

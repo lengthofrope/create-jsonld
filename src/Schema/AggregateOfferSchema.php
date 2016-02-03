@@ -54,7 +54,8 @@ class AggregateOfferSchema extends OfferSchema
     }
 
     /**
-     * @return NumberSchema|TextSchema     **/
+     * @return NumberSchema|TextSchema     
+     **/
     public function getHighPrice() {
         return $this->highPrice;
     }
@@ -70,7 +71,8 @@ class AggregateOfferSchema extends OfferSchema
     }
 
     /**
-     * @return NumberSchema|TextSchema     **/
+     * @return NumberSchema|TextSchema     
+     **/
     public function getLowPrice() {
         return $this->lowPrice;
     }
@@ -86,7 +88,8 @@ class AggregateOfferSchema extends OfferSchema
     }
 
     /**
-     * @return IntegerSchema     **/
+     * @return IntegerSchema     
+     **/
     public function getOfferCount() {
         return $this->offerCount;
     }
@@ -102,7 +105,8 @@ class AggregateOfferSchema extends OfferSchema
     }
 
     /**
-     * @return OfferSchema     **/
+     * @return OfferSchema     
+     **/
     public function getOffers() {
         return $this->offers;
     }

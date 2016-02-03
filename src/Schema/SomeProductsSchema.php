@@ -54,7 +54,8 @@ class SomeProductsSchema extends ProductSchema
     }
 
     /**
-     * @return QuantitativeValueSchema     **/
+     * @return QuantitativeValueSchema     
+     **/
     public function getInventoryLevel() {
         return $this->inventoryLevel;
     }

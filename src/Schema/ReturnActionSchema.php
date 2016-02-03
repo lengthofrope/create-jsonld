@@ -54,7 +54,8 @@ class ReturnActionSchema extends TransferActionSchema
     }
 
     /**
-     * @return AudienceSchema|OrganizationSchema|PersonSchema     **/
+     * @return AudienceSchema|OrganizationSchema|PersonSchema     
+     **/
     public function getRecipient() {
         return $this->recipient;
     }

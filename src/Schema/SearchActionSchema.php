@@ -54,7 +54,8 @@ class SearchActionSchema extends ActionSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getQuery() {
         return $this->query;
     }

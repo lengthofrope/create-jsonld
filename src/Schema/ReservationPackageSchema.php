@@ -54,7 +54,8 @@ class ReservationPackageSchema extends ReservationSchema
     }
 
     /**
-     * @return ReservationSchema     **/
+     * @return ReservationSchema     
+     **/
     public function getSubReservation() {
         return $this->subReservation;
     }

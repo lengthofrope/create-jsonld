@@ -54,7 +54,8 @@ class SportsOrganizationSchema extends OrganizationSchema
     }
 
     /**
-     * @return TextSchema|URLSchema     **/
+     * @return TextSchema|URLSchema     
+     **/
     public function getSport() {
         return $this->sport;
     }

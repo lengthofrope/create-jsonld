@@ -54,7 +54,8 @@ class DeliveryEventSchema extends EventSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getAccessCode() {
         return $this->accessCode;
     }
@@ -70,7 +71,8 @@ class DeliveryEventSchema extends EventSchema
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getAvailableFrom() {
         return $this->availableFrom;
     }
@@ -86,7 +88,8 @@ class DeliveryEventSchema extends EventSchema
     }
 
     /**
-     * @return DateTimeSchema     **/
+     * @return DateTimeSchema     
+     **/
     public function getAvailableThrough() {
         return $this->availableThrough;
     }
@@ -102,7 +105,8 @@ class DeliveryEventSchema extends EventSchema
     }
 
     /**
-     * @return DeliveryMethodSchema     **/
+     * @return DeliveryMethodSchema     
+     **/
     public function getHasDeliveryMethod() {
         return $this->hasDeliveryMethod;
     }

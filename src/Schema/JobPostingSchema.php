@@ -54,7 +54,8 @@ class JobPostingSchema extends IntangibleSchema
     }
 
     /**
-     * @return NumberSchema|PriceSpecificationSchema     **/
+     * @return NumberSchema|PriceSpecificationSchema     
+     **/
     public function getBaseSalary() {
         return $this->baseSalary;
     }
@@ -70,7 +71,8 @@ class JobPostingSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getBenefits() {
         return $this->benefits;
     }
@@ -86,7 +88,8 @@ class JobPostingSchema extends IntangibleSchema
     }
 
     /**
-     * @return DateSchema     **/
+     * @return DateSchema     
+     **/
     public function getDatePosted() {
         return $this->datePosted;
     }
@@ -102,7 +105,8 @@ class JobPostingSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getEducationRequirements() {
         return $this->educationRequirements;
     }
@@ -118,7 +122,8 @@ class JobPostingSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getEmploymentType() {
         return $this->employmentType;
     }
@@ -134,7 +139,8 @@ class JobPostingSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getExperienceRequirements() {
         return $this->experienceRequirements;
     }
@@ -150,7 +156,8 @@ class JobPostingSchema extends IntangibleSchema
     }
 
     /**
-     * @return OrganizationSchema     **/
+     * @return OrganizationSchema     
+     **/
     public function getHiringOrganization() {
         return $this->hiringOrganization;
     }
@@ -166,7 +173,8 @@ class JobPostingSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getIncentiveCompensation() {
         return $this->incentiveCompensation;
     }
@@ -182,7 +190,8 @@ class JobPostingSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getIncentives() {
         return $this->incentives;
     }
@@ -198,7 +207,8 @@ class JobPostingSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getIndustry() {
         return $this->industry;
     }
@@ -214,7 +224,8 @@ class JobPostingSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getJobBenefits() {
         return $this->jobBenefits;
     }
@@ -230,7 +241,8 @@ class JobPostingSchema extends IntangibleSchema
     }
 
     /**
-     * @return PlaceSchema     **/
+     * @return PlaceSchema     
+     **/
     public function getJobLocation() {
         return $this->jobLocation;
     }
@@ -246,7 +258,8 @@ class JobPostingSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getOccupationalCategory() {
         return $this->occupationalCategory;
     }
@@ -262,7 +275,8 @@ class JobPostingSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getQualifications() {
         return $this->qualifications;
     }
@@ -278,7 +292,8 @@ class JobPostingSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getResponsibilities() {
         return $this->responsibilities;
     }
@@ -294,7 +309,8 @@ class JobPostingSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getSalaryCurrency() {
         return $this->salaryCurrency;
     }
@@ -310,7 +326,8 @@ class JobPostingSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getSkills() {
         return $this->skills;
     }
@@ -326,7 +343,8 @@ class JobPostingSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getSpecialCommitments() {
         return $this->specialCommitments;
     }
@@ -342,7 +360,8 @@ class JobPostingSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getTitle() {
         return $this->title;
     }
@@ -358,7 +377,8 @@ class JobPostingSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getWorkHours() {
         return $this->workHours;
     }

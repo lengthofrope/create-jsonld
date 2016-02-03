@@ -54,7 +54,8 @@ class MedicalTherapySchema extends MedicalEntitySchema
     }
 
     /**
-     * @return MedicalEntitySchema     **/
+     * @return MedicalEntitySchema     
+     **/
     public function getAdverseOutcome() {
         return $this->adverseOutcome;
     }
@@ -70,7 +71,8 @@ class MedicalTherapySchema extends MedicalEntitySchema
     }
 
     /**
-     * @return MedicalContraindicationSchema     **/
+     * @return MedicalContraindicationSchema     
+     **/
     public function getContraindication() {
         return $this->contraindication;
     }
@@ -86,7 +88,8 @@ class MedicalTherapySchema extends MedicalEntitySchema
     }
 
     /**
-     * @return MedicalTherapySchema     **/
+     * @return MedicalTherapySchema     
+     **/
     public function getDuplicateTherapy() {
         return $this->duplicateTherapy;
     }
@@ -102,7 +105,8 @@ class MedicalTherapySchema extends MedicalEntitySchema
     }
 
     /**
-     * @return MedicalIndicationSchema     **/
+     * @return MedicalIndicationSchema     
+     **/
     public function getIndication() {
         return $this->indication;
     }
@@ -118,7 +122,8 @@ class MedicalTherapySchema extends MedicalEntitySchema
     }
 
     /**
-     * @return MedicalEntitySchema     **/
+     * @return MedicalEntitySchema     
+     **/
     public function getSeriousAdverseOutcome() {
         return $this->seriousAdverseOutcome;
     }

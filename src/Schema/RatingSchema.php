@@ -54,7 +54,8 @@ class RatingSchema extends IntangibleSchema
     }
 
     /**
-     * @return NumberSchema|TextSchema     **/
+     * @return NumberSchema|TextSchema     
+     **/
     public function getBestRating() {
         return $this->bestRating;
     }
@@ -70,7 +71,8 @@ class RatingSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getRatingValue() {
         return $this->ratingValue;
     }
@@ -86,7 +88,8 @@ class RatingSchema extends IntangibleSchema
     }
 
     /**
-     * @return NumberSchema|TextSchema     **/
+     * @return NumberSchema|TextSchema     
+     **/
     public function getWorstRating() {
         return $this->worstRating;
     }

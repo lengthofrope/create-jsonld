@@ -54,7 +54,8 @@ class CivicStructureSchema extends PlaceSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getOpeningHours() {
         return $this->openingHours;
     }

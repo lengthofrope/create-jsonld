@@ -54,7 +54,8 @@ class EngineSpecificationSchema extends StructuredValueSchema
     }
 
     /**
-     * @return TextSchema|QualitativeValueSchema|URLSchema     **/
+     * @return TextSchema|QualitativeValueSchema|URLSchema     
+     **/
     public function getFuelType() {
         return $this->fuelType;
     }

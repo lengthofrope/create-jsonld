@@ -54,7 +54,8 @@ class MovieTheaterSchema extends \LengthOfRope\JSONLD\Elements\ElementGroup
     }
 
     /**
-     * @return NumberSchema     **/
+     * @return NumberSchema     
+     **/
     public function getScreenCount() {
         return $this->screenCount;
     }

@@ -54,7 +54,8 @@ class SportsTeamSchema extends SportsOrganizationSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getAthlete() {
         return $this->athlete;
     }
@@ -70,7 +71,8 @@ class SportsTeamSchema extends SportsOrganizationSchema
     }
 
     /**
-     * @return PersonSchema     **/
+     * @return PersonSchema     
+     **/
     public function getCoach() {
         return $this->coach;
     }

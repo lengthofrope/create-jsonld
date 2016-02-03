@@ -54,7 +54,8 @@ class CorporationSchema extends OrganizationSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getTickerSymbol() {
         return $this->tickerSymbol;
     }

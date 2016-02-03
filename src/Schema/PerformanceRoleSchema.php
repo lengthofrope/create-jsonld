@@ -54,7 +54,8 @@ class PerformanceRoleSchema extends RoleSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getCharacterName() {
         return $this->characterName;
     }

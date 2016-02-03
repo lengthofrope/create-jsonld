@@ -54,7 +54,8 @@ class NutritionInformationSchema extends StructuredValueSchema
     }
 
     /**
-     * @return EnergySchema     **/
+     * @return EnergySchema     
+     **/
     public function getCalories() {
         return $this->calories;
     }
@@ -70,7 +71,8 @@ class NutritionInformationSchema extends StructuredValueSchema
     }
 
     /**
-     * @return MassSchema     **/
+     * @return MassSchema     
+     **/
     public function getCarbohydrateContent() {
         return $this->carbohydrateContent;
     }
@@ -86,7 +88,8 @@ class NutritionInformationSchema extends StructuredValueSchema
     }
 
     /**
-     * @return MassSchema     **/
+     * @return MassSchema     
+     **/
     public function getCholesterolContent() {
         return $this->cholesterolContent;
     }
@@ -102,7 +105,8 @@ class NutritionInformationSchema extends StructuredValueSchema
     }
 
     /**
-     * @return MassSchema     **/
+     * @return MassSchema     
+     **/
     public function getFatContent() {
         return $this->fatContent;
     }
@@ -118,7 +122,8 @@ class NutritionInformationSchema extends StructuredValueSchema
     }
 
     /**
-     * @return MassSchema     **/
+     * @return MassSchema     
+     **/
     public function getFiberContent() {
         return $this->fiberContent;
     }
@@ -134,7 +139,8 @@ class NutritionInformationSchema extends StructuredValueSchema
     }
 
     /**
-     * @return MassSchema     **/
+     * @return MassSchema     
+     **/
     public function getProteinContent() {
         return $this->proteinContent;
     }
@@ -150,7 +156,8 @@ class NutritionInformationSchema extends StructuredValueSchema
     }
 
     /**
-     * @return MassSchema     **/
+     * @return MassSchema     
+     **/
     public function getSaturatedFatContent() {
         return $this->saturatedFatContent;
     }
@@ -166,7 +173,8 @@ class NutritionInformationSchema extends StructuredValueSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getServingSize() {
         return $this->servingSize;
     }
@@ -182,7 +190,8 @@ class NutritionInformationSchema extends StructuredValueSchema
     }
 
     /**
-     * @return MassSchema     **/
+     * @return MassSchema     
+     **/
     public function getSodiumContent() {
         return $this->sodiumContent;
     }
@@ -198,7 +207,8 @@ class NutritionInformationSchema extends StructuredValueSchema
     }
 
     /**
-     * @return MassSchema     **/
+     * @return MassSchema     
+     **/
     public function getSugarContent() {
         return $this->sugarContent;
     }
@@ -214,7 +224,8 @@ class NutritionInformationSchema extends StructuredValueSchema
     }
 
     /**
-     * @return MassSchema     **/
+     * @return MassSchema     
+     **/
     public function getTransFatContent() {
         return $this->transFatContent;
     }
@@ -230,7 +241,8 @@ class NutritionInformationSchema extends StructuredValueSchema
     }
 
     /**
-     * @return MassSchema     **/
+     * @return MassSchema     
+     **/
     public function getUnsaturatedFatContent() {
         return $this->unsaturatedFatContent;
     }

@@ -54,7 +54,8 @@ class PropertySchema extends IntangibleSchema
     }
 
     /**
-     * @return ClassSchema     **/
+     * @return ClassSchema     
+     **/
     public function getDomainIncludes() {
         return $this->domainIncludes;
     }
@@ -70,7 +71,8 @@ class PropertySchema extends IntangibleSchema
     }
 
     /**
-     * @return PropertySchema     **/
+     * @return PropertySchema     
+     **/
     public function getInverseOf() {
         return $this->inverseOf;
     }
@@ -86,7 +88,8 @@ class PropertySchema extends IntangibleSchema
     }
 
     /**
-     * @return ClassSchema     **/
+     * @return ClassSchema     
+     **/
     public function getRangeIncludes() {
         return $this->rangeIncludes;
     }
@@ -102,7 +105,8 @@ class PropertySchema extends IntangibleSchema
     }
 
     /**
-     * @return PropertySchema|ClassSchema|EnumerationSchema     **/
+     * @return PropertySchema|ClassSchema|EnumerationSchema     
+     **/
     public function getSupersededBy() {
         return $this->supersededBy;
     }

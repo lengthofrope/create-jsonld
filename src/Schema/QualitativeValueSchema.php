@@ -57,7 +57,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return PropertyValueSchema     **/
+     * @return PropertyValueSchema     
+     **/
     public function getAdditionalProperty() {
         return $this->additionalProperty;
     }
@@ -73,7 +74,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return QualitativeValueSchema     **/
+     * @return QualitativeValueSchema     
+     **/
     public function getEqual() {
         return $this->equal;
     }
@@ -89,7 +91,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return QualitativeValueSchema     **/
+     * @return QualitativeValueSchema     
+     **/
     public function getGreater() {
         return $this->greater;
     }
@@ -105,7 +108,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return QualitativeValueSchema     **/
+     * @return QualitativeValueSchema     
+     **/
     public function getGreaterOrEqual() {
         return $this->greaterOrEqual;
     }
@@ -121,7 +125,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return QualitativeValueSchema     **/
+     * @return QualitativeValueSchema     
+     **/
     public function getLesser() {
         return $this->lesser;
     }
@@ -137,7 +142,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return QualitativeValueSchema     **/
+     * @return QualitativeValueSchema     
+     **/
     public function getLesserOrEqual() {
         return $this->lesserOrEqual;
     }
@@ -153,7 +159,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return QualitativeValueSchema     **/
+     * @return QualitativeValueSchema     
+     **/
     public function getNonEqual() {
         return $this->nonEqual;
     }
@@ -169,7 +176,8 @@ Note: Publishers should be aware that applications designed to use specific sche
     }
 
     /**
-     * @return EnumerationSchema|StructuredValueSchema|PropertyValueSchema|QualitativeValueSchema|QuantitativeValueSchema     **/
+     * @return EnumerationSchema|StructuredValueSchema|PropertyValueSchema|QualitativeValueSchema|QuantitativeValueSchema     
+     **/
     public function getValueReference() {
         return $this->valueReference;
     }

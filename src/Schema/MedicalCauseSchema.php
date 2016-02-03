@@ -54,7 +54,8 @@ class MedicalCauseSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return MedicalEntitySchema     **/
+     * @return MedicalEntitySchema     
+     **/
     public function getCauseOf() {
         return $this->causeOf;
     }

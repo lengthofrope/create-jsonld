@@ -54,7 +54,8 @@ class MobileApplicationSchema extends SoftwareApplicationSchema
     }
 
     /**
-     * @return TextSchema     **/
+     * @return TextSchema     
+     **/
     public function getCarrierRequirements() {
         return $this->carrierRequirements;
     }

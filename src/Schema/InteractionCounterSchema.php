@@ -54,7 +54,8 @@ class InteractionCounterSchema extends StructuredValueSchema
     }
 
     /**
-     * @return SoftwareApplicationSchema|WebSiteSchema     **/
+     * @return SoftwareApplicationSchema|WebSiteSchema     
+     **/
     public function getInteractionService() {
         return $this->interactionService;
     }
@@ -70,7 +71,8 @@ class InteractionCounterSchema extends StructuredValueSchema
     }
 
     /**
-     * @return ActionSchema     **/
+     * @return ActionSchema     
+     **/
     public function getInteractionType() {
         return $this->interactionType;
     }
@@ -86,7 +88,8 @@ class InteractionCounterSchema extends StructuredValueSchema
     }
 
     /**
-     * @return IntegerSchema     **/
+     * @return IntegerSchema     
+     **/
     public function getUserInteractionCount() {
         return $this->userInteractionCount;
     }
