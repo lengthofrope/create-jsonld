@@ -37,7 +37,7 @@ class Create extends Elements\ElementGroup
      * Create an instance of the class and return it, so everyone
      * can use chaining.
      *
-     * @return IElement
+     * @return Create
      */
     public static function factory()
     {
