@@ -78,4 +78,14 @@ class Create extends Elements\ElementGroup
         return '<script type="application/ld+json">' . $this->getJSONLD() . '</script>';
     }
 
+    /**
+     * Add a JSONLD Element
+     * 
+     * @param Interfaces\IElement $element
+     * @return Create
+     */
+    public function add(Interfaces\IElement $element)
+    {
+        return parent::add($element);
+    }
 }
