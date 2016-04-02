@@ -1,4 +1,4 @@
-# create-jsonld [![Build Status](https://travis-ci.org/lengthofrope/create-jsonld.svg?branch=master)](https://travis-ci.org/lengthofrope/create-jsonld)
+# create-jsonld [![Build Status](https://travis-ci.org/lengthofrope/create-jsonld.svg?branch=master)](https://travis-ci.org/lengthofrope/create-jsonld) [![Codacy Badge](https://api.codacy.com/project/badge/grade/aa351afeb5be468288cd1372ed7441d2)](https://www.codacy.com/app/bdekort/create-jsonld)
 
 Simple PHP library to create JSON-LD output. 
 
