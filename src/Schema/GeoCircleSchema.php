@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -28,32 +28,33 @@ namespace LengthOfRope\JSONLD\Schema;
 
 /**
  * A GeoCircle is a GeoShape representing a circular geographic area. As it is a GeoShape
-          it provides the simple textual property 'circle', but also allows the combination of postalCode alongside geoRadius.
-          The center of the circle can be indicated via the 'geoMidpoint' property, or more approximately using 'address', 'postalCode'.
-       
+ * *            it provides the simple textual property 'circle', but also allows the combination of postalCode alongside geoRadius.
+ * *            The center of the circle can be indicated via the 'geoMidpoint' property, or more approximately using 'address', 'postalCode'.
+ *        
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class GeoCircleSchema extends GeoShapeSchema
 {
-    public static function factory()
+    public static function factory(): GeoCircleSchema
     {
-        return new GeoCircleSchema('http://schema.org/', 'GeoCircle');
+        return new GeoCircleSchema('https://schema.org/', 'GeoCircle');
     }
 
     /**
-     * Indicates the GeoCoordinates at the centre of a GeoShape e.g. GeoCircle.
+     * Indicates the GeoCoordinates at the centre of a GeoShape, e.g. GeoCircle.
      *
-     * @param $geoMidpoint GeoCoordinatesSchema
+     * @param $geoMidpoint 
+     * @return static
      **/
-    public function setGeoMidpoint($geoMidpoint) {
+    public function setGeoMidpoint($geoMidpoint): static {
         $this->properties['geoMidpoint'] = $geoMidpoint;
 
         return $this;
     }
 
     /**
-     * @return GeoCoordinatesSchema
+     * @return 
      **/
     public function getGeoMidpoint() {
         return $this->properties['geoMidpoint'];
@@ -62,16 +63,17 @@ class GeoCircleSchema extends GeoShapeSchema
     /**
      * Indicates the approximate radius of a GeoCircle (metres unless indicated otherwise via Distance notation).
      *
-     * @param $geoRadius TextSchema|NumberSchema|DistanceSchema
+     * @param $geoRadius ||
+     * @return static
      **/
-    public function setGeoRadius($geoRadius) {
+    public function setGeoRadius($geoRadius): static {
         $this->properties['geoRadius'] = $geoRadius;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|NumberSchema|DistanceSchema
+     * @return ||
      **/
     public function getGeoRadius() {
         return $this->properties['geoRadius'];

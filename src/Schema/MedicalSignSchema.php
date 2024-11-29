@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,45 +33,47 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MedicalSignSchema extends MedicalSignOrSymptomSchema
 {
-    public static function factory()
+    public static function factory(): MedicalSignSchema
     {
-        return new MedicalSignSchema('http://schema.org/', 'MedicalSign');
-    }
-
-    /**
-     * A physical examination that can identify this sign.
-     *
-     * @param $identifyingExam PhysicalExamSchema
-     **/
-    public function setIdentifyingExam($identifyingExam) {
-        $this->properties['identifyingExam'] = $identifyingExam;
-
-        return $this;
-    }
-
-    /**
-     * @return PhysicalExamSchema
-     **/
-    public function getIdentifyingExam() {
-        return $this->properties['identifyingExam'];
+        return new MedicalSignSchema('https://schema.org/', 'MedicalSign');
     }
 
     /**
      * A diagnostic test that can identify this sign.
      *
-     * @param $identifyingTest MedicalTestSchema
+     * @param $identifyingTest 
+     * @return static
      **/
-    public function setIdentifyingTest($identifyingTest) {
+    public function setIdentifyingTest($identifyingTest): static {
         $this->properties['identifyingTest'] = $identifyingTest;
 
         return $this;
     }
 
     /**
-     * @return MedicalTestSchema
+     * @return 
      **/
     public function getIdentifyingTest() {
         return $this->properties['identifyingTest'];
+    }
+
+    /**
+     * A physical examination that can identify this sign.
+     *
+     * @param $identifyingExam 
+     * @return static
+     **/
+    public function setIdentifyingExam($identifyingExam): static {
+        $this->properties['identifyingExam'] = $identifyingExam;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getIdentifyingExam() {
+        return $this->properties['identifyingExam'];
     }
 
 

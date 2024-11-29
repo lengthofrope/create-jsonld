@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,15 +27,15 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Enumerations related to health and the practice of medicine.
+ * Enumerations related to health and the practice of medicine: A concept that is used to attribute a quality to another concept, as a qualifier, a collection of items or a listing of all of the elements of a set in medicine practice.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MedicalEnumerationSchema extends \LengthOfRope\JSONLD\Elements\Element
+class MedicalEnumerationSchema extends EnumerationSchema
 {
-    public static function factory()
+    public static function factory(): MedicalEnumerationSchema
     {
-        return new MedicalEnumerationSchema('http://schema.org/', 'MedicalEnumeration');
+        return new MedicalEnumerationSchema('https://schema.org/', 'MedicalEnumeration');
     }
 
 

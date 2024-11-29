@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,78 +33,44 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MusicReleaseSchema extends MusicPlaylistSchema
 {
-    public static function factory()
+    public static function factory(): MusicReleaseSchema
     {
-        return new MusicReleaseSchema('http://schema.org/', 'MusicRelease');
+        return new MusicReleaseSchema('https://schema.org/', 'MusicRelease');
     }
 
     /**
-     * The catalog number for the release.
+     * The album this is a release of.
      *
-     * @param $catalogNumber TextSchema
+     * @param $releaseOf 
+     * @return static
      **/
-    public function setCatalogNumber($catalogNumber) {
-        $this->properties['catalogNumber'] = $catalogNumber;
+    public function setReleaseOf($releaseOf): static {
+        $this->properties['releaseOf'] = $releaseOf;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
-    public function getCatalogNumber() {
-        return $this->properties['catalogNumber'];
+    public function getReleaseOf() {
+        return $this->properties['releaseOf'];
     }
 
     /**
-     * The group the release is credited to if different than the byArtist. For example, Red and Blue is credited to "Stefani Germanotta Band", but by Lady Gaga.
+     * Format of this release (the type of recording media used, i.e. compact disc, digital media, LP, etc.).
      *
-     * @param $creditedTo PersonSchema|OrganizationSchema
+     * @param $musicReleaseFormat 
+     * @return static
      **/
-    public function setCreditedTo($creditedTo) {
-        $this->properties['creditedTo'] = $creditedTo;
-
-        return $this;
-    }
-
-    /**
-     * @return PersonSchema|OrganizationSchema
-     **/
-    public function getCreditedTo() {
-        return $this->properties['creditedTo'];
-    }
-
-    /**
-     * The duration of the item (movie, audio recording, event, etc.) in <a href='http://en.wikipedia.org/wiki/ISO_8601'>ISO 8601 date format</a>.
-     *
-     * @param $duration DurationSchema
-     **/
-    public function setDuration($duration) {
-        $this->properties['duration'] = $duration;
-
-        return $this;
-    }
-
-    /**
-     * @return DurationSchema
-     **/
-    public function getDuration() {
-        return $this->properties['duration'];
-    }
-
-    /**
-     * Format of this release (the type of recording media used, ie. compact disc, digital media, LP, etc.).
-     *
-     * @param $musicReleaseFormat MusicReleaseFormatTypeSchema
-     **/
-    public function setMusicReleaseFormat($musicReleaseFormat) {
+    public function setMusicReleaseFormat($musicReleaseFormat): static {
         $this->properties['musicReleaseFormat'] = $musicReleaseFormat;
 
         return $this;
     }
 
     /**
-     * @return MusicReleaseFormatTypeSchema
+     * @return 
      **/
     public function getMusicReleaseFormat() {
         return $this->properties['musicReleaseFormat'];
@@ -113,37 +79,77 @@ class MusicReleaseSchema extends MusicPlaylistSchema
     /**
      * The label that issued the release.
      *
-     * @param $recordLabel OrganizationSchema
+     * @param $recordLabel 
+     * @return static
      **/
-    public function setRecordLabel($recordLabel) {
+    public function setRecordLabel($recordLabel): static {
         $this->properties['recordLabel'] = $recordLabel;
 
         return $this;
     }
 
     /**
-     * @return OrganizationSchema
+     * @return 
      **/
     public function getRecordLabel() {
         return $this->properties['recordLabel'];
     }
 
     /**
-     * The album this is a release of.
+     * The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
      *
-     * @param $releaseOf MusicAlbumSchema
+     * @param $duration 
+     * @return static
      **/
-    public function setReleaseOf($releaseOf) {
-        $this->properties['releaseOf'] = $releaseOf;
+    public function setDuration($duration): static {
+        $this->properties['duration'] = $duration;
 
         return $this;
     }
 
     /**
-     * @return MusicAlbumSchema
+     * @return 
      **/
-    public function getReleaseOf() {
-        return $this->properties['releaseOf'];
+    public function getDuration() {
+        return $this->properties['duration'];
+    }
+
+    /**
+     * The group the release is credited to if different than the byArtist. For example, Red and Blue is credited to "Stefani Germanotta Band", but by Lady Gaga.
+     *
+     * @param $creditedTo |
+     * @return static
+     **/
+    public function setCreditedTo($creditedTo): static {
+        $this->properties['creditedTo'] = $creditedTo;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getCreditedTo() {
+        return $this->properties['creditedTo'];
+    }
+
+    /**
+     * The catalog number for the release.
+     *
+     * @param $catalogNumber 
+     * @return static
+     **/
+    public function setCatalogNumber($catalogNumber): static {
+        $this->properties['catalogNumber'] = $catalogNumber;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getCatalogNumber() {
+        return $this->properties['catalogNumber'];
     }
 
 

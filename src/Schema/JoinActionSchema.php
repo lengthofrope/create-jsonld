@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,30 +27,31 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * An agent joins an event/group with participants/friends at a location.<p>Related actions:</p><ul><li><a href="http://schema.org/RegisterAction">RegisterAction</a>: Unlike RegisterAction, JoinAction refers to joining a group/team of people.</li><li><a href="http://schema.org/SubscribeAction">SubscribeAction</a>: Unlike SubscribeAction, JoinAction does not imply that you'll be receiving updates.</li><li><a href="http://schema.org/FollowAction">FollowAction</a>: Unlike FollowAction, JoinAction does not imply that you'll be polling for updates</li></ul>.
+ * An agent joins an event/group with participants/friends at a location.\n\nRelated actions:\n\n* [[RegisterAction]]: Unlike RegisterAction, JoinAction refers to joining a group/team of people.\n* [[SubscribeAction]]: Unlike SubscribeAction, JoinAction does not imply that you'll be receiving updates.\n* [[FollowAction]]: Unlike FollowAction, JoinAction does not imply that you'll be polling for updates.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class JoinActionSchema extends InteractActionSchema
 {
-    public static function factory()
+    public static function factory(): JoinActionSchema
     {
-        return new JoinActionSchema('http://schema.org/', 'JoinAction');
+        return new JoinActionSchema('https://schema.org/', 'JoinAction');
     }
 
     /**
      * Upcoming or past event associated with this place, organization, or action.
      *
-     * @param $event EventSchema
+     * @param $event 
+     * @return static
      **/
-    public function setEvent($event) {
+    public function setEvent($event): static {
         $this->properties['event'] = $event;
 
         return $this;
     }
 
     /**
-     * @return EventSchema
+     * @return 
      **/
     public function getEvent() {
         return $this->properties['event'];

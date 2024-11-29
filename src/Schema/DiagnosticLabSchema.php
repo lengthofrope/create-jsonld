@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,24 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DiagnosticLabSchema extends MedicalOrganizationSchema
 {
-    public static function factory()
+    public static function factory(): DiagnosticLabSchema
     {
-        return new DiagnosticLabSchema('http://schema.org/', 'DiagnosticLab');
+        return new DiagnosticLabSchema('https://schema.org/', 'DiagnosticLab');
     }
 
     /**
      * A diagnostic test or procedure offered by this lab.
      *
-     * @param $availableTest MedicalTestSchema
+     * @param $availableTest 
+     * @return static
      **/
-    public function setAvailableTest($availableTest) {
+    public function setAvailableTest($availableTest): static {
         $this->properties['availableTest'] = $availableTest;
 
         return $this;
     }
 
     /**
-     * @return MedicalTestSchema
+     * @return 
      **/
     public function getAvailableTest() {
         return $this->properties['availableTest'];

@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,66 +27,88 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A comment on an item - for example, a comment on a blog post. The comment's content is expressed via the "text" property, and its topic via "about", properties shared with all CreativeWorks.
+ * A comment on an item - for example, a comment on a blog post. The comment's content is expressed via the [[text]] property, and its topic via [[about]], properties shared with all CreativeWorks.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class CommentSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): CommentSchema
     {
-        return new CommentSchema('http://schema.org/', 'Comment');
+        return new CommentSchema('https://schema.org/', 'Comment');
     }
 
     /**
-     * The number of downvotes this question, answer or comment has received from the community.
+     * The parent of a question, answer or item in general. Typically used for Q/A discussion threads e.g. a chain of comments with the first comment being an [[Article]] or other [[CreativeWork]]. See also [[comment]] which points from something to a comment about it.
      *
-     * @param $downvoteCount IntegerSchema
+     * @param $parentItem |
+     * @return static
      **/
-    public function setDownvoteCount($downvoteCount) {
-        $this->properties['downvoteCount'] = $downvoteCount;
-
-        return $this;
-    }
-
-    /**
-     * @return IntegerSchema
-     **/
-    public function getDownvoteCount() {
-        return $this->properties['downvoteCount'];
-    }
-
-    /**
-     * The parent of a question, answer or item in general.
-     *
-     * @param $parentItem QuestionSchema
-     **/
-    public function setParentItem($parentItem) {
+    public function setParentItem($parentItem): static {
         $this->properties['parentItem'] = $parentItem;
 
         return $this;
     }
 
     /**
-     * @return QuestionSchema
+     * @return |
      **/
     public function getParentItem() {
         return $this->properties['parentItem'];
     }
 
     /**
+     * The number of downvotes this question, answer or comment has received from the community.
+     *
+     * @param $downvoteCount 
+     * @return static
+     **/
+    public function setDownvoteCount($downvoteCount): static {
+        $this->properties['downvoteCount'] = $downvoteCount;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getDownvoteCount() {
+        return $this->properties['downvoteCount'];
+    }
+
+    /**
+     * A CreativeWork such as an image, video, or audio clip shared as part of this posting.
+     *
+     * @param $sharedContent 
+     * @return static
+     **/
+    public function setSharedContent($sharedContent): static {
+        $this->properties['sharedContent'] = $sharedContent;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getSharedContent() {
+        return $this->properties['sharedContent'];
+    }
+
+    /**
      * The number of upvotes this question, answer or comment has received from the community.
      *
-     * @param $upvoteCount IntegerSchema
+     * @param $upvoteCount 
+     * @return static
      **/
-    public function setUpvoteCount($upvoteCount) {
+    public function setUpvoteCount($upvoteCount): static {
         $this->properties['upvoteCount'] = $upvoteCount;
 
         return $this;
     }
 
     /**
-     * @return IntegerSchema
+     * @return 
      **/
     public function getUpvoteCount() {
         return $this->properties['upvoteCount'];

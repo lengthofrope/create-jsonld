@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,24 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MedicalGuidelineRecommendationSchema extends MedicalGuidelineSchema
 {
-    public static function factory()
+    public static function factory(): MedicalGuidelineRecommendationSchema
     {
-        return new MedicalGuidelineRecommendationSchema('http://schema.org/', 'MedicalGuidelineRecommendation');
+        return new MedicalGuidelineRecommendationSchema('https://schema.org/', 'MedicalGuidelineRecommendation');
     }
 
     /**
      * Strength of the guideline's recommendation (e.g. 'class I').
      *
-     * @param $recommendationStrength TextSchema
+     * @param $recommendationStrength 
+     * @return static
      **/
-    public function setRecommendationStrength($recommendationStrength) {
+    public function setRecommendationStrength($recommendationStrength): static {
         $this->properties['recommendationStrength'] = $recommendationStrength;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getRecommendationStrength() {
         return $this->properties['recommendationStrength'];

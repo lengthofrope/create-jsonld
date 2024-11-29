@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,15 +27,15 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Any indication of the existence of a medical condition or disease that is apparent to the patient.
+ * Any complaint sensed and expressed by the patient (therefore defined as subjective)  like stomachache, lower-back pain, or fatigue.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MedicalSymptomSchema extends MedicalSignOrSymptomSchema
 {
-    public static function factory()
+    public static function factory(): MedicalSymptomSchema
     {
-        return new MedicalSymptomSchema('http://schema.org/', 'MedicalSymptom');
+        return new MedicalSymptomSchema('https://schema.org/', 'MedicalSymptom');
     }
 
 

@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,81 +33,85 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ListItemSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): ListItemSchema
     {
-        return new ListItemSchema('http://schema.org/', 'ListItem');
-    }
-
-    /**
-     * An entity represented by an entry in a list or data feed (e.g. an 'artist' in a list of 'artists')’.
-     *
-     * @param $item ThingSchema
-     **/
-    public function setItem($item) {
-        $this->properties['item'] = $item;
-
-        return $this;
-    }
-
-    /**
-     * @return ThingSchema
-     **/
-    public function getItem() {
-        return $this->properties['item'];
-    }
-
-    /**
-     * A link to the ListItem that follows the current one.
-     *
-     * @param $nextItem ListItemSchema
-     **/
-    public function setNextItem($nextItem) {
-        $this->properties['nextItem'] = $nextItem;
-
-        return $this;
-    }
-
-    /**
-     * @return ListItemSchema
-     **/
-    public function getNextItem() {
-        return $this->properties['nextItem'];
+        return new ListItemSchema('https://schema.org/', 'ListItem');
     }
 
     /**
      * The position of an item in a series or sequence of items.
      *
-     * @param $position TextSchema|IntegerSchema
+     * @param $position |
+     * @return static
      **/
-    public function setPosition($position) {
+    public function setPosition($position): static {
         $this->properties['position'] = $position;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|IntegerSchema
+     * @return |
      **/
     public function getPosition() {
         return $this->properties['position'];
     }
 
     /**
-     * A link to the ListItem that preceeds the current one.
+     * An entity represented by an entry in a list or data feed (e.g. an 'artist' in a list of 'artists').
      *
-     * @param $previousItem ListItemSchema
+     * @param $item 
+     * @return static
      **/
-    public function setPreviousItem($previousItem) {
+    public function setItem($item): static {
+        $this->properties['item'] = $item;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getItem() {
+        return $this->properties['item'];
+    }
+
+    /**
+     * A link to the ListItem that precedes the current one.
+     *
+     * @param $previousItem 
+     * @return static
+     **/
+    public function setPreviousItem($previousItem): static {
         $this->properties['previousItem'] = $previousItem;
 
         return $this;
     }
 
     /**
-     * @return ListItemSchema
+     * @return 
      **/
     public function getPreviousItem() {
         return $this->properties['previousItem'];
+    }
+
+    /**
+     * A link to the ListItem that follows the current one.
+     *
+     * @param $nextItem 
+     * @return static
+     **/
+    public function setNextItem($nextItem): static {
+        $this->properties['nextItem'] = $nextItem;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getNextItem() {
+        return $this->properties['nextItem'];
     }
 
 

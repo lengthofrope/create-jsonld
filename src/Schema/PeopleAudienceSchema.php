@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,135 +33,180 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PeopleAudienceSchema extends AudienceSchema
 {
-    public static function factory()
+    public static function factory(): PeopleAudienceSchema
     {
-        return new PeopleAudienceSchema('http://schema.org/', 'PeopleAudience');
-    }
-
-    /**
-     * Expectations for health conditions of target audience.
-     *
-     * @param $healthCondition MedicalConditionSchema
-     **/
-    public function setHealthCondition($healthCondition) {
-        $this->properties['healthCondition'] = $healthCondition;
-
-        return $this;
-    }
-
-    /**
-     * @return MedicalConditionSchema
-     **/
-    public function getHealthCondition() {
-        return $this->properties['healthCondition'];
-    }
-
-    /**
-     * Audiences defined by a person's gender.
-     *
-     * @param $requiredGender TextSchema
-     **/
-    public function setRequiredGender($requiredGender) {
-        $this->properties['requiredGender'] = $requiredGender;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getRequiredGender() {
-        return $this->properties['requiredGender'];
-    }
-
-    /**
-     * Audiences defined by a person's maximum age.
-     *
-     * @param $requiredMaxAge IntegerSchema
-     **/
-    public function setRequiredMaxAge($requiredMaxAge) {
-        $this->properties['requiredMaxAge'] = $requiredMaxAge;
-
-        return $this;
-    }
-
-    /**
-     * @return IntegerSchema
-     **/
-    public function getRequiredMaxAge() {
-        return $this->properties['requiredMaxAge'];
+        return new PeopleAudienceSchema('https://schema.org/', 'PeopleAudience');
     }
 
     /**
      * Audiences defined by a person's minimum age.
      *
-     * @param $requiredMinAge IntegerSchema
+     * @param $requiredMinAge 
+     * @return static
      **/
-    public function setRequiredMinAge($requiredMinAge) {
+    public function setRequiredMinAge($requiredMinAge): static {
         $this->properties['requiredMinAge'] = $requiredMinAge;
 
         return $this;
     }
 
     /**
-     * @return IntegerSchema
+     * @return 
      **/
     public function getRequiredMinAge() {
         return $this->properties['requiredMinAge'];
     }
 
     /**
-     * The gender of the person or audience.
+     * Audiences defined by a person's maximum age.
      *
-     * @param $suggestedGender TextSchema
+     * @param $requiredMaxAge 
+     * @return static
      **/
-    public function setSuggestedGender($suggestedGender) {
+    public function setRequiredMaxAge($requiredMaxAge): static {
+        $this->properties['requiredMaxAge'] = $requiredMaxAge;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getRequiredMaxAge() {
+        return $this->properties['requiredMaxAge'];
+    }
+
+    /**
+     * The age or age range for the intended audience or person, for example 3-12 months for infants, 1-5 years for toddlers.
+     *
+     * @param $suggestedAge 
+     * @return static
+     **/
+    public function setSuggestedAge($suggestedAge): static {
+        $this->properties['suggestedAge'] = $suggestedAge;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getSuggestedAge() {
+        return $this->properties['suggestedAge'];
+    }
+
+    /**
+     * The suggested gender of the intended person or audience, for example "male", "female", or "unisex".
+     *
+     * @param $suggestedGender |
+     * @return static
+     **/
+    public function setSuggestedGender($suggestedGender): static {
         $this->properties['suggestedGender'] = $suggestedGender;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return |
      **/
     public function getSuggestedGender() {
         return $this->properties['suggestedGender'];
     }
 
     /**
-     * Maximal age recommended for viewing content.
+     * Specifying the health condition(s) of a patient, medical study, or other target audience.
      *
-     * @param $suggestedMaxAge NumberSchema
+     * @param $healthCondition 
+     * @return static
      **/
-    public function setSuggestedMaxAge($suggestedMaxAge) {
-        $this->properties['suggestedMaxAge'] = $suggestedMaxAge;
+    public function setHealthCondition($healthCondition): static {
+        $this->properties['healthCondition'] = $healthCondition;
 
         return $this;
     }
 
     /**
-     * @return NumberSchema
+     * @return 
      **/
-    public function getSuggestedMaxAge() {
-        return $this->properties['suggestedMaxAge'];
+    public function getHealthCondition() {
+        return $this->properties['healthCondition'];
     }
 
     /**
-     * Minimal age recommended for viewing content.
+     * A suggested range of body measurements for the intended audience or person, for example inseam between 32 and 34 inches or height between 170 and 190 cm. Typically found on a size chart for wearable products.
      *
-     * @param $suggestedMinAge NumberSchema
+     * @param $suggestedMeasurement 
+     * @return static
      **/
-    public function setSuggestedMinAge($suggestedMinAge) {
+    public function setSuggestedMeasurement($suggestedMeasurement): static {
+        $this->properties['suggestedMeasurement'] = $suggestedMeasurement;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getSuggestedMeasurement() {
+        return $this->properties['suggestedMeasurement'];
+    }
+
+    /**
+     * Audiences defined by a person's gender.
+     *
+     * @param $requiredGender 
+     * @return static
+     **/
+    public function setRequiredGender($requiredGender): static {
+        $this->properties['requiredGender'] = $requiredGender;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getRequiredGender() {
+        return $this->properties['requiredGender'];
+    }
+
+    /**
+     * Minimum recommended age in years for the audience or user.
+     *
+     * @param $suggestedMinAge 
+     * @return static
+     **/
+    public function setSuggestedMinAge($suggestedMinAge): static {
         $this->properties['suggestedMinAge'] = $suggestedMinAge;
 
         return $this;
     }
 
     /**
-     * @return NumberSchema
+     * @return 
      **/
     public function getSuggestedMinAge() {
         return $this->properties['suggestedMinAge'];
+    }
+
+    /**
+     * Maximum recommended age in years for the audience or user.
+     *
+     * @param $suggestedMaxAge 
+     * @return static
+     **/
+    public function setSuggestedMaxAge($suggestedMaxAge): static {
+        $this->properties['suggestedMaxAge'] = $suggestedMaxAge;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getSuggestedMaxAge() {
+        return $this->properties['suggestedMaxAge'];
     }
 
 

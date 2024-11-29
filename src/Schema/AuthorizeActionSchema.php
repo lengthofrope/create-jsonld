@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,24 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class AuthorizeActionSchema extends AllocateActionSchema
 {
-    public static function factory()
+    public static function factory(): AuthorizeActionSchema
     {
-        return new AuthorizeActionSchema('http://schema.org/', 'AuthorizeAction');
+        return new AuthorizeActionSchema('https://schema.org/', 'AuthorizeAction');
     }
 
     /**
      * A sub property of participant. The participant who is at the receiving end of the action.
      *
-     * @param $recipient AudienceSchema|OrganizationSchema|PersonSchema
+     * @param $recipient |||
+     * @return static
      **/
-    public function setRecipient($recipient) {
+    public function setRecipient($recipient): static {
         $this->properties['recipient'] = $recipient;
 
         return $this;
     }
 
     /**
-     * @return AudienceSchema|OrganizationSchema|PersonSchema
+     * @return |||
      **/
     public function getRecipient() {
         return $this->properties['recipient'];

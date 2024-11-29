@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,24 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class UpdateActionSchema extends ActionSchema
 {
-    public static function factory()
+    public static function factory(): UpdateActionSchema
     {
-        return new UpdateActionSchema('http://schema.org/', 'UpdateAction');
+        return new UpdateActionSchema('https://schema.org/', 'UpdateAction');
     }
 
     /**
      * A sub property of object. The collection target of the action.
      *
-     * @param $collection ThingSchema
+     * @param $collection 
+     * @return static
      **/
-    public function setCollection($collection) {
+    public function setCollection($collection): static {
         $this->properties['collection'] = $collection;
 
         return $this;
     }
 
     /**
-     * @return ThingSchema
+     * @return 
      **/
     public function getCollection() {
         return $this->properties['collection'];
@@ -59,16 +60,17 @@ class UpdateActionSchema extends ActionSchema
     /**
      * A sub property of object. The collection target of the action.
      *
-     * @param $targetCollection ThingSchema
+     * @param $targetCollection 
+     * @return static
      **/
-    public function setTargetCollection($targetCollection) {
+    public function setTargetCollection($targetCollection): static {
         $this->properties['targetCollection'] = $targetCollection;
 
         return $this;
     }
 
     /**
-     * @return ThingSchema
+     * @return 
      **/
     public function getTargetCollection() {
         return $this->properties['targetCollection'];

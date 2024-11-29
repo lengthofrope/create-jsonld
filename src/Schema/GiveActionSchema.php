@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,30 +27,31 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of transferring ownership of an object to a destination. Reciprocal of TakeAction.<p>Related actions:</p><ul><li><a href="http://schema.org/TakeAction">TakeAction</a>: Reciprocal of GiveAction.</li><li><a href="http://schema.org/SendAction">SendAction</a>: Unlike SendAction, GiveAction implies that ownership is being transferred (e.g. I may send my laptop to you, but that doesn't mean I'm giving it to you)</li></ul>.
+ * The act of transferring ownership of an object to a destination. Reciprocal of TakeAction.\n\nRelated actions:\n\n* [[TakeAction]]: Reciprocal of GiveAction.\n* [[SendAction]]: Unlike SendAction, GiveAction implies that ownership is being transferred (e.g. I may send my laptop to you, but that doesn't mean I'm giving it to you).
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class GiveActionSchema extends TransferActionSchema
 {
-    public static function factory()
+    public static function factory(): GiveActionSchema
     {
-        return new GiveActionSchema('http://schema.org/', 'GiveAction');
+        return new GiveActionSchema('https://schema.org/', 'GiveAction');
     }
 
     /**
      * A sub property of participant. The participant who is at the receiving end of the action.
      *
-     * @param $recipient AudienceSchema|OrganizationSchema|PersonSchema
+     * @param $recipient |||
+     * @return static
      **/
-    public function setRecipient($recipient) {
+    public function setRecipient($recipient): static {
         $this->properties['recipient'] = $recipient;
 
         return $this;
     }
 
     /**
-     * @return AudienceSchema|OrganizationSchema|PersonSchema
+     * @return |||
      **/
     public function getRecipient() {
         return $this->properties['recipient'];

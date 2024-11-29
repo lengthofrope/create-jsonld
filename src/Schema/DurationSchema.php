@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,15 +27,15 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Quantity: Duration (use  <a href='http://en.wikipedia.org/wiki/ISO_8601'>ISO 8601 duration format</a>).
+ * Quantity: Duration (use [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601)).
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class DurationSchema extends QuantitySchema
 {
-    public static function factory()
+    public static function factory(): DurationSchema
     {
-        return new DurationSchema('http://schema.org/', 'Duration');
+        return new DurationSchema('https://schema.org/', 'Duration');
     }
 
 

@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,30 +27,31 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * An agent tracks an object for updates.<p>Related actions:</p><ul><li><a href="http://schema.org/FollowAction">FollowAction</a>: Unlike FollowAction, TrackAction refers to the interest on the location of innanimates objects.</li><li><a href="http://schema.org/SubscribeAction">SubscribeAction</a>: Unlike SubscribeAction, TrackAction refers to  the interest on the location of innanimate objects</li></ul>.
+ * An agent tracks an object for updates.\n\nRelated actions:\n\n* [[FollowAction]]: Unlike FollowAction, TrackAction refers to the interest on the location of innanimates objects.\n* [[SubscribeAction]]: Unlike SubscribeAction, TrackAction refers to  the interest on the location of innanimate objects.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class TrackActionSchema extends FindActionSchema
 {
-    public static function factory()
+    public static function factory(): TrackActionSchema
     {
-        return new TrackActionSchema('http://schema.org/', 'TrackAction');
+        return new TrackActionSchema('https://schema.org/', 'TrackAction');
     }
 
     /**
      * A sub property of instrument. The method of delivery.
      *
-     * @param $deliveryMethod DeliveryMethodSchema
+     * @param $deliveryMethod 
+     * @return static
      **/
-    public function setDeliveryMethod($deliveryMethod) {
+    public function setDeliveryMethod($deliveryMethod): static {
         $this->properties['deliveryMethod'] = $deliveryMethod;
 
         return $this;
     }
 
     /**
-     * @return DeliveryMethodSchema
+     * @return 
      **/
     public function getDeliveryMethod() {
         return $this->properties['deliveryMethod'];

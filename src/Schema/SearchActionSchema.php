@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,30 +27,31 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of searching for an object.<p>Related actions:</p><ul><li><a href="http://schema.org/FindAction">FindAction</a>: SearchAction generally leads to a FindAction, but not necessarily</li></ul>.
+ * The act of searching for an object.\n\nRelated actions:\n\n* [[FindAction]]: SearchAction generally leads to a FindAction, but not necessarily.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class SearchActionSchema extends ActionSchema
 {
-    public static function factory()
+    public static function factory(): SearchActionSchema
     {
-        return new SearchActionSchema('http://schema.org/', 'SearchAction');
+        return new SearchActionSchema('https://schema.org/', 'SearchAction');
     }
 
     /**
      * A sub property of instrument. The query used on this action.
      *
-     * @param $query TextSchema
+     * @param $query 
+     * @return static
      **/
-    public function setQuery($query) {
+    public function setQuery($query): static {
         $this->properties['query'] = $query;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getQuery() {
         return $this->properties['query'];

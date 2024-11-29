@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,24 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ReviewActionSchema extends AssessActionSchema
 {
-    public static function factory()
+    public static function factory(): ReviewActionSchema
     {
-        return new ReviewActionSchema('http://schema.org/', 'ReviewAction');
+        return new ReviewActionSchema('https://schema.org/', 'ReviewAction');
     }
 
     /**
      * A sub property of result. The review that resulted in the performing of the action.
      *
-     * @param $resultReview ReviewSchema
+     * @param $resultReview 
+     * @return static
      **/
-    public function setResultReview($resultReview) {
+    public function setResultReview($resultReview): static {
         $this->properties['resultReview'] = $resultReview;
 
         return $this;
     }
 
     /**
-     * @return ReviewSchema
+     * @return 
      **/
     public function getResultReview() {
         return $this->properties['resultReview'];

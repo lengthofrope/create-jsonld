@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,9 +33,9 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class NGOSchema extends OrganizationSchema
 {
-    public static function factory()
+    public static function factory(): NGOSchema
     {
-        return new NGOSchema('http://schema.org/', 'NGO');
+        return new NGOSchema('https://schema.org/', 'NGO');
     }
 
 

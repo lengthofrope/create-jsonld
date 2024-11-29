@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,24 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class WinActionSchema extends AchieveActionSchema
 {
-    public static function factory()
+    public static function factory(): WinActionSchema
     {
-        return new WinActionSchema('http://schema.org/', 'WinAction');
+        return new WinActionSchema('https://schema.org/', 'WinAction');
     }
 
     /**
      * A sub property of participant. The loser of the action.
      *
-     * @param $loser PersonSchema
+     * @param $loser 
+     * @return static
      **/
-    public function setLoser($loser) {
+    public function setLoser($loser): static {
         $this->properties['loser'] = $loser;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema
+     * @return 
      **/
     public function getLoser() {
         return $this->properties['loser'];

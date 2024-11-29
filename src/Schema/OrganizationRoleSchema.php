@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,24 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class OrganizationRoleSchema extends RoleSchema
 {
-    public static function factory()
+    public static function factory(): OrganizationRoleSchema
     {
-        return new OrganizationRoleSchema('http://schema.org/', 'OrganizationRole');
+        return new OrganizationRoleSchema('https://schema.org/', 'OrganizationRole');
     }
 
     /**
      * A number associated with a role in an organization, for example, the number on an athlete's jersey.
      *
-     * @param $numberedPosition NumberSchema
+     * @param $numberedPosition 
+     * @return static
      **/
-    public function setNumberedPosition($numberedPosition) {
+    public function setNumberedPosition($numberedPosition): static {
         $this->properties['numberedPosition'] = $numberedPosition;
 
         return $this;
     }
 
     /**
-     * @return NumberSchema
+     * @return 
      **/
     public function getNumberedPosition() {
         return $this->properties['numberedPosition'];

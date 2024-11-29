@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,24 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MapSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): MapSchema
     {
-        return new MapSchema('http://schema.org/', 'Map');
+        return new MapSchema('https://schema.org/', 'Map');
     }
 
     /**
      * Indicates the kind of Map, from the MapCategoryType Enumeration.
      *
-     * @param $mapType MapCategoryTypeSchema
+     * @param $mapType 
+     * @return static
      **/
-    public function setMapType($mapType) {
+    public function setMapType($mapType): static {
         $this->properties['mapType'] = $mapType;
 
         return $this;
     }
 
     /**
-     * @return MapCategoryTypeSchema
+     * @return 
      **/
     public function getMapType() {
         return $this->properties['mapType'];

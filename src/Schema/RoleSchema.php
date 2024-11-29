@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,50 +27,31 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Represents additional information about a relationship or property. For example a Role can be used to say that a 'member' role linking some SportsTeam to a player occurred during a particular time period. Or that a Person's 'actor' role in a Movie was for some particular characterName. Such properties can be attached to a Role entity, which is then associated with the main entities using ordinary properties like 'member' or 'actor'.
-
-      <br/><br/>See also <a href="http://blog.schema.org/2014/06/introducing-role.html">blog post</a>.
+ * Represents additional information about a relationship or property. For example a Role can be used to say that a 'member' role linking some SportsTeam to a player occurred during a particular time period. Or that a Person's 'actor' role in a Movie was for some particular characterName. Such properties can be attached to a Role entity, which is then associated with the main entities using ordinary properties like 'member' or 'actor'.\n\nSee also [blog post](http://blog.schema.org/2014/06/introducing-role.html).
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class RoleSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): RoleSchema
     {
-        return new RoleSchema('http://schema.org/', 'Role');
-    }
-
-    /**
-     * The end date and time of the item (in <a href='http://en.wikipedia.org/wiki/ISO_8601'>ISO 8601 date format</a>).
-     *
-     * @param $endDate DateSchema
-     **/
-    public function setEndDate($endDate) {
-        $this->properties['endDate'] = $endDate;
-
-        return $this;
-    }
-
-    /**
-     * @return DateSchema
-     **/
-    public function getEndDate() {
-        return $this->properties['endDate'];
+        return new RoleSchema('https://schema.org/', 'Role');
     }
 
     /**
      * A position played, performed or filled by a person or organization, as part of an organization. For example, an athlete in a SportsTeam might play in the position named 'Quarterback'.
      *
-     * @param $namedPosition TextSchema|URLSchema
+     * @param $namedPosition |
+     * @return static
      **/
-    public function setNamedPosition($namedPosition) {
+    public function setNamedPosition($namedPosition): static {
         $this->properties['namedPosition'] = $namedPosition;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|URLSchema
+     * @return |
      **/
     public function getNamedPosition() {
         return $this->properties['namedPosition'];
@@ -79,37 +60,58 @@ class RoleSchema extends IntangibleSchema
     /**
      * A role played, performed or filled by a person or organization. For example, the team of creators for a comic book might fill the roles named 'inker', 'penciller', and 'letterer'; or an athlete in a SportsTeam might play in the position named 'Quarterback'.
      *
-     * @param $roleName TextSchema|URLSchema
+     * @param $roleName |
+     * @return static
      **/
-    public function setRoleName($roleName) {
+    public function setRoleName($roleName): static {
         $this->properties['roleName'] = $roleName;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|URLSchema
+     * @return |
      **/
     public function getRoleName() {
         return $this->properties['roleName'];
     }
 
     /**
-     * The start date and time of the item (in <a href='http://en.wikipedia.org/wiki/ISO_8601'>ISO 8601 date format</a>).
+     * The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
-     * @param $startDate DateSchema
+     * @param $startDate |
+     * @return static
      **/
-    public function setStartDate($startDate) {
+    public function setStartDate($startDate): static {
         $this->properties['startDate'] = $startDate;
 
         return $this;
     }
 
     /**
-     * @return DateSchema
+     * @return |
      **/
     public function getStartDate() {
         return $this->properties['startDate'];
+    }
+
+    /**
+     * The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
+     *
+     * @param $endDate |
+     * @return static
+     **/
+    public function setEndDate($endDate): static {
+        $this->properties['endDate'] = $endDate;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getEndDate() {
+        return $this->properties['endDate'];
     }
 
 

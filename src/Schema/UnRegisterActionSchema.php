@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,15 +27,15 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of un-registering from a service.<p>Related actions:</p><ul><li><a href="http://schema.org/RegisterAction">RegisterAction</a>: antonym of UnRegisterAction.</li><li><a href="http://schema.org/Leave">Leave</a>: Unlike LeaveAction, UnRegisterAction implies that you are unregistering from a service you werer previously registered, rather than leaving a team/group of people</li></ul>.
+ * The act of un-registering from a service.\n\nRelated actions:\n\n* [[RegisterAction]]: antonym of UnRegisterAction.\n* [[LeaveAction]]: Unlike LeaveAction, UnRegisterAction implies that you are unregistering from a service you were previously registered, rather than leaving a team/group of people.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class UnRegisterActionSchema extends InteractActionSchema
 {
-    public static function factory()
+    public static function factory(): UnRegisterActionSchema
     {
-        return new UnRegisterActionSchema('http://schema.org/', 'UnRegisterAction');
+        return new UnRegisterActionSchema('https://schema.org/', 'UnRegisterAction');
     }
 
 

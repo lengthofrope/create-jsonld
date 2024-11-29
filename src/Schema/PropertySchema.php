@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,24 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PropertySchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): PropertySchema
     {
-        return new PropertySchema('http://schema.org/', 'Property');
+        return new PropertySchema('https://schema.org/', 'Property');
     }
 
     /**
      * Relates a property to a class that is (one of) the type(s) the property is expected to be used on.
      *
-     * @param $domainIncludes ClassSchema
+     * @param $domainIncludes 
+     * @return static
      **/
-    public function setDomainIncludes($domainIncludes) {
+    public function setDomainIncludes($domainIncludes): static {
         $this->properties['domainIncludes'] = $domainIncludes;
 
         return $this;
     }
 
     /**
-     * @return ClassSchema
+     * @return 
      **/
     public function getDomainIncludes() {
         return $this->properties['domainIncludes'];
@@ -59,55 +60,58 @@ class PropertySchema extends IntangibleSchema
     /**
      * Relates a property to a property that is its inverse. Inverse properties relate the same pairs of items to each other, but in reversed direction. For example, the 'alumni' and 'alumniOf' properties are inverseOf each other. Some properties don't have explicit inverses; in these situations RDFa and JSON-LD syntax for reverse properties can be used.
      *
-     * @param $inverseOf PropertySchema
+     * @param $inverseOf 
+     * @return static
      **/
-    public function setInverseOf($inverseOf) {
+    public function setInverseOf($inverseOf): static {
         $this->properties['inverseOf'] = $inverseOf;
 
         return $this;
     }
 
     /**
-     * @return PropertySchema
+     * @return 
      **/
     public function getInverseOf() {
         return $this->properties['inverseOf'];
     }
 
     /**
-     * Relates a property to a class that constitutes (one of) the expected type(s) for values of the property.
-     *
-     * @param $rangeIncludes ClassSchema
-     **/
-    public function setRangeIncludes($rangeIncludes) {
-        $this->properties['rangeIncludes'] = $rangeIncludes;
-
-        return $this;
-    }
-
-    /**
-     * @return ClassSchema
-     **/
-    public function getRangeIncludes() {
-        return $this->properties['rangeIncludes'];
-    }
-
-    /**
      * Relates a term (i.e. a property, class or enumeration) to one that supersedes it.
      *
-     * @param $supersededBy PropertySchema|ClassSchema|EnumerationSchema
+     * @param $supersededBy ||
+     * @return static
      **/
-    public function setSupersededBy($supersededBy) {
+    public function setSupersededBy($supersededBy): static {
         $this->properties['supersededBy'] = $supersededBy;
 
         return $this;
     }
 
     /**
-     * @return PropertySchema|ClassSchema|EnumerationSchema
+     * @return ||
      **/
     public function getSupersededBy() {
         return $this->properties['supersededBy'];
+    }
+
+    /**
+     * Relates a property to a class that constitutes (one of) the expected type(s) for values of the property.
+     *
+     * @param $rangeIncludes 
+     * @return static
+     **/
+    public function setRangeIncludes($rangeIncludes): static {
+        $this->properties['rangeIncludes'] = $rangeIncludes;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getRangeIncludes() {
+        return $this->properties['rangeIncludes'];
     }
 
 

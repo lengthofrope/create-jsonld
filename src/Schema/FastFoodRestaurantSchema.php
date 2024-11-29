@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,9 +33,9 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class FastFoodRestaurantSchema extends FoodEstablishmentSchema
 {
-    public static function factory()
+    public static function factory(): FastFoodRestaurantSchema
     {
-        return new FastFoodRestaurantSchema('http://schema.org/', 'FastFoodRestaurant');
+        return new FastFoodRestaurantSchema('https://schema.org/', 'FastFoodRestaurant');
     }
 
 

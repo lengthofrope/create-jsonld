@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,24 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class CommentActionSchema extends CommunicateActionSchema
 {
-    public static function factory()
+    public static function factory(): CommentActionSchema
     {
-        return new CommentActionSchema('http://schema.org/', 'CommentAction');
+        return new CommentActionSchema('https://schema.org/', 'CommentAction');
     }
 
     /**
      * A sub property of result. The Comment created or sent as a result of this action.
      *
-     * @param $resultComment CommentSchema
+     * @param $resultComment 
+     * @return static
      **/
-    public function setResultComment($resultComment) {
+    public function setResultComment($resultComment): static {
         $this->properties['resultComment'] = $resultComment;
 
         return $this;
     }
 
     /**
-     * @return CommentSchema
+     * @return 
      **/
     public function getResultComment() {
         return $this->properties['resultComment'];

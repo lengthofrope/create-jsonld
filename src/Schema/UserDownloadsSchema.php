@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,17 +27,15 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use
-          <a href="/Action">Action</a>-based vocabulary, alongside types such as <a href="/Comment">Comment</a>.
-      
+ * UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class UserDownloadsSchema extends UserInteractionSchema
 {
-    public static function factory()
+    public static function factory(): UserDownloadsSchema
     {
-        return new UserDownloadsSchema('http://schema.org/', 'UserDownloads');
+        return new UserDownloadsSchema('https://schema.org/', 'UserDownloads');
     }
 
 

@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,45 +33,47 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class AirportSchema extends CivicStructureSchema
 {
-    public static function factory()
+    public static function factory(): AirportSchema
     {
-        return new AirportSchema('http://schema.org/', 'Airport');
+        return new AirportSchema('https://schema.org/', 'Airport');
     }
 
     /**
      * IATA identifier for an airline or airport.
      *
-     * @param $iataCode TextSchema
+     * @param $iataCode 
+     * @return static
      **/
-    public function setIataCode($iataCode) {
+    public function setIataCode($iataCode): static {
         $this->properties['iataCode'] = $iataCode;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getIataCode() {
         return $this->properties['iataCode'];
     }
 
     /**
-     * IACO identifier for an airport.
+     * ICAO identifier for an airport.
      *
-     * @param $iacoCode TextSchema
+     * @param $icaoCode 
+     * @return static
      **/
-    public function setIacoCode($iacoCode) {
-        $this->properties['iacoCode'] = $iacoCode;
+    public function setIcaoCode($icaoCode): static {
+        $this->properties['icaoCode'] = $icaoCode;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
-    public function getIacoCode() {
-        return $this->properties['iacoCode'];
+    public function getIcaoCode() {
+        return $this->properties['icaoCode'];
     }
 
 

@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,35 +27,15 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A publication in any medium issued in successive parts bearing numerical or chronological designations and intended, such as a magazine, scholarly journal, or newspaper to continue indefinitely.
-
-      <br/><br/>See also <a href="http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html">blog post</a>.
+ * A publication in any medium issued in successive parts bearing numerical or chronological designations and intended to continue indefinitely, such as a magazine, scholarly journal, or newspaper.\n\nSee also [blog post](http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html).
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class PeriodicalSchema extends CreativeWorkSeriesSchema
 {
-    public static function factory()
+    public static function factory(): PeriodicalSchema
     {
-        return new PeriodicalSchema('http://schema.org/', 'Periodical');
-    }
-
-    /**
-     * The International Standard Serial Number (ISSN) that identifies this periodical. You can repeat this property to (for example) identify different formats of this periodical.
-     *
-     * @param $issn TextSchema
-     **/
-    public function setIssn($issn) {
-        $this->properties['issn'] = $issn;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getIssn() {
-        return $this->properties['issn'];
+        return new PeriodicalSchema('https://schema.org/', 'Periodical');
     }
 
 

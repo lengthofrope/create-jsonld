@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,30 +27,31 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * An agent approves/certifies/likes/supports/sanction an object.
+ * An agent approves/certifies/likes/supports/sanctions an object.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class EndorseActionSchema extends ReactActionSchema
 {
-    public static function factory()
+    public static function factory(): EndorseActionSchema
     {
-        return new EndorseActionSchema('http://schema.org/', 'EndorseAction');
+        return new EndorseActionSchema('https://schema.org/', 'EndorseAction');
     }
 
     /**
      * A sub property of participant. The person/organization being supported.
      *
-     * @param $endorsee OrganizationSchema|PersonSchema
+     * @param $endorsee |
+     * @return static
      **/
-    public function setEndorsee($endorsee) {
+    public function setEndorsee($endorsee): static {
         $this->properties['endorsee'] = $endorsee;
 
         return $this;
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema
+     * @return |
      **/
     public function getEndorsee() {
         return $this->properties['endorsee'];

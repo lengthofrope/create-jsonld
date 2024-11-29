@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,48 +27,31 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Any indication of the existence of a medical condition or disease.
+ * Any feature associated or not with a medical condition. In medicine a symptom is generally subjective while a sign is objective.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MedicalSignOrSymptomSchema extends MedicalEntitySchema
+class MedicalSignOrSymptomSchema extends MedicalConditionSchema
 {
-    public static function factory()
+    public static function factory(): MedicalSignOrSymptomSchema
     {
-        return new MedicalSignOrSymptomSchema('http://schema.org/', 'MedicalSignOrSymptom');
-    }
-
-    /**
-     * An underlying cause. More specifically, one of the causative agent(s) that are most directly responsible for the pathophysiologic process that eventually results in the occurrence.
-     *
-     * @param $cause MedicalCauseSchema
-     **/
-    public function setCause($cause) {
-        $this->properties['cause'] = $cause;
-
-        return $this;
-    }
-
-    /**
-     * @return MedicalCauseSchema
-     **/
-    public function getCause() {
-        return $this->properties['cause'];
+        return new MedicalSignOrSymptomSchema('https://schema.org/', 'MedicalSignOrSymptom');
     }
 
     /**
      * A possible treatment to address this condition, sign or symptom.
      *
-     * @param $possibleTreatment MedicalTherapySchema
+     * @param $possibleTreatment 
+     * @return static
      **/
-    public function setPossibleTreatment($possibleTreatment) {
+    public function setPossibleTreatment($possibleTreatment): static {
         $this->properties['possibleTreatment'] = $possibleTreatment;
 
         return $this;
     }
 
     /**
-     * @return MedicalTherapySchema
+     * @return 
      **/
     public function getPossibleTreatment() {
         return $this->properties['possibleTreatment'];

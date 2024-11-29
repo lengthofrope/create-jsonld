@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,63 +33,66 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MusicPlaylistSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): MusicPlaylistSchema
     {
-        return new MusicPlaylistSchema('http://schema.org/', 'MusicPlaylist');
+        return new MusicPlaylistSchema('https://schema.org/', 'MusicPlaylist');
     }
 
     /**
      * The number of tracks in this album or playlist.
      *
-     * @param $numTracks IntegerSchema
+     * @param $numTracks 
+     * @return static
      **/
-    public function setNumTracks($numTracks) {
+    public function setNumTracks($numTracks): static {
         $this->properties['numTracks'] = $numTracks;
 
         return $this;
     }
 
     /**
-     * @return IntegerSchema
+     * @return 
      **/
     public function getNumTracks() {
         return $this->properties['numTracks'];
     }
 
     /**
-     * A music recording (track)&#x2014;usually a single song. If an ItemList is given, the list should contain items of type MusicRecording.
-     *
-     * @param $track ItemListSchema|MusicRecordingSchema
-     **/
-    public function setTrack($track) {
-        $this->properties['track'] = $track;
-
-        return $this;
-    }
-
-    /**
-     * @return ItemListSchema|MusicRecordingSchema
-     **/
-    public function getTrack() {
-        return $this->properties['track'];
-    }
-
-    /**
      * A music recording (track)&#x2014;usually a single song.
      *
-     * @param $tracks MusicRecordingSchema
+     * @param $tracks 
+     * @return static
      **/
-    public function setTracks($tracks) {
+    public function setTracks($tracks): static {
         $this->properties['tracks'] = $tracks;
 
         return $this;
     }
 
     /**
-     * @return MusicRecordingSchema
+     * @return 
      **/
     public function getTracks() {
         return $this->properties['tracks'];
+    }
+
+    /**
+     * A music recording (track)&#x2014;usually a single song. If an ItemList is given, the list should contain items of type MusicRecording.
+     *
+     * @param $track |
+     * @return static
+     **/
+    public function setTrack($track): static {
+        $this->properties['track'] = $track;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getTrack() {
+        return $this->properties['track'];
     }
 
 

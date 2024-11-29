@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,60 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class CommunicateActionSchema extends InteractActionSchema
 {
-    public static function factory()
+    public static function factory(): CommunicateActionSchema
     {
-        return new CommunicateActionSchema('http://schema.org/', 'CommunicateAction');
-    }
-
-    /**
-     * The subject matter of the content.
-     *
-     * @param $about ThingSchema
-     **/
-    public function setAbout($about) {
-        $this->properties['about'] = $about;
-
-        return $this;
-    }
-
-    /**
-     * @return ThingSchema
-     **/
-    public function getAbout() {
-        return $this->properties['about'];
-    }
-
-    /**
-     * The language of the content or performance or used in an action. Please use one of the language codes from the <a href='http://tools.ietf.org/html/bcp47'>IETF BCP 47 standard</a>.
-     *
-     * @param $inLanguage TextSchema|LanguageSchema
-     **/
-    public function setInLanguage($inLanguage) {
-        $this->properties['inLanguage'] = $inLanguage;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema|LanguageSchema
-     **/
-    public function getInLanguage() {
-        return $this->properties['inLanguage'];
+        return new CommunicateActionSchema('https://schema.org/', 'CommunicateAction');
     }
 
     /**
      * A sub property of instrument. The language used on this action.
      *
-     * @param $language LanguageSchema
+     * @param $language 
+     * @return static
      **/
-    public function setLanguage($language) {
+    public function setLanguage($language): static {
         $this->properties['language'] = $language;
 
         return $this;
     }
 
     /**
-     * @return LanguageSchema
+     * @return 
      **/
     public function getLanguage() {
         return $this->properties['language'];
@@ -95,19 +60,58 @@ class CommunicateActionSchema extends InteractActionSchema
     /**
      * A sub property of participant. The participant who is at the receiving end of the action.
      *
-     * @param $recipient AudienceSchema|OrganizationSchema|PersonSchema
+     * @param $recipient |||
+     * @return static
      **/
-    public function setRecipient($recipient) {
+    public function setRecipient($recipient): static {
         $this->properties['recipient'] = $recipient;
 
         return $this;
     }
 
     /**
-     * @return AudienceSchema|OrganizationSchema|PersonSchema
+     * @return |||
      **/
     public function getRecipient() {
         return $this->properties['recipient'];
+    }
+
+    /**
+     * The subject matter of the content.
+     *
+     * @param $about 
+     * @return static
+     **/
+    public function setAbout($about): static {
+        $this->properties['about'] = $about;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getAbout() {
+        return $this->properties['about'];
+    }
+
+    /**
+     * The language of the content or performance or used in an action. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
+     *
+     * @param $inLanguage |
+     * @return static
+     **/
+    public function setInLanguage($inLanguage): static {
+        $this->properties['inLanguage'] = $inLanguage;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getInLanguage() {
+        return $this->properties['inLanguage'];
     }
 
 

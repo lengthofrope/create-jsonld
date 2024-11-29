@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,15 +27,15 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of asserting that a future event/action is no longer going to happen.<p>Related actions:</p><ul><li><a href="http://schema.org/ConfirmAction">ConfirmAction</a>: The antonym of CancelAction</li></ul>.
+ * The act of asserting that a future event/action is no longer going to happen.\n\nRelated actions:\n\n* [[ConfirmAction]]: The antonym of CancelAction.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class CancelActionSchema extends PlanActionSchema
 {
-    public static function factory()
+    public static function factory(): CancelActionSchema
     {
-        return new CancelActionSchema('http://schema.org/', 'CancelAction');
+        return new CancelActionSchema('https://schema.org/', 'CancelAction');
     }
 
 

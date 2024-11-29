@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,24 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ReservationPackageSchema extends ReservationSchema
 {
-    public static function factory()
+    public static function factory(): ReservationPackageSchema
     {
-        return new ReservationPackageSchema('http://schema.org/', 'ReservationPackage');
+        return new ReservationPackageSchema('https://schema.org/', 'ReservationPackage');
     }
 
     /**
      * The individual reservations included in the package. Typically a repeated property.
      *
-     * @param $subReservation ReservationSchema
+     * @param $subReservation 
+     * @return static
      **/
-    public function setSubReservation($subReservation) {
+    public function setSubReservation($subReservation): static {
         $this->properties['subReservation'] = $subReservation;
 
         return $this;
     }
 
     /**
-     * @return ReservationSchema
+     * @return 
      **/
     public function getSubReservation() {
         return $this->properties['subReservation'];

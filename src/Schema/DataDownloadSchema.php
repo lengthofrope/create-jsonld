@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,15 +27,59 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A dataset in downloadable form.
+ * All or part of a [[Dataset]] in downloadable form. 
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class DataDownloadSchema extends MediaObjectSchema
 {
-    public static function factory()
+    public static function factory(): DataDownloadSchema
     {
-        return new DataDownloadSchema('http://schema.org/', 'DataDownload');
+        return new DataDownloadSchema('https://schema.org/', 'DataDownload');
+    }
+
+    /**
+     * A subproperty of [[measurementTechnique]] that can be used for specifying specific methods, in particular via [[MeasurementMethodEnum]].
+     *
+     * @param $measurementMethod |||
+     * @return static
+     **/
+    public function setMeasurementMethod($measurementMethod): static {
+        $this->properties['measurementMethod'] = $measurementMethod;
+
+        return $this;
+    }
+
+    /**
+     * @return |||
+     **/
+    public function getMeasurementMethod() {
+        return $this->properties['measurementMethod'];
+    }
+
+    /**
+     * A technique, method or technology used in an [[Observation]], [[StatisticalVariable]] or [[Dataset]] (or [[DataDownload]], [[DataCatalog]]), corresponding to the method used for measuring the corresponding variable(s) (for datasets, described using [[variableMeasured]]; for [[Observation]], a [[StatisticalVariable]]). Often but not necessarily each [[variableMeasured]] will have an explicit representation as (or mapping to) an property such as those defined in Schema.org, or other RDF vocabularies and "knowledge graphs". In that case the subproperty of [[variableMeasured]] called [[measuredProperty]] is applicable.
+    
+The [[measurementTechnique]] property helps when extra clarification is needed about how a [[measuredProperty]] was measured. This is oriented towards scientific and scholarly dataset publication but may have broader applicability; it is not intended as a full representation of measurement, but can often serve as a high level summary for dataset discovery. 
+
+For example, if [[variableMeasured]] is: molecule concentration, [[measurementTechnique]] could be: "mass spectrometry" or "nmr spectroscopy" or "colorimetry" or "immunofluorescence". If the [[variableMeasured]] is "depression rating", the [[measurementTechnique]] could be "Zung Scale" or "HAM-D" or "Beck Depression Inventory". 
+
+If there are several [[variableMeasured]] properties recorded for some given data object, use a [[PropertyValue]] for each [[variableMeasured]] and attach the corresponding [[measurementTechnique]]. The value can also be from an enumeration, organized as a [[MeasurementMetholdEnumeration]].
+     *
+     * @param $measurementTechnique |||
+     * @return static
+     **/
+    public function setMeasurementTechnique($measurementTechnique): static {
+        $this->properties['measurementTechnique'] = $measurementTechnique;
+
+        return $this;
+    }
+
+    /**
+     * @return |||
+     **/
+    public function getMeasurementTechnique() {
+        return $this->properties['measurementTechnique'];
     }
 
 

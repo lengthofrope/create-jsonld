@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,30 +27,31 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * An agent leaves an event / group with participants/friends at a location.<p>Related actions:</p><ul><li><a href="http://schema.org/JoinAction">JoinAction</a>: The antonym of LeaveAction.</li><li><a href="http://schema.org/UnRegisterAction">UnRegisterAction</a>: Unlike UnRegisterAction, LeaveAction implies leaving a group/team of people rather than a service</li></ul>.
+ * An agent leaves an event / group with participants/friends at a location.\n\nRelated actions:\n\n* [[JoinAction]]: The antonym of LeaveAction.\n* [[UnRegisterAction]]: Unlike UnRegisterAction, LeaveAction implies leaving a group/team of people rather than a service.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class LeaveActionSchema extends InteractActionSchema
 {
-    public static function factory()
+    public static function factory(): LeaveActionSchema
     {
-        return new LeaveActionSchema('http://schema.org/', 'LeaveAction');
+        return new LeaveActionSchema('https://schema.org/', 'LeaveAction');
     }
 
     /**
      * Upcoming or past event associated with this place, organization, or action.
      *
-     * @param $event EventSchema
+     * @param $event 
+     * @return static
      **/
-    public function setEvent($event) {
+    public function setEvent($event): static {
         $this->properties['event'] = $event;
 
         return $this;
     }
 
     /**
-     * @return EventSchema
+     * @return 
      **/
     public function getEvent() {
         return $this->properties['event'];

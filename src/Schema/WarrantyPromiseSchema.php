@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,45 +33,47 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class WarrantyPromiseSchema extends StructuredValueSchema
 {
-    public static function factory()
+    public static function factory(): WarrantyPromiseSchema
     {
-        return new WarrantyPromiseSchema('http://schema.org/', 'WarrantyPromise');
-    }
-
-    /**
-     * The duration of the warranty promise. Common unitCode values are ANN for year, MON for months, or DAY for days.
-     *
-     * @param $durationOfWarranty QuantitativeValueSchema
-     **/
-    public function setDurationOfWarranty($durationOfWarranty) {
-        $this->properties['durationOfWarranty'] = $durationOfWarranty;
-
-        return $this;
-    }
-
-    /**
-     * @return QuantitativeValueSchema
-     **/
-    public function getDurationOfWarranty() {
-        return $this->properties['durationOfWarranty'];
+        return new WarrantyPromiseSchema('https://schema.org/', 'WarrantyPromise');
     }
 
     /**
      * The scope of the warranty promise.
      *
-     * @param $warrantyScope WarrantyScopeSchema
+     * @param $warrantyScope 
+     * @return static
      **/
-    public function setWarrantyScope($warrantyScope) {
+    public function setWarrantyScope($warrantyScope): static {
         $this->properties['warrantyScope'] = $warrantyScope;
 
         return $this;
     }
 
     /**
-     * @return WarrantyScopeSchema
+     * @return 
      **/
     public function getWarrantyScope() {
         return $this->properties['warrantyScope'];
+    }
+
+    /**
+     * The duration of the warranty promise. Common unitCode values are ANN for year, MON for months, or DAY for days.
+     *
+     * @param $durationOfWarranty 
+     * @return static
+     **/
+    public function setDurationOfWarranty($durationOfWarranty): static {
+        $this->properties['durationOfWarranty'] = $durationOfWarranty;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getDurationOfWarranty() {
+        return $this->properties['durationOfWarranty'];
     }
 
 

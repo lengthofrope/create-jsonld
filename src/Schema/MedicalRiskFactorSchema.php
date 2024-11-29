@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,24 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MedicalRiskFactorSchema extends MedicalEntitySchema
 {
-    public static function factory()
+    public static function factory(): MedicalRiskFactorSchema
     {
-        return new MedicalRiskFactorSchema('http://schema.org/', 'MedicalRiskFactor');
+        return new MedicalRiskFactorSchema('https://schema.org/', 'MedicalRiskFactor');
     }
 
     /**
      * The condition, complication, etc. influenced by this factor.
      *
-     * @param $increasesRiskOf MedicalEntitySchema
+     * @param $increasesRiskOf 
+     * @return static
      **/
-    public function setIncreasesRiskOf($increasesRiskOf) {
+    public function setIncreasesRiskOf($increasesRiskOf): static {
         $this->properties['increasesRiskOf'] = $increasesRiskOf;
 
         return $this;
     }
 
     /**
-     * @return MedicalEntitySchema
+     * @return 
      **/
     public function getIncreasesRiskOf() {
         return $this->properties['increasesRiskOf'];

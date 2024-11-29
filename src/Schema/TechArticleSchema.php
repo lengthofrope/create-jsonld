@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,45 +33,47 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class TechArticleSchema extends ArticleSchema
 {
-    public static function factory()
+    public static function factory(): TechArticleSchema
     {
-        return new TechArticleSchema('http://schema.org/', 'TechArticle');
-    }
-
-    /**
-     * Prerequisites needed to fulfill steps in article.
-     *
-     * @param $dependencies TextSchema
-     **/
-    public function setDependencies($dependencies) {
-        $this->properties['dependencies'] = $dependencies;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getDependencies() {
-        return $this->properties['dependencies'];
+        return new TechArticleSchema('https://schema.org/', 'TechArticle');
     }
 
     /**
      * Proficiency needed for this content; expected values: 'Beginner', 'Expert'.
      *
-     * @param $proficiencyLevel TextSchema
+     * @param $proficiencyLevel 
+     * @return static
      **/
-    public function setProficiencyLevel($proficiencyLevel) {
+    public function setProficiencyLevel($proficiencyLevel): static {
         $this->properties['proficiencyLevel'] = $proficiencyLevel;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getProficiencyLevel() {
         return $this->properties['proficiencyLevel'];
+    }
+
+    /**
+     * Prerequisites needed to fulfill steps in article.
+     *
+     * @param $dependencies 
+     * @return static
+     **/
+    public function setDependencies($dependencies): static {
+        $this->properties['dependencies'] = $dependencies;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getDependencies() {
+        return $this->properties['dependencies'];
     }
 
 

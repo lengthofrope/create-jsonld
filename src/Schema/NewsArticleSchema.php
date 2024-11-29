@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,30 +27,77 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A news article.
+ * A NewsArticle is an article whose content reports news, or provides background context and supporting materials for understanding the news.
+
+ * A more detailed overview of [schema.org News markup](/docs/news.html) is also available.
+
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class NewsArticleSchema extends ArticleSchema
 {
-    public static function factory()
+    public static function factory(): NewsArticleSchema
     {
-        return new NewsArticleSchema('http://schema.org/', 'NewsArticle');
+        return new NewsArticleSchema('https://schema.org/', 'NewsArticle');
     }
 
     /**
-     * The location where the NewsArticle was produced.
+     * If this NewsArticle appears in print, this field indicates the name of the page on which the article is found. Please note that this field is intended for the exact page name (e.g. A5, B18).
      *
-     * @param $dateline TextSchema
+     * @param $printPage 
+     * @return static
      **/
-    public function setDateline($dateline) {
+    public function setPrintPage($printPage): static {
+        $this->properties['printPage'] = $printPage;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getPrintPage() {
+        return $this->properties['printPage'];
+    }
+
+    /**
+     * The edition of the print product in which the NewsArticle appears.
+     *
+     * @param $printEdition 
+     * @return static
+     **/
+    public function setPrintEdition($printEdition): static {
+        $this->properties['printEdition'] = $printEdition;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getPrintEdition() {
+        return $this->properties['printEdition'];
+    }
+
+    /**
+     * A [dateline](https://en.wikipedia.org/wiki/Dateline) is a brief piece of text included in news articles that describes where and when the story was written or filed though the date is often omitted. Sometimes only a placename is provided.
+
+Structured representations of dateline-related information can also be expressed more explicitly using [[locationCreated]] (which represents where a work was created, e.g. where a news report was written).  For location depicted or described in the content, use [[contentLocation]].
+
+Dateline summaries are oriented more towards human readers than towards automated processing, and can vary substantially. Some examples: "BEIRUT, Lebanon, June 2.", "Paris, France", "December 19, 2017 11:43AM Reporting from Washington", "Beijing/Moscow", "QUEZON CITY, Philippines".
+      
+     *
+     * @param $dateline 
+     * @return static
+     **/
+    public function setDateline($dateline): static {
         $this->properties['dateline'] = $dateline;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getDateline() {
         return $this->properties['dateline'];
@@ -59,70 +106,36 @@ class NewsArticleSchema extends ArticleSchema
     /**
      * The number of the column in which the NewsArticle appears in the print edition.
      *
-     * @param $printColumn TextSchema
+     * @param $printColumn 
+     * @return static
      **/
-    public function setPrintColumn($printColumn) {
+    public function setPrintColumn($printColumn): static {
         $this->properties['printColumn'] = $printColumn;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getPrintColumn() {
         return $this->properties['printColumn'];
     }
 
     /**
-     * The edition of the print product in which the NewsArticle appears.
-     *
-     * @param $printEdition TextSchema
-     **/
-    public function setPrintEdition($printEdition) {
-        $this->properties['printEdition'] = $printEdition;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getPrintEdition() {
-        return $this->properties['printEdition'];
-    }
-
-    /**
-     * If this NewsArticle appears in print, this field indicates the name of the page on which the article is found. Please note that this field is intended for the exact page name (e.g. A5, B18).
-     *
-     * @param $printPage TextSchema
-     **/
-    public function setPrintPage($printPage) {
-        $this->properties['printPage'] = $printPage;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getPrintPage() {
-        return $this->properties['printPage'];
-    }
-
-    /**
      * If this NewsArticle appears in print, this field indicates the print section in which the article appeared.
      *
-     * @param $printSection TextSchema
+     * @param $printSection 
+     * @return static
      **/
-    public function setPrintSection($printSection) {
+    public function setPrintSection($printSection): static {
         $this->properties['printSection'] = $printSection;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getPrintSection() {
         return $this->properties['printSection'];

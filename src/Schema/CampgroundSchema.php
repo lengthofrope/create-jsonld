@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,15 +27,19 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A campground.
+ * A camping site, campsite, or [[Campground]] is a place used for overnight stay in the outdoors, typically containing individual [[CampingPitch]] locations. \n\n
+ * In British English a campsite is an area, usually divided into a number of pitches, where people can camp overnight using tents or camper vans or caravans; this British English use of the word is synonymous with the American English expression campground. In American English the term campsite generally means an area where an individual, family, group, or military unit can pitch a tent or park a camper; a campground may contain many campsites (source: Wikipedia, see [https://en.wikipedia.org/wiki/Campsite](https://en.wikipedia.org/wiki/Campsite)).\n\n
+
+ * See also the dedicated [document on the use of schema.org for marking up hotels and other forms of accommodations](/docs/hotels.html).
+
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class CampgroundSchema extends CivicStructureSchema
+class CampgroundSchema extends LodgingBusinessSchema
 {
-    public static function factory()
+    public static function factory(): CampgroundSchema
     {
-        return new CampgroundSchema('http://schema.org/', 'Campground');
+        return new CampgroundSchema('https://schema.org/', 'Campground');
     }
 
 

@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -31,98 +31,65 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ExercisePlanSchema extends \LengthOfRope\JSONLD\Elements\Element
+class ExercisePlanSchema extends PhysicalActivitySchema
 {
-    public static function factory()
+    public static function factory(): ExercisePlanSchema
     {
-        return new ExercisePlanSchema('http://schema.org/', 'ExercisePlan');
+        return new ExercisePlanSchema('https://schema.org/', 'ExercisePlan');
     }
 
     /**
-     * Length of time to engage in the activity.
+     * How often one should break from the activity.
      *
-     * @param $activityDuration DurationSchema
+     * @param $restPeriods |
+     * @return static
      **/
-    public function setActivityDuration($activityDuration) {
-        $this->properties['activityDuration'] = $activityDuration;
+    public function setRestPeriods($restPeriods): static {
+        $this->properties['restPeriods'] = $restPeriods;
 
         return $this;
     }
 
     /**
-     * @return DurationSchema
+     * @return |
      **/
-    public function getActivityDuration() {
-        return $this->properties['activityDuration'];
-    }
-
-    /**
-     * How often one should engage in the activity.
-     *
-     * @param $activityFrequency TextSchema
-     **/
-    public function setActivityFrequency($activityFrequency) {
-        $this->properties['activityFrequency'] = $activityFrequency;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getActivityFrequency() {
-        return $this->properties['activityFrequency'];
+    public function getRestPeriods() {
+        return $this->properties['restPeriods'];
     }
 
     /**
      * Any additional component of the exercise prescription that may need to be articulated to the patient. This may include the order of exercises, the number of repetitions of movement, quantitative distance, progressions over time, etc.
      *
-     * @param $additionalVariable TextSchema
+     * @param $additionalVariable 
+     * @return static
      **/
-    public function setAdditionalVariable($additionalVariable) {
+    public function setAdditionalVariable($additionalVariable): static {
         $this->properties['additionalVariable'] = $additionalVariable;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getAdditionalVariable() {
         return $this->properties['additionalVariable'];
     }
 
     /**
-     * Type(s) of exercise or activity, such as strength training, flexibility training, aerobics, cardiac rehabilitation, etc.
-     *
-     * @param $exerciseType TextSchema
-     **/
-    public function setExerciseType($exerciseType) {
-        $this->properties['exerciseType'] = $exerciseType;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getExerciseType() {
-        return $this->properties['exerciseType'];
-    }
-
-    /**
      * Quantitative measure gauging the degree of force involved in the exercise, for example, heartbeats per minute. May include the velocity of the movement.
      *
-     * @param $intensity TextSchema
+     * @param $intensity |
+     * @return static
      **/
-    public function setIntensity($intensity) {
+    public function setIntensity($intensity): static {
         $this->properties['intensity'] = $intensity;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return |
      **/
     public function getIntensity() {
         return $this->properties['intensity'];
@@ -131,55 +98,96 @@ class ExercisePlanSchema extends \LengthOfRope\JSONLD\Elements\Element
     /**
      * Number of times one should repeat the activity.
      *
-     * @param $repetitions NumberSchema
+     * @param $repetitions |
+     * @return static
      **/
-    public function setRepetitions($repetitions) {
+    public function setRepetitions($repetitions): static {
         $this->properties['repetitions'] = $repetitions;
 
         return $this;
     }
 
     /**
-     * @return NumberSchema
+     * @return |
      **/
     public function getRepetitions() {
         return $this->properties['repetitions'];
     }
 
     /**
-     * How often one should break from the activity.
+     * Length of time to engage in the activity.
      *
-     * @param $restPeriods TextSchema
+     * @param $activityDuration |
+     * @return static
      **/
-    public function setRestPeriods($restPeriods) {
-        $this->properties['restPeriods'] = $restPeriods;
+    public function setActivityDuration($activityDuration): static {
+        $this->properties['activityDuration'] = $activityDuration;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return |
      **/
-    public function getRestPeriods() {
-        return $this->properties['restPeriods'];
+    public function getActivityDuration() {
+        return $this->properties['activityDuration'];
     }
 
     /**
      * Quantitative measure of the physiologic output of the exercise; also referred to as energy expenditure.
      *
-     * @param $workload EnergySchema
+     * @param $workload |
+     * @return static
      **/
-    public function setWorkload($workload) {
+    public function setWorkload($workload): static {
         $this->properties['workload'] = $workload;
 
         return $this;
     }
 
     /**
-     * @return EnergySchema
+     * @return |
      **/
     public function getWorkload() {
         return $this->properties['workload'];
+    }
+
+    /**
+     * Type(s) of exercise or activity, such as strength training, flexibility training, aerobics, cardiac rehabilitation, etc.
+     *
+     * @param $exerciseType 
+     * @return static
+     **/
+    public function setExerciseType($exerciseType): static {
+        $this->properties['exerciseType'] = $exerciseType;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getExerciseType() {
+        return $this->properties['exerciseType'];
+    }
+
+    /**
+     * How often one should engage in the activity.
+     *
+     * @param $activityFrequency |
+     * @return static
+     **/
+    public function setActivityFrequency($activityFrequency): static {
+        $this->properties['activityFrequency'] = $activityFrequency;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getActivityFrequency() {
+        return $this->properties['activityFrequency'];
     }
 
 

@@ -1,5 +1,6 @@
 {
     "name": "lengthofrope/create-jsonld",
+    "version": "0.9.3",
     "description": "Simple PHP library to create JSON-LD output.",
     "type": "library",
     "keywords": ["JSON-LD", "jsonld"],

@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,9 +33,66 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class EducationEventSchema extends EventSchema
 {
-    public static function factory()
+    public static function factory(): EducationEventSchema
     {
-        return new EducationEventSchema('http://schema.org/', 'EducationEvent');
+        return new EducationEventSchema('https://schema.org/', 'EducationEvent');
+    }
+
+    /**
+     * The level in terms of progression through an educational or training context. Examples of educational levels include 'beginner', 'intermediate' or 'advanced', and formal sets of level indicators.
+     *
+     * @param $educationalLevel ||
+     * @return static
+     **/
+    public function setEducationalLevel($educationalLevel): static {
+        $this->properties['educationalLevel'] = $educationalLevel;
+
+        return $this;
+    }
+
+    /**
+     * @return ||
+     **/
+    public function getEducationalLevel() {
+        return $this->properties['educationalLevel'];
+    }
+
+    /**
+     * The item being described is intended to assess the competency or learning outcome defined by the referenced term.
+     *
+     * @param $assesses |
+     * @return static
+     **/
+    public function setAssesses($assesses): static {
+        $this->properties['assesses'] = $assesses;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getAssesses() {
+        return $this->properties['assesses'];
+    }
+
+    /**
+     * The item being described is intended to help a person learn the competency or learning outcome defined by the referenced term.
+     *
+     * @param $teaches |
+     * @return static
+     **/
+    public function setTeaches($teaches): static {
+        $this->properties['teaches'] = $teaches;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getTeaches() {
+        return $this->properties['teaches'];
     }
 
 

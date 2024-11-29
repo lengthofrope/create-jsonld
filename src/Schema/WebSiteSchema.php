@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,9 +33,28 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class WebSiteSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): WebSiteSchema
     {
-        return new WebSiteSchema('http://schema.org/', 'WebSite');
+        return new WebSiteSchema('https://schema.org/', 'WebSite');
+    }
+
+    /**
+     * The International Standard Serial Number (ISSN) that identifies this serial publication. You can repeat this property to identify different formats of, or the linking ISSN (ISSN-L) for, this serial publication.
+     *
+     * @param $issn 
+     * @return static
+     **/
+    public function setIssn($issn): static {
+        $this->properties['issn'] = $issn;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getIssn() {
+        return $this->properties['issn'];
     }
 
 

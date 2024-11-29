@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,24 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ParcelDeliverySchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): ParcelDeliverySchema
     {
-        return new ParcelDeliverySchema('http://schema.org/', 'ParcelDelivery');
+        return new ParcelDeliverySchema('https://schema.org/', 'ParcelDelivery');
     }
 
     /**
      * 'carrier' is an out-dated term indicating the 'provider' for parcel delivery and flights.
      *
-     * @param $carrier OrganizationSchema
+     * @param $carrier 
+     * @return static
      **/
-    public function setCarrier($carrier) {
+    public function setCarrier($carrier): static {
         $this->properties['carrier'] = $carrier;
 
         return $this;
     }
 
     /**
-     * @return OrganizationSchema
+     * @return 
      **/
     public function getCarrier() {
         return $this->properties['carrier'];
@@ -59,16 +60,17 @@ class ParcelDeliverySchema extends IntangibleSchema
     /**
      * Destination address.
      *
-     * @param $deliveryAddress PostalAddressSchema
+     * @param $deliveryAddress 
+     * @return static
      **/
-    public function setDeliveryAddress($deliveryAddress) {
+    public function setDeliveryAddress($deliveryAddress): static {
         $this->properties['deliveryAddress'] = $deliveryAddress;
 
         return $this;
     }
 
     /**
-     * @return PostalAddressSchema
+     * @return 
      **/
     public function getDeliveryAddress() {
         return $this->properties['deliveryAddress'];
@@ -77,52 +79,131 @@ class ParcelDeliverySchema extends IntangibleSchema
     /**
      * New entry added as the package passes through each leg of its journey (from shipment to final delivery).
      *
-     * @param $deliveryStatus DeliveryEventSchema
+     * @param $deliveryStatus 
+     * @return static
      **/
-    public function setDeliveryStatus($deliveryStatus) {
+    public function setDeliveryStatus($deliveryStatus): static {
         $this->properties['deliveryStatus'] = $deliveryStatus;
 
         return $this;
     }
 
     /**
-     * @return DeliveryEventSchema
+     * @return 
      **/
     public function getDeliveryStatus() {
         return $this->properties['deliveryStatus'];
     }
 
     /**
-     * The earliest date the package may arrive.
+     * The overall order the items in this delivery were included in.
      *
-     * @param $expectedArrivalFrom DateTimeSchema
+     * @param $partOfOrder 
+     * @return static
      **/
-    public function setExpectedArrivalFrom($expectedArrivalFrom) {
-        $this->properties['expectedArrivalFrom'] = $expectedArrivalFrom;
+    public function setPartOfOrder($partOfOrder): static {
+        $this->properties['partOfOrder'] = $partOfOrder;
 
         return $this;
     }
 
     /**
-     * @return DateTimeSchema
+     * @return 
      **/
-    public function getExpectedArrivalFrom() {
-        return $this->properties['expectedArrivalFrom'];
+    public function getPartOfOrder() {
+        return $this->properties['partOfOrder'];
+    }
+
+    /**
+     * Shipper tracking number.
+     *
+     * @param $trackingNumber 
+     * @return static
+     **/
+    public function setTrackingNumber($trackingNumber): static {
+        $this->properties['trackingNumber'] = $trackingNumber;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getTrackingNumber() {
+        return $this->properties['trackingNumber'];
+    }
+
+    /**
+     * Shipper's address.
+     *
+     * @param $originAddress 
+     * @return static
+     **/
+    public function setOriginAddress($originAddress): static {
+        $this->properties['originAddress'] = $originAddress;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getOriginAddress() {
+        return $this->properties['originAddress'];
+    }
+
+    /**
+     * Tracking url for the parcel delivery.
+     *
+     * @param $trackingUrl 
+     * @return static
+     **/
+    public function setTrackingUrl($trackingUrl): static {
+        $this->properties['trackingUrl'] = $trackingUrl;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getTrackingUrl() {
+        return $this->properties['trackingUrl'];
+    }
+
+    /**
+     * Item(s) being shipped.
+     *
+     * @param $itemShipped 
+     * @return static
+     **/
+    public function setItemShipped($itemShipped): static {
+        $this->properties['itemShipped'] = $itemShipped;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getItemShipped() {
+        return $this->properties['itemShipped'];
     }
 
     /**
      * The latest date the package may arrive.
      *
-     * @param $expectedArrivalUntil DateTimeSchema
+     * @param $expectedArrivalUntil |
+     * @return static
      **/
-    public function setExpectedArrivalUntil($expectedArrivalUntil) {
+    public function setExpectedArrivalUntil($expectedArrivalUntil): static {
         $this->properties['expectedArrivalUntil'] = $expectedArrivalUntil;
 
         return $this;
     }
 
     /**
-     * @return DateTimeSchema
+     * @return |
      **/
     public function getExpectedArrivalUntil() {
         return $this->properties['expectedArrivalUntil'];
@@ -131,127 +212,58 @@ class ParcelDeliverySchema extends IntangibleSchema
     /**
      * Method used for delivery or shipping.
      *
-     * @param $hasDeliveryMethod DeliveryMethodSchema
+     * @param $hasDeliveryMethod 
+     * @return static
      **/
-    public function setHasDeliveryMethod($hasDeliveryMethod) {
+    public function setHasDeliveryMethod($hasDeliveryMethod): static {
         $this->properties['hasDeliveryMethod'] = $hasDeliveryMethod;
 
         return $this;
     }
 
     /**
-     * @return DeliveryMethodSchema
+     * @return 
      **/
     public function getHasDeliveryMethod() {
         return $this->properties['hasDeliveryMethod'];
     }
 
     /**
-     * Item(s) being shipped.
-     *
-     * @param $itemShipped ProductSchema
-     **/
-    public function setItemShipped($itemShipped) {
-        $this->properties['itemShipped'] = $itemShipped;
-
-        return $this;
-    }
-
-    /**
-     * @return ProductSchema
-     **/
-    public function getItemShipped() {
-        return $this->properties['itemShipped'];
-    }
-
-    /**
-     * Shipper's address.
-     *
-     * @param $originAddress PostalAddressSchema
-     **/
-    public function setOriginAddress($originAddress) {
-        $this->properties['originAddress'] = $originAddress;
-
-        return $this;
-    }
-
-    /**
-     * @return PostalAddressSchema
-     **/
-    public function getOriginAddress() {
-        return $this->properties['originAddress'];
-    }
-
-    /**
-     * The overall order the items in this delivery were included in.
-     *
-     * @param $partOfOrder OrderSchema
-     **/
-    public function setPartOfOrder($partOfOrder) {
-        $this->properties['partOfOrder'] = $partOfOrder;
-
-        return $this;
-    }
-
-    /**
-     * @return OrderSchema
-     **/
-    public function getPartOfOrder() {
-        return $this->properties['partOfOrder'];
-    }
-
-    /**
      * The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.
      *
-     * @param $provider PersonSchema|OrganizationSchema
+     * @param $provider |
+     * @return static
      **/
-    public function setProvider($provider) {
+    public function setProvider($provider): static {
         $this->properties['provider'] = $provider;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema|OrganizationSchema
+     * @return |
      **/
     public function getProvider() {
         return $this->properties['provider'];
     }
 
     /**
-     * Shipper tracking number.
+     * The earliest date the package may arrive.
      *
-     * @param $trackingNumber TextSchema
+     * @param $expectedArrivalFrom |
+     * @return static
      **/
-    public function setTrackingNumber($trackingNumber) {
-        $this->properties['trackingNumber'] = $trackingNumber;
+    public function setExpectedArrivalFrom($expectedArrivalFrom): static {
+        $this->properties['expectedArrivalFrom'] = $expectedArrivalFrom;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return |
      **/
-    public function getTrackingNumber() {
-        return $this->properties['trackingNumber'];
-    }
-
-    /**
-     * Tracking url for the parcel delivery.
-     *
-     * @param $trackingUrl URLSchema
-     **/
-    public function setTrackingUrl($trackingUrl) {
-        $this->properties['trackingUrl'] = $trackingUrl;
-
-        return $this;
-    }
-
-    /**
-     * @return URLSchema
-     **/
-    public function getTrackingUrl() {
-        return $this->properties['trackingUrl'];
+    public function getExpectedArrivalFrom() {
+        return $this->properties['expectedArrivalFrom'];
     }
 
 

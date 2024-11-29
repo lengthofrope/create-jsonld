@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,192 +27,259 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A <a href="/VideoGame">video game</a> series.
+ * A video game series.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class VideoGameSeriesSchema extends CreativeWorkSeriesSchema
 {
-    public static function factory()
+    public static function factory(): VideoGameSeriesSchema
     {
-        return new VideoGameSeriesSchema('http://schema.org/', 'VideoGameSeries');
+        return new VideoGameSeriesSchema('https://schema.org/', 'VideoGameSeries');
     }
 
     /**
-     * An actor, e.g. in tv, radio, movie, video games etc. Actors can be associated with individual items or with a series, episode, clip.
+     * An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip.
      *
-     * @param $actor PersonSchema
+     * @param $actor |
+     * @return static
      **/
-    public function setActor($actor) {
+    public function setActor($actor): static {
         $this->properties['actor'] = $actor;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema
+     * @return |
      **/
     public function getActor() {
         return $this->properties['actor'];
     }
 
     /**
-     * An actor, e.g. in tv, radio, movie, video games etc. Actors can be associated with individual items or with a series, episode, clip.
+     * The electronic systems used to play <a href="http://en.wikipedia.org/wiki/Category:Video_game_platforms">video games</a>.
      *
-     * @param $actors PersonSchema
+     * @param $gamePlatform ||
+     * @return static
      **/
-    public function setActors($actors) {
+    public function setGamePlatform($gamePlatform): static {
+        $this->properties['gamePlatform'] = $gamePlatform;
+
+        return $this;
+    }
+
+    /**
+     * @return ||
+     **/
+    public function getGamePlatform() {
+        return $this->properties['gamePlatform'];
+    }
+
+    /**
+     * The trailer of a movie or TV/radio series, season, episode, etc.
+     *
+     * @param $trailer 
+     * @return static
+     **/
+    public function setTrailer($trailer): static {
+        $this->properties['trailer'] = $trailer;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getTrailer() {
+        return $this->properties['trailer'];
+    }
+
+    /**
+     * An actor, e.g. in TV, radio, movie, video games etc. Actors can be associated with individual items or with a series, episode, clip.
+     *
+     * @param $actors 
+     * @return static
+     **/
+    public function setActors($actors): static {
         $this->properties['actors'] = $actors;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema
+     * @return 
      **/
     public function getActors() {
         return $this->properties['actors'];
     }
 
     /**
-     * A piece of data that represents a particular aspect of a fictional character (skill, power, character points, advantage, disadvantage).
-     *
-     * @param $characterAttribute ThingSchema
-     **/
-    public function setCharacterAttribute($characterAttribute) {
-        $this->properties['characterAttribute'] = $characterAttribute;
-
-        return $this;
-    }
-
-    /**
-     * @return ThingSchema
-     **/
-    public function getCharacterAttribute() {
-        return $this->properties['characterAttribute'];
-    }
-
-    /**
-     * Cheat codes to the game.
-     *
-     * @param $cheatCode CreativeWorkSchema
-     **/
-    public function setCheatCode($cheatCode) {
-        $this->properties['cheatCode'] = $cheatCode;
-
-        return $this;
-    }
-
-    /**
-     * @return CreativeWorkSchema
-     **/
-    public function getCheatCode() {
-        return $this->properties['cheatCode'];
-    }
-
-    /**
      * A season that is part of the media series.
      *
-     * @param $containsSeason CreativeWorkSeasonSchema
+     * @param $containsSeason 
+     * @return static
      **/
-    public function setContainsSeason($containsSeason) {
+    public function setContainsSeason($containsSeason): static {
         $this->properties['containsSeason'] = $containsSeason;
 
         return $this;
     }
 
     /**
-     * @return CreativeWorkSeasonSchema
+     * @return 
      **/
     public function getContainsSeason() {
         return $this->properties['containsSeason'];
     }
 
     /**
-     * A director of e.g. tv, radio, movie, video games etc. content. Directors can be associated with individual items or with a series, episode, clip.
+     * The number of seasons in this series.
      *
-     * @param $director PersonSchema
+     * @param $numberOfSeasons 
+     * @return static
      **/
-    public function setDirector($director) {
-        $this->properties['director'] = $director;
+    public function setNumberOfSeasons($numberOfSeasons): static {
+        $this->properties['numberOfSeasons'] = $numberOfSeasons;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema
+     * @return 
      **/
-    public function getDirector() {
-        return $this->properties['director'];
+    public function getNumberOfSeasons() {
+        return $this->properties['numberOfSeasons'];
     }
 
     /**
-     * A director of e.g. tv, radio, movie, video games etc. content. Directors can be associated with individual items or with a series, episode, clip.
+     * The task that a player-controlled character, or group of characters may complete in order to gain a reward.
      *
-     * @param $directors PersonSchema
+     * @param $quest 
+     * @return static
      **/
-    public function setDirectors($directors) {
-        $this->properties['directors'] = $directors;
+    public function setQuest($quest): static {
+        $this->properties['quest'] = $quest;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema
+     * @return 
      **/
-    public function getDirectors() {
-        return $this->properties['directors'];
+    public function getQuest() {
+        return $this->properties['quest'];
     }
 
     /**
-     * An episode of a tv, radio or game media within a series or season.
+     * An episode of a TV, radio or game media within a series or season.
      *
-     * @param $episode EpisodeSchema
+     * @param $episode 
+     * @return static
      **/
-    public function setEpisode($episode) {
+    public function setEpisode($episode): static {
         $this->properties['episode'] = $episode;
 
         return $this;
     }
 
     /**
-     * @return EpisodeSchema
+     * @return 
      **/
     public function getEpisode() {
         return $this->properties['episode'];
     }
 
     /**
-     * An episode of a TV/radio series or season.
+     * Indicate how many people can play this game (minimum, maximum, or range).
      *
-     * @param $episodes EpisodeSchema
+     * @param $numberOfPlayers 
+     * @return static
      **/
-    public function setEpisodes($episodes) {
-        $this->properties['episodes'] = $episodes;
+    public function setNumberOfPlayers($numberOfPlayers): static {
+        $this->properties['numberOfPlayers'] = $numberOfPlayers;
 
         return $this;
     }
 
     /**
-     * @return EpisodeSchema
+     * @return 
      **/
-    public function getEpisodes() {
-        return $this->properties['episodes'];
+    public function getNumberOfPlayers() {
+        return $this->properties['numberOfPlayers'];
+    }
+
+    /**
+     * A director of e.g. TV, radio, movie, video games etc. content. Directors can be associated with individual items or with a series, episode, clip.
+     *
+     * @param $directors 
+     * @return static
+     **/
+    public function setDirectors($directors): static {
+        $this->properties['directors'] = $directors;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getDirectors() {
+        return $this->properties['directors'];
+    }
+
+    /**
+     * Cheat codes to the game.
+     *
+     * @param $cheatCode 
+     * @return static
+     **/
+    public function setCheatCode($cheatCode): static {
+        $this->properties['cheatCode'] = $cheatCode;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getCheatCode() {
+        return $this->properties['cheatCode'];
+    }
+
+    /**
+     * A season in a media series.
+     *
+     * @param $seasons 
+     * @return static
+     **/
+    public function setSeasons($seasons): static {
+        $this->properties['seasons'] = $seasons;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getSeasons() {
+        return $this->properties['seasons'];
     }
 
     /**
      * An item is an object within the game world that can be collected by a player or, occasionally, a non-player character.
      *
-     * @param $gameItem ThingSchema
+     * @param $gameItem 
+     * @return static
      **/
-    public function setGameItem($gameItem) {
+    public function setGameItem($gameItem): static {
         $this->properties['gameItem'] = $gameItem;
 
         return $this;
     }
 
     /**
-     * @return ThingSchema
+     * @return 
      **/
     public function getGameItem() {
         return $this->properties['gameItem'];
@@ -221,217 +288,172 @@ class VideoGameSeriesSchema extends CreativeWorkSeriesSchema
     /**
      * Real or fictional location of the game (or part of game).
      *
-     * @param $gameLocation URLSchema|PlaceSchema|PostalAddressSchema
+     * @param $gameLocation ||
+     * @return static
      **/
-    public function setGameLocation($gameLocation) {
+    public function setGameLocation($gameLocation): static {
         $this->properties['gameLocation'] = $gameLocation;
 
         return $this;
     }
 
     /**
-     * @return URLSchema|PlaceSchema|PostalAddressSchema
+     * @return ||
      **/
     public function getGameLocation() {
         return $this->properties['gameLocation'];
     }
 
     /**
-     * The electronic systems used to play <a href="http://en.wikipedia.org/wiki/Category:Video_game_platforms">video games</a>.
-     *
-     * @param $gamePlatform TextSchema|URLSchema|ThingSchema
-     **/
-    public function setGamePlatform($gamePlatform) {
-        $this->properties['gamePlatform'] = $gamePlatform;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema|URLSchema|ThingSchema
-     **/
-    public function getGamePlatform() {
-        return $this->properties['gamePlatform'];
-    }
-
-    /**
-     * The composer of the soundtrack.
-     *
-     * @param $musicBy MusicGroupSchema|PersonSchema
-     **/
-    public function setMusicBy($musicBy) {
-        $this->properties['musicBy'] = $musicBy;
-
-        return $this;
-    }
-
-    /**
-     * @return MusicGroupSchema|PersonSchema
-     **/
-    public function getMusicBy() {
-        return $this->properties['musicBy'];
-    }
-
-    /**
-     * The number of episodes in this season or series.
-     *
-     * @param $numberOfEpisodes IntegerSchema
-     **/
-    public function setNumberOfEpisodes($numberOfEpisodes) {
-        $this->properties['numberOfEpisodes'] = $numberOfEpisodes;
-
-        return $this;
-    }
-
-    /**
-     * @return IntegerSchema
-     **/
-    public function getNumberOfEpisodes() {
-        return $this->properties['numberOfEpisodes'];
-    }
-
-    /**
-     * Indicate how many people can play this game (minimum, maximum, or range).
-     *
-     * @param $numberOfPlayers QuantitativeValueSchema
-     **/
-    public function setNumberOfPlayers($numberOfPlayers) {
-        $this->properties['numberOfPlayers'] = $numberOfPlayers;
-
-        return $this;
-    }
-
-    /**
-     * @return QuantitativeValueSchema
-     **/
-    public function getNumberOfPlayers() {
-        return $this->properties['numberOfPlayers'];
-    }
-
-    /**
-     * The number of seasons in this series.
-     *
-     * @param $numberOfSeasons IntegerSchema
-     **/
-    public function setNumberOfSeasons($numberOfSeasons) {
-        $this->properties['numberOfSeasons'] = $numberOfSeasons;
-
-        return $this;
-    }
-
-    /**
-     * @return IntegerSchema
-     **/
-    public function getNumberOfSeasons() {
-        return $this->properties['numberOfSeasons'];
-    }
-
-    /**
-     * Indicates whether this game is multi-player, co-op or single-player.  The game can be marked as multi-player, co-op and single-player at the same time.
-     *
-     * @param $playMode GamePlayModeSchema
-     **/
-    public function setPlayMode($playMode) {
-        $this->properties['playMode'] = $playMode;
-
-        return $this;
-    }
-
-    /**
-     * @return GamePlayModeSchema
-     **/
-    public function getPlayMode() {
-        return $this->properties['playMode'];
-    }
-
-    /**
-     * The production company or studio responsible for the item e.g. series, video game, episode etc.
-     *
-     * @param $productionCompany OrganizationSchema
-     **/
-    public function setProductionCompany($productionCompany) {
-        $this->properties['productionCompany'] = $productionCompany;
-
-        return $this;
-    }
-
-    /**
-     * @return OrganizationSchema
-     **/
-    public function getProductionCompany() {
-        return $this->properties['productionCompany'];
-    }
-
-    /**
-     * The task that a player-controlled character, or group of characters may complete in order to gain a reward.
-     *
-     * @param $quest ThingSchema
-     **/
-    public function setQuest($quest) {
-        $this->properties['quest'] = $quest;
-
-        return $this;
-    }
-
-    /**
-     * @return ThingSchema
-     **/
-    public function getQuest() {
-        return $this->properties['quest'];
-    }
-
-    /**
      * A season in a media series.
      *
-     * @param $season CreativeWorkSeasonSchema
+     * @param $season |
+     * @return static
      **/
-    public function setSeason($season) {
+    public function setSeason($season): static {
         $this->properties['season'] = $season;
 
         return $this;
     }
 
     /**
-     * @return CreativeWorkSeasonSchema
+     * @return |
      **/
     public function getSeason() {
         return $this->properties['season'];
     }
 
     /**
-     * A season in a media series.
+     * The production company or studio responsible for the item, e.g. series, video game, episode etc.
      *
-     * @param $seasons CreativeWorkSeasonSchema
+     * @param $productionCompany 
+     * @return static
      **/
-    public function setSeasons($seasons) {
-        $this->properties['seasons'] = $seasons;
+    public function setProductionCompany($productionCompany): static {
+        $this->properties['productionCompany'] = $productionCompany;
 
         return $this;
     }
 
     /**
-     * @return CreativeWorkSeasonSchema
+     * @return 
      **/
-    public function getSeasons() {
-        return $this->properties['seasons'];
+    public function getProductionCompany() {
+        return $this->properties['productionCompany'];
     }
 
     /**
-     * The trailer of a movie or tv/radio series, season, episode, etc.
+     * A piece of data that represents a particular aspect of a fictional character (skill, power, character points, advantage, disadvantage).
      *
-     * @param $trailer VideoObjectSchema
+     * @param $characterAttribute 
+     * @return static
      **/
-    public function setTrailer($trailer) {
-        $this->properties['trailer'] = $trailer;
+    public function setCharacterAttribute($characterAttribute): static {
+        $this->properties['characterAttribute'] = $characterAttribute;
 
         return $this;
     }
 
     /**
-     * @return VideoObjectSchema
+     * @return 
      **/
-    public function getTrailer() {
-        return $this->properties['trailer'];
+    public function getCharacterAttribute() {
+        return $this->properties['characterAttribute'];
+    }
+
+    /**
+     * Indicates whether this game is multi-player, co-op or single-player.  The game can be marked as multi-player, co-op and single-player at the same time.
+     *
+     * @param $playMode 
+     * @return static
+     **/
+    public function setPlayMode($playMode): static {
+        $this->properties['playMode'] = $playMode;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getPlayMode() {
+        return $this->properties['playMode'];
+    }
+
+    /**
+     * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual items or with a series, episode, clip.
+     *
+     * @param $director 
+     * @return static
+     **/
+    public function setDirector($director): static {
+        $this->properties['director'] = $director;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getDirector() {
+        return $this->properties['director'];
+    }
+
+    /**
+     * The number of episodes in this season or series.
+     *
+     * @param $numberOfEpisodes 
+     * @return static
+     **/
+    public function setNumberOfEpisodes($numberOfEpisodes): static {
+        $this->properties['numberOfEpisodes'] = $numberOfEpisodes;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getNumberOfEpisodes() {
+        return $this->properties['numberOfEpisodes'];
+    }
+
+    /**
+     * The composer of the soundtrack.
+     *
+     * @param $musicBy |
+     * @return static
+     **/
+    public function setMusicBy($musicBy): static {
+        $this->properties['musicBy'] = $musicBy;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getMusicBy() {
+        return $this->properties['musicBy'];
+    }
+
+    /**
+     * An episode of a TV/radio series or season.
+     *
+     * @param $episodes 
+     * @return static
+     **/
+    public function setEpisodes($episodes): static {
+        $this->properties['episodes'] = $episodes;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getEpisodes() {
+        return $this->properties['episodes'];
     }
 
 

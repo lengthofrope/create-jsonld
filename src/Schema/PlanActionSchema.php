@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,24 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PlanActionSchema extends OrganizeActionSchema
 {
-    public static function factory()
+    public static function factory(): PlanActionSchema
     {
-        return new PlanActionSchema('http://schema.org/', 'PlanAction');
+        return new PlanActionSchema('https://schema.org/', 'PlanAction');
     }
 
     /**
      * The time the object is scheduled to.
      *
-     * @param $scheduledTime DateTimeSchema
+     * @param $scheduledTime |
+     * @return static
      **/
-    public function setScheduledTime($scheduledTime) {
+    public function setScheduledTime($scheduledTime): static {
         $this->properties['scheduledTime'] = $scheduledTime;
 
         return $this;
     }
 
     /**
-     * @return DateTimeSchema
+     * @return |
      **/
     public function getScheduledTime() {
         return $this->properties['scheduledTime'];

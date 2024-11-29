@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,28 +33,44 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ItemListSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): ItemListSchema
     {
-        return new ItemListSchema('http://schema.org/', 'ItemList');
+        return new ItemListSchema('https://schema.org/', 'ItemList');
     }
 
     /**
-     * For itemListElement values, you can use simple strings (e.g. "Peter", "Paul", "Mary"), existing entities, or use ListItem.
-    <br/><br/>
-    Text values are best if the elements in the list are plain strings. Existing entities are best for a simple, unordered list of existing things in your data. ListItem is used with ordered lists when you want to provide additional context about the element in that list or when the same item might be in different places in different lists.
-    <br/><br/>
-    Note: The order of elements in your mark-up is not sufficient for indicating the order or elements.  Use ListItem with a 'position' property in such cases.
+     * The number of items in an ItemList. Note that some descriptions might not fully describe all items in a list (e.g., multi-page pagination); in such cases, the numberOfItems would be for the entire list.
      *
-     * @param $itemListElement TextSchema|ListItemSchema|ThingSchema
+     * @param $numberOfItems 
+     * @return static
      **/
-    public function setItemListElement($itemListElement) {
+    public function setNumberOfItems($numberOfItems): static {
+        $this->properties['numberOfItems'] = $numberOfItems;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getNumberOfItems() {
+        return $this->properties['numberOfItems'];
+    }
+
+    /**
+     * For itemListElement values, you can use simple strings (e.g. "Peter", "Paul", "Mary"), existing entities, or use ListItem.\n\nText values are best if the elements in the list are plain strings. Existing entities are best for a simple, unordered list of existing things in your data. ListItem is used with ordered lists when you want to provide additional context about the element in that list or when the same item might be in different places in different lists.\n\nNote: The order of elements in your mark-up is not sufficient for indicating the order or elements.  Use ListItem with a 'position' property in such cases.
+     *
+     * @param $itemListElement ||
+     * @return static
+     **/
+    public function setItemListElement($itemListElement): static {
         $this->properties['itemListElement'] = $itemListElement;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|ListItemSchema|ThingSchema
+     * @return ||
      **/
     public function getItemListElement() {
         return $this->properties['itemListElement'];
@@ -63,37 +79,20 @@ class ItemListSchema extends IntangibleSchema
     /**
      * Type of ordering (e.g. Ascending, Descending, Unordered).
      *
-     * @param $itemListOrder ItemListOrderTypeSchema|TextSchema
+     * @param $itemListOrder |
+     * @return static
      **/
-    public function setItemListOrder($itemListOrder) {
+    public function setItemListOrder($itemListOrder): static {
         $this->properties['itemListOrder'] = $itemListOrder;
 
         return $this;
     }
 
     /**
-     * @return ItemListOrderTypeSchema|TextSchema
+     * @return |
      **/
     public function getItemListOrder() {
         return $this->properties['itemListOrder'];
-    }
-
-    /**
-     * The number of items in an ItemList. Note that some descriptions might not fully describe all items in a list (e.g., multi-page pagination); in such cases, the numberOfItems would be for the entire list.
-     *
-     * @param $numberOfItems IntegerSchema
-     **/
-    public function setNumberOfItems($numberOfItems) {
-        $this->properties['numberOfItems'] = $numberOfItems;
-
-        return $this;
-    }
-
-    /**
-     * @return IntegerSchema
-     **/
-    public function getNumberOfItems() {
-        return $this->properties['numberOfItems'];
     }
 
 

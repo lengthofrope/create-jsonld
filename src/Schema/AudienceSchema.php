@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,45 +33,47 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class AudienceSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): AudienceSchema
     {
-        return new AudienceSchema('http://schema.org/', 'Audience');
-    }
-
-    /**
-     * The target group associated with a given audience (e.g. veterans, car owners, musicians, etc.).
-     *
-     * @param $audienceType TextSchema
-     **/
-    public function setAudienceType($audienceType) {
-        $this->properties['audienceType'] = $audienceType;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getAudienceType() {
-        return $this->properties['audienceType'];
+        return new AudienceSchema('https://schema.org/', 'Audience');
     }
 
     /**
      * The geographic area associated with the audience.
      *
-     * @param $geographicArea AdministrativeAreaSchema
+     * @param $geographicArea 
+     * @return static
      **/
-    public function setGeographicArea($geographicArea) {
+    public function setGeographicArea($geographicArea): static {
         $this->properties['geographicArea'] = $geographicArea;
 
         return $this;
     }
 
     /**
-     * @return AdministrativeAreaSchema
+     * @return 
      **/
     public function getGeographicArea() {
         return $this->properties['geographicArea'];
+    }
+
+    /**
+     * The target group associated with a given audience (e.g. veterans, car owners, musicians, etc.).
+     *
+     * @param $audienceType 
+     * @return static
+     **/
+    public function setAudienceType($audienceType): static {
+        $this->properties['audienceType'] = $audienceType;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getAudienceType() {
+        return $this->properties['audienceType'];
     }
 
 

@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,120 +27,126 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A reservation for lodging at a hotel, motel, inn, etc.Note: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations.
+ * A reservation for lodging at a hotel, motel, inn, etc.\n\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class LodgingReservationSchema extends ReservationSchema
 {
-    public static function factory()
+    public static function factory(): LodgingReservationSchema
     {
-        return new LodgingReservationSchema('http://schema.org/', 'LodgingReservation');
-    }
-
-    /**
-     * The earliest someone may check into a lodging establishment.
-     *
-     * @param $checkinTime DateTimeSchema
-     **/
-    public function setCheckinTime($checkinTime) {
-        $this->properties['checkinTime'] = $checkinTime;
-
-        return $this;
-    }
-
-    /**
-     * @return DateTimeSchema
-     **/
-    public function getCheckinTime() {
-        return $this->properties['checkinTime'];
-    }
-
-    /**
-     * The latest someone may check out of a lodging establishment.
-     *
-     * @param $checkoutTime DateTimeSchema
-     **/
-    public function setCheckoutTime($checkoutTime) {
-        $this->properties['checkoutTime'] = $checkoutTime;
-
-        return $this;
-    }
-
-    /**
-     * @return DateTimeSchema
-     **/
-    public function getCheckoutTime() {
-        return $this->properties['checkoutTime'];
-    }
-
-    /**
-     * A full description of the lodging unit.
-     *
-     * @param $lodgingUnitDescription TextSchema
-     **/
-    public function setLodgingUnitDescription($lodgingUnitDescription) {
-        $this->properties['lodgingUnitDescription'] = $lodgingUnitDescription;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getLodgingUnitDescription() {
-        return $this->properties['lodgingUnitDescription'];
-    }
-
-    /**
-     * Textual description of the unit type (including suite vs. room, size of bed, etc.).
-     *
-     * @param $lodgingUnitType TextSchema|QualitativeValueSchema
-     **/
-    public function setLodgingUnitType($lodgingUnitType) {
-        $this->properties['lodgingUnitType'] = $lodgingUnitType;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema|QualitativeValueSchema
-     **/
-    public function getLodgingUnitType() {
-        return $this->properties['lodgingUnitType'];
+        return new LodgingReservationSchema('https://schema.org/', 'LodgingReservation');
     }
 
     /**
      * The number of adults staying in the unit.
      *
-     * @param $numAdults IntegerSchema|QuantitativeValueSchema
+     * @param $numAdults |
+     * @return static
      **/
-    public function setNumAdults($numAdults) {
+    public function setNumAdults($numAdults): static {
         $this->properties['numAdults'] = $numAdults;
 
         return $this;
     }
 
     /**
-     * @return IntegerSchema|QuantitativeValueSchema
+     * @return |
      **/
     public function getNumAdults() {
         return $this->properties['numAdults'];
     }
 
     /**
+     * Textual description of the unit type (including suite vs. room, size of bed, etc.).
+     *
+     * @param $lodgingUnitType |
+     * @return static
+     **/
+    public function setLodgingUnitType($lodgingUnitType): static {
+        $this->properties['lodgingUnitType'] = $lodgingUnitType;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getLodgingUnitType() {
+        return $this->properties['lodgingUnitType'];
+    }
+
+    /**
+     * The latest someone may check out of a lodging establishment.
+     *
+     * @param $checkoutTime |
+     * @return static
+     **/
+    public function setCheckoutTime($checkoutTime): static {
+        $this->properties['checkoutTime'] = $checkoutTime;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getCheckoutTime() {
+        return $this->properties['checkoutTime'];
+    }
+
+    /**
+     * The earliest someone may check into a lodging establishment.
+     *
+     * @param $checkinTime |
+     * @return static
+     **/
+    public function setCheckinTime($checkinTime): static {
+        $this->properties['checkinTime'] = $checkinTime;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getCheckinTime() {
+        return $this->properties['checkinTime'];
+    }
+
+    /**
+     * A full description of the lodging unit.
+     *
+     * @param $lodgingUnitDescription 
+     * @return static
+     **/
+    public function setLodgingUnitDescription($lodgingUnitDescription): static {
+        $this->properties['lodgingUnitDescription'] = $lodgingUnitDescription;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getLodgingUnitDescription() {
+        return $this->properties['lodgingUnitDescription'];
+    }
+
+    /**
      * The number of children staying in the unit.
      *
-     * @param $numChildren IntegerSchema|QuantitativeValueSchema
+     * @param $numChildren |
+     * @return static
      **/
-    public function setNumChildren($numChildren) {
+    public function setNumChildren($numChildren): static {
         $this->properties['numChildren'] = $numChildren;
 
         return $this;
     }
 
     /**
-     * @return IntegerSchema|QuantitativeValueSchema
+     * @return |
      **/
     public function getNumChildren() {
         return $this->properties['numChildren'];

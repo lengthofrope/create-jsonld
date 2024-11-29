@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -31,101 +31,106 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class QuestionSchema extends CreativeWorkSchema
+class QuestionSchema extends CommentSchema
 {
-    public static function factory()
+    public static function factory(): QuestionSchema
     {
-        return new QuestionSchema('http://schema.org/', 'Question');
-    }
-
-    /**
-     * The answer that has been accepted as best, typically on a Question/Answer site. Sites vary in their selection mechanisms, e.g. drawing on community opinion and/or the view of the Question author.
-     *
-     * @param $acceptedAnswer AnswerSchema
-     **/
-    public function setAcceptedAnswer($acceptedAnswer) {
-        $this->properties['acceptedAnswer'] = $acceptedAnswer;
-
-        return $this;
-    }
-
-    /**
-     * @return AnswerSchema
-     **/
-    public function getAcceptedAnswer() {
-        return $this->properties['acceptedAnswer'];
+        return new QuestionSchema('https://schema.org/', 'Question');
     }
 
     /**
      * The number of answers this question has received.
      *
-     * @param $answerCount IntegerSchema
+     * @param $answerCount 
+     * @return static
      **/
-    public function setAnswerCount($answerCount) {
+    public function setAnswerCount($answerCount): static {
         $this->properties['answerCount'] = $answerCount;
 
         return $this;
     }
 
     /**
-     * @return IntegerSchema
+     * @return 
      **/
     public function getAnswerCount() {
         return $this->properties['answerCount'];
     }
 
     /**
-     * The number of downvotes this question, answer or comment has received from the community.
+     * The parent of a question, answer or item in general. Typically used for Q/A discussion threads e.g. a chain of comments with the first comment being an [[Article]] or other [[CreativeWork]]. See also [[comment]] which points from something to a comment about it.
      *
-     * @param $downvoteCount IntegerSchema
+     * @param $parentItem |
+     * @return static
      **/
-    public function setDownvoteCount($downvoteCount) {
-        $this->properties['downvoteCount'] = $downvoteCount;
+    public function setParentItem($parentItem): static {
+        $this->properties['parentItem'] = $parentItem;
 
         return $this;
     }
 
     /**
-     * @return IntegerSchema
+     * @return |
      **/
-    public function getDownvoteCount() {
-        return $this->properties['downvoteCount'];
+    public function getParentItem() {
+        return $this->properties['parentItem'];
+    }
+
+    /**
+     * The answer(s) that has been accepted as best, typically on a Question/Answer site. Sites vary in their selection mechanisms, e.g. drawing on community opinion and/or the view of the Question author.
+     *
+     * @param $acceptedAnswer |
+     * @return static
+     **/
+    public function setAcceptedAnswer($acceptedAnswer): static {
+        $this->properties['acceptedAnswer'] = $acceptedAnswer;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getAcceptedAnswer() {
+        return $this->properties['acceptedAnswer'];
+    }
+
+    /**
+     * For questions that are part of learning resources (e.g. Quiz), eduQuestionType indicates the format of question being given. Example: "Multiple choice", "Open ended", "Flashcard".
+     *
+     * @param $eduQuestionType 
+     * @return static
+     **/
+    public function setEduQuestionType($eduQuestionType): static {
+        $this->properties['eduQuestionType'] = $eduQuestionType;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getEduQuestionType() {
+        return $this->properties['eduQuestionType'];
     }
 
     /**
      * An answer (possibly one of several, possibly incorrect) to a Question, e.g. on a Question/Answer site.
      *
-     * @param $suggestedAnswer AnswerSchema
+     * @param $suggestedAnswer |
+     * @return static
      **/
-    public function setSuggestedAnswer($suggestedAnswer) {
+    public function setSuggestedAnswer($suggestedAnswer): static {
         $this->properties['suggestedAnswer'] = $suggestedAnswer;
 
         return $this;
     }
 
     /**
-     * @return AnswerSchema
+     * @return |
      **/
     public function getSuggestedAnswer() {
         return $this->properties['suggestedAnswer'];
-    }
-
-    /**
-     * The number of upvotes this question, answer or comment has received from the community.
-     *
-     * @param $upvoteCount IntegerSchema
-     **/
-    public function setUpvoteCount($upvoteCount) {
-        $this->properties['upvoteCount'] = $upvoteCount;
-
-        return $this;
-    }
-
-    /**
-     * @return IntegerSchema
-     **/
-    public function getUpvoteCount() {
-        return $this->properties['upvoteCount'];
     }
 
 

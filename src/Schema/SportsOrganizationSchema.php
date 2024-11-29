@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,24 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class SportsOrganizationSchema extends OrganizationSchema
 {
-    public static function factory()
+    public static function factory(): SportsOrganizationSchema
     {
-        return new SportsOrganizationSchema('http://schema.org/', 'SportsOrganization');
+        return new SportsOrganizationSchema('https://schema.org/', 'SportsOrganization');
     }
 
     /**
      * A type of sport (e.g. Baseball).
      *
-     * @param $sport TextSchema|URLSchema
+     * @param $sport |
+     * @return static
      **/
-    public function setSport($sport) {
+    public function setSport($sport): static {
         $this->properties['sport'] = $sport;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|URLSchema
+     * @return |
      **/
     public function getSport() {
         return $this->properties['sport'];

@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,132 +33,63 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class GeoShapeSchema extends StructuredValueSchema
 {
-    public static function factory()
+    public static function factory(): GeoShapeSchema
     {
-        return new GeoShapeSchema('http://schema.org/', 'GeoShape');
+        return new GeoShapeSchema('https://schema.org/', 'GeoShape');
     }
 
     /**
-     * Physical address of the item.
+     * The country. Recommended to be in 2-letter [ISO 3166-1 alpha-2](http://en.wikipedia.org/wiki/ISO_3166-1) format, for example "US". For backward compatibility, a 3-letter [ISO 3166-1 alpha-3](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) country code such as "SGP" or a full country name such as "Singapore" can also be used.
      *
-     * @param $address PostalAddressSchema|TextSchema
+     * @param $addressCountry |
+     * @return static
      **/
-    public function setAddress($address) {
-        $this->properties['address'] = $address;
-
-        return $this;
-    }
-
-    /**
-     * @return PostalAddressSchema|TextSchema
-     **/
-    public function getAddress() {
-        return $this->properties['address'];
-    }
-
-    /**
-     * The country. For example, USA. You can also provide the two-letter <a href='http://en.wikipedia.org/wiki/ISO_3166-1'>ISO 3166-1 alpha-2 country code</a>.
-     *
-     * @param $addressCountry TextSchema|CountrySchema
-     **/
-    public function setAddressCountry($addressCountry) {
+    public function setAddressCountry($addressCountry): static {
         $this->properties['addressCountry'] = $addressCountry;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|CountrySchema
+     * @return |
      **/
     public function getAddressCountry() {
         return $this->properties['addressCountry'];
     }
 
     /**
-     * A box is the area enclosed by the rectangle formed by two points. The first point is the lower corner, the second point is the upper corner. A box is expressed as two points separated by a space character.
+     * Physical address of the item.
      *
-     * @param $box TextSchema
+     * @param $address |
+     * @return static
      **/
-    public function setBox($box) {
-        $this->properties['box'] = $box;
+    public function setAddress($address): static {
+        $this->properties['address'] = $address;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return |
      **/
-    public function getBox() {
-        return $this->properties['box'];
-    }
-
-    /**
-     * A circle is the circular region of a specified radius centered at a specified latitude and longitude. A circle is expressed as a pair followed by a radius in meters.
-     *
-     * @param $circle TextSchema
-     **/
-    public function setCircle($circle) {
-        $this->properties['circle'] = $circle;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getCircle() {
-        return $this->properties['circle'];
-    }
-
-    /**
-     * The elevation of a location (<a href="https://en.wikipedia.org/wiki/World_Geodetic_System">WGS 84</a>).
-     *
-     * @param $elevation NumberSchema|TextSchema
-     **/
-    public function setElevation($elevation) {
-        $this->properties['elevation'] = $elevation;
-
-        return $this;
-    }
-
-    /**
-     * @return NumberSchema|TextSchema
-     **/
-    public function getElevation() {
-        return $this->properties['elevation'];
-    }
-
-    /**
-     * A line is a point-to-point path consisting of two or more points. A line is expressed as a series of two or more point objects separated by space.
-     *
-     * @param $line TextSchema
-     **/
-    public function setLine($line) {
-        $this->properties['line'] = $line;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getLine() {
-        return $this->properties['line'];
+    public function getAddress() {
+        return $this->properties['address'];
     }
 
     /**
      * A polygon is the area enclosed by a point-to-point path for which the starting and ending points are the same. A polygon is expressed as a series of four or more space delimited points where the first and final points are identical.
      *
-     * @param $polygon TextSchema
+     * @param $polygon 
+     * @return static
      **/
-    public function setPolygon($polygon) {
+    public function setPolygon($polygon): static {
         $this->properties['polygon'] = $polygon;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getPolygon() {
         return $this->properties['polygon'];
@@ -167,19 +98,96 @@ class GeoShapeSchema extends StructuredValueSchema
     /**
      * The postal code. For example, 94043.
      *
-     * @param $postalCode TextSchema
+     * @param $postalCode 
+     * @return static
      **/
-    public function setPostalCode($postalCode) {
+    public function setPostalCode($postalCode): static {
         $this->properties['postalCode'] = $postalCode;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getPostalCode() {
         return $this->properties['postalCode'];
+    }
+
+    /**
+     * A circle is the circular region of a specified radius centered at a specified latitude and longitude. A circle is expressed as a pair followed by a radius in meters.
+     *
+     * @param $circle 
+     * @return static
+     **/
+    public function setCircle($circle): static {
+        $this->properties['circle'] = $circle;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getCircle() {
+        return $this->properties['circle'];
+    }
+
+    /**
+     * The elevation of a location ([WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System)). Values may be of the form 'NUMBER UNIT\_OF\_MEASUREMENT' (e.g., '1,000 m', '3,200 ft') while numbers alone should be assumed to be a value in meters.
+     *
+     * @param $elevation |
+     * @return static
+     **/
+    public function setElevation($elevation): static {
+        $this->properties['elevation'] = $elevation;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getElevation() {
+        return $this->properties['elevation'];
+    }
+
+    /**
+     * A line is a point-to-point path consisting of two or more points. A line is expressed as a series of two or more point objects separated by space.
+     *
+     * @param $line 
+     * @return static
+     **/
+    public function setLine($line): static {
+        $this->properties['line'] = $line;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getLine() {
+        return $this->properties['line'];
+    }
+
+    /**
+     * A box is the area enclosed by the rectangle formed by two points. The first point is the lower corner, the second point is the upper corner. A box is expressed as two points separated by a space character.
+     *
+     * @param $box 
+     * @return static
+     **/
+    public function setBox($box): static {
+        $this->properties['box'] = $box;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getBox() {
+        return $this->properties['box'];
     }
 
 

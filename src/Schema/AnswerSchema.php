@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,9 +33,47 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class AnswerSchema extends CommentSchema
 {
-    public static function factory()
+    public static function factory(): AnswerSchema
     {
-        return new AnswerSchema('http://schema.org/', 'Answer');
+        return new AnswerSchema('https://schema.org/', 'Answer');
+    }
+
+    /**
+     * The parent of a question, answer or item in general. Typically used for Q/A discussion threads e.g. a chain of comments with the first comment being an [[Article]] or other [[CreativeWork]]. See also [[comment]] which points from something to a comment about it.
+     *
+     * @param $parentItem |
+     * @return static
+     **/
+    public function setParentItem($parentItem): static {
+        $this->properties['parentItem'] = $parentItem;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getParentItem() {
+        return $this->properties['parentItem'];
+    }
+
+    /**
+     * A step-by-step or full explanation about Answer. Can outline how this Answer was achieved or contain more broad clarification or statement about it. 
+     *
+     * @param $answerExplanation |
+     * @return static
+     **/
+    public function setAnswerExplanation($answerExplanation): static {
+        $this->properties['answerExplanation'] = $answerExplanation;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getAnswerExplanation() {
+        return $this->properties['answerExplanation'];
     }
 
 

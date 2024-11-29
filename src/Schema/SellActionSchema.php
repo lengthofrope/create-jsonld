@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,24 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class SellActionSchema extends TradeActionSchema
 {
-    public static function factory()
+    public static function factory(): SellActionSchema
     {
-        return new SellActionSchema('http://schema.org/', 'SellAction');
+        return new SellActionSchema('https://schema.org/', 'SellAction');
     }
 
     /**
      * A sub property of participant. The participant/person/organization that bought the object.
      *
-     * @param $buyer PersonSchema
+     * @param $buyer |
+     * @return static
      **/
-    public function setBuyer($buyer) {
+    public function setBuyer($buyer): static {
         $this->properties['buyer'] = $buyer;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema
+     * @return |
      **/
     public function getBuyer() {
         return $this->properties['buyer'];
@@ -59,16 +60,17 @@ class SellActionSchema extends TradeActionSchema
     /**
      * The warranty promise(s) included in the offer.
      *
-     * @param $warrantyPromise WarrantyPromiseSchema
+     * @param $warrantyPromise 
+     * @return static
      **/
-    public function setWarrantyPromise($warrantyPromise) {
+    public function setWarrantyPromise($warrantyPromise): static {
         $this->properties['warrantyPromise'] = $warrantyPromise;
 
         return $this;
     }
 
     /**
-     * @return WarrantyPromiseSchema
+     * @return 
      **/
     public function getWarrantyPromise() {
         return $this->properties['warrantyPromise'];

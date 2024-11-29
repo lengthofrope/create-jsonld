@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,135 +33,142 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class EntryPointSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): EntryPointSchema
     {
-        return new EntryPointSchema('http://schema.org/', 'EntryPoint');
-    }
-
-    /**
-     * An application that can complete the request.
-     *
-     * @param $actionApplication SoftwareApplicationSchema
-     **/
-    public function setActionApplication($actionApplication) {
-        $this->properties['actionApplication'] = $actionApplication;
-
-        return $this;
-    }
-
-    /**
-     * @return SoftwareApplicationSchema
-     **/
-    public function getActionApplication() {
-        return $this->properties['actionApplication'];
+        return new EntryPointSchema('https://schema.org/', 'EntryPoint');
     }
 
     /**
      * The high level platform(s) where the Action can be performed for the given URL. To specify a specific application or operating system instance, use actionApplication.
      *
-     * @param $actionPlatform TextSchema|URLSchema
+     * @param $actionPlatform ||
+     * @return static
      **/
-    public function setActionPlatform($actionPlatform) {
+    public function setActionPlatform($actionPlatform): static {
         $this->properties['actionPlatform'] = $actionPlatform;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|URLSchema
+     * @return ||
      **/
     public function getActionPlatform() {
         return $this->properties['actionPlatform'];
     }
 
     /**
-     * An application that can complete the request.
-     *
-     * @param $application SoftwareApplicationSchema
-     **/
-    public function setApplication($application) {
-        $this->properties['application'] = $application;
-
-        return $this;
-    }
-
-    /**
-     * @return SoftwareApplicationSchema
-     **/
-    public function getApplication() {
-        return $this->properties['application'];
-    }
-
-    /**
      * The supported content type(s) for an EntryPoint response.
      *
-     * @param $contentType TextSchema
+     * @param $contentType 
+     * @return static
      **/
-    public function setContentType($contentType) {
+    public function setContentType($contentType): static {
         $this->properties['contentType'] = $contentType;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getContentType() {
         return $this->properties['contentType'];
     }
 
     /**
+     * An application that can complete the request.
+     *
+     * @param $actionApplication 
+     * @return static
+     **/
+    public function setActionApplication($actionApplication): static {
+        $this->properties['actionApplication'] = $actionApplication;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getActionApplication() {
+        return $this->properties['actionApplication'];
+    }
+
+    /**
      * The supported encoding type(s) for an EntryPoint request.
      *
-     * @param $encodingType TextSchema
+     * @param $encodingType 
+     * @return static
      **/
-    public function setEncodingType($encodingType) {
+    public function setEncodingType($encodingType): static {
         $this->properties['encodingType'] = $encodingType;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getEncodingType() {
         return $this->properties['encodingType'];
     }
 
     /**
-     * An HTTP method that specifies the appropriate HTTP method for a request to an HTTP EntryPoint. Values are capitalized strings as used in HTTP.
+     * An url template (RFC6570) that will be used to construct the target of the execution of the action.
      *
-     * @param $httpMethod TextSchema
+     * @param $urlTemplate 
+     * @return static
      **/
-    public function setHttpMethod($httpMethod) {
-        $this->properties['httpMethod'] = $httpMethod;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getHttpMethod() {
-        return $this->properties['httpMethod'];
-    }
-
-    /**
-     * A url template (RFC6570) that will be used to construct the target of the execution of the action.
-     *
-     * @param $urlTemplate TextSchema
-     **/
-    public function setUrlTemplate($urlTemplate) {
+    public function setUrlTemplate($urlTemplate): static {
         $this->properties['urlTemplate'] = $urlTemplate;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getUrlTemplate() {
         return $this->properties['urlTemplate'];
+    }
+
+    /**
+     * An HTTP method that specifies the appropriate HTTP method for a request to an HTTP EntryPoint. Values are capitalized strings as used in HTTP.
+     *
+     * @param $httpMethod 
+     * @return static
+     **/
+    public function setHttpMethod($httpMethod): static {
+        $this->properties['httpMethod'] = $httpMethod;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getHttpMethod() {
+        return $this->properties['httpMethod'];
+    }
+
+    /**
+     * An application that can complete the request.
+     *
+     * @param $application 
+     * @return static
+     **/
+    public function setApplication($application): static {
+        $this->properties['application'] = $application;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getApplication() {
+        return $this->properties['application'];
     }
 
 

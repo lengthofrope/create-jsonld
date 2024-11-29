@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -31,134 +31,103 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class DietSchema extends \LengthOfRope\JSONLD\Elements\Element
+class DietSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): DietSchema
     {
-        return new DietSchema('http://schema.org/', 'Diet');
-    }
-
-    /**
-     * Nutritional information specific to the dietary plan. May include dietary recommendations on what foods to avoid, what foods to consume, and specific alterations/deviations from the USDA or other regulatory body's approved dietary guidelines.
-     *
-     * @param $dietFeatures TextSchema
-     **/
-    public function setDietFeatures($dietFeatures) {
-        $this->properties['dietFeatures'] = $dietFeatures;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getDietFeatures() {
-        return $this->properties['dietFeatures'];
-    }
-
-    /**
-     * People or organizations that endorse the plan.
-     *
-     * @param $endorsers OrganizationSchema|PersonSchema
-     **/
-    public function setEndorsers($endorsers) {
-        $this->properties['endorsers'] = $endorsers;
-
-        return $this;
-    }
-
-    /**
-     * @return OrganizationSchema|PersonSchema
-     **/
-    public function getEndorsers() {
-        return $this->properties['endorsers'];
+        return new DietSchema('https://schema.org/', 'Diet');
     }
 
     /**
      * Medical expert advice related to the plan.
      *
-     * @param $expertConsiderations TextSchema
+     * @param $expertConsiderations 
+     * @return static
      **/
-    public function setExpertConsiderations($expertConsiderations) {
+    public function setExpertConsiderations($expertConsiderations): static {
         $this->properties['expertConsiderations'] = $expertConsiderations;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getExpertConsiderations() {
         return $this->properties['expertConsiderations'];
     }
 
     /**
-     * Descriptive information establishing the overarching theory/philosophy of the plan. May include the rationale for the name, the population where the plan first came to prominence, etc.
+     * People or organizations that endorse the plan.
      *
-     * @param $overview TextSchema
+     * @param $endorsers |
+     * @return static
      **/
-    public function setOverview($overview) {
-        $this->properties['overview'] = $overview;
+    public function setEndorsers($endorsers): static {
+        $this->properties['endorsers'] = $endorsers;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return |
      **/
-    public function getOverview() {
-        return $this->properties['overview'];
+    public function getEndorsers() {
+        return $this->properties['endorsers'];
+    }
+
+    /**
+     * Nutritional information specific to the dietary plan. May include dietary recommendations on what foods to avoid, what foods to consume, and specific alterations/deviations from the USDA or other regulatory body's approved dietary guidelines.
+     *
+     * @param $dietFeatures 
+     * @return static
+     **/
+    public function setDietFeatures($dietFeatures): static {
+        $this->properties['dietFeatures'] = $dietFeatures;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getDietFeatures() {
+        return $this->properties['dietFeatures'];
     }
 
     /**
      * Specific physiologic benefits associated to the plan.
      *
-     * @param $physiologicalBenefits TextSchema
+     * @param $physiologicalBenefits 
+     * @return static
      **/
-    public function setPhysiologicalBenefits($physiologicalBenefits) {
+    public function setPhysiologicalBenefits($physiologicalBenefits): static {
         $this->properties['physiologicalBenefits'] = $physiologicalBenefits;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getPhysiologicalBenefits() {
         return $this->properties['physiologicalBenefits'];
     }
 
     /**
-     * Proprietary name given to the diet plan, typically by its originator or creator.
+     * Specific physiologic risks associated to the diet plan.
      *
-     * @param $proprietaryName TextSchema
+     * @param $risks 
+     * @return static
      **/
-    public function setProprietaryName($proprietaryName) {
-        $this->properties['proprietaryName'] = $proprietaryName;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getProprietaryName() {
-        return $this->properties['proprietaryName'];
-    }
-
-    /**
-     * Specific physiologic risks associated to the plan.
-     *
-     * @param $risks TextSchema
-     **/
-    public function setRisks($risks) {
+    public function setRisks($risks): static {
         $this->properties['risks'] = $risks;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getRisks() {
         return $this->properties['risks'];

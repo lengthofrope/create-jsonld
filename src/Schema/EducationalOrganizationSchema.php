@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -31,26 +31,27 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class EducationalOrganizationSchema extends OrganizationSchema
+class EducationalOrganizationSchema extends CivicStructureSchema
 {
-    public static function factory()
+    public static function factory(): EducationalOrganizationSchema
     {
-        return new EducationalOrganizationSchema('http://schema.org/', 'EducationalOrganization');
+        return new EducationalOrganizationSchema('https://schema.org/', 'EducationalOrganization');
     }
 
     /**
      * Alumni of an organization.
      *
-     * @param $alumni PersonSchema
+     * @param $alumni 
+     * @return static
      **/
-    public function setAlumni($alumni) {
+    public function setAlumni($alumni): static {
         $this->properties['alumni'] = $alumni;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema
+     * @return 
      **/
     public function getAlumni() {
         return $this->properties['alumni'];

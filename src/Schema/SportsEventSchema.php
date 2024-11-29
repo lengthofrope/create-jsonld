@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,42 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class SportsEventSchema extends EventSchema
 {
-    public static function factory()
+    public static function factory(): SportsEventSchema
     {
-        return new SportsEventSchema('http://schema.org/', 'SportsEvent');
-    }
-
-    /**
-     * The away team in a sports event.
-     *
-     * @param $awayTeam PersonSchema|SportsTeamSchema
-     **/
-    public function setAwayTeam($awayTeam) {
-        $this->properties['awayTeam'] = $awayTeam;
-
-        return $this;
-    }
-
-    /**
-     * @return PersonSchema|SportsTeamSchema
-     **/
-    public function getAwayTeam() {
-        return $this->properties['awayTeam'];
+        return new SportsEventSchema('https://schema.org/', 'SportsEvent');
     }
 
     /**
      * A competitor in a sports event.
      *
-     * @param $competitor PersonSchema|SportsTeamSchema
+     * @param $competitor |
+     * @return static
      **/
-    public function setCompetitor($competitor) {
+    public function setCompetitor($competitor): static {
         $this->properties['competitor'] = $competitor;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema|SportsTeamSchema
+     * @return |
      **/
     public function getCompetitor() {
         return $this->properties['competitor'];
@@ -77,19 +60,58 @@ class SportsEventSchema extends EventSchema
     /**
      * The home team in a sports event.
      *
-     * @param $homeTeam PersonSchema|SportsTeamSchema
+     * @param $homeTeam |
+     * @return static
      **/
-    public function setHomeTeam($homeTeam) {
+    public function setHomeTeam($homeTeam): static {
         $this->properties['homeTeam'] = $homeTeam;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema|SportsTeamSchema
+     * @return |
      **/
     public function getHomeTeam() {
         return $this->properties['homeTeam'];
+    }
+
+    /**
+     * The away team in a sports event.
+     *
+     * @param $awayTeam |
+     * @return static
+     **/
+    public function setAwayTeam($awayTeam): static {
+        $this->properties['awayTeam'] = $awayTeam;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getAwayTeam() {
+        return $this->properties['awayTeam'];
+    }
+
+    /**
+     * A type of sport (e.g. Baseball).
+     *
+     * @param $sport |
+     * @return static
+     **/
+    public function setSport($sport): static {
+        $this->properties['sport'] = $sport;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getSport() {
+        return $this->properties['sport'];
     }
 
 

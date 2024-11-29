@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,24 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class CorporationSchema extends OrganizationSchema
 {
-    public static function factory()
+    public static function factory(): CorporationSchema
     {
-        return new CorporationSchema('http://schema.org/', 'Corporation');
+        return new CorporationSchema('https://schema.org/', 'Corporation');
     }
 
     /**
-     * The exchange traded instrument associated with a Corporation object. The tickerSymbol is expressed as an exchange and an instrument name separated by a space character. For the exchange component of the tickerSymbol attribute, we reccommend using the controlled vocaulary of Market Identifier Codes (MIC) specified in ISO15022.
+     * The exchange traded instrument associated with a Corporation object. The tickerSymbol is expressed as an exchange and an instrument name separated by a space character. For the exchange component of the tickerSymbol attribute, we recommend using the controlled vocabulary of Market Identifier Codes (MIC) specified in ISO 15022.
      *
-     * @param $tickerSymbol TextSchema
+     * @param $tickerSymbol 
+     * @return static
      **/
-    public function setTickerSymbol($tickerSymbol) {
+    public function setTickerSymbol($tickerSymbol): static {
         $this->properties['tickerSymbol'] = $tickerSymbol;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getTickerSymbol() {
         return $this->properties['tickerSymbol'];

@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,132 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MedicalConditionSchema extends MedicalEntitySchema
 {
-    public static function factory()
+    public static function factory(): MedicalConditionSchema
     {
-        return new MedicalConditionSchema('http://schema.org/', 'MedicalCondition');
-    }
-
-    /**
-     * The anatomy of the underlying organ system or structures associated with this entity.
-     *
-     * @param $associatedAnatomy AnatomicalStructureSchema|AnatomicalSystemSchema|SuperficialAnatomySchema
-     **/
-    public function setAssociatedAnatomy($associatedAnatomy) {
-        $this->properties['associatedAnatomy'] = $associatedAnatomy;
-
-        return $this;
-    }
-
-    /**
-     * @return AnatomicalStructureSchema|AnatomicalSystemSchema|SuperficialAnatomySchema
-     **/
-    public function getAssociatedAnatomy() {
-        return $this->properties['associatedAnatomy'];
-    }
-
-    /**
-     * An underlying cause. More specifically, one of the causative agent(s) that are most directly responsible for the pathophysiologic process that eventually results in the occurrence.
-     *
-     * @param $cause MedicalCauseSchema
-     **/
-    public function setCause($cause) {
-        $this->properties['cause'] = $cause;
-
-        return $this;
-    }
-
-    /**
-     * @return MedicalCauseSchema
-     **/
-    public function getCause() {
-        return $this->properties['cause'];
-    }
-
-    /**
-     * One of a set of differential diagnoses for the condition. Specifically, a closely-related or competing diagnosis typically considered later in the cognitive process whereby this medical condition is distinguished from others most likely responsible for a similar collection of signs and symptoms to reach the most parsimonious diagnosis or diagnoses in a patient.
-     *
-     * @param $differentialDiagnosis DDxElementSchema
-     **/
-    public function setDifferentialDiagnosis($differentialDiagnosis) {
-        $this->properties['differentialDiagnosis'] = $differentialDiagnosis;
-
-        return $this;
-    }
-
-    /**
-     * @return DDxElementSchema
-     **/
-    public function getDifferentialDiagnosis() {
-        return $this->properties['differentialDiagnosis'];
-    }
-
-    /**
-     * The characteristics of associated patients, such as age, gender, race etc.
-     *
-     * @param $epidemiology TextSchema
-     **/
-    public function setEpidemiology($epidemiology) {
-        $this->properties['epidemiology'] = $epidemiology;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getEpidemiology() {
-        return $this->properties['epidemiology'];
-    }
-
-    /**
-     * The likely outcome in either the short term or long term of the medical condition.
-     *
-     * @param $expectedPrognosis TextSchema
-     **/
-    public function setExpectedPrognosis($expectedPrognosis) {
-        $this->properties['expectedPrognosis'] = $expectedPrognosis;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getExpectedPrognosis() {
-        return $this->properties['expectedPrognosis'];
-    }
-
-    /**
-     * The expected progression of the condition if it is not treated and allowed to progress naturally.
-     *
-     * @param $naturalProgression TextSchema
-     **/
-    public function setNaturalProgression($naturalProgression) {
-        $this->properties['naturalProgression'] = $naturalProgression;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getNaturalProgression() {
-        return $this->properties['naturalProgression'];
+        return new MedicalConditionSchema('https://schema.org/', 'MedicalCondition');
     }
 
     /**
      * Changes in the normal mechanical, physical, and biochemical functions that are associated with this activity or condition.
      *
-     * @param $pathophysiology TextSchema
+     * @param $pathophysiology 
+     * @return static
      **/
-    public function setPathophysiology($pathophysiology) {
+    public function setPathophysiology($pathophysiology): static {
         $this->properties['pathophysiology'] = $pathophysiology;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getPathophysiology() {
         return $this->properties['pathophysiology'];
@@ -167,16 +60,17 @@ class MedicalConditionSchema extends MedicalEntitySchema
     /**
      * A possible unexpected and unfavorable evolution of a medical condition. Complications may include worsening of the signs or symptoms of the disease, extension of the condition to other organ systems, etc.
      *
-     * @param $possibleComplication TextSchema
+     * @param $possibleComplication 
+     * @return static
      **/
-    public function setPossibleComplication($possibleComplication) {
+    public function setPossibleComplication($possibleComplication): static {
         $this->properties['possibleComplication'] = $possibleComplication;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getPossibleComplication() {
         return $this->properties['possibleComplication'];
@@ -185,145 +79,267 @@ class MedicalConditionSchema extends MedicalEntitySchema
     /**
      * A possible treatment to address this condition, sign or symptom.
      *
-     * @param $possibleTreatment MedicalTherapySchema
+     * @param $possibleTreatment 
+     * @return static
      **/
-    public function setPossibleTreatment($possibleTreatment) {
+    public function setPossibleTreatment($possibleTreatment): static {
         $this->properties['possibleTreatment'] = $possibleTreatment;
 
         return $this;
     }
 
     /**
-     * @return MedicalTherapySchema
+     * @return 
      **/
     public function getPossibleTreatment() {
         return $this->properties['possibleTreatment'];
     }
 
     /**
-     * A preventative therapy used to prevent an initial occurrence of the medical condition, such as vaccination.
+     * The likely outcome in either the short term or long term of the medical condition.
      *
-     * @param $primaryPrevention MedicalTherapySchema
+     * @param $expectedPrognosis 
+     * @return static
      **/
-    public function setPrimaryPrevention($primaryPrevention) {
-        $this->properties['primaryPrevention'] = $primaryPrevention;
+    public function setExpectedPrognosis($expectedPrognosis): static {
+        $this->properties['expectedPrognosis'] = $expectedPrognosis;
 
         return $this;
     }
 
     /**
-     * @return MedicalTherapySchema
+     * @return 
      **/
-    public function getPrimaryPrevention() {
-        return $this->properties['primaryPrevention'];
-    }
-
-    /**
-     * A modifiable or non-modifiable factor that increases the risk of a patient contracting this condition, e.g. age,  coexisting condition.
-     *
-     * @param $riskFactor MedicalRiskFactorSchema
-     **/
-    public function setRiskFactor($riskFactor) {
-        $this->properties['riskFactor'] = $riskFactor;
-
-        return $this;
-    }
-
-    /**
-     * @return MedicalRiskFactorSchema
-     **/
-    public function getRiskFactor() {
-        return $this->properties['riskFactor'];
+    public function getExpectedPrognosis() {
+        return $this->properties['expectedPrognosis'];
     }
 
     /**
      * A preventative therapy used to prevent reoccurrence of the medical condition after an initial episode of the condition.
      *
-     * @param $secondaryPrevention MedicalTherapySchema
+     * @param $secondaryPrevention 
+     * @return static
      **/
-    public function setSecondaryPrevention($secondaryPrevention) {
+    public function setSecondaryPrevention($secondaryPrevention): static {
         $this->properties['secondaryPrevention'] = $secondaryPrevention;
 
         return $this;
     }
 
     /**
-     * @return MedicalTherapySchema
+     * @return 
      **/
     public function getSecondaryPrevention() {
         return $this->properties['secondaryPrevention'];
     }
 
     /**
-     * A sign or symptom of this condition. Signs are objective or physically observable manifestations of the medical condition while symptoms are the subjective experience of the medical condition.
-     *
-     * @param $signOrSymptom MedicalSignOrSymptomSchema
-     **/
-    public function setSignOrSymptom($signOrSymptom) {
-        $this->properties['signOrSymptom'] = $signOrSymptom;
-
-        return $this;
-    }
-
-    /**
-     * @return MedicalSignOrSymptomSchema
-     **/
-    public function getSignOrSymptom() {
-        return $this->properties['signOrSymptom'];
-    }
-
-    /**
      * The stage of the condition, if applicable.
      *
-     * @param $stage MedicalConditionStageSchema
+     * @param $stage 
+     * @return static
      **/
-    public function setStage($stage) {
+    public function setStage($stage): static {
         $this->properties['stage'] = $stage;
 
         return $this;
     }
 
     /**
-     * @return MedicalConditionStageSchema
+     * @return 
      **/
     public function getStage() {
         return $this->properties['stage'];
     }
 
     /**
-     * A more specific type of the condition, where applicable, for example 'Type 1 Diabetes', 'Type 2 Diabetes', or 'Gestational Diabetes' for Diabetes.
-     *
-     * @param $subtype TextSchema
-     **/
-    public function setSubtype($subtype) {
-        $this->properties['subtype'] = $subtype;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getSubtype() {
-        return $this->properties['subtype'];
-    }
-
-    /**
      * A medical test typically performed given this condition.
      *
-     * @param $typicalTest MedicalTestSchema
+     * @param $typicalTest 
+     * @return static
      **/
-    public function setTypicalTest($typicalTest) {
+    public function setTypicalTest($typicalTest): static {
         $this->properties['typicalTest'] = $typicalTest;
 
         return $this;
     }
 
     /**
-     * @return MedicalTestSchema
+     * @return 
      **/
     public function getTypicalTest() {
         return $this->properties['typicalTest'];
+    }
+
+    /**
+     * Specifying a drug or medicine used in a medication procedure.
+     *
+     * @param $drug 
+     * @return static
+     **/
+    public function setDrug($drug): static {
+        $this->properties['drug'] = $drug;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getDrug() {
+        return $this->properties['drug'];
+    }
+
+    /**
+     * One of a set of differential diagnoses for the condition. Specifically, a closely-related or competing diagnosis typically considered later in the cognitive process whereby this medical condition is distinguished from others most likely responsible for a similar collection of signs and symptoms to reach the most parsimonious diagnosis or diagnoses in a patient.
+     *
+     * @param $differentialDiagnosis 
+     * @return static
+     **/
+    public function setDifferentialDiagnosis($differentialDiagnosis): static {
+        $this->properties['differentialDiagnosis'] = $differentialDiagnosis;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getDifferentialDiagnosis() {
+        return $this->properties['differentialDiagnosis'];
+    }
+
+    /**
+     * A modifiable or non-modifiable factor that increases the risk of a patient contracting this condition, e.g. age,  coexisting condition.
+     *
+     * @param $riskFactor 
+     * @return static
+     **/
+    public function setRiskFactor($riskFactor): static {
+        $this->properties['riskFactor'] = $riskFactor;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getRiskFactor() {
+        return $this->properties['riskFactor'];
+    }
+
+    /**
+     * The anatomy of the underlying organ system or structures associated with this entity.
+     *
+     * @param $associatedAnatomy ||
+     * @return static
+     **/
+    public function setAssociatedAnatomy($associatedAnatomy): static {
+        $this->properties['associatedAnatomy'] = $associatedAnatomy;
+
+        return $this;
+    }
+
+    /**
+     * @return ||
+     **/
+    public function getAssociatedAnatomy() {
+        return $this->properties['associatedAnatomy'];
+    }
+
+    /**
+     * A sign or symptom of this condition. Signs are objective or physically observable manifestations of the medical condition while symptoms are the subjective experience of the medical condition.
+     *
+     * @param $signOrSymptom 
+     * @return static
+     **/
+    public function setSignOrSymptom($signOrSymptom): static {
+        $this->properties['signOrSymptom'] = $signOrSymptom;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getSignOrSymptom() {
+        return $this->properties['signOrSymptom'];
+    }
+
+    /**
+     * The status of the study (enumerated).
+     *
+     * @param $status ||
+     * @return static
+     **/
+    public function setStatus($status): static {
+        $this->properties['status'] = $status;
+
+        return $this;
+    }
+
+    /**
+     * @return ||
+     **/
+    public function getStatus() {
+        return $this->properties['status'];
+    }
+
+    /**
+     * A preventative therapy used to prevent an initial occurrence of the medical condition, such as vaccination.
+     *
+     * @param $primaryPrevention 
+     * @return static
+     **/
+    public function setPrimaryPrevention($primaryPrevention): static {
+        $this->properties['primaryPrevention'] = $primaryPrevention;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getPrimaryPrevention() {
+        return $this->properties['primaryPrevention'];
+    }
+
+    /**
+     * The expected progression of the condition if it is not treated and allowed to progress naturally.
+     *
+     * @param $naturalProgression 
+     * @return static
+     **/
+    public function setNaturalProgression($naturalProgression): static {
+        $this->properties['naturalProgression'] = $naturalProgression;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getNaturalProgression() {
+        return $this->properties['naturalProgression'];
+    }
+
+    /**
+     * The characteristics of associated patients, such as age, gender, race etc.
+     *
+     * @param $epidemiology 
+     * @return static
+     **/
+    public function setEpidemiology($epidemiology): static {
+        $this->properties['epidemiology'] = $epidemiology;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getEpidemiology() {
+        return $this->properties['epidemiology'];
     }
 
 

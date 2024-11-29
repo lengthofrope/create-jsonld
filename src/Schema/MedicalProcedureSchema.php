@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,66 +27,31 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A process of care used in either a diagnostic, therapeutic, or palliative capacity that relies on invasive (surgical), non-invasive, or percutaneous techniques.
+ * A process of care used in either a diagnostic, therapeutic, preventive or palliative capacity that relies on invasive (surgical), non-invasive, or other techniques.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MedicalProcedureSchema extends MedicalEntitySchema
 {
-    public static function factory()
+    public static function factory(): MedicalProcedureSchema
     {
-        return new MedicalProcedureSchema('http://schema.org/', 'MedicalProcedure');
-    }
-
-    /**
-     * Typical or recommended followup care after the procedure is performed.
-     *
-     * @param $followup TextSchema
-     **/
-    public function setFollowup($followup) {
-        $this->properties['followup'] = $followup;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getFollowup() {
-        return $this->properties['followup'];
-    }
-
-    /**
-     * How the procedure is performed.
-     *
-     * @param $howPerformed TextSchema
-     **/
-    public function setHowPerformed($howPerformed) {
-        $this->properties['howPerformed'] = $howPerformed;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getHowPerformed() {
-        return $this->properties['howPerformed'];
+        return new MedicalProcedureSchema('https://schema.org/', 'MedicalProcedure');
     }
 
     /**
      * Typical preparation that a patient must undergo before having the procedure performed.
      *
-     * @param $preparation TextSchema
+     * @param $preparation |
+     * @return static
      **/
-    public function setPreparation($preparation) {
+    public function setPreparation($preparation): static {
         $this->properties['preparation'] = $preparation;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return |
      **/
     public function getPreparation() {
         return $this->properties['preparation'];
@@ -95,19 +60,96 @@ class MedicalProcedureSchema extends MedicalEntitySchema
     /**
      * The type of procedure, for example Surgical, Noninvasive, or Percutaneous.
      *
-     * @param $procedureType MedicalProcedureTypeSchema
+     * @param $procedureType 
+     * @return static
      **/
-    public function setProcedureType($procedureType) {
+    public function setProcedureType($procedureType): static {
         $this->properties['procedureType'] = $procedureType;
 
         return $this;
     }
 
     /**
-     * @return MedicalProcedureTypeSchema
+     * @return 
      **/
     public function getProcedureType() {
         return $this->properties['procedureType'];
+    }
+
+    /**
+     * How the procedure is performed.
+     *
+     * @param $howPerformed 
+     * @return static
+     **/
+    public function setHowPerformed($howPerformed): static {
+        $this->properties['howPerformed'] = $howPerformed;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getHowPerformed() {
+        return $this->properties['howPerformed'];
+    }
+
+    /**
+     * The status of the study (enumerated).
+     *
+     * @param $status ||
+     * @return static
+     **/
+    public function setStatus($status): static {
+        $this->properties['status'] = $status;
+
+        return $this;
+    }
+
+    /**
+     * @return ||
+     **/
+    public function getStatus() {
+        return $this->properties['status'];
+    }
+
+    /**
+     * Typical or recommended followup care after the procedure is performed.
+     *
+     * @param $followup 
+     * @return static
+     **/
+    public function setFollowup($followup): static {
+        $this->properties['followup'] = $followup;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getFollowup() {
+        return $this->properties['followup'];
+    }
+
+    /**
+     * Location in the body of the anatomical structure.
+     *
+     * @param $bodyLocation 
+     * @return static
+     **/
+    public function setBodyLocation($bodyLocation): static {
+        $this->properties['bodyLocation'] = $bodyLocation;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getBodyLocation() {
+        return $this->properties['bodyLocation'];
     }
 
 

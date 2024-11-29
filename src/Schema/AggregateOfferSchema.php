@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,87 +27,92 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * When a single product is associated with multiple offers (for example, the same pair of shoes is offered by different merchants), then AggregateOffer can be used.
+ * When a single product is associated with multiple offers (for example, the same pair of shoes is offered by different merchants), then AggregateOffer can be used.\n\nNote: AggregateOffers are normally expected to associate multiple offers that all share the same defined [[businessFunction]] value, or default to http://purl.org/goodrelations/v1#Sell if businessFunction is not explicitly defined.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class AggregateOfferSchema extends OfferSchema
 {
-    public static function factory()
+    public static function factory(): AggregateOfferSchema
     {
-        return new AggregateOfferSchema('http://schema.org/', 'AggregateOffer');
+        return new AggregateOfferSchema('https://schema.org/', 'AggregateOffer');
     }
 
     /**
-     * The highest price of all offers available.
+     * The lowest price of all offers available.\n\nUsage guidelines:\n\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.
      *
-     * @param $highPrice NumberSchema|TextSchema
+     * @param $lowPrice |
+     * @return static
      **/
-    public function setHighPrice($highPrice) {
-        $this->properties['highPrice'] = $highPrice;
-
-        return $this;
-    }
-
-    /**
-     * @return NumberSchema|TextSchema
-     **/
-    public function getHighPrice() {
-        return $this->properties['highPrice'];
-    }
-
-    /**
-     * The lowest price of all offers available.
-     *
-     * @param $lowPrice NumberSchema|TextSchema
-     **/
-    public function setLowPrice($lowPrice) {
+    public function setLowPrice($lowPrice): static {
         $this->properties['lowPrice'] = $lowPrice;
 
         return $this;
     }
 
     /**
-     * @return NumberSchema|TextSchema
+     * @return |
      **/
     public function getLowPrice() {
         return $this->properties['lowPrice'];
     }
 
     /**
-     * The number of offers for the product.
+     * The highest price of all offers available.\n\nUsage guidelines:\n\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.
      *
-     * @param $offerCount IntegerSchema
+     * @param $highPrice |
+     * @return static
      **/
-    public function setOfferCount($offerCount) {
-        $this->properties['offerCount'] = $offerCount;
+    public function setHighPrice($highPrice): static {
+        $this->properties['highPrice'] = $highPrice;
 
         return $this;
     }
 
     /**
-     * @return IntegerSchema
+     * @return |
      **/
-    public function getOfferCount() {
-        return $this->properties['offerCount'];
+    public function getHighPrice() {
+        return $this->properties['highPrice'];
     }
 
     /**
-     * An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event.
+     * An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event. Use [[businessFunction]] to indicate the kind of transaction offered, i.e. sell, lease, etc. This property can also be used to describe a [[Demand]]. While this property is listed as expected on a number of common types, it can be used in others. In that case, using a second type, such as Product or a subtype of Product, can clarify the nature of the offer.
+      
      *
-     * @param $offers OfferSchema
+     * @param $offers |
+     * @return static
      **/
-    public function setOffers($offers) {
+    public function setOffers($offers): static {
         $this->properties['offers'] = $offers;
 
         return $this;
     }
 
     /**
-     * @return OfferSchema
+     * @return |
      **/
     public function getOffers() {
         return $this->properties['offers'];
+    }
+
+    /**
+     * The number of offers for the product.
+     *
+     * @param $offerCount 
+     * @return static
+     **/
+    public function setOfferCount($offerCount): static {
+        $this->properties['offerCount'] = $offerCount;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getOfferCount() {
+        return $this->properties['offerCount'];
     }
 
 

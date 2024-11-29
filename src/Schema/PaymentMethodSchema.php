@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,28 +27,35 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A payment method is a standardized procedure for transferring the monetary amount for a purchase. Payment methods are characterized by the legal and technical structures used, and by the organization or group carrying out the transaction.
-<br />
-    Commonly used values:<br />
-<br />
-    http://purl.org/goodrelations/v1#ByBankTransferInAdvance <br />
-    http://purl.org/goodrelations/v1#ByInvoice <br />
-    http://purl.org/goodrelations/v1#Cash <br />
-    http://purl.org/goodrelations/v1#CheckInAdvance <br />
-    http://purl.org/goodrelations/v1#COD <br />
-    http://purl.org/goodrelations/v1#DirectDebit <br />
-    http://purl.org/goodrelations/v1#GoogleCheckout <br />
-    http://purl.org/goodrelations/v1#PayPal <br />
-    http://purl.org/goodrelations/v1#PaySwarm <br />
-        
+ * A payment method is a standardized procedure for transferring the monetary amount for a purchase. Payment methods are characterized by the legal and technical structures used, and by the organization or group carrying out the transaction. The following legacy values should be accepted:
+ *     \n\n* http://purl.org/goodrelations/v1#ByBankTransferInAdvance\n* http://purl.org/goodrelations/v1#ByInvoice\n* http://purl.org/goodrelations/v1#Cash\n* http://purl.org/goodrelations/v1#CheckInAdvance\n* http://purl.org/goodrelations/v1#COD\n* http://purl.org/goodrelations/v1#DirectDebit\n* http://purl.org/goodrelations/v1#GoogleCheckout\n* http://purl.org/goodrelations/v1#PayPal\n* http://purl.org/goodrelations/v1#PaySwarm\n\nStructured values are recommended for newer payment methods.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PaymentMethodSchema extends EnumerationSchema
+class PaymentMethodSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): PaymentMethodSchema
     {
-        return new PaymentMethodSchema('http://schema.org/', 'PaymentMethod');
+        return new PaymentMethodSchema('https://schema.org/', 'PaymentMethod');
+    }
+
+    /**
+     * The type of a payment method.
+     *
+     * @param $paymentMethodType 
+     * @return static
+     **/
+    public function setPaymentMethodType($paymentMethodType): static {
+        $this->properties['paymentMethodType'] = $paymentMethodType;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getPaymentMethodType() {
+        return $this->properties['paymentMethodType'];
     }
 
 

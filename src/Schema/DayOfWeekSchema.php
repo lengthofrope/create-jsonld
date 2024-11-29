@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -28,26 +28,17 @@ namespace LengthOfRope\JSONLD\Schema;
 
 /**
  * The day of the week, e.g. used to specify to which day the opening hours of an OpeningHoursSpecification refer.
-<br />
-    Commonly used values:<br />
-<br />
-    http://purl.org/goodrelations/v1#Monday <br />
-    http://purl.org/goodrelations/v1#Tuesday <br />
-    http://purl.org/goodrelations/v1#Wednesday <br />
-    http://purl.org/goodrelations/v1#Thursday <br />
-    http://purl.org/goodrelations/v1#Friday <br />
-    http://purl.org/goodrelations/v1#Saturday <br />
-    http://purl.org/goodrelations/v1#Sunday <br />
-    http://purl.org/goodrelations/v1#PublicHolidays <br />
-        
+
+ * Originally, URLs from [GoodRelations](http://purl.org/goodrelations/v1) were used (for [[Monday]], [[Tuesday]], [[Wednesday]], [[Thursday]], [[Friday]], [[Saturday]], [[Sunday]] plus a special entry for [[PublicHolidays]]); these have now been integrated directly into schema.org.
+ *       
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class DayOfWeekSchema extends EnumerationSchema
 {
-    public static function factory()
+    public static function factory(): DayOfWeekSchema
     {
-        return new DayOfWeekSchema('http://schema.org/', 'DayOfWeek');
+        return new DayOfWeekSchema('https://schema.org/', 'DayOfWeek');
     }
 
 

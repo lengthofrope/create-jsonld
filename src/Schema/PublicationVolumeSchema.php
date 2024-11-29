@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,89 +27,91 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A part of a successively published publication such as a periodical or multi-volume work, often numbered. It may represent a time span, such as a year.
-
-      <br/><br/>See also <a href="http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html">blog post</a>.
+ * A part of a successively published publication such as a periodical or multi-volume work, often numbered. It may represent a time span, such as a year.\n\nSee also [blog post](http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html).
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class PublicationVolumeSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): PublicationVolumeSchema
     {
-        return new PublicationVolumeSchema('http://schema.org/', 'PublicationVolume');
-    }
-
-    /**
-     * The page on which the work ends; for example "138" or "xvi".
-     *
-     * @param $pageEnd IntegerSchema|TextSchema
-     **/
-    public function setPageEnd($pageEnd) {
-        $this->properties['pageEnd'] = $pageEnd;
-
-        return $this;
-    }
-
-    /**
-     * @return IntegerSchema|TextSchema
-     **/
-    public function getPageEnd() {
-        return $this->properties['pageEnd'];
-    }
-
-    /**
-     * The page on which the work starts; for example "135" or "xiii".
-     *
-     * @param $pageStart IntegerSchema|TextSchema
-     **/
-    public function setPageStart($pageStart) {
-        $this->properties['pageStart'] = $pageStart;
-
-        return $this;
-    }
-
-    /**
-     * @return IntegerSchema|TextSchema
-     **/
-    public function getPageStart() {
-        return $this->properties['pageStart'];
+        return new PublicationVolumeSchema('https://schema.org/', 'PublicationVolume');
     }
 
     /**
      * Any description of pages that is not separated into pageStart and pageEnd; for example, "1-6, 9, 55" or "10-12, 46-49".
      *
-     * @param $pagination TextSchema
+     * @param $pagination 
+     * @return static
      **/
-    public function setPagination($pagination) {
+    public function setPagination($pagination): static {
         $this->properties['pagination'] = $pagination;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getPagination() {
         return $this->properties['pagination'];
     }
 
     /**
+     * The page on which the work starts; for example "135" or "xiii".
+     *
+     * @param $pageStart |
+     * @return static
+     **/
+    public function setPageStart($pageStart): static {
+        $this->properties['pageStart'] = $pageStart;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getPageStart() {
+        return $this->properties['pageStart'];
+    }
+
+    /**
      * Identifies the volume of publication or multi-part work; for example, "iii" or "2".
      *
-     * @param $volumeNumber IntegerSchema|TextSchema
+     * @param $volumeNumber |
+     * @return static
      **/
-    public function setVolumeNumber($volumeNumber) {
+    public function setVolumeNumber($volumeNumber): static {
         $this->properties['volumeNumber'] = $volumeNumber;
 
         return $this;
     }
 
     /**
-     * @return IntegerSchema|TextSchema
+     * @return |
      **/
     public function getVolumeNumber() {
         return $this->properties['volumeNumber'];
+    }
+
+    /**
+     * The page on which the work ends; for example "138" or "xvi".
+     *
+     * @param $pageEnd |
+     * @return static
+     **/
+    public function setPageEnd($pageEnd): static {
+        $this->properties['pageEnd'] = $pageEnd;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getPageEnd() {
+        return $this->properties['pageEnd'];
     }
 
 

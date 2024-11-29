@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,81 +33,85 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DeliveryEventSchema extends EventSchema
 {
-    public static function factory()
+    public static function factory(): DeliveryEventSchema
     {
-        return new DeliveryEventSchema('http://schema.org/', 'DeliveryEvent');
-    }
-
-    /**
-     * Password, PIN, or access code needed for delivery (e.g. from a locker).
-     *
-     * @param $accessCode TextSchema
-     **/
-    public function setAccessCode($accessCode) {
-        $this->properties['accessCode'] = $accessCode;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getAccessCode() {
-        return $this->properties['accessCode'];
-    }
-
-    /**
-     * When the item is available for pickup from the store, locker, etc.
-     *
-     * @param $availableFrom DateTimeSchema
-     **/
-    public function setAvailableFrom($availableFrom) {
-        $this->properties['availableFrom'] = $availableFrom;
-
-        return $this;
-    }
-
-    /**
-     * @return DateTimeSchema
-     **/
-    public function getAvailableFrom() {
-        return $this->properties['availableFrom'];
+        return new DeliveryEventSchema('https://schema.org/', 'DeliveryEvent');
     }
 
     /**
      * After this date, the item will no longer be available for pickup.
      *
-     * @param $availableThrough DateTimeSchema
+     * @param $availableThrough 
+     * @return static
      **/
-    public function setAvailableThrough($availableThrough) {
+    public function setAvailableThrough($availableThrough): static {
         $this->properties['availableThrough'] = $availableThrough;
 
         return $this;
     }
 
     /**
-     * @return DateTimeSchema
+     * @return 
      **/
     public function getAvailableThrough() {
         return $this->properties['availableThrough'];
     }
 
     /**
+     * When the item is available for pickup from the store, locker, etc.
+     *
+     * @param $availableFrom 
+     * @return static
+     **/
+    public function setAvailableFrom($availableFrom): static {
+        $this->properties['availableFrom'] = $availableFrom;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getAvailableFrom() {
+        return $this->properties['availableFrom'];
+    }
+
+    /**
      * Method used for delivery or shipping.
      *
-     * @param $hasDeliveryMethod DeliveryMethodSchema
+     * @param $hasDeliveryMethod 
+     * @return static
      **/
-    public function setHasDeliveryMethod($hasDeliveryMethod) {
+    public function setHasDeliveryMethod($hasDeliveryMethod): static {
         $this->properties['hasDeliveryMethod'] = $hasDeliveryMethod;
 
         return $this;
     }
 
     /**
-     * @return DeliveryMethodSchema
+     * @return 
      **/
     public function getHasDeliveryMethod() {
         return $this->properties['hasDeliveryMethod'];
+    }
+
+    /**
+     * Password, PIN, or access code needed for delivery (e.g. from a locker).
+     *
+     * @param $accessCode 
+     * @return static
+     **/
+    public function setAccessCode($accessCode): static {
+        $this->properties['accessCode'] = $accessCode;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getAccessCode() {
+        return $this->properties['accessCode'];
     }
 
 

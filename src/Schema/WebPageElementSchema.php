@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,9 +33,47 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class WebPageElementSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): WebPageElementSchema
     {
-        return new WebPageElementSchema('http://schema.org/', 'WebPageElement');
+        return new WebPageElementSchema('https://schema.org/', 'WebPageElement');
+    }
+
+    /**
+     * A CSS selector, e.g. of a [[SpeakableSpecification]] or [[WebPageElement]]. In the latter case, multiple matches within a page can constitute a single conceptual "Web page element".
+     *
+     * @param $cssSelector 
+     * @return static
+     **/
+    public function setCssSelector($cssSelector): static {
+        $this->properties['cssSelector'] = $cssSelector;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getCssSelector() {
+        return $this->properties['cssSelector'];
+    }
+
+    /**
+     * An XPath, e.g. of a [[SpeakableSpecification]] or [[WebPageElement]]. In the latter case, multiple matches within a page can constitute a single conceptual "Web page element".
+     *
+     * @param $xpath 
+     * @return static
+     **/
+    public function setXpath($xpath): static {
+        $this->properties['xpath'] = $xpath;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getXpath() {
+        return $this->properties['xpath'];
     }
 
 

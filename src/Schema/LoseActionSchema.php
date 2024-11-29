@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,24 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class LoseActionSchema extends AchieveActionSchema
 {
-    public static function factory()
+    public static function factory(): LoseActionSchema
     {
-        return new LoseActionSchema('http://schema.org/', 'LoseAction');
+        return new LoseActionSchema('https://schema.org/', 'LoseAction');
     }
 
     /**
      * A sub property of participant. The winner of the action.
      *
-     * @param $winner PersonSchema
+     * @param $winner 
+     * @return static
      **/
-    public function setWinner($winner) {
+    public function setWinner($winner): static {
         $this->properties['winner'] = $winner;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema
+     * @return 
      **/
     public function getWinner() {
         return $this->properties['winner'];

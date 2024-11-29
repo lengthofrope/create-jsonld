@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -31,121 +31,106 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class LocalBusinessSchema extends \LengthOfRope\JSONLD\Elements\Element
+class LocalBusinessSchema extends PlaceSchema
 {
-    public static function factory()
+    public static function factory(): LocalBusinessSchema
     {
-        return new LocalBusinessSchema('http://schema.org/', 'LocalBusiness');
+        return new LocalBusinessSchema('https://schema.org/', 'LocalBusiness');
     }
 
     /**
-     * A short textual code (also called "store code") that uniquely identifies a place of business. The code is typically assigned by the parentOrganization and used in structured URLs.
-<br /><br /> For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047 the code "3047" is a branchCode for a particular branch.
-      
+     * The price range of the business, for example ```$$$```.
      *
-     * @param $branchCode TextSchema
+     * @param $priceRange 
+     * @return static
      **/
-    public function setBranchCode($branchCode) {
-        $this->properties['branchCode'] = $branchCode;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getBranchCode() {
-        return $this->properties['branchCode'];
-    }
-
-    /**
-     * The larger organization that this local business is a branch of, if any.
-     *
-     * @param $branchOf OrganizationSchema
-     **/
-    public function setBranchOf($branchOf) {
-        $this->properties['branchOf'] = $branchOf;
-
-        return $this;
-    }
-
-    /**
-     * @return OrganizationSchema
-     **/
-    public function getBranchOf() {
-        return $this->properties['branchOf'];
-    }
-
-    /**
-     * The currency accepted (in <a href='http://en.wikipedia.org/wiki/ISO_4217'>ISO 4217 currency format</a>).
-     *
-     * @param $currenciesAccepted TextSchema
-     **/
-    public function setCurrenciesAccepted($currenciesAccepted) {
-        $this->properties['currenciesAccepted'] = $currenciesAccepted;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getCurrenciesAccepted() {
-        return $this->properties['currenciesAccepted'];
-    }
-
-    /**
-     * The opening hours for a business. Opening hours can be specified as a weekly time range, starting with days, then times per day. Multiple days can be listed with commas ',' separating each day. Day or time ranges are specified using a hyphen '-'.<br />- Days are specified using the following two-letter combinations: <code>Mo</code>, <code>Tu</code>, <code>We</code>, <code>Th</code>, <code>Fr</code>, <code>Sa</code>, <code>Su</code>.<br />- Times are specified using 24:00 time. For example, 3pm is specified as <code>15:00</code>. <br />- Here is an example: <code>&lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Tu,Th 16:00-20:00&quot;&gt;Tuesdays and Thursdays 4-8pm&lt;/time&gt;</code>. <br />- If a business is open 7 days a week, then it can be specified as <code>&lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Mo-Su&quot;&gt;Monday through Sunday, all day&lt;/time&gt;</code>.
-     *
-     * @param $openingHours TextSchema
-     **/
-    public function setOpeningHours($openingHours) {
-        $this->properties['openingHours'] = $openingHours;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getOpeningHours() {
-        return $this->properties['openingHours'];
-    }
-
-    /**
-     * Cash, credit card, etc.
-     *
-     * @param $paymentAccepted TextSchema
-     **/
-    public function setPaymentAccepted($paymentAccepted) {
-        $this->properties['paymentAccepted'] = $paymentAccepted;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getPaymentAccepted() {
-        return $this->properties['paymentAccepted'];
-    }
-
-    /**
-     * The price range of the business, for example <code>$$$</code>.
-     *
-     * @param $priceRange TextSchema
-     **/
-    public function setPriceRange($priceRange) {
+    public function setPriceRange($priceRange): static {
         $this->properties['priceRange'] = $priceRange;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getPriceRange() {
         return $this->properties['priceRange'];
+    }
+
+    /**
+     * The general opening hours for a business. Opening hours can be specified as a weekly time range, starting with days, then times per day. Multiple days can be listed with commas ',' separating each day. Day or time ranges are specified using a hyphen '-'.\n\n* Days are specified using the following two-letter combinations: ```Mo```, ```Tu```, ```We```, ```Th```, ```Fr```, ```Sa```, ```Su```.\n* Times are specified using 24:00 format. For example, 3pm is specified as ```15:00```, 10am as ```10:00```. \n* Here is an example: <code>&lt;time itemprop="openingHours" datetime=&quot;Tu,Th 16:00-20:00&quot;&gt;Tuesdays and Thursdays 4-8pm&lt;/time&gt;</code>.\n* If a business is open 7 days a week, then it can be specified as <code>&lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Mo-Su&quot;&gt;Monday through Sunday, all day&lt;/time&gt;</code>.
+     *
+     * @param $openingHours 
+     * @return static
+     **/
+    public function setOpeningHours($openingHours): static {
+        $this->properties['openingHours'] = $openingHours;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getOpeningHours() {
+        return $this->properties['openingHours'];
+    }
+
+    /**
+     * Cash, Credit Card, Cryptocurrency, Local Exchange Tradings System, etc.
+     *
+     * @param $paymentAccepted 
+     * @return static
+     **/
+    public function setPaymentAccepted($paymentAccepted): static {
+        $this->properties['paymentAccepted'] = $paymentAccepted;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getPaymentAccepted() {
+        return $this->properties['paymentAccepted'];
+    }
+
+    /**
+     * The larger organization that this local business is a branch of, if any. Not to be confused with (anatomical) [[branch]].
+     *
+     * @param $branchOf 
+     * @return static
+     **/
+    public function setBranchOf($branchOf): static {
+        $this->properties['branchOf'] = $branchOf;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getBranchOf() {
+        return $this->properties['branchOf'];
+    }
+
+    /**
+     * The currency accepted.\n\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR".
+     *
+     * @param $currenciesAccepted 
+     * @return static
+     **/
+    public function setCurrenciesAccepted($currenciesAccepted): static {
+        $this->properties['currenciesAccepted'] = $currenciesAccepted;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getCurrenciesAccepted() {
+        return $this->properties['currenciesAccepted'];
     }
 
 

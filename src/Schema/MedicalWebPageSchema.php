@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,27 +33,47 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MedicalWebPageSchema extends WebPageSchema
 {
-    public static function factory()
+    public static function factory(): MedicalWebPageSchema
     {
-        return new MedicalWebPageSchema('http://schema.org/', 'MedicalWebPage');
+        return new MedicalWebPageSchema('https://schema.org/', 'MedicalWebPage');
     }
 
     /**
      * An aspect of medical practice that is considered on the page, such as 'diagnosis', 'treatment', 'causes', 'prognosis', 'etiology', 'epidemiology', etc.
      *
-     * @param $aspect TextSchema
+     * @param $aspect 
+     * @return static
      **/
-    public function setAspect($aspect) {
+    public function setAspect($aspect): static {
         $this->properties['aspect'] = $aspect;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getAspect() {
         return $this->properties['aspect'];
+    }
+
+    /**
+     * Medical audience for page.
+     *
+     * @param $medicalAudience |
+     * @return static
+     **/
+    public function setMedicalAudience($medicalAudience): static {
+        $this->properties['medicalAudience'] = $medicalAudience;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getMedicalAudience() {
+        return $this->properties['medicalAudience'];
     }
 
 

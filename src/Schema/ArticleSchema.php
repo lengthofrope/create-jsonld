@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,125 +27,180 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * An article, such as a news article or piece of investigative report. Newspapers and magazines have articles of many different types and this is intended to cover them all.
-
-      <br/><br/>See also <a href="http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html">blog post</a>.
+ * An article, such as a news article or piece of investigative report. Newspapers and magazines have articles of many different types and this is intended to cover them all.\n\nSee also [blog post](http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html).
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ArticleSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): ArticleSchema
     {
-        return new ArticleSchema('http://schema.org/', 'Article');
-    }
-
-    /**
-     * The actual body of the article.
-     *
-     * @param $articleBody TextSchema
-     **/
-    public function setArticleBody($articleBody) {
-        $this->properties['articleBody'] = $articleBody;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getArticleBody() {
-        return $this->properties['articleBody'];
-    }
-
-    /**
-     * Articles may belong to one or more 'sections' in a magazine or newspaper, such as Sports, Lifestyle, etc.
-     *
-     * @param $articleSection TextSchema
-     **/
-    public function setArticleSection($articleSection) {
-        $this->properties['articleSection'] = $articleSection;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getArticleSection() {
-        return $this->properties['articleSection'];
-    }
-
-    /**
-     * The page on which the work ends; for example "138" or "xvi".
-     *
-     * @param $pageEnd IntegerSchema|TextSchema
-     **/
-    public function setPageEnd($pageEnd) {
-        $this->properties['pageEnd'] = $pageEnd;
-
-        return $this;
-    }
-
-    /**
-     * @return IntegerSchema|TextSchema
-     **/
-    public function getPageEnd() {
-        return $this->properties['pageEnd'];
-    }
-
-    /**
-     * The page on which the work starts; for example "135" or "xiii".
-     *
-     * @param $pageStart IntegerSchema|TextSchema
-     **/
-    public function setPageStart($pageStart) {
-        $this->properties['pageStart'] = $pageStart;
-
-        return $this;
-    }
-
-    /**
-     * @return IntegerSchema|TextSchema
-     **/
-    public function getPageStart() {
-        return $this->properties['pageStart'];
+        return new ArticleSchema('https://schema.org/', 'Article');
     }
 
     /**
      * Any description of pages that is not separated into pageStart and pageEnd; for example, "1-6, 9, 55" or "10-12, 46-49".
      *
-     * @param $pagination TextSchema
+     * @param $pagination 
+     * @return static
      **/
-    public function setPagination($pagination) {
+    public function setPagination($pagination): static {
         $this->properties['pagination'] = $pagination;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getPagination() {
         return $this->properties['pagination'];
     }
 
     /**
+     * The page on which the work starts; for example "135" or "xiii".
+     *
+     * @param $pageStart |
+     * @return static
+     **/
+    public function setPageStart($pageStart): static {
+        $this->properties['pageStart'] = $pageStart;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getPageStart() {
+        return $this->properties['pageStart'];
+    }
+
+    /**
+     * For an [[Article]], typically a [[NewsArticle]], the backstory property provides a textual summary giving a brief explanation of why and how an article was created. In a journalistic setting this could include information about reporting process, methods, interviews, data sources, etc.
+     *
+     * @param $backstory |
+     * @return static
+     **/
+    public function setBackstory($backstory): static {
+        $this->properties['backstory'] = $backstory;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getBackstory() {
+        return $this->properties['backstory'];
+    }
+
+    /**
+     * The actual body of the article.
+     *
+     * @param $articleBody 
+     * @return static
+     **/
+    public function setArticleBody($articleBody): static {
+        $this->properties['articleBody'] = $articleBody;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getArticleBody() {
+        return $this->properties['articleBody'];
+    }
+
+    /**
      * The number of words in the text of the Article.
      *
-     * @param $wordCount IntegerSchema
+     * @param $wordCount 
+     * @return static
      **/
-    public function setWordCount($wordCount) {
+    public function setWordCount($wordCount): static {
         $this->properties['wordCount'] = $wordCount;
 
         return $this;
     }
 
     /**
-     * @return IntegerSchema
+     * @return 
      **/
     public function getWordCount() {
         return $this->properties['wordCount'];
+    }
+
+    /**
+     * The page on which the work ends; for example "138" or "xvi".
+     *
+     * @param $pageEnd |
+     * @return static
+     **/
+    public function setPageEnd($pageEnd): static {
+        $this->properties['pageEnd'] = $pageEnd;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getPageEnd() {
+        return $this->properties['pageEnd'];
+    }
+
+    /**
+     * Indicates sections of a Web page that are particularly 'speakable' in the sense of being highlighted as being especially appropriate for text-to-speech conversion. Other sections of a page may also be usefully spoken in particular circumstances; the 'speakable' property serves to indicate the parts most likely to be generally useful for speech.
+
+The *speakable* property can be repeated an arbitrary number of times, with three kinds of possible 'content-locator' values:
+
+1.) *id-value* URL references - uses *id-value* of an element in the page being annotated. The simplest use of *speakable* has (potentially relative) URL values, referencing identified sections of the document concerned.
+
+2.) CSS Selectors - addresses content in the annotated page, e.g. via class attribute. Use the [[cssSelector]] property.
+
+3.)  XPaths - addresses content via XPaths (assuming an XML view of the content). Use the [[xpath]] property.
+
+
+For more sophisticated markup of speakable sections beyond simple ID references, either CSS selectors or XPath expressions to pick out document section(s) as speakable. For this
+we define a supporting type, [[SpeakableSpecification]]  which is defined to be a possible value of the *speakable* property.
+         
+     *
+     * @param $speakable |
+     * @return static
+     **/
+    public function setSpeakable($speakable): static {
+        $this->properties['speakable'] = $speakable;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getSpeakable() {
+        return $this->properties['speakable'];
+    }
+
+    /**
+     * Articles may belong to one or more 'sections' in a magazine or newspaper, such as Sports, Lifestyle, etc.
+     *
+     * @param $articleSection 
+     * @return static
+     **/
+    public function setArticleSection($articleSection): static {
+        $this->properties['articleSection'] = $articleSection;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getArticleSection() {
+        return $this->properties['articleSection'];
     }
 
 

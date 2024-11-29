@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,117 +33,123 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class GeoCoordinatesSchema extends StructuredValueSchema
 {
-    public static function factory()
+    public static function factory(): GeoCoordinatesSchema
     {
-        return new GeoCoordinatesSchema('http://schema.org/', 'GeoCoordinates');
+        return new GeoCoordinatesSchema('https://schema.org/', 'GeoCoordinates');
     }
 
     /**
-     * Physical address of the item.
+     * The country. Recommended to be in 2-letter [ISO 3166-1 alpha-2](http://en.wikipedia.org/wiki/ISO_3166-1) format, for example "US". For backward compatibility, a 3-letter [ISO 3166-1 alpha-3](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) country code such as "SGP" or a full country name such as "Singapore" can also be used.
      *
-     * @param $address PostalAddressSchema|TextSchema
+     * @param $addressCountry |
+     * @return static
      **/
-    public function setAddress($address) {
-        $this->properties['address'] = $address;
-
-        return $this;
-    }
-
-    /**
-     * @return PostalAddressSchema|TextSchema
-     **/
-    public function getAddress() {
-        return $this->properties['address'];
-    }
-
-    /**
-     * The country. For example, USA. You can also provide the two-letter <a href='http://en.wikipedia.org/wiki/ISO_3166-1'>ISO 3166-1 alpha-2 country code</a>.
-     *
-     * @param $addressCountry TextSchema|CountrySchema
-     **/
-    public function setAddressCountry($addressCountry) {
+    public function setAddressCountry($addressCountry): static {
         $this->properties['addressCountry'] = $addressCountry;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|CountrySchema
+     * @return |
      **/
     public function getAddressCountry() {
         return $this->properties['addressCountry'];
     }
 
     /**
-     * The elevation of a location (<a href="https://en.wikipedia.org/wiki/World_Geodetic_System">WGS 84</a>).
+     * Physical address of the item.
      *
-     * @param $elevation NumberSchema|TextSchema
+     * @param $address |
+     * @return static
      **/
-    public function setElevation($elevation) {
-        $this->properties['elevation'] = $elevation;
+    public function setAddress($address): static {
+        $this->properties['address'] = $address;
 
         return $this;
     }
 
     /**
-     * @return NumberSchema|TextSchema
+     * @return |
      **/
-    public function getElevation() {
-        return $this->properties['elevation'];
-    }
-
-    /**
-     * The latitude of a location. For example <code>37.42242</code> (<a href="https://en.wikipedia.org/wiki/World_Geodetic_System">WGS 84</a>).
-     *
-     * @param $latitude NumberSchema|TextSchema
-     **/
-    public function setLatitude($latitude) {
-        $this->properties['latitude'] = $latitude;
-
-        return $this;
-    }
-
-    /**
-     * @return NumberSchema|TextSchema
-     **/
-    public function getLatitude() {
-        return $this->properties['latitude'];
-    }
-
-    /**
-     * The longitude of a location. For example <code>-122.08585</code> (<a href="https://en.wikipedia.org/wiki/World_Geodetic_System">WGS 84</a>).
-     *
-     * @param $longitude NumberSchema|TextSchema
-     **/
-    public function setLongitude($longitude) {
-        $this->properties['longitude'] = $longitude;
-
-        return $this;
-    }
-
-    /**
-     * @return NumberSchema|TextSchema
-     **/
-    public function getLongitude() {
-        return $this->properties['longitude'];
+    public function getAddress() {
+        return $this->properties['address'];
     }
 
     /**
      * The postal code. For example, 94043.
      *
-     * @param $postalCode TextSchema
+     * @param $postalCode 
+     * @return static
      **/
-    public function setPostalCode($postalCode) {
+    public function setPostalCode($postalCode): static {
         $this->properties['postalCode'] = $postalCode;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getPostalCode() {
         return $this->properties['postalCode'];
+    }
+
+    /**
+     * The latitude of a location. For example ```37.42242``` ([WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
+     *
+     * @param $latitude |
+     * @return static
+     **/
+    public function setLatitude($latitude): static {
+        $this->properties['latitude'] = $latitude;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getLatitude() {
+        return $this->properties['latitude'];
+    }
+
+    /**
+     * The elevation of a location ([WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System)). Values may be of the form 'NUMBER UNIT\_OF\_MEASUREMENT' (e.g., '1,000 m', '3,200 ft') while numbers alone should be assumed to be a value in meters.
+     *
+     * @param $elevation |
+     * @return static
+     **/
+    public function setElevation($elevation): static {
+        $this->properties['elevation'] = $elevation;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getElevation() {
+        return $this->properties['elevation'];
+    }
+
+    /**
+     * The longitude of a location. For example ```-122.08585``` ([WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
+     *
+     * @param $longitude |
+     * @return static
+     **/
+    public function setLongitude($longitude): static {
+        $this->properties['longitude'] = $longitude;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getLongitude() {
+        return $this->properties['longitude'];
     }
 
 

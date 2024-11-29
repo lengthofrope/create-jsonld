@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,24 +27,16 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * 
-      A BreadcrumbList is an ItemList consisting of a chain of linked Web pages, typically described using at least their URL and their name, and typically ending with the current page.
-      <br />
-      <br />
-      The 'position' property is used to reconstruct the order of the items in a BreadcrumbList.
-      The convention is that a breadcrumb list has an itemListOrder of ItemListOrderAscending (lower values listed first), and that the
-      first items in this list correspond to the "top" or beginning of the breadcrumb trail, e.g. with a site or section homepage.
-      The specific values of 'position' are not assigned meaning for a BreadcrumbList, but they should be integers, e.g. beginning
-      with '1' for the first item in the list.
-      
+ * A BreadcrumbList is an ItemList consisting of a chain of linked Web pages, typically described using at least their URL and their name, and typically ending with the current page.\n\nThe [[position]] property is used to reconstruct the order of the items in a BreadcrumbList. The convention is that a breadcrumb list has an [[itemListOrder]] of [[ItemListOrderAscending]] (lower values listed first), and that the first items in this list correspond to the "top" or beginning of the breadcrumb trail, e.g. with a site or section homepage. The specific values of 'position' are not assigned meaning for a BreadcrumbList, but they should be integers, e.g. beginning with '1' for the first item in the list.
+ *       
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class BreadcrumbListSchema extends ItemListSchema
 {
-    public static function factory()
+    public static function factory(): BreadcrumbListSchema
     {
-        return new BreadcrumbListSchema('http://schema.org/', 'BreadcrumbList');
+        return new BreadcrumbListSchema('https://schema.org/', 'BreadcrumbList');
     }
 
 

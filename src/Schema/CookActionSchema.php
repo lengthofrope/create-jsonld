@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,24 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class CookActionSchema extends CreateActionSchema
 {
-    public static function factory()
+    public static function factory(): CookActionSchema
     {
-        return new CookActionSchema('http://schema.org/', 'CookAction');
+        return new CookActionSchema('https://schema.org/', 'CookAction');
     }
 
     /**
      * A sub property of location. The specific food establishment where the action occurred.
      *
-     * @param $foodEstablishment FoodEstablishmentSchema|PlaceSchema
+     * @param $foodEstablishment |
+     * @return static
      **/
-    public function setFoodEstablishment($foodEstablishment) {
+    public function setFoodEstablishment($foodEstablishment): static {
         $this->properties['foodEstablishment'] = $foodEstablishment;
 
         return $this;
     }
 
     /**
-     * @return FoodEstablishmentSchema|PlaceSchema
+     * @return |
      **/
     public function getFoodEstablishment() {
         return $this->properties['foodEstablishment'];
@@ -59,16 +60,17 @@ class CookActionSchema extends CreateActionSchema
     /**
      * A sub property of location. The specific food event where the action occurred.
      *
-     * @param $foodEvent FoodEventSchema
+     * @param $foodEvent 
+     * @return static
      **/
-    public function setFoodEvent($foodEvent) {
+    public function setFoodEvent($foodEvent): static {
         $this->properties['foodEvent'] = $foodEvent;
 
         return $this;
     }
 
     /**
-     * @return FoodEventSchema
+     * @return 
      **/
     public function getFoodEvent() {
         return $this->properties['foodEvent'];
@@ -77,16 +79,17 @@ class CookActionSchema extends CreateActionSchema
     /**
      * A sub property of instrument. The recipe/instructions used to perform the action.
      *
-     * @param $recipe RecipeSchema
+     * @param $recipe 
+     * @return static
      **/
-    public function setRecipe($recipe) {
+    public function setRecipe($recipe): static {
         $this->properties['recipe'] = $recipe;
 
         return $this;
     }
 
     /**
-     * @return RecipeSchema
+     * @return 
      **/
     public function getRecipe() {
         return $this->properties['recipe'];

@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,24 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class SocialMediaPostingSchema extends ArticleSchema
 {
-    public static function factory()
+    public static function factory(): SocialMediaPostingSchema
     {
-        return new SocialMediaPostingSchema('http://schema.org/', 'SocialMediaPosting');
+        return new SocialMediaPostingSchema('https://schema.org/', 'SocialMediaPosting');
     }
 
     /**
      * A CreativeWork such as an image, video, or audio clip shared as part of this posting.
      *
-     * @param $sharedContent CreativeWorkSchema
+     * @param $sharedContent 
+     * @return static
      **/
-    public function setSharedContent($sharedContent) {
+    public function setSharedContent($sharedContent): static {
         $this->properties['sharedContent'] = $sharedContent;
 
         return $this;
     }
 
     /**
-     * @return CreativeWorkSchema
+     * @return 
      **/
     public function getSharedContent() {
         return $this->properties['sharedContent'];

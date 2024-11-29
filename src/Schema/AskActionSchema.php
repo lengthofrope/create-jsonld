@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,30 +27,31 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of posing a question / favor to someone.<p>Related actions:</p><ul><li><a href="http://schema.org/ReplyAction">ReplyAction</a>: Appears generally as a response to AskAction</li></ul>.
+ * The act of posing a question / favor to someone.\n\nRelated actions:\n\n* [[ReplyAction]]: Appears generally as a response to AskAction.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class AskActionSchema extends CommunicateActionSchema
 {
-    public static function factory()
+    public static function factory(): AskActionSchema
     {
-        return new AskActionSchema('http://schema.org/', 'AskAction');
+        return new AskActionSchema('https://schema.org/', 'AskAction');
     }
 
     /**
      * A sub property of object. A question.
      *
-     * @param $question QuestionSchema
+     * @param $question 
+     * @return static
      **/
-    public function setQuestion($question) {
+    public function setQuestion($question): static {
         $this->properties['question'] = $question;
 
         return $this;
     }
 
     /**
-     * @return QuestionSchema
+     * @return 
      **/
     public function getQuestion() {
         return $this->properties['question'];

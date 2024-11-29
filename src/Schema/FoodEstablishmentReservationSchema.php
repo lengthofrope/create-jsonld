@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,70 +27,69 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A reservation to dine at a food-related business.Note: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations.
+ * A reservation to dine at a food-related business.\n\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class FoodEstablishmentReservationSchema extends ReservationSchema
 {
-    public static function factory()
+    public static function factory(): FoodEstablishmentReservationSchema
     {
-        return new FoodEstablishmentReservationSchema('http://schema.org/', 'FoodEstablishmentReservation');
-    }
-
-    /**
-     * The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. e.g. John wrote a book from January to *December*.
-
-Note that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
-     *
-     * @param $endTime DateTimeSchema
-     **/
-    public function setEndTime($endTime) {
-        $this->properties['endTime'] = $endTime;
-
-        return $this;
-    }
-
-    /**
-     * @return DateTimeSchema
-     **/
-    public function getEndTime() {
-        return $this->properties['endTime'];
+        return new FoodEstablishmentReservationSchema('https://schema.org/', 'FoodEstablishmentReservation');
     }
 
     /**
      * Number of people the reservation should accommodate.
      *
-     * @param $partySize IntegerSchema|QuantitativeValueSchema
+     * @param $partySize |
+     * @return static
      **/
-    public function setPartySize($partySize) {
+    public function setPartySize($partySize): static {
         $this->properties['partySize'] = $partySize;
 
         return $this;
     }
 
     /**
-     * @return IntegerSchema|QuantitativeValueSchema
+     * @return |
      **/
     public function getPartySize() {
         return $this->properties['partySize'];
     }
 
     /**
-     * The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For actions that span a period of time, when the action was performed. e.g. John wrote a book from *January* to December.
-
-Note that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
+     * The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. E.g. John wrote a book from January to *December*. For media, including audio and video, it's the time offset of the end of a clip within a larger file.\n\nNote that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
      *
-     * @param $startTime DateTimeSchema
+     * @param $endTime |
+     * @return static
      **/
-    public function setStartTime($startTime) {
+    public function setEndTime($endTime): static {
+        $this->properties['endTime'] = $endTime;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getEndTime() {
+        return $this->properties['endTime'];
+    }
+
+    /**
+     * The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For actions that span a period of time, when the action was performed. E.g. John wrote a book from *January* to December. For media, including audio and video, it's the time offset of the start of a clip within a larger file.\n\nNote that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
+     *
+     * @param $startTime |
+     * @return static
+     **/
+    public function setStartTime($startTime): static {
         $this->properties['startTime'] = $startTime;
 
         return $this;
     }
 
     /**
-     * @return DateTimeSchema
+     * @return |
      **/
     public function getStartTime() {
         return $this->properties['startTime'];

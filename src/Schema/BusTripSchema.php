@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -31,137 +31,87 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class BusTripSchema extends IntangibleSchema
+class BusTripSchema extends TripSchema
 {
-    public static function factory()
+    public static function factory(): BusTripSchema
     {
-        return new BusTripSchema('http://schema.org/', 'BusTrip');
-    }
-
-    /**
-     * The stop or station from which the bus arrives.
-     *
-     * @param $arrivalBusStop BusStationSchema|BusStopSchema
-     **/
-    public function setArrivalBusStop($arrivalBusStop) {
-        $this->properties['arrivalBusStop'] = $arrivalBusStop;
-
-        return $this;
-    }
-
-    /**
-     * @return BusStationSchema|BusStopSchema
-     **/
-    public function getArrivalBusStop() {
-        return $this->properties['arrivalBusStop'];
-    }
-
-    /**
-     * The expected arrival time.
-     *
-     * @param $arrivalTime DateTimeSchema
-     **/
-    public function setArrivalTime($arrivalTime) {
-        $this->properties['arrivalTime'] = $arrivalTime;
-
-        return $this;
-    }
-
-    /**
-     * @return DateTimeSchema
-     **/
-    public function getArrivalTime() {
-        return $this->properties['arrivalTime'];
-    }
-
-    /**
-     * The name of the bus (e.g. Bolt Express).
-     *
-     * @param $busName TextSchema
-     **/
-    public function setBusName($busName) {
-        $this->properties['busName'] = $busName;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getBusName() {
-        return $this->properties['busName'];
+        return new BusTripSchema('https://schema.org/', 'BusTrip');
     }
 
     /**
      * The unique identifier for the bus.
      *
-     * @param $busNumber TextSchema
+     * @param $busNumber 
+     * @return static
      **/
-    public function setBusNumber($busNumber) {
+    public function setBusNumber($busNumber): static {
         $this->properties['busNumber'] = $busNumber;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getBusNumber() {
         return $this->properties['busNumber'];
     }
 
     /**
+     * The name of the bus (e.g. Bolt Express).
+     *
+     * @param $busName 
+     * @return static
+     **/
+    public function setBusName($busName): static {
+        $this->properties['busName'] = $busName;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getBusName() {
+        return $this->properties['busName'];
+    }
+
+    /**
+     * The stop or station from which the bus arrives.
+     *
+     * @param $arrivalBusStop |
+     * @return static
+     **/
+    public function setArrivalBusStop($arrivalBusStop): static {
+        $this->properties['arrivalBusStop'] = $arrivalBusStop;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getArrivalBusStop() {
+        return $this->properties['arrivalBusStop'];
+    }
+
+    /**
      * The stop or station from which the bus departs.
      *
-     * @param $departureBusStop BusStationSchema|BusStopSchema
+     * @param $departureBusStop |
+     * @return static
      **/
-    public function setDepartureBusStop($departureBusStop) {
+    public function setDepartureBusStop($departureBusStop): static {
         $this->properties['departureBusStop'] = $departureBusStop;
 
         return $this;
     }
 
     /**
-     * @return BusStationSchema|BusStopSchema
+     * @return |
      **/
     public function getDepartureBusStop() {
         return $this->properties['departureBusStop'];
-    }
-
-    /**
-     * The expected departure time.
-     *
-     * @param $departureTime DateTimeSchema
-     **/
-    public function setDepartureTime($departureTime) {
-        $this->properties['departureTime'] = $departureTime;
-
-        return $this;
-    }
-
-    /**
-     * @return DateTimeSchema
-     **/
-    public function getDepartureTime() {
-        return $this->properties['departureTime'];
-    }
-
-    /**
-     * The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.
-     *
-     * @param $provider PersonSchema|OrganizationSchema
-     **/
-    public function setProvider($provider) {
-        $this->properties['provider'] = $provider;
-
-        return $this;
-    }
-
-    /**
-     * @return PersonSchema|OrganizationSchema
-     **/
-    public function getProvider() {
-        return $this->properties['provider'];
     }
 
 

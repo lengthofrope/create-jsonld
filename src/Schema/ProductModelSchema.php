@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,63 +33,66 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ProductModelSchema extends ProductSchema
 {
-    public static function factory()
+    public static function factory(): ProductModelSchema
     {
-        return new ProductModelSchema('http://schema.org/', 'ProductModel');
-    }
-
-    /**
-     * A pointer to a base product from which this product is a variant. It is safe to infer that the variant inherits all product features from the base model, unless defined locally. This is not transitive.
-     *
-     * @param $isVariantOf ProductModelSchema
-     **/
-    public function setIsVariantOf($isVariantOf) {
-        $this->properties['isVariantOf'] = $isVariantOf;
-
-        return $this;
-    }
-
-    /**
-     * @return ProductModelSchema
-     **/
-    public function getIsVariantOf() {
-        return $this->properties['isVariantOf'];
-    }
-
-    /**
-     * A pointer from a previous, often discontinued variant of the product to its newer variant.
-     *
-     * @param $predecessorOf ProductModelSchema
-     **/
-    public function setPredecessorOf($predecessorOf) {
-        $this->properties['predecessorOf'] = $predecessorOf;
-
-        return $this;
-    }
-
-    /**
-     * @return ProductModelSchema
-     **/
-    public function getPredecessorOf() {
-        return $this->properties['predecessorOf'];
+        return new ProductModelSchema('https://schema.org/', 'ProductModel');
     }
 
     /**
      * A pointer from a newer variant of a product  to its previous, often discontinued predecessor.
      *
-     * @param $successorOf ProductModelSchema
+     * @param $successorOf 
+     * @return static
      **/
-    public function setSuccessorOf($successorOf) {
+    public function setSuccessorOf($successorOf): static {
         $this->properties['successorOf'] = $successorOf;
 
         return $this;
     }
 
     /**
-     * @return ProductModelSchema
+     * @return 
      **/
     public function getSuccessorOf() {
         return $this->properties['successorOf'];
+    }
+
+    /**
+     * A pointer from a previous, often discontinued variant of the product to its newer variant.
+     *
+     * @param $predecessorOf 
+     * @return static
+     **/
+    public function setPredecessorOf($predecessorOf): static {
+        $this->properties['predecessorOf'] = $predecessorOf;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getPredecessorOf() {
+        return $this->properties['predecessorOf'];
+    }
+
+    /**
+     * Indicates the kind of product that this is a variant of. In the case of [[ProductModel]], this is a pointer (from a ProductModel) to a base product from which this product is a variant. It is safe to infer that the variant inherits all product features from the base model, unless defined locally. This is not transitive. In the case of a [[ProductGroup]], the group description also serves as a template, representing a set of Products that vary on explicitly defined, specific dimensions only (so it defines both a set of variants, as well as which values distinguish amongst those variants). When used with [[ProductGroup]], this property can apply to any [[Product]] included in the group.
+     *
+     * @param $isVariantOf |
+     * @return static
+     **/
+    public function setIsVariantOf($isVariantOf): static {
+        $this->properties['isVariantOf'] = $isVariantOf;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getIsVariantOf() {
+        return $this->properties['isVariantOf'];
     }
 
 

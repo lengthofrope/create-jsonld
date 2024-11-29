@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,24 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DDxElementSchema extends MedicalIntangibleSchema
 {
-    public static function factory()
+    public static function factory(): DDxElementSchema
     {
-        return new DDxElementSchema('http://schema.org/', 'DDxElement');
+        return new DDxElementSchema('https://schema.org/', 'DDxElement');
     }
 
     /**
-     * One or more alternative conditions considered in the differential diagnosis process.
+     * One or more alternative conditions considered in the differential diagnosis process as output of a diagnosis process.
      *
-     * @param $diagnosis MedicalConditionSchema
+     * @param $diagnosis 
+     * @return static
      **/
-    public function setDiagnosis($diagnosis) {
+    public function setDiagnosis($diagnosis): static {
         $this->properties['diagnosis'] = $diagnosis;
 
         return $this;
     }
 
     /**
-     * @return MedicalConditionSchema
+     * @return 
      **/
     public function getDiagnosis() {
         return $this->properties['diagnosis'];
@@ -59,16 +60,17 @@ class DDxElementSchema extends MedicalIntangibleSchema
     /**
      * One of a set of signs and symptoms that can be used to distinguish this diagnosis from others in the differential diagnosis.
      *
-     * @param $distinguishingSign MedicalSignOrSymptomSchema
+     * @param $distinguishingSign 
+     * @return static
      **/
-    public function setDistinguishingSign($distinguishingSign) {
+    public function setDistinguishingSign($distinguishingSign): static {
         $this->properties['distinguishingSign'] = $distinguishingSign;
 
         return $this;
     }
 
     /**
-     * @return MedicalSignOrSymptomSchema
+     * @return 
      **/
     public function getDistinguishingSign() {
         return $this->properties['distinguishingSign'];

@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,24 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PerformanceRoleSchema extends RoleSchema
 {
-    public static function factory()
+    public static function factory(): PerformanceRoleSchema
     {
-        return new PerformanceRoleSchema('http://schema.org/', 'PerformanceRole');
+        return new PerformanceRoleSchema('https://schema.org/', 'PerformanceRole');
     }
 
     /**
      * The name of a character played in some acting or performing role, i.e. in a PerformanceRole.
      *
-     * @param $characterName TextSchema
+     * @param $characterName 
+     * @return static
      **/
-    public function setCharacterName($characterName) {
+    public function setCharacterName($characterName): static {
         $this->properties['characterName'] = $characterName;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getCharacterName() {
         return $this->properties['characterName'];

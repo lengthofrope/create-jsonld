@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,24 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ReportSchema extends ArticleSchema
 {
-    public static function factory()
+    public static function factory(): ReportSchema
     {
-        return new ReportSchema('http://schema.org/', 'Report');
+        return new ReportSchema('https://schema.org/', 'Report');
     }
 
     /**
      * The number or other unique designator assigned to a Report by the publishing organization.
      *
-     * @param $reportNumber TextSchema
+     * @param $reportNumber 
+     * @return static
      **/
-    public function setReportNumber($reportNumber) {
+    public function setReportNumber($reportNumber): static {
         $this->properties['reportNumber'] = $reportNumber;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getReportNumber() {
         return $this->properties['reportNumber'];

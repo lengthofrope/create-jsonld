@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,27 +33,66 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class AudioObjectSchema extends MediaObjectSchema
 {
-    public static function factory()
+    public static function factory(): AudioObjectSchema
     {
-        return new AudioObjectSchema('http://schema.org/', 'AudioObject');
+        return new AudioObjectSchema('https://schema.org/', 'AudioObject');
     }
 
     /**
      * If this MediaObject is an AudioObject or VideoObject, the transcript of that object.
      *
-     * @param $transcript TextSchema
+     * @param $transcript 
+     * @return static
      **/
-    public function setTranscript($transcript) {
+    public function setTranscript($transcript): static {
         $this->properties['transcript'] = $transcript;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getTranscript() {
         return $this->properties['transcript'];
+    }
+
+    /**
+     * The caption for this object. For downloadable machine formats (closed caption, subtitles etc.) use MediaObject and indicate the [[encodingFormat]].
+     *
+     * @param $caption |
+     * @return static
+     **/
+    public function setCaption($caption): static {
+        $this->properties['caption'] = $caption;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getCaption() {
+        return $this->properties['caption'];
+    }
+
+    /**
+     * Represents textual captioning from a [[MediaObject]], e.g. text of a 'meme'.
+     *
+     * @param $embeddedTextCaption 
+     * @return static
+     **/
+    public function setEmbeddedTextCaption($embeddedTextCaption): static {
+        $this->properties['embeddedTextCaption'] = $embeddedTextCaption;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getEmbeddedTextCaption() {
+        return $this->properties['embeddedTextCaption'];
     }
 
 

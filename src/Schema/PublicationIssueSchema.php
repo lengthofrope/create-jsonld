@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,32 +27,69 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A part of a successively published publication such as a periodical or publication volume, often numbered, usually containing a grouping of works such as articles.
-
-      <br/><br/>See also <a href="http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html">blog post</a>.
+ * A part of a successively published publication such as a periodical or publication volume, often numbered, usually containing a grouping of works such as articles.\n\nSee also [blog post](http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html).
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class PublicationIssueSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): PublicationIssueSchema
     {
-        return new PublicationIssueSchema('http://schema.org/', 'PublicationIssue');
+        return new PublicationIssueSchema('https://schema.org/', 'PublicationIssue');
+    }
+
+    /**
+     * Any description of pages that is not separated into pageStart and pageEnd; for example, "1-6, 9, 55" or "10-12, 46-49".
+     *
+     * @param $pagination 
+     * @return static
+     **/
+    public function setPagination($pagination): static {
+        $this->properties['pagination'] = $pagination;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getPagination() {
+        return $this->properties['pagination'];
+    }
+
+    /**
+     * The page on which the work starts; for example "135" or "xiii".
+     *
+     * @param $pageStart |
+     * @return static
+     **/
+    public function setPageStart($pageStart): static {
+        $this->properties['pageStart'] = $pageStart;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getPageStart() {
+        return $this->properties['pageStart'];
     }
 
     /**
      * Identifies the issue of publication; for example, "iii" or "2".
      *
-     * @param $issueNumber IntegerSchema|TextSchema
+     * @param $issueNumber |
+     * @return static
      **/
-    public function setIssueNumber($issueNumber) {
+    public function setIssueNumber($issueNumber): static {
         $this->properties['issueNumber'] = $issueNumber;
 
         return $this;
     }
 
     /**
-     * @return IntegerSchema|TextSchema
+     * @return |
      **/
     public function getIssueNumber() {
         return $this->properties['issueNumber'];
@@ -61,55 +98,20 @@ class PublicationIssueSchema extends CreativeWorkSchema
     /**
      * The page on which the work ends; for example "138" or "xvi".
      *
-     * @param $pageEnd IntegerSchema|TextSchema
+     * @param $pageEnd |
+     * @return static
      **/
-    public function setPageEnd($pageEnd) {
+    public function setPageEnd($pageEnd): static {
         $this->properties['pageEnd'] = $pageEnd;
 
         return $this;
     }
 
     /**
-     * @return IntegerSchema|TextSchema
+     * @return |
      **/
     public function getPageEnd() {
         return $this->properties['pageEnd'];
-    }
-
-    /**
-     * The page on which the work starts; for example "135" or "xiii".
-     *
-     * @param $pageStart IntegerSchema|TextSchema
-     **/
-    public function setPageStart($pageStart) {
-        $this->properties['pageStart'] = $pageStart;
-
-        return $this;
-    }
-
-    /**
-     * @return IntegerSchema|TextSchema
-     **/
-    public function getPageStart() {
-        return $this->properties['pageStart'];
-    }
-
-    /**
-     * Any description of pages that is not separated into pageStart and pageEnd; for example, "1-6, 9, 55" or "10-12, 46-49".
-     *
-     * @param $pagination TextSchema
-     **/
-    public function setPagination($pagination) {
-        $this->properties['pagination'] = $pagination;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getPagination() {
-        return $this->properties['pagination'];
     }
 
 

@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,99 +33,104 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class APIReferenceSchema extends TechArticleSchema
 {
-    public static function factory()
+    public static function factory(): APIReferenceSchema
     {
-        return new APIReferenceSchema('http://schema.org/', 'APIReference');
-    }
-
-    /**
-     * Library file name e.g., mscorlib.dll, system.web.dll.
-     *
-     * @param $assembly TextSchema
-     **/
-    public function setAssembly($assembly) {
-        $this->properties['assembly'] = $assembly;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getAssembly() {
-        return $this->properties['assembly'];
-    }
-
-    /**
-     * Associated product/technology version. e.g., .NET Framework 4.5.
-     *
-     * @param $assemblyVersion TextSchema
-     **/
-    public function setAssemblyVersion($assemblyVersion) {
-        $this->properties['assemblyVersion'] = $assemblyVersion;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getAssemblyVersion() {
-        return $this->properties['assemblyVersion'];
-    }
-
-    /**
-     * Library file name e.g., mscorlib.dll, system.web.dll.
-     *
-     * @param $executableLibraryName TextSchema
-     **/
-    public function setExecutableLibraryName($executableLibraryName) {
-        $this->properties['executableLibraryName'] = $executableLibraryName;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getExecutableLibraryName() {
-        return $this->properties['executableLibraryName'];
-    }
-
-    /**
-     * Indicates whether API is managed or unmanaged.
-     *
-     * @param $programmingModel TextSchema
-     **/
-    public function setProgrammingModel($programmingModel) {
-        $this->properties['programmingModel'] = $programmingModel;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getProgrammingModel() {
-        return $this->properties['programmingModel'];
+        return new APIReferenceSchema('https://schema.org/', 'APIReference');
     }
 
     /**
      * Type of app development: phone, Metro style, desktop, XBox, etc.
      *
-     * @param $targetPlatform TextSchema
+     * @param $targetPlatform 
+     * @return static
      **/
-    public function setTargetPlatform($targetPlatform) {
+    public function setTargetPlatform($targetPlatform): static {
         $this->properties['targetPlatform'] = $targetPlatform;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getTargetPlatform() {
         return $this->properties['targetPlatform'];
+    }
+
+    /**
+     * Library file name, e.g., mscorlib.dll, system.web.dll.
+     *
+     * @param $executableLibraryName 
+     * @return static
+     **/
+    public function setExecutableLibraryName($executableLibraryName): static {
+        $this->properties['executableLibraryName'] = $executableLibraryName;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getExecutableLibraryName() {
+        return $this->properties['executableLibraryName'];
+    }
+
+    /**
+     * Associated product/technology version. E.g., .NET Framework 4.5.
+     *
+     * @param $assemblyVersion 
+     * @return static
+     **/
+    public function setAssemblyVersion($assemblyVersion): static {
+        $this->properties['assemblyVersion'] = $assemblyVersion;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getAssemblyVersion() {
+        return $this->properties['assemblyVersion'];
+    }
+
+    /**
+     * Indicates whether API is managed or unmanaged.
+     *
+     * @param $programmingModel 
+     * @return static
+     **/
+    public function setProgrammingModel($programmingModel): static {
+        $this->properties['programmingModel'] = $programmingModel;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getProgrammingModel() {
+        return $this->properties['programmingModel'];
+    }
+
+    /**
+     * Library file name, e.g., mscorlib.dll, system.web.dll.
+     *
+     * @param $assembly 
+     * @return static
+     **/
+    public function setAssembly($assembly): static {
+        $this->properties['assembly'] = $assembly;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getAssembly() {
+        return $this->properties['assembly'];
     }
 
 

@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,30 +27,31 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of responding to a question/message asked/sent by the object. Related to <a href="AskAction">AskAction</a>.<p>Related actions:</p><ul><li><a href="http://schema.org/AskAction">AskAction</a>: Appears generally as an origin of a ReplyAction</li></ul>.
+ * The act of responding to a question/message asked/sent by the object. Related to [[AskAction]].\n\nRelated actions:\n\n* [[AskAction]]: Appears generally as an origin of a ReplyAction.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ReplyActionSchema extends CommunicateActionSchema
 {
-    public static function factory()
+    public static function factory(): ReplyActionSchema
     {
-        return new ReplyActionSchema('http://schema.org/', 'ReplyAction');
+        return new ReplyActionSchema('https://schema.org/', 'ReplyAction');
     }
 
     /**
      * A sub property of result. The Comment created or sent as a result of this action.
      *
-     * @param $resultComment CommentSchema
+     * @param $resultComment 
+     * @return static
      **/
-    public function setResultComment($resultComment) {
+    public function setResultComment($resultComment): static {
         $this->properties['resultComment'] = $resultComment;
 
         return $this;
     }
 
     /**
-     * @return CommentSchema
+     * @return 
      **/
     public function getResultComment() {
         return $this->properties['resultComment'];
