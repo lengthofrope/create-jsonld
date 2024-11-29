@@ -6,7 +6,7 @@ use \LengthOfRope\JSONLD\Schema;
 
 $Create = JSONLD\Create::factory()->add(
     Schema\BookSchema::factory()
-        ->setAuthor(Schema\PersonSchema::factory()->setName("Bas de Kort")->setEmail("bdekort@gmail.com"))
+        ->setAuthor(Schema\PersonSchema::factory()->setName("John Doe")->setEmail("john.doe@example.com"))
         ->setAbout("PHP")
         ->setName("Superb PHP Book")
         ->setAlternateName("Book one of three")
@@ -18,7 +18,7 @@ $Create = JSONLD\Create::factory()->add(
                 ->setStreetAddress("Somewhere 12")
                 ->setAddressCountry("NL")
                 ->setAddressLocality("Amersfoort")
-                ->setEmail("info@lengthofrope.nl")
+                ->setEmail("john.doe@example.com")
                 ->setTelephone("033-1234567")
                 ->setAddressRegion("Utrecht")
         )
