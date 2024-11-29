@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class JointSchema extends AnatomicalStructureSchema
+class JointSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new JointSchema('http://schema.org/', 'Joint');
+        return new JointSchema('https://schema.org/', 'Joint');
     }
 
     /**
      * The biomechanical properties of the bone.
      *
-     * @param $biomechnicalClass TextSchema
+     * @param $biomechnicalClass 
      **/
     public function setBiomechnicalClass($biomechnicalClass) {
         $this->properties['biomechnicalClass'] = $biomechnicalClass;
@@ -50,34 +50,16 @@ class JointSchema extends AnatomicalStructureSchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getBiomechnicalClass() {
         return $this->properties['biomechnicalClass'];
     }
 
     /**
-     * The degree of mobility the joint allows.
-     *
-     * @param $functionalClass TextSchema
-     **/
-    public function setFunctionalClass($functionalClass) {
-        $this->properties['functionalClass'] = $functionalClass;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getFunctionalClass() {
-        return $this->properties['functionalClass'];
-    }
-
-    /**
      * The name given to how bone physically connects to each other.
      *
-     * @param $structuralClass TextSchema
+     * @param $structuralClass 
      **/
     public function setStructuralClass($structuralClass) {
         $this->properties['structuralClass'] = $structuralClass;
@@ -86,10 +68,28 @@ class JointSchema extends AnatomicalStructureSchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getStructuralClass() {
         return $this->properties['structuralClass'];
+    }
+
+    /**
+     * The degree of mobility the joint allows.
+     *
+     * @param $functionalClass |
+     **/
+    public function setFunctionalClass($functionalClass) {
+        $this->properties['functionalClass'] = $functionalClass;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getFunctionalClass() {
+        return $this->properties['functionalClass'];
     }
 
 

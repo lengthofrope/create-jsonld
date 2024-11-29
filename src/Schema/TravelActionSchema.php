@@ -27,21 +27,21 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of traveling from an fromLocation to a destination by a specified mode of transport, optionally with participants.
+ * The act of traveling from a fromLocation to a destination by a specified mode of transport, optionally with participants.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class TravelActionSchema extends MoveActionSchema
+class TravelActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new TravelActionSchema('http://schema.org/', 'TravelAction');
+        return new TravelActionSchema('https://schema.org/', 'TravelAction');
     }
 
     /**
      * The distance travelled, e.g. exercising or travelling.
      *
-     * @param $distance DistanceSchema
+     * @param $distance 
      **/
     public function setDistance($distance) {
         $this->properties['distance'] = $distance;
@@ -50,7 +50,7 @@ class TravelActionSchema extends MoveActionSchema
     }
 
     /**
-     * @return DistanceSchema
+     * @return 
      **/
     public function getDistance() {
         return $this->properties['distance'];

@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class CollegeOrUniversitySchema extends EducationalOrganizationSchema
+class CollegeOrUniversitySchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new CollegeOrUniversitySchema('http://schema.org/', 'CollegeOrUniversity');
+        return new CollegeOrUniversitySchema('https://schema.org/', 'CollegeOrUniversity');
     }
 
 

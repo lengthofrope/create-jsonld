@@ -31,35 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class OwnershipInfoSchema extends StructuredValueSchema
+class OwnershipInfoSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new OwnershipInfoSchema('http://schema.org/', 'OwnershipInfo');
-    }
-
-    /**
-     * The organization or person from which the product was acquired.
-     *
-     * @param $acquiredFrom OrganizationSchema|PersonSchema
-     **/
-    public function setAcquiredFrom($acquiredFrom) {
-        $this->properties['acquiredFrom'] = $acquiredFrom;
-
-        return $this;
-    }
-
-    /**
-     * @return OrganizationSchema|PersonSchema
-     **/
-    public function getAcquiredFrom() {
-        return $this->properties['acquiredFrom'];
+        return new OwnershipInfoSchema('https://schema.org/', 'OwnershipInfo');
     }
 
     /**
      * The date and time of obtaining the product.
      *
-     * @param $ownedFrom DateTimeSchema
+     * @param $ownedFrom 
      **/
     public function setOwnedFrom($ownedFrom) {
         $this->properties['ownedFrom'] = $ownedFrom;
@@ -68,7 +50,7 @@ class OwnershipInfoSchema extends StructuredValueSchema
     }
 
     /**
-     * @return DateTimeSchema
+     * @return 
      **/
     public function getOwnedFrom() {
         return $this->properties['ownedFrom'];
@@ -77,7 +59,7 @@ class OwnershipInfoSchema extends StructuredValueSchema
     /**
      * The date and time of giving up ownership on the product.
      *
-     * @param $ownedThrough DateTimeSchema
+     * @param $ownedThrough 
      **/
     public function setOwnedThrough($ownedThrough) {
         $this->properties['ownedThrough'] = $ownedThrough;
@@ -86,7 +68,7 @@ class OwnershipInfoSchema extends StructuredValueSchema
     }
 
     /**
-     * @return DateTimeSchema
+     * @return 
      **/
     public function getOwnedThrough() {
         return $this->properties['ownedThrough'];
@@ -95,7 +77,7 @@ class OwnershipInfoSchema extends StructuredValueSchema
     /**
      * The product that this structured value is referring to.
      *
-     * @param $typeOfGood ProductSchema
+     * @param $typeOfGood |
      **/
     public function setTypeOfGood($typeOfGood) {
         $this->properties['typeOfGood'] = $typeOfGood;
@@ -104,10 +86,28 @@ class OwnershipInfoSchema extends StructuredValueSchema
     }
 
     /**
-     * @return ProductSchema
+     * @return |
      **/
     public function getTypeOfGood() {
         return $this->properties['typeOfGood'];
+    }
+
+    /**
+     * The organization or person from which the product was acquired.
+     *
+     * @param $acquiredFrom |
+     **/
+    public function setAcquiredFrom($acquiredFrom) {
+        $this->properties['acquiredFrom'] = $acquiredFrom;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getAcquiredFrom() {
+        return $this->properties['acquiredFrom'];
     }
 
 

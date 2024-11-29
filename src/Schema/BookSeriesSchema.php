@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class BookSeriesSchema extends CreativeWorkSeriesSchema
+class BookSeriesSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new BookSeriesSchema('http://schema.org/', 'BookSeries');
+        return new BookSeriesSchema('https://schema.org/', 'BookSeries');
     }
 
 

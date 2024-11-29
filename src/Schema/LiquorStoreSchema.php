@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class LiquorStoreSchema extends StoreSchema
+class LiquorStoreSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new LiquorStoreSchema('http://schema.org/', 'LiquorStore');
+        return new LiquorStoreSchema('https://schema.org/', 'LiquorStore');
     }
 
 

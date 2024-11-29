@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ImageGallerySchema extends CollectionPageSchema
+class ImageGallerySchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new ImageGallerySchema('http://schema.org/', 'ImageGallery');
+        return new ImageGallerySchema('https://schema.org/', 'ImageGallery');
     }
 
 

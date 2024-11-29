@@ -27,15 +27,15 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Any indication of the existence of a medical condition or disease that is apparent to the patient.
+ * Any complaint sensed and expressed by the patient (therefore defined as subjective)  like stomachache, lower-back pain, or fatigue.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MedicalSymptomSchema extends MedicalSignOrSymptomSchema
+class MedicalSymptomSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MedicalSymptomSchema('http://schema.org/', 'MedicalSymptom');
+        return new MedicalSymptomSchema('https://schema.org/', 'MedicalSymptom');
     }
 
 

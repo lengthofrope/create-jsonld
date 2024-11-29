@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class OfferItemConditionSchema extends EnumerationSchema
+class OfferItemConditionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new OfferItemConditionSchema('http://schema.org/', 'OfferItemCondition');
+        return new OfferItemConditionSchema('https://schema.org/', 'OfferItemCondition');
     }
 
 

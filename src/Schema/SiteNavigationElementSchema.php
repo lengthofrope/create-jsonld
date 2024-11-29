@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class SiteNavigationElementSchema extends WebPageElementSchema
+class SiteNavigationElementSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new SiteNavigationElementSchema('http://schema.org/', 'SiteNavigationElement');
+        return new SiteNavigationElementSchema('https://schema.org/', 'SiteNavigationElement');
     }
 
 

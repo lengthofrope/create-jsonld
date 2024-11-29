@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class NGOSchema extends OrganizationSchema
+class NGOSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new NGOSchema('http://schema.org/', 'NGO');
+        return new NGOSchema('https://schema.org/', 'NGO');
     }
 
 

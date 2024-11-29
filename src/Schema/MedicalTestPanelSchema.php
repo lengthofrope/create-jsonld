@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MedicalTestPanelSchema extends MedicalTestSchema
+class MedicalTestPanelSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MedicalTestPanelSchema('http://schema.org/', 'MedicalTestPanel');
+        return new MedicalTestPanelSchema('https://schema.org/', 'MedicalTestPanel');
     }
 
     /**
      * A component test of the panel.
      *
-     * @param $subTest MedicalTestSchema
+     * @param $subTest 
      **/
     public function setSubTest($subTest) {
         $this->properties['subTest'] = $subTest;
@@ -50,7 +50,7 @@ class MedicalTestPanelSchema extends MedicalTestSchema
     }
 
     /**
-     * @return MedicalTestSchema
+     * @return 
      **/
     public function getSubTest() {
         return $this->properties['subTest'];

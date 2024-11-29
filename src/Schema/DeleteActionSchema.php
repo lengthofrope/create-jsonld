@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class DeleteActionSchema extends UpdateActionSchema
+class DeleteActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new DeleteActionSchema('http://schema.org/', 'DeleteAction');
+        return new DeleteActionSchema('https://schema.org/', 'DeleteAction');
     }
 
 

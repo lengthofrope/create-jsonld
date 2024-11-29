@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PropertySchema extends IntangibleSchema
+class PropertySchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new PropertySchema('http://schema.org/', 'Property');
+        return new PropertySchema('https://schema.org/', 'Property');
     }
 
     /**
      * Relates a property to a class that is (one of) the type(s) the property is expected to be used on.
      *
-     * @param $domainIncludes ClassSchema
+     * @param $domainIncludes 
      **/
     public function setDomainIncludes($domainIncludes) {
         $this->properties['domainIncludes'] = $domainIncludes;
@@ -50,7 +50,7 @@ class PropertySchema extends IntangibleSchema
     }
 
     /**
-     * @return ClassSchema
+     * @return 
      **/
     public function getDomainIncludes() {
         return $this->properties['domainIncludes'];
@@ -59,7 +59,7 @@ class PropertySchema extends IntangibleSchema
     /**
      * Relates a property to a property that is its inverse. Inverse properties relate the same pairs of items to each other, but in reversed direction. For example, the 'alumni' and 'alumniOf' properties are inverseOf each other. Some properties don't have explicit inverses; in these situations RDFa and JSON-LD syntax for reverse properties can be used.
      *
-     * @param $inverseOf PropertySchema
+     * @param $inverseOf 
      **/
     public function setInverseOf($inverseOf) {
         $this->properties['inverseOf'] = $inverseOf;
@@ -68,34 +68,16 @@ class PropertySchema extends IntangibleSchema
     }
 
     /**
-     * @return PropertySchema
+     * @return 
      **/
     public function getInverseOf() {
         return $this->properties['inverseOf'];
     }
 
     /**
-     * Relates a property to a class that constitutes (one of) the expected type(s) for values of the property.
-     *
-     * @param $rangeIncludes ClassSchema
-     **/
-    public function setRangeIncludes($rangeIncludes) {
-        $this->properties['rangeIncludes'] = $rangeIncludes;
-
-        return $this;
-    }
-
-    /**
-     * @return ClassSchema
-     **/
-    public function getRangeIncludes() {
-        return $this->properties['rangeIncludes'];
-    }
-
-    /**
      * Relates a term (i.e. a property, class or enumeration) to one that supersedes it.
      *
-     * @param $supersededBy PropertySchema|ClassSchema|EnumerationSchema
+     * @param $supersededBy ||
      **/
     public function setSupersededBy($supersededBy) {
         $this->properties['supersededBy'] = $supersededBy;
@@ -104,10 +86,28 @@ class PropertySchema extends IntangibleSchema
     }
 
     /**
-     * @return PropertySchema|ClassSchema|EnumerationSchema
+     * @return ||
      **/
     public function getSupersededBy() {
         return $this->properties['supersededBy'];
+    }
+
+    /**
+     * Relates a property to a class that constitutes (one of) the expected type(s) for values of the property.
+     *
+     * @param $rangeIncludes 
+     **/
+    public function setRangeIncludes($rangeIncludes) {
+        $this->properties['rangeIncludes'] = $rangeIncludes;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getRangeIncludes() {
+        return $this->properties['rangeIncludes'];
     }
 
 

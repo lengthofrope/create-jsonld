@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class TipActionSchema extends TradeActionSchema
+class TipActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new TipActionSchema('http://schema.org/', 'TipAction');
+        return new TipActionSchema('https://schema.org/', 'TipAction');
     }
 
     /**
      * A sub property of participant. The participant who is at the receiving end of the action.
      *
-     * @param $recipient AudienceSchema|OrganizationSchema|PersonSchema
+     * @param $recipient |||
      **/
     public function setRecipient($recipient) {
         $this->properties['recipient'] = $recipient;
@@ -50,7 +50,7 @@ class TipActionSchema extends TradeActionSchema
     }
 
     /**
-     * @return AudienceSchema|OrganizationSchema|PersonSchema
+     * @return |||
      **/
     public function getRecipient() {
         return $this->properties['recipient'];

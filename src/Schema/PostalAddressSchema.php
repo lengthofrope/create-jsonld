@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PostalAddressSchema extends ContactPointSchema
+class PostalAddressSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new PostalAddressSchema('http://schema.org/', 'PostalAddress');
+        return new PostalAddressSchema('https://schema.org/', 'PostalAddress');
     }
 
     /**
-     * The country. For example, USA. You can also provide the two-letter <a href='http://en.wikipedia.org/wiki/ISO_3166-1'>ISO 3166-1 alpha-2 country code</a>.
+     * The country. Recommended to be in 2-letter [ISO 3166-1 alpha-2](http://en.wikipedia.org/wiki/ISO_3166-1) format, for example "US". For backward compatibility, a 3-letter [ISO 3166-1 alpha-3](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) country code such as "SGP" or a full country name such as "Singapore" can also be used.
      *
-     * @param $addressCountry TextSchema|CountrySchema
+     * @param $addressCountry |
      **/
     public function setAddressCountry($addressCountry) {
         $this->properties['addressCountry'] = $addressCountry;
@@ -50,70 +50,16 @@ class PostalAddressSchema extends ContactPointSchema
     }
 
     /**
-     * @return TextSchema|CountrySchema
+     * @return |
      **/
     public function getAddressCountry() {
         return $this->properties['addressCountry'];
     }
 
     /**
-     * The locality. For example, Mountain View.
-     *
-     * @param $addressLocality TextSchema
-     **/
-    public function setAddressLocality($addressLocality) {
-        $this->properties['addressLocality'] = $addressLocality;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getAddressLocality() {
-        return $this->properties['addressLocality'];
-    }
-
-    /**
-     * The region. For example, CA.
-     *
-     * @param $addressRegion TextSchema
-     **/
-    public function setAddressRegion($addressRegion) {
-        $this->properties['addressRegion'] = $addressRegion;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getAddressRegion() {
-        return $this->properties['addressRegion'];
-    }
-
-    /**
-     * The post office box number for PO box addresses.
-     *
-     * @param $postOfficeBoxNumber TextSchema
-     **/
-    public function setPostOfficeBoxNumber($postOfficeBoxNumber) {
-        $this->properties['postOfficeBoxNumber'] = $postOfficeBoxNumber;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getPostOfficeBoxNumber() {
-        return $this->properties['postOfficeBoxNumber'];
-    }
-
-    /**
      * The postal code. For example, 94043.
      *
-     * @param $postalCode TextSchema
+     * @param $postalCode 
      **/
     public function setPostalCode($postalCode) {
         $this->properties['postalCode'] = $postalCode;
@@ -122,16 +68,34 @@ class PostalAddressSchema extends ContactPointSchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getPostalCode() {
         return $this->properties['postalCode'];
     }
 
     /**
+     * The locality in which the street address is, and which is in the region. For example, Mountain View.
+     *
+     * @param $addressLocality 
+     **/
+    public function setAddressLocality($addressLocality) {
+        $this->properties['addressLocality'] = $addressLocality;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getAddressLocality() {
+        return $this->properties['addressLocality'];
+    }
+
+    /**
      * The street address. For example, 1600 Amphitheatre Pkwy.
      *
-     * @param $streetAddress TextSchema
+     * @param $streetAddress 
      **/
     public function setStreetAddress($streetAddress) {
         $this->properties['streetAddress'] = $streetAddress;
@@ -140,10 +104,46 @@ class PostalAddressSchema extends ContactPointSchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getStreetAddress() {
         return $this->properties['streetAddress'];
+    }
+
+    /**
+     * The post office box number for PO box addresses.
+     *
+     * @param $postOfficeBoxNumber 
+     **/
+    public function setPostOfficeBoxNumber($postOfficeBoxNumber) {
+        $this->properties['postOfficeBoxNumber'] = $postOfficeBoxNumber;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getPostOfficeBoxNumber() {
+        return $this->properties['postOfficeBoxNumber'];
+    }
+
+    /**
+     * The region in which the locality is, and which is in the country. For example, California or another appropriate first-level [Administrative division](https://en.wikipedia.org/wiki/List_of_administrative_divisions_by_country).
+     *
+     * @param $addressRegion 
+     **/
+    public function setAddressRegion($addressRegion) {
+        $this->properties['addressRegion'] = $addressRegion;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getAddressRegion() {
+        return $this->properties['addressRegion'];
     }
 
 

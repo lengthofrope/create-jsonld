@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class LandmarksOrHistoricalBuildingsSchema extends PlaceSchema
+class LandmarksOrHistoricalBuildingsSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new LandmarksOrHistoricalBuildingsSchema('http://schema.org/', 'LandmarksOrHistoricalBuildings');
+        return new LandmarksOrHistoricalBuildingsSchema('https://schema.org/', 'LandmarksOrHistoricalBuildings');
     }
 
 

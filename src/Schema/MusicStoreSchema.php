@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MusicStoreSchema extends StoreSchema
+class MusicStoreSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MusicStoreSchema('http://schema.org/', 'MusicStore');
+        return new MusicStoreSchema('https://schema.org/', 'MusicStore');
     }
 
 

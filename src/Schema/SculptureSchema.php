@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class SculptureSchema extends CreativeWorkSchema
+class SculptureSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new SculptureSchema('http://schema.org/', 'Sculpture');
+        return new SculptureSchema('https://schema.org/', 'Sculpture');
     }
 
 

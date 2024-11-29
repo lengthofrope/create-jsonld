@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class BookFormatTypeSchema extends EnumerationSchema
+class BookFormatTypeSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new BookFormatTypeSchema('http://schema.org/', 'BookFormatType');
+        return new BookFormatTypeSchema('https://schema.org/', 'BookFormatType');
     }
 
 

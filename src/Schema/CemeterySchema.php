@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class CemeterySchema extends CivicStructureSchema
+class CemeterySchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new CemeterySchema('http://schema.org/', 'Cemetery');
+        return new CemeterySchema('https://schema.org/', 'Cemetery');
     }
 
 

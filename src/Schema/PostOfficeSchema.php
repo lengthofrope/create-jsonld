@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PostOfficeSchema extends GovernmentOfficeSchema
+class PostOfficeSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new PostOfficeSchema('http://schema.org/', 'PostOffice');
+        return new PostOfficeSchema('https://schema.org/', 'PostOffice');
     }
 
 

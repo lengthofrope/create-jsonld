@@ -27,33 +27,17 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Original definition: "provider of professional services."
-        <br><br>
-        The general <a href="/ProfessionalService">ProfessionalService</a> type
-        for local businesses was deprecated due to confusion with <a href="/Service">Service</a>.
-        For reference, the types that it included were: <a href="/Dentist">Dentist</a>,
-        <a href="/AccountingService">AccountingService</a>,
-        <a href="/Attorney">Attorney</a>,
-        <a href="/Notary">Notary</a>, as well as types for several kinds of
-        <a href="/HomeAndConstructionBusiness">HomeAndConstructionBusiness</a>:
-        <a href="/Electrician">Electrician</a>,
-        <a href="/GeneralContractor">GeneralContractor</a>,
-        <a href="/HousePainter">HousePainter</a>,
-        <a href="/Locksmith">Locksmith</a>,
-        <a href="/Plumber">Plumber</a>,
-        <a href="/Plumber">RoofingContractor</a>.
-        <a href="/LegalService">LegalService</a> was introduced as a more
-        inclusive supertype of <a href="/Attorney">Attorney</a>.
-
-      
+ * Original definition: "provider of professional services."\n\nThe general [[ProfessionalService]] type for local businesses was deprecated due to confusion with [[Service]]. For reference, the types that it included were: [[Dentist]],
+ *         [[AccountingService]], [[Attorney]], [[Notary]], as well as types for several kinds of [[HomeAndConstructionBusiness]]: [[Electrician]], [[GeneralContractor]],
+ *         [[HousePainter]], [[Locksmith]], [[Plumber]], [[RoofingContractor]]. [[LegalService]] was introduced as a more inclusive supertype of [[Attorney]].
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ProfessionalServiceSchema extends LocalBusinessSchema
+class ProfessionalServiceSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new ProfessionalServiceSchema('http://schema.org/', 'ProfessionalService');
+        return new ProfessionalServiceSchema('https://schema.org/', 'ProfessionalService');
     }
 
 

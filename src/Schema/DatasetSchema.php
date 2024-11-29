@@ -31,71 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class DatasetSchema extends CreativeWorkSchema
+class DatasetSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new DatasetSchema('http://schema.org/', 'Dataset');
+        return new DatasetSchema('https://schema.org/', 'Dataset');
     }
 
     /**
-     * A data catalog which contains a dataset.
+     * A data catalog which contains this dataset (this property was previously 'catalog', preferred name is now 'includedInDataCatalog').
      *
-     * @param $catalog DataCatalogSchema
-     **/
-    public function setCatalog($catalog) {
-        $this->properties['catalog'] = $catalog;
-
-        return $this;
-    }
-
-    /**
-     * @return DataCatalogSchema
-     **/
-    public function getCatalog() {
-        return $this->properties['catalog'];
-    }
-
-    /**
-     * The range of temporal applicability of a dataset, e.g. for a 2011 census dataset, the year 2011 (in ISO 8601 time interval format).
-     *
-     * @param $datasetTimeInterval DateTimeSchema
-     **/
-    public function setDatasetTimeInterval($datasetTimeInterval) {
-        $this->properties['datasetTimeInterval'] = $datasetTimeInterval;
-
-        return $this;
-    }
-
-    /**
-     * @return DateTimeSchema
-     **/
-    public function getDatasetTimeInterval() {
-        return $this->properties['datasetTimeInterval'];
-    }
-
-    /**
-     * A downloadable form of this dataset, at a specific location, in a specific format.
-     *
-     * @param $distribution DataDownloadSchema
-     **/
-    public function setDistribution($distribution) {
-        $this->properties['distribution'] = $distribution;
-
-        return $this;
-    }
-
-    /**
-     * @return DataDownloadSchema
-     **/
-    public function getDistribution() {
-        return $this->properties['distribution'];
-    }
-
-    /**
-     * A data catalog contained in the dataset.
-     *
-     * @param $includedDataCatalog DataCatalogSchema
+     * @param $includedDataCatalog 
      **/
     public function setIncludedDataCatalog($includedDataCatalog) {
         $this->properties['includedDataCatalog'] = $includedDataCatalog;
@@ -104,46 +50,160 @@ class DatasetSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return DataCatalogSchema
+     * @return 
      **/
     public function getIncludedDataCatalog() {
         return $this->properties['includedDataCatalog'];
     }
 
     /**
-     * The range of spatial applicability of a dataset, e.g. for a dataset of New York weather, the state of New York.
+     * The International Standard Serial Number (ISSN) that identifies this serial publication. You can repeat this property to identify different formats of, or the linking ISSN (ISSN-L) for, this serial publication.
      *
-     * @param $spatial PlaceSchema
+     * @param $issn 
      **/
-    public function setSpatial($spatial) {
-        $this->properties['spatial'] = $spatial;
+    public function setIssn($issn) {
+        $this->properties['issn'] = $issn;
 
         return $this;
     }
 
     /**
-     * @return PlaceSchema
+     * @return 
      **/
-    public function getSpatial() {
-        return $this->properties['spatial'];
+    public function getIssn() {
+        return $this->properties['issn'];
+    }
+
+    /**
+     * A data catalog which contains this dataset.
+     *
+     * @param $includedInDataCatalog 
+     **/
+    public function setIncludedInDataCatalog($includedInDataCatalog) {
+        $this->properties['includedInDataCatalog'] = $includedInDataCatalog;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getIncludedInDataCatalog() {
+        return $this->properties['includedInDataCatalog'];
+    }
+
+    /**
+     * A subproperty of [[measurementTechnique]] that can be used for specifying specific methods, in particular via [[MeasurementMethodEnum]].
+     *
+     * @param $measurementMethod |||
+     **/
+    public function setMeasurementMethod($measurementMethod) {
+        $this->properties['measurementMethod'] = $measurementMethod;
+
+        return $this;
+    }
+
+    /**
+     * @return |||
+     **/
+    public function getMeasurementMethod() {
+        return $this->properties['measurementMethod'];
+    }
+
+    /**
+     * The variableMeasured property can indicate (repeated as necessary) the  variables that are measured in some dataset, either described as text or as pairs of identifier and description using PropertyValue, or more explicitly as a [[StatisticalVariable]].
+     *
+     * @param $variableMeasured |||
+     **/
+    public function setVariableMeasured($variableMeasured) {
+        $this->properties['variableMeasured'] = $variableMeasured;
+
+        return $this;
+    }
+
+    /**
+     * @return |||
+     **/
+    public function getVariableMeasured() {
+        return $this->properties['variableMeasured'];
+    }
+
+    /**
+     * A data catalog which contains this dataset.
+     *
+     * @param $catalog 
+     **/
+    public function setCatalog($catalog) {
+        $this->properties['catalog'] = $catalog;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getCatalog() {
+        return $this->properties['catalog'];
     }
 
     /**
      * The range of temporal applicability of a dataset, e.g. for a 2011 census dataset, the year 2011 (in ISO 8601 time interval format).
      *
-     * @param $temporal DateTimeSchema
+     * @param $datasetTimeInterval 
      **/
-    public function setTemporal($temporal) {
-        $this->properties['temporal'] = $temporal;
+    public function setDatasetTimeInterval($datasetTimeInterval) {
+        $this->properties['datasetTimeInterval'] = $datasetTimeInterval;
 
         return $this;
     }
 
     /**
-     * @return DateTimeSchema
+     * @return 
      **/
-    public function getTemporal() {
-        return $this->properties['temporal'];
+    public function getDatasetTimeInterval() {
+        return $this->properties['datasetTimeInterval'];
+    }
+
+    /**
+     * A downloadable form of this dataset, at a specific location, in a specific format. This property can be repeated if different variations are available. There is no expectation that different downloadable distributions must contain exactly equivalent information (see also [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Class:Distribution) on this point). Different distributions might include or exclude different subsets of the entire dataset, for example.
+     *
+     * @param $distribution 
+     **/
+    public function setDistribution($distribution) {
+        $this->properties['distribution'] = $distribution;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getDistribution() {
+        return $this->properties['distribution'];
+    }
+
+    /**
+     * A technique, method or technology used in an [[Observation]], [[StatisticalVariable]] or [[Dataset]] (or [[DataDownload]], [[DataCatalog]]), corresponding to the method used for measuring the corresponding variable(s) (for datasets, described using [[variableMeasured]]; for [[Observation]], a [[StatisticalVariable]]). Often but not necessarily each [[variableMeasured]] will have an explicit representation as (or mapping to) an property such as those defined in Schema.org, or other RDF vocabularies and "knowledge graphs". In that case the subproperty of [[variableMeasured]] called [[measuredProperty]] is applicable.
+    
+The [[measurementTechnique]] property helps when extra clarification is needed about how a [[measuredProperty]] was measured. This is oriented towards scientific and scholarly dataset publication but may have broader applicability; it is not intended as a full representation of measurement, but can often serve as a high level summary for dataset discovery. 
+
+For example, if [[variableMeasured]] is: molecule concentration, [[measurementTechnique]] could be: "mass spectrometry" or "nmr spectroscopy" or "colorimetry" or "immunofluorescence". If the [[variableMeasured]] is "depression rating", the [[measurementTechnique]] could be "Zung Scale" or "HAM-D" or "Beck Depression Inventory". 
+
+If there are several [[variableMeasured]] properties recorded for some given data object, use a [[PropertyValue]] for each [[variableMeasured]] and attach the corresponding [[measurementTechnique]]. The value can also be from an enumeration, organized as a [[MeasurementMetholdEnumeration]].
+     *
+     * @param $measurementTechnique |||
+     **/
+    public function setMeasurementTechnique($measurementTechnique) {
+        $this->properties['measurementTechnique'] = $measurementTechnique;
+
+        return $this;
+    }
+
+    /**
+     * @return |||
+     **/
+    public function getMeasurementTechnique() {
+        return $this->properties['measurementTechnique'];
     }
 
 

@@ -35,7 +35,7 @@ class MedicalDevicePurposeSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MedicalDevicePurposeSchema('http://schema.org/', 'MedicalDevicePurpose');
+        return new MedicalDevicePurposeSchema('https://schema.org/', 'MedicalDevicePurpose');
     }
 
 

@@ -35,7 +35,7 @@ class InfectiousAgentClassSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new InfectiousAgentClassSchema('http://schema.org/', 'InfectiousAgentClass');
+        return new InfectiousAgentClassSchema('https://schema.org/', 'InfectiousAgentClass');
     }
 
 

@@ -27,21 +27,21 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * An agent tracks an object for updates.<p>Related actions:</p><ul><li><a href="http://schema.org/FollowAction">FollowAction</a>: Unlike FollowAction, TrackAction refers to the interest on the location of innanimates objects.</li><li><a href="http://schema.org/SubscribeAction">SubscribeAction</a>: Unlike SubscribeAction, TrackAction refers to  the interest on the location of innanimate objects</li></ul>.
+ * An agent tracks an object for updates.\n\nRelated actions:\n\n* [[FollowAction]]: Unlike FollowAction, TrackAction refers to the interest on the location of innanimates objects.\n* [[SubscribeAction]]: Unlike SubscribeAction, TrackAction refers to  the interest on the location of innanimate objects.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class TrackActionSchema extends FindActionSchema
+class TrackActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new TrackActionSchema('http://schema.org/', 'TrackAction');
+        return new TrackActionSchema('https://schema.org/', 'TrackAction');
     }
 
     /**
      * A sub property of instrument. The method of delivery.
      *
-     * @param $deliveryMethod DeliveryMethodSchema
+     * @param $deliveryMethod 
      **/
     public function setDeliveryMethod($deliveryMethod) {
         $this->properties['deliveryMethod'] = $deliveryMethod;
@@ -50,7 +50,7 @@ class TrackActionSchema extends FindActionSchema
     }
 
     /**
-     * @return DeliveryMethodSchema
+     * @return 
      **/
     public function getDeliveryMethod() {
         return $this->properties['deliveryMethod'];

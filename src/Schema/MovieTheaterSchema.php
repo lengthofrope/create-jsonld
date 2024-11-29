@@ -35,13 +35,13 @@ class MovieTheaterSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MovieTheaterSchema('http://schema.org/', 'MovieTheater');
+        return new MovieTheaterSchema('https://schema.org/', 'MovieTheater');
     }
 
     /**
      * The number of screens in the movie theater.
      *
-     * @param $screenCount NumberSchema
+     * @param $screenCount 
      **/
     public function setScreenCount($screenCount) {
         $this->properties['screenCount'] = $screenCount;
@@ -50,7 +50,7 @@ class MovieTheaterSchema extends \LengthOfRope\JSONLD\Elements\Element
     }
 
     /**
-     * @return NumberSchema
+     * @return 
      **/
     public function getScreenCount() {
         return $this->properties['screenCount'];

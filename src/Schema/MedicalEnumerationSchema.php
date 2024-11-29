@@ -27,7 +27,7 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Enumerations related to health and the practice of medicine.
+ * Enumerations related to health and the practice of medicine: A concept that is used to attribute a quality to another concept, as a qualifier, a collection of items or a listing of all of the elements of a set in medicine practice.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
@@ -35,7 +35,7 @@ class MedicalEnumerationSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MedicalEnumerationSchema('http://schema.org/', 'MedicalEnumeration');
+        return new MedicalEnumerationSchema('https://schema.org/', 'MedicalEnumeration');
     }
 
 

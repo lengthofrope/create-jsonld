@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class VideoObjectSchema extends MediaObjectSchema
+class VideoObjectSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new VideoObjectSchema('http://schema.org/', 'VideoObject');
+        return new VideoObjectSchema('https://schema.org/', 'VideoObject');
     }
 
     /**
-     * An actor, e.g. in tv, radio, movie, video games etc. Actors can be associated with individual items or with a series, episode, clip.
+     * An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip.
      *
-     * @param $actor PersonSchema
+     * @param $actor |
      **/
     public function setActor($actor) {
         $this->properties['actor'] = $actor;
@@ -50,16 +50,16 @@ class VideoObjectSchema extends MediaObjectSchema
     }
 
     /**
-     * @return PersonSchema
+     * @return |
      **/
     public function getActor() {
         return $this->properties['actor'];
     }
 
     /**
-     * An actor, e.g. in tv, radio, movie, video games etc. Actors can be associated with individual items or with a series, episode, clip.
+     * An actor, e.g. in TV, radio, movie, video games etc. Actors can be associated with individual items or with a series, episode, clip.
      *
-     * @param $actors PersonSchema
+     * @param $actors 
      **/
     public function setActors($actors) {
         $this->properties['actors'] = $actors;
@@ -68,106 +68,16 @@ class VideoObjectSchema extends MediaObjectSchema
     }
 
     /**
-     * @return PersonSchema
+     * @return 
      **/
     public function getActors() {
         return $this->properties['actors'];
     }
 
     /**
-     * The caption for this object.
-     *
-     * @param $caption TextSchema
-     **/
-    public function setCaption($caption) {
-        $this->properties['caption'] = $caption;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getCaption() {
-        return $this->properties['caption'];
-    }
-
-    /**
-     * A director of e.g. tv, radio, movie, video games etc. content. Directors can be associated with individual items or with a series, episode, clip.
-     *
-     * @param $director PersonSchema
-     **/
-    public function setDirector($director) {
-        $this->properties['director'] = $director;
-
-        return $this;
-    }
-
-    /**
-     * @return PersonSchema
-     **/
-    public function getDirector() {
-        return $this->properties['director'];
-    }
-
-    /**
-     * A director of e.g. tv, radio, movie, video games etc. content. Directors can be associated with individual items or with a series, episode, clip.
-     *
-     * @param $directors PersonSchema
-     **/
-    public function setDirectors($directors) {
-        $this->properties['directors'] = $directors;
-
-        return $this;
-    }
-
-    /**
-     * @return PersonSchema
-     **/
-    public function getDirectors() {
-        return $this->properties['directors'];
-    }
-
-    /**
-     * The composer of the soundtrack.
-     *
-     * @param $musicBy MusicGroupSchema|PersonSchema
-     **/
-    public function setMusicBy($musicBy) {
-        $this->properties['musicBy'] = $musicBy;
-
-        return $this;
-    }
-
-    /**
-     * @return MusicGroupSchema|PersonSchema
-     **/
-    public function getMusicBy() {
-        return $this->properties['musicBy'];
-    }
-
-    /**
-     * Thumbnail image for an image or video.
-     *
-     * @param $thumbnail ImageObjectSchema
-     **/
-    public function setThumbnail($thumbnail) {
-        $this->properties['thumbnail'] = $thumbnail;
-
-        return $this;
-    }
-
-    /**
-     * @return ImageObjectSchema
-     **/
-    public function getThumbnail() {
-        return $this->properties['thumbnail'];
-    }
-
-    /**
      * If this MediaObject is an AudioObject or VideoObject, the transcript of that object.
      *
-     * @param $transcript TextSchema
+     * @param $transcript 
      **/
     public function setTranscript($transcript) {
         $this->properties['transcript'] = $transcript;
@@ -176,34 +86,34 @@ class VideoObjectSchema extends MediaObjectSchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getTranscript() {
         return $this->properties['transcript'];
     }
 
     /**
-     * The frame size of the video.
+     * A director of e.g. TV, radio, movie, video games etc. content. Directors can be associated with individual items or with a series, episode, clip.
      *
-     * @param $videoFrameSize TextSchema
+     * @param $directors 
      **/
-    public function setVideoFrameSize($videoFrameSize) {
-        $this->properties['videoFrameSize'] = $videoFrameSize;
+    public function setDirectors($directors) {
+        $this->properties['directors'] = $directors;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
-    public function getVideoFrameSize() {
-        return $this->properties['videoFrameSize'];
+    public function getDirectors() {
+        return $this->properties['directors'];
     }
 
     /**
      * The quality of the video.
      *
-     * @param $videoQuality TextSchema
+     * @param $videoQuality 
      **/
     public function setVideoQuality($videoQuality) {
         $this->properties['videoQuality'] = $videoQuality;
@@ -212,10 +122,100 @@ class VideoObjectSchema extends MediaObjectSchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getVideoQuality() {
         return $this->properties['videoQuality'];
+    }
+
+    /**
+     * The frame size of the video.
+     *
+     * @param $videoFrameSize 
+     **/
+    public function setVideoFrameSize($videoFrameSize) {
+        $this->properties['videoFrameSize'] = $videoFrameSize;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getVideoFrameSize() {
+        return $this->properties['videoFrameSize'];
+    }
+
+    /**
+     * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual items or with a series, episode, clip.
+     *
+     * @param $director 
+     **/
+    public function setDirector($director) {
+        $this->properties['director'] = $director;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getDirector() {
+        return $this->properties['director'];
+    }
+
+    /**
+     * The caption for this object. For downloadable machine formats (closed caption, subtitles etc.) use MediaObject and indicate the [[encodingFormat]].
+     *
+     * @param $caption |
+     **/
+    public function setCaption($caption) {
+        $this->properties['caption'] = $caption;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getCaption() {
+        return $this->properties['caption'];
+    }
+
+    /**
+     * The composer of the soundtrack.
+     *
+     * @param $musicBy |
+     **/
+    public function setMusicBy($musicBy) {
+        $this->properties['musicBy'] = $musicBy;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getMusicBy() {
+        return $this->properties['musicBy'];
+    }
+
+    /**
+     * Represents textual captioning from a [[MediaObject]], e.g. text of a 'meme'.
+     *
+     * @param $embeddedTextCaption 
+     **/
+    public function setEmbeddedTextCaption($embeddedTextCaption) {
+        $this->properties['embeddedTextCaption'] = $embeddedTextCaption;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getEmbeddedTextCaption() {
+        return $this->properties['embeddedTextCaption'];
     }
 
 

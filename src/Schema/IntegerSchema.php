@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class IntegerSchema extends NumberSchema
+class IntegerSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new IntegerSchema('http://schema.org/', 'Integer');
+        return new IntegerSchema('https://schema.org/', 'Integer');
     }
 
 

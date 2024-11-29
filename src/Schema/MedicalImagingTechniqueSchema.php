@@ -35,7 +35,7 @@ class MedicalImagingTechniqueSchema extends \LengthOfRope\JSONLD\Elements\Elemen
 {
     public static function factory()
     {
-        return new MedicalImagingTechniqueSchema('http://schema.org/', 'MedicalImagingTechnique');
+        return new MedicalImagingTechniqueSchema('https://schema.org/', 'MedicalImagingTechnique');
     }
 
 

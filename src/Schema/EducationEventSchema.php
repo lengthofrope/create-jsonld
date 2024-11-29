@@ -31,11 +31,65 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class EducationEventSchema extends EventSchema
+class EducationEventSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new EducationEventSchema('http://schema.org/', 'EducationEvent');
+        return new EducationEventSchema('https://schema.org/', 'EducationEvent');
+    }
+
+    /**
+     * The level in terms of progression through an educational or training context. Examples of educational levels include 'beginner', 'intermediate' or 'advanced', and formal sets of level indicators.
+     *
+     * @param $educationalLevel ||
+     **/
+    public function setEducationalLevel($educationalLevel) {
+        $this->properties['educationalLevel'] = $educationalLevel;
+
+        return $this;
+    }
+
+    /**
+     * @return ||
+     **/
+    public function getEducationalLevel() {
+        return $this->properties['educationalLevel'];
+    }
+
+    /**
+     * The item being described is intended to assess the competency or learning outcome defined by the referenced term.
+     *
+     * @param $assesses |
+     **/
+    public function setAssesses($assesses) {
+        $this->properties['assesses'] = $assesses;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getAssesses() {
+        return $this->properties['assesses'];
+    }
+
+    /**
+     * The item being described is intended to help a person learn the competency or learning outcome defined by the referenced term.
+     *
+     * @param $teaches |
+     **/
+    public function setTeaches($teaches) {
+        $this->properties['teaches'] = $teaches;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getTeaches() {
+        return $this->properties['teaches'];
     }
 
 

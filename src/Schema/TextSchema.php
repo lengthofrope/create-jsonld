@@ -35,7 +35,7 @@ class TextSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new TextSchema('http://schema.org/', 'Text');
+        return new TextSchema('https://schema.org/', 'Text');
     }
 
 

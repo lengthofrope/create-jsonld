@@ -27,18 +27,15 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Professional service: Attorney. <br><br>
-        This type is deprecated - <a href="/LegalService">LegalService</a> is more inclusive and less ambiguous.
-
-      
+ * Professional service: Attorney. \n\nThis type is deprecated - [[LegalService]] is more inclusive and less ambiguous.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class AttorneySchema extends LegalServiceSchema
+class AttorneySchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new AttorneySchema('http://schema.org/', 'Attorney');
+        return new AttorneySchema('https://schema.org/', 'Attorney');
     }
 
 

@@ -27,7 +27,7 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A date value in <a href='http://en.wikipedia.org/wiki/ISO_8601'>ISO 8601 date format</a>.
+ * A date value in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601).
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
@@ -35,7 +35,7 @@ class DateSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new DateSchema('http://schema.org/', 'Date');
+        return new DateSchema('https://schema.org/', 'Date');
     }
 
 

@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class BeachSchema extends CivicStructureSchema
+class BeachSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new BeachSchema('http://schema.org/', 'Beach');
+        return new BeachSchema('https://schema.org/', 'Beach');
     }
 
 

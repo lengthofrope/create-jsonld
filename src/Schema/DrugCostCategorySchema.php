@@ -35,7 +35,7 @@ class DrugCostCategorySchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new DrugCostCategorySchema('http://schema.org/', 'DrugCostCategory');
+        return new DrugCostCategorySchema('https://schema.org/', 'DrugCostCategory');
     }
 
 

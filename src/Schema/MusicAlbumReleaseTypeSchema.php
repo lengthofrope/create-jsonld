@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MusicAlbumReleaseTypeSchema extends EnumerationSchema
+class MusicAlbumReleaseTypeSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MusicAlbumReleaseTypeSchema('http://schema.org/', 'MusicAlbumReleaseType');
+        return new MusicAlbumReleaseTypeSchema('https://schema.org/', 'MusicAlbumReleaseType');
     }
 
 

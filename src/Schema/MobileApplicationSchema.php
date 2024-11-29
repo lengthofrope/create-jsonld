@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MobileApplicationSchema extends SoftwareApplicationSchema
+class MobileApplicationSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MobileApplicationSchema('http://schema.org/', 'MobileApplication');
+        return new MobileApplicationSchema('https://schema.org/', 'MobileApplication');
     }
 
     /**
      * Specifies specific carrier(s) requirements for the application (e.g. an application may only work on a specific carrier network).
      *
-     * @param $carrierRequirements TextSchema
+     * @param $carrierRequirements 
      **/
     public function setCarrierRequirements($carrierRequirements) {
         $this->properties['carrierRequirements'] = $carrierRequirements;
@@ -50,7 +50,7 @@ class MobileApplicationSchema extends SoftwareApplicationSchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getCarrierRequirements() {
         return $this->properties['carrierRequirements'];

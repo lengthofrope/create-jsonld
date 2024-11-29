@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class DataFeedSchema extends DatasetSchema
+class DataFeedSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new DataFeedSchema('http://schema.org/', 'DataFeed');
+        return new DataFeedSchema('https://schema.org/', 'DataFeed');
     }
 
     /**
-     * An item within in a data feed. Data feeds may have many elements.
+     * An item within a data feed. Data feeds may have many elements.
      *
-     * @param $dataFeedElement TextSchema|ThingSchema|DataFeedItemSchema
+     * @param $dataFeedElement ||
      **/
     public function setDataFeedElement($dataFeedElement) {
         $this->properties['dataFeedElement'] = $dataFeedElement;
@@ -50,7 +50,7 @@ class DataFeedSchema extends DatasetSchema
     }
 
     /**
-     * @return TextSchema|ThingSchema|DataFeedItemSchema
+     * @return ||
      **/
     public function getDataFeedElement() {
         return $this->properties['dataFeedElement'];

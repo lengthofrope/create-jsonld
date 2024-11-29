@@ -27,15 +27,15 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Natural languages such as Spanish, Tamil, Hindi, English, etc. and programming languages such as Scheme and Lisp.
+ * Natural languages such as Spanish, Tamil, Hindi, English, etc. Formal language code tags expressed in [BCP 47](https://en.wikipedia.org/wiki/IETF_language_tag) can be used via the [[alternateName]] property. The Language type previously also covered programming languages such as Scheme and Lisp, which are now best represented using [[ComputerLanguage]].
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class LanguageSchema extends IntangibleSchema
+class LanguageSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new LanguageSchema('http://schema.org/', 'Language');
+        return new LanguageSchema('https://schema.org/', 'Language');
     }
 
 

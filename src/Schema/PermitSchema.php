@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PermitSchema extends IntangibleSchema
+class PermitSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new PermitSchema('http://schema.org/', 'Permit');
+        return new PermitSchema('https://schema.org/', 'Permit');
     }
 
     /**
-     * The organization issuing the ticket or permit.
+     * The organization issuing the item, for example a [[Permit]], [[Ticket]], or [[Certification]].
      *
-     * @param $issuedBy OrganizationSchema
+     * @param $issuedBy 
      **/
     public function setIssuedBy($issuedBy) {
         $this->properties['issuedBy'] = $issuedBy;
@@ -50,88 +50,16 @@ class PermitSchema extends IntangibleSchema
     }
 
     /**
-     * @return OrganizationSchema
+     * @return 
      **/
     public function getIssuedBy() {
         return $this->properties['issuedBy'];
     }
 
     /**
-     * The service through with the permit was granted.
+     * The geographic area where the item is valid. Applies for example to a [[Permit]], a [[Certification]], or an [[EducationalOccupationalCredential]]. 
      *
-     * @param $issuedThrough ServiceSchema
-     **/
-    public function setIssuedThrough($issuedThrough) {
-        $this->properties['issuedThrough'] = $issuedThrough;
-
-        return $this;
-    }
-
-    /**
-     * @return ServiceSchema
-     **/
-    public function getIssuedThrough() {
-        return $this->properties['issuedThrough'];
-    }
-
-    /**
-     * The target audience for this permit.
-     *
-     * @param $permitAudience AudienceSchema
-     **/
-    public function setPermitAudience($permitAudience) {
-        $this->properties['permitAudience'] = $permitAudience;
-
-        return $this;
-    }
-
-    /**
-     * @return AudienceSchema
-     **/
-    public function getPermitAudience() {
-        return $this->properties['permitAudience'];
-    }
-
-    /**
-     * The time validity of the permit.
-     *
-     * @param $validFor DurationSchema
-     **/
-    public function setValidFor($validFor) {
-        $this->properties['validFor'] = $validFor;
-
-        return $this;
-    }
-
-    /**
-     * @return DurationSchema
-     **/
-    public function getValidFor() {
-        return $this->properties['validFor'];
-    }
-
-    /**
-     * The date when the item becomes valid.
-     *
-     * @param $validFrom DateTimeSchema
-     **/
-    public function setValidFrom($validFrom) {
-        $this->properties['validFrom'] = $validFrom;
-
-        return $this;
-    }
-
-    /**
-     * @return DateTimeSchema
-     **/
-    public function getValidFrom() {
-        return $this->properties['validFrom'];
-    }
-
-    /**
-     * The geographic area where the permit is valid.
-     *
-     * @param $validIn AdministrativeAreaSchema
+     * @param $validIn 
      **/
     public function setValidIn($validIn) {
         $this->properties['validIn'] = $validIn;
@@ -140,16 +68,52 @@ class PermitSchema extends IntangibleSchema
     }
 
     /**
-     * @return AdministrativeAreaSchema
+     * @return 
      **/
     public function getValidIn() {
         return $this->properties['validIn'];
     }
 
     /**
+     * The duration of validity of a permit or similar thing.
+     *
+     * @param $validFor 
+     **/
+    public function setValidFor($validFor) {
+        $this->properties['validFor'] = $validFor;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getValidFor() {
+        return $this->properties['validFor'];
+    }
+
+    /**
+     * The service through which the permit was granted.
+     *
+     * @param $issuedThrough 
+     **/
+    public function setIssuedThrough($issuedThrough) {
+        $this->properties['issuedThrough'] = $issuedThrough;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getIssuedThrough() {
+        return $this->properties['issuedThrough'];
+    }
+
+    /**
      * The date when the item is no longer valid.
      *
-     * @param $validUntil DateSchema
+     * @param $validUntil 
      **/
     public function setValidUntil($validUntil) {
         $this->properties['validUntil'] = $validUntil;
@@ -158,10 +122,46 @@ class PermitSchema extends IntangibleSchema
     }
 
     /**
-     * @return DateSchema
+     * @return 
      **/
     public function getValidUntil() {
         return $this->properties['validUntil'];
+    }
+
+    /**
+     * The date when the item becomes valid.
+     *
+     * @param $validFrom |
+     **/
+    public function setValidFrom($validFrom) {
+        $this->properties['validFrom'] = $validFrom;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getValidFrom() {
+        return $this->properties['validFrom'];
+    }
+
+    /**
+     * The target audience for this permit.
+     *
+     * @param $permitAudience 
+     **/
+    public function setPermitAudience($permitAudience) {
+        $this->properties['permitAudience'] = $permitAudience;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getPermitAudience() {
+        return $this->properties['permitAudience'];
     }
 
 

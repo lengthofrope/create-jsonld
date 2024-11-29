@@ -27,41 +27,21 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use
-          <a href="/Action">Action</a>-based vocabulary, alongside types such as <a href="/Comment">Comment</a>.
-      
+ * UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class UserCommentsSchema extends UserInteractionSchema
+class UserCommentsSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new UserCommentsSchema('http://schema.org/', 'UserComments');
-    }
-
-    /**
-     * The text of the UserComment.
-     *
-     * @param $commentText TextSchema
-     **/
-    public function setCommentText($commentText) {
-        $this->properties['commentText'] = $commentText;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getCommentText() {
-        return $this->properties['commentText'];
+        return new UserCommentsSchema('https://schema.org/', 'UserComments');
     }
 
     /**
      * The time at which the UserComment was made.
      *
-     * @param $commentTime DateSchema
+     * @param $commentTime |
      **/
     public function setCommentTime($commentTime) {
         $this->properties['commentTime'] = $commentTime;
@@ -70,34 +50,16 @@ class UserCommentsSchema extends UserInteractionSchema
     }
 
     /**
-     * @return DateSchema
+     * @return |
      **/
     public function getCommentTime() {
         return $this->properties['commentTime'];
     }
 
     /**
-     * The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.
-     *
-     * @param $creator OrganizationSchema|PersonSchema
-     **/
-    public function setCreator($creator) {
-        $this->properties['creator'] = $creator;
-
-        return $this;
-    }
-
-    /**
-     * @return OrganizationSchema|PersonSchema
-     **/
-    public function getCreator() {
-        return $this->properties['creator'];
-    }
-
-    /**
      * Specifies the CreativeWork associated with the UserComment.
      *
-     * @param $discusses CreativeWorkSchema
+     * @param $discusses 
      **/
     public function setDiscusses($discusses) {
         $this->properties['discusses'] = $discusses;
@@ -106,16 +68,52 @@ class UserCommentsSchema extends UserInteractionSchema
     }
 
     /**
-     * @return CreativeWorkSchema
+     * @return 
      **/
     public function getDiscusses() {
         return $this->properties['discusses'];
     }
 
     /**
+     * The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.
+     *
+     * @param $creator |
+     **/
+    public function setCreator($creator) {
+        $this->properties['creator'] = $creator;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getCreator() {
+        return $this->properties['creator'];
+    }
+
+    /**
+     * The text of the UserComment.
+     *
+     * @param $commentText 
+     **/
+    public function setCommentText($commentText) {
+        $this->properties['commentText'] = $commentText;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getCommentText() {
+        return $this->properties['commentText'];
+    }
+
+    /**
      * The URL at which a reply may be posted to the specified UserComment.
      *
-     * @param $replyToUrl URLSchema
+     * @param $replyToUrl 
      **/
     public function setReplyToUrl($replyToUrl) {
         $this->properties['replyToUrl'] = $replyToUrl;
@@ -124,7 +122,7 @@ class UserCommentsSchema extends UserInteractionSchema
     }
 
     /**
-     * @return URLSchema
+     * @return 
      **/
     public function getReplyToUrl() {
         return $this->properties['replyToUrl'];

@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MusicGroupSchema extends PerformingGroupSchema
+class MusicGroupSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MusicGroupSchema('http://schema.org/', 'MusicGroup');
+        return new MusicGroupSchema('https://schema.org/', 'MusicGroup');
     }
 
     /**
      * A music album.
      *
-     * @param $album MusicAlbumSchema
+     * @param $album 
      **/
     public function setAlbum($album) {
         $this->properties['album'] = $album;
@@ -50,7 +50,7 @@ class MusicGroupSchema extends PerformingGroupSchema
     }
 
     /**
-     * @return MusicAlbumSchema
+     * @return 
      **/
     public function getAlbum() {
         return $this->properties['album'];
@@ -59,7 +59,7 @@ class MusicGroupSchema extends PerformingGroupSchema
     /**
      * A collection of music albums.
      *
-     * @param $albums MusicAlbumSchema
+     * @param $albums 
      **/
     public function setAlbums($albums) {
         $this->properties['albums'] = $albums;
@@ -68,16 +68,16 @@ class MusicGroupSchema extends PerformingGroupSchema
     }
 
     /**
-     * @return MusicAlbumSchema
+     * @return 
      **/
     public function getAlbums() {
         return $this->properties['albums'];
     }
 
     /**
-     * Genre of the creative work or group.
+     * Genre of the creative work, broadcast channel or group.
      *
-     * @param $genre TextSchema|URLSchema
+     * @param $genre |
      **/
     public function setGenre($genre) {
         $this->properties['genre'] = $genre;
@@ -86,52 +86,16 @@ class MusicGroupSchema extends PerformingGroupSchema
     }
 
     /**
-     * @return TextSchema|URLSchema
+     * @return |
      **/
     public function getGenre() {
         return $this->properties['genre'];
     }
 
     /**
-     * A member of a music group&#x2014;for example, John, Paul, George, or Ringo.
-     *
-     * @param $musicGroupMember PersonSchema
-     **/
-    public function setMusicGroupMember($musicGroupMember) {
-        $this->properties['musicGroupMember'] = $musicGroupMember;
-
-        return $this;
-    }
-
-    /**
-     * @return PersonSchema
-     **/
-    public function getMusicGroupMember() {
-        return $this->properties['musicGroupMember'];
-    }
-
-    /**
-     * A music recording (track)&#x2014;usually a single song. If an ItemList is given, the list should contain items of type MusicRecording.
-     *
-     * @param $track ItemListSchema|MusicRecordingSchema
-     **/
-    public function setTrack($track) {
-        $this->properties['track'] = $track;
-
-        return $this;
-    }
-
-    /**
-     * @return ItemListSchema|MusicRecordingSchema
-     **/
-    public function getTrack() {
-        return $this->properties['track'];
-    }
-
-    /**
      * A music recording (track)&#x2014;usually a single song.
      *
-     * @param $tracks MusicRecordingSchema
+     * @param $tracks 
      **/
     public function setTracks($tracks) {
         $this->properties['tracks'] = $tracks;
@@ -140,10 +104,46 @@ class MusicGroupSchema extends PerformingGroupSchema
     }
 
     /**
-     * @return MusicRecordingSchema
+     * @return 
      **/
     public function getTracks() {
         return $this->properties['tracks'];
+    }
+
+    /**
+     * A music recording (track)&#x2014;usually a single song. If an ItemList is given, the list should contain items of type MusicRecording.
+     *
+     * @param $track |
+     **/
+    public function setTrack($track) {
+        $this->properties['track'] = $track;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getTrack() {
+        return $this->properties['track'];
+    }
+
+    /**
+     * A member of a music group&#x2014;for example, John, Paul, George, or Ringo.
+     *
+     * @param $musicGroupMember 
+     **/
+    public function setMusicGroupMember($musicGroupMember) {
+        $this->properties['musicGroupMember'] = $musicGroupMember;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getMusicGroupMember() {
+        return $this->properties['musicGroupMember'];
     }
 
 

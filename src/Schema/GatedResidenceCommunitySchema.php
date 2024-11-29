@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class GatedResidenceCommunitySchema extends ResidenceSchema
+class GatedResidenceCommunitySchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new GatedResidenceCommunitySchema('http://schema.org/', 'GatedResidenceCommunity');
+        return new GatedResidenceCommunitySchema('https://schema.org/', 'GatedResidenceCommunity');
     }
 
 

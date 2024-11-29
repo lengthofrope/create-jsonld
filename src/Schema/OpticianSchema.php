@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class OpticianSchema extends MedicalOrganizationSchema
+class OpticianSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new OpticianSchema('http://schema.org/', 'Optician');
+        return new OpticianSchema('https://schema.org/', 'Optician');
     }
 
 

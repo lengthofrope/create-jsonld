@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class TaxiSchema extends ServiceSchema
+class TaxiSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new TaxiSchema('http://schema.org/', 'Taxi');
+        return new TaxiSchema('https://schema.org/', 'Taxi');
     }
 
 

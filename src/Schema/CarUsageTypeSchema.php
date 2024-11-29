@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class CarUsageTypeSchema extends QualitativeValueSchema
+class CarUsageTypeSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new CarUsageTypeSchema('http://schema.org/', 'CarUsageType');
+        return new CarUsageTypeSchema('https://schema.org/', 'CarUsageType');
     }
 
 

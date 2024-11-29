@@ -27,7 +27,7 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Target audiences for medical web pages. Enumerated type.
+ * Target audiences for medical web pages.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
@@ -35,7 +35,7 @@ class MedicalAudienceSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MedicalAudienceSchema('http://schema.org/', 'MedicalAudience');
+        return new MedicalAudienceSchema('https://schema.org/', 'MedicalAudience');
     }
 
 

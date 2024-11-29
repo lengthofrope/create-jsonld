@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class WantActionSchema extends ReactActionSchema
+class WantActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new WantActionSchema('http://schema.org/', 'WantAction');
+        return new WantActionSchema('https://schema.org/', 'WantAction');
     }
 
 

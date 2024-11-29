@@ -31,11 +31,29 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class FinancialServiceSchema extends LocalBusinessSchema
+class FinancialServiceSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new FinancialServiceSchema('http://schema.org/', 'FinancialService');
+        return new FinancialServiceSchema('https://schema.org/', 'FinancialService');
+    }
+
+    /**
+     * Description of fees, commissions, and other terms applied either to a class of financial product, or by a financial service organization.
+     *
+     * @param $feesAndCommissionsSpecification |
+     **/
+    public function setFeesAndCommissionsSpecification($feesAndCommissionsSpecification) {
+        $this->properties['feesAndCommissionsSpecification'] = $feesAndCommissionsSpecification;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getFeesAndCommissionsSpecification() {
+        return $this->properties['feesAndCommissionsSpecification'];
     }
 
 

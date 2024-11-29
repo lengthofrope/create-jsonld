@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ReservationStatusTypeSchema extends EnumerationSchema
+class ReservationStatusTypeSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new ReservationStatusTypeSchema('http://schema.org/', 'ReservationStatusType');
+        return new ReservationStatusTypeSchema('https://schema.org/', 'ReservationStatusType');
     }
 
 

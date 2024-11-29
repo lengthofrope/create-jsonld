@@ -35,7 +35,7 @@ class MedicalProcedureTypeSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MedicalProcedureTypeSchema('http://schema.org/', 'MedicalProcedureType');
+        return new MedicalProcedureTypeSchema('https://schema.org/', 'MedicalProcedureType');
     }
 
 

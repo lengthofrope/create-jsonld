@@ -31,35 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class InteractionCounterSchema extends StructuredValueSchema
+class InteractionCounterSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new InteractionCounterSchema('http://schema.org/', 'InteractionCounter');
+        return new InteractionCounterSchema('https://schema.org/', 'InteractionCounter');
     }
 
     /**
-     * The WebSite or SoftwareApplication where the interactions took place.
+     * The Action representing the type of interaction. For up votes, +1s, etc. use [[LikeAction]]. For down votes use [[DislikeAction]]. Otherwise, use the most specific Action.
      *
-     * @param $interactionService SoftwareApplicationSchema|WebSiteSchema
-     **/
-    public function setInteractionService($interactionService) {
-        $this->properties['interactionService'] = $interactionService;
-
-        return $this;
-    }
-
-    /**
-     * @return SoftwareApplicationSchema|WebSiteSchema
-     **/
-    public function getInteractionService() {
-        return $this->properties['interactionService'];
-    }
-
-    /**
-     * The Action representing the type of interaction. For up votes, +1s, etc. use <a href="/LikeAction";>LikeAction</a>. For down votes use <a href="/DislikeAction">DislikeAction</a>. Otherwise, use the most specific Action.
-     *
-     * @param $interactionType ActionSchema
+     * @param $interactionType 
      **/
     public function setInteractionType($interactionType) {
         $this->properties['interactionType'] = $interactionType;
@@ -68,16 +50,34 @@ class InteractionCounterSchema extends StructuredValueSchema
     }
 
     /**
-     * @return ActionSchema
+     * @return 
      **/
     public function getInteractionType() {
         return $this->properties['interactionType'];
     }
 
     /**
+     * The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. E.g. John wrote a book from January to *December*. For media, including audio and video, it's the time offset of the end of a clip within a larger file.\n\nNote that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
+     *
+     * @param $endTime |
+     **/
+    public function setEndTime($endTime) {
+        $this->properties['endTime'] = $endTime;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getEndTime() {
+        return $this->properties['endTime'];
+    }
+
+    /**
      * The number of interactions for the CreativeWork using the WebSite or SoftwareApplication.
      *
-     * @param $userInteractionCount IntegerSchema
+     * @param $userInteractionCount 
      **/
     public function setUserInteractionCount($userInteractionCount) {
         $this->properties['userInteractionCount'] = $userInteractionCount;
@@ -86,10 +86,64 @@ class InteractionCounterSchema extends StructuredValueSchema
     }
 
     /**
-     * @return IntegerSchema
+     * @return 
      **/
     public function getUserInteractionCount() {
         return $this->properties['userInteractionCount'];
+    }
+
+    /**
+     * The location of, for example, where an event is happening, where an organization is located, or where an action takes place.
+     *
+     * @param $location |||
+     **/
+    public function setLocation($location) {
+        $this->properties['location'] = $location;
+
+        return $this;
+    }
+
+    /**
+     * @return |||
+     **/
+    public function getLocation() {
+        return $this->properties['location'];
+    }
+
+    /**
+     * The WebSite or SoftwareApplication where the interactions took place.
+     *
+     * @param $interactionService |
+     **/
+    public function setInteractionService($interactionService) {
+        $this->properties['interactionService'] = $interactionService;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getInteractionService() {
+        return $this->properties['interactionService'];
+    }
+
+    /**
+     * The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For actions that span a period of time, when the action was performed. E.g. John wrote a book from *January* to December. For media, including audio and video, it's the time offset of the start of a clip within a larger file.\n\nNote that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
+     *
+     * @param $startTime |
+     **/
+    public function setStartTime($startTime) {
+        $this->properties['startTime'] = $startTime;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getStartTime() {
+        return $this->properties['startTime'];
     }
 
 

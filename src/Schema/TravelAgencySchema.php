@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class TravelAgencySchema extends LocalBusinessSchema
+class TravelAgencySchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new TravelAgencySchema('http://schema.org/', 'TravelAgency');
+        return new TravelAgencySchema('https://schema.org/', 'TravelAgency');
     }
 
 

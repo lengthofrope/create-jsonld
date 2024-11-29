@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class RealEstateAgentSchema extends LocalBusinessSchema
+class RealEstateAgentSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new RealEstateAgentSchema('http://schema.org/', 'RealEstateAgent');
+        return new RealEstateAgentSchema('https://schema.org/', 'RealEstateAgent');
     }
 
 

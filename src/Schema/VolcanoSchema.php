@@ -27,15 +27,15 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A volcano, like Fuji san.
+ * A volcano, like Fujisan.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class VolcanoSchema extends LandformSchema
+class VolcanoSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new VolcanoSchema('http://schema.org/', 'Volcano');
+        return new VolcanoSchema('https://schema.org/', 'Volcano');
     }
 
 

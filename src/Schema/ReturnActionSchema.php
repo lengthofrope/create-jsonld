@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ReturnActionSchema extends TransferActionSchema
+class ReturnActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new ReturnActionSchema('http://schema.org/', 'ReturnAction');
+        return new ReturnActionSchema('https://schema.org/', 'ReturnAction');
     }
 
     /**
      * A sub property of participant. The participant who is at the receiving end of the action.
      *
-     * @param $recipient AudienceSchema|OrganizationSchema|PersonSchema
+     * @param $recipient |||
      **/
     public function setRecipient($recipient) {
         $this->properties['recipient'] = $recipient;
@@ -50,7 +50,7 @@ class ReturnActionSchema extends TransferActionSchema
     }
 
     /**
-     * @return AudienceSchema|OrganizationSchema|PersonSchema
+     * @return |||
      **/
     public function getRecipient() {
         return $this->properties['recipient'];

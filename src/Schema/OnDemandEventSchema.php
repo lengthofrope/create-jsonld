@@ -27,15 +27,15 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A publication event e.g. catch-up TV or radio podcast, during which a program is available on-demand.
+ * A publication event, e.g. catch-up TV or radio podcast, during which a program is available on-demand.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class OnDemandEventSchema extends PublicationEventSchema
+class OnDemandEventSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new OnDemandEventSchema('http://schema.org/', 'OnDemandEvent');
+        return new OnDemandEventSchema('https://schema.org/', 'OnDemandEvent');
     }
 
 

@@ -27,7 +27,7 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Data type: Number.
+ * Data type: Number.\n\nUsage guidelines:\n\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
@@ -35,7 +35,7 @@ class NumberSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new NumberSchema('http://schema.org/', 'Number');
+        return new NumberSchema('https://schema.org/', 'Number');
     }
 
 

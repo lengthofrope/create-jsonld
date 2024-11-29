@@ -27,15 +27,15 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Classification of the album by it's type of content: soundtrack, live album, studio album, etc.
+ * Classification of the album by its type of content: soundtrack, live album, studio album, etc.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MusicAlbumProductionTypeSchema extends EnumerationSchema
+class MusicAlbumProductionTypeSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MusicAlbumProductionTypeSchema('http://schema.org/', 'MusicAlbumProductionType');
+        return new MusicAlbumProductionTypeSchema('https://schema.org/', 'MusicAlbumProductionType');
     }
 
 

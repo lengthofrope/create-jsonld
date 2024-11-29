@@ -35,7 +35,7 @@ class AutoPartsStoreSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new AutoPartsStoreSchema('http://schema.org/', 'AutoPartsStore');
+        return new AutoPartsStoreSchema('https://schema.org/', 'AutoPartsStore');
     }
 
 

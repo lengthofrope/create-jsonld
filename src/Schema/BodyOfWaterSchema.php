@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class BodyOfWaterSchema extends LandformSchema
+class BodyOfWaterSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new BodyOfWaterSchema('http://schema.org/', 'BodyOfWater');
+        return new BodyOfWaterSchema('https://schema.org/', 'BodyOfWater');
     }
 
 

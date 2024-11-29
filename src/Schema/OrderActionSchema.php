@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class OrderActionSchema extends TradeActionSchema
+class OrderActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new OrderActionSchema('http://schema.org/', 'OrderAction');
+        return new OrderActionSchema('https://schema.org/', 'OrderAction');
     }
 
     /**
      * A sub property of instrument. The method of delivery.
      *
-     * @param $deliveryMethod DeliveryMethodSchema
+     * @param $deliveryMethod 
      **/
     public function setDeliveryMethod($deliveryMethod) {
         $this->properties['deliveryMethod'] = $deliveryMethod;
@@ -50,7 +50,7 @@ class OrderActionSchema extends TradeActionSchema
     }
 
     /**
-     * @return DeliveryMethodSchema
+     * @return 
      **/
     public function getDeliveryMethod() {
         return $this->properties['deliveryMethod'];

@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class VesselSchema extends AnatomicalStructureSchema
+class VesselSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new VesselSchema('http://schema.org/', 'Vessel');
+        return new VesselSchema('https://schema.org/', 'Vessel');
     }
 
 

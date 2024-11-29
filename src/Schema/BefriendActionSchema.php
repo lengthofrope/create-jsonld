@@ -27,15 +27,15 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of forming a personal connection with someone (object) mutually/bidirectionally/symmetrically.<p>Related actions:</p><ul><li><a href="http://schema.org/FollowAction">FollowAction</a>: Unlike FollowAction, BefriendAction implies that the connection is reciprocal</li></ul>.
+ * The act of forming a personal connection with someone (object) mutually/bidirectionally/symmetrically.\n\nRelated actions:\n\n* [[FollowAction]]: Unlike FollowAction, BefriendAction implies that the connection is reciprocal.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class BefriendActionSchema extends InteractActionSchema
+class BefriendActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new BefriendActionSchema('http://schema.org/', 'BefriendAction');
+        return new BefriendActionSchema('https://schema.org/', 'BefriendAction');
     }
 
 

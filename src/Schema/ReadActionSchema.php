@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ReadActionSchema extends ConsumeActionSchema
+class ReadActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new ReadActionSchema('http://schema.org/', 'ReadAction');
+        return new ReadActionSchema('https://schema.org/', 'ReadAction');
     }
 
 

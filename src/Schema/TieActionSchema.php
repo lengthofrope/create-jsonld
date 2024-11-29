@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class TieActionSchema extends AchieveActionSchema
+class TieActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new TieActionSchema('http://schema.org/', 'TieAction');
+        return new TieActionSchema('https://schema.org/', 'TieAction');
     }
 
 

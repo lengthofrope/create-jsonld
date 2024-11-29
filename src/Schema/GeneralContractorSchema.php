@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class GeneralContractorSchema extends HomeAndConstructionBusinessSchema
+class GeneralContractorSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new GeneralContractorSchema('http://schema.org/', 'GeneralContractor');
+        return new GeneralContractorSchema('https://schema.org/', 'GeneralContractor');
     }
 
 

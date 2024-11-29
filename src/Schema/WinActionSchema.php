@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class WinActionSchema extends AchieveActionSchema
+class WinActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new WinActionSchema('http://schema.org/', 'WinAction');
+        return new WinActionSchema('https://schema.org/', 'WinAction');
     }
 
     /**
      * A sub property of participant. The loser of the action.
      *
-     * @param $loser PersonSchema
+     * @param $loser 
      **/
     public function setLoser($loser) {
         $this->properties['loser'] = $loser;
@@ -50,7 +50,7 @@ class WinActionSchema extends AchieveActionSchema
     }
 
     /**
-     * @return PersonSchema
+     * @return 
      **/
     public function getLoser() {
         return $this->properties['loser'];

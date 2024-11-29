@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class SellActionSchema extends TradeActionSchema
+class SellActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new SellActionSchema('http://schema.org/', 'SellAction');
+        return new SellActionSchema('https://schema.org/', 'SellAction');
     }
 
     /**
      * A sub property of participant. The participant/person/organization that bought the object.
      *
-     * @param $buyer PersonSchema
+     * @param $buyer |
      **/
     public function setBuyer($buyer) {
         $this->properties['buyer'] = $buyer;
@@ -50,7 +50,7 @@ class SellActionSchema extends TradeActionSchema
     }
 
     /**
-     * @return PersonSchema
+     * @return |
      **/
     public function getBuyer() {
         return $this->properties['buyer'];
@@ -59,7 +59,7 @@ class SellActionSchema extends TradeActionSchema
     /**
      * The warranty promise(s) included in the offer.
      *
-     * @param $warrantyPromise WarrantyPromiseSchema
+     * @param $warrantyPromise 
      **/
     public function setWarrantyPromise($warrantyPromise) {
         $this->properties['warrantyPromise'] = $warrantyPromise;
@@ -68,7 +68,7 @@ class SellActionSchema extends TradeActionSchema
     }
 
     /**
-     * @return WarrantyPromiseSchema
+     * @return 
      **/
     public function getWarrantyPromise() {
         return $this->properties['warrantyPromise'];

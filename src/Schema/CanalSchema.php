@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class CanalSchema extends BodyOfWaterSchema
+class CanalSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new CanalSchema('http://schema.org/', 'Canal');
+        return new CanalSchema('https://schema.org/', 'Canal');
     }
 
 

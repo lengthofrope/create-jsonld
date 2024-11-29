@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class LigamentSchema extends AnatomicalStructureSchema
+class LigamentSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new LigamentSchema('http://schema.org/', 'Ligament');
+        return new LigamentSchema('https://schema.org/', 'Ligament');
     }
 
 

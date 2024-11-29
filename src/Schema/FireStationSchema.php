@@ -35,7 +35,7 @@ class FireStationSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new FireStationSchema('http://schema.org/', 'FireStation');
+        return new FireStationSchema('https://schema.org/', 'FireStation');
     }
 
 

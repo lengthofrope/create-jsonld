@@ -28,14 +28,17 @@ namespace LengthOfRope\JSONLD\Schema;
 
 /**
  * Bed and breakfast.
+ * <br /><br />
+ * See also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.
+
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class BedAndBreakfastSchema extends LodgingBusinessSchema
+class BedAndBreakfastSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new BedAndBreakfastSchema('http://schema.org/', 'BedAndBreakfast');
+        return new BedAndBreakfastSchema('https://schema.org/', 'BedAndBreakfast');
     }
 
 

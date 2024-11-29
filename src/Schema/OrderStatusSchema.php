@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class OrderStatusSchema extends EnumerationSchema
+class OrderStatusSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new OrderStatusSchema('http://schema.org/', 'OrderStatus');
+        return new OrderStatusSchema('https://schema.org/', 'OrderStatus');
     }
 
 

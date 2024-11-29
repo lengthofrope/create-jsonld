@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MaximumDoseScheduleSchema extends DoseScheduleSchema
+class MaximumDoseScheduleSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MaximumDoseScheduleSchema('http://schema.org/', 'MaximumDoseSchedule');
+        return new MaximumDoseScheduleSchema('https://schema.org/', 'MaximumDoseSchedule');
     }
 
 

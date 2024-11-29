@@ -27,27 +27,16 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A delivery method is a standardized procedure for transferring the product or service to the destination of fulfillment chosen by the customer. Delivery methods are characterized by the means of transportation used, and by the organization or group that is the contracting party for the sending organization or person.
-<br />
-    Commonly used values:<br />
-<br />
-    http://purl.org/goodrelations/v1#DeliveryModeDirectDownload <br />
-    http://purl.org/goodrelations/v1#DeliveryModeFreight <br />
-    http://purl.org/goodrelations/v1#DeliveryModeMail <br />
-    http://purl.org/goodrelations/v1#DeliveryModeOwnFleet <br />
-    http://purl.org/goodrelations/v1#DeliveryModePickUp <br />
-    http://purl.org/goodrelations/v1#DHL <br />
-    http://purl.org/goodrelations/v1#FederalExpress <br />
-    http://purl.org/goodrelations/v1#UPS <br />
-        
+ * A delivery method is a standardized procedure for transferring the product or service to the destination of fulfillment chosen by the customer. Delivery methods are characterized by the means of transportation used, and by the organization or group that is the contracting party for the sending organization or person.\n\nCommonly used values:\n\n* http://purl.org/goodrelations/v1#DeliveryModeDirectDownload\n* http://purl.org/goodrelations/v1#DeliveryModeFreight\n* http://purl.org/goodrelations/v1#DeliveryModeMail\n* http://purl.org/goodrelations/v1#DeliveryModeOwnFleet\n* http://purl.org/goodrelations/v1#DeliveryModePickUp\n* http://purl.org/goodrelations/v1#DHL\n* http://purl.org/goodrelations/v1#FederalExpress\n* http://purl.org/goodrelations/v1#UPS
+ *         
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class DeliveryMethodSchema extends EnumerationSchema
+class DeliveryMethodSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new DeliveryMethodSchema('http://schema.org/', 'DeliveryMethod');
+        return new DeliveryMethodSchema('https://schema.org/', 'DeliveryMethod');
     }
 
 

@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class AppendActionSchema extends InsertActionSchema
+class AppendActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new AppendActionSchema('http://schema.org/', 'AppendAction');
+        return new AppendActionSchema('https://schema.org/', 'AppendAction');
     }
 
 

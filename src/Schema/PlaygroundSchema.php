@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PlaygroundSchema extends CivicStructureSchema
+class PlaygroundSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new PlaygroundSchema('http://schema.org/', 'Playground');
+        return new PlaygroundSchema('https://schema.org/', 'Playground');
     }
 
 

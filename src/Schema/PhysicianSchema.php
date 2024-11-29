@@ -27,57 +27,40 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A doctor's office.
+ * An individual physician or a physician's office considered as a [[MedicalOrganization]].
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PhysicianSchema extends MedicalOrganizationSchema
+class PhysicianSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new PhysicianSchema('http://schema.org/', 'Physician');
+        return new PhysicianSchema('https://schema.org/', 'Physician');
     }
 
     /**
-     * A medical service available from this provider.
+     * A category describing the job, preferably using a term from a taxonomy such as [BLS O*NET-SOC](http://www.onetcenter.org/taxonomy.html), [ISCO-08](https://www.ilo.org/public/english/bureau/stat/isco/isco08/) or similar, with the property repeated for each applicable value. Ideally the taxonomy should be identified, and both the textual label and formal code for the category should be provided.\n
+Note: for historical reasons, any textual label and formal code provided as a literal may be assumed to be from O*NET-SOC.
      *
-     * @param $availableService MedicalProcedureSchema|MedicalTestSchema|MedicalTherapySchema
+     * @param $occupationalCategory |
      **/
-    public function setAvailableService($availableService) {
-        $this->properties['availableService'] = $availableService;
+    public function setOccupationalCategory($occupationalCategory) {
+        $this->properties['occupationalCategory'] = $occupationalCategory;
 
         return $this;
     }
 
     /**
-     * @return MedicalProcedureSchema|MedicalTestSchema|MedicalTherapySchema
+     * @return |
      **/
-    public function getAvailableService() {
-        return $this->properties['availableService'];
-    }
-
-    /**
-     * A hospital with which the physician or office is affiliated.
-     *
-     * @param $hospitalAffiliation HospitalSchema
-     **/
-    public function setHospitalAffiliation($hospitalAffiliation) {
-        $this->properties['hospitalAffiliation'] = $hospitalAffiliation;
-
-        return $this;
-    }
-
-    /**
-     * @return HospitalSchema
-     **/
-    public function getHospitalAffiliation() {
-        return $this->properties['hospitalAffiliation'];
+    public function getOccupationalCategory() {
+        return $this->properties['occupationalCategory'];
     }
 
     /**
      * A medical specialty of the provider.
      *
-     * @param $medicalSpecialty MedicalSpecialtySchema
+     * @param $medicalSpecialty 
      **/
     public function setMedicalSpecialty($medicalSpecialty) {
         $this->properties['medicalSpecialty'] = $medicalSpecialty;
@@ -86,10 +69,65 @@ class PhysicianSchema extends MedicalOrganizationSchema
     }
 
     /**
-     * @return MedicalSpecialtySchema
+     * @return 
      **/
     public function getMedicalSpecialty() {
         return $this->properties['medicalSpecialty'];
+    }
+
+    /**
+     * A medical service available from this provider.
+     *
+     * @param $availableService ||
+     **/
+    public function setAvailableService($availableService) {
+        $this->properties['availableService'] = $availableService;
+
+        return $this;
+    }
+
+    /**
+     * @return ||
+     **/
+    public function getAvailableService() {
+        return $this->properties['availableService'];
+    }
+
+    /**
+     * A <a href="https://en.wikipedia.org/wiki/National_Provider_Identifier">National Provider Identifier</a> (NPI) 
+    is a unique 10-digit identification number issued to health care providers in the United States by the Centers for Medicare and Medicaid Services.
+     *
+     * @param $usNPI 
+     **/
+    public function setUsNPI($usNPI) {
+        $this->properties['usNPI'] = $usNPI;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getUsNPI() {
+        return $this->properties['usNPI'];
+    }
+
+    /**
+     * A hospital with which the physician or office is affiliated.
+     *
+     * @param $hospitalAffiliation 
+     **/
+    public function setHospitalAffiliation($hospitalAffiliation) {
+        $this->properties['hospitalAffiliation'] = $hospitalAffiliation;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getHospitalAffiliation() {
+        return $this->properties['hospitalAffiliation'];
     }
 
 

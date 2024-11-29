@@ -31,89 +31,35 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ProgramMembershipSchema extends IntangibleSchema
+class ProgramMembershipSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new ProgramMembershipSchema('http://schema.org/', 'ProgramMembership');
+        return new ProgramMembershipSchema('https://schema.org/', 'ProgramMembership');
     }
 
     /**
-     * The organization (airline, travelers' club, etc.) the membership is made with.
+     * The number of membership points earned by the member. If necessary, the unitText can be used to express the units the points are issued in. (E.g. stars, miles, etc.)
      *
-     * @param $hostingOrganization OrganizationSchema
+     * @param $membershipPointsEarned |
      **/
-    public function setHostingOrganization($hostingOrganization) {
-        $this->properties['hostingOrganization'] = $hostingOrganization;
+    public function setMembershipPointsEarned($membershipPointsEarned) {
+        $this->properties['membershipPointsEarned'] = $membershipPointsEarned;
 
         return $this;
     }
 
     /**
-     * @return OrganizationSchema
+     * @return |
      **/
-    public function getHostingOrganization() {
-        return $this->properties['hostingOrganization'];
+    public function getMembershipPointsEarned() {
+        return $this->properties['membershipPointsEarned'];
     }
 
     /**
-     * A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals.
+     * The program providing the membership. It is preferable to use [:program](https://schema.org/program) instead.
      *
-     * @param $member OrganizationSchema|PersonSchema
-     **/
-    public function setMember($member) {
-        $this->properties['member'] = $member;
-
-        return $this;
-    }
-
-    /**
-     * @return OrganizationSchema|PersonSchema
-     **/
-    public function getMember() {
-        return $this->properties['member'];
-    }
-
-    /**
-     * A member of this organization.
-     *
-     * @param $members OrganizationSchema|PersonSchema
-     **/
-    public function setMembers($members) {
-        $this->properties['members'] = $members;
-
-        return $this;
-    }
-
-    /**
-     * @return OrganizationSchema|PersonSchema
-     **/
-    public function getMembers() {
-        return $this->properties['members'];
-    }
-
-    /**
-     * A unique identifier for the membership.
-     *
-     * @param $membershipNumber TextSchema
-     **/
-    public function setMembershipNumber($membershipNumber) {
-        $this->properties['membershipNumber'] = $membershipNumber;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getMembershipNumber() {
-        return $this->properties['membershipNumber'];
-    }
-
-    /**
-     * The program providing the membership.
-     *
-     * @param $programName TextSchema
+     * @param $programName 
      **/
     public function setProgramName($programName) {
         $this->properties['programName'] = $programName;
@@ -122,10 +68,100 @@ class ProgramMembershipSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getProgramName() {
         return $this->properties['programName'];
+    }
+
+    /**
+     * A unique identifier for the membership.
+     *
+     * @param $membershipNumber 
+     **/
+    public function setMembershipNumber($membershipNumber) {
+        $this->properties['membershipNumber'] = $membershipNumber;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getMembershipNumber() {
+        return $this->properties['membershipNumber'];
+    }
+
+    /**
+     * The [MemberProgram](https://schema.org/MemberProgram) associated with a [ProgramMembership](https://schema.org/ProgramMembership).
+     *
+     * @param $program 
+     **/
+    public function setProgram($program) {
+        $this->properties['program'] = $program;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getProgram() {
+        return $this->properties['program'];
+    }
+
+    /**
+     * A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals.
+     *
+     * @param $member |
+     **/
+    public function setMember($member) {
+        $this->properties['member'] = $member;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getMember() {
+        return $this->properties['member'];
+    }
+
+    /**
+     * The Organization (airline, travelers' club, retailer, etc.) the membership is made with or which offers the  MemberProgram.
+     *
+     * @param $hostingOrganization 
+     **/
+    public function setHostingOrganization($hostingOrganization) {
+        $this->properties['hostingOrganization'] = $hostingOrganization;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getHostingOrganization() {
+        return $this->properties['hostingOrganization'];
+    }
+
+    /**
+     * A member of this organization.
+     *
+     * @param $members |
+     **/
+    public function setMembers($members) {
+        $this->properties['members'] = $members;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getMembers() {
+        return $this->properties['members'];
     }
 
 

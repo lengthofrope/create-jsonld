@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class SteeringPositionValueSchema extends QualitativeValueSchema
+class SteeringPositionValueSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new SteeringPositionValueSchema('http://schema.org/', 'SteeringPositionValue');
+        return new SteeringPositionValueSchema('https://schema.org/', 'SteeringPositionValue');
     }
 
 

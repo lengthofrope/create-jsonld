@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PaintingSchema extends CreativeWorkSchema
+class PaintingSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new PaintingSchema('http://schema.org/', 'Painting');
+        return new PaintingSchema('https://schema.org/', 'Painting');
     }
 
 

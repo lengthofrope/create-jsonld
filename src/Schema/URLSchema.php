@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class URLSchema extends TextSchema
+class URLSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new URLSchema('http://schema.org/', 'URL');
+        return new URLSchema('https://schema.org/', 'URL');
     }
 
 

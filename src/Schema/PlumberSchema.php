@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PlumberSchema extends HomeAndConstructionBusinessSchema
+class PlumberSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new PlumberSchema('http://schema.org/', 'Plumber');
+        return new PlumberSchema('https://schema.org/', 'Plumber');
     }
 
 

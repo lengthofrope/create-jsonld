@@ -31,53 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class SeatSchema extends IntangibleSchema
+class SeatSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new SeatSchema('http://schema.org/', 'Seat');
-    }
-
-    /**
-     * The location of the reserved seat (e.g., 27).
-     *
-     * @param $seatNumber TextSchema
-     **/
-    public function setSeatNumber($seatNumber) {
-        $this->properties['seatNumber'] = $seatNumber;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getSeatNumber() {
-        return $this->properties['seatNumber'];
-    }
-
-    /**
-     * The row location of the reserved seat (e.g., B).
-     *
-     * @param $seatRow TextSchema
-     **/
-    public function setSeatRow($seatRow) {
-        $this->properties['seatRow'] = $seatRow;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getSeatRow() {
-        return $this->properties['seatRow'];
+        return new SeatSchema('https://schema.org/', 'Seat');
     }
 
     /**
      * The section location of the reserved seat (e.g. Orchestra).
      *
-     * @param $seatSection TextSchema
+     * @param $seatSection 
      **/
     public function setSeatSection($seatSection) {
         $this->properties['seatSection'] = $seatSection;
@@ -86,16 +50,52 @@ class SeatSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getSeatSection() {
         return $this->properties['seatSection'];
     }
 
     /**
+     * The location of the reserved seat (e.g., 27).
+     *
+     * @param $seatNumber 
+     **/
+    public function setSeatNumber($seatNumber) {
+        $this->properties['seatNumber'] = $seatNumber;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getSeatNumber() {
+        return $this->properties['seatNumber'];
+    }
+
+    /**
+     * The row location of the reserved seat (e.g., B).
+     *
+     * @param $seatRow 
+     **/
+    public function setSeatRow($seatRow) {
+        $this->properties['seatRow'] = $seatRow;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getSeatRow() {
+        return $this->properties['seatRow'];
+    }
+
+    /**
      * The type/class of the seat.
      *
-     * @param $seatingType TextSchema|QualitativeValueSchema
+     * @param $seatingType |
      **/
     public function setSeatingType($seatingType) {
         $this->properties['seatingType'] = $seatingType;
@@ -104,7 +104,7 @@ class SeatSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema|QualitativeValueSchema
+     * @return |
      **/
     public function getSeatingType() {
         return $this->properties['seatingType'];

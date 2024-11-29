@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class EmailMessageSchema extends CreativeWorkSchema
+class EmailMessageSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new EmailMessageSchema('http://schema.org/', 'EmailMessage');
+        return new EmailMessageSchema('https://schema.org/', 'EmailMessage');
     }
 
 

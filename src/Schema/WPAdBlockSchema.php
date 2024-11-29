@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class WPAdBlockSchema extends WebPageElementSchema
+class WPAdBlockSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new WPAdBlockSchema('http://schema.org/', 'WPAdBlock');
+        return new WPAdBlockSchema('https://schema.org/', 'WPAdBlock');
     }
 
 

@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class CookActionSchema extends CreateActionSchema
+class CookActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new CookActionSchema('http://schema.org/', 'CookAction');
+        return new CookActionSchema('https://schema.org/', 'CookAction');
     }
 
     /**
      * A sub property of location. The specific food establishment where the action occurred.
      *
-     * @param $foodEstablishment FoodEstablishmentSchema|PlaceSchema
+     * @param $foodEstablishment |
      **/
     public function setFoodEstablishment($foodEstablishment) {
         $this->properties['foodEstablishment'] = $foodEstablishment;
@@ -50,7 +50,7 @@ class CookActionSchema extends CreateActionSchema
     }
 
     /**
-     * @return FoodEstablishmentSchema|PlaceSchema
+     * @return |
      **/
     public function getFoodEstablishment() {
         return $this->properties['foodEstablishment'];
@@ -59,7 +59,7 @@ class CookActionSchema extends CreateActionSchema
     /**
      * A sub property of location. The specific food event where the action occurred.
      *
-     * @param $foodEvent FoodEventSchema
+     * @param $foodEvent 
      **/
     public function setFoodEvent($foodEvent) {
         $this->properties['foodEvent'] = $foodEvent;
@@ -68,7 +68,7 @@ class CookActionSchema extends CreateActionSchema
     }
 
     /**
-     * @return FoodEventSchema
+     * @return 
      **/
     public function getFoodEvent() {
         return $this->properties['foodEvent'];
@@ -77,7 +77,7 @@ class CookActionSchema extends CreateActionSchema
     /**
      * A sub property of instrument. The recipe/instructions used to perform the action.
      *
-     * @param $recipe RecipeSchema
+     * @param $recipe 
      **/
     public function setRecipe($recipe) {
         $this->properties['recipe'] = $recipe;
@@ -86,7 +86,7 @@ class CookActionSchema extends CreateActionSchema
     }
 
     /**
-     * @return RecipeSchema
+     * @return 
      **/
     public function getRecipe() {
         return $this->properties['recipe'];

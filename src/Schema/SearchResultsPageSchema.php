@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class SearchResultsPageSchema extends WebPageSchema
+class SearchResultsPageSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new SearchResultsPageSchema('http://schema.org/', 'SearchResultsPage');
+        return new SearchResultsPageSchema('https://schema.org/', 'SearchResultsPage');
     }
 
 

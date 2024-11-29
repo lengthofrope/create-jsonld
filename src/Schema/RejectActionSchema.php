@@ -27,15 +27,15 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of rejecting to/adopting an object.<p>Related actions:</p><ul><li><a href="http://schema.org/AcceptAction">AcceptAction</a>: The antonym of RejectAction</li></ul>.
+ * The act of rejecting to/adopting an object.\n\nRelated actions:\n\n* [[AcceptAction]]: The antonym of RejectAction.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class RejectActionSchema extends AllocateActionSchema
+class RejectActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new RejectActionSchema('http://schema.org/', 'RejectAction');
+        return new RejectActionSchema('https://schema.org/', 'RejectAction');
     }
 
 

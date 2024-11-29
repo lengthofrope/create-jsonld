@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ElementarySchoolSchema extends EducationalOrganizationSchema
+class ElementarySchoolSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new ElementarySchoolSchema('http://schema.org/', 'ElementarySchool');
+        return new ElementarySchoolSchema('https://schema.org/', 'ElementarySchool');
     }
 
 

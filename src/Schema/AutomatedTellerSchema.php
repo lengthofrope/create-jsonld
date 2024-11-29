@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class AutomatedTellerSchema extends FinancialServiceSchema
+class AutomatedTellerSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new AutomatedTellerSchema('http://schema.org/', 'AutomatedTeller');
+        return new AutomatedTellerSchema('https://schema.org/', 'AutomatedTeller');
     }
 
 

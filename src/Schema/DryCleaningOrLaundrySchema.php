@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class DryCleaningOrLaundrySchema extends LocalBusinessSchema
+class DryCleaningOrLaundrySchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new DryCleaningOrLaundrySchema('http://schema.org/', 'DryCleaningOrLaundry');
+        return new DryCleaningOrLaundrySchema('https://schema.org/', 'DryCleaningOrLaundry');
     }
 
 

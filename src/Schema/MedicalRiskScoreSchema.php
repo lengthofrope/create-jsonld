@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MedicalRiskScoreSchema extends MedicalRiskEstimatorSchema
+class MedicalRiskScoreSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MedicalRiskScoreSchema('http://schema.org/', 'MedicalRiskScore');
+        return new MedicalRiskScoreSchema('https://schema.org/', 'MedicalRiskScore');
     }
 
     /**
      * The algorithm or rules to follow to compute the score.
      *
-     * @param $algorithm TextSchema
+     * @param $algorithm 
      **/
     public function setAlgorithm($algorithm) {
         $this->properties['algorithm'] = $algorithm;
@@ -50,7 +50,7 @@ class MedicalRiskScoreSchema extends MedicalRiskEstimatorSchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getAlgorithm() {
         return $this->properties['algorithm'];

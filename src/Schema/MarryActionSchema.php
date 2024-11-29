@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MarryActionSchema extends InteractActionSchema
+class MarryActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MarryActionSchema('http://schema.org/', 'MarryAction');
+        return new MarryActionSchema('https://schema.org/', 'MarryAction');
     }
 
 

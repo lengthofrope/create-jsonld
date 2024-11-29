@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class VeterinaryCareSchema extends MedicalOrganizationSchema
+class VeterinaryCareSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new VeterinaryCareSchema('http://schema.org/', 'VeterinaryCare');
+        return new VeterinaryCareSchema('https://schema.org/', 'VeterinaryCare');
     }
 
 

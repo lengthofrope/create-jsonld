@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MusicPlaylistSchema extends CreativeWorkSchema
+class MusicPlaylistSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MusicPlaylistSchema('http://schema.org/', 'MusicPlaylist');
+        return new MusicPlaylistSchema('https://schema.org/', 'MusicPlaylist');
     }
 
     /**
      * The number of tracks in this album or playlist.
      *
-     * @param $numTracks IntegerSchema
+     * @param $numTracks 
      **/
     public function setNumTracks($numTracks) {
         $this->properties['numTracks'] = $numTracks;
@@ -50,34 +50,16 @@ class MusicPlaylistSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return IntegerSchema
+     * @return 
      **/
     public function getNumTracks() {
         return $this->properties['numTracks'];
     }
 
     /**
-     * A music recording (track)&#x2014;usually a single song. If an ItemList is given, the list should contain items of type MusicRecording.
-     *
-     * @param $track ItemListSchema|MusicRecordingSchema
-     **/
-    public function setTrack($track) {
-        $this->properties['track'] = $track;
-
-        return $this;
-    }
-
-    /**
-     * @return ItemListSchema|MusicRecordingSchema
-     **/
-    public function getTrack() {
-        return $this->properties['track'];
-    }
-
-    /**
      * A music recording (track)&#x2014;usually a single song.
      *
-     * @param $tracks MusicRecordingSchema
+     * @param $tracks 
      **/
     public function setTracks($tracks) {
         $this->properties['tracks'] = $tracks;
@@ -86,10 +68,28 @@ class MusicPlaylistSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return MusicRecordingSchema
+     * @return 
      **/
     public function getTracks() {
         return $this->properties['tracks'];
+    }
+
+    /**
+     * A music recording (track)&#x2014;usually a single song. If an ItemList is given, the list should contain items of type MusicRecording.
+     *
+     * @param $track |
+     **/
+    public function setTrack($track) {
+        $this->properties['track'] = $track;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getTrack() {
+        return $this->properties['track'];
     }
 
 

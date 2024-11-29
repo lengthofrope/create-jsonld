@@ -27,61 +27,40 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * 
-          A CreativeWorkSeries in schema.org is a group of related items, typically but not necessarily of the same kind.
-          CreativeWorkSeries are usually organized into some order, often chronological. Unlike <a href="/ItemList">ItemList</a> which
-          is a general purpose data structure for lists of things, the emphasis with
-          CreativeWorkSeries is on published materials (written e.g. books and periodicals,
-          or media such as tv, radio and games).
-
-          <br/><br/>
-
-          Specific subtypes are available for describing <a href="/TVSeries">TVSeries</a>, <a href="/RadioSeries">RadioSeries</a>,
-          <a href="/MovieSeries">MovieSeries</a>,
-          <a href="/BookSeries">BookSeries</a>,
-          <a href="/Periodical">Periodical</a>
-          and <a href="/VideoGameSeries">VideoGameSeries</a>. In each case,
-          the <a href="/hasPart">hasPart</a> / <a href="/isPartOf">isPartOf</a> properties
-          can be used to relate the CreativeWorkSeries to its parts. The general CreativeWorkSeries type serves largely
-          just to organize these more specific and practical subtypes.
-
-          <br/><br/>
-
-          It is common for properties applicable to an item from the series to be usefully applied to the containing group.
-          Schema.org attempts to anticipate some of these cases, but publishers should be free to apply
-          properties of the series parts to the series as a whole wherever they seem appropriate.
+ * A CreativeWorkSeries in schema.org is a group of related items, typically but not necessarily of the same kind. CreativeWorkSeries are usually organized into some order, often chronological. Unlike [[ItemList]] which is a general purpose data structure for lists of things, the emphasis with CreativeWorkSeries is on published materials (written e.g. books and periodicals, or media such as TV, radio and games).\n\nSpecific subtypes are available for describing [[TVSeries]], [[RadioSeries]], [[MovieSeries]], [[BookSeries]], [[Periodical]] and [[VideoGameSeries]]. In each case, the [[hasPart]] / [[isPartOf]] properties can be used to relate the CreativeWorkSeries to its parts. The general CreativeWorkSeries type serves largely just to organize these more specific and practical subtypes.\n\nIt is common for properties applicable to an item from the series to be usefully applied to the containing group. Schema.org attempts to anticipate some of these cases, but publishers should be free to apply properties of the series parts to the series as a whole wherever they seem appropriate.
+ *     
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class CreativeWorkSeriesSchema extends CreativeWorkSchema
+class CreativeWorkSeriesSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new CreativeWorkSeriesSchema('http://schema.org/', 'CreativeWorkSeries');
+        return new CreativeWorkSeriesSchema('https://schema.org/', 'CreativeWorkSeries');
     }
 
     /**
-     * The end date and time of the item (in <a href='http://en.wikipedia.org/wiki/ISO_8601'>ISO 8601 date format</a>).
+     * The International Standard Serial Number (ISSN) that identifies this serial publication. You can repeat this property to identify different formats of, or the linking ISSN (ISSN-L) for, this serial publication.
      *
-     * @param $endDate DateSchema
+     * @param $issn 
      **/
-    public function setEndDate($endDate) {
-        $this->properties['endDate'] = $endDate;
+    public function setIssn($issn) {
+        $this->properties['issn'] = $issn;
 
         return $this;
     }
 
     /**
-     * @return DateSchema
+     * @return 
      **/
-    public function getEndDate() {
-        return $this->properties['endDate'];
+    public function getIssn() {
+        return $this->properties['issn'];
     }
 
     /**
-     * The start date and time of the item (in <a href='http://en.wikipedia.org/wiki/ISO_8601'>ISO 8601 date format</a>).
+     * The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
-     * @param $startDate DateSchema
+     * @param $startDate |
      **/
     public function setStartDate($startDate) {
         $this->properties['startDate'] = $startDate;
@@ -90,10 +69,28 @@ class CreativeWorkSeriesSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return DateSchema
+     * @return |
      **/
     public function getStartDate() {
         return $this->properties['startDate'];
+    }
+
+    /**
+     * The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
+     *
+     * @param $endDate |
+     **/
+    public function setEndDate($endDate) {
+        $this->properties['endDate'] = $endDate;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getEndDate() {
+        return $this->properties['endDate'];
     }
 
 

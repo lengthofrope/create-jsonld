@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class AquariumSchema extends CivicStructureSchema
+class AquariumSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new AquariumSchema('http://schema.org/', 'Aquarium');
+        return new AquariumSchema('https://schema.org/', 'Aquarium');
     }
 
 

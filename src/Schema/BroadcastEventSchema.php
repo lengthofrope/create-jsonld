@@ -31,35 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class BroadcastEventSchema extends PublicationEventSchema
+class BroadcastEventSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new BroadcastEventSchema('http://schema.org/', 'BroadcastEvent');
+        return new BroadcastEventSchema('https://schema.org/', 'BroadcastEvent');
     }
 
     /**
-     * The event being broadcast such as a sporting event or awards ceremony.
+     * True if the broadcast is of a live event.
      *
-     * @param $broadcastOfEvent EventSchema
-     **/
-    public function setBroadcastOfEvent($broadcastOfEvent) {
-        $this->properties['broadcastOfEvent'] = $broadcastOfEvent;
-
-        return $this;
-    }
-
-    /**
-     * @return EventSchema
-     **/
-    public function getBroadcastOfEvent() {
-        return $this->properties['broadcastOfEvent'];
-    }
-
-    /**
-     * True is the broadcast is of a live event.
-     *
-     * @param $isLiveBroadcast BooleanSchema
+     * @param $isLiveBroadcast 
      **/
     public function setIsLiveBroadcast($isLiveBroadcast) {
         $this->properties['isLiveBroadcast'] = $isLiveBroadcast;
@@ -68,16 +50,34 @@ class BroadcastEventSchema extends PublicationEventSchema
     }
 
     /**
-     * @return BooleanSchema
+     * @return 
      **/
     public function getIsLiveBroadcast() {
         return $this->properties['isLiveBroadcast'];
     }
 
     /**
+     * The event being broadcast such as a sporting event or awards ceremony.
+     *
+     * @param $broadcastOfEvent 
+     **/
+    public function setBroadcastOfEvent($broadcastOfEvent) {
+        $this->properties['broadcastOfEvent'] = $broadcastOfEvent;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getBroadcastOfEvent() {
+        return $this->properties['broadcastOfEvent'];
+    }
+
+    /**
      * The type of screening or video broadcast used (e.g. IMAX, 3D, SD, HD, etc.).
      *
-     * @param $videoFormat TextSchema
+     * @param $videoFormat 
      **/
     public function setVideoFormat($videoFormat) {
         $this->properties['videoFormat'] = $videoFormat;
@@ -86,10 +86,28 @@ class BroadcastEventSchema extends PublicationEventSchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getVideoFormat() {
         return $this->properties['videoFormat'];
+    }
+
+    /**
+     * Languages in which subtitles/captions are available, in [IETF BCP 47 standard format](http://tools.ietf.org/html/bcp47).
+     *
+     * @param $subtitleLanguage |
+     **/
+    public function setSubtitleLanguage($subtitleLanguage) {
+        $this->properties['subtitleLanguage'] = $subtitleLanguage;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getSubtitleLanguage() {
+        return $this->properties['subtitleLanguage'];
     }
 
 

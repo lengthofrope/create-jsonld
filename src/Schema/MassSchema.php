@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MassSchema extends QuantitySchema
+class MassSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MassSchema('http://schema.org/', 'Mass');
+        return new MassSchema('https://schema.org/', 'Mass');
     }
 
 

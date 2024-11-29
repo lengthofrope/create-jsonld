@@ -27,7 +27,7 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A point in time recurring on multiple days in the form hh:mm:ss[Z|(+|-)hh:mm] (see <a href="http://www.w3.org/TR/xmlschema-2/#time">XML schema for details</a>).
+ * A point in time recurring on multiple days in the form hh:mm:ss[Z|(+|-)hh:mm] (see [XML schema for details](http://www.w3.org/TR/xmlschema-2/#time)).
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
@@ -35,7 +35,7 @@ class TimeSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new TimeSchema('http://schema.org/', 'Time');
+        return new TimeSchema('https://schema.org/', 'Time');
     }
 
 

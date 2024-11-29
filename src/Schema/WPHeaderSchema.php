@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class WPHeaderSchema extends WebPageElementSchema
+class WPHeaderSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new WPHeaderSchema('http://schema.org/', 'WPHeader');
+        return new WPHeaderSchema('https://schema.org/', 'WPHeader');
     }
 
 

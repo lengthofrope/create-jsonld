@@ -31,71 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MusicRecordingSchema extends CreativeWorkSchema
+class MusicRecordingSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MusicRecordingSchema('http://schema.org/', 'MusicRecording');
-    }
-
-    /**
-     * The artist that performed this album or recording.
-     *
-     * @param $byArtist MusicGroupSchema
-     **/
-    public function setByArtist($byArtist) {
-        $this->properties['byArtist'] = $byArtist;
-
-        return $this;
-    }
-
-    /**
-     * @return MusicGroupSchema
-     **/
-    public function getByArtist() {
-        return $this->properties['byArtist'];
-    }
-
-    /**
-     * The duration of the item (movie, audio recording, event, etc.) in <a href='http://en.wikipedia.org/wiki/ISO_8601'>ISO 8601 date format</a>.
-     *
-     * @param $duration DurationSchema
-     **/
-    public function setDuration($duration) {
-        $this->properties['duration'] = $duration;
-
-        return $this;
-    }
-
-    /**
-     * @return DurationSchema
-     **/
-    public function getDuration() {
-        return $this->properties['duration'];
-    }
-
-    /**
-     * The album to which this recording belongs.
-     *
-     * @param $inAlbum MusicAlbumSchema
-     **/
-    public function setInAlbum($inAlbum) {
-        $this->properties['inAlbum'] = $inAlbum;
-
-        return $this;
-    }
-
-    /**
-     * @return MusicAlbumSchema
-     **/
-    public function getInAlbum() {
-        return $this->properties['inAlbum'];
+        return new MusicRecordingSchema('https://schema.org/', 'MusicRecording');
     }
 
     /**
      * The playlist to which this recording belongs.
      *
-     * @param $inPlaylist MusicPlaylistSchema
+     * @param $inPlaylist 
      **/
     public function setInPlaylist($inPlaylist) {
         $this->properties['inPlaylist'] = $inPlaylist;
@@ -104,7 +50,7 @@ class MusicRecordingSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return MusicPlaylistSchema
+     * @return 
      **/
     public function getInPlaylist() {
         return $this->properties['inPlaylist'];
@@ -113,7 +59,7 @@ class MusicRecordingSchema extends CreativeWorkSchema
     /**
      * The International Standard Recording Code for the recording.
      *
-     * @param $isrcCode TextSchema
+     * @param $isrcCode 
      **/
     public function setIsrcCode($isrcCode) {
         $this->properties['isrcCode'] = $isrcCode;
@@ -122,16 +68,52 @@ class MusicRecordingSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getIsrcCode() {
         return $this->properties['isrcCode'];
     }
 
     /**
+     * The artist that performed this album or recording.
+     *
+     * @param $byArtist |
+     **/
+    public function setByArtist($byArtist) {
+        $this->properties['byArtist'] = $byArtist;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getByArtist() {
+        return $this->properties['byArtist'];
+    }
+
+    /**
+     * The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
+     *
+     * @param $duration 
+     **/
+    public function setDuration($duration) {
+        $this->properties['duration'] = $duration;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getDuration() {
+        return $this->properties['duration'];
+    }
+
+    /**
      * The composition this track is a recording of.
      *
-     * @param $recordingOf MusicCompositionSchema
+     * @param $recordingOf 
      **/
     public function setRecordingOf($recordingOf) {
         $this->properties['recordingOf'] = $recordingOf;
@@ -140,10 +122,28 @@ class MusicRecordingSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return MusicCompositionSchema
+     * @return 
      **/
     public function getRecordingOf() {
         return $this->properties['recordingOf'];
+    }
+
+    /**
+     * The album to which this recording belongs.
+     *
+     * @param $inAlbum 
+     **/
+    public function setInAlbum($inAlbum) {
+        $this->properties['inAlbum'] = $inAlbum;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getInAlbum() {
+        return $this->properties['inAlbum'];
     }
 
 

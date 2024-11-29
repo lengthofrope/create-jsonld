@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PathologyTestSchema extends MedicalTestSchema
+class PathologyTestSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new PathologyTestSchema('http://schema.org/', 'PathologyTest');
+        return new PathologyTestSchema('https://schema.org/', 'PathologyTest');
     }
 
     /**
      * The type of tissue sample required for the test.
      *
-     * @param $tissueSample TextSchema
+     * @param $tissueSample 
      **/
     public function setTissueSample($tissueSample) {
         $this->properties['tissueSample'] = $tissueSample;
@@ -50,7 +50,7 @@ class PathologyTestSchema extends MedicalTestSchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getTissueSample() {
         return $this->properties['tissueSample'];

@@ -28,14 +28,17 @@ namespace LengthOfRope\JSONLD\Schema;
 
 /**
  * A hostel - cheap accommodation, often in shared dormitories.
+ * <br /><br />
+ * See also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.
+
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class HostelSchema extends LodgingBusinessSchema
+class HostelSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new HostelSchema('http://schema.org/', 'Hostel');
+        return new HostelSchema('https://schema.org/', 'Hostel');
     }
 
 

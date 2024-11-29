@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ReactActionSchema extends AssessActionSchema
+class ReactActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new ReactActionSchema('http://schema.org/', 'ReactAction');
+        return new ReactActionSchema('https://schema.org/', 'ReactAction');
     }
 
 

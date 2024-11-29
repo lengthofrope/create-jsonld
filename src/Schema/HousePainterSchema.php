@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class HousePainterSchema extends HomeAndConstructionBusinessSchema
+class HousePainterSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new HousePainterSchema('http://schema.org/', 'HousePainter');
+        return new HousePainterSchema('https://schema.org/', 'HousePainter');
     }
 
 

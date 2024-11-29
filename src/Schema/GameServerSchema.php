@@ -31,53 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class GameServerSchema extends IntangibleSchema
+class GameServerSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new GameServerSchema('http://schema.org/', 'GameServer');
-    }
-
-    /**
-     * Video game which is played on this server.
-     *
-     * @param $game VideoGameSchema
-     **/
-    public function setGame($game) {
-        $this->properties['game'] = $game;
-
-        return $this;
-    }
-
-    /**
-     * @return VideoGameSchema
-     **/
-    public function getGame() {
-        return $this->properties['game'];
-    }
-
-    /**
-     * Number of players on the server.
-     *
-     * @param $playersOnline IntegerSchema
-     **/
-    public function setPlayersOnline($playersOnline) {
-        $this->properties['playersOnline'] = $playersOnline;
-
-        return $this;
-    }
-
-    /**
-     * @return IntegerSchema
-     **/
-    public function getPlayersOnline() {
-        return $this->properties['playersOnline'];
+        return new GameServerSchema('https://schema.org/', 'GameServer');
     }
 
     /**
      * Status of a game server.
      *
-     * @param $serverStatus GameServerStatusSchema
+     * @param $serverStatus 
      **/
     public function setServerStatus($serverStatus) {
         $this->properties['serverStatus'] = $serverStatus;
@@ -86,10 +50,46 @@ class GameServerSchema extends IntangibleSchema
     }
 
     /**
-     * @return GameServerStatusSchema
+     * @return 
      **/
     public function getServerStatus() {
         return $this->properties['serverStatus'];
+    }
+
+    /**
+     * Video game which is played on this server.
+     *
+     * @param $game 
+     **/
+    public function setGame($game) {
+        $this->properties['game'] = $game;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getGame() {
+        return $this->properties['game'];
+    }
+
+    /**
+     * Number of players on the server.
+     *
+     * @param $playersOnline 
+     **/
+    public function setPlayersOnline($playersOnline) {
+        $this->properties['playersOnline'] = $playersOnline;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getPlayersOnline() {
+        return $this->properties['playersOnline'];
     }
 
 

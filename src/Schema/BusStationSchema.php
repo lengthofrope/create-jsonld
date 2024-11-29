@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class BusStationSchema extends CivicStructureSchema
+class BusStationSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new BusStationSchema('http://schema.org/', 'BusStation');
+        return new BusStationSchema('https://schema.org/', 'BusStation');
     }
 
 

@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class LocksmithSchema extends HomeAndConstructionBusinessSchema
+class LocksmithSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new LocksmithSchema('http://schema.org/', 'Locksmith');
+        return new LocksmithSchema('https://schema.org/', 'Locksmith');
     }
 
 

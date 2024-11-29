@@ -31,35 +31,75 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ReviewSchema extends CreativeWorkSchema
+class ReviewSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new ReviewSchema('http://schema.org/', 'Review');
+        return new ReviewSchema('https://schema.org/', 'Review');
     }
 
     /**
-     * The item that is being reviewed/rated.
+     * An associated [[Review]].
      *
-     * @param $itemReviewed ThingSchema
+     * @param $associatedReview 
      **/
-    public function setItemReviewed($itemReviewed) {
-        $this->properties['itemReviewed'] = $itemReviewed;
+    public function setAssociatedReview($associatedReview) {
+        $this->properties['associatedReview'] = $associatedReview;
 
         return $this;
     }
 
     /**
-     * @return ThingSchema
+     * @return 
      **/
-    public function getItemReviewed() {
-        return $this->properties['itemReviewed'];
+    public function getAssociatedReview() {
+        return $this->properties['associatedReview'];
+    }
+
+    /**
+     * Provides positive considerations regarding something, for example product highlights or (alongside [[negativeNotes]]) pro/con lists for reviews.
+
+In the case of a [[Review]], the property describes the [[itemReviewed]] from the perspective of the review; in the case of a [[Product]], the product itself is being described.
+
+The property values can be expressed either as unstructured text (repeated as necessary), or if ordered, as a list (in which case the most positive is at the beginning of the list).
+     *
+     * @param $positiveNotes |||
+     **/
+    public function setPositiveNotes($positiveNotes) {
+        $this->properties['positiveNotes'] = $positiveNotes;
+
+        return $this;
+    }
+
+    /**
+     * @return |||
+     **/
+    public function getPositiveNotes() {
+        return $this->properties['positiveNotes'];
+    }
+
+    /**
+     * An associated [[ClaimReview]], related by specific common content, topic or claim. The expectation is that this property would be most typically used in cases where a single activity is conducting both claim reviews and media reviews, in which case [[relatedMediaReview]] would commonly be used on a [[ClaimReview]], while [[relatedClaimReview]] would be used on [[MediaReview]].
+     *
+     * @param $associatedClaimReview 
+     **/
+    public function setAssociatedClaimReview($associatedClaimReview) {
+        $this->properties['associatedClaimReview'] = $associatedClaimReview;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getAssociatedClaimReview() {
+        return $this->properties['associatedClaimReview'];
     }
 
     /**
      * The actual body of the review.
      *
-     * @param $reviewBody TextSchema
+     * @param $reviewBody 
      **/
     public function setReviewBody($reviewBody) {
         $this->properties['reviewBody'] = $reviewBody;
@@ -68,16 +108,52 @@ class ReviewSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getReviewBody() {
         return $this->properties['reviewBody'];
     }
 
     /**
-     * The rating given in this review. Note that reviews can themselves be rated. The <code>reviewRating</code> applies to rating given by the review. The <code>aggregateRating</code> property applies to the review itself, as a creative work.
+     * The item that is being reviewed/rated.
      *
-     * @param $reviewRating RatingSchema
+     * @param $itemReviewed 
+     **/
+    public function setItemReviewed($itemReviewed) {
+        $this->properties['itemReviewed'] = $itemReviewed;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getItemReviewed() {
+        return $this->properties['itemReviewed'];
+    }
+
+    /**
+     * This Review or Rating is relevant to this part or facet of the itemReviewed.
+     *
+     * @param $reviewAspect 
+     **/
+    public function setReviewAspect($reviewAspect) {
+        $this->properties['reviewAspect'] = $reviewAspect;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getReviewAspect() {
+        return $this->properties['reviewAspect'];
+    }
+
+    /**
+     * The rating given in this review. Note that reviews can themselves be rated. The ```reviewRating``` applies to rating given by the review. The [[aggregateRating]] property applies to the review itself, as a creative work.
+     *
+     * @param $reviewRating 
      **/
     public function setReviewRating($reviewRating) {
         $this->properties['reviewRating'] = $reviewRating;
@@ -86,10 +162,51 @@ class ReviewSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return RatingSchema
+     * @return 
      **/
     public function getReviewRating() {
         return $this->properties['reviewRating'];
+    }
+
+    /**
+     * Provides negative considerations regarding something, most typically in pro/con lists for reviews (alongside [[positiveNotes]]). For symmetry 
+
+In the case of a [[Review]], the property describes the [[itemReviewed]] from the perspective of the review; in the case of a [[Product]], the product itself is being described. Since product descriptions 
+tend to emphasise positive claims, it may be relatively unusual to find [[negativeNotes]] used in this way. Nevertheless for the sake of symmetry, [[negativeNotes]] can be used on [[Product]].
+
+The property values can be expressed either as unstructured text (repeated as necessary), or if ordered, as a list (in which case the most negative is at the beginning of the list).
+     *
+     * @param $negativeNotes |||
+     **/
+    public function setNegativeNotes($negativeNotes) {
+        $this->properties['negativeNotes'] = $negativeNotes;
+
+        return $this;
+    }
+
+    /**
+     * @return |||
+     **/
+    public function getNegativeNotes() {
+        return $this->properties['negativeNotes'];
+    }
+
+    /**
+     * An associated [[MediaReview]], related by specific common content, topic or claim. The expectation is that this property would be most typically used in cases where a single activity is conducting both claim reviews and media reviews, in which case [[relatedMediaReview]] would commonly be used on a [[ClaimReview]], while [[relatedClaimReview]] would be used on [[MediaReview]].
+     *
+     * @param $associatedMediaReview 
+     **/
+    public function setAssociatedMediaReview($associatedMediaReview) {
+        $this->properties['associatedMediaReview'] = $associatedMediaReview;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getAssociatedMediaReview() {
+        return $this->properties['associatedMediaReview'];
     }
 
 

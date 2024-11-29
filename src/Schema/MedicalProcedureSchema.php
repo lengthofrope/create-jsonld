@@ -27,57 +27,21 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A process of care used in either a diagnostic, therapeutic, or palliative capacity that relies on invasive (surgical), non-invasive, or percutaneous techniques.
+ * A process of care used in either a diagnostic, therapeutic, preventive or palliative capacity that relies on invasive (surgical), non-invasive, or other techniques.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MedicalProcedureSchema extends MedicalEntitySchema
+class MedicalProcedureSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MedicalProcedureSchema('http://schema.org/', 'MedicalProcedure');
-    }
-
-    /**
-     * Typical or recommended followup care after the procedure is performed.
-     *
-     * @param $followup TextSchema
-     **/
-    public function setFollowup($followup) {
-        $this->properties['followup'] = $followup;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getFollowup() {
-        return $this->properties['followup'];
-    }
-
-    /**
-     * How the procedure is performed.
-     *
-     * @param $howPerformed TextSchema
-     **/
-    public function setHowPerformed($howPerformed) {
-        $this->properties['howPerformed'] = $howPerformed;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getHowPerformed() {
-        return $this->properties['howPerformed'];
+        return new MedicalProcedureSchema('https://schema.org/', 'MedicalProcedure');
     }
 
     /**
      * Typical preparation that a patient must undergo before having the procedure performed.
      *
-     * @param $preparation TextSchema
+     * @param $preparation |
      **/
     public function setPreparation($preparation) {
         $this->properties['preparation'] = $preparation;
@@ -86,7 +50,7 @@ class MedicalProcedureSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return TextSchema
+     * @return |
      **/
     public function getPreparation() {
         return $this->properties['preparation'];
@@ -95,7 +59,7 @@ class MedicalProcedureSchema extends MedicalEntitySchema
     /**
      * The type of procedure, for example Surgical, Noninvasive, or Percutaneous.
      *
-     * @param $procedureType MedicalProcedureTypeSchema
+     * @param $procedureType 
      **/
     public function setProcedureType($procedureType) {
         $this->properties['procedureType'] = $procedureType;
@@ -104,10 +68,82 @@ class MedicalProcedureSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return MedicalProcedureTypeSchema
+     * @return 
      **/
     public function getProcedureType() {
         return $this->properties['procedureType'];
+    }
+
+    /**
+     * How the procedure is performed.
+     *
+     * @param $howPerformed 
+     **/
+    public function setHowPerformed($howPerformed) {
+        $this->properties['howPerformed'] = $howPerformed;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getHowPerformed() {
+        return $this->properties['howPerformed'];
+    }
+
+    /**
+     * The status of the study (enumerated).
+     *
+     * @param $status ||
+     **/
+    public function setStatus($status) {
+        $this->properties['status'] = $status;
+
+        return $this;
+    }
+
+    /**
+     * @return ||
+     **/
+    public function getStatus() {
+        return $this->properties['status'];
+    }
+
+    /**
+     * Typical or recommended followup care after the procedure is performed.
+     *
+     * @param $followup 
+     **/
+    public function setFollowup($followup) {
+        $this->properties['followup'] = $followup;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getFollowup() {
+        return $this->properties['followup'];
+    }
+
+    /**
+     * Location in the body of the anatomical structure.
+     *
+     * @param $bodyLocation 
+     **/
+    public function setBodyLocation($bodyLocation) {
+        $this->properties['bodyLocation'] = $bodyLocation;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getBodyLocation() {
+        return $this->properties['bodyLocation'];
     }
 
 

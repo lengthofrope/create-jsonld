@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class SpecialtySchema extends EnumerationSchema
+class SpecialtySchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new SpecialtySchema('http://schema.org/', 'Specialty');
+        return new SpecialtySchema('https://schema.org/', 'Specialty');
     }
 
 

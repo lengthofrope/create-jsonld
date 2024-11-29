@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class EatActionSchema extends ConsumeActionSchema
+class EatActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new EatActionSchema('http://schema.org/', 'EatAction');
+        return new EatActionSchema('https://schema.org/', 'EatAction');
     }
 
 

@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class SomeProductsSchema extends ProductSchema
+class SomeProductsSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new SomeProductsSchema('http://schema.org/', 'SomeProducts');
+        return new SomeProductsSchema('https://schema.org/', 'SomeProducts');
     }
 
     /**
      * The current approximate inventory level for the item or items.
      *
-     * @param $inventoryLevel QuantitativeValueSchema
+     * @param $inventoryLevel 
      **/
     public function setInventoryLevel($inventoryLevel) {
         $this->properties['inventoryLevel'] = $inventoryLevel;
@@ -50,7 +50,7 @@ class SomeProductsSchema extends ProductSchema
     }
 
     /**
-     * @return QuantitativeValueSchema
+     * @return 
      **/
     public function getInventoryLevel() {
         return $this->properties['inventoryLevel'];

@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class RsvpResponseTypeSchema extends EnumerationSchema
+class RsvpResponseTypeSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new RsvpResponseTypeSchema('http://schema.org/', 'RsvpResponseType');
+        return new RsvpResponseTypeSchema('https://schema.org/', 'RsvpResponseType');
     }
 
 

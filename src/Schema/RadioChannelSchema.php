@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class RadioChannelSchema extends BroadcastChannelSchema
+class RadioChannelSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new RadioChannelSchema('http://schema.org/', 'RadioChannel');
+        return new RadioChannelSchema('https://schema.org/', 'RadioChannel');
     }
 
 

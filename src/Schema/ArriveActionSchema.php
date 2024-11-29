@@ -27,15 +27,15 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of arriving at a place. An agent arrives at a destination from an fromLocation, optionally with participants.
+ * The act of arriving at a place. An agent arrives at a destination from a fromLocation, optionally with participants.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ArriveActionSchema extends MoveActionSchema
+class ArriveActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new ArriveActionSchema('http://schema.org/', 'ArriveAction');
+        return new ArriveActionSchema('https://schema.org/', 'ArriveAction');
     }
 
 

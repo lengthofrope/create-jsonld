@@ -35,7 +35,7 @@ class BooleanSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new BooleanSchema('http://schema.org/', 'Boolean');
+        return new BooleanSchema('https://schema.org/', 'Boolean');
     }
 
 

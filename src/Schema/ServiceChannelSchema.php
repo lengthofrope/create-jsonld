@@ -31,71 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ServiceChannelSchema extends IntangibleSchema
+class ServiceChannelSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new ServiceChannelSchema('http://schema.org/', 'ServiceChannel');
-    }
-
-    /**
-     * A language someone may use with the item.
-     *
-     * @param $availableLanguage LanguageSchema
-     **/
-    public function setAvailableLanguage($availableLanguage) {
-        $this->properties['availableLanguage'] = $availableLanguage;
-
-        return $this;
-    }
-
-    /**
-     * @return LanguageSchema
-     **/
-    public function getAvailableLanguage() {
-        return $this->properties['availableLanguage'];
-    }
-
-    /**
-     * Estimated processing time for the service using this channel.
-     *
-     * @param $processingTime DurationSchema
-     **/
-    public function setProcessingTime($processingTime) {
-        $this->properties['processingTime'] = $processingTime;
-
-        return $this;
-    }
-
-    /**
-     * @return DurationSchema
-     **/
-    public function getProcessingTime() {
-        return $this->properties['processingTime'];
-    }
-
-    /**
-     * The service provided by this channel.
-     *
-     * @param $providesService ServiceSchema
-     **/
-    public function setProvidesService($providesService) {
-        $this->properties['providesService'] = $providesService;
-
-        return $this;
-    }
-
-    /**
-     * @return ServiceSchema
-     **/
-    public function getProvidesService() {
-        return $this->properties['providesService'];
+        return new ServiceChannelSchema('https://schema.org/', 'ServiceChannel');
     }
 
     /**
      * The location (e.g. civic structure, local business, etc.) where a person can go to access the service.
      *
-     * @param $serviceLocation PlaceSchema
+     * @param $serviceLocation 
      **/
     public function setServiceLocation($serviceLocation) {
         $this->properties['serviceLocation'] = $serviceLocation;
@@ -104,7 +50,7 @@ class ServiceChannelSchema extends IntangibleSchema
     }
 
     /**
-     * @return PlaceSchema
+     * @return 
      **/
     public function getServiceLocation() {
         return $this->properties['serviceLocation'];
@@ -113,7 +59,7 @@ class ServiceChannelSchema extends IntangibleSchema
     /**
      * The phone number to use to access the service.
      *
-     * @param $servicePhone ContactPointSchema
+     * @param $servicePhone 
      **/
     public function setServicePhone($servicePhone) {
         $this->properties['servicePhone'] = $servicePhone;
@@ -122,34 +68,16 @@ class ServiceChannelSchema extends IntangibleSchema
     }
 
     /**
-     * @return ContactPointSchema
+     * @return 
      **/
     public function getServicePhone() {
         return $this->properties['servicePhone'];
     }
 
     /**
-     * The address for accessing the service by mail.
-     *
-     * @param $servicePostalAddress PostalAddressSchema
-     **/
-    public function setServicePostalAddress($servicePostalAddress) {
-        $this->properties['servicePostalAddress'] = $servicePostalAddress;
-
-        return $this;
-    }
-
-    /**
-     * @return PostalAddressSchema
-     **/
-    public function getServicePostalAddress() {
-        return $this->properties['servicePostalAddress'];
-    }
-
-    /**
      * The number to access the service by text message.
      *
-     * @param $serviceSmsNumber ContactPointSchema
+     * @param $serviceSmsNumber 
      **/
     public function setServiceSmsNumber($serviceSmsNumber) {
         $this->properties['serviceSmsNumber'] = $serviceSmsNumber;
@@ -158,7 +86,7 @@ class ServiceChannelSchema extends IntangibleSchema
     }
 
     /**
-     * @return ContactPointSchema
+     * @return 
      **/
     public function getServiceSmsNumber() {
         return $this->properties['serviceSmsNumber'];
@@ -167,7 +95,7 @@ class ServiceChannelSchema extends IntangibleSchema
     /**
      * The website to access the service.
      *
-     * @param $serviceUrl URLSchema
+     * @param $serviceUrl 
      **/
     public function setServiceUrl($serviceUrl) {
         $this->properties['serviceUrl'] = $serviceUrl;
@@ -176,10 +104,82 @@ class ServiceChannelSchema extends IntangibleSchema
     }
 
     /**
-     * @return URLSchema
+     * @return 
      **/
     public function getServiceUrl() {
         return $this->properties['serviceUrl'];
+    }
+
+    /**
+     * Estimated processing time for the service using this channel.
+     *
+     * @param $processingTime 
+     **/
+    public function setProcessingTime($processingTime) {
+        $this->properties['processingTime'] = $processingTime;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getProcessingTime() {
+        return $this->properties['processingTime'];
+    }
+
+    /**
+     * The address for accessing the service by mail.
+     *
+     * @param $servicePostalAddress 
+     **/
+    public function setServicePostalAddress($servicePostalAddress) {
+        $this->properties['servicePostalAddress'] = $servicePostalAddress;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getServicePostalAddress() {
+        return $this->properties['servicePostalAddress'];
+    }
+
+    /**
+     * The service provided by this channel.
+     *
+     * @param $providesService 
+     **/
+    public function setProvidesService($providesService) {
+        $this->properties['providesService'] = $providesService;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getProvidesService() {
+        return $this->properties['providesService'];
+    }
+
+    /**
+     * A language someone may use with or at the item, service or place. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].
+     *
+     * @param $availableLanguage |
+     **/
+    public function setAvailableLanguage($availableLanguage) {
+        $this->properties['availableLanguage'] = $availableLanguage;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getAvailableLanguage() {
+        return $this->properties['availableLanguage'];
     }
 
 

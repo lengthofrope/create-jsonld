@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PharmacySchema extends MedicalOrganizationSchema
+class PharmacySchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new PharmacySchema('http://schema.org/', 'Pharmacy');
+        return new PharmacySchema('https://schema.org/', 'Pharmacy');
     }
 
 

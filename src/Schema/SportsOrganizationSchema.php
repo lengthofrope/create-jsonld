@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class SportsOrganizationSchema extends OrganizationSchema
+class SportsOrganizationSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new SportsOrganizationSchema('http://schema.org/', 'SportsOrganization');
+        return new SportsOrganizationSchema('https://schema.org/', 'SportsOrganization');
     }
 
     /**
      * A type of sport (e.g. Baseball).
      *
-     * @param $sport TextSchema|URLSchema
+     * @param $sport |
      **/
     public function setSport($sport) {
         $this->properties['sport'] = $sport;
@@ -50,7 +50,7 @@ class SportsOrganizationSchema extends OrganizationSchema
     }
 
     /**
-     * @return TextSchema|URLSchema
+     * @return |
      **/
     public function getSport() {
         return $this->properties['sport'];

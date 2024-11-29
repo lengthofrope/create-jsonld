@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MedicalWebPageSchema extends WebPageSchema
+class MedicalWebPageSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MedicalWebPageSchema('http://schema.org/', 'MedicalWebPage');
+        return new MedicalWebPageSchema('https://schema.org/', 'MedicalWebPage');
     }
 
     /**
      * An aspect of medical practice that is considered on the page, such as 'diagnosis', 'treatment', 'causes', 'prognosis', 'etiology', 'epidemiology', etc.
      *
-     * @param $aspect TextSchema
+     * @param $aspect 
      **/
     public function setAspect($aspect) {
         $this->properties['aspect'] = $aspect;
@@ -50,10 +50,28 @@ class MedicalWebPageSchema extends WebPageSchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getAspect() {
         return $this->properties['aspect'];
+    }
+
+    /**
+     * Medical audience for page.
+     *
+     * @param $medicalAudience |
+     **/
+    public function setMedicalAudience($medicalAudience) {
+        $this->properties['medicalAudience'] = $medicalAudience;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getMedicalAudience() {
+        return $this->properties['medicalAudience'];
     }
 
 

@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ChildrensEventSchema extends EventSchema
+class ChildrensEventSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new ChildrensEventSchema('http://schema.org/', 'ChildrensEvent');
+        return new ChildrensEventSchema('https://schema.org/', 'ChildrensEvent');
     }
 
 

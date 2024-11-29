@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ElectricianSchema extends HomeAndConstructionBusinessSchema
+class ElectricianSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new ElectricianSchema('http://schema.org/', 'Electrician');
+        return new ElectricianSchema('https://schema.org/', 'Electrician');
     }
 
 

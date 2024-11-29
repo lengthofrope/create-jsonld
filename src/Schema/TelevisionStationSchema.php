@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class TelevisionStationSchema extends LocalBusinessSchema
+class TelevisionStationSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new TelevisionStationSchema('http://schema.org/', 'TelevisionStation');
+        return new TelevisionStationSchema('https://schema.org/', 'TelevisionStation');
     }
 
 

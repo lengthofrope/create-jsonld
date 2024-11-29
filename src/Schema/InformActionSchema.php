@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class InformActionSchema extends CommunicateActionSchema
+class InformActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new InformActionSchema('http://schema.org/', 'InformAction');
+        return new InformActionSchema('https://schema.org/', 'InformAction');
     }
 
     /**
      * Upcoming or past event associated with this place, organization, or action.
      *
-     * @param $event EventSchema
+     * @param $event 
      **/
     public function setEvent($event) {
         $this->properties['event'] = $event;
@@ -50,7 +50,7 @@ class InformActionSchema extends CommunicateActionSchema
     }
 
     /**
-     * @return EventSchema
+     * @return 
      **/
     public function getEvent() {
         return $this->properties['event'];

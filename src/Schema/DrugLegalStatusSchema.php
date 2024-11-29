@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class DrugLegalStatusSchema extends MedicalIntangibleSchema
+class DrugLegalStatusSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new DrugLegalStatusSchema('http://schema.org/', 'DrugLegalStatus');
+        return new DrugLegalStatusSchema('https://schema.org/', 'DrugLegalStatus');
     }
 
     /**
      * The location in which the status applies.
      *
-     * @param $applicableLocation AdministrativeAreaSchema
+     * @param $applicableLocation 
      **/
     public function setApplicableLocation($applicableLocation) {
         $this->properties['applicableLocation'] = $applicableLocation;
@@ -50,7 +50,7 @@ class DrugLegalStatusSchema extends MedicalIntangibleSchema
     }
 
     /**
-     * @return AdministrativeAreaSchema
+     * @return 
      **/
     public function getApplicableLocation() {
         return $this->properties['applicableLocation'];

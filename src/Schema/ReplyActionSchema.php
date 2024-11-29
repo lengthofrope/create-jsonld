@@ -27,21 +27,21 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of responding to a question/message asked/sent by the object. Related to <a href="AskAction">AskAction</a>.<p>Related actions:</p><ul><li><a href="http://schema.org/AskAction">AskAction</a>: Appears generally as an origin of a ReplyAction</li></ul>.
+ * The act of responding to a question/message asked/sent by the object. Related to [[AskAction]].\n\nRelated actions:\n\n* [[AskAction]]: Appears generally as an origin of a ReplyAction.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ReplyActionSchema extends CommunicateActionSchema
+class ReplyActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new ReplyActionSchema('http://schema.org/', 'ReplyAction');
+        return new ReplyActionSchema('https://schema.org/', 'ReplyAction');
     }
 
     /**
      * A sub property of result. The Comment created or sent as a result of this action.
      *
-     * @param $resultComment CommentSchema
+     * @param $resultComment 
      **/
     public function setResultComment($resultComment) {
         $this->properties['resultComment'] = $resultComment;
@@ -50,7 +50,7 @@ class ReplyActionSchema extends CommunicateActionSchema
     }
 
     /**
-     * @return CommentSchema
+     * @return 
      **/
     public function getResultComment() {
         return $this->properties['resultComment'];

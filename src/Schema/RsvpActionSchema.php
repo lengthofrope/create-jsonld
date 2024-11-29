@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class RsvpActionSchema extends InformActionSchema
+class RsvpActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new RsvpActionSchema('http://schema.org/', 'RsvpAction');
+        return new RsvpActionSchema('https://schema.org/', 'RsvpAction');
     }
 
     /**
      * If responding yes, the number of guests who will attend in addition to the invitee.
      *
-     * @param $additionalNumberOfGuests NumberSchema
+     * @param $additionalNumberOfGuests 
      **/
     public function setAdditionalNumberOfGuests($additionalNumberOfGuests) {
         $this->properties['additionalNumberOfGuests'] = $additionalNumberOfGuests;
@@ -50,7 +50,7 @@ class RsvpActionSchema extends InformActionSchema
     }
 
     /**
-     * @return NumberSchema
+     * @return 
      **/
     public function getAdditionalNumberOfGuests() {
         return $this->properties['additionalNumberOfGuests'];
@@ -59,7 +59,7 @@ class RsvpActionSchema extends InformActionSchema
     /**
      * Comments, typically from users.
      *
-     * @param $comment CommentSchema
+     * @param $comment 
      **/
     public function setComment($comment) {
         $this->properties['comment'] = $comment;
@@ -68,7 +68,7 @@ class RsvpActionSchema extends InformActionSchema
     }
 
     /**
-     * @return CommentSchema
+     * @return 
      **/
     public function getComment() {
         return $this->properties['comment'];
@@ -77,7 +77,7 @@ class RsvpActionSchema extends InformActionSchema
     /**
      * The response (yes, no, maybe) to the RSVP.
      *
-     * @param $rsvpResponse RsvpResponseTypeSchema
+     * @param $rsvpResponse 
      **/
     public function setRsvpResponse($rsvpResponse) {
         $this->properties['rsvpResponse'] = $rsvpResponse;
@@ -86,7 +86,7 @@ class RsvpActionSchema extends InformActionSchema
     }
 
     /**
-     * @return RsvpResponseTypeSchema
+     * @return 
      **/
     public function getRsvpResponse() {
         return $this->properties['rsvpResponse'];

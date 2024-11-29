@@ -27,165 +27,21 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A chemical or biologic substance, used as a medical therapy, that has a physiological effect on an organism.
+ * A chemical or biologic substance, used as a medical therapy, that has a physiological effect on an organism. Here the term drug is used interchangeably with the term medicine although clinical knowledge makes a clear difference between them.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class DrugSchema extends MedicalTherapySchema
+class DrugSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new DrugSchema('http://schema.org/', 'Drug');
-    }
-
-    /**
-     * An active ingredient, typically chemical compounds and/or biologic substances.
-     *
-     * @param $activeIngredient TextSchema
-     **/
-    public function setActiveIngredient($activeIngredient) {
-        $this->properties['activeIngredient'] = $activeIngredient;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getActiveIngredient() {
-        return $this->properties['activeIngredient'];
-    }
-
-    /**
-     * A route by which this drug may be administered, e.g. 'oral'.
-     *
-     * @param $administrationRoute TextSchema
-     **/
-    public function setAdministrationRoute($administrationRoute) {
-        $this->properties['administrationRoute'] = $administrationRoute;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getAdministrationRoute() {
-        return $this->properties['administrationRoute'];
-    }
-
-    /**
-     * Any precaution, guidance, contraindication, etc. related to consumption of alcohol while taking this drug.
-     *
-     * @param $alcoholWarning TextSchema
-     **/
-    public function setAlcoholWarning($alcoholWarning) {
-        $this->properties['alcoholWarning'] = $alcoholWarning;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getAlcoholWarning() {
-        return $this->properties['alcoholWarning'];
-    }
-
-    /**
-     * An available dosage strength for the drug.
-     *
-     * @param $availableStrength DrugStrengthSchema
-     **/
-    public function setAvailableStrength($availableStrength) {
-        $this->properties['availableStrength'] = $availableStrength;
-
-        return $this;
-    }
-
-    /**
-     * @return DrugStrengthSchema
-     **/
-    public function getAvailableStrength() {
-        return $this->properties['availableStrength'];
-    }
-
-    /**
-     * Any precaution, guidance, contraindication, etc. related to this drug's use by breastfeeding mothers.
-     *
-     * @param $breastfeedingWarning TextSchema
-     **/
-    public function setBreastfeedingWarning($breastfeedingWarning) {
-        $this->properties['breastfeedingWarning'] = $breastfeedingWarning;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getBreastfeedingWarning() {
-        return $this->properties['breastfeedingWarning'];
-    }
-
-    /**
-     * Description of the absorption and elimination of drugs, including their concentration (pharmacokinetics, pK) and biological effects (pharmacodynamics, pD).
-     *
-     * @param $clinicalPharmacology TextSchema
-     **/
-    public function setClinicalPharmacology($clinicalPharmacology) {
-        $this->properties['clinicalPharmacology'] = $clinicalPharmacology;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getClinicalPharmacology() {
-        return $this->properties['clinicalPharmacology'];
-    }
-
-    /**
-     * Cost per unit of the drug, as reported by the source being tagged.
-     *
-     * @param $cost DrugCostSchema
-     **/
-    public function setCost($cost) {
-        $this->properties['cost'] = $cost;
-
-        return $this;
-    }
-
-    /**
-     * @return DrugCostSchema
-     **/
-    public function getCost() {
-        return $this->properties['cost'];
-    }
-
-    /**
-     * A dosage form in which this drug/supplement is available, e.g. 'tablet', 'suspension', 'injection'.
-     *
-     * @param $dosageForm TextSchema
-     **/
-    public function setDosageForm($dosageForm) {
-        $this->properties['dosageForm'] = $dosageForm;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getDosageForm() {
-        return $this->properties['dosageForm'];
+        return new DrugSchema('https://schema.org/', 'Drug');
     }
 
     /**
      * A dosing schedule for the drug for a given population, either observed, recommended, or maximum dose based on the type used.
      *
-     * @param $doseSchedule DoseScheduleSchema
+     * @param $doseSchedule 
      **/
     public function setDoseSchedule($doseSchedule) {
         $this->properties['doseSchedule'] = $doseSchedule;
@@ -194,232 +50,16 @@ class DrugSchema extends MedicalTherapySchema
     }
 
     /**
-     * @return DoseScheduleSchema
+     * @return 
      **/
     public function getDoseSchedule() {
         return $this->properties['doseSchedule'];
     }
 
     /**
-     * The class of drug this belongs to (e.g., statins).
-     *
-     * @param $drugClass DrugClassSchema
-     **/
-    public function setDrugClass($drugClass) {
-        $this->properties['drugClass'] = $drugClass;
-
-        return $this;
-    }
-
-    /**
-     * @return DrugClassSchema
-     **/
-    public function getDrugClass() {
-        return $this->properties['drugClass'];
-    }
-
-    /**
-     * Any precaution, guidance, contraindication, etc. related to consumption of specific foods while taking this drug.
-     *
-     * @param $foodWarning TextSchema
-     **/
-    public function setFoodWarning($foodWarning) {
-        $this->properties['foodWarning'] = $foodWarning;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getFoodWarning() {
-        return $this->properties['foodWarning'];
-    }
-
-    /**
-     * Another drug that is known to interact with this drug in a way that impacts the effect of this drug or causes a risk to the patient. Note: disease interactions are typically captured as contraindications.
-     *
-     * @param $interactingDrug DrugSchema
-     **/
-    public function setInteractingDrug($interactingDrug) {
-        $this->properties['interactingDrug'] = $interactingDrug;
-
-        return $this;
-    }
-
-    /**
-     * @return DrugSchema
-     **/
-    public function getInteractingDrug() {
-        return $this->properties['interactingDrug'];
-    }
-
-    /**
-     * True if the drug is available in a generic form (regardless of name).
-     *
-     * @param $isAvailableGenerically BooleanSchema
-     **/
-    public function setIsAvailableGenerically($isAvailableGenerically) {
-        $this->properties['isAvailableGenerically'] = $isAvailableGenerically;
-
-        return $this;
-    }
-
-    /**
-     * @return BooleanSchema
-     **/
-    public function getIsAvailableGenerically() {
-        return $this->properties['isAvailableGenerically'];
-    }
-
-    /**
-     * True if this item's name is a proprietary/brand name (vs. generic name).
-     *
-     * @param $isProprietary BooleanSchema
-     **/
-    public function setIsProprietary($isProprietary) {
-        $this->properties['isProprietary'] = $isProprietary;
-
-        return $this;
-    }
-
-    /**
-     * @return BooleanSchema
-     **/
-    public function getIsProprietary() {
-        return $this->properties['isProprietary'];
-    }
-
-    /**
-     * Link to the drug's label details.
-     *
-     * @param $labelDetails URLSchema
-     **/
-    public function setLabelDetails($labelDetails) {
-        $this->properties['labelDetails'] = $labelDetails;
-
-        return $this;
-    }
-
-    /**
-     * @return URLSchema
-     **/
-    public function getLabelDetails() {
-        return $this->properties['labelDetails'];
-    }
-
-    /**
-     * The drug or supplement's legal status, including any controlled substance schedules that apply.
-     *
-     * @param $legalStatus DrugLegalStatusSchema
-     **/
-    public function setLegalStatus($legalStatus) {
-        $this->properties['legalStatus'] = $legalStatus;
-
-        return $this;
-    }
-
-    /**
-     * @return DrugLegalStatusSchema
-     **/
-    public function getLegalStatus() {
-        return $this->properties['legalStatus'];
-    }
-
-    /**
-     * The manufacturer of the product.
-     *
-     * @param $manufacturer OrganizationSchema
-     **/
-    public function setManufacturer($manufacturer) {
-        $this->properties['manufacturer'] = $manufacturer;
-
-        return $this;
-    }
-
-    /**
-     * @return OrganizationSchema
-     **/
-    public function getManufacturer() {
-        return $this->properties['manufacturer'];
-    }
-
-    /**
-     * The specific biochemical interaction through which this drug or supplement produces its pharmacological effect.
-     *
-     * @param $mechanismOfAction TextSchema
-     **/
-    public function setMechanismOfAction($mechanismOfAction) {
-        $this->properties['mechanismOfAction'] = $mechanismOfAction;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getMechanismOfAction() {
-        return $this->properties['mechanismOfAction'];
-    }
-
-    /**
-     * The generic name of this drug or supplement.
-     *
-     * @param $nonProprietaryName TextSchema
-     **/
-    public function setNonProprietaryName($nonProprietaryName) {
-        $this->properties['nonProprietaryName'] = $nonProprietaryName;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getNonProprietaryName() {
-        return $this->properties['nonProprietaryName'];
-    }
-
-    /**
-     * Any information related to overdose on a drug, including signs or symptoms, treatments, contact information for emergency response.
-     *
-     * @param $overdosage TextSchema
-     **/
-    public function setOverdosage($overdosage) {
-        $this->properties['overdosage'] = $overdosage;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getOverdosage() {
-        return $this->properties['overdosage'];
-    }
-
-    /**
-     * Pregnancy category of this drug.
-     *
-     * @param $pregnancyCategory DrugPregnancyCategorySchema
-     **/
-    public function setPregnancyCategory($pregnancyCategory) {
-        $this->properties['pregnancyCategory'] = $pregnancyCategory;
-
-        return $this;
-    }
-
-    /**
-     * @return DrugPregnancyCategorySchema
-     **/
-    public function getPregnancyCategory() {
-        return $this->properties['pregnancyCategory'];
-    }
-
-    /**
      * Any precaution, guidance, contraindication, etc. related to this drug's use during pregnancy.
      *
-     * @param $pregnancyWarning TextSchema
+     * @param $pregnancyWarning 
      **/
     public function setPregnancyWarning($pregnancyWarning) {
         $this->properties['pregnancyWarning'] = $pregnancyWarning;
@@ -428,34 +68,106 @@ class DrugSchema extends MedicalTherapySchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getPregnancyWarning() {
         return $this->properties['pregnancyWarning'];
     }
 
     /**
-     * Link to prescribing information for the drug.
+     * The class of drug this belongs to (e.g., statins).
      *
-     * @param $prescribingInfo URLSchema
+     * @param $drugClass 
      **/
-    public function setPrescribingInfo($prescribingInfo) {
-        $this->properties['prescribingInfo'] = $prescribingInfo;
+    public function setDrugClass($drugClass) {
+        $this->properties['drugClass'] = $drugClass;
 
         return $this;
     }
 
     /**
-     * @return URLSchema
+     * @return 
      **/
-    public function getPrescribingInfo() {
-        return $this->properties['prescribingInfo'];
+    public function getDrugClass() {
+        return $this->properties['drugClass'];
     }
 
     /**
-     * Indicates whether this drug is available by prescription or over-the-counter.
+     * The drug or supplement's legal status, including any controlled substance schedules that apply.
      *
-     * @param $prescriptionStatus DrugPrescriptionStatusSchema
+     * @param $legalStatus ||
+     **/
+    public function setLegalStatus($legalStatus) {
+        $this->properties['legalStatus'] = $legalStatus;
+
+        return $this;
+    }
+
+    /**
+     * @return ||
+     **/
+    public function getLegalStatus() {
+        return $this->properties['legalStatus'];
+    }
+
+    /**
+     * Description of the absorption and elimination of drugs, including their concentration (pharmacokinetics, pK) and biological effects (pharmacodynamics, pD).
+     *
+     * @param $clinicalPharmacology 
+     **/
+    public function setClinicalPharmacology($clinicalPharmacology) {
+        $this->properties['clinicalPharmacology'] = $clinicalPharmacology;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getClinicalPharmacology() {
+        return $this->properties['clinicalPharmacology'];
+    }
+
+    /**
+     * A dosage form in which this drug/supplement is available, e.g. 'tablet', 'suspension', 'injection'.
+     *
+     * @param $dosageForm 
+     **/
+    public function setDosageForm($dosageForm) {
+        $this->properties['dosageForm'] = $dosageForm;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getDosageForm() {
+        return $this->properties['dosageForm'];
+    }
+
+    /**
+     * True if the drug is available in a generic form (regardless of name).
+     *
+     * @param $isAvailableGenerically 
+     **/
+    public function setIsAvailableGenerically($isAvailableGenerically) {
+        $this->properties['isAvailableGenerically'] = $isAvailableGenerically;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getIsAvailableGenerically() {
+        return $this->properties['isAvailableGenerically'];
+    }
+
+    /**
+     * Indicates the status of drug prescription, e.g. local catalogs classifications or whether the drug is available by prescription or over-the-counter, etc.
+     *
+     * @param $prescriptionStatus |
      **/
     public function setPrescriptionStatus($prescriptionStatus) {
         $this->properties['prescriptionStatus'] = $prescriptionStatus;
@@ -464,16 +176,52 @@ class DrugSchema extends MedicalTherapySchema
     }
 
     /**
-     * @return DrugPrescriptionStatusSchema
+     * @return |
      **/
     public function getPrescriptionStatus() {
         return $this->properties['prescriptionStatus'];
     }
 
     /**
+     * Any precaution, guidance, contraindication, etc. related to this drug's use by breastfeeding mothers.
+     *
+     * @param $breastfeedingWarning 
+     **/
+    public function setBreastfeedingWarning($breastfeedingWarning) {
+        $this->properties['breastfeedingWarning'] = $breastfeedingWarning;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getBreastfeedingWarning() {
+        return $this->properties['breastfeedingWarning'];
+    }
+
+    /**
+     * Any precaution, guidance, contraindication, etc. related to consumption of alcohol while taking this drug.
+     *
+     * @param $alcoholWarning 
+     **/
+    public function setAlcoholWarning($alcoholWarning) {
+        $this->properties['alcoholWarning'] = $alcoholWarning;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getAlcoholWarning() {
+        return $this->properties['alcoholWarning'];
+    }
+
+    /**
      * Any other drug related to this one, for example commonly-prescribed alternatives.
      *
-     * @param $relatedDrug DrugSchema
+     * @param $relatedDrug 
      **/
     public function setRelatedDrug($relatedDrug) {
         $this->properties['relatedDrug'] = $relatedDrug;
@@ -482,16 +230,160 @@ class DrugSchema extends MedicalTherapySchema
     }
 
     /**
-     * @return DrugSchema
+     * @return 
      **/
     public function getRelatedDrug() {
         return $this->properties['relatedDrug'];
     }
 
     /**
+     * The specific biochemical interaction through which this drug or supplement produces its pharmacological effect.
+     *
+     * @param $mechanismOfAction 
+     **/
+    public function setMechanismOfAction($mechanismOfAction) {
+        $this->properties['mechanismOfAction'] = $mechanismOfAction;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getMechanismOfAction() {
+        return $this->properties['mechanismOfAction'];
+    }
+
+    /**
+     * True if this item's name is a proprietary/brand name (vs. generic name).
+     *
+     * @param $isProprietary 
+     **/
+    public function setIsProprietary($isProprietary) {
+        $this->properties['isProprietary'] = $isProprietary;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getIsProprietary() {
+        return $this->properties['isProprietary'];
+    }
+
+    /**
+     * Another drug that is known to interact with this drug in a way that impacts the effect of this drug or causes a risk to the patient. Note: disease interactions are typically captured as contraindications.
+     *
+     * @param $interactingDrug 
+     **/
+    public function setInteractingDrug($interactingDrug) {
+        $this->properties['interactingDrug'] = $interactingDrug;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getInteractingDrug() {
+        return $this->properties['interactingDrug'];
+    }
+
+    /**
+     * Description of the absorption and elimination of drugs, including their concentration (pharmacokinetics, pK) and biological effects (pharmacodynamics, pD).
+     *
+     * @param $clincalPharmacology 
+     **/
+    public function setClincalPharmacology($clincalPharmacology) {
+        $this->properties['clincalPharmacology'] = $clincalPharmacology;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getClincalPharmacology() {
+        return $this->properties['clincalPharmacology'];
+    }
+
+    /**
+     * Any information related to overdose on a drug, including signs or symptoms, treatments, contact information for emergency response.
+     *
+     * @param $overdosage 
+     **/
+    public function setOverdosage($overdosage) {
+        $this->properties['overdosage'] = $overdosage;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getOverdosage() {
+        return $this->properties['overdosage'];
+    }
+
+    /**
+     * Any precaution, guidance, contraindication, etc. related to consumption of specific foods while taking this drug.
+     *
+     * @param $foodWarning 
+     **/
+    public function setFoodWarning($foodWarning) {
+        $this->properties['foodWarning'] = $foodWarning;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getFoodWarning() {
+        return $this->properties['foodWarning'];
+    }
+
+    /**
+     * Pregnancy category of this drug.
+     *
+     * @param $pregnancyCategory 
+     **/
+    public function setPregnancyCategory($pregnancyCategory) {
+        $this->properties['pregnancyCategory'] = $pregnancyCategory;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getPregnancyCategory() {
+        return $this->properties['pregnancyCategory'];
+    }
+
+    /**
+     * An available dosage strength for the drug.
+     *
+     * @param $availableStrength 
+     **/
+    public function setAvailableStrength($availableStrength) {
+        $this->properties['availableStrength'] = $availableStrength;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getAvailableStrength() {
+        return $this->properties['availableStrength'];
+    }
+
+    /**
      * Any FDA or other warnings about the drug (text or URL).
      *
-     * @param $warning TextSchema|URLSchema
+     * @param $warning |
      **/
     public function setWarning($warning) {
         $this->properties['warning'] = $warning;
@@ -500,10 +392,190 @@ class DrugSchema extends MedicalTherapySchema
     }
 
     /**
-     * @return TextSchema|URLSchema
+     * @return |
      **/
     public function getWarning() {
         return $this->properties['warning'];
+    }
+
+    /**
+     * A route by which this drug may be administered, e.g. 'oral'.
+     *
+     * @param $administrationRoute 
+     **/
+    public function setAdministrationRoute($administrationRoute) {
+        $this->properties['administrationRoute'] = $administrationRoute;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getAdministrationRoute() {
+        return $this->properties['administrationRoute'];
+    }
+
+    /**
+     * Proprietary name given to the diet plan, typically by its originator or creator.
+     *
+     * @param $proprietaryName 
+     **/
+    public function setProprietaryName($proprietaryName) {
+        $this->properties['proprietaryName'] = $proprietaryName;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getProprietaryName() {
+        return $this->properties['proprietaryName'];
+    }
+
+    /**
+     * Link to prescribing information for the drug.
+     *
+     * @param $prescribingInfo 
+     **/
+    public function setPrescribingInfo($prescribingInfo) {
+        $this->properties['prescribingInfo'] = $prescribingInfo;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getPrescribingInfo() {
+        return $this->properties['prescribingInfo'];
+    }
+
+    /**
+     * Recommended intake of this supplement for a given population as defined by a specific recommending authority.
+     *
+     * @param $maximumIntake 
+     **/
+    public function setMaximumIntake($maximumIntake) {
+        $this->properties['maximumIntake'] = $maximumIntake;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getMaximumIntake() {
+        return $this->properties['maximumIntake'];
+    }
+
+    /**
+     * The generic name of this drug or supplement.
+     *
+     * @param $nonProprietaryName 
+     **/
+    public function setNonProprietaryName($nonProprietaryName) {
+        $this->properties['nonProprietaryName'] = $nonProprietaryName;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getNonProprietaryName() {
+        return $this->properties['nonProprietaryName'];
+    }
+
+    /**
+     * The unit in which the drug is measured, e.g. '5 mg tablet'.
+     *
+     * @param $drugUnit 
+     **/
+    public function setDrugUnit($drugUnit) {
+        $this->properties['drugUnit'] = $drugUnit;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getDrugUnit() {
+        return $this->properties['drugUnit'];
+    }
+
+    /**
+     * An active ingredient, typically chemical compounds and/or biologic substances.
+     *
+     * @param $activeIngredient 
+     **/
+    public function setActiveIngredient($activeIngredient) {
+        $this->properties['activeIngredient'] = $activeIngredient;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getActiveIngredient() {
+        return $this->properties['activeIngredient'];
+    }
+
+    /**
+     * Link to the drug's label details.
+     *
+     * @param $labelDetails 
+     **/
+    public function setLabelDetails($labelDetails) {
+        $this->properties['labelDetails'] = $labelDetails;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getLabelDetails() {
+        return $this->properties['labelDetails'];
+    }
+
+    /**
+     * The RxCUI drug identifier from RXNORM.
+     *
+     * @param $rxcui 
+     **/
+    public function setRxcui($rxcui) {
+        $this->properties['rxcui'] = $rxcui;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getRxcui() {
+        return $this->properties['rxcui'];
+    }
+
+    /**
+     * The insurance plans that cover this drug.
+     *
+     * @param $includedInHealthInsurancePlan 
+     **/
+    public function setIncludedInHealthInsurancePlan($includedInHealthInsurancePlan) {
+        $this->properties['includedInHealthInsurancePlan'] = $includedInHealthInsurancePlan;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getIncludedInHealthInsurancePlan() {
+        return $this->properties['includedInHealthInsurancePlan'];
     }
 
 

@@ -31,35 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class AggregateRatingSchema extends RatingSchema
+class AggregateRatingSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new AggregateRatingSchema('http://schema.org/', 'AggregateRating');
-    }
-
-    /**
-     * The item that is being reviewed/rated.
-     *
-     * @param $itemReviewed ThingSchema
-     **/
-    public function setItemReviewed($itemReviewed) {
-        $this->properties['itemReviewed'] = $itemReviewed;
-
-        return $this;
-    }
-
-    /**
-     * @return ThingSchema
-     **/
-    public function getItemReviewed() {
-        return $this->properties['itemReviewed'];
+        return new AggregateRatingSchema('https://schema.org/', 'AggregateRating');
     }
 
     /**
      * The count of total number of ratings.
      *
-     * @param $ratingCount IntegerSchema
+     * @param $ratingCount 
      **/
     public function setRatingCount($ratingCount) {
         $this->properties['ratingCount'] = $ratingCount;
@@ -68,7 +50,7 @@ class AggregateRatingSchema extends RatingSchema
     }
 
     /**
-     * @return IntegerSchema
+     * @return 
      **/
     public function getRatingCount() {
         return $this->properties['ratingCount'];
@@ -77,7 +59,7 @@ class AggregateRatingSchema extends RatingSchema
     /**
      * The count of total number of reviews.
      *
-     * @param $reviewCount IntegerSchema
+     * @param $reviewCount 
      **/
     public function setReviewCount($reviewCount) {
         $this->properties['reviewCount'] = $reviewCount;
@@ -86,10 +68,28 @@ class AggregateRatingSchema extends RatingSchema
     }
 
     /**
-     * @return IntegerSchema
+     * @return 
      **/
     public function getReviewCount() {
         return $this->properties['reviewCount'];
+    }
+
+    /**
+     * The item that is being reviewed/rated.
+     *
+     * @param $itemReviewed 
+     **/
+    public function setItemReviewed($itemReviewed) {
+        $this->properties['itemReviewed'] = $itemReviewed;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getItemReviewed() {
+        return $this->properties['itemReviewed'];
     }
 
 

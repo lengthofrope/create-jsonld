@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PlanActionSchema extends OrganizeActionSchema
+class PlanActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new PlanActionSchema('http://schema.org/', 'PlanAction');
+        return new PlanActionSchema('https://schema.org/', 'PlanAction');
     }
 
     /**
      * The time the object is scheduled to.
      *
-     * @param $scheduledTime DateTimeSchema
+     * @param $scheduledTime |
      **/
     public function setScheduledTime($scheduledTime) {
         $this->properties['scheduledTime'] = $scheduledTime;
@@ -50,7 +50,7 @@ class PlanActionSchema extends OrganizeActionSchema
     }
 
     /**
-     * @return DateTimeSchema
+     * @return |
      **/
     public function getScheduledTime() {
         return $this->properties['scheduledTime'];

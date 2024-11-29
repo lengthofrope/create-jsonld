@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class NailSalonSchema extends HealthAndBeautyBusinessSchema
+class NailSalonSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new NailSalonSchema('http://schema.org/', 'NailSalon');
+        return new NailSalonSchema('https://schema.org/', 'NailSalon');
     }
 
 

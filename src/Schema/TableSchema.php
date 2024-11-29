@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class TableSchema extends WebPageElementSchema
+class TableSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new TableSchema('http://schema.org/', 'Table');
+        return new TableSchema('https://schema.org/', 'Table');
     }
 
 

@@ -31,29 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class AllocateActionSchema extends OrganizeActionSchema
+class AllocateActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new AllocateActionSchema('http://schema.org/', 'AllocateAction');
-    }
-
-    /**
-     * A goal towards an action is taken. Can be concrete or abstract.
-     *
-     * @param $purpose MedicalDevicePurposeSchema|ThingSchema
-     **/
-    public function setPurpose($purpose) {
-        $this->properties['purpose'] = $purpose;
-
-        return $this;
-    }
-
-    /**
-     * @return MedicalDevicePurposeSchema|ThingSchema
-     **/
-    public function getPurpose() {
-        return $this->properties['purpose'];
+        return new AllocateActionSchema('https://schema.org/', 'AllocateAction');
     }
 
 

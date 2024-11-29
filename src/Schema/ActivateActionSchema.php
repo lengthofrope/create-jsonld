@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ActivateActionSchema extends ControlActionSchema
+class ActivateActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new ActivateActionSchema('http://schema.org/', 'ActivateAction');
+        return new ActivateActionSchema('https://schema.org/', 'ActivateAction');
     }
 
 

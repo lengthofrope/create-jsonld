@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class BookmarkActionSchema extends OrganizeActionSchema
+class BookmarkActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new BookmarkActionSchema('http://schema.org/', 'BookmarkAction');
+        return new BookmarkActionSchema('https://schema.org/', 'BookmarkAction');
     }
 
 

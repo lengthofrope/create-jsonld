@@ -27,75 +27,21 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A reservation for a rental car.Note: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations.
+ * A reservation for a rental car.\n\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class RentalCarReservationSchema extends ReservationSchema
+class RentalCarReservationSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new RentalCarReservationSchema('http://schema.org/', 'RentalCarReservation');
+        return new RentalCarReservationSchema('https://schema.org/', 'RentalCarReservation');
     }
 
     /**
-     * Where a rental car can be dropped off.
+     * When a taxi will pick up a passenger or a rental car can be picked up.
      *
-     * @param $dropoffLocation PlaceSchema
-     **/
-    public function setDropoffLocation($dropoffLocation) {
-        $this->properties['dropoffLocation'] = $dropoffLocation;
-
-        return $this;
-    }
-
-    /**
-     * @return PlaceSchema
-     **/
-    public function getDropoffLocation() {
-        return $this->properties['dropoffLocation'];
-    }
-
-    /**
-     * When a rental car can be dropped off.
-     *
-     * @param $dropoffTime DateTimeSchema
-     **/
-    public function setDropoffTime($dropoffTime) {
-        $this->properties['dropoffTime'] = $dropoffTime;
-
-        return $this;
-    }
-
-    /**
-     * @return DateTimeSchema
-     **/
-    public function getDropoffTime() {
-        return $this->properties['dropoffTime'];
-    }
-
-    /**
-     * Where a taxi will pick up a passenger or a rental car can be picked up.
-     *
-     * @param $pickupLocation PlaceSchema
-     **/
-    public function setPickupLocation($pickupLocation) {
-        $this->properties['pickupLocation'] = $pickupLocation;
-
-        return $this;
-    }
-
-    /**
-     * @return PlaceSchema
-     **/
-    public function getPickupLocation() {
-        return $this->properties['pickupLocation'];
-    }
-
-    /**
-     * When a taxi will pickup a passenger or a rental car can be picked up.
-     *
-     * @param $pickupTime DateTimeSchema
+     * @param $pickupTime 
      **/
     public function setPickupTime($pickupTime) {
         $this->properties['pickupTime'] = $pickupTime;
@@ -104,10 +50,64 @@ class RentalCarReservationSchema extends ReservationSchema
     }
 
     /**
-     * @return DateTimeSchema
+     * @return 
      **/
     public function getPickupTime() {
         return $this->properties['pickupTime'];
+    }
+
+    /**
+     * When a rental car can be dropped off.
+     *
+     * @param $dropoffTime 
+     **/
+    public function setDropoffTime($dropoffTime) {
+        $this->properties['dropoffTime'] = $dropoffTime;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getDropoffTime() {
+        return $this->properties['dropoffTime'];
+    }
+
+    /**
+     * Where a taxi will pick up a passenger or a rental car can be picked up.
+     *
+     * @param $pickupLocation 
+     **/
+    public function setPickupLocation($pickupLocation) {
+        $this->properties['pickupLocation'] = $pickupLocation;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getPickupLocation() {
+        return $this->properties['pickupLocation'];
+    }
+
+    /**
+     * Where a rental car can be dropped off.
+     *
+     * @param $dropoffLocation 
+     **/
+    public function setDropoffLocation($dropoffLocation) {
+        $this->properties['dropoffLocation'] = $dropoffLocation;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getDropoffLocation() {
+        return $this->properties['dropoffLocation'];
     }
 
 

@@ -27,21 +27,21 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * An agent approves/certifies/likes/supports/sanction an object.
+ * An agent approves/certifies/likes/supports/sanctions an object.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class EndorseActionSchema extends ReactActionSchema
+class EndorseActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new EndorseActionSchema('http://schema.org/', 'EndorseAction');
+        return new EndorseActionSchema('https://schema.org/', 'EndorseAction');
     }
 
     /**
      * A sub property of participant. The person/organization being supported.
      *
-     * @param $endorsee OrganizationSchema|PersonSchema
+     * @param $endorsee |
      **/
     public function setEndorsee($endorsee) {
         $this->properties['endorsee'] = $endorsee;
@@ -50,7 +50,7 @@ class EndorseActionSchema extends ReactActionSchema
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema
+     * @return |
      **/
     public function getEndorsee() {
         return $this->properties['endorsee'];

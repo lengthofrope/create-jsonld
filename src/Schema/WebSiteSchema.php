@@ -31,11 +31,29 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class WebSiteSchema extends CreativeWorkSchema
+class WebSiteSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new WebSiteSchema('http://schema.org/', 'WebSite');
+        return new WebSiteSchema('https://schema.org/', 'WebSite');
+    }
+
+    /**
+     * The International Standard Serial Number (ISSN) that identifies this serial publication. You can repeat this property to identify different formats of, or the linking ISSN (ISSN-L) for, this serial publication.
+     *
+     * @param $issn 
+     **/
+    public function setIssn($issn) {
+        $this->properties['issn'] = $issn;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getIssn() {
+        return $this->properties['issn'];
     }
 
 

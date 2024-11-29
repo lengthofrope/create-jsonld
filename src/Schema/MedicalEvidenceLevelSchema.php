@@ -35,7 +35,7 @@ class MedicalEvidenceLevelSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MedicalEvidenceLevelSchema('http://schema.org/', 'MedicalEvidenceLevel');
+        return new MedicalEvidenceLevelSchema('https://schema.org/', 'MedicalEvidenceLevel');
     }
 
 

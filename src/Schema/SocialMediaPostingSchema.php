@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class SocialMediaPostingSchema extends ArticleSchema
+class SocialMediaPostingSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new SocialMediaPostingSchema('http://schema.org/', 'SocialMediaPosting');
+        return new SocialMediaPostingSchema('https://schema.org/', 'SocialMediaPosting');
     }
 
     /**
      * A CreativeWork such as an image, video, or audio clip shared as part of this posting.
      *
-     * @param $sharedContent CreativeWorkSchema
+     * @param $sharedContent 
      **/
     public function setSharedContent($sharedContent) {
         $this->properties['sharedContent'] = $sharedContent;
@@ -50,7 +50,7 @@ class SocialMediaPostingSchema extends ArticleSchema
     }
 
     /**
-     * @return CreativeWorkSchema
+     * @return 
      **/
     public function getSharedContent() {
         return $this->properties['sharedContent'];

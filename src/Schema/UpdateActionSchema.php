@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class UpdateActionSchema extends ActionSchema
+class UpdateActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new UpdateActionSchema('http://schema.org/', 'UpdateAction');
+        return new UpdateActionSchema('https://schema.org/', 'UpdateAction');
     }
 
     /**
      * A sub property of object. The collection target of the action.
      *
-     * @param $collection ThingSchema
+     * @param $collection 
      **/
     public function setCollection($collection) {
         $this->properties['collection'] = $collection;
@@ -50,7 +50,7 @@ class UpdateActionSchema extends ActionSchema
     }
 
     /**
-     * @return ThingSchema
+     * @return 
      **/
     public function getCollection() {
         return $this->properties['collection'];
@@ -59,7 +59,7 @@ class UpdateActionSchema extends ActionSchema
     /**
      * A sub property of object. The collection target of the action.
      *
-     * @param $targetCollection ThingSchema
+     * @param $targetCollection 
      **/
     public function setTargetCollection($targetCollection) {
         $this->properties['targetCollection'] = $targetCollection;
@@ -68,7 +68,7 @@ class UpdateActionSchema extends ActionSchema
     }
 
     /**
-     * @return ThingSchema
+     * @return 
      **/
     public function getTargetCollection() {
         return $this->properties['targetCollection'];

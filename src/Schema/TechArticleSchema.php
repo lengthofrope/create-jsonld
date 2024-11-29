@@ -31,35 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class TechArticleSchema extends ArticleSchema
+class TechArticleSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new TechArticleSchema('http://schema.org/', 'TechArticle');
-    }
-
-    /**
-     * Prerequisites needed to fulfill steps in article.
-     *
-     * @param $dependencies TextSchema
-     **/
-    public function setDependencies($dependencies) {
-        $this->properties['dependencies'] = $dependencies;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getDependencies() {
-        return $this->properties['dependencies'];
+        return new TechArticleSchema('https://schema.org/', 'TechArticle');
     }
 
     /**
      * Proficiency needed for this content; expected values: 'Beginner', 'Expert'.
      *
-     * @param $proficiencyLevel TextSchema
+     * @param $proficiencyLevel 
      **/
     public function setProficiencyLevel($proficiencyLevel) {
         $this->properties['proficiencyLevel'] = $proficiencyLevel;
@@ -68,10 +50,28 @@ class TechArticleSchema extends ArticleSchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getProficiencyLevel() {
         return $this->properties['proficiencyLevel'];
+    }
+
+    /**
+     * Prerequisites needed to fulfill steps in article.
+     *
+     * @param $dependencies 
+     **/
+    public function setDependencies($dependencies) {
+        $this->properties['dependencies'] = $dependencies;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getDependencies() {
+        return $this->properties['dependencies'];
     }
 
 

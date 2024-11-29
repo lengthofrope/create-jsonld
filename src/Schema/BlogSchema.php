@@ -27,21 +27,21 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A blog.
+ * A [blog](https://en.wikipedia.org/wiki/Blog), sometimes known as a "weblog". Note that the individual posts ([[BlogPosting]]s) in a [[Blog]] are often colloquially referred to by the same term.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class BlogSchema extends CreativeWorkSchema
+class BlogSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new BlogSchema('http://schema.org/', 'Blog');
+        return new BlogSchema('https://schema.org/', 'Blog');
     }
 
     /**
      * A posting that is part of this blog.
      *
-     * @param $blogPost BlogPostingSchema
+     * @param $blogPost 
      **/
     public function setBlogPost($blogPost) {
         $this->properties['blogPost'] = $blogPost;
@@ -50,16 +50,34 @@ class BlogSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return BlogPostingSchema
+     * @return 
      **/
     public function getBlogPost() {
         return $this->properties['blogPost'];
     }
 
     /**
-     * The postings that are part of this blog.
+     * The International Standard Serial Number (ISSN) that identifies this serial publication. You can repeat this property to identify different formats of, or the linking ISSN (ISSN-L) for, this serial publication.
      *
-     * @param $blogPosts BlogPostingSchema
+     * @param $issn 
+     **/
+    public function setIssn($issn) {
+        $this->properties['issn'] = $issn;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getIssn() {
+        return $this->properties['issn'];
+    }
+
+    /**
+     * Indicates a post that is part of a [[Blog]]. Note that historically, what we term a "Blog" was once known as a "weblog", and that what we term a "BlogPosting" is now often colloquially referred to as a "blog".
+     *
+     * @param $blogPosts 
      **/
     public function setBlogPosts($blogPosts) {
         $this->properties['blogPosts'] = $blogPosts;
@@ -68,7 +86,7 @@ class BlogSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return BlogPostingSchema
+     * @return 
      **/
     public function getBlogPosts() {
         return $this->properties['blogPosts'];

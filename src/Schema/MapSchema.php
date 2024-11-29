@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MapSchema extends CreativeWorkSchema
+class MapSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MapSchema('http://schema.org/', 'Map');
+        return new MapSchema('https://schema.org/', 'Map');
     }
 
     /**
      * Indicates the kind of Map, from the MapCategoryType Enumeration.
      *
-     * @param $mapType MapCategoryTypeSchema
+     * @param $mapType 
      **/
     public function setMapType($mapType) {
         $this->properties['mapType'] = $mapType;
@@ -50,7 +50,7 @@ class MapSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return MapCategoryTypeSchema
+     * @return 
      **/
     public function getMapType() {
         return $this->properties['mapType'];

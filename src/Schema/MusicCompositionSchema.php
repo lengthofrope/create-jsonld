@@ -31,35 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MusicCompositionSchema extends CreativeWorkSchema
+class MusicCompositionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MusicCompositionSchema('http://schema.org/', 'MusicComposition');
-    }
-
-    /**
-     * The person or organization who wrote the composition.
-     *
-     * @param $composer PersonSchema|OrganizationSchema
-     **/
-    public function setComposer($composer) {
-        $this->properties['composer'] = $composer;
-
-        return $this;
-    }
-
-    /**
-     * @return PersonSchema|OrganizationSchema
-     **/
-    public function getComposer() {
-        return $this->properties['composer'];
+        return new MusicCompositionSchema('https://schema.org/', 'MusicComposition');
     }
 
     /**
      * The date and place the work was first performed.
      *
-     * @param $firstPerformance EventSchema
+     * @param $firstPerformance 
      **/
     public function setFirstPerformance($firstPerformance) {
         $this->properties['firstPerformance'] = $firstPerformance;
@@ -68,142 +50,16 @@ class MusicCompositionSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return EventSchema
+     * @return 
      **/
     public function getFirstPerformance() {
         return $this->properties['firstPerformance'];
     }
 
     /**
-     * Smaller compositions included in this work (e.g. a movement in a symphony).
-     *
-     * @param $includedComposition MusicCompositionSchema
-     **/
-    public function setIncludedComposition($includedComposition) {
-        $this->properties['includedComposition'] = $includedComposition;
-
-        return $this;
-    }
-
-    /**
-     * @return MusicCompositionSchema
-     **/
-    public function getIncludedComposition() {
-        return $this->properties['includedComposition'];
-    }
-
-    /**
-     * The International Standard Musical Work Code for the composition.
-     *
-     * @param $iswcCode TextSchema
-     **/
-    public function setIswcCode($iswcCode) {
-        $this->properties['iswcCode'] = $iswcCode;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getIswcCode() {
-        return $this->properties['iswcCode'];
-    }
-
-    /**
-     * The person who wrote the words.
-     *
-     * @param $lyricist PersonSchema
-     **/
-    public function setLyricist($lyricist) {
-        $this->properties['lyricist'] = $lyricist;
-
-        return $this;
-    }
-
-    /**
-     * @return PersonSchema
-     **/
-    public function getLyricist() {
-        return $this->properties['lyricist'];
-    }
-
-    /**
-     * The words in the song.
-     *
-     * @param $lyrics CreativeWorkSchema
-     **/
-    public function setLyrics($lyrics) {
-        $this->properties['lyrics'] = $lyrics;
-
-        return $this;
-    }
-
-    /**
-     * @return CreativeWorkSchema
-     **/
-    public function getLyrics() {
-        return $this->properties['lyrics'];
-    }
-
-    /**
-     * An arrangement derived from the composition.
-     *
-     * @param $musicArrangement MusicCompositionSchema
-     **/
-    public function setMusicArrangement($musicArrangement) {
-        $this->properties['musicArrangement'] = $musicArrangement;
-
-        return $this;
-    }
-
-    /**
-     * @return MusicCompositionSchema
-     **/
-    public function getMusicArrangement() {
-        return $this->properties['musicArrangement'];
-    }
-
-    /**
-     * The type of composition (e.g. overture, sonata, symphony, etc.).
-     *
-     * @param $musicCompositionForm TextSchema
-     **/
-    public function setMusicCompositionForm($musicCompositionForm) {
-        $this->properties['musicCompositionForm'] = $musicCompositionForm;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getMusicCompositionForm() {
-        return $this->properties['musicCompositionForm'];
-    }
-
-    /**
-     * The key, mode, or scale this composition uses.
-     *
-     * @param $musicalKey TextSchema
-     **/
-    public function setMusicalKey($musicalKey) {
-        $this->properties['musicalKey'] = $musicalKey;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getMusicalKey() {
-        return $this->properties['musicalKey'];
-    }
-
-    /**
      * An audio recording of the work.
      *
-     * @param $recordedAs MusicRecordingSchema
+     * @param $recordedAs 
      **/
     public function setRecordedAs($recordedAs) {
         $this->properties['recordedAs'] = $recordedAs;
@@ -212,10 +68,154 @@ class MusicCompositionSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return MusicRecordingSchema
+     * @return 
      **/
     public function getRecordedAs() {
         return $this->properties['recordedAs'];
+    }
+
+    /**
+     * The words in the song.
+     *
+     * @param $lyrics 
+     **/
+    public function setLyrics($lyrics) {
+        $this->properties['lyrics'] = $lyrics;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getLyrics() {
+        return $this->properties['lyrics'];
+    }
+
+    /**
+     * The International Standard Musical Work Code for the composition.
+     *
+     * @param $iswcCode 
+     **/
+    public function setIswcCode($iswcCode) {
+        $this->properties['iswcCode'] = $iswcCode;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getIswcCode() {
+        return $this->properties['iswcCode'];
+    }
+
+    /**
+     * Smaller compositions included in this work (e.g. a movement in a symphony).
+     *
+     * @param $includedComposition 
+     **/
+    public function setIncludedComposition($includedComposition) {
+        $this->properties['includedComposition'] = $includedComposition;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getIncludedComposition() {
+        return $this->properties['includedComposition'];
+    }
+
+    /**
+     * The person who wrote the words.
+     *
+     * @param $lyricist 
+     **/
+    public function setLyricist($lyricist) {
+        $this->properties['lyricist'] = $lyricist;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getLyricist() {
+        return $this->properties['lyricist'];
+    }
+
+    /**
+     * An arrangement derived from the composition.
+     *
+     * @param $musicArrangement 
+     **/
+    public function setMusicArrangement($musicArrangement) {
+        $this->properties['musicArrangement'] = $musicArrangement;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getMusicArrangement() {
+        return $this->properties['musicArrangement'];
+    }
+
+    /**
+     * The type of composition (e.g. overture, sonata, symphony, etc.).
+     *
+     * @param $musicCompositionForm 
+     **/
+    public function setMusicCompositionForm($musicCompositionForm) {
+        $this->properties['musicCompositionForm'] = $musicCompositionForm;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getMusicCompositionForm() {
+        return $this->properties['musicCompositionForm'];
+    }
+
+    /**
+     * The key, mode, or scale this composition uses.
+     *
+     * @param $musicalKey 
+     **/
+    public function setMusicalKey($musicalKey) {
+        $this->properties['musicalKey'] = $musicalKey;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getMusicalKey() {
+        return $this->properties['musicalKey'];
+    }
+
+    /**
+     * The person or organization who wrote a composition, or who is the composer of a work performed at some event.
+     *
+     * @param $composer |
+     **/
+    public function setComposer($composer) {
+        $this->properties['composer'] = $composer;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getComposer() {
+        return $this->properties['composer'];
     }
 
 

@@ -31,53 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ArterySchema extends VesselSchema
+class ArterySchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new ArterySchema('http://schema.org/', 'Artery');
-    }
-
-    /**
-     * The branches that comprise the arterial structure.
-     *
-     * @param $arterialBranch AnatomicalStructureSchema
-     **/
-    public function setArterialBranch($arterialBranch) {
-        $this->properties['arterialBranch'] = $arterialBranch;
-
-        return $this;
-    }
-
-    /**
-     * @return AnatomicalStructureSchema
-     **/
-    public function getArterialBranch() {
-        return $this->properties['arterialBranch'];
-    }
-
-    /**
-     * The anatomical or organ system that the artery originates from.
-     *
-     * @param $source AnatomicalStructureSchema
-     **/
-    public function setSource($source) {
-        $this->properties['source'] = $source;
-
-        return $this;
-    }
-
-    /**
-     * @return AnatomicalStructureSchema
-     **/
-    public function getSource() {
-        return $this->properties['source'];
+        return new ArterySchema('https://schema.org/', 'Artery');
     }
 
     /**
      * The area to which the artery supplies blood.
      *
-     * @param $supplyTo AnatomicalStructureSchema
+     * @param $supplyTo 
      **/
     public function setSupplyTo($supplyTo) {
         $this->properties['supplyTo'] = $supplyTo;
@@ -86,10 +50,28 @@ class ArterySchema extends VesselSchema
     }
 
     /**
-     * @return AnatomicalStructureSchema
+     * @return 
      **/
     public function getSupplyTo() {
         return $this->properties['supplyTo'];
+    }
+
+    /**
+     * The branches that comprise the arterial structure.
+     *
+     * @param $arterialBranch 
+     **/
+    public function setArterialBranch($arterialBranch) {
+        $this->properties['arterialBranch'] = $arterialBranch;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getArterialBranch() {
+        return $this->properties['arterialBranch'];
     }
 
 

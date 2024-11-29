@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PerformanceRoleSchema extends RoleSchema
+class PerformanceRoleSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new PerformanceRoleSchema('http://schema.org/', 'PerformanceRole');
+        return new PerformanceRoleSchema('https://schema.org/', 'PerformanceRole');
     }
 
     /**
      * The name of a character played in some acting or performing role, i.e. in a PerformanceRole.
      *
-     * @param $characterName TextSchema
+     * @param $characterName 
      **/
     public function setCharacterName($characterName) {
         $this->properties['characterName'] = $characterName;
@@ -50,7 +50,7 @@ class PerformanceRoleSchema extends RoleSchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getCharacterName() {
         return $this->properties['characterName'];

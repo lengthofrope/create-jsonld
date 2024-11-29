@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class BrainStructureSchema extends AnatomicalStructureSchema
+class BrainStructureSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new BrainStructureSchema('http://schema.org/', 'BrainStructure');
+        return new BrainStructureSchema('https://schema.org/', 'BrainStructure');
     }
 
 

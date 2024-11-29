@@ -27,15 +27,15 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A media season e.g. tv, radio, video game etc.
+ * A media season, e.g. TV, radio, video game etc.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class SeasonSchema extends CreativeWorkSchema
+class SeasonSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new SeasonSchema('http://schema.org/', 'Season');
+        return new SeasonSchema('https://schema.org/', 'Season');
     }
 
 

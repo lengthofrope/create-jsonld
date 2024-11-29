@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MedicalRiskEstimatorSchema extends MedicalEntitySchema
+class MedicalRiskEstimatorSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MedicalRiskEstimatorSchema('http://schema.org/', 'MedicalRiskEstimator');
+        return new MedicalRiskEstimatorSchema('https://schema.org/', 'MedicalRiskEstimator');
     }
 
     /**
      * The condition, complication, or symptom whose risk is being estimated.
      *
-     * @param $estimatesRiskOf MedicalEntitySchema
+     * @param $estimatesRiskOf 
      **/
     public function setEstimatesRiskOf($estimatesRiskOf) {
         $this->properties['estimatesRiskOf'] = $estimatesRiskOf;
@@ -50,7 +50,7 @@ class MedicalRiskEstimatorSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return MedicalEntitySchema
+     * @return 
      **/
     public function getEstimatesRiskOf() {
         return $this->properties['estimatesRiskOf'];
@@ -59,7 +59,7 @@ class MedicalRiskEstimatorSchema extends MedicalEntitySchema
     /**
      * A modifiable or non-modifiable risk factor included in the calculation, e.g. age, coexisting condition.
      *
-     * @param $includedRiskFactor MedicalRiskFactorSchema
+     * @param $includedRiskFactor 
      **/
     public function setIncludedRiskFactor($includedRiskFactor) {
         $this->properties['includedRiskFactor'] = $includedRiskFactor;
@@ -68,7 +68,7 @@ class MedicalRiskEstimatorSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return MedicalRiskFactorSchema
+     * @return 
      **/
     public function getIncludedRiskFactor() {
         return $this->properties['includedRiskFactor'];

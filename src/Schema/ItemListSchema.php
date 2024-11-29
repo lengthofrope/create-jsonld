@@ -31,57 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ItemListSchema extends IntangibleSchema
+class ItemListSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new ItemListSchema('http://schema.org/', 'ItemList');
-    }
-
-    /**
-     * For itemListElement values, you can use simple strings (e.g. "Peter", "Paul", "Mary"), existing entities, or use ListItem.
-    <br/><br/>
-    Text values are best if the elements in the list are plain strings. Existing entities are best for a simple, unordered list of existing things in your data. ListItem is used with ordered lists when you want to provide additional context about the element in that list or when the same item might be in different places in different lists.
-    <br/><br/>
-    Note: The order of elements in your mark-up is not sufficient for indicating the order or elements.  Use ListItem with a 'position' property in such cases.
-     *
-     * @param $itemListElement TextSchema|ListItemSchema|ThingSchema
-     **/
-    public function setItemListElement($itemListElement) {
-        $this->properties['itemListElement'] = $itemListElement;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema|ListItemSchema|ThingSchema
-     **/
-    public function getItemListElement() {
-        return $this->properties['itemListElement'];
-    }
-
-    /**
-     * Type of ordering (e.g. Ascending, Descending, Unordered).
-     *
-     * @param $itemListOrder ItemListOrderTypeSchema|TextSchema
-     **/
-    public function setItemListOrder($itemListOrder) {
-        $this->properties['itemListOrder'] = $itemListOrder;
-
-        return $this;
-    }
-
-    /**
-     * @return ItemListOrderTypeSchema|TextSchema
-     **/
-    public function getItemListOrder() {
-        return $this->properties['itemListOrder'];
+        return new ItemListSchema('https://schema.org/', 'ItemList');
     }
 
     /**
      * The number of items in an ItemList. Note that some descriptions might not fully describe all items in a list (e.g., multi-page pagination); in such cases, the numberOfItems would be for the entire list.
      *
-     * @param $numberOfItems IntegerSchema
+     * @param $numberOfItems 
      **/
     public function setNumberOfItems($numberOfItems) {
         $this->properties['numberOfItems'] = $numberOfItems;
@@ -90,10 +50,46 @@ class ItemListSchema extends IntangibleSchema
     }
 
     /**
-     * @return IntegerSchema
+     * @return 
      **/
     public function getNumberOfItems() {
         return $this->properties['numberOfItems'];
+    }
+
+    /**
+     * For itemListElement values, you can use simple strings (e.g. "Peter", "Paul", "Mary"), existing entities, or use ListItem.\n\nText values are best if the elements in the list are plain strings. Existing entities are best for a simple, unordered list of existing things in your data. ListItem is used with ordered lists when you want to provide additional context about the element in that list or when the same item might be in different places in different lists.\n\nNote: The order of elements in your mark-up is not sufficient for indicating the order or elements.  Use ListItem with a 'position' property in such cases.
+     *
+     * @param $itemListElement ||
+     **/
+    public function setItemListElement($itemListElement) {
+        $this->properties['itemListElement'] = $itemListElement;
+
+        return $this;
+    }
+
+    /**
+     * @return ||
+     **/
+    public function getItemListElement() {
+        return $this->properties['itemListElement'];
+    }
+
+    /**
+     * Type of ordering (e.g. Ascending, Descending, Unordered).
+     *
+     * @param $itemListOrder |
+     **/
+    public function setItemListOrder($itemListOrder) {
+        $this->properties['itemListOrder'] = $itemListOrder;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getItemListOrder() {
+        return $this->properties['itemListOrder'];
     }
 
 

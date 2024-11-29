@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MedicalIntangibleSchema extends MedicalEntitySchema
+class MedicalIntangibleSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MedicalIntangibleSchema('http://schema.org/', 'MedicalIntangible');
+        return new MedicalIntangibleSchema('https://schema.org/', 'MedicalIntangible');
     }
 
 

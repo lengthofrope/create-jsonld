@@ -31,35 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class AudienceSchema extends IntangibleSchema
+class AudienceSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new AudienceSchema('http://schema.org/', 'Audience');
-    }
-
-    /**
-     * The target group associated with a given audience (e.g. veterans, car owners, musicians, etc.).
-     *
-     * @param $audienceType TextSchema
-     **/
-    public function setAudienceType($audienceType) {
-        $this->properties['audienceType'] = $audienceType;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getAudienceType() {
-        return $this->properties['audienceType'];
+        return new AudienceSchema('https://schema.org/', 'Audience');
     }
 
     /**
      * The geographic area associated with the audience.
      *
-     * @param $geographicArea AdministrativeAreaSchema
+     * @param $geographicArea 
      **/
     public function setGeographicArea($geographicArea) {
         $this->properties['geographicArea'] = $geographicArea;
@@ -68,10 +50,28 @@ class AudienceSchema extends IntangibleSchema
     }
 
     /**
-     * @return AdministrativeAreaSchema
+     * @return 
      **/
     public function getGeographicArea() {
         return $this->properties['geographicArea'];
+    }
+
+    /**
+     * The target group associated with a given audience (e.g. veterans, car owners, musicians, etc.).
+     *
+     * @param $audienceType 
+     **/
+    public function setAudienceType($audienceType) {
+        $this->properties['audienceType'] = $audienceType;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getAudienceType() {
+        return $this->properties['audienceType'];
     }
 
 

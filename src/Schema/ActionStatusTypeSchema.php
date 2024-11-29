@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ActionStatusTypeSchema extends EnumerationSchema
+class ActionStatusTypeSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new ActionStatusTypeSchema('http://schema.org/', 'ActionStatusType');
+        return new ActionStatusTypeSchema('https://schema.org/', 'ActionStatusType');
     }
 
 

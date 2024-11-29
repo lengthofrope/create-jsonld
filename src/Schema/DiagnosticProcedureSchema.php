@@ -35,7 +35,7 @@ class DiagnosticProcedureSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new DiagnosticProcedureSchema('http://schema.org/', 'DiagnosticProcedure');
+        return new DiagnosticProcedureSchema('https://schema.org/', 'DiagnosticProcedure');
     }
 
 

@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ContinentSchema extends LandformSchema
+class ContinentSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new ContinentSchema('http://schema.org/', 'Continent');
+        return new ContinentSchema('https://schema.org/', 'Continent');
     }
 
 

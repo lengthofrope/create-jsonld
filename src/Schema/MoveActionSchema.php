@@ -27,39 +27,21 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of an agent relocating to a place.<p>Related actions:</p><ul><li><a href="http://schema.org/TransferAction">TransferAction</a>: Unlike TransferAction, the subject of the move is a living Person or Organization rather than an inanimate object</li></ul>.
+ * The act of an agent relocating to a place.\n\nRelated actions:\n\n* [[TransferAction]]: Unlike TransferAction, the subject of the move is a living Person or Organization rather than an inanimate object.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MoveActionSchema extends ActionSchema
+class MoveActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MoveActionSchema('http://schema.org/', 'MoveAction');
-    }
-
-    /**
-     * A sub property of location. The original location of the object or the agent before the action.
-     *
-     * @param $fromLocation PlaceSchema
-     **/
-    public function setFromLocation($fromLocation) {
-        $this->properties['fromLocation'] = $fromLocation;
-
-        return $this;
-    }
-
-    /**
-     * @return PlaceSchema
-     **/
-    public function getFromLocation() {
-        return $this->properties['fromLocation'];
+        return new MoveActionSchema('https://schema.org/', 'MoveAction');
     }
 
     /**
      * A sub property of location. The final location of the object or the agent after the action.
      *
-     * @param $toLocation PlaceSchema
+     * @param $toLocation 
      **/
     public function setToLocation($toLocation) {
         $this->properties['toLocation'] = $toLocation;
@@ -68,10 +50,28 @@ class MoveActionSchema extends ActionSchema
     }
 
     /**
-     * @return PlaceSchema
+     * @return 
      **/
     public function getToLocation() {
         return $this->properties['toLocation'];
+    }
+
+    /**
+     * A sub property of location. The original location of the object or the agent before the action.
+     *
+     * @param $fromLocation 
+     **/
+    public function setFromLocation($fromLocation) {
+        $this->properties['fromLocation'] = $fromLocation;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getFromLocation() {
+        return $this->properties['fromLocation'];
     }
 
 

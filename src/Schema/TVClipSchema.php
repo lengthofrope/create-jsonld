@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class TVClipSchema extends ClipSchema
+class TVClipSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new TVClipSchema('http://schema.org/', 'TVClip');
+        return new TVClipSchema('https://schema.org/', 'TVClip');
     }
 
     /**
      * The TV series to which this episode or season belongs.
      *
-     * @param $partOfTVSeries TVSeriesSchema
+     * @param $partOfTVSeries 
      **/
     public function setPartOfTVSeries($partOfTVSeries) {
         $this->properties['partOfTVSeries'] = $partOfTVSeries;
@@ -50,7 +50,7 @@ class TVClipSchema extends ClipSchema
     }
 
     /**
-     * @return TVSeriesSchema
+     * @return 
      **/
     public function getPartOfTVSeries() {
         return $this->properties['partOfTVSeries'];

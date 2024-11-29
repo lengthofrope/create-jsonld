@@ -31,35 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PayActionSchema extends TradeActionSchema
+class PayActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new PayActionSchema('http://schema.org/', 'PayAction');
-    }
-
-    /**
-     * A goal towards an action is taken. Can be concrete or abstract.
-     *
-     * @param $purpose MedicalDevicePurposeSchema|ThingSchema
-     **/
-    public function setPurpose($purpose) {
-        $this->properties['purpose'] = $purpose;
-
-        return $this;
-    }
-
-    /**
-     * @return MedicalDevicePurposeSchema|ThingSchema
-     **/
-    public function getPurpose() {
-        return $this->properties['purpose'];
+        return new PayActionSchema('https://schema.org/', 'PayAction');
     }
 
     /**
      * A sub property of participant. The participant who is at the receiving end of the action.
      *
-     * @param $recipient AudienceSchema|OrganizationSchema|PersonSchema
+     * @param $recipient |||
      **/
     public function setRecipient($recipient) {
         $this->properties['recipient'] = $recipient;
@@ -68,7 +50,7 @@ class PayActionSchema extends TradeActionSchema
     }
 
     /**
-     * @return AudienceSchema|OrganizationSchema|PersonSchema
+     * @return |||
      **/
     public function getRecipient() {
         return $this->properties['recipient'];

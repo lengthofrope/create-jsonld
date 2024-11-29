@@ -27,20 +27,16 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Accountancy business.
-        <br><br>
-        As a <a href="/LocalBusiness">LocalBusiness</a> it can be
-        described as a <a href="/provider">provider</a> of one or more
-        <a href="/Service">Service(s)</a>.
-      
+ * Accountancy business.\n\nAs a [[LocalBusiness]] it can be described as a [[provider]] of one or more [[Service]]\(s).
+ *       
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class AccountingServiceSchema extends FinancialServiceSchema
+class AccountingServiceSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new AccountingServiceSchema('http://schema.org/', 'AccountingService');
+        return new AccountingServiceSchema('https://schema.org/', 'AccountingService');
     }
 
 

@@ -35,7 +35,7 @@ class MedicalObservationalStudyDesignSchema extends \LengthOfRope\JSONLD\Element
 {
     public static function factory()
     {
-        return new MedicalObservationalStudyDesignSchema('http://schema.org/', 'MedicalObservationalStudyDesign');
+        return new MedicalObservationalStudyDesignSchema('https://schema.org/', 'MedicalObservationalStudyDesign');
     }
 
 

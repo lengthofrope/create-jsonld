@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class LoseActionSchema extends AchieveActionSchema
+class LoseActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new LoseActionSchema('http://schema.org/', 'LoseAction');
+        return new LoseActionSchema('https://schema.org/', 'LoseAction');
     }
 
     /**
      * A sub property of participant. The winner of the action.
      *
-     * @param $winner PersonSchema
+     * @param $winner 
      **/
     public function setWinner($winner) {
         $this->properties['winner'] = $winner;
@@ -50,7 +50,7 @@ class LoseActionSchema extends AchieveActionSchema
     }
 
     /**
-     * @return PersonSchema
+     * @return 
      **/
     public function getWinner() {
         return $this->properties['winner'];

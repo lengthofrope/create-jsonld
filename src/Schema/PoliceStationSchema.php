@@ -35,7 +35,7 @@ class PoliceStationSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new PoliceStationSchema('http://schema.org/', 'PoliceStation');
+        return new PoliceStationSchema('https://schema.org/', 'PoliceStation');
     }
 
 

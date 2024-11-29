@@ -27,21 +27,21 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of physically/electronically taking delivery of an object thathas been transferred from an origin to a destination. Reciprocal of SendAction.<p>Related actions:</p><ul><li><a href="http://schema.org/SendAction">SendAction</a>: The reciprocal of ReceiveAction.</li><li><a href="http://schema.org/TakeAction">TakeAction</a>: Unlike TakeAction, ReceiveAction does not imply that the ownership has been transfered (e.g. I can receive a package, but it does not mean the package is now mine)</li></ul>.
+ * The act of physically/electronically taking delivery of an object that has been transferred from an origin to a destination. Reciprocal of SendAction.\n\nRelated actions:\n\n* [[SendAction]]: The reciprocal of ReceiveAction.\n* [[TakeAction]]: Unlike TakeAction, ReceiveAction does not imply that the ownership has been transferred (e.g. I can receive a package, but it does not mean the package is now mine).
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ReceiveActionSchema extends TransferActionSchema
+class ReceiveActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new ReceiveActionSchema('http://schema.org/', 'ReceiveAction');
+        return new ReceiveActionSchema('https://schema.org/', 'ReceiveAction');
     }
 
     /**
      * A sub property of instrument. The method of delivery.
      *
-     * @param $deliveryMethod DeliveryMethodSchema
+     * @param $deliveryMethod 
      **/
     public function setDeliveryMethod($deliveryMethod) {
         $this->properties['deliveryMethod'] = $deliveryMethod;
@@ -50,7 +50,7 @@ class ReceiveActionSchema extends TransferActionSchema
     }
 
     /**
-     * @return DeliveryMethodSchema
+     * @return 
      **/
     public function getDeliveryMethod() {
         return $this->properties['deliveryMethod'];
@@ -59,7 +59,7 @@ class ReceiveActionSchema extends TransferActionSchema
     /**
      * A sub property of participant. The participant who is at the sending end of the action.
      *
-     * @param $sender AudienceSchema|OrganizationSchema|PersonSchema
+     * @param $sender ||
      **/
     public function setSender($sender) {
         $this->properties['sender'] = $sender;
@@ -68,7 +68,7 @@ class ReceiveActionSchema extends TransferActionSchema
     }
 
     /**
-     * @return AudienceSchema|OrganizationSchema|PersonSchema
+     * @return ||
      **/
     public function getSender() {
         return $this->properties['sender'];

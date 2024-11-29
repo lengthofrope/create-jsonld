@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MedicalRiskFactorSchema extends MedicalEntitySchema
+class MedicalRiskFactorSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MedicalRiskFactorSchema('http://schema.org/', 'MedicalRiskFactor');
+        return new MedicalRiskFactorSchema('https://schema.org/', 'MedicalRiskFactor');
     }
 
     /**
      * The condition, complication, etc. influenced by this factor.
      *
-     * @param $increasesRiskOf MedicalEntitySchema
+     * @param $increasesRiskOf 
      **/
     public function setIncreasesRiskOf($increasesRiskOf) {
         $this->properties['increasesRiskOf'] = $increasesRiskOf;
@@ -50,7 +50,7 @@ class MedicalRiskFactorSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return MedicalEntitySchema
+     * @return 
      **/
     public function getIncreasesRiskOf() {
         return $this->properties['increasesRiskOf'];

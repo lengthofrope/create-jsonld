@@ -27,17 +27,15 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use
-          <a href="/Action">Action</a>-based vocabulary, alongside types such as <a href="/Comment">Comment</a>.
-      
+ * UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class UserDownloadsSchema extends UserInteractionSchema
+class UserDownloadsSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new UserDownloadsSchema('http://schema.org/', 'UserDownloads');
+        return new UserDownloadsSchema('https://schema.org/', 'UserDownloads');
     }
 
 

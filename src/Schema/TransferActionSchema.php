@@ -31,35 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class TransferActionSchema extends ActionSchema
+class TransferActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new TransferActionSchema('http://schema.org/', 'TransferAction');
-    }
-
-    /**
-     * A sub property of location. The original location of the object or the agent before the action.
-     *
-     * @param $fromLocation PlaceSchema
-     **/
-    public function setFromLocation($fromLocation) {
-        $this->properties['fromLocation'] = $fromLocation;
-
-        return $this;
-    }
-
-    /**
-     * @return PlaceSchema
-     **/
-    public function getFromLocation() {
-        return $this->properties['fromLocation'];
+        return new TransferActionSchema('https://schema.org/', 'TransferAction');
     }
 
     /**
      * A sub property of location. The final location of the object or the agent after the action.
      *
-     * @param $toLocation PlaceSchema
+     * @param $toLocation 
      **/
     public function setToLocation($toLocation) {
         $this->properties['toLocation'] = $toLocation;
@@ -68,10 +50,28 @@ class TransferActionSchema extends ActionSchema
     }
 
     /**
-     * @return PlaceSchema
+     * @return 
      **/
     public function getToLocation() {
         return $this->properties['toLocation'];
+    }
+
+    /**
+     * A sub property of location. The original location of the object or the agent before the action.
+     *
+     * @param $fromLocation 
+     **/
+    public function setFromLocation($fromLocation) {
+        $this->properties['fromLocation'] = $fromLocation;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getFromLocation() {
+        return $this->properties['fromLocation'];
     }
 
 

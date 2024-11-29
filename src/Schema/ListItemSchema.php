@@ -31,53 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ListItemSchema extends IntangibleSchema
+class ListItemSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new ListItemSchema('http://schema.org/', 'ListItem');
-    }
-
-    /**
-     * An entity represented by an entry in a list or data feed (e.g. an 'artist' in a list of 'artists')’.
-     *
-     * @param $item ThingSchema
-     **/
-    public function setItem($item) {
-        $this->properties['item'] = $item;
-
-        return $this;
-    }
-
-    /**
-     * @return ThingSchema
-     **/
-    public function getItem() {
-        return $this->properties['item'];
-    }
-
-    /**
-     * A link to the ListItem that follows the current one.
-     *
-     * @param $nextItem ListItemSchema
-     **/
-    public function setNextItem($nextItem) {
-        $this->properties['nextItem'] = $nextItem;
-
-        return $this;
-    }
-
-    /**
-     * @return ListItemSchema
-     **/
-    public function getNextItem() {
-        return $this->properties['nextItem'];
+        return new ListItemSchema('https://schema.org/', 'ListItem');
     }
 
     /**
      * The position of an item in a series or sequence of items.
      *
-     * @param $position TextSchema|IntegerSchema
+     * @param $position |
      **/
     public function setPosition($position) {
         $this->properties['position'] = $position;
@@ -86,16 +50,34 @@ class ListItemSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema|IntegerSchema
+     * @return |
      **/
     public function getPosition() {
         return $this->properties['position'];
     }
 
     /**
-     * A link to the ListItem that preceeds the current one.
+     * An entity represented by an entry in a list or data feed (e.g. an 'artist' in a list of 'artists').
      *
-     * @param $previousItem ListItemSchema
+     * @param $item 
+     **/
+    public function setItem($item) {
+        $this->properties['item'] = $item;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getItem() {
+        return $this->properties['item'];
+    }
+
+    /**
+     * A link to the ListItem that precedes the current one.
+     *
+     * @param $previousItem 
      **/
     public function setPreviousItem($previousItem) {
         $this->properties['previousItem'] = $previousItem;
@@ -104,10 +86,28 @@ class ListItemSchema extends IntangibleSchema
     }
 
     /**
-     * @return ListItemSchema
+     * @return 
      **/
     public function getPreviousItem() {
         return $this->properties['previousItem'];
+    }
+
+    /**
+     * A link to the ListItem that follows the current one.
+     *
+     * @param $nextItem 
+     **/
+    public function setNextItem($nextItem) {
+        $this->properties['nextItem'] = $nextItem;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getNextItem() {
+        return $this->properties['nextItem'];
     }
 
 

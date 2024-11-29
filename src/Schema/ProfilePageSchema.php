@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ProfilePageSchema extends WebPageSchema
+class ProfilePageSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new ProfilePageSchema('http://schema.org/', 'ProfilePage');
+        return new ProfilePageSchema('https://schema.org/', 'ProfilePage');
     }
 
 

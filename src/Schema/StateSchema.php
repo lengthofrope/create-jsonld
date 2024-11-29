@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class StateSchema extends AdministrativeAreaSchema
+class StateSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new StateSchema('http://schema.org/', 'State');
+        return new StateSchema('https://schema.org/', 'State');
     }
 
 

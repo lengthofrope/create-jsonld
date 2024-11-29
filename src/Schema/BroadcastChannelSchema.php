@@ -31,53 +31,35 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class BroadcastChannelSchema extends IntangibleSchema
+class BroadcastChannelSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new BroadcastChannelSchema('http://schema.org/', 'BroadcastChannel');
+        return new BroadcastChannelSchema('https://schema.org/', 'BroadcastChannel');
     }
 
     /**
-     * The unique address by which the BroadcastService can be identified in a provider lineup. In US, this is typically a number.
+     * The frequency used for over-the-air broadcasts. Numeric values or simple ranges, e.g. 87-99. In addition a shortcut idiom is supported for frequencies of AM and FM radio channels, e.g. "87 FM".
      *
-     * @param $broadcastChannelId TextSchema
+     * @param $broadcastFrequency |
      **/
-    public function setBroadcastChannelId($broadcastChannelId) {
-        $this->properties['broadcastChannelId'] = $broadcastChannelId;
+    public function setBroadcastFrequency($broadcastFrequency) {
+        $this->properties['broadcastFrequency'] = $broadcastFrequency;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return |
      **/
-    public function getBroadcastChannelId() {
-        return $this->properties['broadcastChannelId'];
-    }
-
-    /**
-     * The type of service required to have access to the channel (e.g. Standard or Premium).
-     *
-     * @param $broadcastServiceTier TextSchema
-     **/
-    public function setBroadcastServiceTier($broadcastServiceTier) {
-        $this->properties['broadcastServiceTier'] = $broadcastServiceTier;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getBroadcastServiceTier() {
-        return $this->properties['broadcastServiceTier'];
+    public function getBroadcastFrequency() {
+        return $this->properties['broadcastFrequency'];
     }
 
     /**
      * The CableOrSatelliteService offering the channel.
      *
-     * @param $inBroadcastLineup CableOrSatelliteServiceSchema
+     * @param $inBroadcastLineup 
      **/
     public function setInBroadcastLineup($inBroadcastLineup) {
         $this->properties['inBroadcastLineup'] = $inBroadcastLineup;
@@ -86,16 +68,52 @@ class BroadcastChannelSchema extends IntangibleSchema
     }
 
     /**
-     * @return CableOrSatelliteServiceSchema
+     * @return 
      **/
     public function getInBroadcastLineup() {
         return $this->properties['inBroadcastLineup'];
     }
 
     /**
+     * The unique address by which the BroadcastService can be identified in a provider lineup. In US, this is typically a number.
+     *
+     * @param $broadcastChannelId 
+     **/
+    public function setBroadcastChannelId($broadcastChannelId) {
+        $this->properties['broadcastChannelId'] = $broadcastChannelId;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getBroadcastChannelId() {
+        return $this->properties['broadcastChannelId'];
+    }
+
+    /**
+     * The type of service required to have access to the channel (e.g. Standard or Premium).
+     *
+     * @param $broadcastServiceTier 
+     **/
+    public function setBroadcastServiceTier($broadcastServiceTier) {
+        $this->properties['broadcastServiceTier'] = $broadcastServiceTier;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getBroadcastServiceTier() {
+        return $this->properties['broadcastServiceTier'];
+    }
+
+    /**
      * The BroadcastService offered on this channel.
      *
-     * @param $providesBroadcastService BroadcastServiceSchema
+     * @param $providesBroadcastService 
      **/
     public function setProvidesBroadcastService($providesBroadcastService) {
         $this->properties['providesBroadcastService'] = $providesBroadcastService;
@@ -104,10 +122,28 @@ class BroadcastChannelSchema extends IntangibleSchema
     }
 
     /**
-     * @return BroadcastServiceSchema
+     * @return 
      **/
     public function getProvidesBroadcastService() {
         return $this->properties['providesBroadcastService'];
+    }
+
+    /**
+     * Genre of the creative work, broadcast channel or group.
+     *
+     * @param $genre |
+     **/
+    public function setGenre($genre) {
+        $this->properties['genre'] = $genre;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getGenre() {
+        return $this->properties['genre'];
     }
 
 

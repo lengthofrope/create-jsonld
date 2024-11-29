@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class BowlingAlleySchema extends SportsActivityLocationSchema
+class BowlingAlleySchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new BowlingAlleySchema('http://schema.org/', 'BowlingAlley');
+        return new BowlingAlleySchema('https://schema.org/', 'BowlingAlley');
     }
 
 

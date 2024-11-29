@@ -27,16 +27,15 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * 
-          A Series in schema.org is a group of related items, typically but not necessarily of the same kind. 
+ * A Series in schema.org is a group of related items, typically but not necessarily of the same kind. See also [[CreativeWorkSeries]], [[EventSeries]].
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class SeriesSchema extends CreativeWorkSchema
+class SeriesSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new SeriesSchema('http://schema.org/', 'Series');
+        return new SeriesSchema('https://schema.org/', 'Series');
     }
 
 

@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MosqueSchema extends PlaceOfWorshipSchema
+class MosqueSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MosqueSchema('http://schema.org/', 'Mosque');
+        return new MosqueSchema('https://schema.org/', 'Mosque');
     }
 
 

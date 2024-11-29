@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MovingCompanySchema extends HomeAndConstructionBusinessSchema
+class MovingCompanySchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MovingCompanySchema('http://schema.org/', 'MovingCompany');
+        return new MovingCompanySchema('https://schema.org/', 'MovingCompany');
     }
 
 

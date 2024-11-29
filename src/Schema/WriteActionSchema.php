@@ -31,35 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class WriteActionSchema extends CreateActionSchema
+class WriteActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new WriteActionSchema('http://schema.org/', 'WriteAction');
-    }
-
-    /**
-     * The language of the content or performance or used in an action. Please use one of the language codes from the <a href='http://tools.ietf.org/html/bcp47'>IETF BCP 47 standard</a>.
-     *
-     * @param $inLanguage TextSchema|LanguageSchema
-     **/
-    public function setInLanguage($inLanguage) {
-        $this->properties['inLanguage'] = $inLanguage;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema|LanguageSchema
-     **/
-    public function getInLanguage() {
-        return $this->properties['inLanguage'];
+        return new WriteActionSchema('https://schema.org/', 'WriteAction');
     }
 
     /**
      * A sub property of instrument. The language used on this action.
      *
-     * @param $language LanguageSchema
+     * @param $language 
      **/
     public function setLanguage($language) {
         $this->properties['language'] = $language;
@@ -68,10 +50,28 @@ class WriteActionSchema extends CreateActionSchema
     }
 
     /**
-     * @return LanguageSchema
+     * @return 
      **/
     public function getLanguage() {
         return $this->properties['language'];
+    }
+
+    /**
+     * The language of the content or performance or used in an action. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
+     *
+     * @param $inLanguage |
+     **/
+    public function setInLanguage($inLanguage) {
+        $this->properties['inLanguage'] = $inLanguage;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getInLanguage() {
+        return $this->properties['inLanguage'];
     }
 
 

@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class EmploymentAgencySchema extends LocalBusinessSchema
+class EmploymentAgencySchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new EmploymentAgencySchema('http://schema.org/', 'EmploymentAgency');
+        return new EmploymentAgencySchema('https://schema.org/', 'EmploymentAgency');
     }
 
 

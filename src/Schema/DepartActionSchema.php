@@ -27,15 +27,15 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of  departing from a place. An agent departs from an fromLocation for a destination, optionally with participants.
+ * The act of  departing from a place. An agent departs from a fromLocation for a destination, optionally with participants.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class DepartActionSchema extends MoveActionSchema
+class DepartActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new DepartActionSchema('http://schema.org/', 'DepartAction');
+        return new DepartActionSchema('https://schema.org/', 'DepartAction');
     }
 
 

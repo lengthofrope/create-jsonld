@@ -27,15 +27,15 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * An agent inspects/determines/investigates/inquire or examine an object's accuracy/quality/condition or state.
+ * An agent inspects, determines, investigates, inquires, or examines an object's accuracy, quality, condition, or state.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class CheckActionSchema extends FindActionSchema
+class CheckActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new CheckActionSchema('http://schema.org/', 'CheckAction');
+        return new CheckActionSchema('https://schema.org/', 'CheckAction');
     }
 
 

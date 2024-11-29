@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MedicalScholarlyArticleSchema extends ScholarlyArticleSchema
+class MedicalScholarlyArticleSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MedicalScholarlyArticleSchema('http://schema.org/', 'MedicalScholarlyArticle');
+        return new MedicalScholarlyArticleSchema('https://schema.org/', 'MedicalScholarlyArticle');
     }
 
     /**
-     * The type of the medical article, taken from the US NLM MeSH <a href=http://www.nlm.nih.gov/mesh/pubtypes.html>publication type catalog.
+     * The type of the medical article, taken from the US NLM MeSH publication type catalog. See also [MeSH documentation](http://www.nlm.nih.gov/mesh/pubtypes.html).
      *
-     * @param $publicationType TextSchema
+     * @param $publicationType 
      **/
     public function setPublicationType($publicationType) {
         $this->properties['publicationType'] = $publicationType;
@@ -50,7 +50,7 @@ class MedicalScholarlyArticleSchema extends ScholarlyArticleSchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getPublicationType() {
         return $this->properties['publicationType'];

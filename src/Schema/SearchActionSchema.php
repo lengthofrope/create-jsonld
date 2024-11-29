@@ -27,21 +27,21 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of searching for an object.<p>Related actions:</p><ul><li><a href="http://schema.org/FindAction">FindAction</a>: SearchAction generally leads to a FindAction, but not necessarily</li></ul>.
+ * The act of searching for an object.\n\nRelated actions:\n\n* [[FindAction]]: SearchAction generally leads to a FindAction, but not necessarily.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class SearchActionSchema extends ActionSchema
+class SearchActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new SearchActionSchema('http://schema.org/', 'SearchAction');
+        return new SearchActionSchema('https://schema.org/', 'SearchAction');
     }
 
     /**
      * A sub property of instrument. The query used on this action.
      *
-     * @param $query TextSchema
+     * @param $query 
      **/
     public function setQuery($query) {
         $this->properties['query'] = $query;
@@ -50,7 +50,7 @@ class SearchActionSchema extends ActionSchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getQuery() {
         return $this->properties['query'];

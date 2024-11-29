@@ -27,39 +27,21 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A recipe.
+ * A recipe. For dietary restrictions covered by the recipe, a few common restrictions are enumerated via [[suitableForDiet]]. The [[keywords]] property can also be used to add more detail.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class RecipeSchema extends CreativeWorkSchema
+class RecipeSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new RecipeSchema('http://schema.org/', 'Recipe');
-    }
-
-    /**
-     * The time it takes to actually cook the dish, in <a href='http://en.wikipedia.org/wiki/ISO_8601'>ISO 8601 duration format</a>.
-     *
-     * @param $cookTime DurationSchema
-     **/
-    public function setCookTime($cookTime) {
-        $this->properties['cookTime'] = $cookTime;
-
-        return $this;
-    }
-
-    /**
-     * @return DurationSchema
-     **/
-    public function getCookTime() {
-        return $this->properties['cookTime'];
+        return new RecipeSchema('https://schema.org/', 'Recipe');
     }
 
     /**
      * The method of cooking, such as Frying, Steaming, ...
      *
-     * @param $cookingMethod TextSchema
+     * @param $cookingMethod 
      **/
     public function setCookingMethod($cookingMethod) {
         $this->properties['cookingMethod'] = $cookingMethod;
@@ -68,142 +50,52 @@ class RecipeSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getCookingMethod() {
         return $this->properties['cookingMethod'];
     }
 
     /**
-     * A single ingredient used in the recipe, e.g. sugar, flour or garlic.
+     * The time it takes to actually cook the dish, in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
      *
-     * @param $ingredients TextSchema
+     * @param $cookTime 
      **/
-    public function setIngredients($ingredients) {
-        $this->properties['ingredients'] = $ingredients;
+    public function setCookTime($cookTime) {
+        $this->properties['cookTime'] = $cookTime;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
-    public function getIngredients() {
-        return $this->properties['ingredients'];
+    public function getCookTime() {
+        return $this->properties['cookTime'];
     }
 
     /**
-     * Nutrition information about the recipe.
+     * Indicates a dietary restriction or guideline for which this recipe or menu item is suitable, e.g. diabetic, halal etc.
      *
-     * @param $nutrition NutritionInformationSchema
+     * @param $suitableForDiet 
      **/
-    public function setNutrition($nutrition) {
-        $this->properties['nutrition'] = $nutrition;
+    public function setSuitableForDiet($suitableForDiet) {
+        $this->properties['suitableForDiet'] = $suitableForDiet;
 
         return $this;
     }
 
     /**
-     * @return NutritionInformationSchema
+     * @return 
      **/
-    public function getNutrition() {
-        return $this->properties['nutrition'];
-    }
-
-    /**
-     * The length of time it takes to prepare the recipe, in <a href='http://en.wikipedia.org/wiki/ISO_8601'>ISO 8601 duration format</a>.
-     *
-     * @param $prepTime DurationSchema
-     **/
-    public function setPrepTime($prepTime) {
-        $this->properties['prepTime'] = $prepTime;
-
-        return $this;
-    }
-
-    /**
-     * @return DurationSchema
-     **/
-    public function getPrepTime() {
-        return $this->properties['prepTime'];
-    }
-
-    /**
-     * The category of the recipe&#x2014;for example, appetizer, entree, etc.
-     *
-     * @param $recipeCategory TextSchema
-     **/
-    public function setRecipeCategory($recipeCategory) {
-        $this->properties['recipeCategory'] = $recipeCategory;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getRecipeCategory() {
-        return $this->properties['recipeCategory'];
-    }
-
-    /**
-     * The cuisine of the recipe (for example, French or Ethiopian).
-     *
-     * @param $recipeCuisine TextSchema
-     **/
-    public function setRecipeCuisine($recipeCuisine) {
-        $this->properties['recipeCuisine'] = $recipeCuisine;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getRecipeCuisine() {
-        return $this->properties['recipeCuisine'];
-    }
-
-    /**
-     * A single ingredient used in the recipe, e.g. sugar, flour or garlic.
-     *
-     * @param $recipeIngredient TextSchema
-     **/
-    public function setRecipeIngredient($recipeIngredient) {
-        $this->properties['recipeIngredient'] = $recipeIngredient;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getRecipeIngredient() {
-        return $this->properties['recipeIngredient'];
-    }
-
-    /**
-     * A step or instruction involved in making the recipe.
-     *
-     * @param $recipeInstructions TextSchema|ItemListSchema
-     **/
-    public function setRecipeInstructions($recipeInstructions) {
-        $this->properties['recipeInstructions'] = $recipeInstructions;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema|ItemListSchema
-     **/
-    public function getRecipeInstructions() {
-        return $this->properties['recipeInstructions'];
+    public function getSuitableForDiet() {
+        return $this->properties['suitableForDiet'];
     }
 
     /**
      * The quantity produced by the recipe (for example, number of people served, number of servings, etc).
      *
-     * @param $recipeYield TextSchema
+     * @param $recipeYield |
      **/
     public function setRecipeYield($recipeYield) {
         $this->properties['recipeYield'] = $recipeYield;
@@ -212,28 +104,118 @@ class RecipeSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema
+     * @return |
      **/
     public function getRecipeYield() {
         return $this->properties['recipeYield'];
     }
 
     /**
-     * The total time it takes to prepare and cook the recipe, in <a href='http://en.wikipedia.org/wiki/ISO_8601'>ISO 8601 duration format</a>.
+     * A single ingredient used in the recipe, e.g. sugar, flour or garlic.
      *
-     * @param $totalTime DurationSchema
+     * @param $ingredients 
      **/
-    public function setTotalTime($totalTime) {
-        $this->properties['totalTime'] = $totalTime;
+    public function setIngredients($ingredients) {
+        $this->properties['ingredients'] = $ingredients;
 
         return $this;
     }
 
     /**
-     * @return DurationSchema
+     * @return 
      **/
-    public function getTotalTime() {
-        return $this->properties['totalTime'];
+    public function getIngredients() {
+        return $this->properties['ingredients'];
+    }
+
+    /**
+     * A step in making the recipe, in the form of a single item (document, video, etc.) or an ordered list with HowToStep and/or HowToSection items.
+     *
+     * @param $recipeInstructions ||
+     **/
+    public function setRecipeInstructions($recipeInstructions) {
+        $this->properties['recipeInstructions'] = $recipeInstructions;
+
+        return $this;
+    }
+
+    /**
+     * @return ||
+     **/
+    public function getRecipeInstructions() {
+        return $this->properties['recipeInstructions'];
+    }
+
+    /**
+     * Nutrition information about the recipe or menu item.
+     *
+     * @param $nutrition 
+     **/
+    public function setNutrition($nutrition) {
+        $this->properties['nutrition'] = $nutrition;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getNutrition() {
+        return $this->properties['nutrition'];
+    }
+
+    /**
+     * The category of the recipe—for example, appetizer, entree, etc.
+     *
+     * @param $recipeCategory 
+     **/
+    public function setRecipeCategory($recipeCategory) {
+        $this->properties['recipeCategory'] = $recipeCategory;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getRecipeCategory() {
+        return $this->properties['recipeCategory'];
+    }
+
+    /**
+     * A single ingredient used in the recipe, e.g. sugar, flour or garlic.
+     *
+     * @param $recipeIngredient 
+     **/
+    public function setRecipeIngredient($recipeIngredient) {
+        $this->properties['recipeIngredient'] = $recipeIngredient;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getRecipeIngredient() {
+        return $this->properties['recipeIngredient'];
+    }
+
+    /**
+     * The cuisine of the recipe (for example, French or Ethiopian).
+     *
+     * @param $recipeCuisine 
+     **/
+    public function setRecipeCuisine($recipeCuisine) {
+        $this->properties['recipeCuisine'] = $recipeCuisine;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getRecipeCuisine() {
+        return $this->properties['recipeCuisine'];
     }
 
 

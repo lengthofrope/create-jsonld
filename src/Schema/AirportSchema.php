@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class AirportSchema extends CivicStructureSchema
+class AirportSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new AirportSchema('http://schema.org/', 'Airport');
+        return new AirportSchema('https://schema.org/', 'Airport');
     }
 
     /**
      * IATA identifier for an airline or airport.
      *
-     * @param $iataCode TextSchema
+     * @param $iataCode 
      **/
     public function setIataCode($iataCode) {
         $this->properties['iataCode'] = $iataCode;
@@ -50,28 +50,28 @@ class AirportSchema extends CivicStructureSchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getIataCode() {
         return $this->properties['iataCode'];
     }
 
     /**
-     * IACO identifier for an airport.
+     * ICAO identifier for an airport.
      *
-     * @param $iacoCode TextSchema
+     * @param $icaoCode 
      **/
-    public function setIacoCode($iacoCode) {
-        $this->properties['iacoCode'] = $iacoCode;
+    public function setIcaoCode($icaoCode) {
+        $this->properties['icaoCode'] = $icaoCode;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
-    public function getIacoCode() {
-        return $this->properties['iacoCode'];
+    public function getIcaoCode() {
+        return $this->properties['icaoCode'];
     }
 
 

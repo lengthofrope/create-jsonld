@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class RadiationTherapySchema extends MedicalTherapySchema
+class RadiationTherapySchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new RadiationTherapySchema('http://schema.org/', 'RadiationTherapy');
+        return new RadiationTherapySchema('https://schema.org/', 'RadiationTherapy');
     }
 
 

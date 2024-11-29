@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class InternetCafeSchema extends LocalBusinessSchema
+class InternetCafeSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new InternetCafeSchema('http://schema.org/', 'InternetCafe');
+        return new InternetCafeSchema('https://schema.org/', 'InternetCafe');
     }
 
 

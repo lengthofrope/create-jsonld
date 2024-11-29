@@ -31,11 +31,49 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class SingleFamilyResidenceSchema extends ResidenceSchema
+class SingleFamilyResidenceSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new SingleFamilyResidenceSchema('http://schema.org/', 'SingleFamilyResidence');
+        return new SingleFamilyResidenceSchema('https://schema.org/', 'SingleFamilyResidence');
+    }
+
+    /**
+     * The allowed total occupancy for the accommodation in persons (including infants etc). For individual accommodations, this is not necessarily the legal maximum but defines the permitted usage as per the contractual agreement (e.g. a double room used by a single person).
+Typical unit code(s): C62 for person.
+     *
+     * @param $occupancy 
+     **/
+    public function setOccupancy($occupancy) {
+        $this->properties['occupancy'] = $occupancy;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getOccupancy() {
+        return $this->properties['occupancy'];
+    }
+
+    /**
+     * The number of rooms (excluding bathrooms and closets) of the accommodation or lodging business.
+Typical unit code(s): ROM for room or C62 for no unit. The type of room can be put in the unitText property of the QuantitativeValue.
+     *
+     * @param $numberOfRooms |
+     **/
+    public function setNumberOfRooms($numberOfRooms) {
+        $this->properties['numberOfRooms'] = $numberOfRooms;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getNumberOfRooms() {
+        return $this->properties['numberOfRooms'];
     }
 
 

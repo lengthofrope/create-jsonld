@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PerformActionSchema extends PlayActionSchema
+class PerformActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new PerformActionSchema('http://schema.org/', 'PerformAction');
+        return new PerformActionSchema('https://schema.org/', 'PerformAction');
     }
 
     /**
      * A sub property of location. The entertainment business where the action occurred.
      *
-     * @param $entertainmentBusiness EntertainmentBusinessSchema
+     * @param $entertainmentBusiness 
      **/
     public function setEntertainmentBusiness($entertainmentBusiness) {
         $this->properties['entertainmentBusiness'] = $entertainmentBusiness;
@@ -50,7 +50,7 @@ class PerformActionSchema extends PlayActionSchema
     }
 
     /**
-     * @return EntertainmentBusinessSchema
+     * @return 
      **/
     public function getEntertainmentBusiness() {
         return $this->properties['entertainmentBusiness'];

@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ResumeActionSchema extends ControlActionSchema
+class ResumeActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new ResumeActionSchema('http://schema.org/', 'ResumeAction');
+        return new ResumeActionSchema('https://schema.org/', 'ResumeAction');
     }
 
 

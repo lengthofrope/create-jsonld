@@ -31,53 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class OrderItemSchema extends IntangibleSchema
+class OrderItemSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new OrderItemSchema('http://schema.org/', 'OrderItem');
-    }
-
-    /**
-     * The delivery of the parcel related to this order or order item.
-     *
-     * @param $orderDelivery ParcelDeliverySchema
-     **/
-    public function setOrderDelivery($orderDelivery) {
-        $this->properties['orderDelivery'] = $orderDelivery;
-
-        return $this;
-    }
-
-    /**
-     * @return ParcelDeliverySchema
-     **/
-    public function getOrderDelivery() {
-        return $this->properties['orderDelivery'];
-    }
-
-    /**
-     * The identifier of the order item.
-     *
-     * @param $orderItemNumber TextSchema
-     **/
-    public function setOrderItemNumber($orderItemNumber) {
-        $this->properties['orderItemNumber'] = $orderItemNumber;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getOrderItemNumber() {
-        return $this->properties['orderItemNumber'];
+        return new OrderItemSchema('https://schema.org/', 'OrderItem');
     }
 
     /**
      * The current status of the order item.
      *
-     * @param $orderItemStatus OrderStatusSchema
+     * @param $orderItemStatus 
      **/
     public function setOrderItemStatus($orderItemStatus) {
         $this->properties['orderItemStatus'] = $orderItemStatus;
@@ -86,34 +50,16 @@ class OrderItemSchema extends IntangibleSchema
     }
 
     /**
-     * @return OrderStatusSchema
+     * @return 
      **/
     public function getOrderItemStatus() {
         return $this->properties['orderItemStatus'];
     }
 
     /**
-     * The number of the item ordered. If the property is not set, assume the quantity is one.
-     *
-     * @param $orderQuantity NumberSchema
-     **/
-    public function setOrderQuantity($orderQuantity) {
-        $this->properties['orderQuantity'] = $orderQuantity;
-
-        return $this;
-    }
-
-    /**
-     * @return NumberSchema
-     **/
-    public function getOrderQuantity() {
-        return $this->properties['orderQuantity'];
-    }
-
-    /**
      * The item ordered.
      *
-     * @param $orderedItem ProductSchema|OrderItemSchema
+     * @param $orderedItem ||
      **/
     public function setOrderedItem($orderedItem) {
         $this->properties['orderedItem'] = $orderedItem;
@@ -122,10 +68,64 @@ class OrderItemSchema extends IntangibleSchema
     }
 
     /**
-     * @return ProductSchema|OrderItemSchema
+     * @return ||
      **/
     public function getOrderedItem() {
         return $this->properties['orderedItem'];
+    }
+
+    /**
+     * The delivery of the parcel related to this order or order item.
+     *
+     * @param $orderDelivery 
+     **/
+    public function setOrderDelivery($orderDelivery) {
+        $this->properties['orderDelivery'] = $orderDelivery;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getOrderDelivery() {
+        return $this->properties['orderDelivery'];
+    }
+
+    /**
+     * The number of the item ordered. If the property is not set, assume the quantity is one.
+     *
+     * @param $orderQuantity |
+     **/
+    public function setOrderQuantity($orderQuantity) {
+        $this->properties['orderQuantity'] = $orderQuantity;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getOrderQuantity() {
+        return $this->properties['orderQuantity'];
+    }
+
+    /**
+     * The identifier of the order item.
+     *
+     * @param $orderItemNumber 
+     **/
+    public function setOrderItemNumber($orderItemNumber) {
+        $this->properties['orderItemNumber'] = $orderItemNumber;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getOrderItemNumber() {
+        return $this->properties['orderItemNumber'];
     }
 
 

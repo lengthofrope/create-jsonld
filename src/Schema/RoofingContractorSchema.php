@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class RoofingContractorSchema extends HomeAndConstructionBusinessSchema
+class RoofingContractorSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new RoofingContractorSchema('http://schema.org/', 'RoofingContractor');
+        return new RoofingContractorSchema('https://schema.org/', 'RoofingContractor');
     }
 
 

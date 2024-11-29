@@ -27,22 +27,16 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A range of of services that will be provided to a customer free of charge in case of a defect or malfunction of a product.
-<br />
-    Commonly used values:<br />
-<br />
-    http://purl.org/goodrelations/v1#Labor-BringIn <br />
-    http://purl.org/goodrelations/v1#PartsAndLabor-BringIn <br />
-    http://purl.org/goodrelations/v1#PartsAndLabor-PickUp <br />
-      
+ * A range of services that will be provided to a customer free of charge in case of a defect or malfunction of a product.\n\nCommonly used values:\n\n* http://purl.org/goodrelations/v1#Labor-BringIn\n* http://purl.org/goodrelations/v1#PartsAndLabor-BringIn\n* http://purl.org/goodrelations/v1#PartsAndLabor-PickUp
+ *       
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class WarrantyScopeSchema extends EnumerationSchema
+class WarrantyScopeSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new WarrantyScopeSchema('http://schema.org/', 'WarrantyScope');
+        return new WarrantyScopeSchema('https://schema.org/', 'WarrantyScope');
     }
 
 

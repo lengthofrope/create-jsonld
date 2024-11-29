@@ -27,93 +27,21 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The Game type represents things which are games. These are typically rule-governed recreational activities, e.g. role-playing games in which players assume the role of characters in a fictional setting. See also <a href="https://github.com/rvguha/schemaorg/issues/169">open issues list</a>.
+ * The Game type represents things which are games. These are typically rule-governed recreational activities, e.g. role-playing games in which players assume the role of characters in a fictional setting.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class GameSchema extends CreativeWorkSchema
+class GameSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new GameSchema('http://schema.org/', 'Game');
-    }
-
-    /**
-     * A piece of data that represents a particular aspect of a fictional character (skill, power, character points, advantage, disadvantage).
-     *
-     * @param $characterAttribute ThingSchema
-     **/
-    public function setCharacterAttribute($characterAttribute) {
-        $this->properties['characterAttribute'] = $characterAttribute;
-
-        return $this;
-    }
-
-    /**
-     * @return ThingSchema
-     **/
-    public function getCharacterAttribute() {
-        return $this->properties['characterAttribute'];
-    }
-
-    /**
-     * An item is an object within the game world that can be collected by a player or, occasionally, a non-player character.
-     *
-     * @param $gameItem ThingSchema
-     **/
-    public function setGameItem($gameItem) {
-        $this->properties['gameItem'] = $gameItem;
-
-        return $this;
-    }
-
-    /**
-     * @return ThingSchema
-     **/
-    public function getGameItem() {
-        return $this->properties['gameItem'];
-    }
-
-    /**
-     * Real or fictional location of the game (or part of game).
-     *
-     * @param $gameLocation URLSchema|PlaceSchema|PostalAddressSchema
-     **/
-    public function setGameLocation($gameLocation) {
-        $this->properties['gameLocation'] = $gameLocation;
-
-        return $this;
-    }
-
-    /**
-     * @return URLSchema|PlaceSchema|PostalAddressSchema
-     **/
-    public function getGameLocation() {
-        return $this->properties['gameLocation'];
-    }
-
-    /**
-     * Indicate how many people can play this game (minimum, maximum, or range).
-     *
-     * @param $numberOfPlayers QuantitativeValueSchema
-     **/
-    public function setNumberOfPlayers($numberOfPlayers) {
-        $this->properties['numberOfPlayers'] = $numberOfPlayers;
-
-        return $this;
-    }
-
-    /**
-     * @return QuantitativeValueSchema
-     **/
-    public function getNumberOfPlayers() {
-        return $this->properties['numberOfPlayers'];
+        return new GameSchema('https://schema.org/', 'Game');
     }
 
     /**
      * The task that a player-controlled character, or group of characters may complete in order to gain a reward.
      *
-     * @param $quest ThingSchema
+     * @param $quest 
      **/
     public function setQuest($quest) {
         $this->properties['quest'] = $quest;
@@ -122,10 +50,82 @@ class GameSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return ThingSchema
+     * @return 
      **/
     public function getQuest() {
         return $this->properties['quest'];
+    }
+
+    /**
+     * Indicate how many people can play this game (minimum, maximum, or range).
+     *
+     * @param $numberOfPlayers 
+     **/
+    public function setNumberOfPlayers($numberOfPlayers) {
+        $this->properties['numberOfPlayers'] = $numberOfPlayers;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getNumberOfPlayers() {
+        return $this->properties['numberOfPlayers'];
+    }
+
+    /**
+     * An item is an object within the game world that can be collected by a player or, occasionally, a non-player character.
+     *
+     * @param $gameItem 
+     **/
+    public function setGameItem($gameItem) {
+        $this->properties['gameItem'] = $gameItem;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getGameItem() {
+        return $this->properties['gameItem'];
+    }
+
+    /**
+     * Real or fictional location of the game (or part of game).
+     *
+     * @param $gameLocation ||
+     **/
+    public function setGameLocation($gameLocation) {
+        $this->properties['gameLocation'] = $gameLocation;
+
+        return $this;
+    }
+
+    /**
+     * @return ||
+     **/
+    public function getGameLocation() {
+        return $this->properties['gameLocation'];
+    }
+
+    /**
+     * A piece of data that represents a particular aspect of a fictional character (skill, power, character points, advantage, disadvantage).
+     *
+     * @param $characterAttribute 
+     **/
+    public function setCharacterAttribute($characterAttribute) {
+        $this->properties['characterAttribute'] = $characterAttribute;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getCharacterAttribute() {
+        return $this->properties['characterAttribute'];
     }
 
 

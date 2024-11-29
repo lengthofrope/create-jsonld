@@ -31,71 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PhysicalActivitySchema extends LifestyleModificationSchema
+class PhysicalActivitySchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new PhysicalActivitySchema('http://schema.org/', 'PhysicalActivity');
-    }
-
-    /**
-     * The anatomy of the underlying organ system or structures associated with this entity.
-     *
-     * @param $associatedAnatomy AnatomicalStructureSchema|AnatomicalSystemSchema|SuperficialAnatomySchema
-     **/
-    public function setAssociatedAnatomy($associatedAnatomy) {
-        $this->properties['associatedAnatomy'] = $associatedAnatomy;
-
-        return $this;
-    }
-
-    /**
-     * @return AnatomicalStructureSchema|AnatomicalSystemSchema|SuperficialAnatomySchema
-     **/
-    public function getAssociatedAnatomy() {
-        return $this->properties['associatedAnatomy'];
-    }
-
-    /**
-     * A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
-     *
-     * @param $category PhysicalActivityCategorySchema|TextSchema|ThingSchema
-     **/
-    public function setCategory($category) {
-        $this->properties['category'] = $category;
-
-        return $this;
-    }
-
-    /**
-     * @return PhysicalActivityCategorySchema|TextSchema|ThingSchema
-     **/
-    public function getCategory() {
-        return $this->properties['category'];
-    }
-
-    /**
-     * The characteristics of associated patients, such as age, gender, race etc.
-     *
-     * @param $epidemiology TextSchema
-     **/
-    public function setEpidemiology($epidemiology) {
-        $this->properties['epidemiology'] = $epidemiology;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getEpidemiology() {
-        return $this->properties['epidemiology'];
+        return new PhysicalActivitySchema('https://schema.org/', 'PhysicalActivity');
     }
 
     /**
      * Changes in the normal mechanical, physical, and biochemical functions that are associated with this activity or condition.
      *
-     * @param $pathophysiology TextSchema
+     * @param $pathophysiology 
      **/
     public function setPathophysiology($pathophysiology) {
         $this->properties['pathophysiology'] = $pathophysiology;
@@ -104,10 +50,64 @@ class PhysicalActivitySchema extends LifestyleModificationSchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getPathophysiology() {
         return $this->properties['pathophysiology'];
+    }
+
+    /**
+     * The anatomy of the underlying organ system or structures associated with this entity.
+     *
+     * @param $associatedAnatomy ||
+     **/
+    public function setAssociatedAnatomy($associatedAnatomy) {
+        $this->properties['associatedAnatomy'] = $associatedAnatomy;
+
+        return $this;
+    }
+
+    /**
+     * @return ||
+     **/
+    public function getAssociatedAnatomy() {
+        return $this->properties['associatedAnatomy'];
+    }
+
+    /**
+     * A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
+     *
+     * @param $category ||||
+     **/
+    public function setCategory($category) {
+        $this->properties['category'] = $category;
+
+        return $this;
+    }
+
+    /**
+     * @return ||||
+     **/
+    public function getCategory() {
+        return $this->properties['category'];
+    }
+
+    /**
+     * The characteristics of associated patients, such as age, gender, race etc.
+     *
+     * @param $epidemiology 
+     **/
+    public function setEpidemiology($epidemiology) {
+        $this->properties['epidemiology'] = $epidemiology;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getEpidemiology() {
+        return $this->properties['epidemiology'];
     }
 
 

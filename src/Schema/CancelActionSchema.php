@@ -27,15 +27,15 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of asserting that a future event/action is no longer going to happen.<p>Related actions:</p><ul><li><a href="http://schema.org/ConfirmAction">ConfirmAction</a>: The antonym of CancelAction</li></ul>.
+ * The act of asserting that a future event/action is no longer going to happen.\n\nRelated actions:\n\n* [[ConfirmAction]]: The antonym of CancelAction.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class CancelActionSchema extends PlanActionSchema
+class CancelActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new CancelActionSchema('http://schema.org/', 'CancelAction');
+        return new CancelActionSchema('https://schema.org/', 'CancelAction');
     }
 
 

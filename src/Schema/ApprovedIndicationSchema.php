@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ApprovedIndicationSchema extends MedicalIndicationSchema
+class ApprovedIndicationSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new ApprovedIndicationSchema('http://schema.org/', 'ApprovedIndication');
+        return new ApprovedIndicationSchema('https://schema.org/', 'ApprovedIndication');
     }
 
 

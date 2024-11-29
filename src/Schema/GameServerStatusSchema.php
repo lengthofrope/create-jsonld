@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class GameServerStatusSchema extends EnumerationSchema
+class GameServerStatusSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new GameServerStatusSchema('http://schema.org/', 'GameServerStatus');
+        return new GameServerStatusSchema('https://schema.org/', 'GameServerStatus');
     }
 
 

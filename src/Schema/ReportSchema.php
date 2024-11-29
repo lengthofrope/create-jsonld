@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ReportSchema extends ArticleSchema
+class ReportSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new ReportSchema('http://schema.org/', 'Report');
+        return new ReportSchema('https://schema.org/', 'Report');
     }
 
     /**
      * The number or other unique designator assigned to a Report by the publishing organization.
      *
-     * @param $reportNumber TextSchema
+     * @param $reportNumber 
      **/
     public function setReportNumber($reportNumber) {
         $this->properties['reportNumber'] = $reportNumber;
@@ -50,7 +50,7 @@ class ReportSchema extends ArticleSchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getReportNumber() {
         return $this->properties['reportNumber'];

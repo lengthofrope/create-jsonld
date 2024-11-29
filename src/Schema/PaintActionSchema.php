@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PaintActionSchema extends CreateActionSchema
+class PaintActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new PaintActionSchema('http://schema.org/', 'PaintAction');
+        return new PaintActionSchema('https://schema.org/', 'PaintAction');
     }
 
 

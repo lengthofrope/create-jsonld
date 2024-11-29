@@ -31,35 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class RentActionSchema extends TradeActionSchema
+class RentActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new RentActionSchema('http://schema.org/', 'RentAction');
-    }
-
-    /**
-     * A sub property of participant. The owner of the real estate property.
-     *
-     * @param $landlord OrganizationSchema|PersonSchema
-     **/
-    public function setLandlord($landlord) {
-        $this->properties['landlord'] = $landlord;
-
-        return $this;
-    }
-
-    /**
-     * @return OrganizationSchema|PersonSchema
-     **/
-    public function getLandlord() {
-        return $this->properties['landlord'];
+        return new RentActionSchema('https://schema.org/', 'RentAction');
     }
 
     /**
      * A sub property of participant. The real estate agent involved in the action.
      *
-     * @param $realEstateAgent RealEstateAgentSchema
+     * @param $realEstateAgent 
      **/
     public function setRealEstateAgent($realEstateAgent) {
         $this->properties['realEstateAgent'] = $realEstateAgent;
@@ -68,10 +50,28 @@ class RentActionSchema extends TradeActionSchema
     }
 
     /**
-     * @return RealEstateAgentSchema
+     * @return 
      **/
     public function getRealEstateAgent() {
         return $this->properties['realEstateAgent'];
+    }
+
+    /**
+     * A sub property of participant. The owner of the real estate property.
+     *
+     * @param $landlord |
+     **/
+    public function setLandlord($landlord) {
+        $this->properties['landlord'] = $landlord;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getLandlord() {
+        return $this->properties['landlord'];
     }
 
 

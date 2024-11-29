@@ -31,89 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class DietarySupplementSchema extends MedicalTherapySchema
+class DietarySupplementSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new DietarySupplementSchema('http://schema.org/', 'DietarySupplement');
-    }
-
-    /**
-     * An active ingredient, typically chemical compounds and/or biologic substances.
-     *
-     * @param $activeIngredient TextSchema
-     **/
-    public function setActiveIngredient($activeIngredient) {
-        $this->properties['activeIngredient'] = $activeIngredient;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getActiveIngredient() {
-        return $this->properties['activeIngredient'];
-    }
-
-    /**
-     * Descriptive information establishing a historical perspective on the supplement. May include the rationale for the name, the population where the supplement first came to prominence, etc.
-     *
-     * @param $background TextSchema
-     **/
-    public function setBackground($background) {
-        $this->properties['background'] = $background;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getBackground() {
-        return $this->properties['background'];
-    }
-
-    /**
-     * A dosage form in which this drug/supplement is available, e.g. 'tablet', 'suspension', 'injection'.
-     *
-     * @param $dosageForm TextSchema
-     **/
-    public function setDosageForm($dosageForm) {
-        $this->properties['dosageForm'] = $dosageForm;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getDosageForm() {
-        return $this->properties['dosageForm'];
-    }
-
-    /**
-     * True if this item's name is a proprietary/brand name (vs. generic name).
-     *
-     * @param $isProprietary BooleanSchema
-     **/
-    public function setIsProprietary($isProprietary) {
-        $this->properties['isProprietary'] = $isProprietary;
-
-        return $this;
-    }
-
-    /**
-     * @return BooleanSchema
-     **/
-    public function getIsProprietary() {
-        return $this->properties['isProprietary'];
+        return new DietarySupplementSchema('https://schema.org/', 'DietarySupplement');
     }
 
     /**
      * The drug or supplement's legal status, including any controlled substance schedules that apply.
      *
-     * @param $legalStatus DrugLegalStatusSchema
+     * @param $legalStatus ||
      **/
     public function setLegalStatus($legalStatus) {
         $this->properties['legalStatus'] = $legalStatus;
@@ -122,88 +50,16 @@ class DietarySupplementSchema extends MedicalTherapySchema
     }
 
     /**
-     * @return DrugLegalStatusSchema
+     * @return ||
      **/
     public function getLegalStatus() {
         return $this->properties['legalStatus'];
     }
 
     /**
-     * The manufacturer of the product.
-     *
-     * @param $manufacturer OrganizationSchema
-     **/
-    public function setManufacturer($manufacturer) {
-        $this->properties['manufacturer'] = $manufacturer;
-
-        return $this;
-    }
-
-    /**
-     * @return OrganizationSchema
-     **/
-    public function getManufacturer() {
-        return $this->properties['manufacturer'];
-    }
-
-    /**
      * Recommended intake of this supplement for a given population as defined by a specific recommending authority.
      *
-     * @param $maximumIntake MaximumDoseScheduleSchema
-     **/
-    public function setMaximumIntake($maximumIntake) {
-        $this->properties['maximumIntake'] = $maximumIntake;
-
-        return $this;
-    }
-
-    /**
-     * @return MaximumDoseScheduleSchema
-     **/
-    public function getMaximumIntake() {
-        return $this->properties['maximumIntake'];
-    }
-
-    /**
-     * The specific biochemical interaction through which this drug or supplement produces its pharmacological effect.
-     *
-     * @param $mechanismOfAction TextSchema
-     **/
-    public function setMechanismOfAction($mechanismOfAction) {
-        $this->properties['mechanismOfAction'] = $mechanismOfAction;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getMechanismOfAction() {
-        return $this->properties['mechanismOfAction'];
-    }
-
-    /**
-     * The generic name of this drug or supplement.
-     *
-     * @param $nonProprietaryName TextSchema
-     **/
-    public function setNonProprietaryName($nonProprietaryName) {
-        $this->properties['nonProprietaryName'] = $nonProprietaryName;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getNonProprietaryName() {
-        return $this->properties['nonProprietaryName'];
-    }
-
-    /**
-     * Recommended intake of this supplement for a given population as defined by a specific recommending authority.
-     *
-     * @param $recommendedIntake RecommendedDoseScheduleSchema
+     * @param $recommendedIntake 
      **/
     public function setRecommendedIntake($recommendedIntake) {
         $this->properties['recommendedIntake'] = $recommendedIntake;
@@ -212,16 +68,34 @@ class DietarySupplementSchema extends MedicalTherapySchema
     }
 
     /**
-     * @return RecommendedDoseScheduleSchema
+     * @return 
      **/
     public function getRecommendedIntake() {
         return $this->properties['recommendedIntake'];
     }
 
     /**
+     * The specific biochemical interaction through which this drug or supplement produces its pharmacological effect.
+     *
+     * @param $mechanismOfAction 
+     **/
+    public function setMechanismOfAction($mechanismOfAction) {
+        $this->properties['mechanismOfAction'] = $mechanismOfAction;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getMechanismOfAction() {
+        return $this->properties['mechanismOfAction'];
+    }
+
+    /**
      * Any potential safety concern associated with the supplement. May include interactions with other drugs and foods, pregnancy, breastfeeding, known adverse reactions, and documented efficacy of the supplement.
      *
-     * @param $safetyConsideration TextSchema
+     * @param $safetyConsideration 
      **/
     public function setSafetyConsideration($safetyConsideration) {
         $this->properties['safetyConsideration'] = $safetyConsideration;
@@ -230,16 +104,34 @@ class DietarySupplementSchema extends MedicalTherapySchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getSafetyConsideration() {
         return $this->properties['safetyConsideration'];
     }
 
     /**
+     * True if this item's name is a proprietary/brand name (vs. generic name).
+     *
+     * @param $isProprietary 
+     **/
+    public function setIsProprietary($isProprietary) {
+        $this->properties['isProprietary'] = $isProprietary;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getIsProprietary() {
+        return $this->properties['isProprietary'];
+    }
+
+    /**
      * Characteristics of the population for which this is intended, or which typically uses it, e.g. 'adults'.
      *
-     * @param $targetPopulation TextSchema
+     * @param $targetPopulation 
      **/
     public function setTargetPopulation($targetPopulation) {
         $this->properties['targetPopulation'] = $targetPopulation;
@@ -248,10 +140,82 @@ class DietarySupplementSchema extends MedicalTherapySchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getTargetPopulation() {
         return $this->properties['targetPopulation'];
+    }
+
+    /**
+     * Proprietary name given to the diet plan, typically by its originator or creator.
+     *
+     * @param $proprietaryName 
+     **/
+    public function setProprietaryName($proprietaryName) {
+        $this->properties['proprietaryName'] = $proprietaryName;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getProprietaryName() {
+        return $this->properties['proprietaryName'];
+    }
+
+    /**
+     * Recommended intake of this supplement for a given population as defined by a specific recommending authority.
+     *
+     * @param $maximumIntake 
+     **/
+    public function setMaximumIntake($maximumIntake) {
+        $this->properties['maximumIntake'] = $maximumIntake;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getMaximumIntake() {
+        return $this->properties['maximumIntake'];
+    }
+
+    /**
+     * The generic name of this drug or supplement.
+     *
+     * @param $nonProprietaryName 
+     **/
+    public function setNonProprietaryName($nonProprietaryName) {
+        $this->properties['nonProprietaryName'] = $nonProprietaryName;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getNonProprietaryName() {
+        return $this->properties['nonProprietaryName'];
+    }
+
+    /**
+     * An active ingredient, typically chemical compounds and/or biologic substances.
+     *
+     * @param $activeIngredient 
+     **/
+    public function setActiveIngredient($activeIngredient) {
+        $this->properties['activeIngredient'] = $activeIngredient;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getActiveIngredient() {
+        return $this->properties['activeIngredient'];
     }
 
 

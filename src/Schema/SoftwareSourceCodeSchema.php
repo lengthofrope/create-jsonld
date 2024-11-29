@@ -31,107 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class SoftwareSourceCodeSchema extends CreativeWorkSchema
+class SoftwareSourceCodeSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new SoftwareSourceCodeSchema('http://schema.org/', 'SoftwareSourceCode');
-    }
-
-    /**
-     * Link to the repository where the un-compiled, human readable code and related code is located (SVN, github, CodePlex).
-     *
-     * @param $codeRepository URLSchema
-     **/
-    public function setCodeRepository($codeRepository) {
-        $this->properties['codeRepository'] = $codeRepository;
-
-        return $this;
-    }
-
-    /**
-     * @return URLSchema
-     **/
-    public function getCodeRepository() {
-        return $this->properties['codeRepository'];
+        return new SoftwareSourceCodeSchema('https://schema.org/', 'SoftwareSourceCode');
     }
 
     /**
      * What type of code sample: full (compile ready) solution, code snippet, inline code, scripts, template.
      *
-     * @param $codeSampleType TextSchema
-     **/
-    public function setCodeSampleType($codeSampleType) {
-        $this->properties['codeSampleType'] = $codeSampleType;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getCodeSampleType() {
-        return $this->properties['codeSampleType'];
-    }
-
-    /**
-     * The computer programming language.
-     *
-     * @param $programmingLanguage LanguageSchema
-     **/
-    public function setProgrammingLanguage($programmingLanguage) {
-        $this->properties['programmingLanguage'] = $programmingLanguage;
-
-        return $this;
-    }
-
-    /**
-     * @return LanguageSchema
-     **/
-    public function getProgrammingLanguage() {
-        return $this->properties['programmingLanguage'];
-    }
-
-    /**
-     * Runtime platform or script interpreter dependencies (Example - Java v1, Python2.3, .Net Framework 3.0).
-     *
-     * @param $runtime TextSchema
-     **/
-    public function setRuntime($runtime) {
-        $this->properties['runtime'] = $runtime;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getRuntime() {
-        return $this->properties['runtime'];
-    }
-
-    /**
-     * Runtime platform or script interpreter dependencies (Example - Java v1, Python2.3, .Net Framework 3.0).
-     *
-     * @param $runtimePlatform TextSchema
-     **/
-    public function setRuntimePlatform($runtimePlatform) {
-        $this->properties['runtimePlatform'] = $runtimePlatform;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getRuntimePlatform() {
-        return $this->properties['runtimePlatform'];
-    }
-
-    /**
-     * What type of sample: full (compile ready) solution, code snippet, inline code, scripts, template.
-     *
-     * @param $sampleType TextSchema
+     * @param $sampleType 
      **/
     public function setSampleType($sampleType) {
         $this->properties['sampleType'] = $sampleType;
@@ -140,16 +50,70 @@ class SoftwareSourceCodeSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getSampleType() {
         return $this->properties['sampleType'];
     }
 
     /**
+     * The computer programming language.
+     *
+     * @param $programmingLanguage |
+     **/
+    public function setProgrammingLanguage($programmingLanguage) {
+        $this->properties['programmingLanguage'] = $programmingLanguage;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getProgrammingLanguage() {
+        return $this->properties['programmingLanguage'];
+    }
+
+    /**
+     * What type of code sample: full (compile ready) solution, code snippet, inline code, scripts, template.
+     *
+     * @param $codeSampleType 
+     **/
+    public function setCodeSampleType($codeSampleType) {
+        $this->properties['codeSampleType'] = $codeSampleType;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getCodeSampleType() {
+        return $this->properties['codeSampleType'];
+    }
+
+    /**
+     * Runtime platform or script interpreter dependencies (example: Java v1, Python 2.3, .NET Framework 3.0).
+     *
+     * @param $runtime 
+     **/
+    public function setRuntime($runtime) {
+        $this->properties['runtime'] = $runtime;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getRuntime() {
+        return $this->properties['runtime'];
+    }
+
+    /**
      * Target Operating System / Product to which the code applies.  If applies to several versions, just the product name can be used.
      *
-     * @param $targetProduct SoftwareApplicationSchema
+     * @param $targetProduct 
      **/
     public function setTargetProduct($targetProduct) {
         $this->properties['targetProduct'] = $targetProduct;
@@ -158,10 +122,46 @@ class SoftwareSourceCodeSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return SoftwareApplicationSchema
+     * @return 
      **/
     public function getTargetProduct() {
         return $this->properties['targetProduct'];
+    }
+
+    /**
+     * Runtime platform or script interpreter dependencies (example: Java v1, Python 2.3, .NET Framework 3.0).
+     *
+     * @param $runtimePlatform 
+     **/
+    public function setRuntimePlatform($runtimePlatform) {
+        $this->properties['runtimePlatform'] = $runtimePlatform;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getRuntimePlatform() {
+        return $this->properties['runtimePlatform'];
+    }
+
+    /**
+     * Link to the repository where the un-compiled, human readable code and related code is located (SVN, GitHub, CodePlex).
+     *
+     * @param $codeRepository 
+     **/
+    public function setCodeRepository($codeRepository) {
+        $this->properties['codeRepository'] = $codeRepository;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getCodeRepository() {
+        return $this->properties['codeRepository'];
     }
 
 

@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MapCategoryTypeSchema extends EnumerationSchema
+class MapCategoryTypeSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MapCategoryTypeSchema('http://schema.org/', 'MapCategoryType');
+        return new MapCategoryTypeSchema('https://schema.org/', 'MapCategoryType');
     }
 
 

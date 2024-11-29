@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MovieClipSchema extends ClipSchema
+class MovieClipSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MovieClipSchema('http://schema.org/', 'MovieClip');
+        return new MovieClipSchema('https://schema.org/', 'MovieClip');
     }
 
 

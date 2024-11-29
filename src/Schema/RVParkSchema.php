@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class RVParkSchema extends CivicStructureSchema
+class RVParkSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new RVParkSchema('http://schema.org/', 'RVPark');
+        return new RVParkSchema('https://schema.org/', 'RVPark');
     }
 
 

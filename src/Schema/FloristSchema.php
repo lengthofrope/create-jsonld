@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class FloristSchema extends StoreSchema
+class FloristSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new FloristSchema('http://schema.org/', 'Florist');
+        return new FloristSchema('https://schema.org/', 'Florist');
     }
 
 

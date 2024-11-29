@@ -31,35 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ReplaceActionSchema extends UpdateActionSchema
+class ReplaceActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new ReplaceActionSchema('http://schema.org/', 'ReplaceAction');
-    }
-
-    /**
-     * A sub property of object. The object that is being replaced.
-     *
-     * @param $replacee ThingSchema
-     **/
-    public function setReplacee($replacee) {
-        $this->properties['replacee'] = $replacee;
-
-        return $this;
-    }
-
-    /**
-     * @return ThingSchema
-     **/
-    public function getReplacee() {
-        return $this->properties['replacee'];
+        return new ReplaceActionSchema('https://schema.org/', 'ReplaceAction');
     }
 
     /**
      * A sub property of object. The object that replaces.
      *
-     * @param $replacer ThingSchema
+     * @param $replacer 
      **/
     public function setReplacer($replacer) {
         $this->properties['replacer'] = $replacer;
@@ -68,10 +50,28 @@ class ReplaceActionSchema extends UpdateActionSchema
     }
 
     /**
-     * @return ThingSchema
+     * @return 
      **/
     public function getReplacer() {
         return $this->properties['replacer'];
+    }
+
+    /**
+     * A sub property of object. The object that is being replaced.
+     *
+     * @param $replacee 
+     **/
+    public function setReplacee($replacee) {
+        $this->properties['replacee'] = $replacee;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getReplacee() {
+        return $this->properties['replacee'];
     }
 
 

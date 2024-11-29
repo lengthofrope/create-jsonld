@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MedicalConditionStageSchema extends MedicalIntangibleSchema
+class MedicalConditionStageSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MedicalConditionStageSchema('http://schema.org/', 'MedicalConditionStage');
+        return new MedicalConditionStageSchema('https://schema.org/', 'MedicalConditionStage');
     }
 
     /**
      * The stage represented as a number, e.g. 3.
      *
-     * @param $stageAsNumber NumberSchema
+     * @param $stageAsNumber 
      **/
     public function setStageAsNumber($stageAsNumber) {
         $this->properties['stageAsNumber'] = $stageAsNumber;
@@ -50,7 +50,7 @@ class MedicalConditionStageSchema extends MedicalIntangibleSchema
     }
 
     /**
-     * @return NumberSchema
+     * @return 
      **/
     public function getStageAsNumber() {
         return $this->properties['stageAsNumber'];
@@ -59,7 +59,7 @@ class MedicalConditionStageSchema extends MedicalIntangibleSchema
     /**
      * The substage, e.g. 'a' for Stage IIIa.
      *
-     * @param $subStageSuffix TextSchema
+     * @param $subStageSuffix 
      **/
     public function setSubStageSuffix($subStageSuffix) {
         $this->properties['subStageSuffix'] = $subStageSuffix;
@@ -68,7 +68,7 @@ class MedicalConditionStageSchema extends MedicalIntangibleSchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getSubStageSuffix() {
         return $this->properties['subStageSuffix'];

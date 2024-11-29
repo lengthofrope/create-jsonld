@@ -35,7 +35,7 @@ class MedicineSystemSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MedicineSystemSchema('http://schema.org/', 'MedicineSystem');
+        return new MedicineSystemSchema('https://schema.org/', 'MedicineSystem');
     }
 
 

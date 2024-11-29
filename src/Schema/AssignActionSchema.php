@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class AssignActionSchema extends AllocateActionSchema
+class AssignActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new AssignActionSchema('http://schema.org/', 'AssignAction');
+        return new AssignActionSchema('https://schema.org/', 'AssignAction');
     }
 
 

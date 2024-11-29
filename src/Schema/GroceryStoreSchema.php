@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class GroceryStoreSchema extends StoreSchema
+class GroceryStoreSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new GroceryStoreSchema('http://schema.org/', 'GroceryStore');
+        return new GroceryStoreSchema('https://schema.org/', 'GroceryStore');
     }
 
 

@@ -31,35 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class BusinessAudienceSchema extends AudienceSchema
+class BusinessAudienceSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new BusinessAudienceSchema('http://schema.org/', 'BusinessAudience');
-    }
-
-    /**
-     * The number of employees in an organization e.g. business.
-     *
-     * @param $numberOfEmployees QuantitativeValueSchema
-     **/
-    public function setNumberOfEmployees($numberOfEmployees) {
-        $this->properties['numberOfEmployees'] = $numberOfEmployees;
-
-        return $this;
-    }
-
-    /**
-     * @return QuantitativeValueSchema
-     **/
-    public function getNumberOfEmployees() {
-        return $this->properties['numberOfEmployees'];
+        return new BusinessAudienceSchema('https://schema.org/', 'BusinessAudience');
     }
 
     /**
      * The size of the business in annual revenue.
      *
-     * @param $yearlyRevenue QuantitativeValueSchema
+     * @param $yearlyRevenue 
      **/
     public function setYearlyRevenue($yearlyRevenue) {
         $this->properties['yearlyRevenue'] = $yearlyRevenue;
@@ -68,7 +50,7 @@ class BusinessAudienceSchema extends AudienceSchema
     }
 
     /**
-     * @return QuantitativeValueSchema
+     * @return 
      **/
     public function getYearlyRevenue() {
         return $this->properties['yearlyRevenue'];
@@ -77,7 +59,7 @@ class BusinessAudienceSchema extends AudienceSchema
     /**
      * The age of the business.
      *
-     * @param $yearsInOperation QuantitativeValueSchema
+     * @param $yearsInOperation 
      **/
     public function setYearsInOperation($yearsInOperation) {
         $this->properties['yearsInOperation'] = $yearsInOperation;
@@ -86,10 +68,28 @@ class BusinessAudienceSchema extends AudienceSchema
     }
 
     /**
-     * @return QuantitativeValueSchema
+     * @return 
      **/
     public function getYearsInOperation() {
         return $this->properties['yearsInOperation'];
+    }
+
+    /**
+     * The number of employees in an organization, e.g. business.
+     *
+     * @param $numberOfEmployees 
+     **/
+    public function setNumberOfEmployees($numberOfEmployees) {
+        $this->properties['numberOfEmployees'] = $numberOfEmployees;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getNumberOfEmployees() {
+        return $this->properties['numberOfEmployees'];
     }
 
 

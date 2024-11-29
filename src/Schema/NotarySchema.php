@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class NotarySchema extends LegalServiceSchema
+class NotarySchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new NotarySchema('http://schema.org/', 'Notary');
+        return new NotarySchema('https://schema.org/', 'Notary');
     }
 
 

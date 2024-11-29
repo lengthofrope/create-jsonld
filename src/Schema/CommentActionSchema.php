@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class CommentActionSchema extends CommunicateActionSchema
+class CommentActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new CommentActionSchema('http://schema.org/', 'CommentAction');
+        return new CommentActionSchema('https://schema.org/', 'CommentAction');
     }
 
     /**
      * A sub property of result. The Comment created or sent as a result of this action.
      *
-     * @param $resultComment CommentSchema
+     * @param $resultComment 
      **/
     public function setResultComment($resultComment) {
         $this->properties['resultComment'] = $resultComment;
@@ -50,7 +50,7 @@ class CommentActionSchema extends CommunicateActionSchema
     }
 
     /**
-     * @return CommentSchema
+     * @return 
      **/
     public function getResultComment() {
         return $this->properties['resultComment'];

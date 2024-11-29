@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class BakerySchema extends FoodEstablishmentSchema
+class BakerySchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new BakerySchema('http://schema.org/', 'Bakery');
+        return new BakerySchema('https://schema.org/', 'Bakery');
     }
 
 

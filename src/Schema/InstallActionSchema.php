@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class InstallActionSchema extends ConsumeActionSchema
+class InstallActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new InstallActionSchema('http://schema.org/', 'InstallAction');
+        return new InstallActionSchema('https://schema.org/', 'InstallAction');
     }
 
 

@@ -35,7 +35,7 @@ class DrugPregnancyCategorySchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new DrugPregnancyCategorySchema('http://schema.org/', 'DrugPregnancyCategory');
+        return new DrugPregnancyCategorySchema('https://schema.org/', 'DrugPregnancyCategory');
     }
 
 

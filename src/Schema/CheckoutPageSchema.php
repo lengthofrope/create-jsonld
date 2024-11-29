@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class CheckoutPageSchema extends WebPageSchema
+class CheckoutPageSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new CheckoutPageSchema('http://schema.org/', 'CheckoutPage');
+        return new CheckoutPageSchema('https://schema.org/', 'CheckoutPage');
     }
 
 

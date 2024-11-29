@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class BuyActionSchema extends TradeActionSchema
+class BuyActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new BuyActionSchema('http://schema.org/', 'BuyAction');
+        return new BuyActionSchema('https://schema.org/', 'BuyAction');
     }
 
     /**
      * An entity which offers (sells / leases / lends / loans) the services / goods.  A seller may also be a provider.
      *
-     * @param $seller OrganizationSchema|PersonSchema
+     * @param $seller |
      **/
     public function setSeller($seller) {
         $this->properties['seller'] = $seller;
@@ -50,7 +50,7 @@ class BuyActionSchema extends TradeActionSchema
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema
+     * @return |
      **/
     public function getSeller() {
         return $this->properties['seller'];
@@ -59,7 +59,7 @@ class BuyActionSchema extends TradeActionSchema
     /**
      * 'vendor' is an earlier term for 'seller'.
      *
-     * @param $vendor OrganizationSchema|PersonSchema
+     * @param $vendor |
      **/
     public function setVendor($vendor) {
         $this->properties['vendor'] = $vendor;
@@ -68,7 +68,7 @@ class BuyActionSchema extends TradeActionSchema
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema
+     * @return |
      **/
     public function getVendor() {
         return $this->properties['vendor'];
@@ -77,7 +77,7 @@ class BuyActionSchema extends TradeActionSchema
     /**
      * The warranty promise(s) included in the offer.
      *
-     * @param $warrantyPromise WarrantyPromiseSchema
+     * @param $warrantyPromise 
      **/
     public function setWarrantyPromise($warrantyPromise) {
         $this->properties['warrantyPromise'] = $warrantyPromise;
@@ -86,7 +86,7 @@ class BuyActionSchema extends TradeActionSchema
     }
 
     /**
-     * @return WarrantyPromiseSchema
+     * @return 
      **/
     public function getWarrantyPromise() {
         return $this->properties['warrantyPromise'];

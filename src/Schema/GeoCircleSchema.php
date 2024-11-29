@@ -28,23 +28,23 @@ namespace LengthOfRope\JSONLD\Schema;
 
 /**
  * A GeoCircle is a GeoShape representing a circular geographic area. As it is a GeoShape
-          it provides the simple textual property 'circle', but also allows the combination of postalCode alongside geoRadius.
-          The center of the circle can be indicated via the 'geoMidpoint' property, or more approximately using 'address', 'postalCode'.
-       
+ * *            it provides the simple textual property 'circle', but also allows the combination of postalCode alongside geoRadius.
+ * *            The center of the circle can be indicated via the 'geoMidpoint' property, or more approximately using 'address', 'postalCode'.
+ *        
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class GeoCircleSchema extends GeoShapeSchema
+class GeoCircleSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new GeoCircleSchema('http://schema.org/', 'GeoCircle');
+        return new GeoCircleSchema('https://schema.org/', 'GeoCircle');
     }
 
     /**
-     * Indicates the GeoCoordinates at the centre of a GeoShape e.g. GeoCircle.
+     * Indicates the GeoCoordinates at the centre of a GeoShape, e.g. GeoCircle.
      *
-     * @param $geoMidpoint GeoCoordinatesSchema
+     * @param $geoMidpoint 
      **/
     public function setGeoMidpoint($geoMidpoint) {
         $this->properties['geoMidpoint'] = $geoMidpoint;
@@ -53,7 +53,7 @@ class GeoCircleSchema extends GeoShapeSchema
     }
 
     /**
-     * @return GeoCoordinatesSchema
+     * @return 
      **/
     public function getGeoMidpoint() {
         return $this->properties['geoMidpoint'];
@@ -62,7 +62,7 @@ class GeoCircleSchema extends GeoShapeSchema
     /**
      * Indicates the approximate radius of a GeoCircle (metres unless indicated otherwise via Distance notation).
      *
-     * @param $geoRadius TextSchema|NumberSchema|DistanceSchema
+     * @param $geoRadius ||
      **/
     public function setGeoRadius($geoRadius) {
         $this->properties['geoRadius'] = $geoRadius;
@@ -71,7 +71,7 @@ class GeoCircleSchema extends GeoShapeSchema
     }
 
     /**
-     * @return TextSchema|NumberSchema|DistanceSchema
+     * @return ||
      **/
     public function getGeoRadius() {
         return $this->properties['geoRadius'];

@@ -27,39 +27,21 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A reservation for air travel.Note: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use http://schema.org/Offer.
+ * A reservation for air travel.\n\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use [[Offer]].
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class FlightReservationSchema extends ReservationSchema
+class FlightReservationSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new FlightReservationSchema('http://schema.org/', 'FlightReservation');
-    }
-
-    /**
-     * The airline-specific indicator of boarding order / preference.
-     *
-     * @param $boardingGroup TextSchema
-     **/
-    public function setBoardingGroup($boardingGroup) {
-        $this->properties['boardingGroup'] = $boardingGroup;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getBoardingGroup() {
-        return $this->properties['boardingGroup'];
+        return new FlightReservationSchema('https://schema.org/', 'FlightReservation');
     }
 
     /**
      * The priority status assigned to a passenger for security or boarding (e.g. FastTrack or Priority).
      *
-     * @param $passengerPriorityStatus TextSchema|QualitativeValueSchema
+     * @param $passengerPriorityStatus |
      **/
     public function setPassengerPriorityStatus($passengerPriorityStatus) {
         $this->properties['passengerPriorityStatus'] = $passengerPriorityStatus;
@@ -68,7 +50,7 @@ class FlightReservationSchema extends ReservationSchema
     }
 
     /**
-     * @return TextSchema|QualitativeValueSchema
+     * @return |
      **/
     public function getPassengerPriorityStatus() {
         return $this->properties['passengerPriorityStatus'];
@@ -77,7 +59,7 @@ class FlightReservationSchema extends ReservationSchema
     /**
      * The passenger's sequence number as assigned by the airline.
      *
-     * @param $passengerSequenceNumber TextSchema
+     * @param $passengerSequenceNumber 
      **/
     public function setPassengerSequenceNumber($passengerSequenceNumber) {
         $this->properties['passengerSequenceNumber'] = $passengerSequenceNumber;
@@ -86,16 +68,34 @@ class FlightReservationSchema extends ReservationSchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getPassengerSequenceNumber() {
         return $this->properties['passengerSequenceNumber'];
     }
 
     /**
+     * The airline-specific indicator of boarding order / preference.
+     *
+     * @param $boardingGroup 
+     **/
+    public function setBoardingGroup($boardingGroup) {
+        $this->properties['boardingGroup'] = $boardingGroup;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getBoardingGroup() {
+        return $this->properties['boardingGroup'];
+    }
+
+    /**
      * The type of security screening the passenger is subject to.
      *
-     * @param $securityScreening TextSchema
+     * @param $securityScreening 
      **/
     public function setSecurityScreening($securityScreening) {
         $this->properties['securityScreening'] = $securityScreening;
@@ -104,7 +104,7 @@ class FlightReservationSchema extends ReservationSchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getSecurityScreening() {
         return $this->properties['securityScreening'];

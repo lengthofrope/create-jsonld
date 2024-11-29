@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MotorcycleRepairSchema extends AutomotiveBusinessSchema
+class MotorcycleRepairSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MotorcycleRepairSchema('http://schema.org/', 'MotorcycleRepair');
+        return new MotorcycleRepairSchema('https://schema.org/', 'MotorcycleRepair');
     }
 
 

@@ -31,11 +31,47 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class CarSchema extends VehicleSchema
+class CarSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new CarSchema('http://schema.org/', 'Car');
+        return new CarSchema('https://schema.org/', 'Car');
+    }
+
+    /**
+     * The permitted total weight of cargo and installations (e.g. a roof rack) on top of the vehicle.\n\nTypical unit code(s): KGM for kilogram, LBR for pound\n\n* Note 1: You can indicate additional information in the [[name]] of the [[QuantitativeValue]] node.\n* Note 2: You may also link to a [[QualitativeValue]] node that provides additional information using [[valueReference]]\n* Note 3: Note that you can use [[minValue]] and [[maxValue]] to indicate ranges.
+     *
+     * @param $roofLoad 
+     **/
+    public function setRoofLoad($roofLoad) {
+        $this->properties['roofLoad'] = $roofLoad;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getRoofLoad() {
+        return $this->properties['roofLoad'];
+    }
+
+    /**
+     * The ACRISS Car Classification Code is a code used by many car rental companies, for classifying vehicles. ACRISS stands for Association of Car Rental Industry Systems and Standards.
+     *
+     * @param $acrissCode 
+     **/
+    public function setAcrissCode($acrissCode) {
+        $this->properties['acrissCode'] = $acrissCode;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getAcrissCode() {
+        return $this->properties['acrissCode'];
     }
 
 

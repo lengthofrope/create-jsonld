@@ -27,15 +27,15 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of finding an object.<p>Related actions:</p><ul><li><a href="http://schema.org/SearchAction">SearchAction</a>: FindAction is generally lead by a SearchAction, but not necessarily</li></ul>.
+ * The act of finding an object.\n\nRelated actions:\n\n* [[SearchAction]]: FindAction is generally lead by a SearchAction, but not necessarily.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class FindActionSchema extends ActionSchema
+class FindActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new FindActionSchema('http://schema.org/', 'FindAction');
+        return new FindActionSchema('https://schema.org/', 'FindAction');
     }
 
 

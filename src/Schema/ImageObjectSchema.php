@@ -31,53 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ImageObjectSchema extends MediaObjectSchema
+class ImageObjectSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new ImageObjectSchema('http://schema.org/', 'ImageObject');
-    }
-
-    /**
-     * The caption for this object.
-     *
-     * @param $caption TextSchema
-     **/
-    public function setCaption($caption) {
-        $this->properties['caption'] = $caption;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getCaption() {
-        return $this->properties['caption'];
-    }
-
-    /**
-     * exif data for this object.
-     *
-     * @param $exifData TextSchema|PropertyValueSchema
-     **/
-    public function setExifData($exifData) {
-        $this->properties['exifData'] = $exifData;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema|PropertyValueSchema
-     **/
-    public function getExifData() {
-        return $this->properties['exifData'];
+        return new ImageObjectSchema('https://schema.org/', 'ImageObject');
     }
 
     /**
      * Indicates whether this image is representative of the content of the page.
      *
-     * @param $representativeOfPage BooleanSchema
+     * @param $representativeOfPage 
      **/
     public function setRepresentativeOfPage($representativeOfPage) {
         $this->properties['representativeOfPage'] = $representativeOfPage;
@@ -86,28 +50,64 @@ class ImageObjectSchema extends MediaObjectSchema
     }
 
     /**
-     * @return BooleanSchema
+     * @return 
      **/
     public function getRepresentativeOfPage() {
         return $this->properties['representativeOfPage'];
     }
 
     /**
-     * Thumbnail image for an image or video.
+     * The caption for this object. For downloadable machine formats (closed caption, subtitles etc.) use MediaObject and indicate the [[encodingFormat]].
      *
-     * @param $thumbnail ImageObjectSchema
+     * @param $caption |
      **/
-    public function setThumbnail($thumbnail) {
-        $this->properties['thumbnail'] = $thumbnail;
+    public function setCaption($caption) {
+        $this->properties['caption'] = $caption;
 
         return $this;
     }
 
     /**
-     * @return ImageObjectSchema
+     * @return |
      **/
-    public function getThumbnail() {
-        return $this->properties['thumbnail'];
+    public function getCaption() {
+        return $this->properties['caption'];
+    }
+
+    /**
+     * exif data for this object.
+     *
+     * @param $exifData |
+     **/
+    public function setExifData($exifData) {
+        $this->properties['exifData'] = $exifData;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getExifData() {
+        return $this->properties['exifData'];
+    }
+
+    /**
+     * Represents textual captioning from a [[MediaObject]], e.g. text of a 'meme'.
+     *
+     * @param $embeddedTextCaption 
+     **/
+    public function setEmbeddedTextCaption($embeddedTextCaption) {
+        $this->properties['embeddedTextCaption'] = $embeddedTextCaption;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getEmbeddedTextCaption() {
+        return $this->properties['embeddedTextCaption'];
     }
 
 

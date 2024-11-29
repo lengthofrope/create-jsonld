@@ -35,7 +35,7 @@ class HealthClubSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new HealthClubSchema('http://schema.org/', 'HealthClub');
+        return new HealthClubSchema('https://schema.org/', 'HealthClub');
     }
 
 

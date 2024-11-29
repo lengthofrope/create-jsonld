@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class HairSalonSchema extends HealthAndBeautyBusinessSchema
+class HairSalonSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new HairSalonSchema('http://schema.org/', 'HairSalon');
+        return new HairSalonSchema('https://schema.org/', 'HairSalon');
     }
 
 

@@ -31,11 +31,29 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ResidenceSchema extends PlaceSchema
+class ResidenceSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new ResidenceSchema('http://schema.org/', 'Residence');
+        return new ResidenceSchema('https://schema.org/', 'Residence');
+    }
+
+    /**
+     * A floorplan of some [[Accommodation]].
+     *
+     * @param $accommodationFloorPlan 
+     **/
+    public function setAccommodationFloorPlan($accommodationFloorPlan) {
+        $this->properties['accommodationFloorPlan'] = $accommodationFloorPlan;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getAccommodationFloorPlan() {
+        return $this->properties['accommodationFloorPlan'];
     }
 
 

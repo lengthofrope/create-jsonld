@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class AirlineSchema extends OrganizationSchema
+class AirlineSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new AirlineSchema('http://schema.org/', 'Airline');
+        return new AirlineSchema('https://schema.org/', 'Airline');
     }
 
     /**
      * The type of boarding policy used by the airline (e.g. zone-based or group-based).
      *
-     * @param $boardingPolicy BoardingPolicyTypeSchema
+     * @param $boardingPolicy 
      **/
     public function setBoardingPolicy($boardingPolicy) {
         $this->properties['boardingPolicy'] = $boardingPolicy;
@@ -50,7 +50,7 @@ class AirlineSchema extends OrganizationSchema
     }
 
     /**
-     * @return BoardingPolicyTypeSchema
+     * @return 
      **/
     public function getBoardingPolicy() {
         return $this->properties['boardingPolicy'];
@@ -59,7 +59,7 @@ class AirlineSchema extends OrganizationSchema
     /**
      * IATA identifier for an airline or airport.
      *
-     * @param $iataCode TextSchema
+     * @param $iataCode 
      **/
     public function setIataCode($iataCode) {
         $this->properties['iataCode'] = $iataCode;
@@ -68,7 +68,7 @@ class AirlineSchema extends OrganizationSchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getIataCode() {
         return $this->properties['iataCode'];

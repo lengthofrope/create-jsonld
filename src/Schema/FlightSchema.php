@@ -31,107 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class FlightSchema extends IntangibleSchema
+class FlightSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new FlightSchema('http://schema.org/', 'Flight');
-    }
-
-    /**
-     * The kind of aircraft (e.g., "Boeing 747").
-     *
-     * @param $aircraft TextSchema|VehicleSchema
-     **/
-    public function setAircraft($aircraft) {
-        $this->properties['aircraft'] = $aircraft;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema|VehicleSchema
-     **/
-    public function getAircraft() {
-        return $this->properties['aircraft'];
-    }
-
-    /**
-     * The airport where the flight terminates.
-     *
-     * @param $arrivalAirport AirportSchema
-     **/
-    public function setArrivalAirport($arrivalAirport) {
-        $this->properties['arrivalAirport'] = $arrivalAirport;
-
-        return $this;
-    }
-
-    /**
-     * @return AirportSchema
-     **/
-    public function getArrivalAirport() {
-        return $this->properties['arrivalAirport'];
-    }
-
-    /**
-     * Identifier of the flight's arrival gate.
-     *
-     * @param $arrivalGate TextSchema
-     **/
-    public function setArrivalGate($arrivalGate) {
-        $this->properties['arrivalGate'] = $arrivalGate;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getArrivalGate() {
-        return $this->properties['arrivalGate'];
-    }
-
-    /**
-     * Identifier of the flight's arrival terminal.
-     *
-     * @param $arrivalTerminal TextSchema
-     **/
-    public function setArrivalTerminal($arrivalTerminal) {
-        $this->properties['arrivalTerminal'] = $arrivalTerminal;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getArrivalTerminal() {
-        return $this->properties['arrivalTerminal'];
-    }
-
-    /**
-     * The expected arrival time.
-     *
-     * @param $arrivalTime DateTimeSchema
-     **/
-    public function setArrivalTime($arrivalTime) {
-        $this->properties['arrivalTime'] = $arrivalTime;
-
-        return $this;
-    }
-
-    /**
-     * @return DateTimeSchema
-     **/
-    public function getArrivalTime() {
-        return $this->properties['arrivalTime'];
+        return new FlightSchema('https://schema.org/', 'Flight');
     }
 
     /**
      * The type of boarding policy used by the airline (e.g. zone-based or group-based).
      *
-     * @param $boardingPolicy BoardingPolicyTypeSchema
+     * @param $boardingPolicy 
      **/
     public function setBoardingPolicy($boardingPolicy) {
         $this->properties['boardingPolicy'] = $boardingPolicy;
@@ -140,52 +50,34 @@ class FlightSchema extends IntangibleSchema
     }
 
     /**
-     * @return BoardingPolicyTypeSchema
+     * @return 
      **/
     public function getBoardingPolicy() {
         return $this->properties['boardingPolicy'];
     }
 
     /**
-     * 'carrier' is an out-dated term indicating the 'provider' for parcel delivery and flights.
+     * Identifier of the flight's arrival terminal.
      *
-     * @param $carrier OrganizationSchema
+     * @param $arrivalTerminal 
      **/
-    public function setCarrier($carrier) {
-        $this->properties['carrier'] = $carrier;
+    public function setArrivalTerminal($arrivalTerminal) {
+        $this->properties['arrivalTerminal'] = $arrivalTerminal;
 
         return $this;
     }
 
     /**
-     * @return OrganizationSchema
+     * @return 
      **/
-    public function getCarrier() {
-        return $this->properties['carrier'];
-    }
-
-    /**
-     * The airport where the flight originates.
-     *
-     * @param $departureAirport AirportSchema
-     **/
-    public function setDepartureAirport($departureAirport) {
-        $this->properties['departureAirport'] = $departureAirport;
-
-        return $this;
-    }
-
-    /**
-     * @return AirportSchema
-     **/
-    public function getDepartureAirport() {
-        return $this->properties['departureAirport'];
+    public function getArrivalTerminal() {
+        return $this->properties['arrivalTerminal'];
     }
 
     /**
      * Identifier of the flight's departure gate.
      *
-     * @param $departureGate TextSchema
+     * @param $departureGate 
      **/
     public function setDepartureGate($departureGate) {
         $this->properties['departureGate'] = $departureGate;
@@ -194,142 +86,70 @@ class FlightSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getDepartureGate() {
         return $this->properties['departureGate'];
     }
 
     /**
-     * Identifier of the flight's departure terminal.
+     * The airport where the flight originates.
      *
-     * @param $departureTerminal TextSchema
+     * @param $departureAirport 
      **/
-    public function setDepartureTerminal($departureTerminal) {
-        $this->properties['departureTerminal'] = $departureTerminal;
+    public function setDepartureAirport($departureAirport) {
+        $this->properties['departureAirport'] = $departureAirport;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
-    public function getDepartureTerminal() {
-        return $this->properties['departureTerminal'];
+    public function getDepartureAirport() {
+        return $this->properties['departureAirport'];
     }
 
     /**
-     * The expected departure time.
+     * 'carrier' is an out-dated term indicating the 'provider' for parcel delivery and flights.
      *
-     * @param $departureTime DateTimeSchema
+     * @param $carrier 
      **/
-    public function setDepartureTime($departureTime) {
-        $this->properties['departureTime'] = $departureTime;
+    public function setCarrier($carrier) {
+        $this->properties['carrier'] = $carrier;
 
         return $this;
     }
 
     /**
-     * @return DateTimeSchema
+     * @return 
      **/
-    public function getDepartureTime() {
-        return $this->properties['departureTime'];
+    public function getCarrier() {
+        return $this->properties['carrier'];
     }
 
     /**
-     * The estimated time the flight will take.
+     * The kind of aircraft (e.g., "Boeing 747").
      *
-     * @param $estimatedFlightDuration TextSchema|DurationSchema
+     * @param $aircraft |
      **/
-    public function setEstimatedFlightDuration($estimatedFlightDuration) {
-        $this->properties['estimatedFlightDuration'] = $estimatedFlightDuration;
+    public function setAircraft($aircraft) {
+        $this->properties['aircraft'] = $aircraft;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|DurationSchema
+     * @return |
      **/
-    public function getEstimatedFlightDuration() {
-        return $this->properties['estimatedFlightDuration'];
-    }
-
-    /**
-     * The distance of the flight.
-     *
-     * @param $flightDistance TextSchema|DistanceSchema
-     **/
-    public function setFlightDistance($flightDistance) {
-        $this->properties['flightDistance'] = $flightDistance;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema|DistanceSchema
-     **/
-    public function getFlightDistance() {
-        return $this->properties['flightDistance'];
-    }
-
-    /**
-     * The unique identifier for a flight including the airline IATA code. For example, if describing United flight 110, where the IATA code for United is 'UA', the flightNumber is 'UA110'.
-     *
-     * @param $flightNumber TextSchema
-     **/
-    public function setFlightNumber($flightNumber) {
-        $this->properties['flightNumber'] = $flightNumber;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getFlightNumber() {
-        return $this->properties['flightNumber'];
-    }
-
-    /**
-     * Description of the meals that will be provided or available for purchase.
-     *
-     * @param $mealService TextSchema
-     **/
-    public function setMealService($mealService) {
-        $this->properties['mealService'] = $mealService;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getMealService() {
-        return $this->properties['mealService'];
-    }
-
-    /**
-     * The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.
-     *
-     * @param $provider PersonSchema|OrganizationSchema
-     **/
-    public function setProvider($provider) {
-        $this->properties['provider'] = $provider;
-
-        return $this;
-    }
-
-    /**
-     * @return PersonSchema|OrganizationSchema
-     **/
-    public function getProvider() {
-        return $this->properties['provider'];
+    public function getAircraft() {
+        return $this->properties['aircraft'];
     }
 
     /**
      * An entity which offers (sells / leases / lends / loans) the services / goods.  A seller may also be a provider.
      *
-     * @param $seller OrganizationSchema|PersonSchema
+     * @param $seller |
      **/
     public function setSeller($seller) {
         $this->properties['seller'] = $seller;
@@ -338,16 +158,34 @@ class FlightSchema extends IntangibleSchema
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema
+     * @return |
      **/
     public function getSeller() {
         return $this->properties['seller'];
     }
 
     /**
+     * Identifier of the flight's arrival gate.
+     *
+     * @param $arrivalGate 
+     **/
+    public function setArrivalGate($arrivalGate) {
+        $this->properties['arrivalGate'] = $arrivalGate;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getArrivalGate() {
+        return $this->properties['arrivalGate'];
+    }
+
+    /**
      * The time when a passenger can check into the flight online.
      *
-     * @param $webCheckinTime DateTimeSchema
+     * @param $webCheckinTime 
      **/
     public function setWebCheckinTime($webCheckinTime) {
         $this->properties['webCheckinTime'] = $webCheckinTime;
@@ -356,10 +194,118 @@ class FlightSchema extends IntangibleSchema
     }
 
     /**
-     * @return DateTimeSchema
+     * @return 
      **/
     public function getWebCheckinTime() {
         return $this->properties['webCheckinTime'];
+    }
+
+    /**
+     * The estimated time the flight will take.
+     *
+     * @param $estimatedFlightDuration |
+     **/
+    public function setEstimatedFlightDuration($estimatedFlightDuration) {
+        $this->properties['estimatedFlightDuration'] = $estimatedFlightDuration;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getEstimatedFlightDuration() {
+        return $this->properties['estimatedFlightDuration'];
+    }
+
+    /**
+     * The distance of the flight.
+     *
+     * @param $flightDistance |
+     **/
+    public function setFlightDistance($flightDistance) {
+        $this->properties['flightDistance'] = $flightDistance;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getFlightDistance() {
+        return $this->properties['flightDistance'];
+    }
+
+    /**
+     * Description of the meals that will be provided or available for purchase.
+     *
+     * @param $mealService 
+     **/
+    public function setMealService($mealService) {
+        $this->properties['mealService'] = $mealService;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getMealService() {
+        return $this->properties['mealService'];
+    }
+
+    /**
+     * Identifier of the flight's departure terminal.
+     *
+     * @param $departureTerminal 
+     **/
+    public function setDepartureTerminal($departureTerminal) {
+        $this->properties['departureTerminal'] = $departureTerminal;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getDepartureTerminal() {
+        return $this->properties['departureTerminal'];
+    }
+
+    /**
+     * The airport where the flight terminates.
+     *
+     * @param $arrivalAirport 
+     **/
+    public function setArrivalAirport($arrivalAirport) {
+        $this->properties['arrivalAirport'] = $arrivalAirport;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getArrivalAirport() {
+        return $this->properties['arrivalAirport'];
+    }
+
+    /**
+     * The unique identifier for a flight including the airline IATA code. For example, if describing United flight 110, where the IATA code for United is 'UA', the flightNumber is 'UA110'.
+     *
+     * @param $flightNumber 
+     **/
+    public function setFlightNumber($flightNumber) {
+        $this->properties['flightNumber'] = $flightNumber;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getFlightNumber() {
+        return $this->properties['flightNumber'];
     }
 
 

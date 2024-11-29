@@ -27,21 +27,21 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of obtaining an object under an agreement to return it at a later date. Reciprocal of LendAction.<p>Related actions:</p><ul><li><a href="http://schema.org/LendAction">LendAction</a>: Reciprocal of BorrowAction</li></ul>.
+ * The act of obtaining an object under an agreement to return it at a later date. Reciprocal of LendAction.\n\nRelated actions:\n\n* [[LendAction]]: Reciprocal of BorrowAction.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class BorrowActionSchema extends TransferActionSchema
+class BorrowActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new BorrowActionSchema('http://schema.org/', 'BorrowAction');
+        return new BorrowActionSchema('https://schema.org/', 'BorrowAction');
     }
 
     /**
      * A sub property of participant. The person that lends the object being borrowed.
      *
-     * @param $lender PersonSchema
+     * @param $lender |
      **/
     public function setLender($lender) {
         $this->properties['lender'] = $lender;
@@ -50,7 +50,7 @@ class BorrowActionSchema extends TransferActionSchema
     }
 
     /**
-     * @return PersonSchema
+     * @return |
      **/
     public function getLender() {
         return $this->properties['lender'];

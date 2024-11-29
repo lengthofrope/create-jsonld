@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class RecyclingCenterSchema extends LocalBusinessSchema
+class RecyclingCenterSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new RecyclingCenterSchema('http://schema.org/', 'RecyclingCenter');
+        return new RecyclingCenterSchema('https://schema.org/', 'RecyclingCenter');
     }
 
 

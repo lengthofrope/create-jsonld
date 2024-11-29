@@ -31,89 +31,53 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class BroadcastServiceSchema extends ServiceSchema
+class BroadcastServiceSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new BroadcastServiceSchema('http://schema.org/', 'BroadcastService');
+        return new BroadcastServiceSchema('https://schema.org/', 'BroadcastService');
     }
 
     /**
-     * The area within which users can expect to reach the broadcast service.
+     * The frequency used for over-the-air broadcasts. Numeric values or simple ranges, e.g. 87-99. In addition a shortcut idiom is supported for frequencies of AM and FM radio channels, e.g. "87 FM".
      *
-     * @param $area PlaceSchema
+     * @param $broadcastFrequency |
      **/
-    public function setArea($area) {
-        $this->properties['area'] = $area;
+    public function setBroadcastFrequency($broadcastFrequency) {
+        $this->properties['broadcastFrequency'] = $broadcastFrequency;
 
         return $this;
     }
 
     /**
-     * @return PlaceSchema
+     * @return |
      **/
-    public function getArea() {
-        return $this->properties['area'];
+    public function getBroadcastFrequency() {
+        return $this->properties['broadcastFrequency'];
     }
 
     /**
-     * The media network(s) whose content is broadcast on this station.
+     * The timezone in [ISO 8601 format](http://en.wikipedia.org/wiki/ISO_8601) for which the service bases its broadcasts.
      *
-     * @param $broadcastAffiliateOf OrganizationSchema
+     * @param $broadcastTimezone 
      **/
-    public function setBroadcastAffiliateOf($broadcastAffiliateOf) {
-        $this->properties['broadcastAffiliateOf'] = $broadcastAffiliateOf;
+    public function setBroadcastTimezone($broadcastTimezone) {
+        $this->properties['broadcastTimezone'] = $broadcastTimezone;
 
         return $this;
     }
 
     /**
-     * @return OrganizationSchema
+     * @return 
      **/
-    public function getBroadcastAffiliateOf() {
-        return $this->properties['broadcastAffiliateOf'];
-    }
-
-    /**
-     * The name displayed in the channel guide. For many US affiliates, it is the network name.
-     *
-     * @param $broadcastDisplayName TextSchema
-     **/
-    public function setBroadcastDisplayName($broadcastDisplayName) {
-        $this->properties['broadcastDisplayName'] = $broadcastDisplayName;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getBroadcastDisplayName() {
-        return $this->properties['broadcastDisplayName'];
-    }
-
-    /**
-     * The timezone in <a href='http://en.wikipedia.org/wiki/ISO_8601'>ISO 8601 format</a> for which the service bases its broadcasts.
-     *
-     * @param $timezone TextSchema
-     **/
-    public function setTimezone($timezone) {
-        $this->properties['timezone'] = $timezone;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getTimezone() {
-        return $this->properties['timezone'];
+    public function getBroadcastTimezone() {
+        return $this->properties['broadcastTimezone'];
     }
 
     /**
      * The organization owning or operating the broadcast service.
      *
-     * @param $broadcaster OrganizationSchema
+     * @param $broadcaster 
      **/
     public function setBroadcaster($broadcaster) {
         $this->properties['broadcaster'] = $broadcaster;
@@ -122,16 +86,34 @@ class BroadcastServiceSchema extends ServiceSchema
     }
 
     /**
-     * @return OrganizationSchema
+     * @return 
      **/
     public function getBroadcaster() {
         return $this->properties['broadcaster'];
     }
 
     /**
+     * A [callsign](https://en.wikipedia.org/wiki/Call_sign), as used in broadcasting and radio communications to identify people, radio and TV stations, or vehicles.
+     *
+     * @param $callSign 
+     **/
+    public function setCallSign($callSign) {
+        $this->properties['callSign'] = $callSign;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getCallSign() {
+        return $this->properties['callSign'];
+    }
+
+    /**
      * A broadcast service to which the broadcast service may belong to such as regional variations of a national channel.
      *
-     * @param $parentService BroadcastServiceSchema
+     * @param $parentService 
      **/
     public function setParentService($parentService) {
         $this->properties['parentService'] = $parentService;
@@ -140,16 +122,34 @@ class BroadcastServiceSchema extends ServiceSchema
     }
 
     /**
-     * @return BroadcastServiceSchema
+     * @return 
      **/
     public function getParentService() {
         return $this->properties['parentService'];
     }
 
     /**
+     * The media network(s) whose content is broadcast on this station.
+     *
+     * @param $broadcastAffiliateOf 
+     **/
+    public function setBroadcastAffiliateOf($broadcastAffiliateOf) {
+        $this->properties['broadcastAffiliateOf'] = $broadcastAffiliateOf;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getBroadcastAffiliateOf() {
+        return $this->properties['broadcastAffiliateOf'];
+    }
+
+    /**
      * The type of screening or video broadcast used (e.g. IMAX, 3D, SD, HD, etc.).
      *
-     * @param $videoFormat TextSchema
+     * @param $videoFormat 
      **/
     public function setVideoFormat($videoFormat) {
         $this->properties['videoFormat'] = $videoFormat;
@@ -158,10 +158,82 @@ class BroadcastServiceSchema extends ServiceSchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getVideoFormat() {
         return $this->properties['videoFormat'];
+    }
+
+    /**
+     * The name displayed in the channel guide. For many US affiliates, it is the network name.
+     *
+     * @param $broadcastDisplayName 
+     **/
+    public function setBroadcastDisplayName($broadcastDisplayName) {
+        $this->properties['broadcastDisplayName'] = $broadcastDisplayName;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getBroadcastDisplayName() {
+        return $this->properties['broadcastDisplayName'];
+    }
+
+    /**
+     * A broadcast channel of a broadcast service.
+     *
+     * @param $hasBroadcastChannel 
+     **/
+    public function setHasBroadcastChannel($hasBroadcastChannel) {
+        $this->properties['hasBroadcastChannel'] = $hasBroadcastChannel;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getHasBroadcastChannel() {
+        return $this->properties['hasBroadcastChannel'];
+    }
+
+    /**
+     * The area within which users can expect to reach the broadcast service.
+     *
+     * @param $area 
+     **/
+    public function setArea($area) {
+        $this->properties['area'] = $area;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getArea() {
+        return $this->properties['area'];
+    }
+
+    /**
+     * The language of the content or performance or used in an action. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
+     *
+     * @param $inLanguage |
+     **/
+    public function setInLanguage($inLanguage) {
+        $this->properties['inLanguage'] = $inLanguage;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getInLanguage() {
+        return $this->properties['inLanguage'];
     }
 
 

@@ -31,75 +31,18 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class DeliveryChargeSpecificationSchema extends PriceSpecificationSchema
+class DeliveryChargeSpecificationSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new DeliveryChargeSpecificationSchema('http://schema.org/', 'DeliveryChargeSpecification');
+        return new DeliveryChargeSpecificationSchema('https://schema.org/', 'DeliveryChargeSpecification');
     }
 
     /**
-     * The delivery method(s) to which the delivery charge or payment charge specification applies.
-     *
-     * @param $appliesToDeliveryMethod DeliveryMethodSchema
-     **/
-    public function setAppliesToDeliveryMethod($appliesToDeliveryMethod) {
-        $this->properties['appliesToDeliveryMethod'] = $appliesToDeliveryMethod;
-
-        return $this;
-    }
-
-    /**
-     * @return DeliveryMethodSchema
-     **/
-    public function getAppliesToDeliveryMethod() {
-        return $this->properties['appliesToDeliveryMethod'];
-    }
-
-    /**
-     * The geographic area where a service or offered item is provided.
-     *
-     * @param $areaServed PlaceSchema|AdministrativeAreaSchema|GeoShapeSchema|TextSchema
-     **/
-    public function setAreaServed($areaServed) {
-        $this->properties['areaServed'] = $areaServed;
-
-        return $this;
-    }
-
-    /**
-     * @return PlaceSchema|AdministrativeAreaSchema|GeoShapeSchema|TextSchema
-     **/
-    public function getAreaServed() {
-        return $this->properties['areaServed'];
-    }
-
-    /**
-     * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which the offer or delivery charge specification is valid.
-      <br><br> See also <a href="/ineligibleRegion">ineligibleRegion</a>.
-    
-     *
-     * @param $eligibleRegion GeoShapeSchema|PlaceSchema|TextSchema
-     **/
-    public function setEligibleRegion($eligibleRegion) {
-        $this->properties['eligibleRegion'] = $eligibleRegion;
-
-        return $this;
-    }
-
-    /**
-     * @return GeoShapeSchema|PlaceSchema|TextSchema
-     **/
-    public function getEligibleRegion() {
-        return $this->properties['eligibleRegion'];
-    }
-
-    /**
-     * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which the offer or delivery charge specification is not valid, e.g. a region where the transaction is not allowed.
-      <br><br> See also <a href="/eligibleRegion">eligibleRegion</a>.
+     * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which the offer or delivery charge specification is not valid, e.g. a region where the transaction is not allowed.\n\nSee also [[eligibleRegion]].
       
      *
-     * @param $ineligibleRegion GeoShapeSchema|PlaceSchema|TextSchema
+     * @param $ineligibleRegion ||
      **/
     public function setIneligibleRegion($ineligibleRegion) {
         $this->properties['ineligibleRegion'] = $ineligibleRegion;
@@ -108,10 +51,65 @@ class DeliveryChargeSpecificationSchema extends PriceSpecificationSchema
     }
 
     /**
-     * @return GeoShapeSchema|PlaceSchema|TextSchema
+     * @return ||
      **/
     public function getIneligibleRegion() {
         return $this->properties['ineligibleRegion'];
+    }
+
+    /**
+     * The geographic area where a service or offered item is provided.
+     *
+     * @param $areaServed |||
+     **/
+    public function setAreaServed($areaServed) {
+        $this->properties['areaServed'] = $areaServed;
+
+        return $this;
+    }
+
+    /**
+     * @return |||
+     **/
+    public function getAreaServed() {
+        return $this->properties['areaServed'];
+    }
+
+    /**
+     * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which the offer or delivery charge specification is valid.\n\nSee also [[ineligibleRegion]].
+    
+     *
+     * @param $eligibleRegion ||
+     **/
+    public function setEligibleRegion($eligibleRegion) {
+        $this->properties['eligibleRegion'] = $eligibleRegion;
+
+        return $this;
+    }
+
+    /**
+     * @return ||
+     **/
+    public function getEligibleRegion() {
+        return $this->properties['eligibleRegion'];
+    }
+
+    /**
+     * The delivery method(s) to which the delivery charge or payment charge specification applies.
+     *
+     * @param $appliesToDeliveryMethod 
+     **/
+    public function setAppliesToDeliveryMethod($appliesToDeliveryMethod) {
+        $this->properties['appliesToDeliveryMethod'] = $appliesToDeliveryMethod;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getAppliesToDeliveryMethod() {
+        return $this->properties['appliesToDeliveryMethod'];
     }
 
 

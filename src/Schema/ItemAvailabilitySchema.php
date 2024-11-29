@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ItemAvailabilitySchema extends EnumerationSchema
+class ItemAvailabilitySchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new ItemAvailabilitySchema('http://schema.org/', 'ItemAvailability');
+        return new ItemAvailabilitySchema('https://schema.org/', 'ItemAvailability');
     }
 
 

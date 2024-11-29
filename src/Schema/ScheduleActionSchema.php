@@ -27,15 +27,15 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Scheduling future actions, events, or tasks.<p>Related actions:</p><ul><li><a href="http://schema.org/ReserveAction">ReserveAction</a>: Unlike ReserveAction, ScheduleAction allocates future actions (e.g. an event, a task, etc) towards a time slot / spatial allocation</li></ul>.
+ * Scheduling future actions, events, or tasks.\n\nRelated actions:\n\n* [[ReserveAction]]: Unlike ReserveAction, ScheduleAction allocates future actions (e.g. an event, a task, etc) towards a time slot / spatial allocation.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ScheduleActionSchema extends PlanActionSchema
+class ScheduleActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new ScheduleActionSchema('http://schema.org/', 'ScheduleAction');
+        return new ScheduleActionSchema('https://schema.org/', 'ScheduleAction');
     }
 
 

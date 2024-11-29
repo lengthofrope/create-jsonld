@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PhysicalTherapySchema extends MedicalTherapySchema
+class PhysicalTherapySchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new PhysicalTherapySchema('http://schema.org/', 'PhysicalTherapy');
+        return new PhysicalTherapySchema('https://schema.org/', 'PhysicalTherapy');
     }
 
 

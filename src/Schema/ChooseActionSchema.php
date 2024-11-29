@@ -31,35 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ChooseActionSchema extends AssessActionSchema
+class ChooseActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new ChooseActionSchema('http://schema.org/', 'ChooseAction');
+        return new ChooseActionSchema('https://schema.org/', 'ChooseAction');
     }
 
     /**
      * A sub property of object. The options subject to this action.
      *
-     * @param $actionOption TextSchema|ThingSchema
-     **/
-    public function setActionOption($actionOption) {
-        $this->properties['actionOption'] = $actionOption;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema|ThingSchema
-     **/
-    public function getActionOption() {
-        return $this->properties['actionOption'];
-    }
-
-    /**
-     * A sub property of object. The options subject to this action.
-     *
-     * @param $option TextSchema|ThingSchema
+     * @param $option |
      **/
     public function setOption($option) {
         $this->properties['option'] = $option;
@@ -68,10 +50,28 @@ class ChooseActionSchema extends AssessActionSchema
     }
 
     /**
-     * @return TextSchema|ThingSchema
+     * @return |
      **/
     public function getOption() {
         return $this->properties['option'];
+    }
+
+    /**
+     * A sub property of object. The options subject to this action.
+     *
+     * @param $actionOption |
+     **/
+    public function setActionOption($actionOption) {
+        $this->properties['actionOption'] = $actionOption;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getActionOption() {
+        return $this->properties['actionOption'];
     }
 
 

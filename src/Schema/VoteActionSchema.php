@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class VoteActionSchema extends ChooseActionSchema
+class VoteActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new VoteActionSchema('http://schema.org/', 'VoteAction');
+        return new VoteActionSchema('https://schema.org/', 'VoteAction');
     }
 
     /**
      * A sub property of object. The candidate subject of this action.
      *
-     * @param $candidate PersonSchema
+     * @param $candidate 
      **/
     public function setCandidate($candidate) {
         $this->properties['candidate'] = $candidate;
@@ -50,7 +50,7 @@ class VoteActionSchema extends ChooseActionSchema
     }
 
     /**
-     * @return PersonSchema
+     * @return 
      **/
     public function getCandidate() {
         return $this->properties['candidate'];

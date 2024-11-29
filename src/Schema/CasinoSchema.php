@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class CasinoSchema extends EntertainmentBusinessSchema
+class CasinoSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new CasinoSchema('http://schema.org/', 'Casino');
+        return new CasinoSchema('https://schema.org/', 'Casino');
     }
 
 

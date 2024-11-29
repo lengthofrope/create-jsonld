@@ -35,31 +35,13 @@ class HospitalSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new HospitalSchema('http://schema.org/', 'Hospital');
-    }
-
-    /**
-     * A medical service available from this provider.
-     *
-     * @param $availableService MedicalProcedureSchema|MedicalTestSchema|MedicalTherapySchema
-     **/
-    public function setAvailableService($availableService) {
-        $this->properties['availableService'] = $availableService;
-
-        return $this;
-    }
-
-    /**
-     * @return MedicalProcedureSchema|MedicalTestSchema|MedicalTherapySchema
-     **/
-    public function getAvailableService() {
-        return $this->properties['availableService'];
+        return new HospitalSchema('https://schema.org/', 'Hospital');
     }
 
     /**
      * A medical specialty of the provider.
      *
-     * @param $medicalSpecialty MedicalSpecialtySchema
+     * @param $medicalSpecialty 
      **/
     public function setMedicalSpecialty($medicalSpecialty) {
         $this->properties['medicalSpecialty'] = $medicalSpecialty;
@@ -68,10 +50,46 @@ class HospitalSchema extends \LengthOfRope\JSONLD\Elements\Element
     }
 
     /**
-     * @return MedicalSpecialtySchema
+     * @return 
      **/
     public function getMedicalSpecialty() {
         return $this->properties['medicalSpecialty'];
+    }
+
+    /**
+     * A medical service available from this provider.
+     *
+     * @param $availableService ||
+     **/
+    public function setAvailableService($availableService) {
+        $this->properties['availableService'] = $availableService;
+
+        return $this;
+    }
+
+    /**
+     * @return ||
+     **/
+    public function getAvailableService() {
+        return $this->properties['availableService'];
+    }
+
+    /**
+     * Indicates data describing a hospital, e.g. a CDC [[CDCPMDRecord]] or as some kind of [[Dataset]].
+     *
+     * @param $healthcareReportingData |
+     **/
+    public function setHealthcareReportingData($healthcareReportingData) {
+        $this->properties['healthcareReportingData'] = $healthcareReportingData;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getHealthcareReportingData() {
+        return $this->properties['healthcareReportingData'];
     }
 
 

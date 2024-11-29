@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class AudioObjectSchema extends MediaObjectSchema
+class AudioObjectSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new AudioObjectSchema('http://schema.org/', 'AudioObject');
+        return new AudioObjectSchema('https://schema.org/', 'AudioObject');
     }
 
     /**
      * If this MediaObject is an AudioObject or VideoObject, the transcript of that object.
      *
-     * @param $transcript TextSchema
+     * @param $transcript 
      **/
     public function setTranscript($transcript) {
         $this->properties['transcript'] = $transcript;
@@ -50,10 +50,46 @@ class AudioObjectSchema extends MediaObjectSchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getTranscript() {
         return $this->properties['transcript'];
+    }
+
+    /**
+     * The caption for this object. For downloadable machine formats (closed caption, subtitles etc.) use MediaObject and indicate the [[encodingFormat]].
+     *
+     * @param $caption |
+     **/
+    public function setCaption($caption) {
+        $this->properties['caption'] = $caption;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getCaption() {
+        return $this->properties['caption'];
+    }
+
+    /**
+     * Represents textual captioning from a [[MediaObject]], e.g. text of a 'meme'.
+     *
+     * @param $embeddedTextCaption 
+     **/
+    public function setEmbeddedTextCaption($embeddedTextCaption) {
+        $this->properties['embeddedTextCaption'] = $embeddedTextCaption;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getEmbeddedTextCaption() {
+        return $this->properties['embeddedTextCaption'];
     }
 
 

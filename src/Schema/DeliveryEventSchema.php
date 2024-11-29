@@ -31,53 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class DeliveryEventSchema extends EventSchema
+class DeliveryEventSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new DeliveryEventSchema('http://schema.org/', 'DeliveryEvent');
-    }
-
-    /**
-     * Password, PIN, or access code needed for delivery (e.g. from a locker).
-     *
-     * @param $accessCode TextSchema
-     **/
-    public function setAccessCode($accessCode) {
-        $this->properties['accessCode'] = $accessCode;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getAccessCode() {
-        return $this->properties['accessCode'];
-    }
-
-    /**
-     * When the item is available for pickup from the store, locker, etc.
-     *
-     * @param $availableFrom DateTimeSchema
-     **/
-    public function setAvailableFrom($availableFrom) {
-        $this->properties['availableFrom'] = $availableFrom;
-
-        return $this;
-    }
-
-    /**
-     * @return DateTimeSchema
-     **/
-    public function getAvailableFrom() {
-        return $this->properties['availableFrom'];
+        return new DeliveryEventSchema('https://schema.org/', 'DeliveryEvent');
     }
 
     /**
      * After this date, the item will no longer be available for pickup.
      *
-     * @param $availableThrough DateTimeSchema
+     * @param $availableThrough 
      **/
     public function setAvailableThrough($availableThrough) {
         $this->properties['availableThrough'] = $availableThrough;
@@ -86,16 +50,34 @@ class DeliveryEventSchema extends EventSchema
     }
 
     /**
-     * @return DateTimeSchema
+     * @return 
      **/
     public function getAvailableThrough() {
         return $this->properties['availableThrough'];
     }
 
     /**
+     * When the item is available for pickup from the store, locker, etc.
+     *
+     * @param $availableFrom 
+     **/
+    public function setAvailableFrom($availableFrom) {
+        $this->properties['availableFrom'] = $availableFrom;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getAvailableFrom() {
+        return $this->properties['availableFrom'];
+    }
+
+    /**
      * Method used for delivery or shipping.
      *
-     * @param $hasDeliveryMethod DeliveryMethodSchema
+     * @param $hasDeliveryMethod 
      **/
     public function setHasDeliveryMethod($hasDeliveryMethod) {
         $this->properties['hasDeliveryMethod'] = $hasDeliveryMethod;
@@ -104,10 +86,28 @@ class DeliveryEventSchema extends EventSchema
     }
 
     /**
-     * @return DeliveryMethodSchema
+     * @return 
      **/
     public function getHasDeliveryMethod() {
         return $this->properties['hasDeliveryMethod'];
+    }
+
+    /**
+     * Password, PIN, or access code needed for delivery (e.g. from a locker).
+     *
+     * @param $accessCode 
+     **/
+    public function setAccessCode($accessCode) {
+        $this->properties['accessCode'] = $accessCode;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getAccessCode() {
+        return $this->properties['accessCode'];
     }
 
 

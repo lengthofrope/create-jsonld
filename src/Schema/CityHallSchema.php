@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class CityHallSchema extends GovernmentBuildingSchema
+class CityHallSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new CityHallSchema('http://schema.org/', 'CityHall');
+        return new CityHallSchema('https://schema.org/', 'CityHall');
     }
 
 

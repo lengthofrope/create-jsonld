@@ -35,13 +35,13 @@ class VideoGameSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new VideoGameSchema('http://schema.org/', 'VideoGame');
+        return new VideoGameSchema('https://schema.org/', 'VideoGame');
     }
 
     /**
-     * An actor, e.g. in tv, radio, movie, video games etc. Actors can be associated with individual items or with a series, episode, clip.
+     * An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip.
      *
-     * @param $actor PersonSchema
+     * @param $actor |
      **/
     public function setActor($actor) {
         $this->properties['actor'] = $actor;
@@ -50,88 +50,16 @@ class VideoGameSchema extends \LengthOfRope\JSONLD\Elements\Element
     }
 
     /**
-     * @return PersonSchema
+     * @return |
      **/
     public function getActor() {
         return $this->properties['actor'];
     }
 
     /**
-     * An actor, e.g. in tv, radio, movie, video games etc. Actors can be associated with individual items or with a series, episode, clip.
-     *
-     * @param $actors PersonSchema
-     **/
-    public function setActors($actors) {
-        $this->properties['actors'] = $actors;
-
-        return $this;
-    }
-
-    /**
-     * @return PersonSchema
-     **/
-    public function getActors() {
-        return $this->properties['actors'];
-    }
-
-    /**
-     * Cheat codes to the game.
-     *
-     * @param $cheatCode CreativeWorkSchema
-     **/
-    public function setCheatCode($cheatCode) {
-        $this->properties['cheatCode'] = $cheatCode;
-
-        return $this;
-    }
-
-    /**
-     * @return CreativeWorkSchema
-     **/
-    public function getCheatCode() {
-        return $this->properties['cheatCode'];
-    }
-
-    /**
-     * A director of e.g. tv, radio, movie, video games etc. content. Directors can be associated with individual items or with a series, episode, clip.
-     *
-     * @param $director PersonSchema
-     **/
-    public function setDirector($director) {
-        $this->properties['director'] = $director;
-
-        return $this;
-    }
-
-    /**
-     * @return PersonSchema
-     **/
-    public function getDirector() {
-        return $this->properties['director'];
-    }
-
-    /**
-     * A director of e.g. tv, radio, movie, video games etc. content. Directors can be associated with individual items or with a series, episode, clip.
-     *
-     * @param $directors PersonSchema
-     **/
-    public function setDirectors($directors) {
-        $this->properties['directors'] = $directors;
-
-        return $this;
-    }
-
-    /**
-     * @return PersonSchema
-     **/
-    public function getDirectors() {
-        return $this->properties['directors'];
-    }
-
-    /**
      * The electronic systems used to play <a href="http://en.wikipedia.org/wiki/Category:Video_game_platforms">video games</a>.
      *
-     * @param $gamePlatform TextSchema|URLSchema|ThingSchema
+     * @param $gamePlatform ||
      **/
     public function setGamePlatform($gamePlatform) {
         $this->properties['gamePlatform'] = $gamePlatform;
@@ -140,88 +68,16 @@ class VideoGameSchema extends \LengthOfRope\JSONLD\Elements\Element
     }
 
     /**
-     * @return TextSchema|URLSchema|ThingSchema
+     * @return ||
      **/
     public function getGamePlatform() {
         return $this->properties['gamePlatform'];
     }
 
     /**
-     * The server on which  it is possible to play the game.
+     * The trailer of a movie or TV/radio series, season, episode, etc.
      *
-     * @param $gameServer GameServerSchema
-     **/
-    public function setGameServer($gameServer) {
-        $this->properties['gameServer'] = $gameServer;
-
-        return $this;
-    }
-
-    /**
-     * @return GameServerSchema
-     **/
-    public function getGameServer() {
-        return $this->properties['gameServer'];
-    }
-
-    /**
-     * Links to tips, tactics, etc.
-     *
-     * @param $gameTip CreativeWorkSchema
-     **/
-    public function setGameTip($gameTip) {
-        $this->properties['gameTip'] = $gameTip;
-
-        return $this;
-    }
-
-    /**
-     * @return CreativeWorkSchema
-     **/
-    public function getGameTip() {
-        return $this->properties['gameTip'];
-    }
-
-    /**
-     * The composer of the soundtrack.
-     *
-     * @param $musicBy MusicGroupSchema|PersonSchema
-     **/
-    public function setMusicBy($musicBy) {
-        $this->properties['musicBy'] = $musicBy;
-
-        return $this;
-    }
-
-    /**
-     * @return MusicGroupSchema|PersonSchema
-     **/
-    public function getMusicBy() {
-        return $this->properties['musicBy'];
-    }
-
-    /**
-     * Indicates whether this game is multi-player, co-op or single-player.  The game can be marked as multi-player, co-op and single-player at the same time.
-     *
-     * @param $playMode GamePlayModeSchema
-     **/
-    public function setPlayMode($playMode) {
-        $this->properties['playMode'] = $playMode;
-
-        return $this;
-    }
-
-    /**
-     * @return GamePlayModeSchema
-     **/
-    public function getPlayMode() {
-        return $this->properties['playMode'];
-    }
-
-    /**
-     * The trailer of a movie or tv/radio series, season, episode, etc.
-     *
-     * @param $trailer VideoObjectSchema
+     * @param $trailer 
      **/
     public function setTrailer($trailer) {
         $this->properties['trailer'] = $trailer;
@@ -230,10 +86,172 @@ class VideoGameSchema extends \LengthOfRope\JSONLD\Elements\Element
     }
 
     /**
-     * @return VideoObjectSchema
+     * @return 
      **/
     public function getTrailer() {
         return $this->properties['trailer'];
+    }
+
+    /**
+     * An actor, e.g. in TV, radio, movie, video games etc. Actors can be associated with individual items or with a series, episode, clip.
+     *
+     * @param $actors 
+     **/
+    public function setActors($actors) {
+        $this->properties['actors'] = $actors;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getActors() {
+        return $this->properties['actors'];
+    }
+
+    /**
+     * The server on which  it is possible to play the game.
+     *
+     * @param $gameServer 
+     **/
+    public function setGameServer($gameServer) {
+        $this->properties['gameServer'] = $gameServer;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getGameServer() {
+        return $this->properties['gameServer'];
+    }
+
+    /**
+     * Links to tips, tactics, etc.
+     *
+     * @param $gameTip 
+     **/
+    public function setGameTip($gameTip) {
+        $this->properties['gameTip'] = $gameTip;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getGameTip() {
+        return $this->properties['gameTip'];
+    }
+
+    /**
+     * A director of e.g. TV, radio, movie, video games etc. content. Directors can be associated with individual items or with a series, episode, clip.
+     *
+     * @param $directors 
+     **/
+    public function setDirectors($directors) {
+        $this->properties['directors'] = $directors;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getDirectors() {
+        return $this->properties['directors'];
+    }
+
+    /**
+     * Cheat codes to the game.
+     *
+     * @param $cheatCode 
+     **/
+    public function setCheatCode($cheatCode) {
+        $this->properties['cheatCode'] = $cheatCode;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getCheatCode() {
+        return $this->properties['cheatCode'];
+    }
+
+    /**
+     * The edition of a video game.
+     *
+     * @param $gameEdition 
+     **/
+    public function setGameEdition($gameEdition) {
+        $this->properties['gameEdition'] = $gameEdition;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getGameEdition() {
+        return $this->properties['gameEdition'];
+    }
+
+    /**
+     * Indicates whether this game is multi-player, co-op or single-player.  The game can be marked as multi-player, co-op and single-player at the same time.
+     *
+     * @param $playMode 
+     **/
+    public function setPlayMode($playMode) {
+        $this->properties['playMode'] = $playMode;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getPlayMode() {
+        return $this->properties['playMode'];
+    }
+
+    /**
+     * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual items or with a series, episode, clip.
+     *
+     * @param $director 
+     **/
+    public function setDirector($director) {
+        $this->properties['director'] = $director;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getDirector() {
+        return $this->properties['director'];
+    }
+
+    /**
+     * The composer of the soundtrack.
+     *
+     * @param $musicBy |
+     **/
+    public function setMusicBy($musicBy) {
+        $this->properties['musicBy'] = $musicBy;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getMusicBy() {
+        return $this->properties['musicBy'];
     }
 
 

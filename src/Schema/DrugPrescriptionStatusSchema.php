@@ -35,7 +35,7 @@ class DrugPrescriptionStatusSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new DrugPrescriptionStatusSchema('http://schema.org/', 'DrugPrescriptionStatus');
+        return new DrugPrescriptionStatusSchema('https://schema.org/', 'DrugPrescriptionStatus');
     }
 
 

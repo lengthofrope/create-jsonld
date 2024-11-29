@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PondSchema extends BodyOfWaterSchema
+class PondSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new PondSchema('http://schema.org/', 'Pond');
+        return new PondSchema('https://schema.org/', 'Pond');
     }
 
 

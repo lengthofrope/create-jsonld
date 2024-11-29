@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class EducationalOrganizationSchema extends OrganizationSchema
+class EducationalOrganizationSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new EducationalOrganizationSchema('http://schema.org/', 'EducationalOrganization');
+        return new EducationalOrganizationSchema('https://schema.org/', 'EducationalOrganization');
     }
 
     /**
      * Alumni of an organization.
      *
-     * @param $alumni PersonSchema
+     * @param $alumni 
      **/
     public function setAlumni($alumni) {
         $this->properties['alumni'] = $alumni;
@@ -50,7 +50,7 @@ class EducationalOrganizationSchema extends OrganizationSchema
     }
 
     /**
-     * @return PersonSchema
+     * @return 
      **/
     public function getAlumni() {
         return $this->properties['alumni'];

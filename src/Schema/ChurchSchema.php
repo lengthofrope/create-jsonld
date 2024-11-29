@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ChurchSchema extends PlaceOfWorshipSchema
+class ChurchSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new ChurchSchema('http://schema.org/', 'Church');
+        return new ChurchSchema('https://schema.org/', 'Church');
     }
 
 

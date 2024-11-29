@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MedicalGuidelineRecommendationSchema extends MedicalGuidelineSchema
+class MedicalGuidelineRecommendationSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MedicalGuidelineRecommendationSchema('http://schema.org/', 'MedicalGuidelineRecommendation');
+        return new MedicalGuidelineRecommendationSchema('https://schema.org/', 'MedicalGuidelineRecommendation');
     }
 
     /**
      * Strength of the guideline's recommendation (e.g. 'class I').
      *
-     * @param $recommendationStrength TextSchema
+     * @param $recommendationStrength 
      **/
     public function setRecommendationStrength($recommendationStrength) {
         $this->properties['recommendationStrength'] = $recommendationStrength;
@@ -50,7 +50,7 @@ class MedicalGuidelineRecommendationSchema extends MedicalGuidelineSchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getRecommendationStrength() {
         return $this->properties['recommendationStrength'];

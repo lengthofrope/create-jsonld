@@ -34,7 +34,7 @@ namespace LengthOfRope\JSONLD\Generator;
 class Build
 {
 
-    const RDFA_SCHEMA = 'http://schema.org/docs/schema_org_rdfa.html';
+    const RDFA_SCHEMA = 'https://schema.org/version/latest/schemaorg-current-https.jsonld';
 
     /**
      * Holds the schema.org data
@@ -78,22 +78,7 @@ class Build
             if (!file_exists(dirname($cacheFile))) {
                 mkdir(dirname($cacheFile), 0777, true);
             }
-
-            // Load RDFA Schema
-            $graph = new \EasyRdf_Graph(self::RDFA_SCHEMA);
-            $graph->load(self::RDFA_SCHEMA, 'rdfa');
-
-            // Lookup the output format
-            $format = \EasyRdf_Format::getFormat('jsonld');
-
-            // Serialise to the new output format
-            $output = $graph->serialise($format);
-
-            if (!is_scalar($output)) {
-                $output = var_export($output, true);
-            }
-
-            $this->schema = \ML\JsonLD\JsonLD::compact($graph->serialise($format), 'http://schema.org/');
+            $this->schema = json_decode(file_get_contents(self::RDFA_SCHEMA));
 
             // Write cache file
             file_put_contents($cacheFile, serialize($this->schema));
@@ -105,47 +90,49 @@ class Build
     private function parse()
     {
         foreach ($this->schema->{'@graph'} as $key => $item) {
-            $types = $item->type;
+            $types = $item->{'@type'};
             if ($types !== 'rdf:Property') {
                 // Skip all but properties
                 continue;
             }
 
-            // Convert domain and range to arrays
-            $domains = array();
-            if (!is_array($item->domainIncludes)) {
-                $item->domainIncludes = array($item->domainIncludes);
+            if (!isset($item->{'schema:domainIncludes'})) {
+                continue;
             }
 
-            foreach ($item->domainIncludes as $dom) {
-                if (!in_array($dom->id, $domains)) {
-                    $domains[] = $dom->id;
+            // Convert domain and range to arrays
+            $domains = array();
+            if (!is_array($item->{'schema:domainIncludes'})) {
+                $item->{'schema:domainIncludes'} = array($item->{'schema:domainIncludes'});
+            }
+
+            foreach ($item->{'schema:domainIncludes'} as $dom) {
+                if (!in_array($dom->{'@id'}, $domains)) {
+                    $domains[] = $dom->{'@id'};
                 }
             }
 
-            $item->domainIncludes = $domains;
-
+            $item->{'schema:domainIncludes'} = $domains;
 
             $range = array();
-            if (!is_array($item->rangeIncludes)) {
-                $item->rangeIncludes = array($item->rangeIncludes);
+            if (!is_array($item->{'schema:rangeIncludes'})) {
+                $item->{'schema:rangeIncludes'} = array($item->{'schema:rangeIncludes'});
             }
 
-            foreach ($item->rangeIncludes as $ran) {
+            foreach ($item->{'schema:rangeIncludes'} as $ran) {
                 $range[] = array(
-                    'id'    => $ran->id,
-                    'class' => str_replace('schema:', '', $ran->id) . 'Schema'
+                    'id'    => $ran->{'@id'},
+                    'class' => str_replace('schema:', '', $ran->{'@id'}) . 'Schema'
                 );
             }
 
             $item->rangeIncludes = $range;
 
-            $this->props[$item->id] = $item;
+            $this->props[$item->{'@id'}] = $item;
         }
 
-
         foreach ($this->schema->{'@graph'} as $key => $item) {
-            $types = $item->type;
+            $types = $item->{'@type'};
             if ($types === 'rdf:Property') {
                 // Skip properties in first run
                 continue;
@@ -155,27 +142,31 @@ class Build
 
             // Add properties to item
             foreach ($this->props as $prop) {
-                if (in_array($item->id, $prop->domainIncludes)) {
-                    if (!isset($item->props[$prop->{'rdfs:label'}])) {
-                        $item->props[$prop->{'rdfs:label'}] = array(
-                            'id'             => $prop->id,
-                            'domainIncludes' => $prop->domainIncludes,
-                            'rangeIncludes'  => $prop->rangeIncludes,
-                            'comment'        => $prop->{'rdfs:comment'},
-                            'label'          => $prop->{'rdfs:label'},
-                            'getter'         => 'get' . ucfirst($prop->{'rdfs:label'}),
-                            'setter'         => 'set' . ucfirst($prop->{'rdfs:label'}),
-                        );
+                try {
+                    if (in_array($item->{'@id'}, $prop->{'schema:domainIncludes'})) {
+                        if (!isset($item->props[$prop->{'rdfs:label'}])) {
+                            $item->props[$prop->{'rdfs:label'}] = array(
+                                'id'             => $prop->{'@id'},
+                                'domainIncludes' => $prop->{'schema:domainIncludes'},
+                                'rangeIncludes'  => $prop->{'schema:rangeIncludes'},
+                                'comment'        => $prop->{'rdfs:comment'},
+                                'label'          => $prop->{'rdfs:label'},
+                                'getter'         => 'get' . ucfirst($prop->{'rdfs:label'}),
+                                'setter'         => 'set' . ucfirst($prop->{'rdfs:label'}),
+                            );
+                        }
                     }
+                } catch (\TypeError $e) {
+                    // Skip properties that are not in the domainIncludes
                 }
             }
 
             if (is_array($types)) {
                 foreach ($types as $type) {
-                    $this->types[$type][$item->id] = $item;
+                    $this->types[$type][$item->{'@id'}] = $item;
                 }
             } else if (!empty($types)) {
-                $this->types[$types][$item->id] = $item;
+                $this->types[$types][$item->{'@id'}] = $item;
             }
         }
     }
@@ -191,8 +182,20 @@ class Build
         $twig   = new \Twig_Environment($loader);
 
         foreach ($this->types['rdfs:Class'] as $item) {
+            $label = is_object($item->{'rdfs:label'})  ? $item->{'rdfs:label'}->{'@value'} : $item->{'rdfs:label'};
+            $comment = is_object($item->{'rdfs:comment'})  ? $item->{'rdfs:comment'}->{'@value'} : $item->{'rdfs:comment'};
+
+            // Add * to all comment lines excdept the first one
+            foreach(explode("\n", $comment) as $key => $line) {
+                if ($key == 0) {
+                    continue;
+                }
+                $comment = str_replace($line, ' * ' . $line, $comment);
+            }
+
+
             // Add Schema to all classes to prevent failures (classes Class or Float) are reserved.
-            $class = $item->{'rdfs:label'} . 'Schema';
+            $class = $label . 'Schema';
 
             if (in_array($class, array('DataTypeSchema'))) {
                 continue;
@@ -207,16 +210,16 @@ class Build
             }
             $file = $dir . $class . '.php';
 
-            $context = @explode(":", $item->id);
-            $context = @$this->schema->{'@context'}->$context[0];
+            $context = @explode(":", $item->{'@id'});
+            $context = $this->schema->{'@context'}->{$context[0]};
 
             $content = $twig->render('template.twig', array(
                 'class'        => $class,
-                'classcomment' => $item->{'rdfs:comment'},
+                'classcomment' => $comment,
                 'classExtends' => $classextends,
                 'properties'   => $item->props,
                 'context'      => $context,
-                'type'         => $item->{'rdfs:label'},
+                'type'         => $label,
             ));
 
 

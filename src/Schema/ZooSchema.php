@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ZooSchema extends CivicStructureSchema
+class ZooSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new ZooSchema('http://schema.org/', 'Zoo');
+        return new ZooSchema('https://schema.org/', 'Zoo');
     }
 
 

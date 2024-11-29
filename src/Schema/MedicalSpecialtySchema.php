@@ -35,7 +35,7 @@ class MedicalSpecialtySchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MedicalSpecialtySchema('http://schema.org/', 'MedicalSpecialty');
+        return new MedicalSpecialtySchema('https://schema.org/', 'MedicalSpecialty');
     }
 
 

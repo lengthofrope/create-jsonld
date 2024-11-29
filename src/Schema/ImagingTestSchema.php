@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ImagingTestSchema extends MedicalTestSchema
+class ImagingTestSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new ImagingTestSchema('http://schema.org/', 'ImagingTest');
+        return new ImagingTestSchema('https://schema.org/', 'ImagingTest');
     }
 
     /**
      * Imaging technique used.
      *
-     * @param $imagingTechnique MedicalImagingTechniqueSchema
+     * @param $imagingTechnique 
      **/
     public function setImagingTechnique($imagingTechnique) {
         $this->properties['imagingTechnique'] = $imagingTechnique;
@@ -50,7 +50,7 @@ class ImagingTestSchema extends MedicalTestSchema
     }
 
     /**
-     * @return MedicalImagingTechniqueSchema
+     * @return 
      **/
     public function getImagingTechnique() {
         return $this->properties['imagingTechnique'];

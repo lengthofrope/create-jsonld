@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PhotographSchema extends CreativeWorkSchema
+class PhotographSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new PhotographSchema('http://schema.org/', 'Photograph');
+        return new PhotographSchema('https://schema.org/', 'Photograph');
     }
 
 

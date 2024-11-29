@@ -31,53 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class DrugStrengthSchema extends MedicalIntangibleSchema
+class DrugStrengthSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new DrugStrengthSchema('http://schema.org/', 'DrugStrength');
-    }
-
-    /**
-     * An active ingredient, typically chemical compounds and/or biologic substances.
-     *
-     * @param $activeIngredient TextSchema
-     **/
-    public function setActiveIngredient($activeIngredient) {
-        $this->properties['activeIngredient'] = $activeIngredient;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getActiveIngredient() {
-        return $this->properties['activeIngredient'];
-    }
-
-    /**
-     * The location in which the strength is available.
-     *
-     * @param $availableIn AdministrativeAreaSchema
-     **/
-    public function setAvailableIn($availableIn) {
-        $this->properties['availableIn'] = $availableIn;
-
-        return $this;
-    }
-
-    /**
-     * @return AdministrativeAreaSchema
-     **/
-    public function getAvailableIn() {
-        return $this->properties['availableIn'];
+        return new DrugStrengthSchema('https://schema.org/', 'DrugStrength');
     }
 
     /**
      * The units of an active ingredient's strength, e.g. mg.
      *
-     * @param $strengthUnit TextSchema
+     * @param $strengthUnit 
      **/
     public function setStrengthUnit($strengthUnit) {
         $this->properties['strengthUnit'] = $strengthUnit;
@@ -86,7 +50,7 @@ class DrugStrengthSchema extends MedicalIntangibleSchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getStrengthUnit() {
         return $this->properties['strengthUnit'];
@@ -95,7 +59,7 @@ class DrugStrengthSchema extends MedicalIntangibleSchema
     /**
      * The value of an active ingredient's strength, e.g. 325.
      *
-     * @param $strengthValue NumberSchema
+     * @param $strengthValue 
      **/
     public function setStrengthValue($strengthValue) {
         $this->properties['strengthValue'] = $strengthValue;
@@ -104,10 +68,64 @@ class DrugStrengthSchema extends MedicalIntangibleSchema
     }
 
     /**
-     * @return NumberSchema
+     * @return 
      **/
     public function getStrengthValue() {
         return $this->properties['strengthValue'];
+    }
+
+    /**
+     * The location in which the strength is available.
+     *
+     * @param $availableIn 
+     **/
+    public function setAvailableIn($availableIn) {
+        $this->properties['availableIn'] = $availableIn;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getAvailableIn() {
+        return $this->properties['availableIn'];
+    }
+
+    /**
+     * Recommended intake of this supplement for a given population as defined by a specific recommending authority.
+     *
+     * @param $maximumIntake 
+     **/
+    public function setMaximumIntake($maximumIntake) {
+        $this->properties['maximumIntake'] = $maximumIntake;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getMaximumIntake() {
+        return $this->properties['maximumIntake'];
+    }
+
+    /**
+     * An active ingredient, typically chemical compounds and/or biologic substances.
+     *
+     * @param $activeIngredient 
+     **/
+    public function setActiveIngredient($activeIngredient) {
+        $this->properties['activeIngredient'] = $activeIngredient;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getActiveIngredient() {
+        return $this->properties['activeIngredient'];
     }
 
 

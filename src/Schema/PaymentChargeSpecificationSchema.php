@@ -31,35 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PaymentChargeSpecificationSchema extends PriceSpecificationSchema
+class PaymentChargeSpecificationSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new PaymentChargeSpecificationSchema('http://schema.org/', 'PaymentChargeSpecification');
-    }
-
-    /**
-     * The delivery method(s) to which the delivery charge or payment charge specification applies.
-     *
-     * @param $appliesToDeliveryMethod DeliveryMethodSchema
-     **/
-    public function setAppliesToDeliveryMethod($appliesToDeliveryMethod) {
-        $this->properties['appliesToDeliveryMethod'] = $appliesToDeliveryMethod;
-
-        return $this;
-    }
-
-    /**
-     * @return DeliveryMethodSchema
-     **/
-    public function getAppliesToDeliveryMethod() {
-        return $this->properties['appliesToDeliveryMethod'];
+        return new PaymentChargeSpecificationSchema('https://schema.org/', 'PaymentChargeSpecification');
     }
 
     /**
      * The payment method(s) to which the payment charge specification applies.
      *
-     * @param $appliesToPaymentMethod PaymentMethodSchema
+     * @param $appliesToPaymentMethod 
      **/
     public function setAppliesToPaymentMethod($appliesToPaymentMethod) {
         $this->properties['appliesToPaymentMethod'] = $appliesToPaymentMethod;
@@ -68,10 +50,28 @@ class PaymentChargeSpecificationSchema extends PriceSpecificationSchema
     }
 
     /**
-     * @return PaymentMethodSchema
+     * @return 
      **/
     public function getAppliesToPaymentMethod() {
         return $this->properties['appliesToPaymentMethod'];
+    }
+
+    /**
+     * The delivery method(s) to which the delivery charge or payment charge specification applies.
+     *
+     * @param $appliesToDeliveryMethod 
+     **/
+    public function setAppliesToDeliveryMethod($appliesToDeliveryMethod) {
+        $this->properties['appliesToDeliveryMethod'] = $appliesToDeliveryMethod;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getAppliesToDeliveryMethod() {
+        return $this->properties['appliesToDeliveryMethod'];
     }
 
 

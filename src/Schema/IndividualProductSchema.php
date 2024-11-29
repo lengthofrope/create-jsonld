@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class IndividualProductSchema extends ProductSchema
+class IndividualProductSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new IndividualProductSchema('http://schema.org/', 'IndividualProduct');
+        return new IndividualProductSchema('https://schema.org/', 'IndividualProduct');
     }
 
     /**
      * The serial number or any alphanumeric identifier of a particular product. When attached to an offer, it is a shortcut for the serial number of the product included in the offer.
      *
-     * @param $serialNumber TextSchema
+     * @param $serialNumber 
      **/
     public function setSerialNumber($serialNumber) {
         $this->properties['serialNumber'] = $serialNumber;
@@ -50,7 +50,7 @@ class IndividualProductSchema extends ProductSchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getSerialNumber() {
         return $this->properties['serialNumber'];

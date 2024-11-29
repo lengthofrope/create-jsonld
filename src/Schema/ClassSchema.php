@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ClassSchema extends IntangibleSchema
+class ClassSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new ClassSchema('http://schema.org/', 'Class');
+        return new ClassSchema('https://schema.org/', 'Class');
     }
 
     /**
      * Relates a term (i.e. a property, class or enumeration) to one that supersedes it.
      *
-     * @param $supersededBy PropertySchema|ClassSchema|EnumerationSchema
+     * @param $supersededBy ||
      **/
     public function setSupersededBy($supersededBy) {
         $this->properties['supersededBy'] = $supersededBy;
@@ -50,7 +50,7 @@ class ClassSchema extends IntangibleSchema
     }
 
     /**
-     * @return PropertySchema|ClassSchema|EnumerationSchema
+     * @return ||
      **/
     public function getSupersededBy() {
         return $this->properties['supersededBy'];

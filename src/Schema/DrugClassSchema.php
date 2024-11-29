@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class DrugClassSchema extends MedicalTherapySchema
+class DrugClassSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new DrugClassSchema('http://schema.org/', 'DrugClass');
+        return new DrugClassSchema('https://schema.org/', 'DrugClass');
     }
 
     /**
-     * A drug in this drug class.
+     * Specifying a drug or medicine used in a medication procedure.
      *
-     * @param $drug DrugSchema
+     * @param $drug 
      **/
     public function setDrug($drug) {
         $this->properties['drug'] = $drug;
@@ -50,7 +50,7 @@ class DrugClassSchema extends MedicalTherapySchema
     }
 
     /**
-     * @return DrugSchema
+     * @return 
      **/
     public function getDrug() {
         return $this->properties['drug'];

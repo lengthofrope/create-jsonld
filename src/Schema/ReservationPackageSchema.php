@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ReservationPackageSchema extends ReservationSchema
+class ReservationPackageSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new ReservationPackageSchema('http://schema.org/', 'ReservationPackage');
+        return new ReservationPackageSchema('https://schema.org/', 'ReservationPackage');
     }
 
     /**
      * The individual reservations included in the package. Typically a repeated property.
      *
-     * @param $subReservation ReservationSchema
+     * @param $subReservation 
      **/
     public function setSubReservation($subReservation) {
         $this->properties['subReservation'] = $subReservation;
@@ -50,7 +50,7 @@ class ReservationPackageSchema extends ReservationSchema
     }
 
     /**
-     * @return ReservationSchema
+     * @return 
      **/
     public function getSubReservation() {
         return $this->properties['subReservation'];

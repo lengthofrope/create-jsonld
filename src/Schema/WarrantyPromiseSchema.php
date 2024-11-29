@@ -31,35 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class WarrantyPromiseSchema extends StructuredValueSchema
+class WarrantyPromiseSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new WarrantyPromiseSchema('http://schema.org/', 'WarrantyPromise');
-    }
-
-    /**
-     * The duration of the warranty promise. Common unitCode values are ANN for year, MON for months, or DAY for days.
-     *
-     * @param $durationOfWarranty QuantitativeValueSchema
-     **/
-    public function setDurationOfWarranty($durationOfWarranty) {
-        $this->properties['durationOfWarranty'] = $durationOfWarranty;
-
-        return $this;
-    }
-
-    /**
-     * @return QuantitativeValueSchema
-     **/
-    public function getDurationOfWarranty() {
-        return $this->properties['durationOfWarranty'];
+        return new WarrantyPromiseSchema('https://schema.org/', 'WarrantyPromise');
     }
 
     /**
      * The scope of the warranty promise.
      *
-     * @param $warrantyScope WarrantyScopeSchema
+     * @param $warrantyScope 
      **/
     public function setWarrantyScope($warrantyScope) {
         $this->properties['warrantyScope'] = $warrantyScope;
@@ -68,10 +50,28 @@ class WarrantyPromiseSchema extends StructuredValueSchema
     }
 
     /**
-     * @return WarrantyScopeSchema
+     * @return 
      **/
     public function getWarrantyScope() {
         return $this->properties['warrantyScope'];
+    }
+
+    /**
+     * The duration of the warranty promise. Common unitCode values are ANN for year, MON for months, or DAY for days.
+     *
+     * @param $durationOfWarranty 
+     **/
+    public function setDurationOfWarranty($durationOfWarranty) {
+        $this->properties['durationOfWarranty'] = $durationOfWarranty;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getDurationOfWarranty() {
+        return $this->properties['durationOfWarranty'];
     }
 
 

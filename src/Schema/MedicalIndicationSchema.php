@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MedicalIndicationSchema extends MedicalEntitySchema
+class MedicalIndicationSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MedicalIndicationSchema('http://schema.org/', 'MedicalIndication');
+        return new MedicalIndicationSchema('https://schema.org/', 'MedicalIndication');
     }
 
 

@@ -35,7 +35,7 @@ class MedicalStudyStatusSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MedicalStudyStatusSchema('http://schema.org/', 'MedicalStudyStatus');
+        return new MedicalStudyStatusSchema('https://schema.org/', 'MedicalStudyStatus');
     }
 
 

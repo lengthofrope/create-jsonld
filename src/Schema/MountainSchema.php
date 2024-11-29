@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MountainSchema extends LandformSchema
+class MountainSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MountainSchema('http://schema.org/', 'Mountain');
+        return new MountainSchema('https://schema.org/', 'Mountain');
     }
 
 

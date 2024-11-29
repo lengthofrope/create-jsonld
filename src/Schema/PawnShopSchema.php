@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PawnShopSchema extends StoreSchema
+class PawnShopSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new PawnShopSchema('http://schema.org/', 'PawnShop');
+        return new PawnShopSchema('https://schema.org/', 'PawnShop');
     }
 
 

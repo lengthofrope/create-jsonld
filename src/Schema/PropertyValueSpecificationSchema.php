@@ -31,125 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PropertyValueSpecificationSchema extends IntangibleSchema
+class PropertyValueSpecificationSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new PropertyValueSpecificationSchema('http://schema.org/', 'PropertyValueSpecification');
-    }
-
-    /**
-     * The default value of the input.  For properties that expect a literal, the default is a literal value, for properties that expect an object, it's an ID reference to one of the current values.
-     *
-     * @param $defaultValue ThingSchema|TextSchema
-     **/
-    public function setDefaultValue($defaultValue) {
-        $this->properties['defaultValue'] = $defaultValue;
-
-        return $this;
-    }
-
-    /**
-     * @return ThingSchema|TextSchema
-     **/
-    public function getDefaultValue() {
-        return $this->properties['defaultValue'];
-    }
-
-    /**
-     * The upper value of some characteristic or property.
-     *
-     * @param $maxValue NumberSchema
-     **/
-    public function setMaxValue($maxValue) {
-        $this->properties['maxValue'] = $maxValue;
-
-        return $this;
-    }
-
-    /**
-     * @return NumberSchema
-     **/
-    public function getMaxValue() {
-        return $this->properties['maxValue'];
-    }
-
-    /**
-     * The lower value of some characteristic or property.
-     *
-     * @param $minValue NumberSchema
-     **/
-    public function setMinValue($minValue) {
-        $this->properties['minValue'] = $minValue;
-
-        return $this;
-    }
-
-    /**
-     * @return NumberSchema
-     **/
-    public function getMinValue() {
-        return $this->properties['minValue'];
-    }
-
-    /**
-     * Whether multiple values are allowed for the property.  Default is false.
-     *
-     * @param $multipleValues BooleanSchema
-     **/
-    public function setMultipleValues($multipleValues) {
-        $this->properties['multipleValues'] = $multipleValues;
-
-        return $this;
-    }
-
-    /**
-     * @return BooleanSchema
-     **/
-    public function getMultipleValues() {
-        return $this->properties['multipleValues'];
-    }
-
-    /**
-     * Whether or not a property is mutable.  Default is false. Specifying this for a property that also has a value makes it act similar to a "hidden" input in an HTML form.
-     *
-     * @param $readonlyValue BooleanSchema
-     **/
-    public function setReadonlyValue($readonlyValue) {
-        $this->properties['readonlyValue'] = $readonlyValue;
-
-        return $this;
-    }
-
-    /**
-     * @return BooleanSchema
-     **/
-    public function getReadonlyValue() {
-        return $this->properties['readonlyValue'];
-    }
-
-    /**
-     * The stepValue attribute indicates the granularity that is expected (and required) of the value in a PropertyValueSpecification.
-     *
-     * @param $stepValue NumberSchema
-     **/
-    public function setStepValue($stepValue) {
-        $this->properties['stepValue'] = $stepValue;
-
-        return $this;
-    }
-
-    /**
-     * @return NumberSchema
-     **/
-    public function getStepValue() {
-        return $this->properties['stepValue'];
+        return new PropertyValueSpecificationSchema('https://schema.org/', 'PropertyValueSpecification');
     }
 
     /**
      * Specifies the allowed range for number of characters in a literal value.
      *
-     * @param $valueMaxLength NumberSchema
+     * @param $valueMaxLength 
      **/
     public function setValueMaxLength($valueMaxLength) {
         $this->properties['valueMaxLength'] = $valueMaxLength;
@@ -158,7 +50,7 @@ class PropertyValueSpecificationSchema extends IntangibleSchema
     }
 
     /**
-     * @return NumberSchema
+     * @return 
      **/
     public function getValueMaxLength() {
         return $this->properties['valueMaxLength'];
@@ -167,7 +59,7 @@ class PropertyValueSpecificationSchema extends IntangibleSchema
     /**
      * Specifies the minimum allowed range for number of characters in a literal value.
      *
-     * @param $valueMinLength NumberSchema
+     * @param $valueMinLength 
      **/
     public function setValueMinLength($valueMinLength) {
         $this->properties['valueMinLength'] = $valueMinLength;
@@ -176,16 +68,124 @@ class PropertyValueSpecificationSchema extends IntangibleSchema
     }
 
     /**
-     * @return NumberSchema
+     * @return 
      **/
     public function getValueMinLength() {
         return $this->properties['valueMinLength'];
     }
 
     /**
+     * Whether multiple values are allowed for the property.  Default is false.
+     *
+     * @param $multipleValues 
+     **/
+    public function setMultipleValues($multipleValues) {
+        $this->properties['multipleValues'] = $multipleValues;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getMultipleValues() {
+        return $this->properties['multipleValues'];
+    }
+
+    /**
+     * The lower value of some characteristic or property.
+     *
+     * @param $minValue 
+     **/
+    public function setMinValue($minValue) {
+        $this->properties['minValue'] = $minValue;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getMinValue() {
+        return $this->properties['minValue'];
+    }
+
+    /**
+     * Whether or not a property is mutable.  Default is false. Specifying this for a property that also has a value makes it act similar to a "hidden" input in an HTML form.
+     *
+     * @param $readonlyValue 
+     **/
+    public function setReadonlyValue($readonlyValue) {
+        $this->properties['readonlyValue'] = $readonlyValue;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getReadonlyValue() {
+        return $this->properties['readonlyValue'];
+    }
+
+    /**
+     * The upper value of some characteristic or property.
+     *
+     * @param $maxValue 
+     **/
+    public function setMaxValue($maxValue) {
+        $this->properties['maxValue'] = $maxValue;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getMaxValue() {
+        return $this->properties['maxValue'];
+    }
+
+    /**
+     * The stepValue attribute indicates the granularity that is expected (and required) of the value in a PropertyValueSpecification.
+     *
+     * @param $stepValue 
+     **/
+    public function setStepValue($stepValue) {
+        $this->properties['stepValue'] = $stepValue;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getStepValue() {
+        return $this->properties['stepValue'];
+    }
+
+    /**
+     * The default value of the input.  For properties that expect a literal, the default is a literal value, for properties that expect an object, it's an ID reference to one of the current values.
+     *
+     * @param $defaultValue |
+     **/
+    public function setDefaultValue($defaultValue) {
+        $this->properties['defaultValue'] = $defaultValue;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getDefaultValue() {
+        return $this->properties['defaultValue'];
+    }
+
+    /**
      * Indicates the name of the PropertyValueSpecification to be used in URL templates and form encoding in a manner analogous to HTML's input@name.
      *
-     * @param $valueName TextSchema
+     * @param $valueName 
      **/
     public function setValueName($valueName) {
         $this->properties['valueName'] = $valueName;
@@ -194,7 +194,7 @@ class PropertyValueSpecificationSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getValueName() {
         return $this->properties['valueName'];
@@ -203,7 +203,7 @@ class PropertyValueSpecificationSchema extends IntangibleSchema
     /**
      * Specifies a regular expression for testing literal values according to the HTML spec.
      *
-     * @param $valuePattern TextSchema
+     * @param $valuePattern 
      **/
     public function setValuePattern($valuePattern) {
         $this->properties['valuePattern'] = $valuePattern;
@@ -212,7 +212,7 @@ class PropertyValueSpecificationSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getValuePattern() {
         return $this->properties['valuePattern'];
@@ -221,7 +221,7 @@ class PropertyValueSpecificationSchema extends IntangibleSchema
     /**
      * Whether the property must be filled in to complete the action.  Default is false.
      *
-     * @param $valueRequired BooleanSchema
+     * @param $valueRequired 
      **/
     public function setValueRequired($valueRequired) {
         $this->properties['valueRequired'] = $valueRequired;
@@ -230,7 +230,7 @@ class PropertyValueSpecificationSchema extends IntangibleSchema
     }
 
     /**
-     * @return BooleanSchema
+     * @return 
      **/
     public function getValueRequired() {
         return $this->properties['valueRequired'];

@@ -31,35 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class InfectiousDiseaseSchema extends MedicalConditionSchema
+class InfectiousDiseaseSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new InfectiousDiseaseSchema('http://schema.org/', 'InfectiousDisease');
-    }
-
-    /**
-     * The actual infectious agent, such as a specific bacterium.
-     *
-     * @param $infectiousAgent TextSchema
-     **/
-    public function setInfectiousAgent($infectiousAgent) {
-        $this->properties['infectiousAgent'] = $infectiousAgent;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getInfectiousAgent() {
-        return $this->properties['infectiousAgent'];
+        return new InfectiousDiseaseSchema('https://schema.org/', 'InfectiousDisease');
     }
 
     /**
      * The class of infectious agent (bacteria, prion, etc.) that causes the disease.
      *
-     * @param $infectiousAgentClass InfectiousAgentClassSchema
+     * @param $infectiousAgentClass 
      **/
     public function setInfectiousAgentClass($infectiousAgentClass) {
         $this->properties['infectiousAgentClass'] = $infectiousAgentClass;
@@ -68,7 +50,7 @@ class InfectiousDiseaseSchema extends MedicalConditionSchema
     }
 
     /**
-     * @return InfectiousAgentClassSchema
+     * @return 
      **/
     public function getInfectiousAgentClass() {
         return $this->properties['infectiousAgentClass'];
@@ -77,7 +59,7 @@ class InfectiousDiseaseSchema extends MedicalConditionSchema
     /**
      * How the disease spreads, either as a route or vector, for example 'direct contact', 'Aedes aegypti', etc.
      *
-     * @param $transmissionMethod TextSchema
+     * @param $transmissionMethod 
      **/
     public function setTransmissionMethod($transmissionMethod) {
         $this->properties['transmissionMethod'] = $transmissionMethod;
@@ -86,10 +68,28 @@ class InfectiousDiseaseSchema extends MedicalConditionSchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getTransmissionMethod() {
         return $this->properties['transmissionMethod'];
+    }
+
+    /**
+     * The actual infectious agent, such as a specific bacterium.
+     *
+     * @param $infectiousAgent 
+     **/
+    public function setInfectiousAgent($infectiousAgent) {
+        $this->properties['infectiousAgent'] = $infectiousAgent;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getInfectiousAgent() {
+        return $this->properties['infectiousAgent'];
     }
 
 

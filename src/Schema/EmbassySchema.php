@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class EmbassySchema extends GovernmentBuildingSchema
+class EmbassySchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new EmbassySchema('http://schema.org/', 'Embassy');
+        return new EmbassySchema('https://schema.org/', 'Embassy');
     }
 
 

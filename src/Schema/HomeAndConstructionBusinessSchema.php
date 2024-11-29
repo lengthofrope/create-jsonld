@@ -27,22 +27,15 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A construction business.
-        <br><br>
-        A HomeAndConstructionBusiness is a LocalBusiness that provides services around homes and buildings.
-          <br><br>
-          As a <a href="/LocalBusiness">LocalBusiness</a> it can be
-          described as a <a href="/provider">provider</a> of one or more
-          <a href="/Service">Service(s)</a>.
-      
+ * A construction business.\n\nA HomeAndConstructionBusiness is a [[LocalBusiness]] that provides services around homes and buildings.\n\nAs a [[LocalBusiness]] it can be described as a [[provider]] of one or more [[Service]]\(s).
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class HomeAndConstructionBusinessSchema extends LocalBusinessSchema
+class HomeAndConstructionBusinessSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new HomeAndConstructionBusinessSchema('http://schema.org/', 'HomeAndConstructionBusiness');
+        return new HomeAndConstructionBusinessSchema('https://schema.org/', 'HomeAndConstructionBusiness');
     }
 
 

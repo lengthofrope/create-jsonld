@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ContactPointOptionSchema extends EnumerationSchema
+class ContactPointOptionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new ContactPointOptionSchema('http://schema.org/', 'ContactPointOption');
+        return new ContactPointOptionSchema('https://schema.org/', 'ContactPointOption');
     }
 
 

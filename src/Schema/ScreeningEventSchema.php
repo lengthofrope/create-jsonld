@@ -31,35 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ScreeningEventSchema extends EventSchema
+class ScreeningEventSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new ScreeningEventSchema('http://schema.org/', 'ScreeningEvent');
-    }
-
-    /**
-     * Languages in which subtitles/captions are available, in <a href='http://tools.ietf.org/html/bcp47'>IETF BCP 47 standard format.</a>
-     *
-     * @param $subtitleLanguage TextSchema|LanguageSchema
-     **/
-    public function setSubtitleLanguage($subtitleLanguage) {
-        $this->properties['subtitleLanguage'] = $subtitleLanguage;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema|LanguageSchema
-     **/
-    public function getSubtitleLanguage() {
-        return $this->properties['subtitleLanguage'];
+        return new ScreeningEventSchema('https://schema.org/', 'ScreeningEvent');
     }
 
     /**
      * The type of screening or video broadcast used (e.g. IMAX, 3D, SD, HD, etc.).
      *
-     * @param $videoFormat TextSchema
+     * @param $videoFormat 
      **/
     public function setVideoFormat($videoFormat) {
         $this->properties['videoFormat'] = $videoFormat;
@@ -68,16 +50,34 @@ class ScreeningEventSchema extends EventSchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getVideoFormat() {
         return $this->properties['videoFormat'];
     }
 
     /**
+     * Languages in which subtitles/captions are available, in [IETF BCP 47 standard format](http://tools.ietf.org/html/bcp47).
+     *
+     * @param $subtitleLanguage |
+     **/
+    public function setSubtitleLanguage($subtitleLanguage) {
+        $this->properties['subtitleLanguage'] = $subtitleLanguage;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getSubtitleLanguage() {
+        return $this->properties['subtitleLanguage'];
+    }
+
+    /**
      * The movie presented during this event.
      *
-     * @param $workPresented MovieSchema
+     * @param $workPresented 
      **/
     public function setWorkPresented($workPresented) {
         $this->properties['workPresented'] = $workPresented;
@@ -86,7 +86,7 @@ class ScreeningEventSchema extends EventSchema
     }
 
     /**
-     * @return MovieSchema
+     * @return 
      **/
     public function getWorkPresented() {
         return $this->properties['workPresented'];

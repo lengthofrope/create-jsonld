@@ -31,35 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MedicalGuidelineSchema extends MedicalEntitySchema
+class MedicalGuidelineSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MedicalGuidelineSchema('http://schema.org/', 'MedicalGuideline');
-    }
-
-    /**
-     * Strength of evidence of the data used to formulate the guideline (enumerated).
-     *
-     * @param $evidenceLevel MedicalEvidenceLevelSchema
-     **/
-    public function setEvidenceLevel($evidenceLevel) {
-        $this->properties['evidenceLevel'] = $evidenceLevel;
-
-        return $this;
-    }
-
-    /**
-     * @return MedicalEvidenceLevelSchema
-     **/
-    public function getEvidenceLevel() {
-        return $this->properties['evidenceLevel'];
+        return new MedicalGuidelineSchema('https://schema.org/', 'MedicalGuideline');
     }
 
     /**
      * Source of the data used to formulate the guidance, e.g. RCT, consensus opinion, etc.
      *
-     * @param $evidenceOrigin TextSchema
+     * @param $evidenceOrigin 
      **/
     public function setEvidenceOrigin($evidenceOrigin) {
         $this->properties['evidenceOrigin'] = $evidenceOrigin;
@@ -68,7 +50,7 @@ class MedicalGuidelineSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getEvidenceOrigin() {
         return $this->properties['evidenceOrigin'];
@@ -77,7 +59,7 @@ class MedicalGuidelineSchema extends MedicalEntitySchema
     /**
      * Date on which this guideline's recommendation was made.
      *
-     * @param $guidelineDate DateSchema
+     * @param $guidelineDate 
      **/
     public function setGuidelineDate($guidelineDate) {
         $this->properties['guidelineDate'] = $guidelineDate;
@@ -86,7 +68,7 @@ class MedicalGuidelineSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return DateSchema
+     * @return 
      **/
     public function getGuidelineDate() {
         return $this->properties['guidelineDate'];
@@ -95,7 +77,7 @@ class MedicalGuidelineSchema extends MedicalEntitySchema
     /**
      * The medical conditions, treatments, etc. that are the subject of the guideline.
      *
-     * @param $guidelineSubject MedicalEntitySchema
+     * @param $guidelineSubject 
      **/
     public function setGuidelineSubject($guidelineSubject) {
         $this->properties['guidelineSubject'] = $guidelineSubject;
@@ -104,10 +86,28 @@ class MedicalGuidelineSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return MedicalEntitySchema
+     * @return 
      **/
     public function getGuidelineSubject() {
         return $this->properties['guidelineSubject'];
+    }
+
+    /**
+     * Strength of evidence of the data used to formulate the guideline (enumerated).
+     *
+     * @param $evidenceLevel 
+     **/
+    public function setEvidenceLevel($evidenceLevel) {
+        $this->properties['evidenceLevel'] = $evidenceLevel;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getEvidenceLevel() {
+        return $this->properties['evidenceLevel'];
     }
 
 

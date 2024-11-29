@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ReviewActionSchema extends AssessActionSchema
+class ReviewActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new ReviewActionSchema('http://schema.org/', 'ReviewAction');
+        return new ReviewActionSchema('https://schema.org/', 'ReviewAction');
     }
 
     /**
      * A sub property of result. The review that resulted in the performing of the action.
      *
-     * @param $resultReview ReviewSchema
+     * @param $resultReview 
      **/
     public function setResultReview($resultReview) {
         $this->properties['resultReview'] = $resultReview;
@@ -50,7 +50,7 @@ class ReviewActionSchema extends AssessActionSchema
     }
 
     /**
-     * @return ReviewSchema
+     * @return 
      **/
     public function getResultReview() {
         return $this->properties['resultReview'];

@@ -31,35 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class TicketSchema extends IntangibleSchema
+class TicketSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new TicketSchema('http://schema.org/', 'Ticket');
+        return new TicketSchema('https://schema.org/', 'Ticket');
     }
 
     /**
-     * The date the ticket was issued.
+     * The organization issuing the item, for example a [[Permit]], [[Ticket]], or [[Certification]].
      *
-     * @param $dateIssued DateTimeSchema
-     **/
-    public function setDateIssued($dateIssued) {
-        $this->properties['dateIssued'] = $dateIssued;
-
-        return $this;
-    }
-
-    /**
-     * @return DateTimeSchema
-     **/
-    public function getDateIssued() {
-        return $this->properties['dateIssued'];
-    }
-
-    /**
-     * The organization issuing the ticket or permit.
-     *
-     * @param $issuedBy OrganizationSchema
+     * @param $issuedBy 
      **/
     public function setIssuedBy($issuedBy) {
         $this->properties['issuedBy'] = $issuedBy;
@@ -68,106 +50,16 @@ class TicketSchema extends IntangibleSchema
     }
 
     /**
-     * @return OrganizationSchema
+     * @return 
      **/
     public function getIssuedBy() {
         return $this->properties['issuedBy'];
     }
 
     /**
-     * The currency (in 3-letter ISO 4217 format) of the price or a price component, when attached to PriceSpecification and its subtypes.
-     *
-     * @param $priceCurrency TextSchema
-     **/
-    public function setPriceCurrency($priceCurrency) {
-        $this->properties['priceCurrency'] = $priceCurrency;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getPriceCurrency() {
-        return $this->properties['priceCurrency'];
-    }
-
-    /**
-     * The unique identifier for the ticket.
-     *
-     * @param $ticketNumber TextSchema
-     **/
-    public function setTicketNumber($ticketNumber) {
-        $this->properties['ticketNumber'] = $ticketNumber;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getTicketNumber() {
-        return $this->properties['ticketNumber'];
-    }
-
-    /**
-     * Reference to an asset (e.g., Barcode, QR code image or PDF) usable for entrance.
-     *
-     * @param $ticketToken TextSchema|URLSchema
-     **/
-    public function setTicketToken($ticketToken) {
-        $this->properties['ticketToken'] = $ticketToken;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema|URLSchema
-     **/
-    public function getTicketToken() {
-        return $this->properties['ticketToken'];
-    }
-
-    /**
-     * The seat associated with the ticket.
-     *
-     * @param $ticketedSeat SeatSchema
-     **/
-    public function setTicketedSeat($ticketedSeat) {
-        $this->properties['ticketedSeat'] = $ticketedSeat;
-
-        return $this;
-    }
-
-    /**
-     * @return SeatSchema
-     **/
-    public function getTicketedSeat() {
-        return $this->properties['ticketedSeat'];
-    }
-
-    /**
-     * The total price for the reservation or ticket, including applicable taxes, shipping, etc.
-     *
-     * @param $totalPrice NumberSchema|TextSchema|PriceSpecificationSchema
-     **/
-    public function setTotalPrice($totalPrice) {
-        $this->properties['totalPrice'] = $totalPrice;
-
-        return $this;
-    }
-
-    /**
-     * @return NumberSchema|TextSchema|PriceSpecificationSchema
-     **/
-    public function getTotalPrice() {
-        return $this->properties['totalPrice'];
-    }
-
-    /**
      * The person or organization the reservation or ticket is for.
      *
-     * @param $underName PersonSchema|OrganizationSchema
+     * @param $underName |
      **/
     public function setUnderName($underName) {
         $this->properties['underName'] = $underName;
@@ -176,10 +68,118 @@ class TicketSchema extends IntangibleSchema
     }
 
     /**
-     * @return PersonSchema|OrganizationSchema
+     * @return |
      **/
     public function getUnderName() {
         return $this->properties['underName'];
+    }
+
+    /**
+     * The unique identifier for the ticket.
+     *
+     * @param $ticketNumber 
+     **/
+    public function setTicketNumber($ticketNumber) {
+        $this->properties['ticketNumber'] = $ticketNumber;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getTicketNumber() {
+        return $this->properties['ticketNumber'];
+    }
+
+    /**
+     * The seat associated with the ticket.
+     *
+     * @param $ticketedSeat 
+     **/
+    public function setTicketedSeat($ticketedSeat) {
+        $this->properties['ticketedSeat'] = $ticketedSeat;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getTicketedSeat() {
+        return $this->properties['ticketedSeat'];
+    }
+
+    /**
+     * The currency of the price, or a price component when attached to [[PriceSpecification]] and its subtypes.\n\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR".
+     *
+     * @param $priceCurrency 
+     **/
+    public function setPriceCurrency($priceCurrency) {
+        $this->properties['priceCurrency'] = $priceCurrency;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getPriceCurrency() {
+        return $this->properties['priceCurrency'];
+    }
+
+    /**
+     * The total price for the reservation or ticket, including applicable taxes, shipping, etc.\n\nUsage guidelines:\n\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.
+     *
+     * @param $totalPrice ||
+     **/
+    public function setTotalPrice($totalPrice) {
+        $this->properties['totalPrice'] = $totalPrice;
+
+        return $this;
+    }
+
+    /**
+     * @return ||
+     **/
+    public function getTotalPrice() {
+        return $this->properties['totalPrice'];
+    }
+
+    /**
+     * The date the ticket was issued.
+     *
+     * @param $dateIssued |
+     **/
+    public function setDateIssued($dateIssued) {
+        $this->properties['dateIssued'] = $dateIssued;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getDateIssued() {
+        return $this->properties['dateIssued'];
+    }
+
+    /**
+     * Reference to an asset (e.g., Barcode, QR code image or PDF) usable for entrance.
+     *
+     * @param $ticketToken |
+     **/
+    public function setTicketToken($ticketToken) {
+        $this->properties['ticketToken'] = $ticketToken;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getTicketToken() {
+        return $this->properties['ticketToken'];
     }
 
 

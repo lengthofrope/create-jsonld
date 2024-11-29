@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class BarOrPubSchema extends FoodEstablishmentSchema
+class BarOrPubSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new BarOrPubSchema('http://schema.org/', 'BarOrPub');
+        return new BarOrPubSchema('https://schema.org/', 'BarOrPub');
     }
 
 

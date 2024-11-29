@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class GovernmentOrganizationSchema extends OrganizationSchema
+class GovernmentOrganizationSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new GovernmentOrganizationSchema('http://schema.org/', 'GovernmentOrganization');
+        return new GovernmentOrganizationSchema('https://schema.org/', 'GovernmentOrganization');
     }
 
 

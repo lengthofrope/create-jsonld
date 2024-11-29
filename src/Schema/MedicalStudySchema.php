@@ -31,107 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MedicalStudySchema extends MedicalEntitySchema
+class MedicalStudySchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MedicalStudySchema('http://schema.org/', 'MedicalStudy');
-    }
-
-    /**
-     * Expected or actual outcomes of the study.
-     *
-     * @param $outcome TextSchema
-     **/
-    public function setOutcome($outcome) {
-        $this->properties['outcome'] = $outcome;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getOutcome() {
-        return $this->properties['outcome'];
-    }
-
-    /**
-     * Any characteristics of the population used in the study, e.g. 'males under 65'.
-     *
-     * @param $population TextSchema
-     **/
-    public function setPopulation($population) {
-        $this->properties['population'] = $population;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getPopulation() {
-        return $this->properties['population'];
-    }
-
-    /**
-     * Sponsor of the study.
-     *
-     * @param $sponsor OrganizationSchema
-     **/
-    public function setSponsor($sponsor) {
-        $this->properties['sponsor'] = $sponsor;
-
-        return $this;
-    }
-
-    /**
-     * @return OrganizationSchema
-     **/
-    public function getSponsor() {
-        return $this->properties['sponsor'];
-    }
-
-    /**
-     * The status of the study (enumerated).
-     *
-     * @param $status MedicalStudyStatusSchema
-     **/
-    public function setStatus($status) {
-        $this->properties['status'] = $status;
-
-        return $this;
-    }
-
-    /**
-     * @return MedicalStudyStatusSchema
-     **/
-    public function getStatus() {
-        return $this->properties['status'];
-    }
-
-    /**
-     * The location in which the study is taking/took place.
-     *
-     * @param $studyLocation AdministrativeAreaSchema
-     **/
-    public function setStudyLocation($studyLocation) {
-        $this->properties['studyLocation'] = $studyLocation;
-
-        return $this;
-    }
-
-    /**
-     * @return AdministrativeAreaSchema
-     **/
-    public function getStudyLocation() {
-        return $this->properties['studyLocation'];
+        return new MedicalStudySchema('https://schema.org/', 'MedicalStudy');
     }
 
     /**
      * A subject of the study, i.e. one of the medical conditions, therapies, devices, drugs, etc. investigated by the study.
      *
-     * @param $studySubject MedicalEntitySchema
+     * @param $studySubject 
      **/
     public function setStudySubject($studySubject) {
         $this->properties['studySubject'] = $studySubject;
@@ -140,10 +50,82 @@ class MedicalStudySchema extends MedicalEntitySchema
     }
 
     /**
-     * @return MedicalEntitySchema
+     * @return 
      **/
     public function getStudySubject() {
         return $this->properties['studySubject'];
+    }
+
+    /**
+     * The status of the study (enumerated).
+     *
+     * @param $status ||
+     **/
+    public function setStatus($status) {
+        $this->properties['status'] = $status;
+
+        return $this;
+    }
+
+    /**
+     * @return ||
+     **/
+    public function getStatus() {
+        return $this->properties['status'];
+    }
+
+    /**
+     * Specifying the health condition(s) of a patient, medical study, or other target audience.
+     *
+     * @param $healthCondition 
+     **/
+    public function setHealthCondition($healthCondition) {
+        $this->properties['healthCondition'] = $healthCondition;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getHealthCondition() {
+        return $this->properties['healthCondition'];
+    }
+
+    /**
+     * The location in which the study is taking/took place.
+     *
+     * @param $studyLocation 
+     **/
+    public function setStudyLocation($studyLocation) {
+        $this->properties['studyLocation'] = $studyLocation;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getStudyLocation() {
+        return $this->properties['studyLocation'];
+    }
+
+    /**
+     * A person or organization that supports a thing through a pledge, promise, or financial contribution. E.g. a sponsor of a Medical Study or a corporate sponsor of an event.
+     *
+     * @param $sponsor |
+     **/
+    public function setSponsor($sponsor) {
+        $this->properties['sponsor'] = $sponsor;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getSponsor() {
+        return $this->properties['sponsor'];
     }
 
 

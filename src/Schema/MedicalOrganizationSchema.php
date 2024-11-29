@@ -27,15 +27,69 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A medical organization, such as a doctor's office or clinic.
+ * A medical organization (physical or not), such as hospital, institution or clinic.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MedicalOrganizationSchema extends LocalBusinessSchema
+class MedicalOrganizationSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MedicalOrganizationSchema('http://schema.org/', 'MedicalOrganization');
+        return new MedicalOrganizationSchema('https://schema.org/', 'MedicalOrganization');
+    }
+
+    /**
+     * Name or unique ID of network. (Networks are often reused across different insurance plans.)
+     *
+     * @param $healthPlanNetworkId 
+     **/
+    public function setHealthPlanNetworkId($healthPlanNetworkId) {
+        $this->properties['healthPlanNetworkId'] = $healthPlanNetworkId;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getHealthPlanNetworkId() {
+        return $this->properties['healthPlanNetworkId'];
+    }
+
+    /**
+     * A medical specialty of the provider.
+     *
+     * @param $medicalSpecialty 
+     **/
+    public function setMedicalSpecialty($medicalSpecialty) {
+        $this->properties['medicalSpecialty'] = $medicalSpecialty;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getMedicalSpecialty() {
+        return $this->properties['medicalSpecialty'];
+    }
+
+    /**
+     * Whether the provider is accepting new patients.
+     *
+     * @param $isAcceptingNewPatients 
+     **/
+    public function setIsAcceptingNewPatients($isAcceptingNewPatients) {
+        $this->properties['isAcceptingNewPatients'] = $isAcceptingNewPatients;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getIsAcceptingNewPatients() {
+        return $this->properties['isAcceptingNewPatients'];
     }
 
 

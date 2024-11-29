@@ -31,71 +31,35 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MedicalEntitySchema extends ThingSchema
+class MedicalEntitySchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MedicalEntitySchema('http://schema.org/', 'MedicalEntity');
+        return new MedicalEntitySchema('https://schema.org/', 'MedicalEntity');
     }
 
     /**
-     * A medical code for the entity, taken from a controlled vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
+     * The drug or supplement's legal status, including any controlled substance schedules that apply.
      *
-     * @param $code MedicalCodeSchema
+     * @param $legalStatus ||
      **/
-    public function setCode($code) {
-        $this->properties['code'] = $code;
+    public function setLegalStatus($legalStatus) {
+        $this->properties['legalStatus'] = $legalStatus;
 
         return $this;
     }
 
     /**
-     * @return MedicalCodeSchema
+     * @return ||
      **/
-    public function getCode() {
-        return $this->properties['code'];
-    }
-
-    /**
-     * A medical guideline related to this entity.
-     *
-     * @param $guideline MedicalGuidelineSchema
-     **/
-    public function setGuideline($guideline) {
-        $this->properties['guideline'] = $guideline;
-
-        return $this;
-    }
-
-    /**
-     * @return MedicalGuidelineSchema
-     **/
-    public function getGuideline() {
-        return $this->properties['guideline'];
-    }
-
-    /**
-     * The system of medicine that includes this MedicalEntity, for example 'evidence-based', 'homeopathic', 'chiropractic', etc.
-     *
-     * @param $medicineSystem MedicineSystemSchema
-     **/
-    public function setMedicineSystem($medicineSystem) {
-        $this->properties['medicineSystem'] = $medicineSystem;
-
-        return $this;
-    }
-
-    /**
-     * @return MedicineSystemSchema
-     **/
-    public function getMedicineSystem() {
-        return $this->properties['medicineSystem'];
+    public function getLegalStatus() {
+        return $this->properties['legalStatus'];
     }
 
     /**
      * If applicable, the organization that officially recognizes this entity as part of its endorsed system of medicine.
      *
-     * @param $recognizingAuthority OrganizationSchema
+     * @param $recognizingAuthority 
      **/
     public function setRecognizingAuthority($recognizingAuthority) {
         $this->properties['recognizingAuthority'] = $recognizingAuthority;
@@ -104,34 +68,70 @@ class MedicalEntitySchema extends ThingSchema
     }
 
     /**
-     * @return OrganizationSchema
+     * @return 
      **/
     public function getRecognizingAuthority() {
         return $this->properties['recognizingAuthority'];
     }
 
     /**
-     * If applicable, a medical specialty in which this entity is relevant.
+     * A [[Grant]] that directly or indirectly provide funding or sponsorship for this item. See also [[ownershipFundingInfo]].
      *
-     * @param $relevantSpecialty MedicalSpecialtySchema
+     * @param $funding 
      **/
-    public function setRelevantSpecialty($relevantSpecialty) {
-        $this->properties['relevantSpecialty'] = $relevantSpecialty;
+    public function setFunding($funding) {
+        $this->properties['funding'] = $funding;
 
         return $this;
     }
 
     /**
-     * @return MedicalSpecialtySchema
+     * @return 
      **/
-    public function getRelevantSpecialty() {
-        return $this->properties['relevantSpecialty'];
+    public function getFunding() {
+        return $this->properties['funding'];
+    }
+
+    /**
+     * A medical code for the entity, taken from a controlled vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
+     *
+     * @param $code 
+     **/
+    public function setCode($code) {
+        $this->properties['code'] = $code;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getCode() {
+        return $this->properties['code'];
+    }
+
+    /**
+     * The system of medicine that includes this MedicalEntity, for example 'evidence-based', 'homeopathic', 'chiropractic', etc.
+     *
+     * @param $medicineSystem 
+     **/
+    public function setMedicineSystem($medicineSystem) {
+        $this->properties['medicineSystem'] = $medicineSystem;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getMedicineSystem() {
+        return $this->properties['medicineSystem'];
     }
 
     /**
      * A medical study or trial related to this entity.
      *
-     * @param $study MedicalStudySchema
+     * @param $study 
      **/
     public function setStudy($study) {
         $this->properties['study'] = $study;
@@ -140,10 +140,46 @@ class MedicalEntitySchema extends ThingSchema
     }
 
     /**
-     * @return MedicalStudySchema
+     * @return 
      **/
     public function getStudy() {
         return $this->properties['study'];
+    }
+
+    /**
+     * A medical guideline related to this entity.
+     *
+     * @param $guideline 
+     **/
+    public function setGuideline($guideline) {
+        $this->properties['guideline'] = $guideline;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getGuideline() {
+        return $this->properties['guideline'];
+    }
+
+    /**
+     * If applicable, a medical specialty in which this entity is relevant.
+     *
+     * @param $relevantSpecialty 
+     **/
+    public function setRelevantSpecialty($relevantSpecialty) {
+        $this->properties['relevantSpecialty'] = $relevantSpecialty;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getRelevantSpecialty() {
+        return $this->properties['relevantSpecialty'];
     }
 
 

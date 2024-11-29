@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class WebApplicationSchema extends SoftwareApplicationSchema
+class WebApplicationSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new WebApplicationSchema('http://schema.org/', 'WebApplication');
+        return new WebApplicationSchema('https://schema.org/', 'WebApplication');
     }
 
     /**
-     * Specifies browser requirements in human-readable text. For example,"requires HTML5 support".
+     * Specifies browser requirements in human-readable text. For example, 'requires HTML5 support'.
      *
-     * @param $browserRequirements TextSchema
+     * @param $browserRequirements 
      **/
     public function setBrowserRequirements($browserRequirements) {
         $this->properties['browserRequirements'] = $browserRequirements;
@@ -50,7 +50,7 @@ class WebApplicationSchema extends SoftwareApplicationSchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getBrowserRequirements() {
         return $this->properties['browserRequirements'];

@@ -35,7 +35,7 @@ class DateTimeSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new DateTimeSchema('http://schema.org/', 'DateTime');
+        return new DateTimeSchema('https://schema.org/', 'DateTime');
     }
 
 

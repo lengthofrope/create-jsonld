@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class DownloadActionSchema extends TransferActionSchema
+class DownloadActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new DownloadActionSchema('http://schema.org/', 'DownloadAction');
+        return new DownloadActionSchema('https://schema.org/', 'DownloadAction');
     }
 
 

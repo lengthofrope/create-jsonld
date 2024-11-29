@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class EpisodeSchema extends CreativeWorkSchema
+class EpisodeSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new EpisodeSchema('http://schema.org/', 'Episode');
+        return new EpisodeSchema('https://schema.org/', 'Episode');
     }
 
     /**
-     * An actor, e.g. in tv, radio, movie, video games etc. Actors can be associated with individual items or with a series, episode, clip.
+     * An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip.
      *
-     * @param $actor PersonSchema
+     * @param $actor |
      **/
     public function setActor($actor) {
         $this->properties['actor'] = $actor;
@@ -50,160 +50,16 @@ class EpisodeSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return PersonSchema
+     * @return |
      **/
     public function getActor() {
         return $this->properties['actor'];
     }
 
     /**
-     * An actor, e.g. in tv, radio, movie, video games etc. Actors can be associated with individual items or with a series, episode, clip.
+     * The trailer of a movie or TV/radio series, season, episode, etc.
      *
-     * @param $actors PersonSchema
-     **/
-    public function setActors($actors) {
-        $this->properties['actors'] = $actors;
-
-        return $this;
-    }
-
-    /**
-     * @return PersonSchema
-     **/
-    public function getActors() {
-        return $this->properties['actors'];
-    }
-
-    /**
-     * A director of e.g. tv, radio, movie, video games etc. content. Directors can be associated with individual items or with a series, episode, clip.
-     *
-     * @param $director PersonSchema
-     **/
-    public function setDirector($director) {
-        $this->properties['director'] = $director;
-
-        return $this;
-    }
-
-    /**
-     * @return PersonSchema
-     **/
-    public function getDirector() {
-        return $this->properties['director'];
-    }
-
-    /**
-     * A director of e.g. tv, radio, movie, video games etc. content. Directors can be associated with individual items or with a series, episode, clip.
-     *
-     * @param $directors PersonSchema
-     **/
-    public function setDirectors($directors) {
-        $this->properties['directors'] = $directors;
-
-        return $this;
-    }
-
-    /**
-     * @return PersonSchema
-     **/
-    public function getDirectors() {
-        return $this->properties['directors'];
-    }
-
-    /**
-     * Position of the episode within an ordered group of episodes.
-     *
-     * @param $episodeNumber IntegerSchema|TextSchema
-     **/
-    public function setEpisodeNumber($episodeNumber) {
-        $this->properties['episodeNumber'] = $episodeNumber;
-
-        return $this;
-    }
-
-    /**
-     * @return IntegerSchema|TextSchema
-     **/
-    public function getEpisodeNumber() {
-        return $this->properties['episodeNumber'];
-    }
-
-    /**
-     * The composer of the soundtrack.
-     *
-     * @param $musicBy MusicGroupSchema|PersonSchema
-     **/
-    public function setMusicBy($musicBy) {
-        $this->properties['musicBy'] = $musicBy;
-
-        return $this;
-    }
-
-    /**
-     * @return MusicGroupSchema|PersonSchema
-     **/
-    public function getMusicBy() {
-        return $this->properties['musicBy'];
-    }
-
-    /**
-     * The season to which this episode belongs.
-     *
-     * @param $partOfSeason CreativeWorkSeasonSchema
-     **/
-    public function setPartOfSeason($partOfSeason) {
-        $this->properties['partOfSeason'] = $partOfSeason;
-
-        return $this;
-    }
-
-    /**
-     * @return CreativeWorkSeasonSchema
-     **/
-    public function getPartOfSeason() {
-        return $this->properties['partOfSeason'];
-    }
-
-    /**
-     * The series to which this episode or season belongs.
-     *
-     * @param $partOfSeries CreativeWorkSeriesSchema
-     **/
-    public function setPartOfSeries($partOfSeries) {
-        $this->properties['partOfSeries'] = $partOfSeries;
-
-        return $this;
-    }
-
-    /**
-     * @return CreativeWorkSeriesSchema
-     **/
-    public function getPartOfSeries() {
-        return $this->properties['partOfSeries'];
-    }
-
-    /**
-     * The production company or studio responsible for the item e.g. series, video game, episode etc.
-     *
-     * @param $productionCompany OrganizationSchema
-     **/
-    public function setProductionCompany($productionCompany) {
-        $this->properties['productionCompany'] = $productionCompany;
-
-        return $this;
-    }
-
-    /**
-     * @return OrganizationSchema
-     **/
-    public function getProductionCompany() {
-        return $this->properties['productionCompany'];
-    }
-
-    /**
-     * The trailer of a movie or tv/radio series, season, episode, etc.
-     *
-     * @param $trailer VideoObjectSchema
+     * @param $trailer 
      **/
     public function setTrailer($trailer) {
         $this->properties['trailer'] = $trailer;
@@ -212,10 +68,172 @@ class EpisodeSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return VideoObjectSchema
+     * @return 
      **/
     public function getTrailer() {
         return $this->properties['trailer'];
+    }
+
+    /**
+     * The season to which this episode belongs.
+     *
+     * @param $partOfSeason 
+     **/
+    public function setPartOfSeason($partOfSeason) {
+        $this->properties['partOfSeason'] = $partOfSeason;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getPartOfSeason() {
+        return $this->properties['partOfSeason'];
+    }
+
+    /**
+     * An actor, e.g. in TV, radio, movie, video games etc. Actors can be associated with individual items or with a series, episode, clip.
+     *
+     * @param $actors 
+     **/
+    public function setActors($actors) {
+        $this->properties['actors'] = $actors;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getActors() {
+        return $this->properties['actors'];
+    }
+
+    /**
+     * A director of e.g. TV, radio, movie, video games etc. content. Directors can be associated with individual items or with a series, episode, clip.
+     *
+     * @param $directors 
+     **/
+    public function setDirectors($directors) {
+        $this->properties['directors'] = $directors;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getDirectors() {
+        return $this->properties['directors'];
+    }
+
+    /**
+     * The production company or studio responsible for the item, e.g. series, video game, episode etc.
+     *
+     * @param $productionCompany 
+     **/
+    public function setProductionCompany($productionCompany) {
+        $this->properties['productionCompany'] = $productionCompany;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getProductionCompany() {
+        return $this->properties['productionCompany'];
+    }
+
+    /**
+     * The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
+     *
+     * @param $duration 
+     **/
+    public function setDuration($duration) {
+        $this->properties['duration'] = $duration;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getDuration() {
+        return $this->properties['duration'];
+    }
+
+    /**
+     * The series to which this episode or season belongs.
+     *
+     * @param $partOfSeries 
+     **/
+    public function setPartOfSeries($partOfSeries) {
+        $this->properties['partOfSeries'] = $partOfSeries;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getPartOfSeries() {
+        return $this->properties['partOfSeries'];
+    }
+
+    /**
+     * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual items or with a series, episode, clip.
+     *
+     * @param $director 
+     **/
+    public function setDirector($director) {
+        $this->properties['director'] = $director;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getDirector() {
+        return $this->properties['director'];
+    }
+
+    /**
+     * The composer of the soundtrack.
+     *
+     * @param $musicBy |
+     **/
+    public function setMusicBy($musicBy) {
+        $this->properties['musicBy'] = $musicBy;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getMusicBy() {
+        return $this->properties['musicBy'];
+    }
+
+    /**
+     * Position of the episode within an ordered group of episodes.
+     *
+     * @param $episodeNumber |
+     **/
+    public function setEpisodeNumber($episodeNumber) {
+        $this->properties['episodeNumber'] = $episodeNumber;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getEpisodeNumber() {
+        return $this->properties['episodeNumber'];
     }
 
 

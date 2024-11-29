@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class AdministrativeAreaSchema extends PlaceSchema
+class AdministrativeAreaSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new AdministrativeAreaSchema('http://schema.org/', 'AdministrativeArea');
+        return new AdministrativeAreaSchema('https://schema.org/', 'AdministrativeArea');
     }
 
 

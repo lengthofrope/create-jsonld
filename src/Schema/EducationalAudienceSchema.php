@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class EducationalAudienceSchema extends AudienceSchema
+class EducationalAudienceSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new EducationalAudienceSchema('http://schema.org/', 'EducationalAudience');
+        return new EducationalAudienceSchema('https://schema.org/', 'EducationalAudience');
     }
 
     /**
      * An educationalRole of an EducationalAudience.
      *
-     * @param $educationalRole TextSchema
+     * @param $educationalRole 
      **/
     public function setEducationalRole($educationalRole) {
         $this->properties['educationalRole'] = $educationalRole;
@@ -50,7 +50,7 @@ class EducationalAudienceSchema extends AudienceSchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getEducationalRole() {
         return $this->properties['educationalRole'];

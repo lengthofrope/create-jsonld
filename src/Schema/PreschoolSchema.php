@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PreschoolSchema extends EducationalOrganizationSchema
+class PreschoolSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new PreschoolSchema('http://schema.org/', 'Preschool');
+        return new PreschoolSchema('https://schema.org/', 'Preschool');
     }
 
 

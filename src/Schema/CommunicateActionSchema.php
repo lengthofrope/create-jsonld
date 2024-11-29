@@ -31,53 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class CommunicateActionSchema extends InteractActionSchema
+class CommunicateActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new CommunicateActionSchema('http://schema.org/', 'CommunicateAction');
-    }
-
-    /**
-     * The subject matter of the content.
-     *
-     * @param $about ThingSchema
-     **/
-    public function setAbout($about) {
-        $this->properties['about'] = $about;
-
-        return $this;
-    }
-
-    /**
-     * @return ThingSchema
-     **/
-    public function getAbout() {
-        return $this->properties['about'];
-    }
-
-    /**
-     * The language of the content or performance or used in an action. Please use one of the language codes from the <a href='http://tools.ietf.org/html/bcp47'>IETF BCP 47 standard</a>.
-     *
-     * @param $inLanguage TextSchema|LanguageSchema
-     **/
-    public function setInLanguage($inLanguage) {
-        $this->properties['inLanguage'] = $inLanguage;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema|LanguageSchema
-     **/
-    public function getInLanguage() {
-        return $this->properties['inLanguage'];
+        return new CommunicateActionSchema('https://schema.org/', 'CommunicateAction');
     }
 
     /**
      * A sub property of instrument. The language used on this action.
      *
-     * @param $language LanguageSchema
+     * @param $language 
      **/
     public function setLanguage($language) {
         $this->properties['language'] = $language;
@@ -86,7 +50,7 @@ class CommunicateActionSchema extends InteractActionSchema
     }
 
     /**
-     * @return LanguageSchema
+     * @return 
      **/
     public function getLanguage() {
         return $this->properties['language'];
@@ -95,7 +59,7 @@ class CommunicateActionSchema extends InteractActionSchema
     /**
      * A sub property of participant. The participant who is at the receiving end of the action.
      *
-     * @param $recipient AudienceSchema|OrganizationSchema|PersonSchema
+     * @param $recipient |||
      **/
     public function setRecipient($recipient) {
         $this->properties['recipient'] = $recipient;
@@ -104,10 +68,46 @@ class CommunicateActionSchema extends InteractActionSchema
     }
 
     /**
-     * @return AudienceSchema|OrganizationSchema|PersonSchema
+     * @return |||
      **/
     public function getRecipient() {
         return $this->properties['recipient'];
+    }
+
+    /**
+     * The subject matter of the content.
+     *
+     * @param $about 
+     **/
+    public function setAbout($about) {
+        $this->properties['about'] = $about;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getAbout() {
+        return $this->properties['about'];
+    }
+
+    /**
+     * The language of the content or performance or used in an action. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
+     *
+     * @param $inLanguage |
+     **/
+    public function setInLanguage($inLanguage) {
+        $this->properties['inLanguage'] = $inLanguage;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getInLanguage() {
+        return $this->properties['inLanguage'];
     }
 
 

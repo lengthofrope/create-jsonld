@@ -31,35 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class EmployeeRoleSchema extends OrganizationRoleSchema
+class EmployeeRoleSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new EmployeeRoleSchema('http://schema.org/', 'EmployeeRole');
+        return new EmployeeRoleSchema('https://schema.org/', 'EmployeeRole');
     }
 
     /**
-     * The base salary of the job or of an employee in an EmployeeRole.
+     * The currency (coded using [ISO 4217](http://en.wikipedia.org/wiki/ISO_4217)) used for the main salary information in this job posting or for this employee.
      *
-     * @param $baseSalary NumberSchema|PriceSpecificationSchema
-     **/
-    public function setBaseSalary($baseSalary) {
-        $this->properties['baseSalary'] = $baseSalary;
-
-        return $this;
-    }
-
-    /**
-     * @return NumberSchema|PriceSpecificationSchema
-     **/
-    public function getBaseSalary() {
-        return $this->properties['baseSalary'];
-    }
-
-    /**
-     * The currency (coded using ISO 4217, http://en.wikipedia.org/wiki/ISO_4217 ) used for the main salary information in this job posting or for this employee.
-     *
-     * @param $salaryCurrency TextSchema
+     * @param $salaryCurrency 
      **/
     public function setSalaryCurrency($salaryCurrency) {
         $this->properties['salaryCurrency'] = $salaryCurrency;
@@ -68,10 +50,28 @@ class EmployeeRoleSchema extends OrganizationRoleSchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getSalaryCurrency() {
         return $this->properties['salaryCurrency'];
+    }
+
+    /**
+     * The base salary of the job or of an employee in an EmployeeRole.
+     *
+     * @param $baseSalary ||
+     **/
+    public function setBaseSalary($baseSalary) {
+        $this->properties['baseSalary'] = $baseSalary;
+
+        return $this;
+    }
+
+    /**
+     * @return ||
+     **/
+    public function getBaseSalary() {
+        return $this->properties['baseSalary'];
     }
 
 

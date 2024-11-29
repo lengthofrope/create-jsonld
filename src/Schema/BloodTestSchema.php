@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class BloodTestSchema extends MedicalTestSchema
+class BloodTestSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new BloodTestSchema('http://schema.org/', 'BloodTest');
+        return new BloodTestSchema('https://schema.org/', 'BloodTest');
     }
 
 

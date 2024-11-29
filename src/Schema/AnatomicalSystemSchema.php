@@ -27,75 +27,21 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * An anatomical system is a group of anatomical structures that work together to perform a certain task. Anatomical systems, such as organ systems, are one organizing principle of anatomy, and can includes circulatory, digestive, endocrine, integumentary, immune, lymphatic, muscular, nervous, reproductive, respiratory, skeletal, urinary, vestibular, and other systems.
+ * An anatomical system is a group of anatomical structures that work together to perform a certain task. Anatomical systems, such as organ systems, are one organizing principle of anatomy, and can include circulatory, digestive, endocrine, integumentary, immune, lymphatic, muscular, nervous, reproductive, respiratory, skeletal, urinary, vestibular, and other systems.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class AnatomicalSystemSchema extends MedicalEntitySchema
+class AnatomicalSystemSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new AnatomicalSystemSchema('http://schema.org/', 'AnatomicalSystem');
-    }
-
-    /**
-     * If applicable, a description of the pathophysiology associated with the anatomical system, including potential abnormal changes in the mechanical, physical, and biochemical functions of the system.
-     *
-     * @param $associatedPathophysiology TextSchema
-     **/
-    public function setAssociatedPathophysiology($associatedPathophysiology) {
-        $this->properties['associatedPathophysiology'] = $associatedPathophysiology;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getAssociatedPathophysiology() {
-        return $this->properties['associatedPathophysiology'];
-    }
-
-    /**
-     * The underlying anatomical structures, such as organs, that comprise the anatomical system.
-     *
-     * @param $comprisedOf AnatomicalStructureSchema|AnatomicalSystemSchema
-     **/
-    public function setComprisedOf($comprisedOf) {
-        $this->properties['comprisedOf'] = $comprisedOf;
-
-        return $this;
-    }
-
-    /**
-     * @return AnatomicalStructureSchema|AnatomicalSystemSchema
-     **/
-    public function getComprisedOf() {
-        return $this->properties['comprisedOf'];
-    }
-
-    /**
-     * A medical condition associated with this anatomy.
-     *
-     * @param $relatedCondition MedicalConditionSchema
-     **/
-    public function setRelatedCondition($relatedCondition) {
-        $this->properties['relatedCondition'] = $relatedCondition;
-
-        return $this;
-    }
-
-    /**
-     * @return MedicalConditionSchema
-     **/
-    public function getRelatedCondition() {
-        return $this->properties['relatedCondition'];
+        return new AnatomicalSystemSchema('https://schema.org/', 'AnatomicalSystem');
     }
 
     /**
      * Related anatomical structure(s) that are not part of the system but relate or connect to it, such as vascular bundles associated with an organ system.
      *
-     * @param $relatedStructure AnatomicalStructureSchema
+     * @param $relatedStructure 
      **/
     public function setRelatedStructure($relatedStructure) {
         $this->properties['relatedStructure'] = $relatedStructure;
@@ -104,7 +50,7 @@ class AnatomicalSystemSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return AnatomicalStructureSchema
+     * @return 
      **/
     public function getRelatedStructure() {
         return $this->properties['relatedStructure'];
@@ -113,7 +59,7 @@ class AnatomicalSystemSchema extends MedicalEntitySchema
     /**
      * A medical therapy related to this anatomy.
      *
-     * @param $relatedTherapy MedicalTherapySchema
+     * @param $relatedTherapy 
      **/
     public function setRelatedTherapy($relatedTherapy) {
         $this->properties['relatedTherapy'] = $relatedTherapy;
@@ -122,10 +68,64 @@ class AnatomicalSystemSchema extends MedicalEntitySchema
     }
 
     /**
-     * @return MedicalTherapySchema
+     * @return 
      **/
     public function getRelatedTherapy() {
         return $this->properties['relatedTherapy'];
+    }
+
+    /**
+     * Specifying something physically contained by something else. Typically used here for the underlying anatomical structures, such as organs, that comprise the anatomical system.
+     *
+     * @param $comprisedOf |
+     **/
+    public function setComprisedOf($comprisedOf) {
+        $this->properties['comprisedOf'] = $comprisedOf;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getComprisedOf() {
+        return $this->properties['comprisedOf'];
+    }
+
+    /**
+     * A medical condition associated with this anatomy.
+     *
+     * @param $relatedCondition 
+     **/
+    public function setRelatedCondition($relatedCondition) {
+        $this->properties['relatedCondition'] = $relatedCondition;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getRelatedCondition() {
+        return $this->properties['relatedCondition'];
+    }
+
+    /**
+     * If applicable, a description of the pathophysiology associated with the anatomical system, including potential abnormal changes in the mechanical, physical, and biochemical functions of the system.
+     *
+     * @param $associatedPathophysiology 
+     **/
+    public function setAssociatedPathophysiology($associatedPathophysiology) {
+        $this->properties['associatedPathophysiology'] = $associatedPathophysiology;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getAssociatedPathophysiology() {
+        return $this->properties['associatedPathophysiology'];
     }
 
 

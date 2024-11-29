@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ItemListOrderTypeSchema extends EnumerationSchema
+class ItemListOrderTypeSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new ItemListOrderTypeSchema('http://schema.org/', 'ItemListOrderType');
+        return new ItemListOrderTypeSchema('https://schema.org/', 'ItemListOrderType');
     }
 
 

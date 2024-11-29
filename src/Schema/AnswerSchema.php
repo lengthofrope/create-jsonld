@@ -31,11 +31,47 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class AnswerSchema extends CommentSchema
+class AnswerSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new AnswerSchema('http://schema.org/', 'Answer');
+        return new AnswerSchema('https://schema.org/', 'Answer');
+    }
+
+    /**
+     * The parent of a question, answer or item in general. Typically used for Q/A discussion threads e.g. a chain of comments with the first comment being an [[Article]] or other [[CreativeWork]]. See also [[comment]] which points from something to a comment about it.
+     *
+     * @param $parentItem |
+     **/
+    public function setParentItem($parentItem) {
+        $this->properties['parentItem'] = $parentItem;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getParentItem() {
+        return $this->properties['parentItem'];
+    }
+
+    /**
+     * A step-by-step or full explanation about Answer. Can outline how this Answer was achieved or contain more broad clarification or statement about it. 
+     *
+     * @param $answerExplanation |
+     **/
+    public function setAnswerExplanation($answerExplanation) {
+        $this->properties['answerExplanation'] = $answerExplanation;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getAnswerExplanation() {
+        return $this->properties['answerExplanation'];
     }
 
 

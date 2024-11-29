@@ -27,15 +27,15 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Reserving a concrete object.<p>Related actions:</p><ul><li><a href="http://schema.org/ScheduleAction">ScheduleAction</a>: Unlike ScheduleAction, ReserveAction reserves concrete objects (e.g. a table, a hotel) towards a time slot / spatial allocation</li></ul>.
+ * Reserving a concrete object.\n\nRelated actions:\n\n* [[ScheduleAction]]: Unlike ScheduleAction, ReserveAction reserves concrete objects (e.g. a table, a hotel) towards a time slot / spatial allocation.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ReserveActionSchema extends PlanActionSchema
+class ReserveActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new ReserveActionSchema('http://schema.org/', 'ReserveAction');
+        return new ReserveActionSchema('https://schema.org/', 'ReserveAction');
     }
 
 

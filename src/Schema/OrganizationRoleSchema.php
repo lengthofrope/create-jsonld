@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class OrganizationRoleSchema extends RoleSchema
+class OrganizationRoleSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new OrganizationRoleSchema('http://schema.org/', 'OrganizationRole');
+        return new OrganizationRoleSchema('https://schema.org/', 'OrganizationRole');
     }
 
     /**
      * A number associated with a role in an organization, for example, the number on an athlete's jersey.
      *
-     * @param $numberedPosition NumberSchema
+     * @param $numberedPosition 
      **/
     public function setNumberedPosition($numberedPosition) {
         $this->properties['numberedPosition'] = $numberedPosition;
@@ -50,7 +50,7 @@ class OrganizationRoleSchema extends RoleSchema
     }
 
     /**
-     * @return NumberSchema
+     * @return 
      **/
     public function getNumberedPosition() {
         return $this->properties['numberedPosition'];

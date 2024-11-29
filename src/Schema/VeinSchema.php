@@ -31,35 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class VeinSchema extends VesselSchema
+class VeinSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new VeinSchema('http://schema.org/', 'Vein');
-    }
-
-    /**
-     * The vasculature that the vein drains into.
-     *
-     * @param $drainsTo VesselSchema
-     **/
-    public function setDrainsTo($drainsTo) {
-        $this->properties['drainsTo'] = $drainsTo;
-
-        return $this;
-    }
-
-    /**
-     * @return VesselSchema
-     **/
-    public function getDrainsTo() {
-        return $this->properties['drainsTo'];
+        return new VeinSchema('https://schema.org/', 'Vein');
     }
 
     /**
      * The anatomical or organ system drained by this vessel; generally refers to a specific part of an organ.
      *
-     * @param $regionDrained AnatomicalStructureSchema|AnatomicalSystemSchema
+     * @param $regionDrained |
      **/
     public function setRegionDrained($regionDrained) {
         $this->properties['regionDrained'] = $regionDrained;
@@ -68,16 +50,34 @@ class VeinSchema extends VesselSchema
     }
 
     /**
-     * @return AnatomicalStructureSchema|AnatomicalSystemSchema
+     * @return |
      **/
     public function getRegionDrained() {
         return $this->properties['regionDrained'];
     }
 
     /**
+     * The vasculature that the vein drains into.
+     *
+     * @param $drainsTo 
+     **/
+    public function setDrainsTo($drainsTo) {
+        $this->properties['drainsTo'] = $drainsTo;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getDrainsTo() {
+        return $this->properties['drainsTo'];
+    }
+
+    /**
      * The anatomical or organ system that the vein flows into; a larger structure that the vein connects to.
      *
-     * @param $tributary AnatomicalStructureSchema
+     * @param $tributary 
      **/
     public function setTributary($tributary) {
         $this->properties['tributary'] = $tributary;
@@ -86,7 +86,7 @@ class VeinSchema extends VesselSchema
     }
 
     /**
-     * @return AnatomicalStructureSchema
+     * @return 
      **/
     public function getTributary() {
         return $this->properties['tributary'];

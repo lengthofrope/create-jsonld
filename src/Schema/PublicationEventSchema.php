@@ -27,57 +27,39 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A PublicationEvent corresponds indifferently to the event of publication for a CreativeWork of any type e.g. a broadcast event, an on-demand event, a book/journal publication via a variety of delivery media.
+ * A PublicationEvent corresponds indifferently to the event of publication for a CreativeWork of any type, e.g. a broadcast event, an on-demand event, a book/journal publication via a variety of delivery media.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PublicationEventSchema extends EventSchema
+class PublicationEventSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new PublicationEventSchema('http://schema.org/', 'PublicationEvent');
+        return new PublicationEventSchema('https://schema.org/', 'PublicationEvent');
     }
 
     /**
-     * A flag to signal that the publication is accessible for free.
+     * An agent associated with the publication event.
      *
-     * @param $free BooleanSchema
+     * @param $publishedBy |
      **/
-    public function setFree($free) {
-        $this->properties['free'] = $free;
+    public function setPublishedBy($publishedBy) {
+        $this->properties['publishedBy'] = $publishedBy;
 
         return $this;
     }
 
     /**
-     * @return BooleanSchema
+     * @return |
      **/
-    public function getFree() {
-        return $this->properties['free'];
-    }
-
-    /**
-     * A flag to signal that the publication is accessible for free.
-     *
-     * @param $isAccessibleForFree BooleanSchema
-     **/
-    public function setIsAccessibleForFree($isAccessibleForFree) {
-        $this->properties['isAccessibleForFree'] = $isAccessibleForFree;
-
-        return $this;
-    }
-
-    /**
-     * @return BooleanSchema
-     **/
-    public function getIsAccessibleForFree() {
-        return $this->properties['isAccessibleForFree'];
+    public function getPublishedBy() {
+        return $this->properties['publishedBy'];
     }
 
     /**
      * A broadcast service associated with the publication event.
      *
-     * @param $publishedOn BroadcastServiceSchema
+     * @param $publishedOn 
      **/
     public function setPublishedOn($publishedOn) {
         $this->properties['publishedOn'] = $publishedOn;
@@ -86,10 +68,28 @@ class PublicationEventSchema extends EventSchema
     }
 
     /**
-     * @return BroadcastServiceSchema
+     * @return 
      **/
     public function getPublishedOn() {
         return $this->properties['publishedOn'];
+    }
+
+    /**
+     * A flag to signal that the item, event, or place is accessible for free.
+     *
+     * @param $free 
+     **/
+    public function setFree($free) {
+        $this->properties['free'] = $free;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getFree() {
+        return $this->properties['free'];
     }
 
 

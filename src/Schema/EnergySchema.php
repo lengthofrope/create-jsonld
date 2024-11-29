@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class EnergySchema extends QuantitySchema
+class EnergySchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new EnergySchema('http://schema.org/', 'Energy');
+        return new EnergySchema('https://schema.org/', 'Energy');
     }
 
 

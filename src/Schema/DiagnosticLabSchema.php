@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class DiagnosticLabSchema extends MedicalOrganizationSchema
+class DiagnosticLabSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new DiagnosticLabSchema('http://schema.org/', 'DiagnosticLab');
+        return new DiagnosticLabSchema('https://schema.org/', 'DiagnosticLab');
     }
 
     /**
      * A diagnostic test or procedure offered by this lab.
      *
-     * @param $availableTest MedicalTestSchema
+     * @param $availableTest 
      **/
     public function setAvailableTest($availableTest) {
         $this->properties['availableTest'] = $availableTest;
@@ -50,7 +50,7 @@ class DiagnosticLabSchema extends MedicalOrganizationSchema
     }
 
     /**
-     * @return MedicalTestSchema
+     * @return 
      **/
     public function getAvailableTest() {
         return $this->properties['availableTest'];

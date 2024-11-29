@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PerformingArtsTheaterSchema extends CivicStructureSchema
+class PerformingArtsTheaterSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new PerformingArtsTheaterSchema('http://schema.org/', 'PerformingArtsTheater');
+        return new PerformingArtsTheaterSchema('https://schema.org/', 'PerformingArtsTheater');
     }
 
 

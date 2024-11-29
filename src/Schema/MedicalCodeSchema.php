@@ -31,35 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MedicalCodeSchema extends MedicalIntangibleSchema
+class MedicalCodeSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MedicalCodeSchema('http://schema.org/', 'MedicalCode');
-    }
-
-    /**
-     * The actual code.
-     *
-     * @param $codeValue TextSchema
-     **/
-    public function setCodeValue($codeValue) {
-        $this->properties['codeValue'] = $codeValue;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getCodeValue() {
-        return $this->properties['codeValue'];
+        return new MedicalCodeSchema('https://schema.org/', 'MedicalCode');
     }
 
     /**
      * The coding system, e.g. 'ICD-10'.
      *
-     * @param $codingSystem TextSchema
+     * @param $codingSystem 
      **/
     public function setCodingSystem($codingSystem) {
         $this->properties['codingSystem'] = $codingSystem;
@@ -68,10 +50,28 @@ class MedicalCodeSchema extends MedicalIntangibleSchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getCodingSystem() {
         return $this->properties['codingSystem'];
+    }
+
+    /**
+     * A short textual code that uniquely identifies the value.
+     *
+     * @param $codeValue 
+     **/
+    public function setCodeValue($codeValue) {
+        $this->properties['codeValue'] = $codeValue;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getCodeValue() {
+        return $this->properties['codeValue'];
     }
 
 

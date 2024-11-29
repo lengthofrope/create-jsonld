@@ -31,53 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MuscleSchema extends AnatomicalStructureSchema
+class MuscleSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MuscleSchema('http://schema.org/', 'Muscle');
-    }
-
-    /**
-     * The movement the muscle generates.
-     *
-     * @param $action TextSchema
-     **/
-    public function setAction($action) {
-        $this->properties['action'] = $action;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getAction() {
-        return $this->properties['action'];
-    }
-
-    /**
-     * The muscle whose action counteracts the specified muscle.
-     *
-     * @param $antagonist MuscleSchema
-     **/
-    public function setAntagonist($antagonist) {
-        $this->properties['antagonist'] = $antagonist;
-
-        return $this;
-    }
-
-    /**
-     * @return MuscleSchema
-     **/
-    public function getAntagonist() {
-        return $this->properties['antagonist'];
+        return new MuscleSchema('https://schema.org/', 'Muscle');
     }
 
     /**
      * The blood vessel that carries blood from the heart to the muscle.
      *
-     * @param $bloodSupply VesselSchema
+     * @param $bloodSupply 
      **/
     public function setBloodSupply($bloodSupply) {
         $this->properties['bloodSupply'] = $bloodSupply;
@@ -86,16 +50,34 @@ class MuscleSchema extends AnatomicalStructureSchema
     }
 
     /**
-     * @return VesselSchema
+     * @return 
      **/
     public function getBloodSupply() {
         return $this->properties['bloodSupply'];
     }
 
     /**
+     * The muscle whose action counteracts the specified muscle.
+     *
+     * @param $antagonist 
+     **/
+    public function setAntagonist($antagonist) {
+        $this->properties['antagonist'] = $antagonist;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getAntagonist() {
+        return $this->properties['antagonist'];
+    }
+
+    /**
      * The place of attachment of a muscle, or what the muscle moves.
      *
-     * @param $insertion AnatomicalStructureSchema
+     * @param $insertion 
      **/
     public function setInsertion($insertion) {
         $this->properties['insertion'] = $insertion;
@@ -104,7 +86,7 @@ class MuscleSchema extends AnatomicalStructureSchema
     }
 
     /**
-     * @return AnatomicalStructureSchema
+     * @return 
      **/
     public function getInsertion() {
         return $this->properties['insertion'];
@@ -113,7 +95,7 @@ class MuscleSchema extends AnatomicalStructureSchema
     /**
      * The movement the muscle generates.
      *
-     * @param $muscleAction TextSchema
+     * @param $muscleAction 
      **/
     public function setMuscleAction($muscleAction) {
         $this->properties['muscleAction'] = $muscleAction;
@@ -122,7 +104,7 @@ class MuscleSchema extends AnatomicalStructureSchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getMuscleAction() {
         return $this->properties['muscleAction'];
@@ -131,7 +113,7 @@ class MuscleSchema extends AnatomicalStructureSchema
     /**
      * The underlying innervation associated with the muscle.
      *
-     * @param $nerve NerveSchema
+     * @param $nerve 
      **/
     public function setNerve($nerve) {
         $this->properties['nerve'] = $nerve;
@@ -140,28 +122,10 @@ class MuscleSchema extends AnatomicalStructureSchema
     }
 
     /**
-     * @return NerveSchema
+     * @return 
      **/
     public function getNerve() {
         return $this->properties['nerve'];
-    }
-
-    /**
-     * The place or point where a muscle arises.
-     *
-     * @param $origin AnatomicalStructureSchema
-     **/
-    public function setOrigin($origin) {
-        $this->properties['origin'] = $origin;
-
-        return $this;
-    }
-
-    /**
-     * @return AnatomicalStructureSchema
-     **/
-    public function getOrigin() {
-        return $this->properties['origin'];
     }
 
 

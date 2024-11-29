@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PaymentStatusTypeSchema extends EnumerationSchema
+class PaymentStatusTypeSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new PaymentStatusTypeSchema('http://schema.org/', 'PaymentStatusType');
+        return new PaymentStatusTypeSchema('https://schema.org/', 'PaymentStatusType');
     }
 
 

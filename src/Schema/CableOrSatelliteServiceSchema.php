@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class CableOrSatelliteServiceSchema extends ServiceSchema
+class CableOrSatelliteServiceSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new CableOrSatelliteServiceSchema('http://schema.org/', 'CableOrSatelliteService');
+        return new CableOrSatelliteServiceSchema('https://schema.org/', 'CableOrSatelliteService');
     }
 
 

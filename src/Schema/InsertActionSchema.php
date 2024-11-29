@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class InsertActionSchema extends AddActionSchema
+class InsertActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new InsertActionSchema('http://schema.org/', 'InsertAction');
+        return new InsertActionSchema('https://schema.org/', 'InsertAction');
     }
 
     /**
      * A sub property of location. The final location of the object or the agent after the action.
      *
-     * @param $toLocation PlaceSchema
+     * @param $toLocation 
      **/
     public function setToLocation($toLocation) {
         $this->properties['toLocation'] = $toLocation;
@@ -50,7 +50,7 @@ class InsertActionSchema extends AddActionSchema
     }
 
     /**
-     * @return PlaceSchema
+     * @return 
      **/
     public function getToLocation() {
         return $this->properties['toLocation'];

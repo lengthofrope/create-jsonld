@@ -31,35 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class SportsEventSchema extends EventSchema
+class SportsEventSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new SportsEventSchema('http://schema.org/', 'SportsEvent');
-    }
-
-    /**
-     * The away team in a sports event.
-     *
-     * @param $awayTeam PersonSchema|SportsTeamSchema
-     **/
-    public function setAwayTeam($awayTeam) {
-        $this->properties['awayTeam'] = $awayTeam;
-
-        return $this;
-    }
-
-    /**
-     * @return PersonSchema|SportsTeamSchema
-     **/
-    public function getAwayTeam() {
-        return $this->properties['awayTeam'];
+        return new SportsEventSchema('https://schema.org/', 'SportsEvent');
     }
 
     /**
      * A competitor in a sports event.
      *
-     * @param $competitor PersonSchema|SportsTeamSchema
+     * @param $competitor |
      **/
     public function setCompetitor($competitor) {
         $this->properties['competitor'] = $competitor;
@@ -68,7 +50,7 @@ class SportsEventSchema extends EventSchema
     }
 
     /**
-     * @return PersonSchema|SportsTeamSchema
+     * @return |
      **/
     public function getCompetitor() {
         return $this->properties['competitor'];
@@ -77,7 +59,7 @@ class SportsEventSchema extends EventSchema
     /**
      * The home team in a sports event.
      *
-     * @param $homeTeam PersonSchema|SportsTeamSchema
+     * @param $homeTeam |
      **/
     public function setHomeTeam($homeTeam) {
         $this->properties['homeTeam'] = $homeTeam;
@@ -86,10 +68,46 @@ class SportsEventSchema extends EventSchema
     }
 
     /**
-     * @return PersonSchema|SportsTeamSchema
+     * @return |
      **/
     public function getHomeTeam() {
         return $this->properties['homeTeam'];
+    }
+
+    /**
+     * The away team in a sports event.
+     *
+     * @param $awayTeam |
+     **/
+    public function setAwayTeam($awayTeam) {
+        $this->properties['awayTeam'] = $awayTeam;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getAwayTeam() {
+        return $this->properties['awayTeam'];
+    }
+
+    /**
+     * A type of sport (e.g. Baseball).
+     *
+     * @param $sport |
+     **/
+    public function setSport($sport) {
+        $this->properties['sport'] = $sport;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getSport() {
+        return $this->properties['sport'];
     }
 
 

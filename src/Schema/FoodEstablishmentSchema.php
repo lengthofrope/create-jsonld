@@ -31,35 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class FoodEstablishmentSchema extends LocalBusinessSchema
+class FoodEstablishmentSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new FoodEstablishmentSchema('http://schema.org/', 'FoodEstablishment');
+        return new FoodEstablishmentSchema('https://schema.org/', 'FoodEstablishment');
     }
 
     /**
-     * Indicates whether a FoodEstablishment accepts reservations. Values can be Boolean, a URL at which reservations can be made or (for backwards compatibility) the strings <code>Yes</code> or <code>No</code>.
+     * Either the actual menu as a structured representation, as text, or a URL of the menu.
      *
-     * @param $acceptsReservations TextSchema|URLSchema|BooleanSchema
-     **/
-    public function setAcceptsReservations($acceptsReservations) {
-        $this->properties['acceptsReservations'] = $acceptsReservations;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema|URLSchema|BooleanSchema
-     **/
-    public function getAcceptsReservations() {
-        return $this->properties['acceptsReservations'];
-    }
-
-    /**
-     * Either the actual menu or a URL of the menu.
-     *
-     * @param $menu TextSchema|URLSchema
+     * @param $menu ||
      **/
     public function setMenu($menu) {
         $this->properties['menu'] = $menu;
@@ -68,16 +50,52 @@ class FoodEstablishmentSchema extends LocalBusinessSchema
     }
 
     /**
-     * @return TextSchema|URLSchema
+     * @return ||
      **/
     public function getMenu() {
         return $this->properties['menu'];
     }
 
     /**
+     * Either the actual menu as a structured representation, as text, or a URL of the menu.
+     *
+     * @param $hasMenu ||
+     **/
+    public function setHasMenu($hasMenu) {
+        $this->properties['hasMenu'] = $hasMenu;
+
+        return $this;
+    }
+
+    /**
+     * @return ||
+     **/
+    public function getHasMenu() {
+        return $this->properties['hasMenu'];
+    }
+
+    /**
+     * An official rating for a lodging business or food establishment, e.g. from national associations or standards bodies. Use the author property to indicate the rating organization, e.g. as an Organization with name such as (e.g. HOTREC, DEHOGA, WHR, or Hotelstars).
+     *
+     * @param $starRating 
+     **/
+    public function setStarRating($starRating) {
+        $this->properties['starRating'] = $starRating;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getStarRating() {
+        return $this->properties['starRating'];
+    }
+
+    /**
      * The cuisine of the restaurant.
      *
-     * @param $servesCuisine TextSchema
+     * @param $servesCuisine 
      **/
     public function setServesCuisine($servesCuisine) {
         $this->properties['servesCuisine'] = $servesCuisine;
@@ -86,10 +104,28 @@ class FoodEstablishmentSchema extends LocalBusinessSchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getServesCuisine() {
         return $this->properties['servesCuisine'];
+    }
+
+    /**
+     * Indicates whether a FoodEstablishment accepts reservations. Values can be Boolean, an URL at which reservations can be made or (for backwards compatibility) the strings ```Yes``` or ```No```.
+     *
+     * @param $acceptsReservations ||
+     **/
+    public function setAcceptsReservations($acceptsReservations) {
+        $this->properties['acceptsReservations'] = $acceptsReservations;
+
+        return $this;
+    }
+
+    /**
+     * @return ||
+     **/
+    public function getAcceptsReservations() {
+        return $this->properties['acceptsReservations'];
     }
 
 

@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class SportsActivityLocationSchema extends LocalBusinessSchema
+class SportsActivityLocationSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new SportsActivityLocationSchema('http://schema.org/', 'SportsActivityLocation');
+        return new SportsActivityLocationSchema('https://schema.org/', 'SportsActivityLocation');
     }
 
 

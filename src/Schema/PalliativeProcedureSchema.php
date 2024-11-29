@@ -35,7 +35,7 @@ class PalliativeProcedureSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new PalliativeProcedureSchema('http://schema.org/', 'PalliativeProcedure');
+        return new PalliativeProcedureSchema('https://schema.org/', 'PalliativeProcedure');
     }
 
 

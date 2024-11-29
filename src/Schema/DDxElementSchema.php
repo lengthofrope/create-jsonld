@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class DDxElementSchema extends MedicalIntangibleSchema
+class DDxElementSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new DDxElementSchema('http://schema.org/', 'DDxElement');
+        return new DDxElementSchema('https://schema.org/', 'DDxElement');
     }
 
     /**
-     * One or more alternative conditions considered in the differential diagnosis process.
+     * One or more alternative conditions considered in the differential diagnosis process as output of a diagnosis process.
      *
-     * @param $diagnosis MedicalConditionSchema
+     * @param $diagnosis 
      **/
     public function setDiagnosis($diagnosis) {
         $this->properties['diagnosis'] = $diagnosis;
@@ -50,7 +50,7 @@ class DDxElementSchema extends MedicalIntangibleSchema
     }
 
     /**
-     * @return MedicalConditionSchema
+     * @return 
      **/
     public function getDiagnosis() {
         return $this->properties['diagnosis'];
@@ -59,7 +59,7 @@ class DDxElementSchema extends MedicalIntangibleSchema
     /**
      * One of a set of signs and symptoms that can be used to distinguish this diagnosis from others in the differential diagnosis.
      *
-     * @param $distinguishingSign MedicalSignOrSymptomSchema
+     * @param $distinguishingSign 
      **/
     public function setDistinguishingSign($distinguishingSign) {
         $this->properties['distinguishingSign'] = $distinguishingSign;
@@ -68,7 +68,7 @@ class DDxElementSchema extends MedicalIntangibleSchema
     }
 
     /**
-     * @return MedicalSignOrSymptomSchema
+     * @return 
      **/
     public function getDistinguishingSign() {
         return $this->properties['distinguishingSign'];

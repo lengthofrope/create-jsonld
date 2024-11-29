@@ -31,143 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class TrainTripSchema extends IntangibleSchema
+class TrainTripSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new TrainTripSchema('http://schema.org/', 'TrainTrip');
-    }
-
-    /**
-     * The platform where the train arrives.
-     *
-     * @param $arrivalPlatform TextSchema
-     **/
-    public function setArrivalPlatform($arrivalPlatform) {
-        $this->properties['arrivalPlatform'] = $arrivalPlatform;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getArrivalPlatform() {
-        return $this->properties['arrivalPlatform'];
-    }
-
-    /**
-     * The station where the train trip ends.
-     *
-     * @param $arrivalStation TrainStationSchema
-     **/
-    public function setArrivalStation($arrivalStation) {
-        $this->properties['arrivalStation'] = $arrivalStation;
-
-        return $this;
-    }
-
-    /**
-     * @return TrainStationSchema
-     **/
-    public function getArrivalStation() {
-        return $this->properties['arrivalStation'];
-    }
-
-    /**
-     * The expected arrival time.
-     *
-     * @param $arrivalTime DateTimeSchema
-     **/
-    public function setArrivalTime($arrivalTime) {
-        $this->properties['arrivalTime'] = $arrivalTime;
-
-        return $this;
-    }
-
-    /**
-     * @return DateTimeSchema
-     **/
-    public function getArrivalTime() {
-        return $this->properties['arrivalTime'];
-    }
-
-    /**
-     * The platform from which the train departs.
-     *
-     * @param $departurePlatform TextSchema
-     **/
-    public function setDeparturePlatform($departurePlatform) {
-        $this->properties['departurePlatform'] = $departurePlatform;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getDeparturePlatform() {
-        return $this->properties['departurePlatform'];
-    }
-
-    /**
-     * The station from which the train departs.
-     *
-     * @param $departureStation TrainStationSchema
-     **/
-    public function setDepartureStation($departureStation) {
-        $this->properties['departureStation'] = $departureStation;
-
-        return $this;
-    }
-
-    /**
-     * @return TrainStationSchema
-     **/
-    public function getDepartureStation() {
-        return $this->properties['departureStation'];
-    }
-
-    /**
-     * The expected departure time.
-     *
-     * @param $departureTime DateTimeSchema
-     **/
-    public function setDepartureTime($departureTime) {
-        $this->properties['departureTime'] = $departureTime;
-
-        return $this;
-    }
-
-    /**
-     * @return DateTimeSchema
-     **/
-    public function getDepartureTime() {
-        return $this->properties['departureTime'];
-    }
-
-    /**
-     * The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.
-     *
-     * @param $provider PersonSchema|OrganizationSchema
-     **/
-    public function setProvider($provider) {
-        $this->properties['provider'] = $provider;
-
-        return $this;
-    }
-
-    /**
-     * @return PersonSchema|OrganizationSchema
-     **/
-    public function getProvider() {
-        return $this->properties['provider'];
+        return new TrainTripSchema('https://schema.org/', 'TrainTrip');
     }
 
     /**
      * The name of the train (e.g. The Orient Express).
      *
-     * @param $trainName TextSchema
+     * @param $trainName 
      **/
     public function setTrainName($trainName) {
         $this->properties['trainName'] = $trainName;
@@ -176,16 +50,52 @@ class TrainTripSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getTrainName() {
         return $this->properties['trainName'];
     }
 
     /**
+     * The station where the train trip ends.
+     *
+     * @param $arrivalStation 
+     **/
+    public function setArrivalStation($arrivalStation) {
+        $this->properties['arrivalStation'] = $arrivalStation;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getArrivalStation() {
+        return $this->properties['arrivalStation'];
+    }
+
+    /**
+     * The station from which the train departs.
+     *
+     * @param $departureStation 
+     **/
+    public function setDepartureStation($departureStation) {
+        $this->properties['departureStation'] = $departureStation;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getDepartureStation() {
+        return $this->properties['departureStation'];
+    }
+
+    /**
      * The unique identifier for the train.
      *
-     * @param $trainNumber TextSchema
+     * @param $trainNumber 
      **/
     public function setTrainNumber($trainNumber) {
         $this->properties['trainNumber'] = $trainNumber;
@@ -194,10 +104,46 @@ class TrainTripSchema extends IntangibleSchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getTrainNumber() {
         return $this->properties['trainNumber'];
+    }
+
+    /**
+     * The platform from which the train departs.
+     *
+     * @param $departurePlatform 
+     **/
+    public function setDeparturePlatform($departurePlatform) {
+        $this->properties['departurePlatform'] = $departurePlatform;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getDeparturePlatform() {
+        return $this->properties['departurePlatform'];
+    }
+
+    /**
+     * The platform where the train arrives.
+     *
+     * @param $arrivalPlatform 
+     **/
+    public function setArrivalPlatform($arrivalPlatform) {
+        $this->properties['arrivalPlatform'] = $arrivalPlatform;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getArrivalPlatform() {
+        return $this->properties['arrivalPlatform'];
     }
 
 

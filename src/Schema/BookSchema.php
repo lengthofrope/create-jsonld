@@ -31,89 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class BookSchema extends CreativeWorkSchema
+class BookSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new BookSchema('http://schema.org/', 'Book');
-    }
-
-    /**
-     * The edition of the book.
-     *
-     * @param $bookEdition TextSchema
-     **/
-    public function setBookEdition($bookEdition) {
-        $this->properties['bookEdition'] = $bookEdition;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getBookEdition() {
-        return $this->properties['bookEdition'];
-    }
-
-    /**
-     * The format of the book.
-     *
-     * @param $bookFormat BookFormatTypeSchema
-     **/
-    public function setBookFormat($bookFormat) {
-        $this->properties['bookFormat'] = $bookFormat;
-
-        return $this;
-    }
-
-    /**
-     * @return BookFormatTypeSchema
-     **/
-    public function getBookFormat() {
-        return $this->properties['bookFormat'];
-    }
-
-    /**
-     * The illustrator of the book.
-     *
-     * @param $illustrator PersonSchema
-     **/
-    public function setIllustrator($illustrator) {
-        $this->properties['illustrator'] = $illustrator;
-
-        return $this;
-    }
-
-    /**
-     * @return PersonSchema
-     **/
-    public function getIllustrator() {
-        return $this->properties['illustrator'];
-    }
-
-    /**
-     * The ISBN of the book.
-     *
-     * @param $isbn TextSchema
-     **/
-    public function setIsbn($isbn) {
-        $this->properties['isbn'] = $isbn;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getIsbn() {
-        return $this->properties['isbn'];
+        return new BookSchema('https://schema.org/', 'Book');
     }
 
     /**
      * The number of pages in the book.
      *
-     * @param $numberOfPages IntegerSchema
+     * @param $numberOfPages 
      **/
     public function setNumberOfPages($numberOfPages) {
         $this->properties['numberOfPages'] = $numberOfPages;
@@ -122,10 +50,100 @@ class BookSchema extends CreativeWorkSchema
     }
 
     /**
-     * @return IntegerSchema
+     * @return 
      **/
     public function getNumberOfPages() {
         return $this->properties['numberOfPages'];
+    }
+
+    /**
+     * The format of the book.
+     *
+     * @param $bookFormat 
+     **/
+    public function setBookFormat($bookFormat) {
+        $this->properties['bookFormat'] = $bookFormat;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getBookFormat() {
+        return $this->properties['bookFormat'];
+    }
+
+    /**
+     * The illustrator of the book.
+     *
+     * @param $illustrator 
+     **/
+    public function setIllustrator($illustrator) {
+        $this->properties['illustrator'] = $illustrator;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getIllustrator() {
+        return $this->properties['illustrator'];
+    }
+
+    /**
+     * The ISBN of the book.
+     *
+     * @param $isbn 
+     **/
+    public function setIsbn($isbn) {
+        $this->properties['isbn'] = $isbn;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getIsbn() {
+        return $this->properties['isbn'];
+    }
+
+    /**
+     * The edition of the book.
+     *
+     * @param $bookEdition 
+     **/
+    public function setBookEdition($bookEdition) {
+        $this->properties['bookEdition'] = $bookEdition;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getBookEdition() {
+        return $this->properties['bookEdition'];
+    }
+
+    /**
+     * Indicates whether the book is an abridged edition.
+     *
+     * @param $abridged 
+     **/
+    public function setAbridged($abridged) {
+        $this->properties['abridged'] = $abridged;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getAbridged() {
+        return $this->properties['abridged'];
     }
 
 

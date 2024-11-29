@@ -35,7 +35,7 @@ class MedicalTrialDesignSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MedicalTrialDesignSchema('http://schema.org/', 'MedicalTrialDesign');
+        return new MedicalTrialDesignSchema('https://schema.org/', 'MedicalTrialDesign');
     }
 
 

@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class SportsTeamSchema extends SportsOrganizationSchema
+class SportsTeamSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new SportsTeamSchema('http://schema.org/', 'SportsTeam');
+        return new SportsTeamSchema('https://schema.org/', 'SportsTeam');
     }
 
     /**
      * A person that acts as performing member of a sports team; a player as opposed to a coach.
      *
-     * @param $athlete PersonSchema
+     * @param $athlete 
      **/
     public function setAthlete($athlete) {
         $this->properties['athlete'] = $athlete;
@@ -50,7 +50,7 @@ class SportsTeamSchema extends SportsOrganizationSchema
     }
 
     /**
-     * @return PersonSchema
+     * @return 
      **/
     public function getAthlete() {
         return $this->properties['athlete'];
@@ -59,7 +59,7 @@ class SportsTeamSchema extends SportsOrganizationSchema
     /**
      * A person that acts in a coaching role for a sports team.
      *
-     * @param $coach PersonSchema
+     * @param $coach 
      **/
     public function setCoach($coach) {
         $this->properties['coach'] = $coach;
@@ -68,10 +68,28 @@ class SportsTeamSchema extends SportsOrganizationSchema
     }
 
     /**
-     * @return PersonSchema
+     * @return 
      **/
     public function getCoach() {
         return $this->properties['coach'];
+    }
+
+    /**
+     * Gender of something, typically a [[Person]], but possibly also fictional characters, animals, etc. While https://schema.org/Male and https://schema.org/Female may be used, text strings are also acceptable for people who do not identify as a binary gender. The [[gender]] property can also be used in an extended sense to cover e.g. the gender of sports teams. As with the gender of individuals, we do not try to enumerate all possibilities. A mixed-gender [[SportsTeam]] can be indicated with a text value of "Mixed".
+     *
+     * @param $gender |
+     **/
+    public function setGender($gender) {
+        $this->properties['gender'] = $gender;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getGender() {
+        return $this->properties['gender'];
     }
 
 

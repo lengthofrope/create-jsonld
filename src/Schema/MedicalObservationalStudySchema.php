@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MedicalObservationalStudySchema extends MedicalStudySchema
+class MedicalObservationalStudySchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MedicalObservationalStudySchema('http://schema.org/', 'MedicalObservationalStudy');
+        return new MedicalObservationalStudySchema('https://schema.org/', 'MedicalObservationalStudy');
     }
 
     /**
      * Specifics about the observational study design (enumerated).
      *
-     * @param $studyDesign MedicalObservationalStudyDesignSchema
+     * @param $studyDesign 
      **/
     public function setStudyDesign($studyDesign) {
         $this->properties['studyDesign'] = $studyDesign;
@@ -50,7 +50,7 @@ class MedicalObservationalStudySchema extends MedicalStudySchema
     }
 
     /**
-     * @return MedicalObservationalStudyDesignSchema
+     * @return 
      **/
     public function getStudyDesign() {
         return $this->properties['studyDesign'];

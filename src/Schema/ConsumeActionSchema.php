@@ -31,17 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ConsumeActionSchema extends ActionSchema
+class ConsumeActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new ConsumeActionSchema('http://schema.org/', 'ConsumeAction');
+        return new ConsumeActionSchema('https://schema.org/', 'ConsumeAction');
     }
 
     /**
      * An Offer which must be accepted before the user can perform the Action. For example, the user may need to buy a movie before being able to watch it.
      *
-     * @param $expectsAcceptanceOf OfferSchema
+     * @param $expectsAcceptanceOf 
      **/
     public function setExpectsAcceptanceOf($expectsAcceptanceOf) {
         $this->properties['expectsAcceptanceOf'] = $expectsAcceptanceOf;
@@ -50,10 +50,28 @@ class ConsumeActionSchema extends ActionSchema
     }
 
     /**
-     * @return OfferSchema
+     * @return 
      **/
     public function getExpectsAcceptanceOf() {
         return $this->properties['expectsAcceptanceOf'];
+    }
+
+    /**
+     * A set of requirements that must be fulfilled in order to perform an Action. If more than one value is specified, fulfilling one set of requirements will allow the Action to be performed.
+     *
+     * @param $actionAccessibilityRequirement 
+     **/
+    public function setActionAccessibilityRequirement($actionAccessibilityRequirement) {
+        $this->properties['actionAccessibilityRequirement'] = $actionAccessibilityRequirement;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getActionAccessibilityRequirement() {
+        return $this->properties['actionAccessibilityRequirement'];
     }
 
 

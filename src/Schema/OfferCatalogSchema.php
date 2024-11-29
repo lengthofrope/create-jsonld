@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class OfferCatalogSchema extends ItemListSchema
+class OfferCatalogSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new OfferCatalogSchema('http://schema.org/', 'OfferCatalog');
+        return new OfferCatalogSchema('https://schema.org/', 'OfferCatalog');
     }
 
 

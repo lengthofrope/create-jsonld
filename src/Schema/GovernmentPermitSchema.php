@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class GovernmentPermitSchema extends PermitSchema
+class GovernmentPermitSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new GovernmentPermitSchema('http://schema.org/', 'GovernmentPermit');
+        return new GovernmentPermitSchema('https://schema.org/', 'GovernmentPermit');
     }
 
 

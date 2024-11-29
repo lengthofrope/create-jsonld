@@ -27,39 +27,21 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A medical clinic.
+ * A facility, often associated with a hospital or medical school, that is devoted to the specific diagnosis and/or healthcare. Previously limited to outpatients but with evolution it may be open to inpatients as well.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MedicalClinicSchema extends MedicalOrganizationSchema
+class MedicalClinicSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new MedicalClinicSchema('http://schema.org/', 'MedicalClinic');
-    }
-
-    /**
-     * A medical service available from this provider.
-     *
-     * @param $availableService MedicalProcedureSchema|MedicalTestSchema|MedicalTherapySchema
-     **/
-    public function setAvailableService($availableService) {
-        $this->properties['availableService'] = $availableService;
-
-        return $this;
-    }
-
-    /**
-     * @return MedicalProcedureSchema|MedicalTestSchema|MedicalTherapySchema
-     **/
-    public function getAvailableService() {
-        return $this->properties['availableService'];
+        return new MedicalClinicSchema('https://schema.org/', 'MedicalClinic');
     }
 
     /**
      * A medical specialty of the provider.
      *
-     * @param $medicalSpecialty MedicalSpecialtySchema
+     * @param $medicalSpecialty 
      **/
     public function setMedicalSpecialty($medicalSpecialty) {
         $this->properties['medicalSpecialty'] = $medicalSpecialty;
@@ -68,10 +50,28 @@ class MedicalClinicSchema extends MedicalOrganizationSchema
     }
 
     /**
-     * @return MedicalSpecialtySchema
+     * @return 
      **/
     public function getMedicalSpecialty() {
         return $this->properties['medicalSpecialty'];
+    }
+
+    /**
+     * A medical service available from this provider.
+     *
+     * @param $availableService ||
+     **/
+    public function setAvailableService($availableService) {
+        $this->properties['availableService'] = $availableService;
+
+        return $this;
+    }
+
+    /**
+     * @return ||
+     **/
+    public function getAvailableService() {
+        return $this->properties['availableService'];
     }
 
 

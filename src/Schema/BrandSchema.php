@@ -31,35 +31,17 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class BrandSchema extends IntangibleSchema
+class BrandSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new BrandSchema('http://schema.org/', 'Brand');
-    }
-
-    /**
-     * The overall rating, based on a collection of reviews or ratings, of the item.
-     *
-     * @param $aggregateRating AggregateRatingSchema
-     **/
-    public function setAggregateRating($aggregateRating) {
-        $this->properties['aggregateRating'] = $aggregateRating;
-
-        return $this;
-    }
-
-    /**
-     * @return AggregateRatingSchema
-     **/
-    public function getAggregateRating() {
-        return $this->properties['aggregateRating'];
+        return new BrandSchema('https://schema.org/', 'Brand');
     }
 
     /**
      * An associated logo.
      *
-     * @param $logo ImageObjectSchema|URLSchema
+     * @param $logo |
      **/
     public function setLogo($logo) {
         $this->properties['logo'] = $logo;
@@ -68,7 +50,7 @@ class BrandSchema extends IntangibleSchema
     }
 
     /**
-     * @return ImageObjectSchema|URLSchema
+     * @return |
      **/
     public function getLogo() {
         return $this->properties['logo'];
@@ -77,7 +59,7 @@ class BrandSchema extends IntangibleSchema
     /**
      * A review of the item.
      *
-     * @param $review ReviewSchema
+     * @param $review 
      **/
     public function setReview($review) {
         $this->properties['review'] = $review;
@@ -86,10 +68,46 @@ class BrandSchema extends IntangibleSchema
     }
 
     /**
-     * @return ReviewSchema
+     * @return 
      **/
     public function getReview() {
         return $this->properties['review'];
+    }
+
+    /**
+     * A slogan or motto associated with the item.
+     *
+     * @param $slogan 
+     **/
+    public function setSlogan($slogan) {
+        $this->properties['slogan'] = $slogan;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getSlogan() {
+        return $this->properties['slogan'];
+    }
+
+    /**
+     * The overall rating, based on a collection of reviews or ratings, of the item.
+     *
+     * @param $aggregateRating 
+     **/
+    public function setAggregateRating($aggregateRating) {
+        $this->properties['aggregateRating'] = $aggregateRating;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getAggregateRating() {
+        return $this->properties['aggregateRating'];
     }
 
 

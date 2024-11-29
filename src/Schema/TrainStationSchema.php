@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class TrainStationSchema extends CivicStructureSchema
+class TrainStationSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new TrainStationSchema('http://schema.org/', 'TrainStation');
+        return new TrainStationSchema('https://schema.org/', 'TrainStation');
     }
 
 

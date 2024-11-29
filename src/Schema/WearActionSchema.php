@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class WearActionSchema extends UseActionSchema
+class WearActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new WearActionSchema('http://schema.org/', 'WearAction');
+        return new WearActionSchema('https://schema.org/', 'WearAction');
     }
 
 

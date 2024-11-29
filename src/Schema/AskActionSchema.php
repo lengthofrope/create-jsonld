@@ -27,21 +27,21 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of posing a question / favor to someone.<p>Related actions:</p><ul><li><a href="http://schema.org/ReplyAction">ReplyAction</a>: Appears generally as a response to AskAction</li></ul>.
+ * The act of posing a question / favor to someone.\n\nRelated actions:\n\n* [[ReplyAction]]: Appears generally as a response to AskAction.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class AskActionSchema extends CommunicateActionSchema
+class AskActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new AskActionSchema('http://schema.org/', 'AskAction');
+        return new AskActionSchema('https://schema.org/', 'AskAction');
     }
 
     /**
      * A sub property of object. A question.
      *
-     * @param $question QuestionSchema
+     * @param $question 
      **/
     public function setQuestion($question) {
         $this->properties['question'] = $question;
@@ -50,7 +50,7 @@ class AskActionSchema extends CommunicateActionSchema
     }
 
     /**
-     * @return QuestionSchema
+     * @return 
      **/
     public function getQuestion() {
         return $this->properties['question'];

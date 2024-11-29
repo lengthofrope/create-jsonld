@@ -35,7 +35,7 @@ class PhysicalActivityCategorySchema extends \LengthOfRope\JSONLD\Elements\Eleme
 {
     public static function factory()
     {
-        return new PhysicalActivityCategorySchema('http://schema.org/', 'PhysicalActivityCategory');
+        return new PhysicalActivityCategorySchema('https://schema.org/', 'PhysicalActivityCategory');
     }
 
 

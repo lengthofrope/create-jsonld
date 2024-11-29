@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class DisagreeActionSchema extends ReactActionSchema
+class DisagreeActionSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new DisagreeActionSchema('http://schema.org/', 'DisagreeAction');
+        return new DisagreeActionSchema('https://schema.org/', 'DisagreeAction');
     }
 
 

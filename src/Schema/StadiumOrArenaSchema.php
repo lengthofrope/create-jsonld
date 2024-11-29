@@ -35,7 +35,7 @@ class StadiumOrArenaSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new StadiumOrArenaSchema('http://schema.org/', 'StadiumOrArena');
+        return new StadiumOrArenaSchema('https://schema.org/', 'StadiumOrArena');
     }
 
 

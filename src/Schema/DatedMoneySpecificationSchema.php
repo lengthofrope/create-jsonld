@@ -27,39 +27,21 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A DatedMoneySpecification represents monetary values with optional start and end dates. For example, this could represent an employee's salary over a specific period of time.
+ * A DatedMoneySpecification represents monetary values with optional start and end dates. For example, this could represent an employee's salary over a specific period of time. __Note:__ This type has been superseded by [[MonetaryAmount]], use of that type is recommended.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class DatedMoneySpecificationSchema extends StructuredValueSchema
+class DatedMoneySpecificationSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new DatedMoneySpecificationSchema('http://schema.org/', 'DatedMoneySpecification');
+        return new DatedMoneySpecificationSchema('https://schema.org/', 'DatedMoneySpecification');
     }
 
     /**
-     * The amount of money.
+     * The currency in which the monetary amount is expressed.\n\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR".
      *
-     * @param $amount NumberSchema
-     **/
-    public function setAmount($amount) {
-        $this->properties['amount'] = $amount;
-
-        return $this;
-    }
-
-    /**
-     * @return NumberSchema
-     **/
-    public function getAmount() {
-        return $this->properties['amount'];
-    }
-
-    /**
-     * The currency in which the monetary amount is expressed (in 3-letter <a href='http://en.wikipedia.org/wiki/ISO_4217'">ISO 4217</a> format).
-     *
-     * @param $currency TextSchema
+     * @param $currency 
      **/
     public function setCurrency($currency) {
         $this->properties['currency'] = $currency;
@@ -68,34 +50,34 @@ class DatedMoneySpecificationSchema extends StructuredValueSchema
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getCurrency() {
         return $this->properties['currency'];
     }
 
     /**
-     * The end date and time of the item (in <a href='http://en.wikipedia.org/wiki/ISO_8601'>ISO 8601 date format</a>).
+     * The amount of money.
      *
-     * @param $endDate DateSchema
+     * @param $amount |
      **/
-    public function setEndDate($endDate) {
-        $this->properties['endDate'] = $endDate;
+    public function setAmount($amount) {
+        $this->properties['amount'] = $amount;
 
         return $this;
     }
 
     /**
-     * @return DateSchema
+     * @return |
      **/
-    public function getEndDate() {
-        return $this->properties['endDate'];
+    public function getAmount() {
+        return $this->properties['amount'];
     }
 
     /**
-     * The start date and time of the item (in <a href='http://en.wikipedia.org/wiki/ISO_8601'>ISO 8601 date format</a>).
+     * The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
-     * @param $startDate DateSchema
+     * @param $startDate |
      **/
     public function setStartDate($startDate) {
         $this->properties['startDate'] = $startDate;
@@ -104,10 +86,28 @@ class DatedMoneySpecificationSchema extends StructuredValueSchema
     }
 
     /**
-     * @return DateSchema
+     * @return |
      **/
     public function getStartDate() {
         return $this->properties['startDate'];
+    }
+
+    /**
+     * The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
+     *
+     * @param $endDate |
+     **/
+    public function setEndDate($endDate) {
+        $this->properties['endDate'] = $endDate;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getEndDate() {
+        return $this->properties['endDate'];
     }
 
 

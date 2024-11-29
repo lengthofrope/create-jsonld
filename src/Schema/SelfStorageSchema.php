@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class SelfStorageSchema extends LocalBusinessSchema
+class SelfStorageSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new SelfStorageSchema('http://schema.org/', 'SelfStorage');
+        return new SelfStorageSchema('https://schema.org/', 'SelfStorage');
     }
 
 

@@ -31,11 +31,11 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class InsuranceAgencySchema extends FinancialServiceSchema
+class InsuranceAgencySchema extends \LengthOfRope\JSONLD\Elements\Element
 {
     public static function factory()
     {
-        return new InsuranceAgencySchema('http://schema.org/', 'InsuranceAgency');
+        return new InsuranceAgencySchema('https://schema.org/', 'InsuranceAgency');
     }
 
 
