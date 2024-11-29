@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class WPHeaderSchema extends WebPageElementSchema
 {
-    public static function factory()
+    public static function factory(): WPHeaderSchema
     {
         return new WPHeaderSchema('https://schema.org/', 'WPHeader');
     }

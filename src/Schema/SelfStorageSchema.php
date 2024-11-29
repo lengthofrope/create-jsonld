@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class SelfStorageSchema extends LocalBusinessSchema
 {
-    public static function factory()
+    public static function factory(): SelfStorageSchema
     {
         return new SelfStorageSchema('https://schema.org/', 'SelfStorage');
     }

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MarryActionSchema extends InteractActionSchema
 {
-    public static function factory()
+    public static function factory(): MarryActionSchema
     {
         return new MarryActionSchema('https://schema.org/', 'MarryAction');
     }

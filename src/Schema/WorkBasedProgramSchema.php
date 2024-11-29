@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class WorkBasedProgramSchema extends EducationalOccupationalProgramSchema
 {
-    public static function factory()
+    public static function factory(): WorkBasedProgramSchema
     {
         return new WorkBasedProgramSchema('https://schema.org/', 'WorkBasedProgram');
     }
@@ -42,8 +42,9 @@ class WorkBasedProgramSchema extends EducationalOccupationalProgramSchema
      * The estimated salary earned while in the program.
      *
      * @param $trainingSalary 
+     * @return static
      **/
-    public function setTrainingSalary($trainingSalary) {
+    public function setTrainingSalary($trainingSalary): static {
         $this->properties['trainingSalary'] = $trainingSalary;
 
         return $this;
@@ -61,8 +62,9 @@ class WorkBasedProgramSchema extends EducationalOccupationalProgramSchema
 Note: for historical reasons, any textual label and formal code provided as a literal may be assumed to be from O*NET-SOC.
      *
      * @param $occupationalCategory |
+     * @return static
      **/
-    public function setOccupationalCategory($occupationalCategory) {
+    public function setOccupationalCategory($occupationalCategory): static {
         $this->properties['occupationalCategory'] = $occupationalCategory;
 
         return $this;

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class AssessActionSchema extends ActionSchema
 {
-    public static function factory()
+    public static function factory(): AssessActionSchema
     {
         return new AssessActionSchema('https://schema.org/', 'AssessAction');
     }

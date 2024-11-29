@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MerchantReturnPolicySeasonalOverrideSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): MerchantReturnPolicySeasonalOverrideSchema
     {
         return new MerchantReturnPolicySeasonalOverrideSchema('https://schema.org/', 'MerchantReturnPolicySeasonalOverride');
     }
@@ -42,8 +42,9 @@ class MerchantReturnPolicySeasonalOverrideSchema extends IntangibleSchema
      * The type of return fees for purchased products (for any return reason).
      *
      * @param $returnFees 
+     * @return static
      **/
-    public function setReturnFees($returnFees) {
+    public function setReturnFees($returnFees): static {
         $this->properties['returnFees'] = $returnFees;
 
         return $this;
@@ -60,8 +61,9 @@ class MerchantReturnPolicySeasonalOverrideSchema extends IntangibleSchema
      * The type of return method offered, specified from an enumeration.
      *
      * @param $returnMethod 
+     * @return static
      **/
-    public function setReturnMethod($returnMethod) {
+    public function setReturnMethod($returnMethod): static {
         $this->properties['returnMethod'] = $returnMethod;
 
         return $this;
@@ -78,8 +80,9 @@ class MerchantReturnPolicySeasonalOverrideSchema extends IntangibleSchema
      * A refund type, from an enumerated list.
      *
      * @param $refundType 
+     * @return static
      **/
-    public function setRefundType($refundType) {
+    public function setRefundType($refundType): static {
         $this->properties['refundType'] = $refundType;
 
         return $this;
@@ -96,8 +99,9 @@ class MerchantReturnPolicySeasonalOverrideSchema extends IntangibleSchema
      * Amount of shipping costs for product returns (for any reason). Applicable when property [[returnFees]] equals [[ReturnShippingFees]].
      *
      * @param $returnShippingFeesAmount 
+     * @return static
      **/
-    public function setReturnShippingFeesAmount($returnShippingFeesAmount) {
+    public function setReturnShippingFeesAmount($returnShippingFeesAmount): static {
         $this->properties['returnShippingFeesAmount'] = $returnShippingFeesAmount;
 
         return $this;
@@ -114,8 +118,9 @@ class MerchantReturnPolicySeasonalOverrideSchema extends IntangibleSchema
      * The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
      * @param $startDate |
+     * @return static
      **/
-    public function setStartDate($startDate) {
+    public function setStartDate($startDate): static {
         $this->properties['startDate'] = $startDate;
 
         return $this;
@@ -132,8 +137,9 @@ class MerchantReturnPolicySeasonalOverrideSchema extends IntangibleSchema
      * Specifies either a fixed return date or the number of days (from the delivery date) that a product can be returned. Used when the [[returnPolicyCategory]] property is specified as [[MerchantReturnFiniteReturnWindow]].
      *
      * @param $merchantReturnDays ||
+     * @return static
      **/
-    public function setMerchantReturnDays($merchantReturnDays) {
+    public function setMerchantReturnDays($merchantReturnDays): static {
         $this->properties['merchantReturnDays'] = $merchantReturnDays;
 
         return $this;
@@ -150,8 +156,9 @@ class MerchantReturnPolicySeasonalOverrideSchema extends IntangibleSchema
      * Specifies an applicable return policy (from an enumeration).
      *
      * @param $returnPolicyCategory 
+     * @return static
      **/
-    public function setReturnPolicyCategory($returnPolicyCategory) {
+    public function setReturnPolicyCategory($returnPolicyCategory): static {
         $this->properties['returnPolicyCategory'] = $returnPolicyCategory;
 
         return $this;
@@ -168,8 +175,9 @@ class MerchantReturnPolicySeasonalOverrideSchema extends IntangibleSchema
      * The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
      * @param $endDate |
+     * @return static
      **/
-    public function setEndDate($endDate) {
+    public function setEndDate($endDate): static {
         $this->properties['endDate'] = $endDate;
 
         return $this;
@@ -186,8 +194,9 @@ class MerchantReturnPolicySeasonalOverrideSchema extends IntangibleSchema
      * Use [[MonetaryAmount]] to specify a fixed restocking fee for product returns, or use [[Number]] to specify a percentage of the product price paid by the customer.
      *
      * @param $restockingFee |
+     * @return static
      **/
-    public function setRestockingFee($restockingFee) {
+    public function setRestockingFee($restockingFee): static {
         $this->properties['restockingFee'] = $restockingFee;
 
         return $this;

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MedicalSignOrSymptomSchema extends MedicalConditionSchema
 {
-    public static function factory()
+    public static function factory(): MedicalSignOrSymptomSchema
     {
         return new MedicalSignOrSymptomSchema('https://schema.org/', 'MedicalSignOrSymptom');
     }
@@ -42,8 +42,9 @@ class MedicalSignOrSymptomSchema extends MedicalConditionSchema
      * A possible treatment to address this condition, sign or symptom.
      *
      * @param $possibleTreatment 
+     * @return static
      **/
-    public function setPossibleTreatment($possibleTreatment) {
+    public function setPossibleTreatment($possibleTreatment): static {
         $this->properties['possibleTreatment'] = $possibleTreatment;
 
         return $this;

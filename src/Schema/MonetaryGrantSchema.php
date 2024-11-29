@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MonetaryGrantSchema extends GrantSchema
 {
-    public static function factory()
+    public static function factory(): MonetaryGrantSchema
     {
         return new MonetaryGrantSchema('https://schema.org/', 'MonetaryGrant');
     }
@@ -42,8 +42,9 @@ class MonetaryGrantSchema extends GrantSchema
      * A person or organization that supports (sponsors) something through some kind of financial contribution.
      *
      * @param $funder |
+     * @return static
      **/
-    public function setFunder($funder) {
+    public function setFunder($funder): static {
         $this->properties['funder'] = $funder;
 
         return $this;
@@ -60,8 +61,9 @@ class MonetaryGrantSchema extends GrantSchema
      * The amount of money.
      *
      * @param $amount |
+     * @return static
      **/
-    public function setAmount($amount) {
+    public function setAmount($amount): static {
         $this->properties['amount'] = $amount;
 
         return $this;

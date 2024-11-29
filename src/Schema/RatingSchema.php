@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class RatingSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): RatingSchema
     {
         return new RatingSchema('https://schema.org/', 'Rating');
     }
@@ -42,8 +42,9 @@ class RatingSchema extends IntangibleSchema
      * A short explanation (e.g. one to two sentences) providing background context and other information that led to the conclusion expressed in the rating. This is particularly applicable to ratings associated with "fact check" markup using [[ClaimReview]].
      *
      * @param $ratingExplanation 
+     * @return static
      **/
-    public function setRatingExplanation($ratingExplanation) {
+    public function setRatingExplanation($ratingExplanation): static {
         $this->properties['ratingExplanation'] = $ratingExplanation;
 
         return $this;
@@ -60,8 +61,9 @@ class RatingSchema extends IntangibleSchema
      * The highest value allowed in this rating system.
      *
      * @param $bestRating |
+     * @return static
      **/
-    public function setBestRating($bestRating) {
+    public function setBestRating($bestRating): static {
         $this->properties['bestRating'] = $bestRating;
 
         return $this;
@@ -78,8 +80,9 @@ class RatingSchema extends IntangibleSchema
      * The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.
      *
      * @param $author |
+     * @return static
      **/
-    public function setAuthor($author) {
+    public function setAuthor($author): static {
         $this->properties['author'] = $author;
 
         return $this;
@@ -96,8 +99,9 @@ class RatingSchema extends IntangibleSchema
      * This Review or Rating is relevant to this part or facet of the itemReviewed.
      *
      * @param $reviewAspect 
+     * @return static
      **/
-    public function setReviewAspect($reviewAspect) {
+    public function setReviewAspect($reviewAspect): static {
         $this->properties['reviewAspect'] = $reviewAspect;
 
         return $this;
@@ -114,8 +118,9 @@ class RatingSchema extends IntangibleSchema
      * The lowest value allowed in this rating system.
      *
      * @param $worstRating |
+     * @return static
      **/
-    public function setWorstRating($worstRating) {
+    public function setWorstRating($worstRating): static {
         $this->properties['worstRating'] = $worstRating;
 
         return $this;
@@ -132,8 +137,9 @@ class RatingSchema extends IntangibleSchema
      * The rating for the content.\n\nUsage guidelines:\n\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.
      *
      * @param $ratingValue |
+     * @return static
      **/
-    public function setRatingValue($ratingValue) {
+    public function setRatingValue($ratingValue): static {
         $this->properties['ratingValue'] = $ratingValue;
 
         return $this;

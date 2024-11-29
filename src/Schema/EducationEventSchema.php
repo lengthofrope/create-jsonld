@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class EducationEventSchema extends EventSchema
 {
-    public static function factory()
+    public static function factory(): EducationEventSchema
     {
         return new EducationEventSchema('https://schema.org/', 'EducationEvent');
     }
@@ -42,8 +42,9 @@ class EducationEventSchema extends EventSchema
      * The level in terms of progression through an educational or training context. Examples of educational levels include 'beginner', 'intermediate' or 'advanced', and formal sets of level indicators.
      *
      * @param $educationalLevel ||
+     * @return static
      **/
-    public function setEducationalLevel($educationalLevel) {
+    public function setEducationalLevel($educationalLevel): static {
         $this->properties['educationalLevel'] = $educationalLevel;
 
         return $this;
@@ -60,8 +61,9 @@ class EducationEventSchema extends EventSchema
      * The item being described is intended to assess the competency or learning outcome defined by the referenced term.
      *
      * @param $assesses |
+     * @return static
      **/
-    public function setAssesses($assesses) {
+    public function setAssesses($assesses): static {
         $this->properties['assesses'] = $assesses;
 
         return $this;
@@ -78,8 +80,9 @@ class EducationEventSchema extends EventSchema
      * The item being described is intended to help a person learn the competency or learning outcome defined by the referenced term.
      *
      * @param $teaches |
+     * @return static
      **/
-    public function setTeaches($teaches) {
+    public function setTeaches($teaches): static {
         $this->properties['teaches'] = $teaches;
 
         return $this;

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class AnalysisNewsArticleSchema extends NewsArticleSchema
 {
-    public static function factory()
+    public static function factory(): AnalysisNewsArticleSchema
     {
         return new AnalysisNewsArticleSchema('https://schema.org/', 'AnalysisNewsArticle');
     }

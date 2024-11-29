@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class AdministrativeAreaSchema extends PlaceSchema
 {
-    public static function factory()
+    public static function factory(): AdministrativeAreaSchema
     {
         return new AdministrativeAreaSchema('https://schema.org/', 'AdministrativeArea');
     }

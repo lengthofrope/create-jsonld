@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class BoardingPolicyTypeSchema extends EnumerationSchema
 {
-    public static function factory()
+    public static function factory(): BoardingPolicyTypeSchema
     {
         return new BoardingPolicyTypeSchema('https://schema.org/', 'BoardingPolicyType');
     }

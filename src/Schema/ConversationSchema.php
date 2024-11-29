@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ConversationSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): ConversationSchema
     {
         return new ConversationSchema('https://schema.org/', 'Conversation');
     }

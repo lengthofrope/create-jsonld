@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class HowToSupplySchema extends HowToItemSchema
 {
-    public static function factory()
+    public static function factory(): HowToSupplySchema
     {
         return new HowToSupplySchema('https://schema.org/', 'HowToSupply');
     }
@@ -42,8 +42,9 @@ class HowToSupplySchema extends HowToItemSchema
      * The estimated cost of the supply or supplies consumed when performing instructions.
      *
      * @param $estimatedCost |
+     * @return static
      **/
-    public function setEstimatedCost($estimatedCost) {
+    public function setEstimatedCost($estimatedCost): static {
         $this->properties['estimatedCost'] = $estimatedCost;
 
         return $this;

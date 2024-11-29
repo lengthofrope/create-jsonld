@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class OccupationalExperienceRequirementsSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): OccupationalExperienceRequirementsSchema
     {
         return new OccupationalExperienceRequirementsSchema('https://schema.org/', 'OccupationalExperienceRequirements');
     }
@@ -42,8 +42,9 @@ class OccupationalExperienceRequirementsSchema extends IntangibleSchema
      * Indicates the minimal number of months of experience required for a position.
      *
      * @param $monthsOfExperience 
+     * @return static
      **/
-    public function setMonthsOfExperience($monthsOfExperience) {
+    public function setMonthsOfExperience($monthsOfExperience): static {
         $this->properties['monthsOfExperience'] = $monthsOfExperience;
 
         return $this;

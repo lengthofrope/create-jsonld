@@ -31,9 +31,9 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class DepositAccountSchema extends \LengthOfRope\JSONLD\Elements\Element
+class DepositAccountSchema extends BankAccountSchema
 {
-    public static function factory()
+    public static function factory(): DepositAccountSchema
     {
         return new DepositAccountSchema('https://schema.org/', 'DepositAccount');
     }

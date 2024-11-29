@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class OccupationSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): OccupationSchema
     {
         return new OccupationSchema('https://schema.org/', 'Occupation');
     }
@@ -42,8 +42,9 @@ class OccupationSchema extends IntangibleSchema
      * Specific qualifications required for this role or Occupation.
      *
      * @param $qualifications |
+     * @return static
      **/
-    public function setQualifications($qualifications) {
+    public function setQualifications($qualifications): static {
         $this->properties['qualifications'] = $qualifications;
 
         return $this;
@@ -60,8 +61,9 @@ class OccupationSchema extends IntangibleSchema
      * Description of skills and experience needed for the position or Occupation.
      *
      * @param $experienceRequirements |
+     * @return static
      **/
-    public function setExperienceRequirements($experienceRequirements) {
+    public function setExperienceRequirements($experienceRequirements): static {
         $this->properties['experienceRequirements'] = $experienceRequirements;
 
         return $this;
@@ -78,8 +80,9 @@ class OccupationSchema extends IntangibleSchema
      * An estimated salary for a job posting or occupation, based on a variety of variables including, but not limited to industry, job title, and location. Estimated salaries  are often computed by outside organizations rather than the hiring organization, who may not have committed to the estimated value.
      *
      * @param $estimatedSalary ||
+     * @return static
      **/
-    public function setEstimatedSalary($estimatedSalary) {
+    public function setEstimatedSalary($estimatedSalary): static {
         $this->properties['estimatedSalary'] = $estimatedSalary;
 
         return $this;
@@ -96,8 +99,9 @@ class OccupationSchema extends IntangibleSchema
      * A statement of knowledge, skill, ability, task or any other assertion expressing a competency that is either claimed by a person, an organization or desired or required to fulfill a role or to work in an occupation.
      *
      * @param $skills |
+     * @return static
      **/
-    public function setSkills($skills) {
+    public function setSkills($skills): static {
         $this->properties['skills'] = $skills;
 
         return $this;
@@ -115,8 +119,9 @@ class OccupationSchema extends IntangibleSchema
 Note: for historical reasons, any textual label and formal code provided as a literal may be assumed to be from O*NET-SOC.
      *
      * @param $occupationalCategory |
+     * @return static
      **/
-    public function setOccupationalCategory($occupationalCategory) {
+    public function setOccupationalCategory($occupationalCategory): static {
         $this->properties['occupationalCategory'] = $occupationalCategory;
 
         return $this;
@@ -133,8 +138,9 @@ Note: for historical reasons, any textual label and formal code provided as a li
      * Responsibilities associated with this role or Occupation.
      *
      * @param $responsibilities 
+     * @return static
      **/
-    public function setResponsibilities($responsibilities) {
+    public function setResponsibilities($responsibilities): static {
         $this->properties['responsibilities'] = $responsibilities;
 
         return $this;
@@ -151,8 +157,9 @@ Note: for historical reasons, any textual label and formal code provided as a li
      *  The region/country for which this occupational description is appropriate. Note that educational requirements and qualifications can vary between jurisdictions.
      *
      * @param $occupationLocation 
+     * @return static
      **/
-    public function setOccupationLocation($occupationLocation) {
+    public function setOccupationLocation($occupationLocation): static {
         $this->properties['occupationLocation'] = $occupationLocation;
 
         return $this;
@@ -169,8 +176,9 @@ Note: for historical reasons, any textual label and formal code provided as a li
      * Educational background needed for the position or Occupation.
      *
      * @param $educationRequirements |
+     * @return static
      **/
-    public function setEducationRequirements($educationRequirements) {
+    public function setEducationRequirements($educationRequirements): static {
         $this->properties['educationRequirements'] = $educationRequirements;
 
         return $this;

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class APIReferenceSchema extends TechArticleSchema
 {
-    public static function factory()
+    public static function factory(): APIReferenceSchema
     {
         return new APIReferenceSchema('https://schema.org/', 'APIReference');
     }
@@ -42,8 +42,9 @@ class APIReferenceSchema extends TechArticleSchema
      * Type of app development: phone, Metro style, desktop, XBox, etc.
      *
      * @param $targetPlatform 
+     * @return static
      **/
-    public function setTargetPlatform($targetPlatform) {
+    public function setTargetPlatform($targetPlatform): static {
         $this->properties['targetPlatform'] = $targetPlatform;
 
         return $this;
@@ -60,8 +61,9 @@ class APIReferenceSchema extends TechArticleSchema
      * Library file name, e.g., mscorlib.dll, system.web.dll.
      *
      * @param $executableLibraryName 
+     * @return static
      **/
-    public function setExecutableLibraryName($executableLibraryName) {
+    public function setExecutableLibraryName($executableLibraryName): static {
         $this->properties['executableLibraryName'] = $executableLibraryName;
 
         return $this;
@@ -78,8 +80,9 @@ class APIReferenceSchema extends TechArticleSchema
      * Associated product/technology version. E.g., .NET Framework 4.5.
      *
      * @param $assemblyVersion 
+     * @return static
      **/
-    public function setAssemblyVersion($assemblyVersion) {
+    public function setAssemblyVersion($assemblyVersion): static {
         $this->properties['assemblyVersion'] = $assemblyVersion;
 
         return $this;
@@ -96,8 +99,9 @@ class APIReferenceSchema extends TechArticleSchema
      * Indicates whether API is managed or unmanaged.
      *
      * @param $programmingModel 
+     * @return static
      **/
-    public function setProgrammingModel($programmingModel) {
+    public function setProgrammingModel($programmingModel): static {
         $this->properties['programmingModel'] = $programmingModel;
 
         return $this;
@@ -114,8 +118,9 @@ class APIReferenceSchema extends TechArticleSchema
      * Library file name, e.g., mscorlib.dll, system.web.dll.
      *
      * @param $assembly 
+     * @return static
      **/
-    public function setAssembly($assembly) {
+    public function setAssembly($assembly): static {
         $this->properties['assembly'] = $assembly;
 
         return $this;

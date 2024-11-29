@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class BusStopSchema extends CivicStructureSchema
 {
-    public static function factory()
+    public static function factory(): BusStopSchema
     {
         return new BusStopSchema('https://schema.org/', 'BusStop');
     }

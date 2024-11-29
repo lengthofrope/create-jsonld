@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ChemicalSubstanceSchema extends BioChemEntitySchema
 {
-    public static function factory()
+    public static function factory(): ChemicalSubstanceSchema
     {
         return new ChemicalSubstanceSchema('https://schema.org/', 'ChemicalSubstance');
     }
@@ -42,8 +42,9 @@ class ChemicalSubstanceSchema extends BioChemEntitySchema
      * Intended use of the BioChemEntity by humans.
      *
      * @param $potentialUse 
+     * @return static
      **/
-    public function setPotentialUse($potentialUse) {
+    public function setPotentialUse($potentialUse): static {
         $this->properties['potentialUse'] = $potentialUse;
 
         return $this;
@@ -60,8 +61,9 @@ class ChemicalSubstanceSchema extends BioChemEntitySchema
      * A role played by the BioChemEntity within a chemical context.
      *
      * @param $chemicalRole 
+     * @return static
      **/
-    public function setChemicalRole($chemicalRole) {
+    public function setChemicalRole($chemicalRole): static {
         $this->properties['chemicalRole'] = $chemicalRole;
 
         return $this;
@@ -78,8 +80,9 @@ class ChemicalSubstanceSchema extends BioChemEntitySchema
      * The chemical composition describes the identity and relative ratio of the chemical elements that make up the substance.
      *
      * @param $chemicalComposition 
+     * @return static
      **/
-    public function setChemicalComposition($chemicalComposition) {
+    public function setChemicalComposition($chemicalComposition): static {
         $this->properties['chemicalComposition'] = $chemicalComposition;
 
         return $this;

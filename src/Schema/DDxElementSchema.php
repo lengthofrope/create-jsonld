@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DDxElementSchema extends MedicalIntangibleSchema
 {
-    public static function factory()
+    public static function factory(): DDxElementSchema
     {
         return new DDxElementSchema('https://schema.org/', 'DDxElement');
     }
@@ -42,8 +42,9 @@ class DDxElementSchema extends MedicalIntangibleSchema
      * One or more alternative conditions considered in the differential diagnosis process as output of a diagnosis process.
      *
      * @param $diagnosis 
+     * @return static
      **/
-    public function setDiagnosis($diagnosis) {
+    public function setDiagnosis($diagnosis): static {
         $this->properties['diagnosis'] = $diagnosis;
 
         return $this;
@@ -60,8 +61,9 @@ class DDxElementSchema extends MedicalIntangibleSchema
      * One of a set of signs and symptoms that can be used to distinguish this diagnosis from others in the differential diagnosis.
      *
      * @param $distinguishingSign 
+     * @return static
      **/
-    public function setDistinguishingSign($distinguishingSign) {
+    public function setDistinguishingSign($distinguishingSign): static {
         $this->properties['distinguishingSign'] = $distinguishingSign;
 
         return $this;

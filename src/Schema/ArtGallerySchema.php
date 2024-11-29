@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ArtGallerySchema extends EntertainmentBusinessSchema
 {
-    public static function factory()
+    public static function factory(): ArtGallerySchema
     {
         return new ArtGallerySchema('https://schema.org/', 'ArtGallery');
     }

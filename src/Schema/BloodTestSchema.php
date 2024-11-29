@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class BloodTestSchema extends MedicalTestSchema
 {
-    public static function factory()
+    public static function factory(): BloodTestSchema
     {
         return new BloodTestSchema('https://schema.org/', 'BloodTest');
     }

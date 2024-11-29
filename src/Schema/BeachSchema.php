@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class BeachSchema extends CivicStructureSchema
 {
-    public static function factory()
+    public static function factory(): BeachSchema
     {
         return new BeachSchema('https://schema.org/', 'Beach');
     }

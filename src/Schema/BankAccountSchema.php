@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class BankAccountSchema extends FinancialProductSchema
 {
-    public static function factory()
+    public static function factory(): BankAccountSchema
     {
         return new BankAccountSchema('https://schema.org/', 'BankAccount');
     }
@@ -42,8 +42,9 @@ class BankAccountSchema extends FinancialProductSchema
      * The type of a bank account.
      *
      * @param $bankAccountType |
+     * @return static
      **/
-    public function setBankAccountType($bankAccountType) {
+    public function setBankAccountType($bankAccountType): static {
         $this->properties['bankAccountType'] = $bankAccountType;
 
         return $this;
@@ -60,8 +61,9 @@ class BankAccountSchema extends FinancialProductSchema
      * A minimum amount that has to be paid in every month.
      *
      * @param $accountMinimumInflow 
+     * @return static
      **/
-    public function setAccountMinimumInflow($accountMinimumInflow) {
+    public function setAccountMinimumInflow($accountMinimumInflow): static {
         $this->properties['accountMinimumInflow'] = $accountMinimumInflow;
 
         return $this;
@@ -78,8 +80,9 @@ class BankAccountSchema extends FinancialProductSchema
      * An overdraft is an extension of credit from a lending institution when an account reaches zero. An overdraft allows the individual to continue withdrawing money even if the account has no funds in it. Basically the bank allows people to borrow a set amount of money.
      *
      * @param $accountOverdraftLimit 
+     * @return static
      **/
-    public function setAccountOverdraftLimit($accountOverdraftLimit) {
+    public function setAccountOverdraftLimit($accountOverdraftLimit): static {
         $this->properties['accountOverdraftLimit'] = $accountOverdraftLimit;
 
         return $this;

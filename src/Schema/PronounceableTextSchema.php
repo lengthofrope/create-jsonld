@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PronounceableTextSchema extends TextSchema
 {
-    public static function factory()
+    public static function factory(): PronounceableTextSchema
     {
         return new PronounceableTextSchema('https://schema.org/', 'PronounceableText');
     }
@@ -42,8 +42,9 @@ class PronounceableTextSchema extends TextSchema
      * Representation of a text [[textValue]] using the specified [[speechToTextMarkup]]. For example the city name of Houston in IPA: /ˈhjuːstən/.
      *
      * @param $phoneticText 
+     * @return static
      **/
-    public function setPhoneticText($phoneticText) {
+    public function setPhoneticText($phoneticText): static {
         $this->properties['phoneticText'] = $phoneticText;
 
         return $this;
@@ -60,8 +61,9 @@ class PronounceableTextSchema extends TextSchema
      * Text value being annotated.
      *
      * @param $textValue 
+     * @return static
      **/
-    public function setTextValue($textValue) {
+    public function setTextValue($textValue): static {
         $this->properties['textValue'] = $textValue;
 
         return $this;
@@ -78,8 +80,9 @@ class PronounceableTextSchema extends TextSchema
      * The language of the content or performance or used in an action. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
      *
      * @param $inLanguage |
+     * @return static
      **/
-    public function setInLanguage($inLanguage) {
+    public function setInLanguage($inLanguage): static {
         $this->properties['inLanguage'] = $inLanguage;
 
         return $this;
@@ -96,8 +99,9 @@ class PronounceableTextSchema extends TextSchema
      * Form of markup used. eg. [SSML](https://www.w3.org/TR/speech-synthesis11) or [IPA](https://www.wikidata.org/wiki/Property:P898).
      *
      * @param $speechToTextMarkup 
+     * @return static
      **/
-    public function setSpeechToTextMarkup($speechToTextMarkup) {
+    public function setSpeechToTextMarkup($speechToTextMarkup): static {
         $this->properties['speechToTextMarkup'] = $speechToTextMarkup;
 
         return $this;

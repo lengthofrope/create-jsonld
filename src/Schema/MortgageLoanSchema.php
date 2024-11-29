@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MortgageLoanSchema extends LoanOrCreditSchema
 {
-    public static function factory()
+    public static function factory(): MortgageLoanSchema
     {
         return new MortgageLoanSchema('https://schema.org/', 'MortgageLoan');
     }
@@ -42,8 +42,9 @@ class MortgageLoanSchema extends LoanOrCreditSchema
      * Amount of mortgage mandate that can be converted into a proper mortgage at a later stage.
      *
      * @param $loanMortgageMandateAmount 
+     * @return static
      **/
-    public function setLoanMortgageMandateAmount($loanMortgageMandateAmount) {
+    public function setLoanMortgageMandateAmount($loanMortgageMandateAmount): static {
         $this->properties['loanMortgageMandateAmount'] = $loanMortgageMandateAmount;
 
         return $this;
@@ -60,8 +61,9 @@ class MortgageLoanSchema extends LoanOrCreditSchema
      * Whether borrower is a resident of the jurisdiction where the property is located.
      *
      * @param $domiciledMortgage 
+     * @return static
      **/
-    public function setDomiciledMortgage($domiciledMortgage) {
+    public function setDomiciledMortgage($domiciledMortgage): static {
         $this->properties['domiciledMortgage'] = $domiciledMortgage;
 
         return $this;

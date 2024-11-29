@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class JewelryStoreSchema extends StoreSchema
 {
-    public static function factory()
+    public static function factory(): JewelryStoreSchema
     {
         return new JewelryStoreSchema('https://schema.org/', 'JewelryStore');
     }

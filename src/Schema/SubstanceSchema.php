@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class SubstanceSchema extends MedicalEntitySchema
 {
-    public static function factory()
+    public static function factory(): SubstanceSchema
     {
         return new SubstanceSchema('https://schema.org/', 'Substance');
     }
@@ -42,8 +42,9 @@ class SubstanceSchema extends MedicalEntitySchema
      * Recommended intake of this supplement for a given population as defined by a specific recommending authority.
      *
      * @param $maximumIntake 
+     * @return static
      **/
-    public function setMaximumIntake($maximumIntake) {
+    public function setMaximumIntake($maximumIntake): static {
         $this->properties['maximumIntake'] = $maximumIntake;
 
         return $this;
@@ -60,8 +61,9 @@ class SubstanceSchema extends MedicalEntitySchema
      * An active ingredient, typically chemical compounds and/or biologic substances.
      *
      * @param $activeIngredient 
+     * @return static
      **/
-    public function setActiveIngredient($activeIngredient) {
+    public function setActiveIngredient($activeIngredient): static {
         $this->properties['activeIngredient'] = $activeIngredient;
 
         return $this;

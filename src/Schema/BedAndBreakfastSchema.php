@@ -36,7 +36,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class BedAndBreakfastSchema extends LodgingBusinessSchema
 {
-    public static function factory()
+    public static function factory(): BedAndBreakfastSchema
     {
         return new BedAndBreakfastSchema('https://schema.org/', 'BedAndBreakfast');
     }

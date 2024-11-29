@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class BeautySalonSchema extends HealthAndBeautyBusinessSchema
 {
-    public static function factory()
+    public static function factory(): BeautySalonSchema
     {
         return new BeautySalonSchema('https://schema.org/', 'BeautySalon');
     }

@@ -34,7 +34,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PropertyValueSchema extends StructuredValueSchema
 {
-    public static function factory()
+    public static function factory(): PropertyValueSchema
     {
         return new PropertyValueSchema('https://schema.org/', 'PropertyValue');
     }
@@ -43,8 +43,9 @@ class PropertyValueSchema extends StructuredValueSchema
      * The lower value of some characteristic or property.
      *
      * @param $minValue 
+     * @return static
      **/
-    public function setMinValue($minValue) {
+    public function setMinValue($minValue): static {
         $this->properties['minValue'] = $minValue;
 
         return $this;
@@ -64,8 +65,9 @@ a URL indicating the type of the property, either pointing to an external vocabu
 Standards bodies should promote a standard prefix for the identifiers of properties from their standards.
      *
      * @param $propertyID |
+     * @return static
      **/
-    public function setPropertyID($propertyID) {
+    public function setPropertyID($propertyID): static {
         $this->properties['propertyID'] = $propertyID;
 
         return $this;
@@ -82,8 +84,9 @@ Standards bodies should promote a standard prefix for the identifiers of propert
      * The upper value of some characteristic or property.
      *
      * @param $maxValue 
+     * @return static
      **/
-    public function setMaxValue($maxValue) {
+    public function setMaxValue($maxValue): static {
         $this->properties['maxValue'] = $maxValue;
 
         return $this;
@@ -100,8 +103,9 @@ Standards bodies should promote a standard prefix for the identifiers of propert
      * The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes than the UN/CEFACT Common Code may be used with a prefix followed by a colon.
      *
      * @param $unitCode |
+     * @return static
      **/
-    public function setUnitCode($unitCode) {
+    public function setUnitCode($unitCode): static {
         $this->properties['unitCode'] = $unitCode;
 
         return $this;
@@ -118,8 +122,9 @@ Standards bodies should promote a standard prefix for the identifiers of propert
      * A subproperty of [[measurementTechnique]] that can be used for specifying specific methods, in particular via [[MeasurementMethodEnum]].
      *
      * @param $measurementMethod |||
+     * @return static
      **/
-    public function setMeasurementMethod($measurementMethod) {
+    public function setMeasurementMethod($measurementMethod): static {
         $this->properties['measurementMethod'] = $measurementMethod;
 
         return $this;
@@ -136,8 +141,9 @@ Standards bodies should promote a standard prefix for the identifiers of propert
      * The value of a [[QuantitativeValue]] (including [[Observation]]) or property value node.\n\n* For [[QuantitativeValue]] and [[MonetaryAmount]], the recommended type for values is 'Number'.\n* For [[PropertyValue]], it can be 'Text', 'Number', 'Boolean', or 'StructuredValue'.\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.
      *
      * @param $value |||
+     * @return static
      **/
-    public function setValue($value) {
+    public function setValue($value): static {
         $this->properties['value'] = $value;
 
         return $this;
@@ -160,8 +166,9 @@ For example, if [[variableMeasured]] is: molecule concentration, [[measurementTe
 If there are several [[variableMeasured]] properties recorded for some given data object, use a [[PropertyValue]] for each [[variableMeasured]] and attach the corresponding [[measurementTechnique]]. The value can also be from an enumeration, organized as a [[MeasurementMetholdEnumeration]].
      *
      * @param $measurementTechnique |||
+     * @return static
      **/
-    public function setMeasurementTechnique($measurementTechnique) {
+    public function setMeasurementTechnique($measurementTechnique): static {
         $this->properties['measurementTechnique'] = $measurementTechnique;
 
         return $this;
@@ -178,8 +185,9 @@ If there are several [[variableMeasured]] properties recorded for some given dat
      * A secondary value that provides additional information on the original value, e.g. a reference temperature or a type of measurement.
      *
      * @param $valueReference |||||||
+     * @return static
      **/
-    public function setValueReference($valueReference) {
+    public function setValueReference($valueReference): static {
         $this->properties['valueReference'] = $valueReference;
 
         return $this;
@@ -197,8 +205,9 @@ If there are several [[variableMeasured]] properties recorded for some given dat
 <a href='unitCode'>unitCode</a>.
      *
      * @param $unitText 
+     * @return static
      **/
-    public function setUnitText($unitText) {
+    public function setUnitText($unitText): static {
         $this->properties['unitText'] = $unitText;
 
         return $this;

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class RealEstateAgentSchema extends LocalBusinessSchema
 {
-    public static function factory()
+    public static function factory(): RealEstateAgentSchema
     {
         return new RealEstateAgentSchema('https://schema.org/', 'RealEstateAgent');
     }

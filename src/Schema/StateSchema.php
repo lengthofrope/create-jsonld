@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class StateSchema extends AdministrativeAreaSchema
 {
-    public static function factory()
+    public static function factory(): StateSchema
     {
         return new StateSchema('https://schema.org/', 'State');
     }

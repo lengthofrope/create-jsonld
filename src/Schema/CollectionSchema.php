@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class CollectionSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): CollectionSchema
     {
         return new CollectionSchema('https://schema.org/', 'Collection');
     }

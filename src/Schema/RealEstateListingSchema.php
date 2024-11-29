@@ -35,7 +35,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class RealEstateListingSchema extends WebPageSchema
 {
-    public static function factory()
+    public static function factory(): RealEstateListingSchema
     {
         return new RealEstateListingSchema('https://schema.org/', 'RealEstateListing');
     }
@@ -44,8 +44,9 @@ class RealEstateListingSchema extends WebPageSchema
      * Publication date of an online listing.
      *
      * @param $datePosted |
+     * @return static
      **/
-    public function setDatePosted($datePosted) {
+    public function setDatePosted($datePosted): static {
         $this->properties['datePosted'] = $datePosted;
 
         return $this;
@@ -62,8 +63,9 @@ class RealEstateListingSchema extends WebPageSchema
      * Length of the lease for some [[Accommodation]], either particular to some [[Offer]] or in some cases intrinsic to the property.
      *
      * @param $leaseLength |
+     * @return static
      **/
-    public function setLeaseLength($leaseLength) {
+    public function setLeaseLength($leaseLength): static {
         $this->properties['leaseLength'] = $leaseLength;
 
         return $this;

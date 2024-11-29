@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MessageSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): MessageSchema
     {
         return new MessageSchema('https://schema.org/', 'Message');
     }
@@ -42,8 +42,9 @@ class MessageSchema extends CreativeWorkSchema
      * A sub property of participant. The participant who is at the receiving end of the action.
      *
      * @param $recipient |||
+     * @return static
      **/
-    public function setRecipient($recipient) {
+    public function setRecipient($recipient): static {
         $this->properties['recipient'] = $recipient;
 
         return $this;
@@ -60,8 +61,9 @@ class MessageSchema extends CreativeWorkSchema
      * The date/time at which the message has been read by the recipient if a single recipient exists.
      *
      * @param $dateRead |
+     * @return static
      **/
-    public function setDateRead($dateRead) {
+    public function setDateRead($dateRead): static {
         $this->properties['dateRead'] = $dateRead;
 
         return $this;
@@ -78,8 +80,9 @@ class MessageSchema extends CreativeWorkSchema
      * The date/time at which the message was sent.
      *
      * @param $dateSent 
+     * @return static
      **/
-    public function setDateSent($dateSent) {
+    public function setDateSent($dateSent): static {
         $this->properties['dateSent'] = $dateSent;
 
         return $this;
@@ -96,8 +99,9 @@ class MessageSchema extends CreativeWorkSchema
      * A sub property of recipient. The recipient blind copied on a message.
      *
      * @param $bccRecipient ||
+     * @return static
      **/
-    public function setBccRecipient($bccRecipient) {
+    public function setBccRecipient($bccRecipient): static {
         $this->properties['bccRecipient'] = $bccRecipient;
 
         return $this;
@@ -114,8 +118,9 @@ class MessageSchema extends CreativeWorkSchema
      * A sub property of recipient. The recipient copied on a message.
      *
      * @param $ccRecipient ||
+     * @return static
      **/
-    public function setCcRecipient($ccRecipient) {
+    public function setCcRecipient($ccRecipient): static {
         $this->properties['ccRecipient'] = $ccRecipient;
 
         return $this;
@@ -132,8 +137,9 @@ class MessageSchema extends CreativeWorkSchema
      * A sub property of recipient. The recipient who was directly sent the message.
      *
      * @param $toRecipient |||
+     * @return static
      **/
-    public function setToRecipient($toRecipient) {
+    public function setToRecipient($toRecipient): static {
         $this->properties['toRecipient'] = $toRecipient;
 
         return $this;
@@ -150,8 +156,9 @@ class MessageSchema extends CreativeWorkSchema
      * The date/time the message was received if a single recipient exists.
      *
      * @param $dateReceived 
+     * @return static
      **/
-    public function setDateReceived($dateReceived) {
+    public function setDateReceived($dateReceived): static {
         $this->properties['dateReceived'] = $dateReceived;
 
         return $this;
@@ -168,8 +175,9 @@ class MessageSchema extends CreativeWorkSchema
      * A CreativeWork attached to the message.
      *
      * @param $messageAttachment 
+     * @return static
      **/
-    public function setMessageAttachment($messageAttachment) {
+    public function setMessageAttachment($messageAttachment): static {
         $this->properties['messageAttachment'] = $messageAttachment;
 
         return $this;
@@ -186,8 +194,9 @@ class MessageSchema extends CreativeWorkSchema
      * A sub property of participant. The participant who is at the sending end of the action.
      *
      * @param $sender ||
+     * @return static
      **/
-    public function setSender($sender) {
+    public function setSender($sender): static {
         $this->properties['sender'] = $sender;
 
         return $this;

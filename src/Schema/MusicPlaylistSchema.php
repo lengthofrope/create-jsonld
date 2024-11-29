@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MusicPlaylistSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): MusicPlaylistSchema
     {
         return new MusicPlaylistSchema('https://schema.org/', 'MusicPlaylist');
     }
@@ -42,8 +42,9 @@ class MusicPlaylistSchema extends CreativeWorkSchema
      * The number of tracks in this album or playlist.
      *
      * @param $numTracks 
+     * @return static
      **/
-    public function setNumTracks($numTracks) {
+    public function setNumTracks($numTracks): static {
         $this->properties['numTracks'] = $numTracks;
 
         return $this;
@@ -60,8 +61,9 @@ class MusicPlaylistSchema extends CreativeWorkSchema
      * A music recording (track)&#x2014;usually a single song.
      *
      * @param $tracks 
+     * @return static
      **/
-    public function setTracks($tracks) {
+    public function setTracks($tracks): static {
         $this->properties['tracks'] = $tracks;
 
         return $this;
@@ -78,8 +80,9 @@ class MusicPlaylistSchema extends CreativeWorkSchema
      * A music recording (track)&#x2014;usually a single song. If an ItemList is given, the list should contain items of type MusicRecording.
      *
      * @param $track |
+     * @return static
      **/
-    public function setTrack($track) {
+    public function setTrack($track): static {
         $this->properties['track'] = $track;
 
         return $this;

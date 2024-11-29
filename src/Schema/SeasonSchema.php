@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class SeasonSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): SeasonSchema
     {
         return new SeasonSchema('https://schema.org/', 'Season');
     }

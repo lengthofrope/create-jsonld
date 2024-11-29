@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class HowToToolSchema extends HowToItemSchema
 {
-    public static function factory()
+    public static function factory(): HowToToolSchema
     {
         return new HowToToolSchema('https://schema.org/', 'HowToTool');
     }

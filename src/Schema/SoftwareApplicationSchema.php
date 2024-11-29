@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class SoftwareApplicationSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): SoftwareApplicationSchema
     {
         return new SoftwareApplicationSchema('https://schema.org/', 'SoftwareApplication');
     }
@@ -42,8 +42,9 @@ class SoftwareApplicationSchema extends CreativeWorkSchema
      * Minimum memory requirements.
      *
      * @param $memoryRequirements |
+     * @return static
      **/
-    public function setMemoryRequirements($memoryRequirements) {
+    public function setMemoryRequirements($memoryRequirements): static {
         $this->properties['memoryRequirements'] = $memoryRequirements;
 
         return $this;
@@ -60,8 +61,9 @@ class SoftwareApplicationSchema extends CreativeWorkSchema
      * Device required to run the application. Used in cases where a specific make/model is required to run the application.
      *
      * @param $device 
+     * @return static
      **/
-    public function setDevice($device) {
+    public function setDevice($device): static {
         $this->properties['device'] = $device;
 
         return $this;
@@ -78,8 +80,9 @@ class SoftwareApplicationSchema extends CreativeWorkSchema
      * A link to a screenshot image of the app.
      *
      * @param $screenshot |
+     * @return static
      **/
-    public function setScreenshot($screenshot) {
+    public function setScreenshot($screenshot): static {
         $this->properties['screenshot'] = $screenshot;
 
         return $this;
@@ -96,8 +99,9 @@ class SoftwareApplicationSchema extends CreativeWorkSchema
      * Description of what changed in this version.
      *
      * @param $releaseNotes |
+     * @return static
      **/
-    public function setReleaseNotes($releaseNotes) {
+    public function setReleaseNotes($releaseNotes): static {
         $this->properties['releaseNotes'] = $releaseNotes;
 
         return $this;
@@ -114,8 +118,9 @@ class SoftwareApplicationSchema extends CreativeWorkSchema
      * Supporting data for a SoftwareApplication.
      *
      * @param $supportingData 
+     * @return static
      **/
-    public function setSupportingData($supportingData) {
+    public function setSupportingData($supportingData): static {
         $this->properties['supportingData'] = $supportingData;
 
         return $this;
@@ -132,8 +137,9 @@ class SoftwareApplicationSchema extends CreativeWorkSchema
      * Type of software application, e.g. 'Game, Multimedia'.
      *
      * @param $applicationCategory |
+     * @return static
      **/
-    public function setApplicationCategory($applicationCategory) {
+    public function setApplicationCategory($applicationCategory): static {
         $this->properties['applicationCategory'] = $applicationCategory;
 
         return $this;
@@ -150,8 +156,9 @@ class SoftwareApplicationSchema extends CreativeWorkSchema
      * Countries for which the application is not supported. You can also provide the two-letter ISO 3166-1 alpha-2 country code.
      *
      * @param $countriesNotSupported 
+     * @return static
      **/
-    public function setCountriesNotSupported($countriesNotSupported) {
+    public function setCountriesNotSupported($countriesNotSupported): static {
         $this->properties['countriesNotSupported'] = $countriesNotSupported;
 
         return $this;
@@ -168,8 +175,9 @@ class SoftwareApplicationSchema extends CreativeWorkSchema
      * Permission(s) required to run the app (for example, a mobile app may require full internet access or may run only on wifi).
      *
      * @param $permissions 
+     * @return static
      **/
-    public function setPermissions($permissions) {
+    public function setPermissions($permissions): static {
         $this->properties['permissions'] = $permissions;
 
         return $this;
@@ -186,8 +194,9 @@ class SoftwareApplicationSchema extends CreativeWorkSchema
      * Operating systems supported (Windows 7, OS X 10.6, Android 1.6).
      *
      * @param $operatingSystem 
+     * @return static
      **/
-    public function setOperatingSystem($operatingSystem) {
+    public function setOperatingSystem($operatingSystem): static {
         $this->properties['operatingSystem'] = $operatingSystem;
 
         return $this;
@@ -204,8 +213,9 @@ class SoftwareApplicationSchema extends CreativeWorkSchema
      * Device required to run the application. Used in cases where a specific make/model is required to run the application.
      *
      * @param $availableOnDevice 
+     * @return static
      **/
-    public function setAvailableOnDevice($availableOnDevice) {
+    public function setAvailableOnDevice($availableOnDevice): static {
         $this->properties['availableOnDevice'] = $availableOnDevice;
 
         return $this;
@@ -222,8 +232,9 @@ class SoftwareApplicationSchema extends CreativeWorkSchema
      * Software application help.
      *
      * @param $softwareHelp 
+     * @return static
      **/
-    public function setSoftwareHelp($softwareHelp) {
+    public function setSoftwareHelp($softwareHelp): static {
         $this->properties['softwareHelp'] = $softwareHelp;
 
         return $this;
@@ -240,8 +251,9 @@ class SoftwareApplicationSchema extends CreativeWorkSchema
      * Size of the application / package (e.g. 18MB). In the absence of a unit (MB, KB etc.), KB will be assumed.
      *
      * @param $fileSize 
+     * @return static
      **/
-    public function setFileSize($fileSize) {
+    public function setFileSize($fileSize): static {
         $this->properties['fileSize'] = $fileSize;
 
         return $this;
@@ -258,8 +270,9 @@ class SoftwareApplicationSchema extends CreativeWorkSchema
      * Component dependency requirements for application. This includes runtime environments and shared libraries that are not included in the application distribution package, but required to run the application (examples: DirectX, Java or .NET runtime).
      *
      * @param $requirements |
+     * @return static
      **/
-    public function setRequirements($requirements) {
+    public function setRequirements($requirements): static {
         $this->properties['requirements'] = $requirements;
 
         return $this;
@@ -276,8 +289,9 @@ class SoftwareApplicationSchema extends CreativeWorkSchema
      * Storage requirements (free space required).
      *
      * @param $storageRequirements |
+     * @return static
      **/
-    public function setStorageRequirements($storageRequirements) {
+    public function setStorageRequirements($storageRequirements): static {
         $this->properties['storageRequirements'] = $storageRequirements;
 
         return $this;
@@ -294,8 +308,9 @@ class SoftwareApplicationSchema extends CreativeWorkSchema
      * Processor architecture required to run the application (e.g. IA64).
      *
      * @param $processorRequirements 
+     * @return static
      **/
-    public function setProcessorRequirements($processorRequirements) {
+    public function setProcessorRequirements($processorRequirements): static {
         $this->properties['processorRequirements'] = $processorRequirements;
 
         return $this;
@@ -312,8 +327,9 @@ class SoftwareApplicationSchema extends CreativeWorkSchema
      * Countries for which the application is supported. You can also provide the two-letter ISO 3166-1 alpha-2 country code.
      *
      * @param $countriesSupported 
+     * @return static
      **/
-    public function setCountriesSupported($countriesSupported) {
+    public function setCountriesSupported($countriesSupported): static {
         $this->properties['countriesSupported'] = $countriesSupported;
 
         return $this;
@@ -330,8 +346,9 @@ class SoftwareApplicationSchema extends CreativeWorkSchema
      * Additional content for a software application.
      *
      * @param $softwareAddOn 
+     * @return static
      **/
-    public function setSoftwareAddOn($softwareAddOn) {
+    public function setSoftwareAddOn($softwareAddOn): static {
         $this->properties['softwareAddOn'] = $softwareAddOn;
 
         return $this;
@@ -348,8 +365,9 @@ class SoftwareApplicationSchema extends CreativeWorkSchema
      * Component dependency requirements for application. This includes runtime environments and shared libraries that are not included in the application distribution package, but required to run the application (examples: DirectX, Java or .NET runtime).
      *
      * @param $softwareRequirements |
+     * @return static
      **/
-    public function setSoftwareRequirements($softwareRequirements) {
+    public function setSoftwareRequirements($softwareRequirements): static {
         $this->properties['softwareRequirements'] = $softwareRequirements;
 
         return $this;
@@ -366,8 +384,9 @@ class SoftwareApplicationSchema extends CreativeWorkSchema
      * The name of the application suite to which the application belongs (e.g. Excel belongs to Office).
      *
      * @param $applicationSuite 
+     * @return static
      **/
-    public function setApplicationSuite($applicationSuite) {
+    public function setApplicationSuite($applicationSuite): static {
         $this->properties['applicationSuite'] = $applicationSuite;
 
         return $this;
@@ -384,8 +403,9 @@ class SoftwareApplicationSchema extends CreativeWorkSchema
      * If the file can be downloaded, URL to download the binary.
      *
      * @param $downloadUrl 
+     * @return static
      **/
-    public function setDownloadUrl($downloadUrl) {
+    public function setDownloadUrl($downloadUrl): static {
         $this->properties['downloadUrl'] = $downloadUrl;
 
         return $this;
@@ -402,8 +422,9 @@ class SoftwareApplicationSchema extends CreativeWorkSchema
      * Version of the software instance.
      *
      * @param $softwareVersion 
+     * @return static
      **/
-    public function setSoftwareVersion($softwareVersion) {
+    public function setSoftwareVersion($softwareVersion): static {
         $this->properties['softwareVersion'] = $softwareVersion;
 
         return $this;
@@ -420,8 +441,9 @@ class SoftwareApplicationSchema extends CreativeWorkSchema
      * Features or modules provided by this application (and possibly required by other applications).
      *
      * @param $featureList |
+     * @return static
      **/
-    public function setFeatureList($featureList) {
+    public function setFeatureList($featureList): static {
         $this->properties['featureList'] = $featureList;
 
         return $this;
@@ -438,8 +460,9 @@ class SoftwareApplicationSchema extends CreativeWorkSchema
      * Subcategory of the application, e.g. 'Arcade Game'.
      *
      * @param $applicationSubCategory |
+     * @return static
      **/
-    public function setApplicationSubCategory($applicationSubCategory) {
+    public function setApplicationSubCategory($applicationSubCategory): static {
         $this->properties['applicationSubCategory'] = $applicationSubCategory;
 
         return $this;
@@ -456,8 +479,9 @@ class SoftwareApplicationSchema extends CreativeWorkSchema
      * URL at which the app may be installed, if different from the URL of the item.
      *
      * @param $installUrl 
+     * @return static
      **/
-    public function setInstallUrl($installUrl) {
+    public function setInstallUrl($installUrl): static {
         $this->properties['installUrl'] = $installUrl;
 
         return $this;

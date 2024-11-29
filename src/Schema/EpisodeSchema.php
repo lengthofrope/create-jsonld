@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class EpisodeSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): EpisodeSchema
     {
         return new EpisodeSchema('https://schema.org/', 'Episode');
     }
@@ -42,8 +42,9 @@ class EpisodeSchema extends CreativeWorkSchema
      * An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip.
      *
      * @param $actor |
+     * @return static
      **/
-    public function setActor($actor) {
+    public function setActor($actor): static {
         $this->properties['actor'] = $actor;
 
         return $this;
@@ -60,8 +61,9 @@ class EpisodeSchema extends CreativeWorkSchema
      * The trailer of a movie or TV/radio series, season, episode, etc.
      *
      * @param $trailer 
+     * @return static
      **/
-    public function setTrailer($trailer) {
+    public function setTrailer($trailer): static {
         $this->properties['trailer'] = $trailer;
 
         return $this;
@@ -78,8 +80,9 @@ class EpisodeSchema extends CreativeWorkSchema
      * The season to which this episode belongs.
      *
      * @param $partOfSeason 
+     * @return static
      **/
-    public function setPartOfSeason($partOfSeason) {
+    public function setPartOfSeason($partOfSeason): static {
         $this->properties['partOfSeason'] = $partOfSeason;
 
         return $this;
@@ -96,8 +99,9 @@ class EpisodeSchema extends CreativeWorkSchema
      * An actor, e.g. in TV, radio, movie, video games etc. Actors can be associated with individual items or with a series, episode, clip.
      *
      * @param $actors 
+     * @return static
      **/
-    public function setActors($actors) {
+    public function setActors($actors): static {
         $this->properties['actors'] = $actors;
 
         return $this;
@@ -114,8 +118,9 @@ class EpisodeSchema extends CreativeWorkSchema
      * A director of e.g. TV, radio, movie, video games etc. content. Directors can be associated with individual items or with a series, episode, clip.
      *
      * @param $directors 
+     * @return static
      **/
-    public function setDirectors($directors) {
+    public function setDirectors($directors): static {
         $this->properties['directors'] = $directors;
 
         return $this;
@@ -132,8 +137,9 @@ class EpisodeSchema extends CreativeWorkSchema
      * The production company or studio responsible for the item, e.g. series, video game, episode etc.
      *
      * @param $productionCompany 
+     * @return static
      **/
-    public function setProductionCompany($productionCompany) {
+    public function setProductionCompany($productionCompany): static {
         $this->properties['productionCompany'] = $productionCompany;
 
         return $this;
@@ -150,8 +156,9 @@ class EpisodeSchema extends CreativeWorkSchema
      * The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
      *
      * @param $duration 
+     * @return static
      **/
-    public function setDuration($duration) {
+    public function setDuration($duration): static {
         $this->properties['duration'] = $duration;
 
         return $this;
@@ -168,8 +175,9 @@ class EpisodeSchema extends CreativeWorkSchema
      * The series to which this episode or season belongs.
      *
      * @param $partOfSeries 
+     * @return static
      **/
-    public function setPartOfSeries($partOfSeries) {
+    public function setPartOfSeries($partOfSeries): static {
         $this->properties['partOfSeries'] = $partOfSeries;
 
         return $this;
@@ -186,8 +194,9 @@ class EpisodeSchema extends CreativeWorkSchema
      * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual items or with a series, episode, clip.
      *
      * @param $director 
+     * @return static
      **/
-    public function setDirector($director) {
+    public function setDirector($director): static {
         $this->properties['director'] = $director;
 
         return $this;
@@ -204,8 +213,9 @@ class EpisodeSchema extends CreativeWorkSchema
      * The composer of the soundtrack.
      *
      * @param $musicBy |
+     * @return static
      **/
-    public function setMusicBy($musicBy) {
+    public function setMusicBy($musicBy): static {
         $this->properties['musicBy'] = $musicBy;
 
         return $this;
@@ -222,8 +232,9 @@ class EpisodeSchema extends CreativeWorkSchema
      * Position of the episode within an ordered group of episodes.
      *
      * @param $episodeNumber |
+     * @return static
      **/
-    public function setEpisodeNumber($episodeNumber) {
+    public function setEpisodeNumber($episodeNumber): static {
         $this->properties['episodeNumber'] = $episodeNumber;
 
         return $this;

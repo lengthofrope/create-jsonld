@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PreschoolSchema extends EducationalOrganizationSchema
 {
-    public static function factory()
+    public static function factory(): PreschoolSchema
     {
         return new PreschoolSchema('https://schema.org/', 'Preschool');
     }

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class BowlingAlleySchema extends SportsActivityLocationSchema
 {
-    public static function factory()
+    public static function factory(): BowlingAlleySchema
     {
         return new BowlingAlleySchema('https://schema.org/', 'BowlingAlley');
     }

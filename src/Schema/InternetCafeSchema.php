@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class InternetCafeSchema extends LocalBusinessSchema
 {
-    public static function factory()
+    public static function factory(): InternetCafeSchema
     {
         return new InternetCafeSchema('https://schema.org/', 'InternetCafe');
     }

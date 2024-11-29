@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class BrandSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): BrandSchema
     {
         return new BrandSchema('https://schema.org/', 'Brand');
     }
@@ -42,8 +42,9 @@ class BrandSchema extends IntangibleSchema
      * An associated logo.
      *
      * @param $logo |
+     * @return static
      **/
-    public function setLogo($logo) {
+    public function setLogo($logo): static {
         $this->properties['logo'] = $logo;
 
         return $this;
@@ -60,8 +61,9 @@ class BrandSchema extends IntangibleSchema
      * A review of the item.
      *
      * @param $review 
+     * @return static
      **/
-    public function setReview($review) {
+    public function setReview($review): static {
         $this->properties['review'] = $review;
 
         return $this;
@@ -78,8 +80,9 @@ class BrandSchema extends IntangibleSchema
      * A slogan or motto associated with the item.
      *
      * @param $slogan 
+     * @return static
      **/
-    public function setSlogan($slogan) {
+    public function setSlogan($slogan): static {
         $this->properties['slogan'] = $slogan;
 
         return $this;
@@ -96,8 +99,9 @@ class BrandSchema extends IntangibleSchema
      * The overall rating, based on a collection of reviews or ratings, of the item.
      *
      * @param $aggregateRating 
+     * @return static
      **/
-    public function setAggregateRating($aggregateRating) {
+    public function setAggregateRating($aggregateRating): static {
         $this->properties['aggregateRating'] = $aggregateRating;
 
         return $this;

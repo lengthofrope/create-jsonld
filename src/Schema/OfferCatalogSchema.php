@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class OfferCatalogSchema extends ItemListSchema
 {
-    public static function factory()
+    public static function factory(): OfferCatalogSchema
     {
         return new OfferCatalogSchema('https://schema.org/', 'OfferCatalog');
     }

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class RadioBroadcastServiceSchema extends BroadcastServiceSchema
 {
-    public static function factory()
+    public static function factory(): RadioBroadcastServiceSchema
     {
         return new RadioBroadcastServiceSchema('https://schema.org/', 'RadioBroadcastService');
     }

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class TierBenefitEnumerationSchema extends EnumerationSchema
 {
-    public static function factory()
+    public static function factory(): TierBenefitEnumerationSchema
     {
         return new TierBenefitEnumerationSchema('https://schema.org/', 'TierBenefitEnumeration');
     }

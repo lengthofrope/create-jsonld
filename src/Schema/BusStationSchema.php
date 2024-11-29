@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class BusStationSchema extends CivicStructureSchema
 {
-    public static function factory()
+    public static function factory(): BusStationSchema
     {
         return new BusStationSchema('https://schema.org/', 'BusStation');
     }

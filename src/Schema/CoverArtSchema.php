@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class CoverArtSchema extends VisualArtworkSchema
 {
-    public static function factory()
+    public static function factory(): CoverArtSchema
     {
         return new CoverArtSchema('https://schema.org/', 'CoverArt');
     }

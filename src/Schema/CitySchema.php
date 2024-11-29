@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class CitySchema extends AdministrativeAreaSchema
 {
-    public static function factory()
+    public static function factory(): CitySchema
     {
         return new CitySchema('https://schema.org/', 'City');
     }

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PerformActionSchema extends PlayActionSchema
 {
-    public static function factory()
+    public static function factory(): PerformActionSchema
     {
         return new PerformActionSchema('https://schema.org/', 'PerformAction');
     }
@@ -42,8 +42,9 @@ class PerformActionSchema extends PlayActionSchema
      * A sub property of location. The entertainment business where the action occurred.
      *
      * @param $entertainmentBusiness 
+     * @return static
      **/
-    public function setEntertainmentBusiness($entertainmentBusiness) {
+    public function setEntertainmentBusiness($entertainmentBusiness): static {
         $this->properties['entertainmentBusiness'] = $entertainmentBusiness;
 
         return $this;

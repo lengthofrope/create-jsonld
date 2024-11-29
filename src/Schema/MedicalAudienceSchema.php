@@ -31,9 +31,9 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MedicalAudienceSchema extends \LengthOfRope\JSONLD\Elements\Element
+class MedicalAudienceSchema extends PeopleAudienceSchema
 {
-    public static function factory()
+    public static function factory(): MedicalAudienceSchema
     {
         return new MedicalAudienceSchema('https://schema.org/', 'MedicalAudience');
     }

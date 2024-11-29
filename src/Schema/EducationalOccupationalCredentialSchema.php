@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class EducationalOccupationalCredentialSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): EducationalOccupationalCredentialSchema
     {
         return new EducationalOccupationalCredentialSchema('https://schema.org/', 'EducationalOccupationalCredential');
     }
@@ -42,8 +42,9 @@ class EducationalOccupationalCredentialSchema extends CreativeWorkSchema
      * An organization that acknowledges the validity, value or utility of a credential. Note: recognition may include a process of quality assurance or accreditation.
      *
      * @param $recognizedBy 
+     * @return static
      **/
-    public function setRecognizedBy($recognizedBy) {
+    public function setRecognizedBy($recognizedBy): static {
         $this->properties['recognizedBy'] = $recognizedBy;
 
         return $this;
@@ -60,8 +61,9 @@ class EducationalOccupationalCredentialSchema extends CreativeWorkSchema
      * The geographic area where the item is valid. Applies for example to a [[Permit]], a [[Certification]], or an [[EducationalOccupationalCredential]]. 
      *
      * @param $validIn 
+     * @return static
      **/
-    public function setValidIn($validIn) {
+    public function setValidIn($validIn): static {
         $this->properties['validIn'] = $validIn;
 
         return $this;
@@ -78,8 +80,9 @@ class EducationalOccupationalCredentialSchema extends CreativeWorkSchema
      * The duration of validity of a permit or similar thing.
      *
      * @param $validFor 
+     * @return static
      **/
-    public function setValidFor($validFor) {
+    public function setValidFor($validFor): static {
         $this->properties['validFor'] = $validFor;
 
         return $this;
@@ -96,8 +99,9 @@ class EducationalOccupationalCredentialSchema extends CreativeWorkSchema
      * The level in terms of progression through an educational or training context. Examples of educational levels include 'beginner', 'intermediate' or 'advanced', and formal sets of level indicators.
      *
      * @param $educationalLevel ||
+     * @return static
      **/
-    public function setEducationalLevel($educationalLevel) {
+    public function setEducationalLevel($educationalLevel): static {
         $this->properties['educationalLevel'] = $educationalLevel;
 
         return $this;
@@ -114,8 +118,9 @@ class EducationalOccupationalCredentialSchema extends CreativeWorkSchema
      * The category or type of credential being described, for example "degree”, “certificate”, “badge”, or more specific term.
      *
      * @param $credentialCategory ||
+     * @return static
      **/
-    public function setCredentialCategory($credentialCategory) {
+    public function setCredentialCategory($credentialCategory): static {
         $this->properties['credentialCategory'] = $credentialCategory;
 
         return $this;
@@ -132,8 +137,9 @@ class EducationalOccupationalCredentialSchema extends CreativeWorkSchema
      * Knowledge, skill, ability or personal attribute that must be demonstrated by a person or other entity in order to do something such as earn an Educational Occupational Credential or understand a LearningResource.
      *
      * @param $competencyRequired ||
+     * @return static
      **/
-    public function setCompetencyRequired($competencyRequired) {
+    public function setCompetencyRequired($competencyRequired): static {
         $this->properties['competencyRequired'] = $competencyRequired;
 
         return $this;

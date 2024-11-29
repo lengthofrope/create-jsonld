@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DrugPregnancyCategorySchema extends MedicalEnumerationSchema
 {
-    public static function factory()
+    public static function factory(): DrugPregnancyCategorySchema
     {
         return new DrugPregnancyCategorySchema('https://schema.org/', 'DrugPregnancyCategory');
     }

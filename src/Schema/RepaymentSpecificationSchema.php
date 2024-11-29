@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class RepaymentSpecificationSchema extends StructuredValueSchema
 {
-    public static function factory()
+    public static function factory(): RepaymentSpecificationSchema
     {
         return new RepaymentSpecificationSchema('https://schema.org/', 'RepaymentSpecification');
     }
@@ -42,8 +42,9 @@ class RepaymentSpecificationSchema extends StructuredValueSchema
      * The amount to be paid as a penalty in the event of early payment of the loan.
      *
      * @param $earlyPrepaymentPenalty 
+     * @return static
      **/
-    public function setEarlyPrepaymentPenalty($earlyPrepaymentPenalty) {
+    public function setEarlyPrepaymentPenalty($earlyPrepaymentPenalty): static {
         $this->properties['earlyPrepaymentPenalty'] = $earlyPrepaymentPenalty;
 
         return $this;
@@ -60,8 +61,9 @@ class RepaymentSpecificationSchema extends StructuredValueSchema
      * The amount of money to pay in a single payment.
      *
      * @param $loanPaymentAmount 
+     * @return static
      **/
-    public function setLoanPaymentAmount($loanPaymentAmount) {
+    public function setLoanPaymentAmount($loanPaymentAmount): static {
         $this->properties['loanPaymentAmount'] = $loanPaymentAmount;
 
         return $this;
@@ -78,8 +80,9 @@ class RepaymentSpecificationSchema extends StructuredValueSchema
      * Frequency of payments due, i.e. number of months between payments. This is defined as a frequency, i.e. the reciprocal of a period of time.
      *
      * @param $loanPaymentFrequency 
+     * @return static
      **/
-    public function setLoanPaymentFrequency($loanPaymentFrequency) {
+    public function setLoanPaymentFrequency($loanPaymentFrequency): static {
         $this->properties['loanPaymentFrequency'] = $loanPaymentFrequency;
 
         return $this;
@@ -96,8 +99,9 @@ class RepaymentSpecificationSchema extends StructuredValueSchema
      * a type of payment made in cash during the onset of the purchase of an expensive good/service. The payment typically represents only a percentage of the full purchase price.
      *
      * @param $downPayment |
+     * @return static
      **/
-    public function setDownPayment($downPayment) {
+    public function setDownPayment($downPayment): static {
         $this->properties['downPayment'] = $downPayment;
 
         return $this;
@@ -114,8 +118,9 @@ class RepaymentSpecificationSchema extends StructuredValueSchema
      * The number of payments contractually required at origination to repay the loan. For monthly paying loans this is the number of months from the contractual first payment date to the maturity date.
      *
      * @param $numberOfLoanPayments 
+     * @return static
      **/
-    public function setNumberOfLoanPayments($numberOfLoanPayments) {
+    public function setNumberOfLoanPayments($numberOfLoanPayments): static {
         $this->properties['numberOfLoanPayments'] = $numberOfLoanPayments;
 
         return $this;

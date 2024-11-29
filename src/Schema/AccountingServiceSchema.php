@@ -34,7 +34,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class AccountingServiceSchema extends FinancialServiceSchema
 {
-    public static function factory()
+    public static function factory(): AccountingServiceSchema
     {
         return new AccountingServiceSchema('https://schema.org/', 'AccountingService');
     }

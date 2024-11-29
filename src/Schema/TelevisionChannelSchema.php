@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class TelevisionChannelSchema extends BroadcastChannelSchema
 {
-    public static function factory()
+    public static function factory(): TelevisionChannelSchema
     {
         return new TelevisionChannelSchema('https://schema.org/', 'TelevisionChannel');
     }

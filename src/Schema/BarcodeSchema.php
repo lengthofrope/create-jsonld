@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class BarcodeSchema extends ImageObjectSchema
 {
-    public static function factory()
+    public static function factory(): BarcodeSchema
     {
         return new BarcodeSchema('https://schema.org/', 'Barcode');
     }

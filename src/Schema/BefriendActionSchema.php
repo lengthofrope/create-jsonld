@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class BefriendActionSchema extends InteractActionSchema
 {
-    public static function factory()
+    public static function factory(): BefriendActionSchema
     {
         return new BefriendActionSchema('https://schema.org/', 'BefriendAction');
     }

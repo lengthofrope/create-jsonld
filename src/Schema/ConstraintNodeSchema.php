@@ -34,7 +34,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ConstraintNodeSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): ConstraintNodeSchema
     {
         return new ConstraintNodeSchema('https://schema.org/', 'ConstraintNode');
     }
@@ -43,8 +43,9 @@ class ConstraintNodeSchema extends IntangibleSchema
      * Indicates the number of constraints property values defined for a particular [[ConstraintNode]] such as [[StatisticalVariable]]. This helps applications understand if they have access to a sufficiently complete description of a [[StatisticalVariable]] or other construct that is defined using properties on template-style nodes.
      *
      * @param $numConstraints 
+     * @return static
      **/
-    public function setNumConstraints($numConstraints) {
+    public function setNumConstraints($numConstraints): static {
         $this->properties['numConstraints'] = $numConstraints;
 
         return $this;
@@ -61,8 +62,9 @@ class ConstraintNodeSchema extends IntangibleSchema
      * Indicates a property used as a constraint. For example, in the definition of a [[StatisticalVariable]]. The value is a property, either from within Schema.org or from other compatible (e.g. RDF) systems such as DataCommons.org or Wikidata.org. 
      *
      * @param $constraintProperty |
+     * @return static
      **/
-    public function setConstraintProperty($constraintProperty) {
+    public function setConstraintProperty($constraintProperty): static {
         $this->properties['constraintProperty'] = $constraintProperty;
 
         return $this;

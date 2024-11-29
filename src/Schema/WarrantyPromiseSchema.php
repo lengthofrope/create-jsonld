@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class WarrantyPromiseSchema extends StructuredValueSchema
 {
-    public static function factory()
+    public static function factory(): WarrantyPromiseSchema
     {
         return new WarrantyPromiseSchema('https://schema.org/', 'WarrantyPromise');
     }
@@ -42,8 +42,9 @@ class WarrantyPromiseSchema extends StructuredValueSchema
      * The scope of the warranty promise.
      *
      * @param $warrantyScope 
+     * @return static
      **/
-    public function setWarrantyScope($warrantyScope) {
+    public function setWarrantyScope($warrantyScope): static {
         $this->properties['warrantyScope'] = $warrantyScope;
 
         return $this;
@@ -60,8 +61,9 @@ class WarrantyPromiseSchema extends StructuredValueSchema
      * The duration of the warranty promise. Common unitCode values are ANN for year, MON for months, or DAY for days.
      *
      * @param $durationOfWarranty 
+     * @return static
      **/
-    public function setDurationOfWarranty($durationOfWarranty) {
+    public function setDurationOfWarranty($durationOfWarranty): static {
         $this->properties['durationOfWarranty'] = $durationOfWarranty;
 
         return $this;

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ReplyActionSchema extends CommunicateActionSchema
 {
-    public static function factory()
+    public static function factory(): ReplyActionSchema
     {
         return new ReplyActionSchema('https://schema.org/', 'ReplyAction');
     }
@@ -42,8 +42,9 @@ class ReplyActionSchema extends CommunicateActionSchema
      * A sub property of result. The Comment created or sent as a result of this action.
      *
      * @param $resultComment 
+     * @return static
      **/
-    public function setResultComment($resultComment) {
+    public function setResultComment($resultComment): static {
         $this->properties['resultComment'] = $resultComment;
 
         return $this;

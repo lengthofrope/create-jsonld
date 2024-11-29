@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DisagreeActionSchema extends ReactActionSchema
 {
-    public static function factory()
+    public static function factory(): DisagreeActionSchema
     {
         return new DisagreeActionSchema('https://schema.org/', 'DisagreeAction');
     }

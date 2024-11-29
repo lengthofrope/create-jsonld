@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class HVACBusinessSchema extends HomeAndConstructionBusinessSchema
 {
-    public static function factory()
+    public static function factory(): HVACBusinessSchema
     {
         return new HVACBusinessSchema('https://schema.org/', 'HVACBusiness');
     }

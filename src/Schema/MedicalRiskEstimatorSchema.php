@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MedicalRiskEstimatorSchema extends MedicalEntitySchema
 {
-    public static function factory()
+    public static function factory(): MedicalRiskEstimatorSchema
     {
         return new MedicalRiskEstimatorSchema('https://schema.org/', 'MedicalRiskEstimator');
     }
@@ -42,8 +42,9 @@ class MedicalRiskEstimatorSchema extends MedicalEntitySchema
      * The condition, complication, or symptom whose risk is being estimated.
      *
      * @param $estimatesRiskOf 
+     * @return static
      **/
-    public function setEstimatesRiskOf($estimatesRiskOf) {
+    public function setEstimatesRiskOf($estimatesRiskOf): static {
         $this->properties['estimatesRiskOf'] = $estimatesRiskOf;
 
         return $this;
@@ -60,8 +61,9 @@ class MedicalRiskEstimatorSchema extends MedicalEntitySchema
      * A modifiable or non-modifiable risk factor included in the calculation, e.g. age, coexisting condition.
      *
      * @param $includedRiskFactor 
+     * @return static
      **/
-    public function setIncludedRiskFactor($includedRiskFactor) {
+    public function setIncludedRiskFactor($includedRiskFactor): static {
         $this->properties['includedRiskFactor'] = $includedRiskFactor;
 
         return $this;

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PostOfficeSchema extends GovernmentOfficeSchema
 {
-    public static function factory()
+    public static function factory(): PostOfficeSchema
     {
         return new PostOfficeSchema('https://schema.org/', 'PostOffice');
     }

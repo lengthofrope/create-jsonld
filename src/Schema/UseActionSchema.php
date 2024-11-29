@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class UseActionSchema extends ConsumeActionSchema
 {
-    public static function factory()
+    public static function factory(): UseActionSchema
     {
         return new UseActionSchema('https://schema.org/', 'UseAction');
     }

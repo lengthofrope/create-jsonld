@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class FinancialServiceSchema extends LocalBusinessSchema
 {
-    public static function factory()
+    public static function factory(): FinancialServiceSchema
     {
         return new FinancialServiceSchema('https://schema.org/', 'FinancialService');
     }
@@ -42,8 +42,9 @@ class FinancialServiceSchema extends LocalBusinessSchema
      * Description of fees, commissions, and other terms applied either to a class of financial product, or by a financial service organization.
      *
      * @param $feesAndCommissionsSpecification |
+     * @return static
      **/
-    public function setFeesAndCommissionsSpecification($feesAndCommissionsSpecification) {
+    public function setFeesAndCommissionsSpecification($feesAndCommissionsSpecification): static {
         $this->properties['feesAndCommissionsSpecification'] = $feesAndCommissionsSpecification;
 
         return $this;

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class SizeSystemEnumerationSchema extends EnumerationSchema
 {
-    public static function factory()
+    public static function factory(): SizeSystemEnumerationSchema
     {
         return new SizeSystemEnumerationSchema('https://schema.org/', 'SizeSystemEnumeration');
     }

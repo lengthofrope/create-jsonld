@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class RestrictedDietSchema extends EnumerationSchema
 {
-    public static function factory()
+    public static function factory(): RestrictedDietSchema
     {
         return new RestrictedDietSchema('https://schema.org/', 'RestrictedDiet');
     }

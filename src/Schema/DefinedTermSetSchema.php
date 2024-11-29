@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DefinedTermSetSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): DefinedTermSetSchema
     {
         return new DefinedTermSetSchema('https://schema.org/', 'DefinedTermSet');
     }
@@ -42,8 +42,9 @@ class DefinedTermSetSchema extends CreativeWorkSchema
      * A Defined Term contained in this term set.
      *
      * @param $hasDefinedTerm 
+     * @return static
      **/
-    public function setHasDefinedTerm($hasDefinedTerm) {
+    public function setHasDefinedTerm($hasDefinedTerm): static {
         $this->properties['hasDefinedTerm'] = $hasDefinedTerm;
 
         return $this;

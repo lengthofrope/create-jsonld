@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DepartActionSchema extends MoveActionSchema
 {
-    public static function factory()
+    public static function factory(): DepartActionSchema
     {
         return new DepartActionSchema('https://schema.org/', 'DepartAction');
     }

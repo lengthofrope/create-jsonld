@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class GovernmentServiceSchema extends ServiceSchema
 {
-    public static function factory()
+    public static function factory(): GovernmentServiceSchema
     {
         return new GovernmentServiceSchema('https://schema.org/', 'GovernmentService');
     }
@@ -42,8 +42,9 @@ class GovernmentServiceSchema extends ServiceSchema
      * The operating organization, if different from the provider.  This enables the representation of services that are provided by an organization, but operated by another organization like a subcontractor.
      *
      * @param $serviceOperator 
+     * @return static
      **/
-    public function setServiceOperator($serviceOperator) {
+    public function setServiceOperator($serviceOperator): static {
         $this->properties['serviceOperator'] = $serviceOperator;
 
         return $this;
@@ -60,8 +61,9 @@ class GovernmentServiceSchema extends ServiceSchema
      * Indicates a legal jurisdiction, e.g. of some legislation, or where some government service is based.
      *
      * @param $jurisdiction |
+     * @return static
      **/
-    public function setJurisdiction($jurisdiction) {
+    public function setJurisdiction($jurisdiction): static {
         $this->properties['jurisdiction'] = $jurisdiction;
 
         return $this;

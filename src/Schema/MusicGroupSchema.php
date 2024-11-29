@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MusicGroupSchema extends PerformingGroupSchema
 {
-    public static function factory()
+    public static function factory(): MusicGroupSchema
     {
         return new MusicGroupSchema('https://schema.org/', 'MusicGroup');
     }
@@ -42,8 +42,9 @@ class MusicGroupSchema extends PerformingGroupSchema
      * A music album.
      *
      * @param $album 
+     * @return static
      **/
-    public function setAlbum($album) {
+    public function setAlbum($album): static {
         $this->properties['album'] = $album;
 
         return $this;
@@ -60,8 +61,9 @@ class MusicGroupSchema extends PerformingGroupSchema
      * A collection of music albums.
      *
      * @param $albums 
+     * @return static
      **/
-    public function setAlbums($albums) {
+    public function setAlbums($albums): static {
         $this->properties['albums'] = $albums;
 
         return $this;
@@ -78,8 +80,9 @@ class MusicGroupSchema extends PerformingGroupSchema
      * Genre of the creative work, broadcast channel or group.
      *
      * @param $genre |
+     * @return static
      **/
-    public function setGenre($genre) {
+    public function setGenre($genre): static {
         $this->properties['genre'] = $genre;
 
         return $this;
@@ -96,8 +99,9 @@ class MusicGroupSchema extends PerformingGroupSchema
      * A music recording (track)&#x2014;usually a single song.
      *
      * @param $tracks 
+     * @return static
      **/
-    public function setTracks($tracks) {
+    public function setTracks($tracks): static {
         $this->properties['tracks'] = $tracks;
 
         return $this;
@@ -114,8 +118,9 @@ class MusicGroupSchema extends PerformingGroupSchema
      * A music recording (track)&#x2014;usually a single song. If an ItemList is given, the list should contain items of type MusicRecording.
      *
      * @param $track |
+     * @return static
      **/
-    public function setTrack($track) {
+    public function setTrack($track): static {
         $this->properties['track'] = $track;
 
         return $this;
@@ -132,8 +137,9 @@ class MusicGroupSchema extends PerformingGroupSchema
      * A member of a music group&#x2014;for example, John, Paul, George, or Ringo.
      *
      * @param $musicGroupMember 
+     * @return static
      **/
-    public function setMusicGroupMember($musicGroupMember) {
+    public function setMusicGroupMember($musicGroupMember): static {
         $this->properties['musicGroupMember'] = $musicGroupMember;
 
         return $this;

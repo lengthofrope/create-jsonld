@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class HouseSchema extends AccommodationSchema
 {
-    public static function factory()
+    public static function factory(): HouseSchema
     {
         return new HouseSchema('https://schema.org/', 'House');
     }
@@ -43,8 +43,9 @@ class HouseSchema extends AccommodationSchema
 Typical unit code(s): ROM for room or C62 for no unit. The type of room can be put in the unitText property of the QuantitativeValue.
      *
      * @param $numberOfRooms |
+     * @return static
      **/
-    public function setNumberOfRooms($numberOfRooms) {
+    public function setNumberOfRooms($numberOfRooms): static {
         $this->properties['numberOfRooms'] = $numberOfRooms;
 
         return $this;

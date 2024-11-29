@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class TravelActionSchema extends MoveActionSchema
 {
-    public static function factory()
+    public static function factory(): TravelActionSchema
     {
         return new TravelActionSchema('https://schema.org/', 'TravelAction');
     }
@@ -42,8 +42,9 @@ class TravelActionSchema extends MoveActionSchema
      * The distance travelled, e.g. exercising or travelling.
      *
      * @param $distance 
+     * @return static
      **/
-    public function setDistance($distance) {
+    public function setDistance($distance): static {
         $this->properties['distance'] = $distance;
 
         return $this;

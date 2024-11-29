@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class FloristSchema extends StoreSchema
 {
-    public static function factory()
+    public static function factory(): FloristSchema
     {
         return new FloristSchema('https://schema.org/', 'Florist');
     }

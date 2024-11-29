@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MoneyTransferSchema extends TransferActionSchema
 {
-    public static function factory()
+    public static function factory(): MoneyTransferSchema
     {
         return new MoneyTransferSchema('https://schema.org/', 'MoneyTransfer');
     }
@@ -42,8 +42,9 @@ class MoneyTransferSchema extends TransferActionSchema
      * A bank or bank’s branch, financial institution or international financial institution operating the beneficiary’s bank account or releasing funds for the beneficiary.
      *
      * @param $beneficiaryBank |
+     * @return static
      **/
-    public function setBeneficiaryBank($beneficiaryBank) {
+    public function setBeneficiaryBank($beneficiaryBank): static {
         $this->properties['beneficiaryBank'] = $beneficiaryBank;
 
         return $this;
@@ -60,8 +61,9 @@ class MoneyTransferSchema extends TransferActionSchema
      * The amount of money.
      *
      * @param $amount |
+     * @return static
      **/
-    public function setAmount($amount) {
+    public function setAmount($amount): static {
         $this->properties['amount'] = $amount;
 
         return $this;

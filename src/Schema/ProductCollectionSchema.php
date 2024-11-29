@@ -31,9 +31,9 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ProductCollectionSchema extends \LengthOfRope\JSONLD\Elements\Element
+class ProductCollectionSchema extends ProductSchema
 {
-    public static function factory()
+    public static function factory(): ProductCollectionSchema
     {
         return new ProductCollectionSchema('https://schema.org/', 'ProductCollection');
     }
@@ -42,8 +42,9 @@ class ProductCollectionSchema extends \LengthOfRope\JSONLD\Elements\Element
      * This links to a node or nodes indicating the exact quantity of the products included in  an [[Offer]] or [[ProductCollection]].
      *
      * @param $includesObject 
+     * @return static
      **/
-    public function setIncludesObject($includesObject) {
+    public function setIncludesObject($includesObject): static {
         $this->properties['includesObject'] = $includesObject;
 
         return $this;

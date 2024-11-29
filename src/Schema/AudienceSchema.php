@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class AudienceSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): AudienceSchema
     {
         return new AudienceSchema('https://schema.org/', 'Audience');
     }
@@ -42,8 +42,9 @@ class AudienceSchema extends IntangibleSchema
      * The geographic area associated with the audience.
      *
      * @param $geographicArea 
+     * @return static
      **/
-    public function setGeographicArea($geographicArea) {
+    public function setGeographicArea($geographicArea): static {
         $this->properties['geographicArea'] = $geographicArea;
 
         return $this;
@@ -60,8 +61,9 @@ class AudienceSchema extends IntangibleSchema
      * The target group associated with a given audience (e.g. veterans, car owners, musicians, etc.).
      *
      * @param $audienceType 
+     * @return static
      **/
-    public function setAudienceType($audienceType) {
+    public function setAudienceType($audienceType): static {
         $this->properties['audienceType'] = $audienceType;
 
         return $this;

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class GameSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): GameSchema
     {
         return new GameSchema('https://schema.org/', 'Game');
     }
@@ -42,8 +42,9 @@ class GameSchema extends CreativeWorkSchema
      * The task that a player-controlled character, or group of characters may complete in order to gain a reward.
      *
      * @param $quest 
+     * @return static
      **/
-    public function setQuest($quest) {
+    public function setQuest($quest): static {
         $this->properties['quest'] = $quest;
 
         return $this;
@@ -60,8 +61,9 @@ class GameSchema extends CreativeWorkSchema
      * Indicate how many people can play this game (minimum, maximum, or range).
      *
      * @param $numberOfPlayers 
+     * @return static
      **/
-    public function setNumberOfPlayers($numberOfPlayers) {
+    public function setNumberOfPlayers($numberOfPlayers): static {
         $this->properties['numberOfPlayers'] = $numberOfPlayers;
 
         return $this;
@@ -78,8 +80,9 @@ class GameSchema extends CreativeWorkSchema
      * An item is an object within the game world that can be collected by a player or, occasionally, a non-player character.
      *
      * @param $gameItem 
+     * @return static
      **/
-    public function setGameItem($gameItem) {
+    public function setGameItem($gameItem): static {
         $this->properties['gameItem'] = $gameItem;
 
         return $this;
@@ -96,8 +99,9 @@ class GameSchema extends CreativeWorkSchema
      * Real or fictional location of the game (or part of game).
      *
      * @param $gameLocation ||
+     * @return static
      **/
-    public function setGameLocation($gameLocation) {
+    public function setGameLocation($gameLocation): static {
         $this->properties['gameLocation'] = $gameLocation;
 
         return $this;
@@ -114,8 +118,9 @@ class GameSchema extends CreativeWorkSchema
      * A piece of data that represents a particular aspect of a fictional character (skill, power, character points, advantage, disadvantage).
      *
      * @param $characterAttribute 
+     * @return static
      **/
-    public function setCharacterAttribute($characterAttribute) {
+    public function setCharacterAttribute($characterAttribute): static {
         $this->properties['characterAttribute'] = $characterAttribute;
 
         return $this;

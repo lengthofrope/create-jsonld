@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PaymentMethodTypeSchema extends EnumerationSchema
 {
-    public static function factory()
+    public static function factory(): PaymentMethodTypeSchema
     {
         return new PaymentMethodTypeSchema('https://schema.org/', 'PaymentMethodType');
     }

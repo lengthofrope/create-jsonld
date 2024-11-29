@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class WebAPISchema extends ServiceSchema
 {
-    public static function factory()
+    public static function factory(): WebAPISchema
     {
         return new WebAPISchema('https://schema.org/', 'WebAPI');
     }
@@ -42,8 +42,9 @@ class WebAPISchema extends ServiceSchema
      * Further documentation describing the Web API in more detail.
      *
      * @param $documentation |
+     * @return static
      **/
-    public function setDocumentation($documentation) {
+    public function setDocumentation($documentation): static {
         $this->properties['documentation'] = $documentation;
 
         return $this;

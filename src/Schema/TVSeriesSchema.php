@@ -31,9 +31,9 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class TVSeriesSchema extends \LengthOfRope\JSONLD\Elements\Element
+class TVSeriesSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): TVSeriesSchema
     {
         return new TVSeriesSchema('https://schema.org/', 'TVSeries');
     }
@@ -42,8 +42,9 @@ class TVSeriesSchema extends \LengthOfRope\JSONLD\Elements\Element
      * An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip.
      *
      * @param $actor |
+     * @return static
      **/
-    public function setActor($actor) {
+    public function setActor($actor): static {
         $this->properties['actor'] = $actor;
 
         return $this;
@@ -60,8 +61,9 @@ class TVSeriesSchema extends \LengthOfRope\JSONLD\Elements\Element
      * The trailer of a movie or TV/radio series, season, episode, etc.
      *
      * @param $trailer 
+     * @return static
      **/
-    public function setTrailer($trailer) {
+    public function setTrailer($trailer): static {
         $this->properties['trailer'] = $trailer;
 
         return $this;
@@ -83,8 +85,9 @@ Since schema.org types like [[Movie]], [[TVEpisode]], [[TVSeason]], and [[TVSeri
 
      *
      * @param $titleEIDR |
+     * @return static
      **/
-    public function setTitleEIDR($titleEIDR) {
+    public function setTitleEIDR($titleEIDR): static {
         $this->properties['titleEIDR'] = $titleEIDR;
 
         return $this;
@@ -101,8 +104,9 @@ Since schema.org types like [[Movie]], [[TVEpisode]], [[TVSeason]], and [[TVSeri
      * An actor, e.g. in TV, radio, movie, video games etc. Actors can be associated with individual items or with a series, episode, clip.
      *
      * @param $actors 
+     * @return static
      **/
-    public function setActors($actors) {
+    public function setActors($actors): static {
         $this->properties['actors'] = $actors;
 
         return $this;
@@ -119,8 +123,9 @@ Since schema.org types like [[Movie]], [[TVEpisode]], [[TVSeason]], and [[TVSeri
      * A season that is part of the media series.
      *
      * @param $containsSeason 
+     * @return static
      **/
-    public function setContainsSeason($containsSeason) {
+    public function setContainsSeason($containsSeason): static {
         $this->properties['containsSeason'] = $containsSeason;
 
         return $this;
@@ -137,8 +142,9 @@ Since schema.org types like [[Movie]], [[TVEpisode]], [[TVSeason]], and [[TVSeri
      * The number of seasons in this series.
      *
      * @param $numberOfSeasons 
+     * @return static
      **/
-    public function setNumberOfSeasons($numberOfSeasons) {
+    public function setNumberOfSeasons($numberOfSeasons): static {
         $this->properties['numberOfSeasons'] = $numberOfSeasons;
 
         return $this;
@@ -155,8 +161,9 @@ Since schema.org types like [[Movie]], [[TVEpisode]], [[TVSeason]], and [[TVSeri
      * An episode of a TV, radio or game media within a series or season.
      *
      * @param $episode 
+     * @return static
      **/
-    public function setEpisode($episode) {
+    public function setEpisode($episode): static {
         $this->properties['episode'] = $episode;
 
         return $this;
@@ -173,8 +180,9 @@ Since schema.org types like [[Movie]], [[TVEpisode]], [[TVSeason]], and [[TVSeri
      * A director of e.g. TV, radio, movie, video games etc. content. Directors can be associated with individual items or with a series, episode, clip.
      *
      * @param $directors 
+     * @return static
      **/
-    public function setDirectors($directors) {
+    public function setDirectors($directors): static {
         $this->properties['directors'] = $directors;
 
         return $this;
@@ -191,8 +199,9 @@ Since schema.org types like [[Movie]], [[TVEpisode]], [[TVSeason]], and [[TVSeri
      * A season in a media series.
      *
      * @param $seasons 
+     * @return static
      **/
-    public function setSeasons($seasons) {
+    public function setSeasons($seasons): static {
         $this->properties['seasons'] = $seasons;
 
         return $this;
@@ -209,8 +218,9 @@ Since schema.org types like [[Movie]], [[TVEpisode]], [[TVSeason]], and [[TVSeri
      * A season in a media series.
      *
      * @param $season |
+     * @return static
      **/
-    public function setSeason($season) {
+    public function setSeason($season): static {
         $this->properties['season'] = $season;
 
         return $this;
@@ -227,8 +237,9 @@ Since schema.org types like [[Movie]], [[TVEpisode]], [[TVSeason]], and [[TVSeri
      * The production company or studio responsible for the item, e.g. series, video game, episode etc.
      *
      * @param $productionCompany 
+     * @return static
      **/
-    public function setProductionCompany($productionCompany) {
+    public function setProductionCompany($productionCompany): static {
         $this->properties['productionCompany'] = $productionCompany;
 
         return $this;
@@ -249,8 +260,9 @@ In the case of TV and movie, this would be the country of the principle offices 
 In the case of products, the country of origin of the product. The exact interpretation of this may vary by context and product type, and cannot be fully enumerated here.
      *
      * @param $countryOfOrigin 
+     * @return static
      **/
-    public function setCountryOfOrigin($countryOfOrigin) {
+    public function setCountryOfOrigin($countryOfOrigin): static {
         $this->properties['countryOfOrigin'] = $countryOfOrigin;
 
         return $this;
@@ -267,8 +279,9 @@ In the case of products, the country of origin of the product. The exact interpr
      * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual items or with a series, episode, clip.
      *
      * @param $director 
+     * @return static
      **/
-    public function setDirector($director) {
+    public function setDirector($director): static {
         $this->properties['director'] = $director;
 
         return $this;
@@ -285,8 +298,9 @@ In the case of products, the country of origin of the product. The exact interpr
      * The number of episodes in this season or series.
      *
      * @param $numberOfEpisodes 
+     * @return static
      **/
-    public function setNumberOfEpisodes($numberOfEpisodes) {
+    public function setNumberOfEpisodes($numberOfEpisodes): static {
         $this->properties['numberOfEpisodes'] = $numberOfEpisodes;
 
         return $this;
@@ -303,8 +317,9 @@ In the case of products, the country of origin of the product. The exact interpr
      * The composer of the soundtrack.
      *
      * @param $musicBy |
+     * @return static
      **/
-    public function setMusicBy($musicBy) {
+    public function setMusicBy($musicBy): static {
         $this->properties['musicBy'] = $musicBy;
 
         return $this;
@@ -321,8 +336,9 @@ In the case of products, the country of origin of the product. The exact interpr
      * An episode of a TV/radio series or season.
      *
      * @param $episodes 
+     * @return static
      **/
-    public function setEpisodes($episodes) {
+    public function setEpisodes($episodes): static {
         $this->properties['episodes'] = $episodes;
 
         return $this;

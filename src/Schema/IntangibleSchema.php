@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class IntangibleSchema extends ThingSchema
 {
-    public static function factory()
+    public static function factory(): IntangibleSchema
     {
         return new IntangibleSchema('https://schema.org/', 'Intangible');
     }

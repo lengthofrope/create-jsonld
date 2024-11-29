@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class GovernmentOfficeSchema extends LocalBusinessSchema
 {
-    public static function factory()
+    public static function factory(): GovernmentOfficeSchema
     {
         return new GovernmentOfficeSchema('https://schema.org/', 'GovernmentOffice');
     }

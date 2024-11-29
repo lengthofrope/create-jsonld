@@ -36,7 +36,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DayOfWeekSchema extends EnumerationSchema
 {
-    public static function factory()
+    public static function factory(): DayOfWeekSchema
     {
         return new DayOfWeekSchema('https://schema.org/', 'DayOfWeek');
     }

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class RentActionSchema extends TradeActionSchema
 {
-    public static function factory()
+    public static function factory(): RentActionSchema
     {
         return new RentActionSchema('https://schema.org/', 'RentAction');
     }
@@ -42,8 +42,9 @@ class RentActionSchema extends TradeActionSchema
      * A sub property of participant. The real estate agent involved in the action.
      *
      * @param $realEstateAgent 
+     * @return static
      **/
-    public function setRealEstateAgent($realEstateAgent) {
+    public function setRealEstateAgent($realEstateAgent): static {
         $this->properties['realEstateAgent'] = $realEstateAgent;
 
         return $this;
@@ -60,8 +61,9 @@ class RentActionSchema extends TradeActionSchema
      * A sub property of participant. The owner of the real estate property.
      *
      * @param $landlord |
+     * @return static
      **/
-    public function setLandlord($landlord) {
+    public function setLandlord($landlord): static {
         $this->properties['landlord'] = $landlord;
 
         return $this;

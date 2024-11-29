@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class SiteNavigationElementSchema extends WebPageElementSchema
 {
-    public static function factory()
+    public static function factory(): SiteNavigationElementSchema
     {
         return new SiteNavigationElementSchema('https://schema.org/', 'SiteNavigationElement');
     }

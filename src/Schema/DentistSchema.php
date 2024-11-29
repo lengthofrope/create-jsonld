@@ -31,9 +31,9 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class DentistSchema extends \LengthOfRope\JSONLD\Elements\Element
+class DentistSchema extends MedicalOrganizationSchema
 {
-    public static function factory()
+    public static function factory(): DentistSchema
     {
         return new DentistSchema('https://schema.org/', 'Dentist');
     }

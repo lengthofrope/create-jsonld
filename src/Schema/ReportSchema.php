@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ReportSchema extends ArticleSchema
 {
-    public static function factory()
+    public static function factory(): ReportSchema
     {
         return new ReportSchema('https://schema.org/', 'Report');
     }
@@ -42,8 +42,9 @@ class ReportSchema extends ArticleSchema
      * The number or other unique designator assigned to a Report by the publishing organization.
      *
      * @param $reportNumber 
+     * @return static
      **/
-    public function setReportNumber($reportNumber) {
+    public function setReportNumber($reportNumber): static {
         $this->properties['reportNumber'] = $reportNumber;
 
         return $this;

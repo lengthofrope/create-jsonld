@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class OfferItemConditionSchema extends EnumerationSchema
 {
-    public static function factory()
+    public static function factory(): OfferItemConditionSchema
     {
         return new OfferItemConditionSchema('https://schema.org/', 'OfferItemCondition');
     }

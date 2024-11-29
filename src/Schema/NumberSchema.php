@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class NumberSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
-    public static function factory()
+    public static function factory(): NumberSchema
     {
         return new NumberSchema('https://schema.org/', 'Number');
     }

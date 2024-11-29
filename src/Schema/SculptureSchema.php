@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class SculptureSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): SculptureSchema
     {
         return new SculptureSchema('https://schema.org/', 'Sculpture');
     }

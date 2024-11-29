@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class LinkRoleSchema extends RoleSchema
 {
-    public static function factory()
+    public static function factory(): LinkRoleSchema
     {
         return new LinkRoleSchema('https://schema.org/', 'LinkRole');
     }
@@ -42,8 +42,9 @@ class LinkRoleSchema extends RoleSchema
      * Indicates the relationship type of a Web link. 
      *
      * @param $linkRelationship 
+     * @return static
      **/
-    public function setLinkRelationship($linkRelationship) {
+    public function setLinkRelationship($linkRelationship): static {
         $this->properties['linkRelationship'] = $linkRelationship;
 
         return $this;
@@ -60,8 +61,9 @@ class LinkRoleSchema extends RoleSchema
      * The language of the content or performance or used in an action. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
      *
      * @param $inLanguage |
+     * @return static
      **/
-    public function setInLanguage($inLanguage) {
+    public function setInLanguage($inLanguage): static {
         $this->properties['inLanguage'] = $inLanguage;
 
         return $this;

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DaySpaSchema extends HealthAndBeautyBusinessSchema
 {
-    public static function factory()
+    public static function factory(): DaySpaSchema
     {
         return new DaySpaSchema('https://schema.org/', 'DaySpa');
     }

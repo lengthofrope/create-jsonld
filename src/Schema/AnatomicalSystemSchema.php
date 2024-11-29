@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class AnatomicalSystemSchema extends MedicalEntitySchema
 {
-    public static function factory()
+    public static function factory(): AnatomicalSystemSchema
     {
         return new AnatomicalSystemSchema('https://schema.org/', 'AnatomicalSystem');
     }
@@ -42,8 +42,9 @@ class AnatomicalSystemSchema extends MedicalEntitySchema
      * Related anatomical structure(s) that are not part of the system but relate or connect to it, such as vascular bundles associated with an organ system.
      *
      * @param $relatedStructure 
+     * @return static
      **/
-    public function setRelatedStructure($relatedStructure) {
+    public function setRelatedStructure($relatedStructure): static {
         $this->properties['relatedStructure'] = $relatedStructure;
 
         return $this;
@@ -60,8 +61,9 @@ class AnatomicalSystemSchema extends MedicalEntitySchema
      * A medical therapy related to this anatomy.
      *
      * @param $relatedTherapy 
+     * @return static
      **/
-    public function setRelatedTherapy($relatedTherapy) {
+    public function setRelatedTherapy($relatedTherapy): static {
         $this->properties['relatedTherapy'] = $relatedTherapy;
 
         return $this;
@@ -78,8 +80,9 @@ class AnatomicalSystemSchema extends MedicalEntitySchema
      * Specifying something physically contained by something else. Typically used here for the underlying anatomical structures, such as organs, that comprise the anatomical system.
      *
      * @param $comprisedOf |
+     * @return static
      **/
-    public function setComprisedOf($comprisedOf) {
+    public function setComprisedOf($comprisedOf): static {
         $this->properties['comprisedOf'] = $comprisedOf;
 
         return $this;
@@ -96,8 +99,9 @@ class AnatomicalSystemSchema extends MedicalEntitySchema
      * A medical condition associated with this anatomy.
      *
      * @param $relatedCondition 
+     * @return static
      **/
-    public function setRelatedCondition($relatedCondition) {
+    public function setRelatedCondition($relatedCondition): static {
         $this->properties['relatedCondition'] = $relatedCondition;
 
         return $this;
@@ -114,8 +118,9 @@ class AnatomicalSystemSchema extends MedicalEntitySchema
      * If applicable, a description of the pathophysiology associated with the anatomical system, including potential abnormal changes in the mechanical, physical, and biochemical functions of the system.
      *
      * @param $associatedPathophysiology 
+     * @return static
      **/
-    public function setAssociatedPathophysiology($associatedPathophysiology) {
+    public function setAssociatedPathophysiology($associatedPathophysiology): static {
         $this->properties['associatedPathophysiology'] = $associatedPathophysiology;
 
         return $this;

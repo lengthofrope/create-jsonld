@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class FilmActionSchema extends CreateActionSchema
 {
-    public static function factory()
+    public static function factory(): FilmActionSchema
     {
         return new FilmActionSchema('https://schema.org/', 'FilmAction');
     }

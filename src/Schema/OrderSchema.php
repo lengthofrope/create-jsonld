@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class OrderSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): OrderSchema
     {
         return new OrderSchema('https://schema.org/', 'Order');
     }
@@ -42,8 +42,9 @@ class OrderSchema extends IntangibleSchema
      * The offer(s) -- e.g., product, quantity and price combinations -- included in the order.
      *
      * @param $acceptedOffer 
+     * @return static
      **/
-    public function setAcceptedOffer($acceptedOffer) {
+    public function setAcceptedOffer($acceptedOffer): static {
         $this->properties['acceptedOffer'] = $acceptedOffer;
 
         return $this;
@@ -60,8 +61,9 @@ class OrderSchema extends IntangibleSchema
      * Party placing the order or paying the invoice.
      *
      * @param $customer |
+     * @return static
      **/
-    public function setCustomer($customer) {
+    public function setCustomer($customer): static {
         $this->properties['customer'] = $customer;
 
         return $this;
@@ -78,8 +80,9 @@ class OrderSchema extends IntangibleSchema
      * Indicates whether the offer was accepted as a gift for someone other than the buyer.
      *
      * @param $isGift 
+     * @return static
      **/
-    public function setIsGift($isGift) {
+    public function setIsGift($isGift): static {
         $this->properties['isGift'] = $isGift;
 
         return $this;
@@ -96,8 +99,9 @@ class OrderSchema extends IntangibleSchema
      * The name of the credit card or other method of payment for the order.
      *
      * @param $paymentMethod |
+     * @return static
      **/
-    public function setPaymentMethod($paymentMethod) {
+    public function setPaymentMethod($paymentMethod): static {
         $this->properties['paymentMethod'] = $paymentMethod;
 
         return $this;
@@ -114,8 +118,9 @@ class OrderSchema extends IntangibleSchema
      * The URL for sending a payment.
      *
      * @param $paymentUrl 
+     * @return static
      **/
-    public function setPaymentUrl($paymentUrl) {
+    public function setPaymentUrl($paymentUrl): static {
         $this->properties['paymentUrl'] = $paymentUrl;
 
         return $this;
@@ -132,8 +137,9 @@ class OrderSchema extends IntangibleSchema
      * 'merchant' is an out-dated term for 'seller'.
      *
      * @param $merchant |
+     * @return static
      **/
-    public function setMerchant($merchant) {
+    public function setMerchant($merchant): static {
         $this->properties['merchant'] = $merchant;
 
         return $this;
@@ -150,8 +156,9 @@ class OrderSchema extends IntangibleSchema
      * The order is being paid as part of the referenced Invoice.
      *
      * @param $partOfInvoice 
+     * @return static
      **/
-    public function setPartOfInvoice($partOfInvoice) {
+    public function setPartOfInvoice($partOfInvoice): static {
         $this->properties['partOfInvoice'] = $partOfInvoice;
 
         return $this;
@@ -168,8 +175,9 @@ class OrderSchema extends IntangibleSchema
      * The date that payment is due.
      *
      * @param $paymentDueDate |
+     * @return static
      **/
-    public function setPaymentDueDate($paymentDueDate) {
+    public function setPaymentDueDate($paymentDueDate): static {
         $this->properties['paymentDueDate'] = $paymentDueDate;
 
         return $this;
@@ -186,8 +194,9 @@ class OrderSchema extends IntangibleSchema
      * An entity that arranges for an exchange between a buyer and a seller.  In most cases a broker never acquires or releases ownership of a product or service involved in an exchange.  If it is not clear whether an entity is a broker, seller, or buyer, the latter two terms are preferred.
      *
      * @param $broker |
+     * @return static
      **/
-    public function setBroker($broker) {
+    public function setBroker($broker): static {
         $this->properties['broker'] = $broker;
 
         return $this;
@@ -204,8 +213,9 @@ class OrderSchema extends IntangibleSchema
      * Any discount applied (to an Order).
      *
      * @param $discount |
+     * @return static
      **/
-    public function setDiscount($discount) {
+    public function setDiscount($discount): static {
         $this->properties['discount'] = $discount;
 
         return $this;
@@ -222,8 +232,9 @@ class OrderSchema extends IntangibleSchema
      * Date order was placed.
      *
      * @param $orderDate |
+     * @return static
      **/
-    public function setOrderDate($orderDate) {
+    public function setOrderDate($orderDate): static {
         $this->properties['orderDate'] = $orderDate;
 
         return $this;
@@ -240,8 +251,9 @@ class OrderSchema extends IntangibleSchema
      * An identifier for the method of payment used (e.g. the last 4 digits of the credit card).
      *
      * @param $paymentMethodId 
+     * @return static
      **/
-    public function setPaymentMethodId($paymentMethodId) {
+    public function setPaymentMethodId($paymentMethodId): static {
         $this->properties['paymentMethodId'] = $paymentMethodId;
 
         return $this;
@@ -258,8 +270,9 @@ class OrderSchema extends IntangibleSchema
      * The item ordered.
      *
      * @param $orderedItem ||
+     * @return static
      **/
-    public function setOrderedItem($orderedItem) {
+    public function setOrderedItem($orderedItem): static {
         $this->properties['orderedItem'] = $orderedItem;
 
         return $this;
@@ -276,8 +289,9 @@ class OrderSchema extends IntangibleSchema
      * The date that payment is due.
      *
      * @param $paymentDue 
+     * @return static
      **/
-    public function setPaymentDue($paymentDue) {
+    public function setPaymentDue($paymentDue): static {
         $this->properties['paymentDue'] = $paymentDue;
 
         return $this;
@@ -294,8 +308,9 @@ class OrderSchema extends IntangibleSchema
      * An entity which offers (sells / leases / lends / loans) the services / goods.  A seller may also be a provider.
      *
      * @param $seller |
+     * @return static
      **/
-    public function setSeller($seller) {
+    public function setSeller($seller): static {
         $this->properties['seller'] = $seller;
 
         return $this;
@@ -312,8 +327,9 @@ class OrderSchema extends IntangibleSchema
      * The currency of the discount.\n\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR".
      *
      * @param $discountCurrency 
+     * @return static
      **/
-    public function setDiscountCurrency($discountCurrency) {
+    public function setDiscountCurrency($discountCurrency): static {
         $this->properties['discountCurrency'] = $discountCurrency;
 
         return $this;
@@ -330,8 +346,9 @@ class OrderSchema extends IntangibleSchema
      * The delivery of the parcel related to this order or order item.
      *
      * @param $orderDelivery 
+     * @return static
      **/
-    public function setOrderDelivery($orderDelivery) {
+    public function setOrderDelivery($orderDelivery): static {
         $this->properties['orderDelivery'] = $orderDelivery;
 
         return $this;
@@ -348,8 +365,9 @@ class OrderSchema extends IntangibleSchema
      * The billing address for the order.
      *
      * @param $billingAddress 
+     * @return static
      **/
-    public function setBillingAddress($billingAddress) {
+    public function setBillingAddress($billingAddress): static {
         $this->properties['billingAddress'] = $billingAddress;
 
         return $this;
@@ -366,8 +384,9 @@ class OrderSchema extends IntangibleSchema
      * A number that confirms the given order or payment has been received.
      *
      * @param $confirmationNumber 
+     * @return static
      **/
-    public function setConfirmationNumber($confirmationNumber) {
+    public function setConfirmationNumber($confirmationNumber): static {
         $this->properties['confirmationNumber'] = $confirmationNumber;
 
         return $this;
@@ -384,8 +403,9 @@ class OrderSchema extends IntangibleSchema
      * The current status of the order.
      *
      * @param $orderStatus 
+     * @return static
      **/
-    public function setOrderStatus($orderStatus) {
+    public function setOrderStatus($orderStatus): static {
         $this->properties['orderStatus'] = $orderStatus;
 
         return $this;
@@ -402,8 +422,9 @@ class OrderSchema extends IntangibleSchema
      * Code used to redeem a discount.
      *
      * @param $discountCode 
+     * @return static
      **/
-    public function setDiscountCode($discountCode) {
+    public function setDiscountCode($discountCode): static {
         $this->properties['discountCode'] = $discountCode;
 
         return $this;
@@ -420,8 +441,9 @@ class OrderSchema extends IntangibleSchema
      * The identifier of the transaction.
      *
      * @param $orderNumber 
+     * @return static
      **/
-    public function setOrderNumber($orderNumber) {
+    public function setOrderNumber($orderNumber): static {
         $this->properties['orderNumber'] = $orderNumber;
 
         return $this;

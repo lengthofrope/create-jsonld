@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class OnDemandEventSchema extends PublicationEventSchema
 {
-    public static function factory()
+    public static function factory(): OnDemandEventSchema
     {
         return new OnDemandEventSchema('https://schema.org/', 'OnDemandEvent');
     }

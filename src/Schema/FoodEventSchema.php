@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class FoodEventSchema extends EventSchema
 {
-    public static function factory()
+    public static function factory(): FoodEventSchema
     {
         return new FoodEventSchema('https://schema.org/', 'FoodEvent');
     }

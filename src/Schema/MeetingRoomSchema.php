@@ -36,7 +36,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MeetingRoomSchema extends RoomSchema
 {
-    public static function factory()
+    public static function factory(): MeetingRoomSchema
     {
         return new MeetingRoomSchema('https://schema.org/', 'MeetingRoom');
     }

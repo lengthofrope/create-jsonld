@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class AskActionSchema extends CommunicateActionSchema
 {
-    public static function factory()
+    public static function factory(): AskActionSchema
     {
         return new AskActionSchema('https://schema.org/', 'AskAction');
     }
@@ -42,8 +42,9 @@ class AskActionSchema extends CommunicateActionSchema
      * A sub property of object. A question.
      *
      * @param $question 
+     * @return static
      **/
-    public function setQuestion($question) {
+    public function setQuestion($question): static {
         $this->properties['question'] = $question;
 
         return $this;

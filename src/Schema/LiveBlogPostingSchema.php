@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class LiveBlogPostingSchema extends BlogPostingSchema
 {
-    public static function factory()
+    public static function factory(): LiveBlogPostingSchema
     {
         return new LiveBlogPostingSchema('https://schema.org/', 'LiveBlogPosting');
     }
@@ -42,8 +42,9 @@ class LiveBlogPostingSchema extends BlogPostingSchema
      * The time when the live blog will begin covering the Event. Note that coverage may begin before the Event's start time. The LiveBlogPosting may also be created before coverage begins.
      *
      * @param $coverageStartTime 
+     * @return static
      **/
-    public function setCoverageStartTime($coverageStartTime) {
+    public function setCoverageStartTime($coverageStartTime): static {
         $this->properties['coverageStartTime'] = $coverageStartTime;
 
         return $this;
@@ -60,8 +61,9 @@ class LiveBlogPostingSchema extends BlogPostingSchema
      * An update to the LiveBlog.
      *
      * @param $liveBlogUpdate 
+     * @return static
      **/
-    public function setLiveBlogUpdate($liveBlogUpdate) {
+    public function setLiveBlogUpdate($liveBlogUpdate): static {
         $this->properties['liveBlogUpdate'] = $liveBlogUpdate;
 
         return $this;
@@ -78,8 +80,9 @@ class LiveBlogPostingSchema extends BlogPostingSchema
      * The time when the live blog will stop covering the Event. Note that coverage may continue after the Event concludes.
      *
      * @param $coverageEndTime 
+     * @return static
      **/
-    public function setCoverageEndTime($coverageEndTime) {
+    public function setCoverageEndTime($coverageEndTime): static {
         $this->properties['coverageEndTime'] = $coverageEndTime;
 
         return $this;

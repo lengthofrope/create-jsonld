@@ -31,9 +31,9 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class HowToSectionSchema extends \LengthOfRope\JSONLD\Elements\Element
+class HowToSectionSchema extends ListItemSchema
 {
-    public static function factory()
+    public static function factory(): HowToSectionSchema
     {
         return new HowToSectionSchema('https://schema.org/', 'HowToSection');
     }
@@ -42,8 +42,9 @@ class HowToSectionSchema extends \LengthOfRope\JSONLD\Elements\Element
      * A single step item (as HowToStep, text, document, video, etc.) or a HowToSection (originally misnamed 'steps'; 'step' is preferred).
      *
      * @param $steps ||
+     * @return static
      **/
-    public function setSteps($steps) {
+    public function setSteps($steps): static {
         $this->properties['steps'] = $steps;
 
         return $this;

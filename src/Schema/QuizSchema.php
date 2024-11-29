@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class QuizSchema extends LearningResourceSchema
 {
-    public static function factory()
+    public static function factory(): QuizSchema
     {
         return new QuizSchema('https://schema.org/', 'Quiz');
     }

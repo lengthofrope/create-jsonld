@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class CancelActionSchema extends PlanActionSchema
 {
-    public static function factory()
+    public static function factory(): CancelActionSchema
     {
         return new CancelActionSchema('https://schema.org/', 'CancelAction');
     }

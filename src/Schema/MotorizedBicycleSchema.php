@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MotorizedBicycleSchema extends VehicleSchema
 {
-    public static function factory()
+    public static function factory(): MotorizedBicycleSchema
     {
         return new MotorizedBicycleSchema('https://schema.org/', 'MotorizedBicycle');
     }

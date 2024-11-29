@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class UserTweetsSchema extends UserInteractionSchema
 {
-    public static function factory()
+    public static function factory(): UserTweetsSchema
     {
         return new UserTweetsSchema('https://schema.org/', 'UserTweets');
     }

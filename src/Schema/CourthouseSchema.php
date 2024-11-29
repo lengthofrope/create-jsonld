@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class CourthouseSchema extends GovernmentBuildingSchema
 {
-    public static function factory()
+    public static function factory(): CourthouseSchema
     {
         return new CourthouseSchema('https://schema.org/', 'Courthouse');
     }

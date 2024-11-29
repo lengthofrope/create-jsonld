@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class BoneSchema extends AnatomicalStructureSchema
 {
-    public static function factory()
+    public static function factory(): BoneSchema
     {
         return new BoneSchema('https://schema.org/', 'Bone');
     }

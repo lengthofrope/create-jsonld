@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ApplyActionSchema extends OrganizeActionSchema
 {
-    public static function factory()
+    public static function factory(): ApplyActionSchema
     {
         return new ApplyActionSchema('https://schema.org/', 'ApplyAction');
     }

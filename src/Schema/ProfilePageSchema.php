@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ProfilePageSchema extends WebPageSchema
 {
-    public static function factory()
+    public static function factory(): ProfilePageSchema
     {
         return new ProfilePageSchema('https://schema.org/', 'ProfilePage');
     }

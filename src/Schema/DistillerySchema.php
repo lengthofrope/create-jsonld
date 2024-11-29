@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DistillerySchema extends FoodEstablishmentSchema
 {
-    public static function factory()
+    public static function factory(): DistillerySchema
     {
         return new DistillerySchema('https://schema.org/', 'Distillery');
     }

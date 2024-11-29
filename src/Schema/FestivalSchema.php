@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class FestivalSchema extends EventSchema
 {
-    public static function factory()
+    public static function factory(): FestivalSchema
     {
         return new FestivalSchema('https://schema.org/', 'Festival');
     }

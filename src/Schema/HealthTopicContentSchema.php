@@ -34,7 +34,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class HealthTopicContentSchema extends WebContentSchema
 {
-    public static function factory()
+    public static function factory(): HealthTopicContentSchema
     {
         return new HealthTopicContentSchema('https://schema.org/', 'HealthTopicContent');
     }
@@ -43,8 +43,9 @@ class HealthTopicContentSchema extends WebContentSchema
      * Indicates the aspect or aspects specifically addressed in some [[HealthTopicContent]]. For example, that the content is an overview, or that it talks about treatment, self-care, treatments or their side-effects.
      *
      * @param $hasHealthAspect 
+     * @return static
      **/
-    public function setHasHealthAspect($hasHealthAspect) {
+    public function setHasHealthAspect($hasHealthAspect): static {
         $this->properties['hasHealthAspect'] = $hasHealthAspect;
 
         return $this;

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class NonprofitTypeSchema extends EnumerationSchema
 {
-    public static function factory()
+    public static function factory(): NonprofitTypeSchema
     {
         return new NonprofitTypeSchema('https://schema.org/', 'NonprofitType');
     }

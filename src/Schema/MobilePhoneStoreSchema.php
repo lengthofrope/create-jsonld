@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MobilePhoneStoreSchema extends StoreSchema
 {
-    public static function factory()
+    public static function factory(): MobilePhoneStoreSchema
     {
         return new MobilePhoneStoreSchema('https://schema.org/', 'MobilePhoneStore');
     }

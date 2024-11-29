@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DrawActionSchema extends CreateActionSchema
 {
-    public static function factory()
+    public static function factory(): DrawActionSchema
     {
         return new DrawActionSchema('https://schema.org/', 'DrawAction');
     }

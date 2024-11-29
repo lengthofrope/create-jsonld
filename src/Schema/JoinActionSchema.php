@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class JoinActionSchema extends InteractActionSchema
 {
-    public static function factory()
+    public static function factory(): JoinActionSchema
     {
         return new JoinActionSchema('https://schema.org/', 'JoinAction');
     }
@@ -42,8 +42,9 @@ class JoinActionSchema extends InteractActionSchema
      * Upcoming or past event associated with this place, organization, or action.
      *
      * @param $event 
+     * @return static
      **/
-    public function setEvent($event) {
+    public function setEvent($event): static {
         $this->properties['event'] = $event;
 
         return $this;

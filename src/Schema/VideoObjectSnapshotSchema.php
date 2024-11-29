@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class VideoObjectSnapshotSchema extends VideoObjectSchema
 {
-    public static function factory()
+    public static function factory(): VideoObjectSnapshotSchema
     {
         return new VideoObjectSnapshotSchema('https://schema.org/', 'VideoObjectSnapshot');
     }

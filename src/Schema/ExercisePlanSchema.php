@@ -31,9 +31,9 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ExercisePlanSchema extends \LengthOfRope\JSONLD\Elements\Element
+class ExercisePlanSchema extends PhysicalActivitySchema
 {
-    public static function factory()
+    public static function factory(): ExercisePlanSchema
     {
         return new ExercisePlanSchema('https://schema.org/', 'ExercisePlan');
     }
@@ -42,8 +42,9 @@ class ExercisePlanSchema extends \LengthOfRope\JSONLD\Elements\Element
      * How often one should break from the activity.
      *
      * @param $restPeriods |
+     * @return static
      **/
-    public function setRestPeriods($restPeriods) {
+    public function setRestPeriods($restPeriods): static {
         $this->properties['restPeriods'] = $restPeriods;
 
         return $this;
@@ -60,8 +61,9 @@ class ExercisePlanSchema extends \LengthOfRope\JSONLD\Elements\Element
      * Any additional component of the exercise prescription that may need to be articulated to the patient. This may include the order of exercises, the number of repetitions of movement, quantitative distance, progressions over time, etc.
      *
      * @param $additionalVariable 
+     * @return static
      **/
-    public function setAdditionalVariable($additionalVariable) {
+    public function setAdditionalVariable($additionalVariable): static {
         $this->properties['additionalVariable'] = $additionalVariable;
 
         return $this;
@@ -78,8 +80,9 @@ class ExercisePlanSchema extends \LengthOfRope\JSONLD\Elements\Element
      * Quantitative measure gauging the degree of force involved in the exercise, for example, heartbeats per minute. May include the velocity of the movement.
      *
      * @param $intensity |
+     * @return static
      **/
-    public function setIntensity($intensity) {
+    public function setIntensity($intensity): static {
         $this->properties['intensity'] = $intensity;
 
         return $this;
@@ -96,8 +99,9 @@ class ExercisePlanSchema extends \LengthOfRope\JSONLD\Elements\Element
      * Number of times one should repeat the activity.
      *
      * @param $repetitions |
+     * @return static
      **/
-    public function setRepetitions($repetitions) {
+    public function setRepetitions($repetitions): static {
         $this->properties['repetitions'] = $repetitions;
 
         return $this;
@@ -114,8 +118,9 @@ class ExercisePlanSchema extends \LengthOfRope\JSONLD\Elements\Element
      * Length of time to engage in the activity.
      *
      * @param $activityDuration |
+     * @return static
      **/
-    public function setActivityDuration($activityDuration) {
+    public function setActivityDuration($activityDuration): static {
         $this->properties['activityDuration'] = $activityDuration;
 
         return $this;
@@ -132,8 +137,9 @@ class ExercisePlanSchema extends \LengthOfRope\JSONLD\Elements\Element
      * Quantitative measure of the physiologic output of the exercise; also referred to as energy expenditure.
      *
      * @param $workload |
+     * @return static
      **/
-    public function setWorkload($workload) {
+    public function setWorkload($workload): static {
         $this->properties['workload'] = $workload;
 
         return $this;
@@ -150,8 +156,9 @@ class ExercisePlanSchema extends \LengthOfRope\JSONLD\Elements\Element
      * Type(s) of exercise or activity, such as strength training, flexibility training, aerobics, cardiac rehabilitation, etc.
      *
      * @param $exerciseType 
+     * @return static
      **/
-    public function setExerciseType($exerciseType) {
+    public function setExerciseType($exerciseType): static {
         $this->properties['exerciseType'] = $exerciseType;
 
         return $this;
@@ -168,8 +175,9 @@ class ExercisePlanSchema extends \LengthOfRope\JSONLD\Elements\Element
      * How often one should engage in the activity.
      *
      * @param $activityFrequency |
+     * @return static
      **/
-    public function setActivityFrequency($activityFrequency) {
+    public function setActivityFrequency($activityFrequency): static {
         $this->properties['activityFrequency'] = $activityFrequency;
 
         return $this;

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class WearableSizeGroupEnumerationSchema extends SizeGroupEnumerationSchema
 {
-    public static function factory()
+    public static function factory(): WearableSizeGroupEnumerationSchema
     {
         return new WearableSizeGroupEnumerationSchema('https://schema.org/', 'WearableSizeGroupEnumeration');
     }

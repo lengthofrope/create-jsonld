@@ -36,7 +36,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class GeoCircleSchema extends GeoShapeSchema
 {
-    public static function factory()
+    public static function factory(): GeoCircleSchema
     {
         return new GeoCircleSchema('https://schema.org/', 'GeoCircle');
     }
@@ -45,8 +45,9 @@ class GeoCircleSchema extends GeoShapeSchema
      * Indicates the GeoCoordinates at the centre of a GeoShape, e.g. GeoCircle.
      *
      * @param $geoMidpoint 
+     * @return static
      **/
-    public function setGeoMidpoint($geoMidpoint) {
+    public function setGeoMidpoint($geoMidpoint): static {
         $this->properties['geoMidpoint'] = $geoMidpoint;
 
         return $this;
@@ -63,8 +64,9 @@ class GeoCircleSchema extends GeoShapeSchema
      * Indicates the approximate radius of a GeoCircle (metres unless indicated otherwise via Distance notation).
      *
      * @param $geoRadius ||
+     * @return static
      **/
-    public function setGeoRadius($geoRadius) {
+    public function setGeoRadius($geoRadius): static {
         $this->properties['geoRadius'] = $geoRadius;
 
         return $this;

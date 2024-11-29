@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class SearchResultsPageSchema extends WebPageSchema
 {
-    public static function factory()
+    public static function factory(): SearchResultsPageSchema
     {
         return new SearchResultsPageSchema('https://schema.org/', 'SearchResultsPage');
     }

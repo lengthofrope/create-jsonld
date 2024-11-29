@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MerchantReturnPolicySchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): MerchantReturnPolicySchema
     {
         return new MerchantReturnPolicySchema('https://schema.org/', 'MerchantReturnPolicy');
     }
@@ -43,8 +43,9 @@ class MerchantReturnPolicySchema extends IntangibleSchema
 
      *
      * @param $additionalProperty 
+     * @return static
      **/
-    public function setAdditionalProperty($additionalProperty) {
+    public function setAdditionalProperty($additionalProperty): static {
         $this->properties['additionalProperty'] = $additionalProperty;
 
         return $this;
@@ -61,8 +62,9 @@ class MerchantReturnPolicySchema extends IntangibleSchema
      * The type of return fees for purchased products (for any return reason).
      *
      * @param $returnFees 
+     * @return static
      **/
-    public function setReturnFees($returnFees) {
+    public function setReturnFees($returnFees): static {
         $this->properties['returnFees'] = $returnFees;
 
         return $this;
@@ -79,8 +81,9 @@ class MerchantReturnPolicySchema extends IntangibleSchema
      * Seasonal override of a return policy.
      *
      * @param $returnPolicySeasonalOverride 
+     * @return static
      **/
-    public function setReturnPolicySeasonalOverride($returnPolicySeasonalOverride) {
+    public function setReturnPolicySeasonalOverride($returnPolicySeasonalOverride): static {
         $this->properties['returnPolicySeasonalOverride'] = $returnPolicySeasonalOverride;
 
         return $this;
@@ -97,8 +100,9 @@ class MerchantReturnPolicySchema extends IntangibleSchema
      * Are in-store returns offered? (For more advanced return methods use the [[returnMethod]] property.)
      *
      * @param $inStoreReturnsOffered 
+     * @return static
      **/
-    public function setInStoreReturnsOffered($inStoreReturnsOffered) {
+    public function setInStoreReturnsOffered($inStoreReturnsOffered): static {
         $this->properties['inStoreReturnsOffered'] = $inStoreReturnsOffered;
 
         return $this;
@@ -115,8 +119,9 @@ class MerchantReturnPolicySchema extends IntangibleSchema
      * The type of return fees for returns of defect products.
      *
      * @param $itemDefectReturnFees 
+     * @return static
      **/
-    public function setItemDefectReturnFees($itemDefectReturnFees) {
+    public function setItemDefectReturnFees($itemDefectReturnFees): static {
         $this->properties['itemDefectReturnFees'] = $itemDefectReturnFees;
 
         return $this;
@@ -133,8 +138,9 @@ class MerchantReturnPolicySchema extends IntangibleSchema
      * The method (from an enumeration) by which the customer obtains a return shipping label for a product returned due to customer remorse.
      *
      * @param $customerRemorseReturnLabelSource 
+     * @return static
      **/
-    public function setCustomerRemorseReturnLabelSource($customerRemorseReturnLabelSource) {
+    public function setCustomerRemorseReturnLabelSource($customerRemorseReturnLabelSource): static {
         $this->properties['customerRemorseReturnLabelSource'] = $customerRemorseReturnLabelSource;
 
         return $this;
@@ -151,8 +157,9 @@ class MerchantReturnPolicySchema extends IntangibleSchema
      * The type of return method offered, specified from an enumeration.
      *
      * @param $returnMethod 
+     * @return static
      **/
-    public function setReturnMethod($returnMethod) {
+    public function setReturnMethod($returnMethod): static {
         $this->properties['returnMethod'] = $returnMethod;
 
         return $this;
@@ -169,8 +176,9 @@ class MerchantReturnPolicySchema extends IntangibleSchema
      * A refund type, from an enumerated list.
      *
      * @param $refundType 
+     * @return static
      **/
-    public function setRefundType($refundType) {
+    public function setRefundType($refundType): static {
         $this->properties['refundType'] = $refundType;
 
         return $this;
@@ -187,8 +195,9 @@ class MerchantReturnPolicySchema extends IntangibleSchema
      * The membership program tier an Offer (or a PriceSpecification, OfferShippingDetails, or MerchantReturnPolicy under an Offer) is valid for.
      *
      * @param $validForMemberTier 
+     * @return static
      **/
-    public function setValidForMemberTier($validForMemberTier) {
+    public function setValidForMemberTier($validForMemberTier): static {
         $this->properties['validForMemberTier'] = $validForMemberTier;
 
         return $this;
@@ -205,8 +214,9 @@ class MerchantReturnPolicySchema extends IntangibleSchema
      * The method (from an enumeration) by which the customer obtains a return shipping label for a defect product.
      *
      * @param $itemDefectReturnLabelSource 
+     * @return static
      **/
-    public function setItemDefectReturnLabelSource($itemDefectReturnLabelSource) {
+    public function setItemDefectReturnLabelSource($itemDefectReturnLabelSource): static {
         $this->properties['itemDefectReturnLabelSource'] = $itemDefectReturnLabelSource;
 
         return $this;
@@ -223,8 +233,9 @@ class MerchantReturnPolicySchema extends IntangibleSchema
      * The country where the product has to be sent to for returns, for example "Ireland" using the [[name]] property of [[Country]]. You can also provide the two-letter [ISO 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1). Note that this can be different from the country where the product was originally shipped from or sent to.
      *
      * @param $returnPolicyCountry |
+     * @return static
      **/
-    public function setReturnPolicyCountry($returnPolicyCountry) {
+    public function setReturnPolicyCountry($returnPolicyCountry): static {
         $this->properties['returnPolicyCountry'] = $returnPolicyCountry;
 
         return $this;
@@ -241,8 +252,9 @@ class MerchantReturnPolicySchema extends IntangibleSchema
      * Amount of shipping costs for defect product returns. Applicable when property [[itemDefectReturnFees]] equals [[ReturnShippingFees]].
      *
      * @param $itemDefectReturnShippingFeesAmount 
+     * @return static
      **/
-    public function setItemDefectReturnShippingFeesAmount($itemDefectReturnShippingFeesAmount) {
+    public function setItemDefectReturnShippingFeesAmount($itemDefectReturnShippingFeesAmount): static {
         $this->properties['itemDefectReturnShippingFeesAmount'] = $itemDefectReturnShippingFeesAmount;
 
         return $this;
@@ -259,8 +271,9 @@ class MerchantReturnPolicySchema extends IntangibleSchema
      * The method (from an enumeration) by which the customer obtains a return shipping label for a product returned for any reason.
      *
      * @param $returnLabelSource 
+     * @return static
      **/
-    public function setReturnLabelSource($returnLabelSource) {
+    public function setReturnLabelSource($returnLabelSource): static {
         $this->properties['returnLabelSource'] = $returnLabelSource;
 
         return $this;
@@ -277,8 +290,9 @@ class MerchantReturnPolicySchema extends IntangibleSchema
      * Amount of shipping costs for product returns (for any reason). Applicable when property [[returnFees]] equals [[ReturnShippingFees]].
      *
      * @param $returnShippingFeesAmount 
+     * @return static
      **/
-    public function setReturnShippingFeesAmount($returnShippingFeesAmount) {
+    public function setReturnShippingFeesAmount($returnShippingFeesAmount): static {
         $this->properties['returnShippingFeesAmount'] = $returnShippingFeesAmount;
 
         return $this;
@@ -295,8 +309,9 @@ class MerchantReturnPolicySchema extends IntangibleSchema
      * Specifies a Web page or service by URL, for product returns.
      *
      * @param $merchantReturnLink 
+     * @return static
      **/
-    public function setMerchantReturnLink($merchantReturnLink) {
+    public function setMerchantReturnLink($merchantReturnLink): static {
         $this->properties['merchantReturnLink'] = $merchantReturnLink;
 
         return $this;
@@ -313,8 +328,9 @@ class MerchantReturnPolicySchema extends IntangibleSchema
      * The amount of shipping costs if a product is returned due to customer remorse. Applicable when property [[customerRemorseReturnFees]] equals [[ReturnShippingFees]].
      *
      * @param $customerRemorseReturnShippingFeesAmount 
+     * @return static
      **/
-    public function setCustomerRemorseReturnShippingFeesAmount($customerRemorseReturnShippingFeesAmount) {
+    public function setCustomerRemorseReturnShippingFeesAmount($customerRemorseReturnShippingFeesAmount): static {
         $this->properties['customerRemorseReturnShippingFeesAmount'] = $customerRemorseReturnShippingFeesAmount;
 
         return $this;
@@ -331,8 +347,9 @@ class MerchantReturnPolicySchema extends IntangibleSchema
      * The type of return fees if the product is returned due to customer remorse.
      *
      * @param $customerRemorseReturnFees 
+     * @return static
      **/
-    public function setCustomerRemorseReturnFees($customerRemorseReturnFees) {
+    public function setCustomerRemorseReturnFees($customerRemorseReturnFees): static {
         $this->properties['customerRemorseReturnFees'] = $customerRemorseReturnFees;
 
         return $this;
@@ -349,8 +366,9 @@ class MerchantReturnPolicySchema extends IntangibleSchema
      * A predefined value from OfferItemCondition specifying the condition of the product or service, or the products or services included in the offer. Also used for product return policies to specify the condition of products accepted for returns.
      *
      * @param $itemCondition 
+     * @return static
      **/
-    public function setItemCondition($itemCondition) {
+    public function setItemCondition($itemCondition): static {
         $this->properties['itemCondition'] = $itemCondition;
 
         return $this;
@@ -367,8 +385,9 @@ class MerchantReturnPolicySchema extends IntangibleSchema
      * Specifies either a fixed return date or the number of days (from the delivery date) that a product can be returned. Used when the [[returnPolicyCategory]] property is specified as [[MerchantReturnFiniteReturnWindow]].
      *
      * @param $merchantReturnDays ||
+     * @return static
      **/
-    public function setMerchantReturnDays($merchantReturnDays) {
+    public function setMerchantReturnDays($merchantReturnDays): static {
         $this->properties['merchantReturnDays'] = $merchantReturnDays;
 
         return $this;
@@ -385,8 +404,9 @@ class MerchantReturnPolicySchema extends IntangibleSchema
      * Specifies an applicable return policy (from an enumeration).
      *
      * @param $returnPolicyCategory 
+     * @return static
      **/
-    public function setReturnPolicyCategory($returnPolicyCategory) {
+    public function setReturnPolicyCategory($returnPolicyCategory): static {
         $this->properties['returnPolicyCategory'] = $returnPolicyCategory;
 
         return $this;
@@ -403,8 +423,9 @@ class MerchantReturnPolicySchema extends IntangibleSchema
      * A country where a particular merchant return policy applies to, for example the two-letter ISO 3166-1 alpha-2 country code.
      *
      * @param $applicableCountry |
+     * @return static
      **/
-    public function setApplicableCountry($applicableCountry) {
+    public function setApplicableCountry($applicableCountry): static {
         $this->properties['applicableCountry'] = $applicableCountry;
 
         return $this;
@@ -421,8 +442,9 @@ class MerchantReturnPolicySchema extends IntangibleSchema
      * Use [[MonetaryAmount]] to specify a fixed restocking fee for product returns, or use [[Number]] to specify a percentage of the product price paid by the customer.
      *
      * @param $restockingFee |
+     * @return static
      **/
-    public function setRestockingFee($restockingFee) {
+    public function setRestockingFee($restockingFee): static {
         $this->properties['restockingFee'] = $restockingFee;
 
         return $this;

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class TripSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): TripSchema
     {
         return new TripSchema('https://schema.org/', 'Trip');
     }
@@ -42,8 +42,9 @@ class TripSchema extends IntangibleSchema
      * The expected departure time.
      *
      * @param $departureTime |
+     * @return static
      **/
-    public function setDepartureTime($departureTime) {
+    public function setDepartureTime($departureTime): static {
         $this->properties['departureTime'] = $departureTime;
 
         return $this;
@@ -60,8 +61,9 @@ class TripSchema extends IntangibleSchema
      * Identifies that this [[Trip]] is a subTrip of another Trip.  For example Day 1, Day 2, etc. of a multi-day trip.
      *
      * @param $partOfTrip 
+     * @return static
      **/
-    public function setPartOfTrip($partOfTrip) {
+    public function setPartOfTrip($partOfTrip): static {
         $this->properties['partOfTrip'] = $partOfTrip;
 
         return $this;
@@ -78,8 +80,9 @@ class TripSchema extends IntangibleSchema
      * The location of origin of the trip, prior to any destination(s).
      *
      * @param $tripOrigin 
+     * @return static
      **/
-    public function setTripOrigin($tripOrigin) {
+    public function setTripOrigin($tripOrigin): static {
         $this->properties['tripOrigin'] = $tripOrigin;
 
         return $this;
@@ -96,8 +99,9 @@ class TripSchema extends IntangibleSchema
      * Destination(s) ( [[Place]] ) that make up a trip. For a trip where destination order is important use [[ItemList]] to specify that order (see examples).
      *
      * @param $itinerary |
+     * @return static
      **/
-    public function setItinerary($itinerary) {
+    public function setItinerary($itinerary): static {
         $this->properties['itinerary'] = $itinerary;
 
         return $this;
@@ -114,8 +118,9 @@ class TripSchema extends IntangibleSchema
      * The expected arrival time.
      *
      * @param $arrivalTime |
+     * @return static
      **/
-    public function setArrivalTime($arrivalTime) {
+    public function setArrivalTime($arrivalTime): static {
         $this->properties['arrivalTime'] = $arrivalTime;
 
         return $this;
@@ -133,8 +138,9 @@ class TripSchema extends IntangibleSchema
       
      *
      * @param $offers |
+     * @return static
      **/
-    public function setOffers($offers) {
+    public function setOffers($offers): static {
         $this->properties['offers'] = $offers;
 
         return $this;
@@ -151,8 +157,9 @@ class TripSchema extends IntangibleSchema
      * The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.
      *
      * @param $provider |
+     * @return static
      **/
-    public function setProvider($provider) {
+    public function setProvider($provider): static {
         $this->properties['provider'] = $provider;
 
         return $this;
@@ -169,8 +176,9 @@ class TripSchema extends IntangibleSchema
      * Identifies a [[Trip]] that is a subTrip of this Trip.  For example Day 1, Day 2, etc. of a multi-day trip.
      *
      * @param $subTrip 
+     * @return static
      **/
-    public function setSubTrip($subTrip) {
+    public function setSubTrip($subTrip): static {
         $this->properties['subTrip'] = $subTrip;
 
         return $this;

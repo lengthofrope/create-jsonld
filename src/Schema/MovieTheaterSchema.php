@@ -31,9 +31,9 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MovieTheaterSchema extends \LengthOfRope\JSONLD\Elements\Element
+class MovieTheaterSchema extends CivicStructureSchema
 {
-    public static function factory()
+    public static function factory(): MovieTheaterSchema
     {
         return new MovieTheaterSchema('https://schema.org/', 'MovieTheater');
     }
@@ -42,8 +42,9 @@ class MovieTheaterSchema extends \LengthOfRope\JSONLD\Elements\Element
      * The number of screens in the movie theater.
      *
      * @param $screenCount 
+     * @return static
      **/
-    public function setScreenCount($screenCount) {
+    public function setScreenCount($screenCount): static {
         $this->properties['screenCount'] = $screenCount;
 
         return $this;

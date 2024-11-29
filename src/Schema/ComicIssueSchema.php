@@ -38,7 +38,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ComicIssueSchema extends PublicationIssueSchema
 {
-    public static function factory()
+    public static function factory(): ComicIssueSchema
     {
         return new ComicIssueSchema('https://schema.org/', 'ComicIssue');
     }
@@ -47,8 +47,9 @@ class ComicIssueSchema extends PublicationIssueSchema
      * The individual who adds lettering, including speech balloons and sound effects, to artwork.
      *
      * @param $letterer 
+     * @return static
      **/
-    public function setLetterer($letterer) {
+    public function setLetterer($letterer): static {
         $this->properties['letterer'] = $letterer;
 
         return $this;
@@ -65,8 +66,9 @@ class ComicIssueSchema extends PublicationIssueSchema
      * The individual who traces over the pencil drawings in ink after pencils are complete.
      *
      * @param $inker 
+     * @return static
      **/
-    public function setInker($inker) {
+    public function setInker($inker): static {
         $this->properties['inker'] = $inker;
 
         return $this;
@@ -83,8 +85,9 @@ class ComicIssueSchema extends PublicationIssueSchema
      * The individual who adds color to inked drawings.
      *
      * @param $colorist 
+     * @return static
      **/
-    public function setColorist($colorist) {
+    public function setColorist($colorist): static {
         $this->properties['colorist'] = $colorist;
 
         return $this;
@@ -103,8 +106,9 @@ class ComicIssueSchema extends PublicationIssueSchema
     	primary artwork is done in watercolors or digital paints.
      *
      * @param $artist 
+     * @return static
      **/
-    public function setArtist($artist) {
+    public function setArtist($artist): static {
         $this->properties['artist'] = $artist;
 
         return $this;
@@ -121,8 +125,9 @@ class ComicIssueSchema extends PublicationIssueSchema
      * The individual who draws the primary narrative artwork.
      *
      * @param $penciler 
+     * @return static
      **/
-    public function setPenciler($penciler) {
+    public function setPenciler($penciler): static {
         $this->properties['penciler'] = $penciler;
 
         return $this;
@@ -141,8 +146,9 @@ class ComicIssueSchema extends PublicationIssueSchema
     	Variant Cover" or "2nd Printing Variant".
      *
      * @param $variantCover 
+     * @return static
      **/
-    public function setVariantCover($variantCover) {
+    public function setVariantCover($variantCover): static {
         $this->properties['variantCover'] = $variantCover;
 
         return $this;

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MedicalTrialSchema extends MedicalStudySchema
 {
-    public static function factory()
+    public static function factory(): MedicalTrialSchema
     {
         return new MedicalTrialSchema('https://schema.org/', 'MedicalTrial');
     }
@@ -42,8 +42,9 @@ class MedicalTrialSchema extends MedicalStudySchema
      * Specifics about the trial design (enumerated).
      *
      * @param $trialDesign 
+     * @return static
      **/
-    public function setTrialDesign($trialDesign) {
+    public function setTrialDesign($trialDesign): static {
         $this->properties['trialDesign'] = $trialDesign;
 
         return $this;

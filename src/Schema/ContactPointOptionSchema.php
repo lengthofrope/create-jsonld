@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ContactPointOptionSchema extends EnumerationSchema
 {
-    public static function factory()
+    public static function factory(): ContactPointOptionSchema
     {
         return new ContactPointOptionSchema('https://schema.org/', 'ContactPointOption');
     }

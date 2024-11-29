@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class LodgingReservationSchema extends ReservationSchema
 {
-    public static function factory()
+    public static function factory(): LodgingReservationSchema
     {
         return new LodgingReservationSchema('https://schema.org/', 'LodgingReservation');
     }
@@ -42,8 +42,9 @@ class LodgingReservationSchema extends ReservationSchema
      * The number of adults staying in the unit.
      *
      * @param $numAdults |
+     * @return static
      **/
-    public function setNumAdults($numAdults) {
+    public function setNumAdults($numAdults): static {
         $this->properties['numAdults'] = $numAdults;
 
         return $this;
@@ -60,8 +61,9 @@ class LodgingReservationSchema extends ReservationSchema
      * Textual description of the unit type (including suite vs. room, size of bed, etc.).
      *
      * @param $lodgingUnitType |
+     * @return static
      **/
-    public function setLodgingUnitType($lodgingUnitType) {
+    public function setLodgingUnitType($lodgingUnitType): static {
         $this->properties['lodgingUnitType'] = $lodgingUnitType;
 
         return $this;
@@ -78,8 +80,9 @@ class LodgingReservationSchema extends ReservationSchema
      * The latest someone may check out of a lodging establishment.
      *
      * @param $checkoutTime |
+     * @return static
      **/
-    public function setCheckoutTime($checkoutTime) {
+    public function setCheckoutTime($checkoutTime): static {
         $this->properties['checkoutTime'] = $checkoutTime;
 
         return $this;
@@ -96,8 +99,9 @@ class LodgingReservationSchema extends ReservationSchema
      * The earliest someone may check into a lodging establishment.
      *
      * @param $checkinTime |
+     * @return static
      **/
-    public function setCheckinTime($checkinTime) {
+    public function setCheckinTime($checkinTime): static {
         $this->properties['checkinTime'] = $checkinTime;
 
         return $this;
@@ -114,8 +118,9 @@ class LodgingReservationSchema extends ReservationSchema
      * A full description of the lodging unit.
      *
      * @param $lodgingUnitDescription 
+     * @return static
      **/
-    public function setLodgingUnitDescription($lodgingUnitDescription) {
+    public function setLodgingUnitDescription($lodgingUnitDescription): static {
         $this->properties['lodgingUnitDescription'] = $lodgingUnitDescription;
 
         return $this;
@@ -132,8 +137,9 @@ class LodgingReservationSchema extends ReservationSchema
      * The number of children staying in the unit.
      *
      * @param $numChildren |
+     * @return static
      **/
-    public function setNumChildren($numChildren) {
+    public function setNumChildren($numChildren): static {
         $this->properties['numChildren'] = $numChildren;
 
         return $this;

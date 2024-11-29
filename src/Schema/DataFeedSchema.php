@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DataFeedSchema extends DatasetSchema
 {
-    public static function factory()
+    public static function factory(): DataFeedSchema
     {
         return new DataFeedSchema('https://schema.org/', 'DataFeed');
     }
@@ -42,8 +42,9 @@ class DataFeedSchema extends DatasetSchema
      * An item within a data feed. Data feeds may have many elements.
      *
      * @param $dataFeedElement ||
+     * @return static
      **/
-    public function setDataFeedElement($dataFeedElement) {
+    public function setDataFeedElement($dataFeedElement): static {
         $this->properties['dataFeedElement'] = $dataFeedElement;
 
         return $this;

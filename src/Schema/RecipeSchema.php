@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class RecipeSchema extends HowToSchema
 {
-    public static function factory()
+    public static function factory(): RecipeSchema
     {
         return new RecipeSchema('https://schema.org/', 'Recipe');
     }
@@ -42,8 +42,9 @@ class RecipeSchema extends HowToSchema
      * The method of cooking, such as Frying, Steaming, ...
      *
      * @param $cookingMethod 
+     * @return static
      **/
-    public function setCookingMethod($cookingMethod) {
+    public function setCookingMethod($cookingMethod): static {
         $this->properties['cookingMethod'] = $cookingMethod;
 
         return $this;
@@ -60,8 +61,9 @@ class RecipeSchema extends HowToSchema
      * The time it takes to actually cook the dish, in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
      *
      * @param $cookTime 
+     * @return static
      **/
-    public function setCookTime($cookTime) {
+    public function setCookTime($cookTime): static {
         $this->properties['cookTime'] = $cookTime;
 
         return $this;
@@ -78,8 +80,9 @@ class RecipeSchema extends HowToSchema
      * Indicates a dietary restriction or guideline for which this recipe or menu item is suitable, e.g. diabetic, halal etc.
      *
      * @param $suitableForDiet 
+     * @return static
      **/
-    public function setSuitableForDiet($suitableForDiet) {
+    public function setSuitableForDiet($suitableForDiet): static {
         $this->properties['suitableForDiet'] = $suitableForDiet;
 
         return $this;
@@ -96,8 +99,9 @@ class RecipeSchema extends HowToSchema
      * The quantity produced by the recipe (for example, number of people served, number of servings, etc).
      *
      * @param $recipeYield |
+     * @return static
      **/
-    public function setRecipeYield($recipeYield) {
+    public function setRecipeYield($recipeYield): static {
         $this->properties['recipeYield'] = $recipeYield;
 
         return $this;
@@ -114,8 +118,9 @@ class RecipeSchema extends HowToSchema
      * A single ingredient used in the recipe, e.g. sugar, flour or garlic.
      *
      * @param $ingredients 
+     * @return static
      **/
-    public function setIngredients($ingredients) {
+    public function setIngredients($ingredients): static {
         $this->properties['ingredients'] = $ingredients;
 
         return $this;
@@ -132,8 +137,9 @@ class RecipeSchema extends HowToSchema
      * A step in making the recipe, in the form of a single item (document, video, etc.) or an ordered list with HowToStep and/or HowToSection items.
      *
      * @param $recipeInstructions ||
+     * @return static
      **/
-    public function setRecipeInstructions($recipeInstructions) {
+    public function setRecipeInstructions($recipeInstructions): static {
         $this->properties['recipeInstructions'] = $recipeInstructions;
 
         return $this;
@@ -150,8 +156,9 @@ class RecipeSchema extends HowToSchema
      * Nutrition information about the recipe or menu item.
      *
      * @param $nutrition 
+     * @return static
      **/
-    public function setNutrition($nutrition) {
+    public function setNutrition($nutrition): static {
         $this->properties['nutrition'] = $nutrition;
 
         return $this;
@@ -168,8 +175,9 @@ class RecipeSchema extends HowToSchema
      * The category of the recipe—for example, appetizer, entree, etc.
      *
      * @param $recipeCategory 
+     * @return static
      **/
-    public function setRecipeCategory($recipeCategory) {
+    public function setRecipeCategory($recipeCategory): static {
         $this->properties['recipeCategory'] = $recipeCategory;
 
         return $this;
@@ -186,8 +194,9 @@ class RecipeSchema extends HowToSchema
      * A single ingredient used in the recipe, e.g. sugar, flour or garlic.
      *
      * @param $recipeIngredient 
+     * @return static
      **/
-    public function setRecipeIngredient($recipeIngredient) {
+    public function setRecipeIngredient($recipeIngredient): static {
         $this->properties['recipeIngredient'] = $recipeIngredient;
 
         return $this;
@@ -204,8 +213,9 @@ class RecipeSchema extends HowToSchema
      * The cuisine of the recipe (for example, French or Ethiopian).
      *
      * @param $recipeCuisine 
+     * @return static
      **/
-    public function setRecipeCuisine($recipeCuisine) {
+    public function setRecipeCuisine($recipeCuisine): static {
         $this->properties['recipeCuisine'] = $recipeCuisine;
 
         return $this;

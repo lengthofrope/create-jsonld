@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class LifestyleModificationSchema extends MedicalEntitySchema
 {
-    public static function factory()
+    public static function factory(): LifestyleModificationSchema
     {
         return new LifestyleModificationSchema('https://schema.org/', 'LifestyleModification');
     }

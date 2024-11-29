@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class OwnershipInfoSchema extends StructuredValueSchema
 {
-    public static function factory()
+    public static function factory(): OwnershipInfoSchema
     {
         return new OwnershipInfoSchema('https://schema.org/', 'OwnershipInfo');
     }
@@ -42,8 +42,9 @@ class OwnershipInfoSchema extends StructuredValueSchema
      * The date and time of obtaining the product.
      *
      * @param $ownedFrom 
+     * @return static
      **/
-    public function setOwnedFrom($ownedFrom) {
+    public function setOwnedFrom($ownedFrom): static {
         $this->properties['ownedFrom'] = $ownedFrom;
 
         return $this;
@@ -60,8 +61,9 @@ class OwnershipInfoSchema extends StructuredValueSchema
      * The date and time of giving up ownership on the product.
      *
      * @param $ownedThrough 
+     * @return static
      **/
-    public function setOwnedThrough($ownedThrough) {
+    public function setOwnedThrough($ownedThrough): static {
         $this->properties['ownedThrough'] = $ownedThrough;
 
         return $this;
@@ -78,8 +80,9 @@ class OwnershipInfoSchema extends StructuredValueSchema
      * The product that this structured value is referring to.
      *
      * @param $typeOfGood |
+     * @return static
      **/
-    public function setTypeOfGood($typeOfGood) {
+    public function setTypeOfGood($typeOfGood): static {
         $this->properties['typeOfGood'] = $typeOfGood;
 
         return $this;
@@ -96,8 +99,9 @@ class OwnershipInfoSchema extends StructuredValueSchema
      * The organization or person from which the product was acquired.
      *
      * @param $acquiredFrom |
+     * @return static
      **/
-    public function setAcquiredFrom($acquiredFrom) {
+    public function setAcquiredFrom($acquiredFrom): static {
         $this->properties['acquiredFrom'] = $acquiredFrom;
 
         return $this;

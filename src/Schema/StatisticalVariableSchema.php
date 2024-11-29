@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class StatisticalVariableSchema extends ConstraintNodeSchema
 {
-    public static function factory()
+    public static function factory(): StatisticalVariableSchema
     {
         return new StatisticalVariableSchema('https://schema.org/', 'StatisticalVariable');
     }
@@ -42,8 +42,9 @@ class StatisticalVariableSchema extends ConstraintNodeSchema
      * The measuredProperty of an [[Observation]], typically via its [[StatisticalVariable]]. There are various kinds of applicable [[Property]]: a schema.org property, a property from other RDF-compatible systems, e.g. W3C RDF Data Cube, Data Commons, Wikidata, or schema.org extensions such as [GS1's](https://www.gs1.org/voc/?show=properties).
      *
      * @param $measuredProperty 
+     * @return static
      **/
-    public function setMeasuredProperty($measuredProperty) {
+    public function setMeasuredProperty($measuredProperty): static {
         $this->properties['measuredProperty'] = $measuredProperty;
 
         return $this;
@@ -60,8 +61,9 @@ class StatisticalVariableSchema extends ConstraintNodeSchema
      * Indicates the kind of statistic represented by a [[StatisticalVariable]], e.g. mean, count etc. The value of statType is a property, either from within Schema.org (e.g. [[median]], [[marginOfError]], [[maxValue]], [[minValue]]) or from other compatible (e.g. RDF) systems such as DataCommons.org or Wikidata.org. 
      *
      * @param $statType ||
+     * @return static
      **/
-    public function setStatType($statType) {
+    public function setStatType($statType): static {
         $this->properties['statType'] = $statType;
 
         return $this;
@@ -78,8 +80,9 @@ class StatisticalVariableSchema extends ConstraintNodeSchema
      * A subproperty of [[measurementTechnique]] that can be used for specifying specific methods, in particular via [[MeasurementMethodEnum]].
      *
      * @param $measurementMethod |||
+     * @return static
      **/
-    public function setMeasurementMethod($measurementMethod) {
+    public function setMeasurementMethod($measurementMethod): static {
         $this->properties['measurementMethod'] = $measurementMethod;
 
         return $this;
@@ -96,8 +99,9 @@ class StatisticalVariableSchema extends ConstraintNodeSchema
      * Provides additional qualification to an observation. For example, a GDP observation measures the Nominal value.
      *
      * @param $measurementQualifier 
+     * @return static
      **/
-    public function setMeasurementQualifier($measurementQualifier) {
+    public function setMeasurementQualifier($measurementQualifier): static {
         $this->properties['measurementQualifier'] = $measurementQualifier;
 
         return $this;
@@ -114,8 +118,9 @@ class StatisticalVariableSchema extends ConstraintNodeSchema
      * Identifies the denominator variable when an observation represents a ratio or percentage.
      *
      * @param $measurementDenominator 
+     * @return static
      **/
-    public function setMeasurementDenominator($measurementDenominator) {
+    public function setMeasurementDenominator($measurementDenominator): static {
         $this->properties['measurementDenominator'] = $measurementDenominator;
 
         return $this;
@@ -138,8 +143,9 @@ For example, if [[variableMeasured]] is: molecule concentration, [[measurementTe
 If there are several [[variableMeasured]] properties recorded for some given data object, use a [[PropertyValue]] for each [[variableMeasured]] and attach the corresponding [[measurementTechnique]]. The value can also be from an enumeration, organized as a [[MeasurementMetholdEnumeration]].
      *
      * @param $measurementTechnique |||
+     * @return static
      **/
-    public function setMeasurementTechnique($measurementTechnique) {
+    public function setMeasurementTechnique($measurementTechnique): static {
         $this->properties['measurementTechnique'] = $measurementTechnique;
 
         return $this;
@@ -156,8 +162,9 @@ If there are several [[variableMeasured]] properties recorded for some given dat
      * Indicates the populationType common to all members of a [[StatisticalPopulation]] or all cases within the scope of a [[StatisticalVariable]].
      *
      * @param $populationType 
+     * @return static
      **/
-    public function setPopulationType($populationType) {
+    public function setPopulationType($populationType): static {
         $this->properties['populationType'] = $populationType;
 
         return $this;

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MapSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): MapSchema
     {
         return new MapSchema('https://schema.org/', 'Map');
     }
@@ -42,8 +42,9 @@ class MapSchema extends CreativeWorkSchema
      * Indicates the kind of Map, from the MapCategoryType Enumeration.
      *
      * @param $mapType 
+     * @return static
      **/
-    public function setMapType($mapType) {
+    public function setMapType($mapType): static {
         $this->properties['mapType'] = $mapType;
 
         return $this;

@@ -31,9 +31,9 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class HealthClubSchema extends \LengthOfRope\JSONLD\Elements\Element
+class HealthClubSchema extends HealthAndBeautyBusinessSchema
 {
-    public static function factory()
+    public static function factory(): HealthClubSchema
     {
         return new HealthClubSchema('https://schema.org/', 'HealthClub');
     }

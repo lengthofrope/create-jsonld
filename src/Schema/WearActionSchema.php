@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class WearActionSchema extends UseActionSchema
 {
-    public static function factory()
+    public static function factory(): WearActionSchema
     {
         return new WearActionSchema('https://schema.org/', 'WearAction');
     }

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MusicReleaseFormatTypeSchema extends EnumerationSchema
 {
-    public static function factory()
+    public static function factory(): MusicReleaseFormatTypeSchema
     {
         return new MusicReleaseFormatTypeSchema('https://schema.org/', 'MusicReleaseFormatType');
     }

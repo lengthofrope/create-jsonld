@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MedicalConditionSchema extends MedicalEntitySchema
 {
-    public static function factory()
+    public static function factory(): MedicalConditionSchema
     {
         return new MedicalConditionSchema('https://schema.org/', 'MedicalCondition');
     }
@@ -42,8 +42,9 @@ class MedicalConditionSchema extends MedicalEntitySchema
      * Changes in the normal mechanical, physical, and biochemical functions that are associated with this activity or condition.
      *
      * @param $pathophysiology 
+     * @return static
      **/
-    public function setPathophysiology($pathophysiology) {
+    public function setPathophysiology($pathophysiology): static {
         $this->properties['pathophysiology'] = $pathophysiology;
 
         return $this;
@@ -60,8 +61,9 @@ class MedicalConditionSchema extends MedicalEntitySchema
      * A possible unexpected and unfavorable evolution of a medical condition. Complications may include worsening of the signs or symptoms of the disease, extension of the condition to other organ systems, etc.
      *
      * @param $possibleComplication 
+     * @return static
      **/
-    public function setPossibleComplication($possibleComplication) {
+    public function setPossibleComplication($possibleComplication): static {
         $this->properties['possibleComplication'] = $possibleComplication;
 
         return $this;
@@ -78,8 +80,9 @@ class MedicalConditionSchema extends MedicalEntitySchema
      * A possible treatment to address this condition, sign or symptom.
      *
      * @param $possibleTreatment 
+     * @return static
      **/
-    public function setPossibleTreatment($possibleTreatment) {
+    public function setPossibleTreatment($possibleTreatment): static {
         $this->properties['possibleTreatment'] = $possibleTreatment;
 
         return $this;
@@ -96,8 +99,9 @@ class MedicalConditionSchema extends MedicalEntitySchema
      * The likely outcome in either the short term or long term of the medical condition.
      *
      * @param $expectedPrognosis 
+     * @return static
      **/
-    public function setExpectedPrognosis($expectedPrognosis) {
+    public function setExpectedPrognosis($expectedPrognosis): static {
         $this->properties['expectedPrognosis'] = $expectedPrognosis;
 
         return $this;
@@ -114,8 +118,9 @@ class MedicalConditionSchema extends MedicalEntitySchema
      * A preventative therapy used to prevent reoccurrence of the medical condition after an initial episode of the condition.
      *
      * @param $secondaryPrevention 
+     * @return static
      **/
-    public function setSecondaryPrevention($secondaryPrevention) {
+    public function setSecondaryPrevention($secondaryPrevention): static {
         $this->properties['secondaryPrevention'] = $secondaryPrevention;
 
         return $this;
@@ -132,8 +137,9 @@ class MedicalConditionSchema extends MedicalEntitySchema
      * The stage of the condition, if applicable.
      *
      * @param $stage 
+     * @return static
      **/
-    public function setStage($stage) {
+    public function setStage($stage): static {
         $this->properties['stage'] = $stage;
 
         return $this;
@@ -150,8 +156,9 @@ class MedicalConditionSchema extends MedicalEntitySchema
      * A medical test typically performed given this condition.
      *
      * @param $typicalTest 
+     * @return static
      **/
-    public function setTypicalTest($typicalTest) {
+    public function setTypicalTest($typicalTest): static {
         $this->properties['typicalTest'] = $typicalTest;
 
         return $this;
@@ -168,8 +175,9 @@ class MedicalConditionSchema extends MedicalEntitySchema
      * Specifying a drug or medicine used in a medication procedure.
      *
      * @param $drug 
+     * @return static
      **/
-    public function setDrug($drug) {
+    public function setDrug($drug): static {
         $this->properties['drug'] = $drug;
 
         return $this;
@@ -186,8 +194,9 @@ class MedicalConditionSchema extends MedicalEntitySchema
      * One of a set of differential diagnoses for the condition. Specifically, a closely-related or competing diagnosis typically considered later in the cognitive process whereby this medical condition is distinguished from others most likely responsible for a similar collection of signs and symptoms to reach the most parsimonious diagnosis or diagnoses in a patient.
      *
      * @param $differentialDiagnosis 
+     * @return static
      **/
-    public function setDifferentialDiagnosis($differentialDiagnosis) {
+    public function setDifferentialDiagnosis($differentialDiagnosis): static {
         $this->properties['differentialDiagnosis'] = $differentialDiagnosis;
 
         return $this;
@@ -204,8 +213,9 @@ class MedicalConditionSchema extends MedicalEntitySchema
      * A modifiable or non-modifiable factor that increases the risk of a patient contracting this condition, e.g. age,  coexisting condition.
      *
      * @param $riskFactor 
+     * @return static
      **/
-    public function setRiskFactor($riskFactor) {
+    public function setRiskFactor($riskFactor): static {
         $this->properties['riskFactor'] = $riskFactor;
 
         return $this;
@@ -222,8 +232,9 @@ class MedicalConditionSchema extends MedicalEntitySchema
      * The anatomy of the underlying organ system or structures associated with this entity.
      *
      * @param $associatedAnatomy ||
+     * @return static
      **/
-    public function setAssociatedAnatomy($associatedAnatomy) {
+    public function setAssociatedAnatomy($associatedAnatomy): static {
         $this->properties['associatedAnatomy'] = $associatedAnatomy;
 
         return $this;
@@ -240,8 +251,9 @@ class MedicalConditionSchema extends MedicalEntitySchema
      * A sign or symptom of this condition. Signs are objective or physically observable manifestations of the medical condition while symptoms are the subjective experience of the medical condition.
      *
      * @param $signOrSymptom 
+     * @return static
      **/
-    public function setSignOrSymptom($signOrSymptom) {
+    public function setSignOrSymptom($signOrSymptom): static {
         $this->properties['signOrSymptom'] = $signOrSymptom;
 
         return $this;
@@ -258,8 +270,9 @@ class MedicalConditionSchema extends MedicalEntitySchema
      * The status of the study (enumerated).
      *
      * @param $status ||
+     * @return static
      **/
-    public function setStatus($status) {
+    public function setStatus($status): static {
         $this->properties['status'] = $status;
 
         return $this;
@@ -276,8 +289,9 @@ class MedicalConditionSchema extends MedicalEntitySchema
      * A preventative therapy used to prevent an initial occurrence of the medical condition, such as vaccination.
      *
      * @param $primaryPrevention 
+     * @return static
      **/
-    public function setPrimaryPrevention($primaryPrevention) {
+    public function setPrimaryPrevention($primaryPrevention): static {
         $this->properties['primaryPrevention'] = $primaryPrevention;
 
         return $this;
@@ -294,8 +308,9 @@ class MedicalConditionSchema extends MedicalEntitySchema
      * The expected progression of the condition if it is not treated and allowed to progress naturally.
      *
      * @param $naturalProgression 
+     * @return static
      **/
-    public function setNaturalProgression($naturalProgression) {
+    public function setNaturalProgression($naturalProgression): static {
         $this->properties['naturalProgression'] = $naturalProgression;
 
         return $this;
@@ -312,8 +327,9 @@ class MedicalConditionSchema extends MedicalEntitySchema
      * The characteristics of associated patients, such as age, gender, race etc.
      *
      * @param $epidemiology 
+     * @return static
      **/
-    public function setEpidemiology($epidemiology) {
+    public function setEpidemiology($epidemiology): static {
         $this->properties['epidemiology'] = $epidemiology;
 
         return $this;

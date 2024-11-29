@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DrugClassSchema extends MedicalEntitySchema
 {
-    public static function factory()
+    public static function factory(): DrugClassSchema
     {
         return new DrugClassSchema('https://schema.org/', 'DrugClass');
     }
@@ -42,8 +42,9 @@ class DrugClassSchema extends MedicalEntitySchema
      * Specifying a drug or medicine used in a medication procedure.
      *
      * @param $drug 
+     * @return static
      **/
-    public function setDrug($drug) {
+    public function setDrug($drug): static {
         $this->properties['drug'] = $drug;
 
         return $this;

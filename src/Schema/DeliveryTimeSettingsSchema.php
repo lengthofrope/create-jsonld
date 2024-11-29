@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DeliveryTimeSettingsSchema extends StructuredValueSchema
 {
-    public static function factory()
+    public static function factory(): DeliveryTimeSettingsSchema
     {
         return new DeliveryTimeSettingsSchema('https://schema.org/', 'DeliveryTimeSettings');
     }
@@ -42,8 +42,9 @@ class DeliveryTimeSettingsSchema extends StructuredValueSchema
      * indicates (possibly multiple) shipping destinations. These can be defined in several ways, e.g. postalCode ranges.
      *
      * @param $shippingDestination 
+     * @return static
      **/
-    public function setShippingDestination($shippingDestination) {
+    public function setShippingDestination($shippingDestination): static {
         $this->properties['shippingDestination'] = $shippingDestination;
 
         return $this;
@@ -60,8 +61,9 @@ class DeliveryTimeSettingsSchema extends StructuredValueSchema
      * This can be marked 'true' to indicate that some published [[DeliveryTimeSettings]] or [[ShippingRateSettings]] are intended to apply to all [[OfferShippingDetails]] published by the same merchant, when referenced by a [[shippingSettingsLink]] in those settings. It is not meaningful to use a 'true' value for this property alongside a transitTimeLabel (for [[DeliveryTimeSettings]]) or shippingLabel (for [[ShippingRateSettings]]), since this property is for use with unlabelled settings.
      *
      * @param $isUnlabelledFallback 
+     * @return static
      **/
-    public function setIsUnlabelledFallback($isUnlabelledFallback) {
+    public function setIsUnlabelledFallback($isUnlabelledFallback): static {
         $this->properties['isUnlabelledFallback'] = $isUnlabelledFallback;
 
         return $this;
@@ -78,8 +80,9 @@ class DeliveryTimeSettingsSchema extends StructuredValueSchema
      * Label to match an [[OfferShippingDetails]] with a [[DeliveryTimeSettings]] (within the context of a [[shippingSettingsLink]] cross-reference).
      *
      * @param $transitTimeLabel 
+     * @return static
      **/
-    public function setTransitTimeLabel($transitTimeLabel) {
+    public function setTransitTimeLabel($transitTimeLabel): static {
         $this->properties['transitTimeLabel'] = $transitTimeLabel;
 
         return $this;
@@ -96,8 +99,9 @@ class DeliveryTimeSettingsSchema extends StructuredValueSchema
      * The total delay between the receipt of the order and the goods reaching the final customer.
      *
      * @param $deliveryTime 
+     * @return static
      **/
-    public function setDeliveryTime($deliveryTime) {
+    public function setDeliveryTime($deliveryTime): static {
         $this->properties['deliveryTime'] = $deliveryTime;
 
         return $this;

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class GameServerStatusSchema extends StatusEnumerationSchema
 {
-    public static function factory()
+    public static function factory(): GameServerStatusSchema
     {
         return new GameServerStatusSchema('https://schema.org/', 'GameServerStatus');
     }

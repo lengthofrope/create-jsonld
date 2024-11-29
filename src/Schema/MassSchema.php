@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MassSchema extends QuantitySchema
 {
-    public static function factory()
+    public static function factory(): MassSchema
     {
         return new MassSchema('https://schema.org/', 'Mass');
     }

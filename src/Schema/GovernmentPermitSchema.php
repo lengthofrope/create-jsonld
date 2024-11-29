@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class GovernmentPermitSchema extends PermitSchema
 {
-    public static function factory()
+    public static function factory(): GovernmentPermitSchema
     {
         return new GovernmentPermitSchema('https://schema.org/', 'GovernmentPermit');
     }

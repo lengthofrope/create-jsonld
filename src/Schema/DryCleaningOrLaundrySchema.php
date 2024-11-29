@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DryCleaningOrLaundrySchema extends LocalBusinessSchema
 {
-    public static function factory()
+    public static function factory(): DryCleaningOrLaundrySchema
     {
         return new DryCleaningOrLaundrySchema('https://schema.org/', 'DryCleaningOrLaundry');
     }

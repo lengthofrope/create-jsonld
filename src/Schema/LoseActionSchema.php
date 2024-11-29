@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class LoseActionSchema extends AchieveActionSchema
 {
-    public static function factory()
+    public static function factory(): LoseActionSchema
     {
         return new LoseActionSchema('https://schema.org/', 'LoseAction');
     }
@@ -42,8 +42,9 @@ class LoseActionSchema extends AchieveActionSchema
      * A sub property of participant. The winner of the action.
      *
      * @param $winner 
+     * @return static
      **/
-    public function setWinner($winner) {
+    public function setWinner($winner): static {
         $this->properties['winner'] = $winner;
 
         return $this;

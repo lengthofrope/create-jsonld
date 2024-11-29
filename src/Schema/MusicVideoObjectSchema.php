@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MusicVideoObjectSchema extends MediaObjectSchema
 {
-    public static function factory()
+    public static function factory(): MusicVideoObjectSchema
     {
         return new MusicVideoObjectSchema('https://schema.org/', 'MusicVideoObject');
     }

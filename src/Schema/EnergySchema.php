@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class EnergySchema extends QuantitySchema
 {
-    public static function factory()
+    public static function factory(): EnergySchema
     {
         return new EnergySchema('https://schema.org/', 'Energy');
     }

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class IceCreamShopSchema extends FoodEstablishmentSchema
 {
-    public static function factory()
+    public static function factory(): IceCreamShopSchema
     {
         return new IceCreamShopSchema('https://schema.org/', 'IceCreamShop');
     }

@@ -31,9 +31,9 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PhysicianSchema extends \LengthOfRope\JSONLD\Elements\Element
+class PhysicianSchema extends MedicalOrganizationSchema
 {
-    public static function factory()
+    public static function factory(): PhysicianSchema
     {
         return new PhysicianSchema('https://schema.org/', 'Physician');
     }
@@ -43,8 +43,9 @@ class PhysicianSchema extends \LengthOfRope\JSONLD\Elements\Element
 Note: for historical reasons, any textual label and formal code provided as a literal may be assumed to be from O*NET-SOC.
      *
      * @param $occupationalCategory |
+     * @return static
      **/
-    public function setOccupationalCategory($occupationalCategory) {
+    public function setOccupationalCategory($occupationalCategory): static {
         $this->properties['occupationalCategory'] = $occupationalCategory;
 
         return $this;
@@ -61,8 +62,9 @@ Note: for historical reasons, any textual label and formal code provided as a li
      * A medical specialty of the provider.
      *
      * @param $medicalSpecialty 
+     * @return static
      **/
-    public function setMedicalSpecialty($medicalSpecialty) {
+    public function setMedicalSpecialty($medicalSpecialty): static {
         $this->properties['medicalSpecialty'] = $medicalSpecialty;
 
         return $this;
@@ -79,8 +81,9 @@ Note: for historical reasons, any textual label and formal code provided as a li
      * A medical service available from this provider.
      *
      * @param $availableService ||
+     * @return static
      **/
-    public function setAvailableService($availableService) {
+    public function setAvailableService($availableService): static {
         $this->properties['availableService'] = $availableService;
 
         return $this;
@@ -98,8 +101,9 @@ Note: for historical reasons, any textual label and formal code provided as a li
     is a unique 10-digit identification number issued to health care providers in the United States by the Centers for Medicare and Medicaid Services.
      *
      * @param $usNPI 
+     * @return static
      **/
-    public function setUsNPI($usNPI) {
+    public function setUsNPI($usNPI): static {
         $this->properties['usNPI'] = $usNPI;
 
         return $this;
@@ -116,8 +120,9 @@ Note: for historical reasons, any textual label and formal code provided as a li
      * A hospital with which the physician or office is affiliated.
      *
      * @param $hospitalAffiliation 
+     * @return static
      **/
-    public function setHospitalAffiliation($hospitalAffiliation) {
+    public function setHospitalAffiliation($hospitalAffiliation): static {
         $this->properties['hospitalAffiliation'] = $hospitalAffiliation;
 
         return $this;

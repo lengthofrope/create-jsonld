@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class BuddhistTempleSchema extends PlaceOfWorshipSchema
 {
-    public static function factory()
+    public static function factory(): BuddhistTempleSchema
     {
         return new BuddhistTempleSchema('https://schema.org/', 'BuddhistTemple');
     }

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DrugStrengthSchema extends MedicalIntangibleSchema
 {
-    public static function factory()
+    public static function factory(): DrugStrengthSchema
     {
         return new DrugStrengthSchema('https://schema.org/', 'DrugStrength');
     }
@@ -42,8 +42,9 @@ class DrugStrengthSchema extends MedicalIntangibleSchema
      * The units of an active ingredient's strength, e.g. mg.
      *
      * @param $strengthUnit 
+     * @return static
      **/
-    public function setStrengthUnit($strengthUnit) {
+    public function setStrengthUnit($strengthUnit): static {
         $this->properties['strengthUnit'] = $strengthUnit;
 
         return $this;
@@ -60,8 +61,9 @@ class DrugStrengthSchema extends MedicalIntangibleSchema
      * The value of an active ingredient's strength, e.g. 325.
      *
      * @param $strengthValue 
+     * @return static
      **/
-    public function setStrengthValue($strengthValue) {
+    public function setStrengthValue($strengthValue): static {
         $this->properties['strengthValue'] = $strengthValue;
 
         return $this;
@@ -78,8 +80,9 @@ class DrugStrengthSchema extends MedicalIntangibleSchema
      * The location in which the strength is available.
      *
      * @param $availableIn 
+     * @return static
      **/
-    public function setAvailableIn($availableIn) {
+    public function setAvailableIn($availableIn): static {
         $this->properties['availableIn'] = $availableIn;
 
         return $this;
@@ -96,8 +99,9 @@ class DrugStrengthSchema extends MedicalIntangibleSchema
      * Recommended intake of this supplement for a given population as defined by a specific recommending authority.
      *
      * @param $maximumIntake 
+     * @return static
      **/
-    public function setMaximumIntake($maximumIntake) {
+    public function setMaximumIntake($maximumIntake): static {
         $this->properties['maximumIntake'] = $maximumIntake;
 
         return $this;
@@ -114,8 +118,9 @@ class DrugStrengthSchema extends MedicalIntangibleSchema
      * An active ingredient, typically chemical compounds and/or biologic substances.
      *
      * @param $activeIngredient 
+     * @return static
      **/
-    public function setActiveIngredient($activeIngredient) {
+    public function setActiveIngredient($activeIngredient): static {
         $this->properties['activeIngredient'] = $activeIngredient;
 
         return $this;

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MobileApplicationSchema extends SoftwareApplicationSchema
 {
-    public static function factory()
+    public static function factory(): MobileApplicationSchema
     {
         return new MobileApplicationSchema('https://schema.org/', 'MobileApplication');
     }
@@ -42,8 +42,9 @@ class MobileApplicationSchema extends SoftwareApplicationSchema
      * Specifies specific carrier(s) requirements for the application (e.g. an application may only work on a specific carrier network).
      *
      * @param $carrierRequirements 
+     * @return static
      **/
-    public function setCarrierRequirements($carrierRequirements) {
+    public function setCarrierRequirements($carrierRequirements): static {
         $this->properties['carrierRequirements'] = $carrierRequirements;
 
         return $this;

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class VitalSignSchema extends MedicalSignSchema
 {
-    public static function factory()
+    public static function factory(): VitalSignSchema
     {
         return new VitalSignSchema('https://schema.org/', 'VitalSign');
     }

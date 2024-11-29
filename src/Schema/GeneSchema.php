@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class GeneSchema extends BioChemEntitySchema
 {
-    public static function factory()
+    public static function factory(): GeneSchema
     {
         return new GeneSchema('https://schema.org/', 'Gene');
     }
@@ -42,8 +42,9 @@ class GeneSchema extends BioChemEntitySchema
      * Tissue, organ, biological sample, etc in which activity of this gene has been observed experimentally. For example brain, digestive system.
      *
      * @param $expressedIn |||
+     * @return static
      **/
-    public function setExpressedIn($expressedIn) {
+    public function setExpressedIn($expressedIn): static {
         $this->properties['expressedIn'] = $expressedIn;
 
         return $this;
@@ -60,8 +61,9 @@ class GeneSchema extends BioChemEntitySchema
      * A symbolic representation of a BioChemEntity. For example, a nucleotide sequence of a Gene or an amino acid sequence of a Protein.
      *
      * @param $hasBioPolymerSequence 
+     * @return static
      **/
-    public function setHasBioPolymerSequence($hasBioPolymerSequence) {
+    public function setHasBioPolymerSequence($hasBioPolymerSequence): static {
         $this->properties['hasBioPolymerSequence'] = $hasBioPolymerSequence;
 
         return $this;
@@ -78,8 +80,9 @@ class GeneSchema extends BioChemEntitySchema
      * Another BioChemEntity encoded by this one. 
      *
      * @param $encodesBioChemEntity 
+     * @return static
      **/
-    public function setEncodesBioChemEntity($encodesBioChemEntity) {
+    public function setEncodesBioChemEntity($encodesBioChemEntity): static {
         $this->properties['encodesBioChemEntity'] = $encodesBioChemEntity;
 
         return $this;
@@ -96,8 +99,9 @@ class GeneSchema extends BioChemEntitySchema
      * Another gene which is a variation of this one.
      *
      * @param $alternativeOf 
+     * @return static
      **/
-    public function setAlternativeOf($alternativeOf) {
+    public function setAlternativeOf($alternativeOf): static {
         $this->properties['alternativeOf'] = $alternativeOf;
 
         return $this;

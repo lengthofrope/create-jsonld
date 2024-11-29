@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PropertySchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): PropertySchema
     {
         return new PropertySchema('https://schema.org/', 'Property');
     }
@@ -42,8 +42,9 @@ class PropertySchema extends IntangibleSchema
      * Relates a property to a class that is (one of) the type(s) the property is expected to be used on.
      *
      * @param $domainIncludes 
+     * @return static
      **/
-    public function setDomainIncludes($domainIncludes) {
+    public function setDomainIncludes($domainIncludes): static {
         $this->properties['domainIncludes'] = $domainIncludes;
 
         return $this;
@@ -60,8 +61,9 @@ class PropertySchema extends IntangibleSchema
      * Relates a property to a property that is its inverse. Inverse properties relate the same pairs of items to each other, but in reversed direction. For example, the 'alumni' and 'alumniOf' properties are inverseOf each other. Some properties don't have explicit inverses; in these situations RDFa and JSON-LD syntax for reverse properties can be used.
      *
      * @param $inverseOf 
+     * @return static
      **/
-    public function setInverseOf($inverseOf) {
+    public function setInverseOf($inverseOf): static {
         $this->properties['inverseOf'] = $inverseOf;
 
         return $this;
@@ -78,8 +80,9 @@ class PropertySchema extends IntangibleSchema
      * Relates a term (i.e. a property, class or enumeration) to one that supersedes it.
      *
      * @param $supersededBy ||
+     * @return static
      **/
-    public function setSupersededBy($supersededBy) {
+    public function setSupersededBy($supersededBy): static {
         $this->properties['supersededBy'] = $supersededBy;
 
         return $this;
@@ -96,8 +99,9 @@ class PropertySchema extends IntangibleSchema
      * Relates a property to a class that constitutes (one of) the expected type(s) for values of the property.
      *
      * @param $rangeIncludes 
+     * @return static
      **/
-    public function setRangeIncludes($rangeIncludes) {
+    public function setRangeIncludes($rangeIncludes): static {
         $this->properties['rangeIncludes'] = $rangeIncludes;
 
         return $this;

@@ -35,9 +35,9 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class CampgroundSchema extends \LengthOfRope\JSONLD\Elements\Element
+class CampgroundSchema extends LodgingBusinessSchema
 {
-    public static function factory()
+    public static function factory(): CampgroundSchema
     {
         return new CampgroundSchema('https://schema.org/', 'Campground');
     }

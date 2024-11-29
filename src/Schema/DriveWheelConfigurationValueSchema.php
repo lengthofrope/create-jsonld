@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DriveWheelConfigurationValueSchema extends QualitativeValueSchema
 {
-    public static function factory()
+    public static function factory(): DriveWheelConfigurationValueSchema
     {
         return new DriveWheelConfigurationValueSchema('https://schema.org/', 'DriveWheelConfigurationValue');
     }

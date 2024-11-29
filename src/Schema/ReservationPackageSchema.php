@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ReservationPackageSchema extends ReservationSchema
 {
-    public static function factory()
+    public static function factory(): ReservationPackageSchema
     {
         return new ReservationPackageSchema('https://schema.org/', 'ReservationPackage');
     }
@@ -42,8 +42,9 @@ class ReservationPackageSchema extends ReservationSchema
      * The individual reservations included in the package. Typically a repeated property.
      *
      * @param $subReservation 
+     * @return static
      **/
-    public function setSubReservation($subReservation) {
+    public function setSubReservation($subReservation): static {
         $this->properties['subReservation'] = $subReservation;
 
         return $this;

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MedicalSignSchema extends MedicalSignOrSymptomSchema
 {
-    public static function factory()
+    public static function factory(): MedicalSignSchema
     {
         return new MedicalSignSchema('https://schema.org/', 'MedicalSign');
     }
@@ -42,8 +42,9 @@ class MedicalSignSchema extends MedicalSignOrSymptomSchema
      * A diagnostic test that can identify this sign.
      *
      * @param $identifyingTest 
+     * @return static
      **/
-    public function setIdentifyingTest($identifyingTest) {
+    public function setIdentifyingTest($identifyingTest): static {
         $this->properties['identifyingTest'] = $identifyingTest;
 
         return $this;
@@ -60,8 +61,9 @@ class MedicalSignSchema extends MedicalSignOrSymptomSchema
      * A physical examination that can identify this sign.
      *
      * @param $identifyingExam 
+     * @return static
      **/
-    public function setIdentifyingExam($identifyingExam) {
+    public function setIdentifyingExam($identifyingExam): static {
         $this->properties['identifyingExam'] = $identifyingExam;
 
         return $this;

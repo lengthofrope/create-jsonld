@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class InsuranceAgencySchema extends FinancialServiceSchema
 {
-    public static function factory()
+    public static function factory(): InsuranceAgencySchema
     {
         return new InsuranceAgencySchema('https://schema.org/', 'InsuranceAgency');
     }

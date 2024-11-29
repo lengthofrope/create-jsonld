@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class CodeSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): CodeSchema
     {
         return new CodeSchema('https://schema.org/', 'Code');
     }

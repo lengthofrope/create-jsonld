@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class BrainStructureSchema extends AnatomicalStructureSchema
 {
-    public static function factory()
+    public static function factory(): BrainStructureSchema
     {
         return new BrainStructureSchema('https://schema.org/', 'BrainStructure');
     }

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ItemPageSchema extends WebPageSchema
 {
-    public static function factory()
+    public static function factory(): ItemPageSchema
     {
         return new ItemPageSchema('https://schema.org/', 'ItemPage');
     }

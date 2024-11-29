@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MedicalDeviceSchema extends MedicalEntitySchema
 {
-    public static function factory()
+    public static function factory(): MedicalDeviceSchema
     {
         return new MedicalDeviceSchema('https://schema.org/', 'MedicalDevice');
     }
@@ -42,8 +42,9 @@ class MedicalDeviceSchema extends MedicalEntitySchema
      * A description of the procedure involved in setting up, using, and/or installing the device.
      *
      * @param $procedure 
+     * @return static
      **/
-    public function setProcedure($procedure) {
+    public function setProcedure($procedure): static {
         $this->properties['procedure'] = $procedure;
 
         return $this;
@@ -60,8 +61,9 @@ class MedicalDeviceSchema extends MedicalEntitySchema
      * A description of the workup, testing, and other preparations required before implanting this device.
      *
      * @param $preOp 
+     * @return static
      **/
-    public function setPreOp($preOp) {
+    public function setPreOp($preOp): static {
         $this->properties['preOp'] = $preOp;
 
         return $this;
@@ -78,8 +80,9 @@ class MedicalDeviceSchema extends MedicalEntitySchema
      * A possible complication and/or side effect of this therapy. If it is known that an adverse outcome is serious (resulting in death, disability, or permanent damage; requiring hospitalization; or otherwise life-threatening or requiring immediate medical attention), tag it as a seriousAdverseOutcome instead.
      *
      * @param $adverseOutcome 
+     * @return static
      **/
-    public function setAdverseOutcome($adverseOutcome) {
+    public function setAdverseOutcome($adverseOutcome): static {
         $this->properties['adverseOutcome'] = $adverseOutcome;
 
         return $this;
@@ -96,8 +99,9 @@ class MedicalDeviceSchema extends MedicalEntitySchema
      * A contraindication for this therapy.
      *
      * @param $contraindication |
+     * @return static
      **/
-    public function setContraindication($contraindication) {
+    public function setContraindication($contraindication): static {
         $this->properties['contraindication'] = $contraindication;
 
         return $this;
@@ -114,8 +118,9 @@ class MedicalDeviceSchema extends MedicalEntitySchema
      * A possible serious complication and/or serious side effect of this therapy. Serious adverse outcomes include those that are life-threatening; result in death, disability, or permanent damage; require hospitalization or prolong existing hospitalization; cause congenital anomalies or birth defects; or jeopardize the patient and may require medical or surgical intervention to prevent one of the outcomes in this definition.
      *
      * @param $seriousAdverseOutcome 
+     * @return static
      **/
-    public function setSeriousAdverseOutcome($seriousAdverseOutcome) {
+    public function setSeriousAdverseOutcome($seriousAdverseOutcome): static {
         $this->properties['seriousAdverseOutcome'] = $seriousAdverseOutcome;
 
         return $this;
@@ -132,8 +137,9 @@ class MedicalDeviceSchema extends MedicalEntitySchema
      * A description of the postoperative procedures, care, and/or followups for this device.
      *
      * @param $postOp 
+     * @return static
      **/
-    public function setPostOp($postOp) {
+    public function setPostOp($postOp): static {
         $this->properties['postOp'] = $postOp;
 
         return $this;

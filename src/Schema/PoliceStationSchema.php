@@ -31,9 +31,9 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PoliceStationSchema extends \LengthOfRope\JSONLD\Elements\Element
+class PoliceStationSchema extends EmergencyServiceSchema
 {
-    public static function factory()
+    public static function factory(): PoliceStationSchema
     {
         return new PoliceStationSchema('https://schema.org/', 'PoliceStation');
     }

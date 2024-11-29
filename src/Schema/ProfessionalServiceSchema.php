@@ -35,7 +35,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ProfessionalServiceSchema extends LocalBusinessSchema
 {
-    public static function factory()
+    public static function factory(): ProfessionalServiceSchema
     {
         return new ProfessionalServiceSchema('https://schema.org/', 'ProfessionalService');
     }

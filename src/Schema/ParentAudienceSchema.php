@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ParentAudienceSchema extends PeopleAudienceSchema
 {
-    public static function factory()
+    public static function factory(): ParentAudienceSchema
     {
         return new ParentAudienceSchema('https://schema.org/', 'ParentAudience');
     }
@@ -42,8 +42,9 @@ class ParentAudienceSchema extends PeopleAudienceSchema
      * Maximal age of the child.
      *
      * @param $childMaxAge 
+     * @return static
      **/
-    public function setChildMaxAge($childMaxAge) {
+    public function setChildMaxAge($childMaxAge): static {
         $this->properties['childMaxAge'] = $childMaxAge;
 
         return $this;
@@ -60,8 +61,9 @@ class ParentAudienceSchema extends PeopleAudienceSchema
      * Minimal age of the child.
      *
      * @param $childMinAge 
+     * @return static
      **/
-    public function setChildMinAge($childMinAge) {
+    public function setChildMinAge($childMinAge): static {
         $this->properties['childMinAge'] = $childMinAge;
 
         return $this;

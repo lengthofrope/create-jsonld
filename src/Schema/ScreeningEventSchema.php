@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ScreeningEventSchema extends EventSchema
 {
-    public static function factory()
+    public static function factory(): ScreeningEventSchema
     {
         return new ScreeningEventSchema('https://schema.org/', 'ScreeningEvent');
     }
@@ -42,8 +42,9 @@ class ScreeningEventSchema extends EventSchema
      * The type of screening or video broadcast used (e.g. IMAX, 3D, SD, HD, etc.).
      *
      * @param $videoFormat 
+     * @return static
      **/
-    public function setVideoFormat($videoFormat) {
+    public function setVideoFormat($videoFormat): static {
         $this->properties['videoFormat'] = $videoFormat;
 
         return $this;
@@ -60,8 +61,9 @@ class ScreeningEventSchema extends EventSchema
      * Languages in which subtitles/captions are available, in [IETF BCP 47 standard format](http://tools.ietf.org/html/bcp47).
      *
      * @param $subtitleLanguage |
+     * @return static
      **/
-    public function setSubtitleLanguage($subtitleLanguage) {
+    public function setSubtitleLanguage($subtitleLanguage): static {
         $this->properties['subtitleLanguage'] = $subtitleLanguage;
 
         return $this;
@@ -78,8 +80,9 @@ class ScreeningEventSchema extends EventSchema
      * The movie presented during this event.
      *
      * @param $workPresented 
+     * @return static
      **/
-    public function setWorkPresented($workPresented) {
+    public function setWorkPresented($workPresented): static {
         $this->properties['workPresented'] = $workPresented;
 
         return $this;

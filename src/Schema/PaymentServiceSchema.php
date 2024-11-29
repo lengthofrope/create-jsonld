@@ -31,9 +31,9 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PaymentServiceSchema extends \LengthOfRope\JSONLD\Elements\Element
+class PaymentServiceSchema extends FinancialProductSchema
 {
-    public static function factory()
+    public static function factory(): PaymentServiceSchema
     {
         return new PaymentServiceSchema('https://schema.org/', 'PaymentService');
     }

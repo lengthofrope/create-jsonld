@@ -34,7 +34,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class 3DModelSchema extends MediaObjectSchema
 {
-    public static function factory()
+    public static function factory(): 3DModelSchema
     {
         return new 3DModelSchema('https://schema.org/', '3DModel');
     }
@@ -43,8 +43,9 @@ class 3DModelSchema extends MediaObjectSchema
      * Whether the 3DModel allows resizing. For example, room layout applications often do not allow 3DModel elements to be resized to reflect reality.
      *
      * @param $isResizable 
+     * @return static
      **/
-    public function setIsResizable($isResizable) {
+    public function setIsResizable($isResizable): static {
         $this->properties['isResizable'] = $isResizable;
 
         return $this;

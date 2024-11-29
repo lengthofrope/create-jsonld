@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class AcceptActionSchema extends AllocateActionSchema
 {
-    public static function factory()
+    public static function factory(): AcceptActionSchema
     {
         return new AcceptActionSchema('https://schema.org/', 'AcceptAction');
     }

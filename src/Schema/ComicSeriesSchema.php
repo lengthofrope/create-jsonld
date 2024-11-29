@@ -35,7 +35,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ComicSeriesSchema extends PeriodicalSchema
 {
-    public static function factory()
+    public static function factory(): ComicSeriesSchema
     {
         return new ComicSeriesSchema('https://schema.org/', 'ComicSeries');
     }

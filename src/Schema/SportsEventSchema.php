@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class SportsEventSchema extends EventSchema
 {
-    public static function factory()
+    public static function factory(): SportsEventSchema
     {
         return new SportsEventSchema('https://schema.org/', 'SportsEvent');
     }
@@ -42,8 +42,9 @@ class SportsEventSchema extends EventSchema
      * A competitor in a sports event.
      *
      * @param $competitor |
+     * @return static
      **/
-    public function setCompetitor($competitor) {
+    public function setCompetitor($competitor): static {
         $this->properties['competitor'] = $competitor;
 
         return $this;
@@ -60,8 +61,9 @@ class SportsEventSchema extends EventSchema
      * The home team in a sports event.
      *
      * @param $homeTeam |
+     * @return static
      **/
-    public function setHomeTeam($homeTeam) {
+    public function setHomeTeam($homeTeam): static {
         $this->properties['homeTeam'] = $homeTeam;
 
         return $this;
@@ -78,8 +80,9 @@ class SportsEventSchema extends EventSchema
      * The away team in a sports event.
      *
      * @param $awayTeam |
+     * @return static
      **/
-    public function setAwayTeam($awayTeam) {
+    public function setAwayTeam($awayTeam): static {
         $this->properties['awayTeam'] = $awayTeam;
 
         return $this;
@@ -96,8 +99,9 @@ class SportsEventSchema extends EventSchema
      * A type of sport (e.g. Baseball).
      *
      * @param $sport |
+     * @return static
      **/
-    public function setSport($sport) {
+    public function setSport($sport): static {
         $this->properties['sport'] = $sport;
 
         return $this;

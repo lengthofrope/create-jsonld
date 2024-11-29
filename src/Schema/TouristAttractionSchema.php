@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class TouristAttractionSchema extends PlaceSchema
 {
-    public static function factory()
+    public static function factory(): TouristAttractionSchema
     {
         return new TouristAttractionSchema('https://schema.org/', 'TouristAttraction');
     }
@@ -42,8 +42,9 @@ class TouristAttractionSchema extends PlaceSchema
      * Attraction suitable for type(s) of tourist. E.g. children, visitors from a particular country, etc. 
      *
      * @param $touristType |
+     * @return static
      **/
-    public function setTouristType($touristType) {
+    public function setTouristType($touristType): static {
         $this->properties['touristType'] = $touristType;
 
         return $this;
@@ -60,8 +61,9 @@ class TouristAttractionSchema extends PlaceSchema
      * A language someone may use with or at the item, service or place. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].
      *
      * @param $availableLanguage |
+     * @return static
      **/
-    public function setAvailableLanguage($availableLanguage) {
+    public function setAvailableLanguage($availableLanguage): static {
         $this->properties['availableLanguage'] = $availableLanguage;
 
         return $this;

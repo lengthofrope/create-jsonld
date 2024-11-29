@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class UpdateActionSchema extends ActionSchema
 {
-    public static function factory()
+    public static function factory(): UpdateActionSchema
     {
         return new UpdateActionSchema('https://schema.org/', 'UpdateAction');
     }
@@ -42,8 +42,9 @@ class UpdateActionSchema extends ActionSchema
      * A sub property of object. The collection target of the action.
      *
      * @param $collection 
+     * @return static
      **/
-    public function setCollection($collection) {
+    public function setCollection($collection): static {
         $this->properties['collection'] = $collection;
 
         return $this;
@@ -60,8 +61,9 @@ class UpdateActionSchema extends ActionSchema
      * A sub property of object. The collection target of the action.
      *
      * @param $targetCollection 
+     * @return static
      **/
-    public function setTargetCollection($targetCollection) {
+    public function setTargetCollection($targetCollection): static {
         $this->properties['targetCollection'] = $targetCollection;
 
         return $this;

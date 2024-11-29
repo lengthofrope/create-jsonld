@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class IndividualProductSchema extends ProductSchema
 {
-    public static function factory()
+    public static function factory(): IndividualProductSchema
     {
         return new IndividualProductSchema('https://schema.org/', 'IndividualProduct');
     }
@@ -42,8 +42,9 @@ class IndividualProductSchema extends ProductSchema
      * The serial number or any alphanumeric identifier of a particular product. When attached to an offer, it is a shortcut for the serial number of the product included in the offer.
      *
      * @param $serialNumber 
+     * @return static
      **/
-    public function setSerialNumber($serialNumber) {
+    public function setSerialNumber($serialNumber): static {
         $this->properties['serialNumber'] = $serialNumber;
 
         return $this;

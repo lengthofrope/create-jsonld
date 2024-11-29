@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class HealthAspectEnumerationSchema extends EnumerationSchema
 {
-    public static function factory()
+    public static function factory(): HealthAspectEnumerationSchema
     {
         return new HealthAspectEnumerationSchema('https://schema.org/', 'HealthAspectEnumeration');
     }

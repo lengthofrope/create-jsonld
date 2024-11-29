@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class WantActionSchema extends ReactActionSchema
 {
-    public static function factory()
+    public static function factory(): WantActionSchema
     {
         return new WantActionSchema('https://schema.org/', 'WantAction');
     }

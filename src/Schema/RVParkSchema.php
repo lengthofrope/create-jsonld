@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class RVParkSchema extends CivicStructureSchema
 {
-    public static function factory()
+    public static function factory(): RVParkSchema
     {
         return new RVParkSchema('https://schema.org/', 'RVPark');
     }

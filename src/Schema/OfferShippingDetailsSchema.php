@@ -44,7 +44,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class OfferShippingDetailsSchema extends StructuredValueSchema
 {
-    public static function factory()
+    public static function factory(): OfferShippingDetailsSchema
     {
         return new OfferShippingDetailsSchema('https://schema.org/', 'OfferShippingDetails');
     }
@@ -53,8 +53,9 @@ class OfferShippingDetailsSchema extends StructuredValueSchema
      * The shipping rate is the cost of shipping to the specified destination. Typically, the maxValue and currency values (of the [[MonetaryAmount]]) are most appropriate.
      *
      * @param $shippingRate 
+     * @return static
      **/
-    public function setShippingRate($shippingRate) {
+    public function setShippingRate($shippingRate): static {
         $this->properties['shippingRate'] = $shippingRate;
 
         return $this;
@@ -71,8 +72,9 @@ class OfferShippingDetailsSchema extends StructuredValueSchema
      * The membership program tier an Offer (or a PriceSpecification, OfferShippingDetails, or MerchantReturnPolicy under an Offer) is valid for.
      *
      * @param $validForMemberTier 
+     * @return static
      **/
-    public function setValidForMemberTier($validForMemberTier) {
+    public function setValidForMemberTier($validForMemberTier): static {
         $this->properties['validForMemberTier'] = $validForMemberTier;
 
         return $this;
@@ -89,8 +91,9 @@ class OfferShippingDetailsSchema extends StructuredValueSchema
      * indicates (possibly multiple) shipping destinations. These can be defined in several ways, e.g. postalCode ranges.
      *
      * @param $shippingDestination 
+     * @return static
      **/
-    public function setShippingDestination($shippingDestination) {
+    public function setShippingDestination($shippingDestination): static {
         $this->properties['shippingDestination'] = $shippingDestination;
 
         return $this;
@@ -107,8 +110,9 @@ class OfferShippingDetailsSchema extends StructuredValueSchema
      * Link to a page containing [[ShippingRateSettings]] and [[DeliveryTimeSettings]] details.
      *
      * @param $shippingSettingsLink 
+     * @return static
      **/
-    public function setShippingSettingsLink($shippingSettingsLink) {
+    public function setShippingSettingsLink($shippingSettingsLink): static {
         $this->properties['shippingSettingsLink'] = $shippingSettingsLink;
 
         return $this;
@@ -125,8 +129,9 @@ class OfferShippingDetailsSchema extends StructuredValueSchema
      * Label to match an [[OfferShippingDetails]] with a [[DeliveryTimeSettings]] (within the context of a [[shippingSettingsLink]] cross-reference).
      *
      * @param $transitTimeLabel 
+     * @return static
      **/
-    public function setTransitTimeLabel($transitTimeLabel) {
+    public function setTransitTimeLabel($transitTimeLabel): static {
         $this->properties['transitTimeLabel'] = $transitTimeLabel;
 
         return $this;
@@ -143,8 +148,9 @@ class OfferShippingDetailsSchema extends StructuredValueSchema
      * The total delay between the receipt of the order and the goods reaching the final customer.
      *
      * @param $deliveryTime 
+     * @return static
      **/
-    public function setDeliveryTime($deliveryTime) {
+    public function setDeliveryTime($deliveryTime): static {
         $this->properties['deliveryTime'] = $deliveryTime;
 
         return $this;
@@ -161,8 +167,9 @@ class OfferShippingDetailsSchema extends StructuredValueSchema
      * The height of the item.
      *
      * @param $height |
+     * @return static
      **/
-    public function setHeight($height) {
+    public function setHeight($height): static {
         $this->properties['height'] = $height;
 
         return $this;
@@ -179,8 +186,9 @@ class OfferShippingDetailsSchema extends StructuredValueSchema
      * The width of the item.
      *
      * @param $width |
+     * @return static
      **/
-    public function setWidth($width) {
+    public function setWidth($width): static {
         $this->properties['width'] = $width;
 
         return $this;
@@ -197,8 +205,9 @@ class OfferShippingDetailsSchema extends StructuredValueSchema
      * The weight of the product or person.
      *
      * @param $weight 
+     * @return static
      **/
-    public function setWeight($weight) {
+    public function setWeight($weight): static {
         $this->properties['weight'] = $weight;
 
         return $this;
@@ -215,8 +224,9 @@ class OfferShippingDetailsSchema extends StructuredValueSchema
      * The depth of the item.
      *
      * @param $depth |
+     * @return static
      **/
-    public function setDepth($depth) {
+    public function setDepth($depth): static {
         $this->properties['depth'] = $depth;
 
         return $this;
@@ -233,8 +243,9 @@ class OfferShippingDetailsSchema extends StructuredValueSchema
      * Indicates when shipping to a particular [[shippingDestination]] is not available.
      *
      * @param $doesNotShip 
+     * @return static
      **/
-    public function setDoesNotShip($doesNotShip) {
+    public function setDoesNotShip($doesNotShip): static {
         $this->properties['doesNotShip'] = $doesNotShip;
 
         return $this;
@@ -251,8 +262,9 @@ class OfferShippingDetailsSchema extends StructuredValueSchema
      * Label to match an [[OfferShippingDetails]] with a [[ShippingRateSettings]] (within the context of a [[shippingSettingsLink]] cross-reference).
      *
      * @param $shippingLabel 
+     * @return static
      **/
-    public function setShippingLabel($shippingLabel) {
+    public function setShippingLabel($shippingLabel): static {
         $this->properties['shippingLabel'] = $shippingLabel;
 
         return $this;
@@ -269,8 +281,9 @@ class OfferShippingDetailsSchema extends StructuredValueSchema
      * Indicates the origin of a shipment, i.e. where it should be coming from.
      *
      * @param $shippingOrigin 
+     * @return static
      **/
-    public function setShippingOrigin($shippingOrigin) {
+    public function setShippingOrigin($shippingOrigin): static {
         $this->properties['shippingOrigin'] = $shippingOrigin;
 
         return $this;

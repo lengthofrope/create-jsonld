@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PathologyTestSchema extends MedicalTestSchema
 {
-    public static function factory()
+    public static function factory(): PathologyTestSchema
     {
         return new PathologyTestSchema('https://schema.org/', 'PathologyTest');
     }
@@ -42,8 +42,9 @@ class PathologyTestSchema extends MedicalTestSchema
      * The type of tissue sample required for the test.
      *
      * @param $tissueSample 
+     * @return static
      **/
-    public function setTissueSample($tissueSample) {
+    public function setTissueSample($tissueSample): static {
         $this->properties['tissueSample'] = $tissueSample;
 
         return $this;

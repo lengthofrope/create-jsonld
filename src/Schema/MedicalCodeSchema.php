@@ -31,9 +31,9 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MedicalCodeSchema extends \LengthOfRope\JSONLD\Elements\Element
+class MedicalCodeSchema extends CategoryCodeSchema
 {
-    public static function factory()
+    public static function factory(): MedicalCodeSchema
     {
         return new MedicalCodeSchema('https://schema.org/', 'MedicalCode');
     }
@@ -42,8 +42,9 @@ class MedicalCodeSchema extends \LengthOfRope\JSONLD\Elements\Element
      * The coding system, e.g. 'ICD-10'.
      *
      * @param $codingSystem 
+     * @return static
      **/
-    public function setCodingSystem($codingSystem) {
+    public function setCodingSystem($codingSystem): static {
         $this->properties['codingSystem'] = $codingSystem;
 
         return $this;
@@ -60,8 +61,9 @@ class MedicalCodeSchema extends \LengthOfRope\JSONLD\Elements\Element
      * A short textual code that uniquely identifies the value.
      *
      * @param $codeValue 
+     * @return static
      **/
-    public function setCodeValue($codeValue) {
+    public function setCodeValue($codeValue): static {
         $this->properties['codeValue'] = $codeValue;
 
         return $this;

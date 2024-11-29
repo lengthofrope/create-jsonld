@@ -37,7 +37,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class LearningResourceSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): LearningResourceSchema
     {
         return new LearningResourceSchema('https://schema.org/', 'LearningResource');
     }
@@ -48,8 +48,9 @@ class LearningResourceSchema extends CreativeWorkSchema
 This property should not be used where the nature of the alignment can be described using a simple property, for example to express that a resource [[teaches]] or [[assesses]] a competency.
      *
      * @param $educationalAlignment 
+     * @return static
      **/
-    public function setEducationalAlignment($educationalAlignment) {
+    public function setEducationalAlignment($educationalAlignment): static {
         $this->properties['educationalAlignment'] = $educationalAlignment;
 
         return $this;
@@ -66,8 +67,9 @@ This property should not be used where the nature of the alignment can be descri
      * The predominant type or kind characterizing the learning resource. For example, 'presentation', 'handout'.
      *
      * @param $learningResourceType |
+     * @return static
      **/
-    public function setLearningResourceType($learningResourceType) {
+    public function setLearningResourceType($learningResourceType): static {
         $this->properties['learningResourceType'] = $learningResourceType;
 
         return $this;
@@ -84,8 +86,9 @@ This property should not be used where the nature of the alignment can be descri
      * The level in terms of progression through an educational or training context. Examples of educational levels include 'beginner', 'intermediate' or 'advanced', and formal sets of level indicators.
      *
      * @param $educationalLevel ||
+     * @return static
      **/
-    public function setEducationalLevel($educationalLevel) {
+    public function setEducationalLevel($educationalLevel): static {
         $this->properties['educationalLevel'] = $educationalLevel;
 
         return $this;
@@ -102,8 +105,9 @@ This property should not be used where the nature of the alignment can be descri
      * The purpose of a work in the context of education; for example, 'assignment', 'group work'.
      *
      * @param $educationalUse |
+     * @return static
      **/
-    public function setEducationalUse($educationalUse) {
+    public function setEducationalUse($educationalUse): static {
         $this->properties['educationalUse'] = $educationalUse;
 
         return $this;
@@ -120,8 +124,9 @@ This property should not be used where the nature of the alignment can be descri
      * The item being described is intended to assess the competency or learning outcome defined by the referenced term.
      *
      * @param $assesses |
+     * @return static
      **/
-    public function setAssesses($assesses) {
+    public function setAssesses($assesses): static {
         $this->properties['assesses'] = $assesses;
 
         return $this;
@@ -138,8 +143,9 @@ This property should not be used where the nature of the alignment can be descri
      * The item being described is intended to help a person learn the competency or learning outcome defined by the referenced term.
      *
      * @param $teaches |
+     * @return static
      **/
-    public function setTeaches($teaches) {
+    public function setTeaches($teaches): static {
         $this->properties['teaches'] = $teaches;
 
         return $this;
@@ -156,8 +162,9 @@ This property should not be used where the nature of the alignment can be descri
      * Knowledge, skill, ability or personal attribute that must be demonstrated by a person or other entity in order to do something such as earn an Educational Occupational Credential or understand a LearningResource.
      *
      * @param $competencyRequired ||
+     * @return static
      **/
-    public function setCompetencyRequired($competencyRequired) {
+    public function setCompetencyRequired($competencyRequired): static {
         $this->properties['competencyRequired'] = $competencyRequired;
 
         return $this;

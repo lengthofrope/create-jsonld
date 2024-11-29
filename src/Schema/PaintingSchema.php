@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PaintingSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): PaintingSchema
     {
         return new PaintingSchema('https://schema.org/', 'Painting');
     }

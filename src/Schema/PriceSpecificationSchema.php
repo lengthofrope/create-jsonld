@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PriceSpecificationSchema extends StructuredValueSchema
 {
-    public static function factory()
+    public static function factory(): PriceSpecificationSchema
     {
         return new PriceSpecificationSchema('https://schema.org/', 'PriceSpecification');
     }
@@ -43,8 +43,9 @@ class PriceSpecificationSchema extends StructuredValueSchema
       
      *
      * @param $price |
+     * @return static
      **/
-    public function setPrice($price) {
+    public function setPrice($price): static {
         $this->properties['price'] = $price;
 
         return $this;
@@ -61,8 +62,9 @@ class PriceSpecificationSchema extends StructuredValueSchema
      * The number of membership points earned by the member. If necessary, the unitText can be used to express the units the points are issued in. (E.g. stars, miles, etc.)
      *
      * @param $membershipPointsEarned |
+     * @return static
      **/
-    public function setMembershipPointsEarned($membershipPointsEarned) {
+    public function setMembershipPointsEarned($membershipPointsEarned): static {
         $this->properties['membershipPointsEarned'] = $membershipPointsEarned;
 
         return $this;
@@ -79,8 +81,9 @@ class PriceSpecificationSchema extends StructuredValueSchema
      * The membership program tier an Offer (or a PriceSpecification, OfferShippingDetails, or MerchantReturnPolicy under an Offer) is valid for.
      *
      * @param $validForMemberTier 
+     * @return static
      **/
-    public function setValidForMemberTier($validForMemberTier) {
+    public function setValidForMemberTier($validForMemberTier): static {
         $this->properties['validForMemberTier'] = $validForMemberTier;
 
         return $this;
@@ -97,8 +100,9 @@ class PriceSpecificationSchema extends StructuredValueSchema
      * Specifies whether the applicable value-added tax (VAT) is included in the price specification or not.
      *
      * @param $valueAddedTaxIncluded 
+     * @return static
      **/
-    public function setValueAddedTaxIncluded($valueAddedTaxIncluded) {
+    public function setValueAddedTaxIncluded($valueAddedTaxIncluded): static {
         $this->properties['valueAddedTaxIncluded'] = $valueAddedTaxIncluded;
 
         return $this;
@@ -115,8 +119,9 @@ class PriceSpecificationSchema extends StructuredValueSchema
      * The interval and unit of measurement of ordering quantities for which the offer or price specification is valid. This allows e.g. specifying that a certain freight charge is valid only for a certain quantity.
      *
      * @param $eligibleQuantity 
+     * @return static
      **/
-    public function setEligibleQuantity($eligibleQuantity) {
+    public function setEligibleQuantity($eligibleQuantity): static {
         $this->properties['eligibleQuantity'] = $eligibleQuantity;
 
         return $this;
@@ -133,8 +138,9 @@ class PriceSpecificationSchema extends StructuredValueSchema
      * The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours.
      *
      * @param $validThrough |
+     * @return static
      **/
-    public function setValidThrough($validThrough) {
+    public function setValidThrough($validThrough): static {
         $this->properties['validThrough'] = $validThrough;
 
         return $this;
@@ -151,8 +157,9 @@ class PriceSpecificationSchema extends StructuredValueSchema
      * The currency of the price, or a price component when attached to [[PriceSpecification]] and its subtypes.\n\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR".
      *
      * @param $priceCurrency 
+     * @return static
      **/
-    public function setPriceCurrency($priceCurrency) {
+    public function setPriceCurrency($priceCurrency): static {
         $this->properties['priceCurrency'] = $priceCurrency;
 
         return $this;
@@ -169,8 +176,9 @@ class PriceSpecificationSchema extends StructuredValueSchema
      * The highest price if the price is a range.
      *
      * @param $maxPrice 
+     * @return static
      **/
-    public function setMaxPrice($maxPrice) {
+    public function setMaxPrice($maxPrice): static {
         $this->properties['maxPrice'] = $maxPrice;
 
         return $this;
@@ -187,8 +195,9 @@ class PriceSpecificationSchema extends StructuredValueSchema
      * The date when the item becomes valid.
      *
      * @param $validFrom |
+     * @return static
      **/
-    public function setValidFrom($validFrom) {
+    public function setValidFrom($validFrom): static {
         $this->properties['validFrom'] = $validFrom;
 
         return $this;
@@ -205,8 +214,9 @@ class PriceSpecificationSchema extends StructuredValueSchema
      * The lowest price if the price is a range.
      *
      * @param $minPrice 
+     * @return static
      **/
-    public function setMinPrice($minPrice) {
+    public function setMinPrice($minPrice): static {
         $this->properties['minPrice'] = $minPrice;
 
         return $this;
@@ -223,8 +233,9 @@ class PriceSpecificationSchema extends StructuredValueSchema
      * The transaction volume, in a monetary unit, for which the offer or price specification is valid, e.g. for indicating a minimal purchasing volume, to express free shipping above a certain order volume, or to limit the acceptance of credit cards to purchases to a certain minimal amount.
      *
      * @param $eligibleTransactionVolume 
+     * @return static
      **/
-    public function setEligibleTransactionVolume($eligibleTransactionVolume) {
+    public function setEligibleTransactionVolume($eligibleTransactionVolume): static {
         $this->properties['eligibleTransactionVolume'] = $eligibleTransactionVolume;
 
         return $this;

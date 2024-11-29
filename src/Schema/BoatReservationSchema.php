@@ -35,7 +35,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class BoatReservationSchema extends ReservationSchema
 {
-    public static function factory()
+    public static function factory(): BoatReservationSchema
     {
         return new BoatReservationSchema('https://schema.org/', 'BoatReservation');
     }

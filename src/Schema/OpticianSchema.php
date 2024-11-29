@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class OpticianSchema extends MedicalBusinessSchema
 {
-    public static function factory()
+    public static function factory(): OpticianSchema
     {
         return new OpticianSchema('https://schema.org/', 'Optician');
     }

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PlumberSchema extends HomeAndConstructionBusinessSchema
 {
-    public static function factory()
+    public static function factory(): PlumberSchema
     {
         return new PlumberSchema('https://schema.org/', 'Plumber');
     }

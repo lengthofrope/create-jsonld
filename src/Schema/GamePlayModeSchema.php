@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class GamePlayModeSchema extends EnumerationSchema
 {
-    public static function factory()
+    public static function factory(): GamePlayModeSchema
     {
         return new GamePlayModeSchema('https://schema.org/', 'GamePlayMode');
     }

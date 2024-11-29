@@ -31,9 +31,9 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class TVSeasonSchema extends \LengthOfRope\JSONLD\Elements\Element
+class TVSeasonSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): TVSeasonSchema
     {
         return new TVSeasonSchema('https://schema.org/', 'TVSeason');
     }
@@ -47,8 +47,9 @@ Since schema.org types like [[Movie]], [[TVEpisode]], [[TVSeason]], and [[TVSeri
 
      *
      * @param $titleEIDR |
+     * @return static
      **/
-    public function setTitleEIDR($titleEIDR) {
+    public function setTitleEIDR($titleEIDR): static {
         $this->properties['titleEIDR'] = $titleEIDR;
 
         return $this;
@@ -69,8 +70,9 @@ In the case of TV and movie, this would be the country of the principle offices 
 In the case of products, the country of origin of the product. The exact interpretation of this may vary by context and product type, and cannot be fully enumerated here.
      *
      * @param $countryOfOrigin 
+     * @return static
      **/
-    public function setCountryOfOrigin($countryOfOrigin) {
+    public function setCountryOfOrigin($countryOfOrigin): static {
         $this->properties['countryOfOrigin'] = $countryOfOrigin;
 
         return $this;
@@ -87,8 +89,9 @@ In the case of products, the country of origin of the product. The exact interpr
      * The TV series to which this episode or season belongs.
      *
      * @param $partOfTVSeries 
+     * @return static
      **/
-    public function setPartOfTVSeries($partOfTVSeries) {
+    public function setPartOfTVSeries($partOfTVSeries): static {
         $this->properties['partOfTVSeries'] = $partOfTVSeries;
 
         return $this;

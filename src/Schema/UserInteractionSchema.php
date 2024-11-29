@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class UserInteractionSchema extends EventSchema
 {
-    public static function factory()
+    public static function factory(): UserInteractionSchema
     {
         return new UserInteractionSchema('https://schema.org/', 'UserInteraction');
     }

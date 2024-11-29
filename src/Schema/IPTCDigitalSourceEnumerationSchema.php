@@ -35,7 +35,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class IPTCDigitalSourceEnumerationSchema extends MediaEnumerationSchema
 {
-    public static function factory()
+    public static function factory(): IPTCDigitalSourceEnumerationSchema
     {
         return new IPTCDigitalSourceEnumerationSchema('https://schema.org/', 'IPTCDigitalSourceEnumeration');
     }

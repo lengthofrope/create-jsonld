@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class WebPageSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): WebPageSchema
     {
         return new WebPageSchema('https://schema.org/', 'WebPage');
     }
@@ -42,8 +42,9 @@ class WebPageSchema extends CreativeWorkSchema
      * A link related to this web page, for example to other related web pages.
      *
      * @param $relatedLink 
+     * @return static
      **/
-    public function setRelatedLink($relatedLink) {
+    public function setRelatedLink($relatedLink): static {
         $this->properties['relatedLink'] = $relatedLink;
 
         return $this;
@@ -60,8 +61,9 @@ class WebPageSchema extends CreativeWorkSchema
      * A set of links that can help a user understand and navigate a website hierarchy.
      *
      * @param $breadcrumb |
+     * @return static
      **/
-    public function setBreadcrumb($breadcrumb) {
+    public function setBreadcrumb($breadcrumb): static {
         $this->properties['breadcrumb'] = $breadcrumb;
 
         return $this;
@@ -78,8 +80,9 @@ class WebPageSchema extends CreativeWorkSchema
      * People or organizations that have reviewed the content on this web page for accuracy and/or completeness.
      *
      * @param $reviewedBy |
+     * @return static
      **/
-    public function setReviewedBy($reviewedBy) {
+    public function setReviewedBy($reviewedBy): static {
         $this->properties['reviewedBy'] = $reviewedBy;
 
         return $this;
@@ -96,8 +99,9 @@ class WebPageSchema extends CreativeWorkSchema
      * One of the more significant URLs on the page. Typically, these are the non-navigation links that are clicked on the most.
      *
      * @param $significantLink 
+     * @return static
      **/
-    public function setSignificantLink($significantLink) {
+    public function setSignificantLink($significantLink): static {
         $this->properties['significantLink'] = $significantLink;
 
         return $this;
@@ -114,8 +118,9 @@ class WebPageSchema extends CreativeWorkSchema
      * Date on which the content on this web page was last reviewed for accuracy and/or completeness.
      *
      * @param $lastReviewed 
+     * @return static
      **/
-    public function setLastReviewed($lastReviewed) {
+    public function setLastReviewed($lastReviewed): static {
         $this->properties['lastReviewed'] = $lastReviewed;
 
         return $this;
@@ -132,8 +137,9 @@ class WebPageSchema extends CreativeWorkSchema
      * Indicates the main image on the page.
      *
      * @param $primaryImageOfPage 
+     * @return static
      **/
-    public function setPrimaryImageOfPage($primaryImageOfPage) {
+    public function setPrimaryImageOfPage($primaryImageOfPage): static {
         $this->properties['primaryImageOfPage'] = $primaryImageOfPage;
 
         return $this;
@@ -150,8 +156,9 @@ class WebPageSchema extends CreativeWorkSchema
      * The most significant URLs on the page. Typically, these are the non-navigation links that are clicked on the most.
      *
      * @param $significantLinks 
+     * @return static
      **/
-    public function setSignificantLinks($significantLinks) {
+    public function setSignificantLinks($significantLinks): static {
         $this->properties['significantLinks'] = $significantLinks;
 
         return $this;
@@ -168,8 +175,9 @@ class WebPageSchema extends CreativeWorkSchema
      * One of the domain specialities to which this web page's content applies.
      *
      * @param $specialty 
+     * @return static
      **/
-    public function setSpecialty($specialty) {
+    public function setSpecialty($specialty): static {
         $this->properties['specialty'] = $specialty;
 
         return $this;
@@ -186,8 +194,9 @@ class WebPageSchema extends CreativeWorkSchema
      * Indicates if this web page element is the main subject of the page.
      *
      * @param $mainContentOfPage 
+     * @return static
      **/
-    public function setMainContentOfPage($mainContentOfPage) {
+    public function setMainContentOfPage($mainContentOfPage): static {
         $this->properties['mainContentOfPage'] = $mainContentOfPage;
 
         return $this;
@@ -217,8 +226,9 @@ we define a supporting type, [[SpeakableSpecification]]  which is defined to be 
          
      *
      * @param $speakable |
+     * @return static
      **/
-    public function setSpeakable($speakable) {
+    public function setSpeakable($speakable): static {
         $this->properties['speakable'] = $speakable;
 
         return $this;

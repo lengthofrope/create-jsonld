@@ -36,7 +36,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class CDCPMDRecordSchema extends StructuredValueSchema
 {
-    public static function factory()
+    public static function factory(): CDCPMDRecordSchema
     {
         return new CDCPMDRecordSchema('https://schema.org/', 'CDCPMDRecord');
     }
@@ -45,8 +45,9 @@ class CDCPMDRecordSchema extends StructuredValueSchema
      * numicubeds - ICU BEDS: Total number of staffed inpatient intensive care unit (ICU) beds.
      *
      * @param $cvdNumICUBeds 
+     * @return static
      **/
-    public function setCvdNumICUBeds($cvdNumICUBeds) {
+    public function setCvdNumICUBeds($cvdNumICUBeds): static {
         $this->properties['cvdNumICUBeds'] = $cvdNumICUBeds;
 
         return $this;
@@ -63,8 +64,9 @@ class CDCPMDRecordSchema extends StructuredValueSchema
      * Publication date of an online listing.
      *
      * @param $datePosted |
+     * @return static
      **/
-    public function setDatePosted($datePosted) {
+    public function setDatePosted($datePosted): static {
         $this->properties['datePosted'] = $datePosted;
 
         return $this;
@@ -81,8 +83,9 @@ class CDCPMDRecordSchema extends StructuredValueSchema
      * numc19overflowpats - ED/OVERFLOW: Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting an inpatient bed.
      *
      * @param $cvdNumC19OverflowPats 
+     * @return static
      **/
-    public function setCvdNumC19OverflowPats($cvdNumC19OverflowPats) {
+    public function setCvdNumC19OverflowPats($cvdNumC19OverflowPats): static {
         $this->properties['cvdNumC19OverflowPats'] = $cvdNumC19OverflowPats;
 
         return $this;
@@ -99,8 +102,9 @@ class CDCPMDRecordSchema extends StructuredValueSchema
      * numvent - MECHANICAL VENTILATORS: Total number of ventilators available.
      *
      * @param $cvdNumVent 
+     * @return static
      **/
-    public function setCvdNumVent($cvdNumVent) {
+    public function setCvdNumVent($cvdNumVent): static {
         $this->properties['cvdNumVent'] = $cvdNumVent;
 
         return $this;
@@ -117,8 +121,9 @@ class CDCPMDRecordSchema extends StructuredValueSchema
      * collectiondate - Date for which patient counts are reported.
      *
      * @param $cvdCollectionDate |
+     * @return static
      **/
-    public function setCvdCollectionDate($cvdCollectionDate) {
+    public function setCvdCollectionDate($cvdCollectionDate): static {
         $this->properties['cvdCollectionDate'] = $cvdCollectionDate;
 
         return $this;
@@ -135,8 +140,9 @@ class CDCPMDRecordSchema extends StructuredValueSchema
      * numicubedsocc - ICU BED OCCUPANCY: Total number of staffed inpatient ICU beds that are occupied.
      *
      * @param $cvdNumICUBedsOcc 
+     * @return static
      **/
-    public function setCvdNumICUBedsOcc($cvdNumICUBedsOcc) {
+    public function setCvdNumICUBedsOcc($cvdNumICUBedsOcc): static {
         $this->properties['cvdNumICUBedsOcc'] = $cvdNumICUBedsOcc;
 
         return $this;
@@ -153,8 +159,9 @@ class CDCPMDRecordSchema extends StructuredValueSchema
      * numbedsocc - HOSPITAL INPATIENT BED OCCUPANCY: Total number of staffed inpatient beds that are occupied.
      *
      * @param $cvdNumBedsOcc 
+     * @return static
      **/
-    public function setCvdNumBedsOcc($cvdNumBedsOcc) {
+    public function setCvdNumBedsOcc($cvdNumBedsOcc): static {
         $this->properties['cvdNumBedsOcc'] = $cvdNumBedsOcc;
 
         return $this;
@@ -171,8 +178,9 @@ class CDCPMDRecordSchema extends StructuredValueSchema
      * numtotbeds - ALL HOSPITAL BEDS: Total number of all inpatient and outpatient beds, including all staffed, ICU, licensed, and overflow (surge) beds used for inpatients or outpatients.
      *
      * @param $cvdNumTotBeds 
+     * @return static
      **/
-    public function setCvdNumTotBeds($cvdNumTotBeds) {
+    public function setCvdNumTotBeds($cvdNumTotBeds): static {
         $this->properties['cvdNumTotBeds'] = $cvdNumTotBeds;
 
         return $this;
@@ -189,8 +197,9 @@ class CDCPMDRecordSchema extends StructuredValueSchema
      * numc19hosppats - HOSPITALIZED: Patients currently hospitalized in an inpatient care location who have suspected or confirmed COVID-19.
      *
      * @param $cvdNumC19HospPats 
+     * @return static
      **/
-    public function setCvdNumC19HospPats($cvdNumC19HospPats) {
+    public function setCvdNumC19HospPats($cvdNumC19HospPats): static {
         $this->properties['cvdNumC19HospPats'] = $cvdNumC19HospPats;
 
         return $this;
@@ -207,8 +216,9 @@ class CDCPMDRecordSchema extends StructuredValueSchema
      * numbeds - HOSPITAL INPATIENT BEDS: Inpatient beds, including all staffed, licensed, and overflow (surge) beds used for inpatients.
      *
      * @param $cvdNumBeds 
+     * @return static
      **/
-    public function setCvdNumBeds($cvdNumBeds) {
+    public function setCvdNumBeds($cvdNumBeds): static {
         $this->properties['cvdNumBeds'] = $cvdNumBeds;
 
         return $this;
@@ -225,8 +235,9 @@ class CDCPMDRecordSchema extends StructuredValueSchema
      * numc19hopats - HOSPITAL ONSET: Patients hospitalized in an NHSN inpatient care location with onset of suspected or confirmed COVID-19 14 or more days after hospitalization.
      *
      * @param $cvdNumC19HOPats 
+     * @return static
      **/
-    public function setCvdNumC19HOPats($cvdNumC19HOPats) {
+    public function setCvdNumC19HOPats($cvdNumC19HOPats): static {
         $this->properties['cvdNumC19HOPats'] = $cvdNumC19HOPats;
 
         return $this;
@@ -243,8 +254,9 @@ class CDCPMDRecordSchema extends StructuredValueSchema
      * Identifier of the NHSN facility that this data record applies to. Use [[cvdFacilityCounty]] to indicate the county. To provide other details, [[healthcareReportingData]] can be used on a [[Hospital]] entry.
      *
      * @param $cvdFacilityId 
+     * @return static
      **/
-    public function setCvdFacilityId($cvdFacilityId) {
+    public function setCvdFacilityId($cvdFacilityId): static {
         $this->properties['cvdFacilityId'] = $cvdFacilityId;
 
         return $this;
@@ -261,8 +273,9 @@ class CDCPMDRecordSchema extends StructuredValueSchema
      * numventuse - MECHANICAL VENTILATORS IN USE: Total number of ventilators in use.
      *
      * @param $cvdNumVentUse 
+     * @return static
      **/
-    public function setCvdNumVentUse($cvdNumVentUse) {
+    public function setCvdNumVentUse($cvdNumVentUse): static {
         $this->properties['cvdNumVentUse'] = $cvdNumVentUse;
 
         return $this;
@@ -279,8 +292,9 @@ class CDCPMDRecordSchema extends StructuredValueSchema
      * Name of the County of the NHSN facility that this data record applies to. Use [[cvdFacilityId]] to identify the facility. To provide other details, [[healthcareReportingData]] can be used on a [[Hospital]] entry.
      *
      * @param $cvdFacilityCounty 
+     * @return static
      **/
-    public function setCvdFacilityCounty($cvdFacilityCounty) {
+    public function setCvdFacilityCounty($cvdFacilityCounty): static {
         $this->properties['cvdFacilityCounty'] = $cvdFacilityCounty;
 
         return $this;
@@ -297,8 +311,9 @@ class CDCPMDRecordSchema extends StructuredValueSchema
      * numc19died - DEATHS: Patients with suspected or confirmed COVID-19 who died in the hospital, ED, or any overflow location.
      *
      * @param $cvdNumC19Died 
+     * @return static
      **/
-    public function setCvdNumC19Died($cvdNumC19Died) {
+    public function setCvdNumC19Died($cvdNumC19Died): static {
         $this->properties['cvdNumC19Died'] = $cvdNumC19Died;
 
         return $this;
@@ -315,8 +330,9 @@ class CDCPMDRecordSchema extends StructuredValueSchema
      * numc19ofmechventpats - ED/OVERFLOW and VENTILATED: Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting an inpatient bed and on a mechanical ventilator.
      *
      * @param $cvdNumC19OFMechVentPats 
+     * @return static
      **/
-    public function setCvdNumC19OFMechVentPats($cvdNumC19OFMechVentPats) {
+    public function setCvdNumC19OFMechVentPats($cvdNumC19OFMechVentPats): static {
         $this->properties['cvdNumC19OFMechVentPats'] = $cvdNumC19OFMechVentPats;
 
         return $this;
@@ -333,8 +349,9 @@ class CDCPMDRecordSchema extends StructuredValueSchema
      * numc19mechventpats - HOSPITALIZED and VENTILATED: Patients hospitalized in an NHSN inpatient care location who have suspected or confirmed COVID-19 and are on a mechanical ventilator.
      *
      * @param $cvdNumC19MechVentPats 
+     * @return static
      **/
-    public function setCvdNumC19MechVentPats($cvdNumC19MechVentPats) {
+    public function setCvdNumC19MechVentPats($cvdNumC19MechVentPats): static {
         $this->properties['cvdNumC19MechVentPats'] = $cvdNumC19MechVentPats;
 
         return $this;

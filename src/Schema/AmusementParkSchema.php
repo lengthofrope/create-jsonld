@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class AmusementParkSchema extends EntertainmentBusinessSchema
 {
-    public static function factory()
+    public static function factory(): AmusementParkSchema
     {
         return new AmusementParkSchema('https://schema.org/', 'AmusementPark');
     }

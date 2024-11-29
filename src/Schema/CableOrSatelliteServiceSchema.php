@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class CableOrSatelliteServiceSchema extends ServiceSchema
 {
-    public static function factory()
+    public static function factory(): CableOrSatelliteServiceSchema
     {
         return new CableOrSatelliteServiceSchema('https://schema.org/', 'CableOrSatelliteService');
     }

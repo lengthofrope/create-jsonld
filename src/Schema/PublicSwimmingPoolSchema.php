@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PublicSwimmingPoolSchema extends SportsActivityLocationSchema
 {
-    public static function factory()
+    public static function factory(): PublicSwimmingPoolSchema
     {
         return new PublicSwimmingPoolSchema('https://schema.org/', 'PublicSwimmingPool');
     }

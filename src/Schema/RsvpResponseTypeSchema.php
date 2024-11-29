@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class RsvpResponseTypeSchema extends EnumerationSchema
 {
-    public static function factory()
+    public static function factory(): RsvpResponseTypeSchema
     {
         return new RsvpResponseTypeSchema('https://schema.org/', 'RsvpResponseType');
     }

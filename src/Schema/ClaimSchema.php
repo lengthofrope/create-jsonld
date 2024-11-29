@@ -38,7 +38,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ClaimSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): ClaimSchema
     {
         return new ClaimSchema('https://schema.org/', 'Claim');
     }
@@ -47,8 +47,9 @@ class ClaimSchema extends CreativeWorkSchema
      * Indicates the first known occurrence of a [[Claim]] in some [[CreativeWork]].
      *
      * @param $firstAppearance 
+     * @return static
      **/
-    public function setFirstAppearance($firstAppearance) {
+    public function setFirstAppearance($firstAppearance): static {
         $this->properties['firstAppearance'] = $firstAppearance;
 
         return $this;
@@ -65,8 +66,9 @@ class ClaimSchema extends CreativeWorkSchema
      * Indicates an occurrence of a [[Claim]] in some [[CreativeWork]].
      *
      * @param $appearance 
+     * @return static
      **/
-    public function setAppearance($appearance) {
+    public function setAppearance($appearance): static {
         $this->properties['appearance'] = $appearance;
 
         return $this;
@@ -83,8 +85,9 @@ class ClaimSchema extends CreativeWorkSchema
      * For a [[Claim]] interpreted from [[MediaObject]] content, the [[interpretedAsClaim]] property can be used to indicate a claim contained, implied or refined from the content of a [[MediaObject]].
      *
      * @param $claimInterpreter |
+     * @return static
      **/
-    public function setClaimInterpreter($claimInterpreter) {
+    public function setClaimInterpreter($claimInterpreter): static {
         $this->properties['claimInterpreter'] = $claimInterpreter;
 
         return $this;

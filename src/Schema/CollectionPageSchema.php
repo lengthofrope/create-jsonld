@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class CollectionPageSchema extends WebPageSchema
 {
-    public static function factory()
+    public static function factory(): CollectionPageSchema
     {
         return new CollectionPageSchema('https://schema.org/', 'CollectionPage');
     }

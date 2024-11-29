@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class CommunicateActionSchema extends InteractActionSchema
 {
-    public static function factory()
+    public static function factory(): CommunicateActionSchema
     {
         return new CommunicateActionSchema('https://schema.org/', 'CommunicateAction');
     }
@@ -42,8 +42,9 @@ class CommunicateActionSchema extends InteractActionSchema
      * A sub property of instrument. The language used on this action.
      *
      * @param $language 
+     * @return static
      **/
-    public function setLanguage($language) {
+    public function setLanguage($language): static {
         $this->properties['language'] = $language;
 
         return $this;
@@ -60,8 +61,9 @@ class CommunicateActionSchema extends InteractActionSchema
      * A sub property of participant. The participant who is at the receiving end of the action.
      *
      * @param $recipient |||
+     * @return static
      **/
-    public function setRecipient($recipient) {
+    public function setRecipient($recipient): static {
         $this->properties['recipient'] = $recipient;
 
         return $this;
@@ -78,8 +80,9 @@ class CommunicateActionSchema extends InteractActionSchema
      * The subject matter of the content.
      *
      * @param $about 
+     * @return static
      **/
-    public function setAbout($about) {
+    public function setAbout($about): static {
         $this->properties['about'] = $about;
 
         return $this;
@@ -96,8 +99,9 @@ class CommunicateActionSchema extends InteractActionSchema
      * The language of the content or performance or used in an action. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
      *
      * @param $inLanguage |
+     * @return static
      **/
-    public function setInLanguage($inLanguage) {
+    public function setInLanguage($inLanguage): static {
         $this->properties['inLanguage'] = $inLanguage;
 
         return $this;

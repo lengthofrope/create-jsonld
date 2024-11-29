@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class BoatTripSchema extends TripSchema
 {
-    public static function factory()
+    public static function factory(): BoatTripSchema
     {
         return new BoatTripSchema('https://schema.org/', 'BoatTrip');
     }
@@ -42,8 +42,9 @@ class BoatTripSchema extends TripSchema
      * The terminal or port from which the boat departs.
      *
      * @param $departureBoatTerminal 
+     * @return static
      **/
-    public function setDepartureBoatTerminal($departureBoatTerminal) {
+    public function setDepartureBoatTerminal($departureBoatTerminal): static {
         $this->properties['departureBoatTerminal'] = $departureBoatTerminal;
 
         return $this;
@@ -60,8 +61,9 @@ class BoatTripSchema extends TripSchema
      * The terminal or port from which the boat arrives.
      *
      * @param $arrivalBoatTerminal 
+     * @return static
      **/
-    public function setArrivalBoatTerminal($arrivalBoatTerminal) {
+    public function setArrivalBoatTerminal($arrivalBoatTerminal): static {
         $this->properties['arrivalBoatTerminal'] = $arrivalBoatTerminal;
 
         return $this;

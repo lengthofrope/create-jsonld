@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class BroadcastServiceSchema extends ServiceSchema
 {
-    public static function factory()
+    public static function factory(): BroadcastServiceSchema
     {
         return new BroadcastServiceSchema('https://schema.org/', 'BroadcastService');
     }
@@ -42,8 +42,9 @@ class BroadcastServiceSchema extends ServiceSchema
      * The frequency used for over-the-air broadcasts. Numeric values or simple ranges, e.g. 87-99. In addition a shortcut idiom is supported for frequencies of AM and FM radio channels, e.g. "87 FM".
      *
      * @param $broadcastFrequency |
+     * @return static
      **/
-    public function setBroadcastFrequency($broadcastFrequency) {
+    public function setBroadcastFrequency($broadcastFrequency): static {
         $this->properties['broadcastFrequency'] = $broadcastFrequency;
 
         return $this;
@@ -60,8 +61,9 @@ class BroadcastServiceSchema extends ServiceSchema
      * The timezone in [ISO 8601 format](http://en.wikipedia.org/wiki/ISO_8601) for which the service bases its broadcasts.
      *
      * @param $broadcastTimezone 
+     * @return static
      **/
-    public function setBroadcastTimezone($broadcastTimezone) {
+    public function setBroadcastTimezone($broadcastTimezone): static {
         $this->properties['broadcastTimezone'] = $broadcastTimezone;
 
         return $this;
@@ -78,8 +80,9 @@ class BroadcastServiceSchema extends ServiceSchema
      * The organization owning or operating the broadcast service.
      *
      * @param $broadcaster 
+     * @return static
      **/
-    public function setBroadcaster($broadcaster) {
+    public function setBroadcaster($broadcaster): static {
         $this->properties['broadcaster'] = $broadcaster;
 
         return $this;
@@ -96,8 +99,9 @@ class BroadcastServiceSchema extends ServiceSchema
      * A [callsign](https://en.wikipedia.org/wiki/Call_sign), as used in broadcasting and radio communications to identify people, radio and TV stations, or vehicles.
      *
      * @param $callSign 
+     * @return static
      **/
-    public function setCallSign($callSign) {
+    public function setCallSign($callSign): static {
         $this->properties['callSign'] = $callSign;
 
         return $this;
@@ -114,8 +118,9 @@ class BroadcastServiceSchema extends ServiceSchema
      * A broadcast service to which the broadcast service may belong to such as regional variations of a national channel.
      *
      * @param $parentService 
+     * @return static
      **/
-    public function setParentService($parentService) {
+    public function setParentService($parentService): static {
         $this->properties['parentService'] = $parentService;
 
         return $this;
@@ -132,8 +137,9 @@ class BroadcastServiceSchema extends ServiceSchema
      * The media network(s) whose content is broadcast on this station.
      *
      * @param $broadcastAffiliateOf 
+     * @return static
      **/
-    public function setBroadcastAffiliateOf($broadcastAffiliateOf) {
+    public function setBroadcastAffiliateOf($broadcastAffiliateOf): static {
         $this->properties['broadcastAffiliateOf'] = $broadcastAffiliateOf;
 
         return $this;
@@ -150,8 +156,9 @@ class BroadcastServiceSchema extends ServiceSchema
      * The type of screening or video broadcast used (e.g. IMAX, 3D, SD, HD, etc.).
      *
      * @param $videoFormat 
+     * @return static
      **/
-    public function setVideoFormat($videoFormat) {
+    public function setVideoFormat($videoFormat): static {
         $this->properties['videoFormat'] = $videoFormat;
 
         return $this;
@@ -168,8 +175,9 @@ class BroadcastServiceSchema extends ServiceSchema
      * The name displayed in the channel guide. For many US affiliates, it is the network name.
      *
      * @param $broadcastDisplayName 
+     * @return static
      **/
-    public function setBroadcastDisplayName($broadcastDisplayName) {
+    public function setBroadcastDisplayName($broadcastDisplayName): static {
         $this->properties['broadcastDisplayName'] = $broadcastDisplayName;
 
         return $this;
@@ -186,8 +194,9 @@ class BroadcastServiceSchema extends ServiceSchema
      * A broadcast channel of a broadcast service.
      *
      * @param $hasBroadcastChannel 
+     * @return static
      **/
-    public function setHasBroadcastChannel($hasBroadcastChannel) {
+    public function setHasBroadcastChannel($hasBroadcastChannel): static {
         $this->properties['hasBroadcastChannel'] = $hasBroadcastChannel;
 
         return $this;
@@ -204,8 +213,9 @@ class BroadcastServiceSchema extends ServiceSchema
      * The area within which users can expect to reach the broadcast service.
      *
      * @param $area 
+     * @return static
      **/
-    public function setArea($area) {
+    public function setArea($area): static {
         $this->properties['area'] = $area;
 
         return $this;
@@ -222,8 +232,9 @@ class BroadcastServiceSchema extends ServiceSchema
      * The language of the content or performance or used in an action. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
      *
      * @param $inLanguage |
+     * @return static
      **/
-    public function setInLanguage($inLanguage) {
+    public function setInLanguage($inLanguage): static {
         $this->properties['inLanguage'] = $inLanguage;
 
         return $this;

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ReviewActionSchema extends AssessActionSchema
 {
-    public static function factory()
+    public static function factory(): ReviewActionSchema
     {
         return new ReviewActionSchema('https://schema.org/', 'ReviewAction');
     }
@@ -42,8 +42,9 @@ class ReviewActionSchema extends AssessActionSchema
      * A sub property of result. The review that resulted in the performing of the action.
      *
      * @param $resultReview 
+     * @return static
      **/
-    public function setResultReview($resultReview) {
+    public function setResultReview($resultReview): static {
         $this->properties['resultReview'] = $resultReview;
 
         return $this;

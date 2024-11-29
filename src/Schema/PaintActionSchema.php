@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PaintActionSchema extends CreateActionSchema
 {
-    public static function factory()
+    public static function factory(): PaintActionSchema
     {
         return new PaintActionSchema('https://schema.org/', 'PaintAction');
     }

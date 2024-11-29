@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MedicalTherapySchema extends TherapeuticProcedureSchema
 {
-    public static function factory()
+    public static function factory(): MedicalTherapySchema
     {
         return new MedicalTherapySchema('https://schema.org/', 'MedicalTherapy');
     }
@@ -42,8 +42,9 @@ class MedicalTherapySchema extends TherapeuticProcedureSchema
      * A contraindication for this therapy.
      *
      * @param $contraindication |
+     * @return static
      **/
-    public function setContraindication($contraindication) {
+    public function setContraindication($contraindication): static {
         $this->properties['contraindication'] = $contraindication;
 
         return $this;
@@ -60,8 +61,9 @@ class MedicalTherapySchema extends TherapeuticProcedureSchema
      * A possible serious complication and/or serious side effect of this therapy. Serious adverse outcomes include those that are life-threatening; result in death, disability, or permanent damage; require hospitalization or prolong existing hospitalization; cause congenital anomalies or birth defects; or jeopardize the patient and may require medical or surgical intervention to prevent one of the outcomes in this definition.
      *
      * @param $seriousAdverseOutcome 
+     * @return static
      **/
-    public function setSeriousAdverseOutcome($seriousAdverseOutcome) {
+    public function setSeriousAdverseOutcome($seriousAdverseOutcome): static {
         $this->properties['seriousAdverseOutcome'] = $seriousAdverseOutcome;
 
         return $this;
@@ -78,8 +80,9 @@ class MedicalTherapySchema extends TherapeuticProcedureSchema
      * A therapy that duplicates or overlaps this one.
      *
      * @param $duplicateTherapy 
+     * @return static
      **/
-    public function setDuplicateTherapy($duplicateTherapy) {
+    public function setDuplicateTherapy($duplicateTherapy): static {
         $this->properties['duplicateTherapy'] = $duplicateTherapy;
 
         return $this;

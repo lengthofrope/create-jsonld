@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ComedyEventSchema extends EventSchema
 {
-    public static function factory()
+    public static function factory(): ComedyEventSchema
     {
         return new ComedyEventSchema('https://schema.org/', 'ComedyEvent');
     }

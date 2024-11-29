@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class EmergencyServiceSchema extends LocalBusinessSchema
 {
-    public static function factory()
+    public static function factory(): EmergencyServiceSchema
     {
         return new EmergencyServiceSchema('https://schema.org/', 'EmergencyService');
     }

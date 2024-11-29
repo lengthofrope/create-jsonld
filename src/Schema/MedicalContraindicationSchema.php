@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MedicalContraindicationSchema extends MedicalEntitySchema
 {
-    public static function factory()
+    public static function factory(): MedicalContraindicationSchema
     {
         return new MedicalContraindicationSchema('https://schema.org/', 'MedicalContraindication');
     }

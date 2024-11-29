@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PreventionIndicationSchema extends MedicalIndicationSchema
 {
-    public static function factory()
+    public static function factory(): PreventionIndicationSchema
     {
         return new PreventionIndicationSchema('https://schema.org/', 'PreventionIndication');
     }

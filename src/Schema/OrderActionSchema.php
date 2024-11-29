@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class OrderActionSchema extends TradeActionSchema
 {
-    public static function factory()
+    public static function factory(): OrderActionSchema
     {
         return new OrderActionSchema('https://schema.org/', 'OrderAction');
     }
@@ -42,8 +42,9 @@ class OrderActionSchema extends TradeActionSchema
      * A sub property of instrument. The method of delivery.
      *
      * @param $deliveryMethod 
+     * @return static
      **/
-    public function setDeliveryMethod($deliveryMethod) {
+    public function setDeliveryMethod($deliveryMethod): static {
         $this->properties['deliveryMethod'] = $deliveryMethod;
 
         return $this;

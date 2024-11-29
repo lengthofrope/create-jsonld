@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PhysiciansOfficeSchema extends PhysicianSchema
 {
-    public static function factory()
+    public static function factory(): PhysiciansOfficeSchema
     {
         return new PhysiciansOfficeSchema('https://schema.org/', 'PhysiciansOffice');
     }

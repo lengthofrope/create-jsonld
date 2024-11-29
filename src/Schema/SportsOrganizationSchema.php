@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class SportsOrganizationSchema extends OrganizationSchema
 {
-    public static function factory()
+    public static function factory(): SportsOrganizationSchema
     {
         return new SportsOrganizationSchema('https://schema.org/', 'SportsOrganization');
     }
@@ -42,8 +42,9 @@ class SportsOrganizationSchema extends OrganizationSchema
      * A type of sport (e.g. Baseball).
      *
      * @param $sport |
+     * @return static
      **/
-    public function setSport($sport) {
+    public function setSport($sport): static {
         $this->properties['sport'] = $sport;
 
         return $this;

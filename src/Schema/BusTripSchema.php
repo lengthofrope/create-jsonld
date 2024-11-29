@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class BusTripSchema extends TripSchema
 {
-    public static function factory()
+    public static function factory(): BusTripSchema
     {
         return new BusTripSchema('https://schema.org/', 'BusTrip');
     }
@@ -42,8 +42,9 @@ class BusTripSchema extends TripSchema
      * The unique identifier for the bus.
      *
      * @param $busNumber 
+     * @return static
      **/
-    public function setBusNumber($busNumber) {
+    public function setBusNumber($busNumber): static {
         $this->properties['busNumber'] = $busNumber;
 
         return $this;
@@ -60,8 +61,9 @@ class BusTripSchema extends TripSchema
      * The name of the bus (e.g. Bolt Express).
      *
      * @param $busName 
+     * @return static
      **/
-    public function setBusName($busName) {
+    public function setBusName($busName): static {
         $this->properties['busName'] = $busName;
 
         return $this;
@@ -78,8 +80,9 @@ class BusTripSchema extends TripSchema
      * The stop or station from which the bus arrives.
      *
      * @param $arrivalBusStop |
+     * @return static
      **/
-    public function setArrivalBusStop($arrivalBusStop) {
+    public function setArrivalBusStop($arrivalBusStop): static {
         $this->properties['arrivalBusStop'] = $arrivalBusStop;
 
         return $this;
@@ -96,8 +99,9 @@ class BusTripSchema extends TripSchema
      * The stop or station from which the bus departs.
      *
      * @param $departureBusStop |
+     * @return static
      **/
-    public function setDepartureBusStop($departureBusStop) {
+    public function setDepartureBusStop($departureBusStop): static {
         $this->properties['departureBusStop'] = $departureBusStop;
 
         return $this;

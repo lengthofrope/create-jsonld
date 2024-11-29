@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ItemAvailabilitySchema extends EnumerationSchema
 {
-    public static function factory()
+    public static function factory(): ItemAvailabilitySchema
     {
         return new ItemAvailabilitySchema('https://schema.org/', 'ItemAvailability');
     }

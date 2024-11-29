@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class WPAdBlockSchema extends WebPageElementSchema
 {
-    public static function factory()
+    public static function factory(): WPAdBlockSchema
     {
         return new WPAdBlockSchema('https://schema.org/', 'WPAdBlock');
     }

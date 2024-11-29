@@ -31,9 +31,9 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PatientSchema extends \LengthOfRope\JSONLD\Elements\Element
+class PatientSchema extends PersonSchema
 {
-    public static function factory()
+    public static function factory(): PatientSchema
     {
         return new PatientSchema('https://schema.org/', 'Patient');
     }
@@ -42,8 +42,9 @@ class PatientSchema extends \LengthOfRope\JSONLD\Elements\Element
      * One or more alternative conditions considered in the differential diagnosis process as output of a diagnosis process.
      *
      * @param $diagnosis 
+     * @return static
      **/
-    public function setDiagnosis($diagnosis) {
+    public function setDiagnosis($diagnosis): static {
         $this->properties['diagnosis'] = $diagnosis;
 
         return $this;
@@ -60,8 +61,9 @@ class PatientSchema extends \LengthOfRope\JSONLD\Elements\Element
      * Specifying a drug or medicine used in a medication procedure.
      *
      * @param $drug 
+     * @return static
      **/
-    public function setDrug($drug) {
+    public function setDrug($drug): static {
         $this->properties['drug'] = $drug;
 
         return $this;
@@ -78,8 +80,9 @@ class PatientSchema extends \LengthOfRope\JSONLD\Elements\Element
      * Specifying the health condition(s) of a patient, medical study, or other target audience.
      *
      * @param $healthCondition 
+     * @return static
      **/
-    public function setHealthCondition($healthCondition) {
+    public function setHealthCondition($healthCondition): static {
         $this->properties['healthCondition'] = $healthCondition;
 
         return $this;

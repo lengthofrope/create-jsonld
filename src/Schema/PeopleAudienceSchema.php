@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PeopleAudienceSchema extends AudienceSchema
 {
-    public static function factory()
+    public static function factory(): PeopleAudienceSchema
     {
         return new PeopleAudienceSchema('https://schema.org/', 'PeopleAudience');
     }
@@ -42,8 +42,9 @@ class PeopleAudienceSchema extends AudienceSchema
      * Audiences defined by a person's minimum age.
      *
      * @param $requiredMinAge 
+     * @return static
      **/
-    public function setRequiredMinAge($requiredMinAge) {
+    public function setRequiredMinAge($requiredMinAge): static {
         $this->properties['requiredMinAge'] = $requiredMinAge;
 
         return $this;
@@ -60,8 +61,9 @@ class PeopleAudienceSchema extends AudienceSchema
      * Audiences defined by a person's maximum age.
      *
      * @param $requiredMaxAge 
+     * @return static
      **/
-    public function setRequiredMaxAge($requiredMaxAge) {
+    public function setRequiredMaxAge($requiredMaxAge): static {
         $this->properties['requiredMaxAge'] = $requiredMaxAge;
 
         return $this;
@@ -78,8 +80,9 @@ class PeopleAudienceSchema extends AudienceSchema
      * The age or age range for the intended audience or person, for example 3-12 months for infants, 1-5 years for toddlers.
      *
      * @param $suggestedAge 
+     * @return static
      **/
-    public function setSuggestedAge($suggestedAge) {
+    public function setSuggestedAge($suggestedAge): static {
         $this->properties['suggestedAge'] = $suggestedAge;
 
         return $this;
@@ -96,8 +99,9 @@ class PeopleAudienceSchema extends AudienceSchema
      * The suggested gender of the intended person or audience, for example "male", "female", or "unisex".
      *
      * @param $suggestedGender |
+     * @return static
      **/
-    public function setSuggestedGender($suggestedGender) {
+    public function setSuggestedGender($suggestedGender): static {
         $this->properties['suggestedGender'] = $suggestedGender;
 
         return $this;
@@ -114,8 +118,9 @@ class PeopleAudienceSchema extends AudienceSchema
      * Specifying the health condition(s) of a patient, medical study, or other target audience.
      *
      * @param $healthCondition 
+     * @return static
      **/
-    public function setHealthCondition($healthCondition) {
+    public function setHealthCondition($healthCondition): static {
         $this->properties['healthCondition'] = $healthCondition;
 
         return $this;
@@ -132,8 +137,9 @@ class PeopleAudienceSchema extends AudienceSchema
      * A suggested range of body measurements for the intended audience or person, for example inseam between 32 and 34 inches or height between 170 and 190 cm. Typically found on a size chart for wearable products.
      *
      * @param $suggestedMeasurement 
+     * @return static
      **/
-    public function setSuggestedMeasurement($suggestedMeasurement) {
+    public function setSuggestedMeasurement($suggestedMeasurement): static {
         $this->properties['suggestedMeasurement'] = $suggestedMeasurement;
 
         return $this;
@@ -150,8 +156,9 @@ class PeopleAudienceSchema extends AudienceSchema
      * Audiences defined by a person's gender.
      *
      * @param $requiredGender 
+     * @return static
      **/
-    public function setRequiredGender($requiredGender) {
+    public function setRequiredGender($requiredGender): static {
         $this->properties['requiredGender'] = $requiredGender;
 
         return $this;
@@ -168,8 +175,9 @@ class PeopleAudienceSchema extends AudienceSchema
      * Minimum recommended age in years for the audience or user.
      *
      * @param $suggestedMinAge 
+     * @return static
      **/
-    public function setSuggestedMinAge($suggestedMinAge) {
+    public function setSuggestedMinAge($suggestedMinAge): static {
         $this->properties['suggestedMinAge'] = $suggestedMinAge;
 
         return $this;
@@ -186,8 +194,9 @@ class PeopleAudienceSchema extends AudienceSchema
      * Maximum recommended age in years for the audience or user.
      *
      * @param $suggestedMaxAge 
+     * @return static
      **/
-    public function setSuggestedMaxAge($suggestedMaxAge) {
+    public function setSuggestedMaxAge($suggestedMaxAge): static {
         $this->properties['suggestedMaxAge'] = $suggestedMaxAge;
 
         return $this;

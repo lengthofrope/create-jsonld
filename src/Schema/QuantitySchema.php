@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class QuantitySchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): QuantitySchema
     {
         return new QuantitySchema('https://schema.org/', 'Quantity');
     }

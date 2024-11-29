@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MedicalOrganizationSchema extends OrganizationSchema
 {
-    public static function factory()
+    public static function factory(): MedicalOrganizationSchema
     {
         return new MedicalOrganizationSchema('https://schema.org/', 'MedicalOrganization');
     }
@@ -42,8 +42,9 @@ class MedicalOrganizationSchema extends OrganizationSchema
      * Name or unique ID of network. (Networks are often reused across different insurance plans.)
      *
      * @param $healthPlanNetworkId 
+     * @return static
      **/
-    public function setHealthPlanNetworkId($healthPlanNetworkId) {
+    public function setHealthPlanNetworkId($healthPlanNetworkId): static {
         $this->properties['healthPlanNetworkId'] = $healthPlanNetworkId;
 
         return $this;
@@ -60,8 +61,9 @@ class MedicalOrganizationSchema extends OrganizationSchema
      * A medical specialty of the provider.
      *
      * @param $medicalSpecialty 
+     * @return static
      **/
-    public function setMedicalSpecialty($medicalSpecialty) {
+    public function setMedicalSpecialty($medicalSpecialty): static {
         $this->properties['medicalSpecialty'] = $medicalSpecialty;
 
         return $this;
@@ -78,8 +80,9 @@ class MedicalOrganizationSchema extends OrganizationSchema
      * Whether the provider is accepting new patients.
      *
      * @param $isAcceptingNewPatients 
+     * @return static
      **/
-    public function setIsAcceptingNewPatients($isAcceptingNewPatients) {
+    public function setIsAcceptingNewPatients($isAcceptingNewPatients): static {
         $this->properties['isAcceptingNewPatients'] = $isAcceptingNewPatients;
 
         return $this;

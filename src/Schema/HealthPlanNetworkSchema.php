@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class HealthPlanNetworkSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): HealthPlanNetworkSchema
     {
         return new HealthPlanNetworkSchema('https://schema.org/', 'HealthPlanNetwork');
     }
@@ -42,8 +42,9 @@ class HealthPlanNetworkSchema extends IntangibleSchema
      * The costs to the patient for services under this network or formulary.
      *
      * @param $healthPlanCostSharing 
+     * @return static
      **/
-    public function setHealthPlanCostSharing($healthPlanCostSharing) {
+    public function setHealthPlanCostSharing($healthPlanCostSharing): static {
         $this->properties['healthPlanCostSharing'] = $healthPlanCostSharing;
 
         return $this;
@@ -60,8 +61,9 @@ class HealthPlanNetworkSchema extends IntangibleSchema
      * Name or unique ID of network. (Networks are often reused across different insurance plans.)
      *
      * @param $healthPlanNetworkId 
+     * @return static
      **/
-    public function setHealthPlanNetworkId($healthPlanNetworkId) {
+    public function setHealthPlanNetworkId($healthPlanNetworkId): static {
         $this->properties['healthPlanNetworkId'] = $healthPlanNetworkId;
 
         return $this;
@@ -78,8 +80,9 @@ class HealthPlanNetworkSchema extends IntangibleSchema
      * The tier(s) for this network.
      *
      * @param $healthPlanNetworkTier 
+     * @return static
      **/
-    public function setHealthPlanNetworkTier($healthPlanNetworkTier) {
+    public function setHealthPlanNetworkTier($healthPlanNetworkTier): static {
         $this->properties['healthPlanNetworkTier'] = $healthPlanNetworkTier;
 
         return $this;

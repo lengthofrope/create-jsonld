@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class AboutPageSchema extends WebPageSchema
 {
-    public static function factory()
+    public static function factory(): AboutPageSchema
     {
         return new AboutPageSchema('https://schema.org/', 'AboutPage');
     }

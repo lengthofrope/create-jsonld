@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ReservoirSchema extends BodyOfWaterSchema
 {
-    public static function factory()
+    public static function factory(): ReservoirSchema
     {
         return new ReservoirSchema('https://schema.org/', 'Reservoir');
     }

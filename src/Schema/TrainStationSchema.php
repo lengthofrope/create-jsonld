@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class TrainStationSchema extends CivicStructureSchema
 {
-    public static function factory()
+    public static function factory(): TrainStationSchema
     {
         return new TrainStationSchema('https://schema.org/', 'TrainStation');
     }

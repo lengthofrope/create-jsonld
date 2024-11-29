@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class CategoryCodeSchema extends DefinedTermSchema
 {
-    public static function factory()
+    public static function factory(): CategoryCodeSchema
     {
         return new CategoryCodeSchema('https://schema.org/', 'CategoryCode');
     }
@@ -42,8 +42,9 @@ class CategoryCodeSchema extends DefinedTermSchema
      * A [[CategoryCodeSet]] that contains this category code.
      *
      * @param $inCodeSet |
+     * @return static
      **/
-    public function setInCodeSet($inCodeSet) {
+    public function setInCodeSet($inCodeSet): static {
         $this->properties['inCodeSet'] = $inCodeSet;
 
         return $this;
@@ -60,8 +61,9 @@ class CategoryCodeSchema extends DefinedTermSchema
      * A short textual code that uniquely identifies the value.
      *
      * @param $codeValue 
+     * @return static
      **/
-    public function setCodeValue($codeValue) {
+    public function setCodeValue($codeValue): static {
         $this->properties['codeValue'] = $codeValue;
 
         return $this;

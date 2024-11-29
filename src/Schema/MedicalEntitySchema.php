@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MedicalEntitySchema extends ThingSchema
 {
-    public static function factory()
+    public static function factory(): MedicalEntitySchema
     {
         return new MedicalEntitySchema('https://schema.org/', 'MedicalEntity');
     }
@@ -42,8 +42,9 @@ class MedicalEntitySchema extends ThingSchema
      * The drug or supplement's legal status, including any controlled substance schedules that apply.
      *
      * @param $legalStatus ||
+     * @return static
      **/
-    public function setLegalStatus($legalStatus) {
+    public function setLegalStatus($legalStatus): static {
         $this->properties['legalStatus'] = $legalStatus;
 
         return $this;
@@ -60,8 +61,9 @@ class MedicalEntitySchema extends ThingSchema
      * If applicable, the organization that officially recognizes this entity as part of its endorsed system of medicine.
      *
      * @param $recognizingAuthority 
+     * @return static
      **/
-    public function setRecognizingAuthority($recognizingAuthority) {
+    public function setRecognizingAuthority($recognizingAuthority): static {
         $this->properties['recognizingAuthority'] = $recognizingAuthority;
 
         return $this;
@@ -78,8 +80,9 @@ class MedicalEntitySchema extends ThingSchema
      * A [[Grant]] that directly or indirectly provide funding or sponsorship for this item. See also [[ownershipFundingInfo]].
      *
      * @param $funding 
+     * @return static
      **/
-    public function setFunding($funding) {
+    public function setFunding($funding): static {
         $this->properties['funding'] = $funding;
 
         return $this;
@@ -96,8 +99,9 @@ class MedicalEntitySchema extends ThingSchema
      * A medical code for the entity, taken from a controlled vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
      *
      * @param $code 
+     * @return static
      **/
-    public function setCode($code) {
+    public function setCode($code): static {
         $this->properties['code'] = $code;
 
         return $this;
@@ -114,8 +118,9 @@ class MedicalEntitySchema extends ThingSchema
      * The system of medicine that includes this MedicalEntity, for example 'evidence-based', 'homeopathic', 'chiropractic', etc.
      *
      * @param $medicineSystem 
+     * @return static
      **/
-    public function setMedicineSystem($medicineSystem) {
+    public function setMedicineSystem($medicineSystem): static {
         $this->properties['medicineSystem'] = $medicineSystem;
 
         return $this;
@@ -132,8 +137,9 @@ class MedicalEntitySchema extends ThingSchema
      * A medical study or trial related to this entity.
      *
      * @param $study 
+     * @return static
      **/
-    public function setStudy($study) {
+    public function setStudy($study): static {
         $this->properties['study'] = $study;
 
         return $this;
@@ -150,8 +156,9 @@ class MedicalEntitySchema extends ThingSchema
      * A medical guideline related to this entity.
      *
      * @param $guideline 
+     * @return static
      **/
-    public function setGuideline($guideline) {
+    public function setGuideline($guideline): static {
         $this->properties['guideline'] = $guideline;
 
         return $this;
@@ -168,8 +175,9 @@ class MedicalEntitySchema extends ThingSchema
      * If applicable, a medical specialty in which this entity is relevant.
      *
      * @param $relevantSpecialty 
+     * @return static
      **/
-    public function setRelevantSpecialty($relevantSpecialty) {
+    public function setRelevantSpecialty($relevantSpecialty): static {
         $this->properties['relevantSpecialty'] = $relevantSpecialty;
 
         return $this;

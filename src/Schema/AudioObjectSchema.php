@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class AudioObjectSchema extends MediaObjectSchema
 {
-    public static function factory()
+    public static function factory(): AudioObjectSchema
     {
         return new AudioObjectSchema('https://schema.org/', 'AudioObject');
     }
@@ -42,8 +42,9 @@ class AudioObjectSchema extends MediaObjectSchema
      * If this MediaObject is an AudioObject or VideoObject, the transcript of that object.
      *
      * @param $transcript 
+     * @return static
      **/
-    public function setTranscript($transcript) {
+    public function setTranscript($transcript): static {
         $this->properties['transcript'] = $transcript;
 
         return $this;
@@ -60,8 +61,9 @@ class AudioObjectSchema extends MediaObjectSchema
      * The caption for this object. For downloadable machine formats (closed caption, subtitles etc.) use MediaObject and indicate the [[encodingFormat]].
      *
      * @param $caption |
+     * @return static
      **/
-    public function setCaption($caption) {
+    public function setCaption($caption): static {
         $this->properties['caption'] = $caption;
 
         return $this;
@@ -78,8 +80,9 @@ class AudioObjectSchema extends MediaObjectSchema
      * Represents textual captioning from a [[MediaObject]], e.g. text of a 'meme'.
      *
      * @param $embeddedTextCaption 
+     * @return static
      **/
-    public function setEmbeddedTextCaption($embeddedTextCaption) {
+    public function setEmbeddedTextCaption($embeddedTextCaption): static {
         $this->properties['embeddedTextCaption'] = $embeddedTextCaption;
 
         return $this;

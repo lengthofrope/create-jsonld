@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ActionAccessSpecificationSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): ActionAccessSpecificationSchema
     {
         return new ActionAccessSpecificationSchema('https://schema.org/', 'ActionAccessSpecification');
     }
@@ -42,8 +42,9 @@ class ActionAccessSpecificationSchema extends IntangibleSchema
      * The beginning of the availability of the product or service included in the offer.
      *
      * @param $availabilityStarts ||
+     * @return static
      **/
-    public function setAvailabilityStarts($availabilityStarts) {
+    public function setAvailabilityStarts($availabilityStarts): static {
         $this->properties['availabilityStarts'] = $availabilityStarts;
 
         return $this;
@@ -61,8 +62,9 @@ class ActionAccessSpecificationSchema extends IntangibleSchema
       
      *
      * @param $ineligibleRegion ||
+     * @return static
      **/
-    public function setIneligibleRegion($ineligibleRegion) {
+    public function setIneligibleRegion($ineligibleRegion): static {
         $this->properties['ineligibleRegion'] = $ineligibleRegion;
 
         return $this;
@@ -79,8 +81,9 @@ class ActionAccessSpecificationSchema extends IntangibleSchema
      * An Offer which must be accepted before the user can perform the Action. For example, the user may need to buy a movie before being able to watch it.
      *
      * @param $expectsAcceptanceOf 
+     * @return static
      **/
-    public function setExpectsAcceptanceOf($expectsAcceptanceOf) {
+    public function setExpectsAcceptanceOf($expectsAcceptanceOf): static {
         $this->properties['expectsAcceptanceOf'] = $expectsAcceptanceOf;
 
         return $this;
@@ -97,8 +100,9 @@ class ActionAccessSpecificationSchema extends IntangibleSchema
      * A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
      *
      * @param $category ||||
+     * @return static
      **/
-    public function setCategory($category) {
+    public function setCategory($category): static {
         $this->properties['category'] = $category;
 
         return $this;
@@ -115,8 +119,9 @@ class ActionAccessSpecificationSchema extends IntangibleSchema
      * Indicates if use of the media require a subscription  (either paid or free). Allowed values are ```true``` or ```false``` (note that an earlier version had 'yes', 'no').
      *
      * @param $requiresSubscription |
+     * @return static
      **/
-    public function setRequiresSubscription($requiresSubscription) {
+    public function setRequiresSubscription($requiresSubscription): static {
         $this->properties['requiresSubscription'] = $requiresSubscription;
 
         return $this;
@@ -134,8 +139,9 @@ class ActionAccessSpecificationSchema extends IntangibleSchema
     
      *
      * @param $eligibleRegion ||
+     * @return static
      **/
-    public function setEligibleRegion($eligibleRegion) {
+    public function setEligibleRegion($eligibleRegion): static {
         $this->properties['eligibleRegion'] = $eligibleRegion;
 
         return $this;
@@ -152,8 +158,9 @@ class ActionAccessSpecificationSchema extends IntangibleSchema
      * The end of the availability of the product or service included in the offer.
      *
      * @param $availabilityEnds ||
+     * @return static
      **/
-    public function setAvailabilityEnds($availabilityEnds) {
+    public function setAvailabilityEnds($availabilityEnds): static {
         $this->properties['availabilityEnds'] = $availabilityEnds;
 
         return $this;

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class HowToItemSchema extends ListItemSchema
 {
-    public static function factory()
+    public static function factory(): HowToItemSchema
     {
         return new HowToItemSchema('https://schema.org/', 'HowToItem');
     }
@@ -42,8 +42,9 @@ class HowToItemSchema extends ListItemSchema
      * The required quantity of the item(s).
      *
      * @param $requiredQuantity ||
+     * @return static
      **/
-    public function setRequiredQuantity($requiredQuantity) {
+    public function setRequiredQuantity($requiredQuantity): static {
         $this->properties['requiredQuantity'] = $requiredQuantity;
 
         return $this;

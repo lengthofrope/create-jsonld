@@ -31,9 +31,9 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class LegislationObjectSchema extends \LengthOfRope\JSONLD\Elements\Element
+class LegislationObjectSchema extends LegislationSchema
 {
-    public static function factory()
+    public static function factory(): LegislationObjectSchema
     {
         return new LegislationObjectSchema('https://schema.org/', 'LegislationObject');
     }
@@ -42,8 +42,9 @@ class LegislationObjectSchema extends \LengthOfRope\JSONLD\Elements\Element
      * The legal value of this legislation file. The same legislation can be written in multiple files with different legal values. Typically a digitally signed PDF have a "stronger" legal value than the HTML file of the same act.
      *
      * @param $legislationLegalValue 
+     * @return static
      **/
-    public function setLegislationLegalValue($legislationLegalValue) {
+    public function setLegislationLegalValue($legislationLegalValue): static {
         $this->properties['legislationLegalValue'] = $legislationLegalValue;
 
         return $this;

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MedicalScholarlyArticleSchema extends ScholarlyArticleSchema
 {
-    public static function factory()
+    public static function factory(): MedicalScholarlyArticleSchema
     {
         return new MedicalScholarlyArticleSchema('https://schema.org/', 'MedicalScholarlyArticle');
     }
@@ -42,8 +42,9 @@ class MedicalScholarlyArticleSchema extends ScholarlyArticleSchema
      * The type of the medical article, taken from the US NLM MeSH publication type catalog. See also [MeSH documentation](http://www.nlm.nih.gov/mesh/pubtypes.html).
      *
      * @param $publicationType 
+     * @return static
      **/
-    public function setPublicationType($publicationType) {
+    public function setPublicationType($publicationType): static {
         $this->properties['publicationType'] = $publicationType;
 
         return $this;

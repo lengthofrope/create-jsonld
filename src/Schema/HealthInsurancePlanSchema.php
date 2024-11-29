@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class HealthInsurancePlanSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): HealthInsurancePlanSchema
     {
         return new HealthInsurancePlanSchema('https://schema.org/', 'HealthInsurancePlan');
     }
@@ -42,8 +42,9 @@ class HealthInsurancePlanSchema extends IntangibleSchema
      * The standard for interpreting the Plan ID. The preferred is "HIOS". See the Centers for Medicare & Medicaid Services for more details.
      *
      * @param $usesHealthPlanIdStandard |
+     * @return static
      **/
-    public function setUsesHealthPlanIdStandard($usesHealthPlanIdStandard) {
+    public function setUsesHealthPlanIdStandard($usesHealthPlanIdStandard): static {
         $this->properties['usesHealthPlanIdStandard'] = $usesHealthPlanIdStandard;
 
         return $this;
@@ -60,8 +61,9 @@ class HealthInsurancePlanSchema extends IntangibleSchema
      * The URL that goes directly to the summary of benefits and coverage for the specific standard plan or plan variation.
      *
      * @param $benefitsSummaryUrl 
+     * @return static
      **/
-    public function setBenefitsSummaryUrl($benefitsSummaryUrl) {
+    public function setBenefitsSummaryUrl($benefitsSummaryUrl): static {
         $this->properties['benefitsSummaryUrl'] = $benefitsSummaryUrl;
 
         return $this;
@@ -78,8 +80,9 @@ class HealthInsurancePlanSchema extends IntangibleSchema
      * The URL that goes directly to the plan brochure for the specific standard plan or plan variation.
      *
      * @param $healthPlanMarketingUrl 
+     * @return static
      **/
-    public function setHealthPlanMarketingUrl($healthPlanMarketingUrl) {
+    public function setHealthPlanMarketingUrl($healthPlanMarketingUrl): static {
         $this->properties['healthPlanMarketingUrl'] = $healthPlanMarketingUrl;
 
         return $this;
@@ -96,8 +99,9 @@ class HealthInsurancePlanSchema extends IntangibleSchema
      * A contact point for a person or organization.
      *
      * @param $contactPoint 
+     * @return static
      **/
-    public function setContactPoint($contactPoint) {
+    public function setContactPoint($contactPoint): static {
         $this->properties['contactPoint'] = $contactPoint;
 
         return $this;
@@ -114,8 +118,9 @@ class HealthInsurancePlanSchema extends IntangibleSchema
      * The tier(s) of drugs offered by this formulary or insurance plan.
      *
      * @param $healthPlanDrugTier 
+     * @return static
      **/
-    public function setHealthPlanDrugTier($healthPlanDrugTier) {
+    public function setHealthPlanDrugTier($healthPlanDrugTier): static {
         $this->properties['healthPlanDrugTier'] = $healthPlanDrugTier;
 
         return $this;
@@ -132,8 +137,9 @@ class HealthInsurancePlanSchema extends IntangibleSchema
      * Formularies covered by this plan.
      *
      * @param $includesHealthPlanFormulary 
+     * @return static
      **/
-    public function setIncludesHealthPlanFormulary($includesHealthPlanFormulary) {
+    public function setIncludesHealthPlanFormulary($includesHealthPlanFormulary): static {
         $this->properties['includesHealthPlanFormulary'] = $includesHealthPlanFormulary;
 
         return $this;
@@ -150,8 +156,9 @@ class HealthInsurancePlanSchema extends IntangibleSchema
      * Networks covered by this plan.
      *
      * @param $includesHealthPlanNetwork 
+     * @return static
      **/
-    public function setIncludesHealthPlanNetwork($includesHealthPlanNetwork) {
+    public function setIncludesHealthPlanNetwork($includesHealthPlanNetwork): static {
         $this->properties['includesHealthPlanNetwork'] = $includesHealthPlanNetwork;
 
         return $this;
@@ -168,8 +175,9 @@ class HealthInsurancePlanSchema extends IntangibleSchema
      * TODO.
      *
      * @param $healthPlanDrugOption 
+     * @return static
      **/
-    public function setHealthPlanDrugOption($healthPlanDrugOption) {
+    public function setHealthPlanDrugOption($healthPlanDrugOption): static {
         $this->properties['healthPlanDrugOption'] = $healthPlanDrugOption;
 
         return $this;
@@ -186,8 +194,9 @@ class HealthInsurancePlanSchema extends IntangibleSchema
      * The 14-character, HIOS-generated Plan ID number. (Plan IDs must be unique, even across different markets.)
      *
      * @param $healthPlanId 
+     * @return static
      **/
-    public function setHealthPlanId($healthPlanId) {
+    public function setHealthPlanId($healthPlanId): static {
         $this->properties['healthPlanId'] = $healthPlanId;
 
         return $this;

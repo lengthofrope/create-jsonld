@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class BoatTerminalSchema extends CivicStructureSchema
 {
-    public static function factory()
+    public static function factory(): BoatTerminalSchema
     {
         return new BoatTerminalSchema('https://schema.org/', 'BoatTerminal');
     }

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class CollegeOrUniversitySchema extends EducationalOrganizationSchema
 {
-    public static function factory()
+    public static function factory(): CollegeOrUniversitySchema
     {
         return new CollegeOrUniversitySchema('https://schema.org/', 'CollegeOrUniversity');
     }

@@ -34,7 +34,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DeliveryMethodSchema extends EnumerationSchema
 {
-    public static function factory()
+    public static function factory(): DeliveryMethodSchema
     {
         return new DeliveryMethodSchema('https://schema.org/', 'DeliveryMethod');
     }

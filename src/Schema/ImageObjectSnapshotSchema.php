@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ImageObjectSnapshotSchema extends ImageObjectSchema
 {
-    public static function factory()
+    public static function factory(): ImageObjectSnapshotSchema
     {
         return new ImageObjectSnapshotSchema('https://schema.org/', 'ImageObjectSnapshot');
     }

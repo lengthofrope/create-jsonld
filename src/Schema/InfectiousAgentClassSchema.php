@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class InfectiousAgentClassSchema extends MedicalEnumerationSchema
 {
-    public static function factory()
+    public static function factory(): InfectiousAgentClassSchema
     {
         return new InfectiousAgentClassSchema('https://schema.org/', 'InfectiousAgentClass');
     }

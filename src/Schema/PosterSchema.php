@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PosterSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): PosterSchema
     {
         return new PosterSchema('https://schema.org/', 'Poster');
     }

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PerformanceRoleSchema extends RoleSchema
 {
-    public static function factory()
+    public static function factory(): PerformanceRoleSchema
     {
         return new PerformanceRoleSchema('https://schema.org/', 'PerformanceRole');
     }
@@ -42,8 +42,9 @@ class PerformanceRoleSchema extends RoleSchema
      * The name of a character played in some acting or performing role, i.e. in a PerformanceRole.
      *
      * @param $characterName 
+     * @return static
      **/
-    public function setCharacterName($characterName) {
+    public function setCharacterName($characterName): static {
         $this->properties['characterName'] = $characterName;
 
         return $this;

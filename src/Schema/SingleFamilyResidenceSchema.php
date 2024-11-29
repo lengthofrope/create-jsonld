@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class SingleFamilyResidenceSchema extends HouseSchema
 {
-    public static function factory()
+    public static function factory(): SingleFamilyResidenceSchema
     {
         return new SingleFamilyResidenceSchema('https://schema.org/', 'SingleFamilyResidence');
     }
@@ -43,8 +43,9 @@ class SingleFamilyResidenceSchema extends HouseSchema
 Typical unit code(s): C62 for person.
      *
      * @param $occupancy 
+     * @return static
      **/
-    public function setOccupancy($occupancy) {
+    public function setOccupancy($occupancy): static {
         $this->properties['occupancy'] = $occupancy;
 
         return $this;
@@ -62,8 +63,9 @@ Typical unit code(s): C62 for person.
 Typical unit code(s): ROM for room or C62 for no unit. The type of room can be put in the unitText property of the QuantitativeValue.
      *
      * @param $numberOfRooms |
+     * @return static
      **/
-    public function setNumberOfRooms($numberOfRooms) {
+    public function setNumberOfRooms($numberOfRooms): static {
         $this->properties['numberOfRooms'] = $numberOfRooms;
 
         return $this;

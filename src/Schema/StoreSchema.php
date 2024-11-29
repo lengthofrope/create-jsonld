@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class StoreSchema extends LocalBusinessSchema
 {
-    public static function factory()
+    public static function factory(): StoreSchema
     {
         return new StoreSchema('https://schema.org/', 'Store');
     }

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class HyperTocSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): HyperTocSchema
     {
         return new HyperTocSchema('https://schema.org/', 'HyperToc');
     }
@@ -42,8 +42,9 @@ class HyperTocSchema extends CreativeWorkSchema
      * A media object that encodes this CreativeWork. This property is a synonym for encoding.
      *
      * @param $associatedMedia 
+     * @return static
      **/
-    public function setAssociatedMedia($associatedMedia) {
+    public function setAssociatedMedia($associatedMedia): static {
         $this->properties['associatedMedia'] = $associatedMedia;
 
         return $this;
@@ -60,8 +61,9 @@ class HyperTocSchema extends CreativeWorkSchema
      * Indicates a [[HyperTocEntry]] in a [[HyperToc]].
      *
      * @param $tocEntry 
+     * @return static
      **/
-    public function setTocEntry($tocEntry) {
+    public function setTocEntry($tocEntry): static {
         $this->properties['tocEntry'] = $tocEntry;
 
         return $this;

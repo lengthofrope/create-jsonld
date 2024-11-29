@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class BedTypeSchema extends QualitativeValueSchema
 {
-    public static function factory()
+    public static function factory(): BedTypeSchema
     {
         return new BedTypeSchema('https://schema.org/', 'BedType');
     }

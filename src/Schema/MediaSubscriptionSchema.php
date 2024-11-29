@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MediaSubscriptionSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): MediaSubscriptionSchema
     {
         return new MediaSubscriptionSchema('https://schema.org/', 'MediaSubscription');
     }
@@ -42,8 +42,9 @@ class MediaSubscriptionSchema extends IntangibleSchema
      * An Offer which must be accepted before the user can perform the Action. For example, the user may need to buy a movie before being able to watch it.
      *
      * @param $expectsAcceptanceOf 
+     * @return static
      **/
-    public function setExpectsAcceptanceOf($expectsAcceptanceOf) {
+    public function setExpectsAcceptanceOf($expectsAcceptanceOf): static {
         $this->properties['expectsAcceptanceOf'] = $expectsAcceptanceOf;
 
         return $this;
@@ -60,8 +61,9 @@ class MediaSubscriptionSchema extends IntangibleSchema
      * The Organization responsible for authenticating the user's subscription. For example, many media apps require a cable/satellite provider to authenticate your subscription before playing media.
      *
      * @param $authenticator 
+     * @return static
      **/
-    public function setAuthenticator($authenticator) {
+    public function setAuthenticator($authenticator): static {
         $this->properties['authenticator'] = $authenticator;
 
         return $this;

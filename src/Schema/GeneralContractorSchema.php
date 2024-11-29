@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class GeneralContractorSchema extends HomeAndConstructionBusinessSchema
 {
-    public static function factory()
+    public static function factory(): GeneralContractorSchema
     {
         return new GeneralContractorSchema('https://schema.org/', 'GeneralContractor');
     }

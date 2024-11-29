@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class LegislationSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): LegislationSchema
     {
         return new LegislationSchema('https://schema.org/', 'Legislation');
     }
@@ -42,8 +42,9 @@ class LegislationSchema extends CreativeWorkSchema
      * Another legislation that this legislation changes. This encompasses the notions of amendment, replacement, correction, repeal, or other types of change. This may be a direct change (textual or non-textual amendment) or a consequential or indirect change. The property is to be used to express the existence of a change relationship between two acts rather than the existence of a consolidated version of the text that shows the result of the change. For consolidation relationships, use the <a href="/legislationConsolidates">legislationConsolidates</a> property.
      *
      * @param $legislationChanges 
+     * @return static
      **/
-    public function setLegislationChanges($legislationChanges) {
+    public function setLegislationChanges($legislationChanges): static {
         $this->properties['legislationChanges'] = $legislationChanges;
 
         return $this;
@@ -60,8 +61,9 @@ class LegislationSchema extends CreativeWorkSchema
      * Whether the legislation is currently in force, not in force, or partially in force.
      *
      * @param $legislationLegalForce 
+     * @return static
      **/
-    public function setLegislationLegalForce($legislationLegalForce) {
+    public function setLegislationLegalForce($legislationLegalForce): static {
         $this->properties['legislationLegalForce'] = $legislationLegalForce;
 
         return $this;
@@ -78,8 +80,9 @@ class LegislationSchema extends CreativeWorkSchema
      * The jurisdiction from which the legislation originates.
      *
      * @param $legislationJurisdiction |
+     * @return static
      **/
-    public function setLegislationJurisdiction($legislationJurisdiction) {
+    public function setLegislationJurisdiction($legislationJurisdiction): static {
         $this->properties['legislationJurisdiction'] = $legislationJurisdiction;
 
         return $this;
@@ -96,8 +99,9 @@ class LegislationSchema extends CreativeWorkSchema
      * Indicates that this legislation (or part of a legislation) somehow transfers another legislation in a different legislative context. This is an informative link, and it has no legal value. For legally-binding links of transposition, use the <a href="/legislationTransposes">legislationTransposes</a> property. For example an informative consolidated law of a European Union's member state "applies" the consolidated version of the European Directive implemented in it.
      *
      * @param $legislationApplies 
+     * @return static
      **/
-    public function setLegislationApplies($legislationApplies) {
+    public function setLegislationApplies($legislationApplies): static {
         $this->properties['legislationApplies'] = $legislationApplies;
 
         return $this;
@@ -114,8 +118,9 @@ class LegislationSchema extends CreativeWorkSchema
      * Indicates a legal jurisdiction, e.g. of some legislation, or where some government service is based.
      *
      * @param $jurisdiction |
+     * @return static
      **/
-    public function setJurisdiction($jurisdiction) {
+    public function setJurisdiction($jurisdiction): static {
         $this->properties['jurisdiction'] = $jurisdiction;
 
         return $this;
@@ -132,8 +137,9 @@ class LegislationSchema extends CreativeWorkSchema
      * Indicates another legislation taken into account in this consolidated legislation (which is usually the product of an editorial process that revises the legislation). This property should be used multiple times to refer to both the original version or the previous consolidated version, and to the legislations making the change.
      *
      * @param $legislationConsolidates 
+     * @return static
      **/
-    public function setLegislationConsolidates($legislationConsolidates) {
+    public function setLegislationConsolidates($legislationConsolidates): static {
         $this->properties['legislationConsolidates'] = $legislationConsolidates;
 
         return $this;
@@ -150,8 +156,9 @@ class LegislationSchema extends CreativeWorkSchema
      * The date of adoption or signature of the legislation. This is the date at which the text is officially aknowledged to be a legislation, even though it might not even be published or in force.
      *
      * @param $legislationDate 
+     * @return static
      **/
-    public function setLegislationDate($legislationDate) {
+    public function setLegislationDate($legislationDate): static {
         $this->properties['legislationDate'] = $legislationDate;
 
         return $this;
@@ -168,8 +175,9 @@ class LegislationSchema extends CreativeWorkSchema
      * The person or organization that originally passed or made the law: typically parliament (for primary legislation) or government (for secondary legislation). This indicates the "legal author" of the law, as opposed to its physical author.
      *
      * @param $legislationPassedBy |
+     * @return static
      **/
-    public function setLegislationPassedBy($legislationPassedBy) {
+    public function setLegislationPassedBy($legislationPassedBy): static {
         $this->properties['legislationPassedBy'] = $legislationPassedBy;
 
         return $this;
@@ -186,8 +194,9 @@ class LegislationSchema extends CreativeWorkSchema
      * An identifier for the legislation. This can be either a string-based identifier, like the CELEX at EU level or the NOR in France, or a web-based, URL/URI identifier, like an ELI (European Legislation Identifier) or an URN-Lex.
      *
      * @param $legislationIdentifier |
+     * @return static
      **/
-    public function setLegislationIdentifier($legislationIdentifier) {
+    public function setLegislationIdentifier($legislationIdentifier): static {
         $this->properties['legislationIdentifier'] = $legislationIdentifier;
 
         return $this;
@@ -204,8 +213,9 @@ class LegislationSchema extends CreativeWorkSchema
      * Indicates that this legislation (or part of legislation) fulfills the objectives set by another legislation, by passing appropriate implementation measures. Typically, some legislations of European Union's member states or regions transpose European Directives. This indicates a legally binding link between the 2 legislations.
      *
      * @param $legislationTransposes 
+     * @return static
      **/
-    public function setLegislationTransposes($legislationTransposes) {
+    public function setLegislationTransposes($legislationTransposes): static {
         $this->properties['legislationTransposes'] = $legislationTransposes;
 
         return $this;
@@ -222,8 +232,9 @@ class LegislationSchema extends CreativeWorkSchema
      * The point-in-time at which the provided description of the legislation is valid (e.g.: when looking at the law on the 2016-04-07 (= dateVersion), I get the consolidation of 2015-04-12 of the "National Insurance Contributions Act 2015")
      *
      * @param $legislationDateVersion 
+     * @return static
      **/
-    public function setLegislationDateVersion($legislationDateVersion) {
+    public function setLegislationDateVersion($legislationDateVersion): static {
         $this->properties['legislationDateVersion'] = $legislationDateVersion;
 
         return $this;
@@ -240,8 +251,9 @@ class LegislationSchema extends CreativeWorkSchema
      * The type of the legislation. Examples of values are "law", "act", "directive", "decree", "regulation", "statutory instrument", "loi organique", "règlement grand-ducal", etc., depending on the country.
      *
      * @param $legislationType |
+     * @return static
      **/
-    public function setLegislationType($legislationType) {
+    public function setLegislationType($legislationType): static {
         $this->properties['legislationType'] = $legislationType;
 
         return $this;
@@ -258,8 +270,9 @@ class LegislationSchema extends CreativeWorkSchema
      * An individual or organization that has some kind of responsibility for the legislation. Typically the ministry who is/was in charge of elaborating the legislation, or the adressee for potential questions about the legislation once it is published.
      *
      * @param $legislationResponsible |
+     * @return static
      **/
-    public function setLegislationResponsible($legislationResponsible) {
+    public function setLegislationResponsible($legislationResponsible): static {
         $this->properties['legislationResponsible'] = $legislationResponsible;
 
         return $this;

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class SchoolDistrictSchema extends AdministrativeAreaSchema
 {
-    public static function factory()
+    public static function factory(): SchoolDistrictSchema
     {
         return new SchoolDistrictSchema('https://schema.org/', 'SchoolDistrict');
     }

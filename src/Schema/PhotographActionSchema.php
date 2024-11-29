@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PhotographActionSchema extends CreateActionSchema
 {
-    public static function factory()
+    public static function factory(): PhotographActionSchema
     {
         return new PhotographActionSchema('https://schema.org/', 'PhotographAction');
     }

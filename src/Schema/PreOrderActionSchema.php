@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PreOrderActionSchema extends TradeActionSchema
 {
-    public static function factory()
+    public static function factory(): PreOrderActionSchema
     {
         return new PreOrderActionSchema('https://schema.org/', 'PreOrderAction');
     }

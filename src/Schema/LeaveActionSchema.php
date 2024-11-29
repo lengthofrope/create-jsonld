@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class LeaveActionSchema extends InteractActionSchema
 {
-    public static function factory()
+    public static function factory(): LeaveActionSchema
     {
         return new LeaveActionSchema('https://schema.org/', 'LeaveAction');
     }
@@ -42,8 +42,9 @@ class LeaveActionSchema extends InteractActionSchema
      * Upcoming or past event associated with this place, organization, or action.
      *
      * @param $event 
+     * @return static
      **/
-    public function setEvent($event) {
+    public function setEvent($event): static {
         $this->properties['event'] = $event;
 
         return $this;

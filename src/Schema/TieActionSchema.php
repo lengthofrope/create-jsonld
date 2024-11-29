@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class TieActionSchema extends AchieveActionSchema
 {
-    public static function factory()
+    public static function factory(): TieActionSchema
     {
         return new TieActionSchema('https://schema.org/', 'TieAction');
     }

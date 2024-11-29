@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class GatedResidenceCommunitySchema extends ResidenceSchema
 {
-    public static function factory()
+    public static function factory(): GatedResidenceCommunitySchema
     {
         return new GatedResidenceCommunitySchema('https://schema.org/', 'GatedResidenceCommunity');
     }

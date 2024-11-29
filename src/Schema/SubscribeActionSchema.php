@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class SubscribeActionSchema extends InteractActionSchema
 {
-    public static function factory()
+    public static function factory(): SubscribeActionSchema
     {
         return new SubscribeActionSchema('https://schema.org/', 'SubscribeAction');
     }

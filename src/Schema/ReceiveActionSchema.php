@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ReceiveActionSchema extends TransferActionSchema
 {
-    public static function factory()
+    public static function factory(): ReceiveActionSchema
     {
         return new ReceiveActionSchema('https://schema.org/', 'ReceiveAction');
     }
@@ -42,8 +42,9 @@ class ReceiveActionSchema extends TransferActionSchema
      * A sub property of instrument. The method of delivery.
      *
      * @param $deliveryMethod 
+     * @return static
      **/
-    public function setDeliveryMethod($deliveryMethod) {
+    public function setDeliveryMethod($deliveryMethod): static {
         $this->properties['deliveryMethod'] = $deliveryMethod;
 
         return $this;
@@ -60,8 +61,9 @@ class ReceiveActionSchema extends TransferActionSchema
      * A sub property of participant. The participant who is at the sending end of the action.
      *
      * @param $sender ||
+     * @return static
      **/
-    public function setSender($sender) {
+    public function setSender($sender): static {
         $this->properties['sender'] = $sender;
 
         return $this;

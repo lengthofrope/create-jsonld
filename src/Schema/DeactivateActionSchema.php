@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DeactivateActionSchema extends ControlActionSchema
 {
-    public static function factory()
+    public static function factory(): DeactivateActionSchema
     {
         return new DeactivateActionSchema('https://schema.org/', 'DeactivateAction');
     }

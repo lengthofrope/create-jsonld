@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class CemeterySchema extends CivicStructureSchema
 {
-    public static function factory()
+    public static function factory(): CemeterySchema
     {
         return new CemeterySchema('https://schema.org/', 'Cemetery');
     }

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class QuestionSchema extends CommentSchema
 {
-    public static function factory()
+    public static function factory(): QuestionSchema
     {
         return new QuestionSchema('https://schema.org/', 'Question');
     }
@@ -42,8 +42,9 @@ class QuestionSchema extends CommentSchema
      * The number of answers this question has received.
      *
      * @param $answerCount 
+     * @return static
      **/
-    public function setAnswerCount($answerCount) {
+    public function setAnswerCount($answerCount): static {
         $this->properties['answerCount'] = $answerCount;
 
         return $this;
@@ -60,8 +61,9 @@ class QuestionSchema extends CommentSchema
      * The parent of a question, answer or item in general. Typically used for Q/A discussion threads e.g. a chain of comments with the first comment being an [[Article]] or other [[CreativeWork]]. See also [[comment]] which points from something to a comment about it.
      *
      * @param $parentItem |
+     * @return static
      **/
-    public function setParentItem($parentItem) {
+    public function setParentItem($parentItem): static {
         $this->properties['parentItem'] = $parentItem;
 
         return $this;
@@ -78,8 +80,9 @@ class QuestionSchema extends CommentSchema
      * The answer(s) that has been accepted as best, typically on a Question/Answer site. Sites vary in their selection mechanisms, e.g. drawing on community opinion and/or the view of the Question author.
      *
      * @param $acceptedAnswer |
+     * @return static
      **/
-    public function setAcceptedAnswer($acceptedAnswer) {
+    public function setAcceptedAnswer($acceptedAnswer): static {
         $this->properties['acceptedAnswer'] = $acceptedAnswer;
 
         return $this;
@@ -96,8 +99,9 @@ class QuestionSchema extends CommentSchema
      * For questions that are part of learning resources (e.g. Quiz), eduQuestionType indicates the format of question being given. Example: "Multiple choice", "Open ended", "Flashcard".
      *
      * @param $eduQuestionType 
+     * @return static
      **/
-    public function setEduQuestionType($eduQuestionType) {
+    public function setEduQuestionType($eduQuestionType): static {
         $this->properties['eduQuestionType'] = $eduQuestionType;
 
         return $this;
@@ -114,8 +118,9 @@ class QuestionSchema extends CommentSchema
      * An answer (possibly one of several, possibly incorrect) to a Question, e.g. on a Question/Answer site.
      *
      * @param $suggestedAnswer |
+     * @return static
      **/
-    public function setSuggestedAnswer($suggestedAnswer) {
+    public function setSuggestedAnswer($suggestedAnswer): static {
         $this->properties['suggestedAnswer'] = $suggestedAnswer;
 
         return $this;

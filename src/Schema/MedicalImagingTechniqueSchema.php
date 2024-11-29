@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MedicalImagingTechniqueSchema extends MedicalEnumerationSchema
 {
-    public static function factory()
+    public static function factory(): MedicalImagingTechniqueSchema
     {
         return new MedicalImagingTechniqueSchema('https://schema.org/', 'MedicalImagingTechnique');
     }

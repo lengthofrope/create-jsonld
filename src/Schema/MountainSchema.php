@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MountainSchema extends LandformSchema
 {
-    public static function factory()
+    public static function factory(): MountainSchema
     {
         return new MountainSchema('https://schema.org/', 'Mountain');
     }

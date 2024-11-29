@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PlanActionSchema extends OrganizeActionSchema
 {
-    public static function factory()
+    public static function factory(): PlanActionSchema
     {
         return new PlanActionSchema('https://schema.org/', 'PlanAction');
     }
@@ -42,8 +42,9 @@ class PlanActionSchema extends OrganizeActionSchema
      * The time the object is scheduled to.
      *
      * @param $scheduledTime |
+     * @return static
      **/
-    public function setScheduledTime($scheduledTime) {
+    public function setScheduledTime($scheduledTime): static {
         $this->properties['scheduledTime'] = $scheduledTime;
 
         return $this;

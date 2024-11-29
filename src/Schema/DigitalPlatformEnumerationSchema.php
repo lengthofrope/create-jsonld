@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DigitalPlatformEnumerationSchema extends EnumerationSchema
 {
-    public static function factory()
+    public static function factory(): DigitalPlatformEnumerationSchema
     {
         return new DigitalPlatformEnumerationSchema('https://schema.org/', 'DigitalPlatformEnumeration');
     }

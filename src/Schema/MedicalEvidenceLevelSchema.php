@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MedicalEvidenceLevelSchema extends MedicalEnumerationSchema
 {
-    public static function factory()
+    public static function factory(): MedicalEvidenceLevelSchema
     {
         return new MedicalEvidenceLevelSchema('https://schema.org/', 'MedicalEvidenceLevel');
     }

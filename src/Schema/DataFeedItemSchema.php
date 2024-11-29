@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DataFeedItemSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): DataFeedItemSchema
     {
         return new DataFeedItemSchema('https://schema.org/', 'DataFeedItem');
     }
@@ -42,8 +42,9 @@ class DataFeedItemSchema extends IntangibleSchema
      * The date on which the CreativeWork was created or the item was added to a DataFeed.
      *
      * @param $dateCreated |
+     * @return static
      **/
-    public function setDateCreated($dateCreated) {
+    public function setDateCreated($dateCreated): static {
         $this->properties['dateCreated'] = $dateCreated;
 
         return $this;
@@ -60,8 +61,9 @@ class DataFeedItemSchema extends IntangibleSchema
      * The datetime the item was removed from the DataFeed.
      *
      * @param $dateDeleted |
+     * @return static
      **/
-    public function setDateDeleted($dateDeleted) {
+    public function setDateDeleted($dateDeleted): static {
         $this->properties['dateDeleted'] = $dateDeleted;
 
         return $this;
@@ -78,8 +80,9 @@ class DataFeedItemSchema extends IntangibleSchema
      * An entity represented by an entry in a list or data feed (e.g. an 'artist' in a list of 'artists').
      *
      * @param $item 
+     * @return static
      **/
-    public function setItem($item) {
+    public function setItem($item): static {
         $this->properties['item'] = $item;
 
         return $this;
@@ -96,8 +99,9 @@ class DataFeedItemSchema extends IntangibleSchema
      * The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.
      *
      * @param $dateModified |
+     * @return static
      **/
-    public function setDateModified($dateModified) {
+    public function setDateModified($dateModified): static {
         $this->properties['dateModified'] = $dateModified;
 
         return $this;

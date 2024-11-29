@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MenuSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): MenuSchema
     {
         return new MenuSchema('https://schema.org/', 'Menu');
     }
@@ -42,8 +42,9 @@ class MenuSchema extends CreativeWorkSchema
      * A food or drink item contained in a menu or menu section.
      *
      * @param $hasMenuItem 
+     * @return static
      **/
-    public function setHasMenuItem($hasMenuItem) {
+    public function setHasMenuItem($hasMenuItem): static {
         $this->properties['hasMenuItem'] = $hasMenuItem;
 
         return $this;
@@ -60,8 +61,9 @@ class MenuSchema extends CreativeWorkSchema
      * A subgrouping of the menu (by dishes, course, serving time period, etc.).
      *
      * @param $hasMenuSection 
+     * @return static
      **/
-    public function setHasMenuSection($hasMenuSection) {
+    public function setHasMenuSection($hasMenuSection): static {
         $this->properties['hasMenuSection'] = $hasMenuSection;
 
         return $this;

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class AirportSchema extends CivicStructureSchema
 {
-    public static function factory()
+    public static function factory(): AirportSchema
     {
         return new AirportSchema('https://schema.org/', 'Airport');
     }
@@ -42,8 +42,9 @@ class AirportSchema extends CivicStructureSchema
      * IATA identifier for an airline or airport.
      *
      * @param $iataCode 
+     * @return static
      **/
-    public function setIataCode($iataCode) {
+    public function setIataCode($iataCode): static {
         $this->properties['iataCode'] = $iataCode;
 
         return $this;
@@ -60,8 +61,9 @@ class AirportSchema extends CivicStructureSchema
      * ICAO identifier for an airport.
      *
      * @param $icaoCode 
+     * @return static
      **/
-    public function setIcaoCode($icaoCode) {
+    public function setIcaoCode($icaoCode): static {
         $this->properties['icaoCode'] = $icaoCode;
 
         return $this;

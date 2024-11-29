@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MedicalTestPanelSchema extends MedicalTestSchema
 {
-    public static function factory()
+    public static function factory(): MedicalTestPanelSchema
     {
         return new MedicalTestPanelSchema('https://schema.org/', 'MedicalTestPanel');
     }
@@ -42,8 +42,9 @@ class MedicalTestPanelSchema extends MedicalTestSchema
      * A component test of the panel.
      *
      * @param $subTest 
+     * @return static
      **/
-    public function setSubTest($subTest) {
+    public function setSubTest($subTest): static {
         $this->properties['subTest'] = $subTest;
 
         return $this;

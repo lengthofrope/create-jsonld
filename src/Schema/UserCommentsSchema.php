@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class UserCommentsSchema extends UserInteractionSchema
 {
-    public static function factory()
+    public static function factory(): UserCommentsSchema
     {
         return new UserCommentsSchema('https://schema.org/', 'UserComments');
     }
@@ -42,8 +42,9 @@ class UserCommentsSchema extends UserInteractionSchema
      * The time at which the UserComment was made.
      *
      * @param $commentTime |
+     * @return static
      **/
-    public function setCommentTime($commentTime) {
+    public function setCommentTime($commentTime): static {
         $this->properties['commentTime'] = $commentTime;
 
         return $this;
@@ -60,8 +61,9 @@ class UserCommentsSchema extends UserInteractionSchema
      * Specifies the CreativeWork associated with the UserComment.
      *
      * @param $discusses 
+     * @return static
      **/
-    public function setDiscusses($discusses) {
+    public function setDiscusses($discusses): static {
         $this->properties['discusses'] = $discusses;
 
         return $this;
@@ -78,8 +80,9 @@ class UserCommentsSchema extends UserInteractionSchema
      * The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.
      *
      * @param $creator |
+     * @return static
      **/
-    public function setCreator($creator) {
+    public function setCreator($creator): static {
         $this->properties['creator'] = $creator;
 
         return $this;
@@ -96,8 +99,9 @@ class UserCommentsSchema extends UserInteractionSchema
      * The text of the UserComment.
      *
      * @param $commentText 
+     * @return static
      **/
-    public function setCommentText($commentText) {
+    public function setCommentText($commentText): static {
         $this->properties['commentText'] = $commentText;
 
         return $this;
@@ -114,8 +118,9 @@ class UserCommentsSchema extends UserInteractionSchema
      * The URL at which a reply may be posted to the specified UserComment.
      *
      * @param $replyToUrl 
+     * @return static
      **/
-    public function setReplyToUrl($replyToUrl) {
+    public function setReplyToUrl($replyToUrl): static {
         $this->properties['replyToUrl'] = $replyToUrl;
 
         return $this;

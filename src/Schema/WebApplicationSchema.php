@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class WebApplicationSchema extends SoftwareApplicationSchema
 {
-    public static function factory()
+    public static function factory(): WebApplicationSchema
     {
         return new WebApplicationSchema('https://schema.org/', 'WebApplication');
     }
@@ -42,8 +42,9 @@ class WebApplicationSchema extends SoftwareApplicationSchema
      * Specifies browser requirements in human-readable text. For example, 'requires HTML5 support'.
      *
      * @param $browserRequirements 
+     * @return static
      **/
-    public function setBrowserRequirements($browserRequirements) {
+    public function setBrowserRequirements($browserRequirements): static {
         $this->properties['browserRequirements'] = $browserRequirements;
 
         return $this;

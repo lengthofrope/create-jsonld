@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class WriteActionSchema extends CreateActionSchema
 {
-    public static function factory()
+    public static function factory(): WriteActionSchema
     {
         return new WriteActionSchema('https://schema.org/', 'WriteAction');
     }
@@ -42,8 +42,9 @@ class WriteActionSchema extends CreateActionSchema
      * A sub property of instrument. The language used on this action.
      *
      * @param $language 
+     * @return static
      **/
-    public function setLanguage($language) {
+    public function setLanguage($language): static {
         $this->properties['language'] = $language;
 
         return $this;
@@ -60,8 +61,9 @@ class WriteActionSchema extends CreateActionSchema
      * The language of the content or performance or used in an action. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
      *
      * @param $inLanguage |
+     * @return static
      **/
-    public function setInLanguage($inLanguage) {
+    public function setInLanguage($inLanguage): static {
         $this->properties['inLanguage'] = $inLanguage;
 
         return $this;

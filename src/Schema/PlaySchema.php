@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PlaySchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): PlaySchema
     {
         return new PlaySchema('https://schema.org/', 'Play');
     }

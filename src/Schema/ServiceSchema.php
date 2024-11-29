@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ServiceSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): ServiceSchema
     {
         return new ServiceSchema('https://schema.org/', 'Service');
     }
@@ -42,8 +42,9 @@ class ServiceSchema extends IntangibleSchema
      * The type of service being offered, e.g. veterans' benefits, emergency relief, etc.
      *
      * @param $serviceType |
+     * @return static
      **/
-    public function setServiceType($serviceType) {
+    public function setServiceType($serviceType): static {
         $this->properties['serviceType'] = $serviceType;
 
         return $this;
@@ -60,8 +61,9 @@ class ServiceSchema extends IntangibleSchema
      * Human-readable terms of service documentation.
      *
      * @param $termsOfService |
+     * @return static
      **/
-    public function setTermsOfService($termsOfService) {
+    public function setTermsOfService($termsOfService): static {
         $this->properties['termsOfService'] = $termsOfService;
 
         return $this;
@@ -78,8 +80,9 @@ class ServiceSchema extends IntangibleSchema
      * A pointer to another, functionally similar product (or multiple products).
      *
      * @param $isSimilarTo |
+     * @return static
      **/
-    public function setIsSimilarTo($isSimilarTo) {
+    public function setIsSimilarTo($isSimilarTo): static {
         $this->properties['isSimilarTo'] = $isSimilarTo;
 
         return $this;
@@ -96,8 +99,9 @@ class ServiceSchema extends IntangibleSchema
      * An award won by or for this item.
      *
      * @param $award 
+     * @return static
      **/
-    public function setAward($award) {
+    public function setAward($award): static {
         $this->properties['award'] = $award;
 
         return $this;
@@ -114,8 +118,9 @@ class ServiceSchema extends IntangibleSchema
      * An entity that arranges for an exchange between a buyer and a seller.  In most cases a broker never acquires or releases ownership of a product or service involved in an exchange.  If it is not clear whether an entity is a broker, seller, or buyer, the latter two terms are preferred.
      *
      * @param $broker |
+     * @return static
      **/
-    public function setBroker($broker) {
+    public function setBroker($broker): static {
         $this->properties['broker'] = $broker;
 
         return $this;
@@ -132,8 +137,9 @@ class ServiceSchema extends IntangibleSchema
      * Indicates an OfferCatalog listing for this Organization, Person, or Service.
      *
      * @param $hasOfferCatalog 
+     * @return static
      **/
-    public function setHasOfferCatalog($hasOfferCatalog) {
+    public function setHasOfferCatalog($hasOfferCatalog): static {
         $this->properties['hasOfferCatalog'] = $hasOfferCatalog;
 
         return $this;
@@ -150,8 +156,9 @@ class ServiceSchema extends IntangibleSchema
      * Certification information about a product, organization, service, place, or person.
      *
      * @param $hasCertification 
+     * @return static
      **/
-    public function setHasCertification($hasCertification) {
+    public function setHasCertification($hasCertification): static {
         $this->properties['hasCertification'] = $hasCertification;
 
         return $this;
@@ -168,8 +175,9 @@ class ServiceSchema extends IntangibleSchema
      * The audience eligible for this service.
      *
      * @param $serviceAudience 
+     * @return static
      **/
-    public function setServiceAudience($serviceAudience) {
+    public function setServiceAudience($serviceAudience): static {
         $this->properties['serviceAudience'] = $serviceAudience;
 
         return $this;
@@ -186,8 +194,9 @@ class ServiceSchema extends IntangibleSchema
      * An associated logo.
      *
      * @param $logo |
+     * @return static
      **/
-    public function setLogo($logo) {
+    public function setLogo($logo): static {
         $this->properties['logo'] = $logo;
 
         return $this;
@@ -204,8 +213,9 @@ class ServiceSchema extends IntangibleSchema
      * The geographic area where a service or offered item is provided.
      *
      * @param $areaServed |||
+     * @return static
      **/
-    public function setAreaServed($areaServed) {
+    public function setAreaServed($areaServed): static {
         $this->properties['areaServed'] = $areaServed;
 
         return $this;
@@ -222,8 +232,9 @@ class ServiceSchema extends IntangibleSchema
      * The geographic area where the service is provided.
      *
      * @param $serviceArea ||
+     * @return static
      **/
-    public function setServiceArea($serviceArea) {
+    public function setServiceArea($serviceArea): static {
         $this->properties['serviceArea'] = $serviceArea;
 
         return $this;
@@ -240,8 +251,9 @@ class ServiceSchema extends IntangibleSchema
      * The brand(s) associated with a product or service, or the brand(s) maintained by an organization or business person.
      *
      * @param $brand |
+     * @return static
      **/
-    public function setBrand($brand) {
+    public function setBrand($brand): static {
         $this->properties['brand'] = $brand;
 
         return $this;
@@ -258,8 +270,9 @@ class ServiceSchema extends IntangibleSchema
      * A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
      *
      * @param $category ||||
+     * @return static
      **/
-    public function setCategory($category) {
+    public function setCategory($category): static {
         $this->properties['category'] = $category;
 
         return $this;
@@ -276,8 +289,9 @@ class ServiceSchema extends IntangibleSchema
      * Indicates the mobility of a provided service (e.g. 'static', 'dynamic').
      *
      * @param $providerMobility 
+     * @return static
      **/
-    public function setProviderMobility($providerMobility) {
+    public function setProviderMobility($providerMobility): static {
         $this->properties['providerMobility'] = $providerMobility;
 
         return $this;
@@ -294,8 +308,9 @@ class ServiceSchema extends IntangibleSchema
      * A pointer to another, somehow related product (or multiple products).
      *
      * @param $isRelatedTo |
+     * @return static
      **/
-    public function setIsRelatedTo($isRelatedTo) {
+    public function setIsRelatedTo($isRelatedTo): static {
         $this->properties['isRelatedTo'] = $isRelatedTo;
 
         return $this;
@@ -312,8 +327,9 @@ class ServiceSchema extends IntangibleSchema
      * The hours during which this service or contact is available.
      *
      * @param $hoursAvailable 
+     * @return static
      **/
-    public function setHoursAvailable($hoursAvailable) {
+    public function setHoursAvailable($hoursAvailable): static {
         $this->properties['hoursAvailable'] = $hoursAvailable;
 
         return $this;
@@ -330,8 +346,9 @@ class ServiceSchema extends IntangibleSchema
      * A review of the item.
      *
      * @param $review 
+     * @return static
      **/
-    public function setReview($review) {
+    public function setReview($review): static {
         $this->properties['review'] = $review;
 
         return $this;
@@ -348,8 +365,9 @@ class ServiceSchema extends IntangibleSchema
      * The tangible thing generated by the service, e.g. a passport, permit, etc.
      *
      * @param $produces 
+     * @return static
      **/
-    public function setProduces($produces) {
+    public function setProduces($produces): static {
         $this->properties['produces'] = $produces;
 
         return $this;
@@ -367,8 +385,9 @@ class ServiceSchema extends IntangibleSchema
       
      *
      * @param $offers |
+     * @return static
      **/
-    public function setOffers($offers) {
+    public function setOffers($offers): static {
         $this->properties['offers'] = $offers;
 
         return $this;
@@ -385,8 +404,9 @@ class ServiceSchema extends IntangibleSchema
      * The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.
      *
      * @param $provider |
+     * @return static
      **/
-    public function setProvider($provider) {
+    public function setProvider($provider): static {
         $this->properties['provider'] = $provider;
 
         return $this;
@@ -403,8 +423,9 @@ class ServiceSchema extends IntangibleSchema
      * A slogan or motto associated with the item.
      *
      * @param $slogan 
+     * @return static
      **/
-    public function setSlogan($slogan) {
+    public function setSlogan($slogan): static {
         $this->properties['slogan'] = $slogan;
 
         return $this;
@@ -421,8 +442,9 @@ class ServiceSchema extends IntangibleSchema
      * The overall rating, based on a collection of reviews or ratings, of the item.
      *
      * @param $aggregateRating 
+     * @return static
      **/
-    public function setAggregateRating($aggregateRating) {
+    public function setAggregateRating($aggregateRating): static {
         $this->properties['aggregateRating'] = $aggregateRating;
 
         return $this;
@@ -439,8 +461,9 @@ class ServiceSchema extends IntangibleSchema
      * The tangible thing generated by the service, e.g. a passport, permit, etc.
      *
      * @param $serviceOutput 
+     * @return static
      **/
-    public function setServiceOutput($serviceOutput) {
+    public function setServiceOutput($serviceOutput): static {
         $this->properties['serviceOutput'] = $serviceOutput;
 
         return $this;
@@ -457,8 +480,9 @@ class ServiceSchema extends IntangibleSchema
      * A means of accessing the service (e.g. a phone bank, a web site, a location, etc.).
      *
      * @param $availableChannel 
+     * @return static
      **/
-    public function setAvailableChannel($availableChannel) {
+    public function setAvailableChannel($availableChannel): static {
         $this->properties['availableChannel'] = $availableChannel;
 
         return $this;
@@ -475,8 +499,9 @@ class ServiceSchema extends IntangibleSchema
      * An intended audience, i.e. a group for whom something was created.
      *
      * @param $audience 
+     * @return static
      **/
-    public function setAudience($audience) {
+    public function setAudience($audience): static {
         $this->properties['audience'] = $audience;
 
         return $this;

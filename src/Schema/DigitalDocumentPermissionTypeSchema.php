@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DigitalDocumentPermissionTypeSchema extends EnumerationSchema
 {
-    public static function factory()
+    public static function factory(): DigitalDocumentPermissionTypeSchema
     {
         return new DigitalDocumentPermissionTypeSchema('https://schema.org/', 'DigitalDocumentPermissionType');
     }

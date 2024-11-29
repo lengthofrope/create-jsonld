@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class GiveActionSchema extends TransferActionSchema
 {
-    public static function factory()
+    public static function factory(): GiveActionSchema
     {
         return new GiveActionSchema('https://schema.org/', 'GiveAction');
     }
@@ -42,8 +42,9 @@ class GiveActionSchema extends TransferActionSchema
      * A sub property of participant. The participant who is at the receiving end of the action.
      *
      * @param $recipient |||
+     * @return static
      **/
-    public function setRecipient($recipient) {
+    public function setRecipient($recipient): static {
         $this->properties['recipient'] = $recipient;
 
         return $this;

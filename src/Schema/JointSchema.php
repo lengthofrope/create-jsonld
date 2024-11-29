@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class JointSchema extends AnatomicalStructureSchema
 {
-    public static function factory()
+    public static function factory(): JointSchema
     {
         return new JointSchema('https://schema.org/', 'Joint');
     }
@@ -42,8 +42,9 @@ class JointSchema extends AnatomicalStructureSchema
      * The biomechanical properties of the bone.
      *
      * @param $biomechnicalClass 
+     * @return static
      **/
-    public function setBiomechnicalClass($biomechnicalClass) {
+    public function setBiomechnicalClass($biomechnicalClass): static {
         $this->properties['biomechnicalClass'] = $biomechnicalClass;
 
         return $this;
@@ -60,8 +61,9 @@ class JointSchema extends AnatomicalStructureSchema
      * The name given to how bone physically connects to each other.
      *
      * @param $structuralClass 
+     * @return static
      **/
-    public function setStructuralClass($structuralClass) {
+    public function setStructuralClass($structuralClass): static {
         $this->properties['structuralClass'] = $structuralClass;
 
         return $this;
@@ -78,8 +80,9 @@ class JointSchema extends AnatomicalStructureSchema
      * The degree of mobility the joint allows.
      *
      * @param $functionalClass |
+     * @return static
      **/
-    public function setFunctionalClass($functionalClass) {
+    public function setFunctionalClass($functionalClass): static {
         $this->properties['functionalClass'] = $functionalClass;
 
         return $this;

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DrugLegalStatusSchema extends MedicalIntangibleSchema
 {
-    public static function factory()
+    public static function factory(): DrugLegalStatusSchema
     {
         return new DrugLegalStatusSchema('https://schema.org/', 'DrugLegalStatus');
     }
@@ -42,8 +42,9 @@ class DrugLegalStatusSchema extends MedicalIntangibleSchema
      * The location in which the status applies.
      *
      * @param $applicableLocation 
+     * @return static
      **/
-    public function setApplicableLocation($applicableLocation) {
+    public function setApplicableLocation($applicableLocation): static {
         $this->properties['applicableLocation'] = $applicableLocation;
 
         return $this;

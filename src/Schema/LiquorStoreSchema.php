@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class LiquorStoreSchema extends StoreSchema
 {
-    public static function factory()
+    public static function factory(): LiquorStoreSchema
     {
         return new LiquorStoreSchema('https://schema.org/', 'LiquorStore');
     }

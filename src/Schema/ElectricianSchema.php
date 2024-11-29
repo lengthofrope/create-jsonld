@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ElectricianSchema extends HomeAndConstructionBusinessSchema
 {
-    public static function factory()
+    public static function factory(): ElectricianSchema
     {
         return new ElectricianSchema('https://schema.org/', 'Electrician');
     }

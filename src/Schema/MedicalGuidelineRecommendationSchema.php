@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MedicalGuidelineRecommendationSchema extends MedicalGuidelineSchema
 {
-    public static function factory()
+    public static function factory(): MedicalGuidelineRecommendationSchema
     {
         return new MedicalGuidelineRecommendationSchema('https://schema.org/', 'MedicalGuidelineRecommendation');
     }
@@ -42,8 +42,9 @@ class MedicalGuidelineRecommendationSchema extends MedicalGuidelineSchema
      * Strength of the guideline's recommendation (e.g. 'class I').
      *
      * @param $recommendationStrength 
+     * @return static
      **/
-    public function setRecommendationStrength($recommendationStrength) {
+    public function setRecommendationStrength($recommendationStrength): static {
         $this->properties['recommendationStrength'] = $recommendationStrength;
 
         return $this;

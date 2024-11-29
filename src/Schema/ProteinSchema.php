@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ProteinSchema extends BioChemEntitySchema
 {
-    public static function factory()
+    public static function factory(): ProteinSchema
     {
         return new ProteinSchema('https://schema.org/', 'Protein');
     }
@@ -42,8 +42,9 @@ class ProteinSchema extends BioChemEntitySchema
      * A symbolic representation of a BioChemEntity. For example, a nucleotide sequence of a Gene or an amino acid sequence of a Protein.
      *
      * @param $hasBioPolymerSequence 
+     * @return static
      **/
-    public function setHasBioPolymerSequence($hasBioPolymerSequence) {
+    public function setHasBioPolymerSequence($hasBioPolymerSequence): static {
         $this->properties['hasBioPolymerSequence'] = $hasBioPolymerSequence;
 
         return $this;

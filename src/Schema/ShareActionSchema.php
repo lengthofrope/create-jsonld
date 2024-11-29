@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ShareActionSchema extends CommunicateActionSchema
 {
-    public static function factory()
+    public static function factory(): ShareActionSchema
     {
         return new ShareActionSchema('https://schema.org/', 'ShareAction');
     }

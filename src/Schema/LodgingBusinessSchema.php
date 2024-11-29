@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class LodgingBusinessSchema extends LocalBusinessSchema
 {
-    public static function factory()
+    public static function factory(): LodgingBusinessSchema
     {
         return new LodgingBusinessSchema('https://schema.org/', 'LodgingBusiness');
     }
@@ -42,8 +42,9 @@ class LodgingBusinessSchema extends LocalBusinessSchema
      * Indicates whether pets are allowed to enter the accommodation or lodging business. More detailed information can be put in a text value.
      *
      * @param $petsAllowed |
+     * @return static
      **/
-    public function setPetsAllowed($petsAllowed) {
+    public function setPetsAllowed($petsAllowed): static {
         $this->properties['petsAllowed'] = $petsAllowed;
 
         return $this;
@@ -60,8 +61,9 @@ class LodgingBusinessSchema extends LocalBusinessSchema
      * An official rating for a lodging business or food establishment, e.g. from national associations or standards bodies. Use the author property to indicate the rating organization, e.g. as an Organization with name such as (e.g. HOTREC, DEHOGA, WHR, or Hotelstars).
      *
      * @param $starRating 
+     * @return static
      **/
-    public function setStarRating($starRating) {
+    public function setStarRating($starRating): static {
         $this->properties['starRating'] = $starRating;
 
         return $this;
@@ -78,8 +80,9 @@ class LodgingBusinessSchema extends LocalBusinessSchema
      * The latest someone may check out of a lodging establishment.
      *
      * @param $checkoutTime |
+     * @return static
      **/
-    public function setCheckoutTime($checkoutTime) {
+    public function setCheckoutTime($checkoutTime): static {
         $this->properties['checkoutTime'] = $checkoutTime;
 
         return $this;
@@ -96,8 +99,9 @@ class LodgingBusinessSchema extends LocalBusinessSchema
      * The earliest someone may check into a lodging establishment.
      *
      * @param $checkinTime |
+     * @return static
      **/
-    public function setCheckinTime($checkinTime) {
+    public function setCheckinTime($checkinTime): static {
         $this->properties['checkinTime'] = $checkinTime;
 
         return $this;
@@ -115,8 +119,9 @@ class LodgingBusinessSchema extends LocalBusinessSchema
 Typical unit code(s): ROM for room or C62 for no unit. The type of room can be put in the unitText property of the QuantitativeValue.
      *
      * @param $numberOfRooms |
+     * @return static
      **/
-    public function setNumberOfRooms($numberOfRooms) {
+    public function setNumberOfRooms($numberOfRooms): static {
         $this->properties['numberOfRooms'] = $numberOfRooms;
 
         return $this;
@@ -133,8 +138,9 @@ Typical unit code(s): ROM for room or C62 for no unit. The type of room can be p
      * An amenity feature (e.g. a characteristic or service) of the Accommodation. This generic property does not make a statement about whether the feature is included in an offer for the main accommodation or available at extra costs.
      *
      * @param $amenityFeature 
+     * @return static
      **/
-    public function setAmenityFeature($amenityFeature) {
+    public function setAmenityFeature($amenityFeature): static {
         $this->properties['amenityFeature'] = $amenityFeature;
 
         return $this;
@@ -151,8 +157,9 @@ Typical unit code(s): ROM for room or C62 for no unit. The type of room can be p
      * A language someone may use with or at the item, service or place. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].
      *
      * @param $availableLanguage |
+     * @return static
      **/
-    public function setAvailableLanguage($availableLanguage) {
+    public function setAvailableLanguage($availableLanguage): static {
         $this->properties['availableLanguage'] = $availableLanguage;
 
         return $this;
@@ -169,8 +176,9 @@ Typical unit code(s): ROM for room or C62 for no unit. The type of room can be p
      * An intended audience, i.e. a group for whom something was created.
      *
      * @param $audience 
+     * @return static
      **/
-    public function setAudience($audience) {
+    public function setAudience($audience): static {
         $this->properties['audience'] = $audience;
 
         return $this;

@@ -37,7 +37,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class CovidTestingFacilitySchema extends MedicalClinicSchema
 {
-    public static function factory()
+    public static function factory(): CovidTestingFacilitySchema
     {
         return new CovidTestingFacilitySchema('https://schema.org/', 'CovidTestingFacility');
     }

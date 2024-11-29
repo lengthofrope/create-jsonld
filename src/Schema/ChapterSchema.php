@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ChapterSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): ChapterSchema
     {
         return new ChapterSchema('https://schema.org/', 'Chapter');
     }
@@ -42,8 +42,9 @@ class ChapterSchema extends CreativeWorkSchema
      * Any description of pages that is not separated into pageStart and pageEnd; for example, "1-6, 9, 55" or "10-12, 46-49".
      *
      * @param $pagination 
+     * @return static
      **/
-    public function setPagination($pagination) {
+    public function setPagination($pagination): static {
         $this->properties['pagination'] = $pagination;
 
         return $this;
@@ -60,8 +61,9 @@ class ChapterSchema extends CreativeWorkSchema
      * The page on which the work starts; for example "135" or "xiii".
      *
      * @param $pageStart |
+     * @return static
      **/
-    public function setPageStart($pageStart) {
+    public function setPageStart($pageStart): static {
         $this->properties['pageStart'] = $pageStart;
 
         return $this;
@@ -78,8 +80,9 @@ class ChapterSchema extends CreativeWorkSchema
      * The page on which the work ends; for example "138" or "xvi".
      *
      * @param $pageEnd |
+     * @return static
      **/
-    public function setPageEnd($pageEnd) {
+    public function setPageEnd($pageEnd): static {
         $this->properties['pageEnd'] = $pageEnd;
 
         return $this;

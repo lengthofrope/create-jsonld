@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class AdultOrientedEnumerationSchema extends EnumerationSchema
 {
-    public static function factory()
+    public static function factory(): AdultOrientedEnumerationSchema
     {
         return new AdultOrientedEnumerationSchema('https://schema.org/', 'AdultOrientedEnumeration');
     }

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PostalCodeRangeSpecificationSchema extends StructuredValueSchema
 {
-    public static function factory()
+    public static function factory(): PostalCodeRangeSpecificationSchema
     {
         return new PostalCodeRangeSpecificationSchema('https://schema.org/', 'PostalCodeRangeSpecification');
     }
@@ -42,8 +42,9 @@ class PostalCodeRangeSpecificationSchema extends StructuredValueSchema
      * Last postal code in the range (included). Needs to be after [[postalCodeBegin]].
      *
      * @param $postalCodeEnd 
+     * @return static
      **/
-    public function setPostalCodeEnd($postalCodeEnd) {
+    public function setPostalCodeEnd($postalCodeEnd): static {
         $this->properties['postalCodeEnd'] = $postalCodeEnd;
 
         return $this;
@@ -60,8 +61,9 @@ class PostalCodeRangeSpecificationSchema extends StructuredValueSchema
      * First postal code in a range (included).
      *
      * @param $postalCodeBegin 
+     * @return static
      **/
-    public function setPostalCodeBegin($postalCodeBegin) {
+    public function setPostalCodeBegin($postalCodeBegin): static {
         $this->properties['postalCodeBegin'] = $postalCodeBegin;
 
         return $this;

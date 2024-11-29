@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PerformingArtsTheaterSchema extends CivicStructureSchema
 {
-    public static function factory()
+    public static function factory(): PerformingArtsTheaterSchema
     {
         return new PerformingArtsTheaterSchema('https://schema.org/', 'PerformingArtsTheater');
     }

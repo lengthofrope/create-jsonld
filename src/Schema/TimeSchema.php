@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class TimeSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
-    public static function factory()
+    public static function factory(): TimeSchema
     {
         return new TimeSchema('https://schema.org/', 'Time');
     }

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MedicalIndicationSchema extends MedicalEntitySchema
 {
-    public static function factory()
+    public static function factory(): MedicalIndicationSchema
     {
         return new MedicalIndicationSchema('https://schema.org/', 'MedicalIndication');
     }

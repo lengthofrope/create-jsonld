@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class BlogPostingSchema extends SocialMediaPostingSchema
 {
-    public static function factory()
+    public static function factory(): BlogPostingSchema
     {
         return new BlogPostingSchema('https://schema.org/', 'BlogPosting');
     }

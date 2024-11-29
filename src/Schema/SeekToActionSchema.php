@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class SeekToActionSchema extends ActionSchema
 {
-    public static function factory()
+    public static function factory(): SeekToActionSchema
     {
         return new SeekToActionSchema('https://schema.org/', 'SeekToAction');
     }
@@ -42,8 +42,9 @@ class SeekToActionSchema extends ActionSchema
      * The start time of the clip expressed as the number of seconds from the beginning of the work.
      *
      * @param $startOffset |
+     * @return static
      **/
-    public function setStartOffset($startOffset) {
+    public function setStartOffset($startOffset): static {
         $this->properties['startOffset'] = $startOffset;
 
         return $this;

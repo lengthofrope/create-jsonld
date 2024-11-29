@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class AgreeActionSchema extends ReactActionSchema
 {
-    public static function factory()
+    public static function factory(): AgreeActionSchema
     {
         return new AgreeActionSchema('https://schema.org/', 'AgreeAction');
     }

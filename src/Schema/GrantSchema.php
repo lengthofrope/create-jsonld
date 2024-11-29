@@ -39,7 +39,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class GrantSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): GrantSchema
     {
         return new GrantSchema('https://schema.org/', 'Grant');
     }
@@ -48,8 +48,9 @@ class GrantSchema extends IntangibleSchema
      * A person or organization that supports (sponsors) something through some kind of financial contribution.
      *
      * @param $funder |
+     * @return static
      **/
-    public function setFunder($funder) {
+    public function setFunder($funder): static {
         $this->properties['funder'] = $funder;
 
         return $this;
@@ -66,8 +67,9 @@ class GrantSchema extends IntangibleSchema
      * Indicates something directly or indirectly funded or sponsored through a [[Grant]]. See also [[ownershipFundingInfo]].
      *
      * @param $fundedItem ||||||
+     * @return static
      **/
-    public function setFundedItem($fundedItem) {
+    public function setFundedItem($fundedItem): static {
         $this->properties['fundedItem'] = $fundedItem;
 
         return $this;
@@ -84,8 +86,9 @@ class GrantSchema extends IntangibleSchema
      * A person or organization that supports a thing through a pledge, promise, or financial contribution. E.g. a sponsor of a Medical Study or a corporate sponsor of an event.
      *
      * @param $sponsor |
+     * @return static
      **/
-    public function setSponsor($sponsor) {
+    public function setSponsor($sponsor): static {
         $this->properties['sponsor'] = $sponsor;
 
         return $this;

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class LanguageSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): LanguageSchema
     {
         return new LanguageSchema('https://schema.org/', 'Language');
     }

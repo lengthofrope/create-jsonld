@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DurationSchema extends QuantitySchema
 {
-    public static function factory()
+    public static function factory(): DurationSchema
     {
         return new DurationSchema('https://schema.org/', 'Duration');
     }

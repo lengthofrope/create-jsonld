@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class AssignActionSchema extends AllocateActionSchema
 {
-    public static function factory()
+    public static function factory(): AssignActionSchema
     {
         return new AssignActionSchema('https://schema.org/', 'AssignAction');
     }

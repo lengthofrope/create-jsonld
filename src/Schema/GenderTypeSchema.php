@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class GenderTypeSchema extends EnumerationSchema
 {
-    public static function factory()
+    public static function factory(): GenderTypeSchema
     {
         return new GenderTypeSchema('https://schema.org/', 'GenderType');
     }

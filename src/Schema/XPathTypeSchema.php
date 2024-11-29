@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class XPathTypeSchema extends TextSchema
 {
-    public static function factory()
+    public static function factory(): XPathTypeSchema
     {
         return new XPathTypeSchema('https://schema.org/', 'XPathType');
     }

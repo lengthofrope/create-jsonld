@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class CatholicChurchSchema extends ChurchSchema
 {
-    public static function factory()
+    public static function factory(): CatholicChurchSchema
     {
         return new CatholicChurchSchema('https://schema.org/', 'CatholicChurch');
     }

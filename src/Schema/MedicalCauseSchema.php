@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MedicalCauseSchema extends MedicalEntitySchema
 {
-    public static function factory()
+    public static function factory(): MedicalCauseSchema
     {
         return new MedicalCauseSchema('https://schema.org/', 'MedicalCause');
     }
@@ -42,8 +42,9 @@ class MedicalCauseSchema extends MedicalEntitySchema
      * The condition, complication, symptom, sign, etc. caused.
      *
      * @param $causeOf 
+     * @return static
      **/
-    public function setCauseOf($causeOf) {
+    public function setCauseOf($causeOf): static {
         $this->properties['causeOf'] = $causeOf;
 
         return $this;

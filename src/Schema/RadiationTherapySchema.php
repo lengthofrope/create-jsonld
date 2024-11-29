@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class RadiationTherapySchema extends MedicalTherapySchema
 {
-    public static function factory()
+    public static function factory(): RadiationTherapySchema
     {
         return new RadiationTherapySchema('https://schema.org/', 'RadiationTherapy');
     }

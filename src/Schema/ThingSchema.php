@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ThingSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
-    public static function factory()
+    public static function factory(): ThingSchema
     {
         return new ThingSchema('https://schema.org/', 'Thing');
     }
@@ -42,8 +42,9 @@ class ThingSchema extends \LengthOfRope\JSONLD\Elements\Element
      * The name of the item.
      *
      * @param $name 
+     * @return static
      **/
-    public function setName($name) {
+    public function setName($name): static {
         $this->properties['name'] = $name;
 
         return $this;
@@ -60,8 +61,9 @@ class ThingSchema extends \LengthOfRope\JSONLD\Elements\Element
      * A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.
      *
      * @param $disambiguatingDescription 
+     * @return static
      **/
-    public function setDisambiguatingDescription($disambiguatingDescription) {
+    public function setDisambiguatingDescription($disambiguatingDescription): static {
         $this->properties['disambiguatingDescription'] = $disambiguatingDescription;
 
         return $this;
@@ -78,8 +80,9 @@ class ThingSchema extends \LengthOfRope\JSONLD\Elements\Element
      * Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.
      *
      * @param $potentialAction 
+     * @return static
      **/
-    public function setPotentialAction($potentialAction) {
+    public function setPotentialAction($potentialAction): static {
         $this->properties['potentialAction'] = $potentialAction;
 
         return $this;
@@ -96,8 +99,9 @@ class ThingSchema extends \LengthOfRope\JSONLD\Elements\Element
      * URL of the item.
      *
      * @param $url 
+     * @return static
      **/
-    public function setUrl($url) {
+    public function setUrl($url): static {
         $this->properties['url'] = $url;
 
         return $this;
@@ -115,8 +119,9 @@ class ThingSchema extends \LengthOfRope\JSONLD\Elements\Element
         
      *
      * @param $identifier ||
+     * @return static
      **/
-    public function setIdentifier($identifier) {
+    public function setIdentifier($identifier): static {
         $this->properties['identifier'] = $identifier;
 
         return $this;
@@ -133,8 +138,9 @@ class ThingSchema extends \LengthOfRope\JSONLD\Elements\Element
      * A CreativeWork or Event about this Thing.
      *
      * @param $subjectOf |
+     * @return static
      **/
-    public function setSubjectOf($subjectOf) {
+    public function setSubjectOf($subjectOf): static {
         $this->properties['subjectOf'] = $subjectOf;
 
         return $this;
@@ -151,8 +157,9 @@ class ThingSchema extends \LengthOfRope\JSONLD\Elements\Element
      * A description of the item.
      *
      * @param $description |
+     * @return static
      **/
-    public function setDescription($description) {
+    public function setDescription($description): static {
         $this->properties['description'] = $description;
 
         return $this;
@@ -170,8 +177,9 @@ class ThingSchema extends \LengthOfRope\JSONLD\Elements\Element
     use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>.
      *
      * @param $additionalType |
+     * @return static
      **/
-    public function setAdditionalType($additionalType) {
+    public function setAdditionalType($additionalType): static {
         $this->properties['additionalType'] = $additionalType;
 
         return $this;
@@ -188,8 +196,9 @@ class ThingSchema extends \LengthOfRope\JSONLD\Elements\Element
      * An image of the item. This can be a [[URL]] or a fully described [[ImageObject]].
      *
      * @param $image |
+     * @return static
      **/
-    public function setImage($image) {
+    public function setImage($image): static {
         $this->properties['image'] = $image;
 
         return $this;
@@ -206,8 +215,9 @@ class ThingSchema extends \LengthOfRope\JSONLD\Elements\Element
      * URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
      *
      * @param $sameAs 
+     * @return static
      **/
-    public function setSameAs($sameAs) {
+    public function setSameAs($sameAs): static {
         $this->properties['sameAs'] = $sameAs;
 
         return $this;
@@ -224,8 +234,9 @@ class ThingSchema extends \LengthOfRope\JSONLD\Elements\Element
      * An alias for the item.
      *
      * @param $alternateName 
+     * @return static
      **/
-    public function setAlternateName($alternateName) {
+    public function setAlternateName($alternateName): static {
         $this->properties['alternateName'] = $alternateName;
 
         return $this;
@@ -242,8 +253,9 @@ class ThingSchema extends \LengthOfRope\JSONLD\Elements\Element
      * Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details.
      *
      * @param $mainEntityOfPage |
+     * @return static
      **/
-    public function setMainEntityOfPage($mainEntityOfPage) {
+    public function setMainEntityOfPage($mainEntityOfPage): static {
         $this->properties['mainEntityOfPage'] = $mainEntityOfPage;
 
         return $this;

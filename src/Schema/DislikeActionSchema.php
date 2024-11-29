@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DislikeActionSchema extends ReactActionSchema
 {
-    public static function factory()
+    public static function factory(): DislikeActionSchema
     {
         return new DislikeActionSchema('https://schema.org/', 'DislikeAction');
     }

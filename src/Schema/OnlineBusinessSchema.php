@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class OnlineBusinessSchema extends OrganizationSchema
 {
-    public static function factory()
+    public static function factory(): OnlineBusinessSchema
     {
         return new OnlineBusinessSchema('https://schema.org/', 'OnlineBusiness');
     }

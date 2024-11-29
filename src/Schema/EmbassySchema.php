@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class EmbassySchema extends GovernmentBuildingSchema
 {
-    public static function factory()
+    public static function factory(): EmbassySchema
     {
         return new EmbassySchema('https://schema.org/', 'Embassy');
     }

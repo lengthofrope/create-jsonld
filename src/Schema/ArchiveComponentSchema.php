@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ArchiveComponentSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): ArchiveComponentSchema
     {
         return new ArchiveComponentSchema('https://schema.org/', 'ArchiveComponent');
     }

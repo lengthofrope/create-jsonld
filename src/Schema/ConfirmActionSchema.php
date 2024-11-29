@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ConfirmActionSchema extends InformActionSchema
 {
-    public static function factory()
+    public static function factory(): ConfirmActionSchema
     {
         return new ConfirmActionSchema('https://schema.org/', 'ConfirmAction');
     }

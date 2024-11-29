@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PrependActionSchema extends InsertActionSchema
 {
-    public static function factory()
+    public static function factory(): PrependActionSchema
     {
         return new PrependActionSchema('https://schema.org/', 'PrependAction');
     }

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class LandmarksOrHistoricalBuildingsSchema extends PlaceSchema
 {
-    public static function factory()
+    public static function factory(): LandmarksOrHistoricalBuildingsSchema
     {
         return new LandmarksOrHistoricalBuildingsSchema('https://schema.org/', 'LandmarksOrHistoricalBuildings');
     }

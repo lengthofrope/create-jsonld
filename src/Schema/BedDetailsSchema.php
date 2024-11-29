@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class BedDetailsSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): BedDetailsSchema
     {
         return new BedDetailsSchema('https://schema.org/', 'BedDetails');
     }
@@ -42,8 +42,9 @@ class BedDetailsSchema extends IntangibleSchema
      * The type of bed to which the BedDetail refers, i.e. the type of bed available in the quantity indicated by quantity.
      *
      * @param $typeOfBed |
+     * @return static
      **/
-    public function setTypeOfBed($typeOfBed) {
+    public function setTypeOfBed($typeOfBed): static {
         $this->properties['typeOfBed'] = $typeOfBed;
 
         return $this;
@@ -60,8 +61,9 @@ class BedDetailsSchema extends IntangibleSchema
      * The quantity of the given bed type available in the HotelRoom, Suite, House, or Apartment.
      *
      * @param $numberOfBeds 
+     * @return static
      **/
-    public function setNumberOfBeds($numberOfBeds) {
+    public function setNumberOfBeds($numberOfBeds): static {
         $this->properties['numberOfBeds'] = $numberOfBeds;
 
         return $this;

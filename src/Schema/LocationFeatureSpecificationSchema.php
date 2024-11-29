@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class LocationFeatureSpecificationSchema extends PropertyValueSchema
 {
-    public static function factory()
+    public static function factory(): LocationFeatureSpecificationSchema
     {
         return new LocationFeatureSpecificationSchema('https://schema.org/', 'LocationFeatureSpecification');
     }
@@ -42,8 +42,9 @@ class LocationFeatureSpecificationSchema extends PropertyValueSchema
      * The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours.
      *
      * @param $validThrough |
+     * @return static
      **/
-    public function setValidThrough($validThrough) {
+    public function setValidThrough($validThrough): static {
         $this->properties['validThrough'] = $validThrough;
 
         return $this;
@@ -60,8 +61,9 @@ class LocationFeatureSpecificationSchema extends PropertyValueSchema
      * The hours during which this service or contact is available.
      *
      * @param $hoursAvailable 
+     * @return static
      **/
-    public function setHoursAvailable($hoursAvailable) {
+    public function setHoursAvailable($hoursAvailable): static {
         $this->properties['hoursAvailable'] = $hoursAvailable;
 
         return $this;
@@ -78,8 +80,9 @@ class LocationFeatureSpecificationSchema extends PropertyValueSchema
      * The date when the item becomes valid.
      *
      * @param $validFrom |
+     * @return static
      **/
-    public function setValidFrom($validFrom) {
+    public function setValidFrom($validFrom): static {
         $this->properties['validFrom'] = $validFrom;
 
         return $this;

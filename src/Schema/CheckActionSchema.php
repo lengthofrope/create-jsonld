@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class CheckActionSchema extends FindActionSchema
 {
-    public static function factory()
+    public static function factory(): CheckActionSchema
     {
         return new CheckActionSchema('https://schema.org/', 'CheckAction');
     }

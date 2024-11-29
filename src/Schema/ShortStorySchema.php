@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ShortStorySchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): ShortStorySchema
     {
         return new ShortStorySchema('https://schema.org/', 'ShortStory');
     }

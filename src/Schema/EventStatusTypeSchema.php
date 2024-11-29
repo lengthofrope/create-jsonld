@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class EventStatusTypeSchema extends StatusEnumerationSchema
 {
-    public static function factory()
+    public static function factory(): EventStatusTypeSchema
     {
         return new EventStatusTypeSchema('https://schema.org/', 'EventStatusType');
     }

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class HowToSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): HowToSchema
     {
         return new HowToSchema('https://schema.org/', 'HowTo');
     }
@@ -42,8 +42,9 @@ class HowToSchema extends CreativeWorkSchema
      * The length of time it takes to prepare the items to be used in instructions or a direction, in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
      *
      * @param $prepTime 
+     * @return static
      **/
-    public function setPrepTime($prepTime) {
+    public function setPrepTime($prepTime): static {
         $this->properties['prepTime'] = $prepTime;
 
         return $this;
@@ -60,8 +61,9 @@ class HowToSchema extends CreativeWorkSchema
      * A sub property of instrument. An object used (but not consumed) when performing instructions or a direction.
      *
      * @param $tool |
+     * @return static
      **/
-    public function setTool($tool) {
+    public function setTool($tool): static {
         $this->properties['tool'] = $tool;
 
         return $this;
@@ -78,8 +80,9 @@ class HowToSchema extends CreativeWorkSchema
      * The total time required to perform instructions or a direction (including time to prepare the supplies), in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
      *
      * @param $totalTime 
+     * @return static
      **/
-    public function setTotalTime($totalTime) {
+    public function setTotalTime($totalTime): static {
         $this->properties['totalTime'] = $totalTime;
 
         return $this;
@@ -96,8 +99,9 @@ class HowToSchema extends CreativeWorkSchema
      * A single step item (as HowToStep, text, document, video, etc.) or a HowToSection (originally misnamed 'steps'; 'step' is preferred).
      *
      * @param $steps ||
+     * @return static
      **/
-    public function setSteps($steps) {
+    public function setSteps($steps): static {
         $this->properties['steps'] = $steps;
 
         return $this;
@@ -114,8 +118,9 @@ class HowToSchema extends CreativeWorkSchema
      * The estimated cost of the supply or supplies consumed when performing instructions.
      *
      * @param $estimatedCost |
+     * @return static
      **/
-    public function setEstimatedCost($estimatedCost) {
+    public function setEstimatedCost($estimatedCost): static {
         $this->properties['estimatedCost'] = $estimatedCost;
 
         return $this;
@@ -132,8 +137,9 @@ class HowToSchema extends CreativeWorkSchema
      * The length of time it takes to perform instructions or a direction (not including time to prepare the supplies), in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
      *
      * @param $performTime 
+     * @return static
      **/
-    public function setPerformTime($performTime) {
+    public function setPerformTime($performTime): static {
         $this->properties['performTime'] = $performTime;
 
         return $this;
@@ -150,8 +156,9 @@ class HowToSchema extends CreativeWorkSchema
      * A sub-property of instrument. A supply consumed when performing instructions or a direction.
      *
      * @param $supply |
+     * @return static
      **/
-    public function setSupply($supply) {
+    public function setSupply($supply): static {
         $this->properties['supply'] = $supply;
 
         return $this;
@@ -168,8 +175,9 @@ class HowToSchema extends CreativeWorkSchema
      * A single step item (as HowToStep, text, document, video, etc.) or a HowToSection.
      *
      * @param $step |||
+     * @return static
      **/
-    public function setStep($step) {
+    public function setStep($step): static {
         $this->properties['step'] = $step;
 
         return $this;
@@ -186,8 +194,9 @@ class HowToSchema extends CreativeWorkSchema
      * The quantity that results by performing instructions. For example, a paper airplane, 10 personalized candles.
      *
      * @param $yield |
+     * @return static
      **/
-    public function setYield($yield) {
+    public function setYield($yield): static {
         $this->properties['yield'] = $yield;
 
         return $this;

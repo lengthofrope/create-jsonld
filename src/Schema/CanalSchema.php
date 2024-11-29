@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class CanalSchema extends BodyOfWaterSchema
 {
-    public static function factory()
+    public static function factory(): CanalSchema
     {
         return new CanalSchema('https://schema.org/', 'Canal');
     }

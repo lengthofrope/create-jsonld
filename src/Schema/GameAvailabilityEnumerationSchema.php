@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class GameAvailabilityEnumerationSchema extends EnumerationSchema
 {
-    public static function factory()
+    public static function factory(): GameAvailabilityEnumerationSchema
     {
         return new GameAvailabilityEnumerationSchema('https://schema.org/', 'GameAvailabilityEnumeration');
     }

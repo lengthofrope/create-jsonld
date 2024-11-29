@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ArterySchema extends VesselSchema
 {
-    public static function factory()
+    public static function factory(): ArterySchema
     {
         return new ArterySchema('https://schema.org/', 'Artery');
     }
@@ -42,8 +42,9 @@ class ArterySchema extends VesselSchema
      * The area to which the artery supplies blood.
      *
      * @param $supplyTo 
+     * @return static
      **/
-    public function setSupplyTo($supplyTo) {
+    public function setSupplyTo($supplyTo): static {
         $this->properties['supplyTo'] = $supplyTo;
 
         return $this;
@@ -60,8 +61,9 @@ class ArterySchema extends VesselSchema
      * The branches that comprise the arterial structure.
      *
      * @param $arterialBranch 
+     * @return static
      **/
-    public function setArterialBranch($arterialBranch) {
+    public function setArterialBranch($arterialBranch): static {
         $this->properties['arterialBranch'] = $arterialBranch;
 
         return $this;

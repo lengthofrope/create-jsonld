@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class TextSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
-    public static function factory()
+    public static function factory(): TextSchema
     {
         return new TextSchema('https://schema.org/', 'Text');
     }

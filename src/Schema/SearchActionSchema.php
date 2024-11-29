@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class SearchActionSchema extends ActionSchema
 {
-    public static function factory()
+    public static function factory(): SearchActionSchema
     {
         return new SearchActionSchema('https://schema.org/', 'SearchAction');
     }
@@ -42,8 +42,9 @@ class SearchActionSchema extends ActionSchema
      * A sub property of instrument. The query used on this action.
      *
      * @param $query 
+     * @return static
      **/
-    public function setQuery($query) {
+    public function setQuery($query): static {
         $this->properties['query'] = $query;
 
         return $this;

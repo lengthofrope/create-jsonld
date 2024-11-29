@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class BusinessEventSchema extends EventSchema
 {
-    public static function factory()
+    public static function factory(): BusinessEventSchema
     {
         return new BusinessEventSchema('https://schema.org/', 'BusinessEvent');
     }

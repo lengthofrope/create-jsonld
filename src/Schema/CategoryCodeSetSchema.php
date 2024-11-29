@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class CategoryCodeSetSchema extends DefinedTermSetSchema
 {
-    public static function factory()
+    public static function factory(): CategoryCodeSetSchema
     {
         return new CategoryCodeSetSchema('https://schema.org/', 'CategoryCodeSet');
     }
@@ -42,8 +42,9 @@ class CategoryCodeSetSchema extends DefinedTermSetSchema
      * A Category code contained in this code set.
      *
      * @param $hasCategoryCode 
+     * @return static
      **/
-    public function setHasCategoryCode($hasCategoryCode) {
+    public function setHasCategoryCode($hasCategoryCode): static {
         $this->properties['hasCategoryCode'] = $hasCategoryCode;
 
         return $this;

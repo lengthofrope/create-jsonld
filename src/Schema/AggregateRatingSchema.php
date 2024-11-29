@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class AggregateRatingSchema extends RatingSchema
 {
-    public static function factory()
+    public static function factory(): AggregateRatingSchema
     {
         return new AggregateRatingSchema('https://schema.org/', 'AggregateRating');
     }
@@ -42,8 +42,9 @@ class AggregateRatingSchema extends RatingSchema
      * The count of total number of ratings.
      *
      * @param $ratingCount 
+     * @return static
      **/
-    public function setRatingCount($ratingCount) {
+    public function setRatingCount($ratingCount): static {
         $this->properties['ratingCount'] = $ratingCount;
 
         return $this;
@@ -60,8 +61,9 @@ class AggregateRatingSchema extends RatingSchema
      * The count of total number of reviews.
      *
      * @param $reviewCount 
+     * @return static
      **/
-    public function setReviewCount($reviewCount) {
+    public function setReviewCount($reviewCount): static {
         $this->properties['reviewCount'] = $reviewCount;
 
         return $this;
@@ -78,8 +80,9 @@ class AggregateRatingSchema extends RatingSchema
      * The item that is being reviewed/rated.
      *
      * @param $itemReviewed 
+     * @return static
      **/
-    public function setItemReviewed($itemReviewed) {
+    public function setItemReviewed($itemReviewed): static {
         $this->properties['itemReviewed'] = $itemReviewed;
 
         return $this;

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DiagnosticLabSchema extends MedicalOrganizationSchema
 {
-    public static function factory()
+    public static function factory(): DiagnosticLabSchema
     {
         return new DiagnosticLabSchema('https://schema.org/', 'DiagnosticLab');
     }
@@ -42,8 +42,9 @@ class DiagnosticLabSchema extends MedicalOrganizationSchema
      * A diagnostic test or procedure offered by this lab.
      *
      * @param $availableTest 
+     * @return static
      **/
-    public function setAvailableTest($availableTest) {
+    public function setAvailableTest($availableTest): static {
         $this->properties['availableTest'] = $availableTest;
 
         return $this;

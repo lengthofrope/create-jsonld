@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ReturnFeesEnumerationSchema extends EnumerationSchema
 {
-    public static function factory()
+    public static function factory(): ReturnFeesEnumerationSchema
     {
         return new ReturnFeesEnumerationSchema('https://schema.org/', 'ReturnFeesEnumeration');
     }

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class LegalValueLevelSchema extends EnumerationSchema
 {
-    public static function factory()
+    public static function factory(): LegalValueLevelSchema
     {
         return new LegalValueLevelSchema('https://schema.org/', 'LegalValueLevel');
     }

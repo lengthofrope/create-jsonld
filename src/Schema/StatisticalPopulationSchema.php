@@ -35,7 +35,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class StatisticalPopulationSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): StatisticalPopulationSchema
     {
         return new StatisticalPopulationSchema('https://schema.org/', 'StatisticalPopulation');
     }
@@ -44,8 +44,9 @@ class StatisticalPopulationSchema extends IntangibleSchema
      * Indicates the populationType common to all members of a [[StatisticalPopulation]] or all cases within the scope of a [[StatisticalVariable]].
      *
      * @param $populationType 
+     * @return static
      **/
-    public function setPopulationType($populationType) {
+    public function setPopulationType($populationType): static {
         $this->properties['populationType'] = $populationType;
 
         return $this;

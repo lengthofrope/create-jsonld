@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ExchangeRateSpecificationSchema extends StructuredValueSchema
 {
-    public static function factory()
+    public static function factory(): ExchangeRateSpecificationSchema
     {
         return new ExchangeRateSpecificationSchema('https://schema.org/', 'ExchangeRateSpecification');
     }
@@ -42,8 +42,9 @@ class ExchangeRateSpecificationSchema extends StructuredValueSchema
      * The difference between the price at which a broker or other intermediary buys and sells foreign currency.
      *
      * @param $exchangeRateSpread |
+     * @return static
      **/
-    public function setExchangeRateSpread($exchangeRateSpread) {
+    public function setExchangeRateSpread($exchangeRateSpread): static {
         $this->properties['exchangeRateSpread'] = $exchangeRateSpread;
 
         return $this;
@@ -60,8 +61,9 @@ class ExchangeRateSpecificationSchema extends StructuredValueSchema
      * The currency in which the monetary amount is expressed.\n\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR".
      *
      * @param $currency 
+     * @return static
      **/
-    public function setCurrency($currency) {
+    public function setCurrency($currency): static {
         $this->properties['currency'] = $currency;
 
         return $this;
@@ -78,8 +80,9 @@ class ExchangeRateSpecificationSchema extends StructuredValueSchema
      * The current price of a currency.
      *
      * @param $currentExchangeRate 
+     * @return static
      **/
-    public function setCurrentExchangeRate($currentExchangeRate) {
+    public function setCurrentExchangeRate($currentExchangeRate): static {
         $this->properties['currentExchangeRate'] = $currentExchangeRate;
 
         return $this;

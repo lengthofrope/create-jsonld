@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class HighSchoolSchema extends EducationalOrganizationSchema
 {
-    public static function factory()
+    public static function factory(): HighSchoolSchema
     {
         return new HighSchoolSchema('https://schema.org/', 'HighSchool');
     }

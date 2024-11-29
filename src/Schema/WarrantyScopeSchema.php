@@ -34,7 +34,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class WarrantyScopeSchema extends EnumerationSchema
 {
-    public static function factory()
+    public static function factory(): WarrantyScopeSchema
     {
         return new WarrantyScopeSchema('https://schema.org/', 'WarrantyScope');
     }

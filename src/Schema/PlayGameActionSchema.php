@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PlayGameActionSchema extends ConsumeActionSchema
 {
-    public static function factory()
+    public static function factory(): PlayGameActionSchema
     {
         return new PlayGameActionSchema('https://schema.org/', 'PlayGameAction');
     }
@@ -42,8 +42,9 @@ class PlayGameActionSchema extends ConsumeActionSchema
      * Indicates the availability type of the game content associated with this action, such as whether it is a full version or a demo.
      *
      * @param $gameAvailabilityType |
+     * @return static
      **/
-    public function setGameAvailabilityType($gameAvailabilityType) {
+    public function setGameAvailabilityType($gameAvailabilityType): static {
         $this->properties['gameAvailabilityType'] = $gameAvailabilityType;
 
         return $this;

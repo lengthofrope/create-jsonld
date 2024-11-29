@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MovingCompanySchema extends HomeAndConstructionBusinessSchema
 {
-    public static function factory()
+    public static function factory(): MovingCompanySchema
     {
         return new MovingCompanySchema('https://schema.org/', 'MovingCompany');
     }

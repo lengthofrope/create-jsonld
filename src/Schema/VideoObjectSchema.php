@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class VideoObjectSchema extends MediaObjectSchema
 {
-    public static function factory()
+    public static function factory(): VideoObjectSchema
     {
         return new VideoObjectSchema('https://schema.org/', 'VideoObject');
     }
@@ -42,8 +42,9 @@ class VideoObjectSchema extends MediaObjectSchema
      * An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip.
      *
      * @param $actor |
+     * @return static
      **/
-    public function setActor($actor) {
+    public function setActor($actor): static {
         $this->properties['actor'] = $actor;
 
         return $this;
@@ -60,8 +61,9 @@ class VideoObjectSchema extends MediaObjectSchema
      * An actor, e.g. in TV, radio, movie, video games etc. Actors can be associated with individual items or with a series, episode, clip.
      *
      * @param $actors 
+     * @return static
      **/
-    public function setActors($actors) {
+    public function setActors($actors): static {
         $this->properties['actors'] = $actors;
 
         return $this;
@@ -78,8 +80,9 @@ class VideoObjectSchema extends MediaObjectSchema
      * If this MediaObject is an AudioObject or VideoObject, the transcript of that object.
      *
      * @param $transcript 
+     * @return static
      **/
-    public function setTranscript($transcript) {
+    public function setTranscript($transcript): static {
         $this->properties['transcript'] = $transcript;
 
         return $this;
@@ -96,8 +99,9 @@ class VideoObjectSchema extends MediaObjectSchema
      * A director of e.g. TV, radio, movie, video games etc. content. Directors can be associated with individual items or with a series, episode, clip.
      *
      * @param $directors 
+     * @return static
      **/
-    public function setDirectors($directors) {
+    public function setDirectors($directors): static {
         $this->properties['directors'] = $directors;
 
         return $this;
@@ -114,8 +118,9 @@ class VideoObjectSchema extends MediaObjectSchema
      * The quality of the video.
      *
      * @param $videoQuality 
+     * @return static
      **/
-    public function setVideoQuality($videoQuality) {
+    public function setVideoQuality($videoQuality): static {
         $this->properties['videoQuality'] = $videoQuality;
 
         return $this;
@@ -132,8 +137,9 @@ class VideoObjectSchema extends MediaObjectSchema
      * The frame size of the video.
      *
      * @param $videoFrameSize 
+     * @return static
      **/
-    public function setVideoFrameSize($videoFrameSize) {
+    public function setVideoFrameSize($videoFrameSize): static {
         $this->properties['videoFrameSize'] = $videoFrameSize;
 
         return $this;
@@ -150,8 +156,9 @@ class VideoObjectSchema extends MediaObjectSchema
      * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual items or with a series, episode, clip.
      *
      * @param $director 
+     * @return static
      **/
-    public function setDirector($director) {
+    public function setDirector($director): static {
         $this->properties['director'] = $director;
 
         return $this;
@@ -168,8 +175,9 @@ class VideoObjectSchema extends MediaObjectSchema
      * The caption for this object. For downloadable machine formats (closed caption, subtitles etc.) use MediaObject and indicate the [[encodingFormat]].
      *
      * @param $caption |
+     * @return static
      **/
-    public function setCaption($caption) {
+    public function setCaption($caption): static {
         $this->properties['caption'] = $caption;
 
         return $this;
@@ -186,8 +194,9 @@ class VideoObjectSchema extends MediaObjectSchema
      * The composer of the soundtrack.
      *
      * @param $musicBy |
+     * @return static
      **/
-    public function setMusicBy($musicBy) {
+    public function setMusicBy($musicBy): static {
         $this->properties['musicBy'] = $musicBy;
 
         return $this;
@@ -204,8 +213,9 @@ class VideoObjectSchema extends MediaObjectSchema
      * Represents textual captioning from a [[MediaObject]], e.g. text of a 'meme'.
      *
      * @param $embeddedTextCaption 
+     * @return static
      **/
-    public function setEmbeddedTextCaption($embeddedTextCaption) {
+    public function setEmbeddedTextCaption($embeddedTextCaption): static {
         $this->properties['embeddedTextCaption'] = $embeddedTextCaption;
 
         return $this;

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class URLSchema extends TextSchema
 {
-    public static function factory()
+    public static function factory(): URLSchema
     {
         return new URLSchema('https://schema.org/', 'URL');
     }

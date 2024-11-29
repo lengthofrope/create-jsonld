@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class SearchRescueOrganizationSchema extends OrganizationSchema
 {
-    public static function factory()
+    public static function factory(): SearchRescueOrganizationSchema
     {
         return new SearchRescueOrganizationSchema('https://schema.org/', 'SearchRescueOrganization');
     }

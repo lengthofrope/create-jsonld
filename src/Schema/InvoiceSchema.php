@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class InvoiceSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): InvoiceSchema
     {
         return new InvoiceSchema('https://schema.org/', 'Invoice');
     }
@@ -42,8 +42,9 @@ class InvoiceSchema extends IntangibleSchema
      * Party placing the order or paying the invoice.
      *
      * @param $customer |
+     * @return static
      **/
-    public function setCustomer($customer) {
+    public function setCustomer($customer): static {
         $this->properties['customer'] = $customer;
 
         return $this;
@@ -60,8 +61,9 @@ class InvoiceSchema extends IntangibleSchema
      * The name of the credit card or other method of payment for the order.
      *
      * @param $paymentMethod |
+     * @return static
      **/
-    public function setPaymentMethod($paymentMethod) {
+    public function setPaymentMethod($paymentMethod): static {
         $this->properties['paymentMethod'] = $paymentMethod;
 
         return $this;
@@ -78,8 +80,9 @@ class InvoiceSchema extends IntangibleSchema
      * The date that payment is due.
      *
      * @param $paymentDueDate |
+     * @return static
      **/
-    public function setPaymentDueDate($paymentDueDate) {
+    public function setPaymentDueDate($paymentDueDate): static {
         $this->properties['paymentDueDate'] = $paymentDueDate;
 
         return $this;
@@ -96,8 +99,9 @@ class InvoiceSchema extends IntangibleSchema
      * An entity that arranges for an exchange between a buyer and a seller.  In most cases a broker never acquires or releases ownership of a product or service involved in an exchange.  If it is not clear whether an entity is a broker, seller, or buyer, the latter two terms are preferred.
      *
      * @param $broker |
+     * @return static
      **/
-    public function setBroker($broker) {
+    public function setBroker($broker): static {
         $this->properties['broker'] = $broker;
 
         return $this;
@@ -114,8 +118,9 @@ class InvoiceSchema extends IntangibleSchema
      * The total amount due.
      *
      * @param $totalPaymentDue |
+     * @return static
      **/
-    public function setTotalPaymentDue($totalPaymentDue) {
+    public function setTotalPaymentDue($totalPaymentDue): static {
         $this->properties['totalPaymentDue'] = $totalPaymentDue;
 
         return $this;
@@ -132,8 +137,9 @@ class InvoiceSchema extends IntangibleSchema
      * The date the invoice is scheduled to be paid.
      *
      * @param $scheduledPaymentDate 
+     * @return static
      **/
-    public function setScheduledPaymentDate($scheduledPaymentDate) {
+    public function setScheduledPaymentDate($scheduledPaymentDate): static {
         $this->properties['scheduledPaymentDate'] = $scheduledPaymentDate;
 
         return $this;
@@ -150,8 +156,9 @@ class InvoiceSchema extends IntangibleSchema
      * An identifier for the method of payment used (e.g. the last 4 digits of the credit card).
      *
      * @param $paymentMethodId 
+     * @return static
      **/
-    public function setPaymentMethodId($paymentMethodId) {
+    public function setPaymentMethodId($paymentMethodId): static {
         $this->properties['paymentMethodId'] = $paymentMethodId;
 
         return $this;
@@ -168,8 +175,9 @@ class InvoiceSchema extends IntangibleSchema
      * The date that payment is due.
      *
      * @param $paymentDue 
+     * @return static
      **/
-    public function setPaymentDue($paymentDue) {
+    public function setPaymentDue($paymentDue): static {
         $this->properties['paymentDue'] = $paymentDue;
 
         return $this;
@@ -186,8 +194,9 @@ class InvoiceSchema extends IntangibleSchema
      * The time interval used to compute the invoice.
      *
      * @param $billingPeriod 
+     * @return static
      **/
-    public function setBillingPeriod($billingPeriod) {
+    public function setBillingPeriod($billingPeriod): static {
         $this->properties['billingPeriod'] = $billingPeriod;
 
         return $this;
@@ -204,8 +213,9 @@ class InvoiceSchema extends IntangibleSchema
      * A number that confirms the given order or payment has been received.
      *
      * @param $confirmationNumber 
+     * @return static
      **/
-    public function setConfirmationNumber($confirmationNumber) {
+    public function setConfirmationNumber($confirmationNumber): static {
         $this->properties['confirmationNumber'] = $confirmationNumber;
 
         return $this;
@@ -222,8 +232,9 @@ class InvoiceSchema extends IntangibleSchema
      * The status of payment; whether the invoice has been paid or not.
      *
      * @param $paymentStatus |
+     * @return static
      **/
-    public function setPaymentStatus($paymentStatus) {
+    public function setPaymentStatus($paymentStatus): static {
         $this->properties['paymentStatus'] = $paymentStatus;
 
         return $this;
@@ -240,8 +251,9 @@ class InvoiceSchema extends IntangibleSchema
      * A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
      *
      * @param $category ||||
+     * @return static
      **/
-    public function setCategory($category) {
+    public function setCategory($category): static {
         $this->properties['category'] = $category;
 
         return $this;
@@ -258,8 +270,9 @@ class InvoiceSchema extends IntangibleSchema
      * The Order(s) related to this Invoice. One or more Orders may be combined into a single Invoice.
      *
      * @param $referencesOrder 
+     * @return static
      **/
-    public function setReferencesOrder($referencesOrder) {
+    public function setReferencesOrder($referencesOrder): static {
         $this->properties['referencesOrder'] = $referencesOrder;
 
         return $this;
@@ -276,8 +289,9 @@ class InvoiceSchema extends IntangibleSchema
      * The identifier for the account the payment will be applied to.
      *
      * @param $accountId 
+     * @return static
      **/
-    public function setAccountId($accountId) {
+    public function setAccountId($accountId): static {
         $this->properties['accountId'] = $accountId;
 
         return $this;
@@ -294,8 +308,9 @@ class InvoiceSchema extends IntangibleSchema
      * The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.
      *
      * @param $provider |
+     * @return static
      **/
-    public function setProvider($provider) {
+    public function setProvider($provider): static {
         $this->properties['provider'] = $provider;
 
         return $this;
@@ -312,8 +327,9 @@ class InvoiceSchema extends IntangibleSchema
      * The minimum payment required at this time.
      *
      * @param $minimumPaymentDue |
+     * @return static
      **/
-    public function setMinimumPaymentDue($minimumPaymentDue) {
+    public function setMinimumPaymentDue($minimumPaymentDue): static {
         $this->properties['minimumPaymentDue'] = $minimumPaymentDue;
 
         return $this;

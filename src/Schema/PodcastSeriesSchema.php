@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PodcastSeriesSchema extends CreativeWorkSeriesSchema
 {
-    public static function factory()
+    public static function factory(): PodcastSeriesSchema
     {
         return new PodcastSeriesSchema('https://schema.org/', 'PodcastSeries');
     }
@@ -42,8 +42,9 @@ class PodcastSeriesSchema extends CreativeWorkSeriesSchema
      * An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip.
      *
      * @param $actor |
+     * @return static
      **/
-    public function setActor($actor) {
+    public function setActor($actor): static {
         $this->properties['actor'] = $actor;
 
         return $this;
@@ -60,8 +61,9 @@ class PodcastSeriesSchema extends CreativeWorkSeriesSchema
      * The URL for a feed, e.g. associated with a podcast series, blog, or series of date-stamped updates. This is usually RSS or Atom.
      *
      * @param $webFeed |
+     * @return static
      **/
-    public function setWebFeed($webFeed) {
+    public function setWebFeed($webFeed): static {
         $this->properties['webFeed'] = $webFeed;
 
         return $this;

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class EventReservationSchema extends ReservationSchema
 {
-    public static function factory()
+    public static function factory(): EventReservationSchema
     {
         return new EventReservationSchema('https://schema.org/', 'EventReservation');
     }

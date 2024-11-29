@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class VirtualLocationSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): VirtualLocationSchema
     {
         return new VirtualLocationSchema('https://schema.org/', 'VirtualLocation');
     }

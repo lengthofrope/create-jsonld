@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class LibrarySystemSchema extends OrganizationSchema
 {
-    public static function factory()
+    public static function factory(): LibrarySystemSchema
     {
         return new LibrarySystemSchema('https://schema.org/', 'LibrarySystem');
     }

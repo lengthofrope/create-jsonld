@@ -34,7 +34,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class IndividualPhysicianSchema extends PhysicianSchema
 {
-    public static function factory()
+    public static function factory(): IndividualPhysicianSchema
     {
         return new IndividualPhysicianSchema('https://schema.org/', 'IndividualPhysician');
     }
@@ -43,8 +43,9 @@ class IndividualPhysicianSchema extends PhysicianSchema
      * A [[MedicalOrganization]] where the [[IndividualPhysician]] practices.
      *
      * @param $practicesAt 
+     * @return static
      **/
-    public function setPracticesAt($practicesAt) {
+    public function setPracticesAt($practicesAt): static {
         $this->properties['practicesAt'] = $practicesAt;
 
         return $this;

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class VisualArtworkSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): VisualArtworkSchema
     {
         return new VisualArtworkSchema('https://schema.org/', 'VisualArtwork');
     }
@@ -42,8 +42,9 @@ class VisualArtworkSchema extends CreativeWorkSchema
      * A material used as a surface in some artwork, e.g. Canvas, Paper, Wood, Board, etc.
      *
      * @param $surface |
+     * @return static
      **/
-    public function setSurface($surface) {
+    public function setSurface($surface): static {
         $this->properties['surface'] = $surface;
 
         return $this;
@@ -60,8 +61,9 @@ class VisualArtworkSchema extends CreativeWorkSchema
      * The individual who adds lettering, including speech balloons and sound effects, to artwork.
      *
      * @param $letterer 
+     * @return static
      **/
-    public function setLetterer($letterer) {
+    public function setLetterer($letterer): static {
         $this->properties['letterer'] = $letterer;
 
         return $this;
@@ -78,8 +80,9 @@ class VisualArtworkSchema extends CreativeWorkSchema
      * The individual who traces over the pencil drawings in ink after pencils are complete.
      *
      * @param $inker 
+     * @return static
      **/
-    public function setInker($inker) {
+    public function setInker($inker): static {
         $this->properties['inker'] = $inker;
 
         return $this;
@@ -96,8 +99,9 @@ class VisualArtworkSchema extends CreativeWorkSchema
      * The material used. (E.g. Oil, Watercolour, Acrylic, Linoprint, Marble, Cyanotype, Digital, Lithograph, DryPoint, Intaglio, Pastel, Woodcut, Pencil, Mixed Media, etc.)
      *
      * @param $artMedium |
+     * @return static
      **/
-    public function setArtMedium($artMedium) {
+    public function setArtMedium($artMedium): static {
         $this->properties['artMedium'] = $artMedium;
 
         return $this;
@@ -114,8 +118,9 @@ class VisualArtworkSchema extends CreativeWorkSchema
      * The individual who adds color to inked drawings.
      *
      * @param $colorist 
+     * @return static
      **/
-    public function setColorist($colorist) {
+    public function setColorist($colorist): static {
         $this->properties['colorist'] = $colorist;
 
         return $this;
@@ -132,8 +137,9 @@ class VisualArtworkSchema extends CreativeWorkSchema
      * The number of copies when multiple copies of a piece of artwork are produced - e.g. for a limited edition of 20 prints, 'artEdition' refers to the total number of copies (in this example "20").
      *
      * @param $artEdition |
+     * @return static
      **/
-    public function setArtEdition($artEdition) {
+    public function setArtEdition($artEdition): static {
         $this->properties['artEdition'] = $artEdition;
 
         return $this;
@@ -150,8 +156,9 @@ class VisualArtworkSchema extends CreativeWorkSchema
      * The supporting materials for the artwork, e.g. Canvas, Paper, Wood, Board, etc.
      *
      * @param $artworkSurface |
+     * @return static
      **/
-    public function setArtworkSurface($artworkSurface) {
+    public function setArtworkSurface($artworkSurface): static {
         $this->properties['artworkSurface'] = $artworkSurface;
 
         return $this;
@@ -170,8 +177,9 @@ class VisualArtworkSchema extends CreativeWorkSchema
     	primary artwork is done in watercolors or digital paints.
      *
      * @param $artist 
+     * @return static
      **/
-    public function setArtist($artist) {
+    public function setArtist($artist): static {
         $this->properties['artist'] = $artist;
 
         return $this;
@@ -188,8 +196,9 @@ class VisualArtworkSchema extends CreativeWorkSchema
      * The height of the item.
      *
      * @param $height |
+     * @return static
      **/
-    public function setHeight($height) {
+    public function setHeight($height): static {
         $this->properties['height'] = $height;
 
         return $this;
@@ -206,8 +215,9 @@ class VisualArtworkSchema extends CreativeWorkSchema
      * e.g. Painting, Drawing, Sculpture, Print, Photograph, Assemblage, Collage, etc.
      *
      * @param $artform |
+     * @return static
      **/
-    public function setArtform($artform) {
+    public function setArtform($artform): static {
         $this->properties['artform'] = $artform;
 
         return $this;
@@ -224,8 +234,9 @@ class VisualArtworkSchema extends CreativeWorkSchema
      * The width of the item.
      *
      * @param $width |
+     * @return static
      **/
-    public function setWidth($width) {
+    public function setWidth($width): static {
         $this->properties['width'] = $width;
 
         return $this;
@@ -242,8 +253,9 @@ class VisualArtworkSchema extends CreativeWorkSchema
      * The individual who draws the primary narrative artwork.
      *
      * @param $penciler 
+     * @return static
      **/
-    public function setPenciler($penciler) {
+    public function setPenciler($penciler): static {
         $this->properties['penciler'] = $penciler;
 
         return $this;
@@ -260,8 +272,9 @@ class VisualArtworkSchema extends CreativeWorkSchema
      * The weight of the product or person.
      *
      * @param $weight 
+     * @return static
      **/
-    public function setWeight($weight) {
+    public function setWeight($weight): static {
         $this->properties['weight'] = $weight;
 
         return $this;
@@ -278,8 +291,9 @@ class VisualArtworkSchema extends CreativeWorkSchema
      * The depth of the item.
      *
      * @param $depth |
+     * @return static
      **/
-    public function setDepth($depth) {
+    public function setDepth($depth): static {
         $this->properties['depth'] = $depth;
 
         return $this;

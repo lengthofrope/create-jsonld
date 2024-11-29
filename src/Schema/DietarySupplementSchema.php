@@ -31,9 +31,9 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class DietarySupplementSchema extends \LengthOfRope\JSONLD\Elements\Element
+class DietarySupplementSchema extends SubstanceSchema
 {
-    public static function factory()
+    public static function factory(): DietarySupplementSchema
     {
         return new DietarySupplementSchema('https://schema.org/', 'DietarySupplement');
     }
@@ -42,8 +42,9 @@ class DietarySupplementSchema extends \LengthOfRope\JSONLD\Elements\Element
      * The drug or supplement's legal status, including any controlled substance schedules that apply.
      *
      * @param $legalStatus ||
+     * @return static
      **/
-    public function setLegalStatus($legalStatus) {
+    public function setLegalStatus($legalStatus): static {
         $this->properties['legalStatus'] = $legalStatus;
 
         return $this;
@@ -60,8 +61,9 @@ class DietarySupplementSchema extends \LengthOfRope\JSONLD\Elements\Element
      * Recommended intake of this supplement for a given population as defined by a specific recommending authority.
      *
      * @param $recommendedIntake 
+     * @return static
      **/
-    public function setRecommendedIntake($recommendedIntake) {
+    public function setRecommendedIntake($recommendedIntake): static {
         $this->properties['recommendedIntake'] = $recommendedIntake;
 
         return $this;
@@ -78,8 +80,9 @@ class DietarySupplementSchema extends \LengthOfRope\JSONLD\Elements\Element
      * The specific biochemical interaction through which this drug or supplement produces its pharmacological effect.
      *
      * @param $mechanismOfAction 
+     * @return static
      **/
-    public function setMechanismOfAction($mechanismOfAction) {
+    public function setMechanismOfAction($mechanismOfAction): static {
         $this->properties['mechanismOfAction'] = $mechanismOfAction;
 
         return $this;
@@ -96,8 +99,9 @@ class DietarySupplementSchema extends \LengthOfRope\JSONLD\Elements\Element
      * Any potential safety concern associated with the supplement. May include interactions with other drugs and foods, pregnancy, breastfeeding, known adverse reactions, and documented efficacy of the supplement.
      *
      * @param $safetyConsideration 
+     * @return static
      **/
-    public function setSafetyConsideration($safetyConsideration) {
+    public function setSafetyConsideration($safetyConsideration): static {
         $this->properties['safetyConsideration'] = $safetyConsideration;
 
         return $this;
@@ -114,8 +118,9 @@ class DietarySupplementSchema extends \LengthOfRope\JSONLD\Elements\Element
      * True if this item's name is a proprietary/brand name (vs. generic name).
      *
      * @param $isProprietary 
+     * @return static
      **/
-    public function setIsProprietary($isProprietary) {
+    public function setIsProprietary($isProprietary): static {
         $this->properties['isProprietary'] = $isProprietary;
 
         return $this;
@@ -132,8 +137,9 @@ class DietarySupplementSchema extends \LengthOfRope\JSONLD\Elements\Element
      * Characteristics of the population for which this is intended, or which typically uses it, e.g. 'adults'.
      *
      * @param $targetPopulation 
+     * @return static
      **/
-    public function setTargetPopulation($targetPopulation) {
+    public function setTargetPopulation($targetPopulation): static {
         $this->properties['targetPopulation'] = $targetPopulation;
 
         return $this;
@@ -150,8 +156,9 @@ class DietarySupplementSchema extends \LengthOfRope\JSONLD\Elements\Element
      * Proprietary name given to the diet plan, typically by its originator or creator.
      *
      * @param $proprietaryName 
+     * @return static
      **/
-    public function setProprietaryName($proprietaryName) {
+    public function setProprietaryName($proprietaryName): static {
         $this->properties['proprietaryName'] = $proprietaryName;
 
         return $this;
@@ -168,8 +175,9 @@ class DietarySupplementSchema extends \LengthOfRope\JSONLD\Elements\Element
      * Recommended intake of this supplement for a given population as defined by a specific recommending authority.
      *
      * @param $maximumIntake 
+     * @return static
      **/
-    public function setMaximumIntake($maximumIntake) {
+    public function setMaximumIntake($maximumIntake): static {
         $this->properties['maximumIntake'] = $maximumIntake;
 
         return $this;
@@ -186,8 +194,9 @@ class DietarySupplementSchema extends \LengthOfRope\JSONLD\Elements\Element
      * The generic name of this drug or supplement.
      *
      * @param $nonProprietaryName 
+     * @return static
      **/
-    public function setNonProprietaryName($nonProprietaryName) {
+    public function setNonProprietaryName($nonProprietaryName): static {
         $this->properties['nonProprietaryName'] = $nonProprietaryName;
 
         return $this;
@@ -204,8 +213,9 @@ class DietarySupplementSchema extends \LengthOfRope\JSONLD\Elements\Element
      * An active ingredient, typically chemical compounds and/or biologic substances.
      *
      * @param $activeIngredient 
+     * @return static
      **/
-    public function setActiveIngredient($activeIngredient) {
+    public function setActiveIngredient($activeIngredient): static {
         $this->properties['activeIngredient'] = $activeIngredient;
 
         return $this;

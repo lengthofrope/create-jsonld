@@ -34,7 +34,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class BusinessEntityTypeSchema extends EnumerationSchema
 {
-    public static function factory()
+    public static function factory(): BusinessEntityTypeSchema
     {
         return new BusinessEntityTypeSchema('https://schema.org/', 'BusinessEntityType');
     }

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class InvestmentFundSchema extends InvestmentOrDepositSchema
 {
-    public static function factory()
+    public static function factory(): InvestmentFundSchema
     {
         return new InvestmentFundSchema('https://schema.org/', 'InvestmentFund');
     }

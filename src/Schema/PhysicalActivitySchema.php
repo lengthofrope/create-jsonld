@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PhysicalActivitySchema extends LifestyleModificationSchema
 {
-    public static function factory()
+    public static function factory(): PhysicalActivitySchema
     {
         return new PhysicalActivitySchema('https://schema.org/', 'PhysicalActivity');
     }
@@ -42,8 +42,9 @@ class PhysicalActivitySchema extends LifestyleModificationSchema
      * Changes in the normal mechanical, physical, and biochemical functions that are associated with this activity or condition.
      *
      * @param $pathophysiology 
+     * @return static
      **/
-    public function setPathophysiology($pathophysiology) {
+    public function setPathophysiology($pathophysiology): static {
         $this->properties['pathophysiology'] = $pathophysiology;
 
         return $this;
@@ -60,8 +61,9 @@ class PhysicalActivitySchema extends LifestyleModificationSchema
      * The anatomy of the underlying organ system or structures associated with this entity.
      *
      * @param $associatedAnatomy ||
+     * @return static
      **/
-    public function setAssociatedAnatomy($associatedAnatomy) {
+    public function setAssociatedAnatomy($associatedAnatomy): static {
         $this->properties['associatedAnatomy'] = $associatedAnatomy;
 
         return $this;
@@ -78,8 +80,9 @@ class PhysicalActivitySchema extends LifestyleModificationSchema
      * A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
      *
      * @param $category ||||
+     * @return static
      **/
-    public function setCategory($category) {
+    public function setCategory($category): static {
         $this->properties['category'] = $category;
 
         return $this;
@@ -96,8 +99,9 @@ class PhysicalActivitySchema extends LifestyleModificationSchema
      * The characteristics of associated patients, such as age, gender, race etc.
      *
      * @param $epidemiology 
+     * @return static
      **/
-    public function setEpidemiology($epidemiology) {
+    public function setEpidemiology($epidemiology): static {
         $this->properties['epidemiology'] = $epidemiology;
 
         return $this;

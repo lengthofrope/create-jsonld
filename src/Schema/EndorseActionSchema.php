@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class EndorseActionSchema extends ReactActionSchema
 {
-    public static function factory()
+    public static function factory(): EndorseActionSchema
     {
         return new EndorseActionSchema('https://schema.org/', 'EndorseAction');
     }
@@ -42,8 +42,9 @@ class EndorseActionSchema extends ReactActionSchema
      * A sub property of participant. The person/organization being supported.
      *
      * @param $endorsee |
+     * @return static
      **/
-    public function setEndorsee($endorsee) {
+    public function setEndorsee($endorsee): static {
         $this->properties['endorsee'] = $endorsee;
 
         return $this;

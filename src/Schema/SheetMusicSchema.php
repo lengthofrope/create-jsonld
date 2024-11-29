@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class SheetMusicSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): SheetMusicSchema
     {
         return new SheetMusicSchema('https://schema.org/', 'SheetMusic');
     }

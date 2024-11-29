@@ -31,9 +31,9 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PalliativeProcedureSchema extends \LengthOfRope\JSONLD\Elements\Element
+class PalliativeProcedureSchema extends MedicalTherapySchema
 {
-    public static function factory()
+    public static function factory(): PalliativeProcedureSchema
     {
         return new PalliativeProcedureSchema('https://schema.org/', 'PalliativeProcedure');
     }

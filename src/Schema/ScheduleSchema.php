@@ -35,7 +35,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ScheduleSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): ScheduleSchema
     {
         return new ScheduleSchema('https://schema.org/', 'Schedule');
     }
@@ -44,8 +44,9 @@ class ScheduleSchema extends IntangibleSchema
      * Defines the day(s) of the week on which a recurring [[Event]] takes place. May be specified using either [[DayOfWeek]], or alternatively [[Text]] conforming to iCal's syntax for byDay recurrence rules.
      *
      * @param $byDay |
+     * @return static
      **/
-    public function setByDay($byDay) {
+    public function setByDay($byDay): static {
         $this->properties['byDay'] = $byDay;
 
         return $this;
@@ -62,8 +63,9 @@ class ScheduleSchema extends IntangibleSchema
      * The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. E.g. John wrote a book from January to *December*. For media, including audio and video, it's the time offset of the end of a clip within a larger file.\n\nNote that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
      *
      * @param $endTime |
+     * @return static
      **/
-    public function setEndTime($endTime) {
+    public function setEndTime($endTime): static {
         $this->properties['endTime'] = $endTime;
 
         return $this;
@@ -80,8 +82,9 @@ class ScheduleSchema extends IntangibleSchema
      * Defines the number of times a recurring [[Event]] will take place.
      *
      * @param $repeatCount 
+     * @return static
      **/
-    public function setRepeatCount($repeatCount) {
+    public function setRepeatCount($repeatCount): static {
         $this->properties['repeatCount'] = $repeatCount;
 
         return $this;
@@ -98,8 +101,9 @@ class ScheduleSchema extends IntangibleSchema
      * Defines the week(s) of the month on which a recurring Event takes place. Specified as an Integer between 1-5. For clarity, byMonthWeek is best used in conjunction with byDay to indicate concepts like the first and third Mondays of a month.
      *
      * @param $byMonthWeek 
+     * @return static
      **/
-    public function setByMonthWeek($byMonthWeek) {
+    public function setByMonthWeek($byMonthWeek): static {
         $this->properties['byMonthWeek'] = $byMonthWeek;
 
         return $this;
@@ -116,8 +120,9 @@ class ScheduleSchema extends IntangibleSchema
      * The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
      * @param $startDate |
+     * @return static
      **/
-    public function setStartDate($startDate) {
+    public function setStartDate($startDate): static {
         $this->properties['startDate'] = $startDate;
 
         return $this;
@@ -134,8 +139,9 @@ class ScheduleSchema extends IntangibleSchema
      * Defines the day(s) of the month on which a recurring [[Event]] takes place. Specified as an [[Integer]] between 1-31.
      *
      * @param $byMonthDay 
+     * @return static
      **/
-    public function setByMonthDay($byMonthDay) {
+    public function setByMonthDay($byMonthDay): static {
         $this->properties['byMonthDay'] = $byMonthDay;
 
         return $this;
@@ -152,8 +158,9 @@ class ScheduleSchema extends IntangibleSchema
      * The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For actions that span a period of time, when the action was performed. E.g. John wrote a book from *January* to December. For media, including audio and video, it's the time offset of the start of a clip within a larger file.\n\nNote that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
      *
      * @param $startTime |
+     * @return static
      **/
-    public function setStartTime($startTime) {
+    public function setStartTime($startTime): static {
         $this->properties['startTime'] = $startTime;
 
         return $this;
@@ -170,8 +177,9 @@ class ScheduleSchema extends IntangibleSchema
      * Defines the month(s) of the year on which a recurring [[Event]] takes place. Specified as an [[Integer]] between 1-12. January is 1.
      *
      * @param $byMonth 
+     * @return static
      **/
-    public function setByMonth($byMonth) {
+    public function setByMonth($byMonth): static {
         $this->properties['byMonth'] = $byMonth;
 
         return $this;
@@ -188,8 +196,9 @@ class ScheduleSchema extends IntangibleSchema
      * The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
      *
      * @param $duration 
+     * @return static
      **/
-    public function setDuration($duration) {
+    public function setDuration($duration): static {
         $this->properties['duration'] = $duration;
 
         return $this;
@@ -207,8 +216,9 @@ class ScheduleSchema extends IntangibleSchema
       events should be defined as a [[Duration]] of time.
      *
      * @param $repeatFrequency |
+     * @return static
      **/
-    public function setRepeatFrequency($repeatFrequency) {
+    public function setRepeatFrequency($repeatFrequency): static {
         $this->properties['repeatFrequency'] = $repeatFrequency;
 
         return $this;
@@ -225,8 +235,9 @@ class ScheduleSchema extends IntangibleSchema
      * Indicates the timezone for which the time(s) indicated in the [[Schedule]] are given. The value provided should be among those listed in the IANA Time Zone Database.
      *
      * @param $scheduleTimezone 
+     * @return static
      **/
-    public function setScheduleTimezone($scheduleTimezone) {
+    public function setScheduleTimezone($scheduleTimezone): static {
         $this->properties['scheduleTimezone'] = $scheduleTimezone;
 
         return $this;
@@ -243,8 +254,9 @@ class ScheduleSchema extends IntangibleSchema
      * The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
      * @param $endDate |
+     * @return static
      **/
-    public function setEndDate($endDate) {
+    public function setEndDate($endDate): static {
         $this->properties['endDate'] = $endDate;
 
         return $this;
@@ -264,8 +276,9 @@ class ScheduleSchema extends IntangibleSchema
       excluded from the schedule. This allows a whole day to be excluded from the schedule without having to itemise every scheduled event.
      *
      * @param $exceptDate |
+     * @return static
      **/
-    public function setExceptDate($exceptDate) {
+    public function setExceptDate($exceptDate): static {
         $this->properties['exceptDate'] = $exceptDate;
 
         return $this;

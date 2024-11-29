@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PoliticalPartySchema extends OrganizationSchema
 {
-    public static function factory()
+    public static function factory(): PoliticalPartySchema
     {
         return new PoliticalPartySchema('https://schema.org/', 'PoliticalParty');
     }

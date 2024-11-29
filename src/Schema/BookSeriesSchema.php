@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class BookSeriesSchema extends CreativeWorkSeriesSchema
 {
-    public static function factory()
+    public static function factory(): BookSeriesSchema
     {
         return new BookSeriesSchema('https://schema.org/', 'BookSeries');
     }

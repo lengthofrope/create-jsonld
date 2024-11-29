@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class RoleSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): RoleSchema
     {
         return new RoleSchema('https://schema.org/', 'Role');
     }
@@ -42,8 +42,9 @@ class RoleSchema extends IntangibleSchema
      * A position played, performed or filled by a person or organization, as part of an organization. For example, an athlete in a SportsTeam might play in the position named 'Quarterback'.
      *
      * @param $namedPosition |
+     * @return static
      **/
-    public function setNamedPosition($namedPosition) {
+    public function setNamedPosition($namedPosition): static {
         $this->properties['namedPosition'] = $namedPosition;
 
         return $this;
@@ -60,8 +61,9 @@ class RoleSchema extends IntangibleSchema
      * A role played, performed or filled by a person or organization. For example, the team of creators for a comic book might fill the roles named 'inker', 'penciller', and 'letterer'; or an athlete in a SportsTeam might play in the position named 'Quarterback'.
      *
      * @param $roleName |
+     * @return static
      **/
-    public function setRoleName($roleName) {
+    public function setRoleName($roleName): static {
         $this->properties['roleName'] = $roleName;
 
         return $this;
@@ -78,8 +80,9 @@ class RoleSchema extends IntangibleSchema
      * The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
      * @param $startDate |
+     * @return static
      **/
-    public function setStartDate($startDate) {
+    public function setStartDate($startDate): static {
         $this->properties['startDate'] = $startDate;
 
         return $this;
@@ -96,8 +99,9 @@ class RoleSchema extends IntangibleSchema
      * The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
      * @param $endDate |
+     * @return static
      **/
-    public function setEndDate($endDate) {
+    public function setEndDate($endDate): static {
         $this->properties['endDate'] = $endDate;
 
         return $this;

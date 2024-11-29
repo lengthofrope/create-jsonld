@@ -35,7 +35,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ProductGroupSchema extends ProductSchema
 {
-    public static function factory()
+    public static function factory(): ProductGroupSchema
     {
         return new ProductGroupSchema('https://schema.org/', 'ProductGroup');
     }
@@ -44,8 +44,9 @@ class ProductGroupSchema extends ProductSchema
      * Indicates a [[Product]] that is a member of this [[ProductGroup]] (or [[ProductModel]]).
      *
      * @param $hasVariant 
+     * @return static
      **/
-    public function setHasVariant($hasVariant) {
+    public function setHasVariant($hasVariant): static {
         $this->properties['hasVariant'] = $hasVariant;
 
         return $this;
@@ -62,8 +63,9 @@ class ProductGroupSchema extends ProductSchema
      * Indicates the property or properties by which the variants in a [[ProductGroup]] vary, e.g. their size, color etc. Schema.org properties can be referenced by their short name e.g. "color"; terms defined elsewhere can be referenced with their URIs.
      *
      * @param $variesBy |
+     * @return static
      **/
-    public function setVariesBy($variesBy) {
+    public function setVariesBy($variesBy): static {
         $this->properties['variesBy'] = $variesBy;
 
         return $this;
@@ -80,8 +82,9 @@ class ProductGroupSchema extends ProductSchema
      * Indicates a textual identifier for a ProductGroup.
      *
      * @param $productGroupID 
+     * @return static
      **/
-    public function setProductGroupID($productGroupID) {
+    public function setProductGroupID($productGroupID): static {
         $this->properties['productGroupID'] = $productGroupID;
 
         return $this;

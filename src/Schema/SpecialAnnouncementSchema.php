@@ -68,7 +68,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class SpecialAnnouncementSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): SpecialAnnouncementSchema
     {
         return new SpecialAnnouncementSchema('https://schema.org/', 'SpecialAnnouncement');
     }
@@ -77,8 +77,9 @@ class SpecialAnnouncementSchema extends CreativeWorkSchema
      * The URL for a feed, e.g. associated with a podcast series, blog, or series of date-stamped updates. This is usually RSS or Atom.
      *
      * @param $webFeed |
+     * @return static
      **/
-    public function setWebFeed($webFeed) {
+    public function setWebFeed($webFeed): static {
         $this->properties['webFeed'] = $webFeed;
 
         return $this;
@@ -95,8 +96,9 @@ class SpecialAnnouncementSchema extends CreativeWorkSchema
      * Publication date of an online listing.
      *
      * @param $datePosted |
+     * @return static
      **/
-    public function setDatePosted($datePosted) {
+    public function setDatePosted($datePosted): static {
         $this->properties['datePosted'] = $datePosted;
 
         return $this;
@@ -113,8 +115,9 @@ class SpecialAnnouncementSchema extends CreativeWorkSchema
      * Information about disease prevention.
      *
      * @param $diseasePreventionInfo |
+     * @return static
      **/
-    public function setDiseasePreventionInfo($diseasePreventionInfo) {
+    public function setDiseasePreventionInfo($diseasePreventionInfo): static {
         $this->properties['diseasePreventionInfo'] = $diseasePreventionInfo;
 
         return $this;
@@ -131,8 +134,9 @@ class SpecialAnnouncementSchema extends CreativeWorkSchema
      * Information about public transport closures.
      *
      * @param $publicTransportClosuresInfo |
+     * @return static
      **/
-    public function setPublicTransportClosuresInfo($publicTransportClosuresInfo) {
+    public function setPublicTransportClosuresInfo($publicTransportClosuresInfo): static {
         $this->properties['publicTransportClosuresInfo'] = $publicTransportClosuresInfo;
 
         return $this;
@@ -149,8 +153,9 @@ class SpecialAnnouncementSchema extends CreativeWorkSchema
      * A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
      *
      * @param $category ||||
+     * @return static
      **/
-    public function setCategory($category) {
+    public function setCategory($category): static {
         $this->properties['category'] = $category;
 
         return $this;
@@ -167,8 +172,9 @@ class SpecialAnnouncementSchema extends CreativeWorkSchema
      * Information about school closures.
      *
      * @param $schoolClosuresInfo |
+     * @return static
      **/
-    public function setSchoolClosuresInfo($schoolClosuresInfo) {
+    public function setSchoolClosuresInfo($schoolClosuresInfo): static {
         $this->properties['schoolClosuresInfo'] = $schoolClosuresInfo;
 
         return $this;
@@ -185,8 +191,9 @@ class SpecialAnnouncementSchema extends CreativeWorkSchema
      * Guidelines about quarantine rules, e.g. in the context of a pandemic.
      *
      * @param $quarantineGuidelines |
+     * @return static
      **/
-    public function setQuarantineGuidelines($quarantineGuidelines) {
+    public function setQuarantineGuidelines($quarantineGuidelines): static {
         $this->properties['quarantineGuidelines'] = $quarantineGuidelines;
 
         return $this;
@@ -203,8 +210,9 @@ class SpecialAnnouncementSchema extends CreativeWorkSchema
      * governmentBenefitsInfo provides information about government benefits associated with a SpecialAnnouncement.
      *
      * @param $governmentBenefitsInfo 
+     * @return static
      **/
-    public function setGovernmentBenefitsInfo($governmentBenefitsInfo) {
+    public function setGovernmentBenefitsInfo($governmentBenefitsInfo): static {
         $this->properties['governmentBenefitsInfo'] = $governmentBenefitsInfo;
 
         return $this;
@@ -221,8 +229,9 @@ class SpecialAnnouncementSchema extends CreativeWorkSchema
      * Information about travel bans, e.g. in the context of a pandemic.
      *
      * @param $travelBans |
+     * @return static
      **/
-    public function setTravelBans($travelBans) {
+    public function setTravelBans($travelBans): static {
         $this->properties['travelBans'] = $travelBans;
 
         return $this;
@@ -241,8 +250,9 @@ class SpecialAnnouncementSchema extends CreativeWorkSchema
   provided, the page indicated might also contain more such markup.
      *
      * @param $diseaseSpreadStatistics |||
+     * @return static
      **/
-    public function setDiseaseSpreadStatistics($diseaseSpreadStatistics) {
+    public function setDiseaseSpreadStatistics($diseaseSpreadStatistics): static {
         $this->properties['diseaseSpreadStatistics'] = $diseaseSpreadStatistics;
 
         return $this;
@@ -259,8 +269,9 @@ class SpecialAnnouncementSchema extends CreativeWorkSchema
      * Information about getting tested (for a [[MedicalCondition]]), e.g. in the context of a pandemic.
      *
      * @param $gettingTestedInfo |
+     * @return static
      **/
-    public function setGettingTestedInfo($gettingTestedInfo) {
+    public function setGettingTestedInfo($gettingTestedInfo): static {
         $this->properties['gettingTestedInfo'] = $gettingTestedInfo;
 
         return $this;
@@ -277,8 +288,9 @@ class SpecialAnnouncementSchema extends CreativeWorkSchema
      * Indicates a specific [[CivicStructure]] or [[LocalBusiness]] associated with the SpecialAnnouncement. For example, a specific testing facility or business with special opening hours. For a larger geographic region like a quarantine of an entire region, use [[spatialCoverage]].
      *
      * @param $announcementLocation |
+     * @return static
      **/
-    public function setAnnouncementLocation($announcementLocation) {
+    public function setAnnouncementLocation($announcementLocation): static {
         $this->properties['announcementLocation'] = $announcementLocation;
 
         return $this;
@@ -295,8 +307,9 @@ class SpecialAnnouncementSchema extends CreativeWorkSchema
      * Indicates a page with news updates and guidelines. This could often be (but is not required to be) the main page containing [[SpecialAnnouncement]] markup on a site.
      *
      * @param $newsUpdatesAndGuidelines |
+     * @return static
      **/
-    public function setNewsUpdatesAndGuidelines($newsUpdatesAndGuidelines) {
+    public function setNewsUpdatesAndGuidelines($newsUpdatesAndGuidelines): static {
         $this->properties['newsUpdatesAndGuidelines'] = $newsUpdatesAndGuidelines;
 
         return $this;

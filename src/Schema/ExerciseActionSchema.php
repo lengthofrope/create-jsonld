@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ExerciseActionSchema extends PlayActionSchema
 {
-    public static function factory()
+    public static function factory(): ExerciseActionSchema
     {
         return new ExerciseActionSchema('https://schema.org/', 'ExerciseAction');
     }
@@ -42,8 +42,9 @@ class ExerciseActionSchema extends PlayActionSchema
      * A sub property of instrument. The exercise plan used on this action.
      *
      * @param $exercisePlan 
+     * @return static
      **/
-    public function setExercisePlan($exercisePlan) {
+    public function setExercisePlan($exercisePlan): static {
         $this->properties['exercisePlan'] = $exercisePlan;
 
         return $this;
@@ -60,8 +61,9 @@ class ExerciseActionSchema extends PlayActionSchema
      * A sub property of location. The final location of the object or the agent after the action.
      *
      * @param $toLocation 
+     * @return static
      **/
-    public function setToLocation($toLocation) {
+    public function setToLocation($toLocation): static {
         $this->properties['toLocation'] = $toLocation;
 
         return $this;
@@ -78,8 +80,9 @@ class ExerciseActionSchema extends PlayActionSchema
      * A sub property of location. The course where this action was taken.
      *
      * @param $exerciseCourse 
+     * @return static
      **/
-    public function setExerciseCourse($exerciseCourse) {
+    public function setExerciseCourse($exerciseCourse): static {
         $this->properties['exerciseCourse'] = $exerciseCourse;
 
         return $this;
@@ -96,8 +99,9 @@ class ExerciseActionSchema extends PlayActionSchema
      * A sub property of location. The original location of the object or the agent before the action.
      *
      * @param $fromLocation 
+     * @return static
      **/
-    public function setFromLocation($fromLocation) {
+    public function setFromLocation($fromLocation): static {
         $this->properties['fromLocation'] = $fromLocation;
 
         return $this;
@@ -114,8 +118,9 @@ class ExerciseActionSchema extends PlayActionSchema
      * A sub property of location. The sports activity location where this action occurred.
      *
      * @param $sportsActivityLocation 
+     * @return static
      **/
-    public function setSportsActivityLocation($sportsActivityLocation) {
+    public function setSportsActivityLocation($sportsActivityLocation): static {
         $this->properties['sportsActivityLocation'] = $sportsActivityLocation;
 
         return $this;
@@ -132,8 +137,9 @@ class ExerciseActionSchema extends PlayActionSchema
      * The distance travelled, e.g. exercising or travelling.
      *
      * @param $distance 
+     * @return static
      **/
-    public function setDistance($distance) {
+    public function setDistance($distance): static {
         $this->properties['distance'] = $distance;
 
         return $this;
@@ -150,8 +156,9 @@ class ExerciseActionSchema extends PlayActionSchema
      * A sub property of instrument. The diet used in this action.
      *
      * @param $diet 
+     * @return static
      **/
-    public function setDiet($diet) {
+    public function setDiet($diet): static {
         $this->properties['diet'] = $diet;
 
         return $this;
@@ -168,8 +175,9 @@ class ExerciseActionSchema extends PlayActionSchema
      * A sub property of instrument. The diet used in this action.
      *
      * @param $exerciseRelatedDiet 
+     * @return static
      **/
-    public function setExerciseRelatedDiet($exerciseRelatedDiet) {
+    public function setExerciseRelatedDiet($exerciseRelatedDiet): static {
         $this->properties['exerciseRelatedDiet'] = $exerciseRelatedDiet;
 
         return $this;
@@ -186,8 +194,9 @@ class ExerciseActionSchema extends PlayActionSchema
      * A sub property of participant. The sports team that participated on this action.
      *
      * @param $sportsTeam 
+     * @return static
      **/
-    public function setSportsTeam($sportsTeam) {
+    public function setSportsTeam($sportsTeam): static {
         $this->properties['sportsTeam'] = $sportsTeam;
 
         return $this;
@@ -204,8 +213,9 @@ class ExerciseActionSchema extends PlayActionSchema
      * A sub property of location. The sports event where this action occurred.
      *
      * @param $sportsEvent 
+     * @return static
      **/
-    public function setSportsEvent($sportsEvent) {
+    public function setSportsEvent($sportsEvent): static {
         $this->properties['sportsEvent'] = $sportsEvent;
 
         return $this;
@@ -222,8 +232,9 @@ class ExerciseActionSchema extends PlayActionSchema
      * A sub property of participant. The opponent on this action.
      *
      * @param $opponent 
+     * @return static
      **/
-    public function setOpponent($opponent) {
+    public function setOpponent($opponent): static {
         $this->properties['opponent'] = $opponent;
 
         return $this;
@@ -240,8 +251,9 @@ class ExerciseActionSchema extends PlayActionSchema
      * A sub property of location. The course where this action was taken.
      *
      * @param $course 
+     * @return static
      **/
-    public function setCourse($course) {
+    public function setCourse($course): static {
         $this->properties['course'] = $course;
 
         return $this;
@@ -258,8 +270,9 @@ class ExerciseActionSchema extends PlayActionSchema
      * Type(s) of exercise or activity, such as strength training, flexibility training, aerobics, cardiac rehabilitation, etc.
      *
      * @param $exerciseType 
+     * @return static
      **/
-    public function setExerciseType($exerciseType) {
+    public function setExerciseType($exerciseType): static {
         $this->properties['exerciseType'] = $exerciseType;
 
         return $this;

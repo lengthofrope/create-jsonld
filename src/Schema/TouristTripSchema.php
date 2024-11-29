@@ -34,7 +34,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class TouristTripSchema extends TripSchema
 {
-    public static function factory()
+    public static function factory(): TouristTripSchema
     {
         return new TouristTripSchema('https://schema.org/', 'TouristTrip');
     }
@@ -43,8 +43,9 @@ class TouristTripSchema extends TripSchema
      * Attraction suitable for type(s) of tourist. E.g. children, visitors from a particular country, etc. 
      *
      * @param $touristType |
+     * @return static
      **/
-    public function setTouristType($touristType) {
+    public function setTouristType($touristType): static {
         $this->properties['touristType'] = $touristType;
 
         return $this;

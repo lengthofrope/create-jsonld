@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class HackathonSchema extends EventSchema
 {
-    public static function factory()
+    public static function factory(): HackathonSchema
     {
         return new HackathonSchema('https://schema.org/', 'Hackathon');
     }

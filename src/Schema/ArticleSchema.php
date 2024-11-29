@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ArticleSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): ArticleSchema
     {
         return new ArticleSchema('https://schema.org/', 'Article');
     }
@@ -42,8 +42,9 @@ class ArticleSchema extends CreativeWorkSchema
      * Any description of pages that is not separated into pageStart and pageEnd; for example, "1-6, 9, 55" or "10-12, 46-49".
      *
      * @param $pagination 
+     * @return static
      **/
-    public function setPagination($pagination) {
+    public function setPagination($pagination): static {
         $this->properties['pagination'] = $pagination;
 
         return $this;
@@ -60,8 +61,9 @@ class ArticleSchema extends CreativeWorkSchema
      * The page on which the work starts; for example "135" or "xiii".
      *
      * @param $pageStart |
+     * @return static
      **/
-    public function setPageStart($pageStart) {
+    public function setPageStart($pageStart): static {
         $this->properties['pageStart'] = $pageStart;
 
         return $this;
@@ -78,8 +80,9 @@ class ArticleSchema extends CreativeWorkSchema
      * For an [[Article]], typically a [[NewsArticle]], the backstory property provides a textual summary giving a brief explanation of why and how an article was created. In a journalistic setting this could include information about reporting process, methods, interviews, data sources, etc.
      *
      * @param $backstory |
+     * @return static
      **/
-    public function setBackstory($backstory) {
+    public function setBackstory($backstory): static {
         $this->properties['backstory'] = $backstory;
 
         return $this;
@@ -96,8 +99,9 @@ class ArticleSchema extends CreativeWorkSchema
      * The actual body of the article.
      *
      * @param $articleBody 
+     * @return static
      **/
-    public function setArticleBody($articleBody) {
+    public function setArticleBody($articleBody): static {
         $this->properties['articleBody'] = $articleBody;
 
         return $this;
@@ -114,8 +118,9 @@ class ArticleSchema extends CreativeWorkSchema
      * The number of words in the text of the Article.
      *
      * @param $wordCount 
+     * @return static
      **/
-    public function setWordCount($wordCount) {
+    public function setWordCount($wordCount): static {
         $this->properties['wordCount'] = $wordCount;
 
         return $this;
@@ -132,8 +137,9 @@ class ArticleSchema extends CreativeWorkSchema
      * The page on which the work ends; for example "138" or "xvi".
      *
      * @param $pageEnd |
+     * @return static
      **/
-    public function setPageEnd($pageEnd) {
+    public function setPageEnd($pageEnd): static {
         $this->properties['pageEnd'] = $pageEnd;
 
         return $this;
@@ -163,8 +169,9 @@ we define a supporting type, [[SpeakableSpecification]]  which is defined to be 
          
      *
      * @param $speakable |
+     * @return static
      **/
-    public function setSpeakable($speakable) {
+    public function setSpeakable($speakable): static {
         $this->properties['speakable'] = $speakable;
 
         return $this;
@@ -181,8 +188,9 @@ we define a supporting type, [[SpeakableSpecification]]  which is defined to be 
      * Articles may belong to one or more 'sections' in a magazine or newspaper, such as Sports, Lifestyle, etc.
      *
      * @param $articleSection 
+     * @return static
      **/
-    public function setArticleSection($articleSection) {
+    public function setArticleSection($articleSection): static {
         $this->properties['articleSection'] = $articleSection;
 
         return $this;

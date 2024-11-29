@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PsychologicalTreatmentSchema extends TherapeuticProcedureSchema
 {
-    public static function factory()
+    public static function factory(): PsychologicalTreatmentSchema
     {
         return new PsychologicalTreatmentSchema('https://schema.org/', 'PsychologicalTreatment');
     }

@@ -31,9 +31,9 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class EducationalOrganizationSchema extends \LengthOfRope\JSONLD\Elements\Element
+class EducationalOrganizationSchema extends CivicStructureSchema
 {
-    public static function factory()
+    public static function factory(): EducationalOrganizationSchema
     {
         return new EducationalOrganizationSchema('https://schema.org/', 'EducationalOrganization');
     }
@@ -42,8 +42,9 @@ class EducationalOrganizationSchema extends \LengthOfRope\JSONLD\Elements\Elemen
      * Alumni of an organization.
      *
      * @param $alumni 
+     * @return static
      **/
-    public function setAlumni($alumni) {
+    public function setAlumni($alumni): static {
         $this->properties['alumni'] = $alumni;
 
         return $this;

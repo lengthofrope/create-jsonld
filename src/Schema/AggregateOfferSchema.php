@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class AggregateOfferSchema extends OfferSchema
 {
-    public static function factory()
+    public static function factory(): AggregateOfferSchema
     {
         return new AggregateOfferSchema('https://schema.org/', 'AggregateOffer');
     }
@@ -42,8 +42,9 @@ class AggregateOfferSchema extends OfferSchema
      * The lowest price of all offers available.\n\nUsage guidelines:\n\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.
      *
      * @param $lowPrice |
+     * @return static
      **/
-    public function setLowPrice($lowPrice) {
+    public function setLowPrice($lowPrice): static {
         $this->properties['lowPrice'] = $lowPrice;
 
         return $this;
@@ -60,8 +61,9 @@ class AggregateOfferSchema extends OfferSchema
      * The highest price of all offers available.\n\nUsage guidelines:\n\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.
      *
      * @param $highPrice |
+     * @return static
      **/
-    public function setHighPrice($highPrice) {
+    public function setHighPrice($highPrice): static {
         $this->properties['highPrice'] = $highPrice;
 
         return $this;
@@ -79,8 +81,9 @@ class AggregateOfferSchema extends OfferSchema
       
      *
      * @param $offers |
+     * @return static
      **/
-    public function setOffers($offers) {
+    public function setOffers($offers): static {
         $this->properties['offers'] = $offers;
 
         return $this;
@@ -97,8 +100,9 @@ class AggregateOfferSchema extends OfferSchema
      * The number of offers for the product.
      *
      * @param $offerCount 
+     * @return static
      **/
-    public function setOfferCount($offerCount) {
+    public function setOfferCount($offerCount): static {
         $this->properties['offerCount'] = $offerCount;
 
         return $this;

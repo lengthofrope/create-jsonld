@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MonetaryAmountSchema extends StructuredValueSchema
 {
-    public static function factory()
+    public static function factory(): MonetaryAmountSchema
     {
         return new MonetaryAmountSchema('https://schema.org/', 'MonetaryAmount');
     }
@@ -42,8 +42,9 @@ class MonetaryAmountSchema extends StructuredValueSchema
      * The lower value of some characteristic or property.
      *
      * @param $minValue 
+     * @return static
      **/
-    public function setMinValue($minValue) {
+    public function setMinValue($minValue): static {
         $this->properties['minValue'] = $minValue;
 
         return $this;
@@ -60,8 +61,9 @@ class MonetaryAmountSchema extends StructuredValueSchema
      * The upper value of some characteristic or property.
      *
      * @param $maxValue 
+     * @return static
      **/
-    public function setMaxValue($maxValue) {
+    public function setMaxValue($maxValue): static {
         $this->properties['maxValue'] = $maxValue;
 
         return $this;
@@ -78,8 +80,9 @@ class MonetaryAmountSchema extends StructuredValueSchema
      * The currency in which the monetary amount is expressed.\n\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR".
      *
      * @param $currency 
+     * @return static
      **/
-    public function setCurrency($currency) {
+    public function setCurrency($currency): static {
         $this->properties['currency'] = $currency;
 
         return $this;
@@ -96,8 +99,9 @@ class MonetaryAmountSchema extends StructuredValueSchema
      * The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours.
      *
      * @param $validThrough |
+     * @return static
      **/
-    public function setValidThrough($validThrough) {
+    public function setValidThrough($validThrough): static {
         $this->properties['validThrough'] = $validThrough;
 
         return $this;
@@ -114,8 +118,9 @@ class MonetaryAmountSchema extends StructuredValueSchema
      * The value of a [[QuantitativeValue]] (including [[Observation]]) or property value node.\n\n* For [[QuantitativeValue]] and [[MonetaryAmount]], the recommended type for values is 'Number'.\n* For [[PropertyValue]], it can be 'Text', 'Number', 'Boolean', or 'StructuredValue'.\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.
      *
      * @param $value |||
+     * @return static
      **/
-    public function setValue($value) {
+    public function setValue($value): static {
         $this->properties['value'] = $value;
 
         return $this;
@@ -132,8 +137,9 @@ class MonetaryAmountSchema extends StructuredValueSchema
      * The date when the item becomes valid.
      *
      * @param $validFrom |
+     * @return static
      **/
-    public function setValidFrom($validFrom) {
+    public function setValidFrom($validFrom): static {
         $this->properties['validFrom'] = $validFrom;
 
         return $this;

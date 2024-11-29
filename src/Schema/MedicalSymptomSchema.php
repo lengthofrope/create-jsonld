@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MedicalSymptomSchema extends MedicalSignOrSymptomSchema
 {
-    public static function factory()
+    public static function factory(): MedicalSymptomSchema
     {
         return new MedicalSymptomSchema('https://schema.org/', 'MedicalSymptom');
     }

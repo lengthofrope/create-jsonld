@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class TennisComplexSchema extends SportsActivityLocationSchema
 {
-    public static function factory()
+    public static function factory(): TennisComplexSchema
     {
         return new TennisComplexSchema('https://schema.org/', 'TennisComplex');
     }

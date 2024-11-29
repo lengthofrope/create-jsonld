@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class SuperficialAnatomySchema extends MedicalEntitySchema
 {
-    public static function factory()
+    public static function factory(): SuperficialAnatomySchema
     {
         return new SuperficialAnatomySchema('https://schema.org/', 'SuperficialAnatomy');
     }
@@ -42,8 +42,9 @@ class SuperficialAnatomySchema extends MedicalEntitySchema
      * The significance associated with the superficial anatomy; as an example, how characteristics of the superficial anatomy can suggest underlying medical conditions or courses of treatment.
      *
      * @param $significance 
+     * @return static
      **/
-    public function setSignificance($significance) {
+    public function setSignificance($significance): static {
         $this->properties['significance'] = $significance;
 
         return $this;
@@ -60,8 +61,9 @@ class SuperficialAnatomySchema extends MedicalEntitySchema
      * A medical therapy related to this anatomy.
      *
      * @param $relatedTherapy 
+     * @return static
      **/
-    public function setRelatedTherapy($relatedTherapy) {
+    public function setRelatedTherapy($relatedTherapy): static {
         $this->properties['relatedTherapy'] = $relatedTherapy;
 
         return $this;
@@ -78,8 +80,9 @@ class SuperficialAnatomySchema extends MedicalEntitySchema
      * Anatomical systems or structures that relate to the superficial anatomy.
      *
      * @param $relatedAnatomy |
+     * @return static
      **/
-    public function setRelatedAnatomy($relatedAnatomy) {
+    public function setRelatedAnatomy($relatedAnatomy): static {
         $this->properties['relatedAnatomy'] = $relatedAnatomy;
 
         return $this;
@@ -96,8 +99,9 @@ class SuperficialAnatomySchema extends MedicalEntitySchema
      * A medical condition associated with this anatomy.
      *
      * @param $relatedCondition 
+     * @return static
      **/
-    public function setRelatedCondition($relatedCondition) {
+    public function setRelatedCondition($relatedCondition): static {
         $this->properties['relatedCondition'] = $relatedCondition;
 
         return $this;
@@ -114,8 +118,9 @@ class SuperficialAnatomySchema extends MedicalEntitySchema
      * If applicable, a description of the pathophysiology associated with the anatomical system, including potential abnormal changes in the mechanical, physical, and biochemical functions of the system.
      *
      * @param $associatedPathophysiology 
+     * @return static
      **/
-    public function setAssociatedPathophysiology($associatedPathophysiology) {
+    public function setAssociatedPathophysiology($associatedPathophysiology): static {
         $this->properties['associatedPathophysiology'] = $associatedPathophysiology;
 
         return $this;

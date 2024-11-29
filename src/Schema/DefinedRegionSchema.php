@@ -46,7 +46,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DefinedRegionSchema extends StructuredValueSchema
 {
-    public static function factory()
+    public static function factory(): DefinedRegionSchema
     {
         return new DefinedRegionSchema('https://schema.org/', 'DefinedRegion');
     }
@@ -55,8 +55,9 @@ class DefinedRegionSchema extends StructuredValueSchema
      * The country. Recommended to be in 2-letter [ISO 3166-1 alpha-2](http://en.wikipedia.org/wiki/ISO_3166-1) format, for example "US". For backward compatibility, a 3-letter [ISO 3166-1 alpha-3](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) country code such as "SGP" or a full country name such as "Singapore" can also be used.
      *
      * @param $addressCountry |
+     * @return static
      **/
-    public function setAddressCountry($addressCountry) {
+    public function setAddressCountry($addressCountry): static {
         $this->properties['addressCountry'] = $addressCountry;
 
         return $this;
@@ -73,8 +74,9 @@ class DefinedRegionSchema extends StructuredValueSchema
      * The postal code. For example, 94043.
      *
      * @param $postalCode 
+     * @return static
      **/
-    public function setPostalCode($postalCode) {
+    public function setPostalCode($postalCode): static {
         $this->properties['postalCode'] = $postalCode;
 
         return $this;
@@ -91,8 +93,9 @@ class DefinedRegionSchema extends StructuredValueSchema
      * The region in which the locality is, and which is in the country. For example, California or another appropriate first-level [Administrative division](https://en.wikipedia.org/wiki/List_of_administrative_divisions_by_country).
      *
      * @param $addressRegion 
+     * @return static
      **/
-    public function setAddressRegion($addressRegion) {
+    public function setAddressRegion($addressRegion): static {
         $this->properties['addressRegion'] = $addressRegion;
 
         return $this;
@@ -109,8 +112,9 @@ class DefinedRegionSchema extends StructuredValueSchema
      * A defined range of postal codes indicated by a common textual prefix. Used for non-numeric systems such as UK.
      *
      * @param $postalCodePrefix 
+     * @return static
      **/
-    public function setPostalCodePrefix($postalCodePrefix) {
+    public function setPostalCodePrefix($postalCodePrefix): static {
         $this->properties['postalCodePrefix'] = $postalCodePrefix;
 
         return $this;
@@ -127,8 +131,9 @@ class DefinedRegionSchema extends StructuredValueSchema
      * A defined range of postal codes.
      *
      * @param $postalCodeRange 
+     * @return static
      **/
-    public function setPostalCodeRange($postalCodeRange) {
+    public function setPostalCodeRange($postalCodeRange): static {
         $this->properties['postalCodeRange'] = $postalCodeRange;
 
         return $this;

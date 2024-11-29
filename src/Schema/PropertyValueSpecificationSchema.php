@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PropertyValueSpecificationSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): PropertyValueSpecificationSchema
     {
         return new PropertyValueSpecificationSchema('https://schema.org/', 'PropertyValueSpecification');
     }
@@ -42,8 +42,9 @@ class PropertyValueSpecificationSchema extends IntangibleSchema
      * Specifies the allowed range for number of characters in a literal value.
      *
      * @param $valueMaxLength 
+     * @return static
      **/
-    public function setValueMaxLength($valueMaxLength) {
+    public function setValueMaxLength($valueMaxLength): static {
         $this->properties['valueMaxLength'] = $valueMaxLength;
 
         return $this;
@@ -60,8 +61,9 @@ class PropertyValueSpecificationSchema extends IntangibleSchema
      * Specifies the minimum allowed range for number of characters in a literal value.
      *
      * @param $valueMinLength 
+     * @return static
      **/
-    public function setValueMinLength($valueMinLength) {
+    public function setValueMinLength($valueMinLength): static {
         $this->properties['valueMinLength'] = $valueMinLength;
 
         return $this;
@@ -78,8 +80,9 @@ class PropertyValueSpecificationSchema extends IntangibleSchema
      * Whether multiple values are allowed for the property.  Default is false.
      *
      * @param $multipleValues 
+     * @return static
      **/
-    public function setMultipleValues($multipleValues) {
+    public function setMultipleValues($multipleValues): static {
         $this->properties['multipleValues'] = $multipleValues;
 
         return $this;
@@ -96,8 +99,9 @@ class PropertyValueSpecificationSchema extends IntangibleSchema
      * The lower value of some characteristic or property.
      *
      * @param $minValue 
+     * @return static
      **/
-    public function setMinValue($minValue) {
+    public function setMinValue($minValue): static {
         $this->properties['minValue'] = $minValue;
 
         return $this;
@@ -114,8 +118,9 @@ class PropertyValueSpecificationSchema extends IntangibleSchema
      * Whether or not a property is mutable.  Default is false. Specifying this for a property that also has a value makes it act similar to a "hidden" input in an HTML form.
      *
      * @param $readonlyValue 
+     * @return static
      **/
-    public function setReadonlyValue($readonlyValue) {
+    public function setReadonlyValue($readonlyValue): static {
         $this->properties['readonlyValue'] = $readonlyValue;
 
         return $this;
@@ -132,8 +137,9 @@ class PropertyValueSpecificationSchema extends IntangibleSchema
      * The upper value of some characteristic or property.
      *
      * @param $maxValue 
+     * @return static
      **/
-    public function setMaxValue($maxValue) {
+    public function setMaxValue($maxValue): static {
         $this->properties['maxValue'] = $maxValue;
 
         return $this;
@@ -150,8 +156,9 @@ class PropertyValueSpecificationSchema extends IntangibleSchema
      * The stepValue attribute indicates the granularity that is expected (and required) of the value in a PropertyValueSpecification.
      *
      * @param $stepValue 
+     * @return static
      **/
-    public function setStepValue($stepValue) {
+    public function setStepValue($stepValue): static {
         $this->properties['stepValue'] = $stepValue;
 
         return $this;
@@ -168,8 +175,9 @@ class PropertyValueSpecificationSchema extends IntangibleSchema
      * The default value of the input.  For properties that expect a literal, the default is a literal value, for properties that expect an object, it's an ID reference to one of the current values.
      *
      * @param $defaultValue |
+     * @return static
      **/
-    public function setDefaultValue($defaultValue) {
+    public function setDefaultValue($defaultValue): static {
         $this->properties['defaultValue'] = $defaultValue;
 
         return $this;
@@ -186,8 +194,9 @@ class PropertyValueSpecificationSchema extends IntangibleSchema
      * Indicates the name of the PropertyValueSpecification to be used in URL templates and form encoding in a manner analogous to HTML's input@name.
      *
      * @param $valueName 
+     * @return static
      **/
-    public function setValueName($valueName) {
+    public function setValueName($valueName): static {
         $this->properties['valueName'] = $valueName;
 
         return $this;
@@ -204,8 +213,9 @@ class PropertyValueSpecificationSchema extends IntangibleSchema
      * Specifies a regular expression for testing literal values according to the HTML spec.
      *
      * @param $valuePattern 
+     * @return static
      **/
-    public function setValuePattern($valuePattern) {
+    public function setValuePattern($valuePattern): static {
         $this->properties['valuePattern'] = $valuePattern;
 
         return $this;
@@ -222,8 +232,9 @@ class PropertyValueSpecificationSchema extends IntangibleSchema
      * Whether the property must be filled in to complete the action.  Default is false.
      *
      * @param $valueRequired 
+     * @return static
      **/
-    public function setValueRequired($valueRequired) {
+    public function setValueRequired($valueRequired): static {
         $this->properties['valueRequired'] = $valueRequired;
 
         return $this;

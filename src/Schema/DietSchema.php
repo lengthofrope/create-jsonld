@@ -31,9 +31,9 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class DietSchema extends \LengthOfRope\JSONLD\Elements\Element
+class DietSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): DietSchema
     {
         return new DietSchema('https://schema.org/', 'Diet');
     }
@@ -42,8 +42,9 @@ class DietSchema extends \LengthOfRope\JSONLD\Elements\Element
      * Medical expert advice related to the plan.
      *
      * @param $expertConsiderations 
+     * @return static
      **/
-    public function setExpertConsiderations($expertConsiderations) {
+    public function setExpertConsiderations($expertConsiderations): static {
         $this->properties['expertConsiderations'] = $expertConsiderations;
 
         return $this;
@@ -60,8 +61,9 @@ class DietSchema extends \LengthOfRope\JSONLD\Elements\Element
      * People or organizations that endorse the plan.
      *
      * @param $endorsers |
+     * @return static
      **/
-    public function setEndorsers($endorsers) {
+    public function setEndorsers($endorsers): static {
         $this->properties['endorsers'] = $endorsers;
 
         return $this;
@@ -78,8 +80,9 @@ class DietSchema extends \LengthOfRope\JSONLD\Elements\Element
      * Nutritional information specific to the dietary plan. May include dietary recommendations on what foods to avoid, what foods to consume, and specific alterations/deviations from the USDA or other regulatory body's approved dietary guidelines.
      *
      * @param $dietFeatures 
+     * @return static
      **/
-    public function setDietFeatures($dietFeatures) {
+    public function setDietFeatures($dietFeatures): static {
         $this->properties['dietFeatures'] = $dietFeatures;
 
         return $this;
@@ -96,8 +99,9 @@ class DietSchema extends \LengthOfRope\JSONLD\Elements\Element
      * Specific physiologic benefits associated to the plan.
      *
      * @param $physiologicalBenefits 
+     * @return static
      **/
-    public function setPhysiologicalBenefits($physiologicalBenefits) {
+    public function setPhysiologicalBenefits($physiologicalBenefits): static {
         $this->properties['physiologicalBenefits'] = $physiologicalBenefits;
 
         return $this;
@@ -114,8 +118,9 @@ class DietSchema extends \LengthOfRope\JSONLD\Elements\Element
      * Specific physiologic risks associated to the diet plan.
      *
      * @param $risks 
+     * @return static
      **/
-    public function setRisks($risks) {
+    public function setRisks($risks): static {
         $this->properties['risks'] = $risks;
 
         return $this;

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class InvestmentOrDepositSchema extends FinancialProductSchema
 {
-    public static function factory()
+    public static function factory(): InvestmentOrDepositSchema
     {
         return new InvestmentOrDepositSchema('https://schema.org/', 'InvestmentOrDeposit');
     }
@@ -42,8 +42,9 @@ class InvestmentOrDepositSchema extends FinancialProductSchema
      * The amount of money.
      *
      * @param $amount |
+     * @return static
      **/
-    public function setAmount($amount) {
+    public function setAmount($amount): static {
         $this->properties['amount'] = $amount;
 
         return $this;

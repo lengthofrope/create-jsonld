@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ResumeActionSchema extends ControlActionSchema
 {
-    public static function factory()
+    public static function factory(): ResumeActionSchema
     {
         return new ResumeActionSchema('https://schema.org/', 'ResumeAction');
     }

@@ -34,7 +34,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PaymentMethodSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): PaymentMethodSchema
     {
         return new PaymentMethodSchema('https://schema.org/', 'PaymentMethod');
     }
@@ -43,8 +43,9 @@ class PaymentMethodSchema extends IntangibleSchema
      * The type of a payment method.
      *
      * @param $paymentMethodType 
+     * @return static
      **/
-    public function setPaymentMethodType($paymentMethodType) {
+    public function setPaymentMethodType($paymentMethodType): static {
         $this->properties['paymentMethodType'] = $paymentMethodType;
 
         return $this;

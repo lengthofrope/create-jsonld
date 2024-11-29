@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MuseumSchema extends CivicStructureSchema
 {
-    public static function factory()
+    public static function factory(): MuseumSchema
     {
         return new MuseumSchema('https://schema.org/', 'Museum');
     }

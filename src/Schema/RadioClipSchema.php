@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class RadioClipSchema extends ClipSchema
 {
-    public static function factory()
+    public static function factory(): RadioClipSchema
     {
         return new RadioClipSchema('https://schema.org/', 'RadioClip');
     }

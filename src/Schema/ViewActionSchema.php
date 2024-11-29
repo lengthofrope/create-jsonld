@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ViewActionSchema extends ConsumeActionSchema
 {
-    public static function factory()
+    public static function factory(): ViewActionSchema
     {
         return new ViewActionSchema('https://schema.org/', 'ViewAction');
     }

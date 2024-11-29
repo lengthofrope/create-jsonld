@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class LegalServiceSchema extends LocalBusinessSchema
 {
-    public static function factory()
+    public static function factory(): LegalServiceSchema
     {
         return new LegalServiceSchema('https://schema.org/', 'LegalService');
     }

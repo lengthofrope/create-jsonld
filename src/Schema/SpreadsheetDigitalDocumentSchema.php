@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class SpreadsheetDigitalDocumentSchema extends DigitalDocumentSchema
 {
-    public static function factory()
+    public static function factory(): SpreadsheetDigitalDocumentSchema
     {
         return new SpreadsheetDigitalDocumentSchema('https://schema.org/', 'SpreadsheetDigitalDocument');
     }

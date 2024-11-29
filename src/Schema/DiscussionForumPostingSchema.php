@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DiscussionForumPostingSchema extends SocialMediaPostingSchema
 {
-    public static function factory()
+    public static function factory(): DiscussionForumPostingSchema
     {
         return new DiscussionForumPostingSchema('https://schema.org/', 'DiscussionForumPosting');
     }

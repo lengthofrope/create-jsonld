@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class BookFormatTypeSchema extends EnumerationSchema
 {
-    public static function factory()
+    public static function factory(): BookFormatTypeSchema
     {
         return new BookFormatTypeSchema('https://schema.org/', 'BookFormatType');
     }

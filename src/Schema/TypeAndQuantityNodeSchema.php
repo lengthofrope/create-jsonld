@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class TypeAndQuantityNodeSchema extends StructuredValueSchema
 {
-    public static function factory()
+    public static function factory(): TypeAndQuantityNodeSchema
     {
         return new TypeAndQuantityNodeSchema('https://schema.org/', 'TypeAndQuantityNode');
     }
@@ -42,8 +42,9 @@ class TypeAndQuantityNodeSchema extends StructuredValueSchema
      * The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes than the UN/CEFACT Common Code may be used with a prefix followed by a colon.
      *
      * @param $unitCode |
+     * @return static
      **/
-    public function setUnitCode($unitCode) {
+    public function setUnitCode($unitCode): static {
         $this->properties['unitCode'] = $unitCode;
 
         return $this;
@@ -60,8 +61,9 @@ class TypeAndQuantityNodeSchema extends StructuredValueSchema
      * The quantity of the goods included in the offer.
      *
      * @param $amountOfThisGood 
+     * @return static
      **/
-    public function setAmountOfThisGood($amountOfThisGood) {
+    public function setAmountOfThisGood($amountOfThisGood): static {
         $this->properties['amountOfThisGood'] = $amountOfThisGood;
 
         return $this;
@@ -78,8 +80,9 @@ class TypeAndQuantityNodeSchema extends StructuredValueSchema
      * The product that this structured value is referring to.
      *
      * @param $typeOfGood |
+     * @return static
      **/
-    public function setTypeOfGood($typeOfGood) {
+    public function setTypeOfGood($typeOfGood): static {
         $this->properties['typeOfGood'] = $typeOfGood;
 
         return $this;
@@ -96,8 +99,9 @@ class TypeAndQuantityNodeSchema extends StructuredValueSchema
      * The business function (e.g. sell, lease, repair, dispose) of the offer or component of a bundle (TypeAndQuantityNode). The default is http://purl.org/goodrelations/v1#Sell.
      *
      * @param $businessFunction 
+     * @return static
      **/
-    public function setBusinessFunction($businessFunction) {
+    public function setBusinessFunction($businessFunction): static {
         $this->properties['businessFunction'] = $businessFunction;
 
         return $this;
@@ -115,8 +119,9 @@ class TypeAndQuantityNodeSchema extends StructuredValueSchema
 <a href='unitCode'>unitCode</a>.
      *
      * @param $unitText 
+     * @return static
      **/
-    public function setUnitText($unitText) {
+    public function setUnitText($unitText): static {
         $this->properties['unitText'] = $unitText;
 
         return $this;

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class VolcanoSchema extends LandformSchema
 {
-    public static function factory()
+    public static function factory(): VolcanoSchema
     {
         return new VolcanoSchema('https://schema.org/', 'Volcano');
     }

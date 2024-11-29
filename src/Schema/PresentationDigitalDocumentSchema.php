@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PresentationDigitalDocumentSchema extends DigitalDocumentSchema
 {
-    public static function factory()
+    public static function factory(): PresentationDigitalDocumentSchema
     {
         return new PresentationDigitalDocumentSchema('https://schema.org/', 'PresentationDigitalDocument');
     }

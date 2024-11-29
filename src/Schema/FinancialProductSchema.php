@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class FinancialProductSchema extends ServiceSchema
 {
-    public static function factory()
+    public static function factory(): FinancialProductSchema
     {
         return new FinancialProductSchema('https://schema.org/', 'FinancialProduct');
     }
@@ -42,8 +42,9 @@ class FinancialProductSchema extends ServiceSchema
      * Description of fees, commissions, and other terms applied either to a class of financial product, or by a financial service organization.
      *
      * @param $feesAndCommissionsSpecification |
+     * @return static
      **/
-    public function setFeesAndCommissionsSpecification($feesAndCommissionsSpecification) {
+    public function setFeesAndCommissionsSpecification($feesAndCommissionsSpecification): static {
         $this->properties['feesAndCommissionsSpecification'] = $feesAndCommissionsSpecification;
 
         return $this;
@@ -60,8 +61,9 @@ class FinancialProductSchema extends ServiceSchema
      * The interest rate, charged or paid, applicable to the financial product. Note: This is different from the calculated annualPercentageRate.
      *
      * @param $interestRate |
+     * @return static
      **/
-    public function setInterestRate($interestRate) {
+    public function setInterestRate($interestRate): static {
         $this->properties['interestRate'] = $interestRate;
 
         return $this;
@@ -78,8 +80,9 @@ class FinancialProductSchema extends ServiceSchema
      * The annual rate that is charged for borrowing (or made by investing), expressed as a single percentage number that represents the actual yearly cost of funds over the term of a loan. This includes any fees or additional costs associated with the transaction.
      *
      * @param $annualPercentageRate |
+     * @return static
      **/
-    public function setAnnualPercentageRate($annualPercentageRate) {
+    public function setAnnualPercentageRate($annualPercentageRate): static {
         $this->properties['annualPercentageRate'] = $annualPercentageRate;
 
         return $this;

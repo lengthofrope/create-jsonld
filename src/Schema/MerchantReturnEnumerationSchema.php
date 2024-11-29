@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MerchantReturnEnumerationSchema extends EnumerationSchema
 {
-    public static function factory()
+    public static function factory(): MerchantReturnEnumerationSchema
     {
         return new MerchantReturnEnumerationSchema('https://schema.org/', 'MerchantReturnEnumeration');
     }

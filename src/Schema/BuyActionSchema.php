@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class BuyActionSchema extends TradeActionSchema
 {
-    public static function factory()
+    public static function factory(): BuyActionSchema
     {
         return new BuyActionSchema('https://schema.org/', 'BuyAction');
     }
@@ -42,8 +42,9 @@ class BuyActionSchema extends TradeActionSchema
      * An entity which offers (sells / leases / lends / loans) the services / goods.  A seller may also be a provider.
      *
      * @param $seller |
+     * @return static
      **/
-    public function setSeller($seller) {
+    public function setSeller($seller): static {
         $this->properties['seller'] = $seller;
 
         return $this;
@@ -60,8 +61,9 @@ class BuyActionSchema extends TradeActionSchema
      * 'vendor' is an earlier term for 'seller'.
      *
      * @param $vendor |
+     * @return static
      **/
-    public function setVendor($vendor) {
+    public function setVendor($vendor): static {
         $this->properties['vendor'] = $vendor;
 
         return $this;
@@ -78,8 +80,9 @@ class BuyActionSchema extends TradeActionSchema
      * The warranty promise(s) included in the offer.
      *
      * @param $warrantyPromise 
+     * @return static
      **/
-    public function setWarrantyPromise($warrantyPromise) {
+    public function setWarrantyPromise($warrantyPromise): static {
         $this->properties['warrantyPromise'] = $warrantyPromise;
 
         return $this;

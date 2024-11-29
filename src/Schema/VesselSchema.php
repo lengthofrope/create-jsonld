@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class VesselSchema extends AnatomicalStructureSchema
 {
-    public static function factory()
+    public static function factory(): VesselSchema
     {
         return new VesselSchema('https://schema.org/', 'Vessel');
     }

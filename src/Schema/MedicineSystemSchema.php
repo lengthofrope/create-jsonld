@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MedicineSystemSchema extends MedicalEnumerationSchema
 {
-    public static function factory()
+    public static function factory(): MedicineSystemSchema
     {
         return new MedicineSystemSchema('https://schema.org/', 'MedicineSystem');
     }

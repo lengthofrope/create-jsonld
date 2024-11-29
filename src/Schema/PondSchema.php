@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PondSchema extends BodyOfWaterSchema
 {
-    public static function factory()
+    public static function factory(): PondSchema
     {
         return new PondSchema('https://schema.org/', 'Pond');
     }

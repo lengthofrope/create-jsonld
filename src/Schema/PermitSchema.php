@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PermitSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): PermitSchema
     {
         return new PermitSchema('https://schema.org/', 'Permit');
     }
@@ -42,8 +42,9 @@ class PermitSchema extends IntangibleSchema
      * The organization issuing the item, for example a [[Permit]], [[Ticket]], or [[Certification]].
      *
      * @param $issuedBy 
+     * @return static
      **/
-    public function setIssuedBy($issuedBy) {
+    public function setIssuedBy($issuedBy): static {
         $this->properties['issuedBy'] = $issuedBy;
 
         return $this;
@@ -60,8 +61,9 @@ class PermitSchema extends IntangibleSchema
      * The geographic area where the item is valid. Applies for example to a [[Permit]], a [[Certification]], or an [[EducationalOccupationalCredential]]. 
      *
      * @param $validIn 
+     * @return static
      **/
-    public function setValidIn($validIn) {
+    public function setValidIn($validIn): static {
         $this->properties['validIn'] = $validIn;
 
         return $this;
@@ -78,8 +80,9 @@ class PermitSchema extends IntangibleSchema
      * The duration of validity of a permit or similar thing.
      *
      * @param $validFor 
+     * @return static
      **/
-    public function setValidFor($validFor) {
+    public function setValidFor($validFor): static {
         $this->properties['validFor'] = $validFor;
 
         return $this;
@@ -96,8 +99,9 @@ class PermitSchema extends IntangibleSchema
      * The service through which the permit was granted.
      *
      * @param $issuedThrough 
+     * @return static
      **/
-    public function setIssuedThrough($issuedThrough) {
+    public function setIssuedThrough($issuedThrough): static {
         $this->properties['issuedThrough'] = $issuedThrough;
 
         return $this;
@@ -114,8 +118,9 @@ class PermitSchema extends IntangibleSchema
      * The date when the item is no longer valid.
      *
      * @param $validUntil 
+     * @return static
      **/
-    public function setValidUntil($validUntil) {
+    public function setValidUntil($validUntil): static {
         $this->properties['validUntil'] = $validUntil;
 
         return $this;
@@ -132,8 +137,9 @@ class PermitSchema extends IntangibleSchema
      * The date when the item becomes valid.
      *
      * @param $validFrom |
+     * @return static
      **/
-    public function setValidFrom($validFrom) {
+    public function setValidFrom($validFrom): static {
         $this->properties['validFrom'] = $validFrom;
 
         return $this;
@@ -150,8 +156,9 @@ class PermitSchema extends IntangibleSchema
      * The target audience for this permit.
      *
      * @param $permitAudience 
+     * @return static
      **/
-    public function setPermitAudience($permitAudience) {
+    public function setPermitAudience($permitAudience): static {
         $this->properties['permitAudience'] = $permitAudience;
 
         return $this;

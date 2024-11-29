@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class InstallActionSchema extends ConsumeActionSchema
 {
-    public static function factory()
+    public static function factory(): InstallActionSchema
     {
         return new InstallActionSchema('https://schema.org/', 'InstallAction');
     }

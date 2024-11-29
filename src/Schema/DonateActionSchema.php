@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DonateActionSchema extends TransferActionSchema
 {
-    public static function factory()
+    public static function factory(): DonateActionSchema
     {
         return new DonateActionSchema('https://schema.org/', 'DonateAction');
     }
@@ -43,8 +43,9 @@ class DonateActionSchema extends TransferActionSchema
       
      *
      * @param $price |
+     * @return static
      **/
-    public function setPrice($price) {
+    public function setPrice($price): static {
         $this->properties['price'] = $price;
 
         return $this;
@@ -61,8 +62,9 @@ class DonateActionSchema extends TransferActionSchema
      * A sub property of participant. The participant who is at the receiving end of the action.
      *
      * @param $recipient |||
+     * @return static
      **/
-    public function setRecipient($recipient) {
+    public function setRecipient($recipient): static {
         $this->properties['recipient'] = $recipient;
 
         return $this;
@@ -79,8 +81,9 @@ class DonateActionSchema extends TransferActionSchema
      * One or more detailed price specifications, indicating the unit price and delivery or payment charges.
      *
      * @param $priceSpecification 
+     * @return static
      **/
-    public function setPriceSpecification($priceSpecification) {
+    public function setPriceSpecification($priceSpecification): static {
         $this->properties['priceSpecification'] = $priceSpecification;
 
         return $this;
@@ -97,8 +100,9 @@ class DonateActionSchema extends TransferActionSchema
      * The currency of the price, or a price component when attached to [[PriceSpecification]] and its subtypes.\n\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR".
      *
      * @param $priceCurrency 
+     * @return static
      **/
-    public function setPriceCurrency($priceCurrency) {
+    public function setPriceCurrency($priceCurrency): static {
         $this->properties['priceCurrency'] = $priceCurrency;
 
         return $this;

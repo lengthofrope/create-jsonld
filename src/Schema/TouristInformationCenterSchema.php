@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class TouristInformationCenterSchema extends LocalBusinessSchema
 {
-    public static function factory()
+    public static function factory(): TouristInformationCenterSchema
     {
         return new TouristInformationCenterSchema('https://schema.org/', 'TouristInformationCenter');
     }

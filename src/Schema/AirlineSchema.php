@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class AirlineSchema extends OrganizationSchema
 {
-    public static function factory()
+    public static function factory(): AirlineSchema
     {
         return new AirlineSchema('https://schema.org/', 'Airline');
     }
@@ -42,8 +42,9 @@ class AirlineSchema extends OrganizationSchema
      * The type of boarding policy used by the airline (e.g. zone-based or group-based).
      *
      * @param $boardingPolicy 
+     * @return static
      **/
-    public function setBoardingPolicy($boardingPolicy) {
+    public function setBoardingPolicy($boardingPolicy): static {
         $this->properties['boardingPolicy'] = $boardingPolicy;
 
         return $this;
@@ -60,8 +61,9 @@ class AirlineSchema extends OrganizationSchema
      * IATA identifier for an airline or airport.
      *
      * @param $iataCode 
+     * @return static
      **/
-    public function setIataCode($iataCode) {
+    public function setIataCode($iataCode): static {
         $this->properties['iataCode'] = $iataCode;
 
         return $this;

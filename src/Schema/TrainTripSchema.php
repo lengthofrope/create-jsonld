@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class TrainTripSchema extends TripSchema
 {
-    public static function factory()
+    public static function factory(): TrainTripSchema
     {
         return new TrainTripSchema('https://schema.org/', 'TrainTrip');
     }
@@ -42,8 +42,9 @@ class TrainTripSchema extends TripSchema
      * The name of the train (e.g. The Orient Express).
      *
      * @param $trainName 
+     * @return static
      **/
-    public function setTrainName($trainName) {
+    public function setTrainName($trainName): static {
         $this->properties['trainName'] = $trainName;
 
         return $this;
@@ -60,8 +61,9 @@ class TrainTripSchema extends TripSchema
      * The station where the train trip ends.
      *
      * @param $arrivalStation 
+     * @return static
      **/
-    public function setArrivalStation($arrivalStation) {
+    public function setArrivalStation($arrivalStation): static {
         $this->properties['arrivalStation'] = $arrivalStation;
 
         return $this;
@@ -78,8 +80,9 @@ class TrainTripSchema extends TripSchema
      * The station from which the train departs.
      *
      * @param $departureStation 
+     * @return static
      **/
-    public function setDepartureStation($departureStation) {
+    public function setDepartureStation($departureStation): static {
         $this->properties['departureStation'] = $departureStation;
 
         return $this;
@@ -96,8 +99,9 @@ class TrainTripSchema extends TripSchema
      * The unique identifier for the train.
      *
      * @param $trainNumber 
+     * @return static
      **/
-    public function setTrainNumber($trainNumber) {
+    public function setTrainNumber($trainNumber): static {
         $this->properties['trainNumber'] = $trainNumber;
 
         return $this;
@@ -114,8 +118,9 @@ class TrainTripSchema extends TripSchema
      * The platform from which the train departs.
      *
      * @param $departurePlatform 
+     * @return static
      **/
-    public function setDeparturePlatform($departurePlatform) {
+    public function setDeparturePlatform($departurePlatform): static {
         $this->properties['departurePlatform'] = $departurePlatform;
 
         return $this;
@@ -132,8 +137,9 @@ class TrainTripSchema extends TripSchema
      * The platform where the train arrives.
      *
      * @param $arrivalPlatform 
+     * @return static
      **/
-    public function setArrivalPlatform($arrivalPlatform) {
+    public function setArrivalPlatform($arrivalPlatform): static {
         $this->properties['arrivalPlatform'] = $arrivalPlatform;
 
         return $this;

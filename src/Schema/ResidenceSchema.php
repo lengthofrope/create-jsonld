@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ResidenceSchema extends PlaceSchema
 {
-    public static function factory()
+    public static function factory(): ResidenceSchema
     {
         return new ResidenceSchema('https://schema.org/', 'Residence');
     }
@@ -42,8 +42,9 @@ class ResidenceSchema extends PlaceSchema
      * A floorplan of some [[Accommodation]].
      *
      * @param $accommodationFloorPlan 
+     * @return static
      **/
-    public function setAccommodationFloorPlan($accommodationFloorPlan) {
+    public function setAccommodationFloorPlan($accommodationFloorPlan): static {
         $this->properties['accommodationFloorPlan'] = $accommodationFloorPlan;
 
         return $this;

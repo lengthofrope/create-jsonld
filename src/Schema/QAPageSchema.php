@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class QAPageSchema extends WebPageSchema
 {
-    public static function factory()
+    public static function factory(): QAPageSchema
     {
         return new QAPageSchema('https://schema.org/', 'QAPage');
     }

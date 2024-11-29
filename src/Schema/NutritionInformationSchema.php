@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class NutritionInformationSchema extends StructuredValueSchema
 {
-    public static function factory()
+    public static function factory(): NutritionInformationSchema
     {
         return new NutritionInformationSchema('https://schema.org/', 'NutritionInformation');
     }
@@ -42,8 +42,9 @@ class NutritionInformationSchema extends StructuredValueSchema
      * The number of grams of protein.
      *
      * @param $proteinContent 
+     * @return static
      **/
-    public function setProteinContent($proteinContent) {
+    public function setProteinContent($proteinContent): static {
         $this->properties['proteinContent'] = $proteinContent;
 
         return $this;
@@ -60,8 +61,9 @@ class NutritionInformationSchema extends StructuredValueSchema
      * The number of milligrams of sodium.
      *
      * @param $sodiumContent 
+     * @return static
      **/
-    public function setSodiumContent($sodiumContent) {
+    public function setSodiumContent($sodiumContent): static {
         $this->properties['sodiumContent'] = $sodiumContent;
 
         return $this;
@@ -78,8 +80,9 @@ class NutritionInformationSchema extends StructuredValueSchema
      * The number of milligrams of cholesterol.
      *
      * @param $cholesterolContent 
+     * @return static
      **/
-    public function setCholesterolContent($cholesterolContent) {
+    public function setCholesterolContent($cholesterolContent): static {
         $this->properties['cholesterolContent'] = $cholesterolContent;
 
         return $this;
@@ -96,8 +99,9 @@ class NutritionInformationSchema extends StructuredValueSchema
      * The number of grams of fat.
      *
      * @param $fatContent 
+     * @return static
      **/
-    public function setFatContent($fatContent) {
+    public function setFatContent($fatContent): static {
         $this->properties['fatContent'] = $fatContent;
 
         return $this;
@@ -114,8 +118,9 @@ class NutritionInformationSchema extends StructuredValueSchema
      * The number of grams of fiber.
      *
      * @param $fiberContent 
+     * @return static
      **/
-    public function setFiberContent($fiberContent) {
+    public function setFiberContent($fiberContent): static {
         $this->properties['fiberContent'] = $fiberContent;
 
         return $this;
@@ -132,8 +137,9 @@ class NutritionInformationSchema extends StructuredValueSchema
      * The serving size, in terms of the number of volume or mass.
      *
      * @param $servingSize 
+     * @return static
      **/
-    public function setServingSize($servingSize) {
+    public function setServingSize($servingSize): static {
         $this->properties['servingSize'] = $servingSize;
 
         return $this;
@@ -150,8 +156,9 @@ class NutritionInformationSchema extends StructuredValueSchema
      * The number of grams of saturated fat.
      *
      * @param $saturatedFatContent 
+     * @return static
      **/
-    public function setSaturatedFatContent($saturatedFatContent) {
+    public function setSaturatedFatContent($saturatedFatContent): static {
         $this->properties['saturatedFatContent'] = $saturatedFatContent;
 
         return $this;
@@ -168,8 +175,9 @@ class NutritionInformationSchema extends StructuredValueSchema
      * The number of grams of unsaturated fat.
      *
      * @param $unsaturatedFatContent 
+     * @return static
      **/
-    public function setUnsaturatedFatContent($unsaturatedFatContent) {
+    public function setUnsaturatedFatContent($unsaturatedFatContent): static {
         $this->properties['unsaturatedFatContent'] = $unsaturatedFatContent;
 
         return $this;
@@ -186,8 +194,9 @@ class NutritionInformationSchema extends StructuredValueSchema
      * The number of grams of carbohydrates.
      *
      * @param $carbohydrateContent 
+     * @return static
      **/
-    public function setCarbohydrateContent($carbohydrateContent) {
+    public function setCarbohydrateContent($carbohydrateContent): static {
         $this->properties['carbohydrateContent'] = $carbohydrateContent;
 
         return $this;
@@ -204,8 +213,9 @@ class NutritionInformationSchema extends StructuredValueSchema
      * The number of grams of trans fat.
      *
      * @param $transFatContent 
+     * @return static
      **/
-    public function setTransFatContent($transFatContent) {
+    public function setTransFatContent($transFatContent): static {
         $this->properties['transFatContent'] = $transFatContent;
 
         return $this;
@@ -222,8 +232,9 @@ class NutritionInformationSchema extends StructuredValueSchema
      * The number of calories.
      *
      * @param $calories 
+     * @return static
      **/
-    public function setCalories($calories) {
+    public function setCalories($calories): static {
         $this->properties['calories'] = $calories;
 
         return $this;
@@ -240,8 +251,9 @@ class NutritionInformationSchema extends StructuredValueSchema
      * The number of grams of sugar.
      *
      * @param $sugarContent 
+     * @return static
      **/
-    public function setSugarContent($sugarContent) {
+    public function setSugarContent($sugarContent): static {
         $this->properties['sugarContent'] = $sugarContent;
 
         return $this;

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class AnatomicalStructureSchema extends MedicalEntitySchema
 {
-    public static function factory()
+    public static function factory(): AnatomicalStructureSchema
     {
         return new AnatomicalStructureSchema('https://schema.org/', 'AnatomicalStructure');
     }
@@ -42,8 +42,9 @@ class AnatomicalStructureSchema extends MedicalEntitySchema
      * A medical therapy related to this anatomy.
      *
      * @param $relatedTherapy 
+     * @return static
      **/
-    public function setRelatedTherapy($relatedTherapy) {
+    public function setRelatedTherapy($relatedTherapy): static {
         $this->properties['relatedTherapy'] = $relatedTherapy;
 
         return $this;
@@ -60,8 +61,9 @@ class AnatomicalStructureSchema extends MedicalEntitySchema
      * The anatomical or organ system that this structure is part of.
      *
      * @param $partOfSystem 
+     * @return static
      **/
-    public function setPartOfSystem($partOfSystem) {
+    public function setPartOfSystem($partOfSystem): static {
         $this->properties['partOfSystem'] = $partOfSystem;
 
         return $this;
@@ -78,8 +80,9 @@ class AnatomicalStructureSchema extends MedicalEntitySchema
      * An image containing a diagram that illustrates the structure and/or its component substructures and/or connections with other structures.
      *
      * @param $diagram 
+     * @return static
      **/
-    public function setDiagram($diagram) {
+    public function setDiagram($diagram): static {
         $this->properties['diagram'] = $diagram;
 
         return $this;
@@ -96,8 +99,9 @@ class AnatomicalStructureSchema extends MedicalEntitySchema
      * A medical condition associated with this anatomy.
      *
      * @param $relatedCondition 
+     * @return static
      **/
-    public function setRelatedCondition($relatedCondition) {
+    public function setRelatedCondition($relatedCondition): static {
         $this->properties['relatedCondition'] = $relatedCondition;
 
         return $this;
@@ -114,8 +118,9 @@ class AnatomicalStructureSchema extends MedicalEntitySchema
      * Component (sub-)structure(s) that comprise this anatomical structure.
      *
      * @param $subStructure 
+     * @return static
      **/
-    public function setSubStructure($subStructure) {
+    public function setSubStructure($subStructure): static {
         $this->properties['subStructure'] = $subStructure;
 
         return $this;
@@ -132,8 +137,9 @@ class AnatomicalStructureSchema extends MedicalEntitySchema
      * Other anatomical structures to which this structure is connected.
      *
      * @param $connectedTo 
+     * @return static
      **/
-    public function setConnectedTo($connectedTo) {
+    public function setConnectedTo($connectedTo): static {
         $this->properties['connectedTo'] = $connectedTo;
 
         return $this;
@@ -150,8 +156,9 @@ class AnatomicalStructureSchema extends MedicalEntitySchema
      * Location in the body of the anatomical structure.
      *
      * @param $bodyLocation 
+     * @return static
      **/
-    public function setBodyLocation($bodyLocation) {
+    public function setBodyLocation($bodyLocation): static {
         $this->properties['bodyLocation'] = $bodyLocation;
 
         return $this;
@@ -168,8 +175,9 @@ class AnatomicalStructureSchema extends MedicalEntitySchema
      * If applicable, a description of the pathophysiology associated with the anatomical system, including potential abnormal changes in the mechanical, physical, and biochemical functions of the system.
      *
      * @param $associatedPathophysiology 
+     * @return static
      **/
-    public function setAssociatedPathophysiology($associatedPathophysiology) {
+    public function setAssociatedPathophysiology($associatedPathophysiology): static {
         $this->properties['associatedPathophysiology'] = $associatedPathophysiology;
 
         return $this;

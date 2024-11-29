@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DeleteActionSchema extends UpdateActionSchema
 {
-    public static function factory()
+    public static function factory(): DeleteActionSchema
     {
         return new DeleteActionSchema('https://schema.org/', 'DeleteAction');
     }

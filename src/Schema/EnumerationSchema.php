@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class EnumerationSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): EnumerationSchema
     {
         return new EnumerationSchema('https://schema.org/', 'Enumeration');
     }
@@ -42,8 +42,9 @@ class EnumerationSchema extends IntangibleSchema
      * Relates a term (i.e. a property, class or enumeration) to one that supersedes it.
      *
      * @param $supersededBy ||
+     * @return static
      **/
-    public function setSupersededBy($supersededBy) {
+    public function setSupersededBy($supersededBy): static {
         $this->properties['supersededBy'] = $supersededBy;
 
         return $this;

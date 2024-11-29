@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ReserveActionSchema extends PlanActionSchema
 {
-    public static function factory()
+    public static function factory(): ReserveActionSchema
     {
         return new ReserveActionSchema('https://schema.org/', 'ReserveAction');
     }

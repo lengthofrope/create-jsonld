@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MediaReviewItemSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): MediaReviewItemSchema
     {
         return new MediaReviewItemSchema('https://schema.org/', 'MediaReviewItem');
     }
@@ -42,8 +42,9 @@ class MediaReviewItemSchema extends CreativeWorkSchema
      * In the context of a [[MediaReview]], indicates specific media item(s) that are grouped using a [[MediaReviewItem]].
      *
      * @param $mediaItemAppearance 
+     * @return static
      **/
-    public function setMediaItemAppearance($mediaItemAppearance) {
+    public function setMediaItemAppearance($mediaItemAppearance): static {
         $this->properties['mediaItemAppearance'] = $mediaItemAppearance;
 
         return $this;

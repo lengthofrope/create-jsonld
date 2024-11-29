@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class GameServerSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): GameServerSchema
     {
         return new GameServerSchema('https://schema.org/', 'GameServer');
     }
@@ -42,8 +42,9 @@ class GameServerSchema extends IntangibleSchema
      * Status of a game server.
      *
      * @param $serverStatus 
+     * @return static
      **/
-    public function setServerStatus($serverStatus) {
+    public function setServerStatus($serverStatus): static {
         $this->properties['serverStatus'] = $serverStatus;
 
         return $this;
@@ -60,8 +61,9 @@ class GameServerSchema extends IntangibleSchema
      * Video game which is played on this server.
      *
      * @param $game 
+     * @return static
      **/
-    public function setGame($game) {
+    public function setGame($game): static {
         $this->properties['game'] = $game;
 
         return $this;
@@ -78,8 +80,9 @@ class GameServerSchema extends IntangibleSchema
      * Number of players on the server.
      *
      * @param $playersOnline 
+     * @return static
      **/
-    public function setPlayersOnline($playersOnline) {
+    public function setPlayersOnline($playersOnline): static {
         $this->properties['playersOnline'] = $playersOnline;
 
         return $this;

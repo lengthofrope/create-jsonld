@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MedicalRiskCalculatorSchema extends MedicalRiskEstimatorSchema
 {
-    public static function factory()
+    public static function factory(): MedicalRiskCalculatorSchema
     {
         return new MedicalRiskCalculatorSchema('https://schema.org/', 'MedicalRiskCalculator');
     }

@@ -35,7 +35,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class FundingSchemeSchema extends OrganizationSchema
 {
-    public static function factory()
+    public static function factory(): FundingSchemeSchema
     {
         return new FundingSchemeSchema('https://schema.org/', 'FundingScheme');
     }

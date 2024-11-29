@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ClaimReviewSchema extends ReviewSchema
 {
-    public static function factory()
+    public static function factory(): ClaimReviewSchema
     {
         return new ClaimReviewSchema('https://schema.org/', 'ClaimReview');
     }
@@ -42,8 +42,9 @@ class ClaimReviewSchema extends ReviewSchema
      * A short summary of the specific claims reviewed in a ClaimReview.
      *
      * @param $claimReviewed 
+     * @return static
      **/
-    public function setClaimReviewed($claimReviewed) {
+    public function setClaimReviewed($claimReviewed): static {
         $this->properties['claimReviewed'] = $claimReviewed;
 
         return $this;

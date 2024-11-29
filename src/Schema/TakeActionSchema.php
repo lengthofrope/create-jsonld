@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class TakeActionSchema extends TransferActionSchema
 {
-    public static function factory()
+    public static function factory(): TakeActionSchema
     {
         return new TakeActionSchema('https://schema.org/', 'TakeAction');
     }

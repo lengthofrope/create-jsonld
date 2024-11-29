@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ChildCareSchema extends LocalBusinessSchema
 {
-    public static function factory()
+    public static function factory(): ChildCareSchema
     {
         return new ChildCareSchema('https://schema.org/', 'ChildCare');
     }

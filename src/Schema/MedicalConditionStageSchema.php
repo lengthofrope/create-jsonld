@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MedicalConditionStageSchema extends MedicalIntangibleSchema
 {
-    public static function factory()
+    public static function factory(): MedicalConditionStageSchema
     {
         return new MedicalConditionStageSchema('https://schema.org/', 'MedicalConditionStage');
     }
@@ -42,8 +42,9 @@ class MedicalConditionStageSchema extends MedicalIntangibleSchema
      * The stage represented as a number, e.g. 3.
      *
      * @param $stageAsNumber 
+     * @return static
      **/
-    public function setStageAsNumber($stageAsNumber) {
+    public function setStageAsNumber($stageAsNumber): static {
         $this->properties['stageAsNumber'] = $stageAsNumber;
 
         return $this;
@@ -60,8 +61,9 @@ class MedicalConditionStageSchema extends MedicalIntangibleSchema
      * The substage, e.g. 'a' for Stage IIIa.
      *
      * @param $subStageSuffix 
+     * @return static
      **/
-    public function setSubStageSuffix($subStageSuffix) {
+    public function setSubStageSuffix($subStageSuffix): static {
         $this->properties['subStageSuffix'] = $subStageSuffix;
 
         return $this;

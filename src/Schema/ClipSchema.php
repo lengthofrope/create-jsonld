@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ClipSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): ClipSchema
     {
         return new ClipSchema('https://schema.org/', 'Clip');
     }
@@ -42,8 +42,9 @@ class ClipSchema extends CreativeWorkSchema
      * An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip.
      *
      * @param $actor |
+     * @return static
      **/
-    public function setActor($actor) {
+    public function setActor($actor): static {
         $this->properties['actor'] = $actor;
 
         return $this;
@@ -60,8 +61,9 @@ class ClipSchema extends CreativeWorkSchema
      * The episode to which this clip belongs.
      *
      * @param $partOfEpisode 
+     * @return static
      **/
-    public function setPartOfEpisode($partOfEpisode) {
+    public function setPartOfEpisode($partOfEpisode): static {
         $this->properties['partOfEpisode'] = $partOfEpisode;
 
         return $this;
@@ -78,8 +80,9 @@ class ClipSchema extends CreativeWorkSchema
      * The season to which this episode belongs.
      *
      * @param $partOfSeason 
+     * @return static
      **/
-    public function setPartOfSeason($partOfSeason) {
+    public function setPartOfSeason($partOfSeason): static {
         $this->properties['partOfSeason'] = $partOfSeason;
 
         return $this;
@@ -96,8 +99,9 @@ class ClipSchema extends CreativeWorkSchema
      * An actor, e.g. in TV, radio, movie, video games etc. Actors can be associated with individual items or with a series, episode, clip.
      *
      * @param $actors 
+     * @return static
      **/
-    public function setActors($actors) {
+    public function setActors($actors): static {
         $this->properties['actors'] = $actors;
 
         return $this;
@@ -114,8 +118,9 @@ class ClipSchema extends CreativeWorkSchema
      * A director of e.g. TV, radio, movie, video games etc. content. Directors can be associated with individual items or with a series, episode, clip.
      *
      * @param $directors 
+     * @return static
      **/
-    public function setDirectors($directors) {
+    public function setDirectors($directors): static {
         $this->properties['directors'] = $directors;
 
         return $this;
@@ -132,8 +137,9 @@ class ClipSchema extends CreativeWorkSchema
      * Position of the clip within an ordered group of clips.
      *
      * @param $clipNumber |
+     * @return static
      **/
-    public function setClipNumber($clipNumber) {
+    public function setClipNumber($clipNumber): static {
         $this->properties['clipNumber'] = $clipNumber;
 
         return $this;
@@ -150,8 +156,9 @@ class ClipSchema extends CreativeWorkSchema
      * The end time of the clip expressed as the number of seconds from the beginning of the work.
      *
      * @param $endOffset |
+     * @return static
      **/
-    public function setEndOffset($endOffset) {
+    public function setEndOffset($endOffset): static {
         $this->properties['endOffset'] = $endOffset;
 
         return $this;
@@ -168,8 +175,9 @@ class ClipSchema extends CreativeWorkSchema
      * The series to which this episode or season belongs.
      *
      * @param $partOfSeries 
+     * @return static
      **/
-    public function setPartOfSeries($partOfSeries) {
+    public function setPartOfSeries($partOfSeries): static {
         $this->properties['partOfSeries'] = $partOfSeries;
 
         return $this;
@@ -186,8 +194,9 @@ class ClipSchema extends CreativeWorkSchema
      * The start time of the clip expressed as the number of seconds from the beginning of the work.
      *
      * @param $startOffset |
+     * @return static
      **/
-    public function setStartOffset($startOffset) {
+    public function setStartOffset($startOffset): static {
         $this->properties['startOffset'] = $startOffset;
 
         return $this;
@@ -204,8 +213,9 @@ class ClipSchema extends CreativeWorkSchema
      * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual items or with a series, episode, clip.
      *
      * @param $director 
+     * @return static
      **/
-    public function setDirector($director) {
+    public function setDirector($director): static {
         $this->properties['director'] = $director;
 
         return $this;
@@ -222,8 +232,9 @@ class ClipSchema extends CreativeWorkSchema
      * The composer of the soundtrack.
      *
      * @param $musicBy |
+     * @return static
      **/
-    public function setMusicBy($musicBy) {
+    public function setMusicBy($musicBy): static {
         $this->properties['musicBy'] = $musicBy;
 
         return $this;

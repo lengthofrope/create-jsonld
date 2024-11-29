@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ContinentSchema extends LandformSchema
 {
-    public static function factory()
+    public static function factory(): ContinentSchema
     {
         return new ContinentSchema('https://schema.org/', 'Continent');
     }

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class LoanOrCreditSchema extends FinancialProductSchema
 {
-    public static function factory()
+    public static function factory(): LoanOrCreditSchema
     {
         return new LoanOrCreditSchema('https://schema.org/', 'LoanOrCredit');
     }
@@ -42,8 +42,9 @@ class LoanOrCreditSchema extends FinancialProductSchema
      * The duration of the loan or credit agreement.
      *
      * @param $loanTerm 
+     * @return static
      **/
-    public function setLoanTerm($loanTerm) {
+    public function setLoanTerm($loanTerm): static {
         $this->properties['loanTerm'] = $loanTerm;
 
         return $this;
@@ -60,8 +61,9 @@ class LoanOrCreditSchema extends FinancialProductSchema
      * The currency in which the monetary amount is expressed.\n\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR".
      *
      * @param $currency 
+     * @return static
      **/
-    public function setCurrency($currency) {
+    public function setCurrency($currency): static {
         $this->properties['currency'] = $currency;
 
         return $this;
@@ -78,8 +80,9 @@ class LoanOrCreditSchema extends FinancialProductSchema
      * The amount of money.
      *
      * @param $amount |
+     * @return static
      **/
-    public function setAmount($amount) {
+    public function setAmount($amount): static {
         $this->properties['amount'] = $amount;
 
         return $this;
@@ -96,8 +99,9 @@ class LoanOrCreditSchema extends FinancialProductSchema
      * The type of a loan or credit.
      *
      * @param $loanType |
+     * @return static
      **/
-    public function setLoanType($loanType) {
+    public function setLoanType($loanType): static {
         $this->properties['loanType'] = $loanType;
 
         return $this;
@@ -114,8 +118,9 @@ class LoanOrCreditSchema extends FinancialProductSchema
      * The only way you get the money back in the event of default is the security. Recourse is where you still have the opportunity to go back to the borrower for the rest of the money.
      *
      * @param $recourseLoan 
+     * @return static
      **/
-    public function setRecourseLoan($recourseLoan) {
+    public function setRecourseLoan($recourseLoan): static {
         $this->properties['recourseLoan'] = $recourseLoan;
 
         return $this;
@@ -132,8 +137,9 @@ class LoanOrCreditSchema extends FinancialProductSchema
      * Whether the terms for payment of interest can be renegotiated during the life of the loan.
      *
      * @param $renegotiableLoan 
+     * @return static
      **/
-    public function setRenegotiableLoan($renegotiableLoan) {
+    public function setRenegotiableLoan($renegotiableLoan): static {
         $this->properties['renegotiableLoan'] = $renegotiableLoan;
 
         return $this;
@@ -150,8 +156,9 @@ class LoanOrCreditSchema extends FinancialProductSchema
      * The period of time after any due date that the borrower has to fulfil its obligations before a default (failure to pay) is deemed to have occurred.
      *
      * @param $gracePeriod 
+     * @return static
      **/
-    public function setGracePeriod($gracePeriod) {
+    public function setGracePeriod($gracePeriod): static {
         $this->properties['gracePeriod'] = $gracePeriod;
 
         return $this;
@@ -168,8 +175,9 @@ class LoanOrCreditSchema extends FinancialProductSchema
      * A form of paying back money previously borrowed from a lender. Repayment usually takes the form of periodic payments that normally include part principal plus interest in each payment.
      *
      * @param $loanRepaymentForm 
+     * @return static
      **/
-    public function setLoanRepaymentForm($loanRepaymentForm) {
+    public function setLoanRepaymentForm($loanRepaymentForm): static {
         $this->properties['loanRepaymentForm'] = $loanRepaymentForm;
 
         return $this;
@@ -186,8 +194,9 @@ class LoanOrCreditSchema extends FinancialProductSchema
      * Assets required to secure loan or credit repayments. It may take form of third party pledge, goods, financial instruments (cash, securities, etc.)
      *
      * @param $requiredCollateral |
+     * @return static
      **/
-    public function setRequiredCollateral($requiredCollateral) {
+    public function setRequiredCollateral($requiredCollateral): static {
         $this->properties['requiredCollateral'] = $requiredCollateral;
 
         return $this;

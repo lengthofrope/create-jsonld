@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class AdvertiserContentArticleSchema extends ArticleSchema
 {
-    public static function factory()
+    public static function factory(): AdvertiserContentArticleSchema
     {
         return new AdvertiserContentArticleSchema('https://schema.org/', 'AdvertiserContentArticle');
     }

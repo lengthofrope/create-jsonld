@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ProgramMembershipSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): ProgramMembershipSchema
     {
         return new ProgramMembershipSchema('https://schema.org/', 'ProgramMembership');
     }
@@ -42,8 +42,9 @@ class ProgramMembershipSchema extends IntangibleSchema
      * The number of membership points earned by the member. If necessary, the unitText can be used to express the units the points are issued in. (E.g. stars, miles, etc.)
      *
      * @param $membershipPointsEarned |
+     * @return static
      **/
-    public function setMembershipPointsEarned($membershipPointsEarned) {
+    public function setMembershipPointsEarned($membershipPointsEarned): static {
         $this->properties['membershipPointsEarned'] = $membershipPointsEarned;
 
         return $this;
@@ -60,8 +61,9 @@ class ProgramMembershipSchema extends IntangibleSchema
      * The program providing the membership. It is preferable to use [:program](https://schema.org/program) instead.
      *
      * @param $programName 
+     * @return static
      **/
-    public function setProgramName($programName) {
+    public function setProgramName($programName): static {
         $this->properties['programName'] = $programName;
 
         return $this;
@@ -78,8 +80,9 @@ class ProgramMembershipSchema extends IntangibleSchema
      * A unique identifier for the membership.
      *
      * @param $membershipNumber 
+     * @return static
      **/
-    public function setMembershipNumber($membershipNumber) {
+    public function setMembershipNumber($membershipNumber): static {
         $this->properties['membershipNumber'] = $membershipNumber;
 
         return $this;
@@ -96,8 +99,9 @@ class ProgramMembershipSchema extends IntangibleSchema
      * The [MemberProgram](https://schema.org/MemberProgram) associated with a [ProgramMembership](https://schema.org/ProgramMembership).
      *
      * @param $program 
+     * @return static
      **/
-    public function setProgram($program) {
+    public function setProgram($program): static {
         $this->properties['program'] = $program;
 
         return $this;
@@ -114,8 +118,9 @@ class ProgramMembershipSchema extends IntangibleSchema
      * A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals.
      *
      * @param $member |
+     * @return static
      **/
-    public function setMember($member) {
+    public function setMember($member): static {
         $this->properties['member'] = $member;
 
         return $this;
@@ -132,8 +137,9 @@ class ProgramMembershipSchema extends IntangibleSchema
      * The Organization (airline, travelers' club, retailer, etc.) the membership is made with or which offers the  MemberProgram.
      *
      * @param $hostingOrganization 
+     * @return static
      **/
-    public function setHostingOrganization($hostingOrganization) {
+    public function setHostingOrganization($hostingOrganization): static {
         $this->properties['hostingOrganization'] = $hostingOrganization;
 
         return $this;
@@ -150,8 +156,9 @@ class ProgramMembershipSchema extends IntangibleSchema
      * A member of this organization.
      *
      * @param $members |
+     * @return static
      **/
-    public function setMembers($members) {
+    public function setMembers($members): static {
         $this->properties['members'] = $members;
 
         return $this;

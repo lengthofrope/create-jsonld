@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ResearcherSchema extends AudienceSchema
 {
-    public static function factory()
+    public static function factory(): ResearcherSchema
     {
         return new ResearcherSchema('https://schema.org/', 'Researcher');
     }

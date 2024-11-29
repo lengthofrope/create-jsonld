@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class BroadcastChannelSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): BroadcastChannelSchema
     {
         return new BroadcastChannelSchema('https://schema.org/', 'BroadcastChannel');
     }
@@ -42,8 +42,9 @@ class BroadcastChannelSchema extends IntangibleSchema
      * The frequency used for over-the-air broadcasts. Numeric values or simple ranges, e.g. 87-99. In addition a shortcut idiom is supported for frequencies of AM and FM radio channels, e.g. "87 FM".
      *
      * @param $broadcastFrequency |
+     * @return static
      **/
-    public function setBroadcastFrequency($broadcastFrequency) {
+    public function setBroadcastFrequency($broadcastFrequency): static {
         $this->properties['broadcastFrequency'] = $broadcastFrequency;
 
         return $this;
@@ -60,8 +61,9 @@ class BroadcastChannelSchema extends IntangibleSchema
      * The CableOrSatelliteService offering the channel.
      *
      * @param $inBroadcastLineup 
+     * @return static
      **/
-    public function setInBroadcastLineup($inBroadcastLineup) {
+    public function setInBroadcastLineup($inBroadcastLineup): static {
         $this->properties['inBroadcastLineup'] = $inBroadcastLineup;
 
         return $this;
@@ -78,8 +80,9 @@ class BroadcastChannelSchema extends IntangibleSchema
      * The unique address by which the BroadcastService can be identified in a provider lineup. In US, this is typically a number.
      *
      * @param $broadcastChannelId 
+     * @return static
      **/
-    public function setBroadcastChannelId($broadcastChannelId) {
+    public function setBroadcastChannelId($broadcastChannelId): static {
         $this->properties['broadcastChannelId'] = $broadcastChannelId;
 
         return $this;
@@ -96,8 +99,9 @@ class BroadcastChannelSchema extends IntangibleSchema
      * The type of service required to have access to the channel (e.g. Standard or Premium).
      *
      * @param $broadcastServiceTier 
+     * @return static
      **/
-    public function setBroadcastServiceTier($broadcastServiceTier) {
+    public function setBroadcastServiceTier($broadcastServiceTier): static {
         $this->properties['broadcastServiceTier'] = $broadcastServiceTier;
 
         return $this;
@@ -114,8 +118,9 @@ class BroadcastChannelSchema extends IntangibleSchema
      * The BroadcastService offered on this channel.
      *
      * @param $providesBroadcastService 
+     * @return static
      **/
-    public function setProvidesBroadcastService($providesBroadcastService) {
+    public function setProvidesBroadcastService($providesBroadcastService): static {
         $this->properties['providesBroadcastService'] = $providesBroadcastService;
 
         return $this;
@@ -132,8 +137,9 @@ class BroadcastChannelSchema extends IntangibleSchema
      * Genre of the creative work, broadcast channel or group.
      *
      * @param $genre |
+     * @return static
      **/
-    public function setGenre($genre) {
+    public function setGenre($genre): static {
         $this->properties['genre'] = $genre;
 
         return $this;

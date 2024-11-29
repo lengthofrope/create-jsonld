@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class EmployeeRoleSchema extends OrganizationRoleSchema
 {
-    public static function factory()
+    public static function factory(): EmployeeRoleSchema
     {
         return new EmployeeRoleSchema('https://schema.org/', 'EmployeeRole');
     }
@@ -42,8 +42,9 @@ class EmployeeRoleSchema extends OrganizationRoleSchema
      * The currency (coded using [ISO 4217](http://en.wikipedia.org/wiki/ISO_4217)) used for the main salary information in this job posting or for this employee.
      *
      * @param $salaryCurrency 
+     * @return static
      **/
-    public function setSalaryCurrency($salaryCurrency) {
+    public function setSalaryCurrency($salaryCurrency): static {
         $this->properties['salaryCurrency'] = $salaryCurrency;
 
         return $this;
@@ -60,8 +61,9 @@ class EmployeeRoleSchema extends OrganizationRoleSchema
      * The base salary of the job or of an employee in an EmployeeRole.
      *
      * @param $baseSalary ||
+     * @return static
      **/
-    public function setBaseSalary($baseSalary) {
+    public function setBaseSalary($baseSalary): static {
         $this->properties['baseSalary'] = $baseSalary;
 
         return $this;

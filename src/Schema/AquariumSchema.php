@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class AquariumSchema extends CivicStructureSchema
 {
-    public static function factory()
+    public static function factory(): AquariumSchema
     {
         return new AquariumSchema('https://schema.org/', 'Aquarium');
     }

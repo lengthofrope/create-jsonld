@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class WorkersUnionSchema extends OrganizationSchema
 {
-    public static function factory()
+    public static function factory(): WorkersUnionSchema
     {
         return new WorkersUnionSchema('https://schema.org/', 'WorkersUnion');
     }

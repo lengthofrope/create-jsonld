@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class UserCheckinsSchema extends UserInteractionSchema
 {
-    public static function factory()
+    public static function factory(): UserCheckinsSchema
     {
         return new UserCheckinsSchema('https://schema.org/', 'UserCheckins');
     }

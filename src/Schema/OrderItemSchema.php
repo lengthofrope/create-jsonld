@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class OrderItemSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): OrderItemSchema
     {
         return new OrderItemSchema('https://schema.org/', 'OrderItem');
     }
@@ -42,8 +42,9 @@ class OrderItemSchema extends IntangibleSchema
      * The current status of the order item.
      *
      * @param $orderItemStatus 
+     * @return static
      **/
-    public function setOrderItemStatus($orderItemStatus) {
+    public function setOrderItemStatus($orderItemStatus): static {
         $this->properties['orderItemStatus'] = $orderItemStatus;
 
         return $this;
@@ -60,8 +61,9 @@ class OrderItemSchema extends IntangibleSchema
      * The item ordered.
      *
      * @param $orderedItem ||
+     * @return static
      **/
-    public function setOrderedItem($orderedItem) {
+    public function setOrderedItem($orderedItem): static {
         $this->properties['orderedItem'] = $orderedItem;
 
         return $this;
@@ -78,8 +80,9 @@ class OrderItemSchema extends IntangibleSchema
      * The delivery of the parcel related to this order or order item.
      *
      * @param $orderDelivery 
+     * @return static
      **/
-    public function setOrderDelivery($orderDelivery) {
+    public function setOrderDelivery($orderDelivery): static {
         $this->properties['orderDelivery'] = $orderDelivery;
 
         return $this;
@@ -96,8 +99,9 @@ class OrderItemSchema extends IntangibleSchema
      * The number of the item ordered. If the property is not set, assume the quantity is one.
      *
      * @param $orderQuantity |
+     * @return static
      **/
-    public function setOrderQuantity($orderQuantity) {
+    public function setOrderQuantity($orderQuantity): static {
         $this->properties['orderQuantity'] = $orderQuantity;
 
         return $this;
@@ -114,8 +118,9 @@ class OrderItemSchema extends IntangibleSchema
      * The identifier of the order item.
      *
      * @param $orderItemNumber 
+     * @return static
      **/
-    public function setOrderItemNumber($orderItemNumber) {
+    public function setOrderItemNumber($orderItemNumber): static {
         $this->properties['orderItemNumber'] = $orderItemNumber;
 
         return $this;

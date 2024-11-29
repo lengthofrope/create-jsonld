@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ReplaceActionSchema extends UpdateActionSchema
 {
-    public static function factory()
+    public static function factory(): ReplaceActionSchema
     {
         return new ReplaceActionSchema('https://schema.org/', 'ReplaceAction');
     }
@@ -42,8 +42,9 @@ class ReplaceActionSchema extends UpdateActionSchema
      * A sub property of object. The object that replaces.
      *
      * @param $replacer 
+     * @return static
      **/
-    public function setReplacer($replacer) {
+    public function setReplacer($replacer): static {
         $this->properties['replacer'] = $replacer;
 
         return $this;
@@ -60,8 +61,9 @@ class ReplaceActionSchema extends UpdateActionSchema
      * A sub property of object. The object that is being replaced.
      *
      * @param $replacee 
+     * @return static
      **/
-    public function setReplacee($replacee) {
+    public function setReplacee($replacee): static {
         $this->properties['replacee'] = $replacee;
 
         return $this;

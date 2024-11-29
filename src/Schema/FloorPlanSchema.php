@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class FloorPlanSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): FloorPlanSchema
     {
         return new FloorPlanSchema('https://schema.org/', 'FloorPlan');
     }
@@ -43,8 +43,9 @@ class FloorPlanSchema extends IntangibleSchema
 Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for square yard.
      *
      * @param $floorSize 
+     * @return static
      **/
-    public function setFloorSize($floorSize) {
+    public function setFloorSize($floorSize): static {
         $this->properties['floorSize'] = $floorSize;
 
         return $this;
@@ -61,8 +62,9 @@ Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for squa
      * Indicates some accommodation that this floor plan describes.
      *
      * @param $isPlanForApartment 
+     * @return static
      **/
-    public function setIsPlanForApartment($isPlanForApartment) {
+    public function setIsPlanForApartment($isPlanForApartment): static {
         $this->properties['isPlanForApartment'] = $isPlanForApartment;
 
         return $this;
@@ -79,8 +81,9 @@ Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for squa
      * Indicates whether pets are allowed to enter the accommodation or lodging business. More detailed information can be put in a text value.
      *
      * @param $petsAllowed |
+     * @return static
      **/
-    public function setPetsAllowed($petsAllowed) {
+    public function setPetsAllowed($petsAllowed): static {
         $this->properties['petsAllowed'] = $petsAllowed;
 
         return $this;
@@ -97,8 +100,9 @@ Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for squa
      * The total integer number of bedrooms in a some [[Accommodation]], [[ApartmentComplex]] or [[FloorPlan]].
      *
      * @param $numberOfBedrooms |
+     * @return static
      **/
-    public function setNumberOfBedrooms($numberOfBedrooms) {
+    public function setNumberOfBedrooms($numberOfBedrooms): static {
         $this->properties['numberOfBedrooms'] = $numberOfBedrooms;
 
         return $this;
@@ -115,8 +119,9 @@ Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for squa
      * The total integer number of bathrooms in some [[Accommodation]], following real estate conventions as [documented in RESO](https://ddwiki.reso.org/display/DDW17/BathroomsTotalInteger+Field): "The simple sum of the number of bathrooms. For example for a property with two Full Bathrooms and one Half Bathroom, the Bathrooms Total Integer will be 3.". See also [[numberOfRooms]].
      *
      * @param $numberOfBathroomsTotal 
+     * @return static
      **/
-    public function setNumberOfBathroomsTotal($numberOfBathroomsTotal) {
+    public function setNumberOfBathroomsTotal($numberOfBathroomsTotal): static {
         $this->properties['numberOfBathroomsTotal'] = $numberOfBathroomsTotal;
 
         return $this;
@@ -133,8 +138,9 @@ Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for squa
      * A schematic image showing the floorplan layout.
      *
      * @param $layoutImage |
+     * @return static
      **/
-    public function setLayoutImage($layoutImage) {
+    public function setLayoutImage($layoutImage): static {
         $this->properties['layoutImage'] = $layoutImage;
 
         return $this;
@@ -151,8 +157,9 @@ Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for squa
      * Indicates the number of available accommodation units in an [[ApartmentComplex]], or the number of accommodation units for a specific [[FloorPlan]] (within its specific [[ApartmentComplex]]). See also [[numberOfAccommodationUnits]].
      *
      * @param $numberOfAvailableAccommodationUnits 
+     * @return static
      **/
-    public function setNumberOfAvailableAccommodationUnits($numberOfAvailableAccommodationUnits) {
+    public function setNumberOfAvailableAccommodationUnits($numberOfAvailableAccommodationUnits): static {
         $this->properties['numberOfAvailableAccommodationUnits'] = $numberOfAvailableAccommodationUnits;
 
         return $this;
@@ -169,8 +176,9 @@ Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for squa
      * Number of full bathrooms - The total number of full and ¾ bathrooms in an [[Accommodation]]. This corresponds to the [BathroomsFull field in RESO](https://ddwiki.reso.org/display/DDW17/BathroomsFull+Field).
      *
      * @param $numberOfFullBathrooms 
+     * @return static
      **/
-    public function setNumberOfFullBathrooms($numberOfFullBathrooms) {
+    public function setNumberOfFullBathrooms($numberOfFullBathrooms): static {
         $this->properties['numberOfFullBathrooms'] = $numberOfFullBathrooms;
 
         return $this;
@@ -187,8 +195,9 @@ Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for squa
      * Indicates the total (available plus unavailable) number of accommodation units in an [[ApartmentComplex]], or the number of accommodation units for a specific [[FloorPlan]] (within its specific [[ApartmentComplex]]). See also [[numberOfAvailableAccommodationUnits]].
      *
      * @param $numberOfAccommodationUnits 
+     * @return static
      **/
-    public function setNumberOfAccommodationUnits($numberOfAccommodationUnits) {
+    public function setNumberOfAccommodationUnits($numberOfAccommodationUnits): static {
         $this->properties['numberOfAccommodationUnits'] = $numberOfAccommodationUnits;
 
         return $this;
@@ -206,8 +215,9 @@ Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for squa
 Typical unit code(s): ROM for room or C62 for no unit. The type of room can be put in the unitText property of the QuantitativeValue.
      *
      * @param $numberOfRooms |
+     * @return static
      **/
-    public function setNumberOfRooms($numberOfRooms) {
+    public function setNumberOfRooms($numberOfRooms): static {
         $this->properties['numberOfRooms'] = $numberOfRooms;
 
         return $this;
@@ -224,8 +234,9 @@ Typical unit code(s): ROM for room or C62 for no unit. The type of room can be p
      * An amenity feature (e.g. a characteristic or service) of the Accommodation. This generic property does not make a statement about whether the feature is included in an offer for the main accommodation or available at extra costs.
      *
      * @param $amenityFeature 
+     * @return static
      **/
-    public function setAmenityFeature($amenityFeature) {
+    public function setAmenityFeature($amenityFeature): static {
         $this->properties['amenityFeature'] = $amenityFeature;
 
         return $this;
@@ -242,8 +253,9 @@ Typical unit code(s): ROM for room or C62 for no unit. The type of room can be p
      * Number of partial bathrooms - The total number of half and ¼ bathrooms in an [[Accommodation]]. This corresponds to the [BathroomsPartial field in RESO](https://ddwiki.reso.org/display/DDW17/BathroomsPartial+Field). 
      *
      * @param $numberOfPartialBathrooms 
+     * @return static
      **/
-    public function setNumberOfPartialBathrooms($numberOfPartialBathrooms) {
+    public function setNumberOfPartialBathrooms($numberOfPartialBathrooms): static {
         $this->properties['numberOfPartialBathrooms'] = $numberOfPartialBathrooms;
 
         return $this;

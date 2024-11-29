@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class BusinessAudienceSchema extends AudienceSchema
 {
-    public static function factory()
+    public static function factory(): BusinessAudienceSchema
     {
         return new BusinessAudienceSchema('https://schema.org/', 'BusinessAudience');
     }
@@ -42,8 +42,9 @@ class BusinessAudienceSchema extends AudienceSchema
      * The size of the business in annual revenue.
      *
      * @param $yearlyRevenue 
+     * @return static
      **/
-    public function setYearlyRevenue($yearlyRevenue) {
+    public function setYearlyRevenue($yearlyRevenue): static {
         $this->properties['yearlyRevenue'] = $yearlyRevenue;
 
         return $this;
@@ -60,8 +61,9 @@ class BusinessAudienceSchema extends AudienceSchema
      * The age of the business.
      *
      * @param $yearsInOperation 
+     * @return static
      **/
-    public function setYearsInOperation($yearsInOperation) {
+    public function setYearsInOperation($yearsInOperation): static {
         $this->properties['yearsInOperation'] = $yearsInOperation;
 
         return $this;
@@ -78,8 +80,9 @@ class BusinessAudienceSchema extends AudienceSchema
      * The number of employees in an organization, e.g. business.
      *
      * @param $numberOfEmployees 
+     * @return static
      **/
-    public function setNumberOfEmployees($numberOfEmployees) {
+    public function setNumberOfEmployees($numberOfEmployees): static {
         $this->properties['numberOfEmployees'] = $numberOfEmployees;
 
         return $this;

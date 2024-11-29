@@ -36,7 +36,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class HotelRoomSchema extends RoomSchema
 {
-    public static function factory()
+    public static function factory(): HotelRoomSchema
     {
         return new HotelRoomSchema('https://schema.org/', 'HotelRoom');
     }
@@ -46,8 +46,9 @@ class HotelRoomSchema extends RoomSchema
 Typical unit code(s): C62 for person.
      *
      * @param $occupancy 
+     * @return static
      **/
-    public function setOccupancy($occupancy) {
+    public function setOccupancy($occupancy): static {
         $this->properties['occupancy'] = $occupancy;
 
         return $this;
@@ -65,8 +66,9 @@ Typical unit code(s): C62 for person.
       If you want to indicate the quantity of a certain kind of bed, use an instance of BedDetails. For more detailed information, use the amenityFeature property.
      *
      * @param $bed ||
+     * @return static
      **/
-    public function setBed($bed) {
+    public function setBed($bed): static {
         $this->properties['bed'] = $bed;
 
         return $this;

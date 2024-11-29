@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MusicStoreSchema extends StoreSchema
 {
-    public static function factory()
+    public static function factory(): MusicStoreSchema
     {
         return new MusicStoreSchema('https://schema.org/', 'MusicStore');
     }

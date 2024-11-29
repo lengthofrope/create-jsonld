@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MedicalBusinessSchema extends LocalBusinessSchema
 {
-    public static function factory()
+    public static function factory(): MedicalBusinessSchema
     {
         return new MedicalBusinessSchema('https://schema.org/', 'MedicalBusiness');
     }

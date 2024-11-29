@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DefinedTermSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): DefinedTermSchema
     {
         return new DefinedTermSchema('https://schema.org/', 'DefinedTerm');
     }
@@ -42,8 +42,9 @@ class DefinedTermSchema extends IntangibleSchema
      * A [[DefinedTermSet]] that contains this term.
      *
      * @param $inDefinedTermSet |
+     * @return static
      **/
-    public function setInDefinedTermSet($inDefinedTermSet) {
+    public function setInDefinedTermSet($inDefinedTermSet): static {
         $this->properties['inDefinedTermSet'] = $inDefinedTermSet;
 
         return $this;
@@ -60,8 +61,9 @@ class DefinedTermSchema extends IntangibleSchema
      * A code that identifies this [[DefinedTerm]] within a [[DefinedTermSet]].
      *
      * @param $termCode 
+     * @return static
      **/
-    public function setTermCode($termCode) {
+    public function setTermCode($termCode): static {
         $this->properties['termCode'] = $termCode;
 
         return $this;

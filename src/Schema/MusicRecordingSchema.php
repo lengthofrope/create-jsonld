@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MusicRecordingSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): MusicRecordingSchema
     {
         return new MusicRecordingSchema('https://schema.org/', 'MusicRecording');
     }
@@ -42,8 +42,9 @@ class MusicRecordingSchema extends CreativeWorkSchema
      * The playlist to which this recording belongs.
      *
      * @param $inPlaylist 
+     * @return static
      **/
-    public function setInPlaylist($inPlaylist) {
+    public function setInPlaylist($inPlaylist): static {
         $this->properties['inPlaylist'] = $inPlaylist;
 
         return $this;
@@ -60,8 +61,9 @@ class MusicRecordingSchema extends CreativeWorkSchema
      * The International Standard Recording Code for the recording.
      *
      * @param $isrcCode 
+     * @return static
      **/
-    public function setIsrcCode($isrcCode) {
+    public function setIsrcCode($isrcCode): static {
         $this->properties['isrcCode'] = $isrcCode;
 
         return $this;
@@ -78,8 +80,9 @@ class MusicRecordingSchema extends CreativeWorkSchema
      * The artist that performed this album or recording.
      *
      * @param $byArtist |
+     * @return static
      **/
-    public function setByArtist($byArtist) {
+    public function setByArtist($byArtist): static {
         $this->properties['byArtist'] = $byArtist;
 
         return $this;
@@ -96,8 +99,9 @@ class MusicRecordingSchema extends CreativeWorkSchema
      * The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
      *
      * @param $duration 
+     * @return static
      **/
-    public function setDuration($duration) {
+    public function setDuration($duration): static {
         $this->properties['duration'] = $duration;
 
         return $this;
@@ -114,8 +118,9 @@ class MusicRecordingSchema extends CreativeWorkSchema
      * The composition this track is a recording of.
      *
      * @param $recordingOf 
+     * @return static
      **/
-    public function setRecordingOf($recordingOf) {
+    public function setRecordingOf($recordingOf): static {
         $this->properties['recordingOf'] = $recordingOf;
 
         return $this;
@@ -132,8 +137,9 @@ class MusicRecordingSchema extends CreativeWorkSchema
      * The album to which this recording belongs.
      *
      * @param $inAlbum 
+     * @return static
      **/
-    public function setInAlbum($inAlbum) {
+    public function setInAlbum($inAlbum): static {
         $this->properties['inAlbum'] = $inAlbum;
 
         return $this;

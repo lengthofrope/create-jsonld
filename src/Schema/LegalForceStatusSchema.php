@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class LegalForceStatusSchema extends StatusEnumerationSchema
 {
-    public static function factory()
+    public static function factory(): LegalForceStatusSchema
     {
         return new LegalForceStatusSchema('https://schema.org/', 'LegalForceStatus');
     }

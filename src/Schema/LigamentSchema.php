@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class LigamentSchema extends AnatomicalStructureSchema
 {
-    public static function factory()
+    public static function factory(): LigamentSchema
     {
         return new LigamentSchema('https://schema.org/', 'Ligament');
     }

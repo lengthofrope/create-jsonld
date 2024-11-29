@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class InfectiousDiseaseSchema extends MedicalConditionSchema
 {
-    public static function factory()
+    public static function factory(): InfectiousDiseaseSchema
     {
         return new InfectiousDiseaseSchema('https://schema.org/', 'InfectiousDisease');
     }
@@ -42,8 +42,9 @@ class InfectiousDiseaseSchema extends MedicalConditionSchema
      * The class of infectious agent (bacteria, prion, etc.) that causes the disease.
      *
      * @param $infectiousAgentClass 
+     * @return static
      **/
-    public function setInfectiousAgentClass($infectiousAgentClass) {
+    public function setInfectiousAgentClass($infectiousAgentClass): static {
         $this->properties['infectiousAgentClass'] = $infectiousAgentClass;
 
         return $this;
@@ -60,8 +61,9 @@ class InfectiousDiseaseSchema extends MedicalConditionSchema
      * How the disease spreads, either as a route or vector, for example 'direct contact', 'Aedes aegypti', etc.
      *
      * @param $transmissionMethod 
+     * @return static
      **/
-    public function setTransmissionMethod($transmissionMethod) {
+    public function setTransmissionMethod($transmissionMethod): static {
         $this->properties['transmissionMethod'] = $transmissionMethod;
 
         return $this;
@@ -78,8 +80,9 @@ class InfectiousDiseaseSchema extends MedicalConditionSchema
      * The actual infectious agent, such as a specific bacterium.
      *
      * @param $infectiousAgent 
+     * @return static
      **/
-    public function setInfectiousAgent($infectiousAgent) {
+    public function setInfectiousAgent($infectiousAgent): static {
         $this->properties['infectiousAgent'] = $infectiousAgent;
 
         return $this;

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class UnRegisterActionSchema extends InteractActionSchema
 {
-    public static function factory()
+    public static function factory(): UnRegisterActionSchema
     {
         return new UnRegisterActionSchema('https://schema.org/', 'UnRegisterAction');
     }

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class TechArticleSchema extends ArticleSchema
 {
-    public static function factory()
+    public static function factory(): TechArticleSchema
     {
         return new TechArticleSchema('https://schema.org/', 'TechArticle');
     }
@@ -42,8 +42,9 @@ class TechArticleSchema extends ArticleSchema
      * Proficiency needed for this content; expected values: 'Beginner', 'Expert'.
      *
      * @param $proficiencyLevel 
+     * @return static
      **/
-    public function setProficiencyLevel($proficiencyLevel) {
+    public function setProficiencyLevel($proficiencyLevel): static {
         $this->properties['proficiencyLevel'] = $proficiencyLevel;
 
         return $this;
@@ -60,8 +61,9 @@ class TechArticleSchema extends ArticleSchema
      * Prerequisites needed to fulfill steps in article.
      *
      * @param $dependencies 
+     * @return static
      **/
-    public function setDependencies($dependencies) {
+    public function setDependencies($dependencies): static {
         $this->properties['dependencies'] = $dependencies;
 
         return $this;

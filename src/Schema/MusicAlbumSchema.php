@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MusicAlbumSchema extends MusicPlaylistSchema
 {
-    public static function factory()
+    public static function factory(): MusicAlbumSchema
     {
         return new MusicAlbumSchema('https://schema.org/', 'MusicAlbum');
     }
@@ -42,8 +42,9 @@ class MusicAlbumSchema extends MusicPlaylistSchema
      * Classification of the album by its type of content: soundtrack, live album, studio album, etc.
      *
      * @param $albumProductionType 
+     * @return static
      **/
-    public function setAlbumProductionType($albumProductionType) {
+    public function setAlbumProductionType($albumProductionType): static {
         $this->properties['albumProductionType'] = $albumProductionType;
 
         return $this;
@@ -60,8 +61,9 @@ class MusicAlbumSchema extends MusicPlaylistSchema
      * A release of this album.
      *
      * @param $albumRelease 
+     * @return static
      **/
-    public function setAlbumRelease($albumRelease) {
+    public function setAlbumRelease($albumRelease): static {
         $this->properties['albumRelease'] = $albumRelease;
 
         return $this;
@@ -78,8 +80,9 @@ class MusicAlbumSchema extends MusicPlaylistSchema
      * The artist that performed this album or recording.
      *
      * @param $byArtist |
+     * @return static
      **/
-    public function setByArtist($byArtist) {
+    public function setByArtist($byArtist): static {
         $this->properties['byArtist'] = $byArtist;
 
         return $this;
@@ -96,8 +99,9 @@ class MusicAlbumSchema extends MusicPlaylistSchema
      * The kind of release which this album is: single, EP or album.
      *
      * @param $albumReleaseType 
+     * @return static
      **/
-    public function setAlbumReleaseType($albumReleaseType) {
+    public function setAlbumReleaseType($albumReleaseType): static {
         $this->properties['albumReleaseType'] = $albumReleaseType;
 
         return $this;

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ImagingTestSchema extends MedicalTestSchema
 {
-    public static function factory()
+    public static function factory(): ImagingTestSchema
     {
         return new ImagingTestSchema('https://schema.org/', 'ImagingTest');
     }
@@ -42,8 +42,9 @@ class ImagingTestSchema extends MedicalTestSchema
      * Imaging technique used.
      *
      * @param $imagingTechnique 
+     * @return static
      **/
-    public function setImagingTechnique($imagingTechnique) {
+    public function setImagingTechnique($imagingTechnique): static {
         $this->properties['imagingTechnique'] = $imagingTechnique;
 
         return $this;

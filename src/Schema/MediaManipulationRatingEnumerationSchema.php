@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MediaManipulationRatingEnumerationSchema extends EnumerationSchema
 {
-    public static function factory()
+    public static function factory(): MediaManipulationRatingEnumerationSchema
     {
         return new MediaManipulationRatingEnumerationSchema('https://schema.org/', 'MediaManipulationRatingEnumeration');
     }

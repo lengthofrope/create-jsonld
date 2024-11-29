@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MedicalProcedureSchema extends MedicalEntitySchema
 {
-    public static function factory()
+    public static function factory(): MedicalProcedureSchema
     {
         return new MedicalProcedureSchema('https://schema.org/', 'MedicalProcedure');
     }
@@ -42,8 +42,9 @@ class MedicalProcedureSchema extends MedicalEntitySchema
      * Typical preparation that a patient must undergo before having the procedure performed.
      *
      * @param $preparation |
+     * @return static
      **/
-    public function setPreparation($preparation) {
+    public function setPreparation($preparation): static {
         $this->properties['preparation'] = $preparation;
 
         return $this;
@@ -60,8 +61,9 @@ class MedicalProcedureSchema extends MedicalEntitySchema
      * The type of procedure, for example Surgical, Noninvasive, or Percutaneous.
      *
      * @param $procedureType 
+     * @return static
      **/
-    public function setProcedureType($procedureType) {
+    public function setProcedureType($procedureType): static {
         $this->properties['procedureType'] = $procedureType;
 
         return $this;
@@ -78,8 +80,9 @@ class MedicalProcedureSchema extends MedicalEntitySchema
      * How the procedure is performed.
      *
      * @param $howPerformed 
+     * @return static
      **/
-    public function setHowPerformed($howPerformed) {
+    public function setHowPerformed($howPerformed): static {
         $this->properties['howPerformed'] = $howPerformed;
 
         return $this;
@@ -96,8 +99,9 @@ class MedicalProcedureSchema extends MedicalEntitySchema
      * The status of the study (enumerated).
      *
      * @param $status ||
+     * @return static
      **/
-    public function setStatus($status) {
+    public function setStatus($status): static {
         $this->properties['status'] = $status;
 
         return $this;
@@ -114,8 +118,9 @@ class MedicalProcedureSchema extends MedicalEntitySchema
      * Typical or recommended followup care after the procedure is performed.
      *
      * @param $followup 
+     * @return static
      **/
-    public function setFollowup($followup) {
+    public function setFollowup($followup): static {
         $this->properties['followup'] = $followup;
 
         return $this;
@@ -132,8 +137,9 @@ class MedicalProcedureSchema extends MedicalEntitySchema
      * Location in the body of the anatomical structure.
      *
      * @param $bodyLocation 
+     * @return static
      **/
-    public function setBodyLocation($bodyLocation) {
+    public function setBodyLocation($bodyLocation): static {
         $this->properties['bodyLocation'] = $bodyLocation;
 
         return $this;

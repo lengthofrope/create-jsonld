@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class TaxiStandSchema extends CivicStructureSchema
 {
-    public static function factory()
+    public static function factory(): TaxiStandSchema
     {
         return new TaxiStandSchema('https://schema.org/', 'TaxiStand');
     }

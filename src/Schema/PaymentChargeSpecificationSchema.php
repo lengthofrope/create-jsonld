@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PaymentChargeSpecificationSchema extends PriceSpecificationSchema
 {
-    public static function factory()
+    public static function factory(): PaymentChargeSpecificationSchema
     {
         return new PaymentChargeSpecificationSchema('https://schema.org/', 'PaymentChargeSpecification');
     }
@@ -42,8 +42,9 @@ class PaymentChargeSpecificationSchema extends PriceSpecificationSchema
      * The payment method(s) to which the payment charge specification applies.
      *
      * @param $appliesToPaymentMethod 
+     * @return static
      **/
-    public function setAppliesToPaymentMethod($appliesToPaymentMethod) {
+    public function setAppliesToPaymentMethod($appliesToPaymentMethod): static {
         $this->properties['appliesToPaymentMethod'] = $appliesToPaymentMethod;
 
         return $this;
@@ -60,8 +61,9 @@ class PaymentChargeSpecificationSchema extends PriceSpecificationSchema
      * The delivery method(s) to which the delivery charge or payment charge specification applies.
      *
      * @param $appliesToDeliveryMethod 
+     * @return static
      **/
-    public function setAppliesToDeliveryMethod($appliesToDeliveryMethod) {
+    public function setAppliesToDeliveryMethod($appliesToDeliveryMethod): static {
         $this->properties['appliesToDeliveryMethod'] = $appliesToDeliveryMethod;
 
         return $this;

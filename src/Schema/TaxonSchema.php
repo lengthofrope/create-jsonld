@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class TaxonSchema extends ThingSchema
 {
-    public static function factory()
+    public static function factory(): TaxonSchema
     {
         return new TaxonSchema('https://schema.org/', 'Taxon');
     }
@@ -42,8 +42,9 @@ class TaxonSchema extends ThingSchema
      * Closest parent taxon of the taxon in question.
      *
      * @param $parentTaxon ||
+     * @return static
      **/
-    public function setParentTaxon($parentTaxon) {
+    public function setParentTaxon($parentTaxon): static {
         $this->properties['parentTaxon'] = $parentTaxon;
 
         return $this;
@@ -60,8 +61,9 @@ class TaxonSchema extends ThingSchema
      * Closest child taxa of the taxon in question.
      *
      * @param $childTaxon ||
+     * @return static
      **/
-    public function setChildTaxon($childTaxon) {
+    public function setChildTaxon($childTaxon): static {
         $this->properties['childTaxon'] = $childTaxon;
 
         return $this;
@@ -78,8 +80,9 @@ class TaxonSchema extends ThingSchema
      * The taxonomic rank of this taxon given preferably as a URI from a controlled vocabulary – typically the ranks from TDWG TaxonRank ontology or equivalent Wikidata URIs.
      *
      * @param $taxonRank ||
+     * @return static
      **/
-    public function setTaxonRank($taxonRank) {
+    public function setTaxonRank($taxonRank): static {
         $this->properties['taxonRank'] = $taxonRank;
 
         return $this;
@@ -96,8 +99,9 @@ class TaxonSchema extends ThingSchema
      * A Defined Term contained in this term set.
      *
      * @param $hasDefinedTerm 
+     * @return static
      **/
-    public function setHasDefinedTerm($hasDefinedTerm) {
+    public function setHasDefinedTerm($hasDefinedTerm): static {
         $this->properties['hasDefinedTerm'] = $hasDefinedTerm;
 
         return $this;

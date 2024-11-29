@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class TableSchema extends WebPageElementSchema
 {
-    public static function factory()
+    public static function factory(): TableSchema
     {
         return new TableSchema('https://schema.org/', 'Table');
     }

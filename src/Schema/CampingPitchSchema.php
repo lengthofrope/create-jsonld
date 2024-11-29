@@ -37,7 +37,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class CampingPitchSchema extends AccommodationSchema
 {
-    public static function factory()
+    public static function factory(): CampingPitchSchema
     {
         return new CampingPitchSchema('https://schema.org/', 'CampingPitch');
     }

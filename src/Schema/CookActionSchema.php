@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class CookActionSchema extends CreateActionSchema
 {
-    public static function factory()
+    public static function factory(): CookActionSchema
     {
         return new CookActionSchema('https://schema.org/', 'CookAction');
     }
@@ -42,8 +42,9 @@ class CookActionSchema extends CreateActionSchema
      * A sub property of location. The specific food establishment where the action occurred.
      *
      * @param $foodEstablishment |
+     * @return static
      **/
-    public function setFoodEstablishment($foodEstablishment) {
+    public function setFoodEstablishment($foodEstablishment): static {
         $this->properties['foodEstablishment'] = $foodEstablishment;
 
         return $this;
@@ -60,8 +61,9 @@ class CookActionSchema extends CreateActionSchema
      * A sub property of location. The specific food event where the action occurred.
      *
      * @param $foodEvent 
+     * @return static
      **/
-    public function setFoodEvent($foodEvent) {
+    public function setFoodEvent($foodEvent): static {
         $this->properties['foodEvent'] = $foodEvent;
 
         return $this;
@@ -78,8 +80,9 @@ class CookActionSchema extends CreateActionSchema
      * A sub property of instrument. The recipe/instructions used to perform the action.
      *
      * @param $recipe 
+     * @return static
      **/
-    public function setRecipe($recipe) {
+    public function setRecipe($recipe): static {
         $this->properties['recipe'] = $recipe;
 
         return $this;

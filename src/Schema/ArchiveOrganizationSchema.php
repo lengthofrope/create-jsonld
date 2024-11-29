@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ArchiveOrganizationSchema extends LocalBusinessSchema
 {
-    public static function factory()
+    public static function factory(): ArchiveOrganizationSchema
     {
         return new ArchiveOrganizationSchema('https://schema.org/', 'ArchiveOrganization');
     }

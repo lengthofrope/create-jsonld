@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class SolveMathActionSchema extends ActionSchema
 {
-    public static function factory()
+    public static function factory(): SolveMathActionSchema
     {
         return new SolveMathActionSchema('https://schema.org/', 'SolveMathAction');
     }
@@ -42,8 +42,9 @@ class SolveMathActionSchema extends ActionSchema
      * For questions that are part of learning resources (e.g. Quiz), eduQuestionType indicates the format of question being given. Example: "Multiple choice", "Open ended", "Flashcard".
      *
      * @param $eduQuestionType 
+     * @return static
      **/
-    public function setEduQuestionType($eduQuestionType) {
+    public function setEduQuestionType($eduQuestionType): static {
         $this->properties['eduQuestionType'] = $eduQuestionType;
 
         return $this;

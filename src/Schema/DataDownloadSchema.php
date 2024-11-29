@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DataDownloadSchema extends MediaObjectSchema
 {
-    public static function factory()
+    public static function factory(): DataDownloadSchema
     {
         return new DataDownloadSchema('https://schema.org/', 'DataDownload');
     }
@@ -42,8 +42,9 @@ class DataDownloadSchema extends MediaObjectSchema
      * A subproperty of [[measurementTechnique]] that can be used for specifying specific methods, in particular via [[MeasurementMethodEnum]].
      *
      * @param $measurementMethod |||
+     * @return static
      **/
-    public function setMeasurementMethod($measurementMethod) {
+    public function setMeasurementMethod($measurementMethod): static {
         $this->properties['measurementMethod'] = $measurementMethod;
 
         return $this;
@@ -66,8 +67,9 @@ For example, if [[variableMeasured]] is: molecule concentration, [[measurementTe
 If there are several [[variableMeasured]] properties recorded for some given data object, use a [[PropertyValue]] for each [[variableMeasured]] and attach the corresponding [[measurementTechnique]]. The value can also be from an enumeration, organized as a [[MeasurementMetholdEnumeration]].
      *
      * @param $measurementTechnique |||
+     * @return static
      **/
-    public function setMeasurementTechnique($measurementTechnique) {
+    public function setMeasurementTechnique($measurementTechnique): static {
         $this->properties['measurementTechnique'] = $measurementTechnique;
 
         return $this;

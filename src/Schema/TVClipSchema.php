@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class TVClipSchema extends ClipSchema
 {
-    public static function factory()
+    public static function factory(): TVClipSchema
     {
         return new TVClipSchema('https://schema.org/', 'TVClip');
     }
@@ -42,8 +42,9 @@ class TVClipSchema extends ClipSchema
      * The TV series to which this episode or season belongs.
      *
      * @param $partOfTVSeries 
+     * @return static
      **/
-    public function setPartOfTVSeries($partOfTVSeries) {
+    public function setPartOfTVSeries($partOfTVSeries): static {
         $this->properties['partOfTVSeries'] = $partOfTVSeries;
 
         return $this;

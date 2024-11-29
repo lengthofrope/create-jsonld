@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class AppendActionSchema extends InsertActionSchema
 {
-    public static function factory()
+    public static function factory(): AppendActionSchema
     {
         return new AppendActionSchema('https://schema.org/', 'AppendAction');
     }

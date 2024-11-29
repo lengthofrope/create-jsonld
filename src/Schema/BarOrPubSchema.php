@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class BarOrPubSchema extends FoodEstablishmentSchema
 {
-    public static function factory()
+    public static function factory(): BarOrPubSchema
     {
         return new BarOrPubSchema('https://schema.org/', 'BarOrPub');
     }

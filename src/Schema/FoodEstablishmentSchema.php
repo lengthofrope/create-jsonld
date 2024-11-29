@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class FoodEstablishmentSchema extends LocalBusinessSchema
 {
-    public static function factory()
+    public static function factory(): FoodEstablishmentSchema
     {
         return new FoodEstablishmentSchema('https://schema.org/', 'FoodEstablishment');
     }
@@ -42,8 +42,9 @@ class FoodEstablishmentSchema extends LocalBusinessSchema
      * Either the actual menu as a structured representation, as text, or a URL of the menu.
      *
      * @param $menu ||
+     * @return static
      **/
-    public function setMenu($menu) {
+    public function setMenu($menu): static {
         $this->properties['menu'] = $menu;
 
         return $this;
@@ -60,8 +61,9 @@ class FoodEstablishmentSchema extends LocalBusinessSchema
      * Either the actual menu as a structured representation, as text, or a URL of the menu.
      *
      * @param $hasMenu ||
+     * @return static
      **/
-    public function setHasMenu($hasMenu) {
+    public function setHasMenu($hasMenu): static {
         $this->properties['hasMenu'] = $hasMenu;
 
         return $this;
@@ -78,8 +80,9 @@ class FoodEstablishmentSchema extends LocalBusinessSchema
      * An official rating for a lodging business or food establishment, e.g. from national associations or standards bodies. Use the author property to indicate the rating organization, e.g. as an Organization with name such as (e.g. HOTREC, DEHOGA, WHR, or Hotelstars).
      *
      * @param $starRating 
+     * @return static
      **/
-    public function setStarRating($starRating) {
+    public function setStarRating($starRating): static {
         $this->properties['starRating'] = $starRating;
 
         return $this;
@@ -96,8 +99,9 @@ class FoodEstablishmentSchema extends LocalBusinessSchema
      * The cuisine of the restaurant.
      *
      * @param $servesCuisine 
+     * @return static
      **/
-    public function setServesCuisine($servesCuisine) {
+    public function setServesCuisine($servesCuisine): static {
         $this->properties['servesCuisine'] = $servesCuisine;
 
         return $this;
@@ -114,8 +118,9 @@ class FoodEstablishmentSchema extends LocalBusinessSchema
      * Indicates whether a FoodEstablishment accepts reservations. Values can be Boolean, an URL at which reservations can be made or (for backwards compatibility) the strings ```Yes``` or ```No```.
      *
      * @param $acceptsReservations ||
+     * @return static
      **/
-    public function setAcceptsReservations($acceptsReservations) {
+    public function setAcceptsReservations($acceptsReservations): static {
         $this->properties['acceptsReservations'] = $acceptsReservations;
 
         return $this;

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class RestaurantSchema extends FoodEstablishmentSchema
 {
-    public static function factory()
+    public static function factory(): RestaurantSchema
     {
         return new RestaurantSchema('https://schema.org/', 'Restaurant');
     }

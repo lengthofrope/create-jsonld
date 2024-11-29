@@ -31,9 +31,9 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PhysicalExamSchema extends \LengthOfRope\JSONLD\Elements\Element
+class PhysicalExamSchema extends MedicalEnumerationSchema
 {
-    public static function factory()
+    public static function factory(): PhysicalExamSchema
     {
         return new PhysicalExamSchema('https://schema.org/', 'PhysicalExam');
     }

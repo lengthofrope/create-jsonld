@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class VeinSchema extends VesselSchema
 {
-    public static function factory()
+    public static function factory(): VeinSchema
     {
         return new VeinSchema('https://schema.org/', 'Vein');
     }
@@ -42,8 +42,9 @@ class VeinSchema extends VesselSchema
      * The anatomical or organ system drained by this vessel; generally refers to a specific part of an organ.
      *
      * @param $regionDrained |
+     * @return static
      **/
-    public function setRegionDrained($regionDrained) {
+    public function setRegionDrained($regionDrained): static {
         $this->properties['regionDrained'] = $regionDrained;
 
         return $this;
@@ -60,8 +61,9 @@ class VeinSchema extends VesselSchema
      * The vasculature that the vein drains into.
      *
      * @param $drainsTo 
+     * @return static
      **/
-    public function setDrainsTo($drainsTo) {
+    public function setDrainsTo($drainsTo): static {
         $this->properties['drainsTo'] = $drainsTo;
 
         return $this;
@@ -78,8 +80,9 @@ class VeinSchema extends VesselSchema
      * The anatomical or organ system that the vein flows into; a larger structure that the vein connects to.
      *
      * @param $tributary 
+     * @return static
      **/
-    public function setTributary($tributary) {
+    public function setTributary($tributary): static {
         $this->properties['tributary'] = $tributary;
 
         return $this;

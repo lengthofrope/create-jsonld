@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class GuideSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): GuideSchema
     {
         return new GuideSchema('https://schema.org/', 'Guide');
     }
@@ -42,8 +42,9 @@ class GuideSchema extends CreativeWorkSchema
      * This Review or Rating is relevant to this part or facet of the itemReviewed.
      *
      * @param $reviewAspect 
+     * @return static
      **/
-    public function setReviewAspect($reviewAspect) {
+    public function setReviewAspect($reviewAspect): static {
         $this->properties['reviewAspect'] = $reviewAspect;
 
         return $this;

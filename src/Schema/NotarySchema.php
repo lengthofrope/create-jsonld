@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class NotarySchema extends LegalServiceSchema
 {
-    public static function factory()
+    public static function factory(): NotarySchema
     {
         return new NotarySchema('https://schema.org/', 'Notary');
     }

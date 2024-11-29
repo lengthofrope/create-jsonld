@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DrugCostCategorySchema extends MedicalEnumerationSchema
 {
-    public static function factory()
+    public static function factory(): DrugCostCategorySchema
     {
         return new DrugCostCategorySchema('https://schema.org/', 'DrugCostCategory');
     }

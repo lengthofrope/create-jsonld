@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class IgnoreActionSchema extends AssessActionSchema
 {
-    public static function factory()
+    public static function factory(): IgnoreActionSchema
     {
         return new IgnoreActionSchema('https://schema.org/', 'IgnoreAction');
     }

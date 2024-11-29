@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class TrainReservationSchema extends ReservationSchema
 {
-    public static function factory()
+    public static function factory(): TrainReservationSchema
     {
         return new TrainReservationSchema('https://schema.org/', 'TrainReservation');
     }

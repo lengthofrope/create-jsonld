@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class AchieveActionSchema extends ActionSchema
 {
-    public static function factory()
+    public static function factory(): AchieveActionSchema
     {
         return new AchieveActionSchema('https://schema.org/', 'AchieveAction');
     }

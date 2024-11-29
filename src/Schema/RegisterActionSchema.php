@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class RegisterActionSchema extends InteractActionSchema
 {
-    public static function factory()
+    public static function factory(): RegisterActionSchema
     {
         return new RegisterActionSchema('https://schema.org/', 'RegisterAction');
     }

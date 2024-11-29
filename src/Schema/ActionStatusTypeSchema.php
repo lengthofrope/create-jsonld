@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ActionStatusTypeSchema extends StatusEnumerationSchema
 {
-    public static function factory()
+    public static function factory(): ActionStatusTypeSchema
     {
         return new ActionStatusTypeSchema('https://schema.org/', 'ActionStatusType');
     }

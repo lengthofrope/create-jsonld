@@ -36,7 +36,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MediaReviewSchema extends ReviewSchema
 {
-    public static function factory()
+    public static function factory(): MediaReviewSchema
     {
         return new MediaReviewSchema('https://schema.org/', 'MediaReview');
     }
@@ -45,8 +45,9 @@ class MediaReviewSchema extends ReviewSchema
      * Link to the page containing an original version of the content, or directly to an online copy of the original [[MediaObject]] content, e.g. video file.
      *
      * @param $originalMediaLink ||
+     * @return static
      **/
-    public function setOriginalMediaLink($originalMediaLink) {
+    public function setOriginalMediaLink($originalMediaLink): static {
         $this->properties['originalMediaLink'] = $originalMediaLink;
 
         return $this;
@@ -63,8 +64,9 @@ class MediaReviewSchema extends ReviewSchema
      * Describes, in a [[MediaReview]] when dealing with [[DecontextualizedContent]], background information that can contribute to better interpretation of the [[MediaObject]].
      *
      * @param $originalMediaContextDescription 
+     * @return static
      **/
-    public function setOriginalMediaContextDescription($originalMediaContextDescription) {
+    public function setOriginalMediaContextDescription($originalMediaContextDescription): static {
         $this->properties['originalMediaContextDescription'] = $originalMediaContextDescription;
 
         return $this;
@@ -81,8 +83,9 @@ class MediaReviewSchema extends ReviewSchema
      * Indicates a MediaManipulationRatingEnumeration classification of a media object (in the context of how it was published or shared).
      *
      * @param $mediaAuthenticityCategory 
+     * @return static
      **/
-    public function setMediaAuthenticityCategory($mediaAuthenticityCategory) {
+    public function setMediaAuthenticityCategory($mediaAuthenticityCategory): static {
         $this->properties['mediaAuthenticityCategory'] = $mediaAuthenticityCategory;
 
         return $this;

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class EnergyConsumptionDetailsSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): EnergyConsumptionDetailsSchema
     {
         return new EnergyConsumptionDetailsSchema('https://schema.org/', 'EnergyConsumptionDetails');
     }
@@ -42,8 +42,9 @@ class EnergyConsumptionDetailsSchema extends IntangibleSchema
      * Specifies the least energy efficient class on the regulated EU energy consumption scale for the product category a product belongs to. For example, energy consumption for televisions placed on the market after January 1, 2020 is scaled from D to A+++.
      *
      * @param $energyEfficiencyScaleMin 
+     * @return static
      **/
-    public function setEnergyEfficiencyScaleMin($energyEfficiencyScaleMin) {
+    public function setEnergyEfficiencyScaleMin($energyEfficiencyScaleMin): static {
         $this->properties['energyEfficiencyScaleMin'] = $energyEfficiencyScaleMin;
 
         return $this;
@@ -60,8 +61,9 @@ class EnergyConsumptionDetailsSchema extends IntangibleSchema
      * Defines the energy efficiency Category (which could be either a rating out of range of values or a yes/no certification) for a product according to an international energy efficiency standard.
      *
      * @param $hasEnergyEfficiencyCategory 
+     * @return static
      **/
-    public function setHasEnergyEfficiencyCategory($hasEnergyEfficiencyCategory) {
+    public function setHasEnergyEfficiencyCategory($hasEnergyEfficiencyCategory): static {
         $this->properties['hasEnergyEfficiencyCategory'] = $hasEnergyEfficiencyCategory;
 
         return $this;
@@ -78,8 +80,9 @@ class EnergyConsumptionDetailsSchema extends IntangibleSchema
      * Specifies the most energy efficient class on the regulated EU energy consumption scale for the product category a product belongs to. For example, energy consumption for televisions placed on the market after January 1, 2020 is scaled from D to A+++.
      *
      * @param $energyEfficiencyScaleMax 
+     * @return static
      **/
-    public function setEnergyEfficiencyScaleMax($energyEfficiencyScaleMax) {
+    public function setEnergyEfficiencyScaleMax($energyEfficiencyScaleMax): static {
         $this->properties['energyEfficiencyScaleMax'] = $energyEfficiencyScaleMax;
 
         return $this;

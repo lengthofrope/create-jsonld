@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DeliveryEventSchema extends EventSchema
 {
-    public static function factory()
+    public static function factory(): DeliveryEventSchema
     {
         return new DeliveryEventSchema('https://schema.org/', 'DeliveryEvent');
     }
@@ -42,8 +42,9 @@ class DeliveryEventSchema extends EventSchema
      * After this date, the item will no longer be available for pickup.
      *
      * @param $availableThrough 
+     * @return static
      **/
-    public function setAvailableThrough($availableThrough) {
+    public function setAvailableThrough($availableThrough): static {
         $this->properties['availableThrough'] = $availableThrough;
 
         return $this;
@@ -60,8 +61,9 @@ class DeliveryEventSchema extends EventSchema
      * When the item is available for pickup from the store, locker, etc.
      *
      * @param $availableFrom 
+     * @return static
      **/
-    public function setAvailableFrom($availableFrom) {
+    public function setAvailableFrom($availableFrom): static {
         $this->properties['availableFrom'] = $availableFrom;
 
         return $this;
@@ -78,8 +80,9 @@ class DeliveryEventSchema extends EventSchema
      * Method used for delivery or shipping.
      *
      * @param $hasDeliveryMethod 
+     * @return static
      **/
-    public function setHasDeliveryMethod($hasDeliveryMethod) {
+    public function setHasDeliveryMethod($hasDeliveryMethod): static {
         $this->properties['hasDeliveryMethod'] = $hasDeliveryMethod;
 
         return $this;
@@ -96,8 +99,9 @@ class DeliveryEventSchema extends EventSchema
      * Password, PIN, or access code needed for delivery (e.g. from a locker).
      *
      * @param $accessCode 
+     * @return static
      **/
-    public function setAccessCode($accessCode) {
+    public function setAccessCode($accessCode): static {
         $this->properties['accessCode'] = $accessCode;
 
         return $this;

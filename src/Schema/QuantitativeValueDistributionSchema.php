@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class QuantitativeValueDistributionSchema extends StructuredValueSchema
 {
-    public static function factory()
+    public static function factory(): QuantitativeValueDistributionSchema
     {
         return new QuantitativeValueDistributionSchema('https://schema.org/', 'QuantitativeValueDistribution');
     }
@@ -42,8 +42,9 @@ class QuantitativeValueDistributionSchema extends StructuredValueSchema
      * The 90th percentile value.
      *
      * @param $percentile90 
+     * @return static
      **/
-    public function setPercentile90($percentile90) {
+    public function setPercentile90($percentile90): static {
         $this->properties['percentile90'] = $percentile90;
 
         return $this;
@@ -60,8 +61,9 @@ class QuantitativeValueDistributionSchema extends StructuredValueSchema
      * The 10th percentile value.
      *
      * @param $percentile10 
+     * @return static
      **/
-    public function setPercentile10($percentile10) {
+    public function setPercentile10($percentile10): static {
         $this->properties['percentile10'] = $percentile10;
 
         return $this;
@@ -78,8 +80,9 @@ class QuantitativeValueDistributionSchema extends StructuredValueSchema
      * The median value.
      *
      * @param $median 
+     * @return static
      **/
-    public function setMedian($median) {
+    public function setMedian($median): static {
         $this->properties['median'] = $median;
 
         return $this;
@@ -96,8 +99,9 @@ class QuantitativeValueDistributionSchema extends StructuredValueSchema
      * The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
      *
      * @param $duration 
+     * @return static
      **/
-    public function setDuration($duration) {
+    public function setDuration($duration): static {
         $this->properties['duration'] = $duration;
 
         return $this;
@@ -114,8 +118,9 @@ class QuantitativeValueDistributionSchema extends StructuredValueSchema
      * The 75th percentile value.
      *
      * @param $percentile75 
+     * @return static
      **/
-    public function setPercentile75($percentile75) {
+    public function setPercentile75($percentile75): static {
         $this->properties['percentile75'] = $percentile75;
 
         return $this;
@@ -132,8 +137,9 @@ class QuantitativeValueDistributionSchema extends StructuredValueSchema
      * The 25th percentile value.
      *
      * @param $percentile25 
+     * @return static
      **/
-    public function setPercentile25($percentile25) {
+    public function setPercentile25($percentile25): static {
         $this->properties['percentile25'] = $percentile25;
 
         return $this;

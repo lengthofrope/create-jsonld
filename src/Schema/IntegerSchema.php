@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class IntegerSchema extends NumberSchema
 {
-    public static function factory()
+    public static function factory(): IntegerSchema
     {
         return new IntegerSchema('https://schema.org/', 'Integer');
     }

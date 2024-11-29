@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ReturnLabelSourceEnumerationSchema extends EnumerationSchema
 {
-    public static function factory()
+    public static function factory(): ReturnLabelSourceEnumerationSchema
     {
         return new ReturnLabelSourceEnumerationSchema('https://schema.org/', 'ReturnLabelSourceEnumeration');
     }

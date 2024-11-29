@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class LendActionSchema extends TransferActionSchema
 {
-    public static function factory()
+    public static function factory(): LendActionSchema
     {
         return new LendActionSchema('https://schema.org/', 'LendAction');
     }
@@ -42,8 +42,9 @@ class LendActionSchema extends TransferActionSchema
      * A sub property of participant. The person that borrows the object being lent.
      *
      * @param $borrower 
+     * @return static
      **/
-    public function setBorrower($borrower) {
+    public function setBorrower($borrower): static {
         $this->properties['borrower'] = $borrower;
 
         return $this;

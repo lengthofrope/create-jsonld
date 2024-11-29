@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ScholarlyArticleSchema extends ArticleSchema
 {
-    public static function factory()
+    public static function factory(): ScholarlyArticleSchema
     {
         return new ScholarlyArticleSchema('https://schema.org/', 'ScholarlyArticle');
     }

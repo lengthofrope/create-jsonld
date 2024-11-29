@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class AuthorizeActionSchema extends AllocateActionSchema
 {
-    public static function factory()
+    public static function factory(): AuthorizeActionSchema
     {
         return new AuthorizeActionSchema('https://schema.org/', 'AuthorizeAction');
     }
@@ -42,8 +42,9 @@ class AuthorizeActionSchema extends AllocateActionSchema
      * A sub property of participant. The participant who is at the receiving end of the action.
      *
      * @param $recipient |||
+     * @return static
      **/
-    public function setRecipient($recipient) {
+    public function setRecipient($recipient): static {
         $this->properties['recipient'] = $recipient;
 
         return $this;

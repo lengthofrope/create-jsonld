@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class TaxiReservationSchema extends ReservationSchema
 {
-    public static function factory()
+    public static function factory(): TaxiReservationSchema
     {
         return new TaxiReservationSchema('https://schema.org/', 'TaxiReservation');
     }
@@ -42,8 +42,9 @@ class TaxiReservationSchema extends ReservationSchema
      * Number of people the reservation should accommodate.
      *
      * @param $partySize |
+     * @return static
      **/
-    public function setPartySize($partySize) {
+    public function setPartySize($partySize): static {
         $this->properties['partySize'] = $partySize;
 
         return $this;
@@ -60,8 +61,9 @@ class TaxiReservationSchema extends ReservationSchema
      * When a taxi will pick up a passenger or a rental car can be picked up.
      *
      * @param $pickupTime 
+     * @return static
      **/
-    public function setPickupTime($pickupTime) {
+    public function setPickupTime($pickupTime): static {
         $this->properties['pickupTime'] = $pickupTime;
 
         return $this;
@@ -78,8 +80,9 @@ class TaxiReservationSchema extends ReservationSchema
      * Where a taxi will pick up a passenger or a rental car can be picked up.
      *
      * @param $pickupLocation 
+     * @return static
      **/
-    public function setPickupLocation($pickupLocation) {
+    public function setPickupLocation($pickupLocation): static {
         $this->properties['pickupLocation'] = $pickupLocation;
 
         return $this;

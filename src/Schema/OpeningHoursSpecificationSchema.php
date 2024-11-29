@@ -35,7 +35,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class OpeningHoursSpecificationSchema extends StructuredValueSchema
 {
-    public static function factory()
+    public static function factory(): OpeningHoursSpecificationSchema
     {
         return new OpeningHoursSpecificationSchema('https://schema.org/', 'OpeningHoursSpecification');
     }
@@ -44,8 +44,9 @@ class OpeningHoursSpecificationSchema extends StructuredValueSchema
      * The day of the week for which these opening hours are valid.
      *
      * @param $dayOfWeek 
+     * @return static
      **/
-    public function setDayOfWeek($dayOfWeek) {
+    public function setDayOfWeek($dayOfWeek): static {
         $this->properties['dayOfWeek'] = $dayOfWeek;
 
         return $this;
@@ -62,8 +63,9 @@ class OpeningHoursSpecificationSchema extends StructuredValueSchema
      * The closing hour of the place or service on the given day(s) of the week.
      *
      * @param $closes 
+     * @return static
      **/
-    public function setCloses($closes) {
+    public function setCloses($closes): static {
         $this->properties['closes'] = $closes;
 
         return $this;
@@ -80,8 +82,9 @@ class OpeningHoursSpecificationSchema extends StructuredValueSchema
      * The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours.
      *
      * @param $validThrough |
+     * @return static
      **/
-    public function setValidThrough($validThrough) {
+    public function setValidThrough($validThrough): static {
         $this->properties['validThrough'] = $validThrough;
 
         return $this;
@@ -98,8 +101,9 @@ class OpeningHoursSpecificationSchema extends StructuredValueSchema
      * The opening hour of the place or service on the given day(s) of the week.
      *
      * @param $opens 
+     * @return static
      **/
-    public function setOpens($opens) {
+    public function setOpens($opens): static {
         $this->properties['opens'] = $opens;
 
         return $this;
@@ -116,8 +120,9 @@ class OpeningHoursSpecificationSchema extends StructuredValueSchema
      * The date when the item becomes valid.
      *
      * @param $validFrom |
+     * @return static
      **/
-    public function setValidFrom($validFrom) {
+    public function setValidFrom($validFrom): static {
         $this->properties['validFrom'] = $validFrom;
 
         return $this;

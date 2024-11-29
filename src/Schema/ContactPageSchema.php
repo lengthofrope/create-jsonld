@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ContactPageSchema extends WebPageSchema
 {
-    public static function factory()
+    public static function factory(): ContactPageSchema
     {
         return new ContactPageSchema('https://schema.org/', 'ContactPage');
     }

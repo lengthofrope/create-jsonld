@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MedicalIntangibleSchema extends MedicalEntitySchema
 {
-    public static function factory()
+    public static function factory(): MedicalIntangibleSchema
     {
         return new MedicalIntangibleSchema('https://schema.org/', 'MedicalIntangible');
     }

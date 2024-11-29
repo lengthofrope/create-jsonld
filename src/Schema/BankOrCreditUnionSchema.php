@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class BankOrCreditUnionSchema extends FinancialServiceSchema
 {
-    public static function factory()
+    public static function factory(): BankOrCreditUnionSchema
     {
         return new BankOrCreditUnionSchema('https://schema.org/', 'BankOrCreditUnion');
     }

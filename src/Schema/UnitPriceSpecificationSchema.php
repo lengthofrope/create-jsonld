@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class UnitPriceSpecificationSchema extends PriceSpecificationSchema
 {
-    public static function factory()
+    public static function factory(): UnitPriceSpecificationSchema
     {
         return new UnitPriceSpecificationSchema('https://schema.org/', 'UnitPriceSpecification');
     }
@@ -42,8 +42,9 @@ class UnitPriceSpecificationSchema extends PriceSpecificationSchema
      * Identifies a price component (for example, a line item on an invoice), part of the total price for an offer.
      *
      * @param $priceComponentType 
+     * @return static
      **/
-    public function setPriceComponentType($priceComponentType) {
+    public function setPriceComponentType($priceComponentType): static {
         $this->properties['priceComponentType'] = $priceComponentType;
 
         return $this;
@@ -60,8 +61,9 @@ class UnitPriceSpecificationSchema extends PriceSpecificationSchema
      * Defines the type of a price specified for an offered product, for example a list price, a (temporary) sale price or a manufacturer suggested retail price. If multiple prices are specified for an offer the [[priceType]] property can be used to identify the type of each such specified price. The value of priceType can be specified as a value from enumeration PriceTypeEnumeration or as a free form text string for price types that are not already predefined in PriceTypeEnumeration.
      *
      * @param $priceType |
+     * @return static
      **/
-    public function setPriceType($priceType) {
+    public function setPriceType($priceType): static {
         $this->properties['priceType'] = $priceType;
 
         return $this;
@@ -78,8 +80,9 @@ class UnitPriceSpecificationSchema extends PriceSpecificationSchema
      * The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes than the UN/CEFACT Common Code may be used with a prefix followed by a colon.
      *
      * @param $unitCode |
+     * @return static
      **/
-    public function setUnitCode($unitCode) {
+    public function setUnitCode($unitCode): static {
         $this->properties['unitCode'] = $unitCode;
 
         return $this;
@@ -96,8 +99,9 @@ class UnitPriceSpecificationSchema extends PriceSpecificationSchema
      * The reference quantity for which a certain price applies, e.g. 1 EUR per 4 kWh of electricity. This property is a replacement for unitOfMeasurement for the advanced cases where the price does not relate to a standard unit.
      *
      * @param $referenceQuantity 
+     * @return static
      **/
-    public function setReferenceQuantity($referenceQuantity) {
+    public function setReferenceQuantity($referenceQuantity): static {
         $this->properties['referenceQuantity'] = $referenceQuantity;
 
         return $this;
@@ -114,8 +118,9 @@ class UnitPriceSpecificationSchema extends PriceSpecificationSchema
      * This property specifies the minimal quantity and rounding increment that will be the basis for the billing. The unit of measurement is specified by the unitCode property.
      *
      * @param $billingIncrement 
+     * @return static
      **/
-    public function setBillingIncrement($billingIncrement) {
+    public function setBillingIncrement($billingIncrement): static {
         $this->properties['billingIncrement'] = $billingIncrement;
 
         return $this;
@@ -132,8 +137,9 @@ class UnitPriceSpecificationSchema extends PriceSpecificationSchema
      * Specifies for how long this price (or price component) will be billed. Can be used, for example, to model the contractual duration of a subscription or payment plan. Type can be either a Duration or a Number (in which case the unit of measurement, for example month, is specified by the unitCode property).
      *
      * @param $billingDuration ||
+     * @return static
      **/
-    public function setBillingDuration($billingDuration) {
+    public function setBillingDuration($billingDuration): static {
         $this->properties['billingDuration'] = $billingDuration;
 
         return $this;
@@ -150,8 +156,9 @@ class UnitPriceSpecificationSchema extends PriceSpecificationSchema
      * Specifies after how much time this price (or price component) becomes valid and billing starts. Can be used, for example, to model a price increase after the first year of a subscription. The unit of measurement is specified by the unitCode property.
      *
      * @param $billingStart 
+     * @return static
      **/
-    public function setBillingStart($billingStart) {
+    public function setBillingStart($billingStart): static {
         $this->properties['billingStart'] = $billingStart;
 
         return $this;
@@ -169,8 +176,9 @@ class UnitPriceSpecificationSchema extends PriceSpecificationSchema
 <a href='unitCode'>unitCode</a>.
      *
      * @param $unitText 
+     * @return static
      **/
-    public function setUnitText($unitText) {
+    public function setUnitText($unitText): static {
         $this->properties['unitText'] = $unitText;
 
         return $this;

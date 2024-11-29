@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DiagnosticProcedureSchema extends MedicalProcedureSchema
 {
-    public static function factory()
+    public static function factory(): DiagnosticProcedureSchema
     {
         return new DiagnosticProcedureSchema('https://schema.org/', 'DiagnosticProcedure');
     }

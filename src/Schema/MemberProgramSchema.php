@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MemberProgramSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): MemberProgramSchema
     {
         return new MemberProgramSchema('https://schema.org/', 'MemberProgram');
     }
@@ -42,8 +42,9 @@ class MemberProgramSchema extends IntangibleSchema
      * The tiers of a member program.
      *
      * @param $hasTiers 
+     * @return static
      **/
-    public function setHasTiers($hasTiers) {
+    public function setHasTiers($hasTiers): static {
         $this->properties['hasTiers'] = $hasTiers;
 
         return $this;
@@ -60,8 +61,9 @@ class MemberProgramSchema extends IntangibleSchema
      * The Organization (airline, travelers' club, retailer, etc.) the membership is made with or which offers the  MemberProgram.
      *
      * @param $hostingOrganization 
+     * @return static
      **/
-    public function setHostingOrganization($hostingOrganization) {
+    public function setHostingOrganization($hostingOrganization): static {
         $this->properties['hostingOrganization'] = $hostingOrganization;
 
         return $this;

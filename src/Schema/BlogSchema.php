@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class BlogSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): BlogSchema
     {
         return new BlogSchema('https://schema.org/', 'Blog');
     }
@@ -42,8 +42,9 @@ class BlogSchema extends CreativeWorkSchema
      * A posting that is part of this blog.
      *
      * @param $blogPost 
+     * @return static
      **/
-    public function setBlogPost($blogPost) {
+    public function setBlogPost($blogPost): static {
         $this->properties['blogPost'] = $blogPost;
 
         return $this;
@@ -60,8 +61,9 @@ class BlogSchema extends CreativeWorkSchema
      * The International Standard Serial Number (ISSN) that identifies this serial publication. You can repeat this property to identify different formats of, or the linking ISSN (ISSN-L) for, this serial publication.
      *
      * @param $issn 
+     * @return static
      **/
-    public function setIssn($issn) {
+    public function setIssn($issn): static {
         $this->properties['issn'] = $issn;
 
         return $this;
@@ -78,8 +80,9 @@ class BlogSchema extends CreativeWorkSchema
      * Indicates a post that is part of a [[Blog]]. Note that historically, what we term a "Blog" was once known as a "weblog", and that what we term a "BlogPosting" is now often colloquially referred to as a "blog".
      *
      * @param $blogPosts 
+     * @return static
      **/
-    public function setBlogPosts($blogPosts) {
+    public function setBlogPosts($blogPosts): static {
         $this->properties['blogPosts'] = $blogPosts;
 
         return $this;

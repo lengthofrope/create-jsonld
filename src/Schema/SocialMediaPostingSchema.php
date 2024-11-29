@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class SocialMediaPostingSchema extends ArticleSchema
 {
-    public static function factory()
+    public static function factory(): SocialMediaPostingSchema
     {
         return new SocialMediaPostingSchema('https://schema.org/', 'SocialMediaPosting');
     }
@@ -42,8 +42,9 @@ class SocialMediaPostingSchema extends ArticleSchema
      * A CreativeWork such as an image, video, or audio clip shared as part of this posting.
      *
      * @param $sharedContent 
+     * @return static
      **/
-    public function setSharedContent($sharedContent) {
+    public function setSharedContent($sharedContent): static {
         $this->properties['sharedContent'] = $sharedContent;
 
         return $this;

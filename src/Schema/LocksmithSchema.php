@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class LocksmithSchema extends HomeAndConstructionBusinessSchema
 {
-    public static function factory()
+    public static function factory(): LocksmithSchema
     {
         return new LocksmithSchema('https://schema.org/', 'Locksmith');
     }

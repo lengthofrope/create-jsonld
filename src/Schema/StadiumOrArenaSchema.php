@@ -31,9 +31,9 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class StadiumOrArenaSchema extends \LengthOfRope\JSONLD\Elements\Element
+class StadiumOrArenaSchema extends CivicStructureSchema
 {
-    public static function factory()
+    public static function factory(): StadiumOrArenaSchema
     {
         return new StadiumOrArenaSchema('https://schema.org/', 'StadiumOrArena');
     }

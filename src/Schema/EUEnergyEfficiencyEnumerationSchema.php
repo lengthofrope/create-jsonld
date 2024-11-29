@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class EUEnergyEfficiencyEnumerationSchema extends EnergyEfficiencyEnumerationSchema
 {
-    public static function factory()
+    public static function factory(): EUEnergyEfficiencyEnumerationSchema
     {
         return new EUEnergyEfficiencyEnumerationSchema('https://schema.org/', 'EUEnergyEfficiencyEnumeration');
     }

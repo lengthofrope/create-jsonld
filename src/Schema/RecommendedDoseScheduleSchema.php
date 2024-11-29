@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class RecommendedDoseScheduleSchema extends DoseScheduleSchema
 {
-    public static function factory()
+    public static function factory(): RecommendedDoseScheduleSchema
     {
         return new RecommendedDoseScheduleSchema('https://schema.org/', 'RecommendedDoseSchedule');
     }

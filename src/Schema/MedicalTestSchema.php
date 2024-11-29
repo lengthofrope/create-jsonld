@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MedicalTestSchema extends MedicalEntitySchema
 {
-    public static function factory()
+    public static function factory(): MedicalTestSchema
     {
         return new MedicalTestSchema('https://schema.org/', 'MedicalTest');
     }
@@ -42,8 +42,9 @@ class MedicalTestSchema extends MedicalEntitySchema
      * A condition the test is used to diagnose.
      *
      * @param $usedToDiagnose 
+     * @return static
      **/
-    public function setUsedToDiagnose($usedToDiagnose) {
+    public function setUsedToDiagnose($usedToDiagnose): static {
         $this->properties['usedToDiagnose'] = $usedToDiagnose;
 
         return $this;
@@ -60,8 +61,9 @@ class MedicalTestSchema extends MedicalEntitySchema
      * A sign detected by the test.
      *
      * @param $signDetected 
+     * @return static
      **/
-    public function setSignDetected($signDetected) {
+    public function setSignDetected($signDetected): static {
         $this->properties['signDetected'] = $signDetected;
 
         return $this;
@@ -78,8 +80,9 @@ class MedicalTestSchema extends MedicalEntitySchema
      * Drugs that affect the test's results.
      *
      * @param $affectedBy 
+     * @return static
      **/
-    public function setAffectedBy($affectedBy) {
+    public function setAffectedBy($affectedBy): static {
         $this->properties['affectedBy'] = $affectedBy;
 
         return $this;
@@ -96,8 +99,9 @@ class MedicalTestSchema extends MedicalEntitySchema
      * Device used to perform the test.
      *
      * @param $usesDevice 
+     * @return static
      **/
-    public function setUsesDevice($usesDevice) {
+    public function setUsesDevice($usesDevice): static {
         $this->properties['usesDevice'] = $usesDevice;
 
         return $this;
@@ -114,8 +118,9 @@ class MedicalTestSchema extends MedicalEntitySchema
      * Range of acceptable values for a typical patient, when applicable.
      *
      * @param $normalRange |
+     * @return static
      **/
-    public function setNormalRange($normalRange) {
+    public function setNormalRange($normalRange): static {
         $this->properties['normalRange'] = $normalRange;
 
         return $this;

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class WaterfallSchema extends BodyOfWaterSchema
 {
-    public static function factory()
+    public static function factory(): WaterfallSchema
     {
         return new WaterfallSchema('https://schema.org/', 'Waterfall');
     }

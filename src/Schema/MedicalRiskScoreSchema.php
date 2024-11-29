@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MedicalRiskScoreSchema extends MedicalRiskEstimatorSchema
 {
-    public static function factory()
+    public static function factory(): MedicalRiskScoreSchema
     {
         return new MedicalRiskScoreSchema('https://schema.org/', 'MedicalRiskScore');
     }
@@ -42,8 +42,9 @@ class MedicalRiskScoreSchema extends MedicalRiskEstimatorSchema
      * The algorithm or rules to follow to compute the score.
      *
      * @param $algorithm 
+     * @return static
      **/
-    public function setAlgorithm($algorithm) {
+    public function setAlgorithm($algorithm): static {
         $this->properties['algorithm'] = $algorithm;
 
         return $this;

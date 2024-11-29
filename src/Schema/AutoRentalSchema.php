@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class AutoRentalSchema extends AutomotiveBusinessSchema
 {
-    public static function factory()
+    public static function factory(): AutoRentalSchema
     {
         return new AutoRentalSchema('https://schema.org/', 'AutoRental');
     }

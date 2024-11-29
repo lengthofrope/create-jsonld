@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class EmailMessageSchema extends MessageSchema
 {
-    public static function factory()
+    public static function factory(): EmailMessageSchema
     {
         return new EmailMessageSchema('https://schema.org/', 'EmailMessage');
     }

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PhysicalActivityCategorySchema extends EnumerationSchema
 {
-    public static function factory()
+    public static function factory(): PhysicalActivityCategorySchema
     {
         return new PhysicalActivityCategorySchema('https://schema.org/', 'PhysicalActivityCategory');
     }

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PlaygroundSchema extends CivicStructureSchema
 {
-    public static function factory()
+    public static function factory(): PlaygroundSchema
     {
         return new PlaygroundSchema('https://schema.org/', 'Playground');
     }

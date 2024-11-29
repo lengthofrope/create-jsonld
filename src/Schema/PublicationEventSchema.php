@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PublicationEventSchema extends EventSchema
 {
-    public static function factory()
+    public static function factory(): PublicationEventSchema
     {
         return new PublicationEventSchema('https://schema.org/', 'PublicationEvent');
     }
@@ -42,8 +42,9 @@ class PublicationEventSchema extends EventSchema
      * An agent associated with the publication event.
      *
      * @param $publishedBy |
+     * @return static
      **/
-    public function setPublishedBy($publishedBy) {
+    public function setPublishedBy($publishedBy): static {
         $this->properties['publishedBy'] = $publishedBy;
 
         return $this;
@@ -60,8 +61,9 @@ class PublicationEventSchema extends EventSchema
      * A broadcast service associated with the publication event.
      *
      * @param $publishedOn 
+     * @return static
      **/
-    public function setPublishedOn($publishedOn) {
+    public function setPublishedOn($publishedOn): static {
         $this->properties['publishedOn'] = $publishedOn;
 
         return $this;
@@ -78,8 +80,9 @@ class PublicationEventSchema extends EventSchema
      * A flag to signal that the item, event, or place is accessible for free.
      *
      * @param $free 
+     * @return static
      **/
-    public function setFree($free) {
+    public function setFree($free): static {
         $this->properties['free'] = $free;
 
         return $this;

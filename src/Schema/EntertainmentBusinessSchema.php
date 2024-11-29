@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class EntertainmentBusinessSchema extends LocalBusinessSchema
 {
-    public static function factory()
+    public static function factory(): EntertainmentBusinessSchema
     {
         return new EntertainmentBusinessSchema('https://schema.org/', 'EntertainmentBusiness');
     }

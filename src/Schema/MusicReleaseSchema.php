@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MusicReleaseSchema extends MusicPlaylistSchema
 {
-    public static function factory()
+    public static function factory(): MusicReleaseSchema
     {
         return new MusicReleaseSchema('https://schema.org/', 'MusicRelease');
     }
@@ -42,8 +42,9 @@ class MusicReleaseSchema extends MusicPlaylistSchema
      * The album this is a release of.
      *
      * @param $releaseOf 
+     * @return static
      **/
-    public function setReleaseOf($releaseOf) {
+    public function setReleaseOf($releaseOf): static {
         $this->properties['releaseOf'] = $releaseOf;
 
         return $this;
@@ -60,8 +61,9 @@ class MusicReleaseSchema extends MusicPlaylistSchema
      * Format of this release (the type of recording media used, i.e. compact disc, digital media, LP, etc.).
      *
      * @param $musicReleaseFormat 
+     * @return static
      **/
-    public function setMusicReleaseFormat($musicReleaseFormat) {
+    public function setMusicReleaseFormat($musicReleaseFormat): static {
         $this->properties['musicReleaseFormat'] = $musicReleaseFormat;
 
         return $this;
@@ -78,8 +80,9 @@ class MusicReleaseSchema extends MusicPlaylistSchema
      * The label that issued the release.
      *
      * @param $recordLabel 
+     * @return static
      **/
-    public function setRecordLabel($recordLabel) {
+    public function setRecordLabel($recordLabel): static {
         $this->properties['recordLabel'] = $recordLabel;
 
         return $this;
@@ -96,8 +99,9 @@ class MusicReleaseSchema extends MusicPlaylistSchema
      * The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
      *
      * @param $duration 
+     * @return static
      **/
-    public function setDuration($duration) {
+    public function setDuration($duration): static {
         $this->properties['duration'] = $duration;
 
         return $this;
@@ -114,8 +118,9 @@ class MusicReleaseSchema extends MusicPlaylistSchema
      * The group the release is credited to if different than the byArtist. For example, Red and Blue is credited to "Stefani Germanotta Band", but by Lady Gaga.
      *
      * @param $creditedTo |
+     * @return static
      **/
-    public function setCreditedTo($creditedTo) {
+    public function setCreditedTo($creditedTo): static {
         $this->properties['creditedTo'] = $creditedTo;
 
         return $this;
@@ -132,8 +137,9 @@ class MusicReleaseSchema extends MusicPlaylistSchema
      * The catalog number for the release.
      *
      * @param $catalogNumber 
+     * @return static
      **/
-    public function setCatalogNumber($catalogNumber) {
+    public function setCatalogNumber($catalogNumber): static {
         $this->properties['catalogNumber'] = $catalogNumber;
 
         return $this;

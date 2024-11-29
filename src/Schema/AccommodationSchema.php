@@ -37,7 +37,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class AccommodationSchema extends PlaceSchema
 {
-    public static function factory()
+    public static function factory(): AccommodationSchema
     {
         return new AccommodationSchema('https://schema.org/', 'Accommodation');
     }
@@ -47,8 +47,9 @@ class AccommodationSchema extends PlaceSchema
 Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for square yard.
      *
      * @param $floorSize 
+     * @return static
      **/
-    public function setFloorSize($floorSize) {
+    public function setFloorSize($floorSize): static {
         $this->properties['floorSize'] = $floorSize;
 
         return $this;
@@ -65,8 +66,9 @@ Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for squa
      * Category of an [[Accommodation]], following real estate conventions, e.g. RESO (see [PropertySubType](https://ddwiki.reso.org/display/DDW17/PropertySubType+Field), and [PropertyType](https://ddwiki.reso.org/display/DDW17/PropertyType+Field) fields  for suggested values).
      *
      * @param $accommodationCategory 
+     * @return static
      **/
-    public function setAccommodationCategory($accommodationCategory) {
+    public function setAccommodationCategory($accommodationCategory): static {
         $this->properties['accommodationCategory'] = $accommodationCategory;
 
         return $this;
@@ -83,8 +85,9 @@ Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for squa
      * Indicates whether pets are allowed to enter the accommodation or lodging business. More detailed information can be put in a text value.
      *
      * @param $petsAllowed |
+     * @return static
      **/
-    public function setPetsAllowed($petsAllowed) {
+    public function setPetsAllowed($petsAllowed): static {
         $this->properties['petsAllowed'] = $petsAllowed;
 
         return $this;
@@ -102,8 +105,9 @@ Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for squa
 Typical unit code(s): C62 for person.
      *
      * @param $occupancy 
+     * @return static
      **/
-    public function setOccupancy($occupancy) {
+    public function setOccupancy($occupancy): static {
         $this->properties['occupancy'] = $occupancy;
 
         return $this;
@@ -120,8 +124,9 @@ Typical unit code(s): C62 for person.
      * The total integer number of bedrooms in a some [[Accommodation]], [[ApartmentComplex]] or [[FloorPlan]].
      *
      * @param $numberOfBedrooms |
+     * @return static
      **/
-    public function setNumberOfBedrooms($numberOfBedrooms) {
+    public function setNumberOfBedrooms($numberOfBedrooms): static {
         $this->properties['numberOfBedrooms'] = $numberOfBedrooms;
 
         return $this;
@@ -138,8 +143,9 @@ Typical unit code(s): C62 for person.
      * Length of the lease for some [[Accommodation]], either particular to some [[Offer]] or in some cases intrinsic to the property.
      *
      * @param $leaseLength |
+     * @return static
      **/
-    public function setLeaseLength($leaseLength) {
+    public function setLeaseLength($leaseLength): static {
         $this->properties['leaseLength'] = $leaseLength;
 
         return $this;
@@ -157,8 +163,9 @@ Typical unit code(s): C62 for person.
       If you want to indicate the quantity of a certain kind of bed, use an instance of BedDetails. For more detailed information, use the amenityFeature property.
      *
      * @param $bed ||
+     * @return static
      **/
-    public function setBed($bed) {
+    public function setBed($bed): static {
         $this->properties['bed'] = $bed;
 
         return $this;
@@ -175,8 +182,9 @@ Typical unit code(s): C62 for person.
      * Indications regarding the permitted usage of the accommodation.
      *
      * @param $permittedUsage 
+     * @return static
      **/
-    public function setPermittedUsage($permittedUsage) {
+    public function setPermittedUsage($permittedUsage): static {
         $this->properties['permittedUsage'] = $permittedUsage;
 
         return $this;
@@ -194,8 +202,9 @@ Typical unit code(s): C62 for person.
   systems [vary internationally](https://en.wikipedia.org/wiki/Storey#Consecutive_number_floor_designations), the local system should be used where possible.
      *
      * @param $floorLevel 
+     * @return static
      **/
-    public function setFloorLevel($floorLevel) {
+    public function setFloorLevel($floorLevel): static {
         $this->properties['floorLevel'] = $floorLevel;
 
         return $this;
@@ -212,8 +221,9 @@ Typical unit code(s): C62 for person.
      * The total integer number of bathrooms in some [[Accommodation]], following real estate conventions as [documented in RESO](https://ddwiki.reso.org/display/DDW17/BathroomsTotalInteger+Field): "The simple sum of the number of bathrooms. For example for a property with two Full Bathrooms and one Half Bathroom, the Bathrooms Total Integer will be 3.". See also [[numberOfRooms]].
      *
      * @param $numberOfBathroomsTotal 
+     * @return static
      **/
-    public function setNumberOfBathroomsTotal($numberOfBathroomsTotal) {
+    public function setNumberOfBathroomsTotal($numberOfBathroomsTotal): static {
         $this->properties['numberOfBathroomsTotal'] = $numberOfBathroomsTotal;
 
         return $this;
@@ -230,8 +240,9 @@ Typical unit code(s): C62 for person.
      * A floorplan of some [[Accommodation]].
      *
      * @param $accommodationFloorPlan 
+     * @return static
      **/
-    public function setAccommodationFloorPlan($accommodationFloorPlan) {
+    public function setAccommodationFloorPlan($accommodationFloorPlan): static {
         $this->properties['accommodationFloorPlan'] = $accommodationFloorPlan;
 
         return $this;
@@ -248,8 +259,9 @@ Typical unit code(s): C62 for person.
      * Number of full bathrooms - The total number of full and ¾ bathrooms in an [[Accommodation]]. This corresponds to the [BathroomsFull field in RESO](https://ddwiki.reso.org/display/DDW17/BathroomsFull+Field).
      *
      * @param $numberOfFullBathrooms 
+     * @return static
      **/
-    public function setNumberOfFullBathrooms($numberOfFullBathrooms) {
+    public function setNumberOfFullBathrooms($numberOfFullBathrooms): static {
         $this->properties['numberOfFullBathrooms'] = $numberOfFullBathrooms;
 
         return $this;
@@ -267,8 +279,9 @@ Typical unit code(s): C62 for person.
 Typical unit code(s): ROM for room or C62 for no unit. The type of room can be put in the unitText property of the QuantitativeValue.
      *
      * @param $numberOfRooms |
+     * @return static
      **/
-    public function setNumberOfRooms($numberOfRooms) {
+    public function setNumberOfRooms($numberOfRooms): static {
         $this->properties['numberOfRooms'] = $numberOfRooms;
 
         return $this;
@@ -285,8 +298,9 @@ Typical unit code(s): ROM for room or C62 for no unit. The type of room can be p
      * An amenity feature (e.g. a characteristic or service) of the Accommodation. This generic property does not make a statement about whether the feature is included in an offer for the main accommodation or available at extra costs.
      *
      * @param $amenityFeature 
+     * @return static
      **/
-    public function setAmenityFeature($amenityFeature) {
+    public function setAmenityFeature($amenityFeature): static {
         $this->properties['amenityFeature'] = $amenityFeature;
 
         return $this;
@@ -303,8 +317,9 @@ Typical unit code(s): ROM for room or C62 for no unit. The type of room can be p
      * A page providing information on how to book a tour of some [[Place]], such as an [[Accommodation]] or [[ApartmentComplex]] in a real estate setting, as well as other kinds of tours as appropriate.
      *
      * @param $tourBookingPage 
+     * @return static
      **/
-    public function setTourBookingPage($tourBookingPage) {
+    public function setTourBookingPage($tourBookingPage): static {
         $this->properties['tourBookingPage'] = $tourBookingPage;
 
         return $this;
@@ -321,8 +336,9 @@ Typical unit code(s): ROM for room or C62 for no unit. The type of room can be p
      * Number of partial bathrooms - The total number of half and ¼ bathrooms in an [[Accommodation]]. This corresponds to the [BathroomsPartial field in RESO](https://ddwiki.reso.org/display/DDW17/BathroomsPartial+Field). 
      *
      * @param $numberOfPartialBathrooms 
+     * @return static
      **/
-    public function setNumberOfPartialBathrooms($numberOfPartialBathrooms) {
+    public function setNumberOfPartialBathrooms($numberOfPartialBathrooms): static {
         $this->properties['numberOfPartialBathrooms'] = $numberOfPartialBathrooms;
 
         return $this;
@@ -339,8 +355,9 @@ Typical unit code(s): ROM for room or C62 for no unit. The type of room can be p
      * The year an [[Accommodation]] was constructed. This corresponds to the [YearBuilt field in RESO](https://ddwiki.reso.org/display/DDW17/YearBuilt+Field). 
      *
      * @param $yearBuilt 
+     * @return static
      **/
-    public function setYearBuilt($yearBuilt) {
+    public function setYearBuilt($yearBuilt): static {
         $this->properties['yearBuilt'] = $yearBuilt;
 
         return $this;

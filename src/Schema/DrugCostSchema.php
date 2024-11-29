@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DrugCostSchema extends MedicalEntitySchema
 {
-    public static function factory()
+    public static function factory(): DrugCostSchema
     {
         return new DrugCostSchema('https://schema.org/', 'DrugCost');
     }
@@ -42,8 +42,9 @@ class DrugCostSchema extends MedicalEntitySchema
      * The cost per unit of the drug.
      *
      * @param $costPerUnit ||
+     * @return static
      **/
-    public function setCostPerUnit($costPerUnit) {
+    public function setCostPerUnit($costPerUnit): static {
         $this->properties['costPerUnit'] = $costPerUnit;
 
         return $this;
@@ -60,8 +61,9 @@ class DrugCostSchema extends MedicalEntitySchema
      * Additional details to capture the origin of the cost data. For example, 'Medicare Part B'.
      *
      * @param $costOrigin 
+     * @return static
      **/
-    public function setCostOrigin($costOrigin) {
+    public function setCostOrigin($costOrigin): static {
         $this->properties['costOrigin'] = $costOrigin;
 
         return $this;
@@ -78,8 +80,9 @@ class DrugCostSchema extends MedicalEntitySchema
      * The category of cost, such as wholesale, retail, reimbursement cap, etc.
      *
      * @param $costCategory 
+     * @return static
      **/
-    public function setCostCategory($costCategory) {
+    public function setCostCategory($costCategory): static {
         $this->properties['costCategory'] = $costCategory;
 
         return $this;
@@ -96,8 +99,9 @@ class DrugCostSchema extends MedicalEntitySchema
      * The unit in which the drug is measured, e.g. '5 mg tablet'.
      *
      * @param $drugUnit 
+     * @return static
      **/
-    public function setDrugUnit($drugUnit) {
+    public function setDrugUnit($drugUnit): static {
         $this->properties['drugUnit'] = $drugUnit;
 
         return $this;
@@ -114,8 +118,9 @@ class DrugCostSchema extends MedicalEntitySchema
      * The currency (in 3-letter) of the drug cost. See: http://en.wikipedia.org/wiki/ISO_4217. 
      *
      * @param $costCurrency 
+     * @return static
      **/
-    public function setCostCurrency($costCurrency) {
+    public function setCostCurrency($costCurrency): static {
         $this->properties['costCurrency'] = $costCurrency;
 
         return $this;
@@ -132,8 +137,9 @@ class DrugCostSchema extends MedicalEntitySchema
      * The location in which the status applies.
      *
      * @param $applicableLocation 
+     * @return static
      **/
-    public function setApplicableLocation($applicableLocation) {
+    public function setApplicableLocation($applicableLocation): static {
         $this->properties['applicableLocation'] = $applicableLocation;
 
         return $this;

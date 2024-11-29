@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class RecommendationSchema extends ReviewSchema
 {
-    public static function factory()
+    public static function factory(): RecommendationSchema
     {
         return new RecommendationSchema('https://schema.org/', 'Recommendation');
     }
@@ -42,8 +42,9 @@ class RecommendationSchema extends ReviewSchema
      * A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
      *
      * @param $category ||||
+     * @return static
      **/
-    public function setCategory($category) {
+    public function setCategory($category): static {
         $this->properties['category'] = $category;
 
         return $this;

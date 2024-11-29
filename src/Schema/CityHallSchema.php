@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class CityHallSchema extends GovernmentBuildingSchema
 {
-    public static function factory()
+    public static function factory(): CityHallSchema
     {
         return new CityHallSchema('https://schema.org/', 'CityHall');
     }

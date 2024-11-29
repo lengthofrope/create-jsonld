@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MediaObjectSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): MediaObjectSchema
     {
         return new MediaObjectSchema('https://schema.org/', 'MediaObject');
     }
@@ -42,8 +42,9 @@ class MediaObjectSchema extends CreativeWorkSchema
      * A NewsArticle associated with the Media Object.
      *
      * @param $associatedArticle 
+     * @return static
      **/
-    public function setAssociatedArticle($associatedArticle) {
+    public function setAssociatedArticle($associatedArticle): static {
         $this->properties['associatedArticle'] = $associatedArticle;
 
         return $this;
@@ -60,8 +61,9 @@ class MediaObjectSchema extends CreativeWorkSchema
      * File size in (mega/kilo)bytes.
      *
      * @param $contentSize 
+     * @return static
      **/
-    public function setContentSize($contentSize) {
+    public function setContentSize($contentSize): static {
         $this->properties['contentSize'] = $contentSize;
 
         return $this;
@@ -79,8 +81,9 @@ class MediaObjectSchema extends CreativeWorkSchema
       
      *
      * @param $ineligibleRegion ||
+     * @return static
      **/
-    public function setIneligibleRegion($ineligibleRegion) {
+    public function setIneligibleRegion($ineligibleRegion): static {
         $this->properties['ineligibleRegion'] = $ineligibleRegion;
 
         return $this;
@@ -101,8 +104,9 @@ In cases where a [[CreativeWork]] has several media type representations, [[enco
 Unregistered or niche encoding and file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia/Wikidata entry.
      *
      * @param $encodingFormat |
+     * @return static
      **/
-    public function setEncodingFormat($encodingFormat) {
+    public function setEncodingFormat($encodingFormat): static {
         $this->properties['encodingFormat'] = $encodingFormat;
 
         return $this;
@@ -119,8 +123,9 @@ Unregistered or niche encoding and file formats can be indicated instead via the
      * The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. E.g. John wrote a book from January to *December*. For media, including audio and video, it's the time offset of the end of a clip within a larger file.\n\nNote that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
      *
      * @param $endTime |
+     * @return static
      **/
-    public function setEndTime($endTime) {
+    public function setEndTime($endTime): static {
         $this->properties['endTime'] = $endTime;
 
         return $this;
@@ -137,8 +142,9 @@ Unregistered or niche encoding and file formats can be indicated instead via the
      * Date (including time if available) when this media object was uploaded to this site.
      *
      * @param $uploadDate |
+     * @return static
      **/
-    public function setUploadDate($uploadDate) {
+    public function setUploadDate($uploadDate): static {
         $this->properties['uploadDate'] = $uploadDate;
 
         return $this;
@@ -155,8 +161,9 @@ Unregistered or niche encoding and file formats can be indicated instead via the
      * Actual bytes of the media object, for example the image file or video file.
      *
      * @param $contentUrl 
+     * @return static
      **/
-    public function setContentUrl($contentUrl) {
+    public function setContentUrl($contentUrl): static {
         $this->properties['contentUrl'] = $contentUrl;
 
         return $this;
@@ -173,8 +180,9 @@ Unregistered or niche encoding and file formats can be indicated instead via the
      * The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For actions that span a period of time, when the action was performed. E.g. John wrote a book from *January* to December. For media, including audio and video, it's the time offset of the start of a clip within a larger file.\n\nNote that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
      *
      * @param $startTime |
+     * @return static
      **/
-    public function setStartTime($startTime) {
+    public function setStartTime($startTime): static {
         $this->properties['startTime'] = $startTime;
 
         return $this;
@@ -191,8 +199,9 @@ Unregistered or niche encoding and file formats can be indicated instead via the
      * Used to indicate a specific claim contained, implied, translated or refined from the content of a [[MediaObject]] or other [[CreativeWork]]. The interpreting party can be indicated using [[claimInterpreter]].
      *
      * @param $interpretedAsClaim 
+     * @return static
      **/
-    public function setInterpretedAsClaim($interpretedAsClaim) {
+    public function setInterpretedAsClaim($interpretedAsClaim): static {
         $this->properties['interpretedAsClaim'] = $interpretedAsClaim;
 
         return $this;
@@ -209,8 +218,9 @@ Unregistered or niche encoding and file formats can be indicated instead via the
      * The production company or studio responsible for the item, e.g. series, video game, episode etc.
      *
      * @param $productionCompany 
+     * @return static
      **/
-    public function setProductionCompany($productionCompany) {
+    public function setProductionCompany($productionCompany): static {
         $this->properties['productionCompany'] = $productionCompany;
 
         return $this;
@@ -227,8 +237,9 @@ Unregistered or niche encoding and file formats can be indicated instead via the
      * The height of the item.
      *
      * @param $height |
+     * @return static
      **/
-    public function setHeight($height) {
+    public function setHeight($height): static {
         $this->properties['height'] = $height;
 
         return $this;
@@ -245,8 +256,9 @@ Unregistered or niche encoding and file formats can be indicated instead via the
      * The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
      *
      * @param $duration 
+     * @return static
      **/
-    public function setDuration($duration) {
+    public function setDuration($duration): static {
         $this->properties['duration'] = $duration;
 
         return $this;
@@ -263,8 +275,9 @@ Unregistered or niche encoding and file formats can be indicated instead via the
      * The [SHA-2](https://en.wikipedia.org/wiki/SHA-2) SHA256 hash of the content of the item. For example, a zero-length input has value 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'.
      *
      * @param $sha256 
+     * @return static
      **/
-    public function setSha256($sha256) {
+    public function setSha256($sha256): static {
         $this->properties['sha256'] = $sha256;
 
         return $this;
@@ -281,8 +294,9 @@ Unregistered or niche encoding and file formats can be indicated instead via the
      * The width of the item.
      *
      * @param $width |
+     * @return static
      **/
-    public function setWidth($width) {
+    public function setWidth($width): static {
         $this->properties['width'] = $width;
 
         return $this;
@@ -299,8 +313,9 @@ Unregistered or niche encoding and file formats can be indicated instead via the
      * The bitrate of the media object.
      *
      * @param $bitrate 
+     * @return static
      **/
-    public function setBitrate($bitrate) {
+    public function setBitrate($bitrate): static {
         $this->properties['bitrate'] = $bitrate;
 
         return $this;
@@ -317,8 +332,9 @@ Unregistered or niche encoding and file formats can be indicated instead via the
      * A URL pointing to a player for a specific video. In general, this is the information in the ```src``` element of an ```embed``` tag and should not be the same as the content of the ```loc``` tag.
      *
      * @param $embedUrl 
+     * @return static
      **/
-    public function setEmbedUrl($embedUrl) {
+    public function setEmbedUrl($embedUrl): static {
         $this->properties['embedUrl'] = $embedUrl;
 
         return $this;
@@ -335,8 +351,9 @@ Unregistered or niche encoding and file formats can be indicated instead via the
      * Indicates if use of the media require a subscription  (either paid or free). Allowed values are ```true``` or ```false``` (note that an earlier version had 'yes', 'no').
      *
      * @param $requiresSubscription |
+     * @return static
      **/
-    public function setRequiresSubscription($requiresSubscription) {
+    public function setRequiresSubscription($requiresSubscription): static {
         $this->properties['requiresSubscription'] = $requiresSubscription;
 
         return $this;
@@ -353,8 +370,9 @@ Unregistered or niche encoding and file formats can be indicated instead via the
      * Player type required&#x2014;for example, Flash or Silverlight.
      *
      * @param $playerType 
+     * @return static
      **/
-    public function setPlayerType($playerType) {
+    public function setPlayerType($playerType): static {
         $this->properties['playerType'] = $playerType;
 
         return $this;
@@ -371,8 +389,9 @@ Unregistered or niche encoding and file formats can be indicated instead via the
      * The regions where the media is allowed. If not specified, then it's assumed to be allowed everywhere. Specify the countries in [ISO 3166 format](http://en.wikipedia.org/wiki/ISO_3166).
      *
      * @param $regionsAllowed 
+     * @return static
      **/
-    public function setRegionsAllowed($regionsAllowed) {
+    public function setRegionsAllowed($regionsAllowed): static {
         $this->properties['regionsAllowed'] = $regionsAllowed;
 
         return $this;
@@ -389,8 +408,9 @@ Unregistered or niche encoding and file formats can be indicated instead via the
      * The CreativeWork encoded by this media object.
      *
      * @param $encodesCreativeWork 
+     * @return static
      **/
-    public function setEncodesCreativeWork($encodesCreativeWork) {
+    public function setEncodesCreativeWork($encodesCreativeWork): static {
         $this->properties['encodesCreativeWork'] = $encodesCreativeWork;
 
         return $this;

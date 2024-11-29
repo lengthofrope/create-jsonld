@@ -36,7 +36,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class SuiteSchema extends AccommodationSchema
 {
-    public static function factory()
+    public static function factory(): SuiteSchema
     {
         return new SuiteSchema('https://schema.org/', 'Suite');
     }
@@ -46,8 +46,9 @@ class SuiteSchema extends AccommodationSchema
 Typical unit code(s): C62 for person.
      *
      * @param $occupancy 
+     * @return static
      **/
-    public function setOccupancy($occupancy) {
+    public function setOccupancy($occupancy): static {
         $this->properties['occupancy'] = $occupancy;
 
         return $this;
@@ -65,8 +66,9 @@ Typical unit code(s): C62 for person.
       If you want to indicate the quantity of a certain kind of bed, use an instance of BedDetails. For more detailed information, use the amenityFeature property.
      *
      * @param $bed ||
+     * @return static
      **/
-    public function setBed($bed) {
+    public function setBed($bed): static {
         $this->properties['bed'] = $bed;
 
         return $this;
@@ -84,8 +86,9 @@ Typical unit code(s): C62 for person.
 Typical unit code(s): ROM for room or C62 for no unit. The type of room can be put in the unitText property of the QuantitativeValue.
      *
      * @param $numberOfRooms |
+     * @return static
      **/
-    public function setNumberOfRooms($numberOfRooms) {
+    public function setNumberOfRooms($numberOfRooms): static {
         $this->properties['numberOfRooms'] = $numberOfRooms;
 
         return $this;

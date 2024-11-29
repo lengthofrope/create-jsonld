@@ -35,7 +35,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class AlignmentObjectSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): AlignmentObjectSchema
     {
         return new AlignmentObjectSchema('https://schema.org/', 'AlignmentObject');
     }
@@ -44,8 +44,9 @@ class AlignmentObjectSchema extends IntangibleSchema
      * The framework to which the resource being described is aligned.
      *
      * @param $educationalFramework 
+     * @return static
      **/
-    public function setEducationalFramework($educationalFramework) {
+    public function setEducationalFramework($educationalFramework): static {
         $this->properties['educationalFramework'] = $educationalFramework;
 
         return $this;
@@ -62,8 +63,9 @@ class AlignmentObjectSchema extends IntangibleSchema
      * The URL of a node in an established educational framework.
      *
      * @param $targetUrl 
+     * @return static
      **/
-    public function setTargetUrl($targetUrl) {
+    public function setTargetUrl($targetUrl): static {
         $this->properties['targetUrl'] = $targetUrl;
 
         return $this;
@@ -80,8 +82,9 @@ class AlignmentObjectSchema extends IntangibleSchema
      * A category of alignment between the learning resource and the framework node. Recommended values include: 'requires', 'textComplexity', 'readingLevel', and 'educationalSubject'.
      *
      * @param $alignmentType 
+     * @return static
      **/
-    public function setAlignmentType($alignmentType) {
+    public function setAlignmentType($alignmentType): static {
         $this->properties['alignmentType'] = $alignmentType;
 
         return $this;
@@ -98,8 +101,9 @@ class AlignmentObjectSchema extends IntangibleSchema
      * The description of a node in an established educational framework.
      *
      * @param $targetDescription 
+     * @return static
      **/
-    public function setTargetDescription($targetDescription) {
+    public function setTargetDescription($targetDescription): static {
         $this->properties['targetDescription'] = $targetDescription;
 
         return $this;
@@ -116,8 +120,9 @@ class AlignmentObjectSchema extends IntangibleSchema
      * The name of a node in an established educational framework.
      *
      * @param $targetName 
+     * @return static
      **/
-    public function setTargetName($targetName) {
+    public function setTargetName($targetName): static {
         $this->properties['targetName'] = $targetName;
 
         return $this;

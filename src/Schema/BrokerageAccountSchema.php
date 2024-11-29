@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class BrokerageAccountSchema extends InvestmentOrDepositSchema
 {
-    public static function factory()
+    public static function factory(): BrokerageAccountSchema
     {
         return new BrokerageAccountSchema('https://schema.org/', 'BrokerageAccount');
     }

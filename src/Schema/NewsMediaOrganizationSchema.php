@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class NewsMediaOrganizationSchema extends OrganizationSchema
 {
-    public static function factory()
+    public static function factory(): NewsMediaOrganizationSchema
     {
         return new NewsMediaOrganizationSchema('https://schema.org/', 'NewsMediaOrganization');
     }
@@ -42,8 +42,9 @@ class NewsMediaOrganizationSchema extends OrganizationSchema
      * Statement on diversity policy by an [[Organization]] e.g. a [[NewsMediaOrganization]]. For a [[NewsMediaOrganization]], a statement describing the newsroom’s diversity policy on both staffing and sources, typically providing staffing data.
      *
      * @param $diversityPolicy |
+     * @return static
      **/
-    public function setDiversityPolicy($diversityPolicy) {
+    public function setDiversityPolicy($diversityPolicy): static {
         $this->properties['diversityPolicy'] = $diversityPolicy;
 
         return $this;
@@ -60,8 +61,9 @@ class NewsMediaOrganizationSchema extends OrganizationSchema
      * Statement about ethics policy, e.g. of a [[NewsMediaOrganization]] regarding journalistic and publishing practices, or of a [[Restaurant]], a page describing food source policies. In the case of a [[NewsMediaOrganization]], an ethicsPolicy is typically a statement describing the personal, organizational, and corporate standards of behavior expected by the organization.
      *
      * @param $ethicsPolicy |
+     * @return static
      **/
-    public function setEthicsPolicy($ethicsPolicy) {
+    public function setEthicsPolicy($ethicsPolicy): static {
         $this->properties['ethicsPolicy'] = $ethicsPolicy;
 
         return $this;
@@ -78,8 +80,9 @@ class NewsMediaOrganizationSchema extends OrganizationSchema
      * For a [[NewsMediaOrganization]], a link to the masthead page or a page listing top editorial management.
      *
      * @param $masthead |
+     * @return static
      **/
-    public function setMasthead($masthead) {
+    public function setMasthead($masthead): static {
         $this->properties['masthead'] = $masthead;
 
         return $this;
@@ -96,8 +99,9 @@ class NewsMediaOrganizationSchema extends OrganizationSchema
      * Disclosure about verification and fact-checking processes for a [[NewsMediaOrganization]] or other fact-checking [[Organization]].
      *
      * @param $verificationFactCheckingPolicy |
+     * @return static
      **/
-    public function setVerificationFactCheckingPolicy($verificationFactCheckingPolicy) {
+    public function setVerificationFactCheckingPolicy($verificationFactCheckingPolicy): static {
         $this->properties['verificationFactCheckingPolicy'] = $verificationFactCheckingPolicy;
 
         return $this;
@@ -114,8 +118,9 @@ class NewsMediaOrganizationSchema extends OrganizationSchema
      * For a [[NewsMediaOrganization]] or other news-related [[Organization]], a statement explaining when authors of articles are not named in bylines.
      *
      * @param $noBylinesPolicy |
+     * @return static
      **/
-    public function setNoBylinesPolicy($noBylinesPolicy) {
+    public function setNoBylinesPolicy($noBylinesPolicy): static {
         $this->properties['noBylinesPolicy'] = $noBylinesPolicy;
 
         return $this;
@@ -132,8 +137,9 @@ class NewsMediaOrganizationSchema extends OrganizationSchema
      * For an [[Organization]] (typically a [[NewsMediaOrganization]]), a statement about policy on use of unnamed sources and the decision process required.
      *
      * @param $unnamedSourcesPolicy |
+     * @return static
      **/
-    public function setUnnamedSourcesPolicy($unnamedSourcesPolicy) {
+    public function setUnnamedSourcesPolicy($unnamedSourcesPolicy): static {
         $this->properties['unnamedSourcesPolicy'] = $unnamedSourcesPolicy;
 
         return $this;
@@ -150,8 +156,9 @@ class NewsMediaOrganizationSchema extends OrganizationSchema
      * For an [[Organization]] (e.g. [[NewsMediaOrganization]]), a statement describing (in news media, the newsroom’s) disclosure and correction policy for errors.
      *
      * @param $correctionsPolicy |
+     * @return static
      **/
-    public function setCorrectionsPolicy($correctionsPolicy) {
+    public function setCorrectionsPolicy($correctionsPolicy): static {
         $this->properties['correctionsPolicy'] = $correctionsPolicy;
 
         return $this;
@@ -168,8 +175,9 @@ class NewsMediaOrganizationSchema extends OrganizationSchema
      * For an [[Organization]] (often but not necessarily a [[NewsMediaOrganization]]), a description of organizational ownership structure; funding and grants. In a news/media setting, this is with particular reference to editorial independence.   Note that the [[funder]] is also available and can be used to make basic funder information machine-readable.
      *
      * @param $ownershipFundingInfo |||
+     * @return static
      **/
-    public function setOwnershipFundingInfo($ownershipFundingInfo) {
+    public function setOwnershipFundingInfo($ownershipFundingInfo): static {
         $this->properties['ownershipFundingInfo'] = $ownershipFundingInfo;
 
         return $this;
@@ -186,8 +194,9 @@ class NewsMediaOrganizationSchema extends OrganizationSchema
      * For an [[Organization]] (often but not necessarily a [[NewsMediaOrganization]]), a report on staffing diversity issues. In a news context this might be for example ASNE or RTDNA (US) reports, or self-reported.
      *
      * @param $diversityStaffingReport |
+     * @return static
      **/
-    public function setDiversityStaffingReport($diversityStaffingReport) {
+    public function setDiversityStaffingReport($diversityStaffingReport): static {
         $this->properties['diversityStaffingReport'] = $diversityStaffingReport;
 
         return $this;
@@ -204,8 +213,9 @@ class NewsMediaOrganizationSchema extends OrganizationSchema
      * For a [[NewsMediaOrganization]] or other news-related [[Organization]], a statement about public engagement activities (for news media, the newsroom’s), including involving the public - digitally or otherwise -- in coverage decisions, reporting and activities after publication.
      *
      * @param $actionableFeedbackPolicy |
+     * @return static
      **/
-    public function setActionableFeedbackPolicy($actionableFeedbackPolicy) {
+    public function setActionableFeedbackPolicy($actionableFeedbackPolicy): static {
         $this->properties['actionableFeedbackPolicy'] = $actionableFeedbackPolicy;
 
         return $this;
@@ -222,8 +232,9 @@ class NewsMediaOrganizationSchema extends OrganizationSchema
      * For a [[NewsMediaOrganization]], a statement on coverage priorities, including any public agenda or stance on issues.
      *
      * @param $missionCoveragePrioritiesPolicy |
+     * @return static
      **/
-    public function setMissionCoveragePrioritiesPolicy($missionCoveragePrioritiesPolicy) {
+    public function setMissionCoveragePrioritiesPolicy($missionCoveragePrioritiesPolicy): static {
         $this->properties['missionCoveragePrioritiesPolicy'] = $missionCoveragePrioritiesPolicy;
 
         return $this;

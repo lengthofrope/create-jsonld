@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class EventAttendanceModeEnumerationSchema extends EnumerationSchema
 {
-    public static function factory()
+    public static function factory(): EventAttendanceModeEnumerationSchema
     {
         return new EventAttendanceModeEnumerationSchema('https://schema.org/', 'EventAttendanceModeEnumeration');
     }

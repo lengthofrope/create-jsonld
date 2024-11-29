@@ -36,7 +36,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class OfferForPurchaseSchema extends OfferSchema
 {
-    public static function factory()
+    public static function factory(): OfferForPurchaseSchema
     {
         return new OfferForPurchaseSchema('https://schema.org/', 'OfferForPurchase');
     }

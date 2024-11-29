@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MusicCompositionSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): MusicCompositionSchema
     {
         return new MusicCompositionSchema('https://schema.org/', 'MusicComposition');
     }
@@ -42,8 +42,9 @@ class MusicCompositionSchema extends CreativeWorkSchema
      * The date and place the work was first performed.
      *
      * @param $firstPerformance 
+     * @return static
      **/
-    public function setFirstPerformance($firstPerformance) {
+    public function setFirstPerformance($firstPerformance): static {
         $this->properties['firstPerformance'] = $firstPerformance;
 
         return $this;
@@ -60,8 +61,9 @@ class MusicCompositionSchema extends CreativeWorkSchema
      * An audio recording of the work.
      *
      * @param $recordedAs 
+     * @return static
      **/
-    public function setRecordedAs($recordedAs) {
+    public function setRecordedAs($recordedAs): static {
         $this->properties['recordedAs'] = $recordedAs;
 
         return $this;
@@ -78,8 +80,9 @@ class MusicCompositionSchema extends CreativeWorkSchema
      * The words in the song.
      *
      * @param $lyrics 
+     * @return static
      **/
-    public function setLyrics($lyrics) {
+    public function setLyrics($lyrics): static {
         $this->properties['lyrics'] = $lyrics;
 
         return $this;
@@ -96,8 +99,9 @@ class MusicCompositionSchema extends CreativeWorkSchema
      * The International Standard Musical Work Code for the composition.
      *
      * @param $iswcCode 
+     * @return static
      **/
-    public function setIswcCode($iswcCode) {
+    public function setIswcCode($iswcCode): static {
         $this->properties['iswcCode'] = $iswcCode;
 
         return $this;
@@ -114,8 +118,9 @@ class MusicCompositionSchema extends CreativeWorkSchema
      * Smaller compositions included in this work (e.g. a movement in a symphony).
      *
      * @param $includedComposition 
+     * @return static
      **/
-    public function setIncludedComposition($includedComposition) {
+    public function setIncludedComposition($includedComposition): static {
         $this->properties['includedComposition'] = $includedComposition;
 
         return $this;
@@ -132,8 +137,9 @@ class MusicCompositionSchema extends CreativeWorkSchema
      * The person who wrote the words.
      *
      * @param $lyricist 
+     * @return static
      **/
-    public function setLyricist($lyricist) {
+    public function setLyricist($lyricist): static {
         $this->properties['lyricist'] = $lyricist;
 
         return $this;
@@ -150,8 +156,9 @@ class MusicCompositionSchema extends CreativeWorkSchema
      * An arrangement derived from the composition.
      *
      * @param $musicArrangement 
+     * @return static
      **/
-    public function setMusicArrangement($musicArrangement) {
+    public function setMusicArrangement($musicArrangement): static {
         $this->properties['musicArrangement'] = $musicArrangement;
 
         return $this;
@@ -168,8 +175,9 @@ class MusicCompositionSchema extends CreativeWorkSchema
      * The type of composition (e.g. overture, sonata, symphony, etc.).
      *
      * @param $musicCompositionForm 
+     * @return static
      **/
-    public function setMusicCompositionForm($musicCompositionForm) {
+    public function setMusicCompositionForm($musicCompositionForm): static {
         $this->properties['musicCompositionForm'] = $musicCompositionForm;
 
         return $this;
@@ -186,8 +194,9 @@ class MusicCompositionSchema extends CreativeWorkSchema
      * The key, mode, or scale this composition uses.
      *
      * @param $musicalKey 
+     * @return static
      **/
-    public function setMusicalKey($musicalKey) {
+    public function setMusicalKey($musicalKey): static {
         $this->properties['musicalKey'] = $musicalKey;
 
         return $this;
@@ -204,8 +213,9 @@ class MusicCompositionSchema extends CreativeWorkSchema
      * The person or organization who wrote a composition, or who is the composer of a work performed at some event.
      *
      * @param $composer |
+     * @return static
      **/
-    public function setComposer($composer) {
+    public function setComposer($composer): static {
         $this->properties['composer'] = $composer;
 
         return $this;

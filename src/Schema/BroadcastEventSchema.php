@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class BroadcastEventSchema extends PublicationEventSchema
 {
-    public static function factory()
+    public static function factory(): BroadcastEventSchema
     {
         return new BroadcastEventSchema('https://schema.org/', 'BroadcastEvent');
     }
@@ -42,8 +42,9 @@ class BroadcastEventSchema extends PublicationEventSchema
      * True if the broadcast is of a live event.
      *
      * @param $isLiveBroadcast 
+     * @return static
      **/
-    public function setIsLiveBroadcast($isLiveBroadcast) {
+    public function setIsLiveBroadcast($isLiveBroadcast): static {
         $this->properties['isLiveBroadcast'] = $isLiveBroadcast;
 
         return $this;
@@ -60,8 +61,9 @@ class BroadcastEventSchema extends PublicationEventSchema
      * The event being broadcast such as a sporting event or awards ceremony.
      *
      * @param $broadcastOfEvent 
+     * @return static
      **/
-    public function setBroadcastOfEvent($broadcastOfEvent) {
+    public function setBroadcastOfEvent($broadcastOfEvent): static {
         $this->properties['broadcastOfEvent'] = $broadcastOfEvent;
 
         return $this;
@@ -78,8 +80,9 @@ class BroadcastEventSchema extends PublicationEventSchema
      * The type of screening or video broadcast used (e.g. IMAX, 3D, SD, HD, etc.).
      *
      * @param $videoFormat 
+     * @return static
      **/
-    public function setVideoFormat($videoFormat) {
+    public function setVideoFormat($videoFormat): static {
         $this->properties['videoFormat'] = $videoFormat;
 
         return $this;
@@ -96,8 +99,9 @@ class BroadcastEventSchema extends PublicationEventSchema
      * Languages in which subtitles/captions are available, in [IETF BCP 47 standard format](http://tools.ietf.org/html/bcp47).
      *
      * @param $subtitleLanguage |
+     * @return static
      **/
-    public function setSubtitleLanguage($subtitleLanguage) {
+    public function setSubtitleLanguage($subtitleLanguage): static {
         $this->properties['subtitleLanguage'] = $subtitleLanguage;
 
         return $this;

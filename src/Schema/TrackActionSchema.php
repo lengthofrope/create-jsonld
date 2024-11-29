@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class TrackActionSchema extends FindActionSchema
 {
-    public static function factory()
+    public static function factory(): TrackActionSchema
     {
         return new TrackActionSchema('https://schema.org/', 'TrackAction');
     }
@@ -42,8 +42,9 @@ class TrackActionSchema extends FindActionSchema
      * A sub property of instrument. The method of delivery.
      *
      * @param $deliveryMethod 
+     * @return static
      **/
-    public function setDeliveryMethod($deliveryMethod) {
+    public function setDeliveryMethod($deliveryMethod): static {
         $this->properties['deliveryMethod'] = $deliveryMethod;
 
         return $this;

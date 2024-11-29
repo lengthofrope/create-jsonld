@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class RentalCarReservationSchema extends ReservationSchema
 {
-    public static function factory()
+    public static function factory(): RentalCarReservationSchema
     {
         return new RentalCarReservationSchema('https://schema.org/', 'RentalCarReservation');
     }
@@ -42,8 +42,9 @@ class RentalCarReservationSchema extends ReservationSchema
      * When a taxi will pick up a passenger or a rental car can be picked up.
      *
      * @param $pickupTime 
+     * @return static
      **/
-    public function setPickupTime($pickupTime) {
+    public function setPickupTime($pickupTime): static {
         $this->properties['pickupTime'] = $pickupTime;
 
         return $this;
@@ -60,8 +61,9 @@ class RentalCarReservationSchema extends ReservationSchema
      * When a rental car can be dropped off.
      *
      * @param $dropoffTime 
+     * @return static
      **/
-    public function setDropoffTime($dropoffTime) {
+    public function setDropoffTime($dropoffTime): static {
         $this->properties['dropoffTime'] = $dropoffTime;
 
         return $this;
@@ -78,8 +80,9 @@ class RentalCarReservationSchema extends ReservationSchema
      * Where a taxi will pick up a passenger or a rental car can be picked up.
      *
      * @param $pickupLocation 
+     * @return static
      **/
-    public function setPickupLocation($pickupLocation) {
+    public function setPickupLocation($pickupLocation): static {
         $this->properties['pickupLocation'] = $pickupLocation;
 
         return $this;
@@ -96,8 +99,9 @@ class RentalCarReservationSchema extends ReservationSchema
      * Where a rental car can be dropped off.
      *
      * @param $dropoffLocation 
+     * @return static
      **/
-    public function setDropoffLocation($dropoffLocation) {
+    public function setDropoffLocation($dropoffLocation): static {
         $this->properties['dropoffLocation'] = $dropoffLocation;
 
         return $this;

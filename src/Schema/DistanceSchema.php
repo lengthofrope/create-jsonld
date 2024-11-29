@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DistanceSchema extends QuantitySchema
 {
-    public static function factory()
+    public static function factory(): DistanceSchema
     {
         return new DistanceSchema('https://schema.org/', 'Distance');
     }

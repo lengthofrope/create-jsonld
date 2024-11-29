@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class HousePainterSchema extends HomeAndConstructionBusinessSchema
 {
-    public static function factory()
+    public static function factory(): HousePainterSchema
     {
         return new HousePainterSchema('https://schema.org/', 'HousePainter');
     }

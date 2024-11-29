@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class WPSideBarSchema extends WebPageElementSchema
 {
-    public static function factory()
+    public static function factory(): WPSideBarSchema
     {
         return new WPSideBarSchema('https://schema.org/', 'WPSideBar');
     }

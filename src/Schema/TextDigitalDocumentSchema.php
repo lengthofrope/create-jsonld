@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class TextDigitalDocumentSchema extends DigitalDocumentSchema
 {
-    public static function factory()
+    public static function factory(): TextDigitalDocumentSchema
     {
         return new TextDigitalDocumentSchema('https://schema.org/', 'TextDigitalDocument');
     }

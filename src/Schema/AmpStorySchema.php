@@ -31,9 +31,9 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class AmpStorySchema extends \LengthOfRope\JSONLD\Elements\Element
+class AmpStorySchema extends MediaObjectSchema
 {
-    public static function factory()
+    public static function factory(): AmpStorySchema
     {
         return new AmpStorySchema('https://schema.org/', 'AmpStory');
     }

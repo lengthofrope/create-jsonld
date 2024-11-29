@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MenuItemSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): MenuItemSchema
     {
         return new MenuItemSchema('https://schema.org/', 'MenuItem');
     }
@@ -42,8 +42,9 @@ class MenuItemSchema extends IntangibleSchema
      * Indicates a dietary restriction or guideline for which this recipe or menu item is suitable, e.g. diabetic, halal etc.
      *
      * @param $suitableForDiet 
+     * @return static
      **/
-    public function setSuitableForDiet($suitableForDiet) {
+    public function setSuitableForDiet($suitableForDiet): static {
         $this->properties['suitableForDiet'] = $suitableForDiet;
 
         return $this;
@@ -60,8 +61,9 @@ class MenuItemSchema extends IntangibleSchema
      * Additional menu item(s) such as a side dish of salad or side order of fries that can be added to this menu item. Additionally it can be a menu section containing allowed add-on menu items for this menu item.
      *
      * @param $menuAddOn |
+     * @return static
      **/
-    public function setMenuAddOn($menuAddOn) {
+    public function setMenuAddOn($menuAddOn): static {
         $this->properties['menuAddOn'] = $menuAddOn;
 
         return $this;
@@ -78,8 +80,9 @@ class MenuItemSchema extends IntangibleSchema
      * Nutrition information about the recipe or menu item.
      *
      * @param $nutrition 
+     * @return static
      **/
-    public function setNutrition($nutrition) {
+    public function setNutrition($nutrition): static {
         $this->properties['nutrition'] = $nutrition;
 
         return $this;
@@ -97,8 +100,9 @@ class MenuItemSchema extends IntangibleSchema
       
      *
      * @param $offers |
+     * @return static
      **/
-    public function setOffers($offers) {
+    public function setOffers($offers): static {
         $this->properties['offers'] = $offers;
 
         return $this;

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class EmployerAggregateRatingSchema extends AggregateRatingSchema
 {
-    public static function factory()
+    public static function factory(): EmployerAggregateRatingSchema
     {
         return new EmployerAggregateRatingSchema('https://schema.org/', 'EmployerAggregateRating');
     }

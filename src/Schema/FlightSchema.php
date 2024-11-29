@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class FlightSchema extends TripSchema
 {
-    public static function factory()
+    public static function factory(): FlightSchema
     {
         return new FlightSchema('https://schema.org/', 'Flight');
     }
@@ -42,8 +42,9 @@ class FlightSchema extends TripSchema
      * The type of boarding policy used by the airline (e.g. zone-based or group-based).
      *
      * @param $boardingPolicy 
+     * @return static
      **/
-    public function setBoardingPolicy($boardingPolicy) {
+    public function setBoardingPolicy($boardingPolicy): static {
         $this->properties['boardingPolicy'] = $boardingPolicy;
 
         return $this;
@@ -60,8 +61,9 @@ class FlightSchema extends TripSchema
      * Identifier of the flight's arrival terminal.
      *
      * @param $arrivalTerminal 
+     * @return static
      **/
-    public function setArrivalTerminal($arrivalTerminal) {
+    public function setArrivalTerminal($arrivalTerminal): static {
         $this->properties['arrivalTerminal'] = $arrivalTerminal;
 
         return $this;
@@ -78,8 +80,9 @@ class FlightSchema extends TripSchema
      * Identifier of the flight's departure gate.
      *
      * @param $departureGate 
+     * @return static
      **/
-    public function setDepartureGate($departureGate) {
+    public function setDepartureGate($departureGate): static {
         $this->properties['departureGate'] = $departureGate;
 
         return $this;
@@ -96,8 +99,9 @@ class FlightSchema extends TripSchema
      * The airport where the flight originates.
      *
      * @param $departureAirport 
+     * @return static
      **/
-    public function setDepartureAirport($departureAirport) {
+    public function setDepartureAirport($departureAirport): static {
         $this->properties['departureAirport'] = $departureAirport;
 
         return $this;
@@ -114,8 +118,9 @@ class FlightSchema extends TripSchema
      * 'carrier' is an out-dated term indicating the 'provider' for parcel delivery and flights.
      *
      * @param $carrier 
+     * @return static
      **/
-    public function setCarrier($carrier) {
+    public function setCarrier($carrier): static {
         $this->properties['carrier'] = $carrier;
 
         return $this;
@@ -132,8 +137,9 @@ class FlightSchema extends TripSchema
      * The kind of aircraft (e.g., "Boeing 747").
      *
      * @param $aircraft |
+     * @return static
      **/
-    public function setAircraft($aircraft) {
+    public function setAircraft($aircraft): static {
         $this->properties['aircraft'] = $aircraft;
 
         return $this;
@@ -150,8 +156,9 @@ class FlightSchema extends TripSchema
      * An entity which offers (sells / leases / lends / loans) the services / goods.  A seller may also be a provider.
      *
      * @param $seller |
+     * @return static
      **/
-    public function setSeller($seller) {
+    public function setSeller($seller): static {
         $this->properties['seller'] = $seller;
 
         return $this;
@@ -168,8 +175,9 @@ class FlightSchema extends TripSchema
      * Identifier of the flight's arrival gate.
      *
      * @param $arrivalGate 
+     * @return static
      **/
-    public function setArrivalGate($arrivalGate) {
+    public function setArrivalGate($arrivalGate): static {
         $this->properties['arrivalGate'] = $arrivalGate;
 
         return $this;
@@ -186,8 +194,9 @@ class FlightSchema extends TripSchema
      * The time when a passenger can check into the flight online.
      *
      * @param $webCheckinTime 
+     * @return static
      **/
-    public function setWebCheckinTime($webCheckinTime) {
+    public function setWebCheckinTime($webCheckinTime): static {
         $this->properties['webCheckinTime'] = $webCheckinTime;
 
         return $this;
@@ -204,8 +213,9 @@ class FlightSchema extends TripSchema
      * The estimated time the flight will take.
      *
      * @param $estimatedFlightDuration |
+     * @return static
      **/
-    public function setEstimatedFlightDuration($estimatedFlightDuration) {
+    public function setEstimatedFlightDuration($estimatedFlightDuration): static {
         $this->properties['estimatedFlightDuration'] = $estimatedFlightDuration;
 
         return $this;
@@ -222,8 +232,9 @@ class FlightSchema extends TripSchema
      * The distance of the flight.
      *
      * @param $flightDistance |
+     * @return static
      **/
-    public function setFlightDistance($flightDistance) {
+    public function setFlightDistance($flightDistance): static {
         $this->properties['flightDistance'] = $flightDistance;
 
         return $this;
@@ -240,8 +251,9 @@ class FlightSchema extends TripSchema
      * Description of the meals that will be provided or available for purchase.
      *
      * @param $mealService 
+     * @return static
      **/
-    public function setMealService($mealService) {
+    public function setMealService($mealService): static {
         $this->properties['mealService'] = $mealService;
 
         return $this;
@@ -258,8 +270,9 @@ class FlightSchema extends TripSchema
      * Identifier of the flight's departure terminal.
      *
      * @param $departureTerminal 
+     * @return static
      **/
-    public function setDepartureTerminal($departureTerminal) {
+    public function setDepartureTerminal($departureTerminal): static {
         $this->properties['departureTerminal'] = $departureTerminal;
 
         return $this;
@@ -276,8 +289,9 @@ class FlightSchema extends TripSchema
      * The airport where the flight terminates.
      *
      * @param $arrivalAirport 
+     * @return static
      **/
-    public function setArrivalAirport($arrivalAirport) {
+    public function setArrivalAirport($arrivalAirport): static {
         $this->properties['arrivalAirport'] = $arrivalAirport;
 
         return $this;
@@ -294,8 +308,9 @@ class FlightSchema extends TripSchema
      * The unique identifier for a flight including the airline IATA code. For example, if describing United flight 110, where the IATA code for United is 'UA', the flightNumber is 'UA110'.
      *
      * @param $flightNumber 
+     * @return static
      **/
-    public function setFlightNumber($flightNumber) {
+    public function setFlightNumber($flightNumber): static {
         $this->properties['flightNumber'] = $flightNumber;
 
         return $this;

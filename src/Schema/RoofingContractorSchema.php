@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class RoofingContractorSchema extends HomeAndConstructionBusinessSchema
 {
-    public static function factory()
+    public static function factory(): RoofingContractorSchema
     {
         return new RoofingContractorSchema('https://schema.org/', 'RoofingContractor');
     }

@@ -202,6 +202,12 @@ class Build
             }
 
             $classextends = @$item->{'rdfs:subClassOf'};
+
+            // We do not support multiple inheritance (yet) so if array, just take the first one
+            if (is_array($classextends)) {
+                $classextends = $classextends[0];
+            }
+
             $classextends = @str_replace('schema:', '', $classextends->{'@id'});
             if (empty($classextends)) {
                 $classextends = '\LengthOfRope\JSONLD\Elements\Element';

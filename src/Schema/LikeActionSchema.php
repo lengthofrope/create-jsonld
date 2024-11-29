@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class LikeActionSchema extends ReactActionSchema
 {
-    public static function factory()
+    public static function factory(): LikeActionSchema
     {
         return new LikeActionSchema('https://schema.org/', 'LikeAction');
     }

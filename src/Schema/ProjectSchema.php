@@ -35,7 +35,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ProjectSchema extends OrganizationSchema
 {
-    public static function factory()
+    public static function factory(): ProjectSchema
     {
         return new ProjectSchema('https://schema.org/', 'Project');
     }

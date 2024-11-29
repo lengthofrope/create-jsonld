@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class CriticReviewSchema extends ReviewSchema
 {
-    public static function factory()
+    public static function factory(): CriticReviewSchema
     {
         return new CriticReviewSchema('https://schema.org/', 'CriticReview');
     }

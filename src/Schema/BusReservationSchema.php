@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class BusReservationSchema extends ReservationSchema
 {
-    public static function factory()
+    public static function factory(): BusReservationSchema
     {
         return new BusReservationSchema('https://schema.org/', 'BusReservation');
     }

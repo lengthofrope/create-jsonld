@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MovieClipSchema extends ClipSchema
 {
-    public static function factory()
+    public static function factory(): MovieClipSchema
     {
         return new MovieClipSchema('https://schema.org/', 'MovieClip');
     }

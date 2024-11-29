@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MolecularEntitySchema extends BioChemEntitySchema
 {
-    public static function factory()
+    public static function factory(): MolecularEntitySchema
     {
         return new MolecularEntitySchema('https://schema.org/', 'MolecularEntity');
     }
@@ -42,8 +42,9 @@ class MolecularEntitySchema extends BioChemEntitySchema
      * Systematic method of naming chemical compounds as recommended by the International Union of Pure and Applied Chemistry (IUPAC).
      *
      * @param $iupacName 
+     * @return static
      **/
-    public function setIupacName($iupacName) {
+    public function setIupacName($iupacName): static {
         $this->properties['iupacName'] = $iupacName;
 
         return $this;
@@ -60,8 +61,9 @@ class MolecularEntitySchema extends BioChemEntitySchema
      * A specification in form of a line notation for describing the structure of chemical species using short ASCII strings.  Double bond stereochemistry \ indicators may need to be escaped in the string in formats where the backslash is an escape character.
      *
      * @param $smiles 
+     * @return static
      **/
-    public function setSmiles($smiles) {
+    public function setSmiles($smiles): static {
         $this->properties['smiles'] = $smiles;
 
         return $this;
@@ -78,8 +80,9 @@ class MolecularEntitySchema extends BioChemEntitySchema
      * The empirical formula is the simplest whole number ratio of all the atoms in a molecule.
      *
      * @param $molecularFormula 
+     * @return static
      **/
-    public function setMolecularFormula($molecularFormula) {
+    public function setMolecularFormula($molecularFormula): static {
         $this->properties['molecularFormula'] = $molecularFormula;
 
         return $this;
@@ -96,8 +99,9 @@ class MolecularEntitySchema extends BioChemEntitySchema
      * Intended use of the BioChemEntity by humans.
      *
      * @param $potentialUse 
+     * @return static
      **/
-    public function setPotentialUse($potentialUse) {
+    public function setPotentialUse($potentialUse): static {
         $this->properties['potentialUse'] = $potentialUse;
 
         return $this;
@@ -114,8 +118,9 @@ class MolecularEntitySchema extends BioChemEntitySchema
      * InChIKey is a hashed version of the full InChI (using the SHA-256 algorithm).
      *
      * @param $inChIKey 
+     * @return static
      **/
-    public function setInChIKey($inChIKey) {
+    public function setInChIKey($inChIKey): static {
         $this->properties['inChIKey'] = $inChIKey;
 
         return $this;
@@ -132,8 +137,9 @@ class MolecularEntitySchema extends BioChemEntitySchema
      * This is the molecular weight of the entity being described, not of the parent. Units should be included in the form '&lt;Number&gt; &lt;unit&gt;', for example '12 amu' or as '&lt;QuantitativeValue&gt;.
      *
      * @param $molecularWeight |
+     * @return static
      **/
-    public function setMolecularWeight($molecularWeight) {
+    public function setMolecularWeight($molecularWeight): static {
         $this->properties['molecularWeight'] = $molecularWeight;
 
         return $this;
@@ -150,8 +156,9 @@ class MolecularEntitySchema extends BioChemEntitySchema
      * Non-proprietary identifier for molecular entity that can be used in printed and electronic data sources thus enabling easier linking of diverse data compilations.
      *
      * @param $inChI 
+     * @return static
      **/
-    public function setInChI($inChI) {
+    public function setInChI($inChI): static {
         $this->properties['inChI'] = $inChI;
 
         return $this;
@@ -168,8 +175,9 @@ class MolecularEntitySchema extends BioChemEntitySchema
      * A role played by the BioChemEntity within a chemical context.
      *
      * @param $chemicalRole 
+     * @return static
      **/
-    public function setChemicalRole($chemicalRole) {
+    public function setChemicalRole($chemicalRole): static {
         $this->properties['chemicalRole'] = $chemicalRole;
 
         return $this;
@@ -186,8 +194,9 @@ class MolecularEntitySchema extends BioChemEntitySchema
      * The monoisotopic mass is the sum of the masses of the atoms in a molecule using the unbound, ground-state, rest mass of the principal (most abundant) isotope for each element instead of the isotopic average mass. Please include the units in the form '&lt;Number&gt; &lt;unit&gt;', for example '770.230488 g/mol' or as '&lt;QuantitativeValue&gt;.
      *
      * @param $monoisotopicMolecularWeight |
+     * @return static
      **/
-    public function setMonoisotopicMolecularWeight($monoisotopicMolecularWeight) {
+    public function setMonoisotopicMolecularWeight($monoisotopicMolecularWeight): static {
         $this->properties['monoisotopicMolecularWeight'] = $monoisotopicMolecularWeight;
 
         return $this;

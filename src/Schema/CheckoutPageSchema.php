@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class CheckoutPageSchema extends WebPageSchema
 {
-    public static function factory()
+    public static function factory(): CheckoutPageSchema
     {
         return new CheckoutPageSchema('https://schema.org/', 'CheckoutPage');
     }

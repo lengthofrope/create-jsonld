@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DownloadActionSchema extends TransferActionSchema
 {
-    public static function factory()
+    public static function factory(): DownloadActionSchema
     {
         return new DownloadActionSchema('https://schema.org/', 'DownloadAction');
     }

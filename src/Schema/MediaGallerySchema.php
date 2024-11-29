@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MediaGallerySchema extends CollectionPageSchema
 {
-    public static function factory()
+    public static function factory(): MediaGallerySchema
     {
         return new MediaGallerySchema('https://schema.org/', 'MediaGallery');
     }

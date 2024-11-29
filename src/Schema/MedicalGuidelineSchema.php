@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MedicalGuidelineSchema extends MedicalEntitySchema
 {
-    public static function factory()
+    public static function factory(): MedicalGuidelineSchema
     {
         return new MedicalGuidelineSchema('https://schema.org/', 'MedicalGuideline');
     }
@@ -42,8 +42,9 @@ class MedicalGuidelineSchema extends MedicalEntitySchema
      * Source of the data used to formulate the guidance, e.g. RCT, consensus opinion, etc.
      *
      * @param $evidenceOrigin 
+     * @return static
      **/
-    public function setEvidenceOrigin($evidenceOrigin) {
+    public function setEvidenceOrigin($evidenceOrigin): static {
         $this->properties['evidenceOrigin'] = $evidenceOrigin;
 
         return $this;
@@ -60,8 +61,9 @@ class MedicalGuidelineSchema extends MedicalEntitySchema
      * Date on which this guideline's recommendation was made.
      *
      * @param $guidelineDate 
+     * @return static
      **/
-    public function setGuidelineDate($guidelineDate) {
+    public function setGuidelineDate($guidelineDate): static {
         $this->properties['guidelineDate'] = $guidelineDate;
 
         return $this;
@@ -78,8 +80,9 @@ class MedicalGuidelineSchema extends MedicalEntitySchema
      * The medical conditions, treatments, etc. that are the subject of the guideline.
      *
      * @param $guidelineSubject 
+     * @return static
      **/
-    public function setGuidelineSubject($guidelineSubject) {
+    public function setGuidelineSubject($guidelineSubject): static {
         $this->properties['guidelineSubject'] = $guidelineSubject;
 
         return $this;
@@ -96,8 +99,9 @@ class MedicalGuidelineSchema extends MedicalEntitySchema
      * Strength of evidence of the data used to formulate the guideline (enumerated).
      *
      * @param $evidenceLevel 
+     * @return static
      **/
-    public function setEvidenceLevel($evidenceLevel) {
+    public function setEvidenceLevel($evidenceLevel): static {
         $this->properties['evidenceLevel'] = $evidenceLevel;
 
         return $this;

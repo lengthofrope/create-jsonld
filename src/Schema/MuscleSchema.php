@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MuscleSchema extends AnatomicalStructureSchema
 {
-    public static function factory()
+    public static function factory(): MuscleSchema
     {
         return new MuscleSchema('https://schema.org/', 'Muscle');
     }
@@ -42,8 +42,9 @@ class MuscleSchema extends AnatomicalStructureSchema
      * The blood vessel that carries blood from the heart to the muscle.
      *
      * @param $bloodSupply 
+     * @return static
      **/
-    public function setBloodSupply($bloodSupply) {
+    public function setBloodSupply($bloodSupply): static {
         $this->properties['bloodSupply'] = $bloodSupply;
 
         return $this;
@@ -60,8 +61,9 @@ class MuscleSchema extends AnatomicalStructureSchema
      * The muscle whose action counteracts the specified muscle.
      *
      * @param $antagonist 
+     * @return static
      **/
-    public function setAntagonist($antagonist) {
+    public function setAntagonist($antagonist): static {
         $this->properties['antagonist'] = $antagonist;
 
         return $this;
@@ -78,8 +80,9 @@ class MuscleSchema extends AnatomicalStructureSchema
      * The place of attachment of a muscle, or what the muscle moves.
      *
      * @param $insertion 
+     * @return static
      **/
-    public function setInsertion($insertion) {
+    public function setInsertion($insertion): static {
         $this->properties['insertion'] = $insertion;
 
         return $this;
@@ -96,8 +99,9 @@ class MuscleSchema extends AnatomicalStructureSchema
      * The movement the muscle generates.
      *
      * @param $muscleAction 
+     * @return static
      **/
-    public function setMuscleAction($muscleAction) {
+    public function setMuscleAction($muscleAction): static {
         $this->properties['muscleAction'] = $muscleAction;
 
         return $this;
@@ -114,8 +118,9 @@ class MuscleSchema extends AnatomicalStructureSchema
      * The underlying innervation associated with the muscle.
      *
      * @param $nerve 
+     * @return static
      **/
-    public function setNerve($nerve) {
+    public function setNerve($nerve): static {
         $this->properties['nerve'] = $nerve;
 
         return $this;

@@ -31,9 +31,9 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MedicalClinicSchema extends \LengthOfRope\JSONLD\Elements\Element
+class MedicalClinicSchema extends MedicalBusinessSchema
 {
-    public static function factory()
+    public static function factory(): MedicalClinicSchema
     {
         return new MedicalClinicSchema('https://schema.org/', 'MedicalClinic');
     }
@@ -42,8 +42,9 @@ class MedicalClinicSchema extends \LengthOfRope\JSONLD\Elements\Element
      * A medical specialty of the provider.
      *
      * @param $medicalSpecialty 
+     * @return static
      **/
-    public function setMedicalSpecialty($medicalSpecialty) {
+    public function setMedicalSpecialty($medicalSpecialty): static {
         $this->properties['medicalSpecialty'] = $medicalSpecialty;
 
         return $this;
@@ -60,8 +61,9 @@ class MedicalClinicSchema extends \LengthOfRope\JSONLD\Elements\Element
      * A medical service available from this provider.
      *
      * @param $availableService ||
+     * @return static
      **/
-    public function setAvailableService($availableService) {
+    public function setAvailableService($availableService): static {
         $this->properties['availableService'] = $availableService;
 
         return $this;

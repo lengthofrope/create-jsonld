@@ -36,7 +36,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class HostelSchema extends LodgingBusinessSchema
 {
-    public static function factory()
+    public static function factory(): HostelSchema
     {
         return new HostelSchema('https://schema.org/', 'Hostel');
     }

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class EntryPointSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): EntryPointSchema
     {
         return new EntryPointSchema('https://schema.org/', 'EntryPoint');
     }
@@ -42,8 +42,9 @@ class EntryPointSchema extends IntangibleSchema
      * The high level platform(s) where the Action can be performed for the given URL. To specify a specific application or operating system instance, use actionApplication.
      *
      * @param $actionPlatform ||
+     * @return static
      **/
-    public function setActionPlatform($actionPlatform) {
+    public function setActionPlatform($actionPlatform): static {
         $this->properties['actionPlatform'] = $actionPlatform;
 
         return $this;
@@ -60,8 +61,9 @@ class EntryPointSchema extends IntangibleSchema
      * The supported content type(s) for an EntryPoint response.
      *
      * @param $contentType 
+     * @return static
      **/
-    public function setContentType($contentType) {
+    public function setContentType($contentType): static {
         $this->properties['contentType'] = $contentType;
 
         return $this;
@@ -78,8 +80,9 @@ class EntryPointSchema extends IntangibleSchema
      * An application that can complete the request.
      *
      * @param $actionApplication 
+     * @return static
      **/
-    public function setActionApplication($actionApplication) {
+    public function setActionApplication($actionApplication): static {
         $this->properties['actionApplication'] = $actionApplication;
 
         return $this;
@@ -96,8 +99,9 @@ class EntryPointSchema extends IntangibleSchema
      * The supported encoding type(s) for an EntryPoint request.
      *
      * @param $encodingType 
+     * @return static
      **/
-    public function setEncodingType($encodingType) {
+    public function setEncodingType($encodingType): static {
         $this->properties['encodingType'] = $encodingType;
 
         return $this;
@@ -114,8 +118,9 @@ class EntryPointSchema extends IntangibleSchema
      * An url template (RFC6570) that will be used to construct the target of the execution of the action.
      *
      * @param $urlTemplate 
+     * @return static
      **/
-    public function setUrlTemplate($urlTemplate) {
+    public function setUrlTemplate($urlTemplate): static {
         $this->properties['urlTemplate'] = $urlTemplate;
 
         return $this;
@@ -132,8 +137,9 @@ class EntryPointSchema extends IntangibleSchema
      * An HTTP method that specifies the appropriate HTTP method for a request to an HTTP EntryPoint. Values are capitalized strings as used in HTTP.
      *
      * @param $httpMethod 
+     * @return static
      **/
-    public function setHttpMethod($httpMethod) {
+    public function setHttpMethod($httpMethod): static {
         $this->properties['httpMethod'] = $httpMethod;
 
         return $this;
@@ -150,8 +156,9 @@ class EntryPointSchema extends IntangibleSchema
      * An application that can complete the request.
      *
      * @param $application 
+     * @return static
      **/
-    public function setApplication($application) {
+    public function setApplication($application): static {
         $this->properties['application'] = $application;
 
         return $this;

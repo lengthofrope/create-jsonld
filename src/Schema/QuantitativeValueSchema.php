@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class QuantitativeValueSchema extends StructuredValueSchema
 {
-    public static function factory()
+    public static function factory(): QuantitativeValueSchema
     {
         return new QuantitativeValueSchema('https://schema.org/', 'QuantitativeValue');
     }
@@ -43,8 +43,9 @@ class QuantitativeValueSchema extends StructuredValueSchema
 
      *
      * @param $additionalProperty 
+     * @return static
      **/
-    public function setAdditionalProperty($additionalProperty) {
+    public function setAdditionalProperty($additionalProperty): static {
         $this->properties['additionalProperty'] = $additionalProperty;
 
         return $this;
@@ -61,8 +62,9 @@ class QuantitativeValueSchema extends StructuredValueSchema
      * The lower value of some characteristic or property.
      *
      * @param $minValue 
+     * @return static
      **/
-    public function setMinValue($minValue) {
+    public function setMinValue($minValue): static {
         $this->properties['minValue'] = $minValue;
 
         return $this;
@@ -79,8 +81,9 @@ class QuantitativeValueSchema extends StructuredValueSchema
      * The upper value of some characteristic or property.
      *
      * @param $maxValue 
+     * @return static
      **/
-    public function setMaxValue($maxValue) {
+    public function setMaxValue($maxValue): static {
         $this->properties['maxValue'] = $maxValue;
 
         return $this;
@@ -97,8 +100,9 @@ class QuantitativeValueSchema extends StructuredValueSchema
      * The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes than the UN/CEFACT Common Code may be used with a prefix followed by a colon.
      *
      * @param $unitCode |
+     * @return static
      **/
-    public function setUnitCode($unitCode) {
+    public function setUnitCode($unitCode): static {
         $this->properties['unitCode'] = $unitCode;
 
         return $this;
@@ -115,8 +119,9 @@ class QuantitativeValueSchema extends StructuredValueSchema
      * The value of a [[QuantitativeValue]] (including [[Observation]]) or property value node.\n\n* For [[QuantitativeValue]] and [[MonetaryAmount]], the recommended type for values is 'Number'.\n* For [[PropertyValue]], it can be 'Text', 'Number', 'Boolean', or 'StructuredValue'.\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.
      *
      * @param $value |||
+     * @return static
      **/
-    public function setValue($value) {
+    public function setValue($value): static {
         $this->properties['value'] = $value;
 
         return $this;
@@ -133,8 +138,9 @@ class QuantitativeValueSchema extends StructuredValueSchema
      * A secondary value that provides additional information on the original value, e.g. a reference temperature or a type of measurement.
      *
      * @param $valueReference |||||||
+     * @return static
      **/
-    public function setValueReference($valueReference) {
+    public function setValueReference($valueReference): static {
         $this->properties['valueReference'] = $valueReference;
 
         return $this;
@@ -152,8 +158,9 @@ class QuantitativeValueSchema extends StructuredValueSchema
 <a href='unitCode'>unitCode</a>.
      *
      * @param $unitText 
+     * @return static
      **/
-    public function setUnitText($unitText) {
+    public function setUnitText($unitText): static {
         $this->properties['unitText'] = $unitText;
 
         return $this;

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PodcastEpisodeSchema extends EpisodeSchema
 {
-    public static function factory()
+    public static function factory(): PodcastEpisodeSchema
     {
         return new PodcastEpisodeSchema('https://schema.org/', 'PodcastEpisode');
     }

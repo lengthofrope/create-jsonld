@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class CorrectionCommentSchema extends CommentSchema
 {
-    public static function factory()
+    public static function factory(): CorrectionCommentSchema
     {
         return new CorrectionCommentSchema('https://schema.org/', 'CorrectionComment');
     }

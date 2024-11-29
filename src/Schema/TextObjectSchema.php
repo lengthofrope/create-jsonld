@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class TextObjectSchema extends MediaObjectSchema
 {
-    public static function factory()
+    public static function factory(): TextObjectSchema
     {
         return new TextObjectSchema('https://schema.org/', 'TextObject');
     }

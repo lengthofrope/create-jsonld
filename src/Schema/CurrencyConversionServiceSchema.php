@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class CurrencyConversionServiceSchema extends FinancialProductSchema
 {
-    public static function factory()
+    public static function factory(): CurrencyConversionServiceSchema
     {
         return new CurrencyConversionServiceSchema('https://schema.org/', 'CurrencyConversionService');
     }

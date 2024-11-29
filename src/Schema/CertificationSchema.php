@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class CertificationSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): CertificationSchema
     {
         return new CertificationSchema('https://schema.org/', 'Certification');
     }
@@ -42,8 +42,9 @@ class CertificationSchema extends CreativeWorkSchema
      * Indicates the current status of a certification: active or inactive. See also  [gs1:certificationStatus](https://www.gs1.org/voc/certificationStatus).
      *
      * @param $certificationStatus 
+     * @return static
      **/
-    public function setCertificationStatus($certificationStatus) {
+    public function setCertificationStatus($certificationStatus): static {
         $this->properties['certificationStatus'] = $certificationStatus;
 
         return $this;
@@ -60,8 +61,9 @@ class CertificationSchema extends CreativeWorkSchema
      * The organization issuing the item, for example a [[Permit]], [[Ticket]], or [[Certification]].
      *
      * @param $issuedBy 
+     * @return static
      **/
-    public function setIssuedBy($issuedBy) {
+    public function setIssuedBy($issuedBy): static {
         $this->properties['issuedBy'] = $issuedBy;
 
         return $this;
@@ -78,8 +80,9 @@ class CertificationSchema extends CreativeWorkSchema
      * Date when a certification was last audited. See also  [gs1:certificationAuditDate](https://www.gs1.org/voc/certificationAuditDate).
      *
      * @param $auditDate |
+     * @return static
      **/
-    public function setAuditDate($auditDate) {
+    public function setAuditDate($auditDate): static {
         $this->properties['auditDate'] = $auditDate;
 
         return $this;
@@ -96,8 +99,9 @@ class CertificationSchema extends CreativeWorkSchema
      * A measurement of an item, For example, the inseam of pants, the wheel size of a bicycle, the gauge of a screw, or the carbon footprint measured for certification by an authority. Usually an exact measurement, but can also be a range of measurements for adjustable products, for example belts and ski bindings.
      *
      * @param $hasMeasurement 
+     * @return static
      **/
-    public function setHasMeasurement($hasMeasurement) {
+    public function setHasMeasurement($hasMeasurement): static {
         $this->properties['hasMeasurement'] = $hasMeasurement;
 
         return $this;
@@ -114,8 +118,9 @@ class CertificationSchema extends CreativeWorkSchema
      * The geographic area where the item is valid. Applies for example to a [[Permit]], a [[Certification]], or an [[EducationalOccupationalCredential]]. 
      *
      * @param $validIn 
+     * @return static
      **/
-    public function setValidIn($validIn) {
+    public function setValidIn($validIn): static {
         $this->properties['validIn'] = $validIn;
 
         return $this;
@@ -132,8 +137,9 @@ class CertificationSchema extends CreativeWorkSchema
      * The subject matter of the content.
      *
      * @param $about 
+     * @return static
      **/
-    public function setAbout($about) {
+    public function setAbout($about): static {
         $this->properties['about'] = $about;
 
         return $this;
@@ -150,8 +156,9 @@ class CertificationSchema extends CreativeWorkSchema
      * Identifier of a certification instance (as registered with an independent certification body). Typically this identifier can be used to consult and verify the certification instance. See also [gs1:certificationIdentification](https://www.gs1.org/voc/certificationIdentification).
      *
      * @param $certificationIdentification |
+     * @return static
      **/
-    public function setCertificationIdentification($certificationIdentification) {
+    public function setCertificationIdentification($certificationIdentification): static {
         $this->properties['certificationIdentification'] = $certificationIdentification;
 
         return $this;
@@ -168,8 +175,9 @@ class CertificationSchema extends CreativeWorkSchema
      * Rating of a certification instance (as defined by an independent certification body). Typically this rating can be used to rate the level to which the requirements of the certification instance are fulfilled. See also [gs1:certificationValue](https://www.gs1.org/voc/certificationValue).
      *
      * @param $certificationRating 
+     * @return static
      **/
-    public function setCertificationRating($certificationRating) {
+    public function setCertificationRating($certificationRating): static {
         $this->properties['certificationRating'] = $certificationRating;
 
         return $this;
@@ -186,8 +194,9 @@ class CertificationSchema extends CreativeWorkSchema
      * Date of first publication or broadcast. For example the date a [[CreativeWork]] was broadcast or a [[Certification]] was issued.
      *
      * @param $datePublished |
+     * @return static
      **/
-    public function setDatePublished($datePublished) {
+    public function setDatePublished($datePublished): static {
         $this->properties['datePublished'] = $datePublished;
 
         return $this;
@@ -204,8 +213,9 @@ class CertificationSchema extends CreativeWorkSchema
      * An associated logo.
      *
      * @param $logo |
+     * @return static
      **/
-    public function setLogo($logo) {
+    public function setLogo($logo): static {
         $this->properties['logo'] = $logo;
 
         return $this;
@@ -222,8 +232,9 @@ class CertificationSchema extends CreativeWorkSchema
      * The date when the item becomes valid.
      *
      * @param $validFrom |
+     * @return static
      **/
-    public function setValidFrom($validFrom) {
+    public function setValidFrom($validFrom): static {
         $this->properties['validFrom'] = $validFrom;
 
         return $this;
@@ -240,8 +251,9 @@ class CertificationSchema extends CreativeWorkSchema
      * Date the content expires and is no longer useful or available. For example a [[VideoObject]] or [[NewsArticle]] whose availability or relevance is time-limited, a [[ClaimReview]] fact check whose publisher wants to indicate that it may no longer be relevant (or helpful to highlight) after some date, or a [[Certification]] the validity has expired.
      *
      * @param $expires |
+     * @return static
      **/
-    public function setExpires($expires) {
+    public function setExpires($expires): static {
         $this->properties['expires'] = $expires;
 
         return $this;

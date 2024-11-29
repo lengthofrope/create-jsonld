@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DigitalDocumentSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): DigitalDocumentSchema
     {
         return new DigitalDocumentSchema('https://schema.org/', 'DigitalDocument');
     }
@@ -42,8 +42,9 @@ class DigitalDocumentSchema extends CreativeWorkSchema
      * A permission related to the access to this document (e.g. permission to read or write an electronic document). For a public document, specify a grantee with an Audience with audienceType equal to "public".
      *
      * @param $hasDigitalDocumentPermission 
+     * @return static
      **/
-    public function setHasDigitalDocumentPermission($hasDigitalDocumentPermission) {
+    public function setHasDigitalDocumentPermission($hasDigitalDocumentPermission): static {
         $this->properties['hasDigitalDocumentPermission'] = $hasDigitalDocumentPermission;
 
         return $this;

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PlayActionSchema extends ActionSchema
 {
-    public static function factory()
+    public static function factory(): PlayActionSchema
     {
         return new PlayActionSchema('https://schema.org/', 'PlayAction');
     }
@@ -42,8 +42,9 @@ class PlayActionSchema extends ActionSchema
      * Upcoming or past event associated with this place, organization, or action.
      *
      * @param $event 
+     * @return static
      **/
-    public function setEvent($event) {
+    public function setEvent($event): static {
         $this->properties['event'] = $event;
 
         return $this;
@@ -60,8 +61,9 @@ class PlayActionSchema extends ActionSchema
      * An intended audience, i.e. a group for whom something was created.
      *
      * @param $audience 
+     * @return static
      **/
-    public function setAudience($audience) {
+    public function setAudience($audience): static {
         $this->properties['audience'] = $audience;
 
         return $this;

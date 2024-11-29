@@ -31,9 +31,9 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PharmacySchema extends \LengthOfRope\JSONLD\Elements\Element
+class PharmacySchema extends MedicalBusinessSchema
 {
-    public static function factory()
+    public static function factory(): PharmacySchema
     {
         return new PharmacySchema('https://schema.org/', 'Pharmacy');
     }

@@ -31,9 +31,9 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PaymentCardSchema extends \LengthOfRope\JSONLD\Elements\Element
+class PaymentCardSchema extends FinancialProductSchema
 {
-    public static function factory()
+    public static function factory(): PaymentCardSchema
     {
         return new PaymentCardSchema('https://schema.org/', 'PaymentCard');
     }
@@ -42,8 +42,9 @@ class PaymentCardSchema extends \LengthOfRope\JSONLD\Elements\Element
      * A secure method for consumers to purchase products or services via debit, credit or smartcards by using RFID or NFC technology.
      *
      * @param $contactlessPayment 
+     * @return static
      **/
-    public function setContactlessPayment($contactlessPayment) {
+    public function setContactlessPayment($contactlessPayment): static {
         $this->properties['contactlessPayment'] = $contactlessPayment;
 
         return $this;
@@ -60,8 +61,9 @@ class PaymentCardSchema extends \LengthOfRope\JSONLD\Elements\Element
      * A cardholder benefit that pays the cardholder a small percentage of their net expenditures.
      *
      * @param $cashBack |
+     * @return static
      **/
-    public function setCashBack($cashBack) {
+    public function setCashBack($cashBack): static {
         $this->properties['cashBack'] = $cashBack;
 
         return $this;
@@ -78,8 +80,9 @@ class PaymentCardSchema extends \LengthOfRope\JSONLD\Elements\Element
      * A floor limit is the amount of money above which credit card transactions must be authorized.
      *
      * @param $floorLimit 
+     * @return static
      **/
-    public function setFloorLimit($floorLimit) {
+    public function setFloorLimit($floorLimit): static {
         $this->properties['floorLimit'] = $floorLimit;
 
         return $this;
@@ -96,8 +99,9 @@ class PaymentCardSchema extends \LengthOfRope\JSONLD\Elements\Element
      * The minimum payment is the lowest amount of money that one is required to pay on a credit card statement each month.
      *
      * @param $monthlyMinimumRepaymentAmount |
+     * @return static
      **/
-    public function setMonthlyMinimumRepaymentAmount($monthlyMinimumRepaymentAmount) {
+    public function setMonthlyMinimumRepaymentAmount($monthlyMinimumRepaymentAmount): static {
         $this->properties['monthlyMinimumRepaymentAmount'] = $monthlyMinimumRepaymentAmount;
 
         return $this;

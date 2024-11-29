@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class QualitativeValueSchema extends EnumerationSchema
 {
-    public static function factory()
+    public static function factory(): QualitativeValueSchema
     {
         return new QualitativeValueSchema('https://schema.org/', 'QualitativeValue');
     }
@@ -42,8 +42,9 @@ class QualitativeValueSchema extends EnumerationSchema
      * This ordering relation for qualitative values indicates that the subject is equal to the object.
      *
      * @param $equal 
+     * @return static
      **/
-    public function setEqual($equal) {
+    public function setEqual($equal): static {
         $this->properties['equal'] = $equal;
 
         return $this;
@@ -61,8 +62,9 @@ class QualitativeValueSchema extends EnumerationSchema
 
      *
      * @param $additionalProperty 
+     * @return static
      **/
-    public function setAdditionalProperty($additionalProperty) {
+    public function setAdditionalProperty($additionalProperty): static {
         $this->properties['additionalProperty'] = $additionalProperty;
 
         return $this;
@@ -79,8 +81,9 @@ class QualitativeValueSchema extends EnumerationSchema
      * This ordering relation for qualitative values indicates that the subject is lesser than the object.
      *
      * @param $lesser 
+     * @return static
      **/
-    public function setLesser($lesser) {
+    public function setLesser($lesser): static {
         $this->properties['lesser'] = $lesser;
 
         return $this;
@@ -97,8 +100,9 @@ class QualitativeValueSchema extends EnumerationSchema
      * This ordering relation for qualitative values indicates that the subject is lesser than or equal to the object.
      *
      * @param $lesserOrEqual 
+     * @return static
      **/
-    public function setLesserOrEqual($lesserOrEqual) {
+    public function setLesserOrEqual($lesserOrEqual): static {
         $this->properties['lesserOrEqual'] = $lesserOrEqual;
 
         return $this;
@@ -115,8 +119,9 @@ class QualitativeValueSchema extends EnumerationSchema
      * This ordering relation for qualitative values indicates that the subject is greater than or equal to the object.
      *
      * @param $greaterOrEqual 
+     * @return static
      **/
-    public function setGreaterOrEqual($greaterOrEqual) {
+    public function setGreaterOrEqual($greaterOrEqual): static {
         $this->properties['greaterOrEqual'] = $greaterOrEqual;
 
         return $this;
@@ -133,8 +138,9 @@ class QualitativeValueSchema extends EnumerationSchema
      * This ordering relation for qualitative values indicates that the subject is greater than the object.
      *
      * @param $greater 
+     * @return static
      **/
-    public function setGreater($greater) {
+    public function setGreater($greater): static {
         $this->properties['greater'] = $greater;
 
         return $this;
@@ -151,8 +157,9 @@ class QualitativeValueSchema extends EnumerationSchema
      * This ordering relation for qualitative values indicates that the subject is not equal to the object.
      *
      * @param $nonEqual 
+     * @return static
      **/
-    public function setNonEqual($nonEqual) {
+    public function setNonEqual($nonEqual): static {
         $this->properties['nonEqual'] = $nonEqual;
 
         return $this;
@@ -169,8 +176,9 @@ class QualitativeValueSchema extends EnumerationSchema
      * A secondary value that provides additional information on the original value, e.g. a reference temperature or a type of measurement.
      *
      * @param $valueReference |||||||
+     * @return static
      **/
-    public function setValueReference($valueReference) {
+    public function setValueReference($valueReference): static {
         $this->properties['valueReference'] = $valueReference;
 
         return $this;

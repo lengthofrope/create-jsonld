@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class SizeGroupEnumerationSchema extends EnumerationSchema
 {
-    public static function factory()
+    public static function factory(): SizeGroupEnumerationSchema
     {
         return new SizeGroupEnumerationSchema('https://schema.org/', 'SizeGroupEnumeration');
     }

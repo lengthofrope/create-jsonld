@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class RsvpActionSchema extends InformActionSchema
 {
-    public static function factory()
+    public static function factory(): RsvpActionSchema
     {
         return new RsvpActionSchema('https://schema.org/', 'RsvpAction');
     }
@@ -42,8 +42,9 @@ class RsvpActionSchema extends InformActionSchema
      * If responding yes, the number of guests who will attend in addition to the invitee.
      *
      * @param $additionalNumberOfGuests 
+     * @return static
      **/
-    public function setAdditionalNumberOfGuests($additionalNumberOfGuests) {
+    public function setAdditionalNumberOfGuests($additionalNumberOfGuests): static {
         $this->properties['additionalNumberOfGuests'] = $additionalNumberOfGuests;
 
         return $this;
@@ -60,8 +61,9 @@ class RsvpActionSchema extends InformActionSchema
      * Comments, typically from users.
      *
      * @param $comment 
+     * @return static
      **/
-    public function setComment($comment) {
+    public function setComment($comment): static {
         $this->properties['comment'] = $comment;
 
         return $this;
@@ -78,8 +80,9 @@ class RsvpActionSchema extends InformActionSchema
      * The response (yes, no, maybe) to the RSVP.
      *
      * @param $rsvpResponse 
+     * @return static
      **/
-    public function setRsvpResponse($rsvpResponse) {
+    public function setRsvpResponse($rsvpResponse): static {
         $this->properties['rsvpResponse'] = $rsvpResponse;
 
         return $this;

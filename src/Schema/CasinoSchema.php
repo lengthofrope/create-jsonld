@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class CasinoSchema extends EntertainmentBusinessSchema
 {
-    public static function factory()
+    public static function factory(): CasinoSchema
     {
         return new CasinoSchema('https://schema.org/', 'Casino');
     }

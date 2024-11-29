@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ReactActionSchema extends AssessActionSchema
 {
-    public static function factory()
+    public static function factory(): ReactActionSchema
     {
         return new ReactActionSchema('https://schema.org/', 'ReactAction');
     }

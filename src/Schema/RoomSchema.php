@@ -36,7 +36,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class RoomSchema extends AccommodationSchema
 {
-    public static function factory()
+    public static function factory(): RoomSchema
     {
         return new RoomSchema('https://schema.org/', 'Room');
     }

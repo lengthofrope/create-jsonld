@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class FAQPageSchema extends WebPageSchema
 {
-    public static function factory()
+    public static function factory(): FAQPageSchema
     {
         return new FAQPageSchema('https://schema.org/', 'FAQPage');
     }

@@ -34,7 +34,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class BreadcrumbListSchema extends ItemListSchema
 {
-    public static function factory()
+    public static function factory(): BreadcrumbListSchema
     {
         return new BreadcrumbListSchema('https://schema.org/', 'BreadcrumbList');
     }

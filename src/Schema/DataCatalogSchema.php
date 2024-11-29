@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DataCatalogSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): DataCatalogSchema
     {
         return new DataCatalogSchema('https://schema.org/', 'DataCatalog');
     }
@@ -42,8 +42,9 @@ class DataCatalogSchema extends CreativeWorkSchema
      * A dataset contained in this catalog.
      *
      * @param $dataset 
+     * @return static
      **/
-    public function setDataset($dataset) {
+    public function setDataset($dataset): static {
         $this->properties['dataset'] = $dataset;
 
         return $this;
@@ -60,8 +61,9 @@ class DataCatalogSchema extends CreativeWorkSchema
      * A subproperty of [[measurementTechnique]] that can be used for specifying specific methods, in particular via [[MeasurementMethodEnum]].
      *
      * @param $measurementMethod |||
+     * @return static
      **/
-    public function setMeasurementMethod($measurementMethod) {
+    public function setMeasurementMethod($measurementMethod): static {
         $this->properties['measurementMethod'] = $measurementMethod;
 
         return $this;
@@ -84,8 +86,9 @@ For example, if [[variableMeasured]] is: molecule concentration, [[measurementTe
 If there are several [[variableMeasured]] properties recorded for some given data object, use a [[PropertyValue]] for each [[variableMeasured]] and attach the corresponding [[measurementTechnique]]. The value can also be from an enumeration, organized as a [[MeasurementMetholdEnumeration]].
      *
      * @param $measurementTechnique |||
+     * @return static
      **/
-    public function setMeasurementTechnique($measurementTechnique) {
+    public function setMeasurementTechnique($measurementTechnique): static {
         $this->properties['measurementTechnique'] = $measurementTechnique;
 
         return $this;

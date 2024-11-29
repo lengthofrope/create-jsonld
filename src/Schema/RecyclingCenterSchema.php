@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class RecyclingCenterSchema extends LocalBusinessSchema
 {
-    public static function factory()
+    public static function factory(): RecyclingCenterSchema
     {
         return new RecyclingCenterSchema('https://schema.org/', 'RecyclingCenter');
     }

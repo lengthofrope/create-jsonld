@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class TicketSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): TicketSchema
     {
         return new TicketSchema('https://schema.org/', 'Ticket');
     }
@@ -42,8 +42,9 @@ class TicketSchema extends IntangibleSchema
      * The organization issuing the item, for example a [[Permit]], [[Ticket]], or [[Certification]].
      *
      * @param $issuedBy 
+     * @return static
      **/
-    public function setIssuedBy($issuedBy) {
+    public function setIssuedBy($issuedBy): static {
         $this->properties['issuedBy'] = $issuedBy;
 
         return $this;
@@ -60,8 +61,9 @@ class TicketSchema extends IntangibleSchema
      * The person or organization the reservation or ticket is for.
      *
      * @param $underName |
+     * @return static
      **/
-    public function setUnderName($underName) {
+    public function setUnderName($underName): static {
         $this->properties['underName'] = $underName;
 
         return $this;
@@ -78,8 +80,9 @@ class TicketSchema extends IntangibleSchema
      * The unique identifier for the ticket.
      *
      * @param $ticketNumber 
+     * @return static
      **/
-    public function setTicketNumber($ticketNumber) {
+    public function setTicketNumber($ticketNumber): static {
         $this->properties['ticketNumber'] = $ticketNumber;
 
         return $this;
@@ -96,8 +99,9 @@ class TicketSchema extends IntangibleSchema
      * The seat associated with the ticket.
      *
      * @param $ticketedSeat 
+     * @return static
      **/
-    public function setTicketedSeat($ticketedSeat) {
+    public function setTicketedSeat($ticketedSeat): static {
         $this->properties['ticketedSeat'] = $ticketedSeat;
 
         return $this;
@@ -114,8 +118,9 @@ class TicketSchema extends IntangibleSchema
      * The currency of the price, or a price component when attached to [[PriceSpecification]] and its subtypes.\n\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR".
      *
      * @param $priceCurrency 
+     * @return static
      **/
-    public function setPriceCurrency($priceCurrency) {
+    public function setPriceCurrency($priceCurrency): static {
         $this->properties['priceCurrency'] = $priceCurrency;
 
         return $this;
@@ -132,8 +137,9 @@ class TicketSchema extends IntangibleSchema
      * The total price for the reservation or ticket, including applicable taxes, shipping, etc.\n\nUsage guidelines:\n\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.
      *
      * @param $totalPrice ||
+     * @return static
      **/
-    public function setTotalPrice($totalPrice) {
+    public function setTotalPrice($totalPrice): static {
         $this->properties['totalPrice'] = $totalPrice;
 
         return $this;
@@ -150,8 +156,9 @@ class TicketSchema extends IntangibleSchema
      * The date the ticket was issued.
      *
      * @param $dateIssued |
+     * @return static
      **/
-    public function setDateIssued($dateIssued) {
+    public function setDateIssued($dateIssued): static {
         $this->properties['dateIssued'] = $dateIssued;
 
         return $this;
@@ -168,8 +175,9 @@ class TicketSchema extends IntangibleSchema
      * Reference to an asset (e.g., Barcode, QR code image or PDF) usable for entrance.
      *
      * @param $ticketToken |
+     * @return static
      **/
-    public function setTicketToken($ticketToken) {
+    public function setTicketToken($ticketToken): static {
         $this->properties['ticketToken'] = $ticketToken;
 
         return $this;

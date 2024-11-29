@@ -31,9 +31,9 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class AudiobookSchema extends \LengthOfRope\JSONLD\Elements\Element
+class AudiobookSchema extends AudioObjectSchema
 {
-    public static function factory()
+    public static function factory(): AudiobookSchema
     {
         return new AudiobookSchema('https://schema.org/', 'Audiobook');
     }
@@ -42,8 +42,9 @@ class AudiobookSchema extends \LengthOfRope\JSONLD\Elements\Element
      * A person who reads (performs) the audiobook.
      *
      * @param $readBy 
+     * @return static
      **/
-    public function setReadBy($readBy) {
+    public function setReadBy($readBy): static {
         $this->properties['readBy'] = $readBy;
 
         return $this;
@@ -60,8 +61,9 @@ class AudiobookSchema extends \LengthOfRope\JSONLD\Elements\Element
      * The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
      *
      * @param $duration 
+     * @return static
      **/
-    public function setDuration($duration) {
+    public function setDuration($duration): static {
         $this->properties['duration'] = $duration;
 
         return $this;

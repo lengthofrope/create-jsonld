@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DatasetSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): DatasetSchema
     {
         return new DatasetSchema('https://schema.org/', 'Dataset');
     }
@@ -42,8 +42,9 @@ class DatasetSchema extends CreativeWorkSchema
      * A data catalog which contains this dataset (this property was previously 'catalog', preferred name is now 'includedInDataCatalog').
      *
      * @param $includedDataCatalog 
+     * @return static
      **/
-    public function setIncludedDataCatalog($includedDataCatalog) {
+    public function setIncludedDataCatalog($includedDataCatalog): static {
         $this->properties['includedDataCatalog'] = $includedDataCatalog;
 
         return $this;
@@ -60,8 +61,9 @@ class DatasetSchema extends CreativeWorkSchema
      * The International Standard Serial Number (ISSN) that identifies this serial publication. You can repeat this property to identify different formats of, or the linking ISSN (ISSN-L) for, this serial publication.
      *
      * @param $issn 
+     * @return static
      **/
-    public function setIssn($issn) {
+    public function setIssn($issn): static {
         $this->properties['issn'] = $issn;
 
         return $this;
@@ -78,8 +80,9 @@ class DatasetSchema extends CreativeWorkSchema
      * A data catalog which contains this dataset.
      *
      * @param $includedInDataCatalog 
+     * @return static
      **/
-    public function setIncludedInDataCatalog($includedInDataCatalog) {
+    public function setIncludedInDataCatalog($includedInDataCatalog): static {
         $this->properties['includedInDataCatalog'] = $includedInDataCatalog;
 
         return $this;
@@ -96,8 +99,9 @@ class DatasetSchema extends CreativeWorkSchema
      * A subproperty of [[measurementTechnique]] that can be used for specifying specific methods, in particular via [[MeasurementMethodEnum]].
      *
      * @param $measurementMethod |||
+     * @return static
      **/
-    public function setMeasurementMethod($measurementMethod) {
+    public function setMeasurementMethod($measurementMethod): static {
         $this->properties['measurementMethod'] = $measurementMethod;
 
         return $this;
@@ -114,8 +118,9 @@ class DatasetSchema extends CreativeWorkSchema
      * The variableMeasured property can indicate (repeated as necessary) the  variables that are measured in some dataset, either described as text or as pairs of identifier and description using PropertyValue, or more explicitly as a [[StatisticalVariable]].
      *
      * @param $variableMeasured |||
+     * @return static
      **/
-    public function setVariableMeasured($variableMeasured) {
+    public function setVariableMeasured($variableMeasured): static {
         $this->properties['variableMeasured'] = $variableMeasured;
 
         return $this;
@@ -132,8 +137,9 @@ class DatasetSchema extends CreativeWorkSchema
      * A data catalog which contains this dataset.
      *
      * @param $catalog 
+     * @return static
      **/
-    public function setCatalog($catalog) {
+    public function setCatalog($catalog): static {
         $this->properties['catalog'] = $catalog;
 
         return $this;
@@ -150,8 +156,9 @@ class DatasetSchema extends CreativeWorkSchema
      * The range of temporal applicability of a dataset, e.g. for a 2011 census dataset, the year 2011 (in ISO 8601 time interval format).
      *
      * @param $datasetTimeInterval 
+     * @return static
      **/
-    public function setDatasetTimeInterval($datasetTimeInterval) {
+    public function setDatasetTimeInterval($datasetTimeInterval): static {
         $this->properties['datasetTimeInterval'] = $datasetTimeInterval;
 
         return $this;
@@ -168,8 +175,9 @@ class DatasetSchema extends CreativeWorkSchema
      * A downloadable form of this dataset, at a specific location, in a specific format. This property can be repeated if different variations are available. There is no expectation that different downloadable distributions must contain exactly equivalent information (see also [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Class:Distribution) on this point). Different distributions might include or exclude different subsets of the entire dataset, for example.
      *
      * @param $distribution 
+     * @return static
      **/
-    public function setDistribution($distribution) {
+    public function setDistribution($distribution): static {
         $this->properties['distribution'] = $distribution;
 
         return $this;
@@ -192,8 +200,9 @@ For example, if [[variableMeasured]] is: molecule concentration, [[measurementTe
 If there are several [[variableMeasured]] properties recorded for some given data object, use a [[PropertyValue]] for each [[variableMeasured]] and attach the corresponding [[measurementTechnique]]. The value can also be from an enumeration, organized as a [[MeasurementMetholdEnumeration]].
      *
      * @param $measurementTechnique |||
+     * @return static
      **/
-    public function setMeasurementTechnique($measurementTechnique) {
+    public function setMeasurementTechnique($measurementTechnique): static {
         $this->properties['measurementTechnique'] = $measurementTechnique;
 
         return $this;

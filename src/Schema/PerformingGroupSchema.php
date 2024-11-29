@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PerformingGroupSchema extends OrganizationSchema
 {
-    public static function factory()
+    public static function factory(): PerformingGroupSchema
     {
         return new PerformingGroupSchema('https://schema.org/', 'PerformingGroup');
     }

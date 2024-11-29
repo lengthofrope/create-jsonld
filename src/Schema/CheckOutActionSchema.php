@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class CheckOutActionSchema extends CommunicateActionSchema
 {
-    public static function factory()
+    public static function factory(): CheckOutActionSchema
     {
         return new CheckOutActionSchema('https://schema.org/', 'CheckOutAction');
     }

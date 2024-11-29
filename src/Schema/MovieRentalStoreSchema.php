@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MovieRentalStoreSchema extends StoreSchema
 {
-    public static function factory()
+    public static function factory(): MovieRentalStoreSchema
     {
         return new MovieRentalStoreSchema('https://schema.org/', 'MovieRentalStore');
     }

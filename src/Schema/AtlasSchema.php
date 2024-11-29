@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class AtlasSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): AtlasSchema
     {
         return new AtlasSchema('https://schema.org/', 'Atlas');
     }

@@ -39,7 +39,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class EndorsementRatingSchema extends RatingSchema
 {
-    public static function factory()
+    public static function factory(): EndorsementRatingSchema
     {
         return new EndorsementRatingSchema('https://schema.org/', 'EndorsementRating');
     }

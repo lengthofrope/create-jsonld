@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class SyllabusSchema extends LearningResourceSchema
 {
-    public static function factory()
+    public static function factory(): SyllabusSchema
     {
         return new SyllabusSchema('https://schema.org/', 'Syllabus');
     }

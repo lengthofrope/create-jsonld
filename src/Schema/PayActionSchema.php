@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PayActionSchema extends TradeActionSchema
 {
-    public static function factory()
+    public static function factory(): PayActionSchema
     {
         return new PayActionSchema('https://schema.org/', 'PayAction');
     }
@@ -42,8 +42,9 @@ class PayActionSchema extends TradeActionSchema
      * A sub property of participant. The participant who is at the receiving end of the action.
      *
      * @param $recipient |||
+     * @return static
      **/
-    public function setRecipient($recipient) {
+    public function setRecipient($recipient): static {
         $this->properties['recipient'] = $recipient;
 
         return $this;

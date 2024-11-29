@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ReservationStatusTypeSchema extends StatusEnumerationSchema
 {
-    public static function factory()
+    public static function factory(): ReservationStatusTypeSchema
     {
         return new ReservationStatusTypeSchema('https://schema.org/', 'ReservationStatusType');
     }

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class VeterinaryCareSchema extends MedicalOrganizationSchema
 {
-    public static function factory()
+    public static function factory(): VeterinaryCareSchema
     {
         return new VeterinaryCareSchema('https://schema.org/', 'VeterinaryCare');
     }

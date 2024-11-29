@@ -31,9 +31,9 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class HowToStepSchema extends \LengthOfRope\JSONLD\Elements\Element
+class HowToStepSchema extends ListItemSchema
 {
-    public static function factory()
+    public static function factory(): HowToStepSchema
     {
         return new HowToStepSchema('https://schema.org/', 'HowToStep');
     }

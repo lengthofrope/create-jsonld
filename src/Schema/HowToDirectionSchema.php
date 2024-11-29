@@ -31,9 +31,9 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class HowToDirectionSchema extends \LengthOfRope\JSONLD\Elements\Element
+class HowToDirectionSchema extends ListItemSchema
 {
-    public static function factory()
+    public static function factory(): HowToDirectionSchema
     {
         return new HowToDirectionSchema('https://schema.org/', 'HowToDirection');
     }
@@ -42,8 +42,9 @@ class HowToDirectionSchema extends \LengthOfRope\JSONLD\Elements\Element
      * A media object representing the circumstances before performing this direction.
      *
      * @param $beforeMedia |
+     * @return static
      **/
-    public function setBeforeMedia($beforeMedia) {
+    public function setBeforeMedia($beforeMedia): static {
         $this->properties['beforeMedia'] = $beforeMedia;
 
         return $this;
@@ -60,8 +61,9 @@ class HowToDirectionSchema extends \LengthOfRope\JSONLD\Elements\Element
      * The length of time it takes to prepare the items to be used in instructions or a direction, in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
      *
      * @param $prepTime 
+     * @return static
      **/
-    public function setPrepTime($prepTime) {
+    public function setPrepTime($prepTime): static {
         $this->properties['prepTime'] = $prepTime;
 
         return $this;
@@ -78,8 +80,9 @@ class HowToDirectionSchema extends \LengthOfRope\JSONLD\Elements\Element
      * A sub property of instrument. An object used (but not consumed) when performing instructions or a direction.
      *
      * @param $tool |
+     * @return static
      **/
-    public function setTool($tool) {
+    public function setTool($tool): static {
         $this->properties['tool'] = $tool;
 
         return $this;
@@ -96,8 +99,9 @@ class HowToDirectionSchema extends \LengthOfRope\JSONLD\Elements\Element
      * The total time required to perform instructions or a direction (including time to prepare the supplies), in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
      *
      * @param $totalTime 
+     * @return static
      **/
-    public function setTotalTime($totalTime) {
+    public function setTotalTime($totalTime): static {
         $this->properties['totalTime'] = $totalTime;
 
         return $this;
@@ -114,8 +118,9 @@ class HowToDirectionSchema extends \LengthOfRope\JSONLD\Elements\Element
      * A media object representing the circumstances while performing this direction.
      *
      * @param $duringMedia |
+     * @return static
      **/
-    public function setDuringMedia($duringMedia) {
+    public function setDuringMedia($duringMedia): static {
         $this->properties['duringMedia'] = $duringMedia;
 
         return $this;
@@ -132,8 +137,9 @@ class HowToDirectionSchema extends \LengthOfRope\JSONLD\Elements\Element
      * The length of time it takes to perform instructions or a direction (not including time to prepare the supplies), in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
      *
      * @param $performTime 
+     * @return static
      **/
-    public function setPerformTime($performTime) {
+    public function setPerformTime($performTime): static {
         $this->properties['performTime'] = $performTime;
 
         return $this;
@@ -150,8 +156,9 @@ class HowToDirectionSchema extends \LengthOfRope\JSONLD\Elements\Element
      * A sub-property of instrument. A supply consumed when performing instructions or a direction.
      *
      * @param $supply |
+     * @return static
      **/
-    public function setSupply($supply) {
+    public function setSupply($supply): static {
         $this->properties['supply'] = $supply;
 
         return $this;
@@ -168,8 +175,9 @@ class HowToDirectionSchema extends \LengthOfRope\JSONLD\Elements\Element
      * A media object representing the circumstances after performing this direction.
      *
      * @param $afterMedia |
+     * @return static
      **/
-    public function setAfterMedia($afterMedia) {
+    public function setAfterMedia($afterMedia): static {
         $this->properties['afterMedia'] = $afterMedia;
 
         return $this;

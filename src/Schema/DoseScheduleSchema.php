@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DoseScheduleSchema extends MedicalIntangibleSchema
 {
-    public static function factory()
+    public static function factory(): DoseScheduleSchema
     {
         return new DoseScheduleSchema('https://schema.org/', 'DoseSchedule');
     }
@@ -42,8 +42,9 @@ class DoseScheduleSchema extends MedicalIntangibleSchema
      * How often the dose is taken, e.g. 'daily'.
      *
      * @param $frequency 
+     * @return static
      **/
-    public function setFrequency($frequency) {
+    public function setFrequency($frequency): static {
         $this->properties['frequency'] = $frequency;
 
         return $this;
@@ -60,8 +61,9 @@ class DoseScheduleSchema extends MedicalIntangibleSchema
      * Characteristics of the population for which this is intended, or which typically uses it, e.g. 'adults'.
      *
      * @param $targetPopulation 
+     * @return static
      **/
-    public function setTargetPopulation($targetPopulation) {
+    public function setTargetPopulation($targetPopulation): static {
         $this->properties['targetPopulation'] = $targetPopulation;
 
         return $this;
@@ -78,8 +80,9 @@ class DoseScheduleSchema extends MedicalIntangibleSchema
      * The unit of the dose, e.g. 'mg'.
      *
      * @param $doseUnit 
+     * @return static
      **/
-    public function setDoseUnit($doseUnit) {
+    public function setDoseUnit($doseUnit): static {
         $this->properties['doseUnit'] = $doseUnit;
 
         return $this;
@@ -96,8 +99,9 @@ class DoseScheduleSchema extends MedicalIntangibleSchema
      * The value of the dose, e.g. 500.
      *
      * @param $doseValue |
+     * @return static
      **/
-    public function setDoseValue($doseValue) {
+    public function setDoseValue($doseValue): static {
         $this->properties['doseValue'] = $doseValue;
 
         return $this;

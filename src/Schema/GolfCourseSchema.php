@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class GolfCourseSchema extends SportsActivityLocationSchema
 {
-    public static function factory()
+    public static function factory(): GolfCourseSchema
     {
         return new GolfCourseSchema('https://schema.org/', 'GolfCourse');
     }

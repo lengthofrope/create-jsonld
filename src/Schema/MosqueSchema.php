@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MosqueSchema extends PlaceOfWorshipSchema
 {
-    public static function factory()
+    public static function factory(): MosqueSchema
     {
         return new MosqueSchema('https://schema.org/', 'Mosque');
     }

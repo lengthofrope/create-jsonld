@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ResearchProjectSchema extends ProjectSchema
 {
-    public static function factory()
+    public static function factory(): ResearchProjectSchema
     {
         return new ResearchProjectSchema('https://schema.org/', 'ResearchProject');
     }

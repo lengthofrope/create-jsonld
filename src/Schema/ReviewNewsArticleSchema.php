@@ -31,9 +31,9 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ReviewNewsArticleSchema extends \LengthOfRope\JSONLD\Elements\Element
+class ReviewNewsArticleSchema extends NewsArticleSchema
 {
-    public static function factory()
+    public static function factory(): ReviewNewsArticleSchema
     {
         return new ReviewNewsArticleSchema('https://schema.org/', 'ReviewNewsArticle');
     }

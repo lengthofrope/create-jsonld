@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class OrganizationRoleSchema extends RoleSchema
 {
-    public static function factory()
+    public static function factory(): OrganizationRoleSchema
     {
         return new OrganizationRoleSchema('https://schema.org/', 'OrganizationRole');
     }
@@ -42,8 +42,9 @@ class OrganizationRoleSchema extends RoleSchema
      * A number associated with a role in an organization, for example, the number on an athlete's jersey.
      *
      * @param $numberedPosition 
+     * @return static
      **/
-    public function setNumberedPosition($numberedPosition) {
+    public function setNumberedPosition($numberedPosition): static {
         $this->properties['numberedPosition'] = $numberedPosition;
 
         return $this;

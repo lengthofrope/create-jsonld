@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class NGOSchema extends OrganizationSchema
 {
-    public static function factory()
+    public static function factory(): NGOSchema
     {
         return new NGOSchema('https://schema.org/', 'NGO');
     }

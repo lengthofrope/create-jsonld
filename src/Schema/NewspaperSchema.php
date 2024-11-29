@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class NewspaperSchema extends PeriodicalSchema
 {
-    public static function factory()
+    public static function factory(): NewspaperSchema
     {
         return new NewspaperSchema('https://schema.org/', 'Newspaper');
     }

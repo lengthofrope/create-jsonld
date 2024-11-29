@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class BookSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): BookSchema
     {
         return new BookSchema('https://schema.org/', 'Book');
     }
@@ -42,8 +42,9 @@ class BookSchema extends CreativeWorkSchema
      * The number of pages in the book.
      *
      * @param $numberOfPages 
+     * @return static
      **/
-    public function setNumberOfPages($numberOfPages) {
+    public function setNumberOfPages($numberOfPages): static {
         $this->properties['numberOfPages'] = $numberOfPages;
 
         return $this;
@@ -60,8 +61,9 @@ class BookSchema extends CreativeWorkSchema
      * The format of the book.
      *
      * @param $bookFormat 
+     * @return static
      **/
-    public function setBookFormat($bookFormat) {
+    public function setBookFormat($bookFormat): static {
         $this->properties['bookFormat'] = $bookFormat;
 
         return $this;
@@ -78,8 +80,9 @@ class BookSchema extends CreativeWorkSchema
      * The illustrator of the book.
      *
      * @param $illustrator 
+     * @return static
      **/
-    public function setIllustrator($illustrator) {
+    public function setIllustrator($illustrator): static {
         $this->properties['illustrator'] = $illustrator;
 
         return $this;
@@ -96,8 +99,9 @@ class BookSchema extends CreativeWorkSchema
      * The ISBN of the book.
      *
      * @param $isbn 
+     * @return static
      **/
-    public function setIsbn($isbn) {
+    public function setIsbn($isbn): static {
         $this->properties['isbn'] = $isbn;
 
         return $this;
@@ -114,8 +118,9 @@ class BookSchema extends CreativeWorkSchema
      * The edition of the book.
      *
      * @param $bookEdition 
+     * @return static
      **/
-    public function setBookEdition($bookEdition) {
+    public function setBookEdition($bookEdition): static {
         $this->properties['bookEdition'] = $bookEdition;
 
         return $this;
@@ -132,8 +137,9 @@ class BookSchema extends CreativeWorkSchema
      * Indicates whether the book is an abridged edition.
      *
      * @param $abridged 
+     * @return static
      **/
-    public function setAbridged($abridged) {
+    public function setAbridged($abridged): static {
         $this->properties['abridged'] = $abridged;
 
         return $this;

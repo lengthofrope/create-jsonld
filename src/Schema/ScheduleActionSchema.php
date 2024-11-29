@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ScheduleActionSchema extends PlanActionSchema
 {
-    public static function factory()
+    public static function factory(): ScheduleActionSchema
     {
         return new ScheduleActionSchema('https://schema.org/', 'ScheduleAction');
     }

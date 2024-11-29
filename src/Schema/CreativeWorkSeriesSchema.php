@@ -32,9 +32,9 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class CreativeWorkSeriesSchema extends \LengthOfRope\JSONLD\Elements\Element
+class CreativeWorkSeriesSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): CreativeWorkSeriesSchema
     {
         return new CreativeWorkSeriesSchema('https://schema.org/', 'CreativeWorkSeries');
     }
@@ -43,8 +43,9 @@ class CreativeWorkSeriesSchema extends \LengthOfRope\JSONLD\Elements\Element
      * The International Standard Serial Number (ISSN) that identifies this serial publication. You can repeat this property to identify different formats of, or the linking ISSN (ISSN-L) for, this serial publication.
      *
      * @param $issn 
+     * @return static
      **/
-    public function setIssn($issn) {
+    public function setIssn($issn): static {
         $this->properties['issn'] = $issn;
 
         return $this;
@@ -61,8 +62,9 @@ class CreativeWorkSeriesSchema extends \LengthOfRope\JSONLD\Elements\Element
      * The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
      * @param $startDate |
+     * @return static
      **/
-    public function setStartDate($startDate) {
+    public function setStartDate($startDate): static {
         $this->properties['startDate'] = $startDate;
 
         return $this;
@@ -79,8 +81,9 @@ class CreativeWorkSeriesSchema extends \LengthOfRope\JSONLD\Elements\Element
      * The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
      * @param $endDate |
+     * @return static
      **/
-    public function setEndDate($endDate) {
+    public function setEndDate($endDate): static {
         $this->properties['endDate'] = $endDate;
 
         return $this;

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class LandformSchema extends PlaceSchema
 {
-    public static function factory()
+    public static function factory(): LandformSchema
     {
         return new LandformSchema('https://schema.org/', 'Landform');
     }

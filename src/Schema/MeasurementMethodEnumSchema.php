@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MeasurementMethodEnumSchema extends EnumerationSchema
 {
-    public static function factory()
+    public static function factory(): MeasurementMethodEnumSchema
     {
         return new MeasurementMethodEnumSchema('https://schema.org/', 'MeasurementMethodEnum');
     }

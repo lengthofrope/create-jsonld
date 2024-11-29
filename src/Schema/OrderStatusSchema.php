@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class OrderStatusSchema extends StatusEnumerationSchema
 {
-    public static function factory()
+    public static function factory(): OrderStatusSchema
     {
         return new OrderStatusSchema('https://schema.org/', 'OrderStatus');
     }

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class CssSelectorTypeSchema extends TextSchema
 {
-    public static function factory()
+    public static function factory(): CssSelectorTypeSchema
     {
         return new CssSelectorTypeSchema('https://schema.org/', 'CssSelectorType');
     }

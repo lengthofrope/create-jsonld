@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class SteeringPositionValueSchema extends QualitativeValueSchema
 {
-    public static function factory()
+    public static function factory(): SteeringPositionValueSchema
     {
         return new SteeringPositionValueSchema('https://schema.org/', 'SteeringPositionValue');
     }

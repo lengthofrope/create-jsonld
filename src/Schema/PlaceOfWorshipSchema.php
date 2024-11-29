@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PlaceOfWorshipSchema extends CivicStructureSchema
 {
-    public static function factory()
+    public static function factory(): PlaceOfWorshipSchema
     {
         return new PlaceOfWorshipSchema('https://schema.org/', 'PlaceOfWorship');
     }

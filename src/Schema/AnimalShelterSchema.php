@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class AnimalShelterSchema extends LocalBusinessSchema
 {
-    public static function factory()
+    public static function factory(): AnimalShelterSchema
     {
         return new AnimalShelterSchema('https://schema.org/', 'AnimalShelter');
     }

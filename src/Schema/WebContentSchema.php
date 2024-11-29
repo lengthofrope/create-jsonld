@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class WebContentSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): WebContentSchema
     {
         return new WebContentSchema('https://schema.org/', 'WebContent');
     }

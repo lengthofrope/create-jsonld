@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class SizeSpecificationSchema extends QualitativeValueSchema
 {
-    public static function factory()
+    public static function factory(): SizeSpecificationSchema
     {
         return new SizeSpecificationSchema('https://schema.org/', 'SizeSpecification');
     }
@@ -42,8 +42,9 @@ class SizeSpecificationSchema extends QualitativeValueSchema
      * A measurement of an item, For example, the inseam of pants, the wheel size of a bicycle, the gauge of a screw, or the carbon footprint measured for certification by an authority. Usually an exact measurement, but can also be a range of measurements for adjustable products, for example belts and ski bindings.
      *
      * @param $hasMeasurement 
+     * @return static
      **/
-    public function setHasMeasurement($hasMeasurement) {
+    public function setHasMeasurement($hasMeasurement): static {
         $this->properties['hasMeasurement'] = $hasMeasurement;
 
         return $this;
@@ -60,8 +61,9 @@ class SizeSpecificationSchema extends QualitativeValueSchema
      * The age or age range for the intended audience or person, for example 3-12 months for infants, 1-5 years for toddlers.
      *
      * @param $suggestedAge 
+     * @return static
      **/
-    public function setSuggestedAge($suggestedAge) {
+    public function setSuggestedAge($suggestedAge): static {
         $this->properties['suggestedAge'] = $suggestedAge;
 
         return $this;
@@ -78,8 +80,9 @@ class SizeSpecificationSchema extends QualitativeValueSchema
      * The suggested gender of the intended person or audience, for example "male", "female", or "unisex".
      *
      * @param $suggestedGender |
+     * @return static
      **/
-    public function setSuggestedGender($suggestedGender) {
+    public function setSuggestedGender($suggestedGender): static {
         $this->properties['suggestedGender'] = $suggestedGender;
 
         return $this;
@@ -96,8 +99,9 @@ class SizeSpecificationSchema extends QualitativeValueSchema
      * A suggested range of body measurements for the intended audience or person, for example inseam between 32 and 34 inches or height between 170 and 190 cm. Typically found on a size chart for wearable products.
      *
      * @param $suggestedMeasurement 
+     * @return static
      **/
-    public function setSuggestedMeasurement($suggestedMeasurement) {
+    public function setSuggestedMeasurement($suggestedMeasurement): static {
         $this->properties['suggestedMeasurement'] = $suggestedMeasurement;
 
         return $this;
@@ -114,8 +118,9 @@ class SizeSpecificationSchema extends QualitativeValueSchema
      * The size group (also known as "size type") for a product's size. Size groups are common in the fashion industry to define size segments and suggested audiences for wearable products. Multiple values can be combined, for example "men's big and tall", "petite maternity" or "regular".
      *
      * @param $sizeGroup |
+     * @return static
      **/
-    public function setSizeGroup($sizeGroup) {
+    public function setSizeGroup($sizeGroup): static {
         $this->properties['sizeGroup'] = $sizeGroup;
 
         return $this;
@@ -132,8 +137,9 @@ class SizeSpecificationSchema extends QualitativeValueSchema
      * The size system used to identify a product's size. Typically either a standard (for example, "GS1" or "ISO-EN13402"), country code (for example "US" or "JP"), or a measuring system (for example "Metric" or "Imperial").
      *
      * @param $sizeSystem |
+     * @return static
      **/
-    public function setSizeSystem($sizeSystem) {
+    public function setSizeSystem($sizeSystem): static {
         $this->properties['sizeSystem'] = $sizeSystem;
 
         return $this;

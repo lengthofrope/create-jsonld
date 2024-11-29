@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class BookmarkActionSchema extends OrganizeActionSchema
 {
-    public static function factory()
+    public static function factory(): BookmarkActionSchema
     {
         return new BookmarkActionSchema('https://schema.org/', 'BookmarkAction');
     }

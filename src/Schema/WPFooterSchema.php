@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class WPFooterSchema extends WebPageElementSchema
 {
-    public static function factory()
+    public static function factory(): WPFooterSchema
     {
         return new WPFooterSchema('https://schema.org/', 'WPFooter');
     }

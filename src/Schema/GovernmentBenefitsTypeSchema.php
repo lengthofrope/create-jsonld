@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class GovernmentBenefitsTypeSchema extends EnumerationSchema
 {
-    public static function factory()
+    public static function factory(): GovernmentBenefitsTypeSchema
     {
         return new GovernmentBenefitsTypeSchema('https://schema.org/', 'GovernmentBenefitsType');
     }

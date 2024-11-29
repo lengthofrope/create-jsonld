@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class QuoteActionSchema extends TradeActionSchema
 {
-    public static function factory()
+    public static function factory(): QuoteActionSchema
     {
         return new QuoteActionSchema('https://schema.org/', 'QuoteAction');
     }

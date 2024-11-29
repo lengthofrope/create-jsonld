@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class SuspendActionSchema extends ControlActionSchema
 {
-    public static function factory()
+    public static function factory(): SuspendActionSchema
     {
         return new SuspendActionSchema('https://schema.org/', 'SuspendAction');
     }

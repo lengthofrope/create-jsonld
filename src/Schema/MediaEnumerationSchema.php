@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MediaEnumerationSchema extends EnumerationSchema
 {
-    public static function factory()
+    public static function factory(): MediaEnumerationSchema
     {
         return new MediaEnumerationSchema('https://schema.org/', 'MediaEnumeration');
     }

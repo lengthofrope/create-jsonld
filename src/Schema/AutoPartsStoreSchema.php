@@ -31,9 +31,9 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class AutoPartsStoreSchema extends \LengthOfRope\JSONLD\Elements\Element
+class AutoPartsStoreSchema extends StoreSchema
 {
-    public static function factory()
+    public static function factory(): AutoPartsStoreSchema
     {
         return new AutoPartsStoreSchema('https://schema.org/', 'AutoPartsStore');
     }

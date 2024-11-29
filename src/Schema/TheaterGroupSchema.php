@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class TheaterGroupSchema extends PerformingGroupSchema
 {
-    public static function factory()
+    public static function factory(): TheaterGroupSchema
     {
         return new TheaterGroupSchema('https://schema.org/', 'TheaterGroup');
     }

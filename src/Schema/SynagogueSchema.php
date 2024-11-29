@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class SynagogueSchema extends PlaceOfWorshipSchema
 {
-    public static function factory()
+    public static function factory(): SynagogueSchema
     {
         return new SynagogueSchema('https://schema.org/', 'Synagogue');
     }

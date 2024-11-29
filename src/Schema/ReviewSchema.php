@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ReviewSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): ReviewSchema
     {
         return new ReviewSchema('https://schema.org/', 'Review');
     }
@@ -42,8 +42,9 @@ class ReviewSchema extends CreativeWorkSchema
      * An associated [[Review]].
      *
      * @param $associatedReview 
+     * @return static
      **/
-    public function setAssociatedReview($associatedReview) {
+    public function setAssociatedReview($associatedReview): static {
         $this->properties['associatedReview'] = $associatedReview;
 
         return $this;
@@ -64,8 +65,9 @@ In the case of a [[Review]], the property describes the [[itemReviewed]] from th
 The property values can be expressed either as unstructured text (repeated as necessary), or if ordered, as a list (in which case the most positive is at the beginning of the list).
      *
      * @param $positiveNotes |||
+     * @return static
      **/
-    public function setPositiveNotes($positiveNotes) {
+    public function setPositiveNotes($positiveNotes): static {
         $this->properties['positiveNotes'] = $positiveNotes;
 
         return $this;
@@ -82,8 +84,9 @@ The property values can be expressed either as unstructured text (repeated as ne
      * An associated [[ClaimReview]], related by specific common content, topic or claim. The expectation is that this property would be most typically used in cases where a single activity is conducting both claim reviews and media reviews, in which case [[relatedMediaReview]] would commonly be used on a [[ClaimReview]], while [[relatedClaimReview]] would be used on [[MediaReview]].
      *
      * @param $associatedClaimReview 
+     * @return static
      **/
-    public function setAssociatedClaimReview($associatedClaimReview) {
+    public function setAssociatedClaimReview($associatedClaimReview): static {
         $this->properties['associatedClaimReview'] = $associatedClaimReview;
 
         return $this;
@@ -100,8 +103,9 @@ The property values can be expressed either as unstructured text (repeated as ne
      * The actual body of the review.
      *
      * @param $reviewBody 
+     * @return static
      **/
-    public function setReviewBody($reviewBody) {
+    public function setReviewBody($reviewBody): static {
         $this->properties['reviewBody'] = $reviewBody;
 
         return $this;
@@ -118,8 +122,9 @@ The property values can be expressed either as unstructured text (repeated as ne
      * The item that is being reviewed/rated.
      *
      * @param $itemReviewed 
+     * @return static
      **/
-    public function setItemReviewed($itemReviewed) {
+    public function setItemReviewed($itemReviewed): static {
         $this->properties['itemReviewed'] = $itemReviewed;
 
         return $this;
@@ -136,8 +141,9 @@ The property values can be expressed either as unstructured text (repeated as ne
      * This Review or Rating is relevant to this part or facet of the itemReviewed.
      *
      * @param $reviewAspect 
+     * @return static
      **/
-    public function setReviewAspect($reviewAspect) {
+    public function setReviewAspect($reviewAspect): static {
         $this->properties['reviewAspect'] = $reviewAspect;
 
         return $this;
@@ -154,8 +160,9 @@ The property values can be expressed either as unstructured text (repeated as ne
      * The rating given in this review. Note that reviews can themselves be rated. The ```reviewRating``` applies to rating given by the review. The [[aggregateRating]] property applies to the review itself, as a creative work.
      *
      * @param $reviewRating 
+     * @return static
      **/
-    public function setReviewRating($reviewRating) {
+    public function setReviewRating($reviewRating): static {
         $this->properties['reviewRating'] = $reviewRating;
 
         return $this;
@@ -177,8 +184,9 @@ tend to emphasise positive claims, it may be relatively unusual to find [[negati
 The property values can be expressed either as unstructured text (repeated as necessary), or if ordered, as a list (in which case the most negative is at the beginning of the list).
      *
      * @param $negativeNotes |||
+     * @return static
      **/
-    public function setNegativeNotes($negativeNotes) {
+    public function setNegativeNotes($negativeNotes): static {
         $this->properties['negativeNotes'] = $negativeNotes;
 
         return $this;
@@ -195,8 +203,9 @@ The property values can be expressed either as unstructured text (repeated as ne
      * An associated [[MediaReview]], related by specific common content, topic or claim. The expectation is that this property would be most typically used in cases where a single activity is conducting both claim reviews and media reviews, in which case [[relatedMediaReview]] would commonly be used on a [[ClaimReview]], while [[relatedClaimReview]] would be used on [[MediaReview]].
      *
      * @param $associatedMediaReview 
+     * @return static
      **/
-    public function setAssociatedMediaReview($associatedMediaReview) {
+    public function setAssociatedMediaReview($associatedMediaReview): static {
         $this->properties['associatedMediaReview'] = $associatedMediaReview;
 
         return $this;

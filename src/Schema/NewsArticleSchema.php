@@ -36,7 +36,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class NewsArticleSchema extends ArticleSchema
 {
-    public static function factory()
+    public static function factory(): NewsArticleSchema
     {
         return new NewsArticleSchema('https://schema.org/', 'NewsArticle');
     }
@@ -45,8 +45,9 @@ class NewsArticleSchema extends ArticleSchema
      * If this NewsArticle appears in print, this field indicates the name of the page on which the article is found. Please note that this field is intended for the exact page name (e.g. A5, B18).
      *
      * @param $printPage 
+     * @return static
      **/
-    public function setPrintPage($printPage) {
+    public function setPrintPage($printPage): static {
         $this->properties['printPage'] = $printPage;
 
         return $this;
@@ -63,8 +64,9 @@ class NewsArticleSchema extends ArticleSchema
      * The edition of the print product in which the NewsArticle appears.
      *
      * @param $printEdition 
+     * @return static
      **/
-    public function setPrintEdition($printEdition) {
+    public function setPrintEdition($printEdition): static {
         $this->properties['printEdition'] = $printEdition;
 
         return $this;
@@ -86,8 +88,9 @@ Dateline summaries are oriented more towards human readers than towards automate
       
      *
      * @param $dateline 
+     * @return static
      **/
-    public function setDateline($dateline) {
+    public function setDateline($dateline): static {
         $this->properties['dateline'] = $dateline;
 
         return $this;
@@ -104,8 +107,9 @@ Dateline summaries are oriented more towards human readers than towards automate
      * The number of the column in which the NewsArticle appears in the print edition.
      *
      * @param $printColumn 
+     * @return static
      **/
-    public function setPrintColumn($printColumn) {
+    public function setPrintColumn($printColumn): static {
         $this->properties['printColumn'] = $printColumn;
 
         return $this;
@@ -122,8 +126,9 @@ Dateline summaries are oriented more towards human readers than towards automate
      * If this NewsArticle appears in print, this field indicates the print section in which the article appeared.
      *
      * @param $printSection 
+     * @return static
      **/
-    public function setPrintSection($printSection) {
+    public function setPrintSection($printSection): static {
         $this->properties['printSection'] = $printSection;
 
         return $this;

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class EventVenueSchema extends CivicStructureSchema
 {
-    public static function factory()
+    public static function factory(): EventVenueSchema
     {
         return new EventVenueSchema('https://schema.org/', 'EventVenue');
     }

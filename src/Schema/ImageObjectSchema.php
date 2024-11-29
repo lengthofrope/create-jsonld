@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ImageObjectSchema extends MediaObjectSchema
 {
-    public static function factory()
+    public static function factory(): ImageObjectSchema
     {
         return new ImageObjectSchema('https://schema.org/', 'ImageObject');
     }
@@ -42,8 +42,9 @@ class ImageObjectSchema extends MediaObjectSchema
      * Indicates whether this image is representative of the content of the page.
      *
      * @param $representativeOfPage 
+     * @return static
      **/
-    public function setRepresentativeOfPage($representativeOfPage) {
+    public function setRepresentativeOfPage($representativeOfPage): static {
         $this->properties['representativeOfPage'] = $representativeOfPage;
 
         return $this;
@@ -60,8 +61,9 @@ class ImageObjectSchema extends MediaObjectSchema
      * The caption for this object. For downloadable machine formats (closed caption, subtitles etc.) use MediaObject and indicate the [[encodingFormat]].
      *
      * @param $caption |
+     * @return static
      **/
-    public function setCaption($caption) {
+    public function setCaption($caption): static {
         $this->properties['caption'] = $caption;
 
         return $this;
@@ -78,8 +80,9 @@ class ImageObjectSchema extends MediaObjectSchema
      * exif data for this object.
      *
      * @param $exifData |
+     * @return static
      **/
-    public function setExifData($exifData) {
+    public function setExifData($exifData): static {
         $this->properties['exifData'] = $exifData;
 
         return $this;
@@ -96,8 +99,9 @@ class ImageObjectSchema extends MediaObjectSchema
      * Represents textual captioning from a [[MediaObject]], e.g. text of a 'meme'.
      *
      * @param $embeddedTextCaption 
+     * @return static
      **/
-    public function setEmbeddedTextCaption($embeddedTextCaption) {
+    public function setEmbeddedTextCaption($embeddedTextCaption): static {
         $this->properties['embeddedTextCaption'] = $embeddedTextCaption;
 
         return $this;

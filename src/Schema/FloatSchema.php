@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class FloatSchema extends NumberSchema
 {
-    public static function factory()
+    public static function factory(): FloatSchema
     {
         return new FloatSchema('https://schema.org/', 'Float');
     }

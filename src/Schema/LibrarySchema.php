@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class LibrarySchema extends LocalBusinessSchema
 {
-    public static function factory()
+    public static function factory(): LibrarySchema
     {
         return new LibrarySchema('https://schema.org/', 'Library');
     }

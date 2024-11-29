@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PhysicalTherapySchema extends MedicalTherapySchema
 {
-    public static function factory()
+    public static function factory(): PhysicalTherapySchema
     {
         return new PhysicalTherapySchema('https://schema.org/', 'PhysicalTherapy');
     }

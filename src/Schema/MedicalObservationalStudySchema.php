@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MedicalObservationalStudySchema extends MedicalStudySchema
 {
-    public static function factory()
+    public static function factory(): MedicalObservationalStudySchema
     {
         return new MedicalObservationalStudySchema('https://schema.org/', 'MedicalObservationalStudy');
     }
@@ -42,8 +42,9 @@ class MedicalObservationalStudySchema extends MedicalStudySchema
      * Specifics about the observational study design (enumerated).
      *
      * @param $studyDesign 
+     * @return static
      **/
-    public function setStudyDesign($studyDesign) {
+    public function setStudyDesign($studyDesign): static {
         $this->properties['studyDesign'] = $studyDesign;
 
         return $this;

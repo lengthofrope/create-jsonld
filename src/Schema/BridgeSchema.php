@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class BridgeSchema extends CivicStructureSchema
 {
-    public static function factory()
+    public static function factory(): BridgeSchema
     {
         return new BridgeSchema('https://schema.org/', 'Bridge');
     }

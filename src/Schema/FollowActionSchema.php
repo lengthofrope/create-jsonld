@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class FollowActionSchema extends InteractActionSchema
 {
-    public static function factory()
+    public static function factory(): FollowActionSchema
     {
         return new FollowActionSchema('https://schema.org/', 'FollowAction');
     }
@@ -42,8 +42,9 @@ class FollowActionSchema extends InteractActionSchema
      * A sub property of object. The person or organization being followed.
      *
      * @param $followee |
+     * @return static
      **/
-    public function setFollowee($followee) {
+    public function setFollowee($followee): static {
         $this->properties['followee'] = $followee;
 
         return $this;

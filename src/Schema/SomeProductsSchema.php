@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class SomeProductsSchema extends ProductSchema
 {
-    public static function factory()
+    public static function factory(): SomeProductsSchema
     {
         return new SomeProductsSchema('https://schema.org/', 'SomeProducts');
     }
@@ -42,8 +42,9 @@ class SomeProductsSchema extends ProductSchema
      * The current approximate inventory level for the item or items.
      *
      * @param $inventoryLevel 
+     * @return static
      **/
-    public function setInventoryLevel($inventoryLevel) {
+    public function setInventoryLevel($inventoryLevel): static {
         $this->properties['inventoryLevel'] = $inventoryLevel;
 
         return $this;

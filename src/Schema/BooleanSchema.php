@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class BooleanSchema extends \LengthOfRope\JSONLD\Elements\Element
 {
-    public static function factory()
+    public static function factory(): BooleanSchema
     {
         return new BooleanSchema('https://schema.org/', 'Boolean');
     }

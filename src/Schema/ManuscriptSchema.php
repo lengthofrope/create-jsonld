@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ManuscriptSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): ManuscriptSchema
     {
         return new ManuscriptSchema('https://schema.org/', 'Manuscript');
     }

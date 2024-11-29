@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ThesisSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): ThesisSchema
     {
         return new ThesisSchema('https://schema.org/', 'Thesis');
     }
@@ -42,8 +42,9 @@ class ThesisSchema extends CreativeWorkSchema
      * Qualification, candidature, degree, application that Thesis supports.
      *
      * @param $inSupportOf 
+     * @return static
      **/
-    public function setInSupportOf($inSupportOf) {
+    public function setInSupportOf($inSupportOf): static {
         $this->properties['inSupportOf'] = $inSupportOf;
 
         return $this;

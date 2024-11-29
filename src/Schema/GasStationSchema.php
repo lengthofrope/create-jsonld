@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class GasStationSchema extends AutomotiveBusinessSchema
 {
-    public static function factory()
+    public static function factory(): GasStationSchema
     {
         return new GasStationSchema('https://schema.org/', 'GasStation');
     }

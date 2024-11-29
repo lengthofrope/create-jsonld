@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class TherapeuticProcedureSchema extends MedicalProcedureSchema
 {
-    public static function factory()
+    public static function factory(): TherapeuticProcedureSchema
     {
         return new TherapeuticProcedureSchema('https://schema.org/', 'TherapeuticProcedure');
     }
@@ -42,8 +42,9 @@ class TherapeuticProcedureSchema extends MedicalProcedureSchema
      * A dosing schedule for the drug for a given population, either observed, recommended, or maximum dose based on the type used.
      *
      * @param $doseSchedule 
+     * @return static
      **/
-    public function setDoseSchedule($doseSchedule) {
+    public function setDoseSchedule($doseSchedule): static {
         $this->properties['doseSchedule'] = $doseSchedule;
 
         return $this;
@@ -60,8 +61,9 @@ class TherapeuticProcedureSchema extends MedicalProcedureSchema
      * Specifying a drug or medicine used in a medication procedure.
      *
      * @param $drug 
+     * @return static
      **/
-    public function setDrug($drug) {
+    public function setDrug($drug): static {
         $this->properties['drug'] = $drug;
 
         return $this;
@@ -78,8 +80,9 @@ class TherapeuticProcedureSchema extends MedicalProcedureSchema
      * A possible complication and/or side effect of this therapy. If it is known that an adverse outcome is serious (resulting in death, disability, or permanent damage; requiring hospitalization; or otherwise life-threatening or requiring immediate medical attention), tag it as a seriousAdverseOutcome instead.
      *
      * @param $adverseOutcome 
+     * @return static
      **/
-    public function setAdverseOutcome($adverseOutcome) {
+    public function setAdverseOutcome($adverseOutcome): static {
         $this->properties['adverseOutcome'] = $adverseOutcome;
 
         return $this;

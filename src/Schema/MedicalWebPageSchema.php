@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MedicalWebPageSchema extends WebPageSchema
 {
-    public static function factory()
+    public static function factory(): MedicalWebPageSchema
     {
         return new MedicalWebPageSchema('https://schema.org/', 'MedicalWebPage');
     }
@@ -42,8 +42,9 @@ class MedicalWebPageSchema extends WebPageSchema
      * An aspect of medical practice that is considered on the page, such as 'diagnosis', 'treatment', 'causes', 'prognosis', 'etiology', 'epidemiology', etc.
      *
      * @param $aspect 
+     * @return static
      **/
-    public function setAspect($aspect) {
+    public function setAspect($aspect): static {
         $this->properties['aspect'] = $aspect;
 
         return $this;
@@ -60,8 +61,9 @@ class MedicalWebPageSchema extends WebPageSchema
      * Medical audience for page.
      *
      * @param $medicalAudience |
+     * @return static
      **/
-    public function setMedicalAudience($medicalAudience) {
+    public function setMedicalAudience($medicalAudience): static {
         $this->properties['medicalAudience'] = $medicalAudience;
 
         return $this;

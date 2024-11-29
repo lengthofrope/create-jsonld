@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ParcelDeliverySchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): ParcelDeliverySchema
     {
         return new ParcelDeliverySchema('https://schema.org/', 'ParcelDelivery');
     }
@@ -42,8 +42,9 @@ class ParcelDeliverySchema extends IntangibleSchema
      * 'carrier' is an out-dated term indicating the 'provider' for parcel delivery and flights.
      *
      * @param $carrier 
+     * @return static
      **/
-    public function setCarrier($carrier) {
+    public function setCarrier($carrier): static {
         $this->properties['carrier'] = $carrier;
 
         return $this;
@@ -60,8 +61,9 @@ class ParcelDeliverySchema extends IntangibleSchema
      * Destination address.
      *
      * @param $deliveryAddress 
+     * @return static
      **/
-    public function setDeliveryAddress($deliveryAddress) {
+    public function setDeliveryAddress($deliveryAddress): static {
         $this->properties['deliveryAddress'] = $deliveryAddress;
 
         return $this;
@@ -78,8 +80,9 @@ class ParcelDeliverySchema extends IntangibleSchema
      * New entry added as the package passes through each leg of its journey (from shipment to final delivery).
      *
      * @param $deliveryStatus 
+     * @return static
      **/
-    public function setDeliveryStatus($deliveryStatus) {
+    public function setDeliveryStatus($deliveryStatus): static {
         $this->properties['deliveryStatus'] = $deliveryStatus;
 
         return $this;
@@ -96,8 +99,9 @@ class ParcelDeliverySchema extends IntangibleSchema
      * The overall order the items in this delivery were included in.
      *
      * @param $partOfOrder 
+     * @return static
      **/
-    public function setPartOfOrder($partOfOrder) {
+    public function setPartOfOrder($partOfOrder): static {
         $this->properties['partOfOrder'] = $partOfOrder;
 
         return $this;
@@ -114,8 +118,9 @@ class ParcelDeliverySchema extends IntangibleSchema
      * Shipper tracking number.
      *
      * @param $trackingNumber 
+     * @return static
      **/
-    public function setTrackingNumber($trackingNumber) {
+    public function setTrackingNumber($trackingNumber): static {
         $this->properties['trackingNumber'] = $trackingNumber;
 
         return $this;
@@ -132,8 +137,9 @@ class ParcelDeliverySchema extends IntangibleSchema
      * Shipper's address.
      *
      * @param $originAddress 
+     * @return static
      **/
-    public function setOriginAddress($originAddress) {
+    public function setOriginAddress($originAddress): static {
         $this->properties['originAddress'] = $originAddress;
 
         return $this;
@@ -150,8 +156,9 @@ class ParcelDeliverySchema extends IntangibleSchema
      * Tracking url for the parcel delivery.
      *
      * @param $trackingUrl 
+     * @return static
      **/
-    public function setTrackingUrl($trackingUrl) {
+    public function setTrackingUrl($trackingUrl): static {
         $this->properties['trackingUrl'] = $trackingUrl;
 
         return $this;
@@ -168,8 +175,9 @@ class ParcelDeliverySchema extends IntangibleSchema
      * Item(s) being shipped.
      *
      * @param $itemShipped 
+     * @return static
      **/
-    public function setItemShipped($itemShipped) {
+    public function setItemShipped($itemShipped): static {
         $this->properties['itemShipped'] = $itemShipped;
 
         return $this;
@@ -186,8 +194,9 @@ class ParcelDeliverySchema extends IntangibleSchema
      * The latest date the package may arrive.
      *
      * @param $expectedArrivalUntil |
+     * @return static
      **/
-    public function setExpectedArrivalUntil($expectedArrivalUntil) {
+    public function setExpectedArrivalUntil($expectedArrivalUntil): static {
         $this->properties['expectedArrivalUntil'] = $expectedArrivalUntil;
 
         return $this;
@@ -204,8 +213,9 @@ class ParcelDeliverySchema extends IntangibleSchema
      * Method used for delivery or shipping.
      *
      * @param $hasDeliveryMethod 
+     * @return static
      **/
-    public function setHasDeliveryMethod($hasDeliveryMethod) {
+    public function setHasDeliveryMethod($hasDeliveryMethod): static {
         $this->properties['hasDeliveryMethod'] = $hasDeliveryMethod;
 
         return $this;
@@ -222,8 +232,9 @@ class ParcelDeliverySchema extends IntangibleSchema
      * The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.
      *
      * @param $provider |
+     * @return static
      **/
-    public function setProvider($provider) {
+    public function setProvider($provider): static {
         $this->properties['provider'] = $provider;
 
         return $this;
@@ -240,8 +251,9 @@ class ParcelDeliverySchema extends IntangibleSchema
      * The earliest date the package may arrive.
      *
      * @param $expectedArrivalFrom |
+     * @return static
      **/
-    public function setExpectedArrivalFrom($expectedArrivalFrom) {
+    public function setExpectedArrivalFrom($expectedArrivalFrom): static {
         $this->properties['expectedArrivalFrom'] = $expectedArrivalFrom;
 
         return $this;

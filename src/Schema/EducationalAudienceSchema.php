@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class EducationalAudienceSchema extends AudienceSchema
 {
-    public static function factory()
+    public static function factory(): EducationalAudienceSchema
     {
         return new EducationalAudienceSchema('https://schema.org/', 'EducationalAudience');
     }
@@ -42,8 +42,9 @@ class EducationalAudienceSchema extends AudienceSchema
      * An educationalRole of an EducationalAudience.
      *
      * @param $educationalRole 
+     * @return static
      **/
-    public function setEducationalRole($educationalRole) {
+    public function setEducationalRole($educationalRole): static {
         $this->properties['educationalRole'] = $educationalRole;
 
         return $this;

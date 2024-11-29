@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ServiceChannelSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): ServiceChannelSchema
     {
         return new ServiceChannelSchema('https://schema.org/', 'ServiceChannel');
     }
@@ -42,8 +42,9 @@ class ServiceChannelSchema extends IntangibleSchema
      * The location (e.g. civic structure, local business, etc.) where a person can go to access the service.
      *
      * @param $serviceLocation 
+     * @return static
      **/
-    public function setServiceLocation($serviceLocation) {
+    public function setServiceLocation($serviceLocation): static {
         $this->properties['serviceLocation'] = $serviceLocation;
 
         return $this;
@@ -60,8 +61,9 @@ class ServiceChannelSchema extends IntangibleSchema
      * The phone number to use to access the service.
      *
      * @param $servicePhone 
+     * @return static
      **/
-    public function setServicePhone($servicePhone) {
+    public function setServicePhone($servicePhone): static {
         $this->properties['servicePhone'] = $servicePhone;
 
         return $this;
@@ -78,8 +80,9 @@ class ServiceChannelSchema extends IntangibleSchema
      * The number to access the service by text message.
      *
      * @param $serviceSmsNumber 
+     * @return static
      **/
-    public function setServiceSmsNumber($serviceSmsNumber) {
+    public function setServiceSmsNumber($serviceSmsNumber): static {
         $this->properties['serviceSmsNumber'] = $serviceSmsNumber;
 
         return $this;
@@ -96,8 +99,9 @@ class ServiceChannelSchema extends IntangibleSchema
      * The website to access the service.
      *
      * @param $serviceUrl 
+     * @return static
      **/
-    public function setServiceUrl($serviceUrl) {
+    public function setServiceUrl($serviceUrl): static {
         $this->properties['serviceUrl'] = $serviceUrl;
 
         return $this;
@@ -114,8 +118,9 @@ class ServiceChannelSchema extends IntangibleSchema
      * Estimated processing time for the service using this channel.
      *
      * @param $processingTime 
+     * @return static
      **/
-    public function setProcessingTime($processingTime) {
+    public function setProcessingTime($processingTime): static {
         $this->properties['processingTime'] = $processingTime;
 
         return $this;
@@ -132,8 +137,9 @@ class ServiceChannelSchema extends IntangibleSchema
      * The address for accessing the service by mail.
      *
      * @param $servicePostalAddress 
+     * @return static
      **/
-    public function setServicePostalAddress($servicePostalAddress) {
+    public function setServicePostalAddress($servicePostalAddress): static {
         $this->properties['servicePostalAddress'] = $servicePostalAddress;
 
         return $this;
@@ -150,8 +156,9 @@ class ServiceChannelSchema extends IntangibleSchema
      * The service provided by this channel.
      *
      * @param $providesService 
+     * @return static
      **/
-    public function setProvidesService($providesService) {
+    public function setProvidesService($providesService): static {
         $this->properties['providesService'] = $providesService;
 
         return $this;
@@ -168,8 +175,9 @@ class ServiceChannelSchema extends IntangibleSchema
      * A language someone may use with or at the item, service or place. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].
      *
      * @param $availableLanguage |
+     * @return static
      **/
-    public function setAvailableLanguage($availableLanguage) {
+    public function setAvailableLanguage($availableLanguage): static {
         $this->properties['availableLanguage'] = $availableLanguage;
 
         return $this;

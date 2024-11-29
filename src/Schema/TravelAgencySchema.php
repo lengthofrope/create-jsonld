@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class TravelAgencySchema extends LocalBusinessSchema
 {
-    public static function factory()
+    public static function factory(): TravelAgencySchema
     {
         return new TravelAgencySchema('https://schema.org/', 'TravelAgency');
     }

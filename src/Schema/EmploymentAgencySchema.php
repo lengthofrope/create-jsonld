@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class EmploymentAgencySchema extends LocalBusinessSchema
 {
-    public static function factory()
+    public static function factory(): EmploymentAgencySchema
     {
         return new EmploymentAgencySchema('https://schema.org/', 'EmploymentAgency');
     }

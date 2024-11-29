@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class CreativeWorkSchema extends ThingSchema
 {
-    public static function factory()
+    public static function factory(): CreativeWorkSchema
     {
         return new CreativeWorkSchema('https://schema.org/', 'CreativeWork');
     }
@@ -42,8 +42,9 @@ class CreativeWorkSchema extends ThingSchema
      * The number of interactions for the CreativeWork using the WebSite or SoftwareApplication. The most specific child type of InteractionCounter should be used.
      *
      * @param $interactionStatistic 
+     * @return static
      **/
-    public function setInteractionStatistic($interactionStatistic) {
+    public function setInteractionStatistic($interactionStatistic): static {
         $this->properties['interactionStatistic'] = $interactionStatistic;
 
         return $this;
@@ -60,8 +61,9 @@ class CreativeWorkSchema extends ThingSchema
      * A secondary contributor to the CreativeWork or Event.
      *
      * @param $contributor |
+     * @return static
      **/
-    public function setContributor($contributor) {
+    public function setContributor($contributor): static {
         $this->properties['contributor'] = $contributor;
 
         return $this;
@@ -81,8 +83,9 @@ While such policies are most typically expressed in natural language, sometimes 
 
      *
      * @param $publishingPrinciples |
+     * @return static
      **/
-    public function setPublishingPrinciples($publishingPrinciples) {
+    public function setPublishingPrinciples($publishingPrinciples): static {
         $this->properties['publishingPrinciples'] = $publishingPrinciples;
 
         return $this;
@@ -99,8 +102,9 @@ While such policies are most typically expressed in natural language, sometimes 
      * A creative work that this work is an example/instance/realization/derivation of.
      *
      * @param $exampleOfWork 
+     * @return static
      **/
-    public function setExampleOfWork($exampleOfWork) {
+    public function setExampleOfWork($exampleOfWork): static {
         $this->properties['exampleOfWork'] = $exampleOfWork;
 
         return $this;
@@ -117,8 +121,9 @@ While such policies are most typically expressed in natural language, sometimes 
      * The specific time described by a creative work, for works (e.g. articles, video objects etc.) that emphasise a particular moment within an Event.
      *
      * @param $contentReferenceTime 
+     * @return static
      **/
-    public function setContentReferenceTime($contentReferenceTime) {
+    public function setContentReferenceTime($contentReferenceTime): static {
         $this->properties['contentReferenceTime'] = $contentReferenceTime;
 
         return $this;
@@ -135,8 +140,9 @@ While such policies are most typically expressed in natural language, sometimes 
      * Media type, typically MIME format (see [IANA site](http://www.iana.org/assignments/media-types/media-types.xhtml)) of the content, e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, 'encoding' can be used to indicate each MediaObject alongside particular fileFormat information. Unregistered or niche file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia entry.
      *
      * @param $fileFormat |
+     * @return static
      **/
-    public function setFileFormat($fileFormat) {
+    public function setFileFormat($fileFormat): static {
         $this->properties['fileFormat'] = $fileFormat;
 
         return $this;
@@ -153,8 +159,9 @@ While such policies are most typically expressed in natural language, sometimes 
      * Text of a notice appropriate for describing the copyright aspects of this Creative Work, ideally indicating the owner of the copyright for the Work.
      *
      * @param $copyrightNotice 
+     * @return static
      **/
-    public function setCopyrightNotice($copyrightNotice) {
+    public function setCopyrightNotice($copyrightNotice): static {
         $this->properties['copyrightNotice'] = $copyrightNotice;
 
         return $this;
@@ -173,8 +180,9 @@ While such policies are most typically expressed in natural language, sometimes 
 This property should not be used where the nature of the alignment can be described using a simple property, for example to express that a resource [[teaches]] or [[assesses]] a competency.
      *
      * @param $educationalAlignment 
+     * @return static
      **/
-    public function setEducationalAlignment($educationalAlignment) {
+    public function setEducationalAlignment($educationalAlignment): static {
         $this->properties['educationalAlignment'] = $educationalAlignment;
 
         return $this;
@@ -191,8 +199,9 @@ This property should not be used where the nature of the alignment can be descri
      * Indicates that the CreativeWork contains a reference to, but is not necessarily about a concept.
      *
      * @param $mentions 
+     * @return static
      **/
-    public function setMentions($mentions) {
+    public function setMentions($mentions): static {
         $this->properties['mentions'] = $mentions;
 
         return $this;
@@ -210,8 +219,9 @@ This property should not be used where the nature of the alignment can be descri
 (e.g. [[temporalCoverage]], [[dateCreated]], [[dateModified]], [[datePublished]]) are not known to be appropriate.
      *
      * @param $temporal |
+     * @return static
      **/
-    public function setTemporal($temporal) {
+    public function setTemporal($temporal): static {
         $this->properties['temporal'] = $temporal;
 
         return $this;
@@ -228,8 +238,9 @@ This property should not be used where the nature of the alignment can be descri
      * A material that something is made from, e.g. leather, wool, cotton, paper.
      *
      * @param $material ||
+     * @return static
      **/
-    public function setMaterial($material) {
+    public function setMaterial($material): static {
         $this->properties['material'] = $material;
 
         return $this;
@@ -246,8 +257,9 @@ This property should not be used where the nature of the alignment can be descri
      * A media object that encodes this CreativeWork. This property is a synonym for encoding.
      *
      * @param $associatedMedia 
+     * @return static
      **/
-    public function setAssociatedMedia($associatedMedia) {
+    public function setAssociatedMedia($associatedMedia): static {
         $this->properties['associatedMedia'] = $associatedMedia;
 
         return $this;
@@ -264,8 +276,9 @@ This property should not be used where the nature of the alignment can be descri
      * The version of the CreativeWork embodied by a specified resource.
      *
      * @param $version |
+     * @return static
      **/
-    public function setVersion($version) {
+    public function setVersion($version): static {
         $this->properties['version'] = $version;
 
         return $this;
@@ -282,8 +295,9 @@ This property should not be used where the nature of the alignment can be descri
      * An award won by or for this item.
      *
      * @param $award 
+     * @return static
      **/
-    public function setAward($award) {
+    public function setAward($award): static {
         $this->properties['award'] = $award;
 
         return $this;
@@ -300,8 +314,9 @@ This property should not be used where the nature of the alignment can be descri
      * The predominant type or kind characterizing the learning resource. For example, 'presentation', 'handout'.
      *
      * @param $learningResourceType |
+     * @return static
      **/
-    public function setLearningResourceType($learningResourceType) {
+    public function setLearningResourceType($learningResourceType): static {
         $this->properties['learningResourceType'] = $learningResourceType;
 
         return $this;
@@ -318,8 +333,9 @@ This property should not be used where the nature of the alignment can be descri
      * A media object that encodes this CreativeWork. This property is a synonym for associatedMedia.
      *
      * @param $encoding 
+     * @return static
      **/
-    public function setEncoding($encoding) {
+    public function setEncoding($encoding): static {
         $this->properties['encoding'] = $encoding;
 
         return $this;
@@ -336,8 +352,9 @@ This property should not be used where the nature of the alignment can be descri
      * The Event where the CreativeWork was recorded. The CreativeWork may capture all or part of the event.
      *
      * @param $recordedAt 
+     * @return static
      **/
-    public function setRecordedAt($recordedAt) {
+    public function setRecordedAt($recordedAt): static {
         $this->properties['recordedAt'] = $recordedAt;
 
         return $this;
@@ -358,8 +375,9 @@ In cases where a [[CreativeWork]] has several media type representations, [[enco
 Unregistered or niche encoding and file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia/Wikidata entry.
      *
      * @param $encodingFormat |
+     * @return static
      **/
-    public function setEncodingFormat($encodingFormat) {
+    public function setEncodingFormat($encodingFormat): static {
         $this->properties['encodingFormat'] = $encodingFormat;
 
         return $this;
@@ -376,8 +394,9 @@ Unregistered or niche encoding and file formats can be indicated instead via the
      * A human-readable summary of specific accessibility features or deficiencies, consistent with the other accessibility metadata but expressing subtleties such as "short descriptions are present but long descriptions will be needed for non-visual users" or "short descriptions are present and no long descriptions are needed".
      *
      * @param $accessibilitySummary 
+     * @return static
      **/
-    public function setAccessibilitySummary($accessibilitySummary) {
+    public function setAccessibilitySummary($accessibilitySummary): static {
         $this->properties['accessibilitySummary'] = $accessibilitySummary;
 
         return $this;
@@ -394,8 +413,9 @@ Unregistered or niche encoding and file formats can be indicated instead via the
      * Specifies the Person who edited the CreativeWork.
      *
      * @param $editor 
+     * @return static
      **/
-    public function setEditor($editor) {
+    public function setEditor($editor): static {
         $this->properties['editor'] = $editor;
 
         return $this;
@@ -412,8 +432,9 @@ Unregistered or niche encoding and file formats can be indicated instead via the
      * The party holding the legal copyright to the CreativeWork.
      *
      * @param $copyrightHolder |
+     * @return static
      **/
-    public function setCopyrightHolder($copyrightHolder) {
+    public function setCopyrightHolder($copyrightHolder): static {
         $this->properties['copyrightHolder'] = $copyrightHolder;
 
         return $this;
@@ -430,8 +451,9 @@ Unregistered or niche encoding and file formats can be indicated instead via the
      * A [[Grant]] that directly or indirectly provide funding or sponsorship for this item. See also [[ownershipFundingInfo]].
      *
      * @param $funding 
+     * @return static
      **/
-    public function setFunding($funding) {
+    public function setFunding($funding): static {
         $this->properties['funding'] = $funding;
 
         return $this;
@@ -448,8 +470,9 @@ Unregistered or niche encoding and file formats can be indicated instead via the
      * The position of an item in a series or sequence of items.
      *
      * @param $position |
+     * @return static
      **/
-    public function setPosition($position) {
+    public function setPosition($position): static {
         $this->properties['position'] = $position;
 
         return $this;
@@ -466,8 +489,9 @@ Unregistered or niche encoding and file formats can be indicated instead via the
      * The subject matter of the content.
      *
      * @param $about 
+     * @return static
      **/
-    public function setAbout($about) {
+    public function setAbout($about): static {
         $this->properties['about'] = $about;
 
         return $this;
@@ -484,8 +508,9 @@ Unregistered or niche encoding and file formats can be indicated instead via the
      * A secondary title of the CreativeWork.
      *
      * @param $alternativeHeadline 
+     * @return static
      **/
-    public function setAlternativeHeadline($alternativeHeadline) {
+    public function setAlternativeHeadline($alternativeHeadline): static {
         $this->properties['alternativeHeadline'] = $alternativeHeadline;
 
         return $this;
@@ -502,8 +527,9 @@ Unregistered or niche encoding and file formats can be indicated instead via the
      * The number of comments this CreativeWork (e.g. Article, Question or Answer) has received. This is most applicable to works published in Web sites with commenting system; additional comments may exist elsewhere.
      *
      * @param $commentCount 
+     * @return static
      **/
-    public function setCommentCount($commentCount) {
+    public function setCommentCount($commentCount): static {
         $this->properties['commentCount'] = $commentCount;
 
         return $this;
@@ -520,8 +546,9 @@ Unregistered or niche encoding and file formats can be indicated instead via the
      * A person or organization that supports (sponsors) something through some kind of financial contribution.
      *
      * @param $funder |
+     * @return static
      **/
-    public function setFunder($funder) {
+    public function setFunder($funder): static {
         $this->properties['funder'] = $funder;
 
         return $this;
@@ -538,8 +565,9 @@ Unregistered or niche encoding and file formats can be indicated instead via the
      * Date of first publication or broadcast. For example the date a [[CreativeWork]] was broadcast or a [[Certification]] was issued.
      *
      * @param $datePublished |
+     * @return static
      **/
-    public function setDatePublished($datePublished) {
+    public function setDatePublished($datePublished): static {
         $this->properties['datePublished'] = $datePublished;
 
         return $this;
@@ -556,8 +584,9 @@ Unregistered or niche encoding and file formats can be indicated instead via the
      * Indicates whether this content is family friendly.
      *
      * @param $isFamilyFriendly 
+     * @return static
      **/
-    public function setIsFamilyFriendly($isFamilyFriendly) {
+    public function setIsFamilyFriendly($isFamilyFriendly): static {
         $this->properties['isFamilyFriendly'] = $isFamilyFriendly;
 
         return $this;
@@ -574,8 +603,9 @@ Unregistered or niche encoding and file formats can be indicated instead via the
      * Comments, typically from users.
      *
      * @param $comment 
+     * @return static
      **/
-    public function setComment($comment) {
+    public function setComment($comment): static {
         $this->properties['comment'] = $comment;
 
         return $this;
@@ -592,8 +622,9 @@ Unregistered or niche encoding and file formats can be indicated instead via the
      * A resource from which this work is derived or from which it is a modification or adaptation.
      *
      * @param $isBasedOn ||
+     * @return static
      **/
-    public function setIsBasedOn($isBasedOn) {
+    public function setIsBasedOn($isBasedOn): static {
         $this->properties['isBasedOn'] = $isBasedOn;
 
         return $this;
@@ -610,8 +641,9 @@ Unregistered or niche encoding and file formats can be indicated instead via the
      * The Organization on whose behalf the creator was working.
      *
      * @param $sourceOrganization 
+     * @return static
      **/
-    public function setSourceOrganization($sourceOrganization) {
+    public function setSourceOrganization($sourceOrganization): static {
         $this->properties['sourceOrganization'] = $sourceOrganization;
 
         return $this;
@@ -628,8 +660,9 @@ Unregistered or niche encoding and file formats can be indicated instead via the
      * A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html.
      *
      * @param $isBasedOnUrl ||
+     * @return static
      **/
-    public function setIsBasedOnUrl($isBasedOnUrl) {
+    public function setIsBasedOnUrl($isBasedOnUrl): static {
         $this->properties['isBasedOnUrl'] = $isBasedOnUrl;
 
         return $this;
@@ -646,8 +679,9 @@ Unregistered or niche encoding and file formats can be indicated instead via the
      * Thumbnail image for an image or video.
      *
      * @param $thumbnail 
+     * @return static
      **/
-    public function setThumbnail($thumbnail) {
+    public function setThumbnail($thumbnail): static {
         $this->properties['thumbnail'] = $thumbnail;
 
         return $this;
@@ -664,8 +698,9 @@ Unregistered or niche encoding and file formats can be indicated instead via the
      * An embedded video object.
      *
      * @param $video |
+     * @return static
      **/
-    public function setVideo($video) {
+    public function setVideo($video): static {
         $this->properties['video'] = $video;
 
         return $this;
@@ -682,8 +717,9 @@ Unregistered or niche encoding and file formats can be indicated instead via the
      * Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or by repeating the property.
      *
      * @param $keywords ||
+     * @return static
      **/
-    public function setKeywords($keywords) {
+    public function setKeywords($keywords): static {
         $this->properties['keywords'] = $keywords;
 
         return $this;
@@ -700,8 +736,9 @@ Unregistered or niche encoding and file formats can be indicated instead via the
      * Text that can be used to credit person(s) and/or organization(s) associated with a published Creative Work.
      *
      * @param $creditText 
+     * @return static
      **/
-    public function setCreditText($creditText) {
+    public function setCreditText($creditText): static {
         $this->properties['creditText'] = $creditText;
 
         return $this;
@@ -718,8 +755,9 @@ Unregistered or niche encoding and file formats can be indicated instead via the
      * A standardized size of a product or creative work, specified either through a simple textual string (for example 'XL', '32Wx34L'), a  QuantitativeValue with a unitCode, or a comprehensive and structured [[SizeSpecification]]; in other cases, the [[width]], [[height]], [[depth]] and [[weight]] properties may be more applicable. 
      *
      * @param $size |||
+     * @return static
      **/
-    public function setSize($size) {
+    public function setSize($size): static {
         $this->properties['size'] = $size;
 
         return $this;
@@ -736,8 +774,9 @@ Unregistered or niche encoding and file formats can be indicated instead via the
      * A license document that applies to this content, typically indicated by URL.
      *
      * @param $license |
+     * @return static
      **/
-    public function setLicense($license) {
+    public function setLicense($license): static {
         $this->properties['license'] = $license;
 
         return $this;
@@ -754,8 +793,9 @@ Unregistered or niche encoding and file formats can be indicated instead via the
      * A flag to signal that the item, event, or place is accessible for free.
      *
      * @param $isAccessibleForFree 
+     * @return static
      **/
-    public function setIsAccessibleForFree($isAccessibleForFree) {
+    public function setIsAccessibleForFree($isAccessibleForFree): static {
         $this->properties['isAccessibleForFree'] = $isAccessibleForFree;
 
         return $this;
@@ -772,8 +812,9 @@ Unregistered or niche encoding and file formats can be indicated instead via the
      * Indicates a page documenting how licenses can be purchased or otherwise acquired, for the current item.
      *
      * @param $acquireLicensePage |
+     * @return static
      **/
-    public function setAcquireLicensePage($acquireLicensePage) {
+    public function setAcquireLicensePage($acquireLicensePage): static {
         $this->properties['acquireLicensePage'] = $acquireLicensePage;
 
         return $this;
@@ -790,8 +831,9 @@ Unregistered or niche encoding and file formats can be indicated instead via the
      * A link to the page containing the comments of the CreativeWork.
      *
      * @param $discussionUrl 
+     * @return static
      **/
-    public function setDiscussionUrl($discussionUrl) {
+    public function setDiscussionUrl($discussionUrl): static {
         $this->properties['discussionUrl'] = $discussionUrl;
 
         return $this;
@@ -813,8 +855,9 @@ Since schema.org types like [[Movie]] and [[TVEpisode]] can be used for both wor
 
      *
      * @param $editEIDR |
+     * @return static
      **/
-    public function setEditEIDR($editEIDR) {
+    public function setEditEIDR($editEIDR): static {
         $this->properties['editEIDR'] = $editEIDR;
 
         return $this;
@@ -833,8 +876,9 @@ Since schema.org types like [[Movie]] and [[TVEpisode]] can be used for both wor
       areas that the dataset describes: a dataset of New York weather would have spatialCoverage which was the place: the state of New York.
      *
      * @param $spatialCoverage 
+     * @return static
      **/
-    public function setSpatialCoverage($spatialCoverage) {
+    public function setSpatialCoverage($spatialCoverage): static {
         $this->properties['spatialCoverage'] = $spatialCoverage;
 
         return $this;
@@ -852,8 +896,9 @@ Since schema.org types like [[Movie]] and [[TVEpisode]] can be used for both wor
 [[sdPublisher]] property helps make such practices more explicit.
      *
      * @param $sdPublisher |
+     * @return static
      **/
-    public function setSdPublisher($sdPublisher) {
+    public function setSdPublisher($sdPublisher): static {
         $this->properties['sdPublisher'] = $sdPublisher;
 
         return $this;
@@ -870,8 +915,9 @@ Since schema.org types like [[Movie]] and [[TVEpisode]] can be used for both wor
      * The date on which the CreativeWork was created or the item was added to a DataFeed.
      *
      * @param $dateCreated |
+     * @return static
      **/
-    public function setDateCreated($dateCreated) {
+    public function setDateCreated($dateCreated): static {
         $this->properties['dateCreated'] = $dateCreated;
 
         return $this;
@@ -888,8 +934,9 @@ Since schema.org types like [[Movie]] and [[TVEpisode]] can be used for both wor
      * A media object that encodes this CreativeWork.
      *
      * @param $encodings 
+     * @return static
      **/
-    public function setEncodings($encodings) {
+    public function setEncodings($encodings): static {
         $this->properties['encodings'] = $encodings;
 
         return $this;
@@ -906,8 +953,9 @@ Since schema.org types like [[Movie]] and [[TVEpisode]] can be used for both wor
      * A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.
      *
      * @param $citation |
+     * @return static
      **/
-    public function setCitation($citation) {
+    public function setCitation($citation): static {
         $this->properties['citation'] = $citation;
 
         return $this;
@@ -924,8 +972,9 @@ Since schema.org types like [[Movie]] and [[TVEpisode]] can be used for both wor
      * Approximate or typical time it usually takes to work with or through the content of this work for the typical or target audience.
      *
      * @param $timeRequired 
+     * @return static
      **/
-    public function setTimeRequired($timeRequired) {
+    public function setTimeRequired($timeRequired): static {
         $this->properties['timeRequired'] = $timeRequired;
 
         return $this;
@@ -942,8 +991,9 @@ Since schema.org types like [[Movie]] and [[TVEpisode]] can be used for both wor
      * Fictional person connected with a creative work.
      *
      * @param $character 
+     * @return static
      **/
-    public function setCharacter($character) {
+    public function setCharacter($character): static {
         $this->properties['character'] = $character;
 
         return $this;
@@ -960,8 +1010,9 @@ Since schema.org types like [[Movie]] and [[TVEpisode]] can be used for both wor
      * A pattern that something has, for example 'polka dot', 'striped', 'Canadian flag'. Values are typically expressed as text, although links to controlled value schemes are also supported.
      *
      * @param $pattern |
+     * @return static
      **/
-    public function setPattern($pattern) {
+    public function setPattern($pattern): static {
         $this->properties['pattern'] = $pattern;
 
         return $this;
@@ -978,8 +1029,9 @@ Since schema.org types like [[Movie]] and [[TVEpisode]] can be used for both wor
      * The typical expected age range, e.g. '7-9', '11-'.
      *
      * @param $typicalAgeRange 
+     * @return static
      **/
-    public function setTypicalAgeRange($typicalAgeRange) {
+    public function setTypicalAgeRange($typicalAgeRange): static {
         $this->properties['typicalAgeRange'] = $typicalAgeRange;
 
         return $this;
@@ -996,8 +1048,9 @@ Since schema.org types like [[Movie]] and [[TVEpisode]] can be used for both wor
      * Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market, or that translates during some event.
      *
      * @param $translator |
+     * @return static
      **/
-    public function setTranslator($translator) {
+    public function setTranslator($translator): static {
         $this->properties['translator'] = $translator;
 
         return $this;
@@ -1014,8 +1067,9 @@ Since schema.org types like [[Movie]] and [[TVEpisode]] can be used for both wor
      * A thumbnail image relevant to the Thing.
      *
      * @param $thumbnailUrl 
+     * @return static
      **/
-    public function setThumbnailUrl($thumbnailUrl) {
+    public function setThumbnailUrl($thumbnailUrl): static {
         $this->properties['thumbnailUrl'] = $thumbnailUrl;
 
         return $this;
@@ -1032,8 +1086,9 @@ Since schema.org types like [[Movie]] and [[TVEpisode]] can be used for both wor
      * Indicates an IPTCDigitalSourceEnumeration code indicating the nature of the digital source(s) for some [[CreativeWork]].
      *
      * @param $digitalSourceType 
+     * @return static
      **/
-    public function setDigitalSourceType($digitalSourceType) {
+    public function setDigitalSourceType($digitalSourceType): static {
         $this->properties['digitalSourceType'] = $digitalSourceType;
 
         return $this;
@@ -1050,8 +1105,9 @@ Since schema.org types like [[Movie]] and [[TVEpisode]] can be used for both wor
      * The person or organization who produced the work (e.g. music album, movie, TV/radio series etc.).
      *
      * @param $producer |
+     * @return static
      **/
-    public function setProducer($producer) {
+    public function setProducer($producer): static {
         $this->properties['producer'] = $producer;
 
         return $this;
@@ -1068,8 +1124,9 @@ Since schema.org types like [[Movie]] and [[TVEpisode]] can be used for both wor
      * Identifies input methods that are sufficient to fully control the described resource. Values should be drawn from the [approved vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessibilityControl-vocabulary).
      *
      * @param $accessibilityControl 
+     * @return static
      **/
-    public function setAccessibilityControl($accessibilityControl) {
+    public function setAccessibilityControl($accessibilityControl): static {
         $this->properties['accessibilityControl'] = $accessibilityControl;
 
         return $this;
@@ -1086,8 +1143,9 @@ Since schema.org types like [[Movie]] and [[TVEpisode]] can be used for both wor
      * The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.
      *
      * @param $author |
+     * @return static
      **/
-    public function setAuthor($author) {
+    public function setAuthor($author): static {
         $this->properties['author'] = $author;
 
         return $this;
@@ -1104,8 +1162,9 @@ Since schema.org types like [[Movie]] and [[TVEpisode]] can be used for both wor
      * The level in terms of progression through an educational or training context. Examples of educational levels include 'beginner', 'intermediate' or 'advanced', and formal sets of level indicators.
      *
      * @param $educationalLevel ||
+     * @return static
      **/
-    public function setEducationalLevel($educationalLevel) {
+    public function setEducationalLevel($educationalLevel): static {
         $this->properties['educationalLevel'] = $educationalLevel;
 
         return $this;
@@ -1122,8 +1181,9 @@ Since schema.org types like [[Movie]] and [[TVEpisode]] can be used for both wor
      * Genre of the creative work, broadcast channel or group.
      *
      * @param $genre |
+     * @return static
      **/
-    public function setGenre($genre) {
+    public function setGenre($genre): static {
         $this->properties['genre'] = $genre;
 
         return $this;
@@ -1140,8 +1200,9 @@ Since schema.org types like [[Movie]] and [[TVEpisode]] can be used for both wor
      * Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of.
      *
      * @param $isPartOf |
+     * @return static
      **/
-    public function setIsPartOf($isPartOf) {
+    public function setIsPartOf($isPartOf): static {
         $this->properties['isPartOf'] = $isPartOf;
 
         return $this;
@@ -1158,8 +1219,9 @@ Since schema.org types like [[Movie]] and [[TVEpisode]] can be used for both wor
      * Indicates a page or other link involved in archival of a [[CreativeWork]]. In the case of [[MediaReview]], the items in a [[MediaReviewItem]] may often become inaccessible, but be archived by archival, journalistic, activist, or law enforcement organizations. In such cases, the referenced page may not directly publish the content.
      *
      * @param $archivedAt |
+     * @return static
      **/
-    public function setArchivedAt($archivedAt) {
+    public function setArchivedAt($archivedAt): static {
         $this->properties['archivedAt'] = $archivedAt;
 
         return $this;
@@ -1176,8 +1238,9 @@ Since schema.org types like [[Movie]] and [[TVEpisode]] can be used for both wor
      * The year during which the claimed copyright for the CreativeWork was first asserted.
      *
      * @param $copyrightYear 
+     * @return static
      **/
-    public function setCopyrightYear($copyrightYear) {
+    public function setCopyrightYear($copyrightYear): static {
         $this->properties['copyrightYear'] = $copyrightYear;
 
         return $this;
@@ -1194,8 +1257,9 @@ Since schema.org types like [[Movie]] and [[TVEpisode]] can be used for both wor
      * Headline of the article.
      *
      * @param $headline 
+     * @return static
      **/
-    public function setHeadline($headline) {
+    public function setHeadline($headline): static {
         $this->properties['headline'] = $headline;
 
         return $this;
@@ -1212,8 +1276,9 @@ Since schema.org types like [[Movie]] and [[TVEpisode]] can be used for both wor
      * Review of the item.
      *
      * @param $reviews 
+     * @return static
      **/
-    public function setReviews($reviews) {
+    public function setReviews($reviews): static {
         $this->properties['reviews'] = $reviews;
 
         return $this;
@@ -1230,8 +1295,9 @@ Since schema.org types like [[Movie]] and [[TVEpisode]] can be used for both wor
      * Used to indicate a specific claim contained, implied, translated or refined from the content of a [[MediaObject]] or other [[CreativeWork]]. The interpreting party can be indicated using [[claimInterpreter]].
      *
      * @param $interpretedAsClaim 
+     * @return static
      **/
-    public function setInterpretedAsClaim($interpretedAsClaim) {
+    public function setInterpretedAsClaim($interpretedAsClaim): static {
         $this->properties['interpretedAsClaim'] = $interpretedAsClaim;
 
         return $this;
@@ -1248,8 +1314,9 @@ Since schema.org types like [[Movie]] and [[TVEpisode]] can be used for both wor
      * The publisher of the creative work.
      *
      * @param $publisher |
+     * @return static
      **/
-    public function setPublisher($publisher) {
+    public function setPublisher($publisher): static {
         $this->properties['publisher'] = $publisher;
 
         return $this;
@@ -1266,8 +1333,9 @@ Since schema.org types like [[Movie]] and [[TVEpisode]] can be used for both wor
      * A review of the item.
      *
      * @param $review 
+     * @return static
      **/
-    public function setReview($review) {
+    public function setReview($review): static {
         $this->properties['review'] = $review;
 
         return $this;
@@ -1284,8 +1352,9 @@ Since schema.org types like [[Movie]] and [[TVEpisode]] can be used for both wor
      * The status of a creative work in terms of its stage in a lifecycle. Example terms include Incomplete, Draft, Published, Obsolete. Some organizations define a set of terms for the stages of their publication lifecycle.
      *
      * @param $creativeWorkStatus |
+     * @return static
      **/
-    public function setCreativeWorkStatus($creativeWorkStatus) {
+    public function setCreativeWorkStatus($creativeWorkStatus): static {
         $this->properties['creativeWorkStatus'] = $creativeWorkStatus;
 
         return $this;
@@ -1302,8 +1371,9 @@ Since schema.org types like [[Movie]] and [[TVEpisode]] can be used for both wor
      * An embedded audio object.
      *
      * @param $audio ||
+     * @return static
      **/
-    public function setAudio($audio) {
+    public function setAudio($audio): static {
         $this->properties['audio'] = $audio;
 
         return $this;
@@ -1320,8 +1390,9 @@ Since schema.org types like [[Movie]] and [[TVEpisode]] can be used for both wor
      * The purpose of a work in the context of education; for example, 'assignment', 'group work'.
      *
      * @param $educationalUse |
+     * @return static
      **/
-    public function setEducationalUse($educationalUse) {
+    public function setEducationalUse($educationalUse): static {
         $this->properties['educationalUse'] = $educationalUse;
 
         return $this;
@@ -1342,8 +1413,9 @@ In the case of TV and movie, this would be the country of the principle offices 
 In the case of products, the country of origin of the product. The exact interpretation of this may vary by context and product type, and cannot be fully enumerated here.
      *
      * @param $countryOfOrigin 
+     * @return static
      **/
-    public function setCountryOfOrigin($countryOfOrigin) {
+    public function setCountryOfOrigin($countryOfOrigin): static {
         $this->properties['countryOfOrigin'] = $countryOfOrigin;
 
         return $this;
@@ -1360,8 +1432,9 @@ In the case of products, the country of origin of the product. The exact interpr
      * The predominant mode of learning supported by the learning resource. Acceptable values are 'active', 'expositive', or 'mixed'.
      *
      * @param $interactivityType 
+     * @return static
      **/
-    public function setInteractivityType($interactivityType) {
+    public function setInteractivityType($interactivityType): static {
         $this->properties['interactivityType'] = $interactivityType;
 
         return $this;
@@ -1379,8 +1452,9 @@ In the case of products, the country of origin of the product. The exact interpr
       
      *
      * @param $offers |
+     * @return static
      **/
-    public function setOffers($offers) {
+    public function setOffers($offers): static {
         $this->properties['offers'] = $offers;
 
         return $this;
@@ -1401,8 +1475,9 @@ In the case of products, the country of origin of the product. The exact interpr
 Open-ended date ranges can be written with ".." in place of the end date. For example, "2015-11/.." indicates a range beginning in November 2015 and with no specified final date. This is tentative and might be updated in future when ISO 8601 is officially updated.
      *
      * @param $temporalCoverage ||
+     * @return static
      **/
-    public function setTemporalCoverage($temporalCoverage) {
+    public function setTemporalCoverage($temporalCoverage): static {
         $this->properties['temporalCoverage'] = $temporalCoverage;
 
         return $this;
@@ -1419,8 +1494,9 @@ Open-ended date ranges can be written with ".." in place of the end date. For ex
      * A license document that applies to this structured data, typically indicated by URL.
      *
      * @param $sdLicense |
+     * @return static
      **/
-    public function setSdLicense($sdLicense) {
+    public function setSdLicense($sdLicense): static {
         $this->properties['sdLicense'] = $sdLicense;
 
         return $this;
@@ -1437,8 +1513,9 @@ Open-ended date ranges can be written with ".." in place of the end date. For ex
      * The publishing division which published the comic.
      *
      * @param $publisherImprint 
+     * @return static
      **/
-    public function setPublisherImprint($publisherImprint) {
+    public function setPublisherImprint($publisherImprint): static {
         $this->properties['publisherImprint'] = $publisherImprint;
 
         return $this;
@@ -1455,8 +1532,9 @@ Open-ended date ranges can be written with ".." in place of the end date. For ex
      * The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.
      *
      * @param $provider |
+     * @return static
      **/
-    public function setProvider($provider) {
+    public function setProvider($provider): static {
         $this->properties['provider'] = $provider;
 
         return $this;
@@ -1473,8 +1551,9 @@ Open-ended date ranges can be written with ".." in place of the end date. For ex
      * Specifies the Person that is legally accountable for the CreativeWork.
      *
      * @param $accountablePerson 
+     * @return static
      **/
-    public function setAccountablePerson($accountablePerson) {
+    public function setAccountablePerson($accountablePerson): static {
         $this->properties['accountablePerson'] = $accountablePerson;
 
         return $this;
@@ -1491,8 +1570,9 @@ Open-ended date ranges can be written with ".." in place of the end date. For ex
      * A work that is a translation of the content of this work. E.g. 西遊記 has an English workTranslation “Journey to the West”, a German workTranslation “Monkeys Pilgerfahrt” and a Vietnamese  translation Tây du ký bình khảo.
      *
      * @param $workTranslation 
+     * @return static
      **/
-    public function setWorkTranslation($workTranslation) {
+    public function setWorkTranslation($workTranslation): static {
         $this->properties['workTranslation'] = $workTranslation;
 
         return $this;
@@ -1509,8 +1589,9 @@ Open-ended date ranges can be written with ".." in place of the end date. For ex
      * Official rating of a piece of content&#x2014;for example, 'MPAA PG-13'.
      *
      * @param $contentRating |
+     * @return static
      **/
-    public function setContentRating($contentRating) {
+    public function setContentRating($contentRating): static {
         $this->properties['contentRating'] = $contentRating;
 
         return $this;
@@ -1527,8 +1608,9 @@ Open-ended date ranges can be written with ".." in place of the end date. For ex
      * Awards won by or for this item.
      *
      * @param $awards 
+     * @return static
      **/
-    public function setAwards($awards) {
+    public function setAwards($awards): static {
         $this->properties['awards'] = $awards;
 
         return $this;
@@ -1546,8 +1628,9 @@ Open-ended date ranges can be written with ".." in place of the end date. For ex
 (e.g. [[locationCreated]], [[spatialCoverage]], [[contentLocation]]) are not known to be appropriate.
      *
      * @param $spatial 
+     * @return static
      **/
-    public function setSpatial($spatial) {
+    public function setSpatial($spatial): static {
         $this->properties['spatial'] = $spatial;
 
         return $this;
@@ -1564,8 +1647,9 @@ Open-ended date ranges can be written with ".." in place of the end date. For ex
      * The item being described is intended to assess the competency or learning outcome defined by the referenced term.
      *
      * @param $assesses |
+     * @return static
      **/
-    public function setAssesses($assesses) {
+    public function setAssesses($assesses): static {
         $this->properties['assesses'] = $assesses;
 
         return $this;
@@ -1582,8 +1666,9 @@ Open-ended date ranges can be written with ".." in place of the end date. For ex
      * The work that this work has been translated from. E.g. 物种起源 is a translationOf “On the Origin of Species”.
      *
      * @param $translationOfWork 
+     * @return static
      **/
-    public function setTranslationOfWork($translationOfWork) {
+    public function setTranslationOfWork($translationOfWork): static {
         $this->properties['translationOfWork'] = $translationOfWork;
 
         return $this;
@@ -1601,8 +1686,9 @@ Open-ended date ranges can be written with ".." in place of the end date. For ex
     indicate the use of a specific schema.org release, e.g. ```10.0``` as a simple string, or more explicitly via URL, ```https://schema.org/docs/releases.html#v10.0```. There may be situations in which other schemas might usefully be referenced this way, e.g. ```http://dublincore.org/specifications/dublin-core/dces/1999-07-02/``` but this has not been carefully explored in the community.
      *
      * @param $schemaVersion |
+     * @return static
      **/
-    public function setSchemaVersion($schemaVersion) {
+    public function setSchemaVersion($schemaVersion): static {
         $this->properties['schemaVersion'] = $schemaVersion;
 
         return $this;
@@ -1619,8 +1705,9 @@ Open-ended date ranges can be written with ".." in place of the end date. For ex
      * The location where the CreativeWork was created, which may not be the same as the location depicted in the CreativeWork.
      *
      * @param $locationCreated 
+     * @return static
      **/
-    public function setLocationCreated($locationCreated) {
+    public function setLocationCreated($locationCreated): static {
         $this->properties['locationCreated'] = $locationCreated;
 
         return $this;
@@ -1637,8 +1724,9 @@ Open-ended date ranges can be written with ".." in place of the end date. For ex
      * The item being described is intended to help a person learn the competency or learning outcome defined by the referenced term.
      *
      * @param $teaches |
+     * @return static
      **/
-    public function setTeaches($teaches) {
+    public function setTeaches($teaches): static {
         $this->properties['teaches'] = $teaches;
 
         return $this;
@@ -1655,8 +1743,9 @@ Open-ended date ranges can be written with ".." in place of the end date. For ex
      * Indicates the primary entity described in some page or other CreativeWork.
      *
      * @param $mainEntity 
+     * @return static
      **/
-    public function setMainEntity($mainEntity) {
+    public function setMainEntity($mainEntity): static {
         $this->properties['mainEntity'] = $mainEntity;
 
         return $this;
@@ -1673,8 +1762,9 @@ Open-ended date ranges can be written with ".." in place of the end date. For ex
      * Conditions that affect the availability of, or method(s) of access to, an item. Typically used for real world items such as an [[ArchiveComponent]] held by an [[ArchiveOrganization]]. This property is not suitable for use as a general Web access control mechanism. It is expressed only in natural language.\n\nFor example "Available by appointment from the Reading Room" or "Accessible only from logged-in accounts ". 
      *
      * @param $conditionsOfAccess 
+     * @return static
      **/
-    public function setConditionsOfAccess($conditionsOfAccess) {
+    public function setConditionsOfAccess($conditionsOfAccess): static {
         $this->properties['conditionsOfAccess'] = $conditionsOfAccess;
 
         return $this;
@@ -1691,8 +1781,9 @@ Open-ended date ranges can be written with ".." in place of the end date. For ex
      * A publication event associated with the item.
      *
      * @param $publication 
+     * @return static
      **/
-    public function setPublication($publication) {
+    public function setPublication($publication): static {
         $this->properties['publication'] = $publication;
 
         return $this;
@@ -1711,8 +1802,9 @@ Open-ended date ranges can be written with ".." in place of the end date. For ex
 This property can be used alongside the license property which indicates license(s) applicable to some piece of content. The usageInfo property can provide information about other licensing options, e.g. acquiring commercial usage rights for an image that is also available under non-commercial creative commons licenses.
      *
      * @param $usageInfo |
+     * @return static
      **/
-    public function setUsageInfo($usageInfo) {
+    public function setUsageInfo($usageInfo): static {
         $this->properties['usageInfo'] = $usageInfo;
 
         return $this;
@@ -1729,8 +1821,9 @@ This property can be used alongside the license property which indicates license
      * A list of single or combined accessModes that are sufficient to understand all the intellectual content of a resource. Values should be drawn from the [approved vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessModeSufficient-vocabulary).
      *
      * @param $accessModeSufficient 
+     * @return static
      **/
-    public function setAccessModeSufficient($accessModeSufficient) {
+    public function setAccessModeSufficient($accessModeSufficient): static {
         $this->properties['accessModeSufficient'] = $accessModeSufficient;
 
         return $this;
@@ -1748,8 +1841,9 @@ This property can be used alongside the license property which indicates license
       
      *
      * @param $maintainer |
+     * @return static
      **/
-    public function setMaintainer($maintainer) {
+    public function setMaintainer($maintainer): static {
         $this->properties['maintainer'] = $maintainer;
 
         return $this;
@@ -1766,8 +1860,9 @@ This property can be used alongside the license property which indicates license
      * Indicates that the resource is compatible with the referenced accessibility API. Values should be drawn from the [approved vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessibilityAPI-vocabulary).
      *
      * @param $accessibilityAPI 
+     * @return static
      **/
-    public function setAccessibilityAPI($accessibilityAPI) {
+    public function setAccessibilityAPI($accessibilityAPI): static {
         $this->properties['accessibilityAPI'] = $accessibilityAPI;
 
         return $this;
@@ -1784,8 +1879,9 @@ This property can be used alongside the license property which indicates license
      * Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).
      *
      * @param $hasPart 
+     * @return static
      **/
-    public function setHasPart($hasPart) {
+    public function setHasPart($hasPart): static {
         $this->properties['hasPart'] = $hasPart;
 
         return $this;
@@ -1802,8 +1898,9 @@ This property can be used alongside the license property which indicates license
      * Content features of the resource, such as accessible media, alternatives and supported enhancements for accessibility. Values should be drawn from the [approved vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessibilityFeature-vocabulary).
      *
      * @param $accessibilityFeature 
+     * @return static
      **/
-    public function setAccessibilityFeature($accessibilityFeature) {
+    public function setAccessibilityFeature($accessibilityFeature): static {
         $this->properties['accessibilityFeature'] = $accessibilityFeature;
 
         return $this;
@@ -1820,8 +1917,9 @@ This property can be used alongside the license property which indicates license
      * The textual content of this CreativeWork.
      *
      * @param $text 
+     * @return static
      **/
-    public function setText($text) {
+    public function setText($text): static {
         $this->properties['text'] = $text;
 
         return $this;
@@ -1838,8 +1936,9 @@ This property can be used alongside the license property which indicates license
      * Indicates a correction to a [[CreativeWork]], either via a [[CorrectionComment]], textually or in another document.
      *
      * @param $correction ||
+     * @return static
      **/
-    public function setCorrection($correction) {
+    public function setCorrection($correction): static {
         $this->properties['correction'] = $correction;
 
         return $this;
@@ -1856,8 +1955,9 @@ This property can be used alongside the license property which indicates license
      * A person or organization that supports a thing through a pledge, promise, or financial contribution. E.g. a sponsor of a Medical Study or a corporate sponsor of an event.
      *
      * @param $sponsor |
+     * @return static
      **/
-    public function setSponsor($sponsor) {
+    public function setSponsor($sponsor): static {
         $this->properties['sponsor'] = $sponsor;
 
         return $this;
@@ -1874,8 +1974,9 @@ This property can be used alongside the license property which indicates license
      * Example/instance/realization/derivation of the concept of this creative work. E.g. the paperback edition, first edition, or e-book.
      *
      * @param $workExample 
+     * @return static
      **/
-    public function setWorkExample($workExample) {
+    public function setWorkExample($workExample): static {
         $this->properties['workExample'] = $workExample;
 
         return $this;
@@ -1892,8 +1993,9 @@ This property can be used alongside the license property which indicates license
      * An abstract is a short description that summarizes a [[CreativeWork]].
      *
      * @param $abstract 
+     * @return static
      **/
-    public function setAbstract($abstract) {
+    public function setAbstract($abstract): static {
         $this->properties['abstract'] = $abstract;
 
         return $this;
@@ -1910,8 +2012,9 @@ This property can be used alongside the license property which indicates license
      * The overall rating, based on a collection of reviews or ratings, of the item.
      *
      * @param $aggregateRating 
+     * @return static
      **/
-    public function setAggregateRating($aggregateRating) {
+    public function setAggregateRating($aggregateRating): static {
         $this->properties['aggregateRating'] = $aggregateRating;
 
         return $this;
@@ -1928,8 +2031,9 @@ This property can be used alongside the license property which indicates license
      * The location depicted or described in the content. For example, the location in a photograph or painting.
      *
      * @param $contentLocation 
+     * @return static
      **/
-    public function setContentLocation($contentLocation) {
+    public function setContentLocation($contentLocation): static {
         $this->properties['contentLocation'] = $contentLocation;
 
         return $this;
@@ -1946,8 +2050,9 @@ This property can be used alongside the license property which indicates license
      * The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.
      *
      * @param $creator |
+     * @return static
      **/
-    public function setCreator($creator) {
+    public function setCreator($creator): static {
         $this->properties['creator'] = $creator;
 
         return $this;
@@ -1964,8 +2069,9 @@ This property can be used alongside the license property which indicates license
      * Date the content expires and is no longer useful or available. For example a [[VideoObject]] or [[NewsArticle]] whose availability or relevance is time-limited, a [[ClaimReview]] fact check whose publisher wants to indicate that it may no longer be relevant (or helpful to highlight) after some date, or a [[Certification]] the validity has expired.
      *
      * @param $expires |
+     * @return static
      **/
-    public function setExpires($expires) {
+    public function setExpires($expires): static {
         $this->properties['expires'] = $expires;
 
         return $this;
@@ -1982,8 +2088,9 @@ This property can be used alongside the license property which indicates license
      * Indicates the date on which the current structured data was generated / published. Typically used alongside [[sdPublisher]].
      *
      * @param $sdDatePublished 
+     * @return static
      **/
-    public function setSdDatePublished($sdDatePublished) {
+    public function setSdDatePublished($sdDatePublished): static {
         $this->properties['sdDatePublished'] = $sdDatePublished;
 
         return $this;
@@ -2000,8 +2107,9 @@ This property can be used alongside the license property which indicates license
      * The language of the content or performance or used in an action. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
      *
      * @param $inLanguage |
+     * @return static
      **/
-    public function setInLanguage($inLanguage) {
+    public function setInLanguage($inLanguage): static {
         $this->properties['inLanguage'] = $inLanguage;
 
         return $this;
@@ -2018,8 +2126,9 @@ This property can be used alongside the license property which indicates license
      * The place and time the release was issued, expressed as a PublicationEvent.
      *
      * @param $releasedEvent 
+     * @return static
      **/
-    public function setReleasedEvent($releasedEvent) {
+    public function setReleasedEvent($releasedEvent): static {
         $this->properties['releasedEvent'] = $releasedEvent;
 
         return $this;
@@ -2036,8 +2145,9 @@ This property can be used alongside the license property which indicates license
      * The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.
      *
      * @param $dateModified |
+     * @return static
      **/
-    public function setDateModified($dateModified) {
+    public function setDateModified($dateModified): static {
         $this->properties['dateModified'] = $dateModified;
 
         return $this;
@@ -2054,8 +2164,9 @@ This property can be used alongside the license property which indicates license
      * A characteristic of the described resource that is physiologically dangerous to some users. Related to WCAG 2.0 guideline 2.3. Values should be drawn from the [approved vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessibilityHazard-vocabulary).
      *
      * @param $accessibilityHazard 
+     * @return static
      **/
-    public function setAccessibilityHazard($accessibilityHazard) {
+    public function setAccessibilityHazard($accessibilityHazard): static {
         $this->properties['accessibilityHazard'] = $accessibilityHazard;
 
         return $this;
@@ -2072,8 +2183,9 @@ This property can be used alongside the license property which indicates license
      * The human sensory perceptual system or cognitive faculty through which a person may process or perceive information. Values should be drawn from the [approved vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessMode-vocabulary).
      *
      * @param $accessMode 
+     * @return static
      **/
-    public function setAccessMode($accessMode) {
+    public function setAccessMode($accessMode): static {
         $this->properties['accessMode'] = $accessMode;
 
         return $this;
@@ -2090,8 +2202,9 @@ This property can be used alongside the license property which indicates license
      * An intended audience, i.e. a group for whom something was created.
      *
      * @param $audience 
+     * @return static
      **/
-    public function setAudience($audience) {
+    public function setAudience($audience): static {
         $this->properties['audience'] = $audience;
 
         return $this;

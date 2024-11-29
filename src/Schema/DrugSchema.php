@@ -31,9 +31,9 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class DrugSchema extends \LengthOfRope\JSONLD\Elements\Element
+class DrugSchema extends SubstanceSchema
 {
-    public static function factory()
+    public static function factory(): DrugSchema
     {
         return new DrugSchema('https://schema.org/', 'Drug');
     }
@@ -42,8 +42,9 @@ class DrugSchema extends \LengthOfRope\JSONLD\Elements\Element
      * A dosing schedule for the drug for a given population, either observed, recommended, or maximum dose based on the type used.
      *
      * @param $doseSchedule 
+     * @return static
      **/
-    public function setDoseSchedule($doseSchedule) {
+    public function setDoseSchedule($doseSchedule): static {
         $this->properties['doseSchedule'] = $doseSchedule;
 
         return $this;
@@ -60,8 +61,9 @@ class DrugSchema extends \LengthOfRope\JSONLD\Elements\Element
      * Any precaution, guidance, contraindication, etc. related to this drug's use during pregnancy.
      *
      * @param $pregnancyWarning 
+     * @return static
      **/
-    public function setPregnancyWarning($pregnancyWarning) {
+    public function setPregnancyWarning($pregnancyWarning): static {
         $this->properties['pregnancyWarning'] = $pregnancyWarning;
 
         return $this;
@@ -78,8 +80,9 @@ class DrugSchema extends \LengthOfRope\JSONLD\Elements\Element
      * The class of drug this belongs to (e.g., statins).
      *
      * @param $drugClass 
+     * @return static
      **/
-    public function setDrugClass($drugClass) {
+    public function setDrugClass($drugClass): static {
         $this->properties['drugClass'] = $drugClass;
 
         return $this;
@@ -96,8 +99,9 @@ class DrugSchema extends \LengthOfRope\JSONLD\Elements\Element
      * The drug or supplement's legal status, including any controlled substance schedules that apply.
      *
      * @param $legalStatus ||
+     * @return static
      **/
-    public function setLegalStatus($legalStatus) {
+    public function setLegalStatus($legalStatus): static {
         $this->properties['legalStatus'] = $legalStatus;
 
         return $this;
@@ -114,8 +118,9 @@ class DrugSchema extends \LengthOfRope\JSONLD\Elements\Element
      * Description of the absorption and elimination of drugs, including their concentration (pharmacokinetics, pK) and biological effects (pharmacodynamics, pD).
      *
      * @param $clinicalPharmacology 
+     * @return static
      **/
-    public function setClinicalPharmacology($clinicalPharmacology) {
+    public function setClinicalPharmacology($clinicalPharmacology): static {
         $this->properties['clinicalPharmacology'] = $clinicalPharmacology;
 
         return $this;
@@ -132,8 +137,9 @@ class DrugSchema extends \LengthOfRope\JSONLD\Elements\Element
      * A dosage form in which this drug/supplement is available, e.g. 'tablet', 'suspension', 'injection'.
      *
      * @param $dosageForm 
+     * @return static
      **/
-    public function setDosageForm($dosageForm) {
+    public function setDosageForm($dosageForm): static {
         $this->properties['dosageForm'] = $dosageForm;
 
         return $this;
@@ -150,8 +156,9 @@ class DrugSchema extends \LengthOfRope\JSONLD\Elements\Element
      * True if the drug is available in a generic form (regardless of name).
      *
      * @param $isAvailableGenerically 
+     * @return static
      **/
-    public function setIsAvailableGenerically($isAvailableGenerically) {
+    public function setIsAvailableGenerically($isAvailableGenerically): static {
         $this->properties['isAvailableGenerically'] = $isAvailableGenerically;
 
         return $this;
@@ -168,8 +175,9 @@ class DrugSchema extends \LengthOfRope\JSONLD\Elements\Element
      * Indicates the status of drug prescription, e.g. local catalogs classifications or whether the drug is available by prescription or over-the-counter, etc.
      *
      * @param $prescriptionStatus |
+     * @return static
      **/
-    public function setPrescriptionStatus($prescriptionStatus) {
+    public function setPrescriptionStatus($prescriptionStatus): static {
         $this->properties['prescriptionStatus'] = $prescriptionStatus;
 
         return $this;
@@ -186,8 +194,9 @@ class DrugSchema extends \LengthOfRope\JSONLD\Elements\Element
      * Any precaution, guidance, contraindication, etc. related to this drug's use by breastfeeding mothers.
      *
      * @param $breastfeedingWarning 
+     * @return static
      **/
-    public function setBreastfeedingWarning($breastfeedingWarning) {
+    public function setBreastfeedingWarning($breastfeedingWarning): static {
         $this->properties['breastfeedingWarning'] = $breastfeedingWarning;
 
         return $this;
@@ -204,8 +213,9 @@ class DrugSchema extends \LengthOfRope\JSONLD\Elements\Element
      * Any precaution, guidance, contraindication, etc. related to consumption of alcohol while taking this drug.
      *
      * @param $alcoholWarning 
+     * @return static
      **/
-    public function setAlcoholWarning($alcoholWarning) {
+    public function setAlcoholWarning($alcoholWarning): static {
         $this->properties['alcoholWarning'] = $alcoholWarning;
 
         return $this;
@@ -222,8 +232,9 @@ class DrugSchema extends \LengthOfRope\JSONLD\Elements\Element
      * Any other drug related to this one, for example commonly-prescribed alternatives.
      *
      * @param $relatedDrug 
+     * @return static
      **/
-    public function setRelatedDrug($relatedDrug) {
+    public function setRelatedDrug($relatedDrug): static {
         $this->properties['relatedDrug'] = $relatedDrug;
 
         return $this;
@@ -240,8 +251,9 @@ class DrugSchema extends \LengthOfRope\JSONLD\Elements\Element
      * The specific biochemical interaction through which this drug or supplement produces its pharmacological effect.
      *
      * @param $mechanismOfAction 
+     * @return static
      **/
-    public function setMechanismOfAction($mechanismOfAction) {
+    public function setMechanismOfAction($mechanismOfAction): static {
         $this->properties['mechanismOfAction'] = $mechanismOfAction;
 
         return $this;
@@ -258,8 +270,9 @@ class DrugSchema extends \LengthOfRope\JSONLD\Elements\Element
      * True if this item's name is a proprietary/brand name (vs. generic name).
      *
      * @param $isProprietary 
+     * @return static
      **/
-    public function setIsProprietary($isProprietary) {
+    public function setIsProprietary($isProprietary): static {
         $this->properties['isProprietary'] = $isProprietary;
 
         return $this;
@@ -276,8 +289,9 @@ class DrugSchema extends \LengthOfRope\JSONLD\Elements\Element
      * Another drug that is known to interact with this drug in a way that impacts the effect of this drug or causes a risk to the patient. Note: disease interactions are typically captured as contraindications.
      *
      * @param $interactingDrug 
+     * @return static
      **/
-    public function setInteractingDrug($interactingDrug) {
+    public function setInteractingDrug($interactingDrug): static {
         $this->properties['interactingDrug'] = $interactingDrug;
 
         return $this;
@@ -294,8 +308,9 @@ class DrugSchema extends \LengthOfRope\JSONLD\Elements\Element
      * Description of the absorption and elimination of drugs, including their concentration (pharmacokinetics, pK) and biological effects (pharmacodynamics, pD).
      *
      * @param $clincalPharmacology 
+     * @return static
      **/
-    public function setClincalPharmacology($clincalPharmacology) {
+    public function setClincalPharmacology($clincalPharmacology): static {
         $this->properties['clincalPharmacology'] = $clincalPharmacology;
 
         return $this;
@@ -312,8 +327,9 @@ class DrugSchema extends \LengthOfRope\JSONLD\Elements\Element
      * Any information related to overdose on a drug, including signs or symptoms, treatments, contact information for emergency response.
      *
      * @param $overdosage 
+     * @return static
      **/
-    public function setOverdosage($overdosage) {
+    public function setOverdosage($overdosage): static {
         $this->properties['overdosage'] = $overdosage;
 
         return $this;
@@ -330,8 +346,9 @@ class DrugSchema extends \LengthOfRope\JSONLD\Elements\Element
      * Any precaution, guidance, contraindication, etc. related to consumption of specific foods while taking this drug.
      *
      * @param $foodWarning 
+     * @return static
      **/
-    public function setFoodWarning($foodWarning) {
+    public function setFoodWarning($foodWarning): static {
         $this->properties['foodWarning'] = $foodWarning;
 
         return $this;
@@ -348,8 +365,9 @@ class DrugSchema extends \LengthOfRope\JSONLD\Elements\Element
      * Pregnancy category of this drug.
      *
      * @param $pregnancyCategory 
+     * @return static
      **/
-    public function setPregnancyCategory($pregnancyCategory) {
+    public function setPregnancyCategory($pregnancyCategory): static {
         $this->properties['pregnancyCategory'] = $pregnancyCategory;
 
         return $this;
@@ -366,8 +384,9 @@ class DrugSchema extends \LengthOfRope\JSONLD\Elements\Element
      * An available dosage strength for the drug.
      *
      * @param $availableStrength 
+     * @return static
      **/
-    public function setAvailableStrength($availableStrength) {
+    public function setAvailableStrength($availableStrength): static {
         $this->properties['availableStrength'] = $availableStrength;
 
         return $this;
@@ -384,8 +403,9 @@ class DrugSchema extends \LengthOfRope\JSONLD\Elements\Element
      * Any FDA or other warnings about the drug (text or URL).
      *
      * @param $warning |
+     * @return static
      **/
-    public function setWarning($warning) {
+    public function setWarning($warning): static {
         $this->properties['warning'] = $warning;
 
         return $this;
@@ -402,8 +422,9 @@ class DrugSchema extends \LengthOfRope\JSONLD\Elements\Element
      * A route by which this drug may be administered, e.g. 'oral'.
      *
      * @param $administrationRoute 
+     * @return static
      **/
-    public function setAdministrationRoute($administrationRoute) {
+    public function setAdministrationRoute($administrationRoute): static {
         $this->properties['administrationRoute'] = $administrationRoute;
 
         return $this;
@@ -420,8 +441,9 @@ class DrugSchema extends \LengthOfRope\JSONLD\Elements\Element
      * Proprietary name given to the diet plan, typically by its originator or creator.
      *
      * @param $proprietaryName 
+     * @return static
      **/
-    public function setProprietaryName($proprietaryName) {
+    public function setProprietaryName($proprietaryName): static {
         $this->properties['proprietaryName'] = $proprietaryName;
 
         return $this;
@@ -438,8 +460,9 @@ class DrugSchema extends \LengthOfRope\JSONLD\Elements\Element
      * Link to prescribing information for the drug.
      *
      * @param $prescribingInfo 
+     * @return static
      **/
-    public function setPrescribingInfo($prescribingInfo) {
+    public function setPrescribingInfo($prescribingInfo): static {
         $this->properties['prescribingInfo'] = $prescribingInfo;
 
         return $this;
@@ -456,8 +479,9 @@ class DrugSchema extends \LengthOfRope\JSONLD\Elements\Element
      * Recommended intake of this supplement for a given population as defined by a specific recommending authority.
      *
      * @param $maximumIntake 
+     * @return static
      **/
-    public function setMaximumIntake($maximumIntake) {
+    public function setMaximumIntake($maximumIntake): static {
         $this->properties['maximumIntake'] = $maximumIntake;
 
         return $this;
@@ -474,8 +498,9 @@ class DrugSchema extends \LengthOfRope\JSONLD\Elements\Element
      * The generic name of this drug or supplement.
      *
      * @param $nonProprietaryName 
+     * @return static
      **/
-    public function setNonProprietaryName($nonProprietaryName) {
+    public function setNonProprietaryName($nonProprietaryName): static {
         $this->properties['nonProprietaryName'] = $nonProprietaryName;
 
         return $this;
@@ -492,8 +517,9 @@ class DrugSchema extends \LengthOfRope\JSONLD\Elements\Element
      * The unit in which the drug is measured, e.g. '5 mg tablet'.
      *
      * @param $drugUnit 
+     * @return static
      **/
-    public function setDrugUnit($drugUnit) {
+    public function setDrugUnit($drugUnit): static {
         $this->properties['drugUnit'] = $drugUnit;
 
         return $this;
@@ -510,8 +536,9 @@ class DrugSchema extends \LengthOfRope\JSONLD\Elements\Element
      * An active ingredient, typically chemical compounds and/or biologic substances.
      *
      * @param $activeIngredient 
+     * @return static
      **/
-    public function setActiveIngredient($activeIngredient) {
+    public function setActiveIngredient($activeIngredient): static {
         $this->properties['activeIngredient'] = $activeIngredient;
 
         return $this;
@@ -528,8 +555,9 @@ class DrugSchema extends \LengthOfRope\JSONLD\Elements\Element
      * Link to the drug's label details.
      *
      * @param $labelDetails 
+     * @return static
      **/
-    public function setLabelDetails($labelDetails) {
+    public function setLabelDetails($labelDetails): static {
         $this->properties['labelDetails'] = $labelDetails;
 
         return $this;
@@ -546,8 +574,9 @@ class DrugSchema extends \LengthOfRope\JSONLD\Elements\Element
      * The RxCUI drug identifier from RXNORM.
      *
      * @param $rxcui 
+     * @return static
      **/
-    public function setRxcui($rxcui) {
+    public function setRxcui($rxcui): static {
         $this->properties['rxcui'] = $rxcui;
 
         return $this;
@@ -564,8 +593,9 @@ class DrugSchema extends \LengthOfRope\JSONLD\Elements\Element
      * The insurance plans that cover this drug.
      *
      * @param $includedInHealthInsurancePlan 
+     * @return static
      **/
-    public function setIncludedInHealthInsurancePlan($includedInHealthInsurancePlan) {
+    public function setIncludedInHealthInsurancePlan($includedInHealthInsurancePlan): static {
         $this->properties['includedInHealthInsurancePlan'] = $includedInHealthInsurancePlan;
 
         return $this;

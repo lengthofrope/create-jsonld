@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ContactPointSchema extends StructuredValueSchema
 {
-    public static function factory()
+    public static function factory(): ContactPointSchema
     {
         return new ContactPointSchema('https://schema.org/', 'ContactPoint');
     }
@@ -42,8 +42,9 @@ class ContactPointSchema extends StructuredValueSchema
      * A person or organization can have different contact points, for different purposes. For example, a sales contact point, a PR contact point and so on. This property is used to specify the kind of contact point.
      *
      * @param $contactType 
+     * @return static
      **/
-    public function setContactType($contactType) {
+    public function setContactType($contactType): static {
         $this->properties['contactType'] = $contactType;
 
         return $this;
@@ -60,8 +61,9 @@ class ContactPointSchema extends StructuredValueSchema
      * The telephone number.
      *
      * @param $telephone 
+     * @return static
      **/
-    public function setTelephone($telephone) {
+    public function setTelephone($telephone): static {
         $this->properties['telephone'] = $telephone;
 
         return $this;
@@ -78,8 +80,9 @@ class ContactPointSchema extends StructuredValueSchema
      * The product or service this support contact point is related to (such as product support for a particular product line). This can be a specific product or product line (e.g. "iPhone") or a general category of products or services (e.g. "smartphones").
      *
      * @param $productSupported |
+     * @return static
      **/
-    public function setProductSupported($productSupported) {
+    public function setProductSupported($productSupported): static {
         $this->properties['productSupported'] = $productSupported;
 
         return $this;
@@ -96,8 +99,9 @@ class ContactPointSchema extends StructuredValueSchema
      * The fax number.
      *
      * @param $faxNumber 
+     * @return static
      **/
-    public function setFaxNumber($faxNumber) {
+    public function setFaxNumber($faxNumber): static {
         $this->properties['faxNumber'] = $faxNumber;
 
         return $this;
@@ -114,8 +118,9 @@ class ContactPointSchema extends StructuredValueSchema
      * Email address.
      *
      * @param $email 
+     * @return static
      **/
-    public function setEmail($email) {
+    public function setEmail($email): static {
         $this->properties['email'] = $email;
 
         return $this;
@@ -132,8 +137,9 @@ class ContactPointSchema extends StructuredValueSchema
      * The geographic area where a service or offered item is provided.
      *
      * @param $areaServed |||
+     * @return static
      **/
-    public function setAreaServed($areaServed) {
+    public function setAreaServed($areaServed): static {
         $this->properties['areaServed'] = $areaServed;
 
         return $this;
@@ -150,8 +156,9 @@ class ContactPointSchema extends StructuredValueSchema
      * An option available on this contact point (e.g. a toll-free number or support for hearing-impaired callers).
      *
      * @param $contactOption 
+     * @return static
      **/
-    public function setContactOption($contactOption) {
+    public function setContactOption($contactOption): static {
         $this->properties['contactOption'] = $contactOption;
 
         return $this;
@@ -168,8 +175,9 @@ class ContactPointSchema extends StructuredValueSchema
      * The geographic area where the service is provided.
      *
      * @param $serviceArea ||
+     * @return static
      **/
-    public function setServiceArea($serviceArea) {
+    public function setServiceArea($serviceArea): static {
         $this->properties['serviceArea'] = $serviceArea;
 
         return $this;
@@ -186,8 +194,9 @@ class ContactPointSchema extends StructuredValueSchema
      * The hours during which this service or contact is available.
      *
      * @param $hoursAvailable 
+     * @return static
      **/
-    public function setHoursAvailable($hoursAvailable) {
+    public function setHoursAvailable($hoursAvailable): static {
         $this->properties['hoursAvailable'] = $hoursAvailable;
 
         return $this;
@@ -204,8 +213,9 @@ class ContactPointSchema extends StructuredValueSchema
      * A language someone may use with or at the item, service or place. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].
      *
      * @param $availableLanguage |
+     * @return static
      **/
-    public function setAvailableLanguage($availableLanguage) {
+    public function setAvailableLanguage($availableLanguage): static {
         $this->properties['availableLanguage'] = $availableLanguage;
 
         return $this;

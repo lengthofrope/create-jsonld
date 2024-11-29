@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MoveActionSchema extends ActionSchema
 {
-    public static function factory()
+    public static function factory(): MoveActionSchema
     {
         return new MoveActionSchema('https://schema.org/', 'MoveAction');
     }
@@ -42,8 +42,9 @@ class MoveActionSchema extends ActionSchema
      * A sub property of location. The final location of the object or the agent after the action.
      *
      * @param $toLocation 
+     * @return static
      **/
-    public function setToLocation($toLocation) {
+    public function setToLocation($toLocation): static {
         $this->properties['toLocation'] = $toLocation;
 
         return $this;
@@ -60,8 +61,9 @@ class MoveActionSchema extends ActionSchema
      * A sub property of location. The original location of the object or the agent before the action.
      *
      * @param $fromLocation 
+     * @return static
      **/
-    public function setFromLocation($fromLocation) {
+    public function setFromLocation($fromLocation): static {
         $this->properties['fromLocation'] = $fromLocation;
 
         return $this;

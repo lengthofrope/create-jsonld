@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ReturnMethodEnumerationSchema extends EnumerationSchema
 {
-    public static function factory()
+    public static function factory(): ReturnMethodEnumerationSchema
     {
         return new ReturnMethodEnumerationSchema('https://schema.org/', 'ReturnMethodEnumeration');
     }

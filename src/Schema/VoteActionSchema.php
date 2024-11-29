@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class VoteActionSchema extends ChooseActionSchema
 {
-    public static function factory()
+    public static function factory(): VoteActionSchema
     {
         return new VoteActionSchema('https://schema.org/', 'VoteAction');
     }
@@ -42,8 +42,9 @@ class VoteActionSchema extends ChooseActionSchema
      * A sub property of object. The candidate subject of this action.
      *
      * @param $candidate 
+     * @return static
      **/
-    public function setCandidate($candidate) {
+    public function setCandidate($candidate): static {
         $this->properties['candidate'] = $candidate;
 
         return $this;

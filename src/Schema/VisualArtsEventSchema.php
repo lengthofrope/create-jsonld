@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class VisualArtsEventSchema extends EventSchema
 {
-    public static function factory()
+    public static function factory(): VisualArtsEventSchema
     {
         return new VisualArtsEventSchema('https://schema.org/', 'VisualArtsEvent');
     }

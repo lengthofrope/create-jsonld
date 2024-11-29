@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class CommentSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): CommentSchema
     {
         return new CommentSchema('https://schema.org/', 'Comment');
     }
@@ -42,8 +42,9 @@ class CommentSchema extends CreativeWorkSchema
      * The parent of a question, answer or item in general. Typically used for Q/A discussion threads e.g. a chain of comments with the first comment being an [[Article]] or other [[CreativeWork]]. See also [[comment]] which points from something to a comment about it.
      *
      * @param $parentItem |
+     * @return static
      **/
-    public function setParentItem($parentItem) {
+    public function setParentItem($parentItem): static {
         $this->properties['parentItem'] = $parentItem;
 
         return $this;
@@ -60,8 +61,9 @@ class CommentSchema extends CreativeWorkSchema
      * The number of downvotes this question, answer or comment has received from the community.
      *
      * @param $downvoteCount 
+     * @return static
      **/
-    public function setDownvoteCount($downvoteCount) {
+    public function setDownvoteCount($downvoteCount): static {
         $this->properties['downvoteCount'] = $downvoteCount;
 
         return $this;
@@ -78,8 +80,9 @@ class CommentSchema extends CreativeWorkSchema
      * A CreativeWork such as an image, video, or audio clip shared as part of this posting.
      *
      * @param $sharedContent 
+     * @return static
      **/
-    public function setSharedContent($sharedContent) {
+    public function setSharedContent($sharedContent): static {
         $this->properties['sharedContent'] = $sharedContent;
 
         return $this;
@@ -96,8 +99,9 @@ class CommentSchema extends CreativeWorkSchema
      * The number of upvotes this question, answer or comment has received from the community.
      *
      * @param $upvoteCount 
+     * @return static
      **/
-    public function setUpvoteCount($upvoteCount) {
+    public function setUpvoteCount($upvoteCount): static {
         $this->properties['upvoteCount'] = $upvoteCount;
 
         return $this;

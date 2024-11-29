@@ -34,7 +34,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class {{ class }} extends {{ classExtends }}
 {
-    public static function factory()
+    public static function factory(): {{ class }}
     {
         return new {{ class }}('{{ context }}', '{{ type }}');
     }
@@ -45,8 +45,9 @@ class {{ class }} extends {{ classExtends }}
      *
      * @param ${{ property.label }} {% for range in property.rangeIncludes %}{{ range.class }}{% if loop.last == false %}|{% endif %}{% endfor %}
 
+     * @return static
      **/
-    public function {{ property.setter }}(${{ property.label }}) {
+    public function {{ property.setter }}(${{ property.label }}): static {
         $this->properties['{{ property.label }}'] = ${{ property.label }};
 
         return $this;

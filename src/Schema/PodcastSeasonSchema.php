@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PodcastSeasonSchema extends CreativeWorkSeasonSchema
 {
-    public static function factory()
+    public static function factory(): PodcastSeasonSchema
     {
         return new PodcastSeasonSchema('https://schema.org/', 'PodcastSeason');
     }

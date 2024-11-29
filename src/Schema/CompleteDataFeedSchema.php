@@ -35,7 +35,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class CompleteDataFeedSchema extends DataFeedSchema
 {
-    public static function factory()
+    public static function factory(): CompleteDataFeedSchema
     {
         return new CompleteDataFeedSchema('https://schema.org/', 'CompleteDataFeed');
     }

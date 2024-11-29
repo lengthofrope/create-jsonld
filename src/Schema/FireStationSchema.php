@@ -31,9 +31,9 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class FireStationSchema extends \LengthOfRope\JSONLD\Elements\Element
+class FireStationSchema extends CivicStructureSchema
 {
-    public static function factory()
+    public static function factory(): FireStationSchema
     {
         return new FireStationSchema('https://schema.org/', 'FireStation');
     }

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class UserPlaysSchema extends UserInteractionSchema
 {
-    public static function factory()
+    public static function factory(): UserPlaysSchema
     {
         return new UserPlaysSchema('https://schema.org/', 'UserPlays');
     }

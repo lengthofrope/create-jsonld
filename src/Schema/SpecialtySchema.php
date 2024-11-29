@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class SpecialtySchema extends EnumerationSchema
 {
-    public static function factory()
+    public static function factory(): SpecialtySchema
     {
         return new SpecialtySchema('https://schema.org/', 'Specialty');
     }

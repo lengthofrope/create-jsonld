@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PhotographSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): PhotographSchema
     {
         return new PhotographSchema('https://schema.org/', 'Photograph');
     }

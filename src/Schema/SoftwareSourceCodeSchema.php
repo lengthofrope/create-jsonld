@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class SoftwareSourceCodeSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): SoftwareSourceCodeSchema
     {
         return new SoftwareSourceCodeSchema('https://schema.org/', 'SoftwareSourceCode');
     }
@@ -42,8 +42,9 @@ class SoftwareSourceCodeSchema extends CreativeWorkSchema
      * What type of code sample: full (compile ready) solution, code snippet, inline code, scripts, template.
      *
      * @param $sampleType 
+     * @return static
      **/
-    public function setSampleType($sampleType) {
+    public function setSampleType($sampleType): static {
         $this->properties['sampleType'] = $sampleType;
 
         return $this;
@@ -60,8 +61,9 @@ class SoftwareSourceCodeSchema extends CreativeWorkSchema
      * The computer programming language.
      *
      * @param $programmingLanguage |
+     * @return static
      **/
-    public function setProgrammingLanguage($programmingLanguage) {
+    public function setProgrammingLanguage($programmingLanguage): static {
         $this->properties['programmingLanguage'] = $programmingLanguage;
 
         return $this;
@@ -78,8 +80,9 @@ class SoftwareSourceCodeSchema extends CreativeWorkSchema
      * What type of code sample: full (compile ready) solution, code snippet, inline code, scripts, template.
      *
      * @param $codeSampleType 
+     * @return static
      **/
-    public function setCodeSampleType($codeSampleType) {
+    public function setCodeSampleType($codeSampleType): static {
         $this->properties['codeSampleType'] = $codeSampleType;
 
         return $this;
@@ -96,8 +99,9 @@ class SoftwareSourceCodeSchema extends CreativeWorkSchema
      * Runtime platform or script interpreter dependencies (example: Java v1, Python 2.3, .NET Framework 3.0).
      *
      * @param $runtime 
+     * @return static
      **/
-    public function setRuntime($runtime) {
+    public function setRuntime($runtime): static {
         $this->properties['runtime'] = $runtime;
 
         return $this;
@@ -114,8 +118,9 @@ class SoftwareSourceCodeSchema extends CreativeWorkSchema
      * Target Operating System / Product to which the code applies.  If applies to several versions, just the product name can be used.
      *
      * @param $targetProduct 
+     * @return static
      **/
-    public function setTargetProduct($targetProduct) {
+    public function setTargetProduct($targetProduct): static {
         $this->properties['targetProduct'] = $targetProduct;
 
         return $this;
@@ -132,8 +137,9 @@ class SoftwareSourceCodeSchema extends CreativeWorkSchema
      * Runtime platform or script interpreter dependencies (example: Java v1, Python 2.3, .NET Framework 3.0).
      *
      * @param $runtimePlatform 
+     * @return static
      **/
-    public function setRuntimePlatform($runtimePlatform) {
+    public function setRuntimePlatform($runtimePlatform): static {
         $this->properties['runtimePlatform'] = $runtimePlatform;
 
         return $this;
@@ -150,8 +156,9 @@ class SoftwareSourceCodeSchema extends CreativeWorkSchema
      * Link to the repository where the un-compiled, human readable code and related code is located (SVN, GitHub, CodePlex).
      *
      * @param $codeRepository 
+     * @return static
      **/
-    public function setCodeRepository($codeRepository) {
+    public function setCodeRepository($codeRepository): static {
         $this->properties['codeRepository'] = $codeRepository;
 
         return $this;

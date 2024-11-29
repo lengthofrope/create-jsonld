@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class EatActionSchema extends ConsumeActionSchema
 {
-    public static function factory()
+    public static function factory(): EatActionSchema
     {
         return new EatActionSchema('https://schema.org/', 'EatAction');
     }

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class EmployerReviewSchema extends ReviewSchema
 {
-    public static function factory()
+    public static function factory(): EmployerReviewSchema
     {
         return new EmployerReviewSchema('https://schema.org/', 'EmployerReview');
     }

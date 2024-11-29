@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DrinkActionSchema extends ConsumeActionSchema
 {
-    public static function factory()
+    public static function factory(): DrinkActionSchema
     {
         return new DrinkActionSchema('https://schema.org/', 'DrinkAction');
     }

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MedicalObservationalStudyDesignSchema extends MedicalEnumerationSchema
 {
-    public static function factory()
+    public static function factory(): MedicalObservationalStudyDesignSchema
     {
         return new MedicalObservationalStudyDesignSchema('https://schema.org/', 'MedicalObservationalStudyDesign');
     }

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class FlightReservationSchema extends ReservationSchema
 {
-    public static function factory()
+    public static function factory(): FlightReservationSchema
     {
         return new FlightReservationSchema('https://schema.org/', 'FlightReservation');
     }
@@ -42,8 +42,9 @@ class FlightReservationSchema extends ReservationSchema
      * The priority status assigned to a passenger for security or boarding (e.g. FastTrack or Priority).
      *
      * @param $passengerPriorityStatus |
+     * @return static
      **/
-    public function setPassengerPriorityStatus($passengerPriorityStatus) {
+    public function setPassengerPriorityStatus($passengerPriorityStatus): static {
         $this->properties['passengerPriorityStatus'] = $passengerPriorityStatus;
 
         return $this;
@@ -60,8 +61,9 @@ class FlightReservationSchema extends ReservationSchema
      * The passenger's sequence number as assigned by the airline.
      *
      * @param $passengerSequenceNumber 
+     * @return static
      **/
-    public function setPassengerSequenceNumber($passengerSequenceNumber) {
+    public function setPassengerSequenceNumber($passengerSequenceNumber): static {
         $this->properties['passengerSequenceNumber'] = $passengerSequenceNumber;
 
         return $this;
@@ -78,8 +80,9 @@ class FlightReservationSchema extends ReservationSchema
      * The airline-specific indicator of boarding order / preference.
      *
      * @param $boardingGroup 
+     * @return static
      **/
-    public function setBoardingGroup($boardingGroup) {
+    public function setBoardingGroup($boardingGroup): static {
         $this->properties['boardingGroup'] = $boardingGroup;
 
         return $this;
@@ -96,8 +99,9 @@ class FlightReservationSchema extends ReservationSchema
      * The type of security screening the passenger is subject to.
      *
      * @param $securityScreening 
+     * @return static
      **/
-    public function setSecurityScreening($securityScreening) {
+    public function setSecurityScreening($securityScreening): static {
         $this->properties['securityScreening'] = $securityScreening;
 
         return $this;

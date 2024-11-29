@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PriceComponentTypeEnumerationSchema extends EnumerationSchema
 {
-    public static function factory()
+    public static function factory(): PriceComponentTypeEnumerationSchema
     {
         return new PriceComponentTypeEnumerationSchema('https://schema.org/', 'PriceComponentTypeEnumeration');
     }

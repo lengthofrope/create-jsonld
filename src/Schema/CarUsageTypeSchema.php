@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class CarUsageTypeSchema extends EnumerationSchema
 {
-    public static function factory()
+    public static function factory(): CarUsageTypeSchema
     {
         return new CarUsageTypeSchema('https://schema.org/', 'CarUsageType');
     }

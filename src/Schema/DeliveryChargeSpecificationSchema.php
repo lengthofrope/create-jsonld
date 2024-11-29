@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DeliveryChargeSpecificationSchema extends PriceSpecificationSchema
 {
-    public static function factory()
+    public static function factory(): DeliveryChargeSpecificationSchema
     {
         return new DeliveryChargeSpecificationSchema('https://schema.org/', 'DeliveryChargeSpecification');
     }
@@ -43,8 +43,9 @@ class DeliveryChargeSpecificationSchema extends PriceSpecificationSchema
       
      *
      * @param $ineligibleRegion ||
+     * @return static
      **/
-    public function setIneligibleRegion($ineligibleRegion) {
+    public function setIneligibleRegion($ineligibleRegion): static {
         $this->properties['ineligibleRegion'] = $ineligibleRegion;
 
         return $this;
@@ -61,8 +62,9 @@ class DeliveryChargeSpecificationSchema extends PriceSpecificationSchema
      * The geographic area where a service or offered item is provided.
      *
      * @param $areaServed |||
+     * @return static
      **/
-    public function setAreaServed($areaServed) {
+    public function setAreaServed($areaServed): static {
         $this->properties['areaServed'] = $areaServed;
 
         return $this;
@@ -80,8 +82,9 @@ class DeliveryChargeSpecificationSchema extends PriceSpecificationSchema
     
      *
      * @param $eligibleRegion ||
+     * @return static
      **/
-    public function setEligibleRegion($eligibleRegion) {
+    public function setEligibleRegion($eligibleRegion): static {
         $this->properties['eligibleRegion'] = $eligibleRegion;
 
         return $this;
@@ -98,8 +101,9 @@ class DeliveryChargeSpecificationSchema extends PriceSpecificationSchema
      * The delivery method(s) to which the delivery charge or payment charge specification applies.
      *
      * @param $appliesToDeliveryMethod 
+     * @return static
      **/
-    public function setAppliesToDeliveryMethod($appliesToDeliveryMethod) {
+    public function setAppliesToDeliveryMethod($appliesToDeliveryMethod): static {
         $this->properties['appliesToDeliveryMethod'] = $appliesToDeliveryMethod;
 
         return $this;

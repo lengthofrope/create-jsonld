@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class BackgroundNewsArticleSchema extends NewsArticleSchema
 {
-    public static function factory()
+    public static function factory(): BackgroundNewsArticleSchema
     {
         return new BackgroundNewsArticleSchema('https://schema.org/', 'BackgroundNewsArticle');
     }

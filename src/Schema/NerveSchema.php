@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class NerveSchema extends AnatomicalStructureSchema
 {
-    public static function factory()
+    public static function factory(): NerveSchema
     {
         return new NerveSchema('https://schema.org/', 'Nerve');
     }
@@ -42,8 +42,9 @@ class NerveSchema extends AnatomicalStructureSchema
      * The branches that delineate from the nerve bundle. Not to be confused with [[branchOf]].
      *
      * @param $branch 
+     * @return static
      **/
-    public function setBranch($branch) {
+    public function setBranch($branch): static {
         $this->properties['branch'] = $branch;
 
         return $this;
@@ -60,8 +61,9 @@ class NerveSchema extends AnatomicalStructureSchema
      * The neurological pathway extension that involves muscle control.
      *
      * @param $nerveMotor 
+     * @return static
      **/
-    public function setNerveMotor($nerveMotor) {
+    public function setNerveMotor($nerveMotor): static {
         $this->properties['nerveMotor'] = $nerveMotor;
 
         return $this;
@@ -78,8 +80,9 @@ class NerveSchema extends AnatomicalStructureSchema
      * The neurological pathway extension that inputs and sends information to the brain or spinal cord.
      *
      * @param $sensoryUnit |
+     * @return static
      **/
-    public function setSensoryUnit($sensoryUnit) {
+    public function setSensoryUnit($sensoryUnit): static {
         $this->properties['sensoryUnit'] = $sensoryUnit;
 
         return $this;
@@ -96,8 +99,9 @@ class NerveSchema extends AnatomicalStructureSchema
      * The neurological pathway that originates the neurons.
      *
      * @param $sourcedFrom 
+     * @return static
      **/
-    public function setSourcedFrom($sourcedFrom) {
+    public function setSourcedFrom($sourcedFrom): static {
         $this->properties['sourcedFrom'] = $sourcedFrom;
 
         return $this;

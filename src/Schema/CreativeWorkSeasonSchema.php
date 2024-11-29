@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class CreativeWorkSeasonSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): CreativeWorkSeasonSchema
     {
         return new CreativeWorkSeasonSchema('https://schema.org/', 'CreativeWorkSeason');
     }
@@ -42,8 +42,9 @@ class CreativeWorkSeasonSchema extends CreativeWorkSchema
      * An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip.
      *
      * @param $actor |
+     * @return static
      **/
-    public function setActor($actor) {
+    public function setActor($actor): static {
         $this->properties['actor'] = $actor;
 
         return $this;
@@ -60,8 +61,9 @@ class CreativeWorkSeasonSchema extends CreativeWorkSchema
      * The trailer of a movie or TV/radio series, season, episode, etc.
      *
      * @param $trailer 
+     * @return static
      **/
-    public function setTrailer($trailer) {
+    public function setTrailer($trailer): static {
         $this->properties['trailer'] = $trailer;
 
         return $this;
@@ -78,8 +80,9 @@ class CreativeWorkSeasonSchema extends CreativeWorkSchema
      * Position of the season within an ordered group of seasons.
      *
      * @param $seasonNumber |
+     * @return static
      **/
-    public function setSeasonNumber($seasonNumber) {
+    public function setSeasonNumber($seasonNumber): static {
         $this->properties['seasonNumber'] = $seasonNumber;
 
         return $this;
@@ -96,8 +99,9 @@ class CreativeWorkSeasonSchema extends CreativeWorkSchema
      * An episode of a TV, radio or game media within a series or season.
      *
      * @param $episode 
+     * @return static
      **/
-    public function setEpisode($episode) {
+    public function setEpisode($episode): static {
         $this->properties['episode'] = $episode;
 
         return $this;
@@ -114,8 +118,9 @@ class CreativeWorkSeasonSchema extends CreativeWorkSchema
      * The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
      * @param $startDate |
+     * @return static
      **/
-    public function setStartDate($startDate) {
+    public function setStartDate($startDate): static {
         $this->properties['startDate'] = $startDate;
 
         return $this;
@@ -132,8 +137,9 @@ class CreativeWorkSeasonSchema extends CreativeWorkSchema
      * The production company or studio responsible for the item, e.g. series, video game, episode etc.
      *
      * @param $productionCompany 
+     * @return static
      **/
-    public function setProductionCompany($productionCompany) {
+    public function setProductionCompany($productionCompany): static {
         $this->properties['productionCompany'] = $productionCompany;
 
         return $this;
@@ -150,8 +156,9 @@ class CreativeWorkSeasonSchema extends CreativeWorkSchema
      * The series to which this episode or season belongs.
      *
      * @param $partOfSeries 
+     * @return static
      **/
-    public function setPartOfSeries($partOfSeries) {
+    public function setPartOfSeries($partOfSeries): static {
         $this->properties['partOfSeries'] = $partOfSeries;
 
         return $this;
@@ -168,8 +175,9 @@ class CreativeWorkSeasonSchema extends CreativeWorkSchema
      * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual items or with a series, episode, clip.
      *
      * @param $director 
+     * @return static
      **/
-    public function setDirector($director) {
+    public function setDirector($director): static {
         $this->properties['director'] = $director;
 
         return $this;
@@ -186,8 +194,9 @@ class CreativeWorkSeasonSchema extends CreativeWorkSchema
      * The number of episodes in this season or series.
      *
      * @param $numberOfEpisodes 
+     * @return static
      **/
-    public function setNumberOfEpisodes($numberOfEpisodes) {
+    public function setNumberOfEpisodes($numberOfEpisodes): static {
         $this->properties['numberOfEpisodes'] = $numberOfEpisodes;
 
         return $this;
@@ -204,8 +213,9 @@ class CreativeWorkSeasonSchema extends CreativeWorkSchema
      * The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
      * @param $endDate |
+     * @return static
      **/
-    public function setEndDate($endDate) {
+    public function setEndDate($endDate): static {
         $this->properties['endDate'] = $endDate;
 
         return $this;
@@ -222,8 +232,9 @@ class CreativeWorkSeasonSchema extends CreativeWorkSchema
      * An episode of a TV/radio series or season.
      *
      * @param $episodes 
+     * @return static
      **/
-    public function setEpisodes($episodes) {
+    public function setEpisodes($episodes): static {
         $this->properties['episodes'] = $episodes;
 
         return $this;

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class BroadcastFrequencySpecificationSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): BroadcastFrequencySpecificationSchema
     {
         return new BroadcastFrequencySpecificationSchema('https://schema.org/', 'BroadcastFrequencySpecification');
     }
@@ -42,8 +42,9 @@ class BroadcastFrequencySpecificationSchema extends IntangibleSchema
      * The subchannel used for the broadcast.
      *
      * @param $broadcastSubChannel 
+     * @return static
      **/
-    public function setBroadcastSubChannel($broadcastSubChannel) {
+    public function setBroadcastSubChannel($broadcastSubChannel): static {
         $this->properties['broadcastSubChannel'] = $broadcastSubChannel;
 
         return $this;
@@ -60,8 +61,9 @@ class BroadcastFrequencySpecificationSchema extends IntangibleSchema
      * The modulation (e.g. FM, AM, etc) used by a particular broadcast service.
      *
      * @param $broadcastSignalModulation |
+     * @return static
      **/
-    public function setBroadcastSignalModulation($broadcastSignalModulation) {
+    public function setBroadcastSignalModulation($broadcastSignalModulation): static {
         $this->properties['broadcastSignalModulation'] = $broadcastSignalModulation;
 
         return $this;
@@ -78,8 +80,9 @@ class BroadcastFrequencySpecificationSchema extends IntangibleSchema
      * The frequency in MHz for a particular broadcast.
      *
      * @param $broadcastFrequencyValue |
+     * @return static
      **/
-    public function setBroadcastFrequencyValue($broadcastFrequencyValue) {
+    public function setBroadcastFrequencyValue($broadcastFrequencyValue): static {
         $this->properties['broadcastFrequencyValue'] = $broadcastFrequencyValue;
 
         return $this;

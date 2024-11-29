@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class HealthPlanCostSharingSpecificationSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): HealthPlanCostSharingSpecificationSchema
     {
         return new HealthPlanCostSharingSpecificationSchema('https://schema.org/', 'HealthPlanCostSharingSpecification');
     }
@@ -42,8 +42,9 @@ class HealthPlanCostSharingSpecificationSchema extends IntangibleSchema
      * The category or type of pharmacy associated with this cost sharing.
      *
      * @param $healthPlanPharmacyCategory 
+     * @return static
      **/
-    public function setHealthPlanPharmacyCategory($healthPlanPharmacyCategory) {
+    public function setHealthPlanPharmacyCategory($healthPlanPharmacyCategory): static {
         $this->properties['healthPlanPharmacyCategory'] = $healthPlanPharmacyCategory;
 
         return $this;
@@ -60,8 +61,9 @@ class HealthPlanCostSharingSpecificationSchema extends IntangibleSchema
      * The copay amount.
      *
      * @param $healthPlanCopay 
+     * @return static
      **/
-    public function setHealthPlanCopay($healthPlanCopay) {
+    public function setHealthPlanCopay($healthPlanCopay): static {
         $this->properties['healthPlanCopay'] = $healthPlanCopay;
 
         return $this;
@@ -78,8 +80,9 @@ class HealthPlanCostSharingSpecificationSchema extends IntangibleSchema
      * The rate of coinsurance expressed as a number between 0.0 and 1.0.
      *
      * @param $healthPlanCoinsuranceRate 
+     * @return static
      **/
-    public function setHealthPlanCoinsuranceRate($healthPlanCoinsuranceRate) {
+    public function setHealthPlanCoinsuranceRate($healthPlanCoinsuranceRate): static {
         $this->properties['healthPlanCoinsuranceRate'] = $healthPlanCoinsuranceRate;
 
         return $this;
@@ -96,8 +99,9 @@ class HealthPlanCostSharingSpecificationSchema extends IntangibleSchema
      * Whether the coinsurance applies before or after deductible, etc. TODO: Is this a closed set?
      *
      * @param $healthPlanCoinsuranceOption 
+     * @return static
      **/
-    public function setHealthPlanCoinsuranceOption($healthPlanCoinsuranceOption) {
+    public function setHealthPlanCoinsuranceOption($healthPlanCoinsuranceOption): static {
         $this->properties['healthPlanCoinsuranceOption'] = $healthPlanCoinsuranceOption;
 
         return $this;
@@ -114,8 +118,9 @@ class HealthPlanCostSharingSpecificationSchema extends IntangibleSchema
      * Whether the copay is before or after deductible, etc. TODO: Is this a closed set?
      *
      * @param $healthPlanCopayOption 
+     * @return static
      **/
-    public function setHealthPlanCopayOption($healthPlanCopayOption) {
+    public function setHealthPlanCopayOption($healthPlanCopayOption): static {
         $this->properties['healthPlanCopayOption'] = $healthPlanCopayOption;
 
         return $this;

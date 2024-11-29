@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MedicalStudySchema extends MedicalEntitySchema
 {
-    public static function factory()
+    public static function factory(): MedicalStudySchema
     {
         return new MedicalStudySchema('https://schema.org/', 'MedicalStudy');
     }
@@ -42,8 +42,9 @@ class MedicalStudySchema extends MedicalEntitySchema
      * A subject of the study, i.e. one of the medical conditions, therapies, devices, drugs, etc. investigated by the study.
      *
      * @param $studySubject 
+     * @return static
      **/
-    public function setStudySubject($studySubject) {
+    public function setStudySubject($studySubject): static {
         $this->properties['studySubject'] = $studySubject;
 
         return $this;
@@ -60,8 +61,9 @@ class MedicalStudySchema extends MedicalEntitySchema
      * The status of the study (enumerated).
      *
      * @param $status ||
+     * @return static
      **/
-    public function setStatus($status) {
+    public function setStatus($status): static {
         $this->properties['status'] = $status;
 
         return $this;
@@ -78,8 +80,9 @@ class MedicalStudySchema extends MedicalEntitySchema
      * Specifying the health condition(s) of a patient, medical study, or other target audience.
      *
      * @param $healthCondition 
+     * @return static
      **/
-    public function setHealthCondition($healthCondition) {
+    public function setHealthCondition($healthCondition): static {
         $this->properties['healthCondition'] = $healthCondition;
 
         return $this;
@@ -96,8 +99,9 @@ class MedicalStudySchema extends MedicalEntitySchema
      * The location in which the study is taking/took place.
      *
      * @param $studyLocation 
+     * @return static
      **/
-    public function setStudyLocation($studyLocation) {
+    public function setStudyLocation($studyLocation): static {
         $this->properties['studyLocation'] = $studyLocation;
 
         return $this;
@@ -114,8 +118,9 @@ class MedicalStudySchema extends MedicalEntitySchema
      * A person or organization that supports a thing through a pledge, promise, or financial contribution. E.g. a sponsor of a Medical Study or a corporate sponsor of an event.
      *
      * @param $sponsor |
+     * @return static
      **/
-    public function setSponsor($sponsor) {
+    public function setSponsor($sponsor): static {
         $this->properties['sponsor'] = $sponsor;
 
         return $this;

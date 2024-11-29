@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PublicToiletSchema extends CivicStructureSchema
 {
-    public static function factory()
+    public static function factory(): PublicToiletSchema
     {
         return new PublicToiletSchema('https://schema.org/', 'PublicToilet');
     }

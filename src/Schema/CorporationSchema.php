@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class CorporationSchema extends OrganizationSchema
 {
-    public static function factory()
+    public static function factory(): CorporationSchema
     {
         return new CorporationSchema('https://schema.org/', 'Corporation');
     }
@@ -42,8 +42,9 @@ class CorporationSchema extends OrganizationSchema
      * The exchange traded instrument associated with a Corporation object. The tickerSymbol is expressed as an exchange and an instrument name separated by a space character. For the exchange component of the tickerSymbol attribute, we recommend using the controlled vocabulary of Market Identifier Codes (MIC) specified in ISO 15022.
      *
      * @param $tickerSymbol 
+     * @return static
      **/
-    public function setTickerSymbol($tickerSymbol) {
+    public function setTickerSymbol($tickerSymbol): static {
         $this->properties['tickerSymbol'] = $tickerSymbol;
 
         return $this;

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MemberProgramTierSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): MemberProgramTierSchema
     {
         return new MemberProgramTierSchema('https://schema.org/', 'MemberProgramTier');
     }
@@ -42,8 +42,9 @@ class MemberProgramTierSchema extends IntangibleSchema
      * A requirement for a user to join a membership tier, for example: a CreditCard if the tier requires sign up for a credit card, A UnitPriceSpecification if the user is required to pay a (periodic) fee, or a MonetaryAmount if the user needs to spend a minimum amount to join the tier. If a tier is free to join then this property does not need to be specified.
      *
      * @param $hasTierRequirement |||
+     * @return static
      **/
-    public function setHasTierRequirement($hasTierRequirement) {
+    public function setHasTierRequirement($hasTierRequirement): static {
         $this->properties['hasTierRequirement'] = $hasTierRequirement;
 
         return $this;
@@ -60,8 +61,9 @@ class MemberProgramTierSchema extends IntangibleSchema
      * The number of membership points earned by the member. If necessary, the unitText can be used to express the units the points are issued in. (E.g. stars, miles, etc.)
      *
      * @param $membershipPointsEarned |
+     * @return static
      **/
-    public function setMembershipPointsEarned($membershipPointsEarned) {
+    public function setMembershipPointsEarned($membershipPointsEarned): static {
         $this->properties['membershipPointsEarned'] = $membershipPointsEarned;
 
         return $this;
@@ -78,8 +80,9 @@ class MemberProgramTierSchema extends IntangibleSchema
      * A member benefit for a particular tier of a loyalty program.
      *
      * @param $hasTierBenefit 
+     * @return static
      **/
-    public function setHasTierBenefit($hasTierBenefit) {
+    public function setHasTierBenefit($hasTierBenefit): static {
         $this->properties['hasTierBenefit'] = $hasTierBenefit;
 
         return $this;
@@ -96,8 +99,9 @@ class MemberProgramTierSchema extends IntangibleSchema
      * The member program this tier is a part of.
      *
      * @param $isTierOf 
+     * @return static
      **/
-    public function setIsTierOf($isTierOf) {
+    public function setIsTierOf($isTierOf): static {
         $this->properties['isTierOf'] = $isTierOf;
 
         return $this;

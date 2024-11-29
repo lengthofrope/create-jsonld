@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class WebSiteSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): WebSiteSchema
     {
         return new WebSiteSchema('https://schema.org/', 'WebSite');
     }
@@ -42,8 +42,9 @@ class WebSiteSchema extends CreativeWorkSchema
      * The International Standard Serial Number (ISSN) that identifies this serial publication. You can repeat this property to identify different formats of, or the linking ISSN (ISSN-L) for, this serial publication.
      *
      * @param $issn 
+     * @return static
      **/
-    public function setIssn($issn) {
+    public function setIssn($issn): static {
         $this->properties['issn'] = $issn;
 
         return $this;

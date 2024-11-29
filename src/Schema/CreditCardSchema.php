@@ -32,9 +32,9 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class CreditCardSchema extends \LengthOfRope\JSONLD\Elements\Element
+class CreditCardSchema extends LoanOrCreditSchema
 {
-    public static function factory()
+    public static function factory(): CreditCardSchema
     {
         return new CreditCardSchema('https://schema.org/', 'CreditCard');
     }

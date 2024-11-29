@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PaymentStatusTypeSchema extends StatusEnumerationSchema
 {
-    public static function factory()
+    public static function factory(): PaymentStatusTypeSchema
     {
         return new PaymentStatusTypeSchema('https://schema.org/', 'PaymentStatusType');
     }

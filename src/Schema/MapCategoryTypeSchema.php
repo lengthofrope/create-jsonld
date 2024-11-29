@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MapCategoryTypeSchema extends EnumerationSchema
 {
-    public static function factory()
+    public static function factory(): MapCategoryTypeSchema
     {
         return new MapCategoryTypeSchema('https://schema.org/', 'MapCategoryType');
     }

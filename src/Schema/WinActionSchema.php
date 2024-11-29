@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class WinActionSchema extends AchieveActionSchema
 {
-    public static function factory()
+    public static function factory(): WinActionSchema
     {
         return new WinActionSchema('https://schema.org/', 'WinAction');
     }
@@ -42,8 +42,9 @@ class WinActionSchema extends AchieveActionSchema
      * A sub property of participant. The loser of the action.
      *
      * @param $loser 
+     * @return static
      **/
-    public function setLoser($loser) {
+    public function setLoser($loser): static {
         $this->properties['loser'] = $loser;
 
         return $this;

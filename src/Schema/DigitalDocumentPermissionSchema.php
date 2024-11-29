@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DigitalDocumentPermissionSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): DigitalDocumentPermissionSchema
     {
         return new DigitalDocumentPermissionSchema('https://schema.org/', 'DigitalDocumentPermission');
     }
@@ -42,8 +42,9 @@ class DigitalDocumentPermissionSchema extends IntangibleSchema
      * The type of permission granted the person, organization, or audience.
      *
      * @param $permissionType 
+     * @return static
      **/
-    public function setPermissionType($permissionType) {
+    public function setPermissionType($permissionType): static {
         $this->properties['permissionType'] = $permissionType;
 
         return $this;
@@ -60,8 +61,9 @@ class DigitalDocumentPermissionSchema extends IntangibleSchema
      * The person, organization, contact point, or audience that has been granted this permission.
      *
      * @param $grantee |||
+     * @return static
      **/
-    public function setGrantee($grantee) {
+    public function setGrantee($grantee): static {
         $this->properties['grantee'] = $grantee;
 
         return $this;

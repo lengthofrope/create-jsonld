@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class QuotationSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): QuotationSchema
     {
         return new QuotationSchema('https://schema.org/', 'Quotation');
     }
@@ -42,8 +42,9 @@ class QuotationSchema extends CreativeWorkSchema
      * The (e.g. fictional) character, Person or Organization to whom the quotation is attributed within the containing CreativeWork.
      *
      * @param $spokenByCharacter |
+     * @return static
      **/
-    public function setSpokenByCharacter($spokenByCharacter) {
+    public function setSpokenByCharacter($spokenByCharacter): static {
         $this->properties['spokenByCharacter'] = $spokenByCharacter;
 
         return $this;

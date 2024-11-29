@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ComputerLanguageSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): ComputerLanguageSchema
     {
         return new ComputerLanguageSchema('https://schema.org/', 'ComputerLanguage');
     }

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ConsortiumSchema extends OrganizationSchema
 {
-    public static function factory()
+    public static function factory(): ConsortiumSchema
     {
         return new ConsortiumSchema('https://schema.org/', 'Consortium');
     }

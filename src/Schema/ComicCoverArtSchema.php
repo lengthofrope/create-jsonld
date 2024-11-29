@@ -31,9 +31,9 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ComicCoverArtSchema extends \LengthOfRope\JSONLD\Elements\Element
+class ComicCoverArtSchema extends ComicStorySchema
 {
-    public static function factory()
+    public static function factory(): ComicCoverArtSchema
     {
         return new ComicCoverArtSchema('https://schema.org/', 'ComicCoverArt');
     }

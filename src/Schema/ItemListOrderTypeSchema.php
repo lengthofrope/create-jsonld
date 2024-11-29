@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ItemListOrderTypeSchema extends EnumerationSchema
 {
-    public static function factory()
+    public static function factory(): ItemListOrderTypeSchema
     {
         return new ItemListOrderTypeSchema('https://schema.org/', 'ItemListOrderType');
     }

@@ -44,9 +44,9 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class EventSeriesSchema extends \LengthOfRope\JSONLD\Elements\Element
+class EventSeriesSchema extends EventSchema
 {
-    public static function factory()
+    public static function factory(): EventSeriesSchema
     {
         return new EventSeriesSchema('https://schema.org/', 'EventSeries');
     }

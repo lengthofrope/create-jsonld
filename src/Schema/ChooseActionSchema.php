@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ChooseActionSchema extends AssessActionSchema
 {
-    public static function factory()
+    public static function factory(): ChooseActionSchema
     {
         return new ChooseActionSchema('https://schema.org/', 'ChooseAction');
     }
@@ -42,8 +42,9 @@ class ChooseActionSchema extends AssessActionSchema
      * A sub property of object. The options subject to this action.
      *
      * @param $option |
+     * @return static
      **/
-    public function setOption($option) {
+    public function setOption($option): static {
         $this->properties['option'] = $option;
 
         return $this;
@@ -60,8 +61,9 @@ class ChooseActionSchema extends AssessActionSchema
      * A sub property of object. The options subject to this action.
      *
      * @param $actionOption |
+     * @return static
      **/
-    public function setActionOption($actionOption) {
+    public function setActionOption($actionOption): static {
         $this->properties['actionOption'] = $actionOption;
 
         return $this;

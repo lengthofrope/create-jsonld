@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class AudioObjectSnapshotSchema extends AudioObjectSchema
 {
-    public static function factory()
+    public static function factory(): AudioObjectSnapshotSchema
     {
         return new AudioObjectSnapshotSchema('https://schema.org/', 'AudioObjectSnapshot');
     }

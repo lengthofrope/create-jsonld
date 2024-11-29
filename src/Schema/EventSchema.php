@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class EventSchema extends ThingSchema
 {
-    public static function factory()
+    public static function factory(): EventSchema
     {
         return new EventSchema('https://schema.org/', 'Event');
     }
@@ -42,8 +42,9 @@ class EventSchema extends ThingSchema
      * The main performer or performers of the event&#x2014;for example, a presenter, musician, or actor.
      *
      * @param $performers |
+     * @return static
      **/
-    public function setPerformers($performers) {
+    public function setPerformers($performers): static {
         $this->properties['performers'] = $performers;
 
         return $this;
@@ -60,8 +61,9 @@ class EventSchema extends ThingSchema
      * An organizer of an Event.
      *
      * @param $organizer |
+     * @return static
      **/
-    public function setOrganizer($organizer) {
+    public function setOrganizer($organizer): static {
         $this->properties['organizer'] = $organizer;
 
         return $this;
@@ -78,8 +80,9 @@ class EventSchema extends ThingSchema
      * A secondary contributor to the CreativeWork or Event.
      *
      * @param $contributor |
+     * @return static
      **/
-    public function setContributor($contributor) {
+    public function setContributor($contributor): static {
         $this->properties['contributor'] = $contributor;
 
         return $this;
@@ -96,8 +99,9 @@ class EventSchema extends ThingSchema
      * A work performed in some event, for example a play performed in a TheaterEvent.
      *
      * @param $workPerformed 
+     * @return static
      **/
-    public function setWorkPerformed($workPerformed) {
+    public function setWorkPerformed($workPerformed): static {
         $this->properties['workPerformed'] = $workPerformed;
 
         return $this;
@@ -114,8 +118,9 @@ class EventSchema extends ThingSchema
      * An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip.
      *
      * @param $actor |
+     * @return static
      **/
-    public function setActor($actor) {
+    public function setActor($actor): static {
         $this->properties['actor'] = $actor;
 
         return $this;
@@ -132,8 +137,9 @@ class EventSchema extends ThingSchema
      * The eventAttendanceMode of an event indicates whether it occurs online, offline, or a mix.
      *
      * @param $eventAttendanceMode 
+     * @return static
      **/
-    public function setEventAttendanceMode($eventAttendanceMode) {
+    public function setEventAttendanceMode($eventAttendanceMode): static {
         $this->properties['eventAttendanceMode'] = $eventAttendanceMode;
 
         return $this;
@@ -150,8 +156,9 @@ class EventSchema extends ThingSchema
      * A [[Grant]] that directly or indirectly provide funding or sponsorship for this item. See also [[ownershipFundingInfo]].
      *
      * @param $funding 
+     * @return static
      **/
-    public function setFunding($funding) {
+    public function setFunding($funding): static {
         $this->properties['funding'] = $funding;
 
         return $this;
@@ -169,8 +176,9 @@ class EventSchema extends ThingSchema
        Specific subproperties are available for workPerformed (e.g. a play), or a workPresented (a Movie at a ScreeningEvent).
      *
      * @param $workFeatured 
+     * @return static
      **/
-    public function setWorkFeatured($workFeatured) {
+    public function setWorkFeatured($workFeatured): static {
         $this->properties['workFeatured'] = $workFeatured;
 
         return $this;
@@ -187,8 +195,9 @@ class EventSchema extends ThingSchema
      * The maximum virtual attendee capacity of an [[Event]] whose [[eventAttendanceMode]] is [[OnlineEventAttendanceMode]] (or the online aspects, in the case of a [[MixedEventAttendanceMode]]). 
      *
      * @param $maximumVirtualAttendeeCapacity 
+     * @return static
      **/
-    public function setMaximumVirtualAttendeeCapacity($maximumVirtualAttendeeCapacity) {
+    public function setMaximumVirtualAttendeeCapacity($maximumVirtualAttendeeCapacity): static {
         $this->properties['maximumVirtualAttendeeCapacity'] = $maximumVirtualAttendeeCapacity;
 
         return $this;
@@ -205,8 +214,9 @@ class EventSchema extends ThingSchema
      * An Event that is part of this event. For example, a conference event includes many presentations, each of which is a subEvent of the conference.
      *
      * @param $subEvent 
+     * @return static
      **/
-    public function setSubEvent($subEvent) {
+    public function setSubEvent($subEvent): static {
         $this->properties['subEvent'] = $subEvent;
 
         return $this;
@@ -223,8 +233,9 @@ class EventSchema extends ThingSchema
      * The subject matter of the content.
      *
      * @param $about 
+     * @return static
      **/
-    public function setAbout($about) {
+    public function setAbout($about): static {
         $this->properties['about'] = $about;
 
         return $this;
@@ -241,8 +252,9 @@ class EventSchema extends ThingSchema
      * The CreativeWork that captured all or part of this Event.
      *
      * @param $recordedIn 
+     * @return static
      **/
-    public function setRecordedIn($recordedIn) {
+    public function setRecordedIn($recordedIn): static {
         $this->properties['recordedIn'] = $recordedIn;
 
         return $this;
@@ -259,8 +271,9 @@ class EventSchema extends ThingSchema
      * A person or organization that supports (sponsors) something through some kind of financial contribution.
      *
      * @param $funder |
+     * @return static
      **/
-    public function setFunder($funder) {
+    public function setFunder($funder): static {
         $this->properties['funder'] = $funder;
 
         return $this;
@@ -277,8 +290,9 @@ class EventSchema extends ThingSchema
      * Events that are a part of this event. For example, a conference event includes many presentations, each subEvents of the conference.
      *
      * @param $subEvents 
+     * @return static
      **/
-    public function setSubEvents($subEvents) {
+    public function setSubEvents($subEvents): static {
         $this->properties['subEvents'] = $subEvents;
 
         return $this;
@@ -295,8 +309,9 @@ class EventSchema extends ThingSchema
      * Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or by repeating the property.
      *
      * @param $keywords ||
+     * @return static
      **/
-    public function setKeywords($keywords) {
+    public function setKeywords($keywords): static {
         $this->properties['keywords'] = $keywords;
 
         return $this;
@@ -313,8 +328,9 @@ class EventSchema extends ThingSchema
      * A flag to signal that the item, event, or place is accessible for free.
      *
      * @param $isAccessibleForFree 
+     * @return static
      **/
-    public function setIsAccessibleForFree($isAccessibleForFree) {
+    public function setIsAccessibleForFree($isAccessibleForFree): static {
         $this->properties['isAccessibleForFree'] = $isAccessibleForFree;
 
         return $this;
@@ -331,8 +347,9 @@ class EventSchema extends ThingSchema
      * Used in conjunction with eventStatus for rescheduled or cancelled events. This property contains the previously scheduled start date. For rescheduled events, the startDate property should be used for the newly scheduled start date. In the (rare) case of an event that has been postponed and rescheduled multiple times, this field may be repeated.
      *
      * @param $previousStartDate 
+     * @return static
      **/
-    public function setPreviousStartDate($previousStartDate) {
+    public function setPreviousStartDate($previousStartDate): static {
         $this->properties['previousStartDate'] = $previousStartDate;
 
         return $this;
@@ -349,8 +366,9 @@ class EventSchema extends ThingSchema
      * A performer at the event&#x2014;for example, a presenter, musician, musical group or actor.
      *
      * @param $performer |
+     * @return static
      **/
-    public function setPerformer($performer) {
+    public function setPerformer($performer): static {
         $this->properties['performer'] = $performer;
 
         return $this;
@@ -367,8 +385,9 @@ class EventSchema extends ThingSchema
      * The location of, for example, where an event is happening, where an organization is located, or where an action takes place.
      *
      * @param $location |||
+     * @return static
      **/
-    public function setLocation($location) {
+    public function setLocation($location): static {
         $this->properties['location'] = $location;
 
         return $this;
@@ -385,8 +404,9 @@ class EventSchema extends ThingSchema
      * The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
      * @param $startDate |
+     * @return static
      **/
-    public function setStartDate($startDate) {
+    public function setStartDate($startDate): static {
         $this->properties['startDate'] = $startDate;
 
         return $this;
@@ -403,8 +423,9 @@ class EventSchema extends ThingSchema
      * The typical expected age range, e.g. '7-9', '11-'.
      *
      * @param $typicalAgeRange 
+     * @return static
      **/
-    public function setTypicalAgeRange($typicalAgeRange) {
+    public function setTypicalAgeRange($typicalAgeRange): static {
         $this->properties['typicalAgeRange'] = $typicalAgeRange;
 
         return $this;
@@ -421,8 +442,9 @@ class EventSchema extends ThingSchema
      * Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market, or that translates during some event.
      *
      * @param $translator |
+     * @return static
      **/
-    public function setTranslator($translator) {
+    public function setTranslator($translator): static {
         $this->properties['translator'] = $translator;
 
         return $this;
@@ -439,8 +461,9 @@ class EventSchema extends ThingSchema
      * A review of the item.
      *
      * @param $review 
+     * @return static
      **/
-    public function setReview($review) {
+    public function setReview($review): static {
         $this->properties['review'] = $review;
 
         return $this;
@@ -457,8 +480,9 @@ class EventSchema extends ThingSchema
      * The number of attendee places for an event that remain unallocated.
      *
      * @param $remainingAttendeeCapacity 
+     * @return static
      **/
-    public function setRemainingAttendeeCapacity($remainingAttendeeCapacity) {
+    public function setRemainingAttendeeCapacity($remainingAttendeeCapacity): static {
         $this->properties['remainingAttendeeCapacity'] = $remainingAttendeeCapacity;
 
         return $this;
@@ -480,8 +504,9 @@ class EventSchema extends ThingSchema
       or seasons.
      *
      * @param $eventSchedule 
+     * @return static
      **/
-    public function setEventSchedule($eventSchedule) {
+    public function setEventSchedule($eventSchedule): static {
         $this->properties['eventSchedule'] = $eventSchedule;
 
         return $this;
@@ -499,8 +524,9 @@ class EventSchema extends ThingSchema
       
      *
      * @param $offers |
+     * @return static
      **/
-    public function setOffers($offers) {
+    public function setOffers($offers): static {
         $this->properties['offers'] = $offers;
 
         return $this;
@@ -517,8 +543,9 @@ class EventSchema extends ThingSchema
      * The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
      *
      * @param $duration 
+     * @return static
      **/
-    public function setDuration($duration) {
+    public function setDuration($duration): static {
         $this->properties['duration'] = $duration;
 
         return $this;
@@ -535,8 +562,9 @@ class EventSchema extends ThingSchema
      * An event that this event is a part of. For example, a collection of individual music performances might each have a music festival as their superEvent.
      *
      * @param $superEvent 
+     * @return static
      **/
-    public function setSuperEvent($superEvent) {
+    public function setSuperEvent($superEvent): static {
         $this->properties['superEvent'] = $superEvent;
 
         return $this;
@@ -553,8 +581,9 @@ class EventSchema extends ThingSchema
      * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual items or with a series, episode, clip.
      *
      * @param $director 
+     * @return static
      **/
-    public function setDirector($director) {
+    public function setDirector($director): static {
         $this->properties['director'] = $director;
 
         return $this;
@@ -571,8 +600,9 @@ class EventSchema extends ThingSchema
      * The time admission will commence.
      *
      * @param $doorTime |
+     * @return static
      **/
-    public function setDoorTime($doorTime) {
+    public function setDoorTime($doorTime): static {
         $this->properties['doorTime'] = $doorTime;
 
         return $this;
@@ -589,8 +619,9 @@ class EventSchema extends ThingSchema
      * The maximum physical attendee capacity of an [[Event]] whose [[eventAttendanceMode]] is [[OfflineEventAttendanceMode]] (or the offline aspects, in the case of a [[MixedEventAttendanceMode]]). 
      *
      * @param $maximumPhysicalAttendeeCapacity 
+     * @return static
      **/
-    public function setMaximumPhysicalAttendeeCapacity($maximumPhysicalAttendeeCapacity) {
+    public function setMaximumPhysicalAttendeeCapacity($maximumPhysicalAttendeeCapacity): static {
         $this->properties['maximumPhysicalAttendeeCapacity'] = $maximumPhysicalAttendeeCapacity;
 
         return $this;
@@ -607,8 +638,9 @@ class EventSchema extends ThingSchema
      * A person or organization attending the event.
      *
      * @param $attendee |
+     * @return static
      **/
-    public function setAttendee($attendee) {
+    public function setAttendee($attendee): static {
         $this->properties['attendee'] = $attendee;
 
         return $this;
@@ -625,8 +657,9 @@ class EventSchema extends ThingSchema
      * A person or organization that supports a thing through a pledge, promise, or financial contribution. E.g. a sponsor of a Medical Study or a corporate sponsor of an event.
      *
      * @param $sponsor |
+     * @return static
      **/
-    public function setSponsor($sponsor) {
+    public function setSponsor($sponsor): static {
         $this->properties['sponsor'] = $sponsor;
 
         return $this;
@@ -643,8 +676,9 @@ class EventSchema extends ThingSchema
      * The overall rating, based on a collection of reviews or ratings, of the item.
      *
      * @param $aggregateRating 
+     * @return static
      **/
-    public function setAggregateRating($aggregateRating) {
+    public function setAggregateRating($aggregateRating): static {
         $this->properties['aggregateRating'] = $aggregateRating;
 
         return $this;
@@ -661,8 +695,9 @@ class EventSchema extends ThingSchema
      * The language of the content or performance or used in an action. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
      *
      * @param $inLanguage |
+     * @return static
      **/
-    public function setInLanguage($inLanguage) {
+    public function setInLanguage($inLanguage): static {
         $this->properties['inLanguage'] = $inLanguage;
 
         return $this;
@@ -679,8 +714,9 @@ class EventSchema extends ThingSchema
      * The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
      * @param $endDate |
+     * @return static
      **/
-    public function setEndDate($endDate) {
+    public function setEndDate($endDate): static {
         $this->properties['endDate'] = $endDate;
 
         return $this;
@@ -697,8 +733,9 @@ class EventSchema extends ThingSchema
      * A person attending the event.
      *
      * @param $attendees |
+     * @return static
      **/
-    public function setAttendees($attendees) {
+    public function setAttendees($attendees): static {
         $this->properties['attendees'] = $attendees;
 
         return $this;
@@ -715,8 +752,9 @@ class EventSchema extends ThingSchema
      * An eventStatus of an event represents its status; particularly useful when an event is cancelled or rescheduled.
      *
      * @param $eventStatus 
+     * @return static
      **/
-    public function setEventStatus($eventStatus) {
+    public function setEventStatus($eventStatus): static {
         $this->properties['eventStatus'] = $eventStatus;
 
         return $this;
@@ -733,8 +771,9 @@ class EventSchema extends ThingSchema
      * The total number of individuals that may attend an event or venue.
      *
      * @param $maximumAttendeeCapacity 
+     * @return static
      **/
-    public function setMaximumAttendeeCapacity($maximumAttendeeCapacity) {
+    public function setMaximumAttendeeCapacity($maximumAttendeeCapacity): static {
         $this->properties['maximumAttendeeCapacity'] = $maximumAttendeeCapacity;
 
         return $this;
@@ -751,8 +790,9 @@ class EventSchema extends ThingSchema
      * The person or organization who wrote a composition, or who is the composer of a work performed at some event.
      *
      * @param $composer |
+     * @return static
      **/
-    public function setComposer($composer) {
+    public function setComposer($composer): static {
         $this->properties['composer'] = $composer;
 
         return $this;
@@ -769,8 +809,9 @@ class EventSchema extends ThingSchema
      * An intended audience, i.e. a group for whom something was created.
      *
      * @param $audience 
+     * @return static
      **/
-    public function setAudience($audience) {
+    public function setAudience($audience): static {
         $this->properties['audience'] = $audience;
 
         return $this;

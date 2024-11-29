@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class StatementSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): StatementSchema
     {
         return new StatementSchema('https://schema.org/', 'Statement');
     }

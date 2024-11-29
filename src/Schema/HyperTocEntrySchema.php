@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class HyperTocEntrySchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): HyperTocEntrySchema
     {
         return new HyperTocEntrySchema('https://schema.org/', 'HyperTocEntry');
     }
@@ -42,8 +42,9 @@ class HyperTocEntrySchema extends CreativeWorkSchema
      * A media object that encodes this CreativeWork. This property is a synonym for encoding.
      *
      * @param $associatedMedia 
+     * @return static
      **/
-    public function setAssociatedMedia($associatedMedia) {
+    public function setAssociatedMedia($associatedMedia): static {
         $this->properties['associatedMedia'] = $associatedMedia;
 
         return $this;
@@ -60,8 +61,9 @@ class HyperTocEntrySchema extends CreativeWorkSchema
      * A [[HyperTocEntry]] can have a [[tocContinuation]] indicated, which is another [[HyperTocEntry]] that would be the default next item to play or render.
      *
      * @param $tocContinuation 
+     * @return static
      **/
-    public function setTocContinuation($tocContinuation) {
+    public function setTocContinuation($tocContinuation): static {
         $this->properties['tocContinuation'] = $tocContinuation;
 
         return $this;
@@ -78,8 +80,9 @@ class HyperTocEntrySchema extends CreativeWorkSchema
      * Text of an utterances (spoken words, lyrics etc.) that occurs at a certain section of a media object, represented as a [[HyperTocEntry]].
      *
      * @param $utterances 
+     * @return static
      **/
-    public function setUtterances($utterances) {
+    public function setUtterances($utterances): static {
         $this->properties['utterances'] = $utterances;
 
         return $this;

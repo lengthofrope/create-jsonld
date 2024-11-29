@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class InformActionSchema extends CommunicateActionSchema
 {
-    public static function factory()
+    public static function factory(): InformActionSchema
     {
         return new InformActionSchema('https://schema.org/', 'InformAction');
     }
@@ -42,8 +42,9 @@ class InformActionSchema extends CommunicateActionSchema
      * Upcoming or past event associated with this place, organization, or action.
      *
      * @param $event 
+     * @return static
      **/
-    public function setEvent($event) {
+    public function setEvent($event): static {
         $this->properties['event'] = $event;
 
         return $this;

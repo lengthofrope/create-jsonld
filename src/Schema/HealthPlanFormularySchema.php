@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class HealthPlanFormularySchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): HealthPlanFormularySchema
     {
         return new HealthPlanFormularySchema('https://schema.org/', 'HealthPlanFormulary');
     }
@@ -42,8 +42,9 @@ class HealthPlanFormularySchema extends IntangibleSchema
      * The costs to the patient for services under this network or formulary.
      *
      * @param $healthPlanCostSharing 
+     * @return static
      **/
-    public function setHealthPlanCostSharing($healthPlanCostSharing) {
+    public function setHealthPlanCostSharing($healthPlanCostSharing): static {
         $this->properties['healthPlanCostSharing'] = $healthPlanCostSharing;
 
         return $this;
@@ -60,8 +61,9 @@ class HealthPlanFormularySchema extends IntangibleSchema
      * The tier(s) of drugs offered by this formulary or insurance plan.
      *
      * @param $healthPlanDrugTier 
+     * @return static
      **/
-    public function setHealthPlanDrugTier($healthPlanDrugTier) {
+    public function setHealthPlanDrugTier($healthPlanDrugTier): static {
         $this->properties['healthPlanDrugTier'] = $healthPlanDrugTier;
 
         return $this;
@@ -78,8 +80,9 @@ class HealthPlanFormularySchema extends IntangibleSchema
      * Whether prescriptions can be delivered by mail.
      *
      * @param $offersPrescriptionByMail 
+     * @return static
      **/
-    public function setOffersPrescriptionByMail($offersPrescriptionByMail) {
+    public function setOffersPrescriptionByMail($offersPrescriptionByMail): static {
         $this->properties['offersPrescriptionByMail'] = $offersPrescriptionByMail;
 
         return $this;

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class TaxiSchema extends ServiceSchema
 {
-    public static function factory()
+    public static function factory(): TaxiSchema
     {
         return new TaxiSchema('https://schema.org/', 'Taxi');
     }

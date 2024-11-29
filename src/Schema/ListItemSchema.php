@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ListItemSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): ListItemSchema
     {
         return new ListItemSchema('https://schema.org/', 'ListItem');
     }
@@ -42,8 +42,9 @@ class ListItemSchema extends IntangibleSchema
      * The position of an item in a series or sequence of items.
      *
      * @param $position |
+     * @return static
      **/
-    public function setPosition($position) {
+    public function setPosition($position): static {
         $this->properties['position'] = $position;
 
         return $this;
@@ -60,8 +61,9 @@ class ListItemSchema extends IntangibleSchema
      * An entity represented by an entry in a list or data feed (e.g. an 'artist' in a list of 'artists').
      *
      * @param $item 
+     * @return static
      **/
-    public function setItem($item) {
+    public function setItem($item): static {
         $this->properties['item'] = $item;
 
         return $this;
@@ -78,8 +80,9 @@ class ListItemSchema extends IntangibleSchema
      * A link to the ListItem that precedes the current one.
      *
      * @param $previousItem 
+     * @return static
      **/
-    public function setPreviousItem($previousItem) {
+    public function setPreviousItem($previousItem): static {
         $this->properties['previousItem'] = $previousItem;
 
         return $this;
@@ -96,8 +99,9 @@ class ListItemSchema extends IntangibleSchema
      * A link to the ListItem that follows the current one.
      *
      * @param $nextItem 
+     * @return static
      **/
-    public function setNextItem($nextItem) {
+    public function setNextItem($nextItem): static {
         $this->properties['nextItem'] = $nextItem;
 
         return $this;

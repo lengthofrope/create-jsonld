@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ArriveActionSchema extends MoveActionSchema
 {
-    public static function factory()
+    public static function factory(): ArriveActionSchema
     {
         return new ArriveActionSchema('https://schema.org/', 'ArriveAction');
     }

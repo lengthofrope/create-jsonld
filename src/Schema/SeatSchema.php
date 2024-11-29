@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class SeatSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): SeatSchema
     {
         return new SeatSchema('https://schema.org/', 'Seat');
     }
@@ -42,8 +42,9 @@ class SeatSchema extends IntangibleSchema
      * The section location of the reserved seat (e.g. Orchestra).
      *
      * @param $seatSection 
+     * @return static
      **/
-    public function setSeatSection($seatSection) {
+    public function setSeatSection($seatSection): static {
         $this->properties['seatSection'] = $seatSection;
 
         return $this;
@@ -60,8 +61,9 @@ class SeatSchema extends IntangibleSchema
      * The location of the reserved seat (e.g., 27).
      *
      * @param $seatNumber 
+     * @return static
      **/
-    public function setSeatNumber($seatNumber) {
+    public function setSeatNumber($seatNumber): static {
         $this->properties['seatNumber'] = $seatNumber;
 
         return $this;
@@ -78,8 +80,9 @@ class SeatSchema extends IntangibleSchema
      * The row location of the reserved seat (e.g., B).
      *
      * @param $seatRow 
+     * @return static
      **/
-    public function setSeatRow($seatRow) {
+    public function setSeatRow($seatRow): static {
         $this->properties['seatRow'] = $seatRow;
 
         return $this;
@@ -96,8 +99,9 @@ class SeatSchema extends IntangibleSchema
      * The type/class of the seat.
      *
      * @param $seatingType |
+     * @return static
      **/
-    public function setSeatingType($seatingType) {
+    public function setSeatingType($seatingType): static {
         $this->properties['seatingType'] = $seatingType;
 
         return $this;

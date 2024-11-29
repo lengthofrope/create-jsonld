@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class CourseInstanceSchema extends EventSchema
 {
-    public static function factory()
+    public static function factory(): CourseInstanceSchema
     {
         return new CourseInstanceSchema('https://schema.org/', 'CourseInstance');
     }
@@ -42,8 +42,9 @@ class CourseInstanceSchema extends EventSchema
      * A person assigned to instruct or provide instructional assistance for the [[CourseInstance]].
      *
      * @param $instructor 
+     * @return static
      **/
-    public function setInstructor($instructor) {
+    public function setInstructor($instructor): static {
         $this->properties['instructor'] = $instructor;
 
         return $this;
@@ -60,8 +61,9 @@ class CourseInstanceSchema extends EventSchema
      * The medium or means of delivery of the course instance or the mode of study, either as a text label (e.g. "online", "onsite" or "blended"; "synchronous" or "asynchronous"; "full-time" or "part-time") or as a URL reference to a term from a controlled vocabulary (e.g. https://ceds.ed.gov/element/001311#Asynchronous).
      *
      * @param $courseMode |
+     * @return static
      **/
-    public function setCourseMode($courseMode) {
+    public function setCourseMode($courseMode): static {
         $this->properties['courseMode'] = $courseMode;
 
         return $this;
@@ -78,8 +80,9 @@ class CourseInstanceSchema extends EventSchema
      * Represents the length and pace of a course, expressed as a [[Schedule]].
      *
      * @param $courseSchedule 
+     * @return static
      **/
-    public function setCourseSchedule($courseSchedule) {
+    public function setCourseSchedule($courseSchedule): static {
         $this->properties['courseSchedule'] = $courseSchedule;
 
         return $this;
@@ -96,8 +99,9 @@ class CourseInstanceSchema extends EventSchema
      * The amount of work expected of students taking the course, often provided as a figure per week or per month, and may be broken down by type. For example, "2 hours of lectures, 1 hour of lab work and 3 hours of independent study per week".
      *
      * @param $courseWorkload 
+     * @return static
      **/
-    public function setCourseWorkload($courseWorkload) {
+    public function setCourseWorkload($courseWorkload): static {
         $this->properties['courseWorkload'] = $courseWorkload;
 
         return $this;

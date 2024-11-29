@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class BodyMeasurementTypeEnumerationSchema extends MeasurementTypeEnumerationSchema
 {
-    public static function factory()
+    public static function factory(): BodyMeasurementTypeEnumerationSchema
     {
         return new BodyMeasurementTypeEnumerationSchema('https://schema.org/', 'BodyMeasurementTypeEnumeration');
     }

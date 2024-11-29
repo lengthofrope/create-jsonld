@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class StructuredValueSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): StructuredValueSchema
     {
         return new StructuredValueSchema('https://schema.org/', 'StructuredValue');
     }

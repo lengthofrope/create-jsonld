@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PeriodicalSchema extends CreativeWorkSeriesSchema
 {
-    public static function factory()
+    public static function factory(): PeriodicalSchema
     {
         return new PeriodicalSchema('https://schema.org/', 'Periodical');
     }

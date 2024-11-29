@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class AutomatedTellerSchema extends FinancialServiceSchema
 {
-    public static function factory()
+    public static function factory(): AutomatedTellerSchema
     {
         return new AutomatedTellerSchema('https://schema.org/', 'AutomatedTeller');
     }
