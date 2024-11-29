@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,15 +27,15 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * An agent inspects/determines/investigates/inquire or examine an object's accuracy/quality/condition or state.
+ * An agent inspects, determines, investigates, inquires, or examines an object's accuracy, quality, condition, or state.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class CheckActionSchema extends FindActionSchema
 {
-    public static function factory()
+    public static function factory(): CheckActionSchema
     {
-        return new CheckActionSchema('http://schema.org/', 'CheckAction');
+        return new CheckActionSchema('https://schema.org/', 'CheckAction');
     }
 
 

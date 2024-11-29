@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,15 +27,15 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Quantities such as distance, time, mass, weight, etc. Particular instances of say Mass are entities like '3 Kg' or '4 milligrams'.
+ * Quantities such as distance, time, mass, weight, etc. Particular instances of say Mass are entities like '3 kg' or '4 milligrams'.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class QuantitySchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): QuantitySchema
     {
-        return new QuantitySchema('http://schema.org/', 'Quantity');
+        return new QuantitySchema('https://schema.org/', 'Quantity');
     }
 
 

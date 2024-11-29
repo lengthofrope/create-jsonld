@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,63 +33,104 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class FoodEstablishmentSchema extends LocalBusinessSchema
 {
-    public static function factory()
+    public static function factory(): FoodEstablishmentSchema
     {
-        return new FoodEstablishmentSchema('http://schema.org/', 'FoodEstablishment');
+        return new FoodEstablishmentSchema('https://schema.org/', 'FoodEstablishment');
     }
 
     /**
-     * Indicates whether a FoodEstablishment accepts reservations. Values can be Boolean, a URL at which reservations can be made or (for backwards compatibility) the strings <code>Yes</code> or <code>No</code>.
+     * Either the actual menu as a structured representation, as text, or a URL of the menu.
      *
-     * @param $acceptsReservations TextSchema|URLSchema|BooleanSchema
+     * @param $menu ||
+     * @return static
      **/
-    public function setAcceptsReservations($acceptsReservations) {
-        $this->properties['acceptsReservations'] = $acceptsReservations;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema|URLSchema|BooleanSchema
-     **/
-    public function getAcceptsReservations() {
-        return $this->properties['acceptsReservations'];
-    }
-
-    /**
-     * Either the actual menu or a URL of the menu.
-     *
-     * @param $menu TextSchema|URLSchema
-     **/
-    public function setMenu($menu) {
+    public function setMenu($menu): static {
         $this->properties['menu'] = $menu;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|URLSchema
+     * @return ||
      **/
     public function getMenu() {
         return $this->properties['menu'];
     }
 
     /**
+     * Either the actual menu as a structured representation, as text, or a URL of the menu.
+     *
+     * @param $hasMenu ||
+     * @return static
+     **/
+    public function setHasMenu($hasMenu): static {
+        $this->properties['hasMenu'] = $hasMenu;
+
+        return $this;
+    }
+
+    /**
+     * @return ||
+     **/
+    public function getHasMenu() {
+        return $this->properties['hasMenu'];
+    }
+
+    /**
+     * An official rating for a lodging business or food establishment, e.g. from national associations or standards bodies. Use the author property to indicate the rating organization, e.g. as an Organization with name such as (e.g. HOTREC, DEHOGA, WHR, or Hotelstars).
+     *
+     * @param $starRating 
+     * @return static
+     **/
+    public function setStarRating($starRating): static {
+        $this->properties['starRating'] = $starRating;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getStarRating() {
+        return $this->properties['starRating'];
+    }
+
+    /**
      * The cuisine of the restaurant.
      *
-     * @param $servesCuisine TextSchema
+     * @param $servesCuisine 
+     * @return static
      **/
-    public function setServesCuisine($servesCuisine) {
+    public function setServesCuisine($servesCuisine): static {
         $this->properties['servesCuisine'] = $servesCuisine;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getServesCuisine() {
         return $this->properties['servesCuisine'];
+    }
+
+    /**
+     * Indicates whether a FoodEstablishment accepts reservations. Values can be Boolean, an URL at which reservations can be made or (for backwards compatibility) the strings ```Yes``` or ```No```.
+     *
+     * @param $acceptsReservations ||
+     * @return static
+     **/
+    public function setAcceptsReservations($acceptsReservations): static {
+        $this->properties['acceptsReservations'] = $acceptsReservations;
+
+        return $this;
+    }
+
+    /**
+     * @return ||
+     **/
+    public function getAcceptsReservations() {
+        return $this->properties['acceptsReservations'];
     }
 
 

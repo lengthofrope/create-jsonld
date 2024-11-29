@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,24 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class InsertActionSchema extends AddActionSchema
 {
-    public static function factory()
+    public static function factory(): InsertActionSchema
     {
-        return new InsertActionSchema('http://schema.org/', 'InsertAction');
+        return new InsertActionSchema('https://schema.org/', 'InsertAction');
     }
 
     /**
      * A sub property of location. The final location of the object or the agent after the action.
      *
-     * @param $toLocation PlaceSchema
+     * @param $toLocation 
+     * @return static
      **/
-    public function setToLocation($toLocation) {
+    public function setToLocation($toLocation): static {
         $this->properties['toLocation'] = $toLocation;
 
         return $this;
     }
 
     /**
-     * @return PlaceSchema
+     * @return 
      **/
     public function getToLocation() {
         return $this->properties['toLocation'];

@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,60 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DoseScheduleSchema extends MedicalIntangibleSchema
 {
-    public static function factory()
+    public static function factory(): DoseScheduleSchema
     {
-        return new DoseScheduleSchema('http://schema.org/', 'DoseSchedule');
-    }
-
-    /**
-     * The unit of the dose, e.g. 'mg'.
-     *
-     * @param $doseUnit TextSchema
-     **/
-    public function setDoseUnit($doseUnit) {
-        $this->properties['doseUnit'] = $doseUnit;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getDoseUnit() {
-        return $this->properties['doseUnit'];
-    }
-
-    /**
-     * The value of the dose, e.g. 500.
-     *
-     * @param $doseValue NumberSchema
-     **/
-    public function setDoseValue($doseValue) {
-        $this->properties['doseValue'] = $doseValue;
-
-        return $this;
-    }
-
-    /**
-     * @return NumberSchema
-     **/
-    public function getDoseValue() {
-        return $this->properties['doseValue'];
+        return new DoseScheduleSchema('https://schema.org/', 'DoseSchedule');
     }
 
     /**
      * How often the dose is taken, e.g. 'daily'.
      *
-     * @param $frequency TextSchema
+     * @param $frequency 
+     * @return static
      **/
-    public function setFrequency($frequency) {
+    public function setFrequency($frequency): static {
         $this->properties['frequency'] = $frequency;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getFrequency() {
         return $this->properties['frequency'];
@@ -95,19 +60,58 @@ class DoseScheduleSchema extends MedicalIntangibleSchema
     /**
      * Characteristics of the population for which this is intended, or which typically uses it, e.g. 'adults'.
      *
-     * @param $targetPopulation TextSchema
+     * @param $targetPopulation 
+     * @return static
      **/
-    public function setTargetPopulation($targetPopulation) {
+    public function setTargetPopulation($targetPopulation): static {
         $this->properties['targetPopulation'] = $targetPopulation;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getTargetPopulation() {
         return $this->properties['targetPopulation'];
+    }
+
+    /**
+     * The unit of the dose, e.g. 'mg'.
+     *
+     * @param $doseUnit 
+     * @return static
+     **/
+    public function setDoseUnit($doseUnit): static {
+        $this->properties['doseUnit'] = $doseUnit;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getDoseUnit() {
+        return $this->properties['doseUnit'];
+    }
+
+    /**
+     * The value of the dose, e.g. 500.
+     *
+     * @param $doseValue |
+     * @return static
+     **/
+    public function setDoseValue($doseValue): static {
+        $this->properties['doseValue'] = $doseValue;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getDoseValue() {
+        return $this->properties['doseValue'];
     }
 
 

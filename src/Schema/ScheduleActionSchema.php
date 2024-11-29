@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,15 +27,15 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Scheduling future actions, events, or tasks.<p>Related actions:</p><ul><li><a href="http://schema.org/ReserveAction">ReserveAction</a>: Unlike ReserveAction, ScheduleAction allocates future actions (e.g. an event, a task, etc) towards a time slot / spatial allocation</li></ul>.
+ * Scheduling future actions, events, or tasks.\n\nRelated actions:\n\n* [[ReserveAction]]: Unlike ReserveAction, ScheduleAction allocates future actions (e.g. an event, a task, etc) towards a time slot / spatial allocation.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ScheduleActionSchema extends PlanActionSchema
 {
-    public static function factory()
+    public static function factory(): ScheduleActionSchema
     {
-        return new ScheduleActionSchema('http://schema.org/', 'ScheduleAction');
+        return new ScheduleActionSchema('https://schema.org/', 'ScheduleAction');
     }
 
 

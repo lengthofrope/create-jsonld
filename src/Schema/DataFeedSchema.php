@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,24 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DataFeedSchema extends DatasetSchema
 {
-    public static function factory()
+    public static function factory(): DataFeedSchema
     {
-        return new DataFeedSchema('http://schema.org/', 'DataFeed');
+        return new DataFeedSchema('https://schema.org/', 'DataFeed');
     }
 
     /**
-     * An item within in a data feed. Data feeds may have many elements.
+     * An item within a data feed. Data feeds may have many elements.
      *
-     * @param $dataFeedElement TextSchema|ThingSchema|DataFeedItemSchema
+     * @param $dataFeedElement ||
+     * @return static
      **/
-    public function setDataFeedElement($dataFeedElement) {
+    public function setDataFeedElement($dataFeedElement): static {
         $this->properties['dataFeedElement'] = $dataFeedElement;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|ThingSchema|DataFeedItemSchema
+     * @return ||
      **/
     public function getDataFeedElement() {
         return $this->properties['dataFeedElement'];

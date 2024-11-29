@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,24 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class InviteActionSchema extends CommunicateActionSchema
 {
-    public static function factory()
+    public static function factory(): InviteActionSchema
     {
-        return new InviteActionSchema('http://schema.org/', 'InviteAction');
+        return new InviteActionSchema('https://schema.org/', 'InviteAction');
     }
 
     /**
      * Upcoming or past event associated with this place, organization, or action.
      *
-     * @param $event EventSchema
+     * @param $event 
+     * @return static
      **/
-    public function setEvent($event) {
+    public function setEvent($event): static {
         $this->properties['event'] = $event;
 
         return $this;
     }
 
     /**
-     * @return EventSchema
+     * @return 
      **/
     public function getEvent() {
         return $this->properties['event'];

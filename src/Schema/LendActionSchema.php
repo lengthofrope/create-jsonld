@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,30 +27,31 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of providing an object under an agreement that it will be returned at a later date. Reciprocal of BorrowAction.<p>Related actions:</p><ul><li><a href="http://schema.org/BorrowAction">BorrowAction</a>: Reciprocal of LendAction</li></ul>.
+ * The act of providing an object under an agreement that it will be returned at a later date. Reciprocal of BorrowAction.\n\nRelated actions:\n\n* [[BorrowAction]]: Reciprocal of LendAction.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class LendActionSchema extends TransferActionSchema
 {
-    public static function factory()
+    public static function factory(): LendActionSchema
     {
-        return new LendActionSchema('http://schema.org/', 'LendAction');
+        return new LendActionSchema('https://schema.org/', 'LendAction');
     }
 
     /**
      * A sub property of participant. The person that borrows the object being lent.
      *
-     * @param $borrower PersonSchema
+     * @param $borrower 
+     * @return static
      **/
-    public function setBorrower($borrower) {
+    public function setBorrower($borrower): static {
         $this->properties['borrower'] = $borrower;
 
         return $this;
     }
 
     /**
-     * @return PersonSchema
+     * @return 
      **/
     public function getBorrower() {
         return $this->properties['borrower'];

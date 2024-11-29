@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,63 +33,47 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ArterySchema extends VesselSchema
 {
-    public static function factory()
+    public static function factory(): ArterySchema
     {
-        return new ArterySchema('http://schema.org/', 'Artery');
-    }
-
-    /**
-     * The branches that comprise the arterial structure.
-     *
-     * @param $arterialBranch AnatomicalStructureSchema
-     **/
-    public function setArterialBranch($arterialBranch) {
-        $this->properties['arterialBranch'] = $arterialBranch;
-
-        return $this;
-    }
-
-    /**
-     * @return AnatomicalStructureSchema
-     **/
-    public function getArterialBranch() {
-        return $this->properties['arterialBranch'];
-    }
-
-    /**
-     * The anatomical or organ system that the artery originates from.
-     *
-     * @param $source AnatomicalStructureSchema
-     **/
-    public function setSource($source) {
-        $this->properties['source'] = $source;
-
-        return $this;
-    }
-
-    /**
-     * @return AnatomicalStructureSchema
-     **/
-    public function getSource() {
-        return $this->properties['source'];
+        return new ArterySchema('https://schema.org/', 'Artery');
     }
 
     /**
      * The area to which the artery supplies blood.
      *
-     * @param $supplyTo AnatomicalStructureSchema
+     * @param $supplyTo 
+     * @return static
      **/
-    public function setSupplyTo($supplyTo) {
+    public function setSupplyTo($supplyTo): static {
         $this->properties['supplyTo'] = $supplyTo;
 
         return $this;
     }
 
     /**
-     * @return AnatomicalStructureSchema
+     * @return 
      **/
     public function getSupplyTo() {
         return $this->properties['supplyTo'];
+    }
+
+    /**
+     * The branches that comprise the arterial structure.
+     *
+     * @param $arterialBranch 
+     * @return static
+     **/
+    public function setArterialBranch($arterialBranch): static {
+        $this->properties['arterialBranch'] = $arterialBranch;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getArterialBranch() {
+        return $this->properties['arterialBranch'];
     }
 
 

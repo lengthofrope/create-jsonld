@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,15 +27,53 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A tourist attraction.
+ * A tourist attraction.  In principle any Thing can be a [[TouristAttraction]], from a [[Mountain]] and [[LandmarksOrHistoricalBuildings]] to a [[LocalBusiness]].  This Type can be used on its own to describe a general [[TouristAttraction]], or be used as an [[additionalType]] to add tourist attraction properties to any other type.  (See examples below)
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class TouristAttractionSchema extends PlaceSchema
 {
-    public static function factory()
+    public static function factory(): TouristAttractionSchema
     {
-        return new TouristAttractionSchema('http://schema.org/', 'TouristAttraction');
+        return new TouristAttractionSchema('https://schema.org/', 'TouristAttraction');
+    }
+
+    /**
+     * Attraction suitable for type(s) of tourist. E.g. children, visitors from a particular country, etc. 
+     *
+     * @param $touristType |
+     * @return static
+     **/
+    public function setTouristType($touristType): static {
+        $this->properties['touristType'] = $touristType;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getTouristType() {
+        return $this->properties['touristType'];
+    }
+
+    /**
+     * A language someone may use with or at the item, service or place. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].
+     *
+     * @param $availableLanguage |
+     * @return static
+     **/
+    public function setAvailableLanguage($availableLanguage): static {
+        $this->properties['availableLanguage'] = $availableLanguage;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getAvailableLanguage() {
+        return $this->properties['availableLanguage'];
     }
 
 

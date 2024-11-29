@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,139 +33,144 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class QuantitativeValueSchema extends StructuredValueSchema
 {
-    public static function factory()
+    public static function factory(): QuantitativeValueSchema
     {
-        return new QuantitativeValueSchema('http://schema.org/', 'QuantitativeValue');
+        return new QuantitativeValueSchema('https://schema.org/', 'QuantitativeValue');
     }
 
     /**
-     * A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org. <br /><br />
-
-Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.
+     * A property-value pair representing an additional characteristic of the entity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.\n\nNote: Publishers should be aware that applications designed to use specific schema.org properties (e.g. https://schema.org/width, https://schema.org/color, https://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.
 
      *
-     * @param $additionalProperty PropertyValueSchema
+     * @param $additionalProperty 
+     * @return static
      **/
-    public function setAdditionalProperty($additionalProperty) {
+    public function setAdditionalProperty($additionalProperty): static {
         $this->properties['additionalProperty'] = $additionalProperty;
 
         return $this;
     }
 
     /**
-     * @return PropertyValueSchema
+     * @return 
      **/
     public function getAdditionalProperty() {
         return $this->properties['additionalProperty'];
     }
 
     /**
-     * The upper value of some characteristic or property.
-     *
-     * @param $maxValue NumberSchema
-     **/
-    public function setMaxValue($maxValue) {
-        $this->properties['maxValue'] = $maxValue;
-
-        return $this;
-    }
-
-    /**
-     * @return NumberSchema
-     **/
-    public function getMaxValue() {
-        return $this->properties['maxValue'];
-    }
-
-    /**
      * The lower value of some characteristic or property.
      *
-     * @param $minValue NumberSchema
+     * @param $minValue 
+     * @return static
      **/
-    public function setMinValue($minValue) {
+    public function setMinValue($minValue): static {
         $this->properties['minValue'] = $minValue;
 
         return $this;
     }
 
     /**
-     * @return NumberSchema
+     * @return 
      **/
     public function getMinValue() {
         return $this->properties['minValue'];
     }
 
     /**
+     * The upper value of some characteristic or property.
+     *
+     * @param $maxValue 
+     * @return static
+     **/
+    public function setMaxValue($maxValue): static {
+        $this->properties['maxValue'] = $maxValue;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getMaxValue() {
+        return $this->properties['maxValue'];
+    }
+
+    /**
      * The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes than the UN/CEFACT Common Code may be used with a prefix followed by a colon.
      *
-     * @param $unitCode TextSchema|URLSchema
+     * @param $unitCode |
+     * @return static
      **/
-    public function setUnitCode($unitCode) {
+    public function setUnitCode($unitCode): static {
         $this->properties['unitCode'] = $unitCode;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|URLSchema
+     * @return |
      **/
     public function getUnitCode() {
         return $this->properties['unitCode'];
     }
 
     /**
-     * A string or text indicating the unit of measurement. Useful if you cannot provide a standard unit code for
-<a href='unitCode'>unitCode</a>.
+     * The value of a [[QuantitativeValue]] (including [[Observation]]) or property value node.\n\n* For [[QuantitativeValue]] and [[MonetaryAmount]], the recommended type for values is 'Number'.\n* For [[PropertyValue]], it can be 'Text', 'Number', 'Boolean', or 'StructuredValue'.\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.
      *
-     * @param $unitText TextSchema
+     * @param $value |||
+     * @return static
      **/
-    public function setUnitText($unitText) {
-        $this->properties['unitText'] = $unitText;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getUnitText() {
-        return $this->properties['unitText'];
-    }
-
-    /**
-     * The value of the quantitative value or property value node. For QuantitativeValue, the recommended type for values is 'Number'. For PropertyValue, it can be 'Text;', 'Number', 'Boolean', or 'StructuredValue'.
-     *
-     * @param $value NumberSchema|TextSchema|BooleanSchema|StructuredValueSchema
-     **/
-    public function setValue($value) {
+    public function setValue($value): static {
         $this->properties['value'] = $value;
 
         return $this;
     }
 
     /**
-     * @return NumberSchema|TextSchema|BooleanSchema|StructuredValueSchema
+     * @return |||
      **/
     public function getValue() {
         return $this->properties['value'];
     }
 
     /**
-     * A pointer to a secondary value that provides additional information on the original value, e.g. a reference temperature.
+     * A secondary value that provides additional information on the original value, e.g. a reference temperature or a type of measurement.
      *
-     * @param $valueReference EnumerationSchema|StructuredValueSchema|PropertyValueSchema|QualitativeValueSchema|QuantitativeValueSchema
+     * @param $valueReference |||||||
+     * @return static
      **/
-    public function setValueReference($valueReference) {
+    public function setValueReference($valueReference): static {
         $this->properties['valueReference'] = $valueReference;
 
         return $this;
     }
 
     /**
-     * @return EnumerationSchema|StructuredValueSchema|PropertyValueSchema|QualitativeValueSchema|QuantitativeValueSchema
+     * @return |||||||
      **/
     public function getValueReference() {
         return $this->properties['valueReference'];
+    }
+
+    /**
+     * A string or text indicating the unit of measurement. Useful if you cannot provide a standard unit code for
+<a href='unitCode'>unitCode</a>.
+     *
+     * @param $unitText 
+     * @return static
+     **/
+    public function setUnitText($unitText): static {
+        $this->properties['unitText'] = $unitText;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getUnitText() {
+        return $this->properties['unitText'];
     }
 
 

@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,18 +27,15 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Professional service: Attorney. <br><br>
-        This type is deprecated - <a href="/LegalService">LegalService</a> is more inclusive and less ambiguous.
-
-      
+ * Professional service: Attorney. \n\nThis type is deprecated - [[LegalService]] is more inclusive and less ambiguous.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class AttorneySchema extends LegalServiceSchema
 {
-    public static function factory()
+    public static function factory(): AttorneySchema
     {
-        return new AttorneySchema('http://schema.org/', 'Attorney');
+        return new AttorneySchema('https://schema.org/', 'Attorney');
     }
 
 

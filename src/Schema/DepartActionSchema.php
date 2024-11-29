@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,15 +27,15 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of  departing from a place. An agent departs from an fromLocation for a destination, optionally with participants.
+ * The act of  departing from a place. An agent departs from a fromLocation for a destination, optionally with participants.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class DepartActionSchema extends MoveActionSchema
 {
-    public static function factory()
+    public static function factory(): DepartActionSchema
     {
-        return new DepartActionSchema('http://schema.org/', 'DepartAction');
+        return new DepartActionSchema('https://schema.org/', 'DepartAction');
     }
 
 

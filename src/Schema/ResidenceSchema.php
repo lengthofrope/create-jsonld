@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,9 +33,28 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ResidenceSchema extends PlaceSchema
 {
-    public static function factory()
+    public static function factory(): ResidenceSchema
     {
-        return new ResidenceSchema('http://schema.org/', 'Residence');
+        return new ResidenceSchema('https://schema.org/', 'Residence');
+    }
+
+    /**
+     * A floorplan of some [[Accommodation]].
+     *
+     * @param $accommodationFloorPlan 
+     * @return static
+     **/
+    public function setAccommodationFloorPlan($accommodationFloorPlan): static {
+        $this->properties['accommodationFloorPlan'] = $accommodationFloorPlan;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getAccommodationFloorPlan() {
+        return $this->properties['accommodationFloorPlan'];
     }
 
 

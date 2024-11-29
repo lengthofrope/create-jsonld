@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,60 +33,63 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ScreeningEventSchema extends EventSchema
 {
-    public static function factory()
+    public static function factory(): ScreeningEventSchema
     {
-        return new ScreeningEventSchema('http://schema.org/', 'ScreeningEvent');
-    }
-
-    /**
-     * Languages in which subtitles/captions are available, in <a href='http://tools.ietf.org/html/bcp47'>IETF BCP 47 standard format.</a>
-     *
-     * @param $subtitleLanguage TextSchema|LanguageSchema
-     **/
-    public function setSubtitleLanguage($subtitleLanguage) {
-        $this->properties['subtitleLanguage'] = $subtitleLanguage;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema|LanguageSchema
-     **/
-    public function getSubtitleLanguage() {
-        return $this->properties['subtitleLanguage'];
+        return new ScreeningEventSchema('https://schema.org/', 'ScreeningEvent');
     }
 
     /**
      * The type of screening or video broadcast used (e.g. IMAX, 3D, SD, HD, etc.).
      *
-     * @param $videoFormat TextSchema
+     * @param $videoFormat 
+     * @return static
      **/
-    public function setVideoFormat($videoFormat) {
+    public function setVideoFormat($videoFormat): static {
         $this->properties['videoFormat'] = $videoFormat;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getVideoFormat() {
         return $this->properties['videoFormat'];
     }
 
     /**
+     * Languages in which subtitles/captions are available, in [IETF BCP 47 standard format](http://tools.ietf.org/html/bcp47).
+     *
+     * @param $subtitleLanguage |
+     * @return static
+     **/
+    public function setSubtitleLanguage($subtitleLanguage): static {
+        $this->properties['subtitleLanguage'] = $subtitleLanguage;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getSubtitleLanguage() {
+        return $this->properties['subtitleLanguage'];
+    }
+
+    /**
      * The movie presented during this event.
      *
-     * @param $workPresented MovieSchema
+     * @param $workPresented 
+     * @return static
      **/
-    public function setWorkPresented($workPresented) {
+    public function setWorkPresented($workPresented): static {
         $this->properties['workPresented'] = $workPresented;
 
         return $this;
     }
 
     /**
-     * @return MovieSchema
+     * @return 
      **/
     public function getWorkPresented() {
         return $this->properties['workPresented'];

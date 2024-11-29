@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,99 +33,142 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ProgramMembershipSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): ProgramMembershipSchema
     {
-        return new ProgramMembershipSchema('http://schema.org/', 'ProgramMembership');
+        return new ProgramMembershipSchema('https://schema.org/', 'ProgramMembership');
     }
 
     /**
-     * The organization (airline, travelers' club, etc.) the membership is made with.
+     * The number of membership points earned by the member. If necessary, the unitText can be used to express the units the points are issued in. (E.g. stars, miles, etc.)
      *
-     * @param $hostingOrganization OrganizationSchema
+     * @param $membershipPointsEarned |
+     * @return static
      **/
-    public function setHostingOrganization($hostingOrganization) {
-        $this->properties['hostingOrganization'] = $hostingOrganization;
+    public function setMembershipPointsEarned($membershipPointsEarned): static {
+        $this->properties['membershipPointsEarned'] = $membershipPointsEarned;
 
         return $this;
     }
 
     /**
-     * @return OrganizationSchema
+     * @return |
      **/
-    public function getHostingOrganization() {
-        return $this->properties['hostingOrganization'];
+    public function getMembershipPointsEarned() {
+        return $this->properties['membershipPointsEarned'];
     }
 
     /**
-     * A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals.
+     * The program providing the membership. It is preferable to use [:program](https://schema.org/program) instead.
      *
-     * @param $member OrganizationSchema|PersonSchema
+     * @param $programName 
+     * @return static
      **/
-    public function setMember($member) {
-        $this->properties['member'] = $member;
-
-        return $this;
-    }
-
-    /**
-     * @return OrganizationSchema|PersonSchema
-     **/
-    public function getMember() {
-        return $this->properties['member'];
-    }
-
-    /**
-     * A member of this organization.
-     *
-     * @param $members OrganizationSchema|PersonSchema
-     **/
-    public function setMembers($members) {
-        $this->properties['members'] = $members;
-
-        return $this;
-    }
-
-    /**
-     * @return OrganizationSchema|PersonSchema
-     **/
-    public function getMembers() {
-        return $this->properties['members'];
-    }
-
-    /**
-     * A unique identifier for the membership.
-     *
-     * @param $membershipNumber TextSchema
-     **/
-    public function setMembershipNumber($membershipNumber) {
-        $this->properties['membershipNumber'] = $membershipNumber;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getMembershipNumber() {
-        return $this->properties['membershipNumber'];
-    }
-
-    /**
-     * The program providing the membership.
-     *
-     * @param $programName TextSchema
-     **/
-    public function setProgramName($programName) {
+    public function setProgramName($programName): static {
         $this->properties['programName'] = $programName;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getProgramName() {
         return $this->properties['programName'];
+    }
+
+    /**
+     * A unique identifier for the membership.
+     *
+     * @param $membershipNumber 
+     * @return static
+     **/
+    public function setMembershipNumber($membershipNumber): static {
+        $this->properties['membershipNumber'] = $membershipNumber;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getMembershipNumber() {
+        return $this->properties['membershipNumber'];
+    }
+
+    /**
+     * The [MemberProgram](https://schema.org/MemberProgram) associated with a [ProgramMembership](https://schema.org/ProgramMembership).
+     *
+     * @param $program 
+     * @return static
+     **/
+    public function setProgram($program): static {
+        $this->properties['program'] = $program;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getProgram() {
+        return $this->properties['program'];
+    }
+
+    /**
+     * A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals.
+     *
+     * @param $member |
+     * @return static
+     **/
+    public function setMember($member): static {
+        $this->properties['member'] = $member;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getMember() {
+        return $this->properties['member'];
+    }
+
+    /**
+     * The Organization (airline, travelers' club, retailer, etc.) the membership is made with or which offers the  MemberProgram.
+     *
+     * @param $hostingOrganization 
+     * @return static
+     **/
+    public function setHostingOrganization($hostingOrganization): static {
+        $this->properties['hostingOrganization'] = $hostingOrganization;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getHostingOrganization() {
+        return $this->properties['hostingOrganization'];
+    }
+
+    /**
+     * A member of this organization.
+     *
+     * @param $members |
+     * @return static
+     **/
+    public function setMembers($members): static {
+        $this->properties['members'] = $members;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getMembers() {
+        return $this->properties['members'];
     }
 
 

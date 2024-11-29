@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,27 +33,47 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class GovernmentServiceSchema extends ServiceSchema
 {
-    public static function factory()
+    public static function factory(): GovernmentServiceSchema
     {
-        return new GovernmentServiceSchema('http://schema.org/', 'GovernmentService');
+        return new GovernmentServiceSchema('https://schema.org/', 'GovernmentService');
     }
 
     /**
      * The operating organization, if different from the provider.  This enables the representation of services that are provided by an organization, but operated by another organization like a subcontractor.
      *
-     * @param $serviceOperator OrganizationSchema
+     * @param $serviceOperator 
+     * @return static
      **/
-    public function setServiceOperator($serviceOperator) {
+    public function setServiceOperator($serviceOperator): static {
         $this->properties['serviceOperator'] = $serviceOperator;
 
         return $this;
     }
 
     /**
-     * @return OrganizationSchema
+     * @return 
      **/
     public function getServiceOperator() {
         return $this->properties['serviceOperator'];
+    }
+
+    /**
+     * Indicates a legal jurisdiction, e.g. of some legislation, or where some government service is based.
+     *
+     * @param $jurisdiction |
+     * @return static
+     **/
+    public function setJurisdiction($jurisdiction): static {
+        $this->properties['jurisdiction'] = $jurisdiction;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getJurisdiction() {
+        return $this->properties['jurisdiction'];
     }
 
 

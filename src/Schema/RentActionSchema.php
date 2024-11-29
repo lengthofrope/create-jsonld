@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,45 +33,47 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class RentActionSchema extends TradeActionSchema
 {
-    public static function factory()
+    public static function factory(): RentActionSchema
     {
-        return new RentActionSchema('http://schema.org/', 'RentAction');
-    }
-
-    /**
-     * A sub property of participant. The owner of the real estate property.
-     *
-     * @param $landlord OrganizationSchema|PersonSchema
-     **/
-    public function setLandlord($landlord) {
-        $this->properties['landlord'] = $landlord;
-
-        return $this;
-    }
-
-    /**
-     * @return OrganizationSchema|PersonSchema
-     **/
-    public function getLandlord() {
-        return $this->properties['landlord'];
+        return new RentActionSchema('https://schema.org/', 'RentAction');
     }
 
     /**
      * A sub property of participant. The real estate agent involved in the action.
      *
-     * @param $realEstateAgent RealEstateAgentSchema
+     * @param $realEstateAgent 
+     * @return static
      **/
-    public function setRealEstateAgent($realEstateAgent) {
+    public function setRealEstateAgent($realEstateAgent): static {
         $this->properties['realEstateAgent'] = $realEstateAgent;
 
         return $this;
     }
 
     /**
-     * @return RealEstateAgentSchema
+     * @return 
      **/
     public function getRealEstateAgent() {
         return $this->properties['realEstateAgent'];
+    }
+
+    /**
+     * A sub property of participant. The owner of the real estate property.
+     *
+     * @param $landlord |
+     * @return static
+     **/
+    public function setLandlord($landlord): static {
+        $this->properties['landlord'] = $landlord;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getLandlord() {
+        return $this->properties['landlord'];
     }
 
 

@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,24 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MedicalObservationalStudySchema extends MedicalStudySchema
 {
-    public static function factory()
+    public static function factory(): MedicalObservationalStudySchema
     {
-        return new MedicalObservationalStudySchema('http://schema.org/', 'MedicalObservationalStudy');
+        return new MedicalObservationalStudySchema('https://schema.org/', 'MedicalObservationalStudy');
     }
 
     /**
      * Specifics about the observational study design (enumerated).
      *
-     * @param $studyDesign MedicalObservationalStudyDesignSchema
+     * @param $studyDesign 
+     * @return static
      **/
-    public function setStudyDesign($studyDesign) {
+    public function setStudyDesign($studyDesign): static {
         $this->properties['studyDesign'] = $studyDesign;
 
         return $this;
     }
 
     /**
-     * @return MedicalObservationalStudyDesignSchema
+     * @return 
      **/
     public function getStudyDesign() {
         return $this->properties['studyDesign'];

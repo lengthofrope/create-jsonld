@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,42 +33,63 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class SuperficialAnatomySchema extends MedicalEntitySchema
 {
-    public static function factory()
+    public static function factory(): SuperficialAnatomySchema
     {
-        return new SuperficialAnatomySchema('http://schema.org/', 'SuperficialAnatomy');
+        return new SuperficialAnatomySchema('https://schema.org/', 'SuperficialAnatomy');
     }
 
     /**
-     * If applicable, a description of the pathophysiology associated with the anatomical system, including potential abnormal changes in the mechanical, physical, and biochemical functions of the system.
+     * The significance associated with the superficial anatomy; as an example, how characteristics of the superficial anatomy can suggest underlying medical conditions or courses of treatment.
      *
-     * @param $associatedPathophysiology TextSchema
+     * @param $significance 
+     * @return static
      **/
-    public function setAssociatedPathophysiology($associatedPathophysiology) {
-        $this->properties['associatedPathophysiology'] = $associatedPathophysiology;
+    public function setSignificance($significance): static {
+        $this->properties['significance'] = $significance;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
-    public function getAssociatedPathophysiology() {
-        return $this->properties['associatedPathophysiology'];
+    public function getSignificance() {
+        return $this->properties['significance'];
+    }
+
+    /**
+     * A medical therapy related to this anatomy.
+     *
+     * @param $relatedTherapy 
+     * @return static
+     **/
+    public function setRelatedTherapy($relatedTherapy): static {
+        $this->properties['relatedTherapy'] = $relatedTherapy;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getRelatedTherapy() {
+        return $this->properties['relatedTherapy'];
     }
 
     /**
      * Anatomical systems or structures that relate to the superficial anatomy.
      *
-     * @param $relatedAnatomy AnatomicalStructureSchema|AnatomicalSystemSchema
+     * @param $relatedAnatomy |
+     * @return static
      **/
-    public function setRelatedAnatomy($relatedAnatomy) {
+    public function setRelatedAnatomy($relatedAnatomy): static {
         $this->properties['relatedAnatomy'] = $relatedAnatomy;
 
         return $this;
     }
 
     /**
-     * @return AnatomicalStructureSchema|AnatomicalSystemSchema
+     * @return |
      **/
     public function getRelatedAnatomy() {
         return $this->properties['relatedAnatomy'];
@@ -77,55 +98,39 @@ class SuperficialAnatomySchema extends MedicalEntitySchema
     /**
      * A medical condition associated with this anatomy.
      *
-     * @param $relatedCondition MedicalConditionSchema
+     * @param $relatedCondition 
+     * @return static
      **/
-    public function setRelatedCondition($relatedCondition) {
+    public function setRelatedCondition($relatedCondition): static {
         $this->properties['relatedCondition'] = $relatedCondition;
 
         return $this;
     }
 
     /**
-     * @return MedicalConditionSchema
+     * @return 
      **/
     public function getRelatedCondition() {
         return $this->properties['relatedCondition'];
     }
 
     /**
-     * A medical therapy related to this anatomy.
+     * If applicable, a description of the pathophysiology associated with the anatomical system, including potential abnormal changes in the mechanical, physical, and biochemical functions of the system.
      *
-     * @param $relatedTherapy MedicalTherapySchema
+     * @param $associatedPathophysiology 
+     * @return static
      **/
-    public function setRelatedTherapy($relatedTherapy) {
-        $this->properties['relatedTherapy'] = $relatedTherapy;
+    public function setAssociatedPathophysiology($associatedPathophysiology): static {
+        $this->properties['associatedPathophysiology'] = $associatedPathophysiology;
 
         return $this;
     }
 
     /**
-     * @return MedicalTherapySchema
+     * @return 
      **/
-    public function getRelatedTherapy() {
-        return $this->properties['relatedTherapy'];
-    }
-
-    /**
-     * The significance associated with the superficial anatomy; as an example, how characteristics of the superficial anatomy can suggest underlying medical conditions or courses of treatment.
-     *
-     * @param $significance TextSchema
-     **/
-    public function setSignificance($significance) {
-        $this->properties['significance'] = $significance;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getSignificance() {
-        return $this->properties['significance'];
+    public function getAssociatedPathophysiology() {
+        return $this->properties['associatedPathophysiology'];
     }
 
 

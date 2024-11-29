@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,24 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PerformActionSchema extends PlayActionSchema
 {
-    public static function factory()
+    public static function factory(): PerformActionSchema
     {
-        return new PerformActionSchema('http://schema.org/', 'PerformAction');
+        return new PerformActionSchema('https://schema.org/', 'PerformAction');
     }
 
     /**
      * A sub property of location. The entertainment business where the action occurred.
      *
-     * @param $entertainmentBusiness EntertainmentBusinessSchema
+     * @param $entertainmentBusiness 
+     * @return static
      **/
-    public function setEntertainmentBusiness($entertainmentBusiness) {
+    public function setEntertainmentBusiness($entertainmentBusiness): static {
         $this->properties['entertainmentBusiness'] = $entertainmentBusiness;
 
         return $this;
     }
 
     /**
-     * @return EntertainmentBusinessSchema
+     * @return 
      **/
     public function getEntertainmentBusiness() {
         return $this->properties['entertainmentBusiness'];

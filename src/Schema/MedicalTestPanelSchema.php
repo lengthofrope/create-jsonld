@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,24 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MedicalTestPanelSchema extends MedicalTestSchema
 {
-    public static function factory()
+    public static function factory(): MedicalTestPanelSchema
     {
-        return new MedicalTestPanelSchema('http://schema.org/', 'MedicalTestPanel');
+        return new MedicalTestPanelSchema('https://schema.org/', 'MedicalTestPanel');
     }
 
     /**
      * A component test of the panel.
      *
-     * @param $subTest MedicalTestSchema
+     * @param $subTest 
+     * @return static
      **/
-    public function setSubTest($subTest) {
+    public function setSubTest($subTest): static {
         $this->properties['subTest'] = $subTest;
 
         return $this;
     }
 
     /**
-     * @return MedicalTestSchema
+     * @return 
      **/
     public function getSubTest() {
         return $this->properties['subTest'];

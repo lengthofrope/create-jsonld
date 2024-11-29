@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,42 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class LymphaticVesselSchema extends VesselSchema
 {
-    public static function factory()
+    public static function factory(): LymphaticVesselSchema
     {
-        return new LymphaticVesselSchema('http://schema.org/', 'LymphaticVessel');
-    }
-
-    /**
-     * The vasculature the lymphatic structure originates, or afferents, from.
-     *
-     * @param $originatesFrom VesselSchema
-     **/
-    public function setOriginatesFrom($originatesFrom) {
-        $this->properties['originatesFrom'] = $originatesFrom;
-
-        return $this;
-    }
-
-    /**
-     * @return VesselSchema
-     **/
-    public function getOriginatesFrom() {
-        return $this->properties['originatesFrom'];
+        return new LymphaticVesselSchema('https://schema.org/', 'LymphaticVessel');
     }
 
     /**
      * The anatomical or organ system drained by this vessel; generally refers to a specific part of an organ.
      *
-     * @param $regionDrained AnatomicalStructureSchema|AnatomicalSystemSchema
+     * @param $regionDrained |
+     * @return static
      **/
-    public function setRegionDrained($regionDrained) {
+    public function setRegionDrained($regionDrained): static {
         $this->properties['regionDrained'] = $regionDrained;
 
         return $this;
     }
 
     /**
-     * @return AnatomicalStructureSchema|AnatomicalSystemSchema
+     * @return |
      **/
     public function getRegionDrained() {
         return $this->properties['regionDrained'];
@@ -77,19 +60,39 @@ class LymphaticVesselSchema extends VesselSchema
     /**
      * The vasculature the lymphatic structure runs, or efferents, to.
      *
-     * @param $runsTo VesselSchema
+     * @param $runsTo 
+     * @return static
      **/
-    public function setRunsTo($runsTo) {
+    public function setRunsTo($runsTo): static {
         $this->properties['runsTo'] = $runsTo;
 
         return $this;
     }
 
     /**
-     * @return VesselSchema
+     * @return 
      **/
     public function getRunsTo() {
         return $this->properties['runsTo'];
+    }
+
+    /**
+     * The vasculature the lymphatic structure originates, or afferents, from.
+     *
+     * @param $originatesFrom 
+     * @return static
+     **/
+    public function setOriginatesFrom($originatesFrom): static {
+        $this->properties['originatesFrom'] = $originatesFrom;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getOriginatesFrom() {
+        return $this->properties['originatesFrom'];
     }
 
 

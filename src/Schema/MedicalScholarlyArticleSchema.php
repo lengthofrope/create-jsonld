@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,24 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MedicalScholarlyArticleSchema extends ScholarlyArticleSchema
 {
-    public static function factory()
+    public static function factory(): MedicalScholarlyArticleSchema
     {
-        return new MedicalScholarlyArticleSchema('http://schema.org/', 'MedicalScholarlyArticle');
+        return new MedicalScholarlyArticleSchema('https://schema.org/', 'MedicalScholarlyArticle');
     }
 
     /**
-     * The type of the medical article, taken from the US NLM MeSH <a href=http://www.nlm.nih.gov/mesh/pubtypes.html>publication type catalog.
+     * The type of the medical article, taken from the US NLM MeSH publication type catalog. See also [MeSH documentation](http://www.nlm.nih.gov/mesh/pubtypes.html).
      *
-     * @param $publicationType TextSchema
+     * @param $publicationType 
+     * @return static
      **/
-    public function setPublicationType($publicationType) {
+    public function setPublicationType($publicationType): static {
         $this->properties['publicationType'] = $publicationType;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getPublicationType() {
         return $this->properties['publicationType'];

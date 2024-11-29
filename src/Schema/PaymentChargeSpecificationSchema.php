@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,45 +33,47 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class PaymentChargeSpecificationSchema extends PriceSpecificationSchema
 {
-    public static function factory()
+    public static function factory(): PaymentChargeSpecificationSchema
     {
-        return new PaymentChargeSpecificationSchema('http://schema.org/', 'PaymentChargeSpecification');
-    }
-
-    /**
-     * The delivery method(s) to which the delivery charge or payment charge specification applies.
-     *
-     * @param $appliesToDeliveryMethod DeliveryMethodSchema
-     **/
-    public function setAppliesToDeliveryMethod($appliesToDeliveryMethod) {
-        $this->properties['appliesToDeliveryMethod'] = $appliesToDeliveryMethod;
-
-        return $this;
-    }
-
-    /**
-     * @return DeliveryMethodSchema
-     **/
-    public function getAppliesToDeliveryMethod() {
-        return $this->properties['appliesToDeliveryMethod'];
+        return new PaymentChargeSpecificationSchema('https://schema.org/', 'PaymentChargeSpecification');
     }
 
     /**
      * The payment method(s) to which the payment charge specification applies.
      *
-     * @param $appliesToPaymentMethod PaymentMethodSchema
+     * @param $appliesToPaymentMethod 
+     * @return static
      **/
-    public function setAppliesToPaymentMethod($appliesToPaymentMethod) {
+    public function setAppliesToPaymentMethod($appliesToPaymentMethod): static {
         $this->properties['appliesToPaymentMethod'] = $appliesToPaymentMethod;
 
         return $this;
     }
 
     /**
-     * @return PaymentMethodSchema
+     * @return 
      **/
     public function getAppliesToPaymentMethod() {
         return $this->properties['appliesToPaymentMethod'];
+    }
+
+    /**
+     * The delivery method(s) to which the delivery charge or payment charge specification applies.
+     *
+     * @param $appliesToDeliveryMethod 
+     * @return static
+     **/
+    public function setAppliesToDeliveryMethod($appliesToDeliveryMethod): static {
+        $this->properties['appliesToDeliveryMethod'] = $appliesToDeliveryMethod;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getAppliesToDeliveryMethod() {
+        return $this->properties['appliesToDeliveryMethod'];
     }
 
 

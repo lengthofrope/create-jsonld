@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,97 +33,102 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class TypeAndQuantityNodeSchema extends StructuredValueSchema
 {
-    public static function factory()
+    public static function factory(): TypeAndQuantityNodeSchema
     {
-        return new TypeAndQuantityNodeSchema('http://schema.org/', 'TypeAndQuantityNode');
-    }
-
-    /**
-     * The quantity of the goods included in the offer.
-     *
-     * @param $amountOfThisGood NumberSchema
-     **/
-    public function setAmountOfThisGood($amountOfThisGood) {
-        $this->properties['amountOfThisGood'] = $amountOfThisGood;
-
-        return $this;
-    }
-
-    /**
-     * @return NumberSchema
-     **/
-    public function getAmountOfThisGood() {
-        return $this->properties['amountOfThisGood'];
-    }
-
-    /**
-     * The business function (e.g. sell, lease, repair, dispose) of the offer or component of a bundle (TypeAndQuantityNode). The default is http://purl.org/goodrelations/v1#Sell.
-     *
-     * @param $businessFunction BusinessFunctionSchema
-     **/
-    public function setBusinessFunction($businessFunction) {
-        $this->properties['businessFunction'] = $businessFunction;
-
-        return $this;
-    }
-
-    /**
-     * @return BusinessFunctionSchema
-     **/
-    public function getBusinessFunction() {
-        return $this->properties['businessFunction'];
-    }
-
-    /**
-     * The product that this structured value is referring to.
-     *
-     * @param $typeOfGood ProductSchema
-     **/
-    public function setTypeOfGood($typeOfGood) {
-        $this->properties['typeOfGood'] = $typeOfGood;
-
-        return $this;
-    }
-
-    /**
-     * @return ProductSchema
-     **/
-    public function getTypeOfGood() {
-        return $this->properties['typeOfGood'];
+        return new TypeAndQuantityNodeSchema('https://schema.org/', 'TypeAndQuantityNode');
     }
 
     /**
      * The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes than the UN/CEFACT Common Code may be used with a prefix followed by a colon.
      *
-     * @param $unitCode TextSchema|URLSchema
+     * @param $unitCode |
+     * @return static
      **/
-    public function setUnitCode($unitCode) {
+    public function setUnitCode($unitCode): static {
         $this->properties['unitCode'] = $unitCode;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|URLSchema
+     * @return |
      **/
     public function getUnitCode() {
         return $this->properties['unitCode'];
     }
 
     /**
+     * The quantity of the goods included in the offer.
+     *
+     * @param $amountOfThisGood 
+     * @return static
+     **/
+    public function setAmountOfThisGood($amountOfThisGood): static {
+        $this->properties['amountOfThisGood'] = $amountOfThisGood;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getAmountOfThisGood() {
+        return $this->properties['amountOfThisGood'];
+    }
+
+    /**
+     * The product that this structured value is referring to.
+     *
+     * @param $typeOfGood |
+     * @return static
+     **/
+    public function setTypeOfGood($typeOfGood): static {
+        $this->properties['typeOfGood'] = $typeOfGood;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getTypeOfGood() {
+        return $this->properties['typeOfGood'];
+    }
+
+    /**
+     * The business function (e.g. sell, lease, repair, dispose) of the offer or component of a bundle (TypeAndQuantityNode). The default is http://purl.org/goodrelations/v1#Sell.
+     *
+     * @param $businessFunction 
+     * @return static
+     **/
+    public function setBusinessFunction($businessFunction): static {
+        $this->properties['businessFunction'] = $businessFunction;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getBusinessFunction() {
+        return $this->properties['businessFunction'];
+    }
+
+    /**
      * A string or text indicating the unit of measurement. Useful if you cannot provide a standard unit code for
 <a href='unitCode'>unitCode</a>.
      *
-     * @param $unitText TextSchema
+     * @param $unitText 
+     * @return static
      **/
-    public function setUnitText($unitText) {
+    public function setUnitText($unitText): static {
         $this->properties['unitText'] = $unitText;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getUnitText() {
         return $this->properties['unitText'];

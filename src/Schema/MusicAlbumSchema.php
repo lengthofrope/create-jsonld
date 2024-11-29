@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,24 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MusicAlbumSchema extends MusicPlaylistSchema
 {
-    public static function factory()
+    public static function factory(): MusicAlbumSchema
     {
-        return new MusicAlbumSchema('http://schema.org/', 'MusicAlbum');
+        return new MusicAlbumSchema('https://schema.org/', 'MusicAlbum');
     }
 
     /**
-     * Classification of the album by it's type of content: soundtrack, live album, studio album, etc.
+     * Classification of the album by its type of content: soundtrack, live album, studio album, etc.
      *
-     * @param $albumProductionType MusicAlbumProductionTypeSchema
+     * @param $albumProductionType 
+     * @return static
      **/
-    public function setAlbumProductionType($albumProductionType) {
+    public function setAlbumProductionType($albumProductionType): static {
         $this->properties['albumProductionType'] = $albumProductionType;
 
         return $this;
     }
 
     /**
-     * @return MusicAlbumProductionTypeSchema
+     * @return 
      **/
     public function getAlbumProductionType() {
         return $this->properties['albumProductionType'];
@@ -59,55 +60,58 @@ class MusicAlbumSchema extends MusicPlaylistSchema
     /**
      * A release of this album.
      *
-     * @param $albumRelease MusicReleaseSchema
+     * @param $albumRelease 
+     * @return static
      **/
-    public function setAlbumRelease($albumRelease) {
+    public function setAlbumRelease($albumRelease): static {
         $this->properties['albumRelease'] = $albumRelease;
 
         return $this;
     }
 
     /**
-     * @return MusicReleaseSchema
+     * @return 
      **/
     public function getAlbumRelease() {
         return $this->properties['albumRelease'];
     }
 
     /**
-     * The kind of release which this album is: single, EP or album.
-     *
-     * @param $albumReleaseType MusicAlbumReleaseTypeSchema
-     **/
-    public function setAlbumReleaseType($albumReleaseType) {
-        $this->properties['albumReleaseType'] = $albumReleaseType;
-
-        return $this;
-    }
-
-    /**
-     * @return MusicAlbumReleaseTypeSchema
-     **/
-    public function getAlbumReleaseType() {
-        return $this->properties['albumReleaseType'];
-    }
-
-    /**
      * The artist that performed this album or recording.
      *
-     * @param $byArtist MusicGroupSchema
+     * @param $byArtist |
+     * @return static
      **/
-    public function setByArtist($byArtist) {
+    public function setByArtist($byArtist): static {
         $this->properties['byArtist'] = $byArtist;
 
         return $this;
     }
 
     /**
-     * @return MusicGroupSchema
+     * @return |
      **/
     public function getByArtist() {
         return $this->properties['byArtist'];
+    }
+
+    /**
+     * The kind of release which this album is: single, EP or album.
+     *
+     * @param $albumReleaseType 
+     * @return static
+     **/
+    public function setAlbumReleaseType($albumReleaseType): static {
+        $this->properties['albumReleaseType'] = $albumReleaseType;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getAlbumReleaseType() {
+        return $this->properties['albumReleaseType'];
     }
 
 

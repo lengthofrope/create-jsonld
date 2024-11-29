@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,42 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class BusinessAudienceSchema extends AudienceSchema
 {
-    public static function factory()
+    public static function factory(): BusinessAudienceSchema
     {
-        return new BusinessAudienceSchema('http://schema.org/', 'BusinessAudience');
-    }
-
-    /**
-     * The number of employees in an organization e.g. business.
-     *
-     * @param $numberOfEmployees QuantitativeValueSchema
-     **/
-    public function setNumberOfEmployees($numberOfEmployees) {
-        $this->properties['numberOfEmployees'] = $numberOfEmployees;
-
-        return $this;
-    }
-
-    /**
-     * @return QuantitativeValueSchema
-     **/
-    public function getNumberOfEmployees() {
-        return $this->properties['numberOfEmployees'];
+        return new BusinessAudienceSchema('https://schema.org/', 'BusinessAudience');
     }
 
     /**
      * The size of the business in annual revenue.
      *
-     * @param $yearlyRevenue QuantitativeValueSchema
+     * @param $yearlyRevenue 
+     * @return static
      **/
-    public function setYearlyRevenue($yearlyRevenue) {
+    public function setYearlyRevenue($yearlyRevenue): static {
         $this->properties['yearlyRevenue'] = $yearlyRevenue;
 
         return $this;
     }
 
     /**
-     * @return QuantitativeValueSchema
+     * @return 
      **/
     public function getYearlyRevenue() {
         return $this->properties['yearlyRevenue'];
@@ -77,19 +60,39 @@ class BusinessAudienceSchema extends AudienceSchema
     /**
      * The age of the business.
      *
-     * @param $yearsInOperation QuantitativeValueSchema
+     * @param $yearsInOperation 
+     * @return static
      **/
-    public function setYearsInOperation($yearsInOperation) {
+    public function setYearsInOperation($yearsInOperation): static {
         $this->properties['yearsInOperation'] = $yearsInOperation;
 
         return $this;
     }
 
     /**
-     * @return QuantitativeValueSchema
+     * @return 
      **/
     public function getYearsInOperation() {
         return $this->properties['yearsInOperation'];
+    }
+
+    /**
+     * The number of employees in an organization, e.g. business.
+     *
+     * @param $numberOfEmployees 
+     * @return static
+     **/
+    public function setNumberOfEmployees($numberOfEmployees): static {
+        $this->properties['numberOfEmployees'] = $numberOfEmployees;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getNumberOfEmployees() {
+        return $this->properties['numberOfEmployees'];
     }
 
 

@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,15 +27,15 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A type of physical examination of a patient performed by a physician. Enumerated type.
+ * A type of physical examination of a patient performed by a physician. 
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PhysicalExamSchema extends \LengthOfRope\JSONLD\Elements\Element
+class PhysicalExamSchema extends MedicalEnumerationSchema
 {
-    public static function factory()
+    public static function factory(): PhysicalExamSchema
     {
-        return new PhysicalExamSchema('http://schema.org/', 'PhysicalExam');
+        return new PhysicalExamSchema('https://schema.org/', 'PhysicalExam');
     }
 
 

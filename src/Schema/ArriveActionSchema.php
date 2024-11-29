@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,15 +27,15 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of arriving at a place. An agent arrives at a destination from an fromLocation, optionally with participants.
+ * The act of arriving at a place. An agent arrives at a destination from a fromLocation, optionally with participants.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ArriveActionSchema extends MoveActionSchema
 {
-    public static function factory()
+    public static function factory(): ArriveActionSchema
     {
-        return new ArriveActionSchema('http://schema.org/', 'ArriveAction');
+        return new ArriveActionSchema('https://schema.org/', 'ArriveAction');
     }
 
 

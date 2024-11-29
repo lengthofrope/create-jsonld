@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,99 +33,104 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MedicalTestSchema extends MedicalEntitySchema
 {
-    public static function factory()
+    public static function factory(): MedicalTestSchema
     {
-        return new MedicalTestSchema('http://schema.org/', 'MedicalTest');
-    }
-
-    /**
-     * Drugs that affect the test's results.
-     *
-     * @param $affectedBy DrugSchema
-     **/
-    public function setAffectedBy($affectedBy) {
-        $this->properties['affectedBy'] = $affectedBy;
-
-        return $this;
-    }
-
-    /**
-     * @return DrugSchema
-     **/
-    public function getAffectedBy() {
-        return $this->properties['affectedBy'];
-    }
-
-    /**
-     * Range of acceptable values for a typical patient, when applicable.
-     *
-     * @param $normalRange TextSchema
-     **/
-    public function setNormalRange($normalRange) {
-        $this->properties['normalRange'] = $normalRange;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getNormalRange() {
-        return $this->properties['normalRange'];
-    }
-
-    /**
-     * A sign detected by the test.
-     *
-     * @param $signDetected MedicalSignSchema
-     **/
-    public function setSignDetected($signDetected) {
-        $this->properties['signDetected'] = $signDetected;
-
-        return $this;
-    }
-
-    /**
-     * @return MedicalSignSchema
-     **/
-    public function getSignDetected() {
-        return $this->properties['signDetected'];
+        return new MedicalTestSchema('https://schema.org/', 'MedicalTest');
     }
 
     /**
      * A condition the test is used to diagnose.
      *
-     * @param $usedToDiagnose MedicalConditionSchema
+     * @param $usedToDiagnose 
+     * @return static
      **/
-    public function setUsedToDiagnose($usedToDiagnose) {
+    public function setUsedToDiagnose($usedToDiagnose): static {
         $this->properties['usedToDiagnose'] = $usedToDiagnose;
 
         return $this;
     }
 
     /**
-     * @return MedicalConditionSchema
+     * @return 
      **/
     public function getUsedToDiagnose() {
         return $this->properties['usedToDiagnose'];
     }
 
     /**
+     * A sign detected by the test.
+     *
+     * @param $signDetected 
+     * @return static
+     **/
+    public function setSignDetected($signDetected): static {
+        $this->properties['signDetected'] = $signDetected;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getSignDetected() {
+        return $this->properties['signDetected'];
+    }
+
+    /**
+     * Drugs that affect the test's results.
+     *
+     * @param $affectedBy 
+     * @return static
+     **/
+    public function setAffectedBy($affectedBy): static {
+        $this->properties['affectedBy'] = $affectedBy;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getAffectedBy() {
+        return $this->properties['affectedBy'];
+    }
+
+    /**
      * Device used to perform the test.
      *
-     * @param $usesDevice MedicalDeviceSchema
+     * @param $usesDevice 
+     * @return static
      **/
-    public function setUsesDevice($usesDevice) {
+    public function setUsesDevice($usesDevice): static {
         $this->properties['usesDevice'] = $usesDevice;
 
         return $this;
     }
 
     /**
-     * @return MedicalDeviceSchema
+     * @return 
      **/
     public function getUsesDevice() {
         return $this->properties['usesDevice'];
+    }
+
+    /**
+     * Range of acceptable values for a typical patient, when applicable.
+     *
+     * @param $normalRange |
+     * @return static
+     **/
+    public function setNormalRange($normalRange): static {
+        $this->properties['normalRange'] = $normalRange;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getNormalRange() {
+        return $this->properties['normalRange'];
     }
 
 

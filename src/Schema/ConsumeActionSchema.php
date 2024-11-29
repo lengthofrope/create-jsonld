@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,27 +33,47 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ConsumeActionSchema extends ActionSchema
 {
-    public static function factory()
+    public static function factory(): ConsumeActionSchema
     {
-        return new ConsumeActionSchema('http://schema.org/', 'ConsumeAction');
+        return new ConsumeActionSchema('https://schema.org/', 'ConsumeAction');
     }
 
     /**
      * An Offer which must be accepted before the user can perform the Action. For example, the user may need to buy a movie before being able to watch it.
      *
-     * @param $expectsAcceptanceOf OfferSchema
+     * @param $expectsAcceptanceOf 
+     * @return static
      **/
-    public function setExpectsAcceptanceOf($expectsAcceptanceOf) {
+    public function setExpectsAcceptanceOf($expectsAcceptanceOf): static {
         $this->properties['expectsAcceptanceOf'] = $expectsAcceptanceOf;
 
         return $this;
     }
 
     /**
-     * @return OfferSchema
+     * @return 
      **/
     public function getExpectsAcceptanceOf() {
         return $this->properties['expectsAcceptanceOf'];
+    }
+
+    /**
+     * A set of requirements that must be fulfilled in order to perform an Action. If more than one value is specified, fulfilling one set of requirements will allow the Action to be performed.
+     *
+     * @param $actionAccessibilityRequirement 
+     * @return static
+     **/
+    public function setActionAccessibilityRequirement($actionAccessibilityRequirement): static {
+        $this->properties['actionAccessibilityRequirement'] = $actionAccessibilityRequirement;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getActionAccessibilityRequirement() {
+        return $this->properties['actionAccessibilityRequirement'];
     }
 
 

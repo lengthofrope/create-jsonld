@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,132 +33,139 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MusicCompositionSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): MusicCompositionSchema
     {
-        return new MusicCompositionSchema('http://schema.org/', 'MusicComposition');
-    }
-
-    /**
-     * The person or organization who wrote the composition.
-     *
-     * @param $composer PersonSchema|OrganizationSchema
-     **/
-    public function setComposer($composer) {
-        $this->properties['composer'] = $composer;
-
-        return $this;
-    }
-
-    /**
-     * @return PersonSchema|OrganizationSchema
-     **/
-    public function getComposer() {
-        return $this->properties['composer'];
+        return new MusicCompositionSchema('https://schema.org/', 'MusicComposition');
     }
 
     /**
      * The date and place the work was first performed.
      *
-     * @param $firstPerformance EventSchema
+     * @param $firstPerformance 
+     * @return static
      **/
-    public function setFirstPerformance($firstPerformance) {
+    public function setFirstPerformance($firstPerformance): static {
         $this->properties['firstPerformance'] = $firstPerformance;
 
         return $this;
     }
 
     /**
-     * @return EventSchema
+     * @return 
      **/
     public function getFirstPerformance() {
         return $this->properties['firstPerformance'];
     }
 
     /**
-     * Smaller compositions included in this work (e.g. a movement in a symphony).
+     * An audio recording of the work.
      *
-     * @param $includedComposition MusicCompositionSchema
+     * @param $recordedAs 
+     * @return static
      **/
-    public function setIncludedComposition($includedComposition) {
-        $this->properties['includedComposition'] = $includedComposition;
+    public function setRecordedAs($recordedAs): static {
+        $this->properties['recordedAs'] = $recordedAs;
 
         return $this;
     }
 
     /**
-     * @return MusicCompositionSchema
+     * @return 
      **/
-    public function getIncludedComposition() {
-        return $this->properties['includedComposition'];
-    }
-
-    /**
-     * The International Standard Musical Work Code for the composition.
-     *
-     * @param $iswcCode TextSchema
-     **/
-    public function setIswcCode($iswcCode) {
-        $this->properties['iswcCode'] = $iswcCode;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getIswcCode() {
-        return $this->properties['iswcCode'];
-    }
-
-    /**
-     * The person who wrote the words.
-     *
-     * @param $lyricist PersonSchema
-     **/
-    public function setLyricist($lyricist) {
-        $this->properties['lyricist'] = $lyricist;
-
-        return $this;
-    }
-
-    /**
-     * @return PersonSchema
-     **/
-    public function getLyricist() {
-        return $this->properties['lyricist'];
+    public function getRecordedAs() {
+        return $this->properties['recordedAs'];
     }
 
     /**
      * The words in the song.
      *
-     * @param $lyrics CreativeWorkSchema
+     * @param $lyrics 
+     * @return static
      **/
-    public function setLyrics($lyrics) {
+    public function setLyrics($lyrics): static {
         $this->properties['lyrics'] = $lyrics;
 
         return $this;
     }
 
     /**
-     * @return CreativeWorkSchema
+     * @return 
      **/
     public function getLyrics() {
         return $this->properties['lyrics'];
     }
 
     /**
+     * The International Standard Musical Work Code for the composition.
+     *
+     * @param $iswcCode 
+     * @return static
+     **/
+    public function setIswcCode($iswcCode): static {
+        $this->properties['iswcCode'] = $iswcCode;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getIswcCode() {
+        return $this->properties['iswcCode'];
+    }
+
+    /**
+     * Smaller compositions included in this work (e.g. a movement in a symphony).
+     *
+     * @param $includedComposition 
+     * @return static
+     **/
+    public function setIncludedComposition($includedComposition): static {
+        $this->properties['includedComposition'] = $includedComposition;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getIncludedComposition() {
+        return $this->properties['includedComposition'];
+    }
+
+    /**
+     * The person who wrote the words.
+     *
+     * @param $lyricist 
+     * @return static
+     **/
+    public function setLyricist($lyricist): static {
+        $this->properties['lyricist'] = $lyricist;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getLyricist() {
+        return $this->properties['lyricist'];
+    }
+
+    /**
      * An arrangement derived from the composition.
      *
-     * @param $musicArrangement MusicCompositionSchema
+     * @param $musicArrangement 
+     * @return static
      **/
-    public function setMusicArrangement($musicArrangement) {
+    public function setMusicArrangement($musicArrangement): static {
         $this->properties['musicArrangement'] = $musicArrangement;
 
         return $this;
     }
 
     /**
-     * @return MusicCompositionSchema
+     * @return 
      **/
     public function getMusicArrangement() {
         return $this->properties['musicArrangement'];
@@ -167,16 +174,17 @@ class MusicCompositionSchema extends CreativeWorkSchema
     /**
      * The type of composition (e.g. overture, sonata, symphony, etc.).
      *
-     * @param $musicCompositionForm TextSchema
+     * @param $musicCompositionForm 
+     * @return static
      **/
-    public function setMusicCompositionForm($musicCompositionForm) {
+    public function setMusicCompositionForm($musicCompositionForm): static {
         $this->properties['musicCompositionForm'] = $musicCompositionForm;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getMusicCompositionForm() {
         return $this->properties['musicCompositionForm'];
@@ -185,37 +193,39 @@ class MusicCompositionSchema extends CreativeWorkSchema
     /**
      * The key, mode, or scale this composition uses.
      *
-     * @param $musicalKey TextSchema
+     * @param $musicalKey 
+     * @return static
      **/
-    public function setMusicalKey($musicalKey) {
+    public function setMusicalKey($musicalKey): static {
         $this->properties['musicalKey'] = $musicalKey;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getMusicalKey() {
         return $this->properties['musicalKey'];
     }
 
     /**
-     * An audio recording of the work.
+     * The person or organization who wrote a composition, or who is the composer of a work performed at some event.
      *
-     * @param $recordedAs MusicRecordingSchema
+     * @param $composer |
+     * @return static
      **/
-    public function setRecordedAs($recordedAs) {
-        $this->properties['recordedAs'] = $recordedAs;
+    public function setComposer($composer): static {
+        $this->properties['composer'] = $composer;
 
         return $this;
     }
 
     /**
-     * @return MusicRecordingSchema
+     * @return |
      **/
-    public function getRecordedAs() {
-        return $this->properties['recordedAs'];
+    public function getComposer() {
+        return $this->properties['composer'];
     }
 
 

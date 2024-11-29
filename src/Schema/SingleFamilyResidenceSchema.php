@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -31,11 +31,51 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class SingleFamilyResidenceSchema extends ResidenceSchema
+class SingleFamilyResidenceSchema extends HouseSchema
 {
-    public static function factory()
+    public static function factory(): SingleFamilyResidenceSchema
     {
-        return new SingleFamilyResidenceSchema('http://schema.org/', 'SingleFamilyResidence');
+        return new SingleFamilyResidenceSchema('https://schema.org/', 'SingleFamilyResidence');
+    }
+
+    /**
+     * The allowed total occupancy for the accommodation in persons (including infants etc). For individual accommodations, this is not necessarily the legal maximum but defines the permitted usage as per the contractual agreement (e.g. a double room used by a single person).
+Typical unit code(s): C62 for person.
+     *
+     * @param $occupancy 
+     * @return static
+     **/
+    public function setOccupancy($occupancy): static {
+        $this->properties['occupancy'] = $occupancy;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getOccupancy() {
+        return $this->properties['occupancy'];
+    }
+
+    /**
+     * The number of rooms (excluding bathrooms and closets) of the accommodation or lodging business.
+Typical unit code(s): ROM for room or C62 for no unit. The type of room can be put in the unitText property of the QuantitativeValue.
+     *
+     * @param $numberOfRooms |
+     * @return static
+     **/
+    public function setNumberOfRooms($numberOfRooms): static {
+        $this->properties['numberOfRooms'] = $numberOfRooms;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getNumberOfRooms() {
+        return $this->properties['numberOfRooms'];
     }
 
 

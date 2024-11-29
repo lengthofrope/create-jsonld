@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,24 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class OrderActionSchema extends TradeActionSchema
 {
-    public static function factory()
+    public static function factory(): OrderActionSchema
     {
-        return new OrderActionSchema('http://schema.org/', 'OrderAction');
+        return new OrderActionSchema('https://schema.org/', 'OrderAction');
     }
 
     /**
      * A sub property of instrument. The method of delivery.
      *
-     * @param $deliveryMethod DeliveryMethodSchema
+     * @param $deliveryMethod 
+     * @return static
      **/
-    public function setDeliveryMethod($deliveryMethod) {
+    public function setDeliveryMethod($deliveryMethod): static {
         $this->properties['deliveryMethod'] = $deliveryMethod;
 
         return $this;
     }
 
     /**
-     * @return DeliveryMethodSchema
+     * @return 
      **/
     public function getDeliveryMethod() {
         return $this->properties['deliveryMethod'];

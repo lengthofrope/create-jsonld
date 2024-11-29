@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,15 +27,15 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A business that provide Heating, Ventilation and Air Conditioning services.
+ * A business that provides Heating, Ventilation and Air Conditioning services.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class HVACBusinessSchema extends HomeAndConstructionBusinessSchema
 {
-    public static function factory()
+    public static function factory(): HVACBusinessSchema
     {
-        return new HVACBusinessSchema('http://schema.org/', 'HVACBusiness');
+        return new HVACBusinessSchema('https://schema.org/', 'HVACBusiness');
     }
 
 

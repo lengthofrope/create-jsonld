@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,24 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class SomeProductsSchema extends ProductSchema
 {
-    public static function factory()
+    public static function factory(): SomeProductsSchema
     {
-        return new SomeProductsSchema('http://schema.org/', 'SomeProducts');
+        return new SomeProductsSchema('https://schema.org/', 'SomeProducts');
     }
 
     /**
      * The current approximate inventory level for the item or items.
      *
-     * @param $inventoryLevel QuantitativeValueSchema
+     * @param $inventoryLevel 
+     * @return static
      **/
-    public function setInventoryLevel($inventoryLevel) {
+    public function setInventoryLevel($inventoryLevel): static {
         $this->properties['inventoryLevel'] = $inventoryLevel;
 
         return $this;
     }
 
     /**
-     * @return QuantitativeValueSchema
+     * @return 
      **/
     public function getInventoryLevel() {
         return $this->properties['inventoryLevel'];

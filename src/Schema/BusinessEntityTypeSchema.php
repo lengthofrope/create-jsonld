@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,24 +27,16 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A business entity type is a conceptual entity representing the legal form, the size, the main line of business, the position in the value chain, or any combination thereof, of an organization or business person.
-<br />
-    Commonly used values:<br />
-<br />
-    http://purl.org/goodrelations/v1#Business <br />
-    http://purl.org/goodrelations/v1#Enduser <br />
-    http://purl.org/goodrelations/v1#PublicInstitution <br />
-    http://purl.org/goodrelations/v1#Reseller <br />
-
-        
+ * A business entity type is a conceptual entity representing the legal form, the size, the main line of business, the position in the value chain, or any combination thereof, of an organization or business person.\n\nCommonly used values:\n\n* http://purl.org/goodrelations/v1#Business\n* http://purl.org/goodrelations/v1#Enduser\n* http://purl.org/goodrelations/v1#PublicInstitution\n* http://purl.org/goodrelations/v1#Reseller
+ *     
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class BusinessEntityTypeSchema extends EnumerationSchema
 {
-    public static function factory()
+    public static function factory(): BusinessEntityTypeSchema
     {
-        return new BusinessEntityTypeSchema('http://schema.org/', 'BusinessEntityType');
+        return new BusinessEntityTypeSchema('https://schema.org/', 'BusinessEntityType');
     }
 
 

@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,24 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class AirlineSchema extends OrganizationSchema
 {
-    public static function factory()
+    public static function factory(): AirlineSchema
     {
-        return new AirlineSchema('http://schema.org/', 'Airline');
+        return new AirlineSchema('https://schema.org/', 'Airline');
     }
 
     /**
      * The type of boarding policy used by the airline (e.g. zone-based or group-based).
      *
-     * @param $boardingPolicy BoardingPolicyTypeSchema
+     * @param $boardingPolicy 
+     * @return static
      **/
-    public function setBoardingPolicy($boardingPolicy) {
+    public function setBoardingPolicy($boardingPolicy): static {
         $this->properties['boardingPolicy'] = $boardingPolicy;
 
         return $this;
     }
 
     /**
-     * @return BoardingPolicyTypeSchema
+     * @return 
      **/
     public function getBoardingPolicy() {
         return $this->properties['boardingPolicy'];
@@ -59,16 +60,17 @@ class AirlineSchema extends OrganizationSchema
     /**
      * IATA identifier for an airline or airport.
      *
-     * @param $iataCode TextSchema
+     * @param $iataCode 
+     * @return static
      **/
-    public function setIataCode($iataCode) {
+    public function setIataCode($iataCode): static {
         $this->properties['iataCode'] = $iataCode;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getIataCode() {
         return $this->properties['iataCode'];

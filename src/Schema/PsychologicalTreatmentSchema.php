@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,15 +27,15 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A process of care relying upon counseling, dialogue, communication, verbalization aimed at improving a mental health condition.
+ * A process of care relying upon counseling, dialogue and communication  aimed at improving a mental health condition without use of drugs.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PsychologicalTreatmentSchema extends MedicalTherapySchema
+class PsychologicalTreatmentSchema extends TherapeuticProcedureSchema
 {
-    public static function factory()
+    public static function factory(): PsychologicalTreatmentSchema
     {
-        return new PsychologicalTreatmentSchema('http://schema.org/', 'PsychologicalTreatment');
+        return new PsychologicalTreatmentSchema('https://schema.org/', 'PsychologicalTreatment');
     }
 
 

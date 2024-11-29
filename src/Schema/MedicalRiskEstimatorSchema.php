@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,24 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MedicalRiskEstimatorSchema extends MedicalEntitySchema
 {
-    public static function factory()
+    public static function factory(): MedicalRiskEstimatorSchema
     {
-        return new MedicalRiskEstimatorSchema('http://schema.org/', 'MedicalRiskEstimator');
+        return new MedicalRiskEstimatorSchema('https://schema.org/', 'MedicalRiskEstimator');
     }
 
     /**
      * The condition, complication, or symptom whose risk is being estimated.
      *
-     * @param $estimatesRiskOf MedicalEntitySchema
+     * @param $estimatesRiskOf 
+     * @return static
      **/
-    public function setEstimatesRiskOf($estimatesRiskOf) {
+    public function setEstimatesRiskOf($estimatesRiskOf): static {
         $this->properties['estimatesRiskOf'] = $estimatesRiskOf;
 
         return $this;
     }
 
     /**
-     * @return MedicalEntitySchema
+     * @return 
      **/
     public function getEstimatesRiskOf() {
         return $this->properties['estimatesRiskOf'];
@@ -59,16 +60,17 @@ class MedicalRiskEstimatorSchema extends MedicalEntitySchema
     /**
      * A modifiable or non-modifiable risk factor included in the calculation, e.g. age, coexisting condition.
      *
-     * @param $includedRiskFactor MedicalRiskFactorSchema
+     * @param $includedRiskFactor 
+     * @return static
      **/
-    public function setIncludedRiskFactor($includedRiskFactor) {
+    public function setIncludedRiskFactor($includedRiskFactor): static {
         $this->properties['includedRiskFactor'] = $includedRiskFactor;
 
         return $this;
     }
 
     /**
-     * @return MedicalRiskFactorSchema
+     * @return 
      **/
     public function getIncludedRiskFactor() {
         return $this->properties['includedRiskFactor'];

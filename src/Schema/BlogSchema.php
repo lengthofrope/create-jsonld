@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,48 +27,69 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A blog.
+ * A [blog](https://en.wikipedia.org/wiki/Blog), sometimes known as a "weblog". Note that the individual posts ([[BlogPosting]]s) in a [[Blog]] are often colloquially referred to by the same term.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class BlogSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): BlogSchema
     {
-        return new BlogSchema('http://schema.org/', 'Blog');
+        return new BlogSchema('https://schema.org/', 'Blog');
     }
 
     /**
      * A posting that is part of this blog.
      *
-     * @param $blogPost BlogPostingSchema
+     * @param $blogPost 
+     * @return static
      **/
-    public function setBlogPost($blogPost) {
+    public function setBlogPost($blogPost): static {
         $this->properties['blogPost'] = $blogPost;
 
         return $this;
     }
 
     /**
-     * @return BlogPostingSchema
+     * @return 
      **/
     public function getBlogPost() {
         return $this->properties['blogPost'];
     }
 
     /**
-     * The postings that are part of this blog.
+     * The International Standard Serial Number (ISSN) that identifies this serial publication. You can repeat this property to identify different formats of, or the linking ISSN (ISSN-L) for, this serial publication.
      *
-     * @param $blogPosts BlogPostingSchema
+     * @param $issn 
+     * @return static
      **/
-    public function setBlogPosts($blogPosts) {
+    public function setIssn($issn): static {
+        $this->properties['issn'] = $issn;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getIssn() {
+        return $this->properties['issn'];
+    }
+
+    /**
+     * Indicates a post that is part of a [[Blog]]. Note that historically, what we term a "Blog" was once known as a "weblog", and that what we term a "BlogPosting" is now often colloquially referred to as a "blog".
+     *
+     * @param $blogPosts 
+     * @return static
+     **/
+    public function setBlogPosts($blogPosts): static {
         $this->properties['blogPosts'] = $blogPosts;
 
         return $this;
     }
 
     /**
-     * @return BlogPostingSchema
+     * @return 
      **/
     public function getBlogPosts() {
         return $this->properties['blogPosts'];

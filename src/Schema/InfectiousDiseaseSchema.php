@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,42 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class InfectiousDiseaseSchema extends MedicalConditionSchema
 {
-    public static function factory()
+    public static function factory(): InfectiousDiseaseSchema
     {
-        return new InfectiousDiseaseSchema('http://schema.org/', 'InfectiousDisease');
-    }
-
-    /**
-     * The actual infectious agent, such as a specific bacterium.
-     *
-     * @param $infectiousAgent TextSchema
-     **/
-    public function setInfectiousAgent($infectiousAgent) {
-        $this->properties['infectiousAgent'] = $infectiousAgent;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getInfectiousAgent() {
-        return $this->properties['infectiousAgent'];
+        return new InfectiousDiseaseSchema('https://schema.org/', 'InfectiousDisease');
     }
 
     /**
      * The class of infectious agent (bacteria, prion, etc.) that causes the disease.
      *
-     * @param $infectiousAgentClass InfectiousAgentClassSchema
+     * @param $infectiousAgentClass 
+     * @return static
      **/
-    public function setInfectiousAgentClass($infectiousAgentClass) {
+    public function setInfectiousAgentClass($infectiousAgentClass): static {
         $this->properties['infectiousAgentClass'] = $infectiousAgentClass;
 
         return $this;
     }
 
     /**
-     * @return InfectiousAgentClassSchema
+     * @return 
      **/
     public function getInfectiousAgentClass() {
         return $this->properties['infectiousAgentClass'];
@@ -77,19 +60,39 @@ class InfectiousDiseaseSchema extends MedicalConditionSchema
     /**
      * How the disease spreads, either as a route or vector, for example 'direct contact', 'Aedes aegypti', etc.
      *
-     * @param $transmissionMethod TextSchema
+     * @param $transmissionMethod 
+     * @return static
      **/
-    public function setTransmissionMethod($transmissionMethod) {
+    public function setTransmissionMethod($transmissionMethod): static {
         $this->properties['transmissionMethod'] = $transmissionMethod;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getTransmissionMethod() {
         return $this->properties['transmissionMethod'];
+    }
+
+    /**
+     * The actual infectious agent, such as a specific bacterium.
+     *
+     * @param $infectiousAgent 
+     * @return static
+     **/
+    public function setInfectiousAgent($infectiousAgent): static {
+        $this->properties['infectiousAgent'] = $infectiousAgent;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getInfectiousAgent() {
+        return $this->properties['infectiousAgent'];
     }
 
 

@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,60 +33,63 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class VeinSchema extends VesselSchema
 {
-    public static function factory()
+    public static function factory(): VeinSchema
     {
-        return new VeinSchema('http://schema.org/', 'Vein');
-    }
-
-    /**
-     * The vasculature that the vein drains into.
-     *
-     * @param $drainsTo VesselSchema
-     **/
-    public function setDrainsTo($drainsTo) {
-        $this->properties['drainsTo'] = $drainsTo;
-
-        return $this;
-    }
-
-    /**
-     * @return VesselSchema
-     **/
-    public function getDrainsTo() {
-        return $this->properties['drainsTo'];
+        return new VeinSchema('https://schema.org/', 'Vein');
     }
 
     /**
      * The anatomical or organ system drained by this vessel; generally refers to a specific part of an organ.
      *
-     * @param $regionDrained AnatomicalStructureSchema|AnatomicalSystemSchema
+     * @param $regionDrained |
+     * @return static
      **/
-    public function setRegionDrained($regionDrained) {
+    public function setRegionDrained($regionDrained): static {
         $this->properties['regionDrained'] = $regionDrained;
 
         return $this;
     }
 
     /**
-     * @return AnatomicalStructureSchema|AnatomicalSystemSchema
+     * @return |
      **/
     public function getRegionDrained() {
         return $this->properties['regionDrained'];
     }
 
     /**
+     * The vasculature that the vein drains into.
+     *
+     * @param $drainsTo 
+     * @return static
+     **/
+    public function setDrainsTo($drainsTo): static {
+        $this->properties['drainsTo'] = $drainsTo;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getDrainsTo() {
+        return $this->properties['drainsTo'];
+    }
+
+    /**
      * The anatomical or organ system that the vein flows into; a larger structure that the vein connects to.
      *
-     * @param $tributary AnatomicalStructureSchema
+     * @param $tributary 
+     * @return static
      **/
-    public function setTributary($tributary) {
+    public function setTributary($tributary): static {
         $this->properties['tributary'] = $tributary;
 
         return $this;
     }
 
     /**
-     * @return AnatomicalStructureSchema
+     * @return 
      **/
     public function getTributary() {
         return $this->properties['tributary'];

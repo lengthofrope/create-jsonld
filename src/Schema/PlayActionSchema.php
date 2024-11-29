@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,51 +27,53 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of playing/exercising/training/performing for enjoyment, leisure, recreation, Competition or exercise.<p>Related actions:</p><ul><li><a href="http://schema.org/ListenAction">ListenAction</a>: Unlike ListenAction (which is under ConsumeAction), PlayAction refers to performing for an audience or at an event, rather than consuming music.</li><li><a href="http://schema.org/WatchAction">WatchAction</a>: Unlike WatchAction (which is under ConsumeAction), PlayAction refers to showing/displaying for an audience or at an event, rather than consuming visual content</li></ul>.
+ * The act of playing/exercising/training/performing for enjoyment, leisure, recreation, competition or exercise.\n\nRelated actions:\n\n* [[ListenAction]]: Unlike ListenAction (which is under ConsumeAction), PlayAction refers to performing for an audience or at an event, rather than consuming music.\n* [[WatchAction]]: Unlike WatchAction (which is under ConsumeAction), PlayAction refers to showing/displaying for an audience or at an event, rather than consuming visual content.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class PlayActionSchema extends ActionSchema
 {
-    public static function factory()
+    public static function factory(): PlayActionSchema
     {
-        return new PlayActionSchema('http://schema.org/', 'PlayAction');
-    }
-
-    /**
-     * An intended audience, i.e. a group for whom something was created.
-     *
-     * @param $audience AudienceSchema
-     **/
-    public function setAudience($audience) {
-        $this->properties['audience'] = $audience;
-
-        return $this;
-    }
-
-    /**
-     * @return AudienceSchema
-     **/
-    public function getAudience() {
-        return $this->properties['audience'];
+        return new PlayActionSchema('https://schema.org/', 'PlayAction');
     }
 
     /**
      * Upcoming or past event associated with this place, organization, or action.
      *
-     * @param $event EventSchema
+     * @param $event 
+     * @return static
      **/
-    public function setEvent($event) {
+    public function setEvent($event): static {
         $this->properties['event'] = $event;
 
         return $this;
     }
 
     /**
-     * @return EventSchema
+     * @return 
      **/
     public function getEvent() {
         return $this->properties['event'];
+    }
+
+    /**
+     * An intended audience, i.e. a group for whom something was created.
+     *
+     * @param $audience 
+     * @return static
+     **/
+    public function setAudience($audience): static {
+        $this->properties['audience'] = $audience;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getAudience() {
+        return $this->properties['audience'];
     }
 
 

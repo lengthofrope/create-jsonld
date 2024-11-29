@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,24 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ParentAudienceSchema extends PeopleAudienceSchema
 {
-    public static function factory()
+    public static function factory(): ParentAudienceSchema
     {
-        return new ParentAudienceSchema('http://schema.org/', 'ParentAudience');
+        return new ParentAudienceSchema('https://schema.org/', 'ParentAudience');
     }
 
     /**
      * Maximal age of the child.
      *
-     * @param $childMaxAge NumberSchema
+     * @param $childMaxAge 
+     * @return static
      **/
-    public function setChildMaxAge($childMaxAge) {
+    public function setChildMaxAge($childMaxAge): static {
         $this->properties['childMaxAge'] = $childMaxAge;
 
         return $this;
     }
 
     /**
-     * @return NumberSchema
+     * @return 
      **/
     public function getChildMaxAge() {
         return $this->properties['childMaxAge'];
@@ -59,16 +60,17 @@ class ParentAudienceSchema extends PeopleAudienceSchema
     /**
      * Minimal age of the child.
      *
-     * @param $childMinAge NumberSchema
+     * @param $childMinAge 
+     * @return static
      **/
-    public function setChildMinAge($childMinAge) {
+    public function setChildMinAge($childMinAge): static {
         $this->properties['childMinAge'] = $childMinAge;
 
         return $this;
     }
 
     /**
-     * @return NumberSchema
+     * @return 
      **/
     public function getChildMinAge() {
         return $this->properties['childMinAge'];

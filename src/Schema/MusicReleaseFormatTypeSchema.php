@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,15 +27,15 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Format of this release (the type of recording media used, ie. compact disc, digital media, LP, etc.).
+ * Format of this release (the type of recording media used, i.e. compact disc, digital media, LP, etc.).
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MusicReleaseFormatTypeSchema extends EnumerationSchema
 {
-    public static function factory()
+    public static function factory(): MusicReleaseFormatTypeSchema
     {
-        return new MusicReleaseFormatTypeSchema('http://schema.org/', 'MusicReleaseFormatType');
+        return new MusicReleaseFormatTypeSchema('https://schema.org/', 'MusicReleaseFormatType');
     }
 
 

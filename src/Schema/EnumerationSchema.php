@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,30 +27,31 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Lists or enumerations&#x2014;for example, a list of cuisines or music genres, etc.
+ * Lists or enumerations—for example, a list of cuisines or music genres, etc.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class EnumerationSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): EnumerationSchema
     {
-        return new EnumerationSchema('http://schema.org/', 'Enumeration');
+        return new EnumerationSchema('https://schema.org/', 'Enumeration');
     }
 
     /**
      * Relates a term (i.e. a property, class or enumeration) to one that supersedes it.
      *
-     * @param $supersededBy PropertySchema|ClassSchema|EnumerationSchema
+     * @param $supersededBy ||
+     * @return static
      **/
-    public function setSupersededBy($supersededBy) {
+    public function setSupersededBy($supersededBy): static {
         $this->properties['supersededBy'] = $supersededBy;
 
         return $this;
     }
 
     /**
-     * @return PropertySchema|ClassSchema|EnumerationSchema
+     * @return ||
      **/
     public function getSupersededBy() {
         return $this->properties['supersededBy'];

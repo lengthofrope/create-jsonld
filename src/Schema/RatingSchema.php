@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,63 +33,123 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class RatingSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): RatingSchema
     {
-        return new RatingSchema('http://schema.org/', 'Rating');
+        return new RatingSchema('https://schema.org/', 'Rating');
     }
 
     /**
-     * The highest value allowed in this rating system. If bestRating is omitted, 5 is assumed.
+     * A short explanation (e.g. one to two sentences) providing background context and other information that led to the conclusion expressed in the rating. This is particularly applicable to ratings associated with "fact check" markup using [[ClaimReview]].
      *
-     * @param $bestRating NumberSchema|TextSchema
+     * @param $ratingExplanation 
+     * @return static
      **/
-    public function setBestRating($bestRating) {
+    public function setRatingExplanation($ratingExplanation): static {
+        $this->properties['ratingExplanation'] = $ratingExplanation;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getRatingExplanation() {
+        return $this->properties['ratingExplanation'];
+    }
+
+    /**
+     * The highest value allowed in this rating system.
+     *
+     * @param $bestRating |
+     * @return static
+     **/
+    public function setBestRating($bestRating): static {
         $this->properties['bestRating'] = $bestRating;
 
         return $this;
     }
 
     /**
-     * @return NumberSchema|TextSchema
+     * @return |
      **/
     public function getBestRating() {
         return $this->properties['bestRating'];
     }
 
     /**
-     * The rating for the content.
+     * The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.
      *
-     * @param $ratingValue TextSchema
+     * @param $author |
+     * @return static
      **/
-    public function setRatingValue($ratingValue) {
-        $this->properties['ratingValue'] = $ratingValue;
+    public function setAuthor($author): static {
+        $this->properties['author'] = $author;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return |
      **/
-    public function getRatingValue() {
-        return $this->properties['ratingValue'];
+    public function getAuthor() {
+        return $this->properties['author'];
     }
 
     /**
-     * The lowest value allowed in this rating system. If worstRating is omitted, 1 is assumed.
+     * This Review or Rating is relevant to this part or facet of the itemReviewed.
      *
-     * @param $worstRating NumberSchema|TextSchema
+     * @param $reviewAspect 
+     * @return static
      **/
-    public function setWorstRating($worstRating) {
+    public function setReviewAspect($reviewAspect): static {
+        $this->properties['reviewAspect'] = $reviewAspect;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getReviewAspect() {
+        return $this->properties['reviewAspect'];
+    }
+
+    /**
+     * The lowest value allowed in this rating system.
+     *
+     * @param $worstRating |
+     * @return static
+     **/
+    public function setWorstRating($worstRating): static {
         $this->properties['worstRating'] = $worstRating;
 
         return $this;
     }
 
     /**
-     * @return NumberSchema|TextSchema
+     * @return |
      **/
     public function getWorstRating() {
         return $this->properties['worstRating'];
+    }
+
+    /**
+     * The rating for the content.\n\nUsage guidelines:\n\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.
+     *
+     * @param $ratingValue |
+     * @return static
+     **/
+    public function setRatingValue($ratingValue): static {
+        $this->properties['ratingValue'] = $ratingValue;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getRatingValue() {
+        return $this->properties['ratingValue'];
     }
 
 

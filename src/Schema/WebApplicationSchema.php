@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,24 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class WebApplicationSchema extends SoftwareApplicationSchema
 {
-    public static function factory()
+    public static function factory(): WebApplicationSchema
     {
-        return new WebApplicationSchema('http://schema.org/', 'WebApplication');
+        return new WebApplicationSchema('https://schema.org/', 'WebApplication');
     }
 
     /**
-     * Specifies browser requirements in human-readable text. For example,"requires HTML5 support".
+     * Specifies browser requirements in human-readable text. For example, 'requires HTML5 support'.
      *
-     * @param $browserRequirements TextSchema
+     * @param $browserRequirements 
+     * @return static
      **/
-    public function setBrowserRequirements($browserRequirements) {
+    public function setBrowserRequirements($browserRequirements): static {
         $this->properties['browserRequirements'] = $browserRequirements;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getBrowserRequirements() {
         return $this->properties['browserRequirements'];

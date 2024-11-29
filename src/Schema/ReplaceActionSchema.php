@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,45 +33,47 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ReplaceActionSchema extends UpdateActionSchema
 {
-    public static function factory()
+    public static function factory(): ReplaceActionSchema
     {
-        return new ReplaceActionSchema('http://schema.org/', 'ReplaceAction');
-    }
-
-    /**
-     * A sub property of object. The object that is being replaced.
-     *
-     * @param $replacee ThingSchema
-     **/
-    public function setReplacee($replacee) {
-        $this->properties['replacee'] = $replacee;
-
-        return $this;
-    }
-
-    /**
-     * @return ThingSchema
-     **/
-    public function getReplacee() {
-        return $this->properties['replacee'];
+        return new ReplaceActionSchema('https://schema.org/', 'ReplaceAction');
     }
 
     /**
      * A sub property of object. The object that replaces.
      *
-     * @param $replacer ThingSchema
+     * @param $replacer 
+     * @return static
      **/
-    public function setReplacer($replacer) {
+    public function setReplacer($replacer): static {
         $this->properties['replacer'] = $replacer;
 
         return $this;
     }
 
     /**
-     * @return ThingSchema
+     * @return 
      **/
     public function getReplacer() {
         return $this->properties['replacer'];
+    }
+
+    /**
+     * A sub property of object. The object that is being replaced.
+     *
+     * @param $replacee 
+     * @return static
+     **/
+    public function setReplacee($replacee): static {
+        $this->properties['replacee'] = $replacee;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getReplacee() {
+        return $this->properties['replacee'];
     }
 
 

@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,48 +27,69 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The Game type represents things which are games. These are typically rule-governed recreational activities, e.g. role-playing games in which players assume the role of characters in a fictional setting. See also <a href="https://github.com/rvguha/schemaorg/issues/169">open issues list</a>.
+ * The Game type represents things which are games. These are typically rule-governed recreational activities, e.g. role-playing games in which players assume the role of characters in a fictional setting.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class GameSchema extends CreativeWorkSchema
 {
-    public static function factory()
+    public static function factory(): GameSchema
     {
-        return new GameSchema('http://schema.org/', 'Game');
+        return new GameSchema('https://schema.org/', 'Game');
     }
 
     /**
-     * A piece of data that represents a particular aspect of a fictional character (skill, power, character points, advantage, disadvantage).
+     * The task that a player-controlled character, or group of characters may complete in order to gain a reward.
      *
-     * @param $characterAttribute ThingSchema
+     * @param $quest 
+     * @return static
      **/
-    public function setCharacterAttribute($characterAttribute) {
-        $this->properties['characterAttribute'] = $characterAttribute;
+    public function setQuest($quest): static {
+        $this->properties['quest'] = $quest;
 
         return $this;
     }
 
     /**
-     * @return ThingSchema
+     * @return 
      **/
-    public function getCharacterAttribute() {
-        return $this->properties['characterAttribute'];
+    public function getQuest() {
+        return $this->properties['quest'];
+    }
+
+    /**
+     * Indicate how many people can play this game (minimum, maximum, or range).
+     *
+     * @param $numberOfPlayers 
+     * @return static
+     **/
+    public function setNumberOfPlayers($numberOfPlayers): static {
+        $this->properties['numberOfPlayers'] = $numberOfPlayers;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getNumberOfPlayers() {
+        return $this->properties['numberOfPlayers'];
     }
 
     /**
      * An item is an object within the game world that can be collected by a player or, occasionally, a non-player character.
      *
-     * @param $gameItem ThingSchema
+     * @param $gameItem 
+     * @return static
      **/
-    public function setGameItem($gameItem) {
+    public function setGameItem($gameItem): static {
         $this->properties['gameItem'] = $gameItem;
 
         return $this;
     }
 
     /**
-     * @return ThingSchema
+     * @return 
      **/
     public function getGameItem() {
         return $this->properties['gameItem'];
@@ -77,55 +98,39 @@ class GameSchema extends CreativeWorkSchema
     /**
      * Real or fictional location of the game (or part of game).
      *
-     * @param $gameLocation URLSchema|PlaceSchema|PostalAddressSchema
+     * @param $gameLocation ||
+     * @return static
      **/
-    public function setGameLocation($gameLocation) {
+    public function setGameLocation($gameLocation): static {
         $this->properties['gameLocation'] = $gameLocation;
 
         return $this;
     }
 
     /**
-     * @return URLSchema|PlaceSchema|PostalAddressSchema
+     * @return ||
      **/
     public function getGameLocation() {
         return $this->properties['gameLocation'];
     }
 
     /**
-     * Indicate how many people can play this game (minimum, maximum, or range).
+     * A piece of data that represents a particular aspect of a fictional character (skill, power, character points, advantage, disadvantage).
      *
-     * @param $numberOfPlayers QuantitativeValueSchema
+     * @param $characterAttribute 
+     * @return static
      **/
-    public function setNumberOfPlayers($numberOfPlayers) {
-        $this->properties['numberOfPlayers'] = $numberOfPlayers;
+    public function setCharacterAttribute($characterAttribute): static {
+        $this->properties['characterAttribute'] = $characterAttribute;
 
         return $this;
     }
 
     /**
-     * @return QuantitativeValueSchema
+     * @return 
      **/
-    public function getNumberOfPlayers() {
-        return $this->properties['numberOfPlayers'];
-    }
-
-    /**
-     * The task that a player-controlled character, or group of characters may complete in order to gain a reward.
-     *
-     * @param $quest ThingSchema
-     **/
-    public function setQuest($quest) {
-        $this->properties['quest'] = $quest;
-
-        return $this;
-    }
-
-    /**
-     * @return ThingSchema
-     **/
-    public function getQuest() {
-        return $this->properties['quest'];
+    public function getCharacterAttribute() {
+        return $this->properties['characterAttribute'];
     }
 
 

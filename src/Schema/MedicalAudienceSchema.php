@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,15 +27,15 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Target audiences for medical web pages. Enumerated type.
+ * Target audiences for medical web pages.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MedicalAudienceSchema extends \LengthOfRope\JSONLD\Elements\Element
+class MedicalAudienceSchema extends PeopleAudienceSchema
 {
-    public static function factory()
+    public static function factory(): MedicalAudienceSchema
     {
-        return new MedicalAudienceSchema('http://schema.org/', 'MedicalAudience');
+        return new MedicalAudienceSchema('https://schema.org/', 'MedicalAudience');
     }
 
 

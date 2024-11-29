@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,51 +27,53 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A medical clinic.
+ * A facility, often associated with a hospital or medical school, that is devoted to the specific diagnosis and/or healthcare. Previously limited to outpatients but with evolution it may be open to inpatients as well.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MedicalClinicSchema extends MedicalOrganizationSchema
+class MedicalClinicSchema extends MedicalBusinessSchema
 {
-    public static function factory()
+    public static function factory(): MedicalClinicSchema
     {
-        return new MedicalClinicSchema('http://schema.org/', 'MedicalClinic');
-    }
-
-    /**
-     * A medical service available from this provider.
-     *
-     * @param $availableService MedicalProcedureSchema|MedicalTestSchema|MedicalTherapySchema
-     **/
-    public function setAvailableService($availableService) {
-        $this->properties['availableService'] = $availableService;
-
-        return $this;
-    }
-
-    /**
-     * @return MedicalProcedureSchema|MedicalTestSchema|MedicalTherapySchema
-     **/
-    public function getAvailableService() {
-        return $this->properties['availableService'];
+        return new MedicalClinicSchema('https://schema.org/', 'MedicalClinic');
     }
 
     /**
      * A medical specialty of the provider.
      *
-     * @param $medicalSpecialty MedicalSpecialtySchema
+     * @param $medicalSpecialty 
+     * @return static
      **/
-    public function setMedicalSpecialty($medicalSpecialty) {
+    public function setMedicalSpecialty($medicalSpecialty): static {
         $this->properties['medicalSpecialty'] = $medicalSpecialty;
 
         return $this;
     }
 
     /**
-     * @return MedicalSpecialtySchema
+     * @return 
      **/
     public function getMedicalSpecialty() {
         return $this->properties['medicalSpecialty'];
+    }
+
+    /**
+     * A medical service available from this provider.
+     *
+     * @param $availableService ||
+     * @return static
+     **/
+    public function setAvailableService($availableService): static {
+        $this->properties['availableService'] = $availableService;
+
+        return $this;
+    }
+
+    /**
+     * @return ||
+     **/
+    public function getAvailableService() {
+        return $this->properties['availableService'];
     }
 
 

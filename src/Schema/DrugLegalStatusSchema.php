@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,24 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DrugLegalStatusSchema extends MedicalIntangibleSchema
 {
-    public static function factory()
+    public static function factory(): DrugLegalStatusSchema
     {
-        return new DrugLegalStatusSchema('http://schema.org/', 'DrugLegalStatus');
+        return new DrugLegalStatusSchema('https://schema.org/', 'DrugLegalStatus');
     }
 
     /**
      * The location in which the status applies.
      *
-     * @param $applicableLocation AdministrativeAreaSchema
+     * @param $applicableLocation 
+     * @return static
      **/
-    public function setApplicableLocation($applicableLocation) {
+    public function setApplicableLocation($applicableLocation): static {
         $this->properties['applicableLocation'] = $applicableLocation;
 
         return $this;
     }
 
     /**
-     * @return AdministrativeAreaSchema
+     * @return 
      **/
     public function getApplicableLocation() {
         return $this->properties['applicableLocation'];

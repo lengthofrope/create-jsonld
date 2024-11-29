@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,24 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class TVClipSchema extends ClipSchema
 {
-    public static function factory()
+    public static function factory(): TVClipSchema
     {
-        return new TVClipSchema('http://schema.org/', 'TVClip');
+        return new TVClipSchema('https://schema.org/', 'TVClip');
     }
 
     /**
      * The TV series to which this episode or season belongs.
      *
-     * @param $partOfTVSeries TVSeriesSchema
+     * @param $partOfTVSeries 
+     * @return static
      **/
-    public function setPartOfTVSeries($partOfTVSeries) {
+    public function setPartOfTVSeries($partOfTVSeries): static {
         $this->properties['partOfTVSeries'] = $partOfTVSeries;
 
         return $this;
     }
 
     /**
-     * @return TVSeriesSchema
+     * @return 
      **/
     public function getPartOfTVSeries() {
         return $this->properties['partOfTVSeries'];

@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,197 +27,225 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A structured value representing a monetary amount. Typically, only the subclasses of this type are used for markup.
+ * A structured value representing a price or price range. Typically, only the subclasses of this type are used for markup. It is recommended to use [[MonetaryAmount]] to describe independent amounts of money such as a salary, credit card limits, etc.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class PriceSpecificationSchema extends StructuredValueSchema
 {
-    public static function factory()
+    public static function factory(): PriceSpecificationSchema
     {
-        return new PriceSpecificationSchema('http://schema.org/', 'PriceSpecification');
+        return new PriceSpecificationSchema('https://schema.org/', 'PriceSpecification');
     }
 
     /**
-     * The interval and unit of measurement of ordering quantities for which the offer or price specification is valid. This allows e.g. specifying that a certain freight charge is valid only for a certain quantity.
-     *
-     * @param $eligibleQuantity QuantitativeValueSchema
-     **/
-    public function setEligibleQuantity($eligibleQuantity) {
-        $this->properties['eligibleQuantity'] = $eligibleQuantity;
-
-        return $this;
-    }
-
-    /**
-     * @return QuantitativeValueSchema
-     **/
-    public function getEligibleQuantity() {
-        return $this->properties['eligibleQuantity'];
-    }
-
-    /**
-     * The transaction volume, in a monetary unit, for which the offer or price specification is valid, e.g. for indicating a minimal purchasing volume, to express free shipping above a certain order volume, or to limit the acceptance of credit cards to purchases to a certain minimal amount.
-     *
-     * @param $eligibleTransactionVolume PriceSpecificationSchema
-     **/
-    public function setEligibleTransactionVolume($eligibleTransactionVolume) {
-        $this->properties['eligibleTransactionVolume'] = $eligibleTransactionVolume;
-
-        return $this;
-    }
-
-    /**
-     * @return PriceSpecificationSchema
-     **/
-    public function getEligibleTransactionVolume() {
-        return $this->properties['eligibleTransactionVolume'];
-    }
-
-    /**
-     * The highest price if the price is a range.
-     *
-     * @param $maxPrice NumberSchema
-     **/
-    public function setMaxPrice($maxPrice) {
-        $this->properties['maxPrice'] = $maxPrice;
-
-        return $this;
-    }
-
-    /**
-     * @return NumberSchema
-     **/
-    public function getMaxPrice() {
-        return $this->properties['maxPrice'];
-    }
-
-    /**
-     * The lowest price if the price is a range.
-     *
-     * @param $minPrice NumberSchema
-     **/
-    public function setMinPrice($minPrice) {
-        $this->properties['minPrice'] = $minPrice;
-
-        return $this;
-    }
-
-    /**
-     * @return NumberSchema
-     **/
-    public function getMinPrice() {
-        return $this->properties['minPrice'];
-    }
-
-    /**
-     * The offer price of a product, or of a price component when attached to PriceSpecification and its subtypes.
-<br />
-<br />
-      Usage guidelines:
-<br />
-<ul>
-<li>Use the <a href="/priceCurrency">priceCurrency</a> property (with <a href="http://en.wikipedia.org/wiki/ISO_4217#Active_codes">ISO 4217 codes</a> e.g. "USD") instead of
-      including <a href="http://en.wikipedia.org/wiki/Dollar_sign#Currencies_that_use_the_dollar_or_peso_sign">ambiguous symbols</a> such as '$' in the value.
-</li>
-<li>
-      Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.
-</li>
-<li>
-      Note that both <a href="http://www.w3.org/TR/xhtml-rdfa-primer/#using-the-content-attribute">RDFa</a> and Microdata syntax allow the use of a "content=" attribute for publishing simple machine-readable values
-      alongside more human-friendly formatting.
-</li>
-<li>
-      Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similiar Unicode symbols.
-</li>
-</ul>
+     * The offer price of a product, or of a price component when attached to PriceSpecification and its subtypes.\n\nUsage guidelines:\n\n* Use the [[priceCurrency]] property (with standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR") instead of including [ambiguous symbols](http://en.wikipedia.org/wiki/Dollar_sign#Currencies_that_use_the_dollar_or_peso_sign) such as '$' in the value.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.\n* Note that both [RDFa](http://www.w3.org/TR/xhtml-rdfa-primer/#using-the-content-attribute) and Microdata syntax allow the use of a "content=" attribute for publishing simple machine-readable values alongside more human-friendly formatting.\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols.
       
      *
-     * @param $price NumberSchema|TextSchema
+     * @param $price |
+     * @return static
      **/
-    public function setPrice($price) {
+    public function setPrice($price): static {
         $this->properties['price'] = $price;
 
         return $this;
     }
 
     /**
-     * @return NumberSchema|TextSchema
+     * @return |
      **/
     public function getPrice() {
         return $this->properties['price'];
     }
 
     /**
-     * The currency (in 3-letter ISO 4217 format) of the price or a price component, when attached to PriceSpecification and its subtypes.
+     * The number of membership points earned by the member. If necessary, the unitText can be used to express the units the points are issued in. (E.g. stars, miles, etc.)
      *
-     * @param $priceCurrency TextSchema
+     * @param $membershipPointsEarned |
+     * @return static
      **/
-    public function setPriceCurrency($priceCurrency) {
-        $this->properties['priceCurrency'] = $priceCurrency;
+    public function setMembershipPointsEarned($membershipPointsEarned): static {
+        $this->properties['membershipPointsEarned'] = $membershipPointsEarned;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return |
      **/
-    public function getPriceCurrency() {
-        return $this->properties['priceCurrency'];
+    public function getMembershipPointsEarned() {
+        return $this->properties['membershipPointsEarned'];
     }
 
     /**
-     * The date when the item becomes valid.
+     * The membership program tier an Offer (or a PriceSpecification, OfferShippingDetails, or MerchantReturnPolicy under an Offer) is valid for.
      *
-     * @param $validFrom DateTimeSchema
+     * @param $validForMemberTier 
+     * @return static
      **/
-    public function setValidFrom($validFrom) {
-        $this->properties['validFrom'] = $validFrom;
+    public function setValidForMemberTier($validForMemberTier): static {
+        $this->properties['validForMemberTier'] = $validForMemberTier;
 
         return $this;
     }
 
     /**
-     * @return DateTimeSchema
+     * @return 
      **/
-    public function getValidFrom() {
-        return $this->properties['validFrom'];
-    }
-
-    /**
-     * The end of the validity of offer, price specification, or opening hours data.
-     *
-     * @param $validThrough DateTimeSchema
-     **/
-    public function setValidThrough($validThrough) {
-        $this->properties['validThrough'] = $validThrough;
-
-        return $this;
-    }
-
-    /**
-     * @return DateTimeSchema
-     **/
-    public function getValidThrough() {
-        return $this->properties['validThrough'];
+    public function getValidForMemberTier() {
+        return $this->properties['validForMemberTier'];
     }
 
     /**
      * Specifies whether the applicable value-added tax (VAT) is included in the price specification or not.
      *
-     * @param $valueAddedTaxIncluded BooleanSchema
+     * @param $valueAddedTaxIncluded 
+     * @return static
      **/
-    public function setValueAddedTaxIncluded($valueAddedTaxIncluded) {
+    public function setValueAddedTaxIncluded($valueAddedTaxIncluded): static {
         $this->properties['valueAddedTaxIncluded'] = $valueAddedTaxIncluded;
 
         return $this;
     }
 
     /**
-     * @return BooleanSchema
+     * @return 
      **/
     public function getValueAddedTaxIncluded() {
         return $this->properties['valueAddedTaxIncluded'];
+    }
+
+    /**
+     * The interval and unit of measurement of ordering quantities for which the offer or price specification is valid. This allows e.g. specifying that a certain freight charge is valid only for a certain quantity.
+     *
+     * @param $eligibleQuantity 
+     * @return static
+     **/
+    public function setEligibleQuantity($eligibleQuantity): static {
+        $this->properties['eligibleQuantity'] = $eligibleQuantity;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getEligibleQuantity() {
+        return $this->properties['eligibleQuantity'];
+    }
+
+    /**
+     * The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours.
+     *
+     * @param $validThrough |
+     * @return static
+     **/
+    public function setValidThrough($validThrough): static {
+        $this->properties['validThrough'] = $validThrough;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getValidThrough() {
+        return $this->properties['validThrough'];
+    }
+
+    /**
+     * The currency of the price, or a price component when attached to [[PriceSpecification]] and its subtypes.\n\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR".
+     *
+     * @param $priceCurrency 
+     * @return static
+     **/
+    public function setPriceCurrency($priceCurrency): static {
+        $this->properties['priceCurrency'] = $priceCurrency;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getPriceCurrency() {
+        return $this->properties['priceCurrency'];
+    }
+
+    /**
+     * The highest price if the price is a range.
+     *
+     * @param $maxPrice 
+     * @return static
+     **/
+    public function setMaxPrice($maxPrice): static {
+        $this->properties['maxPrice'] = $maxPrice;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getMaxPrice() {
+        return $this->properties['maxPrice'];
+    }
+
+    /**
+     * The date when the item becomes valid.
+     *
+     * @param $validFrom |
+     * @return static
+     **/
+    public function setValidFrom($validFrom): static {
+        $this->properties['validFrom'] = $validFrom;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getValidFrom() {
+        return $this->properties['validFrom'];
+    }
+
+    /**
+     * The lowest price if the price is a range.
+     *
+     * @param $minPrice 
+     * @return static
+     **/
+    public function setMinPrice($minPrice): static {
+        $this->properties['minPrice'] = $minPrice;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getMinPrice() {
+        return $this->properties['minPrice'];
+    }
+
+    /**
+     * The transaction volume, in a monetary unit, for which the offer or price specification is valid, e.g. for indicating a minimal purchasing volume, to express free shipping above a certain order volume, or to limit the acceptance of credit cards to purchases to a certain minimal amount.
+     *
+     * @param $eligibleTransactionVolume 
+     * @return static
+     **/
+    public function setEligibleTransactionVolume($eligibleTransactionVolume): static {
+        $this->properties['eligibleTransactionVolume'] = $eligibleTransactionVolume;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getEligibleTransactionVolume() {
+        return $this->properties['eligibleTransactionVolume'];
     }
 
 

@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,15 +27,15 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A volcano, like Fuji san.
+ * A volcano, like Fujisan.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class VolcanoSchema extends LandformSchema
 {
-    public static function factory()
+    public static function factory(): VolcanoSchema
     {
-        return new VolcanoSchema('http://schema.org/', 'Volcano');
+        return new VolcanoSchema('https://schema.org/', 'Volcano');
     }
 
 

@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,24 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class DataFeedItemSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): DataFeedItemSchema
     {
-        return new DataFeedItemSchema('http://schema.org/', 'DataFeedItem');
+        return new DataFeedItemSchema('https://schema.org/', 'DataFeedItem');
     }
 
     /**
      * The date on which the CreativeWork was created or the item was added to a DataFeed.
      *
-     * @param $dateCreated DateSchema|DateTimeSchema
+     * @param $dateCreated |
+     * @return static
      **/
-    public function setDateCreated($dateCreated) {
+    public function setDateCreated($dateCreated): static {
         $this->properties['dateCreated'] = $dateCreated;
 
         return $this;
     }
 
     /**
-     * @return DateSchema|DateTimeSchema
+     * @return |
      **/
     public function getDateCreated() {
         return $this->properties['dateCreated'];
@@ -59,55 +60,58 @@ class DataFeedItemSchema extends IntangibleSchema
     /**
      * The datetime the item was removed from the DataFeed.
      *
-     * @param $dateDeleted DateTimeSchema
+     * @param $dateDeleted |
+     * @return static
      **/
-    public function setDateDeleted($dateDeleted) {
+    public function setDateDeleted($dateDeleted): static {
         $this->properties['dateDeleted'] = $dateDeleted;
 
         return $this;
     }
 
     /**
-     * @return DateTimeSchema
+     * @return |
      **/
     public function getDateDeleted() {
         return $this->properties['dateDeleted'];
     }
 
     /**
-     * The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.
+     * An entity represented by an entry in a list or data feed (e.g. an 'artist' in a list of 'artists').
      *
-     * @param $dateModified DateSchema|DateTimeSchema
+     * @param $item 
+     * @return static
      **/
-    public function setDateModified($dateModified) {
-        $this->properties['dateModified'] = $dateModified;
-
-        return $this;
-    }
-
-    /**
-     * @return DateSchema|DateTimeSchema
-     **/
-    public function getDateModified() {
-        return $this->properties['dateModified'];
-    }
-
-    /**
-     * An entity represented by an entry in a list or data feed (e.g. an 'artist' in a list of 'artists')’.
-     *
-     * @param $item ThingSchema
-     **/
-    public function setItem($item) {
+    public function setItem($item): static {
         $this->properties['item'] = $item;
 
         return $this;
     }
 
     /**
-     * @return ThingSchema
+     * @return 
      **/
     public function getItem() {
         return $this->properties['item'];
+    }
+
+    /**
+     * The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.
+     *
+     * @param $dateModified |
+     * @return static
+     **/
+    public function setDateModified($dateModified): static {
+        $this->properties['dateModified'] = $dateModified;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getDateModified() {
+        return $this->properties['dateModified'];
     }
 
 

@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,15 +27,18 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A hotel.
+ * A hotel is an establishment that provides lodging paid on a short-term basis (source: Wikipedia, the free encyclopedia, see http://en.wikipedia.org/wiki/Hotel).
+ * <br /><br />
+ * See also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.
+
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class HotelSchema extends LodgingBusinessSchema
 {
-    public static function factory()
+    public static function factory(): HotelSchema
     {
-        return new HotelSchema('http://schema.org/', 'Hotel');
+        return new HotelSchema('https://schema.org/', 'Hotel');
     }
 
 

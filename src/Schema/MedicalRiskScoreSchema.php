@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,24 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MedicalRiskScoreSchema extends MedicalRiskEstimatorSchema
 {
-    public static function factory()
+    public static function factory(): MedicalRiskScoreSchema
     {
-        return new MedicalRiskScoreSchema('http://schema.org/', 'MedicalRiskScore');
+        return new MedicalRiskScoreSchema('https://schema.org/', 'MedicalRiskScore');
     }
 
     /**
      * The algorithm or rules to follow to compute the score.
      *
-     * @param $algorithm TextSchema
+     * @param $algorithm 
+     * @return static
      **/
-    public function setAlgorithm($algorithm) {
+    public function setAlgorithm($algorithm): static {
         $this->properties['algorithm'] = $algorithm;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getAlgorithm() {
         return $this->properties['algorithm'];

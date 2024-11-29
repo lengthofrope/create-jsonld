@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,42 +33,44 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class UnitPriceSpecificationSchema extends PriceSpecificationSchema
 {
-    public static function factory()
+    public static function factory(): UnitPriceSpecificationSchema
     {
-        return new UnitPriceSpecificationSchema('http://schema.org/', 'UnitPriceSpecification');
+        return new UnitPriceSpecificationSchema('https://schema.org/', 'UnitPriceSpecification');
     }
 
     /**
-     * This property specifies the minimal quantity and rounding increment that will be the basis for the billing. The unit of measurement is specified by the unitCode property.
+     * Identifies a price component (for example, a line item on an invoice), part of the total price for an offer.
      *
-     * @param $billingIncrement NumberSchema
+     * @param $priceComponentType 
+     * @return static
      **/
-    public function setBillingIncrement($billingIncrement) {
-        $this->properties['billingIncrement'] = $billingIncrement;
+    public function setPriceComponentType($priceComponentType): static {
+        $this->properties['priceComponentType'] = $priceComponentType;
 
         return $this;
     }
 
     /**
-     * @return NumberSchema
+     * @return 
      **/
-    public function getBillingIncrement() {
-        return $this->properties['billingIncrement'];
+    public function getPriceComponentType() {
+        return $this->properties['priceComponentType'];
     }
 
     /**
-     * A short text or acronym indicating multiple price specifications for the same offer, e.g. SRP for the suggested retail price or INVOICE for the invoice price, mostly used in the car industry.
+     * Defines the type of a price specified for an offered product, for example a list price, a (temporary) sale price or a manufacturer suggested retail price. If multiple prices are specified for an offer the [[priceType]] property can be used to identify the type of each such specified price. The value of priceType can be specified as a value from enumeration PriceTypeEnumeration or as a free form text string for price types that are not already predefined in PriceTypeEnumeration.
      *
-     * @param $priceType TextSchema
+     * @param $priceType |
+     * @return static
      **/
-    public function setPriceType($priceType) {
+    public function setPriceType($priceType): static {
         $this->properties['priceType'] = $priceType;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return |
      **/
     public function getPriceType() {
         return $this->properties['priceType'];
@@ -77,35 +79,113 @@ class UnitPriceSpecificationSchema extends PriceSpecificationSchema
     /**
      * The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes than the UN/CEFACT Common Code may be used with a prefix followed by a colon.
      *
-     * @param $unitCode TextSchema|URLSchema
+     * @param $unitCode |
+     * @return static
      **/
-    public function setUnitCode($unitCode) {
+    public function setUnitCode($unitCode): static {
         $this->properties['unitCode'] = $unitCode;
 
         return $this;
     }
 
     /**
-     * @return TextSchema|URLSchema
+     * @return |
      **/
     public function getUnitCode() {
         return $this->properties['unitCode'];
     }
 
     /**
+     * The reference quantity for which a certain price applies, e.g. 1 EUR per 4 kWh of electricity. This property is a replacement for unitOfMeasurement for the advanced cases where the price does not relate to a standard unit.
+     *
+     * @param $referenceQuantity 
+     * @return static
+     **/
+    public function setReferenceQuantity($referenceQuantity): static {
+        $this->properties['referenceQuantity'] = $referenceQuantity;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getReferenceQuantity() {
+        return $this->properties['referenceQuantity'];
+    }
+
+    /**
+     * This property specifies the minimal quantity and rounding increment that will be the basis for the billing. The unit of measurement is specified by the unitCode property.
+     *
+     * @param $billingIncrement 
+     * @return static
+     **/
+    public function setBillingIncrement($billingIncrement): static {
+        $this->properties['billingIncrement'] = $billingIncrement;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getBillingIncrement() {
+        return $this->properties['billingIncrement'];
+    }
+
+    /**
+     * Specifies for how long this price (or price component) will be billed. Can be used, for example, to model the contractual duration of a subscription or payment plan. Type can be either a Duration or a Number (in which case the unit of measurement, for example month, is specified by the unitCode property).
+     *
+     * @param $billingDuration ||
+     * @return static
+     **/
+    public function setBillingDuration($billingDuration): static {
+        $this->properties['billingDuration'] = $billingDuration;
+
+        return $this;
+    }
+
+    /**
+     * @return ||
+     **/
+    public function getBillingDuration() {
+        return $this->properties['billingDuration'];
+    }
+
+    /**
+     * Specifies after how much time this price (or price component) becomes valid and billing starts. Can be used, for example, to model a price increase after the first year of a subscription. The unit of measurement is specified by the unitCode property.
+     *
+     * @param $billingStart 
+     * @return static
+     **/
+    public function setBillingStart($billingStart): static {
+        $this->properties['billingStart'] = $billingStart;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getBillingStart() {
+        return $this->properties['billingStart'];
+    }
+
+    /**
      * A string or text indicating the unit of measurement. Useful if you cannot provide a standard unit code for
 <a href='unitCode'>unitCode</a>.
      *
-     * @param $unitText TextSchema
+     * @param $unitText 
+     * @return static
      **/
-    public function setUnitText($unitText) {
+    public function setUnitText($unitText): static {
         $this->properties['unitText'] = $unitText;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getUnitText() {
         return $this->properties['unitText'];

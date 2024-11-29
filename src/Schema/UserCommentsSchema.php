@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,104 +27,107 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use
-          <a href="/Action">Action</a>-based vocabulary, alongside types such as <a href="/Comment">Comment</a>.
-      
+ * UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class UserCommentsSchema extends UserInteractionSchema
 {
-    public static function factory()
+    public static function factory(): UserCommentsSchema
     {
-        return new UserCommentsSchema('http://schema.org/', 'UserComments');
-    }
-
-    /**
-     * The text of the UserComment.
-     *
-     * @param $commentText TextSchema
-     **/
-    public function setCommentText($commentText) {
-        $this->properties['commentText'] = $commentText;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getCommentText() {
-        return $this->properties['commentText'];
+        return new UserCommentsSchema('https://schema.org/', 'UserComments');
     }
 
     /**
      * The time at which the UserComment was made.
      *
-     * @param $commentTime DateSchema
+     * @param $commentTime |
+     * @return static
      **/
-    public function setCommentTime($commentTime) {
+    public function setCommentTime($commentTime): static {
         $this->properties['commentTime'] = $commentTime;
 
         return $this;
     }
 
     /**
-     * @return DateSchema
+     * @return |
      **/
     public function getCommentTime() {
         return $this->properties['commentTime'];
     }
 
     /**
-     * The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.
-     *
-     * @param $creator OrganizationSchema|PersonSchema
-     **/
-    public function setCreator($creator) {
-        $this->properties['creator'] = $creator;
-
-        return $this;
-    }
-
-    /**
-     * @return OrganizationSchema|PersonSchema
-     **/
-    public function getCreator() {
-        return $this->properties['creator'];
-    }
-
-    /**
      * Specifies the CreativeWork associated with the UserComment.
      *
-     * @param $discusses CreativeWorkSchema
+     * @param $discusses 
+     * @return static
      **/
-    public function setDiscusses($discusses) {
+    public function setDiscusses($discusses): static {
         $this->properties['discusses'] = $discusses;
 
         return $this;
     }
 
     /**
-     * @return CreativeWorkSchema
+     * @return 
      **/
     public function getDiscusses() {
         return $this->properties['discusses'];
     }
 
     /**
+     * The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.
+     *
+     * @param $creator |
+     * @return static
+     **/
+    public function setCreator($creator): static {
+        $this->properties['creator'] = $creator;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getCreator() {
+        return $this->properties['creator'];
+    }
+
+    /**
+     * The text of the UserComment.
+     *
+     * @param $commentText 
+     * @return static
+     **/
+    public function setCommentText($commentText): static {
+        $this->properties['commentText'] = $commentText;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getCommentText() {
+        return $this->properties['commentText'];
+    }
+
+    /**
      * The URL at which a reply may be posted to the specified UserComment.
      *
-     * @param $replyToUrl URLSchema
+     * @param $replyToUrl 
+     * @return static
      **/
-    public function setReplyToUrl($replyToUrl) {
+    public function setReplyToUrl($replyToUrl): static {
         $this->properties['replyToUrl'] = $replyToUrl;
 
         return $this;
     }
 
     /**
-     * @return URLSchema
+     * @return 
      **/
     public function getReplyToUrl() {
         return $this->properties['replyToUrl'];

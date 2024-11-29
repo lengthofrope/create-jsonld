@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,9 +33,104 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ApartmentComplexSchema extends ResidenceSchema
 {
-    public static function factory()
+    public static function factory(): ApartmentComplexSchema
     {
-        return new ApartmentComplexSchema('http://schema.org/', 'ApartmentComplex');
+        return new ApartmentComplexSchema('https://schema.org/', 'ApartmentComplex');
+    }
+
+    /**
+     * Indicates whether pets are allowed to enter the accommodation or lodging business. More detailed information can be put in a text value.
+     *
+     * @param $petsAllowed |
+     * @return static
+     **/
+    public function setPetsAllowed($petsAllowed): static {
+        $this->properties['petsAllowed'] = $petsAllowed;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getPetsAllowed() {
+        return $this->properties['petsAllowed'];
+    }
+
+    /**
+     * The total integer number of bedrooms in a some [[Accommodation]], [[ApartmentComplex]] or [[FloorPlan]].
+     *
+     * @param $numberOfBedrooms |
+     * @return static
+     **/
+    public function setNumberOfBedrooms($numberOfBedrooms): static {
+        $this->properties['numberOfBedrooms'] = $numberOfBedrooms;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getNumberOfBedrooms() {
+        return $this->properties['numberOfBedrooms'];
+    }
+
+    /**
+     * Indicates the number of available accommodation units in an [[ApartmentComplex]], or the number of accommodation units for a specific [[FloorPlan]] (within its specific [[ApartmentComplex]]). See also [[numberOfAccommodationUnits]].
+     *
+     * @param $numberOfAvailableAccommodationUnits 
+     * @return static
+     **/
+    public function setNumberOfAvailableAccommodationUnits($numberOfAvailableAccommodationUnits): static {
+        $this->properties['numberOfAvailableAccommodationUnits'] = $numberOfAvailableAccommodationUnits;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getNumberOfAvailableAccommodationUnits() {
+        return $this->properties['numberOfAvailableAccommodationUnits'];
+    }
+
+    /**
+     * Indicates the total (available plus unavailable) number of accommodation units in an [[ApartmentComplex]], or the number of accommodation units for a specific [[FloorPlan]] (within its specific [[ApartmentComplex]]). See also [[numberOfAvailableAccommodationUnits]].
+     *
+     * @param $numberOfAccommodationUnits 
+     * @return static
+     **/
+    public function setNumberOfAccommodationUnits($numberOfAccommodationUnits): static {
+        $this->properties['numberOfAccommodationUnits'] = $numberOfAccommodationUnits;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getNumberOfAccommodationUnits() {
+        return $this->properties['numberOfAccommodationUnits'];
+    }
+
+    /**
+     * A page providing information on how to book a tour of some [[Place]], such as an [[Accommodation]] or [[ApartmentComplex]] in a real estate setting, as well as other kinds of tours as appropriate.
+     *
+     * @param $tourBookingPage 
+     * @return static
+     **/
+    public function setTourBookingPage($tourBookingPage): static {
+        $this->properties['tourBookingPage'] = $tourBookingPage;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getTourBookingPage() {
+        return $this->properties['tourBookingPage'];
     }
 
 

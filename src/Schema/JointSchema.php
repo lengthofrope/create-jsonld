@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,63 +33,66 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class JointSchema extends AnatomicalStructureSchema
 {
-    public static function factory()
+    public static function factory(): JointSchema
     {
-        return new JointSchema('http://schema.org/', 'Joint');
+        return new JointSchema('https://schema.org/', 'Joint');
     }
 
     /**
      * The biomechanical properties of the bone.
      *
-     * @param $biomechnicalClass TextSchema
+     * @param $biomechnicalClass 
+     * @return static
      **/
-    public function setBiomechnicalClass($biomechnicalClass) {
+    public function setBiomechnicalClass($biomechnicalClass): static {
         $this->properties['biomechnicalClass'] = $biomechnicalClass;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getBiomechnicalClass() {
         return $this->properties['biomechnicalClass'];
     }
 
     /**
-     * The degree of mobility the joint allows.
-     *
-     * @param $functionalClass TextSchema
-     **/
-    public function setFunctionalClass($functionalClass) {
-        $this->properties['functionalClass'] = $functionalClass;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getFunctionalClass() {
-        return $this->properties['functionalClass'];
-    }
-
-    /**
      * The name given to how bone physically connects to each other.
      *
-     * @param $structuralClass TextSchema
+     * @param $structuralClass 
+     * @return static
      **/
-    public function setStructuralClass($structuralClass) {
+    public function setStructuralClass($structuralClass): static {
         $this->properties['structuralClass'] = $structuralClass;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getStructuralClass() {
         return $this->properties['structuralClass'];
+    }
+
+    /**
+     * The degree of mobility the joint allows.
+     *
+     * @param $functionalClass |
+     * @return static
+     **/
+    public function setFunctionalClass($functionalClass): static {
+        $this->properties['functionalClass'] = $functionalClass;
+
+        return $this;
+    }
+
+    /**
+     * @return |
+     **/
+    public function getFunctionalClass() {
+        return $this->properties['functionalClass'];
     }
 
 

@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,24 +33,44 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class GameServerSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): GameServerSchema
     {
-        return new GameServerSchema('http://schema.org/', 'GameServer');
+        return new GameServerSchema('https://schema.org/', 'GameServer');
+    }
+
+    /**
+     * Status of a game server.
+     *
+     * @param $serverStatus 
+     * @return static
+     **/
+    public function setServerStatus($serverStatus): static {
+        $this->properties['serverStatus'] = $serverStatus;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getServerStatus() {
+        return $this->properties['serverStatus'];
     }
 
     /**
      * Video game which is played on this server.
      *
-     * @param $game VideoGameSchema
+     * @param $game 
+     * @return static
      **/
-    public function setGame($game) {
+    public function setGame($game): static {
         $this->properties['game'] = $game;
 
         return $this;
     }
 
     /**
-     * @return VideoGameSchema
+     * @return 
      **/
     public function getGame() {
         return $this->properties['game'];
@@ -59,37 +79,20 @@ class GameServerSchema extends IntangibleSchema
     /**
      * Number of players on the server.
      *
-     * @param $playersOnline IntegerSchema
+     * @param $playersOnline 
+     * @return static
      **/
-    public function setPlayersOnline($playersOnline) {
+    public function setPlayersOnline($playersOnline): static {
         $this->properties['playersOnline'] = $playersOnline;
 
         return $this;
     }
 
     /**
-     * @return IntegerSchema
+     * @return 
      **/
     public function getPlayersOnline() {
         return $this->properties['playersOnline'];
-    }
-
-    /**
-     * Status of a game server.
-     *
-     * @param $serverStatus GameServerStatusSchema
-     **/
-    public function setServerStatus($serverStatus) {
-        $this->properties['serverStatus'] = $serverStatus;
-
-        return $this;
-    }
-
-    /**
-     * @return GameServerStatusSchema
-     **/
-    public function getServerStatus() {
-        return $this->properties['serverStatus'];
     }
 
 

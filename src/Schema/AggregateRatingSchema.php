@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,42 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class AggregateRatingSchema extends RatingSchema
 {
-    public static function factory()
+    public static function factory(): AggregateRatingSchema
     {
-        return new AggregateRatingSchema('http://schema.org/', 'AggregateRating');
-    }
-
-    /**
-     * The item that is being reviewed/rated.
-     *
-     * @param $itemReviewed ThingSchema
-     **/
-    public function setItemReviewed($itemReviewed) {
-        $this->properties['itemReviewed'] = $itemReviewed;
-
-        return $this;
-    }
-
-    /**
-     * @return ThingSchema
-     **/
-    public function getItemReviewed() {
-        return $this->properties['itemReviewed'];
+        return new AggregateRatingSchema('https://schema.org/', 'AggregateRating');
     }
 
     /**
      * The count of total number of ratings.
      *
-     * @param $ratingCount IntegerSchema
+     * @param $ratingCount 
+     * @return static
      **/
-    public function setRatingCount($ratingCount) {
+    public function setRatingCount($ratingCount): static {
         $this->properties['ratingCount'] = $ratingCount;
 
         return $this;
     }
 
     /**
-     * @return IntegerSchema
+     * @return 
      **/
     public function getRatingCount() {
         return $this->properties['ratingCount'];
@@ -77,19 +60,39 @@ class AggregateRatingSchema extends RatingSchema
     /**
      * The count of total number of reviews.
      *
-     * @param $reviewCount IntegerSchema
+     * @param $reviewCount 
+     * @return static
      **/
-    public function setReviewCount($reviewCount) {
+    public function setReviewCount($reviewCount): static {
         $this->properties['reviewCount'] = $reviewCount;
 
         return $this;
     }
 
     /**
-     * @return IntegerSchema
+     * @return 
      **/
     public function getReviewCount() {
         return $this->properties['reviewCount'];
+    }
+
+    /**
+     * The item that is being reviewed/rated.
+     *
+     * @param $itemReviewed 
+     * @return static
+     **/
+    public function setItemReviewed($itemReviewed): static {
+        $this->properties['itemReviewed'] = $itemReviewed;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getItemReviewed() {
+        return $this->properties['itemReviewed'];
     }
 
 

@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,29 +33,9 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class StoreSchema extends LocalBusinessSchema
 {
-    public static function factory()
+    public static function factory(): StoreSchema
     {
-        return new StoreSchema('http://schema.org/', 'Store');
-    }
-
-    /**
-     * A short textual code (also called "store code") that uniquely identifies a place of business. The code is typically assigned by the parentOrganization and used in structured URLs.
-<br /><br /> For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047 the code "3047" is a branchCode for a particular branch.
-      
-     *
-     * @param $branchCode TextSchema
-     **/
-    public function setBranchCode($branchCode) {
-        $this->properties['branchCode'] = $branchCode;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getBranchCode() {
-        return $this->properties['branchCode'];
+        return new StoreSchema('https://schema.org/', 'Store');
     }
 
 

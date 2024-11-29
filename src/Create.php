@@ -61,6 +61,11 @@ class Create extends Elements\ElementGroup
         return $return;
     }
 
+    /**
+     * Retrieve the elements (and all childrens) as a JSON string
+     *
+     * @return string
+     */
     public function getJSONLD()
     {
         $data = $this->getDataArray();
@@ -73,19 +78,14 @@ class Create extends Elements\ElementGroup
         return $return;
     }
 
+    /**
+     * Retrieve the elements (and all childrens) as a JSON string
+     * wrapped in a script tag of type application/ld+json
+     *
+     * @return string
+     */
     public function getJSONLDScript()
     {
         return '<script type="application/ld+json">' . $this->getJSONLD() . '</script>';
-    }
-
-    /**
-     * Add a JSONLD Element
-     * 
-     * @param Interfaces\IElement $element
-     * @return Create
-     */
-    public function add(Interfaces\IElement $element)
-    {
-        return parent::add($element);
     }
 }

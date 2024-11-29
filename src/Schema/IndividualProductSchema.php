@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,24 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class IndividualProductSchema extends ProductSchema
 {
-    public static function factory()
+    public static function factory(): IndividualProductSchema
     {
-        return new IndividualProductSchema('http://schema.org/', 'IndividualProduct');
+        return new IndividualProductSchema('https://schema.org/', 'IndividualProduct');
     }
 
     /**
      * The serial number or any alphanumeric identifier of a particular product. When attached to an offer, it is a shortcut for the serial number of the product included in the offer.
      *
-     * @param $serialNumber TextSchema
+     * @param $serialNumber 
+     * @return static
      **/
-    public function setSerialNumber($serialNumber) {
+    public function setSerialNumber($serialNumber): static {
         $this->properties['serialNumber'] = $serialNumber;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getSerialNumber() {
         return $this->properties['serialNumber'];

@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -31,26 +31,27 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MovieTheaterSchema extends \LengthOfRope\JSONLD\Elements\Element
+class MovieTheaterSchema extends CivicStructureSchema
 {
-    public static function factory()
+    public static function factory(): MovieTheaterSchema
     {
-        return new MovieTheaterSchema('http://schema.org/', 'MovieTheater');
+        return new MovieTheaterSchema('https://schema.org/', 'MovieTheater');
     }
 
     /**
      * The number of screens in the movie theater.
      *
-     * @param $screenCount NumberSchema
+     * @param $screenCount 
+     * @return static
      **/
-    public function setScreenCount($screenCount) {
+    public function setScreenCount($screenCount): static {
         $this->properties['screenCount'] = $screenCount;
 
         return $this;
     }
 
     /**
-     * @return NumberSchema
+     * @return 
      **/
     public function getScreenCount() {
         return $this->properties['screenCount'];

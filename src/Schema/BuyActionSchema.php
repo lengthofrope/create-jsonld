@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,24 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class BuyActionSchema extends TradeActionSchema
 {
-    public static function factory()
+    public static function factory(): BuyActionSchema
     {
-        return new BuyActionSchema('http://schema.org/', 'BuyAction');
+        return new BuyActionSchema('https://schema.org/', 'BuyAction');
     }
 
     /**
      * An entity which offers (sells / leases / lends / loans) the services / goods.  A seller may also be a provider.
      *
-     * @param $seller OrganizationSchema|PersonSchema
+     * @param $seller |
+     * @return static
      **/
-    public function setSeller($seller) {
+    public function setSeller($seller): static {
         $this->properties['seller'] = $seller;
 
         return $this;
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema
+     * @return |
      **/
     public function getSeller() {
         return $this->properties['seller'];
@@ -59,16 +60,17 @@ class BuyActionSchema extends TradeActionSchema
     /**
      * 'vendor' is an earlier term for 'seller'.
      *
-     * @param $vendor OrganizationSchema|PersonSchema
+     * @param $vendor |
+     * @return static
      **/
-    public function setVendor($vendor) {
+    public function setVendor($vendor): static {
         $this->properties['vendor'] = $vendor;
 
         return $this;
     }
 
     /**
-     * @return OrganizationSchema|PersonSchema
+     * @return |
      **/
     public function getVendor() {
         return $this->properties['vendor'];
@@ -77,16 +79,17 @@ class BuyActionSchema extends TradeActionSchema
     /**
      * The warranty promise(s) included in the offer.
      *
-     * @param $warrantyPromise WarrantyPromiseSchema
+     * @param $warrantyPromise 
+     * @return static
      **/
-    public function setWarrantyPromise($warrantyPromise) {
+    public function setWarrantyPromise($warrantyPromise): static {
         $this->properties['warrantyPromise'] = $warrantyPromise;
 
         return $this;
     }
 
     /**
-     * @return WarrantyPromiseSchema
+     * @return 
      **/
     public function getWarrantyPromise() {
         return $this->properties['warrantyPromise'];

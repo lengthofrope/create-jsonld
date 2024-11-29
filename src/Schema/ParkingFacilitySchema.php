@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,9 +33,9 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class ParkingFacilitySchema extends CivicStructureSchema
 {
-    public static function factory()
+    public static function factory(): ParkingFacilitySchema
     {
-        return new ParkingFacilitySchema('http://schema.org/', 'ParkingFacility');
+        return new ParkingFacilitySchema('https://schema.org/', 'ParkingFacility');
     }
 
 

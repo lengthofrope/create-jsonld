@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,24 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class RsvpActionSchema extends InformActionSchema
 {
-    public static function factory()
+    public static function factory(): RsvpActionSchema
     {
-        return new RsvpActionSchema('http://schema.org/', 'RsvpAction');
+        return new RsvpActionSchema('https://schema.org/', 'RsvpAction');
     }
 
     /**
      * If responding yes, the number of guests who will attend in addition to the invitee.
      *
-     * @param $additionalNumberOfGuests NumberSchema
+     * @param $additionalNumberOfGuests 
+     * @return static
      **/
-    public function setAdditionalNumberOfGuests($additionalNumberOfGuests) {
+    public function setAdditionalNumberOfGuests($additionalNumberOfGuests): static {
         $this->properties['additionalNumberOfGuests'] = $additionalNumberOfGuests;
 
         return $this;
     }
 
     /**
-     * @return NumberSchema
+     * @return 
      **/
     public function getAdditionalNumberOfGuests() {
         return $this->properties['additionalNumberOfGuests'];
@@ -59,16 +60,17 @@ class RsvpActionSchema extends InformActionSchema
     /**
      * Comments, typically from users.
      *
-     * @param $comment CommentSchema
+     * @param $comment 
+     * @return static
      **/
-    public function setComment($comment) {
+    public function setComment($comment): static {
         $this->properties['comment'] = $comment;
 
         return $this;
     }
 
     /**
-     * @return CommentSchema
+     * @return 
      **/
     public function getComment() {
         return $this->properties['comment'];
@@ -77,16 +79,17 @@ class RsvpActionSchema extends InformActionSchema
     /**
      * The response (yes, no, maybe) to the RSVP.
      *
-     * @param $rsvpResponse RsvpResponseTypeSchema
+     * @param $rsvpResponse 
+     * @return static
      **/
-    public function setRsvpResponse($rsvpResponse) {
+    public function setRsvpResponse($rsvpResponse): static {
         $this->properties['rsvpResponse'] = $rsvpResponse;
 
         return $this;
     }
 
     /**
-     * @return RsvpResponseTypeSchema
+     * @return 
      **/
     public function getRsvpResponse() {
         return $this->properties['rsvpResponse'];

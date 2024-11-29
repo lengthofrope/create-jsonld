@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,15 +27,15 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of finding an object.<p>Related actions:</p><ul><li><a href="http://schema.org/SearchAction">SearchAction</a>: FindAction is generally lead by a SearchAction, but not necessarily</li></ul>.
+ * The act of finding an object.\n\nRelated actions:\n\n* [[SearchAction]]: FindAction is generally lead by a SearchAction, but not necessarily.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class FindActionSchema extends ActionSchema
 {
-    public static function factory()
+    public static function factory(): FindActionSchema
     {
-        return new FindActionSchema('http://schema.org/', 'FindAction');
+        return new FindActionSchema('https://schema.org/', 'FindAction');
     }
 
 

@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,30 +27,31 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of traveling from an fromLocation to a destination by a specified mode of transport, optionally with participants.
+ * The act of traveling from a fromLocation to a destination by a specified mode of transport, optionally with participants.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class TravelActionSchema extends MoveActionSchema
 {
-    public static function factory()
+    public static function factory(): TravelActionSchema
     {
-        return new TravelActionSchema('http://schema.org/', 'TravelAction');
+        return new TravelActionSchema('https://schema.org/', 'TravelAction');
     }
 
     /**
      * The distance travelled, e.g. exercising or travelling.
      *
-     * @param $distance DistanceSchema
+     * @param $distance 
+     * @return static
      **/
-    public function setDistance($distance) {
+    public function setDistance($distance): static {
         $this->properties['distance'] = $distance;
 
         return $this;
     }
 
     /**
-     * @return DistanceSchema
+     * @return 
      **/
     public function getDistance() {
         return $this->properties['distance'];

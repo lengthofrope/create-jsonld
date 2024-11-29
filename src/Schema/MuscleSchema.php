@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,78 +33,63 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MuscleSchema extends AnatomicalStructureSchema
 {
-    public static function factory()
+    public static function factory(): MuscleSchema
     {
-        return new MuscleSchema('http://schema.org/', 'Muscle');
-    }
-
-    /**
-     * The movement the muscle generates.
-     *
-     * @param $action TextSchema
-     **/
-    public function setAction($action) {
-        $this->properties['action'] = $action;
-
-        return $this;
-    }
-
-    /**
-     * @return TextSchema
-     **/
-    public function getAction() {
-        return $this->properties['action'];
-    }
-
-    /**
-     * The muscle whose action counteracts the specified muscle.
-     *
-     * @param $antagonist MuscleSchema
-     **/
-    public function setAntagonist($antagonist) {
-        $this->properties['antagonist'] = $antagonist;
-
-        return $this;
-    }
-
-    /**
-     * @return MuscleSchema
-     **/
-    public function getAntagonist() {
-        return $this->properties['antagonist'];
+        return new MuscleSchema('https://schema.org/', 'Muscle');
     }
 
     /**
      * The blood vessel that carries blood from the heart to the muscle.
      *
-     * @param $bloodSupply VesselSchema
+     * @param $bloodSupply 
+     * @return static
      **/
-    public function setBloodSupply($bloodSupply) {
+    public function setBloodSupply($bloodSupply): static {
         $this->properties['bloodSupply'] = $bloodSupply;
 
         return $this;
     }
 
     /**
-     * @return VesselSchema
+     * @return 
      **/
     public function getBloodSupply() {
         return $this->properties['bloodSupply'];
     }
 
     /**
+     * The muscle whose action counteracts the specified muscle.
+     *
+     * @param $antagonist 
+     * @return static
+     **/
+    public function setAntagonist($antagonist): static {
+        $this->properties['antagonist'] = $antagonist;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getAntagonist() {
+        return $this->properties['antagonist'];
+    }
+
+    /**
      * The place of attachment of a muscle, or what the muscle moves.
      *
-     * @param $insertion AnatomicalStructureSchema
+     * @param $insertion 
+     * @return static
      **/
-    public function setInsertion($insertion) {
+    public function setInsertion($insertion): static {
         $this->properties['insertion'] = $insertion;
 
         return $this;
     }
 
     /**
-     * @return AnatomicalStructureSchema
+     * @return 
      **/
     public function getInsertion() {
         return $this->properties['insertion'];
@@ -113,16 +98,17 @@ class MuscleSchema extends AnatomicalStructureSchema
     /**
      * The movement the muscle generates.
      *
-     * @param $muscleAction TextSchema
+     * @param $muscleAction 
+     * @return static
      **/
-    public function setMuscleAction($muscleAction) {
+    public function setMuscleAction($muscleAction): static {
         $this->properties['muscleAction'] = $muscleAction;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getMuscleAction() {
         return $this->properties['muscleAction'];
@@ -131,37 +117,20 @@ class MuscleSchema extends AnatomicalStructureSchema
     /**
      * The underlying innervation associated with the muscle.
      *
-     * @param $nerve NerveSchema
+     * @param $nerve 
+     * @return static
      **/
-    public function setNerve($nerve) {
+    public function setNerve($nerve): static {
         $this->properties['nerve'] = $nerve;
 
         return $this;
     }
 
     /**
-     * @return NerveSchema
+     * @return 
      **/
     public function getNerve() {
         return $this->properties['nerve'];
-    }
-
-    /**
-     * The place or point where a muscle arises.
-     *
-     * @param $origin AnatomicalStructureSchema
-     **/
-    public function setOrigin($origin) {
-        $this->properties['origin'] = $origin;
-
-        return $this;
-    }
-
-    /**
-     * @return AnatomicalStructureSchema
-     **/
-    public function getOrigin() {
-        return $this->properties['origin'];
     }
 
 

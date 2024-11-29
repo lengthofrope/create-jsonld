@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,42 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class BrandSchema extends IntangibleSchema
 {
-    public static function factory()
+    public static function factory(): BrandSchema
     {
-        return new BrandSchema('http://schema.org/', 'Brand');
-    }
-
-    /**
-     * The overall rating, based on a collection of reviews or ratings, of the item.
-     *
-     * @param $aggregateRating AggregateRatingSchema
-     **/
-    public function setAggregateRating($aggregateRating) {
-        $this->properties['aggregateRating'] = $aggregateRating;
-
-        return $this;
-    }
-
-    /**
-     * @return AggregateRatingSchema
-     **/
-    public function getAggregateRating() {
-        return $this->properties['aggregateRating'];
+        return new BrandSchema('https://schema.org/', 'Brand');
     }
 
     /**
      * An associated logo.
      *
-     * @param $logo ImageObjectSchema|URLSchema
+     * @param $logo |
+     * @return static
      **/
-    public function setLogo($logo) {
+    public function setLogo($logo): static {
         $this->properties['logo'] = $logo;
 
         return $this;
     }
 
     /**
-     * @return ImageObjectSchema|URLSchema
+     * @return |
      **/
     public function getLogo() {
         return $this->properties['logo'];
@@ -77,19 +60,58 @@ class BrandSchema extends IntangibleSchema
     /**
      * A review of the item.
      *
-     * @param $review ReviewSchema
+     * @param $review 
+     * @return static
      **/
-    public function setReview($review) {
+    public function setReview($review): static {
         $this->properties['review'] = $review;
 
         return $this;
     }
 
     /**
-     * @return ReviewSchema
+     * @return 
      **/
     public function getReview() {
         return $this->properties['review'];
+    }
+
+    /**
+     * A slogan or motto associated with the item.
+     *
+     * @param $slogan 
+     * @return static
+     **/
+    public function setSlogan($slogan): static {
+        $this->properties['slogan'] = $slogan;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getSlogan() {
+        return $this->properties['slogan'];
+    }
+
+    /**
+     * The overall rating, based on a collection of reviews or ratings, of the item.
+     *
+     * @param $aggregateRating 
+     * @return static
+     **/
+    public function setAggregateRating($aggregateRating): static {
+        $this->properties['aggregateRating'] = $aggregateRating;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getAggregateRating() {
+        return $this->properties['aggregateRating'];
     }
 
 

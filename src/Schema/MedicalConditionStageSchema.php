@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,24 +33,25 @@ namespace LengthOfRope\JSONLD\Schema;
  **/
 class MedicalConditionStageSchema extends MedicalIntangibleSchema
 {
-    public static function factory()
+    public static function factory(): MedicalConditionStageSchema
     {
-        return new MedicalConditionStageSchema('http://schema.org/', 'MedicalConditionStage');
+        return new MedicalConditionStageSchema('https://schema.org/', 'MedicalConditionStage');
     }
 
     /**
      * The stage represented as a number, e.g. 3.
      *
-     * @param $stageAsNumber NumberSchema
+     * @param $stageAsNumber 
+     * @return static
      **/
-    public function setStageAsNumber($stageAsNumber) {
+    public function setStageAsNumber($stageAsNumber): static {
         $this->properties['stageAsNumber'] = $stageAsNumber;
 
         return $this;
     }
 
     /**
-     * @return NumberSchema
+     * @return 
      **/
     public function getStageAsNumber() {
         return $this->properties['stageAsNumber'];
@@ -59,16 +60,17 @@ class MedicalConditionStageSchema extends MedicalIntangibleSchema
     /**
      * The substage, e.g. 'a' for Stage IIIa.
      *
-     * @param $subStageSuffix TextSchema
+     * @param $subStageSuffix 
+     * @return static
      **/
-    public function setSubStageSuffix($subStageSuffix) {
+    public function setSubStageSuffix($subStageSuffix): static {
         $this->properties['subStageSuffix'] = $subStageSuffix;
 
         return $this;
     }
 
     /**
-     * @return TextSchema
+     * @return 
      **/
     public function getSubStageSuffix() {
         return $this->properties['subStageSuffix'];

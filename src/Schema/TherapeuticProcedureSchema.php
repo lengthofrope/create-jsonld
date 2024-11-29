@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
+ * Copyright 2024 LengthOfRope, Bas de Kort <bdekort@gmail.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -31,11 +31,68 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class TherapeuticProcedureSchema extends \LengthOfRope\JSONLD\Elements\Element
+class TherapeuticProcedureSchema extends MedicalProcedureSchema
 {
-    public static function factory()
+    public static function factory(): TherapeuticProcedureSchema
     {
-        return new TherapeuticProcedureSchema('http://schema.org/', 'TherapeuticProcedure');
+        return new TherapeuticProcedureSchema('https://schema.org/', 'TherapeuticProcedure');
+    }
+
+    /**
+     * A dosing schedule for the drug for a given population, either observed, recommended, or maximum dose based on the type used.
+     *
+     * @param $doseSchedule 
+     * @return static
+     **/
+    public function setDoseSchedule($doseSchedule): static {
+        $this->properties['doseSchedule'] = $doseSchedule;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getDoseSchedule() {
+        return $this->properties['doseSchedule'];
+    }
+
+    /**
+     * Specifying a drug or medicine used in a medication procedure.
+     *
+     * @param $drug 
+     * @return static
+     **/
+    public function setDrug($drug): static {
+        $this->properties['drug'] = $drug;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getDrug() {
+        return $this->properties['drug'];
+    }
+
+    /**
+     * A possible complication and/or side effect of this therapy. If it is known that an adverse outcome is serious (resulting in death, disability, or permanent damage; requiring hospitalization; or otherwise life-threatening or requiring immediate medical attention), tag it as a seriousAdverseOutcome instead.
+     *
+     * @param $adverseOutcome 
+     * @return static
+     **/
+    public function setAdverseOutcome($adverseOutcome): static {
+        $this->properties['adverseOutcome'] = $adverseOutcome;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getAdverseOutcome() {
+        return $this->properties['adverseOutcome'];
     }
 
 
