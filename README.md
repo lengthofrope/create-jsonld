@@ -1,9 +1,9 @@
-# create-jsonld [![Build Status](https://travis-ci.org/lengthofrope/create-jsonld.svg?branch=master)](https://travis-ci.org/lengthofrope/create-jsonld) [![Codacy Badge](https://api.codacy.com/project/badge/grade/aa351afeb5be468288cd1372ed7441d2)](https://www.codacy.com/app/bdekort/create-jsonld)
+# create-jsonld
 
-Simple PHP library to create JSON-LD output. 
+Simple PHP library to create JSON-LD output.
 
 Note:
-Datatypes are not yet supported
+This is a WIP JSON+LD parser that doesn't handle everything, but covers the basics.
 
 Usage:
 ```php
@@ -12,7 +12,11 @@ use \LengthOfRope\JSONLD\Schema;
 
 $Create = JSONLD\Create::factory()->add(
     Schema\BookSchema::factory()
-        ->setAuthor(Schema\PersonSchema::factory()->setName("NAME")->setEmail("email@example.com"))
+        ->setAuthor(
+            Schema\PersonSchema::factory()
+                ->setName("NAME")
+                ->setEmail("email@example.com")
+        )
         ->setAbout("PHP")
         ->setName("Superb PHP Book")
         ->setAlternateName("Book one of three")
