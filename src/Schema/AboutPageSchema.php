@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class AboutPageSchema extends \LengthOfRope\JSONLD\Elements\Element
+class AboutPageSchema extends WebPageSchema
 {
     public static function factory()
     {

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class CompleteDataFeedSchema extends \LengthOfRope\JSONLD\Elements\Element
+class CompleteDataFeedSchema extends DataFeedSchema
 {
     public static function factory()
     {

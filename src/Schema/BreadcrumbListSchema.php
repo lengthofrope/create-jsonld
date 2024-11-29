@@ -32,7 +32,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class BreadcrumbListSchema extends \LengthOfRope\JSONLD\Elements\Element
+class BreadcrumbListSchema extends ItemListSchema
 {
     public static function factory()
     {

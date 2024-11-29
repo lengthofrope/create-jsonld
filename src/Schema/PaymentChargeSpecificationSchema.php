@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PaymentChargeSpecificationSchema extends \LengthOfRope\JSONLD\Elements\Element
+class PaymentChargeSpecificationSchema extends PriceSpecificationSchema
 {
     public static function factory()
     {

@@ -32,7 +32,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class BusinessFunctionSchema extends \LengthOfRope\JSONLD\Elements\Element
+class BusinessFunctionSchema extends EnumerationSchema
 {
     public static function factory()
     {

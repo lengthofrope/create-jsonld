@@ -202,7 +202,7 @@ class Build
             }
 
             $classextends = @$item->{'rdfs:subClassOf'};
-            $classextends = @str_replace('schema:', '', $classextends->id);
+            $classextends = @str_replace('schema:', '', $classextends->{'@id'});
             if (empty($classextends)) {
                 $classextends = '\LengthOfRope\JSONLD\Elements\Element';
             } else {

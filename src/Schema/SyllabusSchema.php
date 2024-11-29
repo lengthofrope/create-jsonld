@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class SyllabusSchema extends \LengthOfRope\JSONLD\Elements\Element
+class SyllabusSchema extends LearningResourceSchema
 {
     public static function factory()
     {

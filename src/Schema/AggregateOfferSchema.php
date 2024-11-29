@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class AggregateOfferSchema extends \LengthOfRope\JSONLD\Elements\Element
+class AggregateOfferSchema extends OfferSchema
 {
     public static function factory()
     {

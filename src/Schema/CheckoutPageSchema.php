@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class CheckoutPageSchema extends \LengthOfRope\JSONLD\Elements\Element
+class CheckoutPageSchema extends WebPageSchema
 {
     public static function factory()
     {

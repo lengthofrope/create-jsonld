@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class LikeActionSchema extends \LengthOfRope\JSONLD\Elements\Element
+class LikeActionSchema extends ReactActionSchema
 {
     public static function factory()
     {

@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PronounceableTextSchema extends \LengthOfRope\JSONLD\Elements\Element
+class PronounceableTextSchema extends TextSchema
 {
     public static function factory()
     {

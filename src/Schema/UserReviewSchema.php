@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class UserReviewSchema extends \LengthOfRope\JSONLD\Elements\Element
+class UserReviewSchema extends ReviewSchema
 {
     public static function factory()
     {

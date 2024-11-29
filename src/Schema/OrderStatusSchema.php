@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class OrderStatusSchema extends \LengthOfRope\JSONLD\Elements\Element
+class OrderStatusSchema extends StatusEnumerationSchema
 {
     public static function factory()
     {

@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class DatedMoneySpecificationSchema extends \LengthOfRope\JSONLD\Elements\Element
+class DatedMoneySpecificationSchema extends StructuredValueSchema
 {
     public static function factory()
     {

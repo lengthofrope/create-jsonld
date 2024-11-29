@@ -32,7 +32,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class WarrantyScopeSchema extends \LengthOfRope\JSONLD\Elements\Element
+class WarrantyScopeSchema extends EnumerationSchema
 {
     public static function factory()
     {

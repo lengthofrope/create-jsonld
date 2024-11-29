@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class HinduTempleSchema extends \LengthOfRope\JSONLD\Elements\Element
+class HinduTempleSchema extends PlaceOfWorshipSchema
 {
     public static function factory()
     {

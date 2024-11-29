@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MerchantReturnPolicySeasonalOverrideSchema extends \LengthOfRope\JSONLD\Elements\Element
+class MerchantReturnPolicySeasonalOverrideSchema extends IntangibleSchema
 {
     public static function factory()
     {

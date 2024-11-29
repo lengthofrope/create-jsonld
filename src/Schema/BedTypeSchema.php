@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class BedTypeSchema extends \LengthOfRope\JSONLD\Elements\Element
+class BedTypeSchema extends QualitativeValueSchema
 {
     public static function factory()
     {

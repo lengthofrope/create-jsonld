@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class InteractionCounterSchema extends \LengthOfRope\JSONLD\Elements\Element
+class InteractionCounterSchema extends StructuredValueSchema
 {
     public static function factory()
     {

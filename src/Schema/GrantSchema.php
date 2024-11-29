@@ -37,7 +37,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class GrantSchema extends \LengthOfRope\JSONLD\Elements\Element
+class GrantSchema extends IntangibleSchema
 {
     public static function factory()
     {

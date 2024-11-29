@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class TrackActionSchema extends \LengthOfRope\JSONLD\Elements\Element
+class TrackActionSchema extends FindActionSchema
 {
     public static function factory()
     {

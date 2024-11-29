@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class AnatomicalStructureSchema extends \LengthOfRope\JSONLD\Elements\Element
+class AnatomicalStructureSchema extends MedicalEntitySchema
 {
     public static function factory()
     {

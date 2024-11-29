@@ -37,7 +37,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class EndorsementRatingSchema extends \LengthOfRope\JSONLD\Elements\Element
+class EndorsementRatingSchema extends RatingSchema
 {
     public static function factory()
     {

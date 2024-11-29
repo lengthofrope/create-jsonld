@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ReturnLabelSourceEnumerationSchema extends \LengthOfRope\JSONLD\Elements\Element
+class ReturnLabelSourceEnumerationSchema extends EnumerationSchema
 {
     public static function factory()
     {

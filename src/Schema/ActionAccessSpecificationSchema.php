@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ActionAccessSpecificationSchema extends \LengthOfRope\JSONLD\Elements\Element
+class ActionAccessSpecificationSchema extends IntangibleSchema
 {
     public static function factory()
     {

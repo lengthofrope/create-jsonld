@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class DislikeActionSchema extends \LengthOfRope\JSONLD\Elements\Element
+class DislikeActionSchema extends ReactActionSchema
 {
     public static function factory()
     {

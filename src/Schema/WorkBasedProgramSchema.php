@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class WorkBasedProgramSchema extends \LengthOfRope\JSONLD\Elements\Element
+class WorkBasedProgramSchema extends EducationalOccupationalProgramSchema
 {
     public static function factory()
     {

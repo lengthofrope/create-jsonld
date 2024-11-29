@@ -34,7 +34,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class GeoCircleSchema extends \LengthOfRope\JSONLD\Elements\Element
+class GeoCircleSchema extends GeoShapeSchema
 {
     public static function factory()
     {

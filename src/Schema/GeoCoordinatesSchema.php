@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class GeoCoordinatesSchema extends \LengthOfRope\JSONLD\Elements\Element
+class GeoCoordinatesSchema extends StructuredValueSchema
 {
     public static function factory()
     {

@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class TrainTripSchema extends \LengthOfRope\JSONLD\Elements\Element
+class TrainTripSchema extends TripSchema
 {
     public static function factory()
     {

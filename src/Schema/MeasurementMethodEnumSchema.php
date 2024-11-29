@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MeasurementMethodEnumSchema extends \LengthOfRope\JSONLD\Elements\Element
+class MeasurementMethodEnumSchema extends EnumerationSchema
 {
     public static function factory()
     {

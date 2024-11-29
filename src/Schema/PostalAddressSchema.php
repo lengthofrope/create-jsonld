@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PostalAddressSchema extends \LengthOfRope\JSONLD\Elements\Element
+class PostalAddressSchema extends ContactPointSchema
 {
     public static function factory()
     {

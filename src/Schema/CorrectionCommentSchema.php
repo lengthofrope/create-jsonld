@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class CorrectionCommentSchema extends \LengthOfRope\JSONLD\Elements\Element
+class CorrectionCommentSchema extends CommentSchema
 {
     public static function factory()
     {

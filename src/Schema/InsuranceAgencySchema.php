@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class InsuranceAgencySchema extends \LengthOfRope\JSONLD\Elements\Element
+class InsuranceAgencySchema extends FinancialServiceSchema
 {
     public static function factory()
     {

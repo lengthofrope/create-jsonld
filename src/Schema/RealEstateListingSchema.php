@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class RealEstateListingSchema extends \LengthOfRope\JSONLD\Elements\Element
+class RealEstateListingSchema extends WebPageSchema
 {
     public static function factory()
     {

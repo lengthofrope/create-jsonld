@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ShareActionSchema extends \LengthOfRope\JSONLD\Elements\Element
+class ShareActionSchema extends CommunicateActionSchema
 {
     public static function factory()
     {

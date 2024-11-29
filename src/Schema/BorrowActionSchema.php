@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class BorrowActionSchema extends \LengthOfRope\JSONLD\Elements\Element
+class BorrowActionSchema extends TransferActionSchema
 {
     public static function factory()
     {

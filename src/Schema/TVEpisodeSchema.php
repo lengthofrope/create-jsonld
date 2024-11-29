@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class TVEpisodeSchema extends \LengthOfRope\JSONLD\Elements\Element
+class TVEpisodeSchema extends EpisodeSchema
 {
     public static function factory()
     {

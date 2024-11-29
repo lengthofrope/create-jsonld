@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class AgreeActionSchema extends \LengthOfRope\JSONLD\Elements\Element
+class AgreeActionSchema extends ReactActionSchema
 {
     public static function factory()
     {

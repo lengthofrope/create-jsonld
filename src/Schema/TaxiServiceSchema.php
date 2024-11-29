@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class TaxiServiceSchema extends \LengthOfRope\JSONLD\Elements\Element
+class TaxiServiceSchema extends ServiceSchema
 {
     public static function factory()
     {

@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MotorcycleSchema extends \LengthOfRope\JSONLD\Elements\Element
+class MotorcycleSchema extends VehicleSchema
 {
     public static function factory()
     {

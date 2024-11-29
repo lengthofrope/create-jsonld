@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class EUEnergyEfficiencyEnumerationSchema extends \LengthOfRope\JSONLD\Elements\Element
+class EUEnergyEfficiencyEnumerationSchema extends EnergyEfficiencyEnumerationSchema
 {
     public static function factory()
     {

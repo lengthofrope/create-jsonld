@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class VolcanoSchema extends \LengthOfRope\JSONLD\Elements\Element
+class VolcanoSchema extends LandformSchema
 {
     public static function factory()
     {

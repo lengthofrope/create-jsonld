@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class FloatSchema extends \LengthOfRope\JSONLD\Elements\Element
+class FloatSchema extends NumberSchema
 {
     public static function factory()
     {

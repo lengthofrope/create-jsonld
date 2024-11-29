@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class OnDemandEventSchema extends \LengthOfRope\JSONLD\Elements\Element
+class OnDemandEventSchema extends PublicationEventSchema
 {
     public static function factory()
     {

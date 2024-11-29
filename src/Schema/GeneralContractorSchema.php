@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class GeneralContractorSchema extends \LengthOfRope\JSONLD\Elements\Element
+class GeneralContractorSchema extends HomeAndConstructionBusinessSchema
 {
     public static function factory()
     {

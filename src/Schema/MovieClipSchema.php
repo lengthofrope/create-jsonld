@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MovieClipSchema extends \LengthOfRope\JSONLD\Elements\Element
+class MovieClipSchema extends ClipSchema
 {
     public static function factory()
     {

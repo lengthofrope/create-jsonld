@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ShippingRateSettingsSchema extends \LengthOfRope\JSONLD\Elements\Element
+class ShippingRateSettingsSchema extends StructuredValueSchema
 {
     public static function factory()
     {

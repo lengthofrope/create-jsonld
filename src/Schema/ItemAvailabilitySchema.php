@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ItemAvailabilitySchema extends \LengthOfRope\JSONLD\Elements\Element
+class ItemAvailabilitySchema extends EnumerationSchema
 {
     public static function factory()
     {

@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MountainSchema extends \LengthOfRope\JSONLD\Elements\Element
+class MountainSchema extends LandformSchema
 {
     public static function factory()
     {

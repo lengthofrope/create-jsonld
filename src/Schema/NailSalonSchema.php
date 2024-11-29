@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class NailSalonSchema extends \LengthOfRope\JSONLD\Elements\Element
+class NailSalonSchema extends HealthAndBeautyBusinessSchema
 {
     public static function factory()
     {

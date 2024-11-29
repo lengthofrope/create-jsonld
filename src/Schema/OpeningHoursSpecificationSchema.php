@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class OpeningHoursSpecificationSchema extends \LengthOfRope\JSONLD\Elements\Element
+class OpeningHoursSpecificationSchema extends StructuredValueSchema
 {
     public static function factory()
     {

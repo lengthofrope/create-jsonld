@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class EmergencyServiceSchema extends \LengthOfRope\JSONLD\Elements\Element
+class EmergencyServiceSchema extends LocalBusinessSchema
 {
     public static function factory()
     {

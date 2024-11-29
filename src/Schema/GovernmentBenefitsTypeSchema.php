@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class GovernmentBenefitsTypeSchema extends \LengthOfRope\JSONLD\Elements\Element
+class GovernmentBenefitsTypeSchema extends EnumerationSchema
 {
     public static function factory()
     {

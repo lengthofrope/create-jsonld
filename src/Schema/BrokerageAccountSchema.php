@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class BrokerageAccountSchema extends \LengthOfRope\JSONLD\Elements\Element
+class BrokerageAccountSchema extends InvestmentOrDepositSchema
 {
     public static function factory()
     {

@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class HealthPlanCostSharingSpecificationSchema extends \LengthOfRope\JSONLD\Elements\Element
+class HealthPlanCostSharingSpecificationSchema extends IntangibleSchema
 {
     public static function factory()
     {

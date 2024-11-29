@@ -34,7 +34,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class DayOfWeekSchema extends \LengthOfRope\JSONLD\Elements\Element
+class DayOfWeekSchema extends EnumerationSchema
 {
     public static function factory()
     {

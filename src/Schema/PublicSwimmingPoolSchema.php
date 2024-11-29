@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PublicSwimmingPoolSchema extends \LengthOfRope\JSONLD\Elements\Element
+class PublicSwimmingPoolSchema extends SportsActivityLocationSchema
 {
     public static function factory()
     {

@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class AcceptActionSchema extends \LengthOfRope\JSONLD\Elements\Element
+class AcceptActionSchema extends AllocateActionSchema
 {
     public static function factory()
     {

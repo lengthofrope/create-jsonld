@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class RestrictedDietSchema extends \LengthOfRope\JSONLD\Elements\Element
+class RestrictedDietSchema extends EnumerationSchema
 {
     public static function factory()
     {

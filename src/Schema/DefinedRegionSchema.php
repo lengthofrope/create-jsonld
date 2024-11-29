@@ -44,7 +44,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class DefinedRegionSchema extends \LengthOfRope\JSONLD\Elements\Element
+class DefinedRegionSchema extends StructuredValueSchema
 {
     public static function factory()
     {

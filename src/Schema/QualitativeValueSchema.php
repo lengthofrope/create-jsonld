@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class QualitativeValueSchema extends \LengthOfRope\JSONLD\Elements\Element
+class QualitativeValueSchema extends EnumerationSchema
 {
     public static function factory()
     {

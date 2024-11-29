@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class BoatTripSchema extends \LengthOfRope\JSONLD\Elements\Element
+class BoatTripSchema extends TripSchema
 {
     public static function factory()
     {

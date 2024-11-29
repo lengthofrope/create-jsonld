@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class BackgroundNewsArticleSchema extends \LengthOfRope\JSONLD\Elements\Element
+class BackgroundNewsArticleSchema extends NewsArticleSchema
 {
     public static function factory()
     {

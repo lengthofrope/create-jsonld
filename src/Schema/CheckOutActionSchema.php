@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class CheckOutActionSchema extends \LengthOfRope\JSONLD\Elements\Element
+class CheckOutActionSchema extends CommunicateActionSchema
 {
     public static function factory()
     {

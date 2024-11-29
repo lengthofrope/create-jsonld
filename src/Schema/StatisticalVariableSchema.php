@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class StatisticalVariableSchema extends \LengthOfRope\JSONLD\Elements\Element
+class StatisticalVariableSchema extends ConstraintNodeSchema
 {
     public static function factory()
     {

@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ContactPointOptionSchema extends \LengthOfRope\JSONLD\Elements\Element
+class ContactPointOptionSchema extends EnumerationSchema
 {
     public static function factory()
     {

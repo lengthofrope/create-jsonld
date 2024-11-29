@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class HowToSupplySchema extends \LengthOfRope\JSONLD\Elements\Element
+class HowToSupplySchema extends HowToItemSchema
 {
     public static function factory()
     {

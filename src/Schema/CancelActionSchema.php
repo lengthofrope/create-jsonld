@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class CancelActionSchema extends \LengthOfRope\JSONLD\Elements\Element
+class CancelActionSchema extends PlanActionSchema
 {
     public static function factory()
     {

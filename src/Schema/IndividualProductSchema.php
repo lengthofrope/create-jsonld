@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class IndividualProductSchema extends \LengthOfRope\JSONLD\Elements\Element
+class IndividualProductSchema extends ProductSchema
 {
     public static function factory()
     {

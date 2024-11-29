@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class BarcodeSchema extends \LengthOfRope\JSONLD\Elements\Element
+class BarcodeSchema extends ImageObjectSchema
 {
     public static function factory()
     {

@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class GeoShapeSchema extends \LengthOfRope\JSONLD\Elements\Element
+class GeoShapeSchema extends StructuredValueSchema
 {
     public static function factory()
     {

@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class QuantitativeValueDistributionSchema extends \LengthOfRope\JSONLD\Elements\Element
+class QuantitativeValueDistributionSchema extends StructuredValueSchema
 {
     public static function factory()
     {

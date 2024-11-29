@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ExchangeRateSpecificationSchema extends \LengthOfRope\JSONLD\Elements\Element
+class ExchangeRateSpecificationSchema extends StructuredValueSchema
 {
     public static function factory()
     {

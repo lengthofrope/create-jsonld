@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class TieActionSchema extends \LengthOfRope\JSONLD\Elements\Element
+class TieActionSchema extends AchieveActionSchema
 {
     public static function factory()
     {

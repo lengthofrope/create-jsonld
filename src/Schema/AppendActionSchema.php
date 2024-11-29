@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class AppendActionSchema extends \LengthOfRope\JSONLD\Elements\Element
+class AppendActionSchema extends InsertActionSchema
 {
     public static function factory()
     {

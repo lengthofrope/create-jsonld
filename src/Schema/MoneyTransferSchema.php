@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MoneyTransferSchema extends \LengthOfRope\JSONLD\Elements\Element
+class MoneyTransferSchema extends TransferActionSchema
 {
     public static function factory()
     {

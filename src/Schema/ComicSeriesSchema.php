@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ComicSeriesSchema extends \LengthOfRope\JSONLD\Elements\Element
+class ComicSeriesSchema extends PeriodicalSchema
 {
     public static function factory()
     {

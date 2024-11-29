@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ImageObjectSnapshotSchema extends \LengthOfRope\JSONLD\Elements\Element
+class ImageObjectSnapshotSchema extends ImageObjectSchema
 {
     public static function factory()
     {

@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class IPTCDigitalSourceEnumerationSchema extends \LengthOfRope\JSONLD\Elements\Element
+class IPTCDigitalSourceEnumerationSchema extends MediaEnumerationSchema
 {
     public static function factory()
     {

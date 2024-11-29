@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MortgageLoanSchema extends \LengthOfRope\JSONLD\Elements\Element
+class MortgageLoanSchema extends LoanOrCreditSchema
 {
     public static function factory()
     {

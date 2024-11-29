@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class AirportSchema extends \LengthOfRope\JSONLD\Elements\Element
+class AirportSchema extends CivicStructureSchema
 {
     public static function factory()
     {

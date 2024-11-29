@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class HVACBusinessSchema extends \LengthOfRope\JSONLD\Elements\Element
+class HVACBusinessSchema extends HomeAndConstructionBusinessSchema
 {
     public static function factory()
     {

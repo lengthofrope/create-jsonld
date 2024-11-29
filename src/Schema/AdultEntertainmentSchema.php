@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class AdultEntertainmentSchema extends \LengthOfRope\JSONLD\Elements\Element
+class AdultEntertainmentSchema extends EntertainmentBusinessSchema
 {
     public static function factory()
     {

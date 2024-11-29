@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class DataFeedSchema extends \LengthOfRope\JSONLD\Elements\Element
+class DataFeedSchema extends DatasetSchema
 {
     public static function factory()
     {

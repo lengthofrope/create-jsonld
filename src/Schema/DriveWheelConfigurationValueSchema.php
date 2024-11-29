@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class DriveWheelConfigurationValueSchema extends \LengthOfRope\JSONLD\Elements\Element
+class DriveWheelConfigurationValueSchema extends QualitativeValueSchema
 {
     public static function factory()
     {

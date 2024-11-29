@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class VoteActionSchema extends \LengthOfRope\JSONLD\Elements\Element
+class VoteActionSchema extends ChooseActionSchema
 {
     public static function factory()
     {

@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class UKNonprofitTypeSchema extends \LengthOfRope\JSONLD\Elements\Element
+class UKNonprofitTypeSchema extends NonprofitTypeSchema
 {
     public static function factory()
     {

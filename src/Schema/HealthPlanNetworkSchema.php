@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class HealthPlanNetworkSchema extends \LengthOfRope\JSONLD\Elements\Element
+class HealthPlanNetworkSchema extends IntangibleSchema
 {
     public static function factory()
     {

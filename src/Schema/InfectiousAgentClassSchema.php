@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class InfectiousAgentClassSchema extends \LengthOfRope\JSONLD\Elements\Element
+class InfectiousAgentClassSchema extends MedicalEnumerationSchema
 {
     public static function factory()
     {

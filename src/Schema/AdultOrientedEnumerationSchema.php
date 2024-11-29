@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class AdultOrientedEnumerationSchema extends \LengthOfRope\JSONLD\Elements\Element
+class AdultOrientedEnumerationSchema extends EnumerationSchema
 {
     public static function factory()
     {

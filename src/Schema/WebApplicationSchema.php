@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class WebApplicationSchema extends \LengthOfRope\JSONLD\Elements\Element
+class WebApplicationSchema extends SoftwareApplicationSchema
 {
     public static function factory()
     {

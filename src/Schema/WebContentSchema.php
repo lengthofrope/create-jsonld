@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class WebContentSchema extends \LengthOfRope\JSONLD\Elements\Element
+class WebContentSchema extends CreativeWorkSchema
 {
     public static function factory()
     {

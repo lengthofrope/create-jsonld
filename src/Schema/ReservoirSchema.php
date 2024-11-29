@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ReservoirSchema extends \LengthOfRope\JSONLD\Elements\Element
+class ReservoirSchema extends BodyOfWaterSchema
 {
     public static function factory()
     {

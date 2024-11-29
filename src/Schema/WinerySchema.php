@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class WinerySchema extends \LengthOfRope\JSONLD\Elements\Element
+class WinerySchema extends FoodEstablishmentSchema
 {
     public static function factory()
     {

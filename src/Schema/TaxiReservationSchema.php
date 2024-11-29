@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class TaxiReservationSchema extends \LengthOfRope\JSONLD\Elements\Element
+class TaxiReservationSchema extends ReservationSchema
 {
     public static function factory()
     {

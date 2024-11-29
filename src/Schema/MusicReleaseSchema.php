@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MusicReleaseSchema extends \LengthOfRope\JSONLD\Elements\Element
+class MusicReleaseSchema extends MusicPlaylistSchema
 {
     public static function factory()
     {

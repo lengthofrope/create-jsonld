@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ReviewSchema extends \LengthOfRope\JSONLD\Elements\Element
+class ReviewSchema extends CreativeWorkSchema
 {
     public static function factory()
     {

@@ -32,7 +32,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ConstraintNodeSchema extends \LengthOfRope\JSONLD\Elements\Element
+class ConstraintNodeSchema extends IntangibleSchema
 {
     public static function factory()
     {

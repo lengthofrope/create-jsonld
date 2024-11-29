@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class AdvertiserContentArticleSchema extends \LengthOfRope\JSONLD\Elements\Element
+class AdvertiserContentArticleSchema extends ArticleSchema
 {
     public static function factory()
     {

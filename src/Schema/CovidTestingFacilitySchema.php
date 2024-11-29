@@ -35,7 +35,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class CovidTestingFacilitySchema extends \LengthOfRope\JSONLD\Elements\Element
+class CovidTestingFacilitySchema extends MedicalClinicSchema
 {
     public static function factory()
     {

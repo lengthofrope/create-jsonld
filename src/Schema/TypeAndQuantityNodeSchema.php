@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class TypeAndQuantityNodeSchema extends \LengthOfRope\JSONLD\Elements\Element
+class TypeAndQuantityNodeSchema extends StructuredValueSchema
 {
     public static function factory()
     {

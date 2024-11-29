@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class UserPlusOnesSchema extends \LengthOfRope\JSONLD\Elements\Element
+class UserPlusOnesSchema extends UserInteractionSchema
 {
     public static function factory()
     {

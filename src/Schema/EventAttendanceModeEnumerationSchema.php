@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class EventAttendanceModeEnumerationSchema extends \LengthOfRope\JSONLD\Elements\Element
+class EventAttendanceModeEnumerationSchema extends EnumerationSchema
 {
     public static function factory()
     {

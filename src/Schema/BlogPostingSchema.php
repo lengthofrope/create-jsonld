@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class BlogPostingSchema extends \LengthOfRope\JSONLD\Elements\Element
+class BlogPostingSchema extends SocialMediaPostingSchema
 {
     public static function factory()
     {

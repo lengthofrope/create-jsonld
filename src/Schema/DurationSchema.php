@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class DurationSchema extends \LengthOfRope\JSONLD\Elements\Element
+class DurationSchema extends QuantitySchema
 {
     public static function factory()
     {

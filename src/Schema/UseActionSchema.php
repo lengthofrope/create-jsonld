@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class UseActionSchema extends \LengthOfRope\JSONLD\Elements\Element
+class UseActionSchema extends ConsumeActionSchema
 {
     public static function factory()
     {

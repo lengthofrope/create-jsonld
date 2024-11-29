@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class GolfCourseSchema extends \LengthOfRope\JSONLD\Elements\Element
+class GolfCourseSchema extends SportsActivityLocationSchema
 {
     public static function factory()
     {

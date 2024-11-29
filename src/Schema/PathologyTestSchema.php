@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PathologyTestSchema extends \LengthOfRope\JSONLD\Elements\Element
+class PathologyTestSchema extends MedicalTestSchema
 {
     public static function factory()
     {

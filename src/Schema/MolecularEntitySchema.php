@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MolecularEntitySchema extends \LengthOfRope\JSONLD\Elements\Element
+class MolecularEntitySchema extends BioChemEntitySchema
 {
     public static function factory()
     {

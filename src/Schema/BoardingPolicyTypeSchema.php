@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class BoardingPolicyTypeSchema extends \LengthOfRope\JSONLD\Elements\Element
+class BoardingPolicyTypeSchema extends EnumerationSchema
 {
     public static function factory()
     {

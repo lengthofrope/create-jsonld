@@ -32,7 +32,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PaymentMethodSchema extends \LengthOfRope\JSONLD\Elements\Element
+class PaymentMethodSchema extends IntangibleSchema
 {
     public static function factory()
     {

@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PaymentMethodTypeSchema extends \LengthOfRope\JSONLD\Elements\Element
+class PaymentMethodTypeSchema extends EnumerationSchema
 {
     public static function factory()
     {

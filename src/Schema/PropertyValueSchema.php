@@ -32,7 +32,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PropertyValueSchema extends \LengthOfRope\JSONLD\Elements\Element
+class PropertyValueSchema extends StructuredValueSchema
 {
     public static function factory()
     {

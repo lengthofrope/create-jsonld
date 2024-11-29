@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class SynagogueSchema extends \LengthOfRope\JSONLD\Elements\Element
+class SynagogueSchema extends PlaceOfWorshipSchema
 {
     public static function factory()
     {

@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class RepaymentSpecificationSchema extends \LengthOfRope\JSONLD\Elements\Element
+class RepaymentSpecificationSchema extends StructuredValueSchema
 {
     public static function factory()
     {

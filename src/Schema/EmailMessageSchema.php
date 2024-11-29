@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class EmailMessageSchema extends \LengthOfRope\JSONLD\Elements\Element
+class EmailMessageSchema extends MessageSchema
 {
     public static function factory()
     {

@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class HyperTocSchema extends \LengthOfRope\JSONLD\Elements\Element
+class HyperTocSchema extends CreativeWorkSchema
 {
     public static function factory()
     {

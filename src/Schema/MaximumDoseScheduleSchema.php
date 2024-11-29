@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MaximumDoseScheduleSchema extends \LengthOfRope\JSONLD\Elements\Element
+class MaximumDoseScheduleSchema extends DoseScheduleSchema
 {
     public static function factory()
     {

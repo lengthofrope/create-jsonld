@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class FollowActionSchema extends \LengthOfRope\JSONLD\Elements\Element
+class FollowActionSchema extends InteractActionSchema
 {
     public static function factory()
     {

@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class EmbassySchema extends \LengthOfRope\JSONLD\Elements\Element
+class EmbassySchema extends GovernmentBuildingSchema
 {
     public static function factory()
     {

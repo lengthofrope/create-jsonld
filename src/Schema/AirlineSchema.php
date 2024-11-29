@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class AirlineSchema extends \LengthOfRope\JSONLD\Elements\Element
+class AirlineSchema extends OrganizationSchema
 {
     public static function factory()
     {

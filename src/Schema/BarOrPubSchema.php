@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class BarOrPubSchema extends \LengthOfRope\JSONLD\Elements\Element
+class BarOrPubSchema extends FoodEstablishmentSchema
 {
     public static function factory()
     {

@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class VideoGameSeriesSchema extends \LengthOfRope\JSONLD\Elements\Element
+class VideoGameSeriesSchema extends CreativeWorkSeriesSchema
 {
     public static function factory()
     {

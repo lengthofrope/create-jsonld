@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class CookActionSchema extends \LengthOfRope\JSONLD\Elements\Element
+class CookActionSchema extends CreateActionSchema
 {
     public static function factory()
     {

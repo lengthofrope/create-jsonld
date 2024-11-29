@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class IntegerSchema extends \LengthOfRope\JSONLD\Elements\Element
+class IntegerSchema extends NumberSchema
 {
     public static function factory()
     {

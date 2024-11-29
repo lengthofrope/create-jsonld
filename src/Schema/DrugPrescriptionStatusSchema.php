@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class DrugPrescriptionStatusSchema extends \LengthOfRope\JSONLD\Elements\Element
+class DrugPrescriptionStatusSchema extends MedicalEnumerationSchema
 {
     public static function factory()
     {

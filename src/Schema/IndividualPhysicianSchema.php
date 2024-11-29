@@ -32,7 +32,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class IndividualPhysicianSchema extends \LengthOfRope\JSONLD\Elements\Element
+class IndividualPhysicianSchema extends PhysicianSchema
 {
     public static function factory()
     {

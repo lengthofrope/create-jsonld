@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class UnitPriceSpecificationSchema extends \LengthOfRope\JSONLD\Elements\Element
+class UnitPriceSpecificationSchema extends PriceSpecificationSchema
 {
     public static function factory()
     {

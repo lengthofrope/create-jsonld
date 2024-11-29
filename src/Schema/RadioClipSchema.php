@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class RadioClipSchema extends \LengthOfRope\JSONLD\Elements\Element
+class RadioClipSchema extends ClipSchema
 {
     public static function factory()
     {

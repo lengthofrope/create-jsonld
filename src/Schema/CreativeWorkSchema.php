@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class CreativeWorkSchema extends \LengthOfRope\JSONLD\Elements\Element
+class CreativeWorkSchema extends ThingSchema
 {
     public static function factory()
     {

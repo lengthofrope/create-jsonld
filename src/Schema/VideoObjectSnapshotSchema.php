@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class VideoObjectSnapshotSchema extends \LengthOfRope\JSONLD\Elements\Element
+class VideoObjectSnapshotSchema extends VideoObjectSchema
 {
     public static function factory()
     {

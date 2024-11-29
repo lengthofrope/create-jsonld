@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MedicalDeviceSchema extends \LengthOfRope\JSONLD\Elements\Element
+class MedicalDeviceSchema extends MedicalEntitySchema
 {
     public static function factory()
     {

@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class CarUsageTypeSchema extends \LengthOfRope\JSONLD\Elements\Element
+class CarUsageTypeSchema extends EnumerationSchema
 {
     public static function factory()
     {

@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class TouristAttractionSchema extends \LengthOfRope\JSONLD\Elements\Element
+class TouristAttractionSchema extends PlaceSchema
 {
     public static function factory()
     {

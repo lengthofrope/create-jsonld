@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MonetaryAmountDistributionSchema extends \LengthOfRope\JSONLD\Elements\Element
+class MonetaryAmountDistributionSchema extends QuantitativeValueDistributionSchema
 {
     public static function factory()
     {

@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class FloorPlanSchema extends \LengthOfRope\JSONLD\Elements\Element
+class FloorPlanSchema extends IntangibleSchema
 {
     public static function factory()
     {

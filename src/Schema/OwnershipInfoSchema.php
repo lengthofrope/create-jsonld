@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class OwnershipInfoSchema extends \LengthOfRope\JSONLD\Elements\Element
+class OwnershipInfoSchema extends StructuredValueSchema
 {
     public static function factory()
     {

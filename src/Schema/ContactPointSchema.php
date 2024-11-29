@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ContactPointSchema extends \LengthOfRope\JSONLD\Elements\Element
+class ContactPointSchema extends StructuredValueSchema
 {
     public static function factory()
     {

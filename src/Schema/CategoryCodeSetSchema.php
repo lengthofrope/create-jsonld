@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class CategoryCodeSetSchema extends \LengthOfRope\JSONLD\Elements\Element
+class CategoryCodeSetSchema extends DefinedTermSetSchema
 {
     public static function factory()
     {

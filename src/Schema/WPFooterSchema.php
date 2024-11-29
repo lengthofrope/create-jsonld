@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class WPFooterSchema extends \LengthOfRope\JSONLD\Elements\Element
+class WPFooterSchema extends WebPageElementSchema
 {
     public static function factory()
     {

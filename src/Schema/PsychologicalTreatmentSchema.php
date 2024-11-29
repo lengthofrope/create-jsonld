@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PsychologicalTreatmentSchema extends \LengthOfRope\JSONLD\Elements\Element
+class PsychologicalTreatmentSchema extends TherapeuticProcedureSchema
 {
     public static function factory()
     {

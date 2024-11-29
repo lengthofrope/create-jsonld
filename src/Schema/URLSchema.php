@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class URLSchema extends \LengthOfRope\JSONLD\Elements\Element
+class URLSchema extends TextSchema
 {
     public static function factory()
     {

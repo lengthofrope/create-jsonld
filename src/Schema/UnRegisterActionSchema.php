@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class UnRegisterActionSchema extends \LengthOfRope\JSONLD\Elements\Element
+class UnRegisterActionSchema extends InteractActionSchema
 {
     public static function factory()
     {

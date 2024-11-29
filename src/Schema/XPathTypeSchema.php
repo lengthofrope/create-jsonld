@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class XPathTypeSchema extends \LengthOfRope\JSONLD\Elements\Element
+class XPathTypeSchema extends TextSchema
 {
     public static function factory()
     {

@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class EngineSpecificationSchema extends \LengthOfRope\JSONLD\Elements\Element
+class EngineSpecificationSchema extends StructuredValueSchema
 {
     public static function factory()
     {

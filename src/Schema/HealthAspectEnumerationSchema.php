@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class HealthAspectEnumerationSchema extends \LengthOfRope\JSONLD\Elements\Element
+class HealthAspectEnumerationSchema extends EnumerationSchema
 {
     public static function factory()
     {

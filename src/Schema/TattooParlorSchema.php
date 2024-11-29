@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class TattooParlorSchema extends \LengthOfRope\JSONLD\Elements\Element
+class TattooParlorSchema extends HealthAndBeautyBusinessSchema
 {
     public static function factory()
     {

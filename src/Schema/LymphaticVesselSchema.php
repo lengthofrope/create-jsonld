@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class LymphaticVesselSchema extends \LengthOfRope\JSONLD\Elements\Element
+class LymphaticVesselSchema extends VesselSchema
 {
     public static function factory()
     {

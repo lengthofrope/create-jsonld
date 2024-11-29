@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class GeospatialGeometrySchema extends \LengthOfRope\JSONLD\Elements\Element
+class GeospatialGeometrySchema extends IntangibleSchema
 {
     public static function factory()
     {

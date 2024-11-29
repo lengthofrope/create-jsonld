@@ -32,7 +32,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class HealthTopicContentSchema extends \LengthOfRope\JSONLD\Elements\Element
+class HealthTopicContentSchema extends WebContentSchema
 {
     public static function factory()
     {

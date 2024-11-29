@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class BridgeSchema extends \LengthOfRope\JSONLD\Elements\Element
+class BridgeSchema extends CivicStructureSchema
 {
     public static function factory()
     {

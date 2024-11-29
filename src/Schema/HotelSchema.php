@@ -34,7 +34,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class HotelSchema extends \LengthOfRope\JSONLD\Elements\Element
+class HotelSchema extends LodgingBusinessSchema
 {
     public static function factory()
     {

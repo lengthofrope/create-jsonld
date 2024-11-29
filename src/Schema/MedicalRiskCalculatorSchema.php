@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MedicalRiskCalculatorSchema extends \LengthOfRope\JSONLD\Elements\Element
+class MedicalRiskCalculatorSchema extends MedicalRiskEstimatorSchema
 {
     public static function factory()
     {

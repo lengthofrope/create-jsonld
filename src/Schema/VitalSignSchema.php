@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class VitalSignSchema extends \LengthOfRope\JSONLD\Elements\Element
+class VitalSignSchema extends MedicalSignSchema
 {
     public static function factory()
     {

@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class DanceGroupSchema extends \LengthOfRope\JSONLD\Elements\Element
+class DanceGroupSchema extends PerformingGroupSchema
 {
     public static function factory()
     {

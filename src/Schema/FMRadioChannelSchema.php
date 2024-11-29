@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class FMRadioChannelSchema extends \LengthOfRope\JSONLD\Elements\Element
+class FMRadioChannelSchema extends RadioChannelSchema
 {
     public static function factory()
     {

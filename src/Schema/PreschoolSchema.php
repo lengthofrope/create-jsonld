@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PreschoolSchema extends \LengthOfRope\JSONLD\Elements\Element
+class PreschoolSchema extends EducationalOrganizationSchema
 {
     public static function factory()
     {

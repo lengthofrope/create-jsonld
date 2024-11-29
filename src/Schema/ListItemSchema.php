@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ListItemSchema extends \LengthOfRope\JSONLD\Elements\Element
+class ListItemSchema extends IntangibleSchema
 {
     public static function factory()
     {

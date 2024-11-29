@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ItemListOrderTypeSchema extends \LengthOfRope\JSONLD\Elements\Element
+class ItemListOrderTypeSchema extends EnumerationSchema
 {
     public static function factory()
     {

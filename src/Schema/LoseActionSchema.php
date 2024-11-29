@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class LoseActionSchema extends \LengthOfRope\JSONLD\Elements\Element
+class LoseActionSchema extends AchieveActionSchema
 {
     public static function factory()
     {

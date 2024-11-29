@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class InvoiceSchema extends \LengthOfRope\JSONLD\Elements\Element
+class InvoiceSchema extends IntangibleSchema
 {
     public static function factory()
     {

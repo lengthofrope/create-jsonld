@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class CssSelectorTypeSchema extends \LengthOfRope\JSONLD\Elements\Element
+class CssSelectorTypeSchema extends TextSchema
 {
     public static function factory()
     {

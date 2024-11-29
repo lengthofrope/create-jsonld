@@ -35,7 +35,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class CampingPitchSchema extends \LengthOfRope\JSONLD\Elements\Element
+class CampingPitchSchema extends AccommodationSchema
 {
     public static function factory()
     {

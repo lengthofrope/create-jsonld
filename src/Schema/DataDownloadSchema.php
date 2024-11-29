@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class DataDownloadSchema extends \LengthOfRope\JSONLD\Elements\Element
+class DataDownloadSchema extends MediaObjectSchema
 {
     public static function factory()
     {

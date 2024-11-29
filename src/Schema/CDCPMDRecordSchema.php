@@ -34,7 +34,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class CDCPMDRecordSchema extends \LengthOfRope\JSONLD\Elements\Element
+class CDCPMDRecordSchema extends StructuredValueSchema
 {
     public static function factory()
     {

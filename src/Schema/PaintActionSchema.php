@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PaintActionSchema extends \LengthOfRope\JSONLD\Elements\Element
+class PaintActionSchema extends CreateActionSchema
 {
     public static function factory()
     {

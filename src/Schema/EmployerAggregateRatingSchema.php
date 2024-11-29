@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class EmployerAggregateRatingSchema extends \LengthOfRope\JSONLD\Elements\Element
+class EmployerAggregateRatingSchema extends AggregateRatingSchema
 {
     public static function factory()
     {

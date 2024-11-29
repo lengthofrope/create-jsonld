@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class IgnoreActionSchema extends \LengthOfRope\JSONLD\Elements\Element
+class IgnoreActionSchema extends AssessActionSchema
 {
     public static function factory()
     {

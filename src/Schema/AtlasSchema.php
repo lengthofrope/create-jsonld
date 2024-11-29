@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class AtlasSchema extends \LengthOfRope\JSONLD\Elements\Element
+class AtlasSchema extends CreativeWorkSchema
 {
     public static function factory()
     {

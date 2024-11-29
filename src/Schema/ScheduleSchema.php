@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ScheduleSchema extends \LengthOfRope\JSONLD\Elements\Element
+class ScheduleSchema extends IntangibleSchema
 {
     public static function factory()
     {

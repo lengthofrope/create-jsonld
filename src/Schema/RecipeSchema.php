@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class RecipeSchema extends \LengthOfRope\JSONLD\Elements\Element
+class RecipeSchema extends HowToSchema
 {
     public static function factory()
     {

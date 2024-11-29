@@ -34,7 +34,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class OfferForPurchaseSchema extends \LengthOfRope\JSONLD\Elements\Element
+class OfferForPurchaseSchema extends OfferSchema
 {
     public static function factory()
     {

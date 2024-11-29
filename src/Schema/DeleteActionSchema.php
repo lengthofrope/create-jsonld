@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class DeleteActionSchema extends \LengthOfRope\JSONLD\Elements\Element
+class DeleteActionSchema extends UpdateActionSchema
 {
     public static function factory()
     {

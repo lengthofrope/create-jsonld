@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class OccupationalExperienceRequirementsSchema extends \LengthOfRope\JSONLD\Elements\Element
+class OccupationalExperienceRequirementsSchema extends IntangibleSchema
 {
     public static function factory()
     {

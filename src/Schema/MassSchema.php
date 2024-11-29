@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MassSchema extends \LengthOfRope\JSONLD\Elements\Element
+class MassSchema extends QuantitySchema
 {
     public static function factory()
     {

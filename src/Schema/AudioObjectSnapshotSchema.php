@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class AudioObjectSnapshotSchema extends \LengthOfRope\JSONLD\Elements\Element
+class AudioObjectSnapshotSchema extends AudioObjectSchema
 {
     public static function factory()
     {

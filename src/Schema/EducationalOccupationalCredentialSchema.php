@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class EducationalOccupationalCredentialSchema extends \LengthOfRope\JSONLD\Elements\Element
+class EducationalOccupationalCredentialSchema extends CreativeWorkSchema
 {
     public static function factory()
     {

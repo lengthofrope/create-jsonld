@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PostalCodeRangeSpecificationSchema extends \LengthOfRope\JSONLD\Elements\Element
+class PostalCodeRangeSpecificationSchema extends StructuredValueSchema
 {
     public static function factory()
     {

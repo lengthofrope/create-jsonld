@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class WPSideBarSchema extends \LengthOfRope\JSONLD\Elements\Element
+class WPSideBarSchema extends WebPageElementSchema
 {
     public static function factory()
     {

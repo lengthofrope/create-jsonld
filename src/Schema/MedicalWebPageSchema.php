@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MedicalWebPageSchema extends \LengthOfRope\JSONLD\Elements\Element
+class MedicalWebPageSchema extends WebPageSchema
 {
     public static function factory()
     {

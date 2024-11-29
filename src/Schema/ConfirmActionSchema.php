@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ConfirmActionSchema extends \LengthOfRope\JSONLD\Elements\Element
+class ConfirmActionSchema extends InformActionSchema
 {
     public static function factory()
     {

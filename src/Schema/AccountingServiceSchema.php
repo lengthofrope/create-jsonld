@@ -32,7 +32,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class AccountingServiceSchema extends \LengthOfRope\JSONLD\Elements\Element
+class AccountingServiceSchema extends FinancialServiceSchema
 {
     public static function factory()
     {

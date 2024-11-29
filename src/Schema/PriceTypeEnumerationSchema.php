@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PriceTypeEnumerationSchema extends \LengthOfRope\JSONLD\Elements\Element
+class PriceTypeEnumerationSchema extends EnumerationSchema
 {
     public static function factory()
     {

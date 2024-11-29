@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class TextDigitalDocumentSchema extends \LengthOfRope\JSONLD\Elements\Element
+class TextDigitalDocumentSchema extends DigitalDocumentSchema
 {
     public static function factory()
     {

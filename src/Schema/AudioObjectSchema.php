@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class AudioObjectSchema extends \LengthOfRope\JSONLD\Elements\Element
+class AudioObjectSchema extends MediaObjectSchema
 {
     public static function factory()
     {

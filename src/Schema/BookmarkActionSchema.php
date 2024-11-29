@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class BookmarkActionSchema extends \LengthOfRope\JSONLD\Elements\Element
+class BookmarkActionSchema extends OrganizeActionSchema
 {
     public static function factory()
     {

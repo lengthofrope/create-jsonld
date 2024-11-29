@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class GameSchema extends \LengthOfRope\JSONLD\Elements\Element
+class GameSchema extends CreativeWorkSchema
 {
     public static function factory()
     {

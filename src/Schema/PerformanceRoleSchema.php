@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PerformanceRoleSchema extends \LengthOfRope\JSONLD\Elements\Element
+class PerformanceRoleSchema extends RoleSchema
 {
     public static function factory()
     {

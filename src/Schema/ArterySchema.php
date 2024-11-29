@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ArterySchema extends \LengthOfRope\JSONLD\Elements\Element
+class ArterySchema extends VesselSchema
 {
     public static function factory()
     {
