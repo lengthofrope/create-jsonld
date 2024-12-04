@@ -24,19 +24,57 @@
  * THE SOFTWARE.
  **/
 
-namespace LengthOfRope\JSONLD\Schema;
+namespace LengthOfRope\JSONLD\Traits;
 
-/**
- * Boolean: True or False.
- *
- * @see https://schema.org/Boolean
- * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
- **/
-class Boolean extends \LengthOfRope\JSONLD\Elements\Element
+use DateTime;
+use TypeError;
+
+trait TimeValidator
 {
-    public static function factory(): Boolean
+    private ?DateTime $value = null;
+
+    /**
+     * setValue
+     *
+     * @param $value  H:i:sP
+     * @return static
+     **/
+    public function setValue(DateTime $value): static
     {
-        return new Boolean('https://schema.org/', 'Boolean');
+        $this->value = $value;
+
+        return $this;
     }
 
+    /**
+     * Validate
+     *
+     * @return bool
+     **/
+    public function validate(): bool
+    {
+        // Validate if the value is a DateTime object and validates
+        if (!($this->value instanceof DateTime) || !$this->value->format('H:i:sP')) {
+            return false;
+        }
+
+        return true;
+    }
+
+    /**
+     * getValue
+     *
+     * @return string formatted H:i:sP
+     **/
+    public function getValue(): string
+    {
+        if (!$this->validate()) {
+            throw new TypeError(sprintf(
+                'Expected a DateTime, got %s instead.',
+                is_object($this->value) ? get_class($this->value) : gettype($this->value)
+            ));
+        }
+
+        return $this->value->format('H:i:sP');
+    }
 }

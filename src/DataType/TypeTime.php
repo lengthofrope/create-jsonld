@@ -24,19 +24,39 @@
  * THE SOFTWARE.
  **/
 
-namespace LengthOfRope\JSONLD\Schema;
+namespace LengthOfRope\JSONLD\DataType;
+
+use LengthOfRope\JSONLD\Interfaces\IValidator;
+use LengthOfRope\JSONLD\Traits;
 
 /**
- * Data type: Floating number.
+ * A point in time recurring on multiple days in the form hh:mm:ss[Z|(+|-)hh:mm]
+ * (see [XML schema for details](http://www.w3.org/TR/xmlschema-2/#time)).
  *
- * @see https://schema.org/Float
+ * @see https://schema.org/Time
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class _Float extends Number
+class TypeTime extends \LengthOfRope\JSONLD\Elements\Element implements IValidator
 {
-    public static function factory(): _Float
+    use Traits\TimeValidator;
+
+    public static function factory(): TypeTime
     {
-        return new _Float('https://schema.org/', 'Float');
+        return new TypeTime('https://schema.org/', 'Time');
     }
 
+
+    /**
+     * Retrieve the elements (and all childrens) as an array
+     *
+     * @return array
+     */
+    public function getDataArray()
+    {
+        $arr = parent::getDataArray();
+
+        $arr['@value'] = $this->getValue();
+
+        return $arr;
+    }
 }

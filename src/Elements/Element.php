@@ -78,10 +78,18 @@ abstract class Element implements Interfaces\IElement
     /**
      * Validate all children
      *
+     * @override
      * @return boolean
      */
     public function validate()
     {
+        // Loop through all properties and validate them
+        foreach($this->properties as $property) {
+            if ($property instanceof Interfaces\IValidator && !$property->validate()) {
+                return false;
+            }
+        }
+
         return true;
     }
 

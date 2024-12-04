@@ -2,12 +2,13 @@
 require_once dirname(__DIR__) . '/vendor/autoload.php';
 
 use \LengthOfRope\JSONLD;
+use LengthOfRope\JSONLD\DataType;
 use \LengthOfRope\JSONLD\Schema;
 
 $Create = JSONLD\Create::factory()->add(
     Schema\Person::factory()
         ->setId("https://www.lengthofrope.nl/authors/#john-doe")
-        ->setName("John Doe")
+        ->setName(DataType\TypeText::factory()->setValue("John Doe"))
         ->setEmail("john.doe@example.com")
 )->add(
     Schema\Book::factory()
@@ -80,6 +81,12 @@ $Create = JSONLD\Create::factory()->add(
         )
 );
 
+// Test if the datatypes validate
+if ($Create->validate()) {
+    echo "All data is valid\n";
+} else {
+    echo "Some data is invalid\n";
+}
 //echo "<pre>";
 //print_r($Create->getDataArray());
 print_r($Create->getJSONLDScript());

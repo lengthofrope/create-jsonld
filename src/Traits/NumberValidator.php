@@ -24,19 +24,55 @@
  * THE SOFTWARE.
  **/
 
-namespace LengthOfRope\JSONLD\Schema;
+namespace LengthOfRope\JSONLD\Traits;
 
-/**
- * Data type: Text.
- *
- * @see https://schema.org/Text
- * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
- **/
-class Text extends \LengthOfRope\JSONLD\Elements\Element
+use TypeError;
+
+trait NumberValidator
 {
-    public static function factory(): Text
+    private mixed $value = null;
+
+    /**
+     * setValue
+     *
+     * @param $value
+     * @return static
+     **/
+    public function setValue(mixed $value): static
     {
-        return new Text('https://schema.org/', 'Text');
+        $this->value = $value;
+
+        return $this;
     }
 
+    /**
+     * Validate
+     *
+     * @return bool
+     **/
+    public function validate(): bool
+    {
+        if (!is_numeric($this->value)) {
+            return false;
+        }
+
+        return true;
+    }
+
+    /**
+     * getValue
+     *
+     * @return mixed
+     **/
+    public function getValue(): mixed
+    {
+        if (!$this->validate()) {
+            throw new TypeError(sprintf(
+                'Expected a number, got %s instead.',
+                is_object($this->value) ? get_class($this->value) : gettype($this->value)
+            ));
+        }
+
+        return $this->value;
+    }
 }

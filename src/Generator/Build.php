@@ -43,6 +43,10 @@ class Build
     private $schema;
     private $types = array();
     private $props = array();
+    private $dataTypes = array(
+        'Boolean', 'Time', 'Number', 'DateTime',
+        'Text', 'Date', 'Float'
+    );
 
     /**
      * Factory
@@ -174,8 +178,12 @@ class Build
     private function write()
     {
         $dir = dirname(__DIR__) . '/Schema/';
+        $dirDataTypes = dirname(__DIR__) . '/DataType/';
         if (!is_dir($dir)) {
-            mkdir($dir, 0777, true);
+            mkdir($dir, 0755, true);
+        }
+        if (!is_dir($dirDataTypes)) {
+            mkdir($dir, 0755, true);
         }
 
         $loader = new \Twig\Loader\FilesystemLoader(dirname(dirname(__DIR__)) . '/tools/');
@@ -198,7 +206,7 @@ class Build
             $class = $label;
 
             // If class is reserverd word or starts with a number, prefix with _
-            if (is_numeric(substr($class, 0, 1)) || in_array($class, array('Class', 'Float'))) {
+            if (is_numeric(substr($class, 0, 1)) || in_array($class, array('Class'))) {
                 $class = '_' . $class;
             }
 
@@ -212,12 +220,23 @@ class Build
             if (is_array($classextends)) {
                 $classextends = $classextends[0];
             }
+            $tmpl = 'template.twig';
 
             $classextends = @str_replace('schema:', '', $classextends->{'@id'});
             if (empty($classextends)) {
                 $classextends = '\LengthOfRope\JSONLD\Elements\Element';
             }
             $file = $dir . $class . '.php';
+
+            // If class in DataTypes
+            if (in_array($class, $this->dataTypes)) {
+                $class = 'Type' . $class;
+                if ($classextends !== '\LengthOfRope\JSONLD\Elements\Element') {
+                    $classextends = 'Type' . $classextends;
+                }
+                $tmpl = 'template_datatype.twig';
+                $file = $dirDataTypes . $class . '.php';
+            }
 
             $context = @explode(":", $item->{'@id'});
             $context = $this->schema->{'@context'}->{$context[0]};
@@ -227,7 +246,7 @@ class Build
                 $item->props[$key]['comment'] = $this->multiline($prop['comment'], 80, 5);
             }
 
-            $content = $twig->render('template.twig', array(
+            $content = $twig->render($tmpl, array(
                 'class'        => $class,
                 'classcomment' => $this->multiline($comment),
                 'classExtends' => $classextends,

@@ -24,19 +24,38 @@
  * THE SOFTWARE.
  **/
 
-namespace LengthOfRope\JSONLD\Schema;
+namespace LengthOfRope\JSONLD\DataType;
+
+use LengthOfRope\JSONLD\Interfaces\IValidator;
+use LengthOfRope\JSONLD\Traits;
 
 /**
- * A date value in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601).
+ * Data type: Floating number.
  *
- * @see https://schema.org/Date
+ * @see https://schema.org/Float
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class Date extends \LengthOfRope\JSONLD\Elements\Element
+class TypeFloat extends TypeNumber implements IValidator
 {
-    public static function factory(): Date
+    use Traits\FloatValidator;
+
+    public static function factory(): TypeFloat
     {
-        return new Date('https://schema.org/', 'Date');
+        return new TypeFloat('https://schema.org/', 'Float');
     }
 
+
+    /**
+     * Retrieve the elements (and all childrens) as an array
+     *
+     * @return array
+     */
+    public function getDataArray()
+    {
+        $arr = parent::getDataArray();
+
+        $arr['@value'] = $this->getValue();
+
+        return $arr;
+    }
 }

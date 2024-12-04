@@ -24,20 +24,55 @@
  * THE SOFTWARE.
  **/
 
-namespace LengthOfRope\JSONLD\Schema;
+namespace LengthOfRope\JSONLD\Traits;
 
-/**
- * A point in time recurring on multiple days in the form hh:mm:ss[Z|(+|-)hh:mm]
- * (see [XML schema for details](http://www.w3.org/TR/xmlschema-2/#time)).
- *
- * @see https://schema.org/Time
- * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
- **/
-class Time extends \LengthOfRope\JSONLD\Elements\Element
+use TypeError;
+
+trait TextValidator
 {
-    public static function factory(): Time
+    private ?string $value = null;
+
+    /**
+     * setValue
+     *
+     * @param $value
+     * @return static
+     **/
+    public function setValue(string $value): static
     {
-        return new Time('https://schema.org/', 'Time');
+        $this->value = $value;
+
+        return $this;
     }
 
+    /**
+     * Validate
+     *
+     * @return bool
+     **/
+    public function validate(): bool
+    {
+        if (!is_string($this->value)) {
+            return false;
+        }
+
+        return true;
+    }
+
+    /**
+     * getValue
+     *
+     * @return mixed
+     **/
+    public function getValue(): string
+    {
+        if (!$this->validate()) {
+            throw new TypeError(sprintf(
+                'Expected a string, got %s instead.',
+                is_object($this->value) ? get_class($this->value) : gettype($this->value)
+            ));
+        }
+
+        return $this->value;
+    }
 }

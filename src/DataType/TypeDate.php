@@ -24,26 +24,38 @@
  * THE SOFTWARE.
  **/
 
-namespace LengthOfRope\JSONLD\Schema;
+namespace LengthOfRope\JSONLD\DataType;
+
+use LengthOfRope\JSONLD\Interfaces\IValidator;
+use LengthOfRope\JSONLD\Traits;
 
 /**
- * Data type: Number.
+ * A date value in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601).
  *
- * Usage guidelines:
- *
- * * Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE'
- * (U+0039)) rather than superficially similar Unicode symbols.
- * * Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal
- * point. Avoid using these symbols as a readability separator.
- *
- * @see https://schema.org/Number
+ * @see https://schema.org/Date
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class Number extends \LengthOfRope\JSONLD\Elements\Element
+class TypeDate extends \LengthOfRope\JSONLD\Elements\Element implements IValidator
 {
-    public static function factory(): Number
+    use Traits\DateValidator;
+
+    public static function factory(): TypeDate
     {
-        return new Number('https://schema.org/', 'Number');
+        return new TypeDate('https://schema.org/', 'Date');
     }
 
+
+    /**
+     * Retrieve the elements (and all childrens) as an array
+     *
+     * @return array
+     */
+    public function getDataArray()
+    {
+        $arr = parent::getDataArray();
+
+        $arr['@value'] = $this->getValue();
+
+        return $arr;
+    }
 }

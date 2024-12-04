@@ -24,20 +24,38 @@
  * THE SOFTWARE.
  **/
 
-namespace LengthOfRope\JSONLD\Schema;
+namespace LengthOfRope\JSONLD\DataType;
+
+use LengthOfRope\JSONLD\Interfaces\IValidator;
+use LengthOfRope\JSONLD\Traits;
 
 /**
- * A combination of date and time of day in the form
- * [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] (see Chapter 5.4 of ISO 8601).
+ * Boolean: True or False.
  *
- * @see https://schema.org/DateTime
+ * @see https://schema.org/Boolean
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class DateTime extends \LengthOfRope\JSONLD\Elements\Element
+class TypeBoolean extends \LengthOfRope\JSONLD\Elements\Element implements IValidator
 {
-    public static function factory(): DateTime
+    use Traits\BooleanValidator;
+
+    public static function factory(): TypeBoolean
     {
-        return new DateTime('https://schema.org/', 'DateTime');
+        return new TypeBoolean('https://schema.org/', 'Boolean');
     }
 
+
+    /**
+     * Retrieve the elements (and all childrens) as an array
+     *
+     * @return array
+     */
+    public function getDataArray()
+    {
+        $arr = parent::getDataArray();
+
+        $arr['@value'] = $this->getValue();
+
+        return $arr;
+    }
 }
