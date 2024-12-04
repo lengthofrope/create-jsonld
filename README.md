@@ -5,12 +5,16 @@ Simple PHP library to create JSON-LD output.
 Usage:
 ```php
 use \LengthOfRope\JSONLD;
+use \LengthOfRope\JSONLD\DataType;
 use \LengthOfRope\JSONLD\Schema;
 
 $Create = JSONLD\Create::factory()->add(
     Schema\Person::factory()
         ->setId("https://www.lengthofrope.nl/authors/#john-doe")
-        ->setName("John Doe")
+        ->setName(
+            DataType\Text::factory()
+                ->setValue("John Doe")
+        )
         ->setEmail("john.doe@example.com")
 )->add(
     Schema\Book::factory()
@@ -56,13 +60,24 @@ $Create = JSONLD\Create::factory()->add(
         ->setDescription("Just another developer")
 );
 
-echo $Create->getJSONLDScript();
+// Validate
+if ($Create->validate()) {
+    echo $Create->getJSONLDScript();
+}
+
+// Or try catch
+try {
+    echo $Create->getJSONLDScript();
+} catch(TypeError $e) {
+    echo $e->getMessage();
+}
 ```
 
 ## Version history
-1.0.3
+1.1.0
 
-- Add basic validation
+- Add basic validation for the introduced DataTypes
+- Updated the example
 - Remove obsolete development dependencies
 
 1.0.2
