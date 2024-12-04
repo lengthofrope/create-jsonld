@@ -41,6 +41,10 @@ abstract class Element implements Interfaces\IElement
     /* JSON-LD @type */
     protected $type;
 
+    /* JSON-LD @id */
+    protected $id;
+
+    /* JSON-LD properties */
     protected $properties = array();
 
     protected function __construct($context, $type)
@@ -82,6 +86,26 @@ abstract class Element implements Interfaces\IElement
     }
 
     /**
+     * Set the ID of the element
+     *
+     * This is optional, but can be used to set the @id of the element in the JSON-LD
+     * to link elements together. It provides additional context about the entity by
+     * pointing to its canonical representation or resource on the web and is therefore
+     * usually in the form of a URL.
+     *
+     * I.E. https://site.com/members/#johndoe
+     *
+     * @param string $id
+     * @return static
+     */
+    public function setId(string $id): static
+    {
+        $this->id = $id;
+
+        return $this;
+    }
+
+    /**
      * Retrieve the elements (and all childrens) as an array
      *
      * @return array
@@ -93,6 +117,11 @@ abstract class Element implements Interfaces\IElement
             '@type' => $this->type,
         );
 
+        // Add the ID if it is set
+        if ($this->id) {
+            $arr['@id'] = $this->id;
+        }
+
         foreach($this->properties as $name => $property) {
             if ($property instanceof Interfaces\IElement) {
                 $arr[$name] = $property->getDataArray();
@@ -100,6 +129,7 @@ abstract class Element implements Interfaces\IElement
                 $arr[$name] = $property;
             }
         }
+
         return $arr;
     }
 

@@ -5,11 +5,38 @@ use \LengthOfRope\JSONLD;
 use \LengthOfRope\JSONLD\Schema;
 
 $Create = JSONLD\Create::factory()->add(
+    Schema\Person::factory()
+        ->setId("https://www.lengthofrope.nl/authors/#john-doe")
+        ->setName("John Doe")
+        ->setEmail("john.doe@example.com")
+)->add(
     Schema\Book::factory()
-        ->setAuthor(Schema\Person::factory()->setName("John Doe")->setEmail("john.doe@example.com"))
+        ->setAuthor(
+            Schema\Person::factory()
+                ->setName("John Doe")
+                ->setEmail("john.doe@example.com")
+        )
         ->setAbout("PHP")
         ->setName("Superb PHP Book")
         ->setAlternateName("Book one of three")
+)->add(
+    Schema\Book::factory()
+        ->setAuthor(
+            Schema\Person::factory()
+                ->setId("https://www.lengthofrope.nl/authors/#john-doe")
+        )
+        ->setAbout("PHP")
+        ->setName("Superb PHP Book with a linked author")
+        ->setAlternateName("Book two of three")
+)->add(
+    Schema\Book::factory()
+        ->setAuthor(
+            Schema\Person::factory()
+                ->setId("https://www.lengthofrope.nl/authors/#john-doe")
+        )
+        ->setAbout("PHP")
+        ->setName("A less known but still superb PHP Book with a linked author")
+        ->setAlternateName("Book three of three")
 )->add(
     Schema\Organization::factory()
         ->setAddress(
