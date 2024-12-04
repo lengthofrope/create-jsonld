@@ -31,7 +31,7 @@ use TypeError;
 
 trait DateValidator
 {
-    private DateTime $value;
+    private ?DateTime $value = null;
 
     /**
      * setValue

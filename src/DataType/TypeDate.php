@@ -26,6 +26,7 @@
 
 namespace LengthOfRope\JSONLD\DataType;
 
+use LengthOfRope\JSONLD\Interfaces\IValidator;
 use LengthOfRope\JSONLD\Traits;
 
 /**
@@ -34,7 +35,7 @@ use LengthOfRope\JSONLD\Traits;
  * @see https://schema.org/Date
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class TypeDate extends \LengthOfRope\JSONLD\Elements\Element
+class TypeDate extends \LengthOfRope\JSONLD\Elements\Element implements IValidator
 {
     use Traits\DateValidator;
 
@@ -43,4 +44,18 @@ class TypeDate extends \LengthOfRope\JSONLD\Elements\Element
         return new TypeDate('https://schema.org/', 'Date');
     }
 
+
+    /**
+     * Retrieve the elements (and all childrens) as an array
+     *
+     * @return array
+     */
+    public function getDataArray()
+    {
+        $arr = parent::getDataArray();
+
+        $arr['@value'] = $this->getValue();
+
+        return $arr;
+    }
 }

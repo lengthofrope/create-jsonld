@@ -26,6 +26,7 @@
 
 namespace LengthOfRope\JSONLD\DataType;
 
+use LengthOfRope\JSONLD\Interfaces\IValidator;
 use LengthOfRope\JSONLD\Traits;
 
 /**
@@ -34,7 +35,7 @@ use LengthOfRope\JSONLD\Traits;
  * @see https://schema.org/Float
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class TypeFloat extends TypeNumber
+class TypeFloat extends TypeNumber implements IValidator
 {
     use Traits\FloatValidator;
 
@@ -43,4 +44,18 @@ class TypeFloat extends TypeNumber
         return new TypeFloat('https://schema.org/', 'Float');
     }
 
+
+    /**
+     * Retrieve the elements (and all childrens) as an array
+     *
+     * @return array
+     */
+    public function getDataArray()
+    {
+        $arr = parent::getDataArray();
+
+        $arr['@value'] = $this->getValue();
+
+        return $arr;
+    }
 }

@@ -27,6 +27,7 @@
 
 namespace LengthOfRope\JSONLD\DataType;
 
+use LengthOfRope\JSONLD\Interfaces\IValidator;
 use LengthOfRope\JSONLD\Traits;
 
 /**
@@ -35,7 +36,7 @@ use LengthOfRope\JSONLD\Traits;
  * @see https://schema.org/{{ type }}
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class {{ class }} extends {{ classExtends }}
+class {{ class }} extends {{ classExtends }} implements IValidator
 {
     use Traits\{{ type }}Validator;
 
@@ -66,5 +67,19 @@ class {{ class }} extends {{ classExtends }}
         return $this->properties['{{ property.label }}'];
     }
 {% endfor %}
+
+    /**
+     * Retrieve the elements (and all childrens) as an array
+     *
+     * @return array
+     */
+    public function getDataArray()
+    {
+        $arr = parent::getDataArray();
+
+        $arr['@value'] = $this->getValue();
+
+        return $arr;
+    }
 }
 {% endautoescape %}

@@ -30,7 +30,7 @@ use TypeError;
 
 trait TextValidator
 {
-    private string $value;
+    private ?string $value = null;
 
     /**
      * setValue

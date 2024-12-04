@@ -26,6 +26,7 @@
 
 namespace LengthOfRope\JSONLD\DataType;
 
+use LengthOfRope\JSONLD\Interfaces\IValidator;
 use LengthOfRope\JSONLD\Traits;
 
 /**
@@ -41,7 +42,7 @@ use LengthOfRope\JSONLD\Traits;
  * @see https://schema.org/Number
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class TypeNumber extends \LengthOfRope\JSONLD\Elements\Element
+class TypeNumber extends \LengthOfRope\JSONLD\Elements\Element implements IValidator
 {
     use Traits\NumberValidator;
 
@@ -50,4 +51,18 @@ class TypeNumber extends \LengthOfRope\JSONLD\Elements\Element
         return new TypeNumber('https://schema.org/', 'Number');
     }
 
+
+    /**
+     * Retrieve the elements (and all childrens) as an array
+     *
+     * @return array
+     */
+    public function getDataArray()
+    {
+        $arr = parent::getDataArray();
+
+        $arr['@value'] = $this->getValue();
+
+        return $arr;
+    }
 }

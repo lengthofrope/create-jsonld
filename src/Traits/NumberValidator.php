@@ -30,7 +30,7 @@ use TypeError;
 
 trait NumberValidator
 {
-    private mixed $value;
+    private mixed $value = null;
 
     /**
      * setValue

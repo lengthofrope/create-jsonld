@@ -30,7 +30,7 @@ use TypeError;
 
 trait BooleanValidator
 {
-    private bool $value;
+    private ?bool $value = null;
 
     /**
      * setValue

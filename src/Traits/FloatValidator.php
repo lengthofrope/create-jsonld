@@ -30,7 +30,7 @@ use TypeError;
 
 trait FloatValidator
 {
-    private float $value;
+    private ?float $value = null;
 
     /**
      * setValue

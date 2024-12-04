@@ -26,6 +26,7 @@
 
 namespace LengthOfRope\JSONLD\DataType;
 
+use LengthOfRope\JSONLD\Interfaces\IValidator;
 use LengthOfRope\JSONLD\Traits;
 
 /**
@@ -34,7 +35,7 @@ use LengthOfRope\JSONLD\Traits;
  * @see https://schema.org/Text
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class TypeText extends \LengthOfRope\JSONLD\Elements\Element
+class TypeText extends \LengthOfRope\JSONLD\Elements\Element implements IValidator
 {
     use Traits\TextValidator;
 
@@ -43,4 +44,18 @@ class TypeText extends \LengthOfRope\JSONLD\Elements\Element
         return new TypeText('https://schema.org/', 'Text');
     }
 
+
+    /**
+     * Retrieve the elements (and all childrens) as an array
+     *
+     * @return array
+     */
+    public function getDataArray()
+    {
+        $arr = parent::getDataArray();
+
+        $arr['@value'] = $this->getValue();
+
+        return $arr;
+    }
 }
