@@ -24,7 +24,9 @@
  * THE SOFTWARE.
  **/
 
-namespace LengthOfRope\JSONLD\Schema;
+namespace LengthOfRope\JSONLD\DataType;
+
+use LengthOfRope\JSONLD\Traits;
 
 /**
  * Boolean: True or False.
@@ -32,11 +34,13 @@ namespace LengthOfRope\JSONLD\Schema;
  * @see https://schema.org/Boolean
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class Boolean extends \LengthOfRope\JSONLD\Elements\Element
+class TypeBoolean extends \LengthOfRope\JSONLD\Elements\Element
 {
-    public static function factory(): Boolean
+    use Traits\BooleanValidator;
+
+    public static function factory(): TypeBoolean
     {
-        return new Boolean('https://schema.org/', 'Boolean');
+        return new TypeBoolean('https://schema.org/', 'Boolean');
     }
 
 }

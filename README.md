@@ -60,7 +60,13 @@ echo $Create->getJSONLDScript();
 ```
 
 ## Version history
+1.0.3
+
+- Add basic validation
+- Remove obsolete development dependencies
+
 1.0.2
+
 - Add support for linking with the @id property
 - Updated the example in readme.md
 

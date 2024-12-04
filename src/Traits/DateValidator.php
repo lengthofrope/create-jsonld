@@ -24,19 +24,57 @@
  * THE SOFTWARE.
  **/
 
-namespace LengthOfRope\JSONLD\Schema;
+namespace LengthOfRope\JSONLD\Traits;
 
-/**
- * Data type: Floating number.
- *
- * @see https://schema.org/Float
- * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
- **/
-class _Float extends Number
+use DateTime;
+use TypeError;
+
+trait DateValidator
 {
-    public static function factory(): _Float
+    private DateTime $value;
+
+    /**
+     * setValue
+     *
+     * @param $value
+     * @return static
+     **/
+    public function setValue(DateTime $value): static
     {
-        return new _Float('https://schema.org/', 'Float');
+        $this->value = $value;
+
+        return $this;
     }
 
+    /**
+     * Validate
+     *
+     * @return bool
+     **/
+    public function validate(): bool
+    {
+        // Validate if the value is a DateTime object and validates
+        if (!($this->value instanceof DateTime) || !$this->value->format('Y-m-d')) {
+            return false;
+        }
+
+        return true;
+    }
+
+    /**
+     * getValue
+     *
+     * @return string formatted Y-m-d
+     **/
+    public function getValue(): string
+    {
+        if (!$this->validate()) {
+            throw new TypeError(sprintf(
+                'Expected a DateTime, got %s instead.',
+                is_object($this->value) ? get_class($this->value) : gettype($this->value)
+            ));
+        }
+
+        return $this->value->format('Y-m-d');
+    }
 }

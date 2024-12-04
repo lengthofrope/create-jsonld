@@ -24,26 +24,23 @@
  * THE SOFTWARE.
  **/
 
-namespace LengthOfRope\JSONLD\Schema;
+namespace LengthOfRope\JSONLD\DataType;
+
+use LengthOfRope\JSONLD\Traits;
 
 /**
- * Data type: Number.
+ * Data type: Floating number.
  *
- * Usage guidelines:
- *
- * * Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE'
- * (U+0039)) rather than superficially similar Unicode symbols.
- * * Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal
- * point. Avoid using these symbols as a readability separator.
- *
- * @see https://schema.org/Number
+ * @see https://schema.org/Float
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class Number extends \LengthOfRope\JSONLD\Elements\Element
+class TypeFloat extends TypeNumber
 {
-    public static function factory(): Number
+    use Traits\FloatValidator;
+
+    public static function factory(): TypeFloat
     {
-        return new Number('https://schema.org/', 'Number');
+        return new TypeFloat('https://schema.org/', 'Float');
     }
 
 }

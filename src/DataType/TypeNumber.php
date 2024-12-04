@@ -24,20 +24,30 @@
  * THE SOFTWARE.
  **/
 
-namespace LengthOfRope\JSONLD\Schema;
+namespace LengthOfRope\JSONLD\DataType;
+
+use LengthOfRope\JSONLD\Traits;
 
 /**
- * A combination of date and time of day in the form
- * [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] (see Chapter 5.4 of ISO 8601).
+ * Data type: Number.
  *
- * @see https://schema.org/DateTime
+ * Usage guidelines:
+ *
+ * * Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE'
+ * (U+0039)) rather than superficially similar Unicode symbols.
+ * * Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal
+ * point. Avoid using these symbols as a readability separator.
+ *
+ * @see https://schema.org/Number
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class DateTime extends \LengthOfRope\JSONLD\Elements\Element
+class TypeNumber extends \LengthOfRope\JSONLD\Elements\Element
 {
-    public static function factory(): DateTime
+    use Traits\NumberValidator;
+
+    public static function factory(): TypeNumber
     {
-        return new DateTime('https://schema.org/', 'DateTime');
+        return new TypeNumber('https://schema.org/', 'Number');
     }
 
 }

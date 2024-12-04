@@ -24,19 +24,23 @@
  * THE SOFTWARE.
  **/
 
-namespace LengthOfRope\JSONLD\Schema;
+namespace LengthOfRope\JSONLD\DataType;
+
+use LengthOfRope\JSONLD\Traits;
 
 /**
- * Data type: Text.
+ * A date value in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601).
  *
- * @see https://schema.org/Text
+ * @see https://schema.org/Date
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class Text extends \LengthOfRope\JSONLD\Elements\Element
+class TypeDate extends \LengthOfRope\JSONLD\Elements\Element
 {
-    public static function factory(): Text
+    use Traits\DateValidator;
+
+    public static function factory(): TypeDate
     {
-        return new Text('https://schema.org/', 'Text');
+        return new TypeDate('https://schema.org/', 'Date');
     }
 
 }

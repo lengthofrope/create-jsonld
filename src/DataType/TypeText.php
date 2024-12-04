@@ -24,20 +24,23 @@
  * THE SOFTWARE.
  **/
 
-namespace LengthOfRope\JSONLD\Schema;
+namespace LengthOfRope\JSONLD\DataType;
+
+use LengthOfRope\JSONLD\Traits;
 
 /**
- * A point in time recurring on multiple days in the form hh:mm:ss[Z|(+|-)hh:mm]
- * (see [XML schema for details](http://www.w3.org/TR/xmlschema-2/#time)).
+ * Data type: Text.
  *
- * @see https://schema.org/Time
+ * @see https://schema.org/Text
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class Time extends \LengthOfRope\JSONLD\Elements\Element
+class TypeText extends \LengthOfRope\JSONLD\Elements\Element
 {
-    public static function factory(): Time
+    use Traits\TextValidator;
+
+    public static function factory(): TypeText
     {
-        return new Time('https://schema.org/', 'Time');
+        return new TypeText('https://schema.org/', 'Text');
     }
 
 }

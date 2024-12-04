@@ -24,19 +24,55 @@
  * THE SOFTWARE.
  **/
 
-namespace LengthOfRope\JSONLD\Schema;
+namespace LengthOfRope\JSONLD\Traits;
 
-/**
- * A date value in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601).
- *
- * @see https://schema.org/Date
- * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
- **/
-class Date extends \LengthOfRope\JSONLD\Elements\Element
+use TypeError;
+
+trait BooleanValidator
 {
-    public static function factory(): Date
+    private bool $value;
+
+    /**
+     * setValue
+     *
+     * @param $value
+     * @return static
+     **/
+    public function setValue(bool $value): static
     {
-        return new Date('https://schema.org/', 'Date');
+        $this->value = $value;
+
+        return $this;
     }
 
+    /**
+     * Validate
+     *
+     * @return bool
+     **/
+    public function validate(): bool
+    {
+        if (!is_bool($this->value)) {
+            return false;
+        }
+
+        return true;
+    }
+
+    /**
+     * getValue
+     *
+     * @return bool
+     **/
+    public function getValue(): bool
+    {
+        if (!$this->validate()) {
+            throw new TypeError(sprintf(
+                'Expected a boolean, got %s instead.',
+                is_object($this->value) ? get_class($this->value) : gettype($this->value)
+            ));
+        }
+
+        return $this->value;
+    }
 }

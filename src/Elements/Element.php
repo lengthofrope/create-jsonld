@@ -78,6 +78,7 @@ abstract class Element implements Interfaces\IElement
     /**
      * Validate all children
      *
+     * @override
      * @return boolean
      */
     public function validate()
