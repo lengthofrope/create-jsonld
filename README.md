@@ -2,18 +2,15 @@
 
 Simple PHP library to create JSON-LD output.
 
-Note:
-This is a WIP JSON+LD parser that doesn't handle everything, but covers the basics.
-
 Usage:
 ```php
 use \LengthOfRope\JSONLD;
 use \LengthOfRope\JSONLD\Schema;
 
 $Create = JSONLD\Create::factory()->add(
-    Schema\BookSchema::factory()
+    Schema\Book::factory()
         ->setAuthor(
-            Schema\PersonSchema::factory()
+            Schema\Person::factory()
                 ->setName("NAME")
                 ->setEmail("email@example.com")
         )
@@ -21,9 +18,9 @@ $Create = JSONLD\Create::factory()->add(
         ->setName("Superb PHP Book")
         ->setAlternateName("Book one of three")
 )->add(
-    Schema\OrganizationSchema::factory()
+    Schema\Organization::factory()
         ->setAddress(
-            Schema\PostalAddressSchema::factory()
+            Schema\PostalAddress::factory()
                 ->setPostalCode("1234 AA")
                 ->setStreetAddress("Somewhere 12")
                 ->setAddressCountry("NL")
@@ -38,3 +35,13 @@ $Create = JSONLD\Create::factory()->add(
 
 echo $Create->getJSONLDScript();
 ```
+
+## Version history
+1.0.0
+
+- Removed Schema word from all classes **breaking change!**
+- Added underscores to classes that have a reserved name or start with a number
+
+0.9.X
+
+- Initial development versions

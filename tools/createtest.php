@@ -5,15 +5,15 @@ use \LengthOfRope\JSONLD;
 use \LengthOfRope\JSONLD\Schema;
 
 $Create = JSONLD\Create::factory()->add(
-    Schema\BookSchema::factory()
-        ->setAuthor(Schema\PersonSchema::factory()->setName("John Doe")->setEmail("john.doe@example.com"))
+    Schema\Book::factory()
+        ->setAuthor(Schema\Person::factory()->setName("John Doe")->setEmail("john.doe@example.com"))
         ->setAbout("PHP")
         ->setName("Superb PHP Book")
         ->setAlternateName("Book one of three")
 )->add(
-    Schema\OrganizationSchema::factory()
+    Schema\Organization::factory()
         ->setAddress(
-            Schema\PostalAddressSchema::factory()
+            Schema\PostalAddress::factory()
                 ->setPostalCode("1234 AA")
                 ->setStreetAddress("Somewhere 12")
                 ->setAddressCountry("NL")
@@ -25,25 +25,25 @@ $Create = JSONLD\Create::factory()->add(
         ->setName("LengthOfRope")
         ->setDescription("Just another developer")
 )->add(
-    Schema\CourseSchema::factory()
+    Schema\Course::factory()
         ->setName("PHP Course")
         ->setDescription("Learn PHP in 3 days")
         ->setProvider(
-            Schema\OrganizationSchema::factory()
+            Schema\Organization::factory()
                 ->setName("LengthOfRope")
                 ->setSameAs("https://www.lengthofrope.nl")
                 ->setImage("https://www.lengthofrope.nl/logo.png")
         )
         ->setHasCourseInstance(
-            Schema\CourseInstanceSchema::factory()
+            Schema\CourseInstance::factory()
                 ->setName("PHP Course 1")
                 ->setStartDate("2019-01-01")
                 ->setEndDate("2019-01-03")
                 ->setLocation(
-                    Schema\PlaceSchema::factory()
+                    Schema\Place::factory()
                         ->setName("LengthOfRope")
                         ->setAddress(
-                            Schema\PostalAddressSchema::factory()
+                            Schema\PostalAddress::factory()
                                 ->setPostalCode("1234 AA")
                                 ->setStreetAddress("Somewhere 12")
                                 ->setAddressCountry("NL")
