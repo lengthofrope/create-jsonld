@@ -27,8 +27,11 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A product provided to consumers and businesses by financial institutions such as banks, insurance companies, brokerage firms, consumer finance companies, and investment companies which comprise the financial services industry.
+ * A product provided to consumers and businesses by financial institutions such as
+ * banks, insurance companies, brokerage firms, consumer finance companies, and
+ * investment companies which comprise the financial services industry.
  *
+ * @see https://schema.org/FinancialProduct
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class FinancialProduct extends Service
@@ -39,7 +42,8 @@ class FinancialProduct extends Service
     }
 
     /**
-     * Description of fees, commissions, and other terms applied either to a class of financial product, or by a financial service organization.
+     * Description of fees, commissions, and other terms applied either to a class of
+     * financial product, or by a financial service organization.
      *
      * @param $feesAndCommissionsSpecification |
      * @return static
@@ -56,9 +60,9 @@ class FinancialProduct extends Service
     public function getFeesAndCommissionsSpecification() {
         return $this->properties['feesAndCommissionsSpecification'];
     }
-
     /**
-     * The interest rate, charged or paid, applicable to the financial product. Note: This is different from the calculated annualPercentageRate.
+     * The interest rate, charged or paid, applicable to the financial product. Note:
+     * This is different from the calculated annualPercentageRate.
      *
      * @param $interestRate |
      * @return static
@@ -75,9 +79,11 @@ class FinancialProduct extends Service
     public function getInterestRate() {
         return $this->properties['interestRate'];
     }
-
     /**
-     * The annual rate that is charged for borrowing (or made by investing), expressed as a single percentage number that represents the actual yearly cost of funds over the term of a loan. This includes any fees or additional costs associated with the transaction.
+     * The annual rate that is charged for borrowing (or made by investing), expressed
+     * as a single percentage number that represents the actual yearly cost of funds
+     * over the term of a loan. This includes any fees or additional costs associated
+     * with the transaction.
      *
      * @param $annualPercentageRate |
      * @return static
@@ -94,6 +100,4 @@ class FinancialProduct extends Service
     public function getAnnualPercentageRate() {
         return $this->properties['annualPercentageRate'];
     }
-
-
 }

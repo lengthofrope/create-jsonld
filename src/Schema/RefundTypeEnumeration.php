@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Enumerates several kinds of product return refund types.
  *
+ * @see https://schema.org/RefundTypeEnumeration
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class RefundTypeEnumeration extends Enumeration
@@ -37,6 +38,5 @@ class RefundTypeEnumeration extends Enumeration
     {
         return new RefundTypeEnumeration('https://schema.org/', 'RefundTypeEnumeration');
     }
-
 
 }

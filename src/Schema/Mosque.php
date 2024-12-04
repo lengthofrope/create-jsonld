@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A mosque.
  *
+ * @see https://schema.org/Mosque
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Mosque extends PlaceOfWorship
@@ -37,6 +38,5 @@ class Mosque extends PlaceOfWorship
     {
         return new Mosque('https://schema.org/', 'Mosque');
     }
-
 
 }

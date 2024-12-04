@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A service which provides access to media programming like TV or radio. Access may be via cable or satellite.
+ * A service which provides access to media programming like TV or radio. Access
+ * may be via cable or satellite.
  *
+ * @see https://schema.org/CableOrSatelliteService
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class CableOrSatelliteService extends Service
@@ -37,6 +39,5 @@ class CableOrSatelliteService extends Service
     {
         return new CableOrSatelliteService('https://schema.org/', 'CableOrSatelliteService');
     }
-
 
 }

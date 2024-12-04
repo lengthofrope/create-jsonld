@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Classes of agents or pathogens that transmit infectious diseases. Enumerated type.
+ * Classes of agents or pathogens that transmit infectious diseases. Enumerated
+ * type.
  *
+ * @see https://schema.org/InfectiousAgentClass
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class InfectiousAgentClass extends MedicalEnumeration
@@ -37,6 +39,5 @@ class InfectiousAgentClass extends MedicalEnumeration
     {
         return new InfectiousAgentClass('https://schema.org/', 'InfectiousAgentClass');
     }
-
 
 }

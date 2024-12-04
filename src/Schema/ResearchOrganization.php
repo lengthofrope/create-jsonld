@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A Research Organization (e.g. scientific institute, research company).
  *
+ * @see https://schema.org/ResearchOrganization
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ResearchOrganization extends Organization
@@ -37,6 +38,5 @@ class ResearchOrganization extends Organization
     {
         return new ResearchOrganization('https://schema.org/', 'ResearchOrganization');
     }
-
 
 }

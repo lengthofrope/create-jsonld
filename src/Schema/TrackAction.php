@@ -27,8 +27,16 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * An agent tracks an object for updates.\n\nRelated actions:\n\n* [[FollowAction]]: Unlike FollowAction, TrackAction refers to the interest on the location of innanimates objects.\n* [[SubscribeAction]]: Unlike SubscribeAction, TrackAction refers to  the interest on the location of innanimate objects.
+ * An agent tracks an object for updates.
  *
+ * Related actions:
+ *
+ * * [[FollowAction]]: Unlike FollowAction, TrackAction refers to the interest on
+ * the location of innanimates objects.
+ * * [[SubscribeAction]]: Unlike SubscribeAction, TrackAction refers to  the
+ * interest on the location of innanimate objects.
+ *
+ * @see https://schema.org/TrackAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class TrackAction extends FindAction
@@ -56,6 +64,4 @@ class TrackAction extends FindAction
     public function getDeliveryMethod() {
         return $this->properties['deliveryMethod'];
     }
-
-
 }

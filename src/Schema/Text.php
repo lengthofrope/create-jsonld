@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Data type: Text.
  *
+ * @see https://schema.org/Text
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Text extends \LengthOfRope\JSONLD\Elements\Element
@@ -37,6 +38,5 @@ class Text extends \LengthOfRope\JSONLD\Elements\Element
     {
         return new Text('https://schema.org/', 'Text');
     }
-
 
 }

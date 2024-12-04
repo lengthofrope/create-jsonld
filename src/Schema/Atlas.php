@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A collection or bound volume of maps, charts, plates or tables, physical or in media form illustrating any subject.
+ * A collection or bound volume of maps, charts, plates or tables, physical or in
+ * media form illustrating any subject.
  *
+ * @see https://schema.org/Atlas
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Atlas extends CreativeWork
@@ -37,6 +39,5 @@ class Atlas extends CreativeWork
     {
         return new Atlas('https://schema.org/', 'Atlas');
     }
-
 
 }

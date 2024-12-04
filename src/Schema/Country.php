@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A country.
  *
+ * @see https://schema.org/Country
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Country extends AdministrativeArea
@@ -37,6 +38,5 @@ class Country extends AdministrativeArea
     {
         return new Country('https://schema.org/', 'Country');
     }
-
 
 }

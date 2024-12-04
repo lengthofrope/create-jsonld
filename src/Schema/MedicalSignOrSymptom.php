@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Any feature associated or not with a medical condition. In medicine a symptom is generally subjective while a sign is objective.
+ * Any feature associated or not with a medical condition. In medicine a symptom is
+ * generally subjective while a sign is objective.
  *
+ * @see https://schema.org/MedicalSignOrSymptom
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MedicalSignOrSymptom extends MedicalCondition
@@ -56,6 +58,4 @@ class MedicalSignOrSymptom extends MedicalCondition
     public function getPossibleTreatment() {
         return $this->properties['possibleTreatment'];
     }
-
-
 }

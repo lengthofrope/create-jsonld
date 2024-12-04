@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A payment method using a credit, debit, store or other card to associate the payment with an account.
+ * A payment method using a credit, debit, store or other card to associate the
+ * payment with an account.
  *
+ * @see https://schema.org/PaymentCard
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class PaymentCard extends FinancialProduct
@@ -39,7 +41,8 @@ class PaymentCard extends FinancialProduct
     }
 
     /**
-     * A secure method for consumers to purchase products or services via debit, credit or smartcards by using RFID or NFC technology.
+     * A secure method for consumers to purchase products or services via debit, credit
+     * or smartcards by using RFID or NFC technology.
      *
      * @param $contactlessPayment 
      * @return static
@@ -56,9 +59,9 @@ class PaymentCard extends FinancialProduct
     public function getContactlessPayment() {
         return $this->properties['contactlessPayment'];
     }
-
     /**
-     * A cardholder benefit that pays the cardholder a small percentage of their net expenditures.
+     * A cardholder benefit that pays the cardholder a small percentage of their net
+     * expenditures.
      *
      * @param $cashBack |
      * @return static
@@ -75,9 +78,9 @@ class PaymentCard extends FinancialProduct
     public function getCashBack() {
         return $this->properties['cashBack'];
     }
-
     /**
-     * A floor limit is the amount of money above which credit card transactions must be authorized.
+     * A floor limit is the amount of money above which credit card transactions must
+     * be authorized.
      *
      * @param $floorLimit 
      * @return static
@@ -94,9 +97,9 @@ class PaymentCard extends FinancialProduct
     public function getFloorLimit() {
         return $this->properties['floorLimit'];
     }
-
     /**
-     * The minimum payment is the lowest amount of money that one is required to pay on a credit card statement each month.
+     * The minimum payment is the lowest amount of money that one is required to pay on
+     * a credit card statement each month.
      *
      * @param $monthlyMinimumRepaymentAmount |
      * @return static
@@ -113,6 +116,4 @@ class PaymentCard extends FinancialProduct
     public function getMonthlyMinimumRepaymentAmount() {
         return $this->properties['monthlyMinimumRepaymentAmount'];
     }
-
-
 }

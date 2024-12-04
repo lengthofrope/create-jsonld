@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A diet restricted to certain foods or preparations for cultural, religious, health or lifestyle reasons. 
+ * A diet restricted to certain foods or preparations for cultural, religious,
+ * health or lifestyle reasons.
  *
+ * @see https://schema.org/RestrictedDiet
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class RestrictedDiet extends Enumeration
@@ -37,6 +39,5 @@ class RestrictedDiet extends Enumeration
     {
         return new RestrictedDiet('https://schema.org/', 'RestrictedDiet');
     }
-
 
 }

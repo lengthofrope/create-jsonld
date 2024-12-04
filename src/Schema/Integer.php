@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Data type: Integer.
  *
+ * @see https://schema.org/Integer
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Integer extends Number
@@ -37,6 +38,5 @@ class Integer extends Number
     {
         return new Integer('https://schema.org/', 'Integer');
     }
-
 
 }

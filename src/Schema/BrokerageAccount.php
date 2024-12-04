@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * An account that allows an investor to deposit funds and place investment orders with a licensed broker or brokerage firm.
+ * An account that allows an investor to deposit funds and place investment orders
+ * with a licensed broker or brokerage firm.
  *
+ * @see https://schema.org/BrokerageAccount
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class BrokerageAccount extends InvestmentOrDeposit
@@ -37,6 +39,5 @@ class BrokerageAccount extends InvestmentOrDeposit
     {
         return new BrokerageAccount('https://schema.org/', 'BrokerageAccount');
     }
-
 
 }

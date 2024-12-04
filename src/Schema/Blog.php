@@ -27,8 +27,11 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A [blog](https://en.wikipedia.org/wiki/Blog), sometimes known as a "weblog". Note that the individual posts ([[BlogPosting]]s) in a [[Blog]] are often colloquially referred to by the same term.
+ * A [blog](https://en.wikipedia.org/wiki/Blog), sometimes known as a "weblog".
+ * Note that the individual posts ([[BlogPosting]]s) in a [[Blog]] are often
+ * colloquially referred to by the same term.
  *
+ * @see https://schema.org/Blog
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Blog extends CreativeWork
@@ -56,9 +59,10 @@ class Blog extends CreativeWork
     public function getBlogPost() {
         return $this->properties['blogPost'];
     }
-
     /**
-     * The International Standard Serial Number (ISSN) that identifies this serial publication. You can repeat this property to identify different formats of, or the linking ISSN (ISSN-L) for, this serial publication.
+     * The International Standard Serial Number (ISSN) that identifies this serial
+     * publication. You can repeat this property to identify different formats of, or
+     * the linking ISSN (ISSN-L) for, this serial publication.
      *
      * @param $issn 
      * @return static
@@ -75,9 +79,10 @@ class Blog extends CreativeWork
     public function getIssn() {
         return $this->properties['issn'];
     }
-
     /**
-     * Indicates a post that is part of a [[Blog]]. Note that historically, what we term a "Blog" was once known as a "weblog", and that what we term a "BlogPosting" is now often colloquially referred to as a "blog".
+     * Indicates a post that is part of a [[Blog]]. Note that historically, what we
+     * term a "Blog" was once known as a "weblog", and that what we term a
+     * "BlogPosting" is now often colloquially referred to as a "blog".
      *
      * @param $blogPosts 
      * @return static
@@ -94,6 +99,4 @@ class Blog extends CreativeWork
     public function getBlogPosts() {
         return $this->properties['blogPosts'];
     }
-
-
 }

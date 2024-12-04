@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A creative work with a visual storytelling format intended to be viewed online, particularly on mobile devices.
+ * A creative work with a visual storytelling format intended to be viewed online,
+ * particularly on mobile devices.
  *
+ * @see https://schema.org/AmpStory
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class AmpStory extends MediaObject
@@ -37,6 +39,5 @@ class AmpStory extends MediaObject
     {
         return new AmpStory('https://schema.org/', 'AmpStory');
     }
-
 
 }

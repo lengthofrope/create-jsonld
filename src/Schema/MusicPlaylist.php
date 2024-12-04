@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A collection of music tracks in playlist form.
  *
+ * @see https://schema.org/MusicPlaylist
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MusicPlaylist extends CreativeWork
@@ -56,7 +57,6 @@ class MusicPlaylist extends CreativeWork
     public function getNumTracks() {
         return $this->properties['numTracks'];
     }
-
     /**
      * A music recording (track)&#x2014;usually a single song.
      *
@@ -75,9 +75,9 @@ class MusicPlaylist extends CreativeWork
     public function getTracks() {
         return $this->properties['tracks'];
     }
-
     /**
-     * A music recording (track)&#x2014;usually a single song. If an ItemList is given, the list should contain items of type MusicRecording.
+     * A music recording (track)&#x2014;usually a single song. If an ItemList is given,
+     * the list should contain items of type MusicRecording.
      *
      * @param $track |
      * @return static
@@ -94,6 +94,4 @@ class MusicPlaylist extends CreativeWork
     public function getTrack() {
         return $this->properties['track'];
     }
-
-
 }

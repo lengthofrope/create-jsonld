@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The act of reaching a draw in a competitive activity.
  *
+ * @see https://schema.org/TieAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class TieAction extends AchieveAction
@@ -37,6 +38,5 @@ class TieAction extends AchieveAction
     {
         return new TieAction('https://schema.org/', 'TieAction');
     }
-
 
 }

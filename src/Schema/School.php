@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A school.
  *
+ * @see https://schema.org/School
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class School extends EducationalOrganization
@@ -37,6 +38,5 @@ class School extends EducationalOrganization
     {
         return new School('https://schema.org/', 'School');
     }
-
 
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A legislative building&#x2014;for example, the state capitol.
  *
+ * @see https://schema.org/LegislativeBuilding
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class LegislativeBuilding extends GovernmentBuilding
@@ -37,6 +38,5 @@ class LegislativeBuilding extends GovernmentBuilding
     {
         return new LegislativeBuilding('https://schema.org/', 'LegislativeBuilding');
     }
-
 
 }

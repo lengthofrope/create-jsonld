@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * For a given health insurance plan, the specification for costs and coverage of prescription drugs.
+ * For a given health insurance plan, the specification for costs and coverage of
+ * prescription drugs.
  *
+ * @see https://schema.org/HealthPlanFormulary
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class HealthPlanFormulary extends Intangible
@@ -56,7 +58,6 @@ class HealthPlanFormulary extends Intangible
     public function getHealthPlanCostSharing() {
         return $this->properties['healthPlanCostSharing'];
     }
-
     /**
      * The tier(s) of drugs offered by this formulary or insurance plan.
      *
@@ -75,7 +76,6 @@ class HealthPlanFormulary extends Intangible
     public function getHealthPlanDrugTier() {
         return $this->properties['healthPlanDrugTier'];
     }
-
     /**
      * Whether prescriptions can be delivered by mail.
      *
@@ -94,6 +94,4 @@ class HealthPlanFormulary extends Intangible
     public function getOffersPrescriptionByMail() {
         return $this->properties['offersPrescriptionByMail'];
     }
-
-
 }

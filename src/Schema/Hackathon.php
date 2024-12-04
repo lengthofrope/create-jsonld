@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A [hackathon](https://en.wikipedia.org/wiki/Hackathon) event.
  *
+ * @see https://schema.org/Hackathon
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Hackathon extends Event
@@ -37,6 +38,5 @@ class Hackathon extends Event
     {
         return new Hackathon('https://schema.org/', 'Hackathon');
     }
-
 
 }

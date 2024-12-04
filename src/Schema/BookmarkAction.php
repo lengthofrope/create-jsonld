@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * An agent bookmarks/flags/labels/tags/marks an object.
  *
+ * @see https://schema.org/BookmarkAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class BookmarkAction extends OrganizeAction
@@ -37,6 +38,5 @@ class BookmarkAction extends OrganizeAction
     {
         return new BookmarkAction('https://schema.org/', 'BookmarkAction');
     }
-
 
 }

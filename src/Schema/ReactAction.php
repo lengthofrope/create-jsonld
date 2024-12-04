@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of responding instinctively and emotionally to an object, expressing a sentiment.
+ * The act of responding instinctively and emotionally to an object, expressing a
+ * sentiment.
  *
+ * @see https://schema.org/ReactAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ReactAction extends AssessAction
@@ -37,6 +39,5 @@ class ReactAction extends AssessAction
     {
         return new ReactAction('https://schema.org/', 'ReactAction');
     }
-
 
 }

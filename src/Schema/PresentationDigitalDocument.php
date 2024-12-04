@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A file containing slides or used for a presentation.
  *
+ * @see https://schema.org/PresentationDigitalDocument
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class PresentationDigitalDocument extends DigitalDocument
@@ -37,6 +38,5 @@ class PresentationDigitalDocument extends DigitalDocument
     {
         return new PresentationDigitalDocument('https://schema.org/', 'PresentationDigitalDocument');
     }
-
 
 }

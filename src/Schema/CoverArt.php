@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The artwork on the outer surface of a CreativeWork.
  *
+ * @see https://schema.org/CoverArt
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class CoverArt extends VisualArtwork
@@ -37,6 +38,5 @@ class CoverArt extends VisualArtwork
     {
         return new CoverArt('https://schema.org/', 'CoverArt');
     }
-
 
 }

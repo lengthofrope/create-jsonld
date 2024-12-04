@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A state or province of a country.
  *
+ * @see https://schema.org/State
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class State extends AdministrativeArea
@@ -37,6 +38,5 @@ class State extends AdministrativeArea
     {
         return new State('https://schema.org/', 'State');
     }
-
 
 }

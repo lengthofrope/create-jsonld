@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A [[FAQPage]] is a [[WebPage]] presenting one or more "[Frequently asked questions](https://en.wikipedia.org/wiki/FAQ)" (see also [[QAPage]]).
+ * A [[FAQPage]] is a [[WebPage]] presenting one or more "[Frequently asked
+ * questions](https://en.wikipedia.org/wiki/FAQ)" (see also [[QAPage]]).
  *
+ * @see https://schema.org/FAQPage
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class FAQPage extends WebPage
@@ -37,6 +39,5 @@ class FAQPage extends WebPage
     {
         return new FAQPage('https://schema.org/', 'FAQPage');
     }
-
 
 }

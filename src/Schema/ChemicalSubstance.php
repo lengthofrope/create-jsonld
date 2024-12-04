@@ -27,8 +27,11 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A chemical substance is 'a portion of matter of constant composition, composed of molecular entities of the same type or of different types' (source: [ChEBI:59999](https://www.ebi.ac.uk/chebi/searchId.do?chebiId=59999)).
+ * A chemical substance is 'a portion of matter of constant composition, composed
+ * of molecular entities of the same type or of different types' (source:
+ * [ChEBI:59999](https://www.ebi.ac.uk/chebi/searchId.do?chebiId=59999)).
  *
+ * @see https://schema.org/ChemicalSubstance
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ChemicalSubstance extends BioChemEntity
@@ -56,7 +59,6 @@ class ChemicalSubstance extends BioChemEntity
     public function getPotentialUse() {
         return $this->properties['potentialUse'];
     }
-
     /**
      * A role played by the BioChemEntity within a chemical context.
      *
@@ -75,9 +77,9 @@ class ChemicalSubstance extends BioChemEntity
     public function getChemicalRole() {
         return $this->properties['chemicalRole'];
     }
-
     /**
-     * The chemical composition describes the identity and relative ratio of the chemical elements that make up the substance.
+     * The chemical composition describes the identity and relative ratio of the
+     * chemical elements that make up the substance.
      *
      * @param $chemicalComposition 
      * @return static
@@ -94,6 +96,4 @@ class ChemicalSubstance extends BioChemEntity
     public function getChemicalComposition() {
         return $this->properties['chemicalComposition'];
     }
-
-
 }

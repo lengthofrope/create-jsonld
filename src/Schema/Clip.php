@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A short TV or radio program or a segment/part of a program.
  *
+ * @see https://schema.org/Clip
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Clip extends CreativeWork
@@ -39,7 +40,9 @@ class Clip extends CreativeWork
     }
 
     /**
-     * An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip.
+     * An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or
+     * in an event. Actors can be associated with individual items or with a series,
+     * episode, clip.
      *
      * @param $actor |
      * @return static
@@ -56,7 +59,6 @@ class Clip extends CreativeWork
     public function getActor() {
         return $this->properties['actor'];
     }
-
     /**
      * The episode to which this clip belongs.
      *
@@ -75,7 +77,6 @@ class Clip extends CreativeWork
     public function getPartOfEpisode() {
         return $this->properties['partOfEpisode'];
     }
-
     /**
      * The season to which this episode belongs.
      *
@@ -94,9 +95,9 @@ class Clip extends CreativeWork
     public function getPartOfSeason() {
         return $this->properties['partOfSeason'];
     }
-
     /**
-     * An actor, e.g. in TV, radio, movie, video games etc. Actors can be associated with individual items or with a series, episode, clip.
+     * An actor, e.g. in TV, radio, movie, video games etc. Actors can be associated
+     * with individual items or with a series, episode, clip.
      *
      * @param $actors 
      * @return static
@@ -113,9 +114,9 @@ class Clip extends CreativeWork
     public function getActors() {
         return $this->properties['actors'];
     }
-
     /**
-     * A director of e.g. TV, radio, movie, video games etc. content. Directors can be associated with individual items or with a series, episode, clip.
+     * A director of e.g. TV, radio, movie, video games etc. content. Directors can be
+     * associated with individual items or with a series, episode, clip.
      *
      * @param $directors 
      * @return static
@@ -132,7 +133,6 @@ class Clip extends CreativeWork
     public function getDirectors() {
         return $this->properties['directors'];
     }
-
     /**
      * Position of the clip within an ordered group of clips.
      *
@@ -151,9 +151,9 @@ class Clip extends CreativeWork
     public function getClipNumber() {
         return $this->properties['clipNumber'];
     }
-
     /**
-     * The end time of the clip expressed as the number of seconds from the beginning of the work.
+     * The end time of the clip expressed as the number of seconds from the beginning
+     * of the work.
      *
      * @param $endOffset |
      * @return static
@@ -170,7 +170,6 @@ class Clip extends CreativeWork
     public function getEndOffset() {
         return $this->properties['endOffset'];
     }
-
     /**
      * The series to which this episode or season belongs.
      *
@@ -189,9 +188,9 @@ class Clip extends CreativeWork
     public function getPartOfSeries() {
         return $this->properties['partOfSeries'];
     }
-
     /**
-     * The start time of the clip expressed as the number of seconds from the beginning of the work.
+     * The start time of the clip expressed as the number of seconds from the beginning
+     * of the work.
      *
      * @param $startOffset |
      * @return static
@@ -208,9 +207,10 @@ class Clip extends CreativeWork
     public function getStartOffset() {
         return $this->properties['startOffset'];
     }
-
     /**
-     * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual items or with a series, episode, clip.
+     * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event.
+     * Directors can be associated with individual items or with a series, episode,
+     * clip.
      *
      * @param $director 
      * @return static
@@ -227,7 +227,6 @@ class Clip extends CreativeWork
     public function getDirector() {
         return $this->properties['director'];
     }
-
     /**
      * The composer of the soundtrack.
      *
@@ -246,6 +245,4 @@ class Clip extends CreativeWork
     public function getMusicBy() {
         return $this->properties['musicBy'];
     }
-
-
 }

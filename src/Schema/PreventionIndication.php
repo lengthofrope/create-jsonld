@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * An indication for preventing an underlying condition, symptom, etc.
  *
+ * @see https://schema.org/PreventionIndication
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class PreventionIndication extends MedicalIndication
@@ -37,6 +38,5 @@ class PreventionIndication extends MedicalIndication
     {
         return new PreventionIndication('https://schema.org/', 'PreventionIndication');
     }
-
 
 }

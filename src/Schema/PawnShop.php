@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A shop that will buy, or lend money against the security of, personal possessions.
+ * A shop that will buy, or lend money against the security of, personal
+ * possessions.
  *
+ * @see https://schema.org/PawnShop
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class PawnShop extends Store
@@ -37,6 +39,5 @@ class PawnShop extends Store
     {
         return new PawnShop('https://schema.org/', 'PawnShop');
     }
-
 
 }

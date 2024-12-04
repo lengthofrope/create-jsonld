@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * An audio file.
  *
+ * @see https://schema.org/AudioObject
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class AudioObject extends MediaObject
@@ -39,7 +40,8 @@ class AudioObject extends MediaObject
     }
 
     /**
-     * If this MediaObject is an AudioObject or VideoObject, the transcript of that object.
+     * If this MediaObject is an AudioObject or VideoObject, the transcript of that
+     * object.
      *
      * @param $transcript 
      * @return static
@@ -56,9 +58,9 @@ class AudioObject extends MediaObject
     public function getTranscript() {
         return $this->properties['transcript'];
     }
-
     /**
-     * The caption for this object. For downloadable machine formats (closed caption, subtitles etc.) use MediaObject and indicate the [[encodingFormat]].
+     * The caption for this object. For downloadable machine formats (closed caption,
+     * subtitles etc.) use MediaObject and indicate the [[encodingFormat]].
      *
      * @param $caption |
      * @return static
@@ -75,7 +77,6 @@ class AudioObject extends MediaObject
     public function getCaption() {
         return $this->properties['caption'];
     }
-
     /**
      * Represents textual captioning from a [[MediaObject]], e.g. text of a 'meme'.
      *
@@ -94,6 +95,4 @@ class AudioObject extends MediaObject
     public function getEmbeddedTextCaption() {
         return $this->properties['embeddedTextCaption'];
     }
-
-
 }

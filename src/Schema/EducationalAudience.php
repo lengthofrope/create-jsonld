@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * An EducationalAudience.
  *
+ * @see https://schema.org/EducationalAudience
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class EducationalAudience extends Audience
@@ -56,6 +57,4 @@ class EducationalAudience extends Audience
     public function getEducationalRole() {
         return $this->properties['educationalRole'];
     }
-
-
 }

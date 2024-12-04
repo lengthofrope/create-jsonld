@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A product or service offered by a bank whereby one may deposit, withdraw or transfer money and in some cases be paid interest.
+ * A product or service offered by a bank whereby one may deposit, withdraw or
+ * transfer money and in some cases be paid interest.
  *
+ * @see https://schema.org/BankAccount
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class BankAccount extends FinancialProduct
@@ -56,7 +58,6 @@ class BankAccount extends FinancialProduct
     public function getBankAccountType() {
         return $this->properties['bankAccountType'];
     }
-
     /**
      * A minimum amount that has to be paid in every month.
      *
@@ -75,9 +76,11 @@ class BankAccount extends FinancialProduct
     public function getAccountMinimumInflow() {
         return $this->properties['accountMinimumInflow'];
     }
-
     /**
-     * An overdraft is an extension of credit from a lending institution when an account reaches zero. An overdraft allows the individual to continue withdrawing money even if the account has no funds in it. Basically the bank allows people to borrow a set amount of money.
+     * An overdraft is an extension of credit from a lending institution when an
+     * account reaches zero. An overdraft allows the individual to continue withdrawing
+     * money even if the account has no funds in it. Basically the bank allows people
+     * to borrow a set amount of money.
      *
      * @param $accountOverdraftLimit 
      * @return static
@@ -94,6 +97,4 @@ class BankAccount extends FinancialProduct
     public function getAccountOverdraftLimit() {
         return $this->properties['accountOverdraftLimit'];
     }
-
-
 }

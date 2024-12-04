@@ -27,8 +27,11 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * An event happening at a certain time and location, such as a concert, lecture, or festival. Ticketing information may be added via the [[offers]] property. Repeated events may be structured as separate Event objects.
+ * An event happening at a certain time and location, such as a concert, lecture,
+ * or festival. Ticketing information may be added via the [[offers]] property.
+ * Repeated events may be structured as separate Event objects.
  *
+ * @see https://schema.org/Event
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Event extends Thing
@@ -39,7 +42,8 @@ class Event extends Thing
     }
 
     /**
-     * The main performer or performers of the event&#x2014;for example, a presenter, musician, or actor.
+     * The main performer or performers of the event&#x2014;for example, a presenter,
+     * musician, or actor.
      *
      * @param $performers |
      * @return static
@@ -56,7 +60,6 @@ class Event extends Thing
     public function getPerformers() {
         return $this->properties['performers'];
     }
-
     /**
      * An organizer of an Event.
      *
@@ -75,7 +78,6 @@ class Event extends Thing
     public function getOrganizer() {
         return $this->properties['organizer'];
     }
-
     /**
      * A secondary contributor to the CreativeWork or Event.
      *
@@ -94,7 +96,6 @@ class Event extends Thing
     public function getContributor() {
         return $this->properties['contributor'];
     }
-
     /**
      * A work performed in some event, for example a play performed in a TheaterEvent.
      *
@@ -113,9 +114,10 @@ class Event extends Thing
     public function getWorkPerformed() {
         return $this->properties['workPerformed'];
     }
-
     /**
-     * An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip.
+     * An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or
+     * in an event. Actors can be associated with individual items or with a series,
+     * episode, clip.
      *
      * @param $actor |
      * @return static
@@ -132,9 +134,9 @@ class Event extends Thing
     public function getActor() {
         return $this->properties['actor'];
     }
-
     /**
-     * The eventAttendanceMode of an event indicates whether it occurs online, offline, or a mix.
+     * The eventAttendanceMode of an event indicates whether it occurs online, offline,
+     * or a mix.
      *
      * @param $eventAttendanceMode 
      * @return static
@@ -151,9 +153,9 @@ class Event extends Thing
     public function getEventAttendanceMode() {
         return $this->properties['eventAttendanceMode'];
     }
-
     /**
-     * A [[Grant]] that directly or indirectly provide funding or sponsorship for this item. See also [[ownershipFundingInfo]].
+     * A [[Grant]] that directly or indirectly provide funding or sponsorship for this
+     * item. See also [[ownershipFundingInfo]].
      *
      * @param $funding 
      * @return static
@@ -170,10 +172,10 @@ class Event extends Thing
     public function getFunding() {
         return $this->properties['funding'];
     }
-
     /**
      * A work featured in some event, e.g. exhibited in an ExhibitionEvent.
-       Specific subproperties are available for workPerformed (e.g. a play), or a workPresented (a Movie at a ScreeningEvent).
+     * Specific subproperties are available for workPerformed (e.g. a play), or
+     * a workPresented (a Movie at a ScreeningEvent).
      *
      * @param $workFeatured 
      * @return static
@@ -190,9 +192,10 @@ class Event extends Thing
     public function getWorkFeatured() {
         return $this->properties['workFeatured'];
     }
-
     /**
-     * The maximum virtual attendee capacity of an [[Event]] whose [[eventAttendanceMode]] is [[OnlineEventAttendanceMode]] (or the online aspects, in the case of a [[MixedEventAttendanceMode]]). 
+     * The maximum virtual attendee capacity of an [[Event]] whose
+     * [[eventAttendanceMode]] is [[OnlineEventAttendanceMode]] (or the online aspects,
+     * in the case of a [[MixedEventAttendanceMode]]).
      *
      * @param $maximumVirtualAttendeeCapacity 
      * @return static
@@ -209,9 +212,9 @@ class Event extends Thing
     public function getMaximumVirtualAttendeeCapacity() {
         return $this->properties['maximumVirtualAttendeeCapacity'];
     }
-
     /**
-     * An Event that is part of this event. For example, a conference event includes many presentations, each of which is a subEvent of the conference.
+     * An Event that is part of this event. For example, a conference event includes
+     * many presentations, each of which is a subEvent of the conference.
      *
      * @param $subEvent 
      * @return static
@@ -228,7 +231,6 @@ class Event extends Thing
     public function getSubEvent() {
         return $this->properties['subEvent'];
     }
-
     /**
      * The subject matter of the content.
      *
@@ -247,7 +249,6 @@ class Event extends Thing
     public function getAbout() {
         return $this->properties['about'];
     }
-
     /**
      * The CreativeWork that captured all or part of this Event.
      *
@@ -266,9 +267,9 @@ class Event extends Thing
     public function getRecordedIn() {
         return $this->properties['recordedIn'];
     }
-
     /**
-     * A person or organization that supports (sponsors) something through some kind of financial contribution.
+     * A person or organization that supports (sponsors) something through some kind of
+     * financial contribution.
      *
      * @param $funder |
      * @return static
@@ -285,9 +286,9 @@ class Event extends Thing
     public function getFunder() {
         return $this->properties['funder'];
     }
-
     /**
-     * Events that are a part of this event. For example, a conference event includes many presentations, each subEvents of the conference.
+     * Events that are a part of this event. For example, a conference event includes
+     * many presentations, each subEvents of the conference.
      *
      * @param $subEvents 
      * @return static
@@ -304,9 +305,9 @@ class Event extends Thing
     public function getSubEvents() {
         return $this->properties['subEvents'];
     }
-
     /**
-     * Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or by repeating the property.
+     * Keywords or tags used to describe some item. Multiple textual entries in a
+     * keywords list are typically delimited by commas, or by repeating the property.
      *
      * @param $keywords ||
      * @return static
@@ -323,7 +324,6 @@ class Event extends Thing
     public function getKeywords() {
         return $this->properties['keywords'];
     }
-
     /**
      * A flag to signal that the item, event, or place is accessible for free.
      *
@@ -342,9 +342,12 @@ class Event extends Thing
     public function getIsAccessibleForFree() {
         return $this->properties['isAccessibleForFree'];
     }
-
     /**
-     * Used in conjunction with eventStatus for rescheduled or cancelled events. This property contains the previously scheduled start date. For rescheduled events, the startDate property should be used for the newly scheduled start date. In the (rare) case of an event that has been postponed and rescheduled multiple times, this field may be repeated.
+     * Used in conjunction with eventStatus for rescheduled or cancelled events. This
+     * property contains the previously scheduled start date. For rescheduled events,
+     * the startDate property should be used for the newly scheduled start date. In the
+     * (rare) case of an event that has been postponed and rescheduled multiple times,
+     * this field may be repeated.
      *
      * @param $previousStartDate 
      * @return static
@@ -361,9 +364,9 @@ class Event extends Thing
     public function getPreviousStartDate() {
         return $this->properties['previousStartDate'];
     }
-
     /**
-     * A performer at the event&#x2014;for example, a presenter, musician, musical group or actor.
+     * A performer at the event&#x2014;for example, a presenter, musician, musical
+     * group or actor.
      *
      * @param $performer |
      * @return static
@@ -380,9 +383,9 @@ class Event extends Thing
     public function getPerformer() {
         return $this->properties['performer'];
     }
-
     /**
-     * The location of, for example, where an event is happening, where an organization is located, or where an action takes place.
+     * The location of, for example, where an event is happening, where an organization
+     * is located, or where an action takes place.
      *
      * @param $location |||
      * @return static
@@ -399,9 +402,9 @@ class Event extends Thing
     public function getLocation() {
         return $this->properties['location'];
     }
-
     /**
-     * The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
+     * The start date and time of the item (in [ISO 8601 date
+     * format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
      * @param $startDate |
      * @return static
@@ -418,7 +421,6 @@ class Event extends Thing
     public function getStartDate() {
         return $this->properties['startDate'];
     }
-
     /**
      * The typical expected age range, e.g. '7-9', '11-'.
      *
@@ -437,9 +439,10 @@ class Event extends Thing
     public function getTypicalAgeRange() {
         return $this->properties['typicalAgeRange'];
     }
-
     /**
-     * Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market, or that translates during some event.
+     * Organization or person who adapts a creative work to different languages,
+     * regional differences and technical requirements of a target market, or that
+     * translates during some event.
      *
      * @param $translator |
      * @return static
@@ -456,7 +459,6 @@ class Event extends Thing
     public function getTranslator() {
         return $this->properties['translator'];
     }
-
     /**
      * A review of the item.
      *
@@ -475,7 +477,6 @@ class Event extends Thing
     public function getReview() {
         return $this->properties['review'];
     }
-
     /**
      * The number of attendee places for an event that remain unallocated.
      *
@@ -494,14 +495,22 @@ class Event extends Thing
     public function getRemainingAttendeeCapacity() {
         return $this->properties['remainingAttendeeCapacity'];
     }
-
     /**
-     * Associates an [[Event]] with a [[Schedule]]. There are circumstances where it is preferable to share a schedule for a series of
-      repeating events rather than data on the individual events themselves. For example, a website or application might prefer to publish a schedule for a weekly
-      gym class rather than provide data on every event. A schedule could be processed by applications to add forthcoming events to a calendar. An [[Event]] that
-      is associated with a [[Schedule]] using this property should not have [[startDate]] or [[endDate]] properties. These are instead defined within the associated
-      [[Schedule]], this avoids any ambiguity for clients using the data. The property might have repeated values to specify different schedules, e.g. for different months
-      or seasons.
+     * Associates an [[Event]] with a [[Schedule]]. There are circumstances where it is
+     * preferable to share a schedule for a series of
+     * repeating events rather than data on the individual events themselves. For
+     * example, a website or application might prefer to publish a schedule for a
+     * weekly
+     * gym class rather than provide data on every event. A schedule could be
+     * processed by applications to add forthcoming events to a calendar. An [[Event]]
+     * that
+     * is associated with a [[Schedule]] using this property should not have
+     * [[startDate]] or [[endDate]] properties. These are instead defined within the
+     * associated
+     * [[Schedule]], this avoids any ambiguity for clients using the data. The
+     * property might have repeated values to specify different schedules, e.g. for
+     * different months
+     * or seasons.
      *
      * @param $eventSchedule 
      * @return static
@@ -518,10 +527,15 @@ class Event extends Thing
     public function getEventSchedule() {
         return $this->properties['eventSchedule'];
     }
-
     /**
-     * An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event. Use [[businessFunction]] to indicate the kind of transaction offered, i.e. sell, lease, etc. This property can also be used to describe a [[Demand]]. While this property is listed as expected on a number of common types, it can be used in others. In that case, using a second type, such as Product or a subtype of Product, can clarify the nature of the offer.
-      
+     * An offer to provide this item&#x2014;for example, an offer to sell a product,
+     * rent the DVD of a movie, perform a service, or give away tickets to an event.
+     * Use [[businessFunction]] to indicate the kind of transaction offered, i.e. sell,
+     * lease, etc. This property can also be used to describe a [[Demand]]. While this
+     * property is listed as expected on a number of common types, it can be used in
+     * others. In that case, using a second type, such as Product or a subtype of
+     * Product, can clarify the nature of the offer.
+     *
      *
      * @param $offers |
      * @return static
@@ -538,9 +552,9 @@ class Event extends Thing
     public function getOffers() {
         return $this->properties['offers'];
     }
-
     /**
-     * The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
+     * The duration of the item (movie, audio recording, event, etc.) in [ISO 8601
+     * duration format](http://en.wikipedia.org/wiki/ISO_8601).
      *
      * @param $duration 
      * @return static
@@ -557,9 +571,9 @@ class Event extends Thing
     public function getDuration() {
         return $this->properties['duration'];
     }
-
     /**
-     * An event that this event is a part of. For example, a collection of individual music performances might each have a music festival as their superEvent.
+     * An event that this event is a part of. For example, a collection of individual
+     * music performances might each have a music festival as their superEvent.
      *
      * @param $superEvent 
      * @return static
@@ -576,9 +590,10 @@ class Event extends Thing
     public function getSuperEvent() {
         return $this->properties['superEvent'];
     }
-
     /**
-     * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual items or with a series, episode, clip.
+     * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event.
+     * Directors can be associated with individual items or with a series, episode,
+     * clip.
      *
      * @param $director 
      * @return static
@@ -595,7 +610,6 @@ class Event extends Thing
     public function getDirector() {
         return $this->properties['director'];
     }
-
     /**
      * The time admission will commence.
      *
@@ -614,9 +628,10 @@ class Event extends Thing
     public function getDoorTime() {
         return $this->properties['doorTime'];
     }
-
     /**
-     * The maximum physical attendee capacity of an [[Event]] whose [[eventAttendanceMode]] is [[OfflineEventAttendanceMode]] (or the offline aspects, in the case of a [[MixedEventAttendanceMode]]). 
+     * The maximum physical attendee capacity of an [[Event]] whose
+     * [[eventAttendanceMode]] is [[OfflineEventAttendanceMode]] (or the offline
+     * aspects, in the case of a [[MixedEventAttendanceMode]]).
      *
      * @param $maximumPhysicalAttendeeCapacity 
      * @return static
@@ -633,7 +648,6 @@ class Event extends Thing
     public function getMaximumPhysicalAttendeeCapacity() {
         return $this->properties['maximumPhysicalAttendeeCapacity'];
     }
-
     /**
      * A person or organization attending the event.
      *
@@ -652,9 +666,10 @@ class Event extends Thing
     public function getAttendee() {
         return $this->properties['attendee'];
     }
-
     /**
-     * A person or organization that supports a thing through a pledge, promise, or financial contribution. E.g. a sponsor of a Medical Study or a corporate sponsor of an event.
+     * A person or organization that supports a thing through a pledge, promise, or
+     * financial contribution. E.g. a sponsor of a Medical Study or a corporate sponsor
+     * of an event.
      *
      * @param $sponsor |
      * @return static
@@ -671,7 +686,6 @@ class Event extends Thing
     public function getSponsor() {
         return $this->properties['sponsor'];
     }
-
     /**
      * The overall rating, based on a collection of reviews or ratings, of the item.
      *
@@ -690,9 +704,10 @@ class Event extends Thing
     public function getAggregateRating() {
         return $this->properties['aggregateRating'];
     }
-
     /**
-     * The language of the content or performance or used in an action. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
+     * The language of the content or performance or used in an action. Please use one
+     * of the language codes from the [IETF BCP 47
+     * standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
      *
      * @param $inLanguage |
      * @return static
@@ -709,9 +724,9 @@ class Event extends Thing
     public function getInLanguage() {
         return $this->properties['inLanguage'];
     }
-
     /**
-     * The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
+     * The end date and time of the item (in [ISO 8601 date
+     * format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
      * @param $endDate |
      * @return static
@@ -728,7 +743,6 @@ class Event extends Thing
     public function getEndDate() {
         return $this->properties['endDate'];
     }
-
     /**
      * A person attending the event.
      *
@@ -747,9 +761,9 @@ class Event extends Thing
     public function getAttendees() {
         return $this->properties['attendees'];
     }
-
     /**
-     * An eventStatus of an event represents its status; particularly useful when an event is cancelled or rescheduled.
+     * An eventStatus of an event represents its status; particularly useful when an
+     * event is cancelled or rescheduled.
      *
      * @param $eventStatus 
      * @return static
@@ -766,7 +780,6 @@ class Event extends Thing
     public function getEventStatus() {
         return $this->properties['eventStatus'];
     }
-
     /**
      * The total number of individuals that may attend an event or venue.
      *
@@ -785,9 +798,9 @@ class Event extends Thing
     public function getMaximumAttendeeCapacity() {
         return $this->properties['maximumAttendeeCapacity'];
     }
-
     /**
-     * The person or organization who wrote a composition, or who is the composer of a work performed at some event.
+     * The person or organization who wrote a composition, or who is the composer of a
+     * work performed at some event.
      *
      * @param $composer |
      * @return static
@@ -804,7 +817,6 @@ class Event extends Thing
     public function getComposer() {
         return $this->properties['composer'];
     }
-
     /**
      * An intended audience, i.e. a group for whom something was created.
      *
@@ -823,6 +835,4 @@ class Event extends Thing
     public function getAudience() {
         return $this->properties['audience'];
     }
-
-
 }

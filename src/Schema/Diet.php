@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A strategy of regulating the intake of food to achieve or maintain a specific health-related goal.
+ * A strategy of regulating the intake of food to achieve or maintain a specific
+ * health-related goal.
  *
+ * @see https://schema.org/Diet
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Diet extends CreativeWork
@@ -56,7 +58,6 @@ class Diet extends CreativeWork
     public function getExpertConsiderations() {
         return $this->properties['expertConsiderations'];
     }
-
     /**
      * People or organizations that endorse the plan.
      *
@@ -75,9 +76,11 @@ class Diet extends CreativeWork
     public function getEndorsers() {
         return $this->properties['endorsers'];
     }
-
     /**
-     * Nutritional information specific to the dietary plan. May include dietary recommendations on what foods to avoid, what foods to consume, and specific alterations/deviations from the USDA or other regulatory body's approved dietary guidelines.
+     * Nutritional information specific to the dietary plan. May include dietary
+     * recommendations on what foods to avoid, what foods to consume, and specific
+     * alterations/deviations from the USDA or other regulatory body's approved dietary
+     * guidelines.
      *
      * @param $dietFeatures 
      * @return static
@@ -94,7 +97,6 @@ class Diet extends CreativeWork
     public function getDietFeatures() {
         return $this->properties['dietFeatures'];
     }
-
     /**
      * Specific physiologic benefits associated to the plan.
      *
@@ -113,7 +115,6 @@ class Diet extends CreativeWork
     public function getPhysiologicalBenefits() {
         return $this->properties['physiologicalBenefits'];
     }
-
     /**
      * Specific physiologic risks associated to the diet plan.
      *
@@ -132,6 +133,4 @@ class Diet extends CreativeWork
     public function getRisks() {
         return $this->properties['risks'];
     }
-
-
 }

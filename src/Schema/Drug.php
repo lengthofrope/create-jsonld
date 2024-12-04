@@ -27,8 +27,12 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A chemical or biologic substance, used as a medical therapy, that has a physiological effect on an organism. Here the term drug is used interchangeably with the term medicine although clinical knowledge makes a clear difference between them.
+ * A chemical or biologic substance, used as a medical therapy, that has a
+ * physiological effect on an organism. Here the term drug is used interchangeably
+ * with the term medicine although clinical knowledge makes a clear difference
+ * between them.
  *
+ * @see https://schema.org/Drug
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Drug extends Substance
@@ -39,7 +43,8 @@ class Drug extends Substance
     }
 
     /**
-     * A dosing schedule for the drug for a given population, either observed, recommended, or maximum dose based on the type used.
+     * A dosing schedule for the drug for a given population, either observed,
+     * recommended, or maximum dose based on the type used.
      *
      * @param $doseSchedule 
      * @return static
@@ -56,9 +61,9 @@ class Drug extends Substance
     public function getDoseSchedule() {
         return $this->properties['doseSchedule'];
     }
-
     /**
-     * Any precaution, guidance, contraindication, etc. related to this drug's use during pregnancy.
+     * Any precaution, guidance, contraindication, etc. related to this drug's use
+     * during pregnancy.
      *
      * @param $pregnancyWarning 
      * @return static
@@ -75,7 +80,6 @@ class Drug extends Substance
     public function getPregnancyWarning() {
         return $this->properties['pregnancyWarning'];
     }
-
     /**
      * The class of drug this belongs to (e.g., statins).
      *
@@ -94,9 +98,9 @@ class Drug extends Substance
     public function getDrugClass() {
         return $this->properties['drugClass'];
     }
-
     /**
-     * The drug or supplement's legal status, including any controlled substance schedules that apply.
+     * The drug or supplement's legal status, including any controlled substance
+     * schedules that apply.
      *
      * @param $legalStatus ||
      * @return static
@@ -113,9 +117,10 @@ class Drug extends Substance
     public function getLegalStatus() {
         return $this->properties['legalStatus'];
     }
-
     /**
-     * Description of the absorption and elimination of drugs, including their concentration (pharmacokinetics, pK) and biological effects (pharmacodynamics, pD).
+     * Description of the absorption and elimination of drugs, including their
+     * concentration (pharmacokinetics, pK) and biological effects (pharmacodynamics,
+     * pD).
      *
      * @param $clinicalPharmacology 
      * @return static
@@ -132,9 +137,9 @@ class Drug extends Substance
     public function getClinicalPharmacology() {
         return $this->properties['clinicalPharmacology'];
     }
-
     /**
-     * A dosage form in which this drug/supplement is available, e.g. 'tablet', 'suspension', 'injection'.
+     * A dosage form in which this drug/supplement is available, e.g. 'tablet',
+     * 'suspension', 'injection'.
      *
      * @param $dosageForm 
      * @return static
@@ -151,7 +156,6 @@ class Drug extends Substance
     public function getDosageForm() {
         return $this->properties['dosageForm'];
     }
-
     /**
      * True if the drug is available in a generic form (regardless of name).
      *
@@ -170,9 +174,9 @@ class Drug extends Substance
     public function getIsAvailableGenerically() {
         return $this->properties['isAvailableGenerically'];
     }
-
     /**
-     * Indicates the status of drug prescription, e.g. local catalogs classifications or whether the drug is available by prescription or over-the-counter, etc.
+     * Indicates the status of drug prescription, e.g. local catalogs classifications
+     * or whether the drug is available by prescription or over-the-counter, etc.
      *
      * @param $prescriptionStatus |
      * @return static
@@ -189,9 +193,9 @@ class Drug extends Substance
     public function getPrescriptionStatus() {
         return $this->properties['prescriptionStatus'];
     }
-
     /**
-     * Any precaution, guidance, contraindication, etc. related to this drug's use by breastfeeding mothers.
+     * Any precaution, guidance, contraindication, etc. related to this drug's use by
+     * breastfeeding mothers.
      *
      * @param $breastfeedingWarning 
      * @return static
@@ -208,9 +212,9 @@ class Drug extends Substance
     public function getBreastfeedingWarning() {
         return $this->properties['breastfeedingWarning'];
     }
-
     /**
-     * Any precaution, guidance, contraindication, etc. related to consumption of alcohol while taking this drug.
+     * Any precaution, guidance, contraindication, etc. related to consumption of
+     * alcohol while taking this drug.
      *
      * @param $alcoholWarning 
      * @return static
@@ -227,9 +231,9 @@ class Drug extends Substance
     public function getAlcoholWarning() {
         return $this->properties['alcoholWarning'];
     }
-
     /**
-     * Any other drug related to this one, for example commonly-prescribed alternatives.
+     * Any other drug related to this one, for example commonly-prescribed
+     * alternatives.
      *
      * @param $relatedDrug 
      * @return static
@@ -246,9 +250,9 @@ class Drug extends Substance
     public function getRelatedDrug() {
         return $this->properties['relatedDrug'];
     }
-
     /**
-     * The specific biochemical interaction through which this drug or supplement produces its pharmacological effect.
+     * The specific biochemical interaction through which this drug or supplement
+     * produces its pharmacological effect.
      *
      * @param $mechanismOfAction 
      * @return static
@@ -265,7 +269,6 @@ class Drug extends Substance
     public function getMechanismOfAction() {
         return $this->properties['mechanismOfAction'];
     }
-
     /**
      * True if this item's name is a proprietary/brand name (vs. generic name).
      *
@@ -284,9 +287,10 @@ class Drug extends Substance
     public function getIsProprietary() {
         return $this->properties['isProprietary'];
     }
-
     /**
-     * Another drug that is known to interact with this drug in a way that impacts the effect of this drug or causes a risk to the patient. Note: disease interactions are typically captured as contraindications.
+     * Another drug that is known to interact with this drug in a way that impacts the
+     * effect of this drug or causes a risk to the patient. Note: disease interactions
+     * are typically captured as contraindications.
      *
      * @param $interactingDrug 
      * @return static
@@ -303,9 +307,10 @@ class Drug extends Substance
     public function getInteractingDrug() {
         return $this->properties['interactingDrug'];
     }
-
     /**
-     * Description of the absorption and elimination of drugs, including their concentration (pharmacokinetics, pK) and biological effects (pharmacodynamics, pD).
+     * Description of the absorption and elimination of drugs, including their
+     * concentration (pharmacokinetics, pK) and biological effects (pharmacodynamics,
+     * pD).
      *
      * @param $clincalPharmacology 
      * @return static
@@ -322,9 +327,9 @@ class Drug extends Substance
     public function getClincalPharmacology() {
         return $this->properties['clincalPharmacology'];
     }
-
     /**
-     * Any information related to overdose on a drug, including signs or symptoms, treatments, contact information for emergency response.
+     * Any information related to overdose on a drug, including signs or symptoms,
+     * treatments, contact information for emergency response.
      *
      * @param $overdosage 
      * @return static
@@ -341,9 +346,9 @@ class Drug extends Substance
     public function getOverdosage() {
         return $this->properties['overdosage'];
     }
-
     /**
-     * Any precaution, guidance, contraindication, etc. related to consumption of specific foods while taking this drug.
+     * Any precaution, guidance, contraindication, etc. related to consumption of
+     * specific foods while taking this drug.
      *
      * @param $foodWarning 
      * @return static
@@ -360,7 +365,6 @@ class Drug extends Substance
     public function getFoodWarning() {
         return $this->properties['foodWarning'];
     }
-
     /**
      * Pregnancy category of this drug.
      *
@@ -379,7 +383,6 @@ class Drug extends Substance
     public function getPregnancyCategory() {
         return $this->properties['pregnancyCategory'];
     }
-
     /**
      * An available dosage strength for the drug.
      *
@@ -398,7 +401,6 @@ class Drug extends Substance
     public function getAvailableStrength() {
         return $this->properties['availableStrength'];
     }
-
     /**
      * Any FDA or other warnings about the drug (text or URL).
      *
@@ -417,7 +419,6 @@ class Drug extends Substance
     public function getWarning() {
         return $this->properties['warning'];
     }
-
     /**
      * A route by which this drug may be administered, e.g. 'oral'.
      *
@@ -436,7 +437,6 @@ class Drug extends Substance
     public function getAdministrationRoute() {
         return $this->properties['administrationRoute'];
     }
-
     /**
      * Proprietary name given to the diet plan, typically by its originator or creator.
      *
@@ -455,7 +455,6 @@ class Drug extends Substance
     public function getProprietaryName() {
         return $this->properties['proprietaryName'];
     }
-
     /**
      * Link to prescribing information for the drug.
      *
@@ -474,9 +473,9 @@ class Drug extends Substance
     public function getPrescribingInfo() {
         return $this->properties['prescribingInfo'];
     }
-
     /**
-     * Recommended intake of this supplement for a given population as defined by a specific recommending authority.
+     * Recommended intake of this supplement for a given population as defined by a
+     * specific recommending authority.
      *
      * @param $maximumIntake 
      * @return static
@@ -493,7 +492,6 @@ class Drug extends Substance
     public function getMaximumIntake() {
         return $this->properties['maximumIntake'];
     }
-
     /**
      * The generic name of this drug or supplement.
      *
@@ -512,7 +510,6 @@ class Drug extends Substance
     public function getNonProprietaryName() {
         return $this->properties['nonProprietaryName'];
     }
-
     /**
      * The unit in which the drug is measured, e.g. '5 mg tablet'.
      *
@@ -531,7 +528,6 @@ class Drug extends Substance
     public function getDrugUnit() {
         return $this->properties['drugUnit'];
     }
-
     /**
      * An active ingredient, typically chemical compounds and/or biologic substances.
      *
@@ -550,7 +546,6 @@ class Drug extends Substance
     public function getActiveIngredient() {
         return $this->properties['activeIngredient'];
     }
-
     /**
      * Link to the drug's label details.
      *
@@ -569,7 +564,6 @@ class Drug extends Substance
     public function getLabelDetails() {
         return $this->properties['labelDetails'];
     }
-
     /**
      * The RxCUI drug identifier from RXNORM.
      *
@@ -588,7 +582,6 @@ class Drug extends Substance
     public function getRxcui() {
         return $this->properties['rxcui'];
     }
-
     /**
      * The insurance plans that cover this drug.
      *
@@ -607,6 +600,4 @@ class Drug extends Substance
     public function getIncludedInHealthInsurancePlan() {
         return $this->properties['includedInHealthInsurancePlan'];
     }
-
-
 }

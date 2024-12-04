@@ -27,8 +27,13 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A HyperToc represents a hypertext table of contents for complex media objects, such as [[VideoObject]], [[AudioObject]]. Items in the table of contents are indicated using the [[tocEntry]] property, and typed [[HyperTocEntry]]. For cases where the same larger work is split into multiple files, [[associatedMedia]] can be used on individual [[HyperTocEntry]] items.
+ * A HyperToc represents a hypertext table of contents for complex media objects,
+ * such as [[VideoObject]], [[AudioObject]]. Items in the table of contents are
+ * indicated using the [[tocEntry]] property, and typed [[HyperTocEntry]]. For
+ * cases where the same larger work is split into multiple files,
+ * [[associatedMedia]] can be used on individual [[HyperTocEntry]] items.
  *
+ * @see https://schema.org/HyperToc
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class HyperToc extends CreativeWork
@@ -39,7 +44,8 @@ class HyperToc extends CreativeWork
     }
 
     /**
-     * A media object that encodes this CreativeWork. This property is a synonym for encoding.
+     * A media object that encodes this CreativeWork. This property is a synonym for
+     * encoding.
      *
      * @param $associatedMedia 
      * @return static
@@ -56,7 +62,6 @@ class HyperToc extends CreativeWork
     public function getAssociatedMedia() {
         return $this->properties['associatedMedia'];
     }
-
     /**
      * Indicates a [[HyperTocEntry]] in a [[HyperToc]].
      *
@@ -75,6 +80,4 @@ class HyperToc extends CreativeWork
     public function getTocEntry() {
         return $this->properties['tocEntry'];
     }
-
-
 }

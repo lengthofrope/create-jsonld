@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A lodging business, such as a motel, hotel, or inn.
  *
+ * @see https://schema.org/LodgingBusiness
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class LodgingBusiness extends LocalBusiness
@@ -39,7 +40,8 @@ class LodgingBusiness extends LocalBusiness
     }
 
     /**
-     * Indicates whether pets are allowed to enter the accommodation or lodging business. More detailed information can be put in a text value.
+     * Indicates whether pets are allowed to enter the accommodation or lodging
+     * business. More detailed information can be put in a text value.
      *
      * @param $petsAllowed |
      * @return static
@@ -56,9 +58,11 @@ class LodgingBusiness extends LocalBusiness
     public function getPetsAllowed() {
         return $this->properties['petsAllowed'];
     }
-
     /**
-     * An official rating for a lodging business or food establishment, e.g. from national associations or standards bodies. Use the author property to indicate the rating organization, e.g. as an Organization with name such as (e.g. HOTREC, DEHOGA, WHR, or Hotelstars).
+     * An official rating for a lodging business or food establishment, e.g. from
+     * national associations or standards bodies. Use the author property to indicate
+     * the rating organization, e.g. as an Organization with name such as (e.g. HOTREC,
+     * DEHOGA, WHR, or Hotelstars).
      *
      * @param $starRating 
      * @return static
@@ -75,7 +79,6 @@ class LodgingBusiness extends LocalBusiness
     public function getStarRating() {
         return $this->properties['starRating'];
     }
-
     /**
      * The latest someone may check out of a lodging establishment.
      *
@@ -94,7 +97,6 @@ class LodgingBusiness extends LocalBusiness
     public function getCheckoutTime() {
         return $this->properties['checkoutTime'];
     }
-
     /**
      * The earliest someone may check into a lodging establishment.
      *
@@ -113,10 +115,11 @@ class LodgingBusiness extends LocalBusiness
     public function getCheckinTime() {
         return $this->properties['checkinTime'];
     }
-
     /**
-     * The number of rooms (excluding bathrooms and closets) of the accommodation or lodging business.
-Typical unit code(s): ROM for room or C62 for no unit. The type of room can be put in the unitText property of the QuantitativeValue.
+     * The number of rooms (excluding bathrooms and closets) of the accommodation or
+     * lodging business.
+     * Typical unit code(s): ROM for room or C62 for no unit. The type of room can be
+     * put in the unitText property of the QuantitativeValue.
      *
      * @param $numberOfRooms |
      * @return static
@@ -133,9 +136,10 @@ Typical unit code(s): ROM for room or C62 for no unit. The type of room can be p
     public function getNumberOfRooms() {
         return $this->properties['numberOfRooms'];
     }
-
     /**
-     * An amenity feature (e.g. a characteristic or service) of the Accommodation. This generic property does not make a statement about whether the feature is included in an offer for the main accommodation or available at extra costs.
+     * An amenity feature (e.g. a characteristic or service) of the Accommodation. This
+     * generic property does not make a statement about whether the feature is included
+     * in an offer for the main accommodation or available at extra costs.
      *
      * @param $amenityFeature 
      * @return static
@@ -152,9 +156,10 @@ Typical unit code(s): ROM for room or C62 for no unit. The type of room can be p
     public function getAmenityFeature() {
         return $this->properties['amenityFeature'];
     }
-
     /**
-     * A language someone may use with or at the item, service or place. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].
+     * A language someone may use with or at the item, service or place. Please use one
+     * of the language codes from the [IETF BCP 47
+     * standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].
      *
      * @param $availableLanguage |
      * @return static
@@ -171,7 +176,6 @@ Typical unit code(s): ROM for room or C62 for no unit. The type of room can be p
     public function getAvailableLanguage() {
         return $this->properties['availableLanguage'];
     }
-
     /**
      * An intended audience, i.e. a group for whom something was created.
      *
@@ -190,6 +194,4 @@ Typical unit code(s): ROM for room or C62 for no unit. The type of room can be p
     public function getAudience() {
         return $this->properties['audience'];
     }
-
-
 }

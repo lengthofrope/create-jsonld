@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A library.
  *
+ * @see https://schema.org/Library
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Library extends LocalBusiness
@@ -37,6 +38,5 @@ class Library extends LocalBusiness
     {
         return new Library('https://schema.org/', 'Library');
     }
-
 
 }

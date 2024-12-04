@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A service provided by a government organization, e.g. food stamps, veterans benefits, etc.
+ * A service provided by a government organization, e.g. food stamps, veterans
+ * benefits, etc.
  *
+ * @see https://schema.org/GovernmentService
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class GovernmentService extends Service
@@ -39,7 +41,9 @@ class GovernmentService extends Service
     }
 
     /**
-     * The operating organization, if different from the provider.  This enables the representation of services that are provided by an organization, but operated by another organization like a subcontractor.
+     * The operating organization, if different from the provider.  This enables the
+     * representation of services that are provided by an organization, but operated by
+     * another organization like a subcontractor.
      *
      * @param $serviceOperator 
      * @return static
@@ -56,9 +60,9 @@ class GovernmentService extends Service
     public function getServiceOperator() {
         return $this->properties['serviceOperator'];
     }
-
     /**
-     * Indicates a legal jurisdiction, e.g. of some legislation, or where some government service is based.
+     * Indicates a legal jurisdiction, e.g. of some legislation, or where some
+     * government service is based.
      *
      * @param $jurisdiction |
      * @return static
@@ -75,6 +79,4 @@ class GovernmentService extends Service
     public function getJurisdiction() {
         return $this->properties['jurisdiction'];
     }
-
-
 }

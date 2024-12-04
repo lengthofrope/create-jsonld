@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A supply consumed when performing the instructions for how to achieve a result.
  *
+ * @see https://schema.org/HowToSupply
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class HowToSupply extends HowToItem
@@ -39,7 +40,8 @@ class HowToSupply extends HowToItem
     }
 
     /**
-     * The estimated cost of the supply or supplies consumed when performing instructions.
+     * The estimated cost of the supply or supplies consumed when performing
+     * instructions.
      *
      * @param $estimatedCost |
      * @return static
@@ -56,6 +58,4 @@ class HowToSupply extends HowToItem
     public function getEstimatedCost() {
         return $this->properties['estimatedCost'];
     }
-
-
 }

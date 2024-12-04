@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Beach.
  *
+ * @see https://schema.org/Beach
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Beach extends CivicStructure
@@ -37,6 +38,5 @@ class Beach extends CivicStructure
     {
         return new Beach('https://schema.org/', 'Beach');
     }
-
 
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A rating is an evaluation on a numeric scale, such as 1 to 5 stars.
  *
+ * @see https://schema.org/Rating
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Rating extends Intangible
@@ -39,7 +40,10 @@ class Rating extends Intangible
     }
 
     /**
-     * A short explanation (e.g. one to two sentences) providing background context and other information that led to the conclusion expressed in the rating. This is particularly applicable to ratings associated with "fact check" markup using [[ClaimReview]].
+     * A short explanation (e.g. one to two sentences) providing background context and
+     * other information that led to the conclusion expressed in the rating. This is
+     * particularly applicable to ratings associated with "fact check" markup using
+     * [[ClaimReview]].
      *
      * @param $ratingExplanation 
      * @return static
@@ -56,7 +60,6 @@ class Rating extends Intangible
     public function getRatingExplanation() {
         return $this->properties['ratingExplanation'];
     }
-
     /**
      * The highest value allowed in this rating system.
      *
@@ -75,9 +78,10 @@ class Rating extends Intangible
     public function getBestRating() {
         return $this->properties['bestRating'];
     }
-
     /**
-     * The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.
+     * The author of this content or rating. Please note that author is special in that
+     * HTML 5 provides a special mechanism for indicating authorship via the rel tag.
+     * That is equivalent to this and may be used interchangeably.
      *
      * @param $author |
      * @return static
@@ -94,7 +98,6 @@ class Rating extends Intangible
     public function getAuthor() {
         return $this->properties['author'];
     }
-
     /**
      * This Review or Rating is relevant to this part or facet of the itemReviewed.
      *
@@ -113,7 +116,6 @@ class Rating extends Intangible
     public function getReviewAspect() {
         return $this->properties['reviewAspect'];
     }
-
     /**
      * The lowest value allowed in this rating system.
      *
@@ -132,9 +134,15 @@ class Rating extends Intangible
     public function getWorstRating() {
         return $this->properties['worstRating'];
     }
-
     /**
-     * The rating for the content.\n\nUsage guidelines:\n\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.
+     * The rating for the content.
+     *
+     * Usage guidelines:
+     *
+     * * Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE'
+     * (U+0039)) rather than superficially similar Unicode symbols.
+     * * Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal
+     * point. Avoid using these symbols as a readability separator.
      *
      * @param $ratingValue |
      * @return static
@@ -151,6 +159,4 @@ class Rating extends Intangible
     public function getRatingValue() {
         return $this->properties['ratingValue'];
     }
-
-
 }

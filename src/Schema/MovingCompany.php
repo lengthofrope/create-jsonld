@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A moving company.
  *
+ * @see https://schema.org/MovingCompany
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MovingCompany extends HomeAndConstructionBusiness
@@ -37,6 +38,5 @@ class MovingCompany extends HomeAndConstructionBusiness
     {
         return new MovingCompany('https://schema.org/', 'MovingCompany');
     }
-
 
 }

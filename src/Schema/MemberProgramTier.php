@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A MemberProgramTier specifies a tier under a loyalty (member) program, for example "gold".
+ * A MemberProgramTier specifies a tier under a loyalty (member) program, for
+ * example "gold".
  *
+ * @see https://schema.org/MemberProgramTier
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MemberProgramTier extends Intangible
@@ -39,7 +41,11 @@ class MemberProgramTier extends Intangible
     }
 
     /**
-     * A requirement for a user to join a membership tier, for example: a CreditCard if the tier requires sign up for a credit card, A UnitPriceSpecification if the user is required to pay a (periodic) fee, or a MonetaryAmount if the user needs to spend a minimum amount to join the tier. If a tier is free to join then this property does not need to be specified.
+     * A requirement for a user to join a membership tier, for example: a CreditCard if
+     * the tier requires sign up for a credit card, A UnitPriceSpecification if the
+     * user is required to pay a (periodic) fee, or a MonetaryAmount if the user needs
+     * to spend a minimum amount to join the tier. If a tier is free to join then this
+     * property does not need to be specified.
      *
      * @param $hasTierRequirement |||
      * @return static
@@ -56,9 +62,10 @@ class MemberProgramTier extends Intangible
     public function getHasTierRequirement() {
         return $this->properties['hasTierRequirement'];
     }
-
     /**
-     * The number of membership points earned by the member. If necessary, the unitText can be used to express the units the points are issued in. (E.g. stars, miles, etc.)
+     * The number of membership points earned by the member. If necessary, the unitText
+     * can be used to express the units the points are issued in. (E.g. stars, miles,
+     * etc.)
      *
      * @param $membershipPointsEarned |
      * @return static
@@ -75,7 +82,6 @@ class MemberProgramTier extends Intangible
     public function getMembershipPointsEarned() {
         return $this->properties['membershipPointsEarned'];
     }
-
     /**
      * A member benefit for a particular tier of a loyalty program.
      *
@@ -94,7 +100,6 @@ class MemberProgramTier extends Intangible
     public function getHasTierBenefit() {
         return $this->properties['hasTierBenefit'];
     }
-
     /**
      * The member program this tier is a part of.
      *
@@ -113,6 +118,4 @@ class MemberProgramTier extends Intangible
     public function getIsTierOf() {
         return $this->properties['isTierOf'];
     }
-
-
 }

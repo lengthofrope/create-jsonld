@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A company or fund that gathers capital from a number of investors to create a pool of money that is then re-invested into stocks, bonds and other assets.
+ * A company or fund that gathers capital from a number of investors to create a
+ * pool of money that is then re-invested into stocks, bonds and other assets.
  *
+ * @see https://schema.org/InvestmentFund
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class InvestmentFund extends InvestmentOrDeposit
@@ -37,6 +39,5 @@ class InvestmentFund extends InvestmentOrDeposit
     {
         return new InvestmentFund('https://schema.org/', 'InvestmentFund');
     }
-
 
 }

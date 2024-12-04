@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A medical procedure intended primarily for diagnostic, as opposed to therapeutic, purposes.
+ * A medical procedure intended primarily for diagnostic, as opposed to
+ * therapeutic, purposes.
  *
+ * @see https://schema.org/DiagnosticProcedure
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class DiagnosticProcedure extends MedicalProcedure
@@ -37,6 +39,5 @@ class DiagnosticProcedure extends MedicalProcedure
     {
         return new DiagnosticProcedure('https://schema.org/', 'DiagnosticProcedure');
     }
-
 
 }

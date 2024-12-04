@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * An agent controls a device or application.
  *
+ * @see https://schema.org/ControlAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ControlAction extends Action
@@ -37,6 +38,5 @@ class ControlAction extends Action
     {
         return new ControlAction('https://schema.org/', 'ControlAction');
     }
-
 
 }

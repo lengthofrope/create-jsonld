@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A kind of lodging business that focuses on renting single properties for limited time.
+ * A kind of lodging business that focuses on renting single properties for limited
+ * time.
  *
+ * @see https://schema.org/VacationRental
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class VacationRental extends LodgingBusiness
@@ -37,6 +39,5 @@ class VacationRental extends LodgingBusiness
     {
         return new VacationRental('https://schema.org/', 'VacationRental');
     }
-
 
 }

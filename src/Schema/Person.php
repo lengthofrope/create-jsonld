@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A person (alive, dead, undead, or fictional).
  *
+ * @see https://schema.org/Person
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Person extends Thing
@@ -39,7 +40,9 @@ class Person extends Thing
     }
 
     /**
-     * The number of interactions for the CreativeWork using the WebSite or SoftwareApplication. The most specific child type of InteractionCounter should be used.
+     * The number of interactions for the CreativeWork using the WebSite or
+     * SoftwareApplication. The most specific child type of InteractionCounter should
+     * be used.
      *
      * @param $interactionStatistic 
      * @return static
@@ -56,7 +59,6 @@ class Person extends Thing
     public function getInteractionStatistic() {
         return $this->properties['interactionStatistic'];
     }
-
     /**
      * A credential awarded to the Person or Organization.
      *
@@ -75,7 +77,6 @@ class Person extends Thing
     public function getHasCredential() {
         return $this->properties['hasCredential'];
     }
-
     /**
      * A colleague of the person.
      *
@@ -94,7 +95,6 @@ class Person extends Thing
     public function getColleague() {
         return $this->properties['colleague'];
     }
-
     /**
      * A contact point for a person or organization.
      *
@@ -113,9 +113,9 @@ class Person extends Thing
     public function getContactPoints() {
         return $this->properties['contactPoints'];
     }
-
     /**
-     * The total financial value of the person as calculated by subtracting assets from liabilities.
+     * The total financial value of the person as calculated by subtracting assets from
+     * liabilities.
      *
      * @param $netWorth |
      * @return static
@@ -132,9 +132,11 @@ class Person extends Thing
     public function getNetWorth() {
         return $this->properties['netWorth'];
     }
-
     /**
-     * Of a [[Person]], and less typically of an [[Organization]], to indicate a topic that is known about - suggesting possible expertise but not implying it. We do not distinguish skill levels here, or relate this to educational content, events, objectives or [[JobPosting]] descriptions.
+     * Of a [[Person]], and less typically of an [[Organization]], to indicate a topic
+     * that is known about - suggesting possible expertise but not implying it. We do
+     * not distinguish skill levels here, or relate this to educational content,
+     * events, objectives or [[JobPosting]] descriptions.
      *
      * @param $knowsAbout ||
      * @return static
@@ -151,12 +153,18 @@ class Person extends Thing
     public function getKnowsAbout() {
         return $this->properties['knowsAbout'];
     }
-
     /**
-     * The publishingPrinciples property indicates (typically via [[URL]]) a document describing the editorial principles of an [[Organization]] (or individual, e.g. a [[Person]] writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies. When applied to a [[CreativeWork]] (e.g. [[NewsArticle]]) the principles are those of the party primarily responsible for the creation of the [[CreativeWork]].
-
-While such policies are most typically expressed in natural language, sometimes related information (e.g. indicating a [[funder]]) can be expressed using schema.org terminology.
-
+     * The publishingPrinciples property indicates (typically via [[URL]]) a document
+     * describing the editorial principles of an [[Organization]] (or individual, e.g.
+     * a [[Person]] writing a blog) that relate to their activities as a publisher,
+     * e.g. ethics or diversity policies. When applied to a [[CreativeWork]] (e.g.
+     * [[NewsArticle]]) the principles are those of the party primarily responsible for
+     * the creation of the [[CreativeWork]].
+     *
+     * While such policies are most typically expressed in natural language, sometimes
+     * related information (e.g. indicating a [[funder]]) can be expressed using
+     * schema.org terminology.
+     *
      *
      * @param $publishingPrinciples |
      * @return static
@@ -173,9 +181,10 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getPublishingPrinciples() {
         return $this->properties['publishingPrinciples'];
     }
-
     /**
-     * The International Standard of Industrial Classification of All Economic Activities (ISIC), Revision 4 code for a particular organization, business person, or place.
+     * The International Standard of Industrial Classification of All Economic
+     * Activities (ISIC), Revision 4 code for a particular organization, business
+     * person, or place.
      *
      * @param $isicV4 
      * @return static
@@ -192,7 +201,6 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getIsicV4() {
         return $this->properties['isicV4'];
     }
-
     /**
      * The telephone number.
      *
@@ -211,7 +219,6 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getTelephone() {
         return $this->properties['telephone'];
     }
-
     /**
      * A contact location for a person's residence.
      *
@@ -230,7 +237,6 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getHomeLocation() {
         return $this->properties['homeLocation'];
     }
-
     /**
      * The Value-added Tax ID of the organization or person.
      *
@@ -249,9 +255,11 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getVatID() {
         return $this->properties['vatID'];
     }
-
     /**
-     * Of a [[Person]], and less typically of an [[Organization]], to indicate a known language. We do not distinguish skill levels or reading/writing/speaking/signing here. Use language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47).
+     * Of a [[Person]], and less typically of an [[Organization]], to indicate a known
+     * language. We do not distinguish skill levels or reading/writing/speaking/signing
+     * here. Use language codes from the [IETF BCP 47
+     * standard](http://tools.ietf.org/html/bcp47).
      *
      * @param $knowsLanguage |
      * @return static
@@ -268,7 +276,6 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getKnowsLanguage() {
         return $this->properties['knowsLanguage'];
     }
-
     /**
      * Family name. In the U.S., the last name of a Person.
      *
@@ -287,7 +294,6 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getFamilyName() {
         return $this->properties['familyName'];
     }
-
     /**
      * An honorific prefix preceding a Person's name such as Dr/Mrs/Mr.
      *
@@ -306,7 +312,6 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getHonorificPrefix() {
         return $this->properties['honorificPrefix'];
     }
-
     /**
      * An award won by or for this item.
      *
@@ -325,7 +330,6 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getAward() {
         return $this->properties['award'];
     }
-
     /**
      * Physical address of the item.
      *
@@ -344,9 +348,9 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getAddress() {
         return $this->properties['address'];
     }
-
     /**
-     * A [callsign](https://en.wikipedia.org/wiki/Call_sign), as used in broadcasting and radio communications to identify people, radio and TV stations, or vehicles.
+     * A [callsign](https://en.wikipedia.org/wiki/Call_sign), as used in broadcasting
+     * and radio communications to identify people, radio and TV stations, or vehicles.
      *
      * @param $callSign 
      * @return static
@@ -363,7 +367,6 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getCallSign() {
         return $this->properties['callSign'];
     }
-
     /**
      * The place where the person was born.
      *
@@ -382,7 +385,6 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getBirthPlace() {
         return $this->properties['birthPlace'];
     }
-
     /**
      * The most generic uni-directional social relation.
      *
@@ -401,9 +403,9 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getFollows() {
         return $this->properties['follows'];
     }
-
     /**
-     * A [[Grant]] that directly or indirectly provide funding or sponsorship for this item. See also [[ownershipFundingInfo]].
+     * A [[Grant]] that directly or indirectly provide funding or sponsorship for this
+     * item. See also [[ownershipFundingInfo]].
      *
      * @param $funding 
      * @return static
@@ -420,7 +422,6 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getFunding() {
         return $this->properties['funding'];
     }
-
     /**
      * Indicates an OfferCatalog listing for this Organization, Person, or Service.
      *
@@ -439,9 +440,9 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getHasOfferCatalog() {
         return $this->properties['hasOfferCatalog'];
     }
-
     /**
-     * Certification information about a product, organization, service, place, or person.
+     * Certification information about a product, organization, service, place, or
+     * person.
      *
      * @param $hasCertification 
      * @return static
@@ -458,7 +459,6 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getHasCertification() {
         return $this->properties['hasCertification'];
     }
-
     /**
      * Given name. In the U.S., the first name of a Person.
      *
@@ -477,7 +477,6 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getGivenName() {
         return $this->properties['givenName'];
     }
-
     /**
      * Points-of-Sales operated by the organization or person.
      *
@@ -496,9 +495,9 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getHasPOS() {
         return $this->properties['hasPOS'];
     }
-
     /**
-     * A person or organization that supports (sponsors) something through some kind of financial contribution.
+     * A person or organization that supports (sponsors) something through some kind of
+     * financial contribution.
      *
      * @param $funder |
      * @return static
@@ -515,7 +514,6 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getFunder() {
         return $this->properties['funder'];
     }
-
     /**
      * A parents of the person.
      *
@@ -534,7 +532,6 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getParents() {
         return $this->properties['parents'];
     }
-
     /**
      * The fax number.
      *
@@ -553,7 +550,6 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getFaxNumber() {
         return $this->properties['faxNumber'];
     }
-
     /**
      * The place where the person died.
      *
@@ -572,7 +568,6 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getDeathPlace() {
         return $this->properties['deathPlace'];
     }
-
     /**
      * Email address.
      *
@@ -591,9 +586,9 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getEmail() {
         return $this->properties['email'];
     }
-
     /**
-     * The North American Industry Classification System (NAICS) code for a particular organization or business person.
+     * The North American Industry Classification System (NAICS) code for a particular
+     * organization or business person.
      *
      * @param $naics 
      * @return static
@@ -610,7 +605,6 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getNaics() {
         return $this->properties['naics'];
     }
-
     /**
      * A child of the person.
      *
@@ -629,9 +623,9 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getChildren() {
         return $this->properties['children'];
     }
-
     /**
-     * An Organization (or ProgramMembership) to which this Person or Organization belongs.
+     * An Organization (or ProgramMembership) to which this Person or Organization
+     * belongs.
      *
      * @param $memberOf ||
      * @return static
@@ -648,7 +642,6 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getMemberOf() {
         return $this->properties['memberOf'];
     }
-
     /**
      * A contact point for a person or organization.
      *
@@ -667,9 +660,9 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getContactPoint() {
         return $this->properties['contactPoint'];
     }
-
     /**
-     * The Tax / Fiscal ID of the organization or person, e.g. the TIN in the US or the CIF/NIF in Spain.
+     * The Tax / Fiscal ID of the organization or person, e.g. the TIN in the US or the
+     * CIF/NIF in Spain.
      *
      * @param $taxID 
      * @return static
@@ -686,7 +679,6 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getTaxID() {
         return $this->properties['taxID'];
     }
-
     /**
      * A parent of this person.
      *
@@ -705,7 +697,6 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getParent() {
         return $this->properties['parent'];
     }
-
     /**
      * The most generic bi-directional social/work relation.
      *
@@ -724,9 +715,10 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getKnows() {
         return $this->properties['knows'];
     }
-
     /**
-     * A statement of knowledge, skill, ability, task or any other assertion expressing a competency that is either claimed by a person, an organization or desired or required to fulfill a role or to work in an occupation.
+     * A statement of knowledge, skill, ability, task or any other assertion expressing
+     * a competency that is either claimed by a person, an organization or desired or
+     * required to fulfill a role or to work in an occupation.
      *
      * @param $skills |
      * @return static
@@ -743,7 +735,6 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getSkills() {
         return $this->properties['skills'];
     }
-
     /**
      * Date of birth.
      *
@@ -762,7 +753,6 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getBirthDate() {
         return $this->properties['birthDate'];
     }
-
     /**
      * An organization that the person is an alumni of.
      *
@@ -781,9 +771,9 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getAlumniOf() {
         return $this->properties['alumniOf'];
     }
-
     /**
-     * An organization that this person is affiliated with. For example, a school/university, a club, or a team.
+     * An organization that this person is affiliated with. For example, a
+     * school/university, a club, or a team.
      *
      * @param $affiliation 
      * @return static
@@ -800,7 +790,6 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getAffiliation() {
         return $this->properties['affiliation'];
     }
-
     /**
      * The most generic familial relation.
      *
@@ -819,7 +808,6 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getRelatedTo() {
         return $this->properties['relatedTo'];
     }
-
     /**
      * The job title of the person (for example, Financial Manager).
      *
@@ -838,7 +826,6 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getJobTitle() {
         return $this->properties['jobTitle'];
     }
-
     /**
      * An honorific suffix following a Person's name such as M.D./PhD/MSCSW.
      *
@@ -857,7 +844,6 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getHonorificSuffix() {
         return $this->properties['honorificSuffix'];
     }
-
     /**
      * The person's spouse.
      *
@@ -876,7 +862,6 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getSpouse() {
         return $this->properties['spouse'];
     }
-
     /**
      * A contact location for a person's place of work.
      *
@@ -895,9 +880,9 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getWorkLocation() {
         return $this->properties['workLocation'];
     }
-
     /**
-     * The brand(s) associated with a product or service, or the brand(s) maintained by an organization or business person.
+     * The brand(s) associated with a product or service, or the brand(s) maintained by
+     * an organization or business person.
      *
      * @param $brand |
      * @return static
@@ -914,7 +899,6 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getBrand() {
         return $this->properties['brand'];
     }
-
     /**
      * A colleague of the person.
      *
@@ -933,7 +917,6 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getColleagues() {
         return $this->properties['colleagues'];
     }
-
     /**
      * Nationality of the person.
      *
@@ -952,7 +935,6 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getNationality() {
         return $this->properties['nationality'];
     }
-
     /**
      * Products owned by the organization or person.
      *
@@ -971,7 +953,6 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getOwns() {
         return $this->properties['owns'];
     }
-
     /**
      * Event that this person is a performer or participant in.
      *
@@ -990,7 +971,6 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getPerformerIn() {
         return $this->properties['performerIn'];
     }
-
     /**
      * Date of death.
      *
@@ -1009,7 +989,6 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getDeathDate() {
         return $this->properties['deathDate'];
     }
-
     /**
      * Organizations that the person works for.
      *
@@ -1028,7 +1007,6 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getWorksFor() {
         return $this->properties['worksFor'];
     }
-
     /**
      * An additional name for a Person, can be used for a middle name.
      *
@@ -1047,7 +1025,6 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getAdditionalName() {
         return $this->properties['additionalName'];
     }
-
     /**
      * A sibling of the person.
      *
@@ -1066,7 +1043,6 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getSibling() {
         return $this->properties['sibling'];
     }
-
     /**
      * A sibling of the person.
      *
@@ -1085,9 +1061,11 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getSiblings() {
         return $this->properties['siblings'];
     }
-
     /**
-     * The [Global Location Number](http://www.gs1.org/gln) (GLN, sometimes also referred to as International Location Number or ILN) of the respective organization, person, or place. The GLN is a 13-digit number used to identify parties and physical locations.
+     * The [Global Location Number](http://www.gs1.org/gln) (GLN, sometimes also
+     * referred to as International Location Number or ILN) of the respective
+     * organization, person, or place. The GLN is a 13-digit number used to identify
+     * parties and physical locations.
      *
      * @param $globalLocationNumber 
      * @return static
@@ -1104,7 +1082,6 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getGlobalLocationNumber() {
         return $this->properties['globalLocationNumber'];
     }
-
     /**
      * The height of the item.
      *
@@ -1123,9 +1100,14 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getHeight() {
         return $this->properties['height'];
     }
-
     /**
-     * Gender of something, typically a [[Person]], but possibly also fictional characters, animals, etc. While https://schema.org/Male and https://schema.org/Female may be used, text strings are also acceptable for people who do not identify as a binary gender. The [[gender]] property can also be used in an extended sense to cover e.g. the gender of sports teams. As with the gender of individuals, we do not try to enumerate all possibilities. A mixed-gender [[SportsTeam]] can be indicated with a text value of "Mixed".
+     * Gender of something, typically a [[Person]], but possibly also fictional
+     * characters, animals, etc. While https://schema.org/Male and
+     * https://schema.org/Female may be used, text strings are also acceptable for
+     * people who do not identify as a binary gender. The [[gender]] property can also
+     * be used in an extended sense to cover e.g. the gender of sports teams. As with
+     * the gender of individuals, we do not try to enumerate all possibilities. A
+     * mixed-gender [[SportsTeam]] can be indicated with a text value of "Mixed".
      *
      * @param $gender |
      * @return static
@@ -1142,7 +1124,6 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getGender() {
         return $this->properties['gender'];
     }
-
     /**
      * Awards won by or for this item.
      *
@@ -1161,7 +1142,6 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getAwards() {
         return $this->properties['awards'];
     }
-
     /**
      * The weight of the product or person.
      *
@@ -1180,7 +1160,6 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getWeight() {
         return $this->properties['weight'];
     }
-
     /**
      * The Person's occupation. For past professions, use Role for expressing dates.
      *
@@ -1199,9 +1178,9 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getHasOccupation() {
         return $this->properties['hasOccupation'];
     }
-
     /**
-     * The Dun & Bradstreet DUNS number for identifying an organization or business person.
+     * The Dun & Bradstreet DUNS number for identifying an organization or business
+     * person.
      *
      * @param $duns 
      * @return static
@@ -1218,9 +1197,10 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getDuns() {
         return $this->properties['duns'];
     }
-
     /**
-     * A person or organization that supports a thing through a pledge, promise, or financial contribution. E.g. a sponsor of a Medical Study or a corporate sponsor of an event.
+     * A person or organization that supports a thing through a pledge, promise, or
+     * financial contribution. E.g. a sponsor of a Medical Study or a corporate sponsor
+     * of an event.
      *
      * @param $sponsor |
      * @return static
@@ -1237,7 +1217,6 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getSponsor() {
         return $this->properties['sponsor'];
     }
-
     /**
      * A pointer to products or services offered by the organization or person.
      *
@@ -1256,7 +1235,6 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getMakesOffer() {
         return $this->properties['makesOffer'];
     }
-
     /**
      * A pointer to products or services sought by the organization or person (demand).
      *
@@ -1275,9 +1253,10 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getSeeks() {
         return $this->properties['seeks'];
     }
-
     /**
-     * The number of completed interactions for this entity, in a particular role (the 'agent'), in a particular action (indicated in the statistic), and in a particular context (i.e. interactionService).
+     * The number of completed interactions for this entity, in a particular role (the
+     * 'agent'), in a particular action (indicated in the statistic), and in a
+     * particular context (i.e. interactionService).
      *
      * @param $agentInteractionStatistic 
      * @return static
@@ -1294,6 +1273,4 @@ While such policies are most typically expressed in natural language, sometimes 
     public function getAgentInteractionStatistic() {
         return $this->properties['agentInteractionStatistic'];
     }
-
-
 }

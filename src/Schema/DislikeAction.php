@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of expressing a negative sentiment about the object. An agent dislikes an object (a proposition, topic or theme) with participants.
+ * The act of expressing a negative sentiment about the object. An agent dislikes
+ * an object (a proposition, topic or theme) with participants.
  *
+ * @see https://schema.org/DislikeAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class DislikeAction extends ReactAction
@@ -37,6 +39,5 @@ class DislikeAction extends ReactAction
     {
         return new DislikeAction('https://schema.org/', 'DislikeAction');
     }
-
 
 }

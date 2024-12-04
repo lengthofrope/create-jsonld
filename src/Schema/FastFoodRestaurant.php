@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A fast-food restaurant.
  *
+ * @see https://schema.org/FastFoodRestaurant
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class FastFoodRestaurant extends FoodEstablishment
@@ -37,6 +38,5 @@ class FastFoodRestaurant extends FoodEstablishment
     {
         return new FastFoodRestaurant('https://schema.org/', 'FastFoodRestaurant');
     }
-
 
 }

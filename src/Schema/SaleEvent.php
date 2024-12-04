@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Event type: Sales event.
  *
+ * @see https://schema.org/SaleEvent
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class SaleEvent extends Event
@@ -37,6 +38,5 @@ class SaleEvent extends Event
     {
         return new SaleEvent('https://schema.org/', 'SaleEvent');
     }
-
 
 }

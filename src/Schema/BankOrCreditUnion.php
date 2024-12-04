@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Bank or credit union.
  *
+ * @see https://schema.org/BankOrCreditUnion
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class BankOrCreditUnion extends FinancialService
@@ -37,6 +38,5 @@ class BankOrCreditUnion extends FinancialService
     {
         return new BankOrCreditUnion('https://schema.org/', 'BankOrCreditUnion');
     }
-
 
 }

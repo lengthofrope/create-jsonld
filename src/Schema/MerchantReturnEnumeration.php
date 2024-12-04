@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Enumerates several kinds of product return policies.
  *
+ * @see https://schema.org/MerchantReturnEnumeration
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MerchantReturnEnumeration extends Enumeration
@@ -37,6 +38,5 @@ class MerchantReturnEnumeration extends Enumeration
     {
         return new MerchantReturnEnumeration('https://schema.org/', 'MerchantReturnEnumeration');
     }
-
 
 }

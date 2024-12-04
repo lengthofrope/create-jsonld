@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * One of the continents (for example, Europe or Africa).
  *
+ * @see https://schema.org/Continent
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Continent extends Landform
@@ -37,6 +38,5 @@ class Continent extends Landform
     {
         return new Continent('https://schema.org/', 'Continent');
     }
-
 
 }

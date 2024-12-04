@@ -27,8 +27,11 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].
+ * UserInteraction and its subtypes is an old way of talking about users
+ * interacting with pages. It is generally better to use [[Action]]-based
+ * vocabulary, alongside types such as [[Comment]].
  *
+ * @see https://schema.org/UserComments
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class UserComments extends UserInteraction
@@ -56,7 +59,6 @@ class UserComments extends UserInteraction
     public function getCommentTime() {
         return $this->properties['commentTime'];
     }
-
     /**
      * Specifies the CreativeWork associated with the UserComment.
      *
@@ -75,9 +77,9 @@ class UserComments extends UserInteraction
     public function getDiscusses() {
         return $this->properties['discusses'];
     }
-
     /**
-     * The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.
+     * The creator/author of this CreativeWork. This is the same as the Author property
+     * for CreativeWork.
      *
      * @param $creator |
      * @return static
@@ -94,7 +96,6 @@ class UserComments extends UserInteraction
     public function getCreator() {
         return $this->properties['creator'];
     }
-
     /**
      * The text of the UserComment.
      *
@@ -113,7 +114,6 @@ class UserComments extends UserInteraction
     public function getCommentText() {
         return $this->properties['commentText'];
     }
-
     /**
      * The URL at which a reply may be posted to the specified UserComment.
      *
@@ -132,6 +132,4 @@ class UserComments extends UserInteraction
     public function getReplyToUrl() {
         return $this->properties['replyToUrl'];
     }
-
-
 }

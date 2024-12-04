@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * An agent orders an object/product/service to be delivered/sent.
  *
+ * @see https://schema.org/OrderAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class OrderAction extends TradeAction
@@ -56,6 +57,4 @@ class OrderAction extends TradeAction
     public function getDeliveryMethod() {
         return $this->properties['deliveryMethod'];
     }
-
-
 }

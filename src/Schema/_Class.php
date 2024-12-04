@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A class, also often called a 'Type'; equivalent to rdfs:Class.
  *
+ * @see https://schema.org/Class
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class _Class extends Intangible
@@ -39,7 +40,8 @@ class _Class extends Intangible
     }
 
     /**
-     * Relates a term (i.e. a property, class or enumeration) to one that supersedes it.
+     * Relates a term (i.e. a property, class or enumeration) to one that supersedes
+     * it.
      *
      * @param $supersededBy ||
      * @return static
@@ -56,6 +58,4 @@ class _Class extends Intangible
     public function getSupersededBy() {
         return $this->properties['supersededBy'];
     }
-
-
 }

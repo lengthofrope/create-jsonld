@@ -27,8 +27,13 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A tourist attraction.  In principle any Thing can be a [[TouristAttraction]], from a [[Mountain]] and [[LandmarksOrHistoricalBuildings]] to a [[LocalBusiness]].  This Type can be used on its own to describe a general [[TouristAttraction]], or be used as an [[additionalType]] to add tourist attraction properties to any other type.  (See examples below)
+ * A tourist attraction.  In principle any Thing can be a [[TouristAttraction]],
+ * from a [[Mountain]] and [[LandmarksOrHistoricalBuildings]] to a
+ * [[LocalBusiness]].  This Type can be used on its own to describe a general
+ * [[TouristAttraction]], or be used as an [[additionalType]] to add tourist
+ * attraction properties to any other type.  (See examples below)
  *
+ * @see https://schema.org/TouristAttraction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class TouristAttraction extends Place
@@ -39,7 +44,8 @@ class TouristAttraction extends Place
     }
 
     /**
-     * Attraction suitable for type(s) of tourist. E.g. children, visitors from a particular country, etc. 
+     * Attraction suitable for type(s) of tourist. E.g. children, visitors from a
+     * particular country, etc.
      *
      * @param $touristType |
      * @return static
@@ -56,9 +62,10 @@ class TouristAttraction extends Place
     public function getTouristType() {
         return $this->properties['touristType'];
     }
-
     /**
-     * A language someone may use with or at the item, service or place. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].
+     * A language someone may use with or at the item, service or place. Please use one
+     * of the language codes from the [IETF BCP 47
+     * standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].
      *
      * @param $availableLanguage |
      * @return static
@@ -75,6 +82,4 @@ class TouristAttraction extends Place
     public function getAvailableLanguage() {
         return $this->properties['availableLanguage'];
     }
-
-
 }

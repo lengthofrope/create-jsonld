@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A store that sells materials useful or necessary for various hobbies.
  *
+ * @see https://schema.org/HobbyShop
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class HobbyShop extends Store
@@ -37,6 +38,5 @@ class HobbyShop extends Store
     {
         return new HobbyShop('https://schema.org/', 'HobbyShop');
     }
-
 
 }

@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A software application designed specifically to work well on a mobile device such as a telephone.
+ * A software application designed specifically to work well on a mobile device
+ * such as a telephone.
  *
+ * @see https://schema.org/MobileApplication
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MobileApplication extends SoftwareApplication
@@ -39,7 +41,8 @@ class MobileApplication extends SoftwareApplication
     }
 
     /**
-     * Specifies specific carrier(s) requirements for the application (e.g. an application may only work on a specific carrier network).
+     * Specifies specific carrier(s) requirements for the application (e.g. an
+     * application may only work on a specific carrier network).
      *
      * @param $carrierRequirements 
      * @return static
@@ -56,6 +59,4 @@ class MobileApplication extends SoftwareApplication
     public function getCarrierRequirements() {
         return $this->properties['carrierRequirements'];
     }
-
-
 }

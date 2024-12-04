@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The act of consuming static visual content.
  *
+ * @see https://schema.org/ViewAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ViewAction extends ConsumeAction
@@ -37,6 +38,5 @@ class ViewAction extends ConsumeAction
     {
         return new ViewAction('https://schema.org/', 'ViewAction');
     }
-
 
 }

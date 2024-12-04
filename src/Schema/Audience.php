@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Intended audience for an item, i.e. the group for whom the item was created.
  *
+ * @see https://schema.org/Audience
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Audience extends Intangible
@@ -56,9 +57,9 @@ class Audience extends Intangible
     public function getGeographicArea() {
         return $this->properties['geographicArea'];
     }
-
     /**
-     * The target group associated with a given audience (e.g. veterans, car owners, musicians, etc.).
+     * The target group associated with a given audience (e.g. veterans, car owners,
+     * musicians, etc.).
      *
      * @param $audienceType 
      * @return static
@@ -75,6 +76,4 @@ class Audience extends Intangible
     public function getAudienceType() {
         return $this->properties['audienceType'];
     }
-
-
 }

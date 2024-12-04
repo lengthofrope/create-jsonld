@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A trip on a commercial bus line.
  *
+ * @see https://schema.org/BusTrip
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class BusTrip extends Trip
@@ -56,7 +57,6 @@ class BusTrip extends Trip
     public function getBusNumber() {
         return $this->properties['busNumber'];
     }
-
     /**
      * The name of the bus (e.g. Bolt Express).
      *
@@ -75,7 +75,6 @@ class BusTrip extends Trip
     public function getBusName() {
         return $this->properties['busName'];
     }
-
     /**
      * The stop or station from which the bus arrives.
      *
@@ -94,7 +93,6 @@ class BusTrip extends Trip
     public function getArrivalBusStop() {
         return $this->properties['arrivalBusStop'];
     }
-
     /**
      * The stop or station from which the bus departs.
      *
@@ -113,6 +111,4 @@ class BusTrip extends Trip
     public function getDepartureBusStop() {
         return $this->properties['departureBusStop'];
     }
-
-
 }

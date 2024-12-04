@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Used to describe membership in a loyalty programs (e.g. "StarAliance"), traveler clubs (e.g. "AAA"), purchase clubs ("Safeway Club"), etc.
+ * Used to describe membership in a loyalty programs (e.g. "StarAliance"), traveler
+ * clubs (e.g. "AAA"), purchase clubs ("Safeway Club"), etc.
  *
+ * @see https://schema.org/ProgramMembership
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ProgramMembership extends Intangible
@@ -39,7 +41,9 @@ class ProgramMembership extends Intangible
     }
 
     /**
-     * The number of membership points earned by the member. If necessary, the unitText can be used to express the units the points are issued in. (E.g. stars, miles, etc.)
+     * The number of membership points earned by the member. If necessary, the unitText
+     * can be used to express the units the points are issued in. (E.g. stars, miles,
+     * etc.)
      *
      * @param $membershipPointsEarned |
      * @return static
@@ -56,9 +60,9 @@ class ProgramMembership extends Intangible
     public function getMembershipPointsEarned() {
         return $this->properties['membershipPointsEarned'];
     }
-
     /**
-     * The program providing the membership. It is preferable to use [:program](https://schema.org/program) instead.
+     * The program providing the membership. It is preferable to use
+     * [:program](https://schema.org/program) instead.
      *
      * @param $programName 
      * @return static
@@ -75,7 +79,6 @@ class ProgramMembership extends Intangible
     public function getProgramName() {
         return $this->properties['programName'];
     }
-
     /**
      * A unique identifier for the membership.
      *
@@ -94,9 +97,9 @@ class ProgramMembership extends Intangible
     public function getMembershipNumber() {
         return $this->properties['membershipNumber'];
     }
-
     /**
-     * The [MemberProgram](https://schema.org/MemberProgram) associated with a [ProgramMembership](https://schema.org/ProgramMembership).
+     * The [MemberProgram](https://schema.org/MemberProgram) associated with a
+     * [ProgramMembership](https://schema.org/ProgramMembership).
      *
      * @param $program 
      * @return static
@@ -113,9 +116,9 @@ class ProgramMembership extends Intangible
     public function getProgram() {
         return $this->properties['program'];
     }
-
     /**
-     * A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals.
+     * A member of an Organization or a ProgramMembership. Organizations can be members
+     * of organizations; ProgramMembership is typically for individuals.
      *
      * @param $member |
      * @return static
@@ -132,9 +135,9 @@ class ProgramMembership extends Intangible
     public function getMember() {
         return $this->properties['member'];
     }
-
     /**
-     * The Organization (airline, travelers' club, retailer, etc.) the membership is made with or which offers the  MemberProgram.
+     * The Organization (airline, travelers' club, retailer, etc.) the membership is
+     * made with or which offers the  MemberProgram.
      *
      * @param $hostingOrganization 
      * @return static
@@ -151,7 +154,6 @@ class ProgramMembership extends Intangible
     public function getHostingOrganization() {
         return $this->properties['hostingOrganization'];
     }
-
     /**
      * A member of this organization.
      *
@@ -170,6 +172,4 @@ class ProgramMembership extends Intangible
     public function getMembers() {
         return $this->properties['members'];
     }
-
-
 }

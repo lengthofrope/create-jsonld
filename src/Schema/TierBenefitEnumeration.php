@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * An enumeration of possible benefits as part of a loyalty (members) program.
  *
+ * @see https://schema.org/TierBenefitEnumeration
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class TierBenefitEnumeration extends Enumeration
@@ -37,6 +38,5 @@ class TierBenefitEnumeration extends Enumeration
     {
         return new TierBenefitEnumeration('https://schema.org/', 'TierBenefitEnumeration');
     }
-
 
 }

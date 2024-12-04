@@ -27,8 +27,12 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A recommended dosing schedule for a drug or supplement as prescribed or recommended by an authority or by the drug/supplement's manufacturer. Capture the recommending authority in the recognizingAuthority property of MedicalEntity.
+ * A recommended dosing schedule for a drug or supplement as prescribed or
+ * recommended by an authority or by the drug/supplement's manufacturer. Capture
+ * the recommending authority in the recognizingAuthority property of
+ * MedicalEntity.
  *
+ * @see https://schema.org/RecommendedDoseSchedule
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class RecommendedDoseSchedule extends DoseSchedule
@@ -37,6 +41,5 @@ class RecommendedDoseSchedule extends DoseSchedule
     {
         return new RecommendedDoseSchedule('https://schema.org/', 'RecommendedDoseSchedule');
     }
-
 
 }

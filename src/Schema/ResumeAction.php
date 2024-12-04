@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of resuming a device or application which was formerly paused (e.g. resume music playback or resume a timer).
+ * The act of resuming a device or application which was formerly paused (e.g.
+ * resume music playback or resume a timer).
  *
+ * @see https://schema.org/ResumeAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ResumeAction extends ControlAction
@@ -37,6 +39,5 @@ class ResumeAction extends ControlAction
     {
         return new ResumeAction('https://schema.org/', 'ResumeAction');
     }
-
 
 }

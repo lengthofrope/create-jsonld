@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of returning to the origin that which was previously received (concrete objects) or taken (ownership).
+ * The act of returning to the origin that which was previously received (concrete
+ * objects) or taken (ownership).
  *
+ * @see https://schema.org/ReturnAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ReturnAction extends TransferAction
@@ -39,7 +41,8 @@ class ReturnAction extends TransferAction
     }
 
     /**
-     * A sub property of participant. The participant who is at the receiving end of the action.
+     * A sub property of participant. The participant who is at the receiving end of
+     * the action.
      *
      * @param $recipient |||
      * @return static
@@ -56,6 +59,4 @@ class ReturnAction extends TransferAction
     public function getRecipient() {
         return $this->properties['recipient'];
     }
-
-
 }

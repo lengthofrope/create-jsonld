@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A type of blood vessel that specifically carries blood away from the heart.
  *
+ * @see https://schema.org/Artery
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Artery extends Vessel
@@ -56,7 +57,6 @@ class Artery extends Vessel
     public function getSupplyTo() {
         return $this->properties['supplyTo'];
     }
-
     /**
      * The branches that comprise the arterial structure.
      *
@@ -75,6 +75,4 @@ class Artery extends Vessel
     public function getArterialBranch() {
         return $this->properties['arterialBranch'];
     }
-
-
 }

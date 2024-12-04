@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A public swimming pool.
  *
+ * @see https://schema.org/PublicSwimmingPool
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class PublicSwimmingPool extends SportsActivityLocation
@@ -37,6 +38,5 @@ class PublicSwimmingPool extends SportsActivityLocation
     {
         return new PublicSwimmingPool('https://schema.org/', 'PublicSwimmingPool');
     }
-
 
 }

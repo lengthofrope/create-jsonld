@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Any biological, chemical, or biochemical thing. For example: a protein; a gene; a chemical; a synthetic chemical.
+ * Any biological, chemical, or biochemical thing. For example: a protein; a gene;
+ * a chemical; a synthetic chemical.
  *
+ * @see https://schema.org/BioChemEntity
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class BioChemEntity extends Thing
@@ -39,7 +41,8 @@ class BioChemEntity extends Thing
     }
 
     /**
-     * Subcellular location where this BioChemEntity is located; please use PropertyValue if you want to include any evidence.
+     * Subcellular location where this BioChemEntity is located; please use
+     * PropertyValue if you want to include any evidence.
      *
      * @param $isLocatedInSubcellularLocation ||
      * @return static
@@ -56,9 +59,9 @@ class BioChemEntity extends Thing
     public function getIsLocatedInSubcellularLocation() {
         return $this->properties['isLocatedInSubcellularLocation'];
     }
-
     /**
-     * A [[Grant]] that directly or indirectly provide funding or sponsorship for this item. See also [[ownershipFundingInfo]].
+     * A [[Grant]] that directly or indirectly provide funding or sponsorship for this
+     * item. See also [[ownershipFundingInfo]].
      *
      * @param $funding 
      * @return static
@@ -75,9 +78,8 @@ class BioChemEntity extends Thing
     public function getFunding() {
         return $this->properties['funding'];
     }
-
     /**
-     * Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. 
+     * Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity.
      *
      * @param $isPartOfBioChemEntity 
      * @return static
@@ -94,9 +96,9 @@ class BioChemEntity extends Thing
     public function getIsPartOfBioChemEntity() {
         return $this->properties['isPartOfBioChemEntity'];
     }
-
     /**
-     * Biological process this BioChemEntity is involved in; please use PropertyValue if you want to include any evidence.
+     * Biological process this BioChemEntity is involved in; please use PropertyValue
+     * if you want to include any evidence.
      *
      * @param $isInvolvedInBiologicalProcess ||
      * @return static
@@ -113,9 +115,9 @@ class BioChemEntity extends Thing
     public function getIsInvolvedInBiologicalProcess() {
         return $this->properties['isInvolvedInBiologicalProcess'];
     }
-
     /**
-     * Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part. 
+     * Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part.
+     *
      *
      * @param $hasBioChemEntityPart 
      * @return static
@@ -132,7 +134,6 @@ class BioChemEntity extends Thing
     public function getHasBioChemEntityPart() {
         return $this->properties['hasBioChemEntityPart'];
     }
-
     /**
      * A BioChemEntity that is known to interact with this item.
      *
@@ -151,7 +152,6 @@ class BioChemEntity extends Thing
     public function getBioChemInteraction() {
         return $this->properties['bioChemInteraction'];
     }
-
     /**
      * A similar BioChemEntity, e.g., obtained by fingerprint similarity algorithms.
      *
@@ -170,9 +170,9 @@ class BioChemEntity extends Thing
     public function getBioChemSimilarity() {
         return $this->properties['bioChemSimilarity'];
     }
-
     /**
-     * A common representation such as a protein sequence or chemical structure for this entity. For images use schema.org/image.
+     * A common representation such as a protein sequence or chemical structure for
+     * this entity. For images use schema.org/image.
      *
      * @param $hasRepresentation ||
      * @return static
@@ -189,7 +189,6 @@ class BioChemEntity extends Thing
     public function getHasRepresentation() {
         return $this->properties['hasRepresentation'];
     }
-
     /**
      * Another BioChemEntity encoding by this one.
      *
@@ -208,9 +207,9 @@ class BioChemEntity extends Thing
     public function getIsEncodedByBioChemEntity() {
         return $this->properties['isEncodedByBioChemEntity'];
     }
-
     /**
-     * Molecular function performed by this BioChemEntity; please use PropertyValue if you want to include any evidence.
+     * Molecular function performed by this BioChemEntity; please use PropertyValue if
+     * you want to include any evidence.
      *
      * @param $hasMolecularFunction ||
      * @return static
@@ -227,7 +226,6 @@ class BioChemEntity extends Thing
     public function getHasMolecularFunction() {
         return $this->properties['hasMolecularFunction'];
     }
-
     /**
      * A role played by the BioChemEntity within a biological context.
      *
@@ -246,9 +244,9 @@ class BioChemEntity extends Thing
     public function getBiologicalRole() {
         return $this->properties['biologicalRole'];
     }
-
     /**
-     * The taxonomic grouping of the organism that expresses, encodes, or in some way related to the BioChemEntity.
+     * The taxonomic grouping of the organism that expresses, encodes, or in some way
+     * related to the BioChemEntity.
      *
      * @param $taxonomicRange |||
      * @return static
@@ -265,9 +263,10 @@ class BioChemEntity extends Thing
     public function getTaxonomicRange() {
         return $this->properties['taxonomicRange'];
     }
-
     /**
-     * Disease associated to this BioChemEntity. Such disease can be a MedicalCondition or a URL. If you want to add an evidence supporting the association, please use PropertyValue.
+     * Disease associated to this BioChemEntity. Such disease can be a MedicalCondition
+     * or a URL. If you want to add an evidence supporting the association, please use
+     * PropertyValue.
      *
      * @param $associatedDisease ||
      * @return static
@@ -284,6 +283,4 @@ class BioChemEntity extends Thing
     public function getAssociatedDisease() {
         return $this->properties['associatedDisease'];
     }
-
-
 }

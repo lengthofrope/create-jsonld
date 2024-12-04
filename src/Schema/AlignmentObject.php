@@ -27,10 +27,14 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * An intangible item that describes an alignment between a learning resource and a node in an educational framework.
-
- * Should not be used where the nature of the alignment can be described using a simple property, for example to express that a resource [[teaches]] or [[assesses]] a competency.
+ * An intangible item that describes an alignment between a learning resource and a
+ * node in an educational framework.
  *
+ * * Should not be used where the nature of the alignment can be described using a
+ * simple property, for example to express that a resource [[teaches]] or
+ * [[assesses]] a competency.
+ *
+ * @see https://schema.org/AlignmentObject
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class AlignmentObject extends Intangible
@@ -58,7 +62,6 @@ class AlignmentObject extends Intangible
     public function getEducationalFramework() {
         return $this->properties['educationalFramework'];
     }
-
     /**
      * The URL of a node in an established educational framework.
      *
@@ -77,9 +80,10 @@ class AlignmentObject extends Intangible
     public function getTargetUrl() {
         return $this->properties['targetUrl'];
     }
-
     /**
-     * A category of alignment between the learning resource and the framework node. Recommended values include: 'requires', 'textComplexity', 'readingLevel', and 'educationalSubject'.
+     * A category of alignment between the learning resource and the framework node.
+     * Recommended values include: 'requires', 'textComplexity', 'readingLevel', and
+     * 'educationalSubject'.
      *
      * @param $alignmentType 
      * @return static
@@ -96,7 +100,6 @@ class AlignmentObject extends Intangible
     public function getAlignmentType() {
         return $this->properties['alignmentType'];
     }
-
     /**
      * The description of a node in an established educational framework.
      *
@@ -115,7 +118,6 @@ class AlignmentObject extends Intangible
     public function getTargetDescription() {
         return $this->properties['targetDescription'];
     }
-
     /**
      * The name of a node in an established educational framework.
      *
@@ -134,6 +136,4 @@ class AlignmentObject extends Intangible
     public function getTargetName() {
         return $this->properties['targetName'];
     }
-
-
 }

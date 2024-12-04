@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Web page type: Media gallery page. A mixed-media page that can contain media such as images, videos, and other multimedia.
+ * Web page type: Media gallery page. A mixed-media page that can contain media
+ * such as images, videos, and other multimedia.
  *
+ * @see https://schema.org/MediaGallery
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MediaGallery extends CollectionPage
@@ -37,6 +39,5 @@ class MediaGallery extends CollectionPage
     {
         return new MediaGallery('https://schema.org/', 'MediaGallery');
     }
-
 
 }

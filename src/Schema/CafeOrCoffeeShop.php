@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A cafe or coffee shop.
  *
+ * @see https://schema.org/CafeOrCoffeeShop
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class CafeOrCoffeeShop extends FoodEstablishment
@@ -37,6 +38,5 @@ class CafeOrCoffeeShop extends FoodEstablishment
     {
         return new CafeOrCoffeeShop('https://schema.org/', 'CafeOrCoffeeShop');
     }
-
 
 }

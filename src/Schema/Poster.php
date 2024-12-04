@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A large, usually printed placard, bill, or announcement, often illustrated, that is posted to advertise or publicize something.
+ * A large, usually printed placard, bill, or announcement, often illustrated, that
+ * is posted to advertise or publicize something.
  *
+ * @see https://schema.org/Poster
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Poster extends CreativeWork
@@ -37,6 +39,5 @@ class Poster extends CreativeWork
     {
         return new Poster('https://schema.org/', 'Poster');
     }
-
 
 }

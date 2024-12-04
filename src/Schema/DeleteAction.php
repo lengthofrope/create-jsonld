@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The act of editing a recipient by removing one of its objects.
  *
+ * @see https://schema.org/DeleteAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class DeleteAction extends UpdateAction
@@ -37,6 +38,5 @@ class DeleteAction extends UpdateAction
     {
         return new DeleteAction('https://schema.org/', 'DeleteAction');
     }
-
 
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A zoo.
  *
+ * @see https://schema.org/Zoo
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Zoo extends CivicStructure
@@ -37,6 +38,5 @@ class Zoo extends CivicStructure
     {
         return new Zoo('https://schema.org/', 'Zoo');
     }
-
 
 }

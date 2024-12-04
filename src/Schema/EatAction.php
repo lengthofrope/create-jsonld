@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The act of swallowing solid objects.
  *
+ * @see https://schema.org/EatAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class EatAction extends ConsumeAction
@@ -37,6 +38,5 @@ class EatAction extends ConsumeAction
     {
         return new EatAction('https://schema.org/', 'EatAction');
     }
-
 
 }

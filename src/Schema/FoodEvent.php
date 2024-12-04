@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Event type: Food event.
  *
+ * @see https://schema.org/FoodEvent
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class FoodEvent extends Event
@@ -37,6 +38,5 @@ class FoodEvent extends Event
     {
         return new FoodEvent('https://schema.org/', 'FoodEvent');
     }
-
 
 }

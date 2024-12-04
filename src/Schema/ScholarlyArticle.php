@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A scholarly article.
  *
+ * @see https://schema.org/ScholarlyArticle
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ScholarlyArticle extends Article
@@ -37,6 +38,5 @@ class ScholarlyArticle extends Article
     {
         return new ScholarlyArticle('https://schema.org/', 'ScholarlyArticle');
     }
-
 
 }

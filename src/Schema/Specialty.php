@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Any branch of a field in which people typically develop specific expertise, usually after significant study, time, and effort.
+ * Any branch of a field in which people typically develop specific expertise,
+ * usually after significant study, time, and effort.
  *
+ * @see https://schema.org/Specialty
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Specialty extends Enumeration
@@ -37,6 +39,5 @@ class Specialty extends Enumeration
     {
         return new Specialty('https://schema.org/', 'Specialty');
     }
-
 
 }

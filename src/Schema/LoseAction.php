@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The act of being defeated in a competitive activity.
  *
+ * @see https://schema.org/LoseAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class LoseAction extends AchieveAction
@@ -56,6 +57,4 @@ class LoseAction extends AchieveAction
     public function getWinner() {
         return $this->properties['winner'];
     }
-
-
 }

@@ -27,8 +27,13 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A MemberProgram defines a loyalty (or membership) program that provides its members with certain benefits, for example better pricing, free shipping or returns, or the ability to earn loyalty points. Member programs may have multiple tiers, for example silver and gold members, each with different benefits.
+ * A MemberProgram defines a loyalty (or membership) program that provides its
+ * members with certain benefits, for example better pricing, free shipping or
+ * returns, or the ability to earn loyalty points. Member programs may have
+ * multiple tiers, for example silver and gold members, each with different
+ * benefits.
  *
+ * @see https://schema.org/MemberProgram
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MemberProgram extends Intangible
@@ -56,9 +61,9 @@ class MemberProgram extends Intangible
     public function getHasTiers() {
         return $this->properties['hasTiers'];
     }
-
     /**
-     * The Organization (airline, travelers' club, retailer, etc.) the membership is made with or which offers the  MemberProgram.
+     * The Organization (airline, travelers' club, retailer, etc.) the membership is
+     * made with or which offers the  MemberProgram.
      *
      * @param $hostingOrganization 
      * @return static
@@ -75,6 +80,4 @@ class MemberProgram extends Intangible
     public function getHostingOrganization() {
         return $this->properties['hostingOrganization'];
     }
-
-
 }

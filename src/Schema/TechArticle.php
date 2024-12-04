@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A technical article - Example: How-to (task) topics, step-by-step, procedural troubleshooting, specifications, etc.
+ * A technical article - Example: How-to (task) topics, step-by-step, procedural
+ * troubleshooting, specifications, etc.
  *
+ * @see https://schema.org/TechArticle
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class TechArticle extends Article
@@ -56,7 +58,6 @@ class TechArticle extends Article
     public function getProficiencyLevel() {
         return $this->properties['proficiencyLevel'];
     }
-
     /**
      * Prerequisites needed to fulfill steps in article.
      *
@@ -75,6 +76,4 @@ class TechArticle extends Article
     public function getDependencies() {
         return $this->properties['dependencies'];
     }
-
-
 }

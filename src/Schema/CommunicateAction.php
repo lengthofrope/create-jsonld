@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of conveying information to another person via a communication medium (instrument) such as speech, email, or telephone conversation.
+ * The act of conveying information to another person via a communication medium
+ * (instrument) such as speech, email, or telephone conversation.
  *
+ * @see https://schema.org/CommunicateAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class CommunicateAction extends InteractAction
@@ -56,9 +58,9 @@ class CommunicateAction extends InteractAction
     public function getLanguage() {
         return $this->properties['language'];
     }
-
     /**
-     * A sub property of participant. The participant who is at the receiving end of the action.
+     * A sub property of participant. The participant who is at the receiving end of
+     * the action.
      *
      * @param $recipient |||
      * @return static
@@ -75,7 +77,6 @@ class CommunicateAction extends InteractAction
     public function getRecipient() {
         return $this->properties['recipient'];
     }
-
     /**
      * The subject matter of the content.
      *
@@ -94,9 +95,10 @@ class CommunicateAction extends InteractAction
     public function getAbout() {
         return $this->properties['about'];
     }
-
     /**
-     * The language of the content or performance or used in an action. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
+     * The language of the content or performance or used in an action. Please use one
+     * of the language codes from the [IETF BCP 47
+     * standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
      *
      * @param $inLanguage |
      * @return static
@@ -113,6 +115,4 @@ class CommunicateAction extends InteractAction
     public function getInLanguage() {
         return $this->properties['inLanguage'];
     }
-
-
 }

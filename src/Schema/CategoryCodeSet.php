@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A set of Category Code values.
  *
+ * @see https://schema.org/CategoryCodeSet
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class CategoryCodeSet extends DefinedTermSet
@@ -56,6 +57,4 @@ class CategoryCodeSet extends DefinedTermSet
     public function getHasCategoryCode() {
         return $this->properties['hasCategoryCode'];
     }
-
-
 }

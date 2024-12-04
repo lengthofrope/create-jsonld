@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The act of adding at a specific location in an ordered collection.
  *
+ * @see https://schema.org/InsertAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class InsertAction extends AddAction
@@ -39,7 +40,8 @@ class InsertAction extends AddAction
     }
 
     /**
-     * A sub property of location. The final location of the object or the agent after the action.
+     * A sub property of location. The final location of the object or the agent after
+     * the action.
      *
      * @param $toLocation 
      * @return static
@@ -56,6 +58,4 @@ class InsertAction extends AddAction
     public function getToLocation() {
         return $this->properties['toLocation'];
     }
-
-
 }

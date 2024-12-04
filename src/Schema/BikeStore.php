@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A bike store.
  *
+ * @see https://schema.org/BikeStore
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class BikeStore extends Store
@@ -37,6 +38,5 @@ class BikeStore extends Store
     {
         return new BikeStore('https://schema.org/', 'BikeStore');
     }
-
 
 }

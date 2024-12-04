@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * An ocean (for example, the Pacific).
  *
+ * @see https://schema.org/OceanBodyOfWater
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class OceanBodyOfWater extends BodyOfWater
@@ -37,6 +38,5 @@ class OceanBodyOfWater extends BodyOfWater
     {
         return new OceanBodyOfWater('https://schema.org/', 'OceanBodyOfWater');
     }
-
 
 }

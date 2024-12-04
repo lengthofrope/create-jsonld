@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * UKNonprofitType: Non-profit organization type originating from the United Kingdom.
+ * UKNonprofitType: Non-profit organization type originating from the United
+ * Kingdom.
  *
+ * @see https://schema.org/UKNonprofitType
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class UKNonprofitType extends NonprofitType
@@ -37,6 +39,5 @@ class UKNonprofitType extends NonprofitType
     {
         return new UKNonprofitType('https://schema.org/', 'UKNonprofitType');
     }
-
 
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A type of boarding policy used by an airline.
  *
+ * @see https://schema.org/BoardingPolicyType
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class BoardingPolicyType extends Enumeration
@@ -37,6 +38,5 @@ class BoardingPolicyType extends Enumeration
     {
         return new BoardingPolicyType('https://schema.org/', 'BoardingPolicyType');
     }
-
 
 }

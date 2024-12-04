@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * An [[EmployerReview]] is a review of an [[Organization]] regarding its role as an employer, written by a current or former employee of that organization.
+ * An [[EmployerReview]] is a review of an [[Organization]] regarding its role as
+ * an employer, written by a current or former employee of that organization.
  *
+ * @see https://schema.org/EmployerReview
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class EmployerReview extends Review
@@ -37,6 +39,5 @@ class EmployerReview extends Review
     {
         return new EmployerReview('https://schema.org/', 'EmployerReview');
     }
-
 
 }

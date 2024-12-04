@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * An answer offered to a question; perhaps correct, perhaps opinionated or wrong.
  *
+ * @see https://schema.org/Answer
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Answer extends Comment
@@ -39,7 +40,10 @@ class Answer extends Comment
     }
 
     /**
-     * The parent of a question, answer or item in general. Typically used for Q/A discussion threads e.g. a chain of comments with the first comment being an [[Article]] or other [[CreativeWork]]. See also [[comment]] which points from something to a comment about it.
+     * The parent of a question, answer or item in general. Typically used for Q/A
+     * discussion threads e.g. a chain of comments with the first comment being an
+     * [[Article]] or other [[CreativeWork]]. See also [[comment]] which points from
+     * something to a comment about it.
      *
      * @param $parentItem |
      * @return static
@@ -56,9 +60,9 @@ class Answer extends Comment
     public function getParentItem() {
         return $this->properties['parentItem'];
     }
-
     /**
-     * A step-by-step or full explanation about Answer. Can outline how this Answer was achieved or contain more broad clarification or statement about it. 
+     * A step-by-step or full explanation about Answer. Can outline how this Answer was
+     * achieved or contain more broad clarification or statement about it.
      *
      * @param $answerExplanation |
      * @return static
@@ -75,6 +79,4 @@ class Answer extends Comment
     public function getAnswerExplanation() {
         return $this->properties['answerExplanation'];
     }
-
-
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Enumerated categories of medical drug costs.
  *
+ * @see https://schema.org/DrugCostCategory
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class DrugCostCategory extends MedicalEnumeration
@@ -37,6 +38,5 @@ class DrugCostCategory extends MedicalEnumeration
     {
         return new DrugCostCategory('https://schema.org/', 'DrugCostCategory');
     }
-
 
 }

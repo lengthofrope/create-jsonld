@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * An art gallery.
  *
+ * @see https://schema.org/ArtGallery
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ArtGallery extends EntertainmentBusiness
@@ -37,6 +38,5 @@ class ArtGallery extends EntertainmentBusiness
     {
         return new ArtGallery('https://schema.org/', 'ArtGallery');
     }
-
 
 }

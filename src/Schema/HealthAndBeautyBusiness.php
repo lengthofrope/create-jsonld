@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Health and beauty.
  *
+ * @see https://schema.org/HealthAndBeautyBusiness
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class HealthAndBeautyBusiness extends LocalBusiness
@@ -37,6 +38,5 @@ class HealthAndBeautyBusiness extends LocalBusiness
     {
         return new HealthAndBeautyBusiness('https://schema.org/', 'HealthAndBeautyBusiness');
     }
-
 
 }

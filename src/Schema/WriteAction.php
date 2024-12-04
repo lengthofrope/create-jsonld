@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The act of authoring written creative content.
  *
+ * @see https://schema.org/WriteAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class WriteAction extends CreateAction
@@ -56,9 +57,10 @@ class WriteAction extends CreateAction
     public function getLanguage() {
         return $this->properties['language'];
     }
-
     /**
-     * The language of the content or performance or used in an action. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
+     * The language of the content or performance or used in an action. Please use one
+     * of the language codes from the [IETF BCP 47
+     * standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
      *
      * @param $inLanguage |
      * @return static
@@ -75,6 +77,4 @@ class WriteAction extends CreateAction
     public function getInLanguage() {
         return $this->properties['inLanguage'];
     }
-
-
 }

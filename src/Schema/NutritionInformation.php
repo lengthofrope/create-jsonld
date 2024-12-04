@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Nutritional information about the recipe.
  *
+ * @see https://schema.org/NutritionInformation
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class NutritionInformation extends StructuredValue
@@ -56,7 +57,6 @@ class NutritionInformation extends StructuredValue
     public function getProteinContent() {
         return $this->properties['proteinContent'];
     }
-
     /**
      * The number of milligrams of sodium.
      *
@@ -75,7 +75,6 @@ class NutritionInformation extends StructuredValue
     public function getSodiumContent() {
         return $this->properties['sodiumContent'];
     }
-
     /**
      * The number of milligrams of cholesterol.
      *
@@ -94,7 +93,6 @@ class NutritionInformation extends StructuredValue
     public function getCholesterolContent() {
         return $this->properties['cholesterolContent'];
     }
-
     /**
      * The number of grams of fat.
      *
@@ -113,7 +111,6 @@ class NutritionInformation extends StructuredValue
     public function getFatContent() {
         return $this->properties['fatContent'];
     }
-
     /**
      * The number of grams of fiber.
      *
@@ -132,7 +129,6 @@ class NutritionInformation extends StructuredValue
     public function getFiberContent() {
         return $this->properties['fiberContent'];
     }
-
     /**
      * The serving size, in terms of the number of volume or mass.
      *
@@ -151,7 +147,6 @@ class NutritionInformation extends StructuredValue
     public function getServingSize() {
         return $this->properties['servingSize'];
     }
-
     /**
      * The number of grams of saturated fat.
      *
@@ -170,7 +165,6 @@ class NutritionInformation extends StructuredValue
     public function getSaturatedFatContent() {
         return $this->properties['saturatedFatContent'];
     }
-
     /**
      * The number of grams of unsaturated fat.
      *
@@ -189,7 +183,6 @@ class NutritionInformation extends StructuredValue
     public function getUnsaturatedFatContent() {
         return $this->properties['unsaturatedFatContent'];
     }
-
     /**
      * The number of grams of carbohydrates.
      *
@@ -208,7 +201,6 @@ class NutritionInformation extends StructuredValue
     public function getCarbohydrateContent() {
         return $this->properties['carbohydrateContent'];
     }
-
     /**
      * The number of grams of trans fat.
      *
@@ -227,7 +219,6 @@ class NutritionInformation extends StructuredValue
     public function getTransFatContent() {
         return $this->properties['transFatContent'];
     }
-
     /**
      * The number of calories.
      *
@@ -246,7 +237,6 @@ class NutritionInformation extends StructuredValue
     public function getCalories() {
         return $this->properties['calories'];
     }
-
     /**
      * The number of grams of sugar.
      *
@@ -265,6 +255,4 @@ class NutritionInformation extends StructuredValue
     public function getSugarContent() {
         return $this->properties['sugarContent'];
     }
-
-
 }

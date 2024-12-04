@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * An indication for treating an underlying condition, symptom, etc.
  *
+ * @see https://schema.org/TreatmentIndication
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class TreatmentIndication extends MedicalIndication
@@ -37,6 +38,5 @@ class TreatmentIndication extends MedicalIndication
     {
         return new TreatmentIndication('https://schema.org/', 'TreatmentIndication');
     }
-
 
 }

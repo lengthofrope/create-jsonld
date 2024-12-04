@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of momentarily pausing a device or application (e.g. pause music playback or pause a timer).
+ * The act of momentarily pausing a device or application (e.g. pause music
+ * playback or pause a timer).
  *
+ * @see https://schema.org/SuspendAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class SuspendAction extends ControlAction
@@ -37,6 +39,5 @@ class SuspendAction extends ControlAction
     {
         return new SuspendAction('https://schema.org/', 'SuspendAction');
     }
-
 
 }

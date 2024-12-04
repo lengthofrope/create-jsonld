@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The act of playing a video game.
  *
+ * @see https://schema.org/PlayGameAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class PlayGameAction extends ConsumeAction
@@ -39,7 +40,8 @@ class PlayGameAction extends ConsumeAction
     }
 
     /**
-     * Indicates the availability type of the game content associated with this action, such as whether it is a full version or a demo.
+     * Indicates the availability type of the game content associated with this action,
+     * such as whether it is a full version or a demo.
      *
      * @param $gameAvailabilityType |
      * @return static
@@ -56,6 +58,4 @@ class PlayGameAction extends ConsumeAction
     public function getGameAvailabilityType() {
         return $this->properties['gameAvailabilityType'];
     }
-
-
 }

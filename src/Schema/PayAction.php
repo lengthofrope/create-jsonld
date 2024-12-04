@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * An agent pays a price to a participant.
  *
+ * @see https://schema.org/PayAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class PayAction extends TradeAction
@@ -39,7 +40,8 @@ class PayAction extends TradeAction
     }
 
     /**
-     * A sub property of participant. The participant who is at the receiving end of the action.
+     * A sub property of participant. The participant who is at the receiving end of
+     * the action.
      *
      * @param $recipient |||
      * @return static
@@ -56,6 +58,4 @@ class PayAction extends TradeAction
     public function getRecipient() {
         return $this->properties['recipient'];
     }
-
-
 }

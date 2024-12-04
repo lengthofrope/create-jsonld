@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Enumerates several kinds of policies for product return fees.
  *
+ * @see https://schema.org/ReturnFeesEnumeration
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ReturnFeesEnumeration extends Enumeration
@@ -37,6 +38,5 @@ class ReturnFeesEnumeration extends Enumeration
     {
         return new ReturnFeesEnumeration('https://schema.org/', 'ReturnFeesEnumeration');
     }
-
 
 }

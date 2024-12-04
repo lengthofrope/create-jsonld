@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A School District is an administrative area for the administration of schools.
  *
+ * @see https://schema.org/SchoolDistrict
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class SchoolDistrict extends AdministrativeArea
@@ -37,6 +38,5 @@ class SchoolDistrict extends AdministrativeArea
     {
         return new SchoolDistrict('https://schema.org/', 'SchoolDistrict');
     }
-
 
 }

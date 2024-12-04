@@ -27,8 +27,11 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Enumerates energy efficiency levels (also known as "classes" or "ratings") and certifications that are part of several international energy efficiency standards.
+ * Enumerates energy efficiency levels (also known as "classes" or "ratings") and
+ * certifications that are part of several international energy efficiency
+ * standards.
  *
+ * @see https://schema.org/EnergyEfficiencyEnumeration
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class EnergyEfficiencyEnumeration extends Enumeration
@@ -37,6 +40,5 @@ class EnergyEfficiencyEnumeration extends Enumeration
     {
         return new EnergyEfficiencyEnumeration('https://schema.org/', 'EnergyEfficiencyEnumeration');
     }
-
 
 }

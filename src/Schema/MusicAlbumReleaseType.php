@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The kind of release which this album is: single, EP or album.
  *
+ * @see https://schema.org/MusicAlbumReleaseType
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MusicAlbumReleaseType extends Enumeration
@@ -37,6 +38,5 @@ class MusicAlbumReleaseType extends Enumeration
     {
         return new MusicAlbumReleaseType('https://schema.org/', 'MusicAlbumReleaseType');
     }
-
 
 }

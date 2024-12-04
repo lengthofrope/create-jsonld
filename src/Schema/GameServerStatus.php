@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Status of a game server.
  *
+ * @see https://schema.org/GameServerStatus
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class GameServerStatus extends StatusEnumeration
@@ -37,6 +38,5 @@ class GameServerStatus extends StatusEnumeration
     {
         return new GameServerStatus('https://schema.org/', 'GameServerStatus');
     }
-
 
 }

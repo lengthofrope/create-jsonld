@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A web page element, like a table or an image.
  *
+ * @see https://schema.org/WebPageElement
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class WebPageElement extends CreativeWork
@@ -39,7 +40,9 @@ class WebPageElement extends CreativeWork
     }
 
     /**
-     * A CSS selector, e.g. of a [[SpeakableSpecification]] or [[WebPageElement]]. In the latter case, multiple matches within a page can constitute a single conceptual "Web page element".
+     * A CSS selector, e.g. of a [[SpeakableSpecification]] or [[WebPageElement]]. In
+     * the latter case, multiple matches within a page can constitute a single
+     * conceptual "Web page element".
      *
      * @param $cssSelector 
      * @return static
@@ -56,9 +59,10 @@ class WebPageElement extends CreativeWork
     public function getCssSelector() {
         return $this->properties['cssSelector'];
     }
-
     /**
-     * An XPath, e.g. of a [[SpeakableSpecification]] or [[WebPageElement]]. In the latter case, multiple matches within a page can constitute a single conceptual "Web page element".
+     * An XPath, e.g. of a [[SpeakableSpecification]] or [[WebPageElement]]. In the
+     * latter case, multiple matches within a page can constitute a single conceptual
+     * "Web page element".
      *
      * @param $xpath 
      * @return static
@@ -75,6 +79,4 @@ class WebPageElement extends CreativeWork
     public function getXpath() {
         return $this->properties['xpath'];
     }
-
-
 }

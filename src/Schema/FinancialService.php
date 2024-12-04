@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Financial services business.
  *
+ * @see https://schema.org/FinancialService
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class FinancialService extends LocalBusiness
@@ -39,7 +40,8 @@ class FinancialService extends LocalBusiness
     }
 
     /**
-     * Description of fees, commissions, and other terms applied either to a class of financial product, or by a financial service organization.
+     * Description of fees, commissions, and other terms applied either to a class of
+     * financial product, or by a financial service organization.
      *
      * @param $feesAndCommissionsSpecification |
      * @return static
@@ -56,6 +58,4 @@ class FinancialService extends LocalBusiness
     public function getFeesAndCommissionsSpecification() {
         return $this->properties['feesAndCommissionsSpecification'];
     }
-
-
 }

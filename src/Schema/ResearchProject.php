@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A Research project.
  *
+ * @see https://schema.org/ResearchProject
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ResearchProject extends Project
@@ -37,6 +38,5 @@ class ResearchProject extends Project
     {
         return new ResearchProject('https://schema.org/', 'ResearchProject');
     }
-
 
 }

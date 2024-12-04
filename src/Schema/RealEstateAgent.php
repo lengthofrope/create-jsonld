@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A real-estate agent.
  *
+ * @see https://schema.org/RealEstateAgent
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class RealEstateAgent extends LocalBusiness
@@ -37,6 +38,5 @@ class RealEstateAgent extends LocalBusiness
     {
         return new RealEstateAgent('https://schema.org/', 'RealEstateAgent');
     }
-
 
 }

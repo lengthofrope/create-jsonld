@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * EventStatusType is an enumeration type whose instances represent several states that an Event may be in.
+ * EventStatusType is an enumeration type whose instances represent several states
+ * that an Event may be in.
  *
+ * @see https://schema.org/EventStatusType
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class EventStatusType extends StatusEnumeration
@@ -37,6 +39,5 @@ class EventStatusType extends StatusEnumeration
     {
         return new EventStatusType('https://schema.org/', 'EventStatusType');
     }
-
 
 }

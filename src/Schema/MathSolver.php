@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A math solver which is capable of solving a subset of mathematical problems.
  *
+ * @see https://schema.org/MathSolver
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MathSolver extends CreativeWork
@@ -39,7 +40,9 @@ class MathSolver extends CreativeWork
     }
 
     /**
-     * A mathematical expression (e.g. 'x^2-3x=0') that may be solved for a specific variable, simplified, or transformed. This can take many formats, e.g. LaTeX, Ascii-Math, or math as you would write with a keyboard.
+     * A mathematical expression (e.g. 'x^2-3x=0') that may be solved for a specific
+     * variable, simplified, or transformed. This can take many formats, e.g. LaTeX,
+     * Ascii-Math, or math as you would write with a keyboard.
      *
      * @param $mathExpression |
      * @return static
@@ -56,6 +59,4 @@ class MathSolver extends CreativeWork
     public function getMathExpression() {
         return $this->properties['mathExpression'];
     }
-
-
 }

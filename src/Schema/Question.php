@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A specific question - e.g. from a user seeking answers online, or collected in a Frequently Asked Questions (FAQ) document.
+ * A specific question - e.g. from a user seeking answers online, or collected in a
+ * Frequently Asked Questions (FAQ) document.
  *
+ * @see https://schema.org/Question
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Question extends Comment
@@ -56,9 +58,11 @@ class Question extends Comment
     public function getAnswerCount() {
         return $this->properties['answerCount'];
     }
-
     /**
-     * The parent of a question, answer or item in general. Typically used for Q/A discussion threads e.g. a chain of comments with the first comment being an [[Article]] or other [[CreativeWork]]. See also [[comment]] which points from something to a comment about it.
+     * The parent of a question, answer or item in general. Typically used for Q/A
+     * discussion threads e.g. a chain of comments with the first comment being an
+     * [[Article]] or other [[CreativeWork]]. See also [[comment]] which points from
+     * something to a comment about it.
      *
      * @param $parentItem |
      * @return static
@@ -75,9 +79,10 @@ class Question extends Comment
     public function getParentItem() {
         return $this->properties['parentItem'];
     }
-
     /**
-     * The answer(s) that has been accepted as best, typically on a Question/Answer site. Sites vary in their selection mechanisms, e.g. drawing on community opinion and/or the view of the Question author.
+     * The answer(s) that has been accepted as best, typically on a Question/Answer
+     * site. Sites vary in their selection mechanisms, e.g. drawing on community
+     * opinion and/or the view of the Question author.
      *
      * @param $acceptedAnswer |
      * @return static
@@ -94,9 +99,10 @@ class Question extends Comment
     public function getAcceptedAnswer() {
         return $this->properties['acceptedAnswer'];
     }
-
     /**
-     * For questions that are part of learning resources (e.g. Quiz), eduQuestionType indicates the format of question being given. Example: "Multiple choice", "Open ended", "Flashcard".
+     * For questions that are part of learning resources (e.g. Quiz), eduQuestionType
+     * indicates the format of question being given. Example: "Multiple choice", "Open
+     * ended", "Flashcard".
      *
      * @param $eduQuestionType 
      * @return static
@@ -113,9 +119,9 @@ class Question extends Comment
     public function getEduQuestionType() {
         return $this->properties['eduQuestionType'];
     }
-
     /**
-     * An answer (possibly one of several, possibly incorrect) to a Question, e.g. on a Question/Answer site.
+     * An answer (possibly one of several, possibly incorrect) to a Question, e.g. on a
+     * Question/Answer site.
      *
      * @param $suggestedAnswer |
      * @return static
@@ -132,6 +138,4 @@ class Question extends Comment
     public function getSuggestedAnswer() {
         return $this->properties['suggestedAnswer'];
     }
-
-
 }

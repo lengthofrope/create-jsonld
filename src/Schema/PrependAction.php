@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The act of inserting at the beginning if an ordered collection.
  *
+ * @see https://schema.org/PrependAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class PrependAction extends InsertAction
@@ -37,6 +38,5 @@ class PrependAction extends InsertAction
     {
         return new PrependAction('https://schema.org/', 'PrependAction');
     }
-
 
 }

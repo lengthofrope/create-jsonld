@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * An enumeration of genders.
  *
+ * @see https://schema.org/GenderType
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class GenderType extends Enumeration
@@ -37,6 +38,5 @@ class GenderType extends Enumeration
     {
         return new GenderType('https://schema.org/', 'GenderType');
     }
-
 
 }

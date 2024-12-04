@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A Consortium is a membership [[Organization]] whose members are typically Organizations.
+ * A Consortium is a membership [[Organization]] whose members are typically
+ * Organizations.
  *
+ * @see https://schema.org/Consortium
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Consortium extends Organization
@@ -37,6 +39,5 @@ class Consortium extends Organization
     {
         return new Consortium('https://schema.org/', 'Consortium');
     }
-
 
 }

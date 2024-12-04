@@ -27,8 +27,14 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of an agent relocating to a place.\n\nRelated actions:\n\n* [[TransferAction]]: Unlike TransferAction, the subject of the move is a living Person or Organization rather than an inanimate object.
+ * The act of an agent relocating to a place.
  *
+ * Related actions:
+ *
+ * * [[TransferAction]]: Unlike TransferAction, the subject of the move is a living
+ * Person or Organization rather than an inanimate object.
+ *
+ * @see https://schema.org/MoveAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MoveAction extends Action
@@ -39,7 +45,8 @@ class MoveAction extends Action
     }
 
     /**
-     * A sub property of location. The final location of the object or the agent after the action.
+     * A sub property of location. The final location of the object or the agent after
+     * the action.
      *
      * @param $toLocation 
      * @return static
@@ -56,9 +63,9 @@ class MoveAction extends Action
     public function getToLocation() {
         return $this->properties['toLocation'];
     }
-
     /**
-     * A sub property of location. The original location of the object or the agent before the action.
+     * A sub property of location. The original location of the object or the agent
+     * before the action.
      *
      * @param $fromLocation 
      * @return static
@@ -75,6 +82,4 @@ class MoveAction extends Action
     public function getFromLocation() {
         return $this->properties['fromLocation'];
     }
-
-
 }

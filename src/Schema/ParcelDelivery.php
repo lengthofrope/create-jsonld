@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The delivery of a parcel either via the postal service or a commercial service.
  *
+ * @see https://schema.org/ParcelDelivery
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ParcelDelivery extends Intangible
@@ -39,7 +40,8 @@ class ParcelDelivery extends Intangible
     }
 
     /**
-     * 'carrier' is an out-dated term indicating the 'provider' for parcel delivery and flights.
+     * 'carrier' is an out-dated term indicating the 'provider' for parcel delivery and
+     * flights.
      *
      * @param $carrier 
      * @return static
@@ -56,7 +58,6 @@ class ParcelDelivery extends Intangible
     public function getCarrier() {
         return $this->properties['carrier'];
     }
-
     /**
      * Destination address.
      *
@@ -75,9 +76,9 @@ class ParcelDelivery extends Intangible
     public function getDeliveryAddress() {
         return $this->properties['deliveryAddress'];
     }
-
     /**
-     * New entry added as the package passes through each leg of its journey (from shipment to final delivery).
+     * New entry added as the package passes through each leg of its journey (from
+     * shipment to final delivery).
      *
      * @param $deliveryStatus 
      * @return static
@@ -94,7 +95,6 @@ class ParcelDelivery extends Intangible
     public function getDeliveryStatus() {
         return $this->properties['deliveryStatus'];
     }
-
     /**
      * The overall order the items in this delivery were included in.
      *
@@ -113,7 +113,6 @@ class ParcelDelivery extends Intangible
     public function getPartOfOrder() {
         return $this->properties['partOfOrder'];
     }
-
     /**
      * Shipper tracking number.
      *
@@ -132,7 +131,6 @@ class ParcelDelivery extends Intangible
     public function getTrackingNumber() {
         return $this->properties['trackingNumber'];
     }
-
     /**
      * Shipper's address.
      *
@@ -151,7 +149,6 @@ class ParcelDelivery extends Intangible
     public function getOriginAddress() {
         return $this->properties['originAddress'];
     }
-
     /**
      * Tracking url for the parcel delivery.
      *
@@ -170,7 +167,6 @@ class ParcelDelivery extends Intangible
     public function getTrackingUrl() {
         return $this->properties['trackingUrl'];
     }
-
     /**
      * Item(s) being shipped.
      *
@@ -189,7 +185,6 @@ class ParcelDelivery extends Intangible
     public function getItemShipped() {
         return $this->properties['itemShipped'];
     }
-
     /**
      * The latest date the package may arrive.
      *
@@ -208,7 +203,6 @@ class ParcelDelivery extends Intangible
     public function getExpectedArrivalUntil() {
         return $this->properties['expectedArrivalUntil'];
     }
-
     /**
      * Method used for delivery or shipping.
      *
@@ -227,9 +221,10 @@ class ParcelDelivery extends Intangible
     public function getHasDeliveryMethod() {
         return $this->properties['hasDeliveryMethod'];
     }
-
     /**
-     * The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.
+     * The service provider, service operator, or service performer; the goods
+     * producer. Another party (a seller) may offer those services or goods on behalf
+     * of the provider. A provider may also serve as the seller.
      *
      * @param $provider |
      * @return static
@@ -246,7 +241,6 @@ class ParcelDelivery extends Intangible
     public function getProvider() {
         return $this->properties['provider'];
     }
-
     /**
      * The earliest date the package may arrive.
      *
@@ -265,6 +259,4 @@ class ParcelDelivery extends Intangible
     public function getExpectedArrivalFrom() {
         return $this->properties['expectedArrivalFrom'];
     }
-
-
 }

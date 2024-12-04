@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A single item within a larger data feed.
  *
+ * @see https://schema.org/DataFeedItem
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class DataFeedItem extends Intangible
@@ -39,7 +40,8 @@ class DataFeedItem extends Intangible
     }
 
     /**
-     * The date on which the CreativeWork was created or the item was added to a DataFeed.
+     * The date on which the CreativeWork was created or the item was added to a
+     * DataFeed.
      *
      * @param $dateCreated |
      * @return static
@@ -56,7 +58,6 @@ class DataFeedItem extends Intangible
     public function getDateCreated() {
         return $this->properties['dateCreated'];
     }
-
     /**
      * The datetime the item was removed from the DataFeed.
      *
@@ -75,9 +76,9 @@ class DataFeedItem extends Intangible
     public function getDateDeleted() {
         return $this->properties['dateDeleted'];
     }
-
     /**
-     * An entity represented by an entry in a list or data feed (e.g. an 'artist' in a list of 'artists').
+     * An entity represented by an entry in a list or data feed (e.g. an 'artist' in a
+     * list of 'artists').
      *
      * @param $item 
      * @return static
@@ -94,9 +95,9 @@ class DataFeedItem extends Intangible
     public function getItem() {
         return $this->properties['item'];
     }
-
     /**
-     * The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.
+     * The date on which the CreativeWork was most recently modified or when the item's
+     * entry was modified within a DataFeed.
      *
      * @param $dateModified |
      * @return static
@@ -113,6 +114,4 @@ class DataFeedItem extends Intangible
     public function getDateModified() {
         return $this->properties['dateModified'];
     }
-
-
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A graveyard.
  *
+ * @see https://schema.org/Cemetery
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Cemetery extends CivicStructure
@@ -37,6 +38,5 @@ class Cemetery extends CivicStructure
     {
         return new Cemetery('https://schema.org/', 'Cemetery');
     }
-
 
 }

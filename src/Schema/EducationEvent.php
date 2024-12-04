@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Event type: Education event.
  *
+ * @see https://schema.org/EducationEvent
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class EducationEvent extends Event
@@ -39,7 +40,9 @@ class EducationEvent extends Event
     }
 
     /**
-     * The level in terms of progression through an educational or training context. Examples of educational levels include 'beginner', 'intermediate' or 'advanced', and formal sets of level indicators.
+     * The level in terms of progression through an educational or training context.
+     * Examples of educational levels include 'beginner', 'intermediate' or 'advanced',
+     * and formal sets of level indicators.
      *
      * @param $educationalLevel ||
      * @return static
@@ -56,9 +59,9 @@ class EducationEvent extends Event
     public function getEducationalLevel() {
         return $this->properties['educationalLevel'];
     }
-
     /**
-     * The item being described is intended to assess the competency or learning outcome defined by the referenced term.
+     * The item being described is intended to assess the competency or learning
+     * outcome defined by the referenced term.
      *
      * @param $assesses |
      * @return static
@@ -75,9 +78,9 @@ class EducationEvent extends Event
     public function getAssesses() {
         return $this->properties['assesses'];
     }
-
     /**
-     * The item being described is intended to help a person learn the competency or learning outcome defined by the referenced term.
+     * The item being described is intended to help a person learn the competency or
+     * learning outcome defined by the referenced term.
      *
      * @param $teaches |
      * @return static
@@ -94,6 +97,4 @@ class EducationEvent extends Event
     public function getTeaches() {
         return $this->properties['teaches'];
     }
-
-
 }

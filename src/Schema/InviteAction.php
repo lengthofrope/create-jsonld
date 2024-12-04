@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The act of asking someone to attend an event. Reciprocal of RsvpAction.
  *
+ * @see https://schema.org/InviteAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class InviteAction extends CommunicateAction
@@ -56,6 +57,4 @@ class InviteAction extends CommunicateAction
     public function getEvent() {
         return $this->properties['event'];
     }
-
-
 }

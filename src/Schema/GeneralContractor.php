@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A general contractor.
  *
+ * @see https://schema.org/GeneralContractor
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class GeneralContractor extends HomeAndConstructionBusiness
@@ -37,6 +38,5 @@ class GeneralContractor extends HomeAndConstructionBusiness
     {
         return new GeneralContractor('https://schema.org/', 'GeneralContractor');
     }
-
 
 }

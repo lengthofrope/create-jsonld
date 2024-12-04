@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The action that takes in a math expression and directs users to a page potentially capable of solving/simplifying that expression.
+ * The action that takes in a math expression and directs users to a page
+ * potentially capable of solving/simplifying that expression.
  *
+ * @see https://schema.org/SolveMathAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class SolveMathAction extends Action
@@ -39,7 +41,9 @@ class SolveMathAction extends Action
     }
 
     /**
-     * For questions that are part of learning resources (e.g. Quiz), eduQuestionType indicates the format of question being given. Example: "Multiple choice", "Open ended", "Flashcard".
+     * For questions that are part of learning resources (e.g. Quiz), eduQuestionType
+     * indicates the format of question being given. Example: "Multiple choice", "Open
+     * ended", "Flashcard".
      *
      * @param $eduQuestionType 
      * @return static
@@ -56,6 +60,4 @@ class SolveMathAction extends Action
     public function getEduQuestionType() {
         return $this->properties['eduQuestionType'];
     }
-
-
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A travel agency.
  *
+ * @see https://schema.org/TravelAgency
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class TravelAgency extends LocalBusiness
@@ -37,6 +38,5 @@ class TravelAgency extends LocalBusiness
     {
         return new TravelAgency('https://schema.org/', 'TravelAgency');
     }
-
 
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A government building.
  *
+ * @see https://schema.org/GovernmentBuilding
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class GovernmentBuilding extends CivicStructure
@@ -37,6 +38,5 @@ class GovernmentBuilding extends CivicStructure
     {
         return new GovernmentBuilding('https://schema.org/', 'GovernmentBuilding');
     }
-
 
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Text representing a CSS selector.
  *
+ * @see https://schema.org/CssSelectorType
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class CssSelectorType extends Text
@@ -37,6 +38,5 @@ class CssSelectorType extends Text
     {
         return new CssSelectorType('https://schema.org/', 'CssSelectorType');
     }
-
 
 }

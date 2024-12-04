@@ -27,8 +27,11 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A PublicationEvent corresponds indifferently to the event of publication for a CreativeWork of any type, e.g. a broadcast event, an on-demand event, a book/journal publication via a variety of delivery media.
+ * A PublicationEvent corresponds indifferently to the event of publication for a
+ * CreativeWork of any type, e.g. a broadcast event, an on-demand event, a
+ * book/journal publication via a variety of delivery media.
  *
+ * @see https://schema.org/PublicationEvent
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class PublicationEvent extends Event
@@ -56,7 +59,6 @@ class PublicationEvent extends Event
     public function getPublishedBy() {
         return $this->properties['publishedBy'];
     }
-
     /**
      * A broadcast service associated with the publication event.
      *
@@ -75,7 +77,6 @@ class PublicationEvent extends Event
     public function getPublishedOn() {
         return $this->properties['publishedOn'];
     }
-
     /**
      * A flag to signal that the item, event, or place is accessible for free.
      *
@@ -94,6 +95,4 @@ class PublicationEvent extends Event
     public function getFree() {
         return $this->properties['free'];
     }
-
-
 }

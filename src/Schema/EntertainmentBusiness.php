@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A business providing entertainment.
  *
+ * @see https://schema.org/EntertainmentBusiness
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class EntertainmentBusiness extends LocalBusiness
@@ -37,6 +38,5 @@ class EntertainmentBusiness extends LocalBusiness
     {
         return new EntertainmentBusiness('https://schema.org/', 'EntertainmentBusiness');
     }
-
 
 }

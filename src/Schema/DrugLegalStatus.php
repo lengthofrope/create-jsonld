@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The legal availability status of a medical drug.
  *
+ * @see https://schema.org/DrugLegalStatus
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class DrugLegalStatus extends MedicalIntangible
@@ -56,6 +57,4 @@ class DrugLegalStatus extends MedicalIntangible
     public function getApplicableLocation() {
         return $this->properties['applicableLocation'];
     }
-
-
 }

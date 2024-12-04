@@ -27,8 +27,12 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A reservation for a rental car.\n\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations.
+ * A reservation for a rental car.
  *
+ * Note: This type is for information about actual reservations, e.g. in
+ * confirmation emails or HTML pages with individual confirmations of reservations.
+ *
+ * @see https://schema.org/RentalCarReservation
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class RentalCarReservation extends Reservation
@@ -56,7 +60,6 @@ class RentalCarReservation extends Reservation
     public function getPickupTime() {
         return $this->properties['pickupTime'];
     }
-
     /**
      * When a rental car can be dropped off.
      *
@@ -75,7 +78,6 @@ class RentalCarReservation extends Reservation
     public function getDropoffTime() {
         return $this->properties['dropoffTime'];
     }
-
     /**
      * Where a taxi will pick up a passenger or a rental car can be picked up.
      *
@@ -94,7 +96,6 @@ class RentalCarReservation extends Reservation
     public function getPickupLocation() {
         return $this->properties['pickupLocation'];
     }
-
     /**
      * Where a rental car can be dropped off.
      *
@@ -113,6 +114,4 @@ class RentalCarReservation extends Reservation
     public function getDropoffLocation() {
         return $this->properties['dropoffLocation'];
     }
-
-
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * An electrician.
  *
+ * @see https://schema.org/Electrician
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Electrician extends HomeAndConstructionBusiness
@@ -37,6 +38,5 @@ class Electrician extends HomeAndConstructionBusiness
     {
         return new Electrician('https://schema.org/', 'Electrician');
     }
-
 
 }

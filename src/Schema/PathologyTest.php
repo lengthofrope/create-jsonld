@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A medical test performed by a laboratory that typically involves examination of a tissue sample by a pathologist.
+ * A medical test performed by a laboratory that typically involves examination of
+ * a tissue sample by a pathologist.
  *
+ * @see https://schema.org/PathologyTest
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class PathologyTest extends MedicalTest
@@ -56,6 +58,4 @@ class PathologyTest extends MedicalTest
     public function getTissueSample() {
         return $this->properties['tissueSample'];
     }
-
-
 }

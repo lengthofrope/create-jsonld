@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A QAPage is a WebPage focussed on a specific Question and its Answer(s), e.g. in a question answering site or documenting Frequently Asked Questions (FAQs).
+ * A QAPage is a WebPage focussed on a specific Question and its Answer(s), e.g. in
+ * a question answering site or documenting Frequently Asked Questions (FAQs).
  *
+ * @see https://schema.org/QAPage
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class QAPage extends WebPage
@@ -37,6 +39,5 @@ class QAPage extends WebPage
     {
         return new QAPage('https://schema.org/', 'QAPage');
     }
-
 
 }

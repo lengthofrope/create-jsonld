@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The act of achieving victory in a competitive activity.
  *
+ * @see https://schema.org/WinAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class WinAction extends AchieveAction
@@ -56,6 +57,4 @@ class WinAction extends AchieveAction
     public function getLoser() {
         return $this->properties['loser'];
     }
-
-
 }

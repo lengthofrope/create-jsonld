@@ -27,8 +27,13 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A reservation for air travel.\n\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use [[Offer]].
+ * A reservation for air travel.
  *
+ * Note: This type is for information about actual reservations, e.g. in
+ * confirmation emails or HTML pages with individual confirmations of reservations.
+ * For offers of tickets, use [[Offer]].
+ *
+ * @see https://schema.org/FlightReservation
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class FlightReservation extends Reservation
@@ -39,7 +44,8 @@ class FlightReservation extends Reservation
     }
 
     /**
-     * The priority status assigned to a passenger for security or boarding (e.g. FastTrack or Priority).
+     * The priority status assigned to a passenger for security or boarding (e.g.
+     * FastTrack or Priority).
      *
      * @param $passengerPriorityStatus |
      * @return static
@@ -56,7 +62,6 @@ class FlightReservation extends Reservation
     public function getPassengerPriorityStatus() {
         return $this->properties['passengerPriorityStatus'];
     }
-
     /**
      * The passenger's sequence number as assigned by the airline.
      *
@@ -75,7 +80,6 @@ class FlightReservation extends Reservation
     public function getPassengerSequenceNumber() {
         return $this->properties['passengerSequenceNumber'];
     }
-
     /**
      * The airline-specific indicator of boarding order / preference.
      *
@@ -94,7 +98,6 @@ class FlightReservation extends Reservation
     public function getBoardingGroup() {
         return $this->properties['boardingGroup'];
     }
-
     /**
      * The type of security screening the passenger is subject to.
      *
@@ -113,6 +116,4 @@ class FlightReservation extends Reservation
     public function getSecurityScreening() {
         return $this->properties['securityScreening'];
     }
-
-
 }

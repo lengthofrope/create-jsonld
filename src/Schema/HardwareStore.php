@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A hardware store.
  *
+ * @see https://schema.org/HardwareStore
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class HardwareStore extends Store
@@ -37,6 +38,5 @@ class HardwareStore extends Store
     {
         return new HardwareStore('https://schema.org/', 'HardwareStore');
     }
-
 
 }

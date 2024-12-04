@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A spreadsheet file.
  *
+ * @see https://schema.org/SpreadsheetDigitalDocument
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class SpreadsheetDigitalDocument extends DigitalDocument
@@ -37,6 +38,5 @@ class SpreadsheetDigitalDocument extends DigitalDocument
     {
         return new SpreadsheetDigitalDocument('https://schema.org/', 'SpreadsheetDigitalDocument');
     }
-
 
 }

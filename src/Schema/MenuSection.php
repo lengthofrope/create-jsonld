@@ -27,8 +27,11 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A sub-grouping of food or drink items in a menu. E.g. courses (such as 'Dinner', 'Breakfast', etc.), specific type of dishes (such as 'Meat', 'Vegan', 'Drinks', etc.), or some other classification made by the menu provider.
+ * A sub-grouping of food or drink items in a menu. E.g. courses (such as 'Dinner',
+ * 'Breakfast', etc.), specific type of dishes (such as 'Meat', 'Vegan', 'Drinks',
+ * etc.), or some other classification made by the menu provider.
  *
+ * @see https://schema.org/MenuSection
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MenuSection extends CreativeWork
@@ -56,7 +59,6 @@ class MenuSection extends CreativeWork
     public function getHasMenuItem() {
         return $this->properties['hasMenuItem'];
     }
-
     /**
      * A subgrouping of the menu (by dishes, course, serving time period, etc.).
      *
@@ -75,6 +77,4 @@ class MenuSection extends CreativeWork
     public function getHasMenuSection() {
         return $this->properties['hasMenuSection'];
     }
-
-
 }

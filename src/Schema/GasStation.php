@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A gas station.
  *
+ * @see https://schema.org/GasStation
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class GasStation extends AutomotiveBusiness
@@ -37,6 +38,5 @@ class GasStation extends AutomotiveBusiness
     {
         return new GasStation('https://schema.org/', 'GasStation');
     }
-
 
 }

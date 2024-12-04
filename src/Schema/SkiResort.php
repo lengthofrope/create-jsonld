@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A ski resort.
  *
+ * @see https://schema.org/SkiResort
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class SkiResort extends SportsActivityLocation
@@ -37,6 +38,5 @@ class SkiResort extends SportsActivityLocation
     {
         return new SkiResort('https://schema.org/', 'SkiResort');
     }
-
 
 }

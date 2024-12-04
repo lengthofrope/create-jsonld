@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A roofing contractor.
  *
+ * @see https://schema.org/RoofingContractor
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class RoofingContractor extends HomeAndConstructionBusiness
@@ -37,6 +38,5 @@ class RoofingContractor extends HomeAndConstructionBusiness
     {
         return new RoofingContractor('https://schema.org/', 'RoofingContractor');
     }
-
 
 }

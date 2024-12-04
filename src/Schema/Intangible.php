@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A utility class that serves as the umbrella for a number of 'intangible' things such as quantities, structured values, etc.
+ * A utility class that serves as the umbrella for a number of 'intangible' things
+ * such as quantities, structured values, etc.
  *
+ * @see https://schema.org/Intangible
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Intangible extends Thing
@@ -37,6 +39,5 @@ class Intangible extends Thing
     {
         return new Intangible('https://schema.org/', 'Intangible');
     }
-
 
 }

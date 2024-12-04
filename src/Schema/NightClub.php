@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A nightclub or discotheque.
  *
+ * @see https://schema.org/NightClub
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class NightClub extends EntertainmentBusiness
@@ -37,6 +38,5 @@ class NightClub extends EntertainmentBusiness
     {
         return new NightClub('https://schema.org/', 'NightClub');
     }
-
 
 }

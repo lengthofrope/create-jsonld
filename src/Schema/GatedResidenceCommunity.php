@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Residence type: Gated community.
  *
+ * @see https://schema.org/GatedResidenceCommunity
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class GatedResidenceCommunity extends Residence
@@ -37,6 +38,5 @@ class GatedResidenceCommunity extends Residence
     {
         return new GatedResidenceCommunity('https://schema.org/', 'GatedResidenceCommunity');
     }
-
 
 }

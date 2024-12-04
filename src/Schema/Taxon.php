@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A set of organisms asserted to represent a natural cohesive biological unit.
  *
+ * @see https://schema.org/Taxon
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Taxon extends Thing
@@ -56,7 +57,6 @@ class Taxon extends Thing
     public function getParentTaxon() {
         return $this->properties['parentTaxon'];
     }
-
     /**
      * Closest child taxa of the taxon in question.
      *
@@ -75,9 +75,10 @@ class Taxon extends Thing
     public function getChildTaxon() {
         return $this->properties['childTaxon'];
     }
-
     /**
-     * The taxonomic rank of this taxon given preferably as a URI from a controlled vocabulary – typically the ranks from TDWG TaxonRank ontology or equivalent Wikidata URIs.
+     * The taxonomic rank of this taxon given preferably as a URI from a controlled
+     * vocabulary – typically the ranks from TDWG TaxonRank ontology or equivalent
+     * Wikidata URIs.
      *
      * @param $taxonRank ||
      * @return static
@@ -94,7 +95,6 @@ class Taxon extends Thing
     public function getTaxonRank() {
         return $this->properties['taxonRank'];
     }
-
     /**
      * A Defined Term contained in this term set.
      *
@@ -113,6 +113,4 @@ class Taxon extends Thing
     public function getHasDefinedTerm() {
         return $this->properties['hasDefinedTerm'];
     }
-
-
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * An email message.
  *
+ * @see https://schema.org/EmailMessage
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class EmailMessage extends Message
@@ -37,6 +38,5 @@ class EmailMessage extends Message
     {
         return new EmailMessage('https://schema.org/', 'EmailMessage');
     }
-
 
 }

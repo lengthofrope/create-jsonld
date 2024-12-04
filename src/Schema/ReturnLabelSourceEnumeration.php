@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Enumerates several types of return labels for product returns.
  *
+ * @see https://schema.org/ReturnLabelSourceEnumeration
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ReturnLabelSourceEnumeration extends Enumeration
@@ -37,6 +38,5 @@ class ReturnLabelSourceEnumeration extends Enumeration
     {
         return new ReturnLabelSourceEnumeration('https://schema.org/', 'ReturnLabelSourceEnumeration');
     }
-
 
 }

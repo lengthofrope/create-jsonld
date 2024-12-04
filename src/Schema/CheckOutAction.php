@@ -27,8 +27,19 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of an agent communicating (service provider, social media, etc) their departure of a previously reserved service (e.g. flight check-in) or place (e.g. hotel).\n\nRelated actions:\n\n* [[CheckInAction]]: The antonym of CheckOutAction.\n* [[DepartAction]]: Unlike DepartAction, CheckOutAction implies that the agent is informing/confirming the end of a previously reserved service.\n* [[CancelAction]]: Unlike CancelAction, CheckOutAction implies that the agent is informing/confirming the end of a previously reserved service.
+ * The act of an agent communicating (service provider, social media, etc) their
+ * departure of a previously reserved service (e.g. flight check-in) or place (e.g.
+ * hotel).
  *
+ * Related actions:
+ *
+ * * [[CheckInAction]]: The antonym of CheckOutAction.
+ * * [[DepartAction]]: Unlike DepartAction, CheckOutAction implies that the agent
+ * is informing/confirming the end of a previously reserved service.
+ * * [[CancelAction]]: Unlike CancelAction, CheckOutAction implies that the agent
+ * is informing/confirming the end of a previously reserved service.
+ *
+ * @see https://schema.org/CheckOutAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class CheckOutAction extends CommunicateAction
@@ -37,6 +48,5 @@ class CheckOutAction extends CommunicateAction
     {
         return new CheckOutAction('https://schema.org/', 'CheckOutAction');
     }
-
 
 }

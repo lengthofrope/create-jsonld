@@ -27,11 +27,15 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A GeoCircle is a GeoShape representing a circular geographic area. As it is a GeoShape
- * *            it provides the simple textual property 'circle', but also allows the combination of postalCode alongside geoRadius.
- * *            The center of the circle can be indicated via the 'geoMidpoint' property, or more approximately using 'address', 'postalCode'.
- *        
+ * A GeoCircle is a GeoShape representing a circular geographic area. As it is a
+ * GeoShape
+ * * *            it provides the simple textual property 'circle', but also
+ * allows the combination of postalCode alongside geoRadius.
+ * * *            The center of the circle can be indicated via the 'geoMidpoint'
+ * property, or more approximately using 'address', 'postalCode'.
+ * *
  *
+ * @see https://schema.org/GeoCircle
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class GeoCircle extends GeoShape
@@ -59,9 +63,9 @@ class GeoCircle extends GeoShape
     public function getGeoMidpoint() {
         return $this->properties['geoMidpoint'];
     }
-
     /**
-     * Indicates the approximate radius of a GeoCircle (metres unless indicated otherwise via Distance notation).
+     * Indicates the approximate radius of a GeoCircle (metres unless indicated
+     * otherwise via Distance notation).
      *
      * @param $geoRadius ||
      * @return static
@@ -78,6 +82,4 @@ class GeoCircle extends GeoShape
     public function getGeoRadius() {
         return $this->properties['geoRadius'];
     }
-
-
 }

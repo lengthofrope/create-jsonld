@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Quiz: A test of knowledge, skills and abilities.
  *
+ * @see https://schema.org/Quiz
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Quiz extends LearningResource
@@ -37,6 +38,5 @@ class Quiz extends LearningResource
     {
         return new Quiz('https://schema.org/', 'Quiz');
     }
-
 
 }

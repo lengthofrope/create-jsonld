@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * An historical landmark or building.
  *
+ * @see https://schema.org/LandmarksOrHistoricalBuildings
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class LandmarksOrHistoricalBuildings extends Place
@@ -37,6 +38,5 @@ class LandmarksOrHistoricalBuildings extends Place
     {
         return new LandmarksOrHistoricalBuildings('https://schema.org/', 'LandmarksOrHistoricalBuildings');
     }
-
 
 }

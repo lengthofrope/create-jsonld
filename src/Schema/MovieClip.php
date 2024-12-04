@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A short segment/part of a movie.
  *
+ * @see https://schema.org/MovieClip
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MovieClip extends Clip
@@ -37,6 +38,5 @@ class MovieClip extends Clip
     {
         return new MovieClip('https://schema.org/', 'MovieClip');
     }
-
 
 }

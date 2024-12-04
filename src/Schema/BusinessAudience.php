@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A set of characteristics belonging to businesses, e.g. who compose an item's target audience.
+ * A set of characteristics belonging to businesses, e.g. who compose an item's
+ * target audience.
  *
+ * @see https://schema.org/BusinessAudience
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class BusinessAudience extends Audience
@@ -56,7 +58,6 @@ class BusinessAudience extends Audience
     public function getYearlyRevenue() {
         return $this->properties['yearlyRevenue'];
     }
-
     /**
      * The age of the business.
      *
@@ -75,7 +76,6 @@ class BusinessAudience extends Audience
     public function getYearsInOperation() {
         return $this->properties['yearsInOperation'];
     }
-
     /**
      * The number of employees in an organization, e.g. business.
      *
@@ -94,6 +94,4 @@ class BusinessAudience extends Audience
     public function getNumberOfEmployees() {
         return $this->properties['numberOfEmployees'];
     }
-
-
 }

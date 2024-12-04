@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A service for a vehicle for hire with a driver for local travel. Fares are usually calculated based on distance traveled.
+ * A service for a vehicle for hire with a driver for local travel. Fares are
+ * usually calculated based on distance traveled.
  *
+ * @see https://schema.org/TaxiService
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class TaxiService extends Service
@@ -37,6 +39,5 @@ class TaxiService extends Service
     {
         return new TaxiService('https://schema.org/', 'TaxiService');
     }
-
 
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The act of discovering/finding an object.
  *
+ * @see https://schema.org/DiscoverAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class DiscoverAction extends FindAction
@@ -37,6 +38,5 @@ class DiscoverAction extends FindAction
     {
         return new DiscoverAction('https://schema.org/', 'DiscoverAction');
     }
-
 
 }

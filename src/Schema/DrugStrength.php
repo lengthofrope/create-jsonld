@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A specific strength in which a medical drug is available in a specific country.
  *
+ * @see https://schema.org/DrugStrength
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class DrugStrength extends MedicalIntangible
@@ -56,7 +57,6 @@ class DrugStrength extends MedicalIntangible
     public function getStrengthUnit() {
         return $this->properties['strengthUnit'];
     }
-
     /**
      * The value of an active ingredient's strength, e.g. 325.
      *
@@ -75,7 +75,6 @@ class DrugStrength extends MedicalIntangible
     public function getStrengthValue() {
         return $this->properties['strengthValue'];
     }
-
     /**
      * The location in which the strength is available.
      *
@@ -94,9 +93,9 @@ class DrugStrength extends MedicalIntangible
     public function getAvailableIn() {
         return $this->properties['availableIn'];
     }
-
     /**
-     * Recommended intake of this supplement for a given population as defined by a specific recommending authority.
+     * Recommended intake of this supplement for a given population as defined by a
+     * specific recommending authority.
      *
      * @param $maximumIntake 
      * @return static
@@ -113,7 +112,6 @@ class DrugStrength extends MedicalIntangible
     public function getMaximumIntake() {
         return $this->properties['maximumIntake'];
     }
-
     /**
      * An active ingredient, typically chemical compounds and/or biologic substances.
      *
@@ -132,6 +130,4 @@ class DrugStrength extends MedicalIntangible
     public function getActiveIngredient() {
         return $this->properties['activeIngredient'];
     }
-
-
 }

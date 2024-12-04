@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of expressing a difference of opinion with the object. An agent disagrees to/about an object (a proposition, topic or theme) with participants.
+ * The act of expressing a difference of opinion with the object. An agent
+ * disagrees to/about an object (a proposition, topic or theme) with participants.
  *
+ * @see https://schema.org/DisagreeAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class DisagreeAction extends ReactAction
@@ -37,6 +39,5 @@ class DisagreeAction extends ReactAction
     {
         return new DisagreeAction('https://schema.org/', 'DisagreeAction');
     }
-
 
 }

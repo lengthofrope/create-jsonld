@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A service to convert funds from one currency to another currency.
  *
+ * @see https://schema.org/CurrencyConversionService
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class CurrencyConversionService extends FinancialProduct
@@ -37,6 +38,5 @@ class CurrencyConversionService extends FinancialProduct
     {
         return new CurrencyConversionService('https://schema.org/', 'CurrencyConversionService');
     }
-
 
 }

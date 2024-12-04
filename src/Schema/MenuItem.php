@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A food or drink item listed in a menu or menu section.
  *
+ * @see https://schema.org/MenuItem
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MenuItem extends Intangible
@@ -39,7 +40,8 @@ class MenuItem extends Intangible
     }
 
     /**
-     * Indicates a dietary restriction or guideline for which this recipe or menu item is suitable, e.g. diabetic, halal etc.
+     * Indicates a dietary restriction or guideline for which this recipe or menu item
+     * is suitable, e.g. diabetic, halal etc.
      *
      * @param $suitableForDiet 
      * @return static
@@ -56,9 +58,10 @@ class MenuItem extends Intangible
     public function getSuitableForDiet() {
         return $this->properties['suitableForDiet'];
     }
-
     /**
-     * Additional menu item(s) such as a side dish of salad or side order of fries that can be added to this menu item. Additionally it can be a menu section containing allowed add-on menu items for this menu item.
+     * Additional menu item(s) such as a side dish of salad or side order of fries that
+     * can be added to this menu item. Additionally it can be a menu section containing
+     * allowed add-on menu items for this menu item.
      *
      * @param $menuAddOn |
      * @return static
@@ -75,7 +78,6 @@ class MenuItem extends Intangible
     public function getMenuAddOn() {
         return $this->properties['menuAddOn'];
     }
-
     /**
      * Nutrition information about the recipe or menu item.
      *
@@ -94,10 +96,15 @@ class MenuItem extends Intangible
     public function getNutrition() {
         return $this->properties['nutrition'];
     }
-
     /**
-     * An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event. Use [[businessFunction]] to indicate the kind of transaction offered, i.e. sell, lease, etc. This property can also be used to describe a [[Demand]]. While this property is listed as expected on a number of common types, it can be used in others. In that case, using a second type, such as Product or a subtype of Product, can clarify the nature of the offer.
-      
+     * An offer to provide this item&#x2014;for example, an offer to sell a product,
+     * rent the DVD of a movie, perform a service, or give away tickets to an event.
+     * Use [[businessFunction]] to indicate the kind of transaction offered, i.e. sell,
+     * lease, etc. This property can also be used to describe a [[Demand]]. While this
+     * property is listed as expected on a number of common types, it can be used in
+     * others. In that case, using a second type, such as Product or a subtype of
+     * Product, can clarify the nature of the offer.
+     *
      *
      * @param $offers |
      * @return static
@@ -114,6 +121,4 @@ class MenuItem extends Intangible
     public function getOffers() {
         return $this->properties['offers'];
     }
-
-
 }

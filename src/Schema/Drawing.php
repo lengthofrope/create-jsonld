@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A picture or diagram made with a pencil, pen, or crayon rather than paint.
  *
+ * @see https://schema.org/Drawing
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Drawing extends CreativeWork
@@ -37,6 +38,5 @@ class Drawing extends CreativeWork
     {
         return new Drawing('https://schema.org/', 'Drawing');
     }
-
 
 }

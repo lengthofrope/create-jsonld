@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A statistical distribution of monetary amounts.
  *
+ * @see https://schema.org/MonetaryAmountDistribution
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MonetaryAmountDistribution extends QuantitativeValueDistribution
@@ -39,7 +40,14 @@ class MonetaryAmountDistribution extends QuantitativeValueDistribution
     }
 
     /**
-     * The currency in which the monetary amount is expressed.\n\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR".
+     * The currency in which the monetary amount is expressed.
+     *
+     * Use standard formats: [ISO 4217 currency
+     * format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker
+     * symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for
+     * cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading
+     * Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and
+     * other currency types, e.g. "Ithaca HOUR".
      *
      * @param $currency 
      * @return static
@@ -56,6 +64,4 @@ class MonetaryAmountDistribution extends QuantitativeValueDistribution
     public function getCurrency() {
         return $this->properties['currency'];
     }
-
-
 }

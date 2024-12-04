@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A bridge.
  *
+ * @see https://schema.org/Bridge
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Bridge extends CivicStructure
@@ -37,6 +38,5 @@ class Bridge extends CivicStructure
     {
         return new Bridge('https://schema.org/', 'Bridge');
     }
-
 
 }

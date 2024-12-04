@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A map.
  *
+ * @see https://schema.org/Map
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Map extends CreativeWork
@@ -56,6 +57,4 @@ class Map extends CreativeWork
     public function getMapType() {
         return $this->properties['mapType'];
     }
-
-
 }

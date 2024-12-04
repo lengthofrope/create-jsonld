@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The act of consuming written content.
  *
+ * @see https://schema.org/ReadAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ReadAction extends ConsumeAction
@@ -37,6 +38,5 @@ class ReadAction extends ConsumeAction
     {
         return new ReadAction('https://schema.org/', 'ReadAction');
     }
-
 
 }

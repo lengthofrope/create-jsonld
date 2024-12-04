@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * An event involving the delivery of an item.
  *
+ * @see https://schema.org/DeliveryEvent
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class DeliveryEvent extends Event
@@ -56,7 +57,6 @@ class DeliveryEvent extends Event
     public function getAvailableThrough() {
         return $this->properties['availableThrough'];
     }
-
     /**
      * When the item is available for pickup from the store, locker, etc.
      *
@@ -75,7 +75,6 @@ class DeliveryEvent extends Event
     public function getAvailableFrom() {
         return $this->properties['availableFrom'];
     }
-
     /**
      * Method used for delivery or shipping.
      *
@@ -94,7 +93,6 @@ class DeliveryEvent extends Event
     public function getHasDeliveryMethod() {
         return $this->properties['hasDeliveryMethod'];
     }
-
     /**
      * Password, PIN, or access code needed for delivery (e.g. from a locker).
      *
@@ -113,6 +111,4 @@ class DeliveryEvent extends Event
     public function getAccessCode() {
         return $this->properties['accessCode'];
     }
-
-
 }

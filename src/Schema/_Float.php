@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Data type: Floating number.
  *
+ * @see https://schema.org/Float
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class _Float extends Number
@@ -37,6 +38,5 @@ class _Float extends Number
     {
         return new _Float('https://schema.org/', 'Float');
     }
-
 
 }

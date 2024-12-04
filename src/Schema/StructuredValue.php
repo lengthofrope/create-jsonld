@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Structured values are used when the value of a property has a more complex structure than simply being a textual value or a reference to another thing.
+ * Structured values are used when the value of a property has a more complex
+ * structure than simply being a textual value or a reference to another thing.
  *
+ * @see https://schema.org/StructuredValue
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class StructuredValue extends Intangible
@@ -37,6 +39,5 @@ class StructuredValue extends Intangible
     {
         return new StructuredValue('https://schema.org/', 'StructuredValue');
     }
-
 
 }

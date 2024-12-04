@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Animal shelter.
  *
+ * @see https://schema.org/AnimalShelter
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class AnimalShelter extends LocalBusiness
@@ -37,6 +38,5 @@ class AnimalShelter extends LocalBusiness
     {
         return new AnimalShelter('https://schema.org/', 'AnimalShelter');
     }
-
 
 }

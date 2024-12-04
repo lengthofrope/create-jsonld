@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Car repair, sales, or parts.
  *
+ * @see https://schema.org/AutomotiveBusiness
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class AutomotiveBusiness extends LocalBusiness
@@ -37,6 +38,5 @@ class AutomotiveBusiness extends LocalBusiness
     {
         return new AutomotiveBusiness('https://schema.org/', 'AutomotiveBusiness');
     }
-
 
 }

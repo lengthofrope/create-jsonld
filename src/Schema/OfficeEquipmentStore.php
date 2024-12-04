@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * An office equipment store.
  *
+ * @see https://schema.org/OfficeEquipmentStore
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class OfficeEquipmentStore extends Store
@@ -37,6 +38,5 @@ class OfficeEquipmentStore extends Store
     {
         return new OfficeEquipmentStore('https://schema.org/', 'OfficeEquipmentStore');
     }
-
 
 }

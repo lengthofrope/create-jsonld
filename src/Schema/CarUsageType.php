@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A value indicating a special usage of a car, e.g. commercial rental, driving school, or as a taxi.
+ * A value indicating a special usage of a car, e.g. commercial rental, driving
+ * school, or as a taxi.
  *
+ * @see https://schema.org/CarUsageType
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class CarUsageType extends Enumeration
@@ -37,6 +39,5 @@ class CarUsageType extends Enumeration
     {
         return new CarUsageType('https://schema.org/', 'CarUsageType');
     }
-
 
 }

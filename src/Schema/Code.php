@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Computer programming source code. Example: Full (compile ready) solutions, code snippet samples, scripts, templates.
+ * Computer programming source code. Example: Full (compile ready) solutions, code
+ * snippet samples, scripts, templates.
  *
+ * @see https://schema.org/Code
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Code extends CreativeWork
@@ -37,6 +39,5 @@ class Code extends CreativeWork
     {
         return new Code('https://schema.org/', 'Code');
     }
-
 
 }

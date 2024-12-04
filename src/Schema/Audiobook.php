@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * An audiobook.
  *
+ * @see https://schema.org/Audiobook
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Audiobook extends AudioObject
@@ -56,9 +57,9 @@ class Audiobook extends AudioObject
     public function getReadBy() {
         return $this->properties['readBy'];
     }
-
     /**
-     * The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
+     * The duration of the item (movie, audio recording, event, etc.) in [ISO 8601
+     * duration format](http://en.wikipedia.org/wiki/ISO_8601).
      *
      * @param $duration 
      * @return static
@@ -75,6 +76,4 @@ class Audiobook extends AudioObject
     public function getDuration() {
         return $this->properties['duration'];
     }
-
-
 }

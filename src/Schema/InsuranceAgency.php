@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * An Insurance agency.
  *
+ * @see https://schema.org/InsuranceAgency
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class InsuranceAgency extends FinancialService
@@ -37,6 +38,5 @@ class InsuranceAgency extends FinancialService
     {
         return new InsuranceAgency('https://schema.org/', 'InsuranceAgency');
     }
-
 
 }

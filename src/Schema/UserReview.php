@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A review created by an end-user (e.g. consumer, purchaser, attendee etc.), in contrast with [[CriticReview]].
+ * A review created by an end-user (e.g. consumer, purchaser, attendee etc.), in
+ * contrast with [[CriticReview]].
  *
+ * @see https://schema.org/UserReview
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class UserReview extends Review
@@ -37,6 +39,5 @@ class UserReview extends Review
     {
         return new UserReview('https://schema.org/', 'UserReview');
     }
-
 
 }

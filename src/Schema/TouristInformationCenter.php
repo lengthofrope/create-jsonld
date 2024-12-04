@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A tourist information center.
  *
+ * @see https://schema.org/TouristInformationCenter
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class TouristInformationCenter extends LocalBusiness
@@ -37,6 +38,5 @@ class TouristInformationCenter extends LocalBusiness
     {
         return new TouristInformationCenter('https://schema.org/', 'TouristInformationCenter');
     }
-
 
 }

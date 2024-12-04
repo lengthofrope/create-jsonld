@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The act of participating in performance arts.
  *
+ * @see https://schema.org/PerformAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class PerformAction extends PlayAction
@@ -39,7 +40,8 @@ class PerformAction extends PlayAction
     }
 
     /**
-     * A sub property of location. The entertainment business where the action occurred.
+     * A sub property of location. The entertainment business where the action
+     * occurred.
      *
      * @param $entertainmentBusiness 
      * @return static
@@ -56,6 +58,4 @@ class PerformAction extends PlayAction
     public function getEntertainmentBusiness() {
         return $this->properties['entertainmentBusiness'];
     }
-
-
 }

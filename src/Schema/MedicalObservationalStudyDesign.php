@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Design models for observational medical studies. Enumerated type.
  *
+ * @see https://schema.org/MedicalObservationalStudyDesign
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MedicalObservationalStudyDesign extends MedicalEnumeration
@@ -37,6 +38,5 @@ class MedicalObservationalStudyDesign extends MedicalEnumeration
     {
         return new MedicalObservationalStudyDesign('https://schema.org/', 'MedicalObservationalStudyDesign');
     }
-
 
 }

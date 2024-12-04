@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A defence establishment, such as an army or navy base.
  *
+ * @see https://schema.org/DefenceEstablishment
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class DefenceEstablishment extends GovernmentBuilding
@@ -37,6 +38,5 @@ class DefenceEstablishment extends GovernmentBuilding
     {
         return new DefenceEstablishment('https://schema.org/', 'DefenceEstablishment');
     }
-
 
 }

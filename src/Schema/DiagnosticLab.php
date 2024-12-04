@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A medical laboratory that offers on-site or off-site diagnostic services.
  *
+ * @see https://schema.org/DiagnosticLab
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class DiagnosticLab extends MedicalOrganization
@@ -56,6 +57,4 @@ class DiagnosticLab extends MedicalOrganization
     public function getAvailableTest() {
         return $this->properties['availableTest'];
     }
-
-
 }

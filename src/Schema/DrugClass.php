@@ -27,8 +27,11 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A class of medical drugs, e.g., statins. Classes can represent general pharmacological class, common mechanisms of action, common physiological effects, etc.
+ * A class of medical drugs, e.g., statins. Classes can represent general
+ * pharmacological class, common mechanisms of action, common physiological
+ * effects, etc.
  *
+ * @see https://schema.org/DrugClass
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class DrugClass extends MedicalEntity
@@ -56,6 +59,4 @@ class DrugClass extends MedicalEntity
     public function getDrug() {
         return $this->properties['drug'];
     }
-
-
 }

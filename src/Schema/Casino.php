@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A casino.
  *
+ * @see https://schema.org/Casino
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Casino extends EntertainmentBusiness
@@ -37,6 +38,5 @@ class Casino extends EntertainmentBusiness
     {
         return new Casino('https://schema.org/', 'Casino');
     }
-
 
 }

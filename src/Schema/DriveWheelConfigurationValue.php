@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A value indicating which roadwheels will receive torque.
  *
+ * @see https://schema.org/DriveWheelConfigurationValue
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class DriveWheelConfigurationValue extends QualitativeValue
@@ -37,6 +38,5 @@ class DriveWheelConfigurationValue extends QualitativeValue
     {
         return new DriveWheelConfigurationValue('https://schema.org/', 'DriveWheelConfigurationValue');
     }
-
 
 }

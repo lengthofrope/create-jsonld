@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A motorcycle dealer.
  *
+ * @see https://schema.org/MotorcycleDealer
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MotorcycleDealer extends AutomotiveBusiness
@@ -37,6 +38,5 @@ class MotorcycleDealer extends AutomotiveBusiness
     {
         return new MotorcycleDealer('https://schema.org/', 'MotorcycleDealer');
     }
-
 
 }

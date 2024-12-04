@@ -27,8 +27,15 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * An agent leaves an event / group with participants/friends at a location.\n\nRelated actions:\n\n* [[JoinAction]]: The antonym of LeaveAction.\n* [[UnRegisterAction]]: Unlike UnRegisterAction, LeaveAction implies leaving a group/team of people rather than a service.
+ * An agent leaves an event / group with participants/friends at a location.
  *
+ * Related actions:
+ *
+ * * [[JoinAction]]: The antonym of LeaveAction.
+ * * [[UnRegisterAction]]: Unlike UnRegisterAction, LeaveAction implies leaving a
+ * group/team of people rather than a service.
+ *
+ * @see https://schema.org/LeaveAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class LeaveAction extends InteractAction
@@ -56,6 +63,4 @@ class LeaveAction extends InteractAction
     public function getEvent() {
         return $this->properties['event'];
     }
-
-
 }

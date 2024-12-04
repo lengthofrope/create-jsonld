@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A podcast is an episodic series of digital audio or video files which a user can download and listen to.
+ * A podcast is an episodic series of digital audio or video files which a user can
+ * download and listen to.
  *
+ * @see https://schema.org/PodcastSeries
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class PodcastSeries extends CreativeWorkSeries
@@ -39,7 +41,9 @@ class PodcastSeries extends CreativeWorkSeries
     }
 
     /**
-     * An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip.
+     * An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or
+     * in an event. Actors can be associated with individual items or with a series,
+     * episode, clip.
      *
      * @param $actor |
      * @return static
@@ -56,9 +60,9 @@ class PodcastSeries extends CreativeWorkSeries
     public function getActor() {
         return $this->properties['actor'];
     }
-
     /**
-     * The URL for a feed, e.g. associated with a podcast series, blog, or series of date-stamped updates. This is usually RSS or Atom.
+     * The URL for a feed, e.g. associated with a podcast series, blog, or series of
+     * date-stamped updates. This is usually RSS or Atom.
      *
      * @param $webFeed |
      * @return static
@@ -75,6 +79,4 @@ class PodcastSeries extends CreativeWorkSeries
     public function getWebFeed() {
         return $this->properties['webFeed'];
     }
-
-
 }

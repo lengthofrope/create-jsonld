@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A type of Bank Account with a main purpose of depositing funds to gain interest or other benefits.
+ * A type of Bank Account with a main purpose of depositing funds to gain interest
+ * or other benefits.
  *
+ * @see https://schema.org/DepositAccount
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class DepositAccount extends BankAccount
@@ -37,6 +39,5 @@ class DepositAccount extends BankAccount
     {
         return new DepositAccount('https://schema.org/', 'DepositAccount');
     }
-
 
 }

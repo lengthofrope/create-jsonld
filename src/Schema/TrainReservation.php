@@ -27,8 +27,13 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A reservation for train travel.\n\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use [[Offer]].
+ * A reservation for train travel.
  *
+ * Note: This type is for information about actual reservations, e.g. in
+ * confirmation emails or HTML pages with individual confirmations of reservations.
+ * For offers of tickets, use [[Offer]].
+ *
+ * @see https://schema.org/TrainReservation
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class TrainReservation extends Reservation
@@ -37,6 +42,5 @@ class TrainReservation extends Reservation
     {
         return new TrainReservation('https://schema.org/', 'TrainReservation');
     }
-
 
 }

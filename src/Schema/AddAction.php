@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The act of editing by adding an object to a collection.
  *
+ * @see https://schema.org/AddAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class AddAction extends UpdateAction
@@ -37,6 +38,5 @@ class AddAction extends UpdateAction
     {
         return new AddAction('https://schema.org/', 'AddAction');
     }
-
 
 }

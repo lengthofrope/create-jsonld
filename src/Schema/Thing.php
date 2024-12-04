@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The most generic type of item.
  *
+ * @see https://schema.org/Thing
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Thing extends \LengthOfRope\JSONLD\Elements\Element
@@ -56,9 +57,11 @@ class Thing extends \LengthOfRope\JSONLD\Elements\Element
     public function getName() {
         return $this->properties['name'];
     }
-
     /**
-     * A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.
+     * A sub property of description. A short description of the item used to
+     * disambiguate from other, similar items. Information from other properties (in
+     * particular, name) may be necessary for the description to be useful for
+     * disambiguation.
      *
      * @param $disambiguatingDescription 
      * @return static
@@ -75,9 +78,9 @@ class Thing extends \LengthOfRope\JSONLD\Elements\Element
     public function getDisambiguatingDescription() {
         return $this->properties['disambiguatingDescription'];
     }
-
     /**
-     * Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.
+     * Indicates a potential Action, which describes an idealized action in which this
+     * thing would play an 'object' role.
      *
      * @param $potentialAction 
      * @return static
@@ -94,7 +97,6 @@ class Thing extends \LengthOfRope\JSONLD\Elements\Element
     public function getPotentialAction() {
         return $this->properties['potentialAction'];
     }
-
     /**
      * URL of the item.
      *
@@ -113,10 +115,13 @@ class Thing extends \LengthOfRope\JSONLD\Elements\Element
     public function getUrl() {
         return $this->properties['url'];
     }
-
     /**
-     * The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
-        
+     * The identifier property represents any kind of identifier for any kind of
+     * [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
+     * properties for representing many of these, either as textual strings or as URL
+     * (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more
+     * details.
+     *
      *
      * @param $identifier ||
      * @return static
@@ -133,7 +138,6 @@ class Thing extends \LengthOfRope\JSONLD\Elements\Element
     public function getIdentifier() {
         return $this->properties['identifier'];
     }
-
     /**
      * A CreativeWork or Event about this Thing.
      *
@@ -152,7 +156,6 @@ class Thing extends \LengthOfRope\JSONLD\Elements\Element
     public function getSubjectOf() {
         return $this->properties['subjectOf'];
     }
-
     /**
      * A description of the item.
      *
@@ -171,10 +174,15 @@ class Thing extends \LengthOfRope\JSONLD\Elements\Element
     public function getDescription() {
         return $this->properties['description'];
     }
-
     /**
-     * An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
-    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>.
+     * An additional type for the item, typically used for adding more specific types
+     * from external vocabularies in microdata syntax. This is a relationship between
+     * something and a class that the thing is in. Typically the value is a
+     * URI-identified RDF class, and in this case corresponds to the
+     * use of rdf:type in RDF. Text values can be used sparingly, for cases where
+     * useful information can be added without their being an appropriate schema to
+     * reference. In the case of text values, the class label should follow the
+     * schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>.
      *
      * @param $additionalType |
      * @return static
@@ -191,9 +199,9 @@ class Thing extends \LengthOfRope\JSONLD\Elements\Element
     public function getAdditionalType() {
         return $this->properties['additionalType'];
     }
-
     /**
-     * An image of the item. This can be a [[URL]] or a fully described [[ImageObject]].
+     * An image of the item. This can be a [[URL]] or a fully described
+     * [[ImageObject]].
      *
      * @param $image |
      * @return static
@@ -210,9 +218,9 @@ class Thing extends \LengthOfRope\JSONLD\Elements\Element
     public function getImage() {
         return $this->properties['image'];
     }
-
     /**
-     * URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
+     * URL of a reference Web page that unambiguously indicates the item's identity.
+     * E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
      *
      * @param $sameAs 
      * @return static
@@ -229,7 +237,6 @@ class Thing extends \LengthOfRope\JSONLD\Elements\Element
     public function getSameAs() {
         return $this->properties['sameAs'];
     }
-
     /**
      * An alias for the item.
      *
@@ -248,9 +255,10 @@ class Thing extends \LengthOfRope\JSONLD\Elements\Element
     public function getAlternateName() {
         return $this->properties['alternateName'];
     }
-
     /**
-     * Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details.
+     * Indicates a page (or other CreativeWork) for which this thing is the main entity
+     * being described. See [background
+     * notes](/docs/datamodel.html#mainEntityBackground) for details.
      *
      * @param $mainEntityOfPage |
      * @return static
@@ -267,6 +275,4 @@ class Thing extends \LengthOfRope\JSONLD\Elements\Element
     public function getMainEntityOfPage() {
         return $this->properties['mainEntityOfPage'];
     }
-
-
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A health club.
  *
+ * @see https://schema.org/HealthClub
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class HealthClub extends HealthAndBeautyBusiness
@@ -37,6 +38,5 @@ class HealthClub extends HealthAndBeautyBusiness
     {
         return new HealthClub('https://schema.org/', 'HealthClub');
     }
-
 
 }

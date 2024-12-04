@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A navigation element of the page.
  *
+ * @see https://schema.org/SiteNavigationElement
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class SiteNavigationElement extends WebPageElement
@@ -37,6 +38,5 @@ class SiteNavigationElement extends WebPageElement
     {
         return new SiteNavigationElement('https://schema.org/', 'SiteNavigationElement');
     }
-
 
 }

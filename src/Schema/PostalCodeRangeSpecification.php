@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Indicates a range of postal codes, usually defined as the set of valid codes between [[postalCodeBegin]] and [[postalCodeEnd]], inclusively.
+ * Indicates a range of postal codes, usually defined as the set of valid codes
+ * between [[postalCodeBegin]] and [[postalCodeEnd]], inclusively.
  *
+ * @see https://schema.org/PostalCodeRangeSpecification
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class PostalCodeRangeSpecification extends StructuredValue
@@ -56,7 +58,6 @@ class PostalCodeRangeSpecification extends StructuredValue
     public function getPostalCodeEnd() {
         return $this->properties['postalCodeEnd'];
     }
-
     /**
      * First postal code in a range (included).
      *
@@ -75,6 +76,4 @@ class PostalCodeRangeSpecification extends StructuredValue
     public function getPostalCodeBegin() {
         return $this->properties['postalCodeBegin'];
     }
-
-
 }

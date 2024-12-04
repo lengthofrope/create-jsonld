@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A terminal for boats, ships, and other water vessels.
  *
+ * @see https://schema.org/BoatTerminal
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class BoatTerminal extends CivicStructure
@@ -37,6 +38,5 @@ class BoatTerminal extends CivicStructure
     {
         return new BoatTerminal('https://schema.org/', 'BoatTerminal');
     }
-
 
 }

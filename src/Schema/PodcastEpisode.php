@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A single episode of a podcast series.
  *
+ * @see https://schema.org/PodcastEpisode
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class PodcastEpisode extends Episode
@@ -37,6 +38,5 @@ class PodcastEpisode extends Episode
     {
         return new PodcastEpisode('https://schema.org/', 'PodcastEpisode');
     }
-
 
 }

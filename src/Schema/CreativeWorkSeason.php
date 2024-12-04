@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A media season, e.g. TV, radio, video game etc.
  *
+ * @see https://schema.org/CreativeWorkSeason
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class CreativeWorkSeason extends CreativeWork
@@ -39,7 +40,9 @@ class CreativeWorkSeason extends CreativeWork
     }
 
     /**
-     * An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip.
+     * An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or
+     * in an event. Actors can be associated with individual items or with a series,
+     * episode, clip.
      *
      * @param $actor |
      * @return static
@@ -56,7 +59,6 @@ class CreativeWorkSeason extends CreativeWork
     public function getActor() {
         return $this->properties['actor'];
     }
-
     /**
      * The trailer of a movie or TV/radio series, season, episode, etc.
      *
@@ -75,7 +77,6 @@ class CreativeWorkSeason extends CreativeWork
     public function getTrailer() {
         return $this->properties['trailer'];
     }
-
     /**
      * Position of the season within an ordered group of seasons.
      *
@@ -94,7 +95,6 @@ class CreativeWorkSeason extends CreativeWork
     public function getSeasonNumber() {
         return $this->properties['seasonNumber'];
     }
-
     /**
      * An episode of a TV, radio or game media within a series or season.
      *
@@ -113,9 +113,9 @@ class CreativeWorkSeason extends CreativeWork
     public function getEpisode() {
         return $this->properties['episode'];
     }
-
     /**
-     * The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
+     * The start date and time of the item (in [ISO 8601 date
+     * format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
      * @param $startDate |
      * @return static
@@ -132,9 +132,9 @@ class CreativeWorkSeason extends CreativeWork
     public function getStartDate() {
         return $this->properties['startDate'];
     }
-
     /**
-     * The production company or studio responsible for the item, e.g. series, video game, episode etc.
+     * The production company or studio responsible for the item, e.g. series, video
+     * game, episode etc.
      *
      * @param $productionCompany 
      * @return static
@@ -151,7 +151,6 @@ class CreativeWorkSeason extends CreativeWork
     public function getProductionCompany() {
         return $this->properties['productionCompany'];
     }
-
     /**
      * The series to which this episode or season belongs.
      *
@@ -170,9 +169,10 @@ class CreativeWorkSeason extends CreativeWork
     public function getPartOfSeries() {
         return $this->properties['partOfSeries'];
     }
-
     /**
-     * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual items or with a series, episode, clip.
+     * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event.
+     * Directors can be associated with individual items or with a series, episode,
+     * clip.
      *
      * @param $director 
      * @return static
@@ -189,7 +189,6 @@ class CreativeWorkSeason extends CreativeWork
     public function getDirector() {
         return $this->properties['director'];
     }
-
     /**
      * The number of episodes in this season or series.
      *
@@ -208,9 +207,9 @@ class CreativeWorkSeason extends CreativeWork
     public function getNumberOfEpisodes() {
         return $this->properties['numberOfEpisodes'];
     }
-
     /**
-     * The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
+     * The end date and time of the item (in [ISO 8601 date
+     * format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
      * @param $endDate |
      * @return static
@@ -227,7 +226,6 @@ class CreativeWorkSeason extends CreativeWork
     public function getEndDate() {
         return $this->properties['endDate'];
     }
-
     /**
      * An episode of a TV/radio series or season.
      *
@@ -246,6 +244,4 @@ class CreativeWorkSeason extends CreativeWork
     public function getEpisodes() {
         return $this->properties['episodes'];
     }
-
-
 }

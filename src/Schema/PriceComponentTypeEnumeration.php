@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Enumerates different price components that together make up the total price for an offered product.
+ * Enumerates different price components that together make up the total price for
+ * an offered product.
  *
+ * @see https://schema.org/PriceComponentTypeEnumeration
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class PriceComponentTypeEnumeration extends Enumeration
@@ -37,6 +39,5 @@ class PriceComponentTypeEnumeration extends Enumeration
     {
         return new PriceComponentTypeEnumeration('https://schema.org/', 'PriceComponentTypeEnumeration');
     }
-
 
 }

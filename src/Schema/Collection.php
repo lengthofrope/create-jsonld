@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A collection of items, e.g. creative works or products.
  *
+ * @see https://schema.org/Collection
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Collection extends CreativeWork
@@ -37,6 +38,5 @@ class Collection extends CreativeWork
     {
         return new Collection('https://schema.org/', 'Collection');
     }
-
 
 }

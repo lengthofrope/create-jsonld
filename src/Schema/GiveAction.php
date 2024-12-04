@@ -27,8 +27,17 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of transferring ownership of an object to a destination. Reciprocal of TakeAction.\n\nRelated actions:\n\n* [[TakeAction]]: Reciprocal of GiveAction.\n* [[SendAction]]: Unlike SendAction, GiveAction implies that ownership is being transferred (e.g. I may send my laptop to you, but that doesn't mean I'm giving it to you).
+ * The act of transferring ownership of an object to a destination. Reciprocal of
+ * TakeAction.
  *
+ * Related actions:
+ *
+ * * [[TakeAction]]: Reciprocal of GiveAction.
+ * * [[SendAction]]: Unlike SendAction, GiveAction implies that ownership is being
+ * transferred (e.g. I may send my laptop to you, but that doesn't mean I'm giving
+ * it to you).
+ *
+ * @see https://schema.org/GiveAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class GiveAction extends TransferAction
@@ -39,7 +48,8 @@ class GiveAction extends TransferAction
     }
 
     /**
-     * A sub property of participant. The participant who is at the receiving end of the action.
+     * A sub property of participant. The participant who is at the receiving end of
+     * the action.
      *
      * @param $recipient |||
      * @return static
@@ -56,6 +66,4 @@ class GiveAction extends TransferAction
     public function getRecipient() {
         return $this->properties['recipient'];
     }
-
-
 }

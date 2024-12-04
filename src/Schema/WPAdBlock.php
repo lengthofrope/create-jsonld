@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * An advertising section of the page.
  *
+ * @see https://schema.org/WPAdBlock
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class WPAdBlock extends WebPageElement
@@ -37,6 +38,5 @@ class WPAdBlock extends WebPageElement
     {
         return new WPAdBlock('https://schema.org/', 'WPAdBlock');
     }
-
 
 }

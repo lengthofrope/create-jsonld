@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The act of capturing still images of objects using a camera.
  *
+ * @see https://schema.org/PhotographAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class PhotographAction extends CreateAction
@@ -37,6 +38,5 @@ class PhotographAction extends CreateAction
     {
         return new PhotographAction('https://schema.org/', 'PhotographAction');
     }
-
 
 }

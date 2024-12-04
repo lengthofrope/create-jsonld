@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A nail salon.
  *
+ * @see https://schema.org/NailSalon
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class NailSalon extends HealthAndBeautyBusiness
@@ -37,6 +38,5 @@ class NailSalon extends HealthAndBeautyBusiness
     {
         return new NailSalon('https://schema.org/', 'NailSalon');
     }
-
 
 }

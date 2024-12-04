@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A body of structured information describing some topic(s) of interest.
  *
+ * @see https://schema.org/Dataset
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Dataset extends CreativeWork
@@ -39,7 +40,8 @@ class Dataset extends CreativeWork
     }
 
     /**
-     * A data catalog which contains this dataset (this property was previously 'catalog', preferred name is now 'includedInDataCatalog').
+     * A data catalog which contains this dataset (this property was previously
+     * 'catalog', preferred name is now 'includedInDataCatalog').
      *
      * @param $includedDataCatalog 
      * @return static
@@ -56,9 +58,10 @@ class Dataset extends CreativeWork
     public function getIncludedDataCatalog() {
         return $this->properties['includedDataCatalog'];
     }
-
     /**
-     * The International Standard Serial Number (ISSN) that identifies this serial publication. You can repeat this property to identify different formats of, or the linking ISSN (ISSN-L) for, this serial publication.
+     * The International Standard Serial Number (ISSN) that identifies this serial
+     * publication. You can repeat this property to identify different formats of, or
+     * the linking ISSN (ISSN-L) for, this serial publication.
      *
      * @param $issn 
      * @return static
@@ -75,7 +78,6 @@ class Dataset extends CreativeWork
     public function getIssn() {
         return $this->properties['issn'];
     }
-
     /**
      * A data catalog which contains this dataset.
      *
@@ -94,9 +96,9 @@ class Dataset extends CreativeWork
     public function getIncludedInDataCatalog() {
         return $this->properties['includedInDataCatalog'];
     }
-
     /**
-     * A subproperty of [[measurementTechnique]] that can be used for specifying specific methods, in particular via [[MeasurementMethodEnum]].
+     * A subproperty of [[measurementTechnique]] that can be used for specifying
+     * specific methods, in particular via [[MeasurementMethodEnum]].
      *
      * @param $measurementMethod |||
      * @return static
@@ -113,9 +115,11 @@ class Dataset extends CreativeWork
     public function getMeasurementMethod() {
         return $this->properties['measurementMethod'];
     }
-
     /**
-     * The variableMeasured property can indicate (repeated as necessary) the  variables that are measured in some dataset, either described as text or as pairs of identifier and description using PropertyValue, or more explicitly as a [[StatisticalVariable]].
+     * The variableMeasured property can indicate (repeated as necessary) the
+     * variables that are measured in some dataset, either described as text or as
+     * pairs of identifier and description using PropertyValue, or more explicitly as a
+     * [[StatisticalVariable]].
      *
      * @param $variableMeasured |||
      * @return static
@@ -132,7 +136,6 @@ class Dataset extends CreativeWork
     public function getVariableMeasured() {
         return $this->properties['variableMeasured'];
     }
-
     /**
      * A data catalog which contains this dataset.
      *
@@ -151,9 +154,9 @@ class Dataset extends CreativeWork
     public function getCatalog() {
         return $this->properties['catalog'];
     }
-
     /**
-     * The range of temporal applicability of a dataset, e.g. for a 2011 census dataset, the year 2011 (in ISO 8601 time interval format).
+     * The range of temporal applicability of a dataset, e.g. for a 2011 census
+     * dataset, the year 2011 (in ISO 8601 time interval format).
      *
      * @param $datasetTimeInterval 
      * @return static
@@ -170,9 +173,14 @@ class Dataset extends CreativeWork
     public function getDatasetTimeInterval() {
         return $this->properties['datasetTimeInterval'];
     }
-
     /**
-     * A downloadable form of this dataset, at a specific location, in a specific format. This property can be repeated if different variations are available. There is no expectation that different downloadable distributions must contain exactly equivalent information (see also [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Class:Distribution) on this point). Different distributions might include or exclude different subsets of the entire dataset, for example.
+     * A downloadable form of this dataset, at a specific location, in a specific
+     * format. This property can be repeated if different variations are available.
+     * There is no expectation that different downloadable distributions must contain
+     * exactly equivalent information (see also
+     * [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Class:Distribution) on this point).
+     * Different distributions might include or exclude different subsets of the entire
+     * dataset, for example.
      *
      * @param $distribution 
      * @return static
@@ -189,15 +197,33 @@ class Dataset extends CreativeWork
     public function getDistribution() {
         return $this->properties['distribution'];
     }
-
     /**
-     * A technique, method or technology used in an [[Observation]], [[StatisticalVariable]] or [[Dataset]] (or [[DataDownload]], [[DataCatalog]]), corresponding to the method used for measuring the corresponding variable(s) (for datasets, described using [[variableMeasured]]; for [[Observation]], a [[StatisticalVariable]]). Often but not necessarily each [[variableMeasured]] will have an explicit representation as (or mapping to) an property such as those defined in Schema.org, or other RDF vocabularies and "knowledge graphs". In that case the subproperty of [[variableMeasured]] called [[measuredProperty]] is applicable.
-    
-The [[measurementTechnique]] property helps when extra clarification is needed about how a [[measuredProperty]] was measured. This is oriented towards scientific and scholarly dataset publication but may have broader applicability; it is not intended as a full representation of measurement, but can often serve as a high level summary for dataset discovery. 
-
-For example, if [[variableMeasured]] is: molecule concentration, [[measurementTechnique]] could be: "mass spectrometry" or "nmr spectroscopy" or "colorimetry" or "immunofluorescence". If the [[variableMeasured]] is "depression rating", the [[measurementTechnique]] could be "Zung Scale" or "HAM-D" or "Beck Depression Inventory". 
-
-If there are several [[variableMeasured]] properties recorded for some given data object, use a [[PropertyValue]] for each [[variableMeasured]] and attach the corresponding [[measurementTechnique]]. The value can also be from an enumeration, organized as a [[MeasurementMetholdEnumeration]].
+     * A technique, method or technology used in an [[Observation]],
+     * [[StatisticalVariable]] or [[Dataset]] (or [[DataDownload]], [[DataCatalog]]),
+     * corresponding to the method used for measuring the corresponding variable(s)
+     * (for datasets, described using [[variableMeasured]]; for [[Observation]], a
+     * [[StatisticalVariable]]). Often but not necessarily each [[variableMeasured]]
+     * will have an explicit representation as (or mapping to) an property such as
+     * those defined in Schema.org, or other RDF vocabularies and "knowledge graphs".
+     * In that case the subproperty of [[variableMeasured]] called [[measuredProperty]]
+     * is applicable.
+     *
+     * The [[measurementTechnique]] property helps when extra clarification is needed
+     * about how a [[measuredProperty]] was measured. This is oriented towards
+     * scientific and scholarly dataset publication but may have broader applicability;
+     * it is not intended as a full representation of measurement, but can often serve
+     * as a high level summary for dataset discovery.
+     *
+     * For example, if [[variableMeasured]] is: molecule concentration,
+     * [[measurementTechnique]] could be: "mass spectrometry" or "nmr spectroscopy" or
+     * "colorimetry" or "immunofluorescence". If the [[variableMeasured]] is
+     * "depression rating", the [[measurementTechnique]] could be "Zung Scale" or
+     * "HAM-D" or "Beck Depression Inventory".
+     *
+     * If there are several [[variableMeasured]] properties recorded for some given
+     * data object, use a [[PropertyValue]] for each [[variableMeasured]] and attach
+     * the corresponding [[measurementTechnique]]. The value can also be from an
+     * enumeration, organized as a [[MeasurementMetholdEnumeration]].
      *
      * @param $measurementTechnique |||
      * @return static
@@ -214,6 +240,4 @@ If there are several [[variableMeasured]] properties recorded for some given dat
     public function getMeasurementTechnique() {
         return $this->properties['measurementTechnique'];
     }
-
-
 }

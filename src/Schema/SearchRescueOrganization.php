@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A Search and Rescue organization of some kind.
  *
+ * @see https://schema.org/SearchRescueOrganization
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class SearchRescueOrganization extends Organization
@@ -37,6 +38,5 @@ class SearchRescueOrganization extends Organization
     {
         return new SearchRescueOrganization('https://schema.org/', 'SearchRescueOrganization');
     }
-
 
 }

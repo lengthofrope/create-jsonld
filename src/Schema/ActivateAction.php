@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of starting or activating a device or application (e.g. starting a timer or turning on a flashlight).
+ * The act of starting or activating a device or application (e.g. starting a timer
+ * or turning on a flashlight).
  *
+ * @see https://schema.org/ActivateAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ActivateAction extends ControlAction
@@ -37,6 +39,5 @@ class ActivateAction extends ControlAction
     {
         return new ActivateAction('https://schema.org/', 'ActivateAction');
     }
-
 
 }

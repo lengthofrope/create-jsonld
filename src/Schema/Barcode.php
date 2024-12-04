@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * An image of a visual machine-readable code such as a barcode or QR code.
  *
+ * @see https://schema.org/Barcode
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Barcode extends ImageObject
@@ -37,6 +38,5 @@ class Barcode extends ImageObject
     {
         return new Barcode('https://schema.org/', 'Barcode');
     }
-
 
 }

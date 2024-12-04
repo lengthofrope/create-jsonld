@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A risk factor is anything that increases a person's likelihood of developing or contracting a disease, medical condition, or complication.
+ * A risk factor is anything that increases a person's likelihood of developing or
+ * contracting a disease, medical condition, or complication.
  *
+ * @see https://schema.org/MedicalRiskFactor
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MedicalRiskFactor extends MedicalEntity
@@ -56,6 +58,4 @@ class MedicalRiskFactor extends MedicalEntity
     public function getIncreasesRiskOf() {
         return $this->properties['increasesRiskOf'];
     }
-
-
 }

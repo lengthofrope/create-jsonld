@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * An enumeration that describes different types of medical procedures.
  *
+ * @see https://schema.org/MedicalProcedureType
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MedicalProcedureType extends MedicalEnumeration
@@ -37,6 +38,5 @@ class MedicalProcedureType extends MedicalEnumeration
     {
         return new MedicalProcedureType('https://schema.org/', 'MedicalProcedureType');
     }
-
 
 }

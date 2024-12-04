@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A bus stop.
  *
+ * @see https://schema.org/BusStop
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class BusStop extends CivicStructure
@@ -37,6 +38,5 @@ class BusStop extends CivicStructure
     {
         return new BusStop('https://schema.org/', 'BusStop');
     }
-
 
 }

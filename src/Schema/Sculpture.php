@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A piece of sculpture.
  *
+ * @see https://schema.org/Sculpture
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Sculpture extends CreativeWork
@@ -37,6 +38,5 @@ class Sculpture extends CreativeWork
     {
         return new Sculpture('https://schema.org/', 'Sculpture');
     }
-
 
 }

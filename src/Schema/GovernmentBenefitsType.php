@@ -27,8 +27,11 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * GovernmentBenefitsType enumerates several kinds of government benefits to support the COVID-19 situation. Note that this structure may not capture all benefits offered.
+ * GovernmentBenefitsType enumerates several kinds of government benefits to
+ * support the COVID-19 situation. Note that this structure may not capture all
+ * benefits offered.
  *
+ * @see https://schema.org/GovernmentBenefitsType
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class GovernmentBenefitsType extends Enumeration
@@ -37,6 +40,5 @@ class GovernmentBenefitsType extends Enumeration
     {
         return new GovernmentBenefitsType('https://schema.org/', 'GovernmentBenefitsType');
     }
-
 
 }

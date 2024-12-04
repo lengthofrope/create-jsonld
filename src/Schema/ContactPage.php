@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Web page type: Contact page.
  *
+ * @see https://schema.org/ContactPage
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ContactPage extends WebPage
@@ -37,6 +38,5 @@ class ContactPage extends WebPage
     {
         return new ContactPage('https://schema.org/', 'ContactPage');
     }
-
 
 }

@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Quantity: Duration (use [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601)).
+ * Quantity: Duration (use [ISO 8601 duration
+ * format](http://en.wikipedia.org/wiki/ISO_8601)).
  *
+ * @see https://schema.org/Duration
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Duration extends Quantity
@@ -37,6 +39,5 @@ class Duration extends Quantity
     {
         return new Duration('https://schema.org/', 'Duration');
     }
-
 
 }

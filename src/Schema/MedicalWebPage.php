@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A web page that provides medical information.
  *
+ * @see https://schema.org/MedicalWebPage
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MedicalWebPage extends WebPage
@@ -39,7 +40,9 @@ class MedicalWebPage extends WebPage
     }
 
     /**
-     * An aspect of medical practice that is considered on the page, such as 'diagnosis', 'treatment', 'causes', 'prognosis', 'etiology', 'epidemiology', etc.
+     * An aspect of medical practice that is considered on the page, such as
+     * 'diagnosis', 'treatment', 'causes', 'prognosis', 'etiology', 'epidemiology',
+     * etc.
      *
      * @param $aspect 
      * @return static
@@ -56,7 +59,6 @@ class MedicalWebPage extends WebPage
     public function getAspect() {
         return $this->properties['aspect'];
     }
-
     /**
      * Medical audience for page.
      *
@@ -75,6 +77,4 @@ class MedicalWebPage extends WebPage
     public function getMedicalAudience() {
         return $this->properties['medicalAudience'];
     }
-
-
 }

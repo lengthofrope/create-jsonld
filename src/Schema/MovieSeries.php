@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A series of movies. Included movies can be indicated with the hasPart property.
  *
+ * @see https://schema.org/MovieSeries
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MovieSeries extends CreativeWorkSeries
@@ -39,7 +40,9 @@ class MovieSeries extends CreativeWorkSeries
     }
 
     /**
-     * An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip.
+     * An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or
+     * in an event. Actors can be associated with individual items or with a series,
+     * episode, clip.
      *
      * @param $actor |
      * @return static
@@ -56,7 +59,6 @@ class MovieSeries extends CreativeWorkSeries
     public function getActor() {
         return $this->properties['actor'];
     }
-
     /**
      * The trailer of a movie or TV/radio series, season, episode, etc.
      *
@@ -75,9 +77,9 @@ class MovieSeries extends CreativeWorkSeries
     public function getTrailer() {
         return $this->properties['trailer'];
     }
-
     /**
-     * An actor, e.g. in TV, radio, movie, video games etc. Actors can be associated with individual items or with a series, episode, clip.
+     * An actor, e.g. in TV, radio, movie, video games etc. Actors can be associated
+     * with individual items or with a series, episode, clip.
      *
      * @param $actors 
      * @return static
@@ -94,9 +96,9 @@ class MovieSeries extends CreativeWorkSeries
     public function getActors() {
         return $this->properties['actors'];
     }
-
     /**
-     * A director of e.g. TV, radio, movie, video games etc. content. Directors can be associated with individual items or with a series, episode, clip.
+     * A director of e.g. TV, radio, movie, video games etc. content. Directors can be
+     * associated with individual items or with a series, episode, clip.
      *
      * @param $directors 
      * @return static
@@ -113,9 +115,9 @@ class MovieSeries extends CreativeWorkSeries
     public function getDirectors() {
         return $this->properties['directors'];
     }
-
     /**
-     * The production company or studio responsible for the item, e.g. series, video game, episode etc.
+     * The production company or studio responsible for the item, e.g. series, video
+     * game, episode etc.
      *
      * @param $productionCompany 
      * @return static
@@ -132,9 +134,10 @@ class MovieSeries extends CreativeWorkSeries
     public function getProductionCompany() {
         return $this->properties['productionCompany'];
     }
-
     /**
-     * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual items or with a series, episode, clip.
+     * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event.
+     * Directors can be associated with individual items or with a series, episode,
+     * clip.
      *
      * @param $director 
      * @return static
@@ -151,7 +154,6 @@ class MovieSeries extends CreativeWorkSeries
     public function getDirector() {
         return $this->properties['director'];
     }
-
     /**
      * The composer of the soundtrack.
      *
@@ -170,6 +172,4 @@ class MovieSeries extends CreativeWorkSeries
     public function getMusicBy() {
         return $this->properties['musicBy'];
     }
-
-
 }

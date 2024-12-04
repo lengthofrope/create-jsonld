@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A river (for example, the broad majestic Shannon).
  *
+ * @see https://schema.org/RiverBodyOfWater
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class RiverBodyOfWater extends BodyOfWater
@@ -37,6 +38,5 @@ class RiverBodyOfWater extends BodyOfWater
     {
         return new RiverBodyOfWater('https://schema.org/', 'RiverBodyOfWater');
     }
-
 
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A governmental organization or agency.
  *
+ * @see https://schema.org/GovernmentOrganization
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class GovernmentOrganization extends Organization
@@ -37,6 +38,5 @@ class GovernmentOrganization extends Organization
     {
         return new GovernmentOrganization('https://schema.org/', 'GovernmentOrganization');
     }
-
 
 }

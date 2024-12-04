@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A wholesale store.
  *
+ * @see https://schema.org/WholesaleStore
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class WholesaleStore extends Store
@@ -37,6 +38,5 @@ class WholesaleStore extends Store
     {
         return new WholesaleStore('https://schema.org/', 'WholesaleStore');
     }
-
 
 }

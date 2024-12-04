@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A computer store.
  *
+ * @see https://schema.org/ComputerStore
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ComputerStore extends Store
@@ -37,6 +38,5 @@ class ComputerStore extends Store
     {
         return new ComputerStore('https://schema.org/', 'ComputerStore');
     }
-
 
 }

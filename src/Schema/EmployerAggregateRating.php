@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * An aggregate rating of an Organization related to its role as an employer.
  *
+ * @see https://schema.org/EmployerAggregateRating
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class EmployerAggregateRating extends AggregateRating
@@ -37,6 +38,5 @@ class EmployerAggregateRating extends AggregateRating
     {
         return new EmployerAggregateRating('https://schema.org/', 'EmployerAggregateRating');
     }
-
 
 }

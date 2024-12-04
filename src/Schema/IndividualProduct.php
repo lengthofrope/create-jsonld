@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A single, identifiable product instance (e.g. a laptop with a particular serial number).
+ * A single, identifiable product instance (e.g. a laptop with a particular serial
+ * number).
  *
+ * @see https://schema.org/IndividualProduct
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class IndividualProduct extends Product
@@ -39,7 +41,9 @@ class IndividualProduct extends Product
     }
 
     /**
-     * The serial number or any alphanumeric identifier of a particular product. When attached to an offer, it is a shortcut for the serial number of the product included in the offer.
+     * The serial number or any alphanumeric identifier of a particular product. When
+     * attached to an offer, it is a shortcut for the serial number of the product
+     * included in the offer.
      *
      * @param $serialNumber 
      * @return static
@@ -56,6 +60,4 @@ class IndividualProduct extends Product
     public function getSerialNumber() {
         return $this->properties['serialNumber'];
     }
-
-
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * An educational organization.
  *
+ * @see https://schema.org/EducationalOrganization
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class EducationalOrganization extends CivicStructure
@@ -56,6 +57,4 @@ class EducationalOrganization extends CivicStructure
     public function getAlumni() {
         return $this->properties['alumni'];
     }
-
-
 }

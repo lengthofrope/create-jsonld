@@ -27,8 +27,14 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Enumerates some common technology platforms, for use with properties such as [[actionPlatform]]. It is not supposed to be comprehensive - when a suitable code is not enumerated here, textual or URL values can be used instead. These codes are at a fairly high level and do not deal with versioning and other nuance. Additional codes can be suggested [in github](https://github.com/schemaorg/schemaorg/issues/3057). 
+ * Enumerates some common technology platforms, for use with properties such as
+ * [[actionPlatform]]. It is not supposed to be comprehensive - when a suitable
+ * code is not enumerated here, textual or URL values can be used instead. These
+ * codes are at a fairly high level and do not deal with versioning and other
+ * nuance. Additional codes can be suggested [in
+ * github](https://github.com/schemaorg/schemaorg/issues/3057).
  *
+ * @see https://schema.org/DigitalPlatformEnumeration
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class DigitalPlatformEnumeration extends Enumeration
@@ -37,6 +43,5 @@ class DigitalPlatformEnumeration extends Enumeration
     {
         return new DigitalPlatformEnumeration('https://schema.org/', 'DigitalPlatformEnumeration');
     }
-
 
 }

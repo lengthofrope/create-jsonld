@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Event type: Exhibition event, e.g. at a museum, library, archive, tradeshow, ...
  *
+ * @see https://schema.org/ExhibitionEvent
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ExhibitionEvent extends Event
@@ -37,6 +38,5 @@ class ExhibitionEvent extends Event
     {
         return new ExhibitionEvent('https://schema.org/', 'ExhibitionEvent');
     }
-
 
 }

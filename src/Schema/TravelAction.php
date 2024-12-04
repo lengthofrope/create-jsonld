@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of traveling from a fromLocation to a destination by a specified mode of transport, optionally with participants.
+ * The act of traveling from a fromLocation to a destination by a specified mode of
+ * transport, optionally with participants.
  *
+ * @see https://schema.org/TravelAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class TravelAction extends MoveAction
@@ -56,6 +58,4 @@ class TravelAction extends MoveAction
     public function getDistance() {
         return $this->properties['distance'];
     }
-
-
 }

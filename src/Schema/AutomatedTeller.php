@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * ATM/cash machine.
  *
+ * @see https://schema.org/AutomatedTeller
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class AutomatedTeller extends FinancialService
@@ -37,6 +38,5 @@ class AutomatedTeller extends FinancialService
     {
         return new AutomatedTeller('https://schema.org/', 'AutomatedTeller');
     }
-
 
 }

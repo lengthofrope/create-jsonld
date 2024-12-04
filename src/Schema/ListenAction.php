@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The act of consuming audio content.
  *
+ * @see https://schema.org/ListenAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ListenAction extends ConsumeAction
@@ -37,6 +38,5 @@ class ListenAction extends ConsumeAction
     {
         return new ListenAction('https://schema.org/', 'ListenAction');
     }
-
 
 }

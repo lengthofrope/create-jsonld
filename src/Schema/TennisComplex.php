@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A tennis complex.
  *
+ * @see https://schema.org/TennisComplex
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class TennisComplex extends SportsActivityLocation
@@ -37,6 +38,5 @@ class TennisComplex extends SportsActivityLocation
     {
         return new TennisComplex('https://schema.org/', 'TennisComplex');
     }
-
 
 }

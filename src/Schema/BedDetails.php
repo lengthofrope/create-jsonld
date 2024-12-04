@@ -27,8 +27,12 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * An entity holding detailed information about the available bed types, e.g. the quantity of twin beds for a hotel room. For the single case of just one bed of a certain type, you can use bed directly with a text. See also [[BedType]] (under development).
+ * An entity holding detailed information about the available bed types, e.g. the
+ * quantity of twin beds for a hotel room. For the single case of just one bed of a
+ * certain type, you can use bed directly with a text. See also [[BedType]] (under
+ * development).
  *
+ * @see https://schema.org/BedDetails
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class BedDetails extends Intangible
@@ -39,7 +43,8 @@ class BedDetails extends Intangible
     }
 
     /**
-     * The type of bed to which the BedDetail refers, i.e. the type of bed available in the quantity indicated by quantity.
+     * The type of bed to which the BedDetail refers, i.e. the type of bed available in
+     * the quantity indicated by quantity.
      *
      * @param $typeOfBed |
      * @return static
@@ -56,9 +61,9 @@ class BedDetails extends Intangible
     public function getTypeOfBed() {
         return $this->properties['typeOfBed'];
     }
-
     /**
-     * The quantity of the given bed type available in the HotelRoom, Suite, House, or Apartment.
+     * The quantity of the given bed type available in the HotelRoom, Suite, House, or
+     * Apartment.
      *
      * @param $numberOfBeds 
      * @return static
@@ -75,6 +80,4 @@ class BedDetails extends Intangible
     public function getNumberOfBeds() {
         return $this->properties['numberOfBeds'];
     }
-
-
 }

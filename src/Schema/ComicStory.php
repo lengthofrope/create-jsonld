@@ -28,9 +28,12 @@ namespace LengthOfRope\JSONLD\Schema;
 
 /**
  * The term "story" is any indivisible, re-printable
- *     	unit of a comic, including the interior stories, covers, and backmatter. Most
- *     	comics have at least two stories: a cover (ComicCoverArt) and an interior story.
+ * *     	unit of a comic, including the interior stories, covers, and backmatter.
+ * Most
+ * *     	comics have at least two stories: a cover (ComicCoverArt) and an
+ * interior story.
  *
+ * @see https://schema.org/ComicStory
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ComicStory extends CreativeWork
@@ -41,7 +44,8 @@ class ComicStory extends CreativeWork
     }
 
     /**
-     * The individual who adds lettering, including speech balloons and sound effects, to artwork.
+     * The individual who adds lettering, including speech balloons and sound effects,
+     * to artwork.
      *
      * @param $letterer 
      * @return static
@@ -58,9 +62,9 @@ class ComicStory extends CreativeWork
     public function getLetterer() {
         return $this->properties['letterer'];
     }
-
     /**
-     * The individual who traces over the pencil drawings in ink after pencils are complete.
+     * The individual who traces over the pencil drawings in ink after pencils are
+     * complete.
      *
      * @param $inker 
      * @return static
@@ -77,7 +81,6 @@ class ComicStory extends CreativeWork
     public function getInker() {
         return $this->properties['inker'];
     }
-
     /**
      * The individual who adds color to inked drawings.
      *
@@ -96,11 +99,10 @@ class ComicStory extends CreativeWork
     public function getColorist() {
         return $this->properties['colorist'];
     }
-
     /**
      * The primary artist for a work
-    	in a medium other than pencils or digital line art--for example, if the
-    	primary artwork is done in watercolors or digital paints.
+     * in a medium other than pencils or digital line art--for example, if the
+     * primary artwork is done in watercolors or digital paints.
      *
      * @param $artist 
      * @return static
@@ -117,7 +119,6 @@ class ComicStory extends CreativeWork
     public function getArtist() {
         return $this->properties['artist'];
     }
-
     /**
      * The individual who draws the primary narrative artwork.
      *
@@ -136,6 +137,4 @@ class ComicStory extends CreativeWork
     public function getPenciler() {
         return $this->properties['penciler'];
     }
-
-
 }

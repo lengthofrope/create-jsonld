@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * An agent quotes/estimates/appraises an object/product/service with a price at a location/store.
+ * An agent quotes/estimates/appraises an object/product/service with a price at a
+ * location/store.
  *
+ * @see https://schema.org/QuoteAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class QuoteAction extends TradeAction
@@ -37,6 +39,5 @@ class QuoteAction extends TradeAction
     {
         return new QuoteAction('https://schema.org/', 'QuoteAction');
     }
-
 
 }

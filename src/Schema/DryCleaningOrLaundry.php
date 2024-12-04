@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A dry-cleaning business.
  *
+ * @see https://schema.org/DryCleaningOrLaundry
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class DryCleaningOrLaundry extends LocalBusiness
@@ -37,6 +38,5 @@ class DryCleaningOrLaundry extends LocalBusiness
     {
         return new DryCleaningOrLaundry('https://schema.org/', 'DryCleaningOrLaundry');
     }
-
 
 }

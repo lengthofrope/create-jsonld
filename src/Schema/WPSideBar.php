@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A sidebar section of the page.
  *
+ * @see https://schema.org/WPSideBar
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class WPSideBar extends WebPageElement
@@ -37,6 +38,5 @@ class WPSideBar extends WebPageElement
     {
         return new WPSideBar('https://schema.org/', 'WPSideBar');
     }
-
 
 }

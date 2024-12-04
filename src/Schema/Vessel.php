@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A component of the human body circulatory system comprised of an intricate network of hollow tubes that transport blood throughout the entire body.
+ * A component of the human body circulatory system comprised of an intricate
+ * network of hollow tubes that transport blood throughout the entire body.
  *
+ * @see https://schema.org/Vessel
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Vessel extends AnatomicalStructure
@@ -37,6 +39,5 @@ class Vessel extends AnatomicalStructure
     {
         return new Vessel('https://schema.org/', 'Vessel');
     }
-
 
 }

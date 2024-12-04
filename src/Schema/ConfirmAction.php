@@ -27,8 +27,14 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of notifying someone that a future event/action is going to happen as expected.\n\nRelated actions:\n\n* [[CancelAction]]: The antonym of ConfirmAction.
+ * The act of notifying someone that a future event/action is going to happen as
+ * expected.
  *
+ * Related actions:
+ *
+ * * [[CancelAction]]: The antonym of ConfirmAction.
+ *
+ * @see https://schema.org/ConfirmAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ConfirmAction extends InformAction
@@ -37,6 +43,5 @@ class ConfirmAction extends InformAction
     {
         return new ConfirmAction('https://schema.org/', 'ConfirmAction');
     }
-
 
 }

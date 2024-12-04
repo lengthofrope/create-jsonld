@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A statistical distribution of values.
  *
+ * @see https://schema.org/QuantitativeValueDistribution
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class QuantitativeValueDistribution extends StructuredValue
@@ -56,7 +57,6 @@ class QuantitativeValueDistribution extends StructuredValue
     public function getPercentile90() {
         return $this->properties['percentile90'];
     }
-
     /**
      * The 10th percentile value.
      *
@@ -75,7 +75,6 @@ class QuantitativeValueDistribution extends StructuredValue
     public function getPercentile10() {
         return $this->properties['percentile10'];
     }
-
     /**
      * The median value.
      *
@@ -94,9 +93,9 @@ class QuantitativeValueDistribution extends StructuredValue
     public function getMedian() {
         return $this->properties['median'];
     }
-
     /**
-     * The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
+     * The duration of the item (movie, audio recording, event, etc.) in [ISO 8601
+     * duration format](http://en.wikipedia.org/wiki/ISO_8601).
      *
      * @param $duration 
      * @return static
@@ -113,7 +112,6 @@ class QuantitativeValueDistribution extends StructuredValue
     public function getDuration() {
         return $this->properties['duration'];
     }
-
     /**
      * The 75th percentile value.
      *
@@ -132,7 +130,6 @@ class QuantitativeValueDistribution extends StructuredValue
     public function getPercentile75() {
         return $this->properties['percentile75'];
     }
-
     /**
      * The 25th percentile value.
      *
@@ -151,6 +148,4 @@ class QuantitativeValueDistribution extends StructuredValue
     public function getPercentile25() {
         return $this->properties['percentile25'];
     }
-
-
 }

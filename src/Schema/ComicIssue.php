@@ -28,12 +28,15 @@ namespace LengthOfRope\JSONLD\Schema;
 
 /**
  * Individual comic issues are serially published as
- *     	part of a larger series. For the sake of consistency, even one-shot issues
- *     	belong to a series comprised of a single issue. All comic issues can be
- *     	uniquely identified by: the combination of the name and volume number of the
- *     	series to which the issue belongs; the issue number; and the variant
- *     	description of the issue (if any).
+ * *     	part of a larger series. For the sake of consistency, even one-shot
+ * issues
+ * *     	belong to a series comprised of a single issue. All comic issues can be
+ * *     	uniquely identified by: the combination of the name and volume number of
+ * the
+ * *     	series to which the issue belongs; the issue number; and the variant
+ * *     	description of the issue (if any).
  *
+ * @see https://schema.org/ComicIssue
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ComicIssue extends PublicationIssue
@@ -44,7 +47,8 @@ class ComicIssue extends PublicationIssue
     }
 
     /**
-     * The individual who adds lettering, including speech balloons and sound effects, to artwork.
+     * The individual who adds lettering, including speech balloons and sound effects,
+     * to artwork.
      *
      * @param $letterer 
      * @return static
@@ -61,9 +65,9 @@ class ComicIssue extends PublicationIssue
     public function getLetterer() {
         return $this->properties['letterer'];
     }
-
     /**
-     * The individual who traces over the pencil drawings in ink after pencils are complete.
+     * The individual who traces over the pencil drawings in ink after pencils are
+     * complete.
      *
      * @param $inker 
      * @return static
@@ -80,7 +84,6 @@ class ComicIssue extends PublicationIssue
     public function getInker() {
         return $this->properties['inker'];
     }
-
     /**
      * The individual who adds color to inked drawings.
      *
@@ -99,11 +102,10 @@ class ComicIssue extends PublicationIssue
     public function getColorist() {
         return $this->properties['colorist'];
     }
-
     /**
      * The primary artist for a work
-    	in a medium other than pencils or digital line art--for example, if the
-    	primary artwork is done in watercolors or digital paints.
+     * in a medium other than pencils or digital line art--for example, if the
+     * primary artwork is done in watercolors or digital paints.
      *
      * @param $artist 
      * @return static
@@ -120,7 +122,6 @@ class ComicIssue extends PublicationIssue
     public function getArtist() {
         return $this->properties['artist'];
     }
-
     /**
      * The individual who draws the primary narrative artwork.
      *
@@ -139,11 +140,11 @@ class ComicIssue extends PublicationIssue
     public function getPenciler() {
         return $this->properties['penciler'];
     }
-
     /**
      * A description of the variant cover
-    	for the issue, if the issue is a variant printing. For example, "Bryan Hitch
-    	Variant Cover" or "2nd Printing Variant".
+     * for the issue, if the issue is a variant printing. For example, "Bryan
+     * Hitch
+     * Variant Cover" or "2nd Printing Variant".
      *
      * @param $variantCover 
      * @return static
@@ -160,6 +161,4 @@ class ComicIssue extends PublicationIssue
     public function getVariantCover() {
         return $this->properties['variantCover'];
     }
-
-
 }

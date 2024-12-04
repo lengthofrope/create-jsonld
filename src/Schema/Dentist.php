@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A dentist.
  *
+ * @see https://schema.org/Dentist
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Dentist extends MedicalOrganization
@@ -37,6 +38,5 @@ class Dentist extends MedicalOrganization
     {
         return new Dentist('https://schema.org/', 'Dentist');
     }
-
 
 }

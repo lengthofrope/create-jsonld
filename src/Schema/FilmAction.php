@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The act of capturing sound and moving images on film, video, or digitally.
  *
+ * @see https://schema.org/FilmAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class FilmAction extends CreateAction
@@ -37,6 +38,5 @@ class FilmAction extends CreateAction
     {
         return new FilmAction('https://schema.org/', 'FilmAction');
     }
-
 
 }

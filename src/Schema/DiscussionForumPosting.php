@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A posting to a discussion forum.
  *
+ * @see https://schema.org/DiscussionForumPosting
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class DiscussionForumPosting extends SocialMediaPosting
@@ -37,6 +38,5 @@ class DiscussionForumPosting extends SocialMediaPosting
     {
         return new DiscussionForumPosting('https://schema.org/', 'DiscussionForumPosting');
     }
-
 
 }

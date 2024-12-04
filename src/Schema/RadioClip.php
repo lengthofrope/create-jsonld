@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A short radio program or a segment/part of a radio program.
  *
+ * @see https://schema.org/RadioClip
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class RadioClip extends Clip
@@ -37,6 +38,5 @@ class RadioClip extends Clip
     {
         return new RadioClip('https://schema.org/', 'RadioClip');
     }
-
 
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A [[comment]] that corrects [[CreativeWork]].
  *
+ * @see https://schema.org/CorrectionComment
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class CorrectionComment extends Comment
@@ -37,6 +38,5 @@ class CorrectionComment extends Comment
     {
         return new CorrectionComment('https://schema.org/', 'CorrectionComment');
     }
-
 
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Organization: Non-governmental Organization.
  *
+ * @see https://schema.org/NGO
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class NGO extends Organization
@@ -37,6 +38,5 @@ class NGO extends Organization
     {
         return new NGO('https://schema.org/', 'NGO');
     }
-
 
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Lists or enumerations—for example, a list of cuisines or music genres, etc.
  *
+ * @see https://schema.org/Enumeration
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Enumeration extends Intangible
@@ -39,7 +40,8 @@ class Enumeration extends Intangible
     }
 
     /**
-     * Relates a term (i.e. a property, class or enumeration) to one that supersedes it.
+     * Relates a term (i.e. a property, class or enumeration) to one that supersedes
+     * it.
      *
      * @param $supersededBy ||
      * @return static
@@ -56,6 +58,4 @@ class Enumeration extends Intangible
     public function getSupersededBy() {
         return $this->properties['supersededBy'];
     }
-
-
 }

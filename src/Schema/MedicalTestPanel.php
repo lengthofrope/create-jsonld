@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Any collection of tests commonly ordered together.
  *
+ * @see https://schema.org/MedicalTestPanel
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MedicalTestPanel extends MedicalTest
@@ -56,6 +57,4 @@ class MedicalTestPanel extends MedicalTest
     public function getSubTest() {
         return $this->properties['subTest'];
     }
-
-
 }

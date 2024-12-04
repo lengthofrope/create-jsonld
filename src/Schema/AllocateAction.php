@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The act of organizing tasks/objects/events by associating resources to it.
  *
+ * @see https://schema.org/AllocateAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class AllocateAction extends OrganizeAction
@@ -37,6 +38,5 @@ class AllocateAction extends OrganizeAction
     {
         return new AllocateAction('https://schema.org/', 'AllocateAction');
     }
-
 
 }

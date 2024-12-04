@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A value indicating a steering position.
  *
+ * @see https://schema.org/SteeringPositionValue
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class SteeringPositionValue extends QualitativeValue
@@ -37,6 +38,5 @@ class SteeringPositionValue extends QualitativeValue
     {
         return new SteeringPositionValue('https://schema.org/', 'SteeringPositionValue');
     }
-
 
 }

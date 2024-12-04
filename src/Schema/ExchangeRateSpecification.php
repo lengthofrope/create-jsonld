@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A structured value representing exchange rate.
  *
+ * @see https://schema.org/ExchangeRateSpecification
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ExchangeRateSpecification extends StructuredValue
@@ -39,7 +40,8 @@ class ExchangeRateSpecification extends StructuredValue
     }
 
     /**
-     * The difference between the price at which a broker or other intermediary buys and sells foreign currency.
+     * The difference between the price at which a broker or other intermediary buys
+     * and sells foreign currency.
      *
      * @param $exchangeRateSpread |
      * @return static
@@ -56,9 +58,15 @@ class ExchangeRateSpecification extends StructuredValue
     public function getExchangeRateSpread() {
         return $this->properties['exchangeRateSpread'];
     }
-
     /**
-     * The currency in which the monetary amount is expressed.\n\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR".
+     * The currency in which the monetary amount is expressed.
+     *
+     * Use standard formats: [ISO 4217 currency
+     * format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker
+     * symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for
+     * cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading
+     * Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and
+     * other currency types, e.g. "Ithaca HOUR".
      *
      * @param $currency 
      * @return static
@@ -75,7 +83,6 @@ class ExchangeRateSpecification extends StructuredValue
     public function getCurrency() {
         return $this->properties['currency'];
     }
-
     /**
      * The current price of a currency.
      *
@@ -94,6 +101,4 @@ class ExchangeRateSpecification extends StructuredValue
     public function getCurrentExchangeRate() {
         return $this->properties['currentExchangeRate'];
     }
-
-
 }

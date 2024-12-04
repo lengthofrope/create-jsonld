@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A volcano, like Fujisan.
  *
+ * @see https://schema.org/Volcano
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Volcano extends Landform
@@ -37,6 +38,5 @@ class Volcano extends Landform
     {
         return new Volcano('https://schema.org/', 'Volcano');
     }
-
 
 }

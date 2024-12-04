@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The most generic type of entity related to health and the practice of medicine.
  *
+ * @see https://schema.org/MedicalEntity
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MedicalEntity extends Thing
@@ -39,7 +40,8 @@ class MedicalEntity extends Thing
     }
 
     /**
-     * The drug or supplement's legal status, including any controlled substance schedules that apply.
+     * The drug or supplement's legal status, including any controlled substance
+     * schedules that apply.
      *
      * @param $legalStatus ||
      * @return static
@@ -56,9 +58,9 @@ class MedicalEntity extends Thing
     public function getLegalStatus() {
         return $this->properties['legalStatus'];
     }
-
     /**
-     * If applicable, the organization that officially recognizes this entity as part of its endorsed system of medicine.
+     * If applicable, the organization that officially recognizes this entity as part
+     * of its endorsed system of medicine.
      *
      * @param $recognizingAuthority 
      * @return static
@@ -75,9 +77,9 @@ class MedicalEntity extends Thing
     public function getRecognizingAuthority() {
         return $this->properties['recognizingAuthority'];
     }
-
     /**
-     * A [[Grant]] that directly or indirectly provide funding or sponsorship for this item. See also [[ownershipFundingInfo]].
+     * A [[Grant]] that directly or indirectly provide funding or sponsorship for this
+     * item. See also [[ownershipFundingInfo]].
      *
      * @param $funding 
      * @return static
@@ -94,9 +96,9 @@ class MedicalEntity extends Thing
     public function getFunding() {
         return $this->properties['funding'];
     }
-
     /**
-     * A medical code for the entity, taken from a controlled vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
+     * A medical code for the entity, taken from a controlled vocabulary or ontology
+     * such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
      *
      * @param $code 
      * @return static
@@ -113,9 +115,9 @@ class MedicalEntity extends Thing
     public function getCode() {
         return $this->properties['code'];
     }
-
     /**
-     * The system of medicine that includes this MedicalEntity, for example 'evidence-based', 'homeopathic', 'chiropractic', etc.
+     * The system of medicine that includes this MedicalEntity, for example
+     * 'evidence-based', 'homeopathic', 'chiropractic', etc.
      *
      * @param $medicineSystem 
      * @return static
@@ -132,7 +134,6 @@ class MedicalEntity extends Thing
     public function getMedicineSystem() {
         return $this->properties['medicineSystem'];
     }
-
     /**
      * A medical study or trial related to this entity.
      *
@@ -151,7 +152,6 @@ class MedicalEntity extends Thing
     public function getStudy() {
         return $this->properties['study'];
     }
-
     /**
      * A medical guideline related to this entity.
      *
@@ -170,7 +170,6 @@ class MedicalEntity extends Thing
     public function getGuideline() {
         return $this->properties['guideline'];
     }
-
     /**
      * If applicable, a medical specialty in which this entity is relevant.
      *
@@ -189,6 +188,4 @@ class MedicalEntity extends Thing
     public function getRelevantSpecialty() {
         return $this->properties['relevantSpecialty'];
     }
-
-
 }

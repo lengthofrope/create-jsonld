@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A single feed providing structured information about one or more entities or topics.
+ * A single feed providing structured information about one or more entities or
+ * topics.
  *
+ * @see https://schema.org/DataFeed
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class DataFeed extends Dataset
@@ -56,6 +58,4 @@ class DataFeed extends Dataset
     public function getDataFeedElement() {
         return $this->properties['dataFeedElement'];
     }
-
-
 }

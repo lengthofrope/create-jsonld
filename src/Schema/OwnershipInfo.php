@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A structured value providing information about when a certain organization or person owned a certain product.
+ * A structured value providing information about when a certain organization or
+ * person owned a certain product.
  *
+ * @see https://schema.org/OwnershipInfo
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class OwnershipInfo extends StructuredValue
@@ -56,7 +58,6 @@ class OwnershipInfo extends StructuredValue
     public function getOwnedFrom() {
         return $this->properties['ownedFrom'];
     }
-
     /**
      * The date and time of giving up ownership on the product.
      *
@@ -75,7 +76,6 @@ class OwnershipInfo extends StructuredValue
     public function getOwnedThrough() {
         return $this->properties['ownedThrough'];
     }
-
     /**
      * The product that this structured value is referring to.
      *
@@ -94,7 +94,6 @@ class OwnershipInfo extends StructuredValue
     public function getTypeOfGood() {
         return $this->properties['typeOfGood'];
     }
-
     /**
      * The organization or person from which the product was acquired.
      *
@@ -113,6 +112,4 @@ class OwnershipInfo extends StructuredValue
     public function getAcquiredFrom() {
         return $this->properties['acquiredFrom'];
     }
-
-
 }

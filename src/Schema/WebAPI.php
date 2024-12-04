@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * An application programming interface accessible over Web/Internet technologies.
  *
+ * @see https://schema.org/WebAPI
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class WebAPI extends Service
@@ -56,6 +57,4 @@ class WebAPI extends Service
     public function getDocumentation() {
         return $this->properties['documentation'];
     }
-
-
 }

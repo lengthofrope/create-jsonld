@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A city hall.
  *
+ * @see https://schema.org/CityHall
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class CityHall extends GovernmentBuilding
@@ -37,6 +38,5 @@ class CityHall extends GovernmentBuilding
     {
         return new CityHall('https://schema.org/', 'CityHall');
     }
-
 
 }

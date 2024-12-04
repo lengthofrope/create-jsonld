@@ -27,8 +27,11 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Specifies a location feature by providing a structured value representing a feature of an accommodation as a property-value pair of varying degrees of formality.
+ * Specifies a location feature by providing a structured value representing a
+ * feature of an accommodation as a property-value pair of varying degrees of
+ * formality.
  *
+ * @see https://schema.org/LocationFeatureSpecification
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class LocationFeatureSpecification extends PropertyValue
@@ -39,7 +42,8 @@ class LocationFeatureSpecification extends PropertyValue
     }
 
     /**
-     * The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours.
+     * The date after when the item is not valid. For example the end of an offer,
+     * salary period, or a period of opening hours.
      *
      * @param $validThrough |
      * @return static
@@ -56,7 +60,6 @@ class LocationFeatureSpecification extends PropertyValue
     public function getValidThrough() {
         return $this->properties['validThrough'];
     }
-
     /**
      * The hours during which this service or contact is available.
      *
@@ -75,7 +78,6 @@ class LocationFeatureSpecification extends PropertyValue
     public function getHoursAvailable() {
         return $this->properties['hoursAvailable'];
     }
-
     /**
      * The date when the item becomes valid.
      *
@@ -94,6 +96,4 @@ class LocationFeatureSpecification extends PropertyValue
     public function getValidFrom() {
         return $this->properties['validFrom'];
     }
-
-
 }

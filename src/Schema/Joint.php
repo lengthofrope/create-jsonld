@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The anatomical location at which two or more bones make contact.
  *
+ * @see https://schema.org/Joint
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Joint extends AnatomicalStructure
@@ -56,7 +57,6 @@ class Joint extends AnatomicalStructure
     public function getBiomechnicalClass() {
         return $this->properties['biomechnicalClass'];
     }
-
     /**
      * The name given to how bone physically connects to each other.
      *
@@ -75,7 +75,6 @@ class Joint extends AnatomicalStructure
     public function getStructuralClass() {
         return $this->properties['structuralClass'];
     }
-
     /**
      * The degree of mobility the joint allows.
      *
@@ -94,6 +93,4 @@ class Joint extends AnatomicalStructure
     public function getFunctionalClass() {
         return $this->properties['functionalClass'];
     }
-
-
 }

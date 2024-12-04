@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * NLNonprofitType: Non-profit organization type originating from the Netherlands.
  *
+ * @see https://schema.org/NLNonprofitType
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class NLNonprofitType extends NonprofitType
@@ -37,6 +38,5 @@ class NLNonprofitType extends NonprofitType
     {
         return new NLNonprofitType('https://schema.org/', 'NLNonprofitType');
     }
-
 
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The act of downloading an object.
  *
+ * @see https://schema.org/DownloadAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class DownloadAction extends TransferAction
@@ -37,6 +38,5 @@ class DownloadAction extends TransferAction
     {
         return new DownloadAction('https://schema.org/', 'DownloadAction');
     }
-
 
 }

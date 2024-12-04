@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A photograph.
  *
+ * @see https://schema.org/Photograph
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Photograph extends CreativeWork
@@ -37,6 +38,5 @@ class Photograph extends CreativeWork
     {
         return new Photograph('https://schema.org/', 'Photograph');
     }
-
 
 }

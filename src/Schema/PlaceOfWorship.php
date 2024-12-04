@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Place of worship, such as a church, synagogue, or mosque.
  *
+ * @see https://schema.org/PlaceOfWorship
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class PlaceOfWorship extends CivicStructure
@@ -37,6 +38,5 @@ class PlaceOfWorship extends CivicStructure
     {
         return new PlaceOfWorship('https://schema.org/', 'PlaceOfWorship');
     }
-
 
 }

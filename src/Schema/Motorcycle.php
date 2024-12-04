@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A motorcycle or motorbike is a single-track, two-wheeled motor vehicle.
  *
+ * @see https://schema.org/Motorcycle
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Motorcycle extends Vehicle
@@ -37,6 +38,5 @@ class Motorcycle extends Vehicle
     {
         return new Motorcycle('https://schema.org/', 'Motorcycle');
     }
-
 
 }

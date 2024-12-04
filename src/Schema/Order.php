@@ -27,8 +27,11 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * An order is a confirmation of a transaction (a receipt), which can contain multiple line items, each represented by an Offer that has been accepted by the customer.
+ * An order is a confirmation of a transaction (a receipt), which can contain
+ * multiple line items, each represented by an Offer that has been accepted by the
+ * customer.
  *
+ * @see https://schema.org/Order
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Order extends Intangible
@@ -39,7 +42,8 @@ class Order extends Intangible
     }
 
     /**
-     * The offer(s) -- e.g., product, quantity and price combinations -- included in the order.
+     * The offer(s) -- e.g., product, quantity and price combinations -- included in
+     * the order.
      *
      * @param $acceptedOffer 
      * @return static
@@ -56,7 +60,6 @@ class Order extends Intangible
     public function getAcceptedOffer() {
         return $this->properties['acceptedOffer'];
     }
-
     /**
      * Party placing the order or paying the invoice.
      *
@@ -75,9 +78,9 @@ class Order extends Intangible
     public function getCustomer() {
         return $this->properties['customer'];
     }
-
     /**
-     * Indicates whether the offer was accepted as a gift for someone other than the buyer.
+     * Indicates whether the offer was accepted as a gift for someone other than the
+     * buyer.
      *
      * @param $isGift 
      * @return static
@@ -94,7 +97,6 @@ class Order extends Intangible
     public function getIsGift() {
         return $this->properties['isGift'];
     }
-
     /**
      * The name of the credit card or other method of payment for the order.
      *
@@ -113,7 +115,6 @@ class Order extends Intangible
     public function getPaymentMethod() {
         return $this->properties['paymentMethod'];
     }
-
     /**
      * The URL for sending a payment.
      *
@@ -132,7 +133,6 @@ class Order extends Intangible
     public function getPaymentUrl() {
         return $this->properties['paymentUrl'];
     }
-
     /**
      * 'merchant' is an out-dated term for 'seller'.
      *
@@ -151,7 +151,6 @@ class Order extends Intangible
     public function getMerchant() {
         return $this->properties['merchant'];
     }
-
     /**
      * The order is being paid as part of the referenced Invoice.
      *
@@ -170,7 +169,6 @@ class Order extends Intangible
     public function getPartOfInvoice() {
         return $this->properties['partOfInvoice'];
     }
-
     /**
      * The date that payment is due.
      *
@@ -189,9 +187,11 @@ class Order extends Intangible
     public function getPaymentDueDate() {
         return $this->properties['paymentDueDate'];
     }
-
     /**
-     * An entity that arranges for an exchange between a buyer and a seller.  In most cases a broker never acquires or releases ownership of a product or service involved in an exchange.  If it is not clear whether an entity is a broker, seller, or buyer, the latter two terms are preferred.
+     * An entity that arranges for an exchange between a buyer and a seller.  In most
+     * cases a broker never acquires or releases ownership of a product or service
+     * involved in an exchange.  If it is not clear whether an entity is a broker,
+     * seller, or buyer, the latter two terms are preferred.
      *
      * @param $broker |
      * @return static
@@ -208,7 +208,6 @@ class Order extends Intangible
     public function getBroker() {
         return $this->properties['broker'];
     }
-
     /**
      * Any discount applied (to an Order).
      *
@@ -227,7 +226,6 @@ class Order extends Intangible
     public function getDiscount() {
         return $this->properties['discount'];
     }
-
     /**
      * Date order was placed.
      *
@@ -246,9 +244,9 @@ class Order extends Intangible
     public function getOrderDate() {
         return $this->properties['orderDate'];
     }
-
     /**
-     * An identifier for the method of payment used (e.g. the last 4 digits of the credit card).
+     * An identifier for the method of payment used (e.g. the last 4 digits of the
+     * credit card).
      *
      * @param $paymentMethodId 
      * @return static
@@ -265,7 +263,6 @@ class Order extends Intangible
     public function getPaymentMethodId() {
         return $this->properties['paymentMethodId'];
     }
-
     /**
      * The item ordered.
      *
@@ -284,7 +281,6 @@ class Order extends Intangible
     public function getOrderedItem() {
         return $this->properties['orderedItem'];
     }
-
     /**
      * The date that payment is due.
      *
@@ -303,9 +299,9 @@ class Order extends Intangible
     public function getPaymentDue() {
         return $this->properties['paymentDue'];
     }
-
     /**
-     * An entity which offers (sells / leases / lends / loans) the services / goods.  A seller may also be a provider.
+     * An entity which offers (sells / leases / lends / loans) the services / goods.  A
+     * seller may also be a provider.
      *
      * @param $seller |
      * @return static
@@ -322,9 +318,15 @@ class Order extends Intangible
     public function getSeller() {
         return $this->properties['seller'];
     }
-
     /**
-     * The currency of the discount.\n\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR".
+     * The currency of the discount.
+     *
+     * Use standard formats: [ISO 4217 currency
+     * format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker
+     * symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for
+     * cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading
+     * Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and
+     * other currency types, e.g. "Ithaca HOUR".
      *
      * @param $discountCurrency 
      * @return static
@@ -341,7 +343,6 @@ class Order extends Intangible
     public function getDiscountCurrency() {
         return $this->properties['discountCurrency'];
     }
-
     /**
      * The delivery of the parcel related to this order or order item.
      *
@@ -360,7 +361,6 @@ class Order extends Intangible
     public function getOrderDelivery() {
         return $this->properties['orderDelivery'];
     }
-
     /**
      * The billing address for the order.
      *
@@ -379,7 +379,6 @@ class Order extends Intangible
     public function getBillingAddress() {
         return $this->properties['billingAddress'];
     }
-
     /**
      * A number that confirms the given order or payment has been received.
      *
@@ -398,7 +397,6 @@ class Order extends Intangible
     public function getConfirmationNumber() {
         return $this->properties['confirmationNumber'];
     }
-
     /**
      * The current status of the order.
      *
@@ -417,7 +415,6 @@ class Order extends Intangible
     public function getOrderStatus() {
         return $this->properties['orderStatus'];
     }
-
     /**
      * Code used to redeem a discount.
      *
@@ -436,7 +433,6 @@ class Order extends Intangible
     public function getDiscountCode() {
         return $this->properties['discountCode'];
     }
-
     /**
      * The identifier of the transaction.
      *
@@ -455,6 +451,4 @@ class Order extends Intangible
     public function getOrderNumber() {
         return $this->properties['orderNumber'];
     }
-
-
 }

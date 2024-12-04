@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Properties that take Energy as values are of the form '&lt;Number&gt; &lt;Energy unit of measure&gt;'.
+ * Properties that take Energy as values are of the form '&lt;Number&gt; &lt;Energy
+ * unit of measure&gt;'.
  *
+ * @see https://schema.org/Energy
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Energy extends Quantity
@@ -37,6 +39,5 @@ class Energy extends Quantity
     {
         return new Energy('https://schema.org/', 'Energy');
     }
-
 
 }

@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A unique instance of a radio BroadcastService on a CableOrSatelliteService lineup.
+ * A unique instance of a radio BroadcastService on a CableOrSatelliteService
+ * lineup.
  *
+ * @see https://schema.org/RadioChannel
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class RadioChannel extends BroadcastChannel
@@ -37,6 +39,5 @@ class RadioChannel extends BroadcastChannel
     {
         return new RadioChannel('https://schema.org/', 'RadioChannel');
     }
-
 
 }

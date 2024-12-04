@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A seasonal override of a return policy, for example used for holidays.
  *
+ * @see https://schema.org/MerchantReturnPolicySeasonalOverride
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MerchantReturnPolicySeasonalOverride extends Intangible
@@ -56,7 +57,6 @@ class MerchantReturnPolicySeasonalOverride extends Intangible
     public function getReturnFees() {
         return $this->properties['returnFees'];
     }
-
     /**
      * The type of return method offered, specified from an enumeration.
      *
@@ -75,7 +75,6 @@ class MerchantReturnPolicySeasonalOverride extends Intangible
     public function getReturnMethod() {
         return $this->properties['returnMethod'];
     }
-
     /**
      * A refund type, from an enumerated list.
      *
@@ -94,9 +93,9 @@ class MerchantReturnPolicySeasonalOverride extends Intangible
     public function getRefundType() {
         return $this->properties['refundType'];
     }
-
     /**
-     * Amount of shipping costs for product returns (for any reason). Applicable when property [[returnFees]] equals [[ReturnShippingFees]].
+     * Amount of shipping costs for product returns (for any reason). Applicable when
+     * property [[returnFees]] equals [[ReturnShippingFees]].
      *
      * @param $returnShippingFeesAmount 
      * @return static
@@ -113,9 +112,9 @@ class MerchantReturnPolicySeasonalOverride extends Intangible
     public function getReturnShippingFeesAmount() {
         return $this->properties['returnShippingFeesAmount'];
     }
-
     /**
-     * The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
+     * The start date and time of the item (in [ISO 8601 date
+     * format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
      * @param $startDate |
      * @return static
@@ -132,9 +131,10 @@ class MerchantReturnPolicySeasonalOverride extends Intangible
     public function getStartDate() {
         return $this->properties['startDate'];
     }
-
     /**
-     * Specifies either a fixed return date or the number of days (from the delivery date) that a product can be returned. Used when the [[returnPolicyCategory]] property is specified as [[MerchantReturnFiniteReturnWindow]].
+     * Specifies either a fixed return date or the number of days (from the delivery
+     * date) that a product can be returned. Used when the [[returnPolicyCategory]]
+     * property is specified as [[MerchantReturnFiniteReturnWindow]].
      *
      * @param $merchantReturnDays ||
      * @return static
@@ -151,7 +151,6 @@ class MerchantReturnPolicySeasonalOverride extends Intangible
     public function getMerchantReturnDays() {
         return $this->properties['merchantReturnDays'];
     }
-
     /**
      * Specifies an applicable return policy (from an enumeration).
      *
@@ -170,9 +169,9 @@ class MerchantReturnPolicySeasonalOverride extends Intangible
     public function getReturnPolicyCategory() {
         return $this->properties['returnPolicyCategory'];
     }
-
     /**
-     * The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
+     * The end date and time of the item (in [ISO 8601 date
+     * format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
      * @param $endDate |
      * @return static
@@ -189,9 +188,10 @@ class MerchantReturnPolicySeasonalOverride extends Intangible
     public function getEndDate() {
         return $this->properties['endDate'];
     }
-
     /**
-     * Use [[MonetaryAmount]] to specify a fixed restocking fee for product returns, or use [[Number]] to specify a percentage of the product price paid by the customer.
+     * Use [[MonetaryAmount]] to specify a fixed restocking fee for product returns, or
+     * use [[Number]] to specify a percentage of the product price paid by the
+     * customer.
      *
      * @param $restockingFee |
      * @return static
@@ -208,6 +208,4 @@ class MerchantReturnPolicySeasonalOverride extends Intangible
     public function getRestockingFee() {
         return $this->properties['restockingFee'];
     }
-
-
 }

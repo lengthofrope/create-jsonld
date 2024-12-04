@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Enumerates the different statuses of a Certification (Active and Inactive).
  *
+ * @see https://schema.org/CertificationStatusEnumeration
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class CertificationStatusEnumeration extends Enumeration
@@ -37,6 +38,5 @@ class CertificationStatusEnumeration extends Enumeration
     {
         return new CertificationStatusEnumeration('https://schema.org/', 'CertificationStatusEnumeration');
     }
-
 
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Lists or enumerations dealing with status types.
  *
+ * @see https://schema.org/StatusEnumeration
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class StatusEnumeration extends Enumeration
@@ -37,6 +38,5 @@ class StatusEnumeration extends Enumeration
     {
         return new StatusEnumeration('https://schema.org/', 'StatusEnumeration');
     }
-
 
 }

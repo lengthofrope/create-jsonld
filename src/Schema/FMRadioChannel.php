@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A radio channel that uses FM.
  *
+ * @see https://schema.org/FMRadioChannel
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class FMRadioChannel extends RadioChannel
@@ -37,6 +38,5 @@ class FMRadioChannel extends RadioChannel
     {
         return new FMRadioChannel('https://schema.org/', 'FMRadioChannel');
     }
-
 
 }

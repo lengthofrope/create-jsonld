@@ -27,8 +27,11 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A structured value representing the duration and scope of services that will be provided to a customer free of charge in case of a defect or malfunction of a product.
+ * A structured value representing the duration and scope of services that will be
+ * provided to a customer free of charge in case of a defect or malfunction of a
+ * product.
  *
+ * @see https://schema.org/WarrantyPromise
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class WarrantyPromise extends StructuredValue
@@ -56,9 +59,9 @@ class WarrantyPromise extends StructuredValue
     public function getWarrantyScope() {
         return $this->properties['warrantyScope'];
     }
-
     /**
-     * The duration of the warranty promise. Common unitCode values are ANN for year, MON for months, or DAY for days.
+     * The duration of the warranty promise. Common unitCode values are ANN for year,
+     * MON for months, or DAY for days.
      *
      * @param $durationOfWarranty 
      * @return static
@@ -75,6 +78,4 @@ class WarrantyPromise extends StructuredValue
     public function getDurationOfWarranty() {
         return $this->properties['durationOfWarranty'];
     }
-
-
 }

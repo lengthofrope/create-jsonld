@@ -27,8 +27,13 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A part of a successively published publication such as a periodical or multi-volume work, often numbered. It may represent a time span, such as a year.\n\nSee also [blog post](http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html).
+ * A part of a successively published publication such as a periodical or
+ * multi-volume work, often numbered. It may represent a time span, such as a year.
  *
+ * See also [blog
+ * post](http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html).
+ *
+ * @see https://schema.org/PublicationVolume
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class PublicationVolume extends CreativeWork
@@ -39,7 +44,8 @@ class PublicationVolume extends CreativeWork
     }
 
     /**
-     * Any description of pages that is not separated into pageStart and pageEnd; for example, "1-6, 9, 55" or "10-12, 46-49".
+     * Any description of pages that is not separated into pageStart and pageEnd; for
+     * example, "1-6, 9, 55" or "10-12, 46-49".
      *
      * @param $pagination 
      * @return static
@@ -56,7 +62,6 @@ class PublicationVolume extends CreativeWork
     public function getPagination() {
         return $this->properties['pagination'];
     }
-
     /**
      * The page on which the work starts; for example "135" or "xiii".
      *
@@ -75,9 +80,9 @@ class PublicationVolume extends CreativeWork
     public function getPageStart() {
         return $this->properties['pageStart'];
     }
-
     /**
-     * Identifies the volume of publication or multi-part work; for example, "iii" or "2".
+     * Identifies the volume of publication or multi-part work; for example, "iii" or
+     * "2".
      *
      * @param $volumeNumber |
      * @return static
@@ -94,7 +99,6 @@ class PublicationVolume extends CreativeWork
     public function getVolumeNumber() {
         return $this->properties['volumeNumber'];
     }
-
     /**
      * The page on which the work ends; for example "138" or "xvi".
      *
@@ -113,6 +117,4 @@ class PublicationVolume extends CreativeWork
     public function getPageEnd() {
         return $this->properties['pageEnd'];
     }
-
-
 }

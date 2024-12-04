@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A treatment of people with physical, emotional, or social problems, using purposeful activity to help them overcome or learn to deal with their problems.
+ * A treatment of people with physical, emotional, or social problems, using
+ * purposeful activity to help them overcome or learn to deal with their problems.
  *
+ * @see https://schema.org/OccupationalTherapy
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class OccupationalTherapy extends MedicalTherapy
@@ -37,6 +39,5 @@ class OccupationalTherapy extends MedicalTherapy
     {
         return new OccupationalTherapy('https://schema.org/', 'OccupationalTherapy');
     }
-
 
 }

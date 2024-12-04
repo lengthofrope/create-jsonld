@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Target audiences for medical web pages.
  *
+ * @see https://schema.org/MedicalAudience
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MedicalAudience extends PeopleAudience
@@ -37,6 +38,5 @@ class MedicalAudience extends PeopleAudience
     {
         return new MedicalAudience('https://schema.org/', 'MedicalAudience');
     }
-
 
 }

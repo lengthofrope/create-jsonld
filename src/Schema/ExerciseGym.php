@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A gym.
  *
+ * @see https://schema.org/ExerciseGym
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ExerciseGym extends SportsActivityLocation
@@ -37,6 +38,5 @@ class ExerciseGym extends SportsActivityLocation
     {
         return new ExerciseGym('https://schema.org/', 'ExerciseGym');
     }
-
 
 }

@@ -27,8 +27,11 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Any constitutionally or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately distinguishable entity.
+ * Any constitutionally or isotopically distinct atom, molecule, ion, ion pair,
+ * radical, radical ion, complex, conformer etc., identifiable as a separately
+ * distinguishable entity.
  *
+ * @see https://schema.org/MolecularEntity
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MolecularEntity extends BioChemEntity
@@ -39,7 +42,8 @@ class MolecularEntity extends BioChemEntity
     }
 
     /**
-     * Systematic method of naming chemical compounds as recommended by the International Union of Pure and Applied Chemistry (IUPAC).
+     * Systematic method of naming chemical compounds as recommended by the
+     * International Union of Pure and Applied Chemistry (IUPAC).
      *
      * @param $iupacName 
      * @return static
@@ -56,9 +60,11 @@ class MolecularEntity extends BioChemEntity
     public function getIupacName() {
         return $this->properties['iupacName'];
     }
-
     /**
-     * A specification in form of a line notation for describing the structure of chemical species using short ASCII strings.  Double bond stereochemistry \ indicators may need to be escaped in the string in formats where the backslash is an escape character.
+     * A specification in form of a line notation for describing the structure of
+     * chemical species using short ASCII strings.  Double bond stereochemistry \
+     * indicators may need to be escaped in the string in formats where the backslash
+     * is an escape character.
      *
      * @param $smiles 
      * @return static
@@ -75,9 +81,9 @@ class MolecularEntity extends BioChemEntity
     public function getSmiles() {
         return $this->properties['smiles'];
     }
-
     /**
-     * The empirical formula is the simplest whole number ratio of all the atoms in a molecule.
+     * The empirical formula is the simplest whole number ratio of all the atoms in a
+     * molecule.
      *
      * @param $molecularFormula 
      * @return static
@@ -94,7 +100,6 @@ class MolecularEntity extends BioChemEntity
     public function getMolecularFormula() {
         return $this->properties['molecularFormula'];
     }
-
     /**
      * Intended use of the BioChemEntity by humans.
      *
@@ -113,7 +118,6 @@ class MolecularEntity extends BioChemEntity
     public function getPotentialUse() {
         return $this->properties['potentialUse'];
     }
-
     /**
      * InChIKey is a hashed version of the full InChI (using the SHA-256 algorithm).
      *
@@ -132,9 +136,10 @@ class MolecularEntity extends BioChemEntity
     public function getInChIKey() {
         return $this->properties['inChIKey'];
     }
-
     /**
-     * This is the molecular weight of the entity being described, not of the parent. Units should be included in the form '&lt;Number&gt; &lt;unit&gt;', for example '12 amu' or as '&lt;QuantitativeValue&gt;.
+     * This is the molecular weight of the entity being described, not of the parent.
+     * Units should be included in the form '&lt;Number&gt; &lt;unit&gt;', for example
+     * '12 amu' or as '&lt;QuantitativeValue&gt;.
      *
      * @param $molecularWeight |
      * @return static
@@ -151,9 +156,10 @@ class MolecularEntity extends BioChemEntity
     public function getMolecularWeight() {
         return $this->properties['molecularWeight'];
     }
-
     /**
-     * Non-proprietary identifier for molecular entity that can be used in printed and electronic data sources thus enabling easier linking of diverse data compilations.
+     * Non-proprietary identifier for molecular entity that can be used in printed and
+     * electronic data sources thus enabling easier linking of diverse data
+     * compilations.
      *
      * @param $inChI 
      * @return static
@@ -170,7 +176,6 @@ class MolecularEntity extends BioChemEntity
     public function getInChI() {
         return $this->properties['inChI'];
     }
-
     /**
      * A role played by the BioChemEntity within a chemical context.
      *
@@ -189,9 +194,12 @@ class MolecularEntity extends BioChemEntity
     public function getChemicalRole() {
         return $this->properties['chemicalRole'];
     }
-
     /**
-     * The monoisotopic mass is the sum of the masses of the atoms in a molecule using the unbound, ground-state, rest mass of the principal (most abundant) isotope for each element instead of the isotopic average mass. Please include the units in the form '&lt;Number&gt; &lt;unit&gt;', for example '770.230488 g/mol' or as '&lt;QuantitativeValue&gt;.
+     * The monoisotopic mass is the sum of the masses of the atoms in a molecule using
+     * the unbound, ground-state, rest mass of the principal (most abundant) isotope
+     * for each element instead of the isotopic average mass. Please include the units
+     * in the form '&lt;Number&gt; &lt;unit&gt;', for example '770.230488 g/mol' or as
+     * '&lt;QuantitativeValue&gt;.
      *
      * @param $monoisotopicMolecularWeight |
      * @return static
@@ -208,6 +216,4 @@ class MolecularEntity extends BioChemEntity
     public function getMonoisotopicMolecularWeight() {
         return $this->properties['monoisotopicMolecularWeight'];
     }
-
-
 }

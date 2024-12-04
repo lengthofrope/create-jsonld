@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Web page type: Collection page.
  *
+ * @see https://schema.org/CollectionPage
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class CollectionPage extends WebPage
@@ -37,6 +38,5 @@ class CollectionPage extends WebPage
     {
         return new CollectionPage('https://schema.org/', 'CollectionPage');
     }
-
 
 }

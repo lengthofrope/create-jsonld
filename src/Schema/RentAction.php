@@ -27,8 +27,11 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of giving money in return for temporary use, but not ownership, of an object such as a vehicle or property. For example, an agent rents a property from a landlord in exchange for a periodic payment.
+ * The act of giving money in return for temporary use, but not ownership, of an
+ * object such as a vehicle or property. For example, an agent rents a property
+ * from a landlord in exchange for a periodic payment.
  *
+ * @see https://schema.org/RentAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class RentAction extends TradeAction
@@ -56,7 +59,6 @@ class RentAction extends TradeAction
     public function getRealEstateAgent() {
         return $this->properties['realEstateAgent'];
     }
-
     /**
      * A sub property of participant. The owner of the real estate property.
      *
@@ -75,6 +77,4 @@ class RentAction extends TradeAction
     public function getLandlord() {
         return $this->properties['landlord'];
     }
-
-
 }

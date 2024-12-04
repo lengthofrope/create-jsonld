@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A statement of the money due for goods or services; a bill.
  *
+ * @see https://schema.org/Invoice
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Invoice extends Intangible
@@ -56,7 +57,6 @@ class Invoice extends Intangible
     public function getCustomer() {
         return $this->properties['customer'];
     }
-
     /**
      * The name of the credit card or other method of payment for the order.
      *
@@ -75,7 +75,6 @@ class Invoice extends Intangible
     public function getPaymentMethod() {
         return $this->properties['paymentMethod'];
     }
-
     /**
      * The date that payment is due.
      *
@@ -94,9 +93,11 @@ class Invoice extends Intangible
     public function getPaymentDueDate() {
         return $this->properties['paymentDueDate'];
     }
-
     /**
-     * An entity that arranges for an exchange between a buyer and a seller.  In most cases a broker never acquires or releases ownership of a product or service involved in an exchange.  If it is not clear whether an entity is a broker, seller, or buyer, the latter two terms are preferred.
+     * An entity that arranges for an exchange between a buyer and a seller.  In most
+     * cases a broker never acquires or releases ownership of a product or service
+     * involved in an exchange.  If it is not clear whether an entity is a broker,
+     * seller, or buyer, the latter two terms are preferred.
      *
      * @param $broker |
      * @return static
@@ -113,7 +114,6 @@ class Invoice extends Intangible
     public function getBroker() {
         return $this->properties['broker'];
     }
-
     /**
      * The total amount due.
      *
@@ -132,7 +132,6 @@ class Invoice extends Intangible
     public function getTotalPaymentDue() {
         return $this->properties['totalPaymentDue'];
     }
-
     /**
      * The date the invoice is scheduled to be paid.
      *
@@ -151,9 +150,9 @@ class Invoice extends Intangible
     public function getScheduledPaymentDate() {
         return $this->properties['scheduledPaymentDate'];
     }
-
     /**
-     * An identifier for the method of payment used (e.g. the last 4 digits of the credit card).
+     * An identifier for the method of payment used (e.g. the last 4 digits of the
+     * credit card).
      *
      * @param $paymentMethodId 
      * @return static
@@ -170,7 +169,6 @@ class Invoice extends Intangible
     public function getPaymentMethodId() {
         return $this->properties['paymentMethodId'];
     }
-
     /**
      * The date that payment is due.
      *
@@ -189,7 +187,6 @@ class Invoice extends Intangible
     public function getPaymentDue() {
         return $this->properties['paymentDue'];
     }
-
     /**
      * The time interval used to compute the invoice.
      *
@@ -208,7 +205,6 @@ class Invoice extends Intangible
     public function getBillingPeriod() {
         return $this->properties['billingPeriod'];
     }
-
     /**
      * A number that confirms the given order or payment has been received.
      *
@@ -227,7 +223,6 @@ class Invoice extends Intangible
     public function getConfirmationNumber() {
         return $this->properties['confirmationNumber'];
     }
-
     /**
      * The status of payment; whether the invoice has been paid or not.
      *
@@ -246,9 +241,9 @@ class Invoice extends Intangible
     public function getPaymentStatus() {
         return $this->properties['paymentStatus'];
     }
-
     /**
-     * A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
+     * A category for the item. Greater signs or slashes can be used to informally
+     * indicate a category hierarchy.
      *
      * @param $category ||||
      * @return static
@@ -265,9 +260,9 @@ class Invoice extends Intangible
     public function getCategory() {
         return $this->properties['category'];
     }
-
     /**
-     * The Order(s) related to this Invoice. One or more Orders may be combined into a single Invoice.
+     * The Order(s) related to this Invoice. One or more Orders may be combined into a
+     * single Invoice.
      *
      * @param $referencesOrder 
      * @return static
@@ -284,7 +279,6 @@ class Invoice extends Intangible
     public function getReferencesOrder() {
         return $this->properties['referencesOrder'];
     }
-
     /**
      * The identifier for the account the payment will be applied to.
      *
@@ -303,9 +297,10 @@ class Invoice extends Intangible
     public function getAccountId() {
         return $this->properties['accountId'];
     }
-
     /**
-     * The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.
+     * The service provider, service operator, or service performer; the goods
+     * producer. Another party (a seller) may offer those services or goods on behalf
+     * of the provider. A provider may also serve as the seller.
      *
      * @param $provider |
      * @return static
@@ -322,7 +317,6 @@ class Invoice extends Intangible
     public function getProvider() {
         return $this->properties['provider'];
     }
-
     /**
      * The minimum payment required at this time.
      *
@@ -341,6 +335,4 @@ class Invoice extends Intangible
     public function getMinimumPaymentDue() {
         return $this->properties['minimumPaymentDue'];
     }
-
-
 }

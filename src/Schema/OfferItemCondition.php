@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A list of possible conditions for the item.
  *
+ * @see https://schema.org/OfferItemCondition
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class OfferItemCondition extends Enumeration
@@ -37,6 +38,5 @@ class OfferItemCondition extends Enumeration
     {
         return new OfferItemCondition('https://schema.org/', 'OfferItemCondition');
     }
-
 
 }

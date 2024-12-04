@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A [[LiveBlogPosting]] is a [[BlogPosting]] intended to provide a rolling textual coverage of an ongoing event through continuous updates.
+ * A [[LiveBlogPosting]] is a [[BlogPosting]] intended to provide a rolling textual
+ * coverage of an ongoing event through continuous updates.
  *
+ * @see https://schema.org/LiveBlogPosting
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class LiveBlogPosting extends BlogPosting
@@ -39,7 +41,9 @@ class LiveBlogPosting extends BlogPosting
     }
 
     /**
-     * The time when the live blog will begin covering the Event. Note that coverage may begin before the Event's start time. The LiveBlogPosting may also be created before coverage begins.
+     * The time when the live blog will begin covering the Event. Note that coverage
+     * may begin before the Event's start time. The LiveBlogPosting may also be created
+     * before coverage begins.
      *
      * @param $coverageStartTime 
      * @return static
@@ -56,7 +60,6 @@ class LiveBlogPosting extends BlogPosting
     public function getCoverageStartTime() {
         return $this->properties['coverageStartTime'];
     }
-
     /**
      * An update to the LiveBlog.
      *
@@ -75,9 +78,9 @@ class LiveBlogPosting extends BlogPosting
     public function getLiveBlogUpdate() {
         return $this->properties['liveBlogUpdate'];
     }
-
     /**
-     * The time when the live blog will stop covering the Event. Note that coverage may continue after the Event concludes.
+     * The time when the live blog will stop covering the Event. Note that coverage may
+     * continue after the Event concludes.
      *
      * @param $coverageEndTime 
      * @return static
@@ -94,6 +97,4 @@ class LiveBlogPosting extends BlogPosting
     public function getCoverageEndTime() {
         return $this->properties['coverageEndTime'];
     }
-
-
 }

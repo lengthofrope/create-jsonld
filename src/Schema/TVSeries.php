@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * CreativeWorkSeries dedicated to TV broadcast and associated online delivery.
  *
+ * @see https://schema.org/TVSeries
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class TVSeries extends CreativeWork
@@ -39,7 +40,9 @@ class TVSeries extends CreativeWork
     }
 
     /**
-     * An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip.
+     * An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or
+     * in an event. Actors can be associated with individual items or with a series,
+     * episode, clip.
      *
      * @param $actor |
      * @return static
@@ -56,7 +59,6 @@ class TVSeries extends CreativeWork
     public function getActor() {
         return $this->properties['actor'];
     }
-
     /**
      * The trailer of a movie or TV/radio series, season, episode, etc.
      *
@@ -75,14 +77,19 @@ class TVSeries extends CreativeWork
     public function getTrailer() {
         return $this->properties['trailer'];
     }
-
     /**
-     * An [EIDR](https://eidr.org/) (Entertainment Identifier Registry) [[identifier]] representing at the most general/abstract level, a work of film or television.
-
-For example, the motion picture known as "Ghostbusters" has a titleEIDR of  "10.5240/7EC7-228A-510A-053E-CBB8-J". This title (or work) may have several variants, which EIDR calls "edits". See [[editEIDR]].
-
-Since schema.org types like [[Movie]], [[TVEpisode]], [[TVSeason]], and [[TVSeries]] can be used for both works and their multiple expressions, it is possible to use [[titleEIDR]] alone (for a general description), or alongside [[editEIDR]] for a more edit-specific description.
-
+     * An [EIDR](https://eidr.org/) (Entertainment Identifier Registry) [[identifier]]
+     * representing at the most general/abstract level, a work of film or television.
+     *
+     * For example, the motion picture known as "Ghostbusters" has a titleEIDR of
+     * "10.5240/7EC7-228A-510A-053E-CBB8-J". This title (or work) may have several
+     * variants, which EIDR calls "edits". See [[editEIDR]].
+     *
+     * Since schema.org types like [[Movie]], [[TVEpisode]], [[TVSeason]], and
+     * [[TVSeries]] can be used for both works and their multiple expressions, it is
+     * possible to use [[titleEIDR]] alone (for a general description), or alongside
+     * [[editEIDR]] for a more edit-specific description.
+     *
      *
      * @param $titleEIDR |
      * @return static
@@ -99,9 +106,9 @@ Since schema.org types like [[Movie]], [[TVEpisode]], [[TVSeason]], and [[TVSeri
     public function getTitleEIDR() {
         return $this->properties['titleEIDR'];
     }
-
     /**
-     * An actor, e.g. in TV, radio, movie, video games etc. Actors can be associated with individual items or with a series, episode, clip.
+     * An actor, e.g. in TV, radio, movie, video games etc. Actors can be associated
+     * with individual items or with a series, episode, clip.
      *
      * @param $actors 
      * @return static
@@ -118,7 +125,6 @@ Since schema.org types like [[Movie]], [[TVEpisode]], [[TVSeason]], and [[TVSeri
     public function getActors() {
         return $this->properties['actors'];
     }
-
     /**
      * A season that is part of the media series.
      *
@@ -137,7 +143,6 @@ Since schema.org types like [[Movie]], [[TVEpisode]], [[TVSeason]], and [[TVSeri
     public function getContainsSeason() {
         return $this->properties['containsSeason'];
     }
-
     /**
      * The number of seasons in this series.
      *
@@ -156,7 +161,6 @@ Since schema.org types like [[Movie]], [[TVEpisode]], [[TVSeason]], and [[TVSeri
     public function getNumberOfSeasons() {
         return $this->properties['numberOfSeasons'];
     }
-
     /**
      * An episode of a TV, radio or game media within a series or season.
      *
@@ -175,9 +179,9 @@ Since schema.org types like [[Movie]], [[TVEpisode]], [[TVSeason]], and [[TVSeri
     public function getEpisode() {
         return $this->properties['episode'];
     }
-
     /**
-     * A director of e.g. TV, radio, movie, video games etc. content. Directors can be associated with individual items or with a series, episode, clip.
+     * A director of e.g. TV, radio, movie, video games etc. content. Directors can be
+     * associated with individual items or with a series, episode, clip.
      *
      * @param $directors 
      * @return static
@@ -194,7 +198,6 @@ Since schema.org types like [[Movie]], [[TVEpisode]], [[TVSeason]], and [[TVSeri
     public function getDirectors() {
         return $this->properties['directors'];
     }
-
     /**
      * A season in a media series.
      *
@@ -213,7 +216,6 @@ Since schema.org types like [[Movie]], [[TVEpisode]], [[TVSeason]], and [[TVSeri
     public function getSeasons() {
         return $this->properties['seasons'];
     }
-
     /**
      * A season in a media series.
      *
@@ -232,9 +234,9 @@ Since schema.org types like [[Movie]], [[TVEpisode]], [[TVSeason]], and [[TVSeri
     public function getSeason() {
         return $this->properties['season'];
     }
-
     /**
-     * The production company or studio responsible for the item, e.g. series, video game, episode etc.
+     * The production company or studio responsible for the item, e.g. series, video
+     * game, episode etc.
      *
      * @param $productionCompany 
      * @return static
@@ -251,13 +253,19 @@ Since schema.org types like [[Movie]], [[TVEpisode]], [[TVSeason]], and [[TVSeri
     public function getProductionCompany() {
         return $this->properties['productionCompany'];
     }
-
     /**
-     * The country of origin of something, including products as well as creative  works such as movie and TV content.
-
-In the case of TV and movie, this would be the country of the principle offices of the production company or individual responsible for the movie. For other kinds of [[CreativeWork]] it is difficult to provide fully general guidance, and properties such as [[contentLocation]] and [[locationCreated]] may be more applicable.
-
-In the case of products, the country of origin of the product. The exact interpretation of this may vary by context and product type, and cannot be fully enumerated here.
+     * The country of origin of something, including products as well as creative
+     * works such as movie and TV content.
+     *
+     * In the case of TV and movie, this would be the country of the principle offices
+     * of the production company or individual responsible for the movie. For other
+     * kinds of [[CreativeWork]] it is difficult to provide fully general guidance, and
+     * properties such as [[contentLocation]] and [[locationCreated]] may be more
+     * applicable.
+     *
+     * In the case of products, the country of origin of the product. The exact
+     * interpretation of this may vary by context and product type, and cannot be fully
+     * enumerated here.
      *
      * @param $countryOfOrigin 
      * @return static
@@ -274,9 +282,10 @@ In the case of products, the country of origin of the product. The exact interpr
     public function getCountryOfOrigin() {
         return $this->properties['countryOfOrigin'];
     }
-
     /**
-     * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual items or with a series, episode, clip.
+     * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event.
+     * Directors can be associated with individual items or with a series, episode,
+     * clip.
      *
      * @param $director 
      * @return static
@@ -293,7 +302,6 @@ In the case of products, the country of origin of the product. The exact interpr
     public function getDirector() {
         return $this->properties['director'];
     }
-
     /**
      * The number of episodes in this season or series.
      *
@@ -312,7 +320,6 @@ In the case of products, the country of origin of the product. The exact interpr
     public function getNumberOfEpisodes() {
         return $this->properties['numberOfEpisodes'];
     }
-
     /**
      * The composer of the soundtrack.
      *
@@ -331,7 +338,6 @@ In the case of products, the country of origin of the product. The exact interpr
     public function getMusicBy() {
         return $this->properties['musicBy'];
     }
-
     /**
      * An episode of a TV/radio series or season.
      *
@@ -350,6 +356,4 @@ In the case of products, the country of origin of the product. The exact interpr
     public function getEpisodes() {
         return $this->properties['episodes'];
     }
-
-
 }

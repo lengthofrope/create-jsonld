@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A patient is any person recipient of health care services.
  *
+ * @see https://schema.org/Patient
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Patient extends Person
@@ -39,7 +40,8 @@ class Patient extends Person
     }
 
     /**
-     * One or more alternative conditions considered in the differential diagnosis process as output of a diagnosis process.
+     * One or more alternative conditions considered in the differential diagnosis
+     * process as output of a diagnosis process.
      *
      * @param $diagnosis 
      * @return static
@@ -56,7 +58,6 @@ class Patient extends Person
     public function getDiagnosis() {
         return $this->properties['diagnosis'];
     }
-
     /**
      * Specifying a drug or medicine used in a medication procedure.
      *
@@ -75,9 +76,9 @@ class Patient extends Person
     public function getDrug() {
         return $this->properties['drug'];
     }
-
     /**
-     * Specifying the health condition(s) of a patient, medical study, or other target audience.
+     * Specifying the health condition(s) of a patient, medical study, or other target
+     * audience.
      *
      * @param $healthCondition 
      * @return static
@@ -94,6 +95,4 @@ class Patient extends Person
     public function getHealthCondition() {
         return $this->properties['healthCondition'];
     }
-
-
 }

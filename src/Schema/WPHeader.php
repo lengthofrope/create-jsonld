@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The header section of the page.
  *
+ * @see https://schema.org/WPHeader
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class WPHeader extends WebPageElement
@@ -37,6 +38,5 @@ class WPHeader extends WebPageElement
     {
         return new WPHeader('https://schema.org/', 'WPHeader');
     }
-
 
 }

@@ -27,8 +27,12 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Any bodily activity that enhances or maintains physical fitness and overall health and wellness. Includes activity that is part of daily living and routine, structured exercise, and exercise prescribed as part of a medical treatment or recovery plan.
+ * Any bodily activity that enhances or maintains physical fitness and overall
+ * health and wellness. Includes activity that is part of daily living and routine,
+ * structured exercise, and exercise prescribed as part of a medical treatment or
+ * recovery plan.
  *
+ * @see https://schema.org/PhysicalActivity
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class PhysicalActivity extends LifestyleModification
@@ -39,7 +43,8 @@ class PhysicalActivity extends LifestyleModification
     }
 
     /**
-     * Changes in the normal mechanical, physical, and biochemical functions that are associated with this activity or condition.
+     * Changes in the normal mechanical, physical, and biochemical functions that are
+     * associated with this activity or condition.
      *
      * @param $pathophysiology 
      * @return static
@@ -56,9 +61,9 @@ class PhysicalActivity extends LifestyleModification
     public function getPathophysiology() {
         return $this->properties['pathophysiology'];
     }
-
     /**
-     * The anatomy of the underlying organ system or structures associated with this entity.
+     * The anatomy of the underlying organ system or structures associated with this
+     * entity.
      *
      * @param $associatedAnatomy ||
      * @return static
@@ -75,9 +80,9 @@ class PhysicalActivity extends LifestyleModification
     public function getAssociatedAnatomy() {
         return $this->properties['associatedAnatomy'];
     }
-
     /**
-     * A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
+     * A category for the item. Greater signs or slashes can be used to informally
+     * indicate a category hierarchy.
      *
      * @param $category ||||
      * @return static
@@ -94,7 +99,6 @@ class PhysicalActivity extends LifestyleModification
     public function getCategory() {
         return $this->properties['category'];
     }
-
     /**
      * The characteristics of associated patients, such as age, gender, race etc.
      *
@@ -113,6 +117,4 @@ class PhysicalActivity extends LifestyleModification
     public function getEpidemiology() {
         return $this->properties['epidemiology'];
     }
-
-
 }

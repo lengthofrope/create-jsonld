@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Systems of medical practice.
  *
+ * @see https://schema.org/MedicineSystem
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MedicineSystem extends MedicalEnumeration
@@ -37,6 +38,5 @@ class MedicineSystem extends MedicalEnumeration
     {
         return new MedicineSystem('https://schema.org/', 'MedicineSystem');
     }
-
 
 }

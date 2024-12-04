@@ -27,8 +27,16 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of un-registering from a service.\n\nRelated actions:\n\n* [[RegisterAction]]: antonym of UnRegisterAction.\n* [[LeaveAction]]: Unlike LeaveAction, UnRegisterAction implies that you are unregistering from a service you were previously registered, rather than leaving a team/group of people.
+ * The act of un-registering from a service.
  *
+ * Related actions:
+ *
+ * * [[RegisterAction]]: antonym of UnRegisterAction.
+ * * [[LeaveAction]]: Unlike LeaveAction, UnRegisterAction implies that you are
+ * unregistering from a service you were previously registered, rather than leaving
+ * a team/group of people.
+ *
+ * @see https://schema.org/UnRegisterAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class UnRegisterAction extends InteractAction
@@ -37,6 +45,5 @@ class UnRegisterAction extends InteractAction
     {
         return new UnRegisterAction('https://schema.org/', 'UnRegisterAction');
     }
-
 
 }

@@ -27,8 +27,16 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * An action performed by a direct agent and indirect participants upon a direct object. Optionally happens at a location with the help of an inanimate instrument. The execution of the action may produce a result. Specific action sub-type documentation specifies the exact expectation of each argument/role.\n\nSee also [blog post](http://blog.schema.org/2014/04/announcing-schemaorg-actions.html) and [Actions overview document](https://schema.org/docs/actions.html).
+ * An action performed by a direct agent and indirect participants upon a direct
+ * object. Optionally happens at a location with the help of an inanimate
+ * instrument. The execution of the action may produce a result. Specific action
+ * sub-type documentation specifies the exact expectation of each argument/role.
  *
+ * See also [blog
+ * post](http://blog.schema.org/2014/04/announcing-schemaorg-actions.html) and
+ * [Actions overview document](https://schema.org/docs/actions.html).
+ *
+ * @see https://schema.org/Action
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Action extends Thing
@@ -56,7 +64,6 @@ class Action extends Thing
     public function getActionProcess() {
         return $this->properties['actionProcess'];
     }
-
     /**
      * The result produced in the action. E.g. John wrote *a book*.
      *
@@ -75,9 +82,16 @@ class Action extends Thing
     public function getResult() {
         return $this->properties['result'];
     }
-
     /**
-     * The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. E.g. John wrote a book from January to *December*. For media, including audio and video, it's the time offset of the end of a clip within a larger file.\n\nNote that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
+     * The endTime of something. For a reserved event or service (e.g.
+     * FoodEstablishmentReservation), the time that it is expected to end. For actions
+     * that span a period of time, when the action was performed. E.g. John wrote a
+     * book from January to *December*. For media, including audio and video, it's the
+     * time offset of the end of a clip within a larger file.
+     *
+     * Note that Event uses startDate/endDate instead of startTime/endTime, even when
+     * describing dates with times. This situation may be clarified in future
+     * revisions.
      *
      * @param $endTime |
      * @return static
@@ -94,9 +108,9 @@ class Action extends Thing
     public function getEndTime() {
         return $this->properties['endTime'];
     }
-
     /**
-     * The direct performer or driver of the action (animate or inanimate). E.g. *John* wrote a book.
+     * The direct performer or driver of the action (animate or inanimate). E.g. *John*
+     * wrote a book.
      *
      * @param $agent |
      * @return static
@@ -113,7 +127,6 @@ class Action extends Thing
     public function getAgent() {
         return $this->properties['agent'];
     }
-
     /**
      * For failed actions, more information on the cause of the failure.
      *
@@ -132,9 +145,9 @@ class Action extends Thing
     public function getError() {
         return $this->properties['error'];
     }
-
     /**
-     * The location of, for example, where an event is happening, where an organization is located, or where an action takes place.
+     * The location of, for example, where an event is happening, where an organization
+     * is located, or where an action takes place.
      *
      * @param $location |||
      * @return static
@@ -151,7 +164,6 @@ class Action extends Thing
     public function getLocation() {
         return $this->properties['location'];
     }
-
     /**
      * Indicates the current disposition of the Action.
      *
@@ -170,9 +182,16 @@ class Action extends Thing
     public function getActionStatus() {
         return $this->properties['actionStatus'];
     }
-
     /**
-     * The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For actions that span a period of time, when the action was performed. E.g. John wrote a book from *January* to December. For media, including audio and video, it's the time offset of the start of a clip within a larger file.\n\nNote that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
+     * The startTime of something. For a reserved event or service (e.g.
+     * FoodEstablishmentReservation), the time that it is expected to start. For
+     * actions that span a period of time, when the action was performed. E.g. John
+     * wrote a book from *January* to December. For media, including audio and video,
+     * it's the time offset of the start of a clip within a larger file.
+     *
+     * Note that Event uses startDate/endDate instead of startTime/endTime, even when
+     * describing dates with times. This situation may be clarified in future
+     * revisions.
      *
      * @param $startTime |
      * @return static
@@ -189,7 +208,6 @@ class Action extends Thing
     public function getStartTime() {
         return $this->properties['startTime'];
     }
-
     /**
      * Indicates a target EntryPoint, or url, for an Action.
      *
@@ -208,9 +226,9 @@ class Action extends Thing
     public function getTarget() {
         return $this->properties['target'];
     }
-
     /**
-     * Other co-agents that participated in the action indirectly. E.g. John wrote a book with *Steve*.
+     * Other co-agents that participated in the action indirectly. E.g. John wrote a
+     * book with *Steve*.
      *
      * @param $participant |
      * @return static
@@ -227,9 +245,9 @@ class Action extends Thing
     public function getParticipant() {
         return $this->properties['participant'];
     }
-
     /**
-     * The object that helped the agent perform the action. E.g. John wrote a book with *a pen*.
+     * The object that helped the agent perform the action. E.g. John wrote a book with
+     * *a pen*.
      *
      * @param $instrument 
      * @return static
@@ -246,9 +264,10 @@ class Action extends Thing
     public function getInstrument() {
         return $this->properties['instrument'];
     }
-
     /**
-     * The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.
+     * The service provider, service operator, or service performer; the goods
+     * producer. Another party (a seller) may offer those services or goods on behalf
+     * of the provider. A provider may also serve as the seller.
      *
      * @param $provider |
      * @return static
@@ -265,9 +284,10 @@ class Action extends Thing
     public function getProvider() {
         return $this->properties['provider'];
     }
-
     /**
-     * The object upon which the action is carried out, whose state is kept intact or changed. Also known as the semantic roles patient, affected or undergoer (which change their state) or theme (which doesn't). E.g. John read *a book*.
+     * The object upon which the action is carried out, whose state is kept intact or
+     * changed. Also known as the semantic roles patient, affected or undergoer (which
+     * change their state) or theme (which doesn't). E.g. John read *a book*.
      *
      * @param $object 
      * @return static
@@ -284,6 +304,4 @@ class Action extends Thing
     public function getObject() {
         return $this->properties['object'];
     }
-
-
 }

@@ -27,9 +27,13 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Accountancy business.\n\nAs a [[LocalBusiness]] it can be described as a [[provider]] of one or more [[Service]]\(s).
- *       
+ * Accountancy business.
  *
+ * As a [[LocalBusiness]] it can be described as a [[provider]] of one or more
+ * [[Service]]\(s).
+ * *
+ *
+ * @see https://schema.org/AccountingService
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class AccountingService extends FinancialService
@@ -38,6 +42,5 @@ class AccountingService extends FinancialService
     {
         return new AccountingService('https://schema.org/', 'AccountingService');
     }
-
 
 }

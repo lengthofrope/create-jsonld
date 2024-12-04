@@ -27,8 +27,14 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Any medical intervention designed to prevent, treat, and cure human diseases and medical conditions, including both curative and palliative therapies. Medical therapies are typically processes of care relying upon pharmacotherapy, behavioral therapy, supportive therapy (with fluid or nutrition for example), or detoxification (e.g. hemodialysis) aimed at improving or preventing a health condition.
+ * Any medical intervention designed to prevent, treat, and cure human diseases and
+ * medical conditions, including both curative and palliative therapies. Medical
+ * therapies are typically processes of care relying upon pharmacotherapy,
+ * behavioral therapy, supportive therapy (with fluid or nutrition for example), or
+ * detoxification (e.g. hemodialysis) aimed at improving or preventing a health
+ * condition.
  *
+ * @see https://schema.org/MedicalTherapy
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MedicalTherapy extends TherapeuticProcedure
@@ -56,9 +62,13 @@ class MedicalTherapy extends TherapeuticProcedure
     public function getContraindication() {
         return $this->properties['contraindication'];
     }
-
     /**
-     * A possible serious complication and/or serious side effect of this therapy. Serious adverse outcomes include those that are life-threatening; result in death, disability, or permanent damage; require hospitalization or prolong existing hospitalization; cause congenital anomalies or birth defects; or jeopardize the patient and may require medical or surgical intervention to prevent one of the outcomes in this definition.
+     * A possible serious complication and/or serious side effect of this therapy.
+     * Serious adverse outcomes include those that are life-threatening; result in
+     * death, disability, or permanent damage; require hospitalization or prolong
+     * existing hospitalization; cause congenital anomalies or birth defects; or
+     * jeopardize the patient and may require medical or surgical intervention to
+     * prevent one of the outcomes in this definition.
      *
      * @param $seriousAdverseOutcome 
      * @return static
@@ -75,7 +85,6 @@ class MedicalTherapy extends TherapeuticProcedure
     public function getSeriousAdverseOutcome() {
         return $this->properties['seriousAdverseOutcome'];
     }
-
     /**
      * A therapy that duplicates or overlaps this one.
      *
@@ -94,6 +103,4 @@ class MedicalTherapy extends TherapeuticProcedure
     public function getDuplicateTherapy() {
         return $this->properties['duplicateTherapy'];
     }
-
-
 }

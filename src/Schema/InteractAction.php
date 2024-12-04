@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The act of interacting with another person or organization.
  *
+ * @see https://schema.org/InteractAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class InteractAction extends Action
@@ -37,6 +38,5 @@ class InteractAction extends Action
     {
         return new InteractAction('https://schema.org/', 'InteractAction');
     }
-
 
 }

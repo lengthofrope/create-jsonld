@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A scholarly article in the medical domain.
  *
+ * @see https://schema.org/MedicalScholarlyArticle
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MedicalScholarlyArticle extends ScholarlyArticle
@@ -39,7 +40,9 @@ class MedicalScholarlyArticle extends ScholarlyArticle
     }
 
     /**
-     * The type of the medical article, taken from the US NLM MeSH publication type catalog. See also [MeSH documentation](http://www.nlm.nih.gov/mesh/pubtypes.html).
+     * The type of the medical article, taken from the US NLM MeSH publication type
+     * catalog. See also [MeSH
+     * documentation](http://www.nlm.nih.gov/mesh/pubtypes.html).
      *
      * @param $publicationType 
      * @return static
@@ -56,6 +59,4 @@ class MedicalScholarlyArticle extends ScholarlyArticle
     public function getPublicationType() {
         return $this->properties['publicationType'];
     }
-
-
 }

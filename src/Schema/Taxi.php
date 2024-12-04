@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A taxi.
  *
+ * @see https://schema.org/Taxi
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Taxi extends Service
@@ -37,6 +38,5 @@ class Taxi extends Service
     {
         return new Taxi('https://schema.org/', 'Taxi');
     }
-
 
 }

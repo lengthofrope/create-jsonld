@@ -27,8 +27,13 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A reservation for an event like a concert, sporting event, or lecture.\n\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use [[Offer]].
+ * A reservation for an event like a concert, sporting event, or lecture.
  *
+ * Note: This type is for information about actual reservations, e.g. in
+ * confirmation emails or HTML pages with individual confirmations of reservations.
+ * For offers of tickets, use [[Offer]].
+ *
+ * @see https://schema.org/EventReservation
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class EventReservation extends Reservation
@@ -37,6 +42,5 @@ class EventReservation extends Reservation
     {
         return new EventReservation('https://schema.org/', 'EventReservation');
     }
-
 
 }

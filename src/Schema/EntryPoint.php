@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * An entry point, within some Web-based protocol.
  *
+ * @see https://schema.org/EntryPoint
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class EntryPoint extends Intangible
@@ -39,7 +40,9 @@ class EntryPoint extends Intangible
     }
 
     /**
-     * The high level platform(s) where the Action can be performed for the given URL. To specify a specific application or operating system instance, use actionApplication.
+     * The high level platform(s) where the Action can be performed for the given URL.
+     * To specify a specific application or operating system instance, use
+     * actionApplication.
      *
      * @param $actionPlatform ||
      * @return static
@@ -56,7 +59,6 @@ class EntryPoint extends Intangible
     public function getActionPlatform() {
         return $this->properties['actionPlatform'];
     }
-
     /**
      * The supported content type(s) for an EntryPoint response.
      *
@@ -75,7 +77,6 @@ class EntryPoint extends Intangible
     public function getContentType() {
         return $this->properties['contentType'];
     }
-
     /**
      * An application that can complete the request.
      *
@@ -94,7 +95,6 @@ class EntryPoint extends Intangible
     public function getActionApplication() {
         return $this->properties['actionApplication'];
     }
-
     /**
      * The supported encoding type(s) for an EntryPoint request.
      *
@@ -113,9 +113,9 @@ class EntryPoint extends Intangible
     public function getEncodingType() {
         return $this->properties['encodingType'];
     }
-
     /**
-     * An url template (RFC6570) that will be used to construct the target of the execution of the action.
+     * An url template (RFC6570) that will be used to construct the target of the
+     * execution of the action.
      *
      * @param $urlTemplate 
      * @return static
@@ -132,9 +132,9 @@ class EntryPoint extends Intangible
     public function getUrlTemplate() {
         return $this->properties['urlTemplate'];
     }
-
     /**
-     * An HTTP method that specifies the appropriate HTTP method for a request to an HTTP EntryPoint. Values are capitalized strings as used in HTTP.
+     * An HTTP method that specifies the appropriate HTTP method for a request to an
+     * HTTP EntryPoint. Values are capitalized strings as used in HTTP.
      *
      * @param $httpMethod 
      * @return static
@@ -151,7 +151,6 @@ class EntryPoint extends Intangible
     public function getHttpMethod() {
         return $this->properties['httpMethod'];
     }
-
     /**
      * An application that can complete the request.
      *
@@ -170,6 +169,4 @@ class EntryPoint extends Intangible
     public function getApplication() {
         return $this->properties['application'];
     }
-
-
 }

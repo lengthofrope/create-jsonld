@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Indicates employment-related experience requirements, e.g. [[monthsOfExperience]].
+ * Indicates employment-related experience requirements, e.g.
+ * [[monthsOfExperience]].
  *
+ * @see https://schema.org/OccupationalExperienceRequirements
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class OccupationalExperienceRequirements extends Intangible
@@ -56,6 +58,4 @@ class OccupationalExperienceRequirements extends Intangible
     public function getMonthsOfExperience() {
         return $this->properties['monthsOfExperience'];
     }
-
-
 }

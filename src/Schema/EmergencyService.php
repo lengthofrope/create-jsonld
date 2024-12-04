@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * An emergency service, such as a fire station or ER.
  *
+ * @see https://schema.org/EmergencyService
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class EmergencyService extends LocalBusiness
@@ -37,6 +38,5 @@ class EmergencyService extends LocalBusiness
     {
         return new EmergencyService('https://schema.org/', 'EmergencyService');
     }
-
 
 }

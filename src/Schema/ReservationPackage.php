@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A group of multiple reservations with common values for all sub-reservations.
  *
+ * @see https://schema.org/ReservationPackage
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ReservationPackage extends Reservation
@@ -39,7 +40,8 @@ class ReservationPackage extends Reservation
     }
 
     /**
-     * The individual reservations included in the package. Typically a repeated property.
+     * The individual reservations included in the package. Typically a repeated
+     * property.
      *
      * @param $subReservation 
      * @return static
@@ -56,6 +58,4 @@ class ReservationPackage extends Reservation
     public function getSubReservation() {
         return $this->properties['subReservation'];
     }
-
-
 }

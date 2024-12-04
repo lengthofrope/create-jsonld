@@ -27,8 +27,13 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A description of an educational course which may be offered as distinct instances which take place at different times or take place at different locations, or be offered through different media or modes of study. An educational course is a sequence of one or more educational events and/or creative works which aims to build knowledge, competence or ability of learners.
+ * A description of an educational course which may be offered as distinct
+ * instances which take place at different times or take place at different
+ * locations, or be offered through different media or modes of study. An
+ * educational course is a sequence of one or more educational events and/or
+ * creative works which aims to build knowledge, competence or ability of learners.
  *
+ * @see https://schema.org/Course
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Course extends CreativeWork
@@ -39,7 +44,8 @@ class Course extends CreativeWork
     }
 
     /**
-     * Indicates (typically several) Syllabus entities that lay out what each section of the overall course will cover.
+     * Indicates (typically several) Syllabus entities that lay out what each section
+     * of the overall course will cover.
      *
      * @param $syllabusSections 
      * @return static
@@ -56,9 +62,9 @@ class Course extends CreativeWork
     public function getSyllabusSections() {
         return $this->properties['syllabusSections'];
     }
-
     /**
-     * The identifier for the [[Course]] used by the course [[provider]] (e.g. CS101 or 6.001).
+     * The identifier for the [[Course]] used by the course [[provider]] (e.g. CS101 or
+     * 6.001).
      *
      * @param $courseCode 
      * @return static
@@ -75,9 +81,10 @@ class Course extends CreativeWork
     public function getCourseCode() {
         return $this->properties['courseCode'];
     }
-
     /**
-     * A description of the qualification, award, certificate, diploma or other occupational credential awarded as a consequence of successful completion of this course or program.
+     * A description of the qualification, award, certificate, diploma or other
+     * occupational credential awarded as a consequence of successful completion of
+     * this course or program.
      *
      * @param $occupationalCredentialAwarded ||
      * @return static
@@ -94,9 +101,10 @@ class Course extends CreativeWork
     public function getOccupationalCredentialAwarded() {
         return $this->properties['occupationalCredentialAwarded'];
     }
-
     /**
-     * Requirements for taking the Course. May be completion of another [[Course]] or a textual description like "permission of instructor". Requirements may be a pre-requisite competency, referenced using [[AlignmentObject]].
+     * Requirements for taking the Course. May be completion of another [[Course]] or a
+     * textual description like "permission of instructor". Requirements may be a
+     * pre-requisite competency, referenced using [[AlignmentObject]].
      *
      * @param $coursePrerequisites ||
      * @return static
@@ -113,9 +121,9 @@ class Course extends CreativeWork
     public function getCoursePrerequisites() {
         return $this->properties['coursePrerequisites'];
     }
-
     /**
-     * An offering of the course at a specific time and place or through specific media or mode of study or to a specific section of students.
+     * An offering of the course at a specific time and place or through specific media
+     * or mode of study or to a specific section of students.
      *
      * @param $hasCourseInstance 
      * @return static
@@ -132,7 +140,6 @@ class Course extends CreativeWork
     public function getHasCourseInstance() {
         return $this->properties['hasCourseInstance'];
     }
-
     /**
      * The total number of students that have enrolled in the history of the course.
      *
@@ -151,9 +158,9 @@ class Course extends CreativeWork
     public function getTotalHistoricalEnrollment() {
         return $this->properties['totalHistoricalEnrollment'];
     }
-
     /**
-     * The number of credits or units awarded by a Course or required to complete an EducationalOccupationalProgram.
+     * The number of credits or units awarded by a Course or required to complete an
+     * EducationalOccupationalProgram.
      *
      * @param $numberOfCredits |
      * @return static
@@ -170,9 +177,10 @@ class Course extends CreativeWork
     public function getNumberOfCredits() {
         return $this->properties['numberOfCredits'];
     }
-
     /**
-     * A description of the qualification, award, certificate, diploma or other educational credential awarded as a consequence of successful completion of this course or program.
+     * A description of the qualification, award, certificate, diploma or other
+     * educational credential awarded as a consequence of successful completion of this
+     * course or program.
      *
      * @param $educationalCredentialAwarded ||
      * @return static
@@ -189,9 +197,10 @@ class Course extends CreativeWork
     public function getEducationalCredentialAwarded() {
         return $this->properties['educationalCredentialAwarded'];
     }
-
     /**
-     * A language someone may use with or at the item, service or place. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].
+     * A language someone may use with or at the item, service or place. Please use one
+     * of the language codes from the [IETF BCP 47
+     * standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].
      *
      * @param $availableLanguage |
      * @return static
@@ -208,9 +217,9 @@ class Course extends CreativeWork
     public function getAvailableLanguage() {
         return $this->properties['availableLanguage'];
     }
-
     /**
-     * A financial aid type or program which students may use to pay for tuition or fees associated with the program.
+     * A financial aid type or program which students may use to pay for tuition or
+     * fees associated with the program.
      *
      * @param $financialAidEligible |
      * @return static
@@ -227,6 +236,4 @@ class Course extends CreativeWork
     public function getFinancialAidEligible() {
         return $this->properties['financialAidEligible'];
     }
-
-
 }

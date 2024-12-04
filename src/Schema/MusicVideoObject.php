@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A music video file.
  *
+ * @see https://schema.org/MusicVideoObject
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MusicVideoObject extends MediaObject
@@ -37,6 +38,5 @@ class MusicVideoObject extends MediaObject
     {
         return new MusicVideoObject('https://schema.org/', 'MusicVideoObject');
     }
-
 
 }

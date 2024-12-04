@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Enumerated for values for itemListOrder for indicating how an ordered ItemList is organized.
+ * Enumerated for values for itemListOrder for indicating how an ordered ItemList
+ * is organized.
  *
+ * @see https://schema.org/ItemListOrderType
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ItemListOrderType extends Enumeration
@@ -37,6 +39,5 @@ class ItemListOrderType extends Enumeration
     {
         return new ItemListOrderType('https://schema.org/', 'ItemListOrderType');
     }
-
 
 }

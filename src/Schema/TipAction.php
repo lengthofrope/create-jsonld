@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of giving money voluntarily to a beneficiary in recognition of services rendered.
+ * The act of giving money voluntarily to a beneficiary in recognition of services
+ * rendered.
  *
+ * @see https://schema.org/TipAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class TipAction extends TradeAction
@@ -39,7 +41,8 @@ class TipAction extends TradeAction
     }
 
     /**
-     * A sub property of participant. The participant who is at the receiving end of the action.
+     * A sub property of participant. The participant who is at the receiving end of
+     * the action.
      *
      * @param $recipient |||
      * @return static
@@ -56,6 +59,4 @@ class TipAction extends TradeAction
     public function getRecipient() {
         return $this->properties['recipient'];
     }
-
-
 }

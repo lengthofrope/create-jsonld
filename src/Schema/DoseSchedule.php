@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A specific dosing schedule for a drug or supplement.
  *
+ * @see https://schema.org/DoseSchedule
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class DoseSchedule extends MedicalIntangible
@@ -56,9 +57,9 @@ class DoseSchedule extends MedicalIntangible
     public function getFrequency() {
         return $this->properties['frequency'];
     }
-
     /**
-     * Characteristics of the population for which this is intended, or which typically uses it, e.g. 'adults'.
+     * Characteristics of the population for which this is intended, or which typically
+     * uses it, e.g. 'adults'.
      *
      * @param $targetPopulation 
      * @return static
@@ -75,7 +76,6 @@ class DoseSchedule extends MedicalIntangible
     public function getTargetPopulation() {
         return $this->properties['targetPopulation'];
     }
-
     /**
      * The unit of the dose, e.g. 'mg'.
      *
@@ -94,7 +94,6 @@ class DoseSchedule extends MedicalIntangible
     public function getDoseUnit() {
         return $this->properties['doseUnit'];
     }
-
     /**
      * The value of the dose, e.g. 500.
      *
@@ -113,6 +112,4 @@ class DoseSchedule extends MedicalIntangible
     public function getDoseValue() {
         return $this->properties['doseValue'];
     }
-
-
 }

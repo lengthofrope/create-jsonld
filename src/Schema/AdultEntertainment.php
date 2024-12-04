@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * An adult entertainment establishment.
  *
+ * @see https://schema.org/AdultEntertainment
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class AdultEntertainment extends EntertainmentBusiness
@@ -37,6 +38,5 @@ class AdultEntertainment extends EntertainmentBusiness
     {
         return new AdultEntertainment('https://schema.org/', 'AdultEntertainment');
     }
-
 
 }

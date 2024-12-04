@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Boolean: True or False.
  *
+ * @see https://schema.org/Boolean
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Boolean extends \LengthOfRope\JSONLD\Elements\Element
@@ -37,6 +38,5 @@ class Boolean extends \LengthOfRope\JSONLD\Elements\Element
     {
         return new Boolean('https://schema.org/', 'Boolean');
     }
-
 
 }

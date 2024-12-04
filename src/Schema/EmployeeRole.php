@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A subclass of OrganizationRole used to describe employee relationships.
  *
+ * @see https://schema.org/EmployeeRole
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class EmployeeRole extends OrganizationRole
@@ -39,7 +40,8 @@ class EmployeeRole extends OrganizationRole
     }
 
     /**
-     * The currency (coded using [ISO 4217](http://en.wikipedia.org/wiki/ISO_4217)) used for the main salary information in this job posting or for this employee.
+     * The currency (coded using [ISO 4217](http://en.wikipedia.org/wiki/ISO_4217))
+     * used for the main salary information in this job posting or for this employee.
      *
      * @param $salaryCurrency 
      * @return static
@@ -56,7 +58,6 @@ class EmployeeRole extends OrganizationRole
     public function getSalaryCurrency() {
         return $this->properties['salaryCurrency'];
     }
-
     /**
      * The base salary of the job or of an employee in an EmployeeRole.
      *
@@ -75,6 +76,4 @@ class EmployeeRole extends OrganizationRole
     public function getBaseSalary() {
         return $this->properties['baseSalary'];
     }
-
-
 }

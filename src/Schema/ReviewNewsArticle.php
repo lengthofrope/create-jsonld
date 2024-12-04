@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A [[NewsArticle]] and [[CriticReview]] providing a professional critic's assessment of a service, product, performance, or artistic or literary work.
+ * A [[NewsArticle]] and [[CriticReview]] providing a professional critic's
+ * assessment of a service, product, performance, or artistic or literary work.
  *
+ * @see https://schema.org/ReviewNewsArticle
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ReviewNewsArticle extends NewsArticle
@@ -37,6 +39,5 @@ class ReviewNewsArticle extends NewsArticle
     {
         return new ReviewNewsArticle('https://schema.org/', 'ReviewNewsArticle');
     }
-
 
 }

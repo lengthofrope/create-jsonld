@@ -27,8 +27,15 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of registering to an organization/service without the guarantee to receive it.\n\nRelated actions:\n\n* [[RegisterAction]]: Unlike RegisterAction, ApplyAction has no guarantees that the application will be accepted.
+ * The act of registering to an organization/service without the guarantee to
+ * receive it.
  *
+ * Related actions:
+ *
+ * * [[RegisterAction]]: Unlike RegisterAction, ApplyAction has no guarantees that
+ * the application will be accepted.
+ *
+ * @see https://schema.org/ApplyAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ApplyAction extends OrganizeAction
@@ -37,6 +44,5 @@ class ApplyAction extends OrganizeAction
     {
         return new ApplyAction('https://schema.org/', 'ApplyAction');
     }
-
 
 }

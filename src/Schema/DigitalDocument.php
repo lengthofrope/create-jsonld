@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * An electronic file or document.
  *
+ * @see https://schema.org/DigitalDocument
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class DigitalDocument extends CreativeWork
@@ -39,7 +40,9 @@ class DigitalDocument extends CreativeWork
     }
 
     /**
-     * A permission related to the access to this document (e.g. permission to read or write an electronic document). For a public document, specify a grantee with an Audience with audienceType equal to "public".
+     * A permission related to the access to this document (e.g. permission to read or
+     * write an electronic document). For a public document, specify a grantee with an
+     * Audience with audienceType equal to "public".
      *
      * @param $hasDigitalDocumentPermission 
      * @return static
@@ -56,6 +59,4 @@ class DigitalDocument extends CreativeWork
     public function getHasDigitalDocumentPermission() {
         return $this->properties['hasDigitalDocumentPermission'];
     }
-
-
 }

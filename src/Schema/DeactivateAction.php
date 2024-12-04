@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of stopping or deactivating a device or application (e.g. stopping a timer or turning off a flashlight).
+ * The act of stopping or deactivating a device or application (e.g. stopping a
+ * timer or turning off a flashlight).
  *
+ * @see https://schema.org/DeactivateAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class DeactivateAction extends ControlAction
@@ -37,6 +39,5 @@ class DeactivateAction extends ControlAction
     {
         return new DeactivateAction('https://schema.org/', 'DeactivateAction');
     }
-
 
 }

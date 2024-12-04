@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of planning the execution of an event/task/action/reservation/plan to a future date.
+ * The act of planning the execution of an event/task/action/reservation/plan to a
+ * future date.
  *
+ * @see https://schema.org/PlanAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class PlanAction extends OrganizeAction
@@ -56,6 +58,4 @@ class PlanAction extends OrganizeAction
     public function getScheduledTime() {
         return $this->properties['scheduledTime'];
     }
-
-
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A Property value specification.
  *
+ * @see https://schema.org/PropertyValueSpecification
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class PropertyValueSpecification extends Intangible
@@ -56,7 +57,6 @@ class PropertyValueSpecification extends Intangible
     public function getValueMaxLength() {
         return $this->properties['valueMaxLength'];
     }
-
     /**
      * Specifies the minimum allowed range for number of characters in a literal value.
      *
@@ -75,7 +75,6 @@ class PropertyValueSpecification extends Intangible
     public function getValueMinLength() {
         return $this->properties['valueMinLength'];
     }
-
     /**
      * Whether multiple values are allowed for the property.  Default is false.
      *
@@ -94,7 +93,6 @@ class PropertyValueSpecification extends Intangible
     public function getMultipleValues() {
         return $this->properties['multipleValues'];
     }
-
     /**
      * The lower value of some characteristic or property.
      *
@@ -113,9 +111,10 @@ class PropertyValueSpecification extends Intangible
     public function getMinValue() {
         return $this->properties['minValue'];
     }
-
     /**
-     * Whether or not a property is mutable.  Default is false. Specifying this for a property that also has a value makes it act similar to a "hidden" input in an HTML form.
+     * Whether or not a property is mutable.  Default is false. Specifying this for a
+     * property that also has a value makes it act similar to a "hidden" input in an
+     * HTML form.
      *
      * @param $readonlyValue 
      * @return static
@@ -132,7 +131,6 @@ class PropertyValueSpecification extends Intangible
     public function getReadonlyValue() {
         return $this->properties['readonlyValue'];
     }
-
     /**
      * The upper value of some characteristic or property.
      *
@@ -151,9 +149,9 @@ class PropertyValueSpecification extends Intangible
     public function getMaxValue() {
         return $this->properties['maxValue'];
     }
-
     /**
-     * The stepValue attribute indicates the granularity that is expected (and required) of the value in a PropertyValueSpecification.
+     * The stepValue attribute indicates the granularity that is expected (and
+     * required) of the value in a PropertyValueSpecification.
      *
      * @param $stepValue 
      * @return static
@@ -170,9 +168,10 @@ class PropertyValueSpecification extends Intangible
     public function getStepValue() {
         return $this->properties['stepValue'];
     }
-
     /**
-     * The default value of the input.  For properties that expect a literal, the default is a literal value, for properties that expect an object, it's an ID reference to one of the current values.
+     * The default value of the input.  For properties that expect a literal, the
+     * default is a literal value, for properties that expect an object, it's an ID
+     * reference to one of the current values.
      *
      * @param $defaultValue |
      * @return static
@@ -189,9 +188,9 @@ class PropertyValueSpecification extends Intangible
     public function getDefaultValue() {
         return $this->properties['defaultValue'];
     }
-
     /**
-     * Indicates the name of the PropertyValueSpecification to be used in URL templates and form encoding in a manner analogous to HTML's input@name.
+     * Indicates the name of the PropertyValueSpecification to be used in URL templates
+     * and form encoding in a manner analogous to HTML's input@name.
      *
      * @param $valueName 
      * @return static
@@ -208,9 +207,9 @@ class PropertyValueSpecification extends Intangible
     public function getValueName() {
         return $this->properties['valueName'];
     }
-
     /**
-     * Specifies a regular expression for testing literal values according to the HTML spec.
+     * Specifies a regular expression for testing literal values according to the HTML
+     * spec.
      *
      * @param $valuePattern 
      * @return static
@@ -227,9 +226,9 @@ class PropertyValueSpecification extends Intangible
     public function getValuePattern() {
         return $this->properties['valuePattern'];
     }
-
     /**
-     * Whether the property must be filled in to complete the action.  Default is false.
+     * Whether the property must be filled in to complete the action.  Default is
+     * false.
      *
      * @param $valueRequired 
      * @return static
@@ -246,6 +245,4 @@ class PropertyValueSpecification extends Intangible
     public function getValueRequired() {
         return $this->properties['valueRequired'];
     }
-
-
 }

@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A delivery service through which radio content is provided via broadcast over the air or online.
+ * A delivery service through which radio content is provided via broadcast over
+ * the air or online.
  *
+ * @see https://schema.org/RadioBroadcastService
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class RadioBroadcastService extends BroadcastService
@@ -37,6 +39,5 @@ class RadioBroadcastService extends BroadcastService
     {
         return new RadioBroadcastService('https://schema.org/', 'RadioBroadcastService');
     }
-
 
 }

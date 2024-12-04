@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A florist.
  *
+ * @see https://schema.org/Florist
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Florist extends Store
@@ -37,6 +38,5 @@ class Florist extends Store
     {
         return new Florist('https://schema.org/', 'Florist');
     }
-
 
 }

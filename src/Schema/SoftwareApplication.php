@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A software application.
  *
+ * @see https://schema.org/SoftwareApplication
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class SoftwareApplication extends CreativeWork
@@ -56,9 +57,9 @@ class SoftwareApplication extends CreativeWork
     public function getMemoryRequirements() {
         return $this->properties['memoryRequirements'];
     }
-
     /**
-     * Device required to run the application. Used in cases where a specific make/model is required to run the application.
+     * Device required to run the application. Used in cases where a specific
+     * make/model is required to run the application.
      *
      * @param $device 
      * @return static
@@ -75,7 +76,6 @@ class SoftwareApplication extends CreativeWork
     public function getDevice() {
         return $this->properties['device'];
     }
-
     /**
      * A link to a screenshot image of the app.
      *
@@ -94,7 +94,6 @@ class SoftwareApplication extends CreativeWork
     public function getScreenshot() {
         return $this->properties['screenshot'];
     }
-
     /**
      * Description of what changed in this version.
      *
@@ -113,7 +112,6 @@ class SoftwareApplication extends CreativeWork
     public function getReleaseNotes() {
         return $this->properties['releaseNotes'];
     }
-
     /**
      * Supporting data for a SoftwareApplication.
      *
@@ -132,7 +130,6 @@ class SoftwareApplication extends CreativeWork
     public function getSupportingData() {
         return $this->properties['supportingData'];
     }
-
     /**
      * Type of software application, e.g. 'Game, Multimedia'.
      *
@@ -151,9 +148,9 @@ class SoftwareApplication extends CreativeWork
     public function getApplicationCategory() {
         return $this->properties['applicationCategory'];
     }
-
     /**
-     * Countries for which the application is not supported. You can also provide the two-letter ISO 3166-1 alpha-2 country code.
+     * Countries for which the application is not supported. You can also provide the
+     * two-letter ISO 3166-1 alpha-2 country code.
      *
      * @param $countriesNotSupported 
      * @return static
@@ -170,9 +167,9 @@ class SoftwareApplication extends CreativeWork
     public function getCountriesNotSupported() {
         return $this->properties['countriesNotSupported'];
     }
-
     /**
-     * Permission(s) required to run the app (for example, a mobile app may require full internet access or may run only on wifi).
+     * Permission(s) required to run the app (for example, a mobile app may require
+     * full internet access or may run only on wifi).
      *
      * @param $permissions 
      * @return static
@@ -189,7 +186,6 @@ class SoftwareApplication extends CreativeWork
     public function getPermissions() {
         return $this->properties['permissions'];
     }
-
     /**
      * Operating systems supported (Windows 7, OS X 10.6, Android 1.6).
      *
@@ -208,9 +204,9 @@ class SoftwareApplication extends CreativeWork
     public function getOperatingSystem() {
         return $this->properties['operatingSystem'];
     }
-
     /**
-     * Device required to run the application. Used in cases where a specific make/model is required to run the application.
+     * Device required to run the application. Used in cases where a specific
+     * make/model is required to run the application.
      *
      * @param $availableOnDevice 
      * @return static
@@ -227,7 +223,6 @@ class SoftwareApplication extends CreativeWork
     public function getAvailableOnDevice() {
         return $this->properties['availableOnDevice'];
     }
-
     /**
      * Software application help.
      *
@@ -246,9 +241,9 @@ class SoftwareApplication extends CreativeWork
     public function getSoftwareHelp() {
         return $this->properties['softwareHelp'];
     }
-
     /**
-     * Size of the application / package (e.g. 18MB). In the absence of a unit (MB, KB etc.), KB will be assumed.
+     * Size of the application / package (e.g. 18MB). In the absence of a unit (MB, KB
+     * etc.), KB will be assumed.
      *
      * @param $fileSize 
      * @return static
@@ -265,9 +260,11 @@ class SoftwareApplication extends CreativeWork
     public function getFileSize() {
         return $this->properties['fileSize'];
     }
-
     /**
-     * Component dependency requirements for application. This includes runtime environments and shared libraries that are not included in the application distribution package, but required to run the application (examples: DirectX, Java or .NET runtime).
+     * Component dependency requirements for application. This includes runtime
+     * environments and shared libraries that are not included in the application
+     * distribution package, but required to run the application (examples: DirectX,
+     * Java or .NET runtime).
      *
      * @param $requirements |
      * @return static
@@ -284,7 +281,6 @@ class SoftwareApplication extends CreativeWork
     public function getRequirements() {
         return $this->properties['requirements'];
     }
-
     /**
      * Storage requirements (free space required).
      *
@@ -303,7 +299,6 @@ class SoftwareApplication extends CreativeWork
     public function getStorageRequirements() {
         return $this->properties['storageRequirements'];
     }
-
     /**
      * Processor architecture required to run the application (e.g. IA64).
      *
@@ -322,9 +317,9 @@ class SoftwareApplication extends CreativeWork
     public function getProcessorRequirements() {
         return $this->properties['processorRequirements'];
     }
-
     /**
-     * Countries for which the application is supported. You can also provide the two-letter ISO 3166-1 alpha-2 country code.
+     * Countries for which the application is supported. You can also provide the
+     * two-letter ISO 3166-1 alpha-2 country code.
      *
      * @param $countriesSupported 
      * @return static
@@ -341,7 +336,6 @@ class SoftwareApplication extends CreativeWork
     public function getCountriesSupported() {
         return $this->properties['countriesSupported'];
     }
-
     /**
      * Additional content for a software application.
      *
@@ -360,9 +354,11 @@ class SoftwareApplication extends CreativeWork
     public function getSoftwareAddOn() {
         return $this->properties['softwareAddOn'];
     }
-
     /**
-     * Component dependency requirements for application. This includes runtime environments and shared libraries that are not included in the application distribution package, but required to run the application (examples: DirectX, Java or .NET runtime).
+     * Component dependency requirements for application. This includes runtime
+     * environments and shared libraries that are not included in the application
+     * distribution package, but required to run the application (examples: DirectX,
+     * Java or .NET runtime).
      *
      * @param $softwareRequirements |
      * @return static
@@ -379,9 +375,9 @@ class SoftwareApplication extends CreativeWork
     public function getSoftwareRequirements() {
         return $this->properties['softwareRequirements'];
     }
-
     /**
-     * The name of the application suite to which the application belongs (e.g. Excel belongs to Office).
+     * The name of the application suite to which the application belongs (e.g. Excel
+     * belongs to Office).
      *
      * @param $applicationSuite 
      * @return static
@@ -398,7 +394,6 @@ class SoftwareApplication extends CreativeWork
     public function getApplicationSuite() {
         return $this->properties['applicationSuite'];
     }
-
     /**
      * If the file can be downloaded, URL to download the binary.
      *
@@ -417,7 +412,6 @@ class SoftwareApplication extends CreativeWork
     public function getDownloadUrl() {
         return $this->properties['downloadUrl'];
     }
-
     /**
      * Version of the software instance.
      *
@@ -436,9 +430,9 @@ class SoftwareApplication extends CreativeWork
     public function getSoftwareVersion() {
         return $this->properties['softwareVersion'];
     }
-
     /**
-     * Features or modules provided by this application (and possibly required by other applications).
+     * Features or modules provided by this application (and possibly required by other
+     * applications).
      *
      * @param $featureList |
      * @return static
@@ -455,7 +449,6 @@ class SoftwareApplication extends CreativeWork
     public function getFeatureList() {
         return $this->properties['featureList'];
     }
-
     /**
      * Subcategory of the application, e.g. 'Arcade Game'.
      *
@@ -474,7 +467,6 @@ class SoftwareApplication extends CreativeWork
     public function getApplicationSubCategory() {
         return $this->properties['applicationSubCategory'];
     }
-
     /**
      * URL at which the app may be installed, if different from the URL of the item.
      *
@@ -493,6 +485,4 @@ class SoftwareApplication extends CreativeWork
     public function getInstallUrl() {
         return $this->properties['installUrl'];
     }
-
-
 }

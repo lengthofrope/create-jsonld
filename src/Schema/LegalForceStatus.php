@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A list of possible statuses for the legal force of a legislation.
  *
+ * @see https://schema.org/LegalForceStatus
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class LegalForceStatus extends StatusEnumeration
@@ -37,6 +38,5 @@ class LegalForceStatus extends StatusEnumeration
     {
         return new LegalForceStatus('https://schema.org/', 'LegalForceStatus');
     }
-
 
 }

@@ -27,8 +27,12 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A particular online business, either standalone or the online part of a broader organization. Examples include an eCommerce site, an online travel booking site, an online learning site, an online logistics and shipping provider, an online (virtual) doctor, etc.
+ * A particular online business, either standalone or the online part of a broader
+ * organization. Examples include an eCommerce site, an online travel booking site,
+ * an online learning site, an online logistics and shipping provider, an online
+ * (virtual) doctor, etc.
  *
+ * @see https://schema.org/OnlineBusiness
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class OnlineBusiness extends Organization
@@ -37,6 +41,5 @@ class OnlineBusiness extends Organization
     {
         return new OnlineBusiness('https://schema.org/', 'OnlineBusiness');
     }
-
 
 }

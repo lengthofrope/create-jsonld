@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * An eCommerce site.
  *
+ * @see https://schema.org/OnlineStore
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class OnlineStore extends OnlineBusiness
@@ -37,6 +38,5 @@ class OnlineStore extends OnlineBusiness
     {
         return new OnlineStore('https://schema.org/', 'OnlineStore');
     }
-
 
 }

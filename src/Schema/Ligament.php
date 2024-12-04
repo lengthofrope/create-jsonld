@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A short band of tough, flexible, fibrous connective tissue that functions to connect multiple bones, cartilages, and structurally support joints.
+ * A short band of tough, flexible, fibrous connective tissue that functions to
+ * connect multiple bones, cartilages, and structurally support joints.
  *
+ * @see https://schema.org/Ligament
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Ligament extends AnatomicalStructure
@@ -37,6 +39,5 @@ class Ligament extends AnatomicalStructure
     {
         return new Ligament('https://schema.org/', 'Ligament');
     }
-
 
 }

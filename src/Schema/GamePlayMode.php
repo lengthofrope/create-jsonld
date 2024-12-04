@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Indicates whether this game is multi-player, co-op or single-player.
  *
+ * @see https://schema.org/GamePlayMode
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class GamePlayMode extends Enumeration
@@ -37,6 +38,5 @@ class GamePlayMode extends Enumeration
     {
         return new GamePlayMode('https://schema.org/', 'GamePlayMode');
     }
-
 
 }

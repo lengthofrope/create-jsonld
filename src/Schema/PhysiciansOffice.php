@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A doctor's office or clinic.
  *
+ * @see https://schema.org/PhysiciansOffice
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class PhysiciansOffice extends Physician
@@ -37,6 +38,5 @@ class PhysiciansOffice extends Physician
     {
         return new PhysiciansOffice('https://schema.org/', 'PhysiciansOffice');
     }
-
 
 }

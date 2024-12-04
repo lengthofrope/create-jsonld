@@ -27,11 +27,16 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A suite in a hotel or other public accommodation, denotes a class of luxury accommodations, the key feature of which is multiple rooms (source: Wikipedia, the free encyclopedia, see <a href="http://en.wikipedia.org/wiki/Suite_(hotel)">http://en.wikipedia.org/wiki/Suite_(hotel)</a>).
- * <br /><br />
- * See also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.
-
+ * A suite in a hotel or other public accommodation, denotes a class of luxury
+ * accommodations, the key feature of which is multiple rooms (source: Wikipedia,
+ * the free encyclopedia, see <a
+ * href="http://en.wikipedia.org/wiki/Suite_(hotel)">http://en.wikipedia.org/wiki/Suite_(hotel)</a>).
+ * * <br /><br />
+ * * See also the <a href="/docs/hotels.html">dedicated document on the use of
+ * schema.org for marking up hotels and other forms of accommodations</a>.
  *
+ *
+ * @see https://schema.org/Suite
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Suite extends Accommodation
@@ -42,8 +47,11 @@ class Suite extends Accommodation
     }
 
     /**
-     * The allowed total occupancy for the accommodation in persons (including infants etc). For individual accommodations, this is not necessarily the legal maximum but defines the permitted usage as per the contractual agreement (e.g. a double room used by a single person).
-Typical unit code(s): C62 for person.
+     * The allowed total occupancy for the accommodation in persons (including infants
+     * etc). For individual accommodations, this is not necessarily the legal maximum
+     * but defines the permitted usage as per the contractual agreement (e.g. a double
+     * room used by a single person).
+     * Typical unit code(s): C62 for person.
      *
      * @param $occupancy 
      * @return static
@@ -60,10 +68,12 @@ Typical unit code(s): C62 for person.
     public function getOccupancy() {
         return $this->properties['occupancy'];
     }
-
     /**
-     * The type of bed or beds included in the accommodation. For the single case of just one bed of a certain type, you use bed directly with a text.
-      If you want to indicate the quantity of a certain kind of bed, use an instance of BedDetails. For more detailed information, use the amenityFeature property.
+     * The type of bed or beds included in the accommodation. For the single case of
+     * just one bed of a certain type, you use bed directly with a text.
+     * If you want to indicate the quantity of a certain kind of bed, use an
+     * instance of BedDetails. For more detailed information, use the amenityFeature
+     * property.
      *
      * @param $bed ||
      * @return static
@@ -80,10 +90,11 @@ Typical unit code(s): C62 for person.
     public function getBed() {
         return $this->properties['bed'];
     }
-
     /**
-     * The number of rooms (excluding bathrooms and closets) of the accommodation or lodging business.
-Typical unit code(s): ROM for room or C62 for no unit. The type of room can be put in the unitText property of the QuantitativeValue.
+     * The number of rooms (excluding bathrooms and closets) of the accommodation or
+     * lodging business.
+     * Typical unit code(s): ROM for room or C62 for no unit. The type of room can be
+     * put in the unitText property of the QuantitativeValue.
      *
      * @param $numberOfRooms |
      * @return static
@@ -100,6 +111,4 @@ Typical unit code(s): ROM for room or C62 for no unit. The type of room can be p
     public function getNumberOfRooms() {
         return $this->properties['numberOfRooms'];
     }
-
-
 }

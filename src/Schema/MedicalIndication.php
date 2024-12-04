@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A condition or factor that indicates use of a medical therapy, including signs, symptoms, risk factors, anatomical states, etc.
+ * A condition or factor that indicates use of a medical therapy, including signs,
+ * symptoms, risk factors, anatomical states, etc.
  *
+ * @see https://schema.org/MedicalIndication
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MedicalIndication extends MedicalEntity
@@ -37,6 +39,5 @@ class MedicalIndication extends MedicalEntity
     {
         return new MedicalIndication('https://schema.org/', 'MedicalIndication');
     }
-
 
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A waterfall, like Niagara.
  *
+ * @see https://schema.org/Waterfall
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Waterfall extends BodyOfWater
@@ -37,6 +38,5 @@ class Waterfall extends BodyOfWater
     {
         return new Waterfall('https://schema.org/', 'Waterfall');
     }
-
 
 }

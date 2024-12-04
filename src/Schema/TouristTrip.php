@@ -27,9 +27,14 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A tourist trip. A created itinerary of visits to one or more places of interest ([[TouristAttraction]]/[[TouristDestination]]) often linked by a similar theme, geographic area, or interest to a particular [[touristType]]. The [UNWTO](http://www2.unwto.org/) defines tourism trip as the Trip taken by visitors.
- *   (See examples below.)
+ * A tourist trip. A created itinerary of visits to one or more places of interest
+ * ([[TouristAttraction]]/[[TouristDestination]]) often linked by a similar theme,
+ * geographic area, or interest to a particular [[touristType]]. The
+ * [UNWTO](http://www2.unwto.org/) defines tourism trip as the Trip taken by
+ * visitors.
+ * *   (See examples below.)
  *
+ * @see https://schema.org/TouristTrip
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class TouristTrip extends Trip
@@ -40,7 +45,8 @@ class TouristTrip extends Trip
     }
 
     /**
-     * Attraction suitable for type(s) of tourist. E.g. children, visitors from a particular country, etc. 
+     * Attraction suitable for type(s) of tourist. E.g. children, visitors from a
+     * particular country, etc.
      *
      * @param $touristType |
      * @return static
@@ -57,6 +63,4 @@ class TouristTrip extends Trip
     public function getTouristType() {
         return $this->properties['touristType'];
     }
-
-
 }

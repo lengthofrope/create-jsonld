@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A bowling alley.
  *
+ * @see https://schema.org/BowlingAlley
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class BowlingAlley extends SportsActivityLocation
@@ -37,6 +38,5 @@ class BowlingAlley extends SportsActivityLocation
     {
         return new BowlingAlley('https://schema.org/', 'BowlingAlley');
     }
-
 
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A trip on a commercial ferry line.
  *
+ * @see https://schema.org/BoatTrip
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class BoatTrip extends Trip
@@ -56,7 +57,6 @@ class BoatTrip extends Trip
     public function getDepartureBoatTerminal() {
         return $this->properties['departureBoatTerminal'];
     }
-
     /**
      * The terminal or port from which the boat arrives.
      *
@@ -75,6 +75,4 @@ class BoatTrip extends Trip
     public function getArrivalBoatTerminal() {
         return $this->properties['arrivalBoatTerminal'];
     }
-
-
 }

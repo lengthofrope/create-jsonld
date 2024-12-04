@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A structured representation of food or drink items available from a FoodEstablishment.
+ * A structured representation of food or drink items available from a
+ * FoodEstablishment.
  *
+ * @see https://schema.org/Menu
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Menu extends CreativeWork
@@ -56,7 +58,6 @@ class Menu extends CreativeWork
     public function getHasMenuItem() {
         return $this->properties['hasMenuItem'];
     }
-
     /**
      * A subgrouping of the menu (by dishes, course, serving time period, etc.).
      *
@@ -75,6 +76,4 @@ class Menu extends CreativeWork
     public function getHasMenuSection() {
         return $this->properties['hasMenuSection'];
     }
-
-
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A day spa.
  *
+ * @see https://schema.org/DaySpa
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class DaySpa extends HealthAndBeautyBusiness
@@ -37,6 +38,5 @@ class DaySpa extends HealthAndBeautyBusiness
     {
         return new DaySpa('https://schema.org/', 'DaySpa');
     }
-
 
 }

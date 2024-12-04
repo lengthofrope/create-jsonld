@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A process of care involving exercise, changes to diet, fitness routines, and other lifestyle changes aimed at improving a health condition.
+ * A process of care involving exercise, changes to diet, fitness routines, and
+ * other lifestyle changes aimed at improving a health condition.
  *
+ * @see https://schema.org/LifestyleModification
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class LifestyleModification extends MedicalEntity
@@ -37,6 +39,5 @@ class LifestyleModification extends MedicalEntity
     {
         return new LifestyleModification('https://schema.org/', 'LifestyleModification');
     }
-
 
 }

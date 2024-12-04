@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A type of permission which can be granted for accessing a digital document.
  *
+ * @see https://schema.org/DigitalDocumentPermissionType
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class DigitalDocumentPermissionType extends Enumeration
@@ -37,6 +38,5 @@ class DigitalDocumentPermissionType extends Enumeration
     {
         return new DigitalDocumentPermissionType('https://schema.org/', 'DigitalDocumentPermissionType');
     }
-
 
 }

@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Short story or tale. A brief work of literature, usually written in narrative prose.
+ * Short story or tale. A brief work of literature, usually written in narrative
+ * prose.
  *
+ * @see https://schema.org/ShortStory
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ShortStory extends CreativeWork
@@ -37,6 +39,5 @@ class ShortStory extends CreativeWork
     {
         return new ShortStory('https://schema.org/', 'ShortStory');
     }
-
 
 }

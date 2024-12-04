@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A fact-checking review of claims made (or reported) in some creative work (referenced via itemReviewed).
+ * A fact-checking review of claims made (or reported) in some creative work
+ * (referenced via itemReviewed).
  *
+ * @see https://schema.org/ClaimReview
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ClaimReview extends Review
@@ -56,6 +58,4 @@ class ClaimReview extends Review
     public function getClaimReviewed() {
         return $this->properties['claimReviewed'];
     }
-
-
 }

@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of accomplishing something via previous efforts. It is an instantaneous action rather than an ongoing process.
+ * The act of accomplishing something via previous efforts. It is an instantaneous
+ * action rather than an ongoing process.
  *
+ * @see https://schema.org/AchieveAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class AchieveAction extends Action
@@ -37,6 +39,5 @@ class AchieveAction extends Action
     {
         return new AchieveAction('https://schema.org/', 'AchieveAction');
     }
-
 
 }

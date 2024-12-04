@@ -27,11 +27,15 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A CDCPMDRecord is a data structure representing a record in a CDC tabular data format
- * *        used for hospital data reporting. See [documentation](/docs/cdc-covid.html) for details, and the linked CDC materials for authoritative
- * *        definitions used as the source here.
- *       
+ * A CDCPMDRecord is a data structure representing a record in a CDC tabular data
+ * format
+ * * *        used for hospital data reporting. See
+ * [documentation](/docs/cdc-covid.html) for details, and the linked CDC materials
+ * for authoritative
+ * * *        definitions used as the source here.
+ * *
  *
+ * @see https://schema.org/CDCPMDRecord
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class CDCPMDRecord extends StructuredValue
@@ -42,7 +46,8 @@ class CDCPMDRecord extends StructuredValue
     }
 
     /**
-     * numicubeds - ICU BEDS: Total number of staffed inpatient intensive care unit (ICU) beds.
+     * numicubeds - ICU BEDS: Total number of staffed inpatient intensive care unit
+     * (ICU) beds.
      *
      * @param $cvdNumICUBeds 
      * @return static
@@ -59,7 +64,6 @@ class CDCPMDRecord extends StructuredValue
     public function getCvdNumICUBeds() {
         return $this->properties['cvdNumICUBeds'];
     }
-
     /**
      * Publication date of an online listing.
      *
@@ -78,9 +82,9 @@ class CDCPMDRecord extends StructuredValue
     public function getDatePosted() {
         return $this->properties['datePosted'];
     }
-
     /**
-     * numc19overflowpats - ED/OVERFLOW: Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting an inpatient bed.
+     * numc19overflowpats - ED/OVERFLOW: Patients with suspected or confirmed COVID-19
+     * who are in the ED or any overflow location awaiting an inpatient bed.
      *
      * @param $cvdNumC19OverflowPats 
      * @return static
@@ -97,7 +101,6 @@ class CDCPMDRecord extends StructuredValue
     public function getCvdNumC19OverflowPats() {
         return $this->properties['cvdNumC19OverflowPats'];
     }
-
     /**
      * numvent - MECHANICAL VENTILATORS: Total number of ventilators available.
      *
@@ -116,7 +119,6 @@ class CDCPMDRecord extends StructuredValue
     public function getCvdNumVent() {
         return $this->properties['cvdNumVent'];
     }
-
     /**
      * collectiondate - Date for which patient counts are reported.
      *
@@ -135,9 +137,9 @@ class CDCPMDRecord extends StructuredValue
     public function getCvdCollectionDate() {
         return $this->properties['cvdCollectionDate'];
     }
-
     /**
-     * numicubedsocc - ICU BED OCCUPANCY: Total number of staffed inpatient ICU beds that are occupied.
+     * numicubedsocc - ICU BED OCCUPANCY: Total number of staffed inpatient ICU beds
+     * that are occupied.
      *
      * @param $cvdNumICUBedsOcc 
      * @return static
@@ -154,9 +156,9 @@ class CDCPMDRecord extends StructuredValue
     public function getCvdNumICUBedsOcc() {
         return $this->properties['cvdNumICUBedsOcc'];
     }
-
     /**
-     * numbedsocc - HOSPITAL INPATIENT BED OCCUPANCY: Total number of staffed inpatient beds that are occupied.
+     * numbedsocc - HOSPITAL INPATIENT BED OCCUPANCY: Total number of staffed inpatient
+     * beds that are occupied.
      *
      * @param $cvdNumBedsOcc 
      * @return static
@@ -173,9 +175,10 @@ class CDCPMDRecord extends StructuredValue
     public function getCvdNumBedsOcc() {
         return $this->properties['cvdNumBedsOcc'];
     }
-
     /**
-     * numtotbeds - ALL HOSPITAL BEDS: Total number of all inpatient and outpatient beds, including all staffed, ICU, licensed, and overflow (surge) beds used for inpatients or outpatients.
+     * numtotbeds - ALL HOSPITAL BEDS: Total number of all inpatient and outpatient
+     * beds, including all staffed, ICU, licensed, and overflow (surge) beds used for
+     * inpatients or outpatients.
      *
      * @param $cvdNumTotBeds 
      * @return static
@@ -192,9 +195,9 @@ class CDCPMDRecord extends StructuredValue
     public function getCvdNumTotBeds() {
         return $this->properties['cvdNumTotBeds'];
     }
-
     /**
-     * numc19hosppats - HOSPITALIZED: Patients currently hospitalized in an inpatient care location who have suspected or confirmed COVID-19.
+     * numc19hosppats - HOSPITALIZED: Patients currently hospitalized in an inpatient
+     * care location who have suspected or confirmed COVID-19.
      *
      * @param $cvdNumC19HospPats 
      * @return static
@@ -211,9 +214,9 @@ class CDCPMDRecord extends StructuredValue
     public function getCvdNumC19HospPats() {
         return $this->properties['cvdNumC19HospPats'];
     }
-
     /**
-     * numbeds - HOSPITAL INPATIENT BEDS: Inpatient beds, including all staffed, licensed, and overflow (surge) beds used for inpatients.
+     * numbeds - HOSPITAL INPATIENT BEDS: Inpatient beds, including all staffed,
+     * licensed, and overflow (surge) beds used for inpatients.
      *
      * @param $cvdNumBeds 
      * @return static
@@ -230,9 +233,10 @@ class CDCPMDRecord extends StructuredValue
     public function getCvdNumBeds() {
         return $this->properties['cvdNumBeds'];
     }
-
     /**
-     * numc19hopats - HOSPITAL ONSET: Patients hospitalized in an NHSN inpatient care location with onset of suspected or confirmed COVID-19 14 or more days after hospitalization.
+     * numc19hopats - HOSPITAL ONSET: Patients hospitalized in an NHSN inpatient care
+     * location with onset of suspected or confirmed COVID-19 14 or more days after
+     * hospitalization.
      *
      * @param $cvdNumC19HOPats 
      * @return static
@@ -249,9 +253,10 @@ class CDCPMDRecord extends StructuredValue
     public function getCvdNumC19HOPats() {
         return $this->properties['cvdNumC19HOPats'];
     }
-
     /**
-     * Identifier of the NHSN facility that this data record applies to. Use [[cvdFacilityCounty]] to indicate the county. To provide other details, [[healthcareReportingData]] can be used on a [[Hospital]] entry.
+     * Identifier of the NHSN facility that this data record applies to. Use
+     * [[cvdFacilityCounty]] to indicate the county. To provide other details,
+     * [[healthcareReportingData]] can be used on a [[Hospital]] entry.
      *
      * @param $cvdFacilityId 
      * @return static
@@ -268,7 +273,6 @@ class CDCPMDRecord extends StructuredValue
     public function getCvdFacilityId() {
         return $this->properties['cvdFacilityId'];
     }
-
     /**
      * numventuse - MECHANICAL VENTILATORS IN USE: Total number of ventilators in use.
      *
@@ -287,9 +291,10 @@ class CDCPMDRecord extends StructuredValue
     public function getCvdNumVentUse() {
         return $this->properties['cvdNumVentUse'];
     }
-
     /**
-     * Name of the County of the NHSN facility that this data record applies to. Use [[cvdFacilityId]] to identify the facility. To provide other details, [[healthcareReportingData]] can be used on a [[Hospital]] entry.
+     * Name of the County of the NHSN facility that this data record applies to. Use
+     * [[cvdFacilityId]] to identify the facility. To provide other details,
+     * [[healthcareReportingData]] can be used on a [[Hospital]] entry.
      *
      * @param $cvdFacilityCounty 
      * @return static
@@ -306,9 +311,9 @@ class CDCPMDRecord extends StructuredValue
     public function getCvdFacilityCounty() {
         return $this->properties['cvdFacilityCounty'];
     }
-
     /**
-     * numc19died - DEATHS: Patients with suspected or confirmed COVID-19 who died in the hospital, ED, or any overflow location.
+     * numc19died - DEATHS: Patients with suspected or confirmed COVID-19 who died in
+     * the hospital, ED, or any overflow location.
      *
      * @param $cvdNumC19Died 
      * @return static
@@ -325,9 +330,10 @@ class CDCPMDRecord extends StructuredValue
     public function getCvdNumC19Died() {
         return $this->properties['cvdNumC19Died'];
     }
-
     /**
-     * numc19ofmechventpats - ED/OVERFLOW and VENTILATED: Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting an inpatient bed and on a mechanical ventilator.
+     * numc19ofmechventpats - ED/OVERFLOW and VENTILATED: Patients with suspected or
+     * confirmed COVID-19 who are in the ED or any overflow location awaiting an
+     * inpatient bed and on a mechanical ventilator.
      *
      * @param $cvdNumC19OFMechVentPats 
      * @return static
@@ -344,9 +350,10 @@ class CDCPMDRecord extends StructuredValue
     public function getCvdNumC19OFMechVentPats() {
         return $this->properties['cvdNumC19OFMechVentPats'];
     }
-
     /**
-     * numc19mechventpats - HOSPITALIZED and VENTILATED: Patients hospitalized in an NHSN inpatient care location who have suspected or confirmed COVID-19 and are on a mechanical ventilator.
+     * numc19mechventpats - HOSPITALIZED and VENTILATED: Patients hospitalized in an
+     * NHSN inpatient care location who have suspected or confirmed COVID-19 and are on
+     * a mechanical ventilator.
      *
      * @param $cvdNumC19MechVentPats 
      * @return static
@@ -363,6 +370,4 @@ class CDCPMDRecord extends StructuredValue
     public function getCvdNumC19MechVentPats() {
         return $this->properties['cvdNumC19MechVentPats'];
     }
-
-
 }

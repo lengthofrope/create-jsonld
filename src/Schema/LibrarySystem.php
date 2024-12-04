@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A [[LibrarySystem]] is a collaborative system amongst several libraries.
  *
+ * @see https://schema.org/LibrarySystem
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class LibrarySystem extends Organization
@@ -37,6 +38,5 @@ class LibrarySystem extends Organization
     {
         return new LibrarySystem('https://schema.org/', 'LibrarySystem');
     }
-
 
 }

@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A theater group or company, for example, the Royal Shakespeare Company or Druid Theatre.
+ * A theater group or company, for example, the Royal Shakespeare Company or Druid
+ * Theatre.
  *
+ * @see https://schema.org/TheaterGroup
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class TheaterGroup extends PerformingGroup
@@ -37,6 +39,5 @@ class TheaterGroup extends PerformingGroup
     {
         return new TheaterGroup('https://schema.org/', 'TheaterGroup');
     }
-
 
 }

@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Any physical manifestation of a person's medical condition discoverable by objective diagnostic tests or physical examination.
+ * Any physical manifestation of a person's medical condition discoverable by
+ * objective diagnostic tests or physical examination.
  *
+ * @see https://schema.org/MedicalSign
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MedicalSign extends MedicalSignOrSymptom
@@ -56,7 +58,6 @@ class MedicalSign extends MedicalSignOrSymptom
     public function getIdentifyingTest() {
         return $this->properties['identifyingTest'];
     }
-
     /**
      * A physical examination that can identify this sign.
      *
@@ -75,6 +76,4 @@ class MedicalSign extends MedicalSignOrSymptom
     public function getIdentifyingExam() {
         return $this->properties['identifyingExam'];
     }
-
-
 }

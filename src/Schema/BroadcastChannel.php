@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A unique instance of a BroadcastService on a CableOrSatelliteService lineup.
  *
+ * @see https://schema.org/BroadcastChannel
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class BroadcastChannel extends Intangible
@@ -39,7 +40,9 @@ class BroadcastChannel extends Intangible
     }
 
     /**
-     * The frequency used for over-the-air broadcasts. Numeric values or simple ranges, e.g. 87-99. In addition a shortcut idiom is supported for frequencies of AM and FM radio channels, e.g. "87 FM".
+     * The frequency used for over-the-air broadcasts. Numeric values or simple ranges,
+     * e.g. 87-99. In addition a shortcut idiom is supported for frequencies of AM and
+     * FM radio channels, e.g. "87 FM".
      *
      * @param $broadcastFrequency |
      * @return static
@@ -56,7 +59,6 @@ class BroadcastChannel extends Intangible
     public function getBroadcastFrequency() {
         return $this->properties['broadcastFrequency'];
     }
-
     /**
      * The CableOrSatelliteService offering the channel.
      *
@@ -75,9 +77,9 @@ class BroadcastChannel extends Intangible
     public function getInBroadcastLineup() {
         return $this->properties['inBroadcastLineup'];
     }
-
     /**
-     * The unique address by which the BroadcastService can be identified in a provider lineup. In US, this is typically a number.
+     * The unique address by which the BroadcastService can be identified in a provider
+     * lineup. In US, this is typically a number.
      *
      * @param $broadcastChannelId 
      * @return static
@@ -94,9 +96,9 @@ class BroadcastChannel extends Intangible
     public function getBroadcastChannelId() {
         return $this->properties['broadcastChannelId'];
     }
-
     /**
-     * The type of service required to have access to the channel (e.g. Standard or Premium).
+     * The type of service required to have access to the channel (e.g. Standard or
+     * Premium).
      *
      * @param $broadcastServiceTier 
      * @return static
@@ -113,7 +115,6 @@ class BroadcastChannel extends Intangible
     public function getBroadcastServiceTier() {
         return $this->properties['broadcastServiceTier'];
     }
-
     /**
      * The BroadcastService offered on this channel.
      *
@@ -132,7 +133,6 @@ class BroadcastChannel extends Intangible
     public function getProvidesBroadcastService() {
         return $this->properties['providesBroadcastService'];
     }
-
     /**
      * Genre of the creative work, broadcast channel or group.
      *
@@ -151,6 +151,4 @@ class BroadcastChannel extends Intangible
     public function getGenre() {
         return $this->properties['genre'];
     }
-
-
 }

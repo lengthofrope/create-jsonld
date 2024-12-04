@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A sports club.
  *
+ * @see https://schema.org/SportsClub
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class SportsClub extends SportsActivityLocation
@@ -37,6 +38,5 @@ class SportsClub extends SportsActivityLocation
     {
         return new SportsClub('https://schema.org/', 'SportsClub');
     }
-
 
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The act of editing a recipient by replacing an old object with a new object.
  *
+ * @see https://schema.org/ReplaceAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ReplaceAction extends UpdateAction
@@ -56,7 +57,6 @@ class ReplaceAction extends UpdateAction
     public function getReplacer() {
         return $this->properties['replacer'];
     }
-
     /**
      * A sub property of object. The object that is being replaced.
      *
@@ -75,6 +75,4 @@ class ReplaceAction extends UpdateAction
     public function getReplacee() {
         return $this->properties['replacee'];
     }
-
-
 }

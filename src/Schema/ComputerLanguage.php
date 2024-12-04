@@ -27,8 +27,11 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * This type covers computer programming languages such as Scheme and Lisp, as well as other language-like computer representations. Natural languages are best represented with the [[Language]] type.
+ * This type covers computer programming languages such as Scheme and Lisp, as well
+ * as other language-like computer representations. Natural languages are best
+ * represented with the [[Language]] type.
  *
+ * @see https://schema.org/ComputerLanguage
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ComputerLanguage extends Intangible
@@ -37,6 +40,5 @@ class ComputerLanguage extends Intangible
     {
         return new ComputerLanguage('https://schema.org/', 'ComputerLanguage');
     }
-
 
 }

@@ -27,8 +27,13 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * An infectious disease is a clinically evident human disease resulting from the presence of pathogenic microbial agents, like pathogenic viruses, pathogenic bacteria, fungi, protozoa, multicellular parasites, and prions. To be considered an infectious disease, such pathogens are known to be able to cause this disease.
+ * An infectious disease is a clinically evident human disease resulting from the
+ * presence of pathogenic microbial agents, like pathogenic viruses, pathogenic
+ * bacteria, fungi, protozoa, multicellular parasites, and prions. To be considered
+ * an infectious disease, such pathogens are known to be able to cause this
+ * disease.
  *
+ * @see https://schema.org/InfectiousDisease
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class InfectiousDisease extends MedicalCondition
@@ -56,9 +61,9 @@ class InfectiousDisease extends MedicalCondition
     public function getInfectiousAgentClass() {
         return $this->properties['infectiousAgentClass'];
     }
-
     /**
-     * How the disease spreads, either as a route or vector, for example 'direct contact', 'Aedes aegypti', etc.
+     * How the disease spreads, either as a route or vector, for example 'direct
+     * contact', 'Aedes aegypti', etc.
      *
      * @param $transmissionMethod 
      * @return static
@@ -75,7 +80,6 @@ class InfectiousDisease extends MedicalCondition
     public function getTransmissionMethod() {
         return $this->properties['transmissionMethod'];
     }
-
     /**
      * The actual infectious agent, such as a specific bacterium.
      *
@@ -94,6 +98,4 @@ class InfectiousDisease extends MedicalCondition
     public function getInfectiousAgent() {
         return $this->properties['infectiousAgent'];
     }
-
-
 }

@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of transferring money from one place to another place. This may occur electronically or physically.
+ * The act of transferring money from one place to another place. This may occur
+ * electronically or physically.
  *
+ * @see https://schema.org/MoneyTransfer
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MoneyTransfer extends TransferAction
@@ -39,7 +41,9 @@ class MoneyTransfer extends TransferAction
     }
 
     /**
-     * A bank or bank’s branch, financial institution or international financial institution operating the beneficiary’s bank account or releasing funds for the beneficiary.
+     * A bank or bank’s branch, financial institution or international financial
+     * institution operating the beneficiary’s bank account or releasing funds for
+     * the beneficiary.
      *
      * @param $beneficiaryBank |
      * @return static
@@ -56,7 +60,6 @@ class MoneyTransfer extends TransferAction
     public function getBeneficiaryBank() {
         return $this->properties['beneficiaryBank'];
     }
-
     /**
      * The amount of money.
      *
@@ -75,6 +78,4 @@ class MoneyTransfer extends TransferAction
     public function getAmount() {
         return $this->properties['amount'];
     }
-
-
 }

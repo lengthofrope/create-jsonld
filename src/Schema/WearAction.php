@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The act of dressing oneself in clothing.
  *
+ * @see https://schema.org/WearAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class WearAction extends UseAction
@@ -37,6 +38,5 @@ class WearAction extends UseAction
     {
         return new WearAction('https://schema.org/', 'WearAction');
     }
-
 
 }

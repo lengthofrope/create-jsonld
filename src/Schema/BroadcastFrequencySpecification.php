@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The frequency in MHz and the modulation used for a particular BroadcastService.
  *
+ * @see https://schema.org/BroadcastFrequencySpecification
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class BroadcastFrequencySpecification extends Intangible
@@ -56,7 +57,6 @@ class BroadcastFrequencySpecification extends Intangible
     public function getBroadcastSubChannel() {
         return $this->properties['broadcastSubChannel'];
     }
-
     /**
      * The modulation (e.g. FM, AM, etc) used by a particular broadcast service.
      *
@@ -75,7 +75,6 @@ class BroadcastFrequencySpecification extends Intangible
     public function getBroadcastSignalModulation() {
         return $this->properties['broadcastSignalModulation'];
     }
-
     /**
      * The frequency in MHz for a particular broadcast.
      *
@@ -94,6 +93,4 @@ class BroadcastFrequencySpecification extends Intangible
     public function getBroadcastFrequencyValue() {
         return $this->properties['broadcastFrequencyValue'];
     }
-
-
 }

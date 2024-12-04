@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * An organization that provides flights for passengers.
  *
+ * @see https://schema.org/Airline
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Airline extends Organization
@@ -39,7 +40,8 @@ class Airline extends Organization
     }
 
     /**
-     * The type of boarding policy used by the airline (e.g. zone-based or group-based).
+     * The type of boarding policy used by the airline (e.g. zone-based or
+     * group-based).
      *
      * @param $boardingPolicy 
      * @return static
@@ -56,7 +58,6 @@ class Airline extends Organization
     public function getBoardingPolicy() {
         return $this->properties['boardingPolicy'];
     }
-
     /**
      * IATA identifier for an airline or airport.
      *
@@ -75,6 +76,4 @@ class Airline extends Organization
     public function getIataCode() {
         return $this->properties['iataCode'];
     }
-
-
 }

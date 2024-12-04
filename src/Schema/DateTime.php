@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] (see Chapter 5.4 of ISO 8601).
+ * A combination of date and time of day in the form
+ * [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] (see Chapter 5.4 of ISO 8601).
  *
+ * @see https://schema.org/DateTime
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class DateTime extends \LengthOfRope\JSONLD\Elements\Element
@@ -37,6 +39,5 @@ class DateTime extends \LengthOfRope\JSONLD\Elements\Element
     {
         return new DateTime('https://schema.org/', 'DateTime');
     }
-
 
 }

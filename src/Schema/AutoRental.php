@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A car rental business.
  *
+ * @see https://schema.org/AutoRental
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class AutoRental extends AutomotiveBusiness
@@ -37,6 +38,5 @@ class AutoRental extends AutomotiveBusiness
     {
         return new AutoRental('https://schema.org/', 'AutoRental');
     }
-
 
 }

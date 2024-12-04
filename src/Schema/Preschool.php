@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A preschool.
  *
+ * @see https://schema.org/Preschool
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Preschool extends EducationalOrganization
@@ -37,6 +38,5 @@ class Preschool extends EducationalOrganization
     {
         return new Preschool('https://schema.org/', 'Preschool');
     }
-
 
 }

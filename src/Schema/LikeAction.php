@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of expressing a positive sentiment about the object. An agent likes an object (a proposition, topic or theme) with participants.
+ * The act of expressing a positive sentiment about the object. An agent likes an
+ * object (a proposition, topic or theme) with participants.
  *
+ * @see https://schema.org/LikeAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class LikeAction extends ReactAction
@@ -37,6 +39,5 @@ class LikeAction extends ReactAction
     {
         return new LikeAction('https://schema.org/', 'LikeAction');
     }
-
 
 }

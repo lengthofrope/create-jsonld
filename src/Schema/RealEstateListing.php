@@ -27,10 +27,13 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A [[RealEstateListing]] is a listing that describes one or more real-estate [[Offer]]s (whose [[businessFunction]] is typically to lease out, or to sell).
- * *    The [[RealEstateListing]] type itself represents the overall listing, as manifested in some [[WebPage]].
- *   
+ * A [[RealEstateListing]] is a listing that describes one or more real-estate
+ * [[Offer]]s (whose [[businessFunction]] is typically to lease out, or to sell).
+ * * *    The [[RealEstateListing]] type itself represents the overall listing, as
+ * manifested in some [[WebPage]].
+ * *
  *
+ * @see https://schema.org/RealEstateListing
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class RealEstateListing extends WebPage
@@ -58,9 +61,9 @@ class RealEstateListing extends WebPage
     public function getDatePosted() {
         return $this->properties['datePosted'];
     }
-
     /**
-     * Length of the lease for some [[Accommodation]], either particular to some [[Offer]] or in some cases intrinsic to the property.
+     * Length of the lease for some [[Accommodation]], either particular to some
+     * [[Offer]] or in some cases intrinsic to the property.
      *
      * @param $leaseLength |
      * @return static
@@ -77,6 +80,4 @@ class RealEstateListing extends WebPage
     public function getLeaseLength() {
         return $this->properties['leaseLength'];
     }
-
-
 }

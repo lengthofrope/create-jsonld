@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The publication format of the book.
  *
+ * @see https://schema.org/BookFormatType
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class BookFormatType extends Enumeration
@@ -37,6 +38,5 @@ class BookFormatType extends Enumeration
     {
         return new BookFormatType('https://schema.org/', 'BookFormatType');
     }
-
 
 }

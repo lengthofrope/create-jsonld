@@ -27,8 +27,17 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A FloorPlan is an explicit representation of a collection of similar accommodations, allowing the provision of common information (room counts, sizes, layout diagrams) and offers for rental or sale. In typical use, some [[ApartmentComplex]] has an [[accommodationFloorPlan]] which is a [[FloorPlan]].  A FloorPlan is always in the context of a particular place, either a larger [[ApartmentComplex]] or a single [[Apartment]]. The visual/spatial aspects of a floor plan (i.e. room layout, [see wikipedia](https://en.wikipedia.org/wiki/Floor_plan)) can be indicated using [[image]]. 
+ * A FloorPlan is an explicit representation of a collection of similar
+ * accommodations, allowing the provision of common information (room counts,
+ * sizes, layout diagrams) and offers for rental or sale. In typical use, some
+ * [[ApartmentComplex]] has an [[accommodationFloorPlan]] which is a [[FloorPlan]].
+ * A FloorPlan is always in the context of a particular place, either a larger
+ * [[ApartmentComplex]] or a single [[Apartment]]. The visual/spatial aspects of a
+ * floor plan (i.e. room layout, [see
+ * wikipedia](https://en.wikipedia.org/wiki/Floor_plan)) can be indicated using
+ * [[image]].
  *
+ * @see https://schema.org/FloorPlan
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class FloorPlan extends Intangible
@@ -40,7 +49,8 @@ class FloorPlan extends Intangible
 
     /**
      * The size of the accommodation, e.g. in square meter or squarefoot.
-Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for square yard.
+     * Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for
+     * square yard.
      *
      * @param $floorSize 
      * @return static
@@ -57,7 +67,6 @@ Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for squa
     public function getFloorSize() {
         return $this->properties['floorSize'];
     }
-
     /**
      * Indicates some accommodation that this floor plan describes.
      *
@@ -76,9 +85,9 @@ Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for squa
     public function getIsPlanForApartment() {
         return $this->properties['isPlanForApartment'];
     }
-
     /**
-     * Indicates whether pets are allowed to enter the accommodation or lodging business. More detailed information can be put in a text value.
+     * Indicates whether pets are allowed to enter the accommodation or lodging
+     * business. More detailed information can be put in a text value.
      *
      * @param $petsAllowed |
      * @return static
@@ -95,9 +104,9 @@ Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for squa
     public function getPetsAllowed() {
         return $this->properties['petsAllowed'];
     }
-
     /**
-     * The total integer number of bedrooms in a some [[Accommodation]], [[ApartmentComplex]] or [[FloorPlan]].
+     * The total integer number of bedrooms in a some [[Accommodation]],
+     * [[ApartmentComplex]] or [[FloorPlan]].
      *
      * @param $numberOfBedrooms |
      * @return static
@@ -114,9 +123,13 @@ Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for squa
     public function getNumberOfBedrooms() {
         return $this->properties['numberOfBedrooms'];
     }
-
     /**
-     * The total integer number of bathrooms in some [[Accommodation]], following real estate conventions as [documented in RESO](https://ddwiki.reso.org/display/DDW17/BathroomsTotalInteger+Field): "The simple sum of the number of bathrooms. For example for a property with two Full Bathrooms and one Half Bathroom, the Bathrooms Total Integer will be 3.". See also [[numberOfRooms]].
+     * The total integer number of bathrooms in some [[Accommodation]], following real
+     * estate conventions as [documented in
+     * RESO](https://ddwiki.reso.org/display/DDW17/BathroomsTotalInteger+Field): "The
+     * simple sum of the number of bathrooms. For example for a property with two Full
+     * Bathrooms and one Half Bathroom, the Bathrooms Total Integer will be 3.". See
+     * also [[numberOfRooms]].
      *
      * @param $numberOfBathroomsTotal 
      * @return static
@@ -133,7 +146,6 @@ Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for squa
     public function getNumberOfBathroomsTotal() {
         return $this->properties['numberOfBathroomsTotal'];
     }
-
     /**
      * A schematic image showing the floorplan layout.
      *
@@ -152,9 +164,11 @@ Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for squa
     public function getLayoutImage() {
         return $this->properties['layoutImage'];
     }
-
     /**
-     * Indicates the number of available accommodation units in an [[ApartmentComplex]], or the number of accommodation units for a specific [[FloorPlan]] (within its specific [[ApartmentComplex]]). See also [[numberOfAccommodationUnits]].
+     * Indicates the number of available accommodation units in an
+     * [[ApartmentComplex]], or the number of accommodation units for a specific
+     * [[FloorPlan]] (within its specific [[ApartmentComplex]]). See also
+     * [[numberOfAccommodationUnits]].
      *
      * @param $numberOfAvailableAccommodationUnits 
      * @return static
@@ -171,9 +185,10 @@ Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for squa
     public function getNumberOfAvailableAccommodationUnits() {
         return $this->properties['numberOfAvailableAccommodationUnits'];
     }
-
     /**
-     * Number of full bathrooms - The total number of full and ¾ bathrooms in an [[Accommodation]]. This corresponds to the [BathroomsFull field in RESO](https://ddwiki.reso.org/display/DDW17/BathroomsFull+Field).
+     * Number of full bathrooms - The total number of full and ¾ bathrooms in an
+     * [[Accommodation]]. This corresponds to the [BathroomsFull field in
+     * RESO](https://ddwiki.reso.org/display/DDW17/BathroomsFull+Field).
      *
      * @param $numberOfFullBathrooms 
      * @return static
@@ -190,9 +205,11 @@ Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for squa
     public function getNumberOfFullBathrooms() {
         return $this->properties['numberOfFullBathrooms'];
     }
-
     /**
-     * Indicates the total (available plus unavailable) number of accommodation units in an [[ApartmentComplex]], or the number of accommodation units for a specific [[FloorPlan]] (within its specific [[ApartmentComplex]]). See also [[numberOfAvailableAccommodationUnits]].
+     * Indicates the total (available plus unavailable) number of accommodation units
+     * in an [[ApartmentComplex]], or the number of accommodation units for a specific
+     * [[FloorPlan]] (within its specific [[ApartmentComplex]]). See also
+     * [[numberOfAvailableAccommodationUnits]].
      *
      * @param $numberOfAccommodationUnits 
      * @return static
@@ -209,10 +226,11 @@ Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for squa
     public function getNumberOfAccommodationUnits() {
         return $this->properties['numberOfAccommodationUnits'];
     }
-
     /**
-     * The number of rooms (excluding bathrooms and closets) of the accommodation or lodging business.
-Typical unit code(s): ROM for room or C62 for no unit. The type of room can be put in the unitText property of the QuantitativeValue.
+     * The number of rooms (excluding bathrooms and closets) of the accommodation or
+     * lodging business.
+     * Typical unit code(s): ROM for room or C62 for no unit. The type of room can be
+     * put in the unitText property of the QuantitativeValue.
      *
      * @param $numberOfRooms |
      * @return static
@@ -229,9 +247,10 @@ Typical unit code(s): ROM for room or C62 for no unit. The type of room can be p
     public function getNumberOfRooms() {
         return $this->properties['numberOfRooms'];
     }
-
     /**
-     * An amenity feature (e.g. a characteristic or service) of the Accommodation. This generic property does not make a statement about whether the feature is included in an offer for the main accommodation or available at extra costs.
+     * An amenity feature (e.g. a characteristic or service) of the Accommodation. This
+     * generic property does not make a statement about whether the feature is included
+     * in an offer for the main accommodation or available at extra costs.
      *
      * @param $amenityFeature 
      * @return static
@@ -248,9 +267,10 @@ Typical unit code(s): ROM for room or C62 for no unit. The type of room can be p
     public function getAmenityFeature() {
         return $this->properties['amenityFeature'];
     }
-
     /**
-     * Number of partial bathrooms - The total number of half and ¼ bathrooms in an [[Accommodation]]. This corresponds to the [BathroomsPartial field in RESO](https://ddwiki.reso.org/display/DDW17/BathroomsPartial+Field). 
+     * Number of partial bathrooms - The total number of half and ¼ bathrooms in an
+     * [[Accommodation]]. This corresponds to the [BathroomsPartial field in
+     * RESO](https://ddwiki.reso.org/display/DDW17/BathroomsPartial+Field).
      *
      * @param $numberOfPartialBathrooms 
      * @return static
@@ -267,6 +287,4 @@ Typical unit code(s): ROM for room or C62 for no unit. The type of room can be p
     public function getNumberOfPartialBathrooms() {
         return $this->properties['numberOfPartialBathrooms'];
     }
-
-
 }

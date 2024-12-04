@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The act of generating a comment about a subject.
  *
+ * @see https://schema.org/CommentAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class CommentAction extends CommunicateAction
@@ -39,7 +40,8 @@ class CommentAction extends CommunicateAction
     }
 
     /**
-     * A sub property of result. The Comment created or sent as a result of this action.
+     * A sub property of result. The Comment created or sent as a result of this
+     * action.
      *
      * @param $resultComment 
      * @return static
@@ -56,6 +58,4 @@ class CommentAction extends CommunicateAction
     public function getResultComment() {
         return $this->properties['resultComment'];
     }
-
-
 }

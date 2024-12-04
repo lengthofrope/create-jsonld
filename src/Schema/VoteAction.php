@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of expressing a preference from a fixed/finite/structured set of choices/options.
+ * The act of expressing a preference from a fixed/finite/structured set of
+ * choices/options.
  *
+ * @see https://schema.org/VoteAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class VoteAction extends ChooseAction
@@ -56,6 +58,4 @@ class VoteAction extends ChooseAction
     public function getCandidate() {
         return $this->properties['candidate'];
     }
-
-
 }

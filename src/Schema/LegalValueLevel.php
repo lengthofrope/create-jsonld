@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A list of possible levels for the legal validity of a legislation.
  *
+ * @see https://schema.org/LegalValueLevel
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class LegalValueLevel extends Enumeration
@@ -37,6 +38,5 @@ class LegalValueLevel extends Enumeration
     {
         return new LegalValueLevel('https://schema.org/', 'LegalValueLevel');
     }
-
 
 }

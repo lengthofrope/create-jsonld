@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A date value in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601).
  *
+ * @see https://schema.org/Date
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Date extends \LengthOfRope\JSONLD\Elements\Element
@@ -37,6 +38,5 @@ class Date extends \LengthOfRope\JSONLD\Elements\Element
     {
         return new Date('https://schema.org/', 'Date');
     }
-
 
 }

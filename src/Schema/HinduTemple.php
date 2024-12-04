@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A Hindu temple.
  *
+ * @see https://schema.org/HinduTemple
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class HinduTemple extends PlaceOfWorship
@@ -37,6 +38,5 @@ class HinduTemple extends PlaceOfWorship
     {
         return new HinduTemple('https://schema.org/', 'HinduTemple');
     }
-
 
 }

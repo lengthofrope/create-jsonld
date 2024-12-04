@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A profession, may involve prolonged training and/or a formal qualification.
  *
+ * @see https://schema.org/Occupation
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Occupation extends Intangible
@@ -56,7 +57,6 @@ class Occupation extends Intangible
     public function getQualifications() {
         return $this->properties['qualifications'];
     }
-
     /**
      * Description of skills and experience needed for the position or Occupation.
      *
@@ -75,9 +75,11 @@ class Occupation extends Intangible
     public function getExperienceRequirements() {
         return $this->properties['experienceRequirements'];
     }
-
     /**
-     * An estimated salary for a job posting or occupation, based on a variety of variables including, but not limited to industry, job title, and location. Estimated salaries  are often computed by outside organizations rather than the hiring organization, who may not have committed to the estimated value.
+     * An estimated salary for a job posting or occupation, based on a variety of
+     * variables including, but not limited to industry, job title, and location.
+     * Estimated salaries  are often computed by outside organizations rather than the
+     * hiring organization, who may not have committed to the estimated value.
      *
      * @param $estimatedSalary ||
      * @return static
@@ -94,9 +96,10 @@ class Occupation extends Intangible
     public function getEstimatedSalary() {
         return $this->properties['estimatedSalary'];
     }
-
     /**
-     * A statement of knowledge, skill, ability, task or any other assertion expressing a competency that is either claimed by a person, an organization or desired or required to fulfill a role or to work in an occupation.
+     * A statement of knowledge, skill, ability, task or any other assertion expressing
+     * a competency that is either claimed by a person, an organization or desired or
+     * required to fulfill a role or to work in an occupation.
      *
      * @param $skills |
      * @return static
@@ -113,10 +116,16 @@ class Occupation extends Intangible
     public function getSkills() {
         return $this->properties['skills'];
     }
-
     /**
-     * A category describing the job, preferably using a term from a taxonomy such as [BLS O*NET-SOC](http://www.onetcenter.org/taxonomy.html), [ISCO-08](https://www.ilo.org/public/english/bureau/stat/isco/isco08/) or similar, with the property repeated for each applicable value. Ideally the taxonomy should be identified, and both the textual label and formal code for the category should be provided.\n
-Note: for historical reasons, any textual label and formal code provided as a literal may be assumed to be from O*NET-SOC.
+     * A category describing the job, preferably using a term from a taxonomy such as
+     * [BLS O*NET-SOC](http://www.onetcenter.org/taxonomy.html),
+     * [ISCO-08](https://www.ilo.org/public/english/bureau/stat/isco/isco08/) or
+     * similar, with the property repeated for each applicable value. Ideally the
+     * taxonomy should be identified, and both the textual label and formal code for
+     * the category should be provided.
+     *
+     * Note: for historical reasons, any textual label and formal code provided as a
+     * literal may be assumed to be from O*NET-SOC.
      *
      * @param $occupationalCategory |
      * @return static
@@ -133,7 +142,6 @@ Note: for historical reasons, any textual label and formal code provided as a li
     public function getOccupationalCategory() {
         return $this->properties['occupationalCategory'];
     }
-
     /**
      * Responsibilities associated with this role or Occupation.
      *
@@ -152,9 +160,9 @@ Note: for historical reasons, any textual label and formal code provided as a li
     public function getResponsibilities() {
         return $this->properties['responsibilities'];
     }
-
     /**
-     *  The region/country for which this occupational description is appropriate. Note that educational requirements and qualifications can vary between jurisdictions.
+     * The region/country for which this occupational description is appropriate. Note
+     * that educational requirements and qualifications can vary between jurisdictions.
      *
      * @param $occupationLocation 
      * @return static
@@ -171,7 +179,6 @@ Note: for historical reasons, any textual label and formal code provided as a li
     public function getOccupationLocation() {
         return $this->properties['occupationLocation'];
     }
-
     /**
      * Educational background needed for the position or Occupation.
      *
@@ -190,6 +197,4 @@ Note: for historical reasons, any textual label and formal code provided as a li
     public function getEducationRequirements() {
         return $this->properties['educationRequirements'];
     }
-
-
 }

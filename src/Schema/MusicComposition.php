@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A musical composition.
  *
+ * @see https://schema.org/MusicComposition
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MusicComposition extends CreativeWork
@@ -56,7 +57,6 @@ class MusicComposition extends CreativeWork
     public function getFirstPerformance() {
         return $this->properties['firstPerformance'];
     }
-
     /**
      * An audio recording of the work.
      *
@@ -75,7 +75,6 @@ class MusicComposition extends CreativeWork
     public function getRecordedAs() {
         return $this->properties['recordedAs'];
     }
-
     /**
      * The words in the song.
      *
@@ -94,7 +93,6 @@ class MusicComposition extends CreativeWork
     public function getLyrics() {
         return $this->properties['lyrics'];
     }
-
     /**
      * The International Standard Musical Work Code for the composition.
      *
@@ -113,7 +111,6 @@ class MusicComposition extends CreativeWork
     public function getIswcCode() {
         return $this->properties['iswcCode'];
     }
-
     /**
      * Smaller compositions included in this work (e.g. a movement in a symphony).
      *
@@ -132,7 +129,6 @@ class MusicComposition extends CreativeWork
     public function getIncludedComposition() {
         return $this->properties['includedComposition'];
     }
-
     /**
      * The person who wrote the words.
      *
@@ -151,7 +147,6 @@ class MusicComposition extends CreativeWork
     public function getLyricist() {
         return $this->properties['lyricist'];
     }
-
     /**
      * An arrangement derived from the composition.
      *
@@ -170,7 +165,6 @@ class MusicComposition extends CreativeWork
     public function getMusicArrangement() {
         return $this->properties['musicArrangement'];
     }
-
     /**
      * The type of composition (e.g. overture, sonata, symphony, etc.).
      *
@@ -189,7 +183,6 @@ class MusicComposition extends CreativeWork
     public function getMusicCompositionForm() {
         return $this->properties['musicCompositionForm'];
     }
-
     /**
      * The key, mode, or scale this composition uses.
      *
@@ -208,9 +201,9 @@ class MusicComposition extends CreativeWork
     public function getMusicalKey() {
         return $this->properties['musicalKey'];
     }
-
     /**
-     * The person or organization who wrote a composition, or who is the composer of a work performed at some event.
+     * The person or organization who wrote a composition, or who is the composer of a
+     * work performed at some event.
      *
      * @param $composer |
      * @return static
@@ -227,6 +220,4 @@ class MusicComposition extends CreativeWork
     public function getComposer() {
         return $this->properties['composer'];
     }
-
-
 }

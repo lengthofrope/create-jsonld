@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of transferring/moving (abstract or concrete) animate or inanimate objects from one place to another.
+ * The act of transferring/moving (abstract or concrete) animate or inanimate
+ * objects from one place to another.
  *
+ * @see https://schema.org/TransferAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class TransferAction extends Action
@@ -39,7 +41,8 @@ class TransferAction extends Action
     }
 
     /**
-     * A sub property of location. The final location of the object or the agent after the action.
+     * A sub property of location. The final location of the object or the agent after
+     * the action.
      *
      * @param $toLocation 
      * @return static
@@ -56,9 +59,9 @@ class TransferAction extends Action
     public function getToLocation() {
         return $this->properties['toLocation'];
     }
-
     /**
-     * A sub property of location. The original location of the object or the agent before the action.
+     * A sub property of location. The original location of the object or the agent
+     * before the action.
      *
      * @param $fromLocation 
      * @return static
@@ -75,6 +78,4 @@ class TransferAction extends Action
     public function getFromLocation() {
         return $this->properties['fromLocation'];
     }
-
-
 }

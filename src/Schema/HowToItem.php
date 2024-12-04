@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * An item used as either a tool or supply when performing the instructions for how to achieve a result.
+ * An item used as either a tool or supply when performing the instructions for how
+ * to achieve a result.
  *
+ * @see https://schema.org/HowToItem
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class HowToItem extends ListItem
@@ -56,6 +58,4 @@ class HowToItem extends ListItem
     public function getRequiredQuantity() {
         return $this->properties['requiredQuantity'];
     }
-
-
 }

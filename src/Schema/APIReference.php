@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Reference documentation for application programming interfaces (APIs).
  *
+ * @see https://schema.org/APIReference
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class APIReference extends TechArticle
@@ -56,7 +57,6 @@ class APIReference extends TechArticle
     public function getTargetPlatform() {
         return $this->properties['targetPlatform'];
     }
-
     /**
      * Library file name, e.g., mscorlib.dll, system.web.dll.
      *
@@ -75,7 +75,6 @@ class APIReference extends TechArticle
     public function getExecutableLibraryName() {
         return $this->properties['executableLibraryName'];
     }
-
     /**
      * Associated product/technology version. E.g., .NET Framework 4.5.
      *
@@ -94,7 +93,6 @@ class APIReference extends TechArticle
     public function getAssemblyVersion() {
         return $this->properties['assemblyVersion'];
     }
-
     /**
      * Indicates whether API is managed or unmanaged.
      *
@@ -113,7 +111,6 @@ class APIReference extends TechArticle
     public function getProgrammingModel() {
         return $this->properties['programmingModel'];
     }
-
     /**
      * Library file name, e.g., mscorlib.dll, system.web.dll.
      *
@@ -132,6 +129,4 @@ class APIReference extends TechArticle
     public function getAssembly() {
         return $this->properties['assembly'];
     }
-
-
 }

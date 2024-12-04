@@ -27,8 +27,11 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A Workers Union (also known as a Labor Union, Labour Union, or Trade Union) is an organization that promotes the interests of its worker members by collectively bargaining with management, organizing, and political lobbying.
+ * A Workers Union (also known as a Labor Union, Labour Union, or Trade Union) is
+ * an organization that promotes the interests of its worker members by
+ * collectively bargaining with management, organizing, and political lobbying.
  *
+ * @see https://schema.org/WorkersUnion
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class WorkersUnion extends Organization
@@ -37,6 +40,5 @@ class WorkersUnion extends Organization
     {
         return new WorkersUnion('https://schema.org/', 'WorkersUnion');
     }
-
 
 }

@@ -178,8 +178,8 @@ class Build
             mkdir($dir, 0777, true);
         }
 
-        $loader = new \Twig_Loader_Filesystem(dirname(dirname(__DIR__)) . '/tools/');
-        $twig   = new \Twig_Environment($loader);
+        $loader = new \Twig\Loader\FilesystemLoader(dirname(dirname(__DIR__)) . '/tools/');
+        $twig   = new \Twig\Environment($loader);
 
         foreach ($this->types['rdfs:Class'] as $item) {
             $label = is_object($item->{'rdfs:label'})  ? $item->{'rdfs:label'}->{'@value'} : $item->{'rdfs:label'};
@@ -222,9 +222,14 @@ class Build
             $context = @explode(":", $item->{'@id'});
             $context = $this->schema->{'@context'}->{$context[0]};
 
+            // Multiline property comments
+            foreach ($item->props as $key => $prop) {
+                $item->props[$key]['comment'] = $this->multiline($prop['comment'], 80, 5);
+            }
+
             $content = $twig->render('template.twig', array(
                 'class'        => $class,
-                'classcomment' => $comment,
+                'classcomment' => $this->multiline($comment),
                 'classExtends' => $classextends,
                 'properties'   => $item->props,
                 'context'      => $context,
@@ -234,6 +239,35 @@ class Build
 
             file_put_contents($file, $content);
         }
+    }
+
+    /**
+     * Shorten lines to a maximum length and add * to the beginning of each line
+     *
+     * @param string $longLine
+     * @param int $maxLength
+     * @param int $indent
+     * @return string with EOL tags
+     */
+    private function multiline(string $longLine, int $maxLength = 80, int $indent = 1): string
+    {
+        // Convert \n to PHP_EOL
+        $longLine = str_replace('\n', PHP_EOL, $longLine);
+
+        $lines = explode(PHP_EOL, wordwrap($longLine, $maxLength));
+        $shortened = '';
+        foreach ($lines as $line) {
+            $line = trim($line);
+            if (strlen($line) !== 0) {
+                $line = ' ' . $line;
+            }
+            $shortened .= str_pad('*', $indent + 1, ' ', STR_PAD_LEFT) . $line . PHP_EOL;
+        }
+
+        // Remove last EOL
+        $shortened = substr($shortened, 0, -1);
+
+        return $shortened;
     }
 
 }

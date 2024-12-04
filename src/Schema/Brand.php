@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A brand is a name used by an organization or business person for labeling a product, product group, or similar.
+ * A brand is a name used by an organization or business person for labeling a
+ * product, product group, or similar.
  *
+ * @see https://schema.org/Brand
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Brand extends Intangible
@@ -56,7 +58,6 @@ class Brand extends Intangible
     public function getLogo() {
         return $this->properties['logo'];
     }
-
     /**
      * A review of the item.
      *
@@ -75,7 +76,6 @@ class Brand extends Intangible
     public function getReview() {
         return $this->properties['review'];
     }
-
     /**
      * A slogan or motto associated with the item.
      *
@@ -94,7 +94,6 @@ class Brand extends Intangible
     public function getSlogan() {
         return $this->properties['slogan'];
     }
-
     /**
      * The overall rating, based on a collection of reviews or ratings, of the item.
      *
@@ -113,6 +112,4 @@ class Brand extends Intangible
     public function getAggregateRating() {
         return $this->properties['aggregateRating'];
     }
-
-
 }

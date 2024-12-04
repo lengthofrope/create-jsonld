@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A music recording (track), usually a single song.
  *
+ * @see https://schema.org/MusicRecording
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MusicRecording extends CreativeWork
@@ -56,7 +57,6 @@ class MusicRecording extends CreativeWork
     public function getInPlaylist() {
         return $this->properties['inPlaylist'];
     }
-
     /**
      * The International Standard Recording Code for the recording.
      *
@@ -75,7 +75,6 @@ class MusicRecording extends CreativeWork
     public function getIsrcCode() {
         return $this->properties['isrcCode'];
     }
-
     /**
      * The artist that performed this album or recording.
      *
@@ -94,9 +93,9 @@ class MusicRecording extends CreativeWork
     public function getByArtist() {
         return $this->properties['byArtist'];
     }
-
     /**
-     * The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
+     * The duration of the item (movie, audio recording, event, etc.) in [ISO 8601
+     * duration format](http://en.wikipedia.org/wiki/ISO_8601).
      *
      * @param $duration 
      * @return static
@@ -113,7 +112,6 @@ class MusicRecording extends CreativeWork
     public function getDuration() {
         return $this->properties['duration'];
     }
-
     /**
      * The composition this track is a recording of.
      *
@@ -132,7 +130,6 @@ class MusicRecording extends CreativeWork
     public function getRecordingOf() {
         return $this->properties['recordingOf'];
     }
-
     /**
      * The album to which this recording belongs.
      *
@@ -151,6 +148,4 @@ class MusicRecording extends CreativeWork
     public function getInAlbum() {
         return $this->properties['inAlbum'];
     }
-
-
 }

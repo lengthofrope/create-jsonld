@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Level of evidence for a medical guideline. Enumerated type.
  *
+ * @see https://schema.org/MedicalEvidenceLevel
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MedicalEvidenceLevel extends MedicalEnumeration
@@ -37,6 +38,5 @@ class MedicalEvidenceLevel extends MedicalEnumeration
     {
         return new MedicalEvidenceLevel('https://schema.org/', 'MedicalEvidenceLevel');
     }
-
 
 }

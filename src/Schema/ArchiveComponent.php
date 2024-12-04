@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * An intangible type to be applied to any archive content, carrying with it a set of properties required to describe archival items and collections.
+ * An intangible type to be applied to any archive content, carrying with it a set
+ * of properties required to describe archival items and collections.
  *
+ * @see https://schema.org/ArchiveComponent
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ArchiveComponent extends CreativeWork
@@ -37,6 +39,5 @@ class ArchiveComponent extends CreativeWork
     {
         return new ArchiveComponent('https://schema.org/', 'ArchiveComponent');
     }
-
 
 }

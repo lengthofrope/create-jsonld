@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Properties that take Distances as values are of the form '&lt;Number&gt; &lt;Length unit of measure&gt;'. E.g., '7 ft'.
+ * Properties that take Distances as values are of the form '&lt;Number&gt;
+ * &lt;Length unit of measure&gt;'. E.g., '7 ft'.
  *
+ * @see https://schema.org/Distance
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Distance extends Quantity
@@ -37,6 +39,5 @@ class Distance extends Quantity
     {
         return new Distance('https://schema.org/', 'Distance');
     }
-
 
 }

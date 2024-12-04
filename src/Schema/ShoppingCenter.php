@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A shopping center or mall.
  *
+ * @see https://schema.org/ShoppingCenter
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ShoppingCenter extends LocalBusiness
@@ -37,6 +38,5 @@ class ShoppingCenter extends LocalBusiness
     {
         return new ShoppingCenter('https://schema.org/', 'ShoppingCenter');
     }
-
 
 }

@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Rigid connective tissue that comprises up the skeletal structure of the human body.
+ * Rigid connective tissue that comprises up the skeletal structure of the human
+ * body.
  *
+ * @see https://schema.org/Bone
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Bone extends AnatomicalStructure
@@ -37,6 +39,5 @@ class Bone extends AnatomicalStructure
     {
         return new Bone('https://schema.org/', 'Bone');
     }
-
 
 }

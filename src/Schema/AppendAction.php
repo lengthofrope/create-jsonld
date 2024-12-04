@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The act of inserting at the end if an ordered collection.
  *
+ * @see https://schema.org/AppendAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class AppendAction extends InsertAction
@@ -37,6 +38,5 @@ class AppendAction extends InsertAction
     {
         return new AppendAction('https://schema.org/', 'AppendAction');
     }
-
 
 }

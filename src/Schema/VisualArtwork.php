@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A work of art that is primarily visual in character.
  *
+ * @see https://schema.org/VisualArtwork
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class VisualArtwork extends CreativeWork
@@ -39,7 +40,8 @@ class VisualArtwork extends CreativeWork
     }
 
     /**
-     * A material used as a surface in some artwork, e.g. Canvas, Paper, Wood, Board, etc.
+     * A material used as a surface in some artwork, e.g. Canvas, Paper, Wood, Board,
+     * etc.
      *
      * @param $surface |
      * @return static
@@ -56,9 +58,9 @@ class VisualArtwork extends CreativeWork
     public function getSurface() {
         return $this->properties['surface'];
     }
-
     /**
-     * The individual who adds lettering, including speech balloons and sound effects, to artwork.
+     * The individual who adds lettering, including speech balloons and sound effects,
+     * to artwork.
      *
      * @param $letterer 
      * @return static
@@ -75,9 +77,9 @@ class VisualArtwork extends CreativeWork
     public function getLetterer() {
         return $this->properties['letterer'];
     }
-
     /**
-     * The individual who traces over the pencil drawings in ink after pencils are complete.
+     * The individual who traces over the pencil drawings in ink after pencils are
+     * complete.
      *
      * @param $inker 
      * @return static
@@ -94,9 +96,10 @@ class VisualArtwork extends CreativeWork
     public function getInker() {
         return $this->properties['inker'];
     }
-
     /**
-     * The material used. (E.g. Oil, Watercolour, Acrylic, Linoprint, Marble, Cyanotype, Digital, Lithograph, DryPoint, Intaglio, Pastel, Woodcut, Pencil, Mixed Media, etc.)
+     * The material used. (E.g. Oil, Watercolour, Acrylic, Linoprint, Marble,
+     * Cyanotype, Digital, Lithograph, DryPoint, Intaglio, Pastel, Woodcut, Pencil,
+     * Mixed Media, etc.)
      *
      * @param $artMedium |
      * @return static
@@ -113,7 +116,6 @@ class VisualArtwork extends CreativeWork
     public function getArtMedium() {
         return $this->properties['artMedium'];
     }
-
     /**
      * The individual who adds color to inked drawings.
      *
@@ -132,9 +134,10 @@ class VisualArtwork extends CreativeWork
     public function getColorist() {
         return $this->properties['colorist'];
     }
-
     /**
-     * The number of copies when multiple copies of a piece of artwork are produced - e.g. for a limited edition of 20 prints, 'artEdition' refers to the total number of copies (in this example "20").
+     * The number of copies when multiple copies of a piece of artwork are produced -
+     * e.g. for a limited edition of 20 prints, 'artEdition' refers to the total number
+     * of copies (in this example "20").
      *
      * @param $artEdition |
      * @return static
@@ -151,7 +154,6 @@ class VisualArtwork extends CreativeWork
     public function getArtEdition() {
         return $this->properties['artEdition'];
     }
-
     /**
      * The supporting materials for the artwork, e.g. Canvas, Paper, Wood, Board, etc.
      *
@@ -170,11 +172,10 @@ class VisualArtwork extends CreativeWork
     public function getArtworkSurface() {
         return $this->properties['artworkSurface'];
     }
-
     /**
      * The primary artist for a work
-    	in a medium other than pencils or digital line art--for example, if the
-    	primary artwork is done in watercolors or digital paints.
+     * in a medium other than pencils or digital line art--for example, if the
+     * primary artwork is done in watercolors or digital paints.
      *
      * @param $artist 
      * @return static
@@ -191,7 +192,6 @@ class VisualArtwork extends CreativeWork
     public function getArtist() {
         return $this->properties['artist'];
     }
-
     /**
      * The height of the item.
      *
@@ -210,7 +210,6 @@ class VisualArtwork extends CreativeWork
     public function getHeight() {
         return $this->properties['height'];
     }
-
     /**
      * e.g. Painting, Drawing, Sculpture, Print, Photograph, Assemblage, Collage, etc.
      *
@@ -229,7 +228,6 @@ class VisualArtwork extends CreativeWork
     public function getArtform() {
         return $this->properties['artform'];
     }
-
     /**
      * The width of the item.
      *
@@ -248,7 +246,6 @@ class VisualArtwork extends CreativeWork
     public function getWidth() {
         return $this->properties['width'];
     }
-
     /**
      * The individual who draws the primary narrative artwork.
      *
@@ -267,7 +264,6 @@ class VisualArtwork extends CreativeWork
     public function getPenciler() {
         return $this->properties['penciler'];
     }
-
     /**
      * The weight of the product or person.
      *
@@ -286,7 +282,6 @@ class VisualArtwork extends CreativeWork
     public function getWeight() {
         return $this->properties['weight'];
     }
-
     /**
      * The depth of the item.
      *
@@ -305,6 +300,4 @@ class VisualArtwork extends CreativeWork
     public function getDepth() {
         return $this->properties['depth'];
     }
-
-
 }

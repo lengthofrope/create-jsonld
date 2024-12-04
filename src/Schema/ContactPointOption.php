@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Enumerated options related to a ContactPoint.
  *
+ * @see https://schema.org/ContactPointOption
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ContactPointOption extends Enumeration
@@ -37,6 +38,5 @@ class ContactPointOption extends Enumeration
     {
         return new ContactPointOption('https://schema.org/', 'ContactPointOption');
     }
-
 
 }

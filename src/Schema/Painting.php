@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A painting.
  *
+ * @see https://schema.org/Painting
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Painting extends CreativeWork
@@ -37,6 +38,5 @@ class Painting extends CreativeWork
     {
         return new Painting('https://schema.org/', 'Painting');
     }
-
 
 }

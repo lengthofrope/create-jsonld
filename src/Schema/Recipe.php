@@ -27,8 +27,11 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A recipe. For dietary restrictions covered by the recipe, a few common restrictions are enumerated via [[suitableForDiet]]. The [[keywords]] property can also be used to add more detail.
+ * A recipe. For dietary restrictions covered by the recipe, a few common
+ * restrictions are enumerated via [[suitableForDiet]]. The [[keywords]] property
+ * can also be used to add more detail.
  *
+ * @see https://schema.org/Recipe
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Recipe extends HowTo
@@ -56,9 +59,9 @@ class Recipe extends HowTo
     public function getCookingMethod() {
         return $this->properties['cookingMethod'];
     }
-
     /**
-     * The time it takes to actually cook the dish, in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
+     * The time it takes to actually cook the dish, in [ISO 8601 duration
+     * format](http://en.wikipedia.org/wiki/ISO_8601).
      *
      * @param $cookTime 
      * @return static
@@ -75,9 +78,9 @@ class Recipe extends HowTo
     public function getCookTime() {
         return $this->properties['cookTime'];
     }
-
     /**
-     * Indicates a dietary restriction or guideline for which this recipe or menu item is suitable, e.g. diabetic, halal etc.
+     * Indicates a dietary restriction or guideline for which this recipe or menu item
+     * is suitable, e.g. diabetic, halal etc.
      *
      * @param $suitableForDiet 
      * @return static
@@ -94,9 +97,9 @@ class Recipe extends HowTo
     public function getSuitableForDiet() {
         return $this->properties['suitableForDiet'];
     }
-
     /**
-     * The quantity produced by the recipe (for example, number of people served, number of servings, etc).
+     * The quantity produced by the recipe (for example, number of people served,
+     * number of servings, etc).
      *
      * @param $recipeYield |
      * @return static
@@ -113,7 +116,6 @@ class Recipe extends HowTo
     public function getRecipeYield() {
         return $this->properties['recipeYield'];
     }
-
     /**
      * A single ingredient used in the recipe, e.g. sugar, flour or garlic.
      *
@@ -132,9 +134,9 @@ class Recipe extends HowTo
     public function getIngredients() {
         return $this->properties['ingredients'];
     }
-
     /**
-     * A step in making the recipe, in the form of a single item (document, video, etc.) or an ordered list with HowToStep and/or HowToSection items.
+     * A step in making the recipe, in the form of a single item (document, video,
+     * etc.) or an ordered list with HowToStep and/or HowToSection items.
      *
      * @param $recipeInstructions ||
      * @return static
@@ -151,7 +153,6 @@ class Recipe extends HowTo
     public function getRecipeInstructions() {
         return $this->properties['recipeInstructions'];
     }
-
     /**
      * Nutrition information about the recipe or menu item.
      *
@@ -170,7 +171,6 @@ class Recipe extends HowTo
     public function getNutrition() {
         return $this->properties['nutrition'];
     }
-
     /**
      * The category of the recipe—for example, appetizer, entree, etc.
      *
@@ -189,7 +189,6 @@ class Recipe extends HowTo
     public function getRecipeCategory() {
         return $this->properties['recipeCategory'];
     }
-
     /**
      * A single ingredient used in the recipe, e.g. sugar, flour or garlic.
      *
@@ -208,7 +207,6 @@ class Recipe extends HowTo
     public function getRecipeIngredient() {
         return $this->properties['recipeIngredient'];
     }
-
     /**
      * The cuisine of the recipe (for example, French or Ethiopian).
      *
@@ -227,6 +225,4 @@ class Recipe extends HowTo
     public function getRecipeCuisine() {
         return $this->properties['recipeCuisine'];
     }
-
-
 }

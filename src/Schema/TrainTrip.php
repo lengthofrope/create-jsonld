@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A trip on a commercial train line.
  *
+ * @see https://schema.org/TrainTrip
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class TrainTrip extends Trip
@@ -56,7 +57,6 @@ class TrainTrip extends Trip
     public function getTrainName() {
         return $this->properties['trainName'];
     }
-
     /**
      * The station where the train trip ends.
      *
@@ -75,7 +75,6 @@ class TrainTrip extends Trip
     public function getArrivalStation() {
         return $this->properties['arrivalStation'];
     }
-
     /**
      * The station from which the train departs.
      *
@@ -94,7 +93,6 @@ class TrainTrip extends Trip
     public function getDepartureStation() {
         return $this->properties['departureStation'];
     }
-
     /**
      * The unique identifier for the train.
      *
@@ -113,7 +111,6 @@ class TrainTrip extends Trip
     public function getTrainNumber() {
         return $this->properties['trainNumber'];
     }
-
     /**
      * The platform from which the train departs.
      *
@@ -132,7 +129,6 @@ class TrainTrip extends Trip
     public function getDeparturePlatform() {
         return $this->properties['departurePlatform'];
     }
-
     /**
      * The platform where the train arrives.
      *
@@ -151,6 +147,4 @@ class TrainTrip extends Trip
     public function getArrivalPlatform() {
         return $this->properties['arrivalPlatform'];
     }
-
-
 }

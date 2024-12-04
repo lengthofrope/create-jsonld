@@ -27,8 +27,11 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The type of payment method, only for generic payment types, specific forms of payments, like card payment should be expressed using subclasses of PaymentMethod.
+ * The type of payment method, only for generic payment types, specific forms of
+ * payments, like card payment should be expressed using subclasses of
+ * PaymentMethod.
  *
+ * @see https://schema.org/PaymentMethodType
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class PaymentMethodType extends Enumeration
@@ -37,6 +40,5 @@ class PaymentMethodType extends Enumeration
     {
         return new PaymentMethodType('https://schema.org/', 'PaymentMethodType');
     }
-
 
 }

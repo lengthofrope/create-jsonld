@@ -27,8 +27,16 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Data type: Number.\n\nUsage guidelines:\n\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.
+ * Data type: Number.
  *
+ * Usage guidelines:
+ *
+ * * Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE'
+ * (U+0039)) rather than superficially similar Unicode symbols.
+ * * Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal
+ * point. Avoid using these symbols as a readability separator.
+ *
+ * @see https://schema.org/Number
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Number extends \LengthOfRope\JSONLD\Elements\Element
@@ -37,6 +45,5 @@ class Number extends \LengthOfRope\JSONLD\Elements\Element
     {
         return new Number('https://schema.org/', 'Number');
     }
-
 
 }

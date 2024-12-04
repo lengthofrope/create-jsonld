@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A Childcare center.
  *
+ * @see https://schema.org/ChildCare
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ChildCare extends LocalBusiness
@@ -37,6 +38,5 @@ class ChildCare extends LocalBusiness
     {
         return new ChildCare('https://schema.org/', 'ChildCare');
     }
-
 
 }

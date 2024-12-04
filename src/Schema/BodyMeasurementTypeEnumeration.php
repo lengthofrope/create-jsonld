@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Enumerates types (or dimensions) of a person's body measurements, for example for fitting of clothes.
+ * Enumerates types (or dimensions) of a person's body measurements, for example
+ * for fitting of clothes.
  *
+ * @see https://schema.org/BodyMeasurementTypeEnumeration
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class BodyMeasurementTypeEnumeration extends MeasurementTypeEnumeration
@@ -37,6 +39,5 @@ class BodyMeasurementTypeEnumeration extends MeasurementTypeEnumeration
     {
         return new BodyMeasurementTypeEnumeration('https://schema.org/', 'BodyMeasurementTypeEnumeration');
     }
-
 
 }

@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A service provided by an organization, e.g. delivery service, print services, etc.
+ * A service provided by an organization, e.g. delivery service, print services,
+ * etc.
  *
+ * @see https://schema.org/Service
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Service extends Intangible
@@ -39,7 +41,8 @@ class Service extends Intangible
     }
 
     /**
-     * The type of service being offered, e.g. veterans' benefits, emergency relief, etc.
+     * The type of service being offered, e.g. veterans' benefits, emergency relief,
+     * etc.
      *
      * @param $serviceType |
      * @return static
@@ -56,7 +59,6 @@ class Service extends Intangible
     public function getServiceType() {
         return $this->properties['serviceType'];
     }
-
     /**
      * Human-readable terms of service documentation.
      *
@@ -75,7 +77,6 @@ class Service extends Intangible
     public function getTermsOfService() {
         return $this->properties['termsOfService'];
     }
-
     /**
      * A pointer to another, functionally similar product (or multiple products).
      *
@@ -94,7 +95,6 @@ class Service extends Intangible
     public function getIsSimilarTo() {
         return $this->properties['isSimilarTo'];
     }
-
     /**
      * An award won by or for this item.
      *
@@ -113,9 +113,11 @@ class Service extends Intangible
     public function getAward() {
         return $this->properties['award'];
     }
-
     /**
-     * An entity that arranges for an exchange between a buyer and a seller.  In most cases a broker never acquires or releases ownership of a product or service involved in an exchange.  If it is not clear whether an entity is a broker, seller, or buyer, the latter two terms are preferred.
+     * An entity that arranges for an exchange between a buyer and a seller.  In most
+     * cases a broker never acquires or releases ownership of a product or service
+     * involved in an exchange.  If it is not clear whether an entity is a broker,
+     * seller, or buyer, the latter two terms are preferred.
      *
      * @param $broker |
      * @return static
@@ -132,7 +134,6 @@ class Service extends Intangible
     public function getBroker() {
         return $this->properties['broker'];
     }
-
     /**
      * Indicates an OfferCatalog listing for this Organization, Person, or Service.
      *
@@ -151,9 +152,9 @@ class Service extends Intangible
     public function getHasOfferCatalog() {
         return $this->properties['hasOfferCatalog'];
     }
-
     /**
-     * Certification information about a product, organization, service, place, or person.
+     * Certification information about a product, organization, service, place, or
+     * person.
      *
      * @param $hasCertification 
      * @return static
@@ -170,7 +171,6 @@ class Service extends Intangible
     public function getHasCertification() {
         return $this->properties['hasCertification'];
     }
-
     /**
      * The audience eligible for this service.
      *
@@ -189,7 +189,6 @@ class Service extends Intangible
     public function getServiceAudience() {
         return $this->properties['serviceAudience'];
     }
-
     /**
      * An associated logo.
      *
@@ -208,7 +207,6 @@ class Service extends Intangible
     public function getLogo() {
         return $this->properties['logo'];
     }
-
     /**
      * The geographic area where a service or offered item is provided.
      *
@@ -227,7 +225,6 @@ class Service extends Intangible
     public function getAreaServed() {
         return $this->properties['areaServed'];
     }
-
     /**
      * The geographic area where the service is provided.
      *
@@ -246,9 +243,9 @@ class Service extends Intangible
     public function getServiceArea() {
         return $this->properties['serviceArea'];
     }
-
     /**
-     * The brand(s) associated with a product or service, or the brand(s) maintained by an organization or business person.
+     * The brand(s) associated with a product or service, or the brand(s) maintained by
+     * an organization or business person.
      *
      * @param $brand |
      * @return static
@@ -265,9 +262,9 @@ class Service extends Intangible
     public function getBrand() {
         return $this->properties['brand'];
     }
-
     /**
-     * A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
+     * A category for the item. Greater signs or slashes can be used to informally
+     * indicate a category hierarchy.
      *
      * @param $category ||||
      * @return static
@@ -284,7 +281,6 @@ class Service extends Intangible
     public function getCategory() {
         return $this->properties['category'];
     }
-
     /**
      * Indicates the mobility of a provided service (e.g. 'static', 'dynamic').
      *
@@ -303,7 +299,6 @@ class Service extends Intangible
     public function getProviderMobility() {
         return $this->properties['providerMobility'];
     }
-
     /**
      * A pointer to another, somehow related product (or multiple products).
      *
@@ -322,7 +317,6 @@ class Service extends Intangible
     public function getIsRelatedTo() {
         return $this->properties['isRelatedTo'];
     }
-
     /**
      * The hours during which this service or contact is available.
      *
@@ -341,7 +335,6 @@ class Service extends Intangible
     public function getHoursAvailable() {
         return $this->properties['hoursAvailable'];
     }
-
     /**
      * A review of the item.
      *
@@ -360,7 +353,6 @@ class Service extends Intangible
     public function getReview() {
         return $this->properties['review'];
     }
-
     /**
      * The tangible thing generated by the service, e.g. a passport, permit, etc.
      *
@@ -379,10 +371,15 @@ class Service extends Intangible
     public function getProduces() {
         return $this->properties['produces'];
     }
-
     /**
-     * An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event. Use [[businessFunction]] to indicate the kind of transaction offered, i.e. sell, lease, etc. This property can also be used to describe a [[Demand]]. While this property is listed as expected on a number of common types, it can be used in others. In that case, using a second type, such as Product or a subtype of Product, can clarify the nature of the offer.
-      
+     * An offer to provide this item&#x2014;for example, an offer to sell a product,
+     * rent the DVD of a movie, perform a service, or give away tickets to an event.
+     * Use [[businessFunction]] to indicate the kind of transaction offered, i.e. sell,
+     * lease, etc. This property can also be used to describe a [[Demand]]. While this
+     * property is listed as expected on a number of common types, it can be used in
+     * others. In that case, using a second type, such as Product or a subtype of
+     * Product, can clarify the nature of the offer.
+     *
      *
      * @param $offers |
      * @return static
@@ -399,9 +396,10 @@ class Service extends Intangible
     public function getOffers() {
         return $this->properties['offers'];
     }
-
     /**
-     * The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.
+     * The service provider, service operator, or service performer; the goods
+     * producer. Another party (a seller) may offer those services or goods on behalf
+     * of the provider. A provider may also serve as the seller.
      *
      * @param $provider |
      * @return static
@@ -418,7 +416,6 @@ class Service extends Intangible
     public function getProvider() {
         return $this->properties['provider'];
     }
-
     /**
      * A slogan or motto associated with the item.
      *
@@ -437,7 +434,6 @@ class Service extends Intangible
     public function getSlogan() {
         return $this->properties['slogan'];
     }
-
     /**
      * The overall rating, based on a collection of reviews or ratings, of the item.
      *
@@ -456,7 +452,6 @@ class Service extends Intangible
     public function getAggregateRating() {
         return $this->properties['aggregateRating'];
     }
-
     /**
      * The tangible thing generated by the service, e.g. a passport, permit, etc.
      *
@@ -475,9 +470,9 @@ class Service extends Intangible
     public function getServiceOutput() {
         return $this->properties['serviceOutput'];
     }
-
     /**
-     * A means of accessing the service (e.g. a phone bank, a web site, a location, etc.).
+     * A means of accessing the service (e.g. a phone bank, a web site, a location,
+     * etc.).
      *
      * @param $availableChannel 
      * @return static
@@ -494,7 +489,6 @@ class Service extends Intangible
     public function getAvailableChannel() {
         return $this->properties['availableChannel'];
     }
-
     /**
      * An intended audience, i.e. a group for whom something was created.
      *
@@ -513,6 +507,4 @@ class Service extends Intangible
     public function getAudience() {
         return $this->properties['audience'];
     }
-
-
 }

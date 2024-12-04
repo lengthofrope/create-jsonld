@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A plumbing service.
  *
+ * @see https://schema.org/Plumber
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Plumber extends HomeAndConstructionBusiness
@@ -37,6 +38,5 @@ class Plumber extends HomeAndConstructionBusiness
     {
         return new Plumber('https://schema.org/', 'Plumber');
     }
-
 
 }

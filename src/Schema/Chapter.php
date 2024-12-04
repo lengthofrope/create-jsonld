@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * One of the sections into which a book is divided. A chapter usually has a section number or a name.
+ * One of the sections into which a book is divided. A chapter usually has a
+ * section number or a name.
  *
+ * @see https://schema.org/Chapter
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Chapter extends CreativeWork
@@ -39,7 +41,8 @@ class Chapter extends CreativeWork
     }
 
     /**
-     * Any description of pages that is not separated into pageStart and pageEnd; for example, "1-6, 9, 55" or "10-12, 46-49".
+     * Any description of pages that is not separated into pageStart and pageEnd; for
+     * example, "1-6, 9, 55" or "10-12, 46-49".
      *
      * @param $pagination 
      * @return static
@@ -56,7 +59,6 @@ class Chapter extends CreativeWork
     public function getPagination() {
         return $this->properties['pagination'];
     }
-
     /**
      * The page on which the work starts; for example "135" or "xiii".
      *
@@ -75,7 +77,6 @@ class Chapter extends CreativeWork
     public function getPageStart() {
         return $this->properties['pageStart'];
     }
-
     /**
      * The page on which the work ends; for example "138" or "xvi".
      *
@@ -94,6 +95,4 @@ class Chapter extends CreativeWork
     public function getPageEnd() {
         return $this->properties['pageEnd'];
     }
-
-
 }

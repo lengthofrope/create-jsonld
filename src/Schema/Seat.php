@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Used to describe a seat, such as a reserved seat in an event reservation.
  *
+ * @see https://schema.org/Seat
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Seat extends Intangible
@@ -56,7 +57,6 @@ class Seat extends Intangible
     public function getSeatSection() {
         return $this->properties['seatSection'];
     }
-
     /**
      * The location of the reserved seat (e.g., 27).
      *
@@ -75,7 +75,6 @@ class Seat extends Intangible
     public function getSeatNumber() {
         return $this->properties['seatNumber'];
     }
-
     /**
      * The row location of the reserved seat (e.g., B).
      *
@@ -94,7 +93,6 @@ class Seat extends Intangible
     public function getSeatRow() {
         return $this->properties['seatRow'];
     }
-
     /**
      * The type/class of the seat.
      *
@@ -113,6 +111,4 @@ class Seat extends Intangible
     public function getSeatingType() {
         return $this->properties['seatingType'];
     }
-
-
 }

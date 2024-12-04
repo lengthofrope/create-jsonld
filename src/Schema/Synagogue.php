@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A synagogue.
  *
+ * @see https://schema.org/Synagogue
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Synagogue extends PlaceOfWorship
@@ -37,6 +38,5 @@ class Synagogue extends PlaceOfWorship
     {
         return new Synagogue('https://schema.org/', 'Synagogue');
     }
-
 
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Enumeration(s) for use with [[measurementMethod]].
  *
+ * @see https://schema.org/MeasurementMethodEnum
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MeasurementMethodEnum extends Enumeration
@@ -37,6 +38,5 @@ class MeasurementMethodEnum extends Enumeration
     {
         return new MeasurementMethodEnum('https://schema.org/', 'MeasurementMethodEnum');
     }
-
 
 }

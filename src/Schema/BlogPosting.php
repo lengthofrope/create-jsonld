@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A blog post.
  *
+ * @see https://schema.org/BlogPosting
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class BlogPosting extends SocialMediaPosting
@@ -37,6 +38,5 @@ class BlogPosting extends SocialMediaPosting
     {
         return new BlogPosting('https://schema.org/', 'BlogPosting');
     }
-
 
 }

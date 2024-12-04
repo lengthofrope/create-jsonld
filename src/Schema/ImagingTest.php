@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Any medical imaging modality typically used for diagnostic purposes.
  *
+ * @see https://schema.org/ImagingTest
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ImagingTest extends MedicalTest
@@ -56,6 +57,4 @@ class ImagingTest extends MedicalTest
     public function getImagingTechnique() {
         return $this->properties['imagingTechnique'];
     }
-
-
 }

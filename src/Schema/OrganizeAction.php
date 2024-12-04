@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of manipulating/administering/supervising/controlling one or more objects.
+ * The act of manipulating/administering/supervising/controlling one or more
+ * objects.
  *
+ * @see https://schema.org/OrganizeAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class OrganizeAction extends Action
@@ -37,6 +39,5 @@ class OrganizeAction extends Action
     {
         return new OrganizeAction('https://schema.org/', 'OrganizeAction');
     }
-
 
 }

@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of notifying someone of information pertinent to them, with no expectation of a response.
+ * The act of notifying someone of information pertinent to them, with no
+ * expectation of a response.
  *
+ * @see https://schema.org/InformAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class InformAction extends CommunicateAction
@@ -56,6 +58,4 @@ class InformAction extends CommunicateAction
     public function getEvent() {
         return $this->properties['event'];
     }
-
-
 }
