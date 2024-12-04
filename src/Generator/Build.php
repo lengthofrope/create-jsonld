@@ -195,9 +195,14 @@ class Build
 
 
             // Add Schema to all classes to prevent failures (classes Class or Float) are reserved.
-            $class = $label . 'Schema';
+            $class = $label;
 
-            if (in_array($class, array('DataTypeSchema'))) {
+            // If class is reserverd word or starts with a number, prefix with _
+            if (is_numeric(substr($class, 0, 1)) || in_array($class, array('Class', 'Float'))) {
+                $class = '_' . $class;
+            }
+
+            if (in_array($class, array('DataType'))) {
                 continue;
             }
 
@@ -211,8 +216,6 @@ class Build
             $classextends = @str_replace('schema:', '', $classextends->{'@id'});
             if (empty($classextends)) {
                 $classextends = '\LengthOfRope\JSONLD\Elements\Element';
-            } else {
-                $classextends .= 'Schema';
             }
             $file = $dir . $class . '.php';
 
