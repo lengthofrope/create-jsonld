@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The footer section of the page.
  *
+ * @see https://schema.org/WPFooter
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class WPFooter extends WebPageElement
@@ -37,6 +38,5 @@ class WPFooter extends WebPageElement
     {
         return new WPFooter('https://schema.org/', 'WPFooter');
     }
-
 
 }

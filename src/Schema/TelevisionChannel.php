@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A unique instance of a television BroadcastService on a CableOrSatelliteService lineup.
+ * A unique instance of a television BroadcastService on a CableOrSatelliteService
+ * lineup.
  *
+ * @see https://schema.org/TelevisionChannel
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class TelevisionChannel extends BroadcastChannel
@@ -37,6 +39,5 @@ class TelevisionChannel extends BroadcastChannel
     {
         return new TelevisionChannel('https://schema.org/', 'TelevisionChannel');
     }
-
 
 }

@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of producing a visual/graphical representation of an object, typically with a pen/pencil and paper as instruments.
+ * The act of producing a visual/graphical representation of an object, typically
+ * with a pen/pencil and paper as instruments.
  *
+ * @see https://schema.org/DrawAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class DrawAction extends CreateAction
@@ -37,6 +39,5 @@ class DrawAction extends CreateAction
     {
         return new DrawAction('https://schema.org/', 'DrawAction');
     }
-
 
 }

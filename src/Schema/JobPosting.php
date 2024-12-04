@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A listing that describes a job opening in a certain organization.
  *
+ * @see https://schema.org/JobPosting
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class JobPosting extends Intangible
@@ -39,7 +40,9 @@ class JobPosting extends Intangible
     }
 
     /**
-     * A description of the types of physical activity associated with the job. Defined terms such as those in O*net may be used, but note that there is no way to specify the level of ability as well as its nature when using a defined term.
+     * A description of the types of physical activity associated with the job. Defined
+     * terms such as those in O*net may be used, but note that there is no way to
+     * specify the level of ability as well as its nature when using a defined term.
      *
      * @param $physicalRequirement ||
      * @return static
@@ -56,7 +59,6 @@ class JobPosting extends Intangible
     public function getPhysicalRequirement() {
         return $this->properties['physicalRequirement'];
     }
-
     /**
      * Specific qualifications required for this role or Occupation.
      *
@@ -75,9 +77,9 @@ class JobPosting extends Intangible
     public function getQualifications() {
         return $this->properties['qualifications'];
     }
-
     /**
-     * Type of employment (e.g. full-time, part-time, contract, temporary, seasonal, internship).
+     * Type of employment (e.g. full-time, part-time, contract, temporary, seasonal,
+     * internship).
      *
      * @param $employmentType 
      * @return static
@@ -94,7 +96,6 @@ class JobPosting extends Intangible
     public function getEmploymentType() {
         return $this->properties['employmentType'];
     }
-
     /**
      * An indicator as to whether a position is available for an immediate start.
      *
@@ -113,9 +114,9 @@ class JobPosting extends Intangible
     public function getJobImmediateStart() {
         return $this->properties['jobImmediateStart'];
     }
-
     /**
-     * The legal requirements such as citizenship, visa and other documentation required for an applicant to this job.
+     * The legal requirements such as citizenship, visa and other documentation
+     * required for an applicant to this job.
      *
      * @param $eligibilityToWorkRequirement 
      * @return static
@@ -132,7 +133,6 @@ class JobPosting extends Intangible
     public function getEligibilityToWorkRequirement() {
         return $this->properties['eligibilityToWorkRequirement'];
     }
-
     /**
      * Description of bonus and commission compensation aspects of the job.
      *
@@ -151,7 +151,6 @@ class JobPosting extends Intangible
     public function getIncentiveCompensation() {
         return $this->properties['incentiveCompensation'];
     }
-
     /**
      * Organization or Person offering the job position.
      *
@@ -170,7 +169,6 @@ class JobPosting extends Intangible
     public function getHiringOrganization() {
         return $this->properties['hiringOrganization'];
     }
-
     /**
      * Publication date of an online listing.
      *
@@ -189,7 +187,6 @@ class JobPosting extends Intangible
     public function getDatePosted() {
         return $this->properties['datePosted'];
     }
-
     /**
      * A (typically single) geographic location associated with the job position.
      *
@@ -208,7 +205,6 @@ class JobPosting extends Intangible
     public function getJobLocation() {
         return $this->properties['jobLocation'];
     }
-
     /**
      * A description of any security clearance requirements of the job.
      *
@@ -227,7 +223,6 @@ class JobPosting extends Intangible
     public function getSecurityClearanceRequirement() {
         return $this->properties['securityClearanceRequirement'];
     }
-
     /**
      * Description of skills and experience needed for the position or Occupation.
      *
@@ -246,9 +241,11 @@ class JobPosting extends Intangible
     public function getExperienceRequirements() {
         return $this->properties['experienceRequirements'];
     }
-
     /**
-     * An estimated salary for a job posting or occupation, based on a variety of variables including, but not limited to industry, job title, and location. Estimated salaries  are often computed by outside organizations rather than the hiring organization, who may not have committed to the estimated value.
+     * An estimated salary for a job posting or occupation, based on a variety of
+     * variables including, but not limited to industry, job title, and location.
+     * Estimated salaries  are often computed by outside organizations rather than the
+     * hiring organization, who may not have committed to the estimated value.
      *
      * @param $estimatedSalary ||
      * @return static
@@ -265,9 +262,9 @@ class JobPosting extends Intangible
     public function getEstimatedSalary() {
         return $this->properties['estimatedSalary'];
     }
-
     /**
-     * The currency (coded using [ISO 4217](http://en.wikipedia.org/wiki/ISO_4217)) used for the main salary information in this job posting or for this employee.
+     * The currency (coded using [ISO 4217](http://en.wikipedia.org/wiki/ISO_4217))
+     * used for the main salary information in this job posting or for this employee.
      *
      * @param $salaryCurrency 
      * @return static
@@ -284,7 +281,6 @@ class JobPosting extends Intangible
     public function getSalaryCurrency() {
         return $this->properties['salaryCurrency'];
     }
-
     /**
      * Description of benefits associated with the job.
      *
@@ -303,7 +299,6 @@ class JobPosting extends Intangible
     public function getJobBenefits() {
         return $this->properties['jobBenefits'];
     }
-
     /**
      * A description of the job location (e.g. TELECOMMUTE for telecommute jobs).
      *
@@ -322,7 +317,6 @@ class JobPosting extends Intangible
     public function getJobLocationType() {
         return $this->properties['jobLocationType'];
     }
-
     /**
      * The Occupation for the JobPosting.
      *
@@ -341,9 +335,9 @@ class JobPosting extends Intangible
     public function getRelevantOccupation() {
         return $this->properties['relevantOccupation'];
     }
-
     /**
-     * The number of positions open for this job posting. Use a positive integer. Do not use if the number of positions is unclear or not known.
+     * The number of positions open for this job posting. Use a positive integer. Do
+     * not use if the number of positions is unclear or not known.
      *
      * @param $totalJobOpenings 
      * @return static
@@ -360,9 +354,10 @@ class JobPosting extends Intangible
     public function getTotalJobOpenings() {
         return $this->properties['totalJobOpenings'];
     }
-
     /**
-     * A statement of knowledge, skill, ability, task or any other assertion expressing a competency that is either claimed by a person, an organization or desired or required to fulfill a role or to work in an occupation.
+     * A statement of knowledge, skill, ability, task or any other assertion expressing
+     * a competency that is either claimed by a person, an organization or desired or
+     * required to fulfill a role or to work in an occupation.
      *
      * @param $skills |
      * @return static
@@ -379,9 +374,10 @@ class JobPosting extends Intangible
     public function getSkills() {
         return $this->properties['skills'];
     }
-
     /**
-     * The location(s) applicants can apply from. This is usually used for telecommuting jobs where the applicant does not need to be in a physical office. Note: This should not be used for citizenship or work visa requirements.
+     * The location(s) applicants can apply from. This is usually used for
+     * telecommuting jobs where the applicant does not need to be in a physical office.
+     * Note: This should not be used for citizenship or work visa requirements.
      *
      * @param $applicantLocationRequirements 
      * @return static
@@ -398,9 +394,15 @@ class JobPosting extends Intangible
     public function getApplicantLocationRequirements() {
         return $this->properties['applicantLocationRequirements'];
     }
-
     /**
-     * Indicates whether an [[url]] that is associated with a [[JobPosting]] enables direct application for the job, via the posting website. A job posting is considered to have directApply of [[True]] if an application process for the specified job can be directly initiated via the url(s) given (noting that e.g. multiple internet domains might nevertheless be involved at an implementation level). A value of [[False]] is appropriate if there is no clear path to applying directly online for the specified job, navigating directly from the JobPosting url(s) supplied.
+     * Indicates whether an [[url]] that is associated with a [[JobPosting]] enables
+     * direct application for the job, via the posting website. A job posting is
+     * considered to have directApply of [[True]] if an application process for the
+     * specified job can be directly initiated via the url(s) given (noting that e.g.
+     * multiple internet domains might nevertheless be involved at an implementation
+     * level). A value of [[False]] is appropriate if there is no clear path to
+     * applying directly online for the specified job, navigating directly from the
+     * JobPosting url(s) supplied.
      *
      * @param $directApply 
      * @return static
@@ -417,9 +419,9 @@ class JobPosting extends Intangible
     public function getDirectApply() {
         return $this->properties['directApply'];
     }
-
     /**
-     * A description of the employer, career opportunities and work environment for this position.
+     * A description of the employer, career opportunities and work environment for
+     * this position.
      *
      * @param $employerOverview 
      * @return static
@@ -436,9 +438,9 @@ class JobPosting extends Intangible
     public function getEmployerOverview() {
         return $this->properties['employerOverview'];
     }
-
     /**
-     * The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours.
+     * The date after when the item is not valid. For example the end of an offer,
+     * salary period, or a period of opening hours.
      *
      * @param $validThrough |
      * @return static
@@ -455,10 +457,16 @@ class JobPosting extends Intangible
     public function getValidThrough() {
         return $this->properties['validThrough'];
     }
-
     /**
-     * A category describing the job, preferably using a term from a taxonomy such as [BLS O*NET-SOC](http://www.onetcenter.org/taxonomy.html), [ISCO-08](https://www.ilo.org/public/english/bureau/stat/isco/isco08/) or similar, with the property repeated for each applicable value. Ideally the taxonomy should be identified, and both the textual label and formal code for the category should be provided.\n
-Note: for historical reasons, any textual label and formal code provided as a literal may be assumed to be from O*NET-SOC.
+     * A category describing the job, preferably using a term from a taxonomy such as
+     * [BLS O*NET-SOC](http://www.onetcenter.org/taxonomy.html),
+     * [ISCO-08](https://www.ilo.org/public/english/bureau/stat/isco/isco08/) or
+     * similar, with the property repeated for each applicable value. Ideally the
+     * taxonomy should be identified, and both the textual label and formal code for
+     * the category should be provided.
+     *
+     * Note: for historical reasons, any textual label and formal code provided as a
+     * literal may be assumed to be from O*NET-SOC.
      *
      * @param $occupationalCategory |
      * @return static
@@ -475,9 +483,11 @@ Note: for historical reasons, any textual label and formal code provided as a li
     public function getOccupationalCategory() {
         return $this->properties['occupationalCategory'];
     }
-
     /**
-     * A description of any sensory requirements and levels necessary to function on the job, including hearing and vision. Defined terms such as those in O*net may be used, but note that there is no way to specify the level of ability as well as its nature when using a defined term.
+     * A description of any sensory requirements and levels necessary to function on
+     * the job, including hearing and vision. Defined terms such as those in O*net may
+     * be used, but note that there is no way to specify the level of ability as well
+     * as its nature when using a defined term.
      *
      * @param $sensoryRequirement ||
      * @return static
@@ -494,7 +504,6 @@ Note: for historical reasons, any textual label and formal code provided as a li
     public function getSensoryRequirement() {
         return $this->properties['sensoryRequirement'];
     }
-
     /**
      * The typical working hours for this job (e.g. 1st shift, night shift, 8am-5pm).
      *
@@ -513,9 +522,9 @@ Note: for historical reasons, any textual label and formal code provided as a li
     public function getWorkHours() {
         return $this->properties['workHours'];
     }
-
     /**
-     * Indicates the department, unit and/or facility where the employee reports and/or in which the job is to be performed.
+     * Indicates the department, unit and/or facility where the employee reports and/or
+     * in which the job is to be performed.
      *
      * @param $employmentUnit 
      * @return static
@@ -532,9 +541,11 @@ Note: for historical reasons, any textual label and formal code provided as a li
     public function getEmploymentUnit() {
         return $this->properties['employmentUnit'];
     }
-
     /**
-     * Indicates whether a [[JobPosting]] will accept experience (as indicated by [[OccupationalExperienceRequirements]]) in place of its formal educational qualifications (as indicated by [[educationRequirements]]). If true, indicates that satisfying one of these requirements is sufficient.
+     * Indicates whether a [[JobPosting]] will accept experience (as indicated by
+     * [[OccupationalExperienceRequirements]]) in place of its formal educational
+     * qualifications (as indicated by [[educationRequirements]]). If true, indicates
+     * that satisfying one of these requirements is sufficient.
      *
      * @param $experienceInPlaceOfEducation 
      * @return static
@@ -551,7 +562,6 @@ Note: for historical reasons, any textual label and formal code provided as a li
     public function getExperienceInPlaceOfEducation() {
         return $this->properties['experienceInPlaceOfEducation'];
     }
-
     /**
      * Responsibilities associated with this role or Occupation.
      *
@@ -570,9 +580,10 @@ Note: for historical reasons, any textual label and formal code provided as a li
     public function getResponsibilities() {
         return $this->properties['responsibilities'];
     }
-
     /**
-     * The date on which a successful applicant for this job would be expected to start work. Choose a specific date in the future or use the jobImmediateStart property to indicate the position is to be filled as soon as possible.
+     * The date on which a successful applicant for this job would be expected to start
+     * work. Choose a specific date in the future or use the jobImmediateStart property
+     * to indicate the position is to be filled as soon as possible.
      *
      * @param $jobStartDate |
      * @return static
@@ -589,7 +600,6 @@ Note: for historical reasons, any textual label and formal code provided as a li
     public function getJobStartDate() {
         return $this->properties['jobStartDate'];
     }
-
     /**
      * The base salary of the job or of an employee in an EmployeeRole.
      *
@@ -608,7 +618,6 @@ Note: for historical reasons, any textual label and formal code provided as a li
     public function getBaseSalary() {
         return $this->properties['baseSalary'];
     }
-
     /**
      * Description of bonus and commission compensation aspects of the job.
      *
@@ -627,7 +636,6 @@ Note: for historical reasons, any textual label and formal code provided as a li
     public function getIncentives() {
         return $this->properties['incentives'];
     }
-
     /**
      * Contact details for further information relevant to this job posting.
      *
@@ -646,7 +654,6 @@ Note: for historical reasons, any textual label and formal code provided as a li
     public function getApplicationContact() {
         return $this->properties['applicationContact'];
     }
-
     /**
      * Educational background needed for the position or Occupation.
      *
@@ -665,9 +672,9 @@ Note: for historical reasons, any textual label and formal code provided as a li
     public function getEducationRequirements() {
         return $this->properties['educationRequirements'];
     }
-
     /**
-     * Any special commitments associated with this job posting. Valid entries include VeteranCommit, MilitarySpouseCommit, etc.
+     * Any special commitments associated with this job posting. Valid entries include
+     * VeteranCommit, MilitarySpouseCommit, etc.
      *
      * @param $specialCommitments 
      * @return static
@@ -684,7 +691,6 @@ Note: for historical reasons, any textual label and formal code provided as a li
     public function getSpecialCommitments() {
         return $this->properties['specialCommitments'];
     }
-
     /**
      * The industry associated with the job position.
      *
@@ -703,7 +709,6 @@ Note: for historical reasons, any textual label and formal code provided as a li
     public function getIndustry() {
         return $this->properties['industry'];
     }
-
     /**
      * Description of benefits associated with the job.
      *
@@ -722,7 +727,6 @@ Note: for historical reasons, any textual label and formal code provided as a li
     public function getBenefits() {
         return $this->properties['benefits'];
     }
-
     /**
      * The title of the job.
      *
@@ -741,6 +745,4 @@ Note: for historical reasons, any textual label and formal code provided as a li
     public function getTitle() {
         return $this->properties['title'];
     }
-
-
 }

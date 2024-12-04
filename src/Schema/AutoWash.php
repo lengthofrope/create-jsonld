@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A car wash business.
  *
+ * @see https://schema.org/AutoWash
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class AutoWash extends AutomotiveBusiness
@@ -37,6 +38,5 @@ class AutoWash extends AutomotiveBusiness
     {
         return new AutoWash('https://schema.org/', 'AutoWash');
     }
-
 
 }

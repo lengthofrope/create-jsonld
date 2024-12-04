@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A subscription which allows a user to access media including audio, video, books, etc.
+ * A subscription which allows a user to access media including audio, video,
+ * books, etc.
  *
+ * @see https://schema.org/MediaSubscription
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MediaSubscription extends Intangible
@@ -39,7 +41,8 @@ class MediaSubscription extends Intangible
     }
 
     /**
-     * An Offer which must be accepted before the user can perform the Action. For example, the user may need to buy a movie before being able to watch it.
+     * An Offer which must be accepted before the user can perform the Action. For
+     * example, the user may need to buy a movie before being able to watch it.
      *
      * @param $expectsAcceptanceOf 
      * @return static
@@ -56,9 +59,10 @@ class MediaSubscription extends Intangible
     public function getExpectsAcceptanceOf() {
         return $this->properties['expectsAcceptanceOf'];
     }
-
     /**
-     * The Organization responsible for authenticating the user's subscription. For example, many media apps require a cable/satellite provider to authenticate your subscription before playing media.
+     * The Organization responsible for authenticating the user's subscription. For
+     * example, many media apps require a cable/satellite provider to authenticate your
+     * subscription before playing media.
      *
      * @param $authenticator 
      * @return static
@@ -75,6 +79,4 @@ class MediaSubscription extends Intangible
     public function getAuthenticator() {
         return $this->properties['authenticator'];
     }
-
-
 }

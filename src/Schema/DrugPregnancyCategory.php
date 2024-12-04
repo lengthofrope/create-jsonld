@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Categories that represent an assessment of the risk of fetal injury due to a drug or pharmaceutical used as directed by the mother during pregnancy.
+ * Categories that represent an assessment of the risk of fetal injury due to a
+ * drug or pharmaceutical used as directed by the mother during pregnancy.
  *
+ * @see https://schema.org/DrugPregnancyCategory
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class DrugPregnancyCategory extends MedicalEnumeration
@@ -37,6 +39,5 @@ class DrugPregnancyCategory extends MedicalEnumeration
     {
         return new DrugPregnancyCategory('https://schema.org/', 'DrugPregnancyCategory');
     }
-
 
 }

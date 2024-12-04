@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A recycling center.
  *
+ * @see https://schema.org/RecyclingCenter
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class RecyclingCenter extends LocalBusiness
@@ -37,6 +38,5 @@ class RecyclingCenter extends LocalBusiness
     {
         return new RecyclingCenter('https://schema.org/', 'RecyclingCenter');
     }
-
 
 }

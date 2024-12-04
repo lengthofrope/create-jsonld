@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Brewery.
  *
+ * @see https://schema.org/Brewery
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Brewery extends FoodEstablishment
@@ -37,6 +38,5 @@ class Brewery extends FoodEstablishment
     {
         return new Brewery('https://schema.org/', 'Brewery');
     }
-
 
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A permit issued by a government agency.
  *
+ * @see https://schema.org/GovernmentPermit
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class GovernmentPermit extends Permit
@@ -37,6 +38,5 @@ class GovernmentPermit extends Permit
     {
         return new GovernmentPermit('https://schema.org/', 'GovernmentPermit');
     }
-
 
 }

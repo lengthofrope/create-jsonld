@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A medical procedure intended primarily for therapeutic purposes, aimed at improving a health condition.
+ * A medical procedure intended primarily for therapeutic purposes, aimed at
+ * improving a health condition.
  *
+ * @see https://schema.org/TherapeuticProcedure
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class TherapeuticProcedure extends MedicalProcedure
@@ -39,7 +41,8 @@ class TherapeuticProcedure extends MedicalProcedure
     }
 
     /**
-     * A dosing schedule for the drug for a given population, either observed, recommended, or maximum dose based on the type used.
+     * A dosing schedule for the drug for a given population, either observed,
+     * recommended, or maximum dose based on the type used.
      *
      * @param $doseSchedule 
      * @return static
@@ -56,7 +59,6 @@ class TherapeuticProcedure extends MedicalProcedure
     public function getDoseSchedule() {
         return $this->properties['doseSchedule'];
     }
-
     /**
      * Specifying a drug or medicine used in a medication procedure.
      *
@@ -75,9 +77,11 @@ class TherapeuticProcedure extends MedicalProcedure
     public function getDrug() {
         return $this->properties['drug'];
     }
-
     /**
-     * A possible complication and/or side effect of this therapy. If it is known that an adverse outcome is serious (resulting in death, disability, or permanent damage; requiring hospitalization; or otherwise life-threatening or requiring immediate medical attention), tag it as a seriousAdverseOutcome instead.
+     * A possible complication and/or side effect of this therapy. If it is known that
+     * an adverse outcome is serious (resulting in death, disability, or permanent
+     * damage; requiring hospitalization; or otherwise life-threatening or requiring
+     * immediate medical attention), tag it as a seriousAdverseOutcome instead.
      *
      * @param $adverseOutcome 
      * @return static
@@ -94,6 +98,4 @@ class TherapeuticProcedure extends MedicalProcedure
     public function getAdverseOutcome() {
         return $this->properties['adverseOutcome'];
     }
-
-
 }

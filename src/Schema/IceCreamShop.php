@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * An ice cream shop.
  *
+ * @see https://schema.org/IceCreamShop
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class IceCreamShop extends FoodEstablishment
@@ -37,6 +38,5 @@ class IceCreamShop extends FoodEstablishment
     {
         return new IceCreamShop('https://schema.org/', 'IceCreamShop');
     }
-
 
 }

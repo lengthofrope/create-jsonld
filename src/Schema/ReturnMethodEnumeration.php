@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Enumerates several types of product return methods.
  *
+ * @see https://schema.org/ReturnMethodEnumeration
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ReturnMethodEnumeration extends Enumeration
@@ -37,6 +38,5 @@ class ReturnMethodEnumeration extends Enumeration
     {
         return new ReturnMethodEnumeration('https://schema.org/', 'ReturnMethodEnumeration');
     }
-
 
 }

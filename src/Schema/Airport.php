@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * An airport.
  *
+ * @see https://schema.org/Airport
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Airport extends CivicStructure
@@ -56,7 +57,6 @@ class Airport extends CivicStructure
     public function getIataCode() {
         return $this->properties['iataCode'];
     }
-
     /**
      * ICAO identifier for an airport.
      *
@@ -75,6 +75,4 @@ class Airport extends CivicStructure
     public function getIcaoCode() {
         return $this->properties['icaoCode'];
     }
-
-
 }

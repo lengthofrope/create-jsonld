@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A loan in which property or real estate is used as collateral. (A loan securitized against some real estate.)
+ * A loan in which property or real estate is used as collateral. (A loan
+ * securitized against some real estate.)
  *
+ * @see https://schema.org/MortgageLoan
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MortgageLoan extends LoanOrCredit
@@ -39,7 +41,8 @@ class MortgageLoan extends LoanOrCredit
     }
 
     /**
-     * Amount of mortgage mandate that can be converted into a proper mortgage at a later stage.
+     * Amount of mortgage mandate that can be converted into a proper mortgage at a
+     * later stage.
      *
      * @param $loanMortgageMandateAmount 
      * @return static
@@ -56,9 +59,9 @@ class MortgageLoan extends LoanOrCredit
     public function getLoanMortgageMandateAmount() {
         return $this->properties['loanMortgageMandateAmount'];
     }
-
     /**
-     * Whether borrower is a resident of the jurisdiction where the property is located.
+     * Whether borrower is a resident of the jurisdiction where the property is
+     * located.
      *
      * @param $domiciledMortgage 
      * @return static
@@ -75,6 +78,4 @@ class MortgageLoan extends LoanOrCredit
     public function getDomiciledMortgage() {
         return $this->properties['domiciledMortgage'];
     }
-
-
 }

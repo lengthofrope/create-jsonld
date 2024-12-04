@@ -27,8 +27,11 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * An indication for a medical therapy that has been formally specified or approved by a regulatory body that regulates use of the therapy; for example, the US FDA approves indications for most drugs in the US.
+ * An indication for a medical therapy that has been formally specified or approved
+ * by a regulatory body that regulates use of the therapy; for example, the US FDA
+ * approves indications for most drugs in the US.
  *
+ * @see https://schema.org/ApprovedIndication
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ApprovedIndication extends MedicalIndication
@@ -37,6 +40,5 @@ class ApprovedIndication extends MedicalIndication
     {
         return new ApprovedIndication('https://schema.org/', 'ApprovedIndication');
     }
-
 
 }

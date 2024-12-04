@@ -27,8 +27,12 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * An [[Article]] that an external entity has paid to place or to produce to its specifications. Includes [advertorials](https://en.wikipedia.org/wiki/Advertorial), sponsored content, native advertising and other paid content.
+ * An [[Article]] that an external entity has paid to place or to produce to its
+ * specifications. Includes
+ * [advertorials](https://en.wikipedia.org/wiki/Advertorial), sponsored content,
+ * native advertising and other paid content.
  *
+ * @see https://schema.org/AdvertiserContentArticle
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class AdvertiserContentArticle extends Article
@@ -37,6 +41,5 @@ class AdvertiserContentArticle extends Article
     {
         return new AdvertiserContentArticle('https://schema.org/', 'AdvertiserContentArticle');
     }
-
 
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A comedy club.
  *
+ * @see https://schema.org/ComedyClub
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ComedyClub extends EntertainmentBusiness
@@ -37,6 +38,5 @@ class ComedyClub extends EntertainmentBusiness
     {
         return new ComedyClub('https://schema.org/', 'ComedyClub');
     }
-
 
 }

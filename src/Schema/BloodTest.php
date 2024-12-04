@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A medical test performed on a sample of a patient's blood.
  *
+ * @see https://schema.org/BloodTest
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class BloodTest extends MedicalTest
@@ -37,6 +38,5 @@ class BloodTest extends MedicalTest
     {
         return new BloodTest('https://schema.org/', 'BloodTest');
     }
-
 
 }

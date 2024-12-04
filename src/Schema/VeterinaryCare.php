@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A vet's office.
  *
+ * @see https://schema.org/VeterinaryCare
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class VeterinaryCare extends MedicalOrganization
@@ -37,6 +38,5 @@ class VeterinaryCare extends MedicalOrganization
     {
         return new VeterinaryCare('https://schema.org/', 'VeterinaryCare');
     }
-
 
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A mountain, like Mount Whitney or Mount Everest.
  *
+ * @see https://schema.org/Mountain
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Mountain extends Landform
@@ -37,6 +38,5 @@ class Mountain extends Landform
     {
         return new Mountain('https://schema.org/', 'Mountain');
     }
-
 
 }

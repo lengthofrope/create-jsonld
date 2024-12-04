@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Event type: Sports event.
  *
+ * @see https://schema.org/SportsEvent
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class SportsEvent extends Event
@@ -56,7 +57,6 @@ class SportsEvent extends Event
     public function getCompetitor() {
         return $this->properties['competitor'];
     }
-
     /**
      * The home team in a sports event.
      *
@@ -75,7 +75,6 @@ class SportsEvent extends Event
     public function getHomeTeam() {
         return $this->properties['homeTeam'];
     }
-
     /**
      * The away team in a sports event.
      *
@@ -94,7 +93,6 @@ class SportsEvent extends Event
     public function getAwayTeam() {
         return $this->properties['awayTeam'];
     }
-
     /**
      * A type of sport (e.g. Baseball).
      *
@@ -113,6 +111,4 @@ class SportsEvent extends Event
     public function getSport() {
         return $this->properties['sport'];
     }
-
-
 }

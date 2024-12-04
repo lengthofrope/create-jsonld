@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A specific payment status. For example, PaymentDue, PaymentComplete, etc.
  *
+ * @see https://schema.org/PaymentStatusType
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class PaymentStatusType extends StatusEnumeration
@@ -37,6 +38,5 @@ class PaymentStatusType extends StatusEnumeration
     {
         return new PaymentStatusType('https://schema.org/', 'PaymentStatusType');
     }
-
 
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The act of managing by changing/editing the state of the object.
  *
+ * @see https://schema.org/UpdateAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class UpdateAction extends Action
@@ -56,7 +57,6 @@ class UpdateAction extends Action
     public function getCollection() {
         return $this->properties['collection'];
     }
-
     /**
      * A sub property of object. The collection target of the action.
      *
@@ -75,6 +75,4 @@ class UpdateAction extends Action
     public function getTargetCollection() {
         return $this->properties['targetCollection'];
     }
-
-
 }

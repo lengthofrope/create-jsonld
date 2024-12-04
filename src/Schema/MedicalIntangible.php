@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A utility class that serves as the umbrella for a number of 'intangible' things in the medical space.
+ * A utility class that serves as the umbrella for a number of 'intangible' things
+ * in the medical space.
  *
+ * @see https://schema.org/MedicalIntangible
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MedicalIntangible extends MedicalEntity
@@ -37,6 +39,5 @@ class MedicalIntangible extends MedicalEntity
     {
         return new MedicalIntangible('https://schema.org/', 'MedicalIntangible');
     }
-
 
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The act of expressing a desire about the object. An agent wants an object.
  *
+ * @see https://schema.org/WantAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class WantAction extends ReactAction
@@ -37,6 +38,5 @@ class WantAction extends ReactAction
     {
         return new WantAction('https://schema.org/', 'WantAction');
     }
-
 
 }

@@ -27,8 +27,11 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A particular physical or virtual business of an organization for medical purposes. Examples of MedicalBusiness include different businesses run by health professionals.
+ * A particular physical or virtual business of an organization for medical
+ * purposes. Examples of MedicalBusiness include different businesses run by health
+ * professionals.
  *
+ * @see https://schema.org/MedicalBusiness
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MedicalBusiness extends LocalBusiness
@@ -37,6 +40,5 @@ class MedicalBusiness extends LocalBusiness
     {
         return new MedicalBusiness('https://schema.org/', 'MedicalBusiness');
     }
-
 
 }

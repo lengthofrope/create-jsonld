@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Researchers.
  *
+ * @see https://schema.org/Researcher
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Researcher extends Audience
@@ -37,6 +38,5 @@ class Researcher extends Audience
     {
         return new Researcher('https://schema.org/', 'Researcher');
     }
-
 
 }

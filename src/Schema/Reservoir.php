@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A reservoir of water, typically an artificially created lake, like the Lake Kariba reservoir.
+ * A reservoir of water, typically an artificially created lake, like the Lake
+ * Kariba reservoir.
  *
+ * @see https://schema.org/Reservoir
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Reservoir extends BodyOfWater
@@ -37,6 +39,5 @@ class Reservoir extends BodyOfWater
     {
         return new Reservoir('https://schema.org/', 'Reservoir');
     }
-
 
 }

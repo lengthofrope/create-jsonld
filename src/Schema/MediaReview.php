@@ -27,11 +27,19 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A [[MediaReview]] is a more specialized form of Review dedicated to the evaluation of media content online, typically in the context of fact-checking and misinformation.
- *     For more general reviews of media in the broader sense, use [[UserReview]], [[CriticReview]] or other [[Review]] types. This definition is
- *     a work in progress. While the [[MediaManipulationRatingEnumeration]] list reflects significant community review amongst fact-checkers and others working
- *     to combat misinformation, the specific structures for representing media objects, their versions and publication context, are still evolving. Similarly, best practices for the relationship between [[MediaReview]] and [[ClaimReview]] markup have not yet been finalized.
+ * A [[MediaReview]] is a more specialized form of Review dedicated to the
+ * evaluation of media content online, typically in the context of fact-checking
+ * and misinformation.
+ * *     For more general reviews of media in the broader sense, use
+ * [[UserReview]], [[CriticReview]] or other [[Review]] types. This definition is
+ * *     a work in progress. While the [[MediaManipulationRatingEnumeration]] list
+ * reflects significant community review amongst fact-checkers and others working
+ * *     to combat misinformation, the specific structures for representing media
+ * objects, their versions and publication context, are still evolving. Similarly,
+ * best practices for the relationship between [[MediaReview]] and [[ClaimReview]]
+ * markup have not yet been finalized.
  *
+ * @see https://schema.org/MediaReview
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MediaReview extends Review
@@ -42,7 +50,8 @@ class MediaReview extends Review
     }
 
     /**
-     * Link to the page containing an original version of the content, or directly to an online copy of the original [[MediaObject]] content, e.g. video file.
+     * Link to the page containing an original version of the content, or directly to
+     * an online copy of the original [[MediaObject]] content, e.g. video file.
      *
      * @param $originalMediaLink ||
      * @return static
@@ -59,9 +68,10 @@ class MediaReview extends Review
     public function getOriginalMediaLink() {
         return $this->properties['originalMediaLink'];
     }
-
     /**
-     * Describes, in a [[MediaReview]] when dealing with [[DecontextualizedContent]], background information that can contribute to better interpretation of the [[MediaObject]].
+     * Describes, in a [[MediaReview]] when dealing with [[DecontextualizedContent]],
+     * background information that can contribute to better interpretation of the
+     * [[MediaObject]].
      *
      * @param $originalMediaContextDescription 
      * @return static
@@ -78,9 +88,9 @@ class MediaReview extends Review
     public function getOriginalMediaContextDescription() {
         return $this->properties['originalMediaContextDescription'];
     }
-
     /**
-     * Indicates a MediaManipulationRatingEnumeration classification of a media object (in the context of how it was published or shared).
+     * Indicates a MediaManipulationRatingEnumeration classification of a media object
+     * (in the context of how it was published or shared).
      *
      * @param $mediaAuthenticityCategory 
      * @return static
@@ -97,6 +107,4 @@ class MediaReview extends Review
     public function getMediaAuthenticityCategory() {
         return $this->properties['mediaAuthenticityCategory'];
     }
-
-
 }

@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * This is the [[Action]] of navigating to a specific [[startOffset]] timestamp within a [[VideoObject]], typically represented with a URL template structure.
+ * This is the [[Action]] of navigating to a specific [[startOffset]] timestamp
+ * within a [[VideoObject]], typically represented with a URL template structure.
  *
+ * @see https://schema.org/SeekToAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class SeekToAction extends Action
@@ -39,7 +41,8 @@ class SeekToAction extends Action
     }
 
     /**
-     * The start time of the clip expressed as the number of seconds from the beginning of the work.
+     * The start time of the clip expressed as the number of seconds from the beginning
+     * of the work.
      *
      * @param $startOffset |
      * @return static
@@ -56,6 +59,4 @@ class SeekToAction extends Action
     public function getStartOffset() {
         return $this->properties['startOffset'];
     }
-
-
 }

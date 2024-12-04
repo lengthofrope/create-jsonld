@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A tool used (but not consumed) when performing instructions for how to achieve a result.
+ * A tool used (but not consumed) when performing instructions for how to achieve a
+ * result.
  *
+ * @see https://schema.org/HowToTool
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class HowToTool extends HowToItem
@@ -37,6 +39,5 @@ class HowToTool extends HowToItem
     {
         return new HowToTool('https://schema.org/', 'HowToTool');
     }
-
 
 }

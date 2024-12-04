@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A common pathway for the electrochemical nerve impulses that are transmitted along each of the axons.
+ * A common pathway for the electrochemical nerve impulses that are transmitted
+ * along each of the axons.
  *
+ * @see https://schema.org/Nerve
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Nerve extends AnatomicalStructure
@@ -39,7 +41,8 @@ class Nerve extends AnatomicalStructure
     }
 
     /**
-     * The branches that delineate from the nerve bundle. Not to be confused with [[branchOf]].
+     * The branches that delineate from the nerve bundle. Not to be confused with
+     * [[branchOf]].
      *
      * @param $branch 
      * @return static
@@ -56,7 +59,6 @@ class Nerve extends AnatomicalStructure
     public function getBranch() {
         return $this->properties['branch'];
     }
-
     /**
      * The neurological pathway extension that involves muscle control.
      *
@@ -75,9 +77,9 @@ class Nerve extends AnatomicalStructure
     public function getNerveMotor() {
         return $this->properties['nerveMotor'];
     }
-
     /**
-     * The neurological pathway extension that inputs and sends information to the brain or spinal cord.
+     * The neurological pathway extension that inputs and sends information to the
+     * brain or spinal cord.
      *
      * @param $sensoryUnit |
      * @return static
@@ -94,7 +96,6 @@ class Nerve extends AnatomicalStructure
     public function getSensoryUnit() {
         return $this->properties['sensoryUnit'];
     }
-
     /**
      * The neurological pathway that originates the neurons.
      *
@@ -113,6 +114,4 @@ class Nerve extends AnatomicalStructure
     public function getSourcedFrom() {
         return $this->properties['sourcedFrom'];
     }
-
-
 }

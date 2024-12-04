@@ -28,8 +28,9 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * {{ classcomment }}
+{{ classcomment }}
  *
+ * @see https://schema.org/{{ type }}
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class {{ class }} extends {{ classExtends }}
@@ -41,7 +42,7 @@ class {{ class }} extends {{ classExtends }}
 
 {% for property in properties %}
     /**
-     * {{ property.comment }}
+{{ property.comment }}
      *
      * @param ${{ property.label }} {% for range in property.rangeIncludes %}{{ range.class }}{% if loop.last == false %}|{% endif %}{% endfor %}
 
@@ -60,8 +61,6 @@ class {{ class }} extends {{ classExtends }}
     public function {{ property.getter }}() {
         return $this->properties['{{ property.label }}'];
     }
-
 {% endfor %}
-
 }
 {% endautoescape %}

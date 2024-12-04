@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Data type: URL.
  *
+ * @see https://schema.org/URL
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class URL extends Text
@@ -37,6 +38,5 @@ class URL extends Text
     {
         return new URL('https://schema.org/', 'URL');
     }
-
 
 }

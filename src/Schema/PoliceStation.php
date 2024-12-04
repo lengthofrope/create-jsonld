@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A police station.
  *
+ * @see https://schema.org/PoliceStation
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class PoliceStation extends EmergencyService
@@ -37,6 +38,5 @@ class PoliceStation extends EmergencyService
     {
         return new PoliceStation('https://schema.org/', 'PoliceStation');
     }
-
 
 }

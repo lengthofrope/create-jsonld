@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Target audiences types for medical web pages. Enumerated type.
  *
+ * @see https://schema.org/MedicalAudienceType
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MedicalAudienceType extends MedicalEnumeration
@@ -37,6 +38,5 @@ class MedicalAudienceType extends MedicalEnumeration
     {
         return new MedicalAudienceType('https://schema.org/', 'MedicalAudienceType');
     }
-
 
 }

@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Represents the collection of all sports organizations, including sports teams, governing bodies, and sports associations.
+ * Represents the collection of all sports organizations, including sports teams,
+ * governing bodies, and sports associations.
  *
+ * @see https://schema.org/SportsOrganization
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class SportsOrganization extends Organization
@@ -56,6 +58,4 @@ class SportsOrganization extends Organization
     public function getSport() {
         return $this->properties['sport'];
     }
-
-
 }

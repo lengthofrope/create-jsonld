@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * An OfferCatalog is an ItemList that contains related Offers and/or further OfferCatalogs that are offeredBy the same provider.
+ * An OfferCatalog is an ItemList that contains related Offers and/or further
+ * OfferCatalogs that are offeredBy the same provider.
  *
+ * @see https://schema.org/OfferCatalog
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class OfferCatalog extends ItemList
@@ -37,6 +39,5 @@ class OfferCatalog extends ItemList
     {
         return new OfferCatalog('https://schema.org/', 'OfferCatalog');
     }
-
 
 }

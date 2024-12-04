@@ -27,8 +27,11 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A comment on an item - for example, a comment on a blog post. The comment's content is expressed via the [[text]] property, and its topic via [[about]], properties shared with all CreativeWorks.
+ * A comment on an item - for example, a comment on a blog post. The comment's
+ * content is expressed via the [[text]] property, and its topic via [[about]],
+ * properties shared with all CreativeWorks.
  *
+ * @see https://schema.org/Comment
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Comment extends CreativeWork
@@ -39,7 +42,10 @@ class Comment extends CreativeWork
     }
 
     /**
-     * The parent of a question, answer or item in general. Typically used for Q/A discussion threads e.g. a chain of comments with the first comment being an [[Article]] or other [[CreativeWork]]. See also [[comment]] which points from something to a comment about it.
+     * The parent of a question, answer or item in general. Typically used for Q/A
+     * discussion threads e.g. a chain of comments with the first comment being an
+     * [[Article]] or other [[CreativeWork]]. See also [[comment]] which points from
+     * something to a comment about it.
      *
      * @param $parentItem |
      * @return static
@@ -56,9 +62,9 @@ class Comment extends CreativeWork
     public function getParentItem() {
         return $this->properties['parentItem'];
     }
-
     /**
-     * The number of downvotes this question, answer or comment has received from the community.
+     * The number of downvotes this question, answer or comment has received from the
+     * community.
      *
      * @param $downvoteCount 
      * @return static
@@ -75,9 +81,9 @@ class Comment extends CreativeWork
     public function getDownvoteCount() {
         return $this->properties['downvoteCount'];
     }
-
     /**
-     * A CreativeWork such as an image, video, or audio clip shared as part of this posting.
+     * A CreativeWork such as an image, video, or audio clip shared as part of this
+     * posting.
      *
      * @param $sharedContent 
      * @return static
@@ -94,9 +100,9 @@ class Comment extends CreativeWork
     public function getSharedContent() {
         return $this->properties['sharedContent'];
     }
-
     /**
-     * The number of upvotes this question, answer or comment has received from the community.
+     * The number of upvotes this question, answer or comment has received from the
+     * community.
      *
      * @param $upvoteCount 
      * @return static
@@ -113,6 +119,4 @@ class Comment extends CreativeWork
     public function getUpvoteCount() {
         return $this->properties['upvoteCount'];
     }
-
-
 }

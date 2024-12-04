@@ -27,10 +27,13 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * An enterprise (potentially individual but typically collaborative), planned to achieve a particular aim.
- * Use properties from [[Organization]], [[subOrganization]]/[[parentOrganization]] to indicate project sub-structures. 
- *    
+ * An enterprise (potentially individual but typically collaborative), planned to
+ * achieve a particular aim.
+ * * Use properties from [[Organization]],
+ * [[subOrganization]]/[[parentOrganization]] to indicate project sub-structures.
+ * *
  *
+ * @see https://schema.org/Project
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Project extends Organization
@@ -39,6 +42,5 @@ class Project extends Organization
     {
         return new Project('https://schema.org/', 'Project');
     }
-
 
 }

@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A geographical region, typically under the jurisdiction of a particular government.
+ * A geographical region, typically under the jurisdiction of a particular
+ * government.
  *
+ * @see https://schema.org/AdministrativeArea
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class AdministrativeArea extends Place
@@ -37,6 +39,5 @@ class AdministrativeArea extends Place
     {
         return new AdministrativeArea('https://schema.org/', 'AdministrativeArea');
     }
-
 
 }

@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A type of blood vessel that specifically carries lymph fluid unidirectionally toward the heart.
+ * A type of blood vessel that specifically carries lymph fluid unidirectionally
+ * toward the heart.
  *
+ * @see https://schema.org/LymphaticVessel
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class LymphaticVessel extends Vessel
@@ -39,7 +41,8 @@ class LymphaticVessel extends Vessel
     }
 
     /**
-     * The anatomical or organ system drained by this vessel; generally refers to a specific part of an organ.
+     * The anatomical or organ system drained by this vessel; generally refers to a
+     * specific part of an organ.
      *
      * @param $regionDrained |
      * @return static
@@ -56,7 +59,6 @@ class LymphaticVessel extends Vessel
     public function getRegionDrained() {
         return $this->properties['regionDrained'];
     }
-
     /**
      * The vasculature the lymphatic structure runs, or efferents, to.
      *
@@ -75,7 +77,6 @@ class LymphaticVessel extends Vessel
     public function getRunsTo() {
         return $this->properties['runsTo'];
     }
-
     /**
      * The vasculature the lymphatic structure originates, or afferents, from.
      *
@@ -94,6 +95,4 @@ class LymphaticVessel extends Vessel
     public function getOriginatesFrom() {
         return $this->properties['originatesFrom'];
     }
-
-
 }

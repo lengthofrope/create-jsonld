@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Web page type: About page.
  *
+ * @see https://schema.org/AboutPage
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class AboutPage extends WebPage
@@ -37,6 +38,5 @@ class AboutPage extends WebPage
     {
         return new AboutPage('https://schema.org/', 'AboutPage');
     }
-
 
 }

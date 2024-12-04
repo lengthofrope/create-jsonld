@@ -27,8 +27,13 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * An anatomical system is a group of anatomical structures that work together to perform a certain task. Anatomical systems, such as organ systems, are one organizing principle of anatomy, and can include circulatory, digestive, endocrine, integumentary, immune, lymphatic, muscular, nervous, reproductive, respiratory, skeletal, urinary, vestibular, and other systems.
+ * An anatomical system is a group of anatomical structures that work together to
+ * perform a certain task. Anatomical systems, such as organ systems, are one
+ * organizing principle of anatomy, and can include circulatory, digestive,
+ * endocrine, integumentary, immune, lymphatic, muscular, nervous, reproductive,
+ * respiratory, skeletal, urinary, vestibular, and other systems.
  *
+ * @see https://schema.org/AnatomicalSystem
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class AnatomicalSystem extends MedicalEntity
@@ -39,7 +44,8 @@ class AnatomicalSystem extends MedicalEntity
     }
 
     /**
-     * Related anatomical structure(s) that are not part of the system but relate or connect to it, such as vascular bundles associated with an organ system.
+     * Related anatomical structure(s) that are not part of the system but relate or
+     * connect to it, such as vascular bundles associated with an organ system.
      *
      * @param $relatedStructure 
      * @return static
@@ -56,7 +62,6 @@ class AnatomicalSystem extends MedicalEntity
     public function getRelatedStructure() {
         return $this->properties['relatedStructure'];
     }
-
     /**
      * A medical therapy related to this anatomy.
      *
@@ -75,9 +80,10 @@ class AnatomicalSystem extends MedicalEntity
     public function getRelatedTherapy() {
         return $this->properties['relatedTherapy'];
     }
-
     /**
-     * Specifying something physically contained by something else. Typically used here for the underlying anatomical structures, such as organs, that comprise the anatomical system.
+     * Specifying something physically contained by something else. Typically used here
+     * for the underlying anatomical structures, such as organs, that comprise the
+     * anatomical system.
      *
      * @param $comprisedOf |
      * @return static
@@ -94,7 +100,6 @@ class AnatomicalSystem extends MedicalEntity
     public function getComprisedOf() {
         return $this->properties['comprisedOf'];
     }
-
     /**
      * A medical condition associated with this anatomy.
      *
@@ -113,9 +118,10 @@ class AnatomicalSystem extends MedicalEntity
     public function getRelatedCondition() {
         return $this->properties['relatedCondition'];
     }
-
     /**
-     * If applicable, a description of the pathophysiology associated with the anatomical system, including potential abnormal changes in the mechanical, physical, and biochemical functions of the system.
+     * If applicable, a description of the pathophysiology associated with the
+     * anatomical system, including potential abnormal changes in the mechanical,
+     * physical, and biochemical functions of the system.
      *
      * @param $associatedPathophysiology 
      * @return static
@@ -132,6 +138,4 @@ class AnatomicalSystem extends MedicalEntity
     public function getAssociatedPathophysiology() {
         return $this->properties['associatedPathophysiology'];
     }
-
-
 }

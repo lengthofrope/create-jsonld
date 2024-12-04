@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * An image file.
  *
+ * @see https://schema.org/ImageObject
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ImageObject extends MediaObject
@@ -56,9 +57,9 @@ class ImageObject extends MediaObject
     public function getRepresentativeOfPage() {
         return $this->properties['representativeOfPage'];
     }
-
     /**
-     * The caption for this object. For downloadable machine formats (closed caption, subtitles etc.) use MediaObject and indicate the [[encodingFormat]].
+     * The caption for this object. For downloadable machine formats (closed caption,
+     * subtitles etc.) use MediaObject and indicate the [[encodingFormat]].
      *
      * @param $caption |
      * @return static
@@ -75,7 +76,6 @@ class ImageObject extends MediaObject
     public function getCaption() {
         return $this->properties['caption'];
     }
-
     /**
      * exif data for this object.
      *
@@ -94,7 +94,6 @@ class ImageObject extends MediaObject
     public function getExifData() {
         return $this->properties['exifData'];
     }
-
     /**
      * Represents textual captioning from a [[MediaObject]], e.g. text of a 'meme'.
      *
@@ -113,6 +112,4 @@ class ImageObject extends MediaObject
     public function getEmbeddedTextCaption() {
         return $this->properties['embeddedTextCaption'];
     }
-
-
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A series of books. Included books can be indicated with the hasPart property.
  *
+ * @see https://schema.org/BookSeries
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class BookSeries extends CreativeWorkSeries
@@ -37,6 +38,5 @@ class BookSeries extends CreativeWorkSeries
     {
         return new BookSeries('https://schema.org/', 'BookSeries');
     }
-
 
 }

@@ -27,8 +27,11 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A specific object or file containing a Legislation. Note that the same Legislation can be published in multiple files. For example, a digitally signed PDF, a plain PDF and an HTML version.
+ * A specific object or file containing a Legislation. Note that the same
+ * Legislation can be published in multiple files. For example, a digitally signed
+ * PDF, a plain PDF and an HTML version.
  *
+ * @see https://schema.org/LegislationObject
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class LegislationObject extends Legislation
@@ -39,7 +42,9 @@ class LegislationObject extends Legislation
     }
 
     /**
-     * The legal value of this legislation file. The same legislation can be written in multiple files with different legal values. Typically a digitally signed PDF have a "stronger" legal value than the HTML file of the same act.
+     * The legal value of this legislation file. The same legislation can be written in
+     * multiple files with different legal values. Typically a digitally signed PDF
+     * have a "stronger" legal value than the HTML file of the same act.
      *
      * @param $legislationLegalValue 
      * @return static
@@ -56,6 +61,4 @@ class LegislationObject extends Legislation
     public function getLegislationLegalValue() {
         return $this->properties['legislationLegalValue'];
     }
-
-
 }

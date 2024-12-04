@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A predefined value for a product characteristic, e.g. the power cord plug type 'US' or the garment sizes 'S', 'M', 'L', and 'XL'.
+ * A predefined value for a product characteristic, e.g. the power cord plug type
+ * 'US' or the garment sizes 'S', 'M', 'L', and 'XL'.
  *
+ * @see https://schema.org/QualitativeValue
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class QualitativeValue extends Enumeration
@@ -39,7 +41,8 @@ class QualitativeValue extends Enumeration
     }
 
     /**
-     * This ordering relation for qualitative values indicates that the subject is equal to the object.
+     * This ordering relation for qualitative values indicates that the subject is
+     * equal to the object.
      *
      * @param $equal 
      * @return static
@@ -56,10 +59,16 @@ class QualitativeValue extends Enumeration
     public function getEqual() {
         return $this->properties['equal'];
     }
-
     /**
-     * A property-value pair representing an additional characteristic of the entity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.\n\nNote: Publishers should be aware that applications designed to use specific schema.org properties (e.g. https://schema.org/width, https://schema.org/color, https://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.
-
+     * A property-value pair representing an additional characteristic of the entity,
+     * e.g. a product feature or another characteristic for which there is no matching
+     * property in schema.org.
+     *
+     * Note: Publishers should be aware that applications designed to use specific
+     * schema.org properties (e.g. https://schema.org/width, https://schema.org/color,
+     * https://schema.org/gtin13, ...) will typically expect such data to be provided
+     * using those properties, rather than using the generic property/value mechanism.
+     *
      *
      * @param $additionalProperty 
      * @return static
@@ -76,9 +85,9 @@ class QualitativeValue extends Enumeration
     public function getAdditionalProperty() {
         return $this->properties['additionalProperty'];
     }
-
     /**
-     * This ordering relation for qualitative values indicates that the subject is lesser than the object.
+     * This ordering relation for qualitative values indicates that the subject is
+     * lesser than the object.
      *
      * @param $lesser 
      * @return static
@@ -95,9 +104,9 @@ class QualitativeValue extends Enumeration
     public function getLesser() {
         return $this->properties['lesser'];
     }
-
     /**
-     * This ordering relation for qualitative values indicates that the subject is lesser than or equal to the object.
+     * This ordering relation for qualitative values indicates that the subject is
+     * lesser than or equal to the object.
      *
      * @param $lesserOrEqual 
      * @return static
@@ -114,9 +123,9 @@ class QualitativeValue extends Enumeration
     public function getLesserOrEqual() {
         return $this->properties['lesserOrEqual'];
     }
-
     /**
-     * This ordering relation for qualitative values indicates that the subject is greater than or equal to the object.
+     * This ordering relation for qualitative values indicates that the subject is
+     * greater than or equal to the object.
      *
      * @param $greaterOrEqual 
      * @return static
@@ -133,9 +142,9 @@ class QualitativeValue extends Enumeration
     public function getGreaterOrEqual() {
         return $this->properties['greaterOrEqual'];
     }
-
     /**
-     * This ordering relation for qualitative values indicates that the subject is greater than the object.
+     * This ordering relation for qualitative values indicates that the subject is
+     * greater than the object.
      *
      * @param $greater 
      * @return static
@@ -152,9 +161,9 @@ class QualitativeValue extends Enumeration
     public function getGreater() {
         return $this->properties['greater'];
     }
-
     /**
-     * This ordering relation for qualitative values indicates that the subject is not equal to the object.
+     * This ordering relation for qualitative values indicates that the subject is not
+     * equal to the object.
      *
      * @param $nonEqual 
      * @return static
@@ -171,9 +180,9 @@ class QualitativeValue extends Enumeration
     public function getNonEqual() {
         return $this->properties['nonEqual'];
     }
-
     /**
-     * A secondary value that provides additional information on the original value, e.g. a reference temperature or a type of measurement.
+     * A secondary value that provides additional information on the original value,
+     * e.g. a reference temperature or a type of measurement.
      *
      * @param $valueReference |||||||
      * @return static
@@ -190,6 +199,4 @@ class QualitativeValue extends Enumeration
     public function getValueReference() {
         return $this->properties['valueReference'];
     }
-
-
 }

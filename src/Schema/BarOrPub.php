@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A bar or pub.
  *
+ * @see https://schema.org/BarOrPub
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class BarOrPub extends FoodEstablishment
@@ -37,6 +38,5 @@ class BarOrPub extends FoodEstablishment
     {
         return new BarOrPub('https://schema.org/', 'BarOrPub');
     }
-
 
 }

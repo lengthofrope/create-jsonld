@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A screening of a movie or other video.
  *
+ * @see https://schema.org/ScreeningEvent
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ScreeningEvent extends Event
@@ -56,9 +57,9 @@ class ScreeningEvent extends Event
     public function getVideoFormat() {
         return $this->properties['videoFormat'];
     }
-
     /**
-     * Languages in which subtitles/captions are available, in [IETF BCP 47 standard format](http://tools.ietf.org/html/bcp47).
+     * Languages in which subtitles/captions are available, in [IETF BCP 47 standard
+     * format](http://tools.ietf.org/html/bcp47).
      *
      * @param $subtitleLanguage |
      * @return static
@@ -75,7 +76,6 @@ class ScreeningEvent extends Event
     public function getSubtitleLanguage() {
         return $this->properties['subtitleLanguage'];
     }
-
     /**
      * The movie presented during this event.
      *
@@ -94,6 +94,4 @@ class ScreeningEvent extends Event
     public function getWorkPresented() {
         return $this->properties['workPresented'];
     }
-
-
 }

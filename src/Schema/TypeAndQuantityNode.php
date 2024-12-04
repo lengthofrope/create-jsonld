@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A structured value indicating the quantity, unit of measurement, and business function of goods included in a bundle offer.
+ * A structured value indicating the quantity, unit of measurement, and business
+ * function of goods included in a bundle offer.
  *
+ * @see https://schema.org/TypeAndQuantityNode
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class TypeAndQuantityNode extends StructuredValue
@@ -39,7 +41,9 @@ class TypeAndQuantityNode extends StructuredValue
     }
 
     /**
-     * The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes than the UN/CEFACT Common Code may be used with a prefix followed by a colon.
+     * The unit of measurement given using the UN/CEFACT Common Code (3 characters) or
+     * a URL. Other codes than the UN/CEFACT Common Code may be used with a prefix
+     * followed by a colon.
      *
      * @param $unitCode |
      * @return static
@@ -56,7 +60,6 @@ class TypeAndQuantityNode extends StructuredValue
     public function getUnitCode() {
         return $this->properties['unitCode'];
     }
-
     /**
      * The quantity of the goods included in the offer.
      *
@@ -75,7 +78,6 @@ class TypeAndQuantityNode extends StructuredValue
     public function getAmountOfThisGood() {
         return $this->properties['amountOfThisGood'];
     }
-
     /**
      * The product that this structured value is referring to.
      *
@@ -94,9 +96,10 @@ class TypeAndQuantityNode extends StructuredValue
     public function getTypeOfGood() {
         return $this->properties['typeOfGood'];
     }
-
     /**
-     * The business function (e.g. sell, lease, repair, dispose) of the offer or component of a bundle (TypeAndQuantityNode). The default is http://purl.org/goodrelations/v1#Sell.
+     * The business function (e.g. sell, lease, repair, dispose) of the offer or
+     * component of a bundle (TypeAndQuantityNode). The default is
+     * http://purl.org/goodrelations/v1#Sell.
      *
      * @param $businessFunction 
      * @return static
@@ -113,10 +116,10 @@ class TypeAndQuantityNode extends StructuredValue
     public function getBusinessFunction() {
         return $this->properties['businessFunction'];
     }
-
     /**
-     * A string or text indicating the unit of measurement. Useful if you cannot provide a standard unit code for
-<a href='unitCode'>unitCode</a>.
+     * A string or text indicating the unit of measurement. Useful if you cannot
+     * provide a standard unit code for
+     * <a href='unitCode'>unitCode</a>.
      *
      * @param $unitText 
      * @return static
@@ -133,6 +136,4 @@ class TypeAndQuantityNode extends StructuredValue
     public function getUnitText() {
         return $this->properties['unitText'];
     }
-
-
 }

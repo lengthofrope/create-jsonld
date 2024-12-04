@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A set of characteristics belonging to people, e.g. who compose an item's target audience.
+ * A set of characteristics belonging to people, e.g. who compose an item's target
+ * audience.
  *
+ * @see https://schema.org/PeopleAudience
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class PeopleAudience extends Audience
@@ -56,7 +58,6 @@ class PeopleAudience extends Audience
     public function getRequiredMinAge() {
         return $this->properties['requiredMinAge'];
     }
-
     /**
      * Audiences defined by a person's maximum age.
      *
@@ -75,9 +76,9 @@ class PeopleAudience extends Audience
     public function getRequiredMaxAge() {
         return $this->properties['requiredMaxAge'];
     }
-
     /**
-     * The age or age range for the intended audience or person, for example 3-12 months for infants, 1-5 years for toddlers.
+     * The age or age range for the intended audience or person, for example 3-12
+     * months for infants, 1-5 years for toddlers.
      *
      * @param $suggestedAge 
      * @return static
@@ -94,9 +95,9 @@ class PeopleAudience extends Audience
     public function getSuggestedAge() {
         return $this->properties['suggestedAge'];
     }
-
     /**
-     * The suggested gender of the intended person or audience, for example "male", "female", or "unisex".
+     * The suggested gender of the intended person or audience, for example "male",
+     * "female", or "unisex".
      *
      * @param $suggestedGender |
      * @return static
@@ -113,9 +114,9 @@ class PeopleAudience extends Audience
     public function getSuggestedGender() {
         return $this->properties['suggestedGender'];
     }
-
     /**
-     * Specifying the health condition(s) of a patient, medical study, or other target audience.
+     * Specifying the health condition(s) of a patient, medical study, or other target
+     * audience.
      *
      * @param $healthCondition 
      * @return static
@@ -132,9 +133,10 @@ class PeopleAudience extends Audience
     public function getHealthCondition() {
         return $this->properties['healthCondition'];
     }
-
     /**
-     * A suggested range of body measurements for the intended audience or person, for example inseam between 32 and 34 inches or height between 170 and 190 cm. Typically found on a size chart for wearable products.
+     * A suggested range of body measurements for the intended audience or person, for
+     * example inseam between 32 and 34 inches or height between 170 and 190 cm.
+     * Typically found on a size chart for wearable products.
      *
      * @param $suggestedMeasurement 
      * @return static
@@ -151,7 +153,6 @@ class PeopleAudience extends Audience
     public function getSuggestedMeasurement() {
         return $this->properties['suggestedMeasurement'];
     }
-
     /**
      * Audiences defined by a person's gender.
      *
@@ -170,7 +171,6 @@ class PeopleAudience extends Audience
     public function getRequiredGender() {
         return $this->properties['requiredGender'];
     }
-
     /**
      * Minimum recommended age in years for the audience or user.
      *
@@ -189,7 +189,6 @@ class PeopleAudience extends Audience
     public function getSuggestedMinAge() {
         return $this->properties['suggestedMinAge'];
     }
-
     /**
      * Maximum recommended age in years for the audience or user.
      *
@@ -208,6 +207,4 @@ class PeopleAudience extends Audience
     public function getSuggestedMaxAge() {
         return $this->properties['suggestedMaxAge'];
     }
-
-
 }

@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * An agent orders a (not yet released) object/product/service to be delivered/sent.
+ * An agent orders a (not yet released) object/product/service to be
+ * delivered/sent.
  *
+ * @see https://schema.org/PreOrderAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class PreOrderAction extends TradeAction
@@ -37,6 +39,5 @@ class PreOrderAction extends TradeAction
     {
         return new PreOrderAction('https://schema.org/', 'PreOrderAction');
     }
-
 
 }

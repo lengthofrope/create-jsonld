@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of participating in exertive activity for the purposes of improving health and fitness.
+ * The act of participating in exertive activity for the purposes of improving
+ * health and fitness.
  *
+ * @see https://schema.org/ExerciseAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ExerciseAction extends PlayAction
@@ -56,9 +58,9 @@ class ExerciseAction extends PlayAction
     public function getExercisePlan() {
         return $this->properties['exercisePlan'];
     }
-
     /**
-     * A sub property of location. The final location of the object or the agent after the action.
+     * A sub property of location. The final location of the object or the agent after
+     * the action.
      *
      * @param $toLocation 
      * @return static
@@ -75,7 +77,6 @@ class ExerciseAction extends PlayAction
     public function getToLocation() {
         return $this->properties['toLocation'];
     }
-
     /**
      * A sub property of location. The course where this action was taken.
      *
@@ -94,9 +95,9 @@ class ExerciseAction extends PlayAction
     public function getExerciseCourse() {
         return $this->properties['exerciseCourse'];
     }
-
     /**
-     * A sub property of location. The original location of the object or the agent before the action.
+     * A sub property of location. The original location of the object or the agent
+     * before the action.
      *
      * @param $fromLocation 
      * @return static
@@ -113,9 +114,9 @@ class ExerciseAction extends PlayAction
     public function getFromLocation() {
         return $this->properties['fromLocation'];
     }
-
     /**
-     * A sub property of location. The sports activity location where this action occurred.
+     * A sub property of location. The sports activity location where this action
+     * occurred.
      *
      * @param $sportsActivityLocation 
      * @return static
@@ -132,7 +133,6 @@ class ExerciseAction extends PlayAction
     public function getSportsActivityLocation() {
         return $this->properties['sportsActivityLocation'];
     }
-
     /**
      * The distance travelled, e.g. exercising or travelling.
      *
@@ -151,7 +151,6 @@ class ExerciseAction extends PlayAction
     public function getDistance() {
         return $this->properties['distance'];
     }
-
     /**
      * A sub property of instrument. The diet used in this action.
      *
@@ -170,7 +169,6 @@ class ExerciseAction extends PlayAction
     public function getDiet() {
         return $this->properties['diet'];
     }
-
     /**
      * A sub property of instrument. The diet used in this action.
      *
@@ -189,7 +187,6 @@ class ExerciseAction extends PlayAction
     public function getExerciseRelatedDiet() {
         return $this->properties['exerciseRelatedDiet'];
     }
-
     /**
      * A sub property of participant. The sports team that participated on this action.
      *
@@ -208,7 +205,6 @@ class ExerciseAction extends PlayAction
     public function getSportsTeam() {
         return $this->properties['sportsTeam'];
     }
-
     /**
      * A sub property of location. The sports event where this action occurred.
      *
@@ -227,7 +223,6 @@ class ExerciseAction extends PlayAction
     public function getSportsEvent() {
         return $this->properties['sportsEvent'];
     }
-
     /**
      * A sub property of participant. The opponent on this action.
      *
@@ -246,7 +241,6 @@ class ExerciseAction extends PlayAction
     public function getOpponent() {
         return $this->properties['opponent'];
     }
-
     /**
      * A sub property of location. The course where this action was taken.
      *
@@ -265,9 +259,9 @@ class ExerciseAction extends PlayAction
     public function getCourse() {
         return $this->properties['course'];
     }
-
     /**
-     * Type(s) of exercise or activity, such as strength training, flexibility training, aerobics, cardiac rehabilitation, etc.
+     * Type(s) of exercise or activity, such as strength training, flexibility
+     * training, aerobics, cardiac rehabilitation, etc.
      *
      * @param $exerciseType 
      * @return static
@@ -284,6 +278,4 @@ class ExerciseAction extends PlayAction
     public function getExerciseType() {
         return $this->properties['exerciseType'];
     }
-
-
 }

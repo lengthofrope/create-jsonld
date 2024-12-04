@@ -27,8 +27,11 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of giving money to a seller in exchange for goods or services rendered. An agent buys an object, product, or service from a seller for a price. Reciprocal of SellAction.
+ * The act of giving money to a seller in exchange for goods or services rendered.
+ * An agent buys an object, product, or service from a seller for a price.
+ * Reciprocal of SellAction.
  *
+ * @see https://schema.org/BuyAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class BuyAction extends TradeAction
@@ -39,7 +42,8 @@ class BuyAction extends TradeAction
     }
 
     /**
-     * An entity which offers (sells / leases / lends / loans) the services / goods.  A seller may also be a provider.
+     * An entity which offers (sells / leases / lends / loans) the services / goods.  A
+     * seller may also be a provider.
      *
      * @param $seller |
      * @return static
@@ -56,7 +60,6 @@ class BuyAction extends TradeAction
     public function getSeller() {
         return $this->properties['seller'];
     }
-
     /**
      * 'vendor' is an earlier term for 'seller'.
      *
@@ -75,7 +78,6 @@ class BuyAction extends TradeAction
     public function getVendor() {
         return $this->properties['vendor'];
     }
-
     /**
      * The warranty promise(s) included in the offer.
      *
@@ -94,6 +96,4 @@ class BuyAction extends TradeAction
     public function getWarrantyPromise() {
         return $this->properties['warrantyPromise'];
     }
-
-
 }

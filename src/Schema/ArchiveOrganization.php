@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * An organization with archival holdings. An organization which keeps and preserves archival material and typically makes it accessible to the public.
+ * An organization with archival holdings. An organization which keeps and
+ * preserves archival material and typically makes it accessible to the public.
  *
+ * @see https://schema.org/ArchiveOrganization
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ArchiveOrganization extends LocalBusiness
@@ -37,6 +39,5 @@ class ArchiveOrganization extends LocalBusiness
     {
         return new ArchiveOrganization('https://schema.org/', 'ArchiveOrganization');
     }
-
 
 }

@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A property, used to indicate attributes and relationships of some Thing; equivalent to rdf:Property.
+ * A property, used to indicate attributes and relationships of some Thing;
+ * equivalent to rdf:Property.
  *
+ * @see https://schema.org/Property
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Property extends Intangible
@@ -39,7 +41,8 @@ class Property extends Intangible
     }
 
     /**
-     * Relates a property to a class that is (one of) the type(s) the property is expected to be used on.
+     * Relates a property to a class that is (one of) the type(s) the property is
+     * expected to be used on.
      *
      * @param $domainIncludes 
      * @return static
@@ -56,9 +59,12 @@ class Property extends Intangible
     public function getDomainIncludes() {
         return $this->properties['domainIncludes'];
     }
-
     /**
-     * Relates a property to a property that is its inverse. Inverse properties relate the same pairs of items to each other, but in reversed direction. For example, the 'alumni' and 'alumniOf' properties are inverseOf each other. Some properties don't have explicit inverses; in these situations RDFa and JSON-LD syntax for reverse properties can be used.
+     * Relates a property to a property that is its inverse. Inverse properties relate
+     * the same pairs of items to each other, but in reversed direction. For example,
+     * the 'alumni' and 'alumniOf' properties are inverseOf each other. Some properties
+     * don't have explicit inverses; in these situations RDFa and JSON-LD syntax for
+     * reverse properties can be used.
      *
      * @param $inverseOf 
      * @return static
@@ -75,9 +81,9 @@ class Property extends Intangible
     public function getInverseOf() {
         return $this->properties['inverseOf'];
     }
-
     /**
-     * Relates a term (i.e. a property, class or enumeration) to one that supersedes it.
+     * Relates a term (i.e. a property, class or enumeration) to one that supersedes
+     * it.
      *
      * @param $supersededBy ||
      * @return static
@@ -94,9 +100,9 @@ class Property extends Intangible
     public function getSupersededBy() {
         return $this->properties['supersededBy'];
     }
-
     /**
-     * Relates a property to a class that constitutes (one of) the expected type(s) for values of the property.
+     * Relates a property to a class that constitutes (one of) the expected type(s) for
+     * values of the property.
      *
      * @param $rangeIncludes 
      * @return static
@@ -113,6 +119,4 @@ class Property extends Intangible
     public function getRangeIncludes() {
         return $this->properties['rangeIncludes'];
     }
-
-
 }

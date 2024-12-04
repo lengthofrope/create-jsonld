@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A list of possible product availability options.
  *
+ * @see https://schema.org/ItemAvailability
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ItemAvailability extends Enumeration
@@ -37,6 +38,5 @@ class ItemAvailability extends Enumeration
     {
         return new ItemAvailability('https://schema.org/', 'ItemAvailability');
     }
-
 
 }

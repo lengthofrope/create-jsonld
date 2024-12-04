@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * An internet cafe.
  *
+ * @see https://schema.org/InternetCafe
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class InternetCafe extends LocalBusiness
@@ -37,6 +38,5 @@ class InternetCafe extends LocalBusiness
     {
         return new InternetCafe('https://schema.org/', 'InternetCafe');
     }
-
 
 }

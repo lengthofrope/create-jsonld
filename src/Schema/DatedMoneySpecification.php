@@ -27,8 +27,12 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A DatedMoneySpecification represents monetary values with optional start and end dates. For example, this could represent an employee's salary over a specific period of time. __Note:__ This type has been superseded by [[MonetaryAmount]], use of that type is recommended.
+ * A DatedMoneySpecification represents monetary values with optional start and end
+ * dates. For example, this could represent an employee's salary over a specific
+ * period of time. __Note:__ This type has been superseded by [[MonetaryAmount]],
+ * use of that type is recommended.
  *
+ * @see https://schema.org/DatedMoneySpecification
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class DatedMoneySpecification extends StructuredValue
@@ -39,7 +43,14 @@ class DatedMoneySpecification extends StructuredValue
     }
 
     /**
-     * The currency in which the monetary amount is expressed.\n\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR".
+     * The currency in which the monetary amount is expressed.
+     *
+     * Use standard formats: [ISO 4217 currency
+     * format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker
+     * symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for
+     * cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading
+     * Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and
+     * other currency types, e.g. "Ithaca HOUR".
      *
      * @param $currency 
      * @return static
@@ -56,7 +67,6 @@ class DatedMoneySpecification extends StructuredValue
     public function getCurrency() {
         return $this->properties['currency'];
     }
-
     /**
      * The amount of money.
      *
@@ -75,9 +85,9 @@ class DatedMoneySpecification extends StructuredValue
     public function getAmount() {
         return $this->properties['amount'];
     }
-
     /**
-     * The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
+     * The start date and time of the item (in [ISO 8601 date
+     * format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
      * @param $startDate |
      * @return static
@@ -94,9 +104,9 @@ class DatedMoneySpecification extends StructuredValue
     public function getStartDate() {
         return $this->properties['startDate'];
     }
-
     /**
-     * The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
+     * The end date and time of the item (in [ISO 8601 date
+     * format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
      * @param $endDate |
      * @return static
@@ -113,6 +123,4 @@ class DatedMoneySpecification extends StructuredValue
     public function getEndDate() {
         return $this->properties['endDate'];
     }
-
-
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Organization: A business corporation.
  *
+ * @see https://schema.org/Corporation
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Corporation extends Organization
@@ -39,7 +40,11 @@ class Corporation extends Organization
     }
 
     /**
-     * The exchange traded instrument associated with a Corporation object. The tickerSymbol is expressed as an exchange and an instrument name separated by a space character. For the exchange component of the tickerSymbol attribute, we recommend using the controlled vocabulary of Market Identifier Codes (MIC) specified in ISO 15022.
+     * The exchange traded instrument associated with a Corporation object. The
+     * tickerSymbol is expressed as an exchange and an instrument name separated by a
+     * space character. For the exchange component of the tickerSymbol attribute, we
+     * recommend using the controlled vocabulary of Market Identifier Codes (MIC)
+     * specified in ISO 15022.
      *
      * @param $tickerSymbol 
      * @return static
@@ -56,6 +61,4 @@ class Corporation extends Organization
     public function getTickerSymbol() {
         return $this->properties['tickerSymbol'];
     }
-
-
 }

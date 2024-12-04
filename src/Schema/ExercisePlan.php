@@ -27,8 +27,11 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Fitness-related activity designed for a specific health-related purpose, including defined exercise routines as well as activity prescribed by a clinician.
+ * Fitness-related activity designed for a specific health-related purpose,
+ * including defined exercise routines as well as activity prescribed by a
+ * clinician.
  *
+ * @see https://schema.org/ExercisePlan
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ExercisePlan extends PhysicalActivity
@@ -56,9 +59,10 @@ class ExercisePlan extends PhysicalActivity
     public function getRestPeriods() {
         return $this->properties['restPeriods'];
     }
-
     /**
-     * Any additional component of the exercise prescription that may need to be articulated to the patient. This may include the order of exercises, the number of repetitions of movement, quantitative distance, progressions over time, etc.
+     * Any additional component of the exercise prescription that may need to be
+     * articulated to the patient. This may include the order of exercises, the number
+     * of repetitions of movement, quantitative distance, progressions over time, etc.
      *
      * @param $additionalVariable 
      * @return static
@@ -75,9 +79,9 @@ class ExercisePlan extends PhysicalActivity
     public function getAdditionalVariable() {
         return $this->properties['additionalVariable'];
     }
-
     /**
-     * Quantitative measure gauging the degree of force involved in the exercise, for example, heartbeats per minute. May include the velocity of the movement.
+     * Quantitative measure gauging the degree of force involved in the exercise, for
+     * example, heartbeats per minute. May include the velocity of the movement.
      *
      * @param $intensity |
      * @return static
@@ -94,7 +98,6 @@ class ExercisePlan extends PhysicalActivity
     public function getIntensity() {
         return $this->properties['intensity'];
     }
-
     /**
      * Number of times one should repeat the activity.
      *
@@ -113,7 +116,6 @@ class ExercisePlan extends PhysicalActivity
     public function getRepetitions() {
         return $this->properties['repetitions'];
     }
-
     /**
      * Length of time to engage in the activity.
      *
@@ -132,9 +134,9 @@ class ExercisePlan extends PhysicalActivity
     public function getActivityDuration() {
         return $this->properties['activityDuration'];
     }
-
     /**
-     * Quantitative measure of the physiologic output of the exercise; also referred to as energy expenditure.
+     * Quantitative measure of the physiologic output of the exercise; also referred to
+     * as energy expenditure.
      *
      * @param $workload |
      * @return static
@@ -151,9 +153,9 @@ class ExercisePlan extends PhysicalActivity
     public function getWorkload() {
         return $this->properties['workload'];
     }
-
     /**
-     * Type(s) of exercise or activity, such as strength training, flexibility training, aerobics, cardiac rehabilitation, etc.
+     * Type(s) of exercise or activity, such as strength training, flexibility
+     * training, aerobics, cardiac rehabilitation, etc.
      *
      * @param $exerciseType 
      * @return static
@@ -170,7 +172,6 @@ class ExercisePlan extends PhysicalActivity
     public function getExerciseType() {
         return $this->properties['exerciseType'];
     }
-
     /**
      * How often one should engage in the activity.
      *
@@ -189,6 +190,4 @@ class ExercisePlan extends PhysicalActivity
     public function getActivityFrequency() {
         return $this->properties['activityFrequency'];
     }
-
-
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The artwork on the cover of a comic.
  *
+ * @see https://schema.org/ComicCoverArt
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ComicCoverArt extends ComicStory
@@ -37,6 +38,5 @@ class ComicCoverArt extends ComicStory
     {
         return new ComicCoverArt('https://schema.org/', 'ComicCoverArt');
     }
-
 
 }

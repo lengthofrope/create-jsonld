@@ -27,8 +27,13 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of rejecting to/adopting an object.\n\nRelated actions:\n\n* [[AcceptAction]]: The antonym of RejectAction.
+ * The act of rejecting to/adopting an object.
  *
+ * Related actions:
+ *
+ * * [[AcceptAction]]: The antonym of RejectAction.
+ *
+ * @see https://schema.org/RejectAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class RejectAction extends AllocateAction
@@ -37,6 +42,5 @@ class RejectAction extends AllocateAction
     {
         return new RejectAction('https://schema.org/', 'RejectAction');
     }
-
 
 }

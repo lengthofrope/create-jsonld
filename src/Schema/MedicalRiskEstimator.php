@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Any rule set or interactive tool for estimating the risk of developing a complication or condition.
+ * Any rule set or interactive tool for estimating the risk of developing a
+ * complication or condition.
  *
+ * @see https://schema.org/MedicalRiskEstimator
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MedicalRiskEstimator extends MedicalEntity
@@ -56,9 +58,9 @@ class MedicalRiskEstimator extends MedicalEntity
     public function getEstimatesRiskOf() {
         return $this->properties['estimatesRiskOf'];
     }
-
     /**
-     * A modifiable or non-modifiable risk factor included in the calculation, e.g. age, coexisting condition.
+     * A modifiable or non-modifiable risk factor included in the calculation, e.g.
+     * age, coexisting condition.
      *
      * @param $includedRiskFactor 
      * @return static
@@ -75,6 +77,4 @@ class MedicalRiskEstimator extends MedicalEntity
     public function getIncludedRiskFactor() {
         return $this->properties['includedRiskFactor'];
     }
-
-
 }

@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Any anatomical structure which pertains to the soft nervous tissue functioning as the coordinating center of sensation and intellectual and nervous activity.
+ * Any anatomical structure which pertains to the soft nervous tissue functioning
+ * as the coordinating center of sensation and intellectual and nervous activity.
  *
+ * @see https://schema.org/BrainStructure
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class BrainStructure extends AnatomicalStructure
@@ -37,6 +39,5 @@ class BrainStructure extends AnatomicalStructure
     {
         return new BrainStructure('https://schema.org/', 'BrainStructure');
     }
-
 
 }

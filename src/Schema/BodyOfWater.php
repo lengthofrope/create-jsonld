@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A body of water, such as a sea, ocean, or lake.
  *
+ * @see https://schema.org/BodyOfWater
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class BodyOfWater extends Landform
@@ -37,6 +38,5 @@ class BodyOfWater extends Landform
     {
         return new BodyOfWater('https://schema.org/', 'BodyOfWater');
     }
-
 
 }

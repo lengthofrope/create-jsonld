@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Auto body shop.
  *
+ * @see https://schema.org/AutoBodyShop
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class AutoBodyShop extends AutomotiveBusiness
@@ -37,6 +38,5 @@ class AutoBodyShop extends AutomotiveBusiness
     {
         return new AutoBodyShop('https://schema.org/', 'AutoBodyShop');
     }
-
 
 }

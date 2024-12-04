@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Enumerated status values for Order.
  *
+ * @see https://schema.org/OrderStatus
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class OrderStatus extends StatusEnumeration
@@ -37,6 +38,5 @@ class OrderStatus extends StatusEnumeration
     {
         return new OrderStatus('https://schema.org/', 'OrderStatus');
     }
-
 
 }

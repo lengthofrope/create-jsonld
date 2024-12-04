@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The act of ingesting information/resources/food.
  *
+ * @see https://schema.org/ConsumeAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ConsumeAction extends Action
@@ -39,7 +40,8 @@ class ConsumeAction extends Action
     }
 
     /**
-     * An Offer which must be accepted before the user can perform the Action. For example, the user may need to buy a movie before being able to watch it.
+     * An Offer which must be accepted before the user can perform the Action. For
+     * example, the user may need to buy a movie before being able to watch it.
      *
      * @param $expectsAcceptanceOf 
      * @return static
@@ -56,9 +58,10 @@ class ConsumeAction extends Action
     public function getExpectsAcceptanceOf() {
         return $this->properties['expectsAcceptanceOf'];
     }
-
     /**
-     * A set of requirements that must be fulfilled in order to perform an Action. If more than one value is specified, fulfilling one set of requirements will allow the Action to be performed.
+     * A set of requirements that must be fulfilled in order to perform an Action. If
+     * more than one value is specified, fulfilling one set of requirements will allow
+     * the Action to be performed.
      *
      * @param $actionAccessibilityRequirement 
      * @return static
@@ -75,6 +78,4 @@ class ConsumeAction extends Action
     public function getActionAccessibilityRequirement() {
         return $this->properties['actionAccessibilityRequirement'];
     }
-
-
 }

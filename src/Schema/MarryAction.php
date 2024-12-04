@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The act of marrying a person.
  *
+ * @see https://schema.org/MarryAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MarryAction extends InteractAction
@@ -37,6 +38,5 @@ class MarryAction extends InteractAction
     {
         return new MarryAction('https://schema.org/', 'MarryAction');
     }
-
 
 }

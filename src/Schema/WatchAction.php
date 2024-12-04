@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The act of consuming dynamic/moving visual content.
  *
+ * @see https://schema.org/WatchAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class WatchAction extends ConsumeAction
@@ -37,6 +38,5 @@ class WatchAction extends ConsumeAction
     {
         return new WatchAction('https://schema.org/', 'WatchAction');
     }
-
 
 }

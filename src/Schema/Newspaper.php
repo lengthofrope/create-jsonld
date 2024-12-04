@@ -27,8 +27,11 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A publication containing information about varied topics that are pertinent to general information, a geographic area, or a specific subject matter (i.e. business, culture, education). Often published daily.
+ * A publication containing information about varied topics that are pertinent to
+ * general information, a geographic area, or a specific subject matter (i.e.
+ * business, culture, education). Often published daily.
  *
+ * @see https://schema.org/Newspaper
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Newspaper extends Periodical
@@ -37,6 +40,5 @@ class Newspaper extends Periodical
     {
         return new Newspaper('https://schema.org/', 'Newspaper');
     }
-
 
 }

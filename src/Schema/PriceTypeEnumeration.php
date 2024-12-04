@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Enumerates different price types, for example list price, invoice price, and sale price.
+ * Enumerates different price types, for example list price, invoice price, and
+ * sale price.
  *
+ * @see https://schema.org/PriceTypeEnumeration
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class PriceTypeEnumeration extends Enumeration
@@ -37,6 +39,5 @@ class PriceTypeEnumeration extends Enumeration
     {
         return new PriceTypeEnumeration('https://schema.org/', 'PriceTypeEnumeration');
     }
-
 
 }

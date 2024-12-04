@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Any complaint sensed and expressed by the patient (therefore defined as subjective)  like stomachache, lower-back pain, or fatigue.
+ * Any complaint sensed and expressed by the patient (therefore defined as
+ * subjective)  like stomachache, lower-back pain, or fatigue.
  *
+ * @see https://schema.org/MedicalSymptom
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MedicalSymptom extends MedicalSignOrSymptom
@@ -37,6 +39,5 @@ class MedicalSymptom extends MedicalSignOrSymptom
     {
         return new MedicalSymptom('https://schema.org/', 'MedicalSymptom');
     }
-
 
 }

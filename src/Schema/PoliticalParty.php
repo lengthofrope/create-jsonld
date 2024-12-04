@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Organization: Political Party.
  *
+ * @see https://schema.org/PoliticalParty
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class PoliticalParty extends Organization
@@ -37,6 +38,5 @@ class PoliticalParty extends Organization
     {
         return new PoliticalParty('https://schema.org/', 'PoliticalParty');
     }
-
 
 }

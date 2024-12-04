@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * An airline flight.
  *
+ * @see https://schema.org/Flight
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Flight extends Trip
@@ -39,7 +40,8 @@ class Flight extends Trip
     }
 
     /**
-     * The type of boarding policy used by the airline (e.g. zone-based or group-based).
+     * The type of boarding policy used by the airline (e.g. zone-based or
+     * group-based).
      *
      * @param $boardingPolicy 
      * @return static
@@ -56,7 +58,6 @@ class Flight extends Trip
     public function getBoardingPolicy() {
         return $this->properties['boardingPolicy'];
     }
-
     /**
      * Identifier of the flight's arrival terminal.
      *
@@ -75,7 +76,6 @@ class Flight extends Trip
     public function getArrivalTerminal() {
         return $this->properties['arrivalTerminal'];
     }
-
     /**
      * Identifier of the flight's departure gate.
      *
@@ -94,7 +94,6 @@ class Flight extends Trip
     public function getDepartureGate() {
         return $this->properties['departureGate'];
     }
-
     /**
      * The airport where the flight originates.
      *
@@ -113,9 +112,9 @@ class Flight extends Trip
     public function getDepartureAirport() {
         return $this->properties['departureAirport'];
     }
-
     /**
-     * 'carrier' is an out-dated term indicating the 'provider' for parcel delivery and flights.
+     * 'carrier' is an out-dated term indicating the 'provider' for parcel delivery and
+     * flights.
      *
      * @param $carrier 
      * @return static
@@ -132,7 +131,6 @@ class Flight extends Trip
     public function getCarrier() {
         return $this->properties['carrier'];
     }
-
     /**
      * The kind of aircraft (e.g., "Boeing 747").
      *
@@ -151,9 +149,9 @@ class Flight extends Trip
     public function getAircraft() {
         return $this->properties['aircraft'];
     }
-
     /**
-     * An entity which offers (sells / leases / lends / loans) the services / goods.  A seller may also be a provider.
+     * An entity which offers (sells / leases / lends / loans) the services / goods.  A
+     * seller may also be a provider.
      *
      * @param $seller |
      * @return static
@@ -170,7 +168,6 @@ class Flight extends Trip
     public function getSeller() {
         return $this->properties['seller'];
     }
-
     /**
      * Identifier of the flight's arrival gate.
      *
@@ -189,7 +186,6 @@ class Flight extends Trip
     public function getArrivalGate() {
         return $this->properties['arrivalGate'];
     }
-
     /**
      * The time when a passenger can check into the flight online.
      *
@@ -208,7 +204,6 @@ class Flight extends Trip
     public function getWebCheckinTime() {
         return $this->properties['webCheckinTime'];
     }
-
     /**
      * The estimated time the flight will take.
      *
@@ -227,7 +222,6 @@ class Flight extends Trip
     public function getEstimatedFlightDuration() {
         return $this->properties['estimatedFlightDuration'];
     }
-
     /**
      * The distance of the flight.
      *
@@ -246,7 +240,6 @@ class Flight extends Trip
     public function getFlightDistance() {
         return $this->properties['flightDistance'];
     }
-
     /**
      * Description of the meals that will be provided or available for purchase.
      *
@@ -265,7 +258,6 @@ class Flight extends Trip
     public function getMealService() {
         return $this->properties['mealService'];
     }
-
     /**
      * Identifier of the flight's departure terminal.
      *
@@ -284,7 +276,6 @@ class Flight extends Trip
     public function getDepartureTerminal() {
         return $this->properties['departureTerminal'];
     }
-
     /**
      * The airport where the flight terminates.
      *
@@ -303,9 +294,10 @@ class Flight extends Trip
     public function getArrivalAirport() {
         return $this->properties['arrivalAirport'];
     }
-
     /**
-     * The unique identifier for a flight including the airline IATA code. For example, if describing United flight 110, where the IATA code for United is 'UA', the flightNumber is 'UA110'.
+     * The unique identifier for a flight including the airline IATA code. For example,
+     * if describing United flight 110, where the IATA code for United is 'UA', the
+     * flightNumber is 'UA110'.
      *
      * @param $flightNumber 
      * @return static
@@ -322,6 +314,4 @@ class Flight extends Trip
     public function getFlightNumber() {
         return $this->properties['flightNumber'];
     }
-
-
 }

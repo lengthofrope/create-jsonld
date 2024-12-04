@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * An employment agency.
  *
+ * @see https://schema.org/EmploymentAgency
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class EmploymentAgency extends LocalBusiness
@@ -37,6 +38,5 @@ class EmploymentAgency extends LocalBusiness
     {
         return new EmploymentAgency('https://schema.org/', 'EmploymentAgency');
     }
-
 
 }

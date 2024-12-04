@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Computer programming source code. Example: Full (compile ready) solutions, code snippet samples, scripts, templates.
+ * Computer programming source code. Example: Full (compile ready) solutions, code
+ * snippet samples, scripts, templates.
  *
+ * @see https://schema.org/SoftwareSourceCode
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class SoftwareSourceCode extends CreativeWork
@@ -39,7 +41,8 @@ class SoftwareSourceCode extends CreativeWork
     }
 
     /**
-     * What type of code sample: full (compile ready) solution, code snippet, inline code, scripts, template.
+     * What type of code sample: full (compile ready) solution, code snippet, inline
+     * code, scripts, template.
      *
      * @param $sampleType 
      * @return static
@@ -56,7 +59,6 @@ class SoftwareSourceCode extends CreativeWork
     public function getSampleType() {
         return $this->properties['sampleType'];
     }
-
     /**
      * The computer programming language.
      *
@@ -75,9 +77,9 @@ class SoftwareSourceCode extends CreativeWork
     public function getProgrammingLanguage() {
         return $this->properties['programmingLanguage'];
     }
-
     /**
-     * What type of code sample: full (compile ready) solution, code snippet, inline code, scripts, template.
+     * What type of code sample: full (compile ready) solution, code snippet, inline
+     * code, scripts, template.
      *
      * @param $codeSampleType 
      * @return static
@@ -94,9 +96,9 @@ class SoftwareSourceCode extends CreativeWork
     public function getCodeSampleType() {
         return $this->properties['codeSampleType'];
     }
-
     /**
-     * Runtime platform or script interpreter dependencies (example: Java v1, Python 2.3, .NET Framework 3.0).
+     * Runtime platform or script interpreter dependencies (example: Java v1, Python
+     * 2.3, .NET Framework 3.0).
      *
      * @param $runtime 
      * @return static
@@ -113,9 +115,9 @@ class SoftwareSourceCode extends CreativeWork
     public function getRuntime() {
         return $this->properties['runtime'];
     }
-
     /**
-     * Target Operating System / Product to which the code applies.  If applies to several versions, just the product name can be used.
+     * Target Operating System / Product to which the code applies.  If applies to
+     * several versions, just the product name can be used.
      *
      * @param $targetProduct 
      * @return static
@@ -132,9 +134,9 @@ class SoftwareSourceCode extends CreativeWork
     public function getTargetProduct() {
         return $this->properties['targetProduct'];
     }
-
     /**
-     * Runtime platform or script interpreter dependencies (example: Java v1, Python 2.3, .NET Framework 3.0).
+     * Runtime platform or script interpreter dependencies (example: Java v1, Python
+     * 2.3, .NET Framework 3.0).
      *
      * @param $runtimePlatform 
      * @return static
@@ -151,9 +153,9 @@ class SoftwareSourceCode extends CreativeWork
     public function getRuntimePlatform() {
         return $this->properties['runtimePlatform'];
     }
-
     /**
-     * Link to the repository where the un-compiled, human readable code and related code is located (SVN, GitHub, CodePlex).
+     * Link to the repository where the un-compiled, human readable code and related
+     * code is located (SVN, GitHub, CodePlex).
      *
      * @param $codeRepository 
      * @return static
@@ -170,6 +172,4 @@ class SoftwareSourceCode extends CreativeWork
     public function getCodeRepository() {
         return $this->properties['codeRepository'];
     }
-
-
 }

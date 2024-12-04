@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * An embassy.
  *
+ * @see https://schema.org/Embassy
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Embassy extends GovernmentBuilding
@@ -37,6 +38,5 @@ class Embassy extends GovernmentBuilding
     {
         return new Embassy('https://schema.org/', 'Embassy');
     }
-
 
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A video file.
  *
+ * @see https://schema.org/VideoObject
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class VideoObject extends MediaObject
@@ -39,7 +40,9 @@ class VideoObject extends MediaObject
     }
 
     /**
-     * An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip.
+     * An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or
+     * in an event. Actors can be associated with individual items or with a series,
+     * episode, clip.
      *
      * @param $actor |
      * @return static
@@ -56,9 +59,9 @@ class VideoObject extends MediaObject
     public function getActor() {
         return $this->properties['actor'];
     }
-
     /**
-     * An actor, e.g. in TV, radio, movie, video games etc. Actors can be associated with individual items or with a series, episode, clip.
+     * An actor, e.g. in TV, radio, movie, video games etc. Actors can be associated
+     * with individual items or with a series, episode, clip.
      *
      * @param $actors 
      * @return static
@@ -75,9 +78,9 @@ class VideoObject extends MediaObject
     public function getActors() {
         return $this->properties['actors'];
     }
-
     /**
-     * If this MediaObject is an AudioObject or VideoObject, the transcript of that object.
+     * If this MediaObject is an AudioObject or VideoObject, the transcript of that
+     * object.
      *
      * @param $transcript 
      * @return static
@@ -94,9 +97,9 @@ class VideoObject extends MediaObject
     public function getTranscript() {
         return $this->properties['transcript'];
     }
-
     /**
-     * A director of e.g. TV, radio, movie, video games etc. content. Directors can be associated with individual items or with a series, episode, clip.
+     * A director of e.g. TV, radio, movie, video games etc. content. Directors can be
+     * associated with individual items or with a series, episode, clip.
      *
      * @param $directors 
      * @return static
@@ -113,7 +116,6 @@ class VideoObject extends MediaObject
     public function getDirectors() {
         return $this->properties['directors'];
     }
-
     /**
      * The quality of the video.
      *
@@ -132,7 +134,6 @@ class VideoObject extends MediaObject
     public function getVideoQuality() {
         return $this->properties['videoQuality'];
     }
-
     /**
      * The frame size of the video.
      *
@@ -151,9 +152,10 @@ class VideoObject extends MediaObject
     public function getVideoFrameSize() {
         return $this->properties['videoFrameSize'];
     }
-
     /**
-     * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual items or with a series, episode, clip.
+     * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event.
+     * Directors can be associated with individual items or with a series, episode,
+     * clip.
      *
      * @param $director 
      * @return static
@@ -170,9 +172,9 @@ class VideoObject extends MediaObject
     public function getDirector() {
         return $this->properties['director'];
     }
-
     /**
-     * The caption for this object. For downloadable machine formats (closed caption, subtitles etc.) use MediaObject and indicate the [[encodingFormat]].
+     * The caption for this object. For downloadable machine formats (closed caption,
+     * subtitles etc.) use MediaObject and indicate the [[encodingFormat]].
      *
      * @param $caption |
      * @return static
@@ -189,7 +191,6 @@ class VideoObject extends MediaObject
     public function getCaption() {
         return $this->properties['caption'];
     }
-
     /**
      * The composer of the soundtrack.
      *
@@ -208,7 +209,6 @@ class VideoObject extends MediaObject
     public function getMusicBy() {
         return $this->properties['musicBy'];
     }
-
     /**
      * Represents textual captioning from a [[MediaObject]], e.g. text of a 'meme'.
      *
@@ -227,6 +227,4 @@ class VideoObject extends MediaObject
     public function getEmbeddedTextCaption() {
         return $this->properties['embeddedTextCaption'];
     }
-
-
 }

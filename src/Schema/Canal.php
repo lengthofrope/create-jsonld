@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A canal, like the Panama Canal.
  *
+ * @see https://schema.org/Canal
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Canal extends BodyOfWater
@@ -37,6 +38,5 @@ class Canal extends BodyOfWater
     {
         return new Canal('https://schema.org/', 'Canal');
     }
-
 
 }

@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A vehicle is a device that is designed or used to transport people or cargo over land, water, air, or through space.
+ * A vehicle is a device that is designed or used to transport people or cargo over
+ * land, water, air, or through space.
  *
+ * @see https://schema.org/Vehicle
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Vehicle extends Product
@@ -39,7 +41,10 @@ class Vehicle extends Product
     }
 
     /**
-     * The number of passengers that can be seated in the vehicle, both in terms of the physical space available, and in terms of limitations set by law.\n\nTypical unit code(s): C62 for persons.
+     * The number of passengers that can be seated in the vehicle, both in terms of the
+     * physical space available, and in terms of limitations set by law.
+     *
+     * Typical unit code(s): C62 for persons.
      *
      * @param $vehicleSeatingCapacity |
      * @return static
@@ -56,9 +61,10 @@ class Vehicle extends Product
     public function getVehicleSeatingCapacity() {
         return $this->properties['vehicleSeatingCapacity'];
     }
-
     /**
-     * The CO2 emissions in g/km. When used in combination with a QuantitativeValue, put "g/km" into the unitText property of that value, since there is no UN/CEFACT Common Code for "g/km".
+     * The CO2 emissions in g/km. When used in combination with a QuantitativeValue,
+     * put "g/km" into the unitText property of that value, since there is no UN/CEFACT
+     * Common Code for "g/km".
      *
      * @param $emissionsCO2 
      * @return static
@@ -75,9 +81,10 @@ class Vehicle extends Product
     public function getEmissionsCO2() {
         return $this->properties['emissionsCO2'];
     }
-
     /**
-     * The number of owners of the vehicle, including the current one.\n\nTypical unit code(s): C62.
+     * The number of owners of the vehicle, including the current one.
+     *
+     * Typical unit code(s): C62.
      *
      * @param $numberOfPreviousOwners |
      * @return static
@@ -94,9 +101,20 @@ class Vehicle extends Product
     public function getNumberOfPreviousOwners() {
         return $this->properties['numberOfPreviousOwners'];
     }
-
     /**
-     * The permitted weight of passengers and cargo, EXCLUDING the weight of the empty vehicle.\n\nTypical unit code(s): KGM for kilogram, LBR for pound\n\n* Note 1: Many databases specify the permitted TOTAL weight instead, which is the sum of [[weight]] and [[payload]]\n* Note 2: You can indicate additional information in the [[name]] of the [[QuantitativeValue]] node.\n* Note 3: You may also link to a [[QualitativeValue]] node that provides additional information using [[valueReference]].\n* Note 4: Note that you can use [[minValue]] and [[maxValue]] to indicate ranges.
+     * The permitted weight of passengers and cargo, EXCLUDING the weight of the empty
+     * vehicle.
+     *
+     * Typical unit code(s): KGM for kilogram, LBR for pound
+     *
+     * * Note 1: Many databases specify the permitted TOTAL weight instead, which is
+     * the sum of [[weight]] and [[payload]]
+     * * Note 2: You can indicate additional information in the [[name]] of the
+     * [[QuantitativeValue]] node.
+     * * Note 3: You may also link to a [[QualitativeValue]] node that provides
+     * additional information using [[valueReference]].
+     * * Note 4: Note that you can use [[minValue]] and [[maxValue]] to indicate
+     * ranges.
      *
      * @param $payload 
      * @return static
@@ -113,7 +131,6 @@ class Vehicle extends Product
     public function getPayload() {
         return $this->properties['payload'];
     }
-
     /**
      * Indicates that the vehicle meets the respective emission standard.
      *
@@ -132,7 +149,6 @@ class Vehicle extends Product
     public function getMeetsEmissionStandard() {
         return $this->properties['meetsEmissionStandard'];
     }
-
     /**
      * The position of the steering wheel or similar device (mostly for cars).
      *
@@ -151,7 +167,6 @@ class Vehicle extends Product
     public function getSteeringPosition() {
         return $this->properties['steeringPosition'];
     }
-
     /**
      * The date of production of the item, e.g. vehicle.
      *
@@ -170,9 +185,9 @@ class Vehicle extends Product
     public function getProductionDate() {
         return $this->properties['productionDate'];
     }
-
     /**
-     * The Vehicle Identification Number (VIN) is a unique serial number used by the automotive industry to identify individual motor vehicles.
+     * The Vehicle Identification Number (VIN) is a unique serial number used by the
+     * automotive industry to identify individual motor vehicles.
      *
      * @param $vehicleIdentificationNumber 
      * @return static
@@ -189,9 +204,9 @@ class Vehicle extends Product
     public function getVehicleIdentificationNumber() {
         return $this->properties['vehicleIdentificationNumber'];
     }
-
     /**
-     * A [callsign](https://en.wikipedia.org/wiki/Call_sign), as used in broadcasting and radio communications to identify people, radio and TV stations, or vehicles.
+     * A [callsign](https://en.wikipedia.org/wiki/Call_sign), as used in broadcasting
+     * and radio communications to identify people, radio and TV stations, or vehicles.
      *
      * @param $callSign 
      * @return static
@@ -208,9 +223,18 @@ class Vehicle extends Product
     public function getCallSign() {
         return $this->properties['callSign'];
     }
-
     /**
-     * The amount of fuel consumed for traveling a particular distance or temporal duration with the given vehicle (e.g. liters per 100 km).\n\n* Note 1: There are unfortunately no standard unit codes for liters per 100 km.  Use [[unitText]] to indicate the unit of measurement, e.g. L/100 km.\n* Note 2: There are two ways of indicating the fuel consumption, [[fuelConsumption]] (e.g. 8 liters per 100 km) and [[fuelEfficiency]] (e.g. 30 miles per gallon). They are reciprocal.\n* Note 3: Often, the absolute value is useful only when related to driving speed ("at 80 km/h") or usage pattern ("city traffic"). You can use [[valueReference]] to link the value for the fuel consumption to another value.
+     * The amount of fuel consumed for traveling a particular distance or temporal
+     * duration with the given vehicle (e.g. liters per 100 km).
+     *
+     * * Note 1: There are unfortunately no standard unit codes for liters per 100 km.
+     * Use [[unitText]] to indicate the unit of measurement, e.g. L/100 km.
+     * * Note 2: There are two ways of indicating the fuel consumption,
+     * [[fuelConsumption]] (e.g. 8 liters per 100 km) and [[fuelEfficiency]] (e.g. 30
+     * miles per gallon). They are reciprocal.
+     * * Note 3: Often, the absolute value is useful only when related to driving speed
+     * ("at 80 km/h") or usage pattern ("city traffic"). You can use [[valueReference]]
+     * to link the value for the fuel consumption to another value.
      *
      * @param $fuelConsumption 
      * @return static
@@ -227,9 +251,10 @@ class Vehicle extends Product
     public function getFuelConsumption() {
         return $this->properties['fuelConsumption'];
     }
-
     /**
-     * The number of doors.\n\nTypical unit code(s): C62.
+     * The number of doors.
+     *
+     * Typical unit code(s): C62.
      *
      * @param $numberOfDoors |
      * @return static
@@ -246,7 +271,6 @@ class Vehicle extends Product
     public function getNumberOfDoors() {
         return $this->properties['numberOfDoors'];
     }
-
     /**
      * A textual description of known damages, both repaired and unrepaired.
      *
@@ -265,9 +289,13 @@ class Vehicle extends Product
     public function getKnownVehicleDamages() {
         return $this->properties['knownVehicleDamages'];
     }
-
     /**
-     * The capacity of the fuel tank or in the case of electric cars, the battery. If there are multiple components for storage, this should indicate the total of all storage of the same type.\n\nTypical unit code(s): LTR for liters, GLL of US gallons, GLI for UK / imperial gallons, AMH for ampere-hours (for electrical vehicles).
+     * The capacity of the fuel tank or in the case of electric cars, the battery. If
+     * there are multiple components for storage, this should indicate the total of all
+     * storage of the same type.
+     *
+     * Typical unit code(s): LTR for liters, GLL of US gallons, GLI for UK / imperial
+     * gallons, AMH for ampere-hours (for electrical vehicles).
      *
      * @param $fuelCapacity 
      * @return static
@@ -284,9 +312,13 @@ class Vehicle extends Product
     public function getFuelCapacity() {
         return $this->properties['fuelCapacity'];
     }
-
     /**
-     * The available volume for cargo or luggage. For automobiles, this is usually the trunk volume.\n\nTypical unit code(s): LTR for liters, FTQ for cubic foot/feet\n\nNote: You can use [[minValue]] and [[maxValue]] to indicate ranges.
+     * The available volume for cargo or luggage. For automobiles, this is usually the
+     * trunk volume.
+     *
+     * Typical unit code(s): LTR for liters, FTQ for cubic foot/feet
+     *
+     * Note: You can use [[minValue]] and [[maxValue]] to indicate ranges.
      *
      * @param $cargoVolume 
      * @return static
@@ -303,9 +335,9 @@ class Vehicle extends Product
     public function getCargoVolume() {
         return $this->properties['cargoVolume'];
     }
-
     /**
-     * A short text indicating the configuration of the vehicle, e.g. '5dr hatchback ST 2.5 MT 225 hp' or 'limited edition'.
+     * A short text indicating the configuration of the vehicle, e.g. '5dr hatchback ST
+     * 2.5 MT 225 hp' or 'limited edition'.
      *
      * @param $vehicleConfiguration 
      * @return static
@@ -322,7 +354,6 @@ class Vehicle extends Product
     public function getVehicleConfiguration() {
         return $this->properties['vehicleConfiguration'];
     }
-
     /**
      * The color or color combination of the interior of the vehicle.
      *
@@ -341,9 +372,9 @@ class Vehicle extends Product
     public function getVehicleInteriorColor() {
         return $this->properties['vehicleInteriorColor'];
     }
-
     /**
-     * The release date of a vehicle model (often used to differentiate versions of the same make and model).
+     * The release date of a vehicle model (often used to differentiate versions of the
+     * same make and model).
      *
      * @param $vehicleModelDate 
      * @return static
@@ -360,9 +391,11 @@ class Vehicle extends Product
     public function getVehicleModelDate() {
         return $this->properties['vehicleModelDate'];
     }
-
     /**
-     * The total distance travelled by the particular vehicle since its initial production, as read from its odometer.\n\nTypical unit code(s): KMT for kilometers, SMI for statute miles.
+     * The total distance travelled by the particular vehicle since its initial
+     * production, as read from its odometer.
+     *
+     * Typical unit code(s): KMT for kilometers, SMI for statute miles.
      *
      * @param $mileageFromOdometer 
      * @return static
@@ -379,9 +412,11 @@ class Vehicle extends Product
     public function getMileageFromOdometer() {
         return $this->properties['mileageFromOdometer'];
     }
-
     /**
-     * The number of persons that can be seated (e.g. in a vehicle), both in terms of the physical space available, and in terms of limitations set by law.\n\nTypical unit code(s): C62 for persons.
+     * The number of persons that can be seated (e.g. in a vehicle), both in terms of
+     * the physical space available, and in terms of limitations set by law.
+     *
+     * Typical unit code(s): C62 for persons.
      *
      * @param $seatingCapacity |
      * @return static
@@ -398,7 +433,6 @@ class Vehicle extends Product
     public function getSeatingCapacity() {
         return $this->properties['seatingCapacity'];
     }
-
     /**
      * The number or type of airbags in the vehicle.
      *
@@ -417,9 +451,9 @@ class Vehicle extends Product
     public function getNumberOfAirbags() {
         return $this->properties['numberOfAirbags'];
     }
-
     /**
-     * The type of component used for transmitting the power from a rotating power source to the wheels or other relevant component(s) ("gearbox" for cars).
+     * The type of component used for transmitting the power from a rotating power
+     * source to the wheels or other relevant component(s) ("gearbox" for cars).
      *
      * @param $vehicleTransmission ||
      * @return static
@@ -436,9 +470,9 @@ class Vehicle extends Product
     public function getVehicleTransmission() {
         return $this->properties['vehicleTransmission'];
     }
-
     /**
-     * The release date of a vehicle model (often used to differentiate versions of the same make and model).
+     * The release date of a vehicle model (often used to differentiate versions of the
+     * same make and model).
      *
      * @param $modelDate 
      * @return static
@@ -455,9 +489,11 @@ class Vehicle extends Product
     public function getModelDate() {
         return $this->properties['modelDate'];
     }
-
     /**
-     * The total number of forward gears available for the transmission system of the vehicle.\n\nTypical unit code(s): C62.
+     * The total number of forward gears available for the transmission system of the
+     * vehicle.
+     *
+     * Typical unit code(s): C62.
      *
      * @param $numberOfForwardGears |
      * @return static
@@ -474,9 +510,10 @@ class Vehicle extends Product
     public function getNumberOfForwardGears() {
         return $this->properties['numberOfForwardGears'];
     }
-
     /**
-     * Indicates whether the vehicle has been used for special purposes, like commercial rental, driving school, or as a taxi. The legislation in many countries requires this information to be revealed when offering a car for sale.
+     * Indicates whether the vehicle has been used for special purposes, like
+     * commercial rental, driving school, or as a taxi. The legislation in many
+     * countries requires this information to be revealed when offering a car for sale.
      *
      * @param $vehicleSpecialUsage |
      * @return static
@@ -493,9 +530,17 @@ class Vehicle extends Product
     public function getVehicleSpecialUsage() {
         return $this->properties['vehicleSpecialUsage'];
     }
-
     /**
-     * The time needed to accelerate the vehicle from a given start velocity to a given target velocity.\n\nTypical unit code(s): SEC for seconds\n\n* Note: There are unfortunately no standard unit codes for seconds/0..100 km/h or seconds/0..60 mph. Simply use "SEC" for seconds and indicate the velocities in the [[name]] of the [[QuantitativeValue]], or use [[valueReference]] with a [[QuantitativeValue]] of 0..60 mph or 0..100 km/h to specify the reference speeds.
+     * The time needed to accelerate the vehicle from a given start velocity to a given
+     * target velocity.
+     *
+     * Typical unit code(s): SEC for seconds
+     *
+     * * Note: There are unfortunately no standard unit codes for seconds/0..100 km/h
+     * or seconds/0..60 mph. Simply use "SEC" for seconds and indicate the velocities
+     * in the [[name]] of the [[QuantitativeValue]], or use [[valueReference]] with a
+     * [[QuantitativeValue]] of 0..60 mph or 0..100 km/h to specify the reference
+     * speeds.
      *
      * @param $accelerationTime 
      * @return static
@@ -512,7 +557,6 @@ class Vehicle extends Product
     public function getAccelerationTime() {
         return $this->properties['accelerationTime'];
     }
-
     /**
      * Information about the engine or engines of the vehicle.
      *
@@ -531,9 +575,18 @@ class Vehicle extends Product
     public function getVehicleEngine() {
         return $this->properties['vehicleEngine'];
     }
-
     /**
-     * The permitted total weight of the loaded vehicle, including passengers and cargo and the weight of the empty vehicle.\n\nTypical unit code(s): KGM for kilogram, LBR for pound\n\n* Note 1: You can indicate additional information in the [[name]] of the [[QuantitativeValue]] node.\n* Note 2: You may also link to a [[QualitativeValue]] node that provides additional information using [[valueReference]].\n* Note 3: Note that you can use [[minValue]] and [[maxValue]] to indicate ranges.
+     * The permitted total weight of the loaded vehicle, including passengers and cargo
+     * and the weight of the empty vehicle.
+     *
+     * Typical unit code(s): KGM for kilogram, LBR for pound
+     *
+     * * Note 1: You can indicate additional information in the [[name]] of the
+     * [[QuantitativeValue]] node.
+     * * Note 2: You may also link to a [[QualitativeValue]] node that provides
+     * additional information using [[valueReference]].
+     * * Note 3: Note that you can use [[minValue]] and [[maxValue]] to indicate
+     * ranges.
      *
      * @param $weightTotal 
      * @return static
@@ -550,9 +603,16 @@ class Vehicle extends Product
     public function getWeightTotal() {
         return $this->properties['weightTotal'];
     }
-
     /**
-     * The permitted weight of a trailer attached to the vehicle.\n\nTypical unit code(s): KGM for kilogram, LBR for pound\n* Note 1: You can indicate additional information in the [[name]] of the [[QuantitativeValue]] node.\n* Note 2: You may also link to a [[QualitativeValue]] node that provides additional information using [[valueReference]].\n* Note 3: Note that you can use [[minValue]] and [[maxValue]] to indicate ranges.
+     * The permitted weight of a trailer attached to the vehicle.
+     *
+     * Typical unit code(s): KGM for kilogram, LBR for pound
+     * * Note 1: You can indicate additional information in the [[name]] of the
+     * [[QuantitativeValue]] node.
+     * * Note 2: You may also link to a [[QualitativeValue]] node that provides
+     * additional information using [[valueReference]].
+     * * Note 3: Note that you can use [[minValue]] and [[maxValue]] to indicate
+     * ranges.
      *
      * @param $trailerWeight 
      * @return static
@@ -569,9 +629,10 @@ class Vehicle extends Product
     public function getTrailerWeight() {
         return $this->properties['trailerWeight'];
     }
-
     /**
-     * The number of axles.\n\nTypical unit code(s): C62.
+     * The number of axles.
+     *
+     * Typical unit code(s): C62.
      *
      * @param $numberOfAxles |
      * @return static
@@ -588,9 +649,19 @@ class Vehicle extends Product
     public function getNumberOfAxles() {
         return $this->properties['numberOfAxles'];
     }
-
     /**
-     * The speed range of the vehicle. If the vehicle is powered by an engine, the upper limit of the speed range (indicated by [[maxValue]]) should be the maximum speed achievable under regular conditions.\n\nTypical unit code(s): KMH for km/h, HM for mile per hour (0.447 04 m/s), KNT for knot\n\n*Note 1: Use [[minValue]] and [[maxValue]] to indicate the range. Typically, the minimal value is zero.\n* Note 2: There are many different ways of measuring the speed range. You can link to information about how the given value has been determined using the [[valueReference]] property.
+     * The speed range of the vehicle. If the vehicle is powered by an engine, the
+     * upper limit of the speed range (indicated by [[maxValue]]) should be the maximum
+     * speed achievable under regular conditions.
+     *
+     * Typical unit code(s): KMH for km/h, HM for mile per hour (0.447 04 m/s), KNT for
+     * knot
+     *
+     * *Note 1: Use [[minValue]] and [[maxValue]] to indicate the range. Typically, the
+     * minimal value is zero.
+     * * Note 2: There are many different ways of measuring the speed range. You can
+     * link to information about how the given value has been determined using the
+     * [[valueReference]] property.
      *
      * @param $speed 
      * @return static
@@ -607,9 +678,11 @@ class Vehicle extends Product
     public function getSpeed() {
         return $this->properties['speed'];
     }
-
     /**
-     * The type or material of the interior of the vehicle (e.g. synthetic fabric, leather, wood, etc.). While most interior types are characterized by the material used, an interior type can also be based on vehicle usage or target audience.
+     * The type or material of the interior of the vehicle (e.g. synthetic fabric,
+     * leather, wood, etc.). While most interior types are characterized by the
+     * material used, an interior type can also be based on vehicle usage or target
+     * audience.
      *
      * @param $vehicleInteriorType 
      * @return static
@@ -626,9 +699,19 @@ class Vehicle extends Product
     public function getVehicleInteriorType() {
         return $this->properties['vehicleInteriorType'];
     }
-
     /**
-     * The distance traveled per unit of fuel used; most commonly miles per gallon (mpg) or kilometers per liter (km/L).\n\n* Note 1: There are unfortunately no standard unit codes for miles per gallon or kilometers per liter. Use [[unitText]] to indicate the unit of measurement, e.g. mpg or km/L.\n* Note 2: There are two ways of indicating the fuel consumption, [[fuelConsumption]] (e.g. 8 liters per 100 km) and [[fuelEfficiency]] (e.g. 30 miles per gallon). They are reciprocal.\n* Note 3: Often, the absolute value is useful only when related to driving speed ("at 80 km/h") or usage pattern ("city traffic"). You can use [[valueReference]] to link the value for the fuel economy to another value.
+     * The distance traveled per unit of fuel used; most commonly miles per gallon
+     * (mpg) or kilometers per liter (km/L).
+     *
+     * * Note 1: There are unfortunately no standard unit codes for miles per gallon or
+     * kilometers per liter. Use [[unitText]] to indicate the unit of measurement, e.g.
+     * mpg or km/L.
+     * * Note 2: There are two ways of indicating the fuel consumption,
+     * [[fuelConsumption]] (e.g. 8 liters per 100 km) and [[fuelEfficiency]] (e.g. 30
+     * miles per gallon). They are reciprocal.
+     * * Note 3: Often, the absolute value is useful only when related to driving speed
+     * ("at 80 km/h") or usage pattern ("city traffic"). You can use [[valueReference]]
+     * to link the value for the fuel economy to another value.
      *
      * @param $fuelEfficiency 
      * @return static
@@ -645,9 +728,9 @@ class Vehicle extends Product
     public function getFuelEfficiency() {
         return $this->properties['fuelEfficiency'];
     }
-
     /**
-     * The date of the first registration of the vehicle with the respective public authorities.
+     * The date of the first registration of the vehicle with the respective public
+     * authorities.
      *
      * @param $dateVehicleFirstRegistered 
      * @return static
@@ -664,9 +747,10 @@ class Vehicle extends Product
     public function getDateVehicleFirstRegistered() {
         return $this->properties['dateVehicleFirstRegistered'];
     }
-
     /**
-     * The type of fuel suitable for the engine or engines of the vehicle. If the vehicle has only one engine, this property can be attached directly to the vehicle.
+     * The type of fuel suitable for the engine or engines of the vehicle. If the
+     * vehicle has only one engine, this property can be attached directly to the
+     * vehicle.
      *
      * @param $fuelType ||
      * @return static
@@ -683,9 +767,9 @@ class Vehicle extends Product
     public function getFuelType() {
         return $this->properties['fuelType'];
     }
-
     /**
-     * Indicates the design and body style of the vehicle (e.g. station wagon, hatchback, etc.).
+     * Indicates the design and body style of the vehicle (e.g. station wagon,
+     * hatchback, etc.).
      *
      * @param $bodyType ||
      * @return static
@@ -702,9 +786,9 @@ class Vehicle extends Product
     public function getBodyType() {
         return $this->properties['bodyType'];
     }
-
     /**
-     * The drive wheel configuration, i.e. which roadwheels will receive torque from the vehicle's engine via the drivetrain.
+     * The drive wheel configuration, i.e. which roadwheels will receive torque from
+     * the vehicle's engine via the drivetrain.
      *
      * @param $driveWheelConfiguration |
      * @return static
@@ -721,9 +805,18 @@ class Vehicle extends Product
     public function getDriveWheelConfiguration() {
         return $this->properties['driveWheelConfiguration'];
     }
-
     /**
-     * The permitted vertical load (TWR) of a trailer attached to the vehicle. Also referred to as Tongue Load Rating (TLR) or Vertical Load Rating (VLR).\n\nTypical unit code(s): KGM for kilogram, LBR for pound\n\n* Note 1: You can indicate additional information in the [[name]] of the [[QuantitativeValue]] node.\n* Note 2: You may also link to a [[QualitativeValue]] node that provides additional information using [[valueReference]].\n* Note 3: Note that you can use [[minValue]] and [[maxValue]] to indicate ranges.
+     * The permitted vertical load (TWR) of a trailer attached to the vehicle. Also
+     * referred to as Tongue Load Rating (TLR) or Vertical Load Rating (VLR).
+     *
+     * Typical unit code(s): KGM for kilogram, LBR for pound
+     *
+     * * Note 1: You can indicate additional information in the [[name]] of the
+     * [[QuantitativeValue]] node.
+     * * Note 2: You may also link to a [[QualitativeValue]] node that provides
+     * additional information using [[valueReference]].
+     * * Note 3: Note that you can use [[minValue]] and [[maxValue]] to indicate
+     * ranges.
      *
      * @param $tongueWeight 
      * @return static
@@ -740,7 +833,6 @@ class Vehicle extends Product
     public function getTongueWeight() {
         return $this->properties['tongueWeight'];
     }
-
     /**
      * The date the item, e.g. vehicle, was purchased by the current owner.
      *
@@ -759,9 +851,11 @@ class Vehicle extends Product
     public function getPurchaseDate() {
         return $this->properties['purchaseDate'];
     }
-
     /**
-     * The distance between the centers of the front and rear wheels.\n\nTypical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT for foot/feet.
+     * The distance between the centers of the front and rear wheels.
+     *
+     * Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT
+     * for foot/feet.
      *
      * @param $wheelbase 
      * @return static
@@ -778,6 +872,4 @@ class Vehicle extends Product
     public function getWheelbase() {
         return $this->properties['wheelbase'];
     }
-
-
 }

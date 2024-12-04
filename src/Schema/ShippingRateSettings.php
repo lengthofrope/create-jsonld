@@ -27,8 +27,13 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A ShippingRateSettings represents re-usable pieces of shipping information. It is designed for publication on an URL that may be referenced via the [[shippingSettingsLink]] property of an [[OfferShippingDetails]]. Several occurrences can be published, distinguished and matched (i.e. identified/referenced) by their different values for [[shippingLabel]].
+ * A ShippingRateSettings represents re-usable pieces of shipping information. It
+ * is designed for publication on an URL that may be referenced via the
+ * [[shippingSettingsLink]] property of an [[OfferShippingDetails]]. Several
+ * occurrences can be published, distinguished and matched (i.e.
+ * identified/referenced) by their different values for [[shippingLabel]].
  *
+ * @see https://schema.org/ShippingRateSettings
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ShippingRateSettings extends StructuredValue
@@ -39,7 +44,9 @@ class ShippingRateSettings extends StructuredValue
     }
 
     /**
-     * A monetary value above (or at) which the shipping rate becomes free. Intended to be used via an [[OfferShippingDetails]] with [[shippingSettingsLink]] matching this [[ShippingRateSettings]].
+     * A monetary value above (or at) which the shipping rate becomes free. Intended to
+     * be used via an [[OfferShippingDetails]] with [[shippingSettingsLink]] matching
+     * this [[ShippingRateSettings]].
      *
      * @param $freeShippingThreshold |
      * @return static
@@ -56,9 +63,10 @@ class ShippingRateSettings extends StructuredValue
     public function getFreeShippingThreshold() {
         return $this->properties['freeShippingThreshold'];
     }
-
     /**
-     * The shipping rate is the cost of shipping to the specified destination. Typically, the maxValue and currency values (of the [[MonetaryAmount]]) are most appropriate.
+     * The shipping rate is the cost of shipping to the specified destination.
+     * Typically, the maxValue and currency values (of the [[MonetaryAmount]]) are most
+     * appropriate.
      *
      * @param $shippingRate 
      * @return static
@@ -75,9 +83,9 @@ class ShippingRateSettings extends StructuredValue
     public function getShippingRate() {
         return $this->properties['shippingRate'];
     }
-
     /**
-     * indicates (possibly multiple) shipping destinations. These can be defined in several ways, e.g. postalCode ranges.
+     * indicates (possibly multiple) shipping destinations. These can be defined in
+     * several ways, e.g. postalCode ranges.
      *
      * @param $shippingDestination 
      * @return static
@@ -94,9 +102,14 @@ class ShippingRateSettings extends StructuredValue
     public function getShippingDestination() {
         return $this->properties['shippingDestination'];
     }
-
     /**
-     * This can be marked 'true' to indicate that some published [[DeliveryTimeSettings]] or [[ShippingRateSettings]] are intended to apply to all [[OfferShippingDetails]] published by the same merchant, when referenced by a [[shippingSettingsLink]] in those settings. It is not meaningful to use a 'true' value for this property alongside a transitTimeLabel (for [[DeliveryTimeSettings]]) or shippingLabel (for [[ShippingRateSettings]]), since this property is for use with unlabelled settings.
+     * This can be marked 'true' to indicate that some published
+     * [[DeliveryTimeSettings]] or [[ShippingRateSettings]] are intended to apply to
+     * all [[OfferShippingDetails]] published by the same merchant, when referenced by
+     * a [[shippingSettingsLink]] in those settings. It is not meaningful to use a
+     * 'true' value for this property alongside a transitTimeLabel (for
+     * [[DeliveryTimeSettings]]) or shippingLabel (for [[ShippingRateSettings]]), since
+     * this property is for use with unlabelled settings.
      *
      * @param $isUnlabelledFallback 
      * @return static
@@ -113,9 +126,9 @@ class ShippingRateSettings extends StructuredValue
     public function getIsUnlabelledFallback() {
         return $this->properties['isUnlabelledFallback'];
     }
-
     /**
-     * Indicates when shipping to a particular [[shippingDestination]] is not available.
+     * Indicates when shipping to a particular [[shippingDestination]] is not
+     * available.
      *
      * @param $doesNotShip 
      * @return static
@@ -132,9 +145,9 @@ class ShippingRateSettings extends StructuredValue
     public function getDoesNotShip() {
         return $this->properties['doesNotShip'];
     }
-
     /**
-     * Label to match an [[OfferShippingDetails]] with a [[ShippingRateSettings]] (within the context of a [[shippingSettingsLink]] cross-reference).
+     * Label to match an [[OfferShippingDetails]] with a [[ShippingRateSettings]]
+     * (within the context of a [[shippingSettingsLink]] cross-reference).
      *
      * @param $shippingLabel 
      * @return static
@@ -151,6 +164,4 @@ class ShippingRateSettings extends StructuredValue
     public function getShippingLabel() {
         return $this->properties['shippingLabel'];
     }
-
-
 }

@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * USNonprofitType: Non-profit organization type originating from the United States.
+ * USNonprofitType: Non-profit organization type originating from the United
+ * States.
  *
+ * @see https://schema.org/USNonprofitType
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class USNonprofitType extends NonprofitType
@@ -37,6 +39,5 @@ class USNonprofitType extends NonprofitType
     {
         return new USNonprofitType('https://schema.org/', 'USNonprofitType');
     }
-
 
 }

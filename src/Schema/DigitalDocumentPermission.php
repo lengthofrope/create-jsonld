@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A permission for a particular person or group to access a particular file.
  *
+ * @see https://schema.org/DigitalDocumentPermission
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class DigitalDocumentPermission extends Intangible
@@ -56,9 +57,9 @@ class DigitalDocumentPermission extends Intangible
     public function getPermissionType() {
         return $this->properties['permissionType'];
     }
-
     /**
-     * The person, organization, contact point, or audience that has been granted this permission.
+     * The person, organization, contact point, or audience that has been granted this
+     * permission.
      *
      * @param $grantee |||
      * @return static
@@ -75,6 +76,4 @@ class DigitalDocumentPermission extends Intangible
     public function getGrantee() {
         return $this->properties['grantee'];
     }
-
-
 }

@@ -27,14 +27,24 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A grant, typically financial or otherwise quantifiable, of resources. Typically a [[funder]] sponsors some [[MonetaryAmount]] to an [[Organization]] or [[Person]],
- * *      sometimes not necessarily via a dedicated or long-lived [[Project]], resulting in one or more outputs, or [[fundedItem]]s. For financial sponsorship, indicate the [[funder]] of a [[MonetaryGrant]]. For non-financial support, indicate [[sponsor]] of [[Grant]]s of resources (e.g. office space).
-
- * Grants support  activities directed towards some agreed collective goals, often but not always organized as [[Project]]s. Long-lived projects are sometimes sponsored by a variety of grants over time, but it is also common for a project to be associated with a single grant.
-
- * The amount of a [[Grant]] is represented using [[amount]] as a [[MonetaryAmount]].
- *     
+ * A grant, typically financial or otherwise quantifiable, of resources. Typically
+ * a [[funder]] sponsors some [[MonetaryAmount]] to an [[Organization]] or
+ * [[Person]],
+ * * *      sometimes not necessarily via a dedicated or long-lived [[Project]],
+ * resulting in one or more outputs, or [[fundedItem]]s. For financial sponsorship,
+ * indicate the [[funder]] of a [[MonetaryGrant]]. For non-financial support,
+ * indicate [[sponsor]] of [[Grant]]s of resources (e.g. office space).
  *
+ * * Grants support  activities directed towards some agreed collective goals,
+ * often but not always organized as [[Project]]s. Long-lived projects are
+ * sometimes sponsored by a variety of grants over time, but it is also common for
+ * a project to be associated with a single grant.
+ *
+ * * The amount of a [[Grant]] is represented using [[amount]] as a
+ * [[MonetaryAmount]].
+ * *
+ *
+ * @see https://schema.org/Grant
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Grant extends Intangible
@@ -45,7 +55,8 @@ class Grant extends Intangible
     }
 
     /**
-     * A person or organization that supports (sponsors) something through some kind of financial contribution.
+     * A person or organization that supports (sponsors) something through some kind of
+     * financial contribution.
      *
      * @param $funder |
      * @return static
@@ -62,9 +73,9 @@ class Grant extends Intangible
     public function getFunder() {
         return $this->properties['funder'];
     }
-
     /**
-     * Indicates something directly or indirectly funded or sponsored through a [[Grant]]. See also [[ownershipFundingInfo]].
+     * Indicates something directly or indirectly funded or sponsored through a
+     * [[Grant]]. See also [[ownershipFundingInfo]].
      *
      * @param $fundedItem ||||||
      * @return static
@@ -81,9 +92,10 @@ class Grant extends Intangible
     public function getFundedItem() {
         return $this->properties['fundedItem'];
     }
-
     /**
-     * A person or organization that supports a thing through a pledge, promise, or financial contribution. E.g. a sponsor of a Medical Study or a corporate sponsor of an event.
+     * A person or organization that supports a thing through a pledge, promise, or
+     * financial contribution. E.g. a sponsor of a Medical Study or a corporate sponsor
+     * of an event.
      *
      * @param $sponsor |
      * @return static
@@ -100,6 +112,4 @@ class Grant extends Intangible
     public function getSponsor() {
         return $this->properties['sponsor'];
     }
-
-
 }

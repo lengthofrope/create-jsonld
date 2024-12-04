@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A type of bed. This is used for indicating the bed or beds available in an accommodation.
+ * A type of bed. This is used for indicating the bed or beds available in an
+ * accommodation.
  *
+ * @see https://schema.org/BedType
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class BedType extends QualitativeValue
@@ -37,6 +39,5 @@ class BedType extends QualitativeValue
     {
         return new BedType('https://schema.org/', 'BedType');
     }
-
 
 }

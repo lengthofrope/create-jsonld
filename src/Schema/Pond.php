@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A pond.
  *
+ * @see https://schema.org/Pond
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Pond extends BodyOfWater
@@ -37,6 +38,5 @@ class Pond extends BodyOfWater
     {
         return new Pond('https://schema.org/', 'Pond');
     }
-
 
 }

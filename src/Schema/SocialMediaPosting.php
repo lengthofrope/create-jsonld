@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A post to a social media platform, including blog posts, tweets, Facebook posts, etc.
+ * A post to a social media platform, including blog posts, tweets, Facebook posts,
+ * etc.
  *
+ * @see https://schema.org/SocialMediaPosting
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class SocialMediaPosting extends Article
@@ -39,7 +41,8 @@ class SocialMediaPosting extends Article
     }
 
     /**
-     * A CreativeWork such as an image, video, or audio clip shared as part of this posting.
+     * A CreativeWork such as an image, video, or audio clip shared as part of this
+     * posting.
      *
      * @param $sharedContent 
      * @return static
@@ -56,6 +59,4 @@ class SocialMediaPosting extends Article
     public function getSharedContent() {
         return $this->properties['sharedContent'];
     }
-
-
 }

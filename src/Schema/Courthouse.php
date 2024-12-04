@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A courthouse.
  *
+ * @see https://schema.org/Courthouse
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Courthouse extends GovernmentBuilding
@@ -37,6 +38,5 @@ class Courthouse extends GovernmentBuilding
     {
         return new Courthouse('https://schema.org/', 'Courthouse');
     }
-
 
 }

@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * RsvpResponseType is an enumeration type whose instances represent responding to an RSVP request.
+ * RsvpResponseType is an enumeration type whose instances represent responding to
+ * an RSVP request.
  *
+ * @see https://schema.org/RsvpResponseType
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class RsvpResponseType extends Enumeration
@@ -37,6 +39,5 @@ class RsvpResponseType extends Enumeration
     {
         return new RsvpResponseType('https://schema.org/', 'RsvpResponseType');
     }
-
 
 }

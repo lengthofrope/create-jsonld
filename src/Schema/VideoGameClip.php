@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A short segment/part of a video game.
  *
+ * @see https://schema.org/VideoGameClip
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class VideoGameClip extends Clip
@@ -37,6 +38,5 @@ class VideoGameClip extends Clip
     {
         return new VideoGameClip('https://schema.org/', 'VideoGameClip');
     }
-
 
 }

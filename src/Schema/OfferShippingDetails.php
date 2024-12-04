@@ -28,18 +28,22 @@ namespace LengthOfRope\JSONLD\Schema;
 
 /**
  * OfferShippingDetails represents information about shipping destinations.
-
- * Multiple of these entities can be used to represent different shipping rates for different destinations:
-
- * One entity for Alaska/Hawaii. A different one for continental US. A different one for all France.
-
- * Multiple of these entities can be used to represent different shipping costs and delivery times.
-
- * Two entities that are identical but differ in rate and time:
-
- * E.g. Cheaper and slower: $5 in 5-7 days
- * or Fast and expensive: $15 in 1-2 days.
  *
+ * * Multiple of these entities can be used to represent different shipping rates
+ * for different destinations:
+ *
+ * * One entity for Alaska/Hawaii. A different one for continental US. A different
+ * one for all France.
+ *
+ * * Multiple of these entities can be used to represent different shipping costs
+ * and delivery times.
+ *
+ * * Two entities that are identical but differ in rate and time:
+ *
+ * * E.g. Cheaper and slower: $5 in 5-7 days
+ * * or Fast and expensive: $15 in 1-2 days.
+ *
+ * @see https://schema.org/OfferShippingDetails
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class OfferShippingDetails extends StructuredValue
@@ -50,7 +54,9 @@ class OfferShippingDetails extends StructuredValue
     }
 
     /**
-     * The shipping rate is the cost of shipping to the specified destination. Typically, the maxValue and currency values (of the [[MonetaryAmount]]) are most appropriate.
+     * The shipping rate is the cost of shipping to the specified destination.
+     * Typically, the maxValue and currency values (of the [[MonetaryAmount]]) are most
+     * appropriate.
      *
      * @param $shippingRate 
      * @return static
@@ -67,9 +73,9 @@ class OfferShippingDetails extends StructuredValue
     public function getShippingRate() {
         return $this->properties['shippingRate'];
     }
-
     /**
-     * The membership program tier an Offer (or a PriceSpecification, OfferShippingDetails, or MerchantReturnPolicy under an Offer) is valid for.
+     * The membership program tier an Offer (or a PriceSpecification,
+     * OfferShippingDetails, or MerchantReturnPolicy under an Offer) is valid for.
      *
      * @param $validForMemberTier 
      * @return static
@@ -86,9 +92,9 @@ class OfferShippingDetails extends StructuredValue
     public function getValidForMemberTier() {
         return $this->properties['validForMemberTier'];
     }
-
     /**
-     * indicates (possibly multiple) shipping destinations. These can be defined in several ways, e.g. postalCode ranges.
+     * indicates (possibly multiple) shipping destinations. These can be defined in
+     * several ways, e.g. postalCode ranges.
      *
      * @param $shippingDestination 
      * @return static
@@ -105,9 +111,9 @@ class OfferShippingDetails extends StructuredValue
     public function getShippingDestination() {
         return $this->properties['shippingDestination'];
     }
-
     /**
-     * Link to a page containing [[ShippingRateSettings]] and [[DeliveryTimeSettings]] details.
+     * Link to a page containing [[ShippingRateSettings]] and [[DeliveryTimeSettings]]
+     * details.
      *
      * @param $shippingSettingsLink 
      * @return static
@@ -124,9 +130,9 @@ class OfferShippingDetails extends StructuredValue
     public function getShippingSettingsLink() {
         return $this->properties['shippingSettingsLink'];
     }
-
     /**
-     * Label to match an [[OfferShippingDetails]] with a [[DeliveryTimeSettings]] (within the context of a [[shippingSettingsLink]] cross-reference).
+     * Label to match an [[OfferShippingDetails]] with a [[DeliveryTimeSettings]]
+     * (within the context of a [[shippingSettingsLink]] cross-reference).
      *
      * @param $transitTimeLabel 
      * @return static
@@ -143,9 +149,9 @@ class OfferShippingDetails extends StructuredValue
     public function getTransitTimeLabel() {
         return $this->properties['transitTimeLabel'];
     }
-
     /**
-     * The total delay between the receipt of the order and the goods reaching the final customer.
+     * The total delay between the receipt of the order and the goods reaching the
+     * final customer.
      *
      * @param $deliveryTime 
      * @return static
@@ -162,7 +168,6 @@ class OfferShippingDetails extends StructuredValue
     public function getDeliveryTime() {
         return $this->properties['deliveryTime'];
     }
-
     /**
      * The height of the item.
      *
@@ -181,7 +186,6 @@ class OfferShippingDetails extends StructuredValue
     public function getHeight() {
         return $this->properties['height'];
     }
-
     /**
      * The width of the item.
      *
@@ -200,7 +204,6 @@ class OfferShippingDetails extends StructuredValue
     public function getWidth() {
         return $this->properties['width'];
     }
-
     /**
      * The weight of the product or person.
      *
@@ -219,7 +222,6 @@ class OfferShippingDetails extends StructuredValue
     public function getWeight() {
         return $this->properties['weight'];
     }
-
     /**
      * The depth of the item.
      *
@@ -238,9 +240,9 @@ class OfferShippingDetails extends StructuredValue
     public function getDepth() {
         return $this->properties['depth'];
     }
-
     /**
-     * Indicates when shipping to a particular [[shippingDestination]] is not available.
+     * Indicates when shipping to a particular [[shippingDestination]] is not
+     * available.
      *
      * @param $doesNotShip 
      * @return static
@@ -257,9 +259,9 @@ class OfferShippingDetails extends StructuredValue
     public function getDoesNotShip() {
         return $this->properties['doesNotShip'];
     }
-
     /**
-     * Label to match an [[OfferShippingDetails]] with a [[ShippingRateSettings]] (within the context of a [[shippingSettingsLink]] cross-reference).
+     * Label to match an [[OfferShippingDetails]] with a [[ShippingRateSettings]]
+     * (within the context of a [[shippingSettingsLink]] cross-reference).
      *
      * @param $shippingLabel 
      * @return static
@@ -276,7 +278,6 @@ class OfferShippingDetails extends StructuredValue
     public function getShippingLabel() {
         return $this->properties['shippingLabel'];
     }
-
     /**
      * Indicates the origin of a shipment, i.e. where it should be coming from.
      *
@@ -295,6 +296,4 @@ class OfferShippingDetails extends StructuredValue
     public function getShippingOrigin() {
         return $this->properties['shippingOrigin'];
     }
-
-
 }

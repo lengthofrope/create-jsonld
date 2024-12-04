@@ -37,6 +37,10 @@ echo $Create->getJSONLDScript();
 ```
 
 ## Version history
+1.0.1
+- Restructured comments
+- Added @see with link to schema.org
+
 1.0.0
 
 - Removed Schema word from all classes **breaking change!**

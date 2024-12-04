@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Web page type: Image gallery page.
  *
+ * @see https://schema.org/ImageGallery
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ImageGallery extends MediaGallery
@@ -37,6 +38,5 @@ class ImageGallery extends MediaGallery
     {
         return new ImageGallery('https://schema.org/', 'ImageGallery');
     }
-
 
 }

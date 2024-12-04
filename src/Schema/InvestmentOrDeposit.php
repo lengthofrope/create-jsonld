@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A type of financial product that typically requires the client to transfer funds to a financial service in return for potential beneficial financial return.
+ * A type of financial product that typically requires the client to transfer funds
+ * to a financial service in return for potential beneficial financial return.
  *
+ * @see https://schema.org/InvestmentOrDeposit
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class InvestmentOrDeposit extends FinancialProduct
@@ -56,6 +58,4 @@ class InvestmentOrDeposit extends FinancialProduct
     public function getAmount() {
         return $this->properties['amount'];
     }
-
-
 }

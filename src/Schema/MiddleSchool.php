@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A middle school (typically for children aged around 11-14, although this varies somewhat).
+ * A middle school (typically for children aged around 11-14, although this varies
+ * somewhat).
  *
+ * @see https://schema.org/MiddleSchool
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MiddleSchool extends EducationalOrganization
@@ -37,6 +39,5 @@ class MiddleSchool extends EducationalOrganization
     {
         return new MiddleSchool('https://schema.org/', 'MiddleSchool');
     }
-
 
 }

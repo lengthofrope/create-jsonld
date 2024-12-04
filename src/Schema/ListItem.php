@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * An list item, e.g. a step in a checklist or how-to description.
  *
+ * @see https://schema.org/ListItem
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ListItem extends Intangible
@@ -56,9 +57,9 @@ class ListItem extends Intangible
     public function getPosition() {
         return $this->properties['position'];
     }
-
     /**
-     * An entity represented by an entry in a list or data feed (e.g. an 'artist' in a list of 'artists').
+     * An entity represented by an entry in a list or data feed (e.g. an 'artist' in a
+     * list of 'artists').
      *
      * @param $item 
      * @return static
@@ -75,7 +76,6 @@ class ListItem extends Intangible
     public function getItem() {
         return $this->properties['item'];
     }
-
     /**
      * A link to the ListItem that precedes the current one.
      *
@@ -94,7 +94,6 @@ class ListItem extends Intangible
     public function getPreviousItem() {
         return $this->properties['previousItem'];
     }
-
     /**
      * A link to the ListItem that follows the current one.
      *
@@ -113,6 +112,4 @@ class ListItem extends Intangible
     public function getNextItem() {
         return $this->properties['nextItem'];
     }
-
-
 }

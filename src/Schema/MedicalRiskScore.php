@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A simple system that adds up the number of risk factors to yield a score that is associated with prognosis, e.g. CHAD score, TIMI risk score.
+ * A simple system that adds up the number of risk factors to yield a score that is
+ * associated with prognosis, e.g. CHAD score, TIMI risk score.
  *
+ * @see https://schema.org/MedicalRiskScore
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MedicalRiskScore extends MedicalRiskEstimator
@@ -56,6 +58,4 @@ class MedicalRiskScore extends MedicalRiskEstimator
     public function getAlgorithm() {
         return $this->properties['algorithm'];
     }
-
-
 }

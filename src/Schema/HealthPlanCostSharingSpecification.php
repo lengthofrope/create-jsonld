@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A description of costs to the patient under a given network or formulary.
  *
+ * @see https://schema.org/HealthPlanCostSharingSpecification
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class HealthPlanCostSharingSpecification extends Intangible
@@ -56,7 +57,6 @@ class HealthPlanCostSharingSpecification extends Intangible
     public function getHealthPlanPharmacyCategory() {
         return $this->properties['healthPlanPharmacyCategory'];
     }
-
     /**
      * The copay amount.
      *
@@ -75,7 +75,6 @@ class HealthPlanCostSharingSpecification extends Intangible
     public function getHealthPlanCopay() {
         return $this->properties['healthPlanCopay'];
     }
-
     /**
      * The rate of coinsurance expressed as a number between 0.0 and 1.0.
      *
@@ -94,9 +93,9 @@ class HealthPlanCostSharingSpecification extends Intangible
     public function getHealthPlanCoinsuranceRate() {
         return $this->properties['healthPlanCoinsuranceRate'];
     }
-
     /**
-     * Whether the coinsurance applies before or after deductible, etc. TODO: Is this a closed set?
+     * Whether the coinsurance applies before or after deductible, etc. TODO: Is this a
+     * closed set?
      *
      * @param $healthPlanCoinsuranceOption 
      * @return static
@@ -113,9 +112,9 @@ class HealthPlanCostSharingSpecification extends Intangible
     public function getHealthPlanCoinsuranceOption() {
         return $this->properties['healthPlanCoinsuranceOption'];
     }
-
     /**
-     * Whether the copay is before or after deductible, etc. TODO: Is this a closed set?
+     * Whether the copay is before or after deductible, etc. TODO: Is this a closed
+     * set?
      *
      * @param $healthPlanCopayOption 
      * @return static
@@ -132,6 +131,4 @@ class HealthPlanCostSharingSpecification extends Intangible
     public function getHealthPlanCopayOption() {
         return $this->properties['healthPlanCopayOption'];
     }
-
-
 }

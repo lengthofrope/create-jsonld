@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The act of forming one's opinion, reaction or sentiment.
  *
+ * @see https://schema.org/AssessAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class AssessAction extends Action
@@ -37,6 +38,5 @@ class AssessAction extends Action
     {
         return new AssessAction('https://schema.org/', 'AssessAction');
     }
-
 
 }

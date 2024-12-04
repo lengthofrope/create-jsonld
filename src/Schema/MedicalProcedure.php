@@ -27,8 +27,11 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A process of care used in either a diagnostic, therapeutic, preventive or palliative capacity that relies on invasive (surgical), non-invasive, or other techniques.
+ * A process of care used in either a diagnostic, therapeutic, preventive or
+ * palliative capacity that relies on invasive (surgical), non-invasive, or other
+ * techniques.
  *
+ * @see https://schema.org/MedicalProcedure
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MedicalProcedure extends MedicalEntity
@@ -39,7 +42,8 @@ class MedicalProcedure extends MedicalEntity
     }
 
     /**
-     * Typical preparation that a patient must undergo before having the procedure performed.
+     * Typical preparation that a patient must undergo before having the procedure
+     * performed.
      *
      * @param $preparation |
      * @return static
@@ -56,7 +60,6 @@ class MedicalProcedure extends MedicalEntity
     public function getPreparation() {
         return $this->properties['preparation'];
     }
-
     /**
      * The type of procedure, for example Surgical, Noninvasive, or Percutaneous.
      *
@@ -75,7 +78,6 @@ class MedicalProcedure extends MedicalEntity
     public function getProcedureType() {
         return $this->properties['procedureType'];
     }
-
     /**
      * How the procedure is performed.
      *
@@ -94,7 +96,6 @@ class MedicalProcedure extends MedicalEntity
     public function getHowPerformed() {
         return $this->properties['howPerformed'];
     }
-
     /**
      * The status of the study (enumerated).
      *
@@ -113,7 +114,6 @@ class MedicalProcedure extends MedicalEntity
     public function getStatus() {
         return $this->properties['status'];
     }
-
     /**
      * Typical or recommended followup care after the procedure is performed.
      *
@@ -132,7 +132,6 @@ class MedicalProcedure extends MedicalEntity
     public function getFollowup() {
         return $this->properties['followup'];
     }
-
     /**
      * Location in the body of the anatomical structure.
      *
@@ -151,6 +150,4 @@ class MedicalProcedure extends MedicalEntity
     public function getBodyLocation() {
         return $this->properties['bodyLocation'];
     }
-
-
 }

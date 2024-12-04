@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A notary.
  *
+ * @see https://schema.org/Notary
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Notary extends LegalService
@@ -37,6 +38,5 @@ class Notary extends LegalService
     {
         return new Notary('https://schema.org/', 'Notary');
     }
-
 
 }

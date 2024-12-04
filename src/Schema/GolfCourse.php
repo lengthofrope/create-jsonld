@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A golf course.
  *
+ * @see https://schema.org/GolfCourse
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class GolfCourse extends SportsActivityLocation
@@ -37,6 +38,5 @@ class GolfCourse extends SportsActivityLocation
     {
         return new GolfCourse('https://schema.org/', 'GolfCourse');
     }
-
 
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A placeholder for multiple similar products of the same kind.
  *
+ * @see https://schema.org/SomeProducts
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class SomeProducts extends Product
@@ -56,6 +57,4 @@ class SomeProducts extends Product
     public function getInventoryLevel() {
         return $this->properties['inventoryLevel'];
     }
-
-
 }

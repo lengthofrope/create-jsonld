@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A muscle is an anatomical structure consisting of a contractile form of tissue that animals use to effect movement.
+ * A muscle is an anatomical structure consisting of a contractile form of tissue
+ * that animals use to effect movement.
  *
+ * @see https://schema.org/Muscle
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Muscle extends AnatomicalStructure
@@ -56,7 +58,6 @@ class Muscle extends AnatomicalStructure
     public function getBloodSupply() {
         return $this->properties['bloodSupply'];
     }
-
     /**
      * The muscle whose action counteracts the specified muscle.
      *
@@ -75,7 +76,6 @@ class Muscle extends AnatomicalStructure
     public function getAntagonist() {
         return $this->properties['antagonist'];
     }
-
     /**
      * The place of attachment of a muscle, or what the muscle moves.
      *
@@ -94,7 +94,6 @@ class Muscle extends AnatomicalStructure
     public function getInsertion() {
         return $this->properties['insertion'];
     }
-
     /**
      * The movement the muscle generates.
      *
@@ -113,7 +112,6 @@ class Muscle extends AnatomicalStructure
     public function getMuscleAction() {
         return $this->properties['muscleAction'];
     }
-
     /**
      * The underlying innervation associated with the muscle.
      *
@@ -132,6 +130,4 @@ class Muscle extends AnatomicalStructure
     public function getNerve() {
         return $this->properties['nerve'];
     }
-
-
 }

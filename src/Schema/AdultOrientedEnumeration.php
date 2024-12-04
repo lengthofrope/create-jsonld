@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Enumeration of considerations that make a product relevant or potentially restricted for adults only.
+ * Enumeration of considerations that make a product relevant or potentially
+ * restricted for adults only.
  *
+ * @see https://schema.org/AdultOrientedEnumeration
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class AdultOrientedEnumeration extends Enumeration
@@ -37,6 +39,5 @@ class AdultOrientedEnumeration extends Enumeration
     {
         return new AdultOrientedEnumeration('https://schema.org/', 'AdultOrientedEnumeration');
     }
-
 
 }

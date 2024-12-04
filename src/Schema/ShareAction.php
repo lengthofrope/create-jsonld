@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The act of distributing content to people for their amusement or edification.
  *
+ * @see https://schema.org/ShareAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ShareAction extends CommunicateAction
@@ -37,6 +38,5 @@ class ShareAction extends CommunicateAction
     {
         return new ShareAction('https://schema.org/', 'ShareAction');
     }
-
 
 }

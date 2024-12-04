@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A media season, e.g. TV, radio, video game etc.
  *
+ * @see https://schema.org/Season
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Season extends CreativeWork
@@ -37,6 +38,5 @@ class Season extends CreativeWork
     {
         return new Season('https://schema.org/', 'Season');
     }
-
 
 }

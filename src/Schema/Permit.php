@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A permit issued by an organization, e.g. a parking pass.
  *
+ * @see https://schema.org/Permit
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Permit extends Intangible
@@ -39,7 +40,8 @@ class Permit extends Intangible
     }
 
     /**
-     * The organization issuing the item, for example a [[Permit]], [[Ticket]], or [[Certification]].
+     * The organization issuing the item, for example a [[Permit]], [[Ticket]], or
+     * [[Certification]].
      *
      * @param $issuedBy 
      * @return static
@@ -56,9 +58,9 @@ class Permit extends Intangible
     public function getIssuedBy() {
         return $this->properties['issuedBy'];
     }
-
     /**
-     * The geographic area where the item is valid. Applies for example to a [[Permit]], a [[Certification]], or an [[EducationalOccupationalCredential]]. 
+     * The geographic area where the item is valid. Applies for example to a
+     * [[Permit]], a [[Certification]], or an [[EducationalOccupationalCredential]].
      *
      * @param $validIn 
      * @return static
@@ -75,7 +77,6 @@ class Permit extends Intangible
     public function getValidIn() {
         return $this->properties['validIn'];
     }
-
     /**
      * The duration of validity of a permit or similar thing.
      *
@@ -94,7 +95,6 @@ class Permit extends Intangible
     public function getValidFor() {
         return $this->properties['validFor'];
     }
-
     /**
      * The service through which the permit was granted.
      *
@@ -113,7 +113,6 @@ class Permit extends Intangible
     public function getIssuedThrough() {
         return $this->properties['issuedThrough'];
     }
-
     /**
      * The date when the item is no longer valid.
      *
@@ -132,7 +131,6 @@ class Permit extends Intangible
     public function getValidUntil() {
         return $this->properties['validUntil'];
     }
-
     /**
      * The date when the item becomes valid.
      *
@@ -151,7 +149,6 @@ class Permit extends Intangible
     public function getValidFrom() {
         return $this->properties['validFrom'];
     }
-
     /**
      * The target audience for this permit.
      *
@@ -170,6 +167,4 @@ class Permit extends Intangible
     public function getPermitAudience() {
         return $this->properties['permitAudience'];
     }
-
-
 }

@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A medical organization (physical or not), such as hospital, institution or clinic.
+ * A medical organization (physical or not), such as hospital, institution or
+ * clinic.
  *
+ * @see https://schema.org/MedicalOrganization
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MedicalOrganization extends Organization
@@ -39,7 +41,8 @@ class MedicalOrganization extends Organization
     }
 
     /**
-     * Name or unique ID of network. (Networks are often reused across different insurance plans.)
+     * Name or unique ID of network. (Networks are often reused across different
+     * insurance plans.)
      *
      * @param $healthPlanNetworkId 
      * @return static
@@ -56,7 +59,6 @@ class MedicalOrganization extends Organization
     public function getHealthPlanNetworkId() {
         return $this->properties['healthPlanNetworkId'];
     }
-
     /**
      * A medical specialty of the provider.
      *
@@ -75,7 +77,6 @@ class MedicalOrganization extends Organization
     public function getMedicalSpecialty() {
         return $this->properties['medicalSpecialty'];
     }
-
     /**
      * Whether the provider is accepting new patients.
      *
@@ -94,6 +95,4 @@ class MedicalOrganization extends Organization
     public function getIsAcceptingNewPatients() {
         return $this->properties['isAcceptingNewPatients'];
     }
-
-
 }

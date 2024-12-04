@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Web applications.
  *
+ * @see https://schema.org/WebApplication
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class WebApplication extends SoftwareApplication
@@ -39,7 +40,8 @@ class WebApplication extends SoftwareApplication
     }
 
     /**
-     * Specifies browser requirements in human-readable text. For example, 'requires HTML5 support'.
+     * Specifies browser requirements in human-readable text. For example, 'requires
+     * HTML5 support'.
      *
      * @param $browserRequirements 
      * @return static
@@ -56,6 +58,4 @@ class WebApplication extends SoftwareApplication
     public function getBrowserRequirements() {
         return $this->properties['browserRequirements'];
     }
-
-
 }

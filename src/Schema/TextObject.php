@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A text file. The text can be unformatted or contain markup, html, etc.
  *
+ * @see https://schema.org/TextObject
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class TextObject extends MediaObject
@@ -37,6 +38,5 @@ class TextObject extends MediaObject
     {
         return new TextObject('https://schema.org/', 'TextObject');
     }
-
 
 }

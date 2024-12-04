@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A theater or other performing art center.
  *
+ * @see https://schema.org/PerformingArtsTheater
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class PerformingArtsTheater extends CivicStructure
@@ -37,6 +38,5 @@ class PerformingArtsTheater extends CivicStructure
     {
         return new PerformingArtsTheater('https://schema.org/', 'PerformingArtsTheater');
     }
-
 
 }

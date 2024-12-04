@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A train station.
  *
+ * @see https://schema.org/TrainStation
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class TrainStation extends CivicStructure
@@ -37,6 +38,5 @@ class TrainStation extends CivicStructure
     {
         return new TrainStation('https://schema.org/', 'TrainStation');
     }
-
 
 }

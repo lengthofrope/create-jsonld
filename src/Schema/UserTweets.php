@@ -27,8 +27,11 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].
+ * UserInteraction and its subtypes is an old way of talking about users
+ * interacting with pages. It is generally better to use [[Action]]-based
+ * vocabulary, alongside types such as [[Comment]].
  *
+ * @see https://schema.org/UserTweets
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class UserTweets extends UserInteraction
@@ -37,6 +40,5 @@ class UserTweets extends UserInteraction
     {
         return new UserTweets('https://schema.org/', 'UserTweets');
     }
-
 
 }

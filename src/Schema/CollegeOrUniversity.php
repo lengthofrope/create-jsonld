@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A college, university, or other third-level educational institution.
  *
+ * @see https://schema.org/CollegeOrUniversity
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class CollegeOrUniversity extends EducationalOrganization
@@ -37,6 +38,5 @@ class CollegeOrUniversity extends EducationalOrganization
     {
         return new CollegeOrUniversity('https://schema.org/', 'CollegeOrUniversity');
     }
-
 
 }

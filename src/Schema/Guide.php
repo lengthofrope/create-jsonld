@@ -27,8 +27,14 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * [[Guide]] is a page or article that recommends specific products or services, or aspects of a thing for a user to consider. A [[Guide]] may represent a Buying Guide and detail aspects of products or services for a user to consider. A [[Guide]] may represent a Product Guide and recommend specific products or services. A [[Guide]] may represent a Ranked List and recommend specific products or services with ranking.
+ * [[Guide]] is a page or article that recommends specific products or services, or
+ * aspects of a thing for a user to consider. A [[Guide]] may represent a Buying
+ * Guide and detail aspects of products or services for a user to consider. A
+ * [[Guide]] may represent a Product Guide and recommend specific products or
+ * services. A [[Guide]] may represent a Ranked List and recommend specific
+ * products or services with ranking.
  *
+ * @see https://schema.org/Guide
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Guide extends CreativeWork
@@ -56,6 +62,4 @@ class Guide extends CreativeWork
     public function getReviewAspect() {
         return $this->properties['reviewAspect'];
     }
-
-
 }

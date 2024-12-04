@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The act of intentionally disregarding the object. An agent ignores an object.
  *
+ * @see https://schema.org/IgnoreAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class IgnoreAction extends AssessAction
@@ -37,6 +38,5 @@ class IgnoreAction extends AssessAction
     {
         return new IgnoreAction('https://schema.org/', 'IgnoreAction');
     }
-
 
 }

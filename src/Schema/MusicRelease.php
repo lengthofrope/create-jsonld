@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A MusicRelease is a specific release of a music album.
  *
+ * @see https://schema.org/MusicRelease
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MusicRelease extends MusicPlaylist
@@ -56,9 +57,9 @@ class MusicRelease extends MusicPlaylist
     public function getReleaseOf() {
         return $this->properties['releaseOf'];
     }
-
     /**
-     * Format of this release (the type of recording media used, i.e. compact disc, digital media, LP, etc.).
+     * Format of this release (the type of recording media used, i.e. compact disc,
+     * digital media, LP, etc.).
      *
      * @param $musicReleaseFormat 
      * @return static
@@ -75,7 +76,6 @@ class MusicRelease extends MusicPlaylist
     public function getMusicReleaseFormat() {
         return $this->properties['musicReleaseFormat'];
     }
-
     /**
      * The label that issued the release.
      *
@@ -94,9 +94,9 @@ class MusicRelease extends MusicPlaylist
     public function getRecordLabel() {
         return $this->properties['recordLabel'];
     }
-
     /**
-     * The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
+     * The duration of the item (movie, audio recording, event, etc.) in [ISO 8601
+     * duration format](http://en.wikipedia.org/wiki/ISO_8601).
      *
      * @param $duration 
      * @return static
@@ -113,9 +113,10 @@ class MusicRelease extends MusicPlaylist
     public function getDuration() {
         return $this->properties['duration'];
     }
-
     /**
-     * The group the release is credited to if different than the byArtist. For example, Red and Blue is credited to "Stefani Germanotta Band", but by Lady Gaga.
+     * The group the release is credited to if different than the byArtist. For
+     * example, Red and Blue is credited to "Stefani Germanotta Band", but by Lady
+     * Gaga.
      *
      * @param $creditedTo |
      * @return static
@@ -132,7 +133,6 @@ class MusicRelease extends MusicPlaylist
     public function getCreditedTo() {
         return $this->properties['creditedTo'];
     }
-
     /**
      * The catalog number for the release.
      *
@@ -151,6 +151,4 @@ class MusicRelease extends MusicPlaylist
     public function getCatalogNumber() {
         return $this->properties['catalogNumber'];
     }
-
-
 }

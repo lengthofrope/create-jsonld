@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Format of this release (the type of recording media used, i.e. compact disc, digital media, LP, etc.).
+ * Format of this release (the type of recording media used, i.e. compact disc,
+ * digital media, LP, etc.).
  *
+ * @see https://schema.org/MusicReleaseFormatType
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MusicReleaseFormatType extends Enumeration
@@ -37,6 +39,5 @@ class MusicReleaseFormatType extends Enumeration
     {
         return new MusicReleaseFormatType('https://schema.org/', 'MusicReleaseFormatType');
     }
-
 
 }

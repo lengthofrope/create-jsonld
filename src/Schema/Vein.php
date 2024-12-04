@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A type of blood vessel that specifically carries blood to the heart.
  *
+ * @see https://schema.org/Vein
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Vein extends Vessel
@@ -39,7 +40,8 @@ class Vein extends Vessel
     }
 
     /**
-     * The anatomical or organ system drained by this vessel; generally refers to a specific part of an organ.
+     * The anatomical or organ system drained by this vessel; generally refers to a
+     * specific part of an organ.
      *
      * @param $regionDrained |
      * @return static
@@ -56,7 +58,6 @@ class Vein extends Vessel
     public function getRegionDrained() {
         return $this->properties['regionDrained'];
     }
-
     /**
      * The vasculature that the vein drains into.
      *
@@ -75,9 +76,9 @@ class Vein extends Vessel
     public function getDrainsTo() {
         return $this->properties['drainsTo'];
     }
-
     /**
-     * The anatomical or organ system that the vein flows into; a larger structure that the vein connects to.
+     * The anatomical or organ system that the vein flows into; a larger structure that
+     * the vein connects to.
      *
      * @param $tributary 
      * @return static
@@ -94,6 +95,4 @@ class Vein extends Vessel
     public function getTributary() {
         return $this->properties['tributary'];
     }
-
-
 }

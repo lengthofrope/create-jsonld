@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A guideline recommendation that is regarded as efficacious and where quality of the data supporting the recommendation is sound.
+ * A guideline recommendation that is regarded as efficacious and where quality of
+ * the data supporting the recommendation is sound.
  *
+ * @see https://schema.org/MedicalGuidelineRecommendation
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MedicalGuidelineRecommendation extends MedicalGuideline
@@ -56,6 +58,4 @@ class MedicalGuidelineRecommendation extends MedicalGuideline
     public function getRecommendationStrength() {
         return $this->properties['recommendationStrength'];
     }
-
-
 }

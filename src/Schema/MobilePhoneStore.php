@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A store that sells mobile phones and related accessories.
  *
+ * @see https://schema.org/MobilePhoneStore
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MobilePhoneStore extends Store
@@ -37,6 +38,5 @@ class MobilePhoneStore extends Store
     {
         return new MobilePhoneStore('https://schema.org/', 'MobilePhoneStore');
     }
-
 
 }

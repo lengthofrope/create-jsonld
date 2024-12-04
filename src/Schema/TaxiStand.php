@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A taxi stand.
  *
+ * @see https://schema.org/TaxiStand
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class TaxiStand extends CivicStructure
@@ -37,6 +38,5 @@ class TaxiStand extends CivicStructure
     {
         return new TaxiStand('https://schema.org/', 'TaxiStand');
     }
-
 
 }

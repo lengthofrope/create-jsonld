@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A church.
  *
+ * @see https://schema.org/Church
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Church extends PlaceOfWorship
@@ -37,6 +38,5 @@ class Church extends PlaceOfWorship
     {
         return new Church('https://schema.org/', 'Church');
     }
-
 
 }

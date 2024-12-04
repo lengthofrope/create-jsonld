@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A radio episode which can be part of a series or season.
  *
+ * @see https://schema.org/RadioEpisode
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class RadioEpisode extends Episode
@@ -37,6 +38,5 @@ class RadioEpisode extends Episode
     {
         return new RadioEpisode('https://schema.org/', 'RadioEpisode');
     }
-
 
 }

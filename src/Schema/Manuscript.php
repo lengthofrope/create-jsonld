@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A book, document, or piece of music written by hand rather than typed or printed.
+ * A book, document, or piece of music written by hand rather than typed or
+ * printed.
  *
+ * @see https://schema.org/Manuscript
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Manuscript extends CreativeWork
@@ -37,6 +39,5 @@ class Manuscript extends CreativeWork
     {
         return new Manuscript('https://schema.org/', 'Manuscript');
     }
-
 
 }

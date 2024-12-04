@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Aquarium.
  *
+ * @see https://schema.org/Aquarium
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Aquarium extends CivicStructure
@@ -37,6 +38,5 @@ class Aquarium extends CivicStructure
     {
         return new Aquarium('https://schema.org/', 'Aquarium');
     }
-
 
 }

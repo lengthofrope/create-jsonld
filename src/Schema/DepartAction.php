@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of  departing from a place. An agent departs from a fromLocation for a destination, optionally with participants.
+ * The act of  departing from a place. An agent departs from a fromLocation for a
+ * destination, optionally with participants.
  *
+ * @see https://schema.org/DepartAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class DepartAction extends MoveAction
@@ -37,6 +39,5 @@ class DepartAction extends MoveAction
     {
         return new DepartAction('https://schema.org/', 'DepartAction');
     }
-
 
 }

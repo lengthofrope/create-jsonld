@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A medical procedure involving an incision with instruments; performed for diagnose, or therapeutic purposes.
+ * A medical procedure involving an incision with instruments; performed for
+ * diagnose, or therapeutic purposes.
  *
+ * @see https://schema.org/SurgicalProcedure
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class SurgicalProcedure extends MedicalProcedure
@@ -37,6 +39,5 @@ class SurgicalProcedure extends MedicalProcedure
     {
         return new SurgicalProcedure('https://schema.org/', 'SurgicalProcedure');
     }
-
 
 }

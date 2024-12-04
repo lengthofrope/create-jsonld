@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A direction indicating a single action to do in the instructions for how to achieve a result.
+ * A direction indicating a single action to do in the instructions for how to
+ * achieve a result.
  *
+ * @see https://schema.org/HowToDirection
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class HowToDirection extends ListItem
@@ -56,9 +58,9 @@ class HowToDirection extends ListItem
     public function getBeforeMedia() {
         return $this->properties['beforeMedia'];
     }
-
     /**
-     * The length of time it takes to prepare the items to be used in instructions or a direction, in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
+     * The length of time it takes to prepare the items to be used in instructions or a
+     * direction, in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
      *
      * @param $prepTime 
      * @return static
@@ -75,9 +77,9 @@ class HowToDirection extends ListItem
     public function getPrepTime() {
         return $this->properties['prepTime'];
     }
-
     /**
-     * A sub property of instrument. An object used (but not consumed) when performing instructions or a direction.
+     * A sub property of instrument. An object used (but not consumed) when performing
+     * instructions or a direction.
      *
      * @param $tool |
      * @return static
@@ -94,9 +96,10 @@ class HowToDirection extends ListItem
     public function getTool() {
         return $this->properties['tool'];
     }
-
     /**
-     * The total time required to perform instructions or a direction (including time to prepare the supplies), in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
+     * The total time required to perform instructions or a direction (including time
+     * to prepare the supplies), in [ISO 8601 duration
+     * format](http://en.wikipedia.org/wiki/ISO_8601).
      *
      * @param $totalTime 
      * @return static
@@ -113,7 +116,6 @@ class HowToDirection extends ListItem
     public function getTotalTime() {
         return $this->properties['totalTime'];
     }
-
     /**
      * A media object representing the circumstances while performing this direction.
      *
@@ -132,9 +134,10 @@ class HowToDirection extends ListItem
     public function getDuringMedia() {
         return $this->properties['duringMedia'];
     }
-
     /**
-     * The length of time it takes to perform instructions or a direction (not including time to prepare the supplies), in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
+     * The length of time it takes to perform instructions or a direction (not
+     * including time to prepare the supplies), in [ISO 8601 duration
+     * format](http://en.wikipedia.org/wiki/ISO_8601).
      *
      * @param $performTime 
      * @return static
@@ -151,9 +154,9 @@ class HowToDirection extends ListItem
     public function getPerformTime() {
         return $this->properties['performTime'];
     }
-
     /**
-     * A sub-property of instrument. A supply consumed when performing instructions or a direction.
+     * A sub-property of instrument. A supply consumed when performing instructions or
+     * a direction.
      *
      * @param $supply |
      * @return static
@@ -170,7 +173,6 @@ class HowToDirection extends ListItem
     public function getSupply() {
         return $this->properties['supply'];
     }
-
     /**
      * A media object representing the circumstances after performing this direction.
      *
@@ -189,6 +191,4 @@ class HowToDirection extends ListItem
     public function getAfterMedia() {
         return $this->properties['afterMedia'];
     }
-
-
 }

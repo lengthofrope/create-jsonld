@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A place offering space for "Recreational Vehicles", Caravans, mobile homes and the like.
+ * A place offering space for "Recreational Vehicles", Caravans, mobile homes and
+ * the like.
  *
+ * @see https://schema.org/RVPark
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class RVPark extends CivicStructure
@@ -37,6 +39,5 @@ class RVPark extends CivicStructure
     {
         return new RVPark('https://schema.org/', 'RVPark');
     }
-
 
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A parking lot or other parking facility.
  *
+ * @see https://schema.org/ParkingFacility
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ParkingFacility extends CivicStructure
@@ -37,6 +38,5 @@ class ParkingFacility extends CivicStructure
     {
         return new ParkingFacility('https://schema.org/', 'ParkingFacility');
     }
-
 
 }

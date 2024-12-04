@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The act of granting permission to an object.
  *
+ * @see https://schema.org/AuthorizeAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class AuthorizeAction extends AllocateAction
@@ -39,7 +40,8 @@ class AuthorizeAction extends AllocateAction
     }
 
     /**
-     * A sub property of participant. The participant who is at the receiving end of the action.
+     * A sub property of participant. The participant who is at the receiving end of
+     * the action.
      *
      * @param $recipient |||
      * @return static
@@ -56,6 +58,4 @@ class AuthorizeAction extends AllocateAction
     public function getRecipient() {
         return $this->properties['recipient'];
     }
-
-
 }

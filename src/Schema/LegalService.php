@@ -27,8 +27,13 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A LegalService is a business that provides legally-oriented services, advice and representation, e.g. law firms.\n\nAs a [[LocalBusiness]] it can be described as a [[provider]] of one or more [[Service]]\(s).
+ * A LegalService is a business that provides legally-oriented services, advice and
+ * representation, e.g. law firms.
  *
+ * As a [[LocalBusiness]] it can be described as a [[provider]] of one or more
+ * [[Service]]\(s).
+ *
+ * @see https://schema.org/LegalService
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class LegalService extends LocalBusiness
@@ -37,6 +42,5 @@ class LegalService extends LocalBusiness
     {
         return new LegalService('https://schema.org/', 'LegalService');
     }
-
 
 }

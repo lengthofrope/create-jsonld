@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The status of an Action.
  *
+ * @see https://schema.org/ActionStatusType
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ActionStatusType extends StatusEnumeration
@@ -37,6 +38,5 @@ class ActionStatusType extends StatusEnumeration
     {
         return new ActionStatusType('https://schema.org/', 'ActionStatusType');
     }
-
 
 }

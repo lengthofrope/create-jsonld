@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A single message from a sender to one or more organizations or people.
  *
+ * @see https://schema.org/Message
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Message extends CreativeWork
@@ -39,7 +40,8 @@ class Message extends CreativeWork
     }
 
     /**
-     * A sub property of participant. The participant who is at the receiving end of the action.
+     * A sub property of participant. The participant who is at the receiving end of
+     * the action.
      *
      * @param $recipient |||
      * @return static
@@ -56,9 +58,9 @@ class Message extends CreativeWork
     public function getRecipient() {
         return $this->properties['recipient'];
     }
-
     /**
-     * The date/time at which the message has been read by the recipient if a single recipient exists.
+     * The date/time at which the message has been read by the recipient if a single
+     * recipient exists.
      *
      * @param $dateRead |
      * @return static
@@ -75,7 +77,6 @@ class Message extends CreativeWork
     public function getDateRead() {
         return $this->properties['dateRead'];
     }
-
     /**
      * The date/time at which the message was sent.
      *
@@ -94,7 +95,6 @@ class Message extends CreativeWork
     public function getDateSent() {
         return $this->properties['dateSent'];
     }
-
     /**
      * A sub property of recipient. The recipient blind copied on a message.
      *
@@ -113,7 +113,6 @@ class Message extends CreativeWork
     public function getBccRecipient() {
         return $this->properties['bccRecipient'];
     }
-
     /**
      * A sub property of recipient. The recipient copied on a message.
      *
@@ -132,7 +131,6 @@ class Message extends CreativeWork
     public function getCcRecipient() {
         return $this->properties['ccRecipient'];
     }
-
     /**
      * A sub property of recipient. The recipient who was directly sent the message.
      *
@@ -151,7 +149,6 @@ class Message extends CreativeWork
     public function getToRecipient() {
         return $this->properties['toRecipient'];
     }
-
     /**
      * The date/time the message was received if a single recipient exists.
      *
@@ -170,7 +167,6 @@ class Message extends CreativeWork
     public function getDateReceived() {
         return $this->properties['dateReceived'];
     }
-
     /**
      * A CreativeWork attached to the message.
      *
@@ -189,9 +185,9 @@ class Message extends CreativeWork
     public function getMessageAttachment() {
         return $this->properties['messageAttachment'];
     }
-
     /**
-     * A sub property of participant. The participant who is at the sending end of the action.
+     * A sub property of participant. The participant who is at the sending end of the
+     * action.
      *
      * @param $sender ||
      * @return static
@@ -208,6 +204,4 @@ class Message extends CreativeWork
     public function getSender() {
         return $this->properties['sender'];
     }
-
-
 }

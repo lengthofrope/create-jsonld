@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A tattoo parlor.
  *
+ * @see https://schema.org/TattooParlor
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class TattooParlor extends HealthAndBeautyBusiness
@@ -37,6 +38,5 @@ class TattooParlor extends HealthAndBeautyBusiness
     {
         return new TattooParlor('https://schema.org/', 'TattooParlor');
     }
-
 
 }

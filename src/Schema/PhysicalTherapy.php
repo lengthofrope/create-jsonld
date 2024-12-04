@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A process of progressive physical care and rehabilitation aimed at improving a health condition.
+ * A process of progressive physical care and rehabilitation aimed at improving a
+ * health condition.
  *
+ * @see https://schema.org/PhysicalTherapy
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class PhysicalTherapy extends MedicalTherapy
@@ -37,6 +39,5 @@ class PhysicalTherapy extends MedicalTherapy
     {
         return new PhysicalTherapy('https://schema.org/', 'PhysicalTherapy');
     }
-
 
 }

@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A step in the instructions for how to achieve a result. It is an ordered list with HowToDirection and/or HowToTip items.
+ * A step in the instructions for how to achieve a result. It is an ordered list
+ * with HowToDirection and/or HowToTip items.
  *
+ * @see https://schema.org/HowToStep
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class HowToStep extends ListItem
@@ -37,6 +39,5 @@ class HowToStep extends ListItem
     {
         return new HowToStep('https://schema.org/', 'HowToStep');
     }
-
 
 }

@@ -27,8 +27,15 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The cost per unit of a medical drug. Note that this type is not meant to represent the price in an offer of a drug for sale; see the Offer type for that. This type will typically be used to tag wholesale or average retail cost of a drug, or maximum reimbursable cost. Costs of medical drugs vary widely depending on how and where they are paid for, so while this type captures some of the variables, costs should be used with caution by consumers of this schema's markup.
+ * The cost per unit of a medical drug. Note that this type is not meant to
+ * represent the price in an offer of a drug for sale; see the Offer type for that.
+ * This type will typically be used to tag wholesale or average retail cost of a
+ * drug, or maximum reimbursable cost. Costs of medical drugs vary widely depending
+ * on how and where they are paid for, so while this type captures some of the
+ * variables, costs should be used with caution by consumers of this schema's
+ * markup.
  *
+ * @see https://schema.org/DrugCost
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class DrugCost extends MedicalEntity
@@ -56,9 +63,9 @@ class DrugCost extends MedicalEntity
     public function getCostPerUnit() {
         return $this->properties['costPerUnit'];
     }
-
     /**
-     * Additional details to capture the origin of the cost data. For example, 'Medicare Part B'.
+     * Additional details to capture the origin of the cost data. For example,
+     * 'Medicare Part B'.
      *
      * @param $costOrigin 
      * @return static
@@ -75,7 +82,6 @@ class DrugCost extends MedicalEntity
     public function getCostOrigin() {
         return $this->properties['costOrigin'];
     }
-
     /**
      * The category of cost, such as wholesale, retail, reimbursement cap, etc.
      *
@@ -94,7 +100,6 @@ class DrugCost extends MedicalEntity
     public function getCostCategory() {
         return $this->properties['costCategory'];
     }
-
     /**
      * The unit in which the drug is measured, e.g. '5 mg tablet'.
      *
@@ -113,9 +118,9 @@ class DrugCost extends MedicalEntity
     public function getDrugUnit() {
         return $this->properties['drugUnit'];
     }
-
     /**
-     * The currency (in 3-letter) of the drug cost. See: http://en.wikipedia.org/wiki/ISO_4217. 
+     * The currency (in 3-letter) of the drug cost. See:
+     * http://en.wikipedia.org/wiki/ISO_4217.
      *
      * @param $costCurrency 
      * @return static
@@ -132,7 +137,6 @@ class DrugCost extends MedicalEntity
     public function getCostCurrency() {
         return $this->properties['costCurrency'];
     }
-
     /**
      * The location in which the status applies.
      *
@@ -151,6 +155,4 @@ class DrugCost extends MedicalEntity
     public function getApplicableLocation() {
         return $this->properties['applicableLocation'];
     }
-
-
 }

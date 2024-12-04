@@ -27,8 +27,12 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Any specific branch of medical science or practice. Medical specialities include clinical specialties that pertain to particular organ systems and their respective disease states, as well as allied health specialties. Enumerated type.
+ * Any specific branch of medical science or practice. Medical specialities include
+ * clinical specialties that pertain to particular organ systems and their
+ * respective disease states, as well as allied health specialties. Enumerated
+ * type.
  *
+ * @see https://schema.org/MedicalSpecialty
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MedicalSpecialty extends MedicalEnumeration
@@ -37,6 +41,5 @@ class MedicalSpecialty extends MedicalEnumeration
     {
         return new MedicalSpecialty('https://schema.org/', 'MedicalSpecialty');
     }
-
 
 }

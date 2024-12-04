@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * For a [[VideoGame]], such as used with a [[PlayGameAction]], an enumeration of the kind of game availability offered. 
+ * For a [[VideoGame]], such as used with a [[PlayGameAction]], an enumeration of
+ * the kind of game availability offered.
  *
+ * @see https://schema.org/GameAvailabilityEnumeration
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class GameAvailabilityEnumeration extends Enumeration
@@ -37,6 +39,5 @@ class GameAvailabilityEnumeration extends Enumeration
     {
         return new GameAvailabilityEnumeration('https://schema.org/', 'GameAvailabilityEnumeration');
     }
-
 
 }

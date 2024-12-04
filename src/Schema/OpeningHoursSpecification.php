@@ -27,10 +27,18 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A structured value providing information about the opening hours of a place or a certain service inside a place.\n\n
- * The place is __open__ if the [[opens]] property is specified, and __closed__ otherwise.\n\nIf the value for the [[closes]] property is less than the value for the [[opens]] property then the hour range is assumed to span over the next day.
- *       
+ * A structured value providing information about the opening hours of a place or a
+ * certain service inside a place.
  *
+ *
+ * * The place is __open__ if the [[opens]] property is specified, and __closed__
+ * otherwise.
+ *
+ * If the value for the [[closes]] property is less than the value for the
+ * [[opens]] property then the hour range is assumed to span over the next day.
+ * *
+ *
+ * @see https://schema.org/OpeningHoursSpecification
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class OpeningHoursSpecification extends StructuredValue
@@ -58,7 +66,6 @@ class OpeningHoursSpecification extends StructuredValue
     public function getDayOfWeek() {
         return $this->properties['dayOfWeek'];
     }
-
     /**
      * The closing hour of the place or service on the given day(s) of the week.
      *
@@ -77,9 +84,9 @@ class OpeningHoursSpecification extends StructuredValue
     public function getCloses() {
         return $this->properties['closes'];
     }
-
     /**
-     * The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours.
+     * The date after when the item is not valid. For example the end of an offer,
+     * salary period, or a period of opening hours.
      *
      * @param $validThrough |
      * @return static
@@ -96,7 +103,6 @@ class OpeningHoursSpecification extends StructuredValue
     public function getValidThrough() {
         return $this->properties['validThrough'];
     }
-
     /**
      * The opening hour of the place or service on the given day(s) of the week.
      *
@@ -115,7 +121,6 @@ class OpeningHoursSpecification extends StructuredValue
     public function getOpens() {
         return $this->properties['opens'];
     }
-
     /**
      * The date when the item becomes valid.
      *
@@ -134,6 +139,4 @@ class OpeningHoursSpecification extends StructuredValue
     public function getValidFrom() {
         return $this->properties['validFrom'];
     }
-
-
 }

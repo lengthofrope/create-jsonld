@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The costs of settling the payment using a particular payment method.
  *
+ * @see https://schema.org/PaymentChargeSpecification
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class PaymentChargeSpecification extends PriceSpecification
@@ -56,9 +57,9 @@ class PaymentChargeSpecification extends PriceSpecification
     public function getAppliesToPaymentMethod() {
         return $this->properties['appliesToPaymentMethod'];
     }
-
     /**
-     * The delivery method(s) to which the delivery charge or payment charge specification applies.
+     * The delivery method(s) to which the delivery charge or payment charge
+     * specification applies.
      *
      * @param $appliesToDeliveryMethod 
      * @return static
@@ -75,6 +76,4 @@ class PaymentChargeSpecification extends PriceSpecification
     public function getAppliesToDeliveryMethod() {
         return $this->properties['appliesToDeliveryMethod'];
     }
-
-
 }

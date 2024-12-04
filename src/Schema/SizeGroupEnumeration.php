@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Enumerates common size groups for various product categories.
  *
+ * @see https://schema.org/SizeGroupEnumeration
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class SizeGroupEnumeration extends Enumeration
@@ -37,6 +38,5 @@ class SizeGroupEnumeration extends Enumeration
     {
         return new SizeGroupEnumeration('https://schema.org/', 'SizeGroupEnumeration');
     }
-
 
 }

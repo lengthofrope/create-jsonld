@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A business that provides Heating, Ventilation and Air Conditioning services.
  *
+ * @see https://schema.org/HVACBusiness
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class HVACBusiness extends HomeAndConstructionBusiness
@@ -37,6 +38,5 @@ class HVACBusiness extends HomeAndConstructionBusiness
     {
         return new HVACBusiness('https://schema.org/', 'HVACBusiness');
     }
-
 
 }

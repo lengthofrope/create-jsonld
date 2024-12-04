@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A page devoted to a single item, such as a particular product or hotel.
  *
+ * @see https://schema.org/ItemPage
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ItemPage extends WebPage
@@ -37,6 +38,5 @@ class ItemPage extends WebPage
     {
         return new ItemPage('https://schema.org/', 'ItemPage');
     }
-
 
 }

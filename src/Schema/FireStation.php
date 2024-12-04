@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A fire station. With firemen.
  *
+ * @see https://schema.org/FireStation
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class FireStation extends CivicStructure
@@ -37,6 +38,5 @@ class FireStation extends CivicStructure
     {
         return new FireStation('https://schema.org/', 'FireStation');
     }
-
 
 }

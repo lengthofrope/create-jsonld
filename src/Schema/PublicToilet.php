@@ -27,8 +27,11 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A public toilet is a room or small building containing one or more toilets (and possibly also urinals) which is available for use by the general public, or by customers or employees of certain businesses.
+ * A public toilet is a room or small building containing one or more toilets (and
+ * possibly also urinals) which is available for use by the general public, or by
+ * customers or employees of certain businesses.
  *
+ * @see https://schema.org/PublicToilet
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class PublicToilet extends CivicStructure
@@ -37,6 +40,5 @@ class PublicToilet extends CivicStructure
     {
         return new PublicToilet('https://schema.org/', 'PublicToilet');
     }
-
 
 }

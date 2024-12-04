@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A set of requirements that must be fulfilled in order to perform an Action.
  *
+ * @see https://schema.org/ActionAccessSpecification
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ActionAccessSpecification extends Intangible
@@ -39,7 +40,8 @@ class ActionAccessSpecification extends Intangible
     }
 
     /**
-     * The beginning of the availability of the product or service included in the offer.
+     * The beginning of the availability of the product or service included in the
+     * offer.
      *
      * @param $availabilityStarts ||
      * @return static
@@ -56,10 +58,13 @@ class ActionAccessSpecification extends Intangible
     public function getAvailabilityStarts() {
         return $this->properties['availabilityStarts'];
     }
-
     /**
-     * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which the offer or delivery charge specification is not valid, e.g. a region where the transaction is not allowed.\n\nSee also [[eligibleRegion]].
-      
+     * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the
+     * GeoShape for the geo-political region(s) for which the offer or delivery charge
+     * specification is not valid, e.g. a region where the transaction is not allowed.
+     *
+     * See also [[eligibleRegion]].
+     *
      *
      * @param $ineligibleRegion ||
      * @return static
@@ -76,9 +81,9 @@ class ActionAccessSpecification extends Intangible
     public function getIneligibleRegion() {
         return $this->properties['ineligibleRegion'];
     }
-
     /**
-     * An Offer which must be accepted before the user can perform the Action. For example, the user may need to buy a movie before being able to watch it.
+     * An Offer which must be accepted before the user can perform the Action. For
+     * example, the user may need to buy a movie before being able to watch it.
      *
      * @param $expectsAcceptanceOf 
      * @return static
@@ -95,9 +100,9 @@ class ActionAccessSpecification extends Intangible
     public function getExpectsAcceptanceOf() {
         return $this->properties['expectsAcceptanceOf'];
     }
-
     /**
-     * A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
+     * A category for the item. Greater signs or slashes can be used to informally
+     * indicate a category hierarchy.
      *
      * @param $category ||||
      * @return static
@@ -114,9 +119,10 @@ class ActionAccessSpecification extends Intangible
     public function getCategory() {
         return $this->properties['category'];
     }
-
     /**
-     * Indicates if use of the media require a subscription  (either paid or free). Allowed values are ```true``` or ```false``` (note that an earlier version had 'yes', 'no').
+     * Indicates if use of the media require a subscription  (either paid or free).
+     * Allowed values are ```true``` or ```false``` (note that an earlier version had
+     * 'yes', 'no').
      *
      * @param $requiresSubscription |
      * @return static
@@ -133,10 +139,13 @@ class ActionAccessSpecification extends Intangible
     public function getRequiresSubscription() {
         return $this->properties['requiresSubscription'];
     }
-
     /**
-     * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which the offer or delivery charge specification is valid.\n\nSee also [[ineligibleRegion]].
-    
+     * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the
+     * GeoShape for the geo-political region(s) for which the offer or delivery charge
+     * specification is valid.
+     *
+     * See also [[ineligibleRegion]].
+     *
      *
      * @param $eligibleRegion ||
      * @return static
@@ -153,7 +162,6 @@ class ActionAccessSpecification extends Intangible
     public function getEligibleRegion() {
         return $this->properties['eligibleRegion'];
     }
-
     /**
      * The end of the availability of the product or service included in the offer.
      *
@@ -172,6 +180,4 @@ class ActionAccessSpecification extends Intangible
     public function getAvailabilityEnds() {
         return $this->properties['availabilityEnds'];
     }
-
-
 }

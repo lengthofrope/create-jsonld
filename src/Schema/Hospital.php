@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A hospital.
  *
+ * @see https://schema.org/Hospital
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Hospital extends CivicStructure
@@ -56,7 +57,6 @@ class Hospital extends CivicStructure
     public function getMedicalSpecialty() {
         return $this->properties['medicalSpecialty'];
     }
-
     /**
      * A medical service available from this provider.
      *
@@ -75,9 +75,9 @@ class Hospital extends CivicStructure
     public function getAvailableService() {
         return $this->properties['availableService'];
     }
-
     /**
-     * Indicates data describing a hospital, e.g. a CDC [[CDCPMDRecord]] or as some kind of [[Dataset]].
+     * Indicates data describing a hospital, e.g. a CDC [[CDCPMDRecord]] or as some
+     * kind of [[Dataset]].
      *
      * @param $healthcareReportingData |
      * @return static
@@ -94,6 +94,4 @@ class Hospital extends CivicStructure
     public function getHealthcareReportingData() {
         return $this->properties['healthcareReportingData'];
     }
-
-
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A music store.
  *
+ * @see https://schema.org/MusicStore
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MusicStore extends Store
@@ -37,6 +38,5 @@ class MusicStore extends Store
     {
         return new MusicStore('https://schema.org/', 'MusicStore');
     }
-
 
 }

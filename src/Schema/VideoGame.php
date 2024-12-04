@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A video game is an electronic game that involves human interaction with a user interface to generate visual feedback on a video device.
+ * A video game is an electronic game that involves human interaction with a user
+ * interface to generate visual feedback on a video device.
  *
+ * @see https://schema.org/VideoGame
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class VideoGame extends Game
@@ -39,7 +41,9 @@ class VideoGame extends Game
     }
 
     /**
-     * An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip.
+     * An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or
+     * in an event. Actors can be associated with individual items or with a series,
+     * episode, clip.
      *
      * @param $actor |
      * @return static
@@ -56,9 +60,10 @@ class VideoGame extends Game
     public function getActor() {
         return $this->properties['actor'];
     }
-
     /**
-     * The electronic systems used to play <a href="http://en.wikipedia.org/wiki/Category:Video_game_platforms">video games</a>.
+     * The electronic systems used to play <a
+     * href="http://en.wikipedia.org/wiki/Category:Video_game_platforms">video
+     * games</a>.
      *
      * @param $gamePlatform ||
      * @return static
@@ -75,7 +80,6 @@ class VideoGame extends Game
     public function getGamePlatform() {
         return $this->properties['gamePlatform'];
     }
-
     /**
      * The trailer of a movie or TV/radio series, season, episode, etc.
      *
@@ -94,9 +98,9 @@ class VideoGame extends Game
     public function getTrailer() {
         return $this->properties['trailer'];
     }
-
     /**
-     * An actor, e.g. in TV, radio, movie, video games etc. Actors can be associated with individual items or with a series, episode, clip.
+     * An actor, e.g. in TV, radio, movie, video games etc. Actors can be associated
+     * with individual items or with a series, episode, clip.
      *
      * @param $actors 
      * @return static
@@ -113,7 +117,6 @@ class VideoGame extends Game
     public function getActors() {
         return $this->properties['actors'];
     }
-
     /**
      * The server on which  it is possible to play the game.
      *
@@ -132,7 +135,6 @@ class VideoGame extends Game
     public function getGameServer() {
         return $this->properties['gameServer'];
     }
-
     /**
      * Links to tips, tactics, etc.
      *
@@ -151,9 +153,9 @@ class VideoGame extends Game
     public function getGameTip() {
         return $this->properties['gameTip'];
     }
-
     /**
-     * A director of e.g. TV, radio, movie, video games etc. content. Directors can be associated with individual items or with a series, episode, clip.
+     * A director of e.g. TV, radio, movie, video games etc. content. Directors can be
+     * associated with individual items or with a series, episode, clip.
      *
      * @param $directors 
      * @return static
@@ -170,7 +172,6 @@ class VideoGame extends Game
     public function getDirectors() {
         return $this->properties['directors'];
     }
-
     /**
      * Cheat codes to the game.
      *
@@ -189,7 +190,6 @@ class VideoGame extends Game
     public function getCheatCode() {
         return $this->properties['cheatCode'];
     }
-
     /**
      * The edition of a video game.
      *
@@ -208,9 +208,9 @@ class VideoGame extends Game
     public function getGameEdition() {
         return $this->properties['gameEdition'];
     }
-
     /**
-     * Indicates whether this game is multi-player, co-op or single-player.  The game can be marked as multi-player, co-op and single-player at the same time.
+     * Indicates whether this game is multi-player, co-op or single-player.  The game
+     * can be marked as multi-player, co-op and single-player at the same time.
      *
      * @param $playMode 
      * @return static
@@ -227,9 +227,10 @@ class VideoGame extends Game
     public function getPlayMode() {
         return $this->properties['playMode'];
     }
-
     /**
-     * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual items or with a series, episode, clip.
+     * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event.
+     * Directors can be associated with individual items or with a series, episode,
+     * clip.
      *
      * @param $director 
      * @return static
@@ -246,7 +247,6 @@ class VideoGame extends Game
     public function getDirector() {
         return $this->properties['director'];
     }
-
     /**
      * The composer of the soundtrack.
      *
@@ -265,6 +265,4 @@ class VideoGame extends Game
     public function getMusicBy() {
         return $this->properties['musicBy'];
     }
-
-
 }

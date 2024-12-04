@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * An enumeration of several kinds of Map.
  *
+ * @see https://schema.org/MapCategoryType
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MapCategoryType extends Enumeration
@@ -37,6 +38,5 @@ class MapCategoryType extends Enumeration
     {
         return new MapCategoryType('https://schema.org/', 'MapCategoryType');
     }
-
 
 }

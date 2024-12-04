@@ -27,8 +27,14 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of searching for an object.\n\nRelated actions:\n\n* [[FindAction]]: SearchAction generally leads to a FindAction, but not necessarily.
+ * The act of searching for an object.
  *
+ * Related actions:
+ *
+ * * [[FindAction]]: SearchAction generally leads to a FindAction, but not
+ * necessarily.
+ *
+ * @see https://schema.org/SearchAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class SearchAction extends Action
@@ -56,6 +62,4 @@ class SearchAction extends Action
     public function getQuery() {
         return $this->properties['query'];
     }
-
-
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A table on a Web page.
  *
+ * @see https://schema.org/Table
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Table extends WebPageElement
@@ -37,6 +38,5 @@ class Table extends WebPageElement
     {
         return new Table('https://schema.org/', 'Table');
     }
-
 
 }

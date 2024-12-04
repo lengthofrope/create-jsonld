@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A monetary grant.
  *
+ * @see https://schema.org/MonetaryGrant
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MonetaryGrant extends Grant
@@ -39,7 +40,8 @@ class MonetaryGrant extends Grant
     }
 
     /**
-     * A person or organization that supports (sponsors) something through some kind of financial contribution.
+     * A person or organization that supports (sponsors) something through some kind of
+     * financial contribution.
      *
      * @param $funder |
      * @return static
@@ -56,7 +58,6 @@ class MonetaryGrant extends Grant
     public function getFunder() {
         return $this->properties['funder'];
     }
-
     /**
      * The amount of money.
      *
@@ -75,6 +76,4 @@ class MonetaryGrant extends Grant
     public function getAmount() {
         return $this->properties['amount'];
     }
-
-
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Any medical test, typically performed for diagnostic purposes.
  *
+ * @see https://schema.org/MedicalTest
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MedicalTest extends MedicalEntity
@@ -56,7 +57,6 @@ class MedicalTest extends MedicalEntity
     public function getUsedToDiagnose() {
         return $this->properties['usedToDiagnose'];
     }
-
     /**
      * A sign detected by the test.
      *
@@ -75,7 +75,6 @@ class MedicalTest extends MedicalEntity
     public function getSignDetected() {
         return $this->properties['signDetected'];
     }
-
     /**
      * Drugs that affect the test's results.
      *
@@ -94,7 +93,6 @@ class MedicalTest extends MedicalEntity
     public function getAffectedBy() {
         return $this->properties['affectedBy'];
     }
-
     /**
      * Device used to perform the test.
      *
@@ -113,7 +111,6 @@ class MedicalTest extends MedicalEntity
     public function getUsesDevice() {
         return $this->properties['usesDevice'];
     }
-
     /**
      * Range of acceptable values for a typical patient, when applicable.
      *
@@ -132,6 +129,4 @@ class MedicalTest extends MedicalEntity
     public function getNormalRange() {
         return $this->properties['normalRange'];
     }
-
-
 }

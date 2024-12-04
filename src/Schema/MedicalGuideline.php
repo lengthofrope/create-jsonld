@@ -27,8 +27,15 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Any recommendation made by a standard society (e.g. ACC/AHA) or consensus statement that denotes how to diagnose and treat a particular condition. Note: this type should be used to tag the actual guideline recommendation; if the guideline recommendation occurs in a larger scholarly article, use MedicalScholarlyArticle to tag the overall article, not this type. Note also: the organization making the recommendation should be captured in the recognizingAuthority base property of MedicalEntity.
+ * Any recommendation made by a standard society (e.g. ACC/AHA) or consensus
+ * statement that denotes how to diagnose and treat a particular condition. Note:
+ * this type should be used to tag the actual guideline recommendation; if the
+ * guideline recommendation occurs in a larger scholarly article, use
+ * MedicalScholarlyArticle to tag the overall article, not this type. Note also:
+ * the organization making the recommendation should be captured in the
+ * recognizingAuthority base property of MedicalEntity.
  *
+ * @see https://schema.org/MedicalGuideline
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MedicalGuideline extends MedicalEntity
@@ -39,7 +46,8 @@ class MedicalGuideline extends MedicalEntity
     }
 
     /**
-     * Source of the data used to formulate the guidance, e.g. RCT, consensus opinion, etc.
+     * Source of the data used to formulate the guidance, e.g. RCT, consensus opinion,
+     * etc.
      *
      * @param $evidenceOrigin 
      * @return static
@@ -56,7 +64,6 @@ class MedicalGuideline extends MedicalEntity
     public function getEvidenceOrigin() {
         return $this->properties['evidenceOrigin'];
     }
-
     /**
      * Date on which this guideline's recommendation was made.
      *
@@ -75,7 +82,6 @@ class MedicalGuideline extends MedicalEntity
     public function getGuidelineDate() {
         return $this->properties['guidelineDate'];
     }
-
     /**
      * The medical conditions, treatments, etc. that are the subject of the guideline.
      *
@@ -94,7 +100,6 @@ class MedicalGuideline extends MedicalEntity
     public function getGuidelineSubject() {
         return $this->properties['guidelineSubject'];
     }
-
     /**
      * Strength of evidence of the data used to formulate the guideline (enumerated).
      *
@@ -113,6 +118,4 @@ class MedicalGuideline extends MedicalEntity
     public function getEvidenceLevel() {
         return $this->properties['evidenceLevel'];
     }
-
-
 }

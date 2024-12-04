@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Text representing an XPath (typically but not necessarily version 1.0).
  *
+ * @see https://schema.org/XPathType
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class XPathType extends Text
@@ -37,6 +38,5 @@ class XPathType extends Text
     {
         return new XPathType('https://schema.org/', 'XPathType');
     }
-
 
 }

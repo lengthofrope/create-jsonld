@@ -27,8 +27,11 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Any condition of the human body that affects the normal functioning of a person, whether physically or mentally. Includes diseases, injuries, disabilities, disorders, syndromes, etc.
+ * Any condition of the human body that affects the normal functioning of a person,
+ * whether physically or mentally. Includes diseases, injuries, disabilities,
+ * disorders, syndromes, etc.
  *
+ * @see https://schema.org/MedicalCondition
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MedicalCondition extends MedicalEntity
@@ -39,7 +42,8 @@ class MedicalCondition extends MedicalEntity
     }
 
     /**
-     * Changes in the normal mechanical, physical, and biochemical functions that are associated with this activity or condition.
+     * Changes in the normal mechanical, physical, and biochemical functions that are
+     * associated with this activity or condition.
      *
      * @param $pathophysiology 
      * @return static
@@ -56,9 +60,10 @@ class MedicalCondition extends MedicalEntity
     public function getPathophysiology() {
         return $this->properties['pathophysiology'];
     }
-
     /**
-     * A possible unexpected and unfavorable evolution of a medical condition. Complications may include worsening of the signs or symptoms of the disease, extension of the condition to other organ systems, etc.
+     * A possible unexpected and unfavorable evolution of a medical condition.
+     * Complications may include worsening of the signs or symptoms of the disease,
+     * extension of the condition to other organ systems, etc.
      *
      * @param $possibleComplication 
      * @return static
@@ -75,7 +80,6 @@ class MedicalCondition extends MedicalEntity
     public function getPossibleComplication() {
         return $this->properties['possibleComplication'];
     }
-
     /**
      * A possible treatment to address this condition, sign or symptom.
      *
@@ -94,9 +98,9 @@ class MedicalCondition extends MedicalEntity
     public function getPossibleTreatment() {
         return $this->properties['possibleTreatment'];
     }
-
     /**
-     * The likely outcome in either the short term or long term of the medical condition.
+     * The likely outcome in either the short term or long term of the medical
+     * condition.
      *
      * @param $expectedPrognosis 
      * @return static
@@ -113,9 +117,9 @@ class MedicalCondition extends MedicalEntity
     public function getExpectedPrognosis() {
         return $this->properties['expectedPrognosis'];
     }
-
     /**
-     * A preventative therapy used to prevent reoccurrence of the medical condition after an initial episode of the condition.
+     * A preventative therapy used to prevent reoccurrence of the medical condition
+     * after an initial episode of the condition.
      *
      * @param $secondaryPrevention 
      * @return static
@@ -132,7 +136,6 @@ class MedicalCondition extends MedicalEntity
     public function getSecondaryPrevention() {
         return $this->properties['secondaryPrevention'];
     }
-
     /**
      * The stage of the condition, if applicable.
      *
@@ -151,7 +154,6 @@ class MedicalCondition extends MedicalEntity
     public function getStage() {
         return $this->properties['stage'];
     }
-
     /**
      * A medical test typically performed given this condition.
      *
@@ -170,7 +172,6 @@ class MedicalCondition extends MedicalEntity
     public function getTypicalTest() {
         return $this->properties['typicalTest'];
     }
-
     /**
      * Specifying a drug or medicine used in a medication procedure.
      *
@@ -189,9 +190,12 @@ class MedicalCondition extends MedicalEntity
     public function getDrug() {
         return $this->properties['drug'];
     }
-
     /**
-     * One of a set of differential diagnoses for the condition. Specifically, a closely-related or competing diagnosis typically considered later in the cognitive process whereby this medical condition is distinguished from others most likely responsible for a similar collection of signs and symptoms to reach the most parsimonious diagnosis or diagnoses in a patient.
+     * One of a set of differential diagnoses for the condition. Specifically, a
+     * closely-related or competing diagnosis typically considered later in the
+     * cognitive process whereby this medical condition is distinguished from others
+     * most likely responsible for a similar collection of signs and symptoms to reach
+     * the most parsimonious diagnosis or diagnoses in a patient.
      *
      * @param $differentialDiagnosis 
      * @return static
@@ -208,9 +212,9 @@ class MedicalCondition extends MedicalEntity
     public function getDifferentialDiagnosis() {
         return $this->properties['differentialDiagnosis'];
     }
-
     /**
-     * A modifiable or non-modifiable factor that increases the risk of a patient contracting this condition, e.g. age,  coexisting condition.
+     * A modifiable or non-modifiable factor that increases the risk of a patient
+     * contracting this condition, e.g. age,  coexisting condition.
      *
      * @param $riskFactor 
      * @return static
@@ -227,9 +231,9 @@ class MedicalCondition extends MedicalEntity
     public function getRiskFactor() {
         return $this->properties['riskFactor'];
     }
-
     /**
-     * The anatomy of the underlying organ system or structures associated with this entity.
+     * The anatomy of the underlying organ system or structures associated with this
+     * entity.
      *
      * @param $associatedAnatomy ||
      * @return static
@@ -246,9 +250,10 @@ class MedicalCondition extends MedicalEntity
     public function getAssociatedAnatomy() {
         return $this->properties['associatedAnatomy'];
     }
-
     /**
-     * A sign or symptom of this condition. Signs are objective or physically observable manifestations of the medical condition while symptoms are the subjective experience of the medical condition.
+     * A sign or symptom of this condition. Signs are objective or physically
+     * observable manifestations of the medical condition while symptoms are the
+     * subjective experience of the medical condition.
      *
      * @param $signOrSymptom 
      * @return static
@@ -265,7 +270,6 @@ class MedicalCondition extends MedicalEntity
     public function getSignOrSymptom() {
         return $this->properties['signOrSymptom'];
     }
-
     /**
      * The status of the study (enumerated).
      *
@@ -284,9 +288,9 @@ class MedicalCondition extends MedicalEntity
     public function getStatus() {
         return $this->properties['status'];
     }
-
     /**
-     * A preventative therapy used to prevent an initial occurrence of the medical condition, such as vaccination.
+     * A preventative therapy used to prevent an initial occurrence of the medical
+     * condition, such as vaccination.
      *
      * @param $primaryPrevention 
      * @return static
@@ -303,9 +307,9 @@ class MedicalCondition extends MedicalEntity
     public function getPrimaryPrevention() {
         return $this->properties['primaryPrevention'];
     }
-
     /**
-     * The expected progression of the condition if it is not treated and allowed to progress naturally.
+     * The expected progression of the condition if it is not treated and allowed to
+     * progress naturally.
      *
      * @param $naturalProgression 
      * @return static
@@ -322,7 +326,6 @@ class MedicalCondition extends MedicalEntity
     public function getNaturalProgression() {
         return $this->properties['naturalProgression'];
     }
-
     /**
      * The characteristics of associated patients, such as age, gender, race etc.
      *
@@ -341,6 +344,4 @@ class MedicalCondition extends MedicalEntity
     public function getEpidemiology() {
         return $this->properties['epidemiology'];
     }
-
-
 }

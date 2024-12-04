@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A delivery service through which content is provided via broadcast over the air or online.
+ * A delivery service through which content is provided via broadcast over the air
+ * or online.
  *
+ * @see https://schema.org/BroadcastService
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class BroadcastService extends Service
@@ -39,7 +41,9 @@ class BroadcastService extends Service
     }
 
     /**
-     * The frequency used for over-the-air broadcasts. Numeric values or simple ranges, e.g. 87-99. In addition a shortcut idiom is supported for frequencies of AM and FM radio channels, e.g. "87 FM".
+     * The frequency used for over-the-air broadcasts. Numeric values or simple ranges,
+     * e.g. 87-99. In addition a shortcut idiom is supported for frequencies of AM and
+     * FM radio channels, e.g. "87 FM".
      *
      * @param $broadcastFrequency |
      * @return static
@@ -56,9 +60,9 @@ class BroadcastService extends Service
     public function getBroadcastFrequency() {
         return $this->properties['broadcastFrequency'];
     }
-
     /**
-     * The timezone in [ISO 8601 format](http://en.wikipedia.org/wiki/ISO_8601) for which the service bases its broadcasts.
+     * The timezone in [ISO 8601 format](http://en.wikipedia.org/wiki/ISO_8601) for
+     * which the service bases its broadcasts.
      *
      * @param $broadcastTimezone 
      * @return static
@@ -75,7 +79,6 @@ class BroadcastService extends Service
     public function getBroadcastTimezone() {
         return $this->properties['broadcastTimezone'];
     }
-
     /**
      * The organization owning or operating the broadcast service.
      *
@@ -94,9 +97,9 @@ class BroadcastService extends Service
     public function getBroadcaster() {
         return $this->properties['broadcaster'];
     }
-
     /**
-     * A [callsign](https://en.wikipedia.org/wiki/Call_sign), as used in broadcasting and radio communications to identify people, radio and TV stations, or vehicles.
+     * A [callsign](https://en.wikipedia.org/wiki/Call_sign), as used in broadcasting
+     * and radio communications to identify people, radio and TV stations, or vehicles.
      *
      * @param $callSign 
      * @return static
@@ -113,9 +116,9 @@ class BroadcastService extends Service
     public function getCallSign() {
         return $this->properties['callSign'];
     }
-
     /**
-     * A broadcast service to which the broadcast service may belong to such as regional variations of a national channel.
+     * A broadcast service to which the broadcast service may belong to such as
+     * regional variations of a national channel.
      *
      * @param $parentService 
      * @return static
@@ -132,7 +135,6 @@ class BroadcastService extends Service
     public function getParentService() {
         return $this->properties['parentService'];
     }
-
     /**
      * The media network(s) whose content is broadcast on this station.
      *
@@ -151,7 +153,6 @@ class BroadcastService extends Service
     public function getBroadcastAffiliateOf() {
         return $this->properties['broadcastAffiliateOf'];
     }
-
     /**
      * The type of screening or video broadcast used (e.g. IMAX, 3D, SD, HD, etc.).
      *
@@ -170,9 +171,9 @@ class BroadcastService extends Service
     public function getVideoFormat() {
         return $this->properties['videoFormat'];
     }
-
     /**
-     * The name displayed in the channel guide. For many US affiliates, it is the network name.
+     * The name displayed in the channel guide. For many US affiliates, it is the
+     * network name.
      *
      * @param $broadcastDisplayName 
      * @return static
@@ -189,7 +190,6 @@ class BroadcastService extends Service
     public function getBroadcastDisplayName() {
         return $this->properties['broadcastDisplayName'];
     }
-
     /**
      * A broadcast channel of a broadcast service.
      *
@@ -208,7 +208,6 @@ class BroadcastService extends Service
     public function getHasBroadcastChannel() {
         return $this->properties['hasBroadcastChannel'];
     }
-
     /**
      * The area within which users can expect to reach the broadcast service.
      *
@@ -227,9 +226,10 @@ class BroadcastService extends Service
     public function getArea() {
         return $this->properties['area'];
     }
-
     /**
-     * The language of the content or performance or used in an action. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
+     * The language of the content or performance or used in an action. Please use one
+     * of the language codes from the [IETF BCP 47
+     * standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
      *
      * @param $inLanguage |
      * @return static
@@ -246,6 +246,4 @@ class BroadcastService extends Service
     public function getInLanguage() {
         return $this->properties['inLanguage'];
     }
-
-
 }

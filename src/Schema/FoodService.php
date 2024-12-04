@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A food service, like breakfast, lunch, or dinner.
  *
+ * @see https://schema.org/FoodService
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class FoodService extends Service
@@ -37,6 +38,5 @@ class FoodService extends Service
     {
         return new FoodService('https://schema.org/', 'FoodService');
     }
-
 
 }

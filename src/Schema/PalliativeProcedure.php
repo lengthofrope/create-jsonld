@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A medical procedure intended primarily for palliative purposes, aimed at relieving the symptoms of an underlying health condition.
+ * A medical procedure intended primarily for palliative purposes, aimed at
+ * relieving the symptoms of an underlying health condition.
  *
+ * @see https://schema.org/PalliativeProcedure
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class PalliativeProcedure extends MedicalTherapy
@@ -37,6 +39,5 @@ class PalliativeProcedure extends MedicalTherapy
     {
         return new PalliativeProcedure('https://schema.org/', 'PalliativeProcedure');
     }
-
 
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A winery.
  *
+ * @see https://schema.org/Winery
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Winery extends FoodEstablishment
@@ -37,6 +38,5 @@ class Winery extends FoodEstablishment
     {
         return new Winery('https://schema.org/', 'Winery');
     }
-
 
 }

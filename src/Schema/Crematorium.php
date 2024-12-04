@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A crematorium.
  *
+ * @see https://schema.org/Crematorium
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Crematorium extends CivicStructure
@@ -37,6 +38,5 @@ class Crematorium extends CivicStructure
     {
         return new Crematorium('https://schema.org/', 'Crematorium');
     }
-
 
 }

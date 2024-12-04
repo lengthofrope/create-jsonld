@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Web page type: Search results page.
  *
+ * @see https://schema.org/SearchResultsPage
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class SearchResultsPage extends WebPage
@@ -37,6 +38,5 @@ class SearchResultsPage extends WebPage
     {
         return new SearchResultsPage('https://schema.org/', 'SearchResultsPage');
     }
-
 
 }

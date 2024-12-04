@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The act of producing/preparing food.
  *
+ * @see https://schema.org/CookAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class CookAction extends CreateAction
@@ -39,7 +40,8 @@ class CookAction extends CreateAction
     }
 
     /**
-     * A sub property of location. The specific food establishment where the action occurred.
+     * A sub property of location. The specific food establishment where the action
+     * occurred.
      *
      * @param $foodEstablishment |
      * @return static
@@ -56,7 +58,6 @@ class CookAction extends CreateAction
     public function getFoodEstablishment() {
         return $this->properties['foodEstablishment'];
     }
-
     /**
      * A sub property of location. The specific food event where the action occurred.
      *
@@ -75,9 +76,9 @@ class CookAction extends CreateAction
     public function getFoodEvent() {
         return $this->properties['foodEvent'];
     }
-
     /**
-     * A sub property of instrument. The recipe/instructions used to perform the action.
+     * A sub property of instrument. The recipe/instructions used to perform the
+     * action.
      *
      * @param $recipe 
      * @return static
@@ -94,6 +95,4 @@ class CookAction extends CreateAction
     public function getRecipe() {
         return $this->properties['recipe'];
     }
-
-
 }

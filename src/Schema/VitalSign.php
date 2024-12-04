@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Vital signs are measures of various physiological functions in order to assess the most basic body functions.
+ * Vital signs are measures of various physiological functions in order to assess
+ * the most basic body functions.
  *
+ * @see https://schema.org/VitalSign
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class VitalSign extends MedicalSign
@@ -37,6 +39,5 @@ class VitalSign extends MedicalSign
     {
         return new VitalSign('https://schema.org/', 'VitalSign');
     }
-
 
 }

@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A Service to transfer funds from a person or organization to a beneficiary person or organization.
+ * A Service to transfer funds from a person or organization to a beneficiary
+ * person or organization.
  *
+ * @see https://schema.org/PaymentService
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class PaymentService extends FinancialProduct
@@ -37,6 +39,5 @@ class PaymentService extends FinancialProduct
     {
         return new PaymentService('https://schema.org/', 'PaymentService');
     }
-
 
 }

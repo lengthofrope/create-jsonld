@@ -27,8 +27,12 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A play is a form of literature, usually consisting of dialogue between characters, intended for theatrical performance rather than just reading. Note: A performance of a Play would be a [[TheaterEvent]] or [[BroadcastEvent]] - the *Play* being the [[workPerformed]].
+ * A play is a form of literature, usually consisting of dialogue between
+ * characters, intended for theatrical performance rather than just reading. Note:
+ * A performance of a Play would be a [[TheaterEvent]] or [[BroadcastEvent]] - the
+ * *Play* being the [[workPerformed]].
  *
+ * @see https://schema.org/Play
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Play extends CreativeWork
@@ -37,6 +41,5 @@ class Play extends CreativeWork
     {
         return new Play('https://schema.org/', 'Play');
     }
-
 
 }

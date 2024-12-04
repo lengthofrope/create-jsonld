@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The status of a medical study. Enumerated type.
  *
+ * @see https://schema.org/MedicalStudyStatus
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MedicalStudyStatus extends MedicalEnumeration
@@ -37,6 +38,5 @@ class MedicalStudyStatus extends MedicalEnumeration
     {
         return new MedicalStudyStatus('https://schema.org/', 'MedicalStudyStatus');
     }
-
 
 }

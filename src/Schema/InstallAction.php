@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The act of installing an application.
  *
+ * @see https://schema.org/InstallAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class InstallAction extends ConsumeAction
@@ -37,6 +38,5 @@ class InstallAction extends ConsumeAction
     {
         return new InstallAction('https://schema.org/', 'InstallAction');
     }
-
 
 }

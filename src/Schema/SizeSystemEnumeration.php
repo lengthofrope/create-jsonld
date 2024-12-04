@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Enumerates common size systems for different categories of products, for example "EN-13402" or "UK" for wearables or "Imperial" for screws.
+ * Enumerates common size systems for different categories of products, for example
+ * "EN-13402" or "UK" for wearables or "Imperial" for screws.
  *
+ * @see https://schema.org/SizeSystemEnumeration
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class SizeSystemEnumeration extends Enumeration
@@ -37,6 +39,5 @@ class SizeSystemEnumeration extends Enumeration
     {
         return new SizeSystemEnumeration('https://schema.org/', 'SizeSystemEnumeration');
     }
-
 
 }

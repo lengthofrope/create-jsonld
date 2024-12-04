@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * An order item is a line of an order. It includes the quantity and shipping details of a bought offer.
+ * An order item is a line of an order. It includes the quantity and shipping
+ * details of a bought offer.
  *
+ * @see https://schema.org/OrderItem
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class OrderItem extends Intangible
@@ -56,7 +58,6 @@ class OrderItem extends Intangible
     public function getOrderItemStatus() {
         return $this->properties['orderItemStatus'];
     }
-
     /**
      * The item ordered.
      *
@@ -75,7 +76,6 @@ class OrderItem extends Intangible
     public function getOrderedItem() {
         return $this->properties['orderedItem'];
     }
-
     /**
      * The delivery of the parcel related to this order or order item.
      *
@@ -94,9 +94,9 @@ class OrderItem extends Intangible
     public function getOrderDelivery() {
         return $this->properties['orderDelivery'];
     }
-
     /**
-     * The number of the item ordered. If the property is not set, assume the quantity is one.
+     * The number of the item ordered. If the property is not set, assume the quantity
+     * is one.
      *
      * @param $orderQuantity |
      * @return static
@@ -113,7 +113,6 @@ class OrderItem extends Intangible
     public function getOrderQuantity() {
         return $this->properties['orderQuantity'];
     }
-
     /**
      * The identifier of the order item.
      *
@@ -132,6 +131,4 @@ class OrderItem extends Intangible
     public function getOrderItemNumber() {
         return $this->properties['orderItemNumber'];
     }
-
-
 }

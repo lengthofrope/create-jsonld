@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of allocating an action/event/task to some destination (someone or something).
+ * The act of allocating an action/event/task to some destination (someone or
+ * something).
  *
+ * @see https://schema.org/AssignAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class AssignAction extends AllocateAction
@@ -37,6 +39,5 @@ class AssignAction extends AllocateAction
     {
         return new AssignAction('https://schema.org/', 'AssignAction');
     }
-
 
 }

@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A sub-grouping of steps in the instructions for how to achieve a result (e.g. steps for making a pie crust within a pie recipe).
+ * A sub-grouping of steps in the instructions for how to achieve a result (e.g.
+ * steps for making a pie crust within a pie recipe).
  *
+ * @see https://schema.org/HowToSection
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class HowToSection extends ListItem
@@ -39,7 +41,8 @@ class HowToSection extends ListItem
     }
 
     /**
-     * A single step item (as HowToStep, text, document, video, etc.) or a HowToSection (originally misnamed 'steps'; 'step' is preferred).
+     * A single step item (as HowToStep, text, document, video, etc.) or a HowToSection
+     * (originally misnamed 'steps'; 'step' is preferred).
      *
      * @param $steps ||
      * @return static
@@ -56,6 +59,4 @@ class HowToSection extends ListItem
     public function getSteps() {
         return $this->properties['steps'];
     }
-
-
 }

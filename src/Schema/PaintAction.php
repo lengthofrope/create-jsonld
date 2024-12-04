@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The act of producing a painting, typically with paint and canvas as instruments.
  *
+ * @see https://schema.org/PaintAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class PaintAction extends CreateAction
@@ -37,6 +38,5 @@ class PaintAction extends CreateAction
     {
         return new PaintAction('https://schema.org/', 'PaintAction');
     }
-
 
 }

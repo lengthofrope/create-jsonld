@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A set of products (either [[ProductGroup]]s or specific variants) that are listed together e.g. in an [[Offer]].
+ * A set of products (either [[ProductGroup]]s or specific variants) that are
+ * listed together e.g. in an [[Offer]].
  *
+ * @see https://schema.org/ProductCollection
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ProductCollection extends Product
@@ -39,7 +41,8 @@ class ProductCollection extends Product
     }
 
     /**
-     * This links to a node or nodes indicating the exact quantity of the products included in  an [[Offer]] or [[ProductCollection]].
+     * This links to a node or nodes indicating the exact quantity of the products
+     * included in  an [[Offer]] or [[ProductCollection]].
      *
      * @param $includesObject 
      * @return static
@@ -56,6 +59,4 @@ class ProductCollection extends Product
     public function getIncludesObject() {
         return $this->properties['includesObject'];
     }
-
-
 }

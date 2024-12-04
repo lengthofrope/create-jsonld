@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A code for a medical entity.
  *
+ * @see https://schema.org/MedicalCode
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MedicalCode extends CategoryCode
@@ -56,7 +57,6 @@ class MedicalCode extends CategoryCode
     public function getCodingSystem() {
         return $this->properties['codingSystem'];
     }
-
     /**
      * A short textual code that uniquely identifies the value.
      *
@@ -75,6 +75,4 @@ class MedicalCode extends CategoryCode
     public function getCodeValue() {
         return $this->properties['codeValue'];
     }
-
-
 }

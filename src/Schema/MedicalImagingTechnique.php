@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Any medical imaging modality typically used for diagnostic purposes. Enumerated type.
+ * Any medical imaging modality typically used for diagnostic purposes. Enumerated
+ * type.
  *
+ * @see https://schema.org/MedicalImagingTechnique
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MedicalImagingTechnique extends MedicalEnumeration
@@ -37,6 +39,5 @@ class MedicalImagingTechnique extends MedicalEnumeration
     {
         return new MedicalImagingTechnique('https://schema.org/', 'MedicalImagingTechnique');
     }
-
 
 }

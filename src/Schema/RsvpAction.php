@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of notifying an event organizer as to whether you expect to attend the event.
+ * The act of notifying an event organizer as to whether you expect to attend the
+ * event.
  *
+ * @see https://schema.org/RsvpAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class RsvpAction extends InformAction
@@ -39,7 +41,8 @@ class RsvpAction extends InformAction
     }
 
     /**
-     * If responding yes, the number of guests who will attend in addition to the invitee.
+     * If responding yes, the number of guests who will attend in addition to the
+     * invitee.
      *
      * @param $additionalNumberOfGuests 
      * @return static
@@ -56,7 +59,6 @@ class RsvpAction extends InformAction
     public function getAdditionalNumberOfGuests() {
         return $this->properties['additionalNumberOfGuests'];
     }
-
     /**
      * Comments, typically from users.
      *
@@ -75,7 +77,6 @@ class RsvpAction extends InformAction
     public function getComment() {
         return $this->properties['comment'];
     }
-
     /**
      * The response (yes, no, maybe) to the RSVP.
      *
@@ -94,6 +95,4 @@ class RsvpAction extends InformAction
     public function getRsvpResponse() {
         return $this->properties['rsvpResponse'];
     }
-
-
 }

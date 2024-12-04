@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Any matter of defined composition that has discrete existence, whose origin may be biological, mineral or chemical.
+ * Any matter of defined composition that has discrete existence, whose origin may
+ * be biological, mineral or chemical.
  *
+ * @see https://schema.org/Substance
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Substance extends MedicalEntity
@@ -39,7 +41,8 @@ class Substance extends MedicalEntity
     }
 
     /**
-     * Recommended intake of this supplement for a given population as defined by a specific recommending authority.
+     * Recommended intake of this supplement for a given population as defined by a
+     * specific recommending authority.
      *
      * @param $maximumIntake 
      * @return static
@@ -56,7 +59,6 @@ class Substance extends MedicalEntity
     public function getMaximumIntake() {
         return $this->properties['maximumIntake'];
     }
-
     /**
      * An active ingredient, typically chemical compounds and/or biologic substances.
      *
@@ -75,6 +77,4 @@ class Substance extends MedicalEntity
     public function getActiveIngredient() {
         return $this->properties['activeIngredient'];
     }
-
-
 }

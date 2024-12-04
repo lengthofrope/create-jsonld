@@ -27,8 +27,11 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A complex mathematical calculation requiring an online calculator, used to assess prognosis. Note: use the url property of Thing to record any URLs for online calculators.
+ * A complex mathematical calculation requiring an online calculator, used to
+ * assess prognosis. Note: use the url property of Thing to record any URLs for
+ * online calculators.
  *
+ * @see https://schema.org/MedicalRiskCalculator
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MedicalRiskCalculator extends MedicalRiskEstimator
@@ -37,6 +40,5 @@ class MedicalRiskCalculator extends MedicalRiskEstimator
     {
         return new MedicalRiskCalculator('https://schema.org/', 'MedicalRiskCalculator');
     }
-
 
 }

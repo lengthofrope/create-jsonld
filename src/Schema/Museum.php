@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A museum.
  *
+ * @see https://schema.org/Museum
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Museum extends CivicStructure
@@ -37,6 +38,5 @@ class Museum extends CivicStructure
     {
         return new Museum('https://schema.org/', 'Museum');
     }
-
 
 }

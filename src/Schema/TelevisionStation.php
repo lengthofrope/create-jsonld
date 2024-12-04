@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A television station.
  *
+ * @see https://schema.org/TelevisionStation
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class TelevisionStation extends LocalBusiness
@@ -37,6 +38,5 @@ class TelevisionStation extends LocalBusiness
     {
         return new TelevisionStation('https://schema.org/', 'TelevisionStation');
     }
-
 
 }

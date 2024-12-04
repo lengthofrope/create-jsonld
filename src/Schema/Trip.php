@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A trip or journey. An itinerary of visits to one or more places.
  *
+ * @see https://schema.org/Trip
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Trip extends Intangible
@@ -56,9 +57,9 @@ class Trip extends Intangible
     public function getDepartureTime() {
         return $this->properties['departureTime'];
     }
-
     /**
-     * Identifies that this [[Trip]] is a subTrip of another Trip.  For example Day 1, Day 2, etc. of a multi-day trip.
+     * Identifies that this [[Trip]] is a subTrip of another Trip.  For example Day 1,
+     * Day 2, etc. of a multi-day trip.
      *
      * @param $partOfTrip 
      * @return static
@@ -75,7 +76,6 @@ class Trip extends Intangible
     public function getPartOfTrip() {
         return $this->properties['partOfTrip'];
     }
-
     /**
      * The location of origin of the trip, prior to any destination(s).
      *
@@ -94,9 +94,9 @@ class Trip extends Intangible
     public function getTripOrigin() {
         return $this->properties['tripOrigin'];
     }
-
     /**
-     * Destination(s) ( [[Place]] ) that make up a trip. For a trip where destination order is important use [[ItemList]] to specify that order (see examples).
+     * Destination(s) ( [[Place]] ) that make up a trip. For a trip where destination
+     * order is important use [[ItemList]] to specify that order (see examples).
      *
      * @param $itinerary |
      * @return static
@@ -113,7 +113,6 @@ class Trip extends Intangible
     public function getItinerary() {
         return $this->properties['itinerary'];
     }
-
     /**
      * The expected arrival time.
      *
@@ -132,10 +131,15 @@ class Trip extends Intangible
     public function getArrivalTime() {
         return $this->properties['arrivalTime'];
     }
-
     /**
-     * An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event. Use [[businessFunction]] to indicate the kind of transaction offered, i.e. sell, lease, etc. This property can also be used to describe a [[Demand]]. While this property is listed as expected on a number of common types, it can be used in others. In that case, using a second type, such as Product or a subtype of Product, can clarify the nature of the offer.
-      
+     * An offer to provide this item&#x2014;for example, an offer to sell a product,
+     * rent the DVD of a movie, perform a service, or give away tickets to an event.
+     * Use [[businessFunction]] to indicate the kind of transaction offered, i.e. sell,
+     * lease, etc. This property can also be used to describe a [[Demand]]. While this
+     * property is listed as expected on a number of common types, it can be used in
+     * others. In that case, using a second type, such as Product or a subtype of
+     * Product, can clarify the nature of the offer.
+     *
      *
      * @param $offers |
      * @return static
@@ -152,9 +156,10 @@ class Trip extends Intangible
     public function getOffers() {
         return $this->properties['offers'];
     }
-
     /**
-     * The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.
+     * The service provider, service operator, or service performer; the goods
+     * producer. Another party (a seller) may offer those services or goods on behalf
+     * of the provider. A provider may also serve as the seller.
      *
      * @param $provider |
      * @return static
@@ -171,9 +176,9 @@ class Trip extends Intangible
     public function getProvider() {
         return $this->properties['provider'];
     }
-
     /**
-     * Identifies a [[Trip]] that is a subTrip of this Trip.  For example Day 1, Day 2, etc. of a multi-day trip.
+     * Identifies a [[Trip]] that is a subTrip of this Trip.  For example Day 1, Day 2,
+     * etc. of a multi-day trip.
      *
      * @param $subTrip 
      * @return static
@@ -190,6 +195,4 @@ class Trip extends Intangible
     public function getSubTrip() {
         return $this->properties['subTrip'];
     }
-
-
 }

@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of expressing a preference from a set of options or a large or unbounded set of choices/options.
+ * The act of expressing a preference from a set of options or a large or unbounded
+ * set of choices/options.
  *
+ * @see https://schema.org/ChooseAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ChooseAction extends AssessAction
@@ -56,7 +58,6 @@ class ChooseAction extends AssessAction
     public function getOption() {
         return $this->properties['option'];
     }
-
     /**
      * A sub property of object. The options subject to this action.
      *
@@ -75,6 +76,4 @@ class ChooseAction extends AssessAction
     public function getActionOption() {
         return $this->properties['actionOption'];
     }
-
-
 }

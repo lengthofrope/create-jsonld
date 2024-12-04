@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Web page type: Checkout page.
  *
+ * @see https://schema.org/CheckoutPage
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class CheckoutPage extends WebPage
@@ -37,6 +38,5 @@ class CheckoutPage extends WebPage
     {
         return new CheckoutPage('https://schema.org/', 'CheckoutPage');
     }
-
 
 }

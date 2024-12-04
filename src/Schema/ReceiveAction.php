@@ -27,8 +27,17 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of physically/electronically taking delivery of an object that has been transferred from an origin to a destination. Reciprocal of SendAction.\n\nRelated actions:\n\n* [[SendAction]]: The reciprocal of ReceiveAction.\n* [[TakeAction]]: Unlike TakeAction, ReceiveAction does not imply that the ownership has been transferred (e.g. I can receive a package, but it does not mean the package is now mine).
+ * The act of physically/electronically taking delivery of an object that has been
+ * transferred from an origin to a destination. Reciprocal of SendAction.
  *
+ * Related actions:
+ *
+ * * [[SendAction]]: The reciprocal of ReceiveAction.
+ * * [[TakeAction]]: Unlike TakeAction, ReceiveAction does not imply that the
+ * ownership has been transferred (e.g. I can receive a package, but it does not
+ * mean the package is now mine).
+ *
+ * @see https://schema.org/ReceiveAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ReceiveAction extends TransferAction
@@ -56,9 +65,9 @@ class ReceiveAction extends TransferAction
     public function getDeliveryMethod() {
         return $this->properties['deliveryMethod'];
     }
-
     /**
-     * A sub property of participant. The participant who is at the sending end of the action.
+     * A sub property of participant. The participant who is at the sending end of the
+     * action.
      *
      * @param $sender ||
      * @return static
@@ -75,6 +84,4 @@ class ReceiveAction extends TransferAction
     public function getSender() {
         return $this->properties['sender'];
     }
-
-
 }

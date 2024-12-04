@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Indicates whether this drug is available by prescription or over-the-counter.
  *
+ * @see https://schema.org/DrugPrescriptionStatus
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class DrugPrescriptionStatus extends MedicalEnumeration
@@ -37,6 +38,5 @@ class DrugPrescriptionStatus extends MedicalEnumeration
     {
         return new DrugPrescriptionStatus('https://schema.org/', 'DrugPrescriptionStatus');
     }
-
 
 }

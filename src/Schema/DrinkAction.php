@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The act of swallowing liquids.
  *
+ * @see https://schema.org/DrinkAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class DrinkAction extends ConsumeAction
@@ -37,6 +38,5 @@ class DrinkAction extends ConsumeAction
     {
         return new DrinkAction('https://schema.org/', 'DrinkAction');
     }
-
 
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Event type: Children's event.
  *
+ * @see https://schema.org/ChildrensEvent
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ChildrensEvent extends Event
@@ -37,6 +38,5 @@ class ChildrensEvent extends Event
     {
         return new ChildrensEvent('https://schema.org/', 'ChildrensEvent');
     }
-
 
 }

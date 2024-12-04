@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Enumerates common size groups (also known as "size types") for wearable products.
+ * Enumerates common size groups (also known as "size types") for wearable
+ * products.
  *
+ * @see https://schema.org/WearableSizeGroupEnumeration
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class WearableSizeGroupEnumeration extends SizeGroupEnumeration
@@ -37,6 +39,5 @@ class WearableSizeGroupEnumeration extends SizeGroupEnumeration
     {
         return new WearableSizeGroupEnumeration('https://schema.org/', 'WearableSizeGroupEnumeration');
     }
-
 
 }

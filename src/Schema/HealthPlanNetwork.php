@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A US-style health insurance plan network.
  *
+ * @see https://schema.org/HealthPlanNetwork
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class HealthPlanNetwork extends Intangible
@@ -56,9 +57,9 @@ class HealthPlanNetwork extends Intangible
     public function getHealthPlanCostSharing() {
         return $this->properties['healthPlanCostSharing'];
     }
-
     /**
-     * Name or unique ID of network. (Networks are often reused across different insurance plans.)
+     * Name or unique ID of network. (Networks are often reused across different
+     * insurance plans.)
      *
      * @param $healthPlanNetworkId 
      * @return static
@@ -75,7 +76,6 @@ class HealthPlanNetwork extends Intangible
     public function getHealthPlanNetworkId() {
         return $this->properties['healthPlanNetworkId'];
     }
-
     /**
      * The tier(s) for this network.
      *
@@ -94,6 +94,4 @@ class HealthPlanNetwork extends Intangible
     public function getHealthPlanNetworkTier() {
         return $this->properties['healthPlanNetworkTier'];
     }
-
-
 }

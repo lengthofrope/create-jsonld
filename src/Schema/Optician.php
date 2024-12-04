@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A store that sells reading glasses and similar devices for improving vision.
  *
+ * @see https://schema.org/Optician
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Optician extends MedicalBusiness
@@ -37,6 +38,5 @@ class Optician extends MedicalBusiness
     {
         return new Optician('https://schema.org/', 'Optician');
     }
-
 
 }

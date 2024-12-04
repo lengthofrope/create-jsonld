@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A patient-reported or observed dosing schedule for a drug or supplement.
  *
+ * @see https://schema.org/ReportedDoseSchedule
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ReportedDoseSchedule extends DoseSchedule
@@ -37,6 +38,5 @@ class ReportedDoseSchedule extends DoseSchedule
     {
         return new ReportedDoseSchedule('https://schema.org/', 'ReportedDoseSchedule');
     }
-
 
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Season dedicated to radio broadcast and associated online delivery.
  *
+ * @see https://schema.org/RadioSeason
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class RadioSeason extends CreativeWorkSeason
@@ -37,6 +38,5 @@ class RadioSeason extends CreativeWorkSeason
     {
         return new RadioSeason('https://schema.org/', 'RadioSeason');
     }
-
 
 }

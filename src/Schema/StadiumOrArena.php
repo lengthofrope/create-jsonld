@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A stadium.
  *
+ * @see https://schema.org/StadiumOrArena
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class StadiumOrArena extends CivicStructure
@@ -37,6 +38,5 @@ class StadiumOrArena extends CivicStructure
     {
         return new StadiumOrArena('https://schema.org/', 'StadiumOrArena');
     }
-
 
 }

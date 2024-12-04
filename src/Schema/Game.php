@@ -27,8 +27,11 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The Game type represents things which are games. These are typically rule-governed recreational activities, e.g. role-playing games in which players assume the role of characters in a fictional setting.
+ * The Game type represents things which are games. These are typically
+ * rule-governed recreational activities, e.g. role-playing games in which players
+ * assume the role of characters in a fictional setting.
  *
+ * @see https://schema.org/Game
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Game extends CreativeWork
@@ -39,7 +42,8 @@ class Game extends CreativeWork
     }
 
     /**
-     * The task that a player-controlled character, or group of characters may complete in order to gain a reward.
+     * The task that a player-controlled character, or group of characters may complete
+     * in order to gain a reward.
      *
      * @param $quest 
      * @return static
@@ -56,7 +60,6 @@ class Game extends CreativeWork
     public function getQuest() {
         return $this->properties['quest'];
     }
-
     /**
      * Indicate how many people can play this game (minimum, maximum, or range).
      *
@@ -75,9 +78,9 @@ class Game extends CreativeWork
     public function getNumberOfPlayers() {
         return $this->properties['numberOfPlayers'];
     }
-
     /**
-     * An item is an object within the game world that can be collected by a player or, occasionally, a non-player character.
+     * An item is an object within the game world that can be collected by a player or,
+     * occasionally, a non-player character.
      *
      * @param $gameItem 
      * @return static
@@ -94,7 +97,6 @@ class Game extends CreativeWork
     public function getGameItem() {
         return $this->properties['gameItem'];
     }
-
     /**
      * Real or fictional location of the game (or part of game).
      *
@@ -113,9 +115,9 @@ class Game extends CreativeWork
     public function getGameLocation() {
         return $this->properties['gameLocation'];
     }
-
     /**
-     * A piece of data that represents a particular aspect of a fictional character (skill, power, character points, advantage, disadvantage).
+     * A piece of data that represents a particular aspect of a fictional character
+     * (skill, power, character points, advantage, disadvantage).
      *
      * @param $characterAttribute 
      * @return static
@@ -132,6 +134,4 @@ class Game extends CreativeWork
     public function getCharacterAttribute() {
         return $this->properties['characterAttribute'];
     }
-
-
 }

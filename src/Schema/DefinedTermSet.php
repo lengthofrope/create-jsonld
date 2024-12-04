@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A set of defined terms, for example a set of categories or a classification scheme, a glossary, dictionary or enumeration.
+ * A set of defined terms, for example a set of categories or a classification
+ * scheme, a glossary, dictionary or enumeration.
  *
+ * @see https://schema.org/DefinedTermSet
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class DefinedTermSet extends CreativeWork
@@ -56,6 +58,4 @@ class DefinedTermSet extends CreativeWork
     public function getHasDefinedTerm() {
         return $this->properties['hasDefinedTerm'];
     }
-
-
 }

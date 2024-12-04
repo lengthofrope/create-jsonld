@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A sea (for example, the Caspian sea).
  *
+ * @see https://schema.org/SeaBodyOfWater
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class SeaBodyOfWater extends BodyOfWater
@@ -37,6 +38,5 @@ class SeaBodyOfWater extends BodyOfWater
     {
         return new SeaBodyOfWater('https://schema.org/', 'SeaBodyOfWater');
     }
-
 
 }

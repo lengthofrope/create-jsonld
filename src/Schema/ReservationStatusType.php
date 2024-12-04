@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Enumerated status values for Reservation.
  *
+ * @see https://schema.org/ReservationStatusType
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ReservationStatusType extends StatusEnumeration
@@ -37,6 +38,5 @@ class ReservationStatusType extends StatusEnumeration
     {
         return new ReservationStatusType('https://schema.org/', 'ReservationStatusType');
     }
-
 
 }

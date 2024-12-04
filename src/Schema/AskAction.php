@@ -27,8 +27,13 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of posing a question / favor to someone.\n\nRelated actions:\n\n* [[ReplyAction]]: Appears generally as a response to AskAction.
+ * The act of posing a question / favor to someone.
  *
+ * Related actions:
+ *
+ * * [[ReplyAction]]: Appears generally as a response to AskAction.
+ *
+ * @see https://schema.org/AskAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class AskAction extends CommunicateAction
@@ -56,6 +61,4 @@ class AskAction extends CommunicateAction
     public function getQuestion() {
         return $this->properties['question'];
     }
-
-
 }

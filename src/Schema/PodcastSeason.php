@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A single season of a podcast. Many podcasts do not break down into separate seasons. In that case, PodcastSeries should be used.
+ * A single season of a podcast. Many podcasts do not break down into separate
+ * seasons. In that case, PodcastSeries should be used.
  *
+ * @see https://schema.org/PodcastSeason
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class PodcastSeason extends CreativeWorkSeason
@@ -37,6 +39,5 @@ class PodcastSeason extends CreativeWorkSeason
     {
         return new PodcastSeason('https://schema.org/', 'PodcastSeason');
     }
-
 
 }

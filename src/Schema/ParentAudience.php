@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A set of characteristics describing parents, who can be interested in viewing some content.
+ * A set of characteristics describing parents, who can be interested in viewing
+ * some content.
  *
+ * @see https://schema.org/ParentAudience
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ParentAudience extends PeopleAudience
@@ -56,7 +58,6 @@ class ParentAudience extends PeopleAudience
     public function getChildMaxAge() {
         return $this->properties['childMaxAge'];
     }
-
     /**
      * Minimal age of the child.
      *
@@ -75,6 +76,4 @@ class ParentAudience extends PeopleAudience
     public function getChildMinAge() {
         return $this->properties['childMinAge'];
     }
-
-
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * An auto parts store.
  *
+ * @see https://schema.org/AutoPartsStore
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class AutoPartsStore extends Store
@@ -37,6 +38,5 @@ class AutoPartsStore extends Store
     {
         return new AutoPartsStore('https://schema.org/', 'AutoPartsStore');
     }
-
 
 }

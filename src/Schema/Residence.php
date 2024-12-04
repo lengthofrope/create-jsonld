@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The place where a person lives.
  *
+ * @see https://schema.org/Residence
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Residence extends Place
@@ -56,6 +57,4 @@ class Residence extends Place
     public function getAccommodationFloorPlan() {
         return $this->properties['accommodationFloorPlan'];
     }
-
-
 }

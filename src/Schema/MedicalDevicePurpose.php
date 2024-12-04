@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Categories of medical devices, organized by the purpose or intended use of the device.
+ * Categories of medical devices, organized by the purpose or intended use of the
+ * device.
  *
+ * @see https://schema.org/MedicalDevicePurpose
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MedicalDevicePurpose extends MedicalEnumeration
@@ -37,6 +39,5 @@ class MedicalDevicePurpose extends MedicalEnumeration
     {
         return new MedicalDevicePurpose('https://schema.org/', 'MedicalDevicePurpose');
     }
-
 
 }

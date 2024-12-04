@@ -27,8 +27,13 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A discrete unit of inheritance which affects one or more biological traits (Source: [https://en.wikipedia.org/wiki/Gene](https://en.wikipedia.org/wiki/Gene)). Examples include FOXP2 (Forkhead box protein P2), SCARNA21 (small Cajal body-specific RNA 21), A- (agouti genotype).
+ * A discrete unit of inheritance which affects one or more biological traits
+ * (Source:
+ * [https://en.wikipedia.org/wiki/Gene](https://en.wikipedia.org/wiki/Gene)).
+ * Examples include FOXP2 (Forkhead box protein P2), SCARNA21 (small Cajal
+ * body-specific RNA 21), A- (agouti genotype).
  *
+ * @see https://schema.org/Gene
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Gene extends BioChemEntity
@@ -39,7 +44,8 @@ class Gene extends BioChemEntity
     }
 
     /**
-     * Tissue, organ, biological sample, etc in which activity of this gene has been observed experimentally. For example brain, digestive system.
+     * Tissue, organ, biological sample, etc in which activity of this gene has been
+     * observed experimentally. For example brain, digestive system.
      *
      * @param $expressedIn |||
      * @return static
@@ -56,9 +62,9 @@ class Gene extends BioChemEntity
     public function getExpressedIn() {
         return $this->properties['expressedIn'];
     }
-
     /**
-     * A symbolic representation of a BioChemEntity. For example, a nucleotide sequence of a Gene or an amino acid sequence of a Protein.
+     * A symbolic representation of a BioChemEntity. For example, a nucleotide sequence
+     * of a Gene or an amino acid sequence of a Protein.
      *
      * @param $hasBioPolymerSequence 
      * @return static
@@ -75,9 +81,8 @@ class Gene extends BioChemEntity
     public function getHasBioPolymerSequence() {
         return $this->properties['hasBioPolymerSequence'];
     }
-
     /**
-     * Another BioChemEntity encoded by this one. 
+     * Another BioChemEntity encoded by this one.
      *
      * @param $encodesBioChemEntity 
      * @return static
@@ -94,7 +99,6 @@ class Gene extends BioChemEntity
     public function getEncodesBioChemEntity() {
         return $this->properties['encodesBioChemEntity'];
     }
-
     /**
      * Another gene which is a variation of this one.
      *
@@ -113,6 +117,4 @@ class Gene extends BioChemEntity
     public function getAlternativeOf() {
         return $this->properties['alternativeOf'];
     }
-
-
 }

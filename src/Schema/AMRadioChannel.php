@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A radio channel that uses AM.
  *
+ * @see https://schema.org/AMRadioChannel
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class AMRadioChannel extends RadioChannel
@@ -37,6 +38,5 @@ class AMRadioChannel extends RadioChannel
     {
         return new AMRadioChannel('https://schema.org/', 'AMRadioChannel');
     }
-
 
 }

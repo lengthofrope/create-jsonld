@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Server that provides game interaction in a multiplayer game.
  *
+ * @see https://schema.org/GameServer
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class GameServer extends Intangible
@@ -56,7 +57,6 @@ class GameServer extends Intangible
     public function getServerStatus() {
         return $this->properties['serverStatus'];
     }
-
     /**
      * Video game which is played on this server.
      *
@@ -75,7 +75,6 @@ class GameServer extends Intangible
     public function getGame() {
         return $this->properties['game'];
     }
-
     /**
      * Number of players on the server.
      *
@@ -94,6 +93,4 @@ class GameServer extends Intangible
     public function getPlayersOnline() {
         return $this->properties['playersOnline'];
     }
-
-
 }

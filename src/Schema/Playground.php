@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A playground.
  *
+ * @see https://schema.org/Playground
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Playground extends CivicStructure
@@ -37,6 +38,5 @@ class Playground extends CivicStructure
     {
         return new Playground('https://schema.org/', 'Playground');
     }
-
 
 }

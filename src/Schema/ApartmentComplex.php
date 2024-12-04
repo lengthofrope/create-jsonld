@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Residence type: Apartment complex.
  *
+ * @see https://schema.org/ApartmentComplex
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ApartmentComplex extends Residence
@@ -39,7 +40,8 @@ class ApartmentComplex extends Residence
     }
 
     /**
-     * Indicates whether pets are allowed to enter the accommodation or lodging business. More detailed information can be put in a text value.
+     * Indicates whether pets are allowed to enter the accommodation or lodging
+     * business. More detailed information can be put in a text value.
      *
      * @param $petsAllowed |
      * @return static
@@ -56,9 +58,9 @@ class ApartmentComplex extends Residence
     public function getPetsAllowed() {
         return $this->properties['petsAllowed'];
     }
-
     /**
-     * The total integer number of bedrooms in a some [[Accommodation]], [[ApartmentComplex]] or [[FloorPlan]].
+     * The total integer number of bedrooms in a some [[Accommodation]],
+     * [[ApartmentComplex]] or [[FloorPlan]].
      *
      * @param $numberOfBedrooms |
      * @return static
@@ -75,9 +77,11 @@ class ApartmentComplex extends Residence
     public function getNumberOfBedrooms() {
         return $this->properties['numberOfBedrooms'];
     }
-
     /**
-     * Indicates the number of available accommodation units in an [[ApartmentComplex]], or the number of accommodation units for a specific [[FloorPlan]] (within its specific [[ApartmentComplex]]). See also [[numberOfAccommodationUnits]].
+     * Indicates the number of available accommodation units in an
+     * [[ApartmentComplex]], or the number of accommodation units for a specific
+     * [[FloorPlan]] (within its specific [[ApartmentComplex]]). See also
+     * [[numberOfAccommodationUnits]].
      *
      * @param $numberOfAvailableAccommodationUnits 
      * @return static
@@ -94,9 +98,11 @@ class ApartmentComplex extends Residence
     public function getNumberOfAvailableAccommodationUnits() {
         return $this->properties['numberOfAvailableAccommodationUnits'];
     }
-
     /**
-     * Indicates the total (available plus unavailable) number of accommodation units in an [[ApartmentComplex]], or the number of accommodation units for a specific [[FloorPlan]] (within its specific [[ApartmentComplex]]). See also [[numberOfAvailableAccommodationUnits]].
+     * Indicates the total (available plus unavailable) number of accommodation units
+     * in an [[ApartmentComplex]], or the number of accommodation units for a specific
+     * [[FloorPlan]] (within its specific [[ApartmentComplex]]). See also
+     * [[numberOfAvailableAccommodationUnits]].
      *
      * @param $numberOfAccommodationUnits 
      * @return static
@@ -113,9 +119,10 @@ class ApartmentComplex extends Residence
     public function getNumberOfAccommodationUnits() {
         return $this->properties['numberOfAccommodationUnits'];
     }
-
     /**
-     * A page providing information on how to book a tour of some [[Place]], such as an [[Accommodation]] or [[ApartmentComplex]] in a real estate setting, as well as other kinds of tours as appropriate.
+     * A page providing information on how to book a tour of some [[Place]], such as an
+     * [[Accommodation]] or [[ApartmentComplex]] in a real estate setting, as well as
+     * other kinds of tours as appropriate.
      *
      * @param $tourBookingPage 
      * @return static
@@ -132,6 +139,4 @@ class ApartmentComplex extends Residence
     public function getTourBookingPage() {
         return $this->properties['tourBookingPage'];
     }
-
-
 }

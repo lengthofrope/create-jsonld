@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A US-style health insurance plan, including PPOs, EPOs, and HMOs.
  *
+ * @see https://schema.org/HealthInsurancePlan
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class HealthInsurancePlan extends Intangible
@@ -39,7 +40,8 @@ class HealthInsurancePlan extends Intangible
     }
 
     /**
-     * The standard for interpreting the Plan ID. The preferred is "HIOS". See the Centers for Medicare & Medicaid Services for more details.
+     * The standard for interpreting the Plan ID. The preferred is "HIOS". See the
+     * Centers for Medicare & Medicaid Services for more details.
      *
      * @param $usesHealthPlanIdStandard |
      * @return static
@@ -56,9 +58,9 @@ class HealthInsurancePlan extends Intangible
     public function getUsesHealthPlanIdStandard() {
         return $this->properties['usesHealthPlanIdStandard'];
     }
-
     /**
-     * The URL that goes directly to the summary of benefits and coverage for the specific standard plan or plan variation.
+     * The URL that goes directly to the summary of benefits and coverage for the
+     * specific standard plan or plan variation.
      *
      * @param $benefitsSummaryUrl 
      * @return static
@@ -75,9 +77,9 @@ class HealthInsurancePlan extends Intangible
     public function getBenefitsSummaryUrl() {
         return $this->properties['benefitsSummaryUrl'];
     }
-
     /**
-     * The URL that goes directly to the plan brochure for the specific standard plan or plan variation.
+     * The URL that goes directly to the plan brochure for the specific standard plan
+     * or plan variation.
      *
      * @param $healthPlanMarketingUrl 
      * @return static
@@ -94,7 +96,6 @@ class HealthInsurancePlan extends Intangible
     public function getHealthPlanMarketingUrl() {
         return $this->properties['healthPlanMarketingUrl'];
     }
-
     /**
      * A contact point for a person or organization.
      *
@@ -113,7 +114,6 @@ class HealthInsurancePlan extends Intangible
     public function getContactPoint() {
         return $this->properties['contactPoint'];
     }
-
     /**
      * The tier(s) of drugs offered by this formulary or insurance plan.
      *
@@ -132,7 +132,6 @@ class HealthInsurancePlan extends Intangible
     public function getHealthPlanDrugTier() {
         return $this->properties['healthPlanDrugTier'];
     }
-
     /**
      * Formularies covered by this plan.
      *
@@ -151,7 +150,6 @@ class HealthInsurancePlan extends Intangible
     public function getIncludesHealthPlanFormulary() {
         return $this->properties['includesHealthPlanFormulary'];
     }
-
     /**
      * Networks covered by this plan.
      *
@@ -170,7 +168,6 @@ class HealthInsurancePlan extends Intangible
     public function getIncludesHealthPlanNetwork() {
         return $this->properties['includesHealthPlanNetwork'];
     }
-
     /**
      * TODO.
      *
@@ -189,9 +186,9 @@ class HealthInsurancePlan extends Intangible
     public function getHealthPlanDrugOption() {
         return $this->properties['healthPlanDrugOption'];
     }
-
     /**
-     * The 14-character, HIOS-generated Plan ID number. (Plan IDs must be unique, even across different markets.)
+     * The 14-character, HIOS-generated Plan ID number. (Plan IDs must be unique, even
+     * across different markets.)
      *
      * @param $healthPlanId 
      * @return static
@@ -208,6 +205,4 @@ class HealthInsurancePlan extends Intangible
     public function getHealthPlanId() {
         return $this->properties['healthPlanId'];
     }
-
-
 }

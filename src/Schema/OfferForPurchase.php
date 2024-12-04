@@ -27,11 +27,14 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * An [[OfferForPurchase]] in Schema.org represents an [[Offer]] to sell something, i.e. an [[Offer]] whose
- * *    [[businessFunction]] is [sell](http://purl.org/goodrelations/v1#Sell.). See [Good Relations](https://en.wikipedia.org/wiki/GoodRelations) for
- * *    background on the underlying concepts.
- *   
+ * An [[OfferForPurchase]] in Schema.org represents an [[Offer]] to sell something,
+ * i.e. an [[Offer]] whose
+ * * *    [[businessFunction]] is [sell](http://purl.org/goodrelations/v1#Sell.).
+ * See [Good Relations](https://en.wikipedia.org/wiki/GoodRelations) for
+ * * *    background on the underlying concepts.
+ * *
  *
+ * @see https://schema.org/OfferForPurchase
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class OfferForPurchase extends Offer
@@ -40,6 +43,5 @@ class OfferForPurchase extends Offer
     {
         return new OfferForPurchase('https://schema.org/', 'OfferForPurchase');
     }
-
 
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A pharmacy or drugstore.
  *
+ * @see https://schema.org/Pharmacy
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Pharmacy extends MedicalBusiness
@@ -37,6 +38,5 @@ class Pharmacy extends MedicalBusiness
     {
         return new Pharmacy('https://schema.org/', 'Pharmacy');
     }
-
 
 }

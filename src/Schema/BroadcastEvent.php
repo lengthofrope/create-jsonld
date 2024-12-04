@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * An over the air or online broadcast event.
  *
+ * @see https://schema.org/BroadcastEvent
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class BroadcastEvent extends PublicationEvent
@@ -56,7 +57,6 @@ class BroadcastEvent extends PublicationEvent
     public function getIsLiveBroadcast() {
         return $this->properties['isLiveBroadcast'];
     }
-
     /**
      * The event being broadcast such as a sporting event or awards ceremony.
      *
@@ -75,7 +75,6 @@ class BroadcastEvent extends PublicationEvent
     public function getBroadcastOfEvent() {
         return $this->properties['broadcastOfEvent'];
     }
-
     /**
      * The type of screening or video broadcast used (e.g. IMAX, 3D, SD, HD, etc.).
      *
@@ -94,9 +93,9 @@ class BroadcastEvent extends PublicationEvent
     public function getVideoFormat() {
         return $this->properties['videoFormat'];
     }
-
     /**
-     * Languages in which subtitles/captions are available, in [IETF BCP 47 standard format](http://tools.ietf.org/html/bcp47).
+     * Languages in which subtitles/captions are available, in [IETF BCP 47 standard
+     * format](http://tools.ietf.org/html/bcp47).
      *
      * @param $subtitleLanguage |
      * @return static
@@ -113,6 +112,4 @@ class BroadcastEvent extends PublicationEvent
     public function getSubtitleLanguage() {
         return $this->properties['subtitleLanguage'];
     }
-
-
 }

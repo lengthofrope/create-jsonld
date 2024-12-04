@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Any part of the human body, typically a component of an anatomical system. Organs, tissues, and cells are all anatomical structures.
+ * Any part of the human body, typically a component of an anatomical system.
+ * Organs, tissues, and cells are all anatomical structures.
  *
+ * @see https://schema.org/AnatomicalStructure
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class AnatomicalStructure extends MedicalEntity
@@ -56,7 +58,6 @@ class AnatomicalStructure extends MedicalEntity
     public function getRelatedTherapy() {
         return $this->properties['relatedTherapy'];
     }
-
     /**
      * The anatomical or organ system that this structure is part of.
      *
@@ -75,9 +76,9 @@ class AnatomicalStructure extends MedicalEntity
     public function getPartOfSystem() {
         return $this->properties['partOfSystem'];
     }
-
     /**
-     * An image containing a diagram that illustrates the structure and/or its component substructures and/or connections with other structures.
+     * An image containing a diagram that illustrates the structure and/or its
+     * component substructures and/or connections with other structures.
      *
      * @param $diagram 
      * @return static
@@ -94,7 +95,6 @@ class AnatomicalStructure extends MedicalEntity
     public function getDiagram() {
         return $this->properties['diagram'];
     }
-
     /**
      * A medical condition associated with this anatomy.
      *
@@ -113,7 +113,6 @@ class AnatomicalStructure extends MedicalEntity
     public function getRelatedCondition() {
         return $this->properties['relatedCondition'];
     }
-
     /**
      * Component (sub-)structure(s) that comprise this anatomical structure.
      *
@@ -132,7 +131,6 @@ class AnatomicalStructure extends MedicalEntity
     public function getSubStructure() {
         return $this->properties['subStructure'];
     }
-
     /**
      * Other anatomical structures to which this structure is connected.
      *
@@ -151,7 +149,6 @@ class AnatomicalStructure extends MedicalEntity
     public function getConnectedTo() {
         return $this->properties['connectedTo'];
     }
-
     /**
      * Location in the body of the anatomical structure.
      *
@@ -170,9 +167,10 @@ class AnatomicalStructure extends MedicalEntity
     public function getBodyLocation() {
         return $this->properties['bodyLocation'];
     }
-
     /**
-     * If applicable, a description of the pathophysiology associated with the anatomical system, including potential abnormal changes in the mechanical, physical, and biochemical functions of the system.
+     * If applicable, a description of the pathophysiology associated with the
+     * anatomical system, including potential abnormal changes in the mechanical,
+     * physical, and biochemical functions of the system.
      *
      * @param $associatedPathophysiology 
      * @return static
@@ -189,6 +187,4 @@ class AnatomicalStructure extends MedicalEntity
     public function getAssociatedPathophysiology() {
         return $this->properties['associatedPathophysiology'];
     }
-
-
 }

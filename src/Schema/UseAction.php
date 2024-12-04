@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The act of applying an object to its intended purpose.
  *
+ * @see https://schema.org/UseAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class UseAction extends ConsumeAction
@@ -37,6 +38,5 @@ class UseAction extends ConsumeAction
     {
         return new UseAction('https://schema.org/', 'UseAction');
     }
-
 
 }

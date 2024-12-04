@@ -27,8 +27,11 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * An educational or occupational credential. A diploma, academic degree, certification, qualification, badge, etc., that may be awarded to a person or other entity that meets the requirements defined by the credentialer.
+ * An educational or occupational credential. A diploma, academic degree,
+ * certification, qualification, badge, etc., that may be awarded to a person or
+ * other entity that meets the requirements defined by the credentialer.
  *
+ * @see https://schema.org/EducationalOccupationalCredential
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class EducationalOccupationalCredential extends CreativeWork
@@ -39,7 +42,9 @@ class EducationalOccupationalCredential extends CreativeWork
     }
 
     /**
-     * An organization that acknowledges the validity, value or utility of a credential. Note: recognition may include a process of quality assurance or accreditation.
+     * An organization that acknowledges the validity, value or utility of a
+     * credential. Note: recognition may include a process of quality assurance or
+     * accreditation.
      *
      * @param $recognizedBy 
      * @return static
@@ -56,9 +61,9 @@ class EducationalOccupationalCredential extends CreativeWork
     public function getRecognizedBy() {
         return $this->properties['recognizedBy'];
     }
-
     /**
-     * The geographic area where the item is valid. Applies for example to a [[Permit]], a [[Certification]], or an [[EducationalOccupationalCredential]]. 
+     * The geographic area where the item is valid. Applies for example to a
+     * [[Permit]], a [[Certification]], or an [[EducationalOccupationalCredential]].
      *
      * @param $validIn 
      * @return static
@@ -75,7 +80,6 @@ class EducationalOccupationalCredential extends CreativeWork
     public function getValidIn() {
         return $this->properties['validIn'];
     }
-
     /**
      * The duration of validity of a permit or similar thing.
      *
@@ -94,9 +98,10 @@ class EducationalOccupationalCredential extends CreativeWork
     public function getValidFor() {
         return $this->properties['validFor'];
     }
-
     /**
-     * The level in terms of progression through an educational or training context. Examples of educational levels include 'beginner', 'intermediate' or 'advanced', and formal sets of level indicators.
+     * The level in terms of progression through an educational or training context.
+     * Examples of educational levels include 'beginner', 'intermediate' or 'advanced',
+     * and formal sets of level indicators.
      *
      * @param $educationalLevel ||
      * @return static
@@ -113,9 +118,9 @@ class EducationalOccupationalCredential extends CreativeWork
     public function getEducationalLevel() {
         return $this->properties['educationalLevel'];
     }
-
     /**
-     * The category or type of credential being described, for example "degree”, “certificate”, “badge”, or more specific term.
+     * The category or type of credential being described, for example "degree”,
+     * “certificate”, “badge”, or more specific term.
      *
      * @param $credentialCategory ||
      * @return static
@@ -132,9 +137,10 @@ class EducationalOccupationalCredential extends CreativeWork
     public function getCredentialCategory() {
         return $this->properties['credentialCategory'];
     }
-
     /**
-     * Knowledge, skill, ability or personal attribute that must be demonstrated by a person or other entity in order to do something such as earn an Educational Occupational Credential or understand a LearningResource.
+     * Knowledge, skill, ability or personal attribute that must be demonstrated by a
+     * person or other entity in order to do something such as earn an Educational
+     * Occupational Credential or understand a LearningResource.
      *
      * @param $competencyRequired ||
      * @return static
@@ -151,6 +157,4 @@ class EducationalOccupationalCredential extends CreativeWork
     public function getCompetencyRequired() {
         return $this->properties['competencyRequired'];
     }
-
-
 }

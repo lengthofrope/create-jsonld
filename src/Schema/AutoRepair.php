@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Car repair business.
  *
+ * @see https://schema.org/AutoRepair
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class AutoRepair extends AutomotiveBusiness
@@ -37,6 +38,5 @@ class AutoRepair extends AutomotiveBusiness
     {
         return new AutoRepair('https://schema.org/', 'AutoRepair');
     }
-
 
 }

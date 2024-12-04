@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Enumerates common types of measurement for wearables products.
  *
+ * @see https://schema.org/WearableMeasurementTypeEnumeration
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class WearableMeasurementTypeEnumeration extends MeasurementTypeEnumeration
@@ -37,6 +38,5 @@ class WearableMeasurementTypeEnumeration extends MeasurementTypeEnumeration
     {
         return new WearableMeasurementTypeEnumeration('https://schema.org/', 'WearableMeasurementTypeEnumeration');
     }
-
 
 }

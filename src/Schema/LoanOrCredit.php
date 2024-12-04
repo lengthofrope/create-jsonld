@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A financial product for the loaning of an amount of money, or line of credit, under agreed terms and charges.
+ * A financial product for the loaning of an amount of money, or line of credit,
+ * under agreed terms and charges.
  *
+ * @see https://schema.org/LoanOrCredit
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class LoanOrCredit extends FinancialProduct
@@ -56,9 +58,15 @@ class LoanOrCredit extends FinancialProduct
     public function getLoanTerm() {
         return $this->properties['loanTerm'];
     }
-
     /**
-     * The currency in which the monetary amount is expressed.\n\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR".
+     * The currency in which the monetary amount is expressed.
+     *
+     * Use standard formats: [ISO 4217 currency
+     * format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker
+     * symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for
+     * cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading
+     * Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and
+     * other currency types, e.g. "Ithaca HOUR".
      *
      * @param $currency 
      * @return static
@@ -75,7 +83,6 @@ class LoanOrCredit extends FinancialProduct
     public function getCurrency() {
         return $this->properties['currency'];
     }
-
     /**
      * The amount of money.
      *
@@ -94,7 +101,6 @@ class LoanOrCredit extends FinancialProduct
     public function getAmount() {
         return $this->properties['amount'];
     }
-
     /**
      * The type of a loan or credit.
      *
@@ -113,9 +119,10 @@ class LoanOrCredit extends FinancialProduct
     public function getLoanType() {
         return $this->properties['loanType'];
     }
-
     /**
-     * The only way you get the money back in the event of default is the security. Recourse is where you still have the opportunity to go back to the borrower for the rest of the money.
+     * The only way you get the money back in the event of default is the security.
+     * Recourse is where you still have the opportunity to go back to the borrower for
+     * the rest of the money.
      *
      * @param $recourseLoan 
      * @return static
@@ -132,9 +139,9 @@ class LoanOrCredit extends FinancialProduct
     public function getRecourseLoan() {
         return $this->properties['recourseLoan'];
     }
-
     /**
-     * Whether the terms for payment of interest can be renegotiated during the life of the loan.
+     * Whether the terms for payment of interest can be renegotiated during the life of
+     * the loan.
      *
      * @param $renegotiableLoan 
      * @return static
@@ -151,9 +158,9 @@ class LoanOrCredit extends FinancialProduct
     public function getRenegotiableLoan() {
         return $this->properties['renegotiableLoan'];
     }
-
     /**
-     * The period of time after any due date that the borrower has to fulfil its obligations before a default (failure to pay) is deemed to have occurred.
+     * The period of time after any due date that the borrower has to fulfil its
+     * obligations before a default (failure to pay) is deemed to have occurred.
      *
      * @param $gracePeriod 
      * @return static
@@ -170,9 +177,10 @@ class LoanOrCredit extends FinancialProduct
     public function getGracePeriod() {
         return $this->properties['gracePeriod'];
     }
-
     /**
-     * A form of paying back money previously borrowed from a lender. Repayment usually takes the form of periodic payments that normally include part principal plus interest in each payment.
+     * A form of paying back money previously borrowed from a lender. Repayment usually
+     * takes the form of periodic payments that normally include part principal plus
+     * interest in each payment.
      *
      * @param $loanRepaymentForm 
      * @return static
@@ -189,9 +197,9 @@ class LoanOrCredit extends FinancialProduct
     public function getLoanRepaymentForm() {
         return $this->properties['loanRepaymentForm'];
     }
-
     /**
-     * Assets required to secure loan or credit repayments. It may take form of third party pledge, goods, financial instruments (cash, securities, etc.)
+     * Assets required to secure loan or credit repayments. It may take form of third
+     * party pledge, goods, financial instruments (cash, securities, etc.)
      *
      * @param $requiredCollateral |
      * @return static
@@ -208,6 +216,4 @@ class LoanOrCredit extends FinancialProduct
     public function getRequiredCollateral() {
         return $this->properties['requiredCollateral'];
     }
-
-
 }

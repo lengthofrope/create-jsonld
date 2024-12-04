@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Instructions that explain how to achieve a result by performing a sequence of steps.
+ * Instructions that explain how to achieve a result by performing a sequence of
+ * steps.
  *
+ * @see https://schema.org/HowTo
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class HowTo extends CreativeWork
@@ -39,7 +41,8 @@ class HowTo extends CreativeWork
     }
 
     /**
-     * The length of time it takes to prepare the items to be used in instructions or a direction, in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
+     * The length of time it takes to prepare the items to be used in instructions or a
+     * direction, in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
      *
      * @param $prepTime 
      * @return static
@@ -56,9 +59,9 @@ class HowTo extends CreativeWork
     public function getPrepTime() {
         return $this->properties['prepTime'];
     }
-
     /**
-     * A sub property of instrument. An object used (but not consumed) when performing instructions or a direction.
+     * A sub property of instrument. An object used (but not consumed) when performing
+     * instructions or a direction.
      *
      * @param $tool |
      * @return static
@@ -75,9 +78,10 @@ class HowTo extends CreativeWork
     public function getTool() {
         return $this->properties['tool'];
     }
-
     /**
-     * The total time required to perform instructions or a direction (including time to prepare the supplies), in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
+     * The total time required to perform instructions or a direction (including time
+     * to prepare the supplies), in [ISO 8601 duration
+     * format](http://en.wikipedia.org/wiki/ISO_8601).
      *
      * @param $totalTime 
      * @return static
@@ -94,9 +98,9 @@ class HowTo extends CreativeWork
     public function getTotalTime() {
         return $this->properties['totalTime'];
     }
-
     /**
-     * A single step item (as HowToStep, text, document, video, etc.) or a HowToSection (originally misnamed 'steps'; 'step' is preferred).
+     * A single step item (as HowToStep, text, document, video, etc.) or a HowToSection
+     * (originally misnamed 'steps'; 'step' is preferred).
      *
      * @param $steps ||
      * @return static
@@ -113,9 +117,9 @@ class HowTo extends CreativeWork
     public function getSteps() {
         return $this->properties['steps'];
     }
-
     /**
-     * The estimated cost of the supply or supplies consumed when performing instructions.
+     * The estimated cost of the supply or supplies consumed when performing
+     * instructions.
      *
      * @param $estimatedCost |
      * @return static
@@ -132,9 +136,10 @@ class HowTo extends CreativeWork
     public function getEstimatedCost() {
         return $this->properties['estimatedCost'];
     }
-
     /**
-     * The length of time it takes to perform instructions or a direction (not including time to prepare the supplies), in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
+     * The length of time it takes to perform instructions or a direction (not
+     * including time to prepare the supplies), in [ISO 8601 duration
+     * format](http://en.wikipedia.org/wiki/ISO_8601).
      *
      * @param $performTime 
      * @return static
@@ -151,9 +156,9 @@ class HowTo extends CreativeWork
     public function getPerformTime() {
         return $this->properties['performTime'];
     }
-
     /**
-     * A sub-property of instrument. A supply consumed when performing instructions or a direction.
+     * A sub-property of instrument. A supply consumed when performing instructions or
+     * a direction.
      *
      * @param $supply |
      * @return static
@@ -170,9 +175,9 @@ class HowTo extends CreativeWork
     public function getSupply() {
         return $this->properties['supply'];
     }
-
     /**
-     * A single step item (as HowToStep, text, document, video, etc.) or a HowToSection.
+     * A single step item (as HowToStep, text, document, video, etc.) or a
+     * HowToSection.
      *
      * @param $step |||
      * @return static
@@ -189,9 +194,9 @@ class HowTo extends CreativeWork
     public function getStep() {
         return $this->properties['step'];
     }
-
     /**
-     * The quantity that results by performing instructions. For example, a paper airplane, 10 personalized candles.
+     * The quantity that results by performing instructions. For example, a paper
+     * airplane, 10 personalized candles.
      *
      * @param $yield |
      * @return static
@@ -208,6 +213,4 @@ class HowTo extends CreativeWork
     public function getYield() {
         return $this->properties['yield'];
     }
-
-
 }

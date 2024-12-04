@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A book.
  *
+ * @see https://schema.org/Book
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Book extends CreativeWork
@@ -56,7 +57,6 @@ class Book extends CreativeWork
     public function getNumberOfPages() {
         return $this->properties['numberOfPages'];
     }
-
     /**
      * The format of the book.
      *
@@ -75,7 +75,6 @@ class Book extends CreativeWork
     public function getBookFormat() {
         return $this->properties['bookFormat'];
     }
-
     /**
      * The illustrator of the book.
      *
@@ -94,7 +93,6 @@ class Book extends CreativeWork
     public function getIllustrator() {
         return $this->properties['illustrator'];
     }
-
     /**
      * The ISBN of the book.
      *
@@ -113,7 +111,6 @@ class Book extends CreativeWork
     public function getIsbn() {
         return $this->properties['isbn'];
     }
-
     /**
      * The edition of the book.
      *
@@ -132,7 +129,6 @@ class Book extends CreativeWork
     public function getBookEdition() {
         return $this->properties['bookEdition'];
     }
-
     /**
      * Indicates whether the book is an abridged edition.
      *
@@ -151,6 +147,4 @@ class Book extends CreativeWork
     public function getAbridged() {
         return $this->properties['abridged'];
     }
-
-
 }

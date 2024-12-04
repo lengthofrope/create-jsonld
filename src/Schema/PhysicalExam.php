@@ -27,8 +27,9 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A type of physical examination of a patient performed by a physician. 
+ * A type of physical examination of a patient performed by a physician.
  *
+ * @see https://schema.org/PhysicalExam
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class PhysicalExam extends MedicalEnumeration
@@ -37,6 +38,5 @@ class PhysicalExam extends MedicalEnumeration
     {
         return new PhysicalExam('https://schema.org/', 'PhysicalExam');
     }
-
 
 }

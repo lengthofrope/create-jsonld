@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A city or town.
  *
+ * @see https://schema.org/City
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class City extends AdministrativeArea
@@ -37,6 +38,5 @@ class City extends AdministrativeArea
     {
         return new City('https://schema.org/', 'City');
     }
-
 
 }

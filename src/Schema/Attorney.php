@@ -27,8 +27,11 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Professional service: Attorney. \n\nThis type is deprecated - [[LegalService]] is more inclusive and less ambiguous.
+ * Professional service: Attorney.
  *
+ * This type is deprecated - [[LegalService]] is more inclusive and less ambiguous.
+ *
+ * @see https://schema.org/Attorney
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Attorney extends LegalService
@@ -37,6 +40,5 @@ class Attorney extends LegalService
     {
         return new Attorney('https://schema.org/', 'Attorney');
     }
-
 
 }

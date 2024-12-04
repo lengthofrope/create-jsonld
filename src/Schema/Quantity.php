@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Quantities such as distance, time, mass, weight, etc. Particular instances of say Mass are entities like '3 kg' or '4 milligrams'.
+ * Quantities such as distance, time, mass, weight, etc. Particular instances of
+ * say Mass are entities like '3 kg' or '4 milligrams'.
  *
+ * @see https://schema.org/Quantity
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Quantity extends Intangible
@@ -37,6 +39,5 @@ class Quantity extends Intangible
     {
         return new Quantity('https://schema.org/', 'Quantity');
     }
-
 
 }

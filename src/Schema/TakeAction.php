@@ -27,8 +27,16 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of gaining ownership of an object from an origin. Reciprocal of GiveAction.\n\nRelated actions:\n\n* [[GiveAction]]: The reciprocal of TakeAction.\n* [[ReceiveAction]]: Unlike ReceiveAction, TakeAction implies that ownership has been transferred.
+ * The act of gaining ownership of an object from an origin. Reciprocal of
+ * GiveAction.
  *
+ * Related actions:
+ *
+ * * [[GiveAction]]: The reciprocal of TakeAction.
+ * * [[ReceiveAction]]: Unlike ReceiveAction, TakeAction implies that ownership has
+ * been transferred.
+ *
+ * @see https://schema.org/TakeAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class TakeAction extends TransferAction
@@ -37,6 +45,5 @@ class TakeAction extends TransferAction
     {
         return new TakeAction('https://schema.org/', 'TakeAction');
     }
-
 
 }

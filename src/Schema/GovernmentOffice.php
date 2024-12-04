@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A government office&#x2014;for example, an IRS or DMV office.
  *
+ * @see https://schema.org/GovernmentOffice
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class GovernmentOffice extends LocalBusiness
@@ -37,6 +38,5 @@ class GovernmentOffice extends LocalBusiness
     {
         return new GovernmentOffice('https://schema.org/', 'GovernmentOffice');
     }
-
 
 }

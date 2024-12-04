@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A self-storage facility.
  *
+ * @see https://schema.org/SelfStorage
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class SelfStorage extends LocalBusiness
@@ -37,6 +38,5 @@ class SelfStorage extends LocalBusiness
     {
         return new SelfStorage('https://schema.org/', 'SelfStorage');
     }
-
 
 }

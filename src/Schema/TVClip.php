@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A short TV program or a segment/part of a TV program.
  *
+ * @see https://schema.org/TVClip
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class TVClip extends Clip
@@ -56,6 +57,4 @@ class TVClip extends Clip
     public function getPartOfTVSeries() {
         return $this->properties['partOfTVSeries'];
     }
-
-
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A file containing a note, primarily for the author.
  *
+ * @see https://schema.org/NoteDigitalDocument
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class NoteDigitalDocument extends DigitalDocument
@@ -37,6 +38,5 @@ class NoteDigitalDocument extends DigitalDocument
     {
         return new NoteDigitalDocument('https://schema.org/', 'NoteDigitalDocument');
     }
-
 
 }

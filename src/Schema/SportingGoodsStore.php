@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A sporting goods store.
  *
+ * @see https://schema.org/SportingGoodsStore
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class SportingGoodsStore extends Store
@@ -37,6 +38,5 @@ class SportingGoodsStore extends Store
     {
         return new SportingGoodsStore('https://schema.org/', 'SportingGoodsStore');
     }
-
 
 }

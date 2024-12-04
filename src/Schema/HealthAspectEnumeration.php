@@ -27,8 +27,11 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * HealthAspectEnumeration enumerates several aspects of health content online, each of which might be described using [[hasHealthAspect]] and [[HealthTopicContent]].
+ * HealthAspectEnumeration enumerates several aspects of health content online,
+ * each of which might be described using [[hasHealthAspect]] and
+ * [[HealthTopicContent]].
  *
+ * @see https://schema.org/HealthAspectEnumeration
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class HealthAspectEnumeration extends Enumeration
@@ -37,6 +40,5 @@ class HealthAspectEnumeration extends Enumeration
     {
         return new HealthAspectEnumeration('https://schema.org/', 'HealthAspectEnumeration');
     }
-
 
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Web page type: Profile page.
  *
+ * @see https://schema.org/ProfilePage
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ProfilePage extends WebPage
@@ -37,6 +38,5 @@ class ProfilePage extends WebPage
     {
         return new ProfilePage('https://schema.org/', 'ProfilePage');
     }
-
 
 }

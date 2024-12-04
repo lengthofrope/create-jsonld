@@ -27,8 +27,11 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A facility, often associated with a hospital or medical school, that is devoted to the specific diagnosis and/or healthcare. Previously limited to outpatients but with evolution it may be open to inpatients as well.
+ * A facility, often associated with a hospital or medical school, that is devoted
+ * to the specific diagnosis and/or healthcare. Previously limited to outpatients
+ * but with evolution it may be open to inpatients as well.
  *
+ * @see https://schema.org/MedicalClinic
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MedicalClinic extends MedicalBusiness
@@ -56,7 +59,6 @@ class MedicalClinic extends MedicalBusiness
     public function getMedicalSpecialty() {
         return $this->properties['medicalSpecialty'];
     }
-
     /**
      * A medical service available from this provider.
      *
@@ -75,6 +77,4 @@ class MedicalClinic extends MedicalBusiness
     public function getAvailableService() {
         return $this->properties['availableService'];
     }
-
-
 }

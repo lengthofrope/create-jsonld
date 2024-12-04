@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A musical group, such as a band, an orchestra, or a choir. Can also be a solo musician.
+ * A musical group, such as a band, an orchestra, or a choir. Can also be a solo
+ * musician.
  *
+ * @see https://schema.org/MusicGroup
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MusicGroup extends PerformingGroup
@@ -56,7 +58,6 @@ class MusicGroup extends PerformingGroup
     public function getAlbum() {
         return $this->properties['album'];
     }
-
     /**
      * A collection of music albums.
      *
@@ -75,7 +76,6 @@ class MusicGroup extends PerformingGroup
     public function getAlbums() {
         return $this->properties['albums'];
     }
-
     /**
      * Genre of the creative work, broadcast channel or group.
      *
@@ -94,7 +94,6 @@ class MusicGroup extends PerformingGroup
     public function getGenre() {
         return $this->properties['genre'];
     }
-
     /**
      * A music recording (track)&#x2014;usually a single song.
      *
@@ -113,9 +112,9 @@ class MusicGroup extends PerformingGroup
     public function getTracks() {
         return $this->properties['tracks'];
     }
-
     /**
-     * A music recording (track)&#x2014;usually a single song. If an ItemList is given, the list should contain items of type MusicRecording.
+     * A music recording (track)&#x2014;usually a single song. If an ItemList is given,
+     * the list should contain items of type MusicRecording.
      *
      * @param $track |
      * @return static
@@ -132,7 +131,6 @@ class MusicGroup extends PerformingGroup
     public function getTrack() {
         return $this->properties['track'];
     }
-
     /**
      * A member of a music group&#x2014;for example, John, Paul, George, or Ringo.
      *
@@ -151,6 +149,4 @@ class MusicGroup extends PerformingGroup
     public function getMusicGroupMember() {
         return $this->properties['musicGroupMember'];
     }
-
-
 }

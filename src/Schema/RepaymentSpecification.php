@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A structured value representing repayment.
  *
+ * @see https://schema.org/RepaymentSpecification
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class RepaymentSpecification extends StructuredValue
@@ -56,7 +57,6 @@ class RepaymentSpecification extends StructuredValue
     public function getEarlyPrepaymentPenalty() {
         return $this->properties['earlyPrepaymentPenalty'];
     }
-
     /**
      * The amount of money to pay in a single payment.
      *
@@ -75,9 +75,9 @@ class RepaymentSpecification extends StructuredValue
     public function getLoanPaymentAmount() {
         return $this->properties['loanPaymentAmount'];
     }
-
     /**
-     * Frequency of payments due, i.e. number of months between payments. This is defined as a frequency, i.e. the reciprocal of a period of time.
+     * Frequency of payments due, i.e. number of months between payments. This is
+     * defined as a frequency, i.e. the reciprocal of a period of time.
      *
      * @param $loanPaymentFrequency 
      * @return static
@@ -94,9 +94,10 @@ class RepaymentSpecification extends StructuredValue
     public function getLoanPaymentFrequency() {
         return $this->properties['loanPaymentFrequency'];
     }
-
     /**
-     * a type of payment made in cash during the onset of the purchase of an expensive good/service. The payment typically represents only a percentage of the full purchase price.
+     * a type of payment made in cash during the onset of the purchase of an expensive
+     * good/service. The payment typically represents only a percentage of the full
+     * purchase price.
      *
      * @param $downPayment |
      * @return static
@@ -113,9 +114,10 @@ class RepaymentSpecification extends StructuredValue
     public function getDownPayment() {
         return $this->properties['downPayment'];
     }
-
     /**
-     * The number of payments contractually required at origination to repay the loan. For monthly paying loans this is the number of months from the contractual first payment date to the maturity date.
+     * The number of payments contractually required at origination to repay the loan.
+     * For monthly paying loans this is the number of months from the contractual first
+     * payment date to the maturity date.
      *
      * @param $numberOfLoanPayments 
      * @return static
@@ -132,6 +134,4 @@ class RepaymentSpecification extends StructuredValue
     public function getNumberOfLoanPayments() {
         return $this->properties['numberOfLoanPayments'];
     }
-
-
 }

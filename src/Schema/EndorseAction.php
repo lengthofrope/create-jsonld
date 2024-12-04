@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * An agent approves/certifies/likes/supports/sanctions an object.
  *
+ * @see https://schema.org/EndorseAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class EndorseAction extends ReactAction
@@ -56,6 +57,4 @@ class EndorseAction extends ReactAction
     public function getEndorsee() {
         return $this->properties['endorsee'];
     }
-
-
 }

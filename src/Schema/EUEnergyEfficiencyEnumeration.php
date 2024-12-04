@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Enumerates the EU energy efficiency classes A-G as well as A+, A++, and A+++ as defined in EU directive 2017/1369.
+ * Enumerates the EU energy efficiency classes A-G as well as A+, A++, and A+++ as
+ * defined in EU directive 2017/1369.
  *
+ * @see https://schema.org/EUEnergyEfficiencyEnumeration
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class EUEnergyEfficiencyEnumeration extends EnergyEfficiencyEnumeration
@@ -37,6 +39,5 @@ class EUEnergyEfficiencyEnumeration extends EnergyEfficiencyEnumeration
     {
         return new EUEnergyEfficiencyEnumeration('https://schema.org/', 'EUEnergyEfficiencyEnumeration');
     }
-
 
 }

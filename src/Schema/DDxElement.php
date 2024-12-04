@@ -27,8 +27,11 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * An alternative, closely-related condition typically considered later in the differential diagnosis process along with the signs that are used to distinguish it.
+ * An alternative, closely-related condition typically considered later in the
+ * differential diagnosis process along with the signs that are used to distinguish
+ * it.
  *
+ * @see https://schema.org/DDxElement
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class DDxElement extends MedicalIntangible
@@ -39,7 +42,8 @@ class DDxElement extends MedicalIntangible
     }
 
     /**
-     * One or more alternative conditions considered in the differential diagnosis process as output of a diagnosis process.
+     * One or more alternative conditions considered in the differential diagnosis
+     * process as output of a diagnosis process.
      *
      * @param $diagnosis 
      * @return static
@@ -56,9 +60,9 @@ class DDxElement extends MedicalIntangible
     public function getDiagnosis() {
         return $this->properties['diagnosis'];
     }
-
     /**
-     * One of a set of signs and symptoms that can be used to distinguish this diagnosis from others in the differential diagnosis.
+     * One of a set of signs and symptoms that can be used to distinguish this
+     * diagnosis from others in the differential diagnosis.
      *
      * @param $distinguishingSign 
      * @return static
@@ -75,6 +79,4 @@ class DDxElement extends MedicalIntangible
     public function getDistinguishingSign() {
         return $this->properties['distinguishingSign'];
     }
-
-
 }

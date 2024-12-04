@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A house painting service.
  *
+ * @see https://schema.org/HousePainter
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class HousePainter extends HomeAndConstructionBusiness
@@ -37,6 +38,5 @@ class HousePainter extends HomeAndConstructionBusiness
     {
         return new HousePainter('https://schema.org/', 'HousePainter');
     }
-
 
 }

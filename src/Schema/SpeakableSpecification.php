@@ -27,8 +27,12 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A SpeakableSpecification indicates (typically via [[xpath]] or [[cssSelector]]) sections of a document that are highlighted as particularly [[speakable]]. Instances of this type are expected to be used primarily as values of the [[speakable]] property.
+ * A SpeakableSpecification indicates (typically via [[xpath]] or [[cssSelector]])
+ * sections of a document that are highlighted as particularly [[speakable]].
+ * Instances of this type are expected to be used primarily as values of the
+ * [[speakable]] property.
  *
+ * @see https://schema.org/SpeakableSpecification
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class SpeakableSpecification extends Intangible
@@ -39,7 +43,9 @@ class SpeakableSpecification extends Intangible
     }
 
     /**
-     * A CSS selector, e.g. of a [[SpeakableSpecification]] or [[WebPageElement]]. In the latter case, multiple matches within a page can constitute a single conceptual "Web page element".
+     * A CSS selector, e.g. of a [[SpeakableSpecification]] or [[WebPageElement]]. In
+     * the latter case, multiple matches within a page can constitute a single
+     * conceptual "Web page element".
      *
      * @param $cssSelector 
      * @return static
@@ -56,9 +62,10 @@ class SpeakableSpecification extends Intangible
     public function getCssSelector() {
         return $this->properties['cssSelector'];
     }
-
     /**
-     * An XPath, e.g. of a [[SpeakableSpecification]] or [[WebPageElement]]. In the latter case, multiple matches within a page can constitute a single conceptual "Web page element".
+     * An XPath, e.g. of a [[SpeakableSpecification]] or [[WebPageElement]]. In the
+     * latter case, multiple matches within a page can constitute a single conceptual
+     * "Web page element".
      *
      * @param $xpath 
      * @return static
@@ -75,6 +82,4 @@ class SpeakableSpecification extends Intangible
     public function getXpath() {
         return $this->properties['xpath'];
     }
-
-
 }

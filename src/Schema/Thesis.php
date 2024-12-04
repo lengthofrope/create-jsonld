@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A thesis or dissertation document submitted in support of candidature for an academic degree or professional qualification.
+ * A thesis or dissertation document submitted in support of candidature for an
+ * academic degree or professional qualification.
  *
+ * @see https://schema.org/Thesis
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Thesis extends CreativeWork
@@ -56,6 +58,4 @@ class Thesis extends CreativeWork
     public function getInSupportOf() {
         return $this->properties['inSupportOf'];
     }
-
-
 }

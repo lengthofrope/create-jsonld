@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A lake (for example, Lake Pontrachain).
  *
+ * @see https://schema.org/LakeBodyOfWater
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class LakeBodyOfWater extends BodyOfWater
@@ -37,6 +38,5 @@ class LakeBodyOfWater extends BodyOfWater
     {
         return new LakeBodyOfWater('https://schema.org/', 'LakeBodyOfWater');
     }
-
 
 }

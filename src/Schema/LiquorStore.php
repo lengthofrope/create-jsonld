@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A shop that sells alcoholic drinks such as wine, beer, whisky and other spirits.
  *
+ * @see https://schema.org/LiquorStore
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class LiquorStore extends Store
@@ -37,6 +38,5 @@ class LiquorStore extends Store
     {
         return new LiquorStore('https://schema.org/', 'LiquorStore');
     }
-
 
 }

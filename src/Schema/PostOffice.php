@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A post office.
  *
+ * @see https://schema.org/PostOffice
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class PostOffice extends GovernmentOffice
@@ -37,6 +38,5 @@ class PostOffice extends GovernmentOffice
     {
         return new PostOffice('https://schema.org/', 'PostOffice');
     }
-
 
 }

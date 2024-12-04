@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A park.
  *
+ * @see https://schema.org/Park
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Park extends CivicStructure
@@ -37,6 +38,5 @@ class Park extends CivicStructure
     {
         return new Park('https://schema.org/', 'Park');
     }
-
 
 }

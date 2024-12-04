@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A motorized bicycle is a bicycle with an attached motor used to power the vehicle, or to assist with pedaling.
+ * A motorized bicycle is a bicycle with an attached motor used to power the
+ * vehicle, or to assist with pedaling.
  *
+ * @see https://schema.org/MotorizedBicycle
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MotorizedBicycle extends Vehicle
@@ -37,6 +39,5 @@ class MotorizedBicycle extends Vehicle
     {
         return new MotorizedBicycle('https://schema.org/', 'MotorizedBicycle');
     }
-
 
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * An amusement park.
  *
+ * @see https://schema.org/AmusementPark
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class AmusementPark extends EntertainmentBusiness
@@ -37,6 +38,5 @@ class AmusementPark extends EntertainmentBusiness
     {
         return new AmusementPark('https://schema.org/', 'AmusementPark');
     }
-
 
 }

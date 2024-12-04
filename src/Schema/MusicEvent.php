@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Event type: Music event.
  *
+ * @see https://schema.org/MusicEvent
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MusicEvent extends Event
@@ -37,6 +38,5 @@ class MusicEvent extends Event
     {
         return new MusicEvent('https://schema.org/', 'MusicEvent');
     }
-
 
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Design models for medical trials. Enumerated type.
  *
+ * @see https://schema.org/MedicalTrialDesign
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MedicalTrialDesign extends MedicalEnumeration
@@ -37,6 +38,5 @@ class MedicalTrialDesign extends MedicalEnumeration
     {
         return new MedicalTrialDesign('https://schema.org/', 'MedicalTrialDesign');
     }
-
 
 }

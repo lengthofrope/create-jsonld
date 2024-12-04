@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * NonprofitType enumerates several kinds of official non-profit types of which a non-profit organization can be.
+ * NonprofitType enumerates several kinds of official non-profit types of which a
+ * non-profit organization can be.
  *
+ * @see https://schema.org/NonprofitType
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class NonprofitType extends Enumeration
@@ -37,6 +39,5 @@ class NonprofitType extends Enumeration
     {
         return new NonprofitType('https://schema.org/', 'NonprofitType');
     }
-
 
 }

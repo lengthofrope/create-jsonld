@@ -27,8 +27,12 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A reservation for lodging at a hotel, motel, inn, etc.\n\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations.
+ * A reservation for lodging at a hotel, motel, inn, etc.
  *
+ * Note: This type is for information about actual reservations, e.g. in
+ * confirmation emails or HTML pages with individual confirmations of reservations.
+ *
+ * @see https://schema.org/LodgingReservation
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class LodgingReservation extends Reservation
@@ -56,9 +60,9 @@ class LodgingReservation extends Reservation
     public function getNumAdults() {
         return $this->properties['numAdults'];
     }
-
     /**
-     * Textual description of the unit type (including suite vs. room, size of bed, etc.).
+     * Textual description of the unit type (including suite vs. room, size of bed,
+     * etc.).
      *
      * @param $lodgingUnitType |
      * @return static
@@ -75,7 +79,6 @@ class LodgingReservation extends Reservation
     public function getLodgingUnitType() {
         return $this->properties['lodgingUnitType'];
     }
-
     /**
      * The latest someone may check out of a lodging establishment.
      *
@@ -94,7 +97,6 @@ class LodgingReservation extends Reservation
     public function getCheckoutTime() {
         return $this->properties['checkoutTime'];
     }
-
     /**
      * The earliest someone may check into a lodging establishment.
      *
@@ -113,7 +115,6 @@ class LodgingReservation extends Reservation
     public function getCheckinTime() {
         return $this->properties['checkinTime'];
     }
-
     /**
      * A full description of the lodging unit.
      *
@@ -132,7 +133,6 @@ class LodgingReservation extends Reservation
     public function getLodgingUnitDescription() {
         return $this->properties['lodgingUnitDescription'];
     }
-
     /**
      * The number of children staying in the unit.
      *
@@ -151,6 +151,4 @@ class LodgingReservation extends Reservation
     public function getNumChildren() {
         return $this->properties['numChildren'];
     }
-
-
 }

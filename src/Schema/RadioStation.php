@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A radio station.
  *
+ * @see https://schema.org/RadioStation
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class RadioStation extends LocalBusiness
@@ -37,6 +38,5 @@ class RadioStation extends LocalBusiness
     {
         return new RadioStation('https://schema.org/', 'RadioStation');
     }
-
 
 }

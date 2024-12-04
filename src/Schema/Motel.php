@@ -28,10 +28,12 @@ namespace LengthOfRope\JSONLD\Schema;
 
 /**
  * A motel.
- * <br /><br />
- * See also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.
-
+ * * <br /><br />
+ * * See also the <a href="/docs/hotels.html">dedicated document on the use of
+ * schema.org for marking up hotels and other forms of accommodations</a>.
  *
+ *
+ * @see https://schema.org/Motel
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Motel extends LodgingBusiness
@@ -40,6 +42,5 @@ class Motel extends LodgingBusiness
     {
         return new Motel('https://schema.org/', 'Motel');
     }
-
 
 }

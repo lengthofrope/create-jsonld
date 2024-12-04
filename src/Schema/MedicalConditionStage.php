@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A stage of a medical condition, such as 'Stage IIIa'.
  *
+ * @see https://schema.org/MedicalConditionStage
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MedicalConditionStage extends MedicalIntangible
@@ -56,7 +57,6 @@ class MedicalConditionStage extends MedicalIntangible
     public function getStageAsNumber() {
         return $this->properties['stageAsNumber'];
     }
-
     /**
      * The substage, e.g. 'a' for Stage IIIa.
      *
@@ -75,6 +75,4 @@ class MedicalConditionStage extends MedicalIntangible
     public function getSubStageSuffix() {
         return $this->properties['subStageSuffix'];
     }
-
-
 }

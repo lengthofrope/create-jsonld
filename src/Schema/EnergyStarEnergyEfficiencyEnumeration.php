@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Used to indicate whether a product is EnergyStar certified.
  *
+ * @see https://schema.org/EnergyStarEnergyEfficiencyEnumeration
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class EnergyStarEnergyEfficiencyEnumeration extends EnergyEfficiencyEnumeration
@@ -37,6 +38,5 @@ class EnergyStarEnergyEfficiencyEnumeration extends EnergyEfficiencyEnumeration
     {
         return new EnergyStarEnergyEfficiencyEnumeration('https://schema.org/', 'EnergyStarEnergyEfficiencyEnumeration');
     }
-
 
 }

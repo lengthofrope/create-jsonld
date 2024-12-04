@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A file composed primarily of text.
  *
+ * @see https://schema.org/TextDigitalDocument
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class TextDigitalDocument extends DigitalDocument
@@ -37,6 +38,5 @@ class TextDigitalDocument extends DigitalDocument
     {
         return new TextDigitalDocument('https://schema.org/', 'TextDigitalDocument');
     }
-
 
 }

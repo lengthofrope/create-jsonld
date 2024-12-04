@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A media episode (e.g. TV, radio, video game) which can be part of a series or season.
+ * A media episode (e.g. TV, radio, video game) which can be part of a series or
+ * season.
  *
+ * @see https://schema.org/Episode
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Episode extends CreativeWork
@@ -39,7 +41,9 @@ class Episode extends CreativeWork
     }
 
     /**
-     * An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip.
+     * An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or
+     * in an event. Actors can be associated with individual items or with a series,
+     * episode, clip.
      *
      * @param $actor |
      * @return static
@@ -56,7 +60,6 @@ class Episode extends CreativeWork
     public function getActor() {
         return $this->properties['actor'];
     }
-
     /**
      * The trailer of a movie or TV/radio series, season, episode, etc.
      *
@@ -75,7 +78,6 @@ class Episode extends CreativeWork
     public function getTrailer() {
         return $this->properties['trailer'];
     }
-
     /**
      * The season to which this episode belongs.
      *
@@ -94,9 +96,9 @@ class Episode extends CreativeWork
     public function getPartOfSeason() {
         return $this->properties['partOfSeason'];
     }
-
     /**
-     * An actor, e.g. in TV, radio, movie, video games etc. Actors can be associated with individual items or with a series, episode, clip.
+     * An actor, e.g. in TV, radio, movie, video games etc. Actors can be associated
+     * with individual items or with a series, episode, clip.
      *
      * @param $actors 
      * @return static
@@ -113,9 +115,9 @@ class Episode extends CreativeWork
     public function getActors() {
         return $this->properties['actors'];
     }
-
     /**
-     * A director of e.g. TV, radio, movie, video games etc. content. Directors can be associated with individual items or with a series, episode, clip.
+     * A director of e.g. TV, radio, movie, video games etc. content. Directors can be
+     * associated with individual items or with a series, episode, clip.
      *
      * @param $directors 
      * @return static
@@ -132,9 +134,9 @@ class Episode extends CreativeWork
     public function getDirectors() {
         return $this->properties['directors'];
     }
-
     /**
-     * The production company or studio responsible for the item, e.g. series, video game, episode etc.
+     * The production company or studio responsible for the item, e.g. series, video
+     * game, episode etc.
      *
      * @param $productionCompany 
      * @return static
@@ -151,9 +153,9 @@ class Episode extends CreativeWork
     public function getProductionCompany() {
         return $this->properties['productionCompany'];
     }
-
     /**
-     * The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
+     * The duration of the item (movie, audio recording, event, etc.) in [ISO 8601
+     * duration format](http://en.wikipedia.org/wiki/ISO_8601).
      *
      * @param $duration 
      * @return static
@@ -170,7 +172,6 @@ class Episode extends CreativeWork
     public function getDuration() {
         return $this->properties['duration'];
     }
-
     /**
      * The series to which this episode or season belongs.
      *
@@ -189,9 +190,10 @@ class Episode extends CreativeWork
     public function getPartOfSeries() {
         return $this->properties['partOfSeries'];
     }
-
     /**
-     * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual items or with a series, episode, clip.
+     * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event.
+     * Directors can be associated with individual items or with a series, episode,
+     * clip.
      *
      * @param $director 
      * @return static
@@ -208,7 +210,6 @@ class Episode extends CreativeWork
     public function getDirector() {
         return $this->properties['director'];
     }
-
     /**
      * The composer of the soundtrack.
      *
@@ -227,7 +228,6 @@ class Episode extends CreativeWork
     public function getMusicBy() {
         return $this->properties['musicBy'];
     }
-
     /**
      * Position of the episode within an ordered group of episodes.
      *
@@ -246,6 +246,4 @@ class Episode extends CreativeWork
     public function getEpisodeNumber() {
         return $this->properties['episodeNumber'];
     }
-
-
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Printed music, as opposed to performed or recorded music.
  *
+ * @see https://schema.org/SheetMusic
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class SheetMusic extends CreativeWork
@@ -37,6 +38,5 @@ class SheetMusic extends CreativeWork
     {
         return new SheetMusic('https://schema.org/', 'SheetMusic');
     }
-
 
 }

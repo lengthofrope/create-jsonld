@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Event type: Literary event.
  *
+ * @see https://schema.org/LiteraryEvent
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class LiteraryEvent extends Event
@@ -37,6 +38,5 @@ class LiteraryEvent extends Event
     {
         return new LiteraryEvent('https://schema.org/', 'LiteraryEvent');
     }
-
 
 }

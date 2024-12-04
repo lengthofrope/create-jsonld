@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Enumerates common size systems specific for wearable products.
  *
+ * @see https://schema.org/WearableSizeSystemEnumeration
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class WearableSizeSystemEnumeration extends SizeSystemEnumeration
@@ -37,6 +38,5 @@ class WearableSizeSystemEnumeration extends SizeSystemEnumeration
     {
         return new WearableSizeSystemEnumeration('https://schema.org/', 'WearableSizeSystemEnumeration');
     }
-
 
 }

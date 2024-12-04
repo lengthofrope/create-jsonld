@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of producing a balanced opinion about the object for an audience. An agent reviews an object with participants resulting in a review.
+ * The act of producing a balanced opinion about the object for an audience. An
+ * agent reviews an object with participants resulting in a review.
  *
+ * @see https://schema.org/ReviewAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ReviewAction extends AssessAction
@@ -39,7 +41,8 @@ class ReviewAction extends AssessAction
     }
 
     /**
-     * A sub property of result. The review that resulted in the performing of the action.
+     * A sub property of result. The review that resulted in the performing of the
+     * action.
      *
      * @param $resultReview 
      * @return static
@@ -56,6 +59,4 @@ class ReviewAction extends AssessAction
     public function getResultReview() {
         return $this->properties['resultReview'];
     }
-
-
 }

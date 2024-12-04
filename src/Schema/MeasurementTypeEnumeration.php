@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Enumeration of common measurement types (or dimensions), for example "chest" for a person, "inseam" for pants, "gauge" for screws, or "wheel" for bicycles.
+ * Enumeration of common measurement types (or dimensions), for example "chest" for
+ * a person, "inseam" for pants, "gauge" for screws, or "wheel" for bicycles.
  *
+ * @see https://schema.org/MeasurementTypeEnumeration
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MeasurementTypeEnumeration extends Enumeration
@@ -37,6 +39,5 @@ class MeasurementTypeEnumeration extends Enumeration
     {
         return new MeasurementTypeEnumeration('https://schema.org/', 'MeasurementTypeEnumeration');
     }
-
 
 }

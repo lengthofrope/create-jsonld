@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A process of care using radiation aimed at improving a health condition.
  *
+ * @see https://schema.org/RadiationTherapy
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class RadiationTherapy extends MedicalTherapy
@@ -37,6 +38,5 @@ class RadiationTherapy extends MedicalTherapy
     {
         return new RadiationTherapy('https://schema.org/', 'RadiationTherapy');
     }
-
 
 }

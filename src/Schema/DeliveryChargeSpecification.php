@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The price for the delivery of an offer using a particular delivery method.
  *
+ * @see https://schema.org/DeliveryChargeSpecification
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class DeliveryChargeSpecification extends PriceSpecification
@@ -39,8 +40,12 @@ class DeliveryChargeSpecification extends PriceSpecification
     }
 
     /**
-     * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which the offer or delivery charge specification is not valid, e.g. a region where the transaction is not allowed.\n\nSee also [[eligibleRegion]].
-      
+     * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the
+     * GeoShape for the geo-political region(s) for which the offer or delivery charge
+     * specification is not valid, e.g. a region where the transaction is not allowed.
+     *
+     * See also [[eligibleRegion]].
+     *
      *
      * @param $ineligibleRegion ||
      * @return static
@@ -57,7 +62,6 @@ class DeliveryChargeSpecification extends PriceSpecification
     public function getIneligibleRegion() {
         return $this->properties['ineligibleRegion'];
     }
-
     /**
      * The geographic area where a service or offered item is provided.
      *
@@ -76,10 +80,13 @@ class DeliveryChargeSpecification extends PriceSpecification
     public function getAreaServed() {
         return $this->properties['areaServed'];
     }
-
     /**
-     * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which the offer or delivery charge specification is valid.\n\nSee also [[ineligibleRegion]].
-    
+     * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the
+     * GeoShape for the geo-political region(s) for which the offer or delivery charge
+     * specification is valid.
+     *
+     * See also [[ineligibleRegion]].
+     *
      *
      * @param $eligibleRegion ||
      * @return static
@@ -96,9 +103,9 @@ class DeliveryChargeSpecification extends PriceSpecification
     public function getEligibleRegion() {
         return $this->properties['eligibleRegion'];
     }
-
     /**
-     * The delivery method(s) to which the delivery charge or payment charge specification applies.
+     * The delivery method(s) to which the delivery charge or payment charge
+     * specification applies.
      *
      * @param $appliesToDeliveryMethod 
      * @return static
@@ -115,6 +122,4 @@ class DeliveryChargeSpecification extends PriceSpecification
     public function getAppliesToDeliveryMethod() {
         return $this->properties['appliesToDeliveryMethod'];
     }
-
-
 }

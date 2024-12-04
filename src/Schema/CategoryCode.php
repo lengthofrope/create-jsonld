@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A Category Code.
  *
+ * @see https://schema.org/CategoryCode
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class CategoryCode extends DefinedTerm
@@ -56,7 +57,6 @@ class CategoryCode extends DefinedTerm
     public function getInCodeSet() {
         return $this->properties['inCodeSet'];
     }
-
     /**
      * A short textual code that uniquely identifies the value.
      *
@@ -75,6 +75,4 @@ class CategoryCode extends DefinedTerm
     public function getCodeValue() {
         return $this->properties['codeValue'];
     }
-
-
 }

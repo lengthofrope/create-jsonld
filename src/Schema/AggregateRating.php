@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * The average rating based on multiple ratings or reviews.
  *
+ * @see https://schema.org/AggregateRating
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class AggregateRating extends Rating
@@ -56,7 +57,6 @@ class AggregateRating extends Rating
     public function getRatingCount() {
         return $this->properties['ratingCount'];
     }
-
     /**
      * The count of total number of reviews.
      *
@@ -75,7 +75,6 @@ class AggregateRating extends Rating
     public function getReviewCount() {
         return $this->properties['reviewCount'];
     }
-
     /**
      * The item that is being reviewed/rated.
      *
@@ -94,6 +93,4 @@ class AggregateRating extends Rating
     public function getItemReviewed() {
         return $this->properties['itemReviewed'];
     }
-
-
 }

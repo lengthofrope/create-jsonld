@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A process of care relying upon counseling, dialogue and communication  aimed at improving a mental health condition without use of drugs.
+ * A process of care relying upon counseling, dialogue and communication  aimed at
+ * improving a mental health condition without use of drugs.
  *
+ * @see https://schema.org/PsychologicalTreatment
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class PsychologicalTreatment extends TherapeuticProcedure
@@ -37,6 +39,5 @@ class PsychologicalTreatment extends TherapeuticProcedure
     {
         return new PsychologicalTreatment('https://schema.org/', 'PsychologicalTreatment');
     }
-
 
 }

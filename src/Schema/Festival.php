@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Event type: Festival.
  *
+ * @see https://schema.org/Festival
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Festival extends Event
@@ -37,6 +38,5 @@ class Festival extends Event
     {
         return new Festival('https://schema.org/', 'Festival');
     }
-
 
 }

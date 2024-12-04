@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A dance group&#x2014;for example, the Alvin Ailey Dance Theater or Riverdance.
  *
+ * @see https://schema.org/DanceGroup
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class DanceGroup extends PerformingGroup
@@ -37,6 +38,5 @@ class DanceGroup extends PerformingGroup
     {
         return new DanceGroup('https://schema.org/', 'DanceGroup');
     }
-
 
 }

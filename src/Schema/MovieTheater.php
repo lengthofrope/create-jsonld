@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A movie theater.
  *
+ * @see https://schema.org/MovieTheater
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MovieTheater extends CivicStructure
@@ -56,6 +57,4 @@ class MovieTheater extends CivicStructure
     public function getScreenCount() {
         return $this->properties['screenCount'];
     }
-
-
 }

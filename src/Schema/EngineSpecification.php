@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * Information about the engine of the vehicle. A vehicle can have multiple engines represented by multiple engine specification entities.
+ * Information about the engine of the vehicle. A vehicle can have multiple engines
+ * represented by multiple engine specification entities.
  *
+ * @see https://schema.org/EngineSpecification
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class EngineSpecification extends StructuredValue
@@ -40,7 +42,15 @@ class EngineSpecification extends StructuredValue
 
     /**
      * The power of the vehicle's engine.
-    Typical unit code(s): KWT for kilowatt, BHP for brake horsepower, N12 for metric horsepower (PS, with 1 PS = 735,49875 W)\n\n* Note 1: There are many different ways of measuring an engine's power. For an overview, see  [http://en.wikipedia.org/wiki/Horsepower#Engine\_power\_test\_codes](http://en.wikipedia.org/wiki/Horsepower#Engine_power_test_codes).\n* Note 2: You can link to information about how the given value has been determined using the [[valueReference]] property.\n* Note 3: You can use [[minValue]] and [[maxValue]] to indicate ranges.
+     * Typical unit code(s): KWT for kilowatt, BHP for brake horsepower, N12 for
+     * metric horsepower (PS, with 1 PS = 735,49875 W)
+     *
+     * * Note 1: There are many different ways of measuring an engine's power. For an
+     * overview, see
+     * [http://en.wikipedia.org/wiki/Horsepower#Engine\_power\_test\_codes](http://en.wikipedia.org/wiki/Horsepower#Engine_power_test_codes).
+     * * Note 2: You can link to information about how the given value has been
+     * determined using the [[valueReference]] property.
+     * * Note 3: You can use [[minValue]] and [[maxValue]] to indicate ranges.
      *
      * @param $enginePower 
      * @return static
@@ -57,9 +67,15 @@ class EngineSpecification extends StructuredValue
     public function getEnginePower() {
         return $this->properties['enginePower'];
     }
-
     /**
-     * The volume swept by all of the pistons inside the cylinders of an internal combustion engine in a single movement. \n\nTypical unit code(s): CMQ for cubic centimeter, LTR for liters, INQ for cubic inches\n* Note 1: You can link to information about how the given value has been determined using the [[valueReference]] property.\n* Note 2: You can use [[minValue]] and [[maxValue]] to indicate ranges.
+     * The volume swept by all of the pistons inside the cylinders of an internal
+     * combustion engine in a single movement.
+     *
+     * Typical unit code(s): CMQ for cubic centimeter, LTR for liters, INQ for cubic
+     * inches
+     * * Note 1: You can link to information about how the given value has been
+     * determined using the [[valueReference]] property.
+     * * Note 2: You can use [[minValue]] and [[maxValue]] to indicate ranges.
      *
      * @param $engineDisplacement 
      * @return static
@@ -76,7 +92,6 @@ class EngineSpecification extends StructuredValue
     public function getEngineDisplacement() {
         return $this->properties['engineDisplacement'];
     }
-
     /**
      * The type of engine or engines powering the vehicle.
      *
@@ -95,9 +110,15 @@ class EngineSpecification extends StructuredValue
     public function getEngineType() {
         return $this->properties['engineType'];
     }
-
     /**
-     * The torque (turning force) of the vehicle's engine.\n\nTypical unit code(s): NU for newton metre (N m), F17 for pound-force per foot, or F48 for pound-force per inch\n\n* Note 1: You can link to information about how the given value has been determined (e.g. reference RPM) using the [[valueReference]] property.\n* Note 2: You can use [[minValue]] and [[maxValue]] to indicate ranges.
+     * The torque (turning force) of the vehicle's engine.
+     *
+     * Typical unit code(s): NU for newton metre (N m), F17 for pound-force per foot,
+     * or F48 for pound-force per inch
+     *
+     * * Note 1: You can link to information about how the given value has been
+     * determined (e.g. reference RPM) using the [[valueReference]] property.
+     * * Note 2: You can use [[minValue]] and [[maxValue]] to indicate ranges.
      *
      * @param $torque 
      * @return static
@@ -114,9 +135,10 @@ class EngineSpecification extends StructuredValue
     public function getTorque() {
         return $this->properties['torque'];
     }
-
     /**
-     * The type of fuel suitable for the engine or engines of the vehicle. If the vehicle has only one engine, this property can be attached directly to the vehicle.
+     * The type of fuel suitable for the engine or engines of the vehicle. If the
+     * vehicle has only one engine, this property can be attached directly to the
+     * vehicle.
      *
      * @param $fuelType ||
      * @return static
@@ -133,6 +155,4 @@ class EngineSpecification extends StructuredValue
     public function getFuelType() {
         return $this->properties['fuelType'];
     }
-
-
 }

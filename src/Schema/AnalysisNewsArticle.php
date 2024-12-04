@@ -27,8 +27,11 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * An AnalysisNewsArticle is a [[NewsArticle]] that, while based on factual reporting, incorporates the expertise of the author/producer, offering interpretations and conclusions.
+ * An AnalysisNewsArticle is a [[NewsArticle]] that, while based on factual
+ * reporting, incorporates the expertise of the author/producer, offering
+ * interpretations and conclusions.
  *
+ * @see https://schema.org/AnalysisNewsArticle
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class AnalysisNewsArticle extends NewsArticle
@@ -37,6 +40,5 @@ class AnalysisNewsArticle extends NewsArticle
     {
         return new AnalysisNewsArticle('https://schema.org/', 'AnalysisNewsArticle');
     }
-
 
 }

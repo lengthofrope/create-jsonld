@@ -28,9 +28,10 @@ namespace LengthOfRope\JSONLD\Schema;
 
 /**
  * A sequential publication of comic stories under a
- *     	unifying title, for example "The Amazing Spider-Man" or "Groo the
- *     	Wanderer".
+ * *     	unifying title, for example "The Amazing Spider-Man" or "Groo the
+ * *     	Wanderer".
  *
+ * @see https://schema.org/ComicSeries
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ComicSeries extends Periodical
@@ -39,6 +40,5 @@ class ComicSeries extends Periodical
     {
         return new ComicSeries('https://schema.org/', 'ComicSeries');
     }
-
 
 }

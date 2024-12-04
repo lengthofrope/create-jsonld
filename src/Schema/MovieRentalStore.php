@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A movie rental store.
  *
+ * @see https://schema.org/MovieRentalStore
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MovieRentalStore extends Store
@@ -37,6 +38,5 @@ class MovieRentalStore extends Store
     {
         return new MovieRentalStore('https://schema.org/', 'MovieRentalStore');
     }
-
 
 }

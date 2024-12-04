@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Event type: Visual arts event.
  *
+ * @see https://schema.org/VisualArtsEvent
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class VisualArtsEvent extends Event
@@ -37,6 +38,5 @@ class VisualArtsEvent extends Event
     {
         return new VisualArtsEvent('https://schema.org/', 'VisualArtsEvent');
     }
-
 
 }

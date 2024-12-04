@@ -27,8 +27,13 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A web page. Every web page is implicitly assumed to be declared to be of type WebPage, so the various properties about that webpage, such as <code>breadcrumb</code> may be used. We recommend explicit declaration if these properties are specified, but if they are found outside of an itemscope, they will be assumed to be about the page.
+ * A web page. Every web page is implicitly assumed to be declared to be of type
+ * WebPage, so the various properties about that webpage, such as
+ * <code>breadcrumb</code> may be used. We recommend explicit declaration if these
+ * properties are specified, but if they are found outside of an itemscope, they
+ * will be assumed to be about the page.
  *
+ * @see https://schema.org/WebPage
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class WebPage extends CreativeWork
@@ -56,7 +61,6 @@ class WebPage extends CreativeWork
     public function getRelatedLink() {
         return $this->properties['relatedLink'];
     }
-
     /**
      * A set of links that can help a user understand and navigate a website hierarchy.
      *
@@ -75,9 +79,9 @@ class WebPage extends CreativeWork
     public function getBreadcrumb() {
         return $this->properties['breadcrumb'];
     }
-
     /**
-     * People or organizations that have reviewed the content on this web page for accuracy and/or completeness.
+     * People or organizations that have reviewed the content on this web page for
+     * accuracy and/or completeness.
      *
      * @param $reviewedBy |
      * @return static
@@ -94,9 +98,9 @@ class WebPage extends CreativeWork
     public function getReviewedBy() {
         return $this->properties['reviewedBy'];
     }
-
     /**
-     * One of the more significant URLs on the page. Typically, these are the non-navigation links that are clicked on the most.
+     * One of the more significant URLs on the page. Typically, these are the
+     * non-navigation links that are clicked on the most.
      *
      * @param $significantLink 
      * @return static
@@ -113,9 +117,9 @@ class WebPage extends CreativeWork
     public function getSignificantLink() {
         return $this->properties['significantLink'];
     }
-
     /**
-     * Date on which the content on this web page was last reviewed for accuracy and/or completeness.
+     * Date on which the content on this web page was last reviewed for accuracy and/or
+     * completeness.
      *
      * @param $lastReviewed 
      * @return static
@@ -132,7 +136,6 @@ class WebPage extends CreativeWork
     public function getLastReviewed() {
         return $this->properties['lastReviewed'];
     }
-
     /**
      * Indicates the main image on the page.
      *
@@ -151,9 +154,9 @@ class WebPage extends CreativeWork
     public function getPrimaryImageOfPage() {
         return $this->properties['primaryImageOfPage'];
     }
-
     /**
-     * The most significant URLs on the page. Typically, these are the non-navigation links that are clicked on the most.
+     * The most significant URLs on the page. Typically, these are the non-navigation
+     * links that are clicked on the most.
      *
      * @param $significantLinks 
      * @return static
@@ -170,7 +173,6 @@ class WebPage extends CreativeWork
     public function getSignificantLinks() {
         return $this->properties['significantLinks'];
     }
-
     /**
      * One of the domain specialities to which this web page's content applies.
      *
@@ -189,7 +191,6 @@ class WebPage extends CreativeWork
     public function getSpecialty() {
         return $this->properties['specialty'];
     }
-
     /**
      * Indicates if this web page element is the main subject of the page.
      *
@@ -208,22 +209,33 @@ class WebPage extends CreativeWork
     public function getMainContentOfPage() {
         return $this->properties['mainContentOfPage'];
     }
-
     /**
-     * Indicates sections of a Web page that are particularly 'speakable' in the sense of being highlighted as being especially appropriate for text-to-speech conversion. Other sections of a page may also be usefully spoken in particular circumstances; the 'speakable' property serves to indicate the parts most likely to be generally useful for speech.
-
-The *speakable* property can be repeated an arbitrary number of times, with three kinds of possible 'content-locator' values:
-
-1.) *id-value* URL references - uses *id-value* of an element in the page being annotated. The simplest use of *speakable* has (potentially relative) URL values, referencing identified sections of the document concerned.
-
-2.) CSS Selectors - addresses content in the annotated page, e.g. via class attribute. Use the [[cssSelector]] property.
-
-3.)  XPaths - addresses content via XPaths (assuming an XML view of the content). Use the [[xpath]] property.
-
-
-For more sophisticated markup of speakable sections beyond simple ID references, either CSS selectors or XPath expressions to pick out document section(s) as speakable. For this
-we define a supporting type, [[SpeakableSpecification]]  which is defined to be a possible value of the *speakable* property.
-         
+     * Indicates sections of a Web page that are particularly 'speakable' in the sense
+     * of being highlighted as being especially appropriate for text-to-speech
+     * conversion. Other sections of a page may also be usefully spoken in particular
+     * circumstances; the 'speakable' property serves to indicate the parts most likely
+     * to be generally useful for speech.
+     *
+     * The *speakable* property can be repeated an arbitrary number of times, with
+     * three kinds of possible 'content-locator' values:
+     *
+     * 1.) *id-value* URL references - uses *id-value* of an element in the page being
+     * annotated. The simplest use of *speakable* has (potentially relative) URL
+     * values, referencing identified sections of the document concerned.
+     *
+     * 2.) CSS Selectors - addresses content in the annotated page, e.g. via class
+     * attribute. Use the [[cssSelector]] property.
+     *
+     * 3.)  XPaths - addresses content via XPaths (assuming an XML view of the
+     * content). Use the [[xpath]] property.
+     *
+     *
+     * For more sophisticated markup of speakable sections beyond simple ID references,
+     * either CSS selectors or XPath expressions to pick out document section(s) as
+     * speakable. For this
+     * we define a supporting type, [[SpeakableSpecification]]  which is defined to be
+     * a possible value of the *speakable* property.
+     *
      *
      * @param $speakable |
      * @return static
@@ -240,6 +252,4 @@ we define a supporting type, [[SpeakableSpecification]]  which is defined to be 
     public function getSpeakable() {
         return $this->properties['speakable'];
     }
-
-
 }

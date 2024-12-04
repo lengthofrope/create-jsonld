@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A subclass of Role used to describe roles within organizations.
  *
+ * @see https://schema.org/OrganizationRole
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class OrganizationRole extends Role
@@ -39,7 +40,8 @@ class OrganizationRole extends Role
     }
 
     /**
-     * A number associated with a role in an organization, for example, the number on an athlete's jersey.
+     * A number associated with a role in an organization, for example, the number on
+     * an athlete's jersey.
      *
      * @param $numberedPosition 
      * @return static
@@ -56,6 +58,4 @@ class OrganizationRole extends Role
     public function getNumberedPosition() {
         return $this->properties['numberedPosition'];
     }
-
-
 }

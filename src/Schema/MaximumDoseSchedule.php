@@ -27,8 +27,12 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The maximum dosing schedule considered safe for a drug or supplement as recommended by an authority or by the drug/supplement's manufacturer. Capture the recommending authority in the recognizingAuthority property of MedicalEntity.
+ * The maximum dosing schedule considered safe for a drug or supplement as
+ * recommended by an authority or by the drug/supplement's manufacturer. Capture
+ * the recommending authority in the recognizingAuthority property of
+ * MedicalEntity.
  *
+ * @see https://schema.org/MaximumDoseSchedule
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MaximumDoseSchedule extends DoseSchedule
@@ -37,6 +41,5 @@ class MaximumDoseSchedule extends DoseSchedule
     {
         return new MaximumDoseSchedule('https://schema.org/', 'MaximumDoseSchedule');
     }
-
 
 }

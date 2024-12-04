@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * The act of deliberately creating/producing/generating/building a result out of the agent.
+ * The act of deliberately creating/producing/generating/building a result out of
+ * the agent.
  *
+ * @see https://schema.org/CreateAction
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class CreateAction extends Action
@@ -37,6 +39,5 @@ class CreateAction extends Action
     {
         return new CreateAction('https://schema.org/', 'CreateAction');
     }
-
 
 }

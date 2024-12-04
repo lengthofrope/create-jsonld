@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A means for accessing a service, e.g. a government office location, web site, or phone number.
+ * A means for accessing a service, e.g. a government office location, web site, or
+ * phone number.
  *
+ * @see https://schema.org/ServiceChannel
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class ServiceChannel extends Intangible
@@ -39,7 +41,8 @@ class ServiceChannel extends Intangible
     }
 
     /**
-     * The location (e.g. civic structure, local business, etc.) where a person can go to access the service.
+     * The location (e.g. civic structure, local business, etc.) where a person can go
+     * to access the service.
      *
      * @param $serviceLocation 
      * @return static
@@ -56,7 +59,6 @@ class ServiceChannel extends Intangible
     public function getServiceLocation() {
         return $this->properties['serviceLocation'];
     }
-
     /**
      * The phone number to use to access the service.
      *
@@ -75,7 +77,6 @@ class ServiceChannel extends Intangible
     public function getServicePhone() {
         return $this->properties['servicePhone'];
     }
-
     /**
      * The number to access the service by text message.
      *
@@ -94,7 +95,6 @@ class ServiceChannel extends Intangible
     public function getServiceSmsNumber() {
         return $this->properties['serviceSmsNumber'];
     }
-
     /**
      * The website to access the service.
      *
@@ -113,7 +113,6 @@ class ServiceChannel extends Intangible
     public function getServiceUrl() {
         return $this->properties['serviceUrl'];
     }
-
     /**
      * Estimated processing time for the service using this channel.
      *
@@ -132,7 +131,6 @@ class ServiceChannel extends Intangible
     public function getProcessingTime() {
         return $this->properties['processingTime'];
     }
-
     /**
      * The address for accessing the service by mail.
      *
@@ -151,7 +149,6 @@ class ServiceChannel extends Intangible
     public function getServicePostalAddress() {
         return $this->properties['servicePostalAddress'];
     }
-
     /**
      * The service provided by this channel.
      *
@@ -170,9 +167,10 @@ class ServiceChannel extends Intangible
     public function getProvidesService() {
         return $this->properties['providesService'];
     }
-
     /**
-     * A language someone may use with or at the item, service or place. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].
+     * A language someone may use with or at the item, service or place. Please use one
+     * of the language codes from the [IETF BCP 47
+     * standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].
      *
      * @param $availableLanguage |
      * @return static
@@ -189,6 +187,4 @@ class ServiceChannel extends Intangible
     public function getAvailableLanguage() {
         return $this->properties['availableLanguage'];
     }
-
-
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Data type: PronounceableText.
  *
+ * @see https://schema.org/PronounceableText
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class PronounceableText extends Text
@@ -39,7 +40,9 @@ class PronounceableText extends Text
     }
 
     /**
-     * Representation of a text [[textValue]] using the specified [[speechToTextMarkup]]. For example the city name of Houston in IPA: /ˈhjuːstən/.
+     * Representation of a text [[textValue]] using the specified
+     * [[speechToTextMarkup]]. For example the city name of Houston in IPA:
+     * /ˈhjuːstən/.
      *
      * @param $phoneticText 
      * @return static
@@ -56,7 +59,6 @@ class PronounceableText extends Text
     public function getPhoneticText() {
         return $this->properties['phoneticText'];
     }
-
     /**
      * Text value being annotated.
      *
@@ -75,9 +77,10 @@ class PronounceableText extends Text
     public function getTextValue() {
         return $this->properties['textValue'];
     }
-
     /**
-     * The language of the content or performance or used in an action. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
+     * The language of the content or performance or used in an action. Please use one
+     * of the language codes from the [IETF BCP 47
+     * standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
      *
      * @param $inLanguage |
      * @return static
@@ -94,9 +97,9 @@ class PronounceableText extends Text
     public function getInLanguage() {
         return $this->properties['inLanguage'];
     }
-
     /**
-     * Form of markup used. eg. [SSML](https://www.w3.org/TR/speech-synthesis11) or [IPA](https://www.wikidata.org/wiki/Property:P898).
+     * Form of markup used. eg. [SSML](https://www.w3.org/TR/speech-synthesis11) or
+     * [IPA](https://www.wikidata.org/wiki/Property:P898).
      *
      * @param $speechToTextMarkup 
      * @return static
@@ -113,6 +116,4 @@ class PronounceableText extends Text
     public function getSpeechToTextMarkup() {
         return $this->properties['speechToTextMarkup'];
     }
-
-
 }

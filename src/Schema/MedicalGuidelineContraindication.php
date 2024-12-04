@@ -27,8 +27,10 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A guideline contraindication that designates a process as harmful and where quality of the data supporting the contraindication is sound.
+ * A guideline contraindication that designates a process as harmful and where
+ * quality of the data supporting the contraindication is sound.
  *
+ * @see https://schema.org/MedicalGuidelineContraindication
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MedicalGuidelineContraindication extends MedicalGuideline
@@ -37,6 +39,5 @@ class MedicalGuidelineContraindication extends MedicalGuideline
     {
         return new MedicalGuidelineContraindication('https://schema.org/', 'MedicalGuidelineContraindication');
     }
-
 
 }

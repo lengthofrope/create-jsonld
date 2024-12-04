@@ -27,8 +27,11 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * One or more messages between organizations or people on a particular topic. Individual messages can be linked to the conversation with isPartOf or hasPart properties.
+ * One or more messages between organizations or people on a particular topic.
+ * Individual messages can be linked to the conversation with isPartOf or hasPart
+ * properties.
  *
+ * @see https://schema.org/Conversation
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Conversation extends CreativeWork
@@ -37,6 +40,5 @@ class Conversation extends CreativeWork
     {
         return new Conversation('https://schema.org/', 'Conversation');
     }
-
 
 }

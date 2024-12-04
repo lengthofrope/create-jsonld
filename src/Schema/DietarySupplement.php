@@ -27,8 +27,12 @@
 namespace LengthOfRope\JSONLD\Schema;
 
 /**
- * A product taken by mouth that contains a dietary ingredient intended to supplement the diet. Dietary ingredients may include vitamins, minerals, herbs or other botanicals, amino acids, and substances such as enzymes, organ tissues, glandulars and metabolites.
+ * A product taken by mouth that contains a dietary ingredient intended to
+ * supplement the diet. Dietary ingredients may include vitamins, minerals, herbs
+ * or other botanicals, amino acids, and substances such as enzymes, organ tissues,
+ * glandulars and metabolites.
  *
+ * @see https://schema.org/DietarySupplement
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class DietarySupplement extends Substance
@@ -39,7 +43,8 @@ class DietarySupplement extends Substance
     }
 
     /**
-     * The drug or supplement's legal status, including any controlled substance schedules that apply.
+     * The drug or supplement's legal status, including any controlled substance
+     * schedules that apply.
      *
      * @param $legalStatus ||
      * @return static
@@ -56,9 +61,9 @@ class DietarySupplement extends Substance
     public function getLegalStatus() {
         return $this->properties['legalStatus'];
     }
-
     /**
-     * Recommended intake of this supplement for a given population as defined by a specific recommending authority.
+     * Recommended intake of this supplement for a given population as defined by a
+     * specific recommending authority.
      *
      * @param $recommendedIntake 
      * @return static
@@ -75,9 +80,9 @@ class DietarySupplement extends Substance
     public function getRecommendedIntake() {
         return $this->properties['recommendedIntake'];
     }
-
     /**
-     * The specific biochemical interaction through which this drug or supplement produces its pharmacological effect.
+     * The specific biochemical interaction through which this drug or supplement
+     * produces its pharmacological effect.
      *
      * @param $mechanismOfAction 
      * @return static
@@ -94,9 +99,10 @@ class DietarySupplement extends Substance
     public function getMechanismOfAction() {
         return $this->properties['mechanismOfAction'];
     }
-
     /**
-     * Any potential safety concern associated with the supplement. May include interactions with other drugs and foods, pregnancy, breastfeeding, known adverse reactions, and documented efficacy of the supplement.
+     * Any potential safety concern associated with the supplement. May include
+     * interactions with other drugs and foods, pregnancy, breastfeeding, known adverse
+     * reactions, and documented efficacy of the supplement.
      *
      * @param $safetyConsideration 
      * @return static
@@ -113,7 +119,6 @@ class DietarySupplement extends Substance
     public function getSafetyConsideration() {
         return $this->properties['safetyConsideration'];
     }
-
     /**
      * True if this item's name is a proprietary/brand name (vs. generic name).
      *
@@ -132,9 +137,9 @@ class DietarySupplement extends Substance
     public function getIsProprietary() {
         return $this->properties['isProprietary'];
     }
-
     /**
-     * Characteristics of the population for which this is intended, or which typically uses it, e.g. 'adults'.
+     * Characteristics of the population for which this is intended, or which typically
+     * uses it, e.g. 'adults'.
      *
      * @param $targetPopulation 
      * @return static
@@ -151,7 +156,6 @@ class DietarySupplement extends Substance
     public function getTargetPopulation() {
         return $this->properties['targetPopulation'];
     }
-
     /**
      * Proprietary name given to the diet plan, typically by its originator or creator.
      *
@@ -170,9 +174,9 @@ class DietarySupplement extends Substance
     public function getProprietaryName() {
         return $this->properties['proprietaryName'];
     }
-
     /**
-     * Recommended intake of this supplement for a given population as defined by a specific recommending authority.
+     * Recommended intake of this supplement for a given population as defined by a
+     * specific recommending authority.
      *
      * @param $maximumIntake 
      * @return static
@@ -189,7 +193,6 @@ class DietarySupplement extends Substance
     public function getMaximumIntake() {
         return $this->properties['maximumIntake'];
     }
-
     /**
      * The generic name of this drug or supplement.
      *
@@ -208,7 +211,6 @@ class DietarySupplement extends Substance
     public function getNonProprietaryName() {
         return $this->properties['nonProprietaryName'];
     }
-
     /**
      * An active ingredient, typically chemical compounds and/or biologic substances.
      *
@@ -227,6 +229,4 @@ class DietarySupplement extends Substance
     public function getActiveIngredient() {
         return $this->properties['activeIngredient'];
     }
-
-
 }

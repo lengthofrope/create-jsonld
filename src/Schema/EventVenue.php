@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * An event venue.
  *
+ * @see https://schema.org/EventVenue
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class EventVenue extends CivicStructure
@@ -37,6 +38,5 @@ class EventVenue extends CivicStructure
     {
         return new EventVenue('https://schema.org/', 'EventVenue');
     }
-
 
 }

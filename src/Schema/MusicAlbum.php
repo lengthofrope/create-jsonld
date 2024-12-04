@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A collection of music tracks.
  *
+ * @see https://schema.org/MusicAlbum
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class MusicAlbum extends MusicPlaylist
@@ -39,7 +40,8 @@ class MusicAlbum extends MusicPlaylist
     }
 
     /**
-     * Classification of the album by its type of content: soundtrack, live album, studio album, etc.
+     * Classification of the album by its type of content: soundtrack, live album,
+     * studio album, etc.
      *
      * @param $albumProductionType 
      * @return static
@@ -56,7 +58,6 @@ class MusicAlbum extends MusicPlaylist
     public function getAlbumProductionType() {
         return $this->properties['albumProductionType'];
     }
-
     /**
      * A release of this album.
      *
@@ -75,7 +76,6 @@ class MusicAlbum extends MusicPlaylist
     public function getAlbumRelease() {
         return $this->properties['albumRelease'];
     }
-
     /**
      * The artist that performed this album or recording.
      *
@@ -94,7 +94,6 @@ class MusicAlbum extends MusicPlaylist
     public function getByArtist() {
         return $this->properties['byArtist'];
     }
-
     /**
      * The kind of release which this album is: single, EP or album.
      *
@@ -113,6 +112,4 @@ class MusicAlbum extends MusicPlaylist
     public function getAlbumReleaseType() {
         return $this->properties['albumReleaseType'];
     }
-
-
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Event type: Social event.
  *
+ * @see https://schema.org/SocialEvent
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class SocialEvent extends Event
@@ -37,6 +38,5 @@ class SocialEvent extends Event
     {
         return new SocialEvent('https://schema.org/', 'SocialEvent');
     }
-
 
 }

@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * Categories of physical activity, organized by physiologic classification.
  *
+ * @see https://schema.org/PhysicalActivityCategory
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class PhysicalActivityCategory extends Enumeration
@@ -37,6 +38,5 @@ class PhysicalActivityCategory extends Enumeration
     {
         return new PhysicalActivityCategory('https://schema.org/', 'PhysicalActivityCategory');
     }
-
 
 }

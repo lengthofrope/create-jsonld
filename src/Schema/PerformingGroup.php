@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A performance group, such as a band, an orchestra, or a circus.
  *
+ * @see https://schema.org/PerformingGroup
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class PerformingGroup extends Organization
@@ -37,6 +38,5 @@ class PerformingGroup extends Organization
     {
         return new PerformingGroup('https://schema.org/', 'PerformingGroup');
     }
-
 
 }

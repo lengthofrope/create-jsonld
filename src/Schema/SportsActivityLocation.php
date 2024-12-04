@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A sports location, such as a playing field.
  *
+ * @see https://schema.org/SportsActivityLocation
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class SportsActivityLocation extends LocalBusiness
@@ -37,6 +38,5 @@ class SportsActivityLocation extends LocalBusiness
     {
         return new SportsActivityLocation('https://schema.org/', 'SportsActivityLocation');
     }
-
 
 }

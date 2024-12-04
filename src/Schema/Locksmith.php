@@ -29,6 +29,7 @@ namespace LengthOfRope\JSONLD\Schema;
 /**
  * A locksmith.
  *
+ * @see https://schema.org/Locksmith
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
 class Locksmith extends HomeAndConstructionBusiness
@@ -37,6 +38,5 @@ class Locksmith extends HomeAndConstructionBusiness
     {
         return new Locksmith('https://schema.org/', 'Locksmith');
     }
-
 
 }
