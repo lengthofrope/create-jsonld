@@ -43,7 +43,7 @@ class PeopleAudience extends Audience
     /**
      * Audiences defined by a person's minimum age.
      *
-     * @param $requiredMinAge \LengthOfRope\JSONLD\Schema\Integer
+     * @param $requiredMinAge \LengthOfRope\JSONLD\DataType\Integer
      * @return static
      **/
     public function setRequiredMinAge($requiredMinAge): static {
@@ -53,7 +53,7 @@ class PeopleAudience extends Audience
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Integer
+     * @return \LengthOfRope\JSONLD\DataType\Integer
      **/
     public function getRequiredMinAge() {
         return $this->properties['requiredMinAge'];
@@ -61,7 +61,7 @@ class PeopleAudience extends Audience
     /**
      * Audiences defined by a person's maximum age.
      *
-     * @param $requiredMaxAge \LengthOfRope\JSONLD\Schema\Integer
+     * @param $requiredMaxAge \LengthOfRope\JSONLD\DataType\Integer
      * @return static
      **/
     public function setRequiredMaxAge($requiredMaxAge): static {
@@ -71,7 +71,7 @@ class PeopleAudience extends Audience
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Integer
+     * @return \LengthOfRope\JSONLD\DataType\Integer
      **/
     public function getRequiredMaxAge() {
         return $this->properties['requiredMaxAge'];

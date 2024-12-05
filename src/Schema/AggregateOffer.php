@@ -124,7 +124,7 @@ class AggregateOffer extends Offer
     /**
      * The number of offers for the product.
      *
-     * @param $offerCount \LengthOfRope\JSONLD\Schema\Integer
+     * @param $offerCount \LengthOfRope\JSONLD\DataType\Integer
      * @return static
      **/
     public function setOfferCount($offerCount): static {
@@ -134,7 +134,7 @@ class AggregateOffer extends Offer
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Integer
+     * @return \LengthOfRope\JSONLD\DataType\Integer
      **/
     public function getOfferCount() {
         return $this->properties['offerCount'];

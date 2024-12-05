@@ -42,7 +42,7 @@ class WebAPI extends Service
     /**
      * Further documentation describing the Web API in more detail.
      *
-     * @param $documentation \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\URL
+     * @param $documentation \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setDocumentation($documentation): static {
@@ -52,7 +52,7 @@ class WebAPI extends Service
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getDocumentation() {
         return $this->properties['documentation'];

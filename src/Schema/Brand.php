@@ -43,7 +43,7 @@ class Brand extends Intangible
     /**
      * An associated logo.
      *
-     * @param $logo \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\ImageObject
+     * @param $logo \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\ImageObject
      * @return static
      **/
     public function setLogo($logo): static {
@@ -53,7 +53,7 @@ class Brand extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\ImageObject
+     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\ImageObject
      **/
     public function getLogo() {
         return $this->properties['logo'];

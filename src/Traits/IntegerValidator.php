@@ -24,38 +24,55 @@
  * THE SOFTWARE.
  **/
 
-namespace LengthOfRope\JSONLD\Schema;
+namespace LengthOfRope\JSONLD\Traits;
 
-/**
- * Financial services business.
- *
- * @see https://schema.org/FinancialService
- * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
- **/
-class FinancialService extends LocalBusiness
+use TypeError;
+
+trait IntegerValidator
 {
-    public static function factory(): FinancialService
-    {
-        return new FinancialService('https://schema.org/', 'FinancialService');
-    }
+    private mixed $value = null;
 
     /**
-     * Description of fees, commissions, and other terms applied either to a class of
-     * financial product, or by a financial service organization.
+     * setValue
      *
-     * @param $feesAndCommissionsSpecification \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @param $value
      * @return static
      **/
-    public function setFeesAndCommissionsSpecification($feesAndCommissionsSpecification): static {
-        $this->properties['feesAndCommissionsSpecification'] = $feesAndCommissionsSpecification;
+    public function setValue(int $value): static
+    {
+        $this->value = $value;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * Validate
+     *
+     * @return bool
      **/
-    public function getFeesAndCommissionsSpecification() {
-        return $this->properties['feesAndCommissionsSpecification'];
+    public function validate(): bool
+    {
+        if (!is_int($this->value)) {
+            return false;
+        }
+
+        return true;
+    }
+
+    /**
+     * getValue
+     *
+     * @return int
+     **/
+    public function getValue(): int
+    {
+        if (!$this->validate()) {
+            throw new TypeError(sprintf(
+                'Expected a number, got %s instead.',
+                is_object($this->value) ? get_class($this->value) : gettype($this->value)
+            ));
+        }
+
+        return $this->value;
     }
 }

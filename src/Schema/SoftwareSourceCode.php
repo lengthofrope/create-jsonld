@@ -157,7 +157,7 @@ class SoftwareSourceCode extends CreativeWork
      * Link to the repository where the un-compiled, human readable code and related
      * code is located (SVN, GitHub, CodePlex).
      *
-     * @param $codeRepository \LengthOfRope\JSONLD\Schema\URL
+     * @param $codeRepository \LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setCodeRepository($codeRepository): static {
@@ -167,7 +167,7 @@ class SoftwareSourceCode extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\URL
      **/
     public function getCodeRepository() {
         return $this->properties['codeRepository'];

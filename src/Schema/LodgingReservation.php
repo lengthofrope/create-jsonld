@@ -45,7 +45,7 @@ class LodgingReservation extends Reservation
     /**
      * The number of adults staying in the unit.
      *
-     * @param $numAdults \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Integer
+     * @param $numAdults \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\Integer
      * @return static
      **/
     public function setNumAdults($numAdults): static {
@@ -55,7 +55,7 @@ class LodgingReservation extends Reservation
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Integer
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\Integer
      **/
     public function getNumAdults() {
         return $this->properties['numAdults'];
@@ -136,7 +136,7 @@ class LodgingReservation extends Reservation
     /**
      * The number of children staying in the unit.
      *
-     * @param $numChildren \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Integer
+     * @param $numChildren \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\Integer
      * @return static
      **/
     public function setNumChildren($numChildren): static {
@@ -146,7 +146,7 @@ class LodgingReservation extends Reservation
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Integer
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\Integer
      **/
     public function getNumChildren() {
         return $this->properties['numChildren'];

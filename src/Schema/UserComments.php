@@ -117,7 +117,7 @@ class UserComments extends UserInteraction
     /**
      * The URL at which a reply may be posted to the specified UserComment.
      *
-     * @param $replyToUrl \LengthOfRope\JSONLD\Schema\URL
+     * @param $replyToUrl \LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setReplyToUrl($replyToUrl): static {
@@ -127,7 +127,7 @@ class UserComments extends UserInteraction
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\URL
      **/
     public function getReplyToUrl() {
         return $this->properties['replyToUrl'];

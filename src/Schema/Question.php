@@ -43,7 +43,7 @@ class Question extends Comment
     /**
      * The number of answers this question has received.
      *
-     * @param $answerCount \LengthOfRope\JSONLD\Schema\Integer
+     * @param $answerCount \LengthOfRope\JSONLD\DataType\Integer
      * @return static
      **/
     public function setAnswerCount($answerCount): static {
@@ -53,7 +53,7 @@ class Question extends Comment
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Integer
+     * @return \LengthOfRope\JSONLD\DataType\Integer
      **/
     public function getAnswerCount() {
         return $this->properties['answerCount'];

@@ -404,7 +404,7 @@ class Drug extends Substance
     /**
      * Any FDA or other warnings about the drug (text or URL).
      *
-     * @param $warning \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @param $warning \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setWarning($warning): static {
@@ -414,7 +414,7 @@ class Drug extends Substance
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getWarning() {
         return $this->properties['warning'];
@@ -458,7 +458,7 @@ class Drug extends Substance
     /**
      * Link to prescribing information for the drug.
      *
-     * @param $prescribingInfo \LengthOfRope\JSONLD\Schema\URL
+     * @param $prescribingInfo \LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setPrescribingInfo($prescribingInfo): static {
@@ -468,7 +468,7 @@ class Drug extends Substance
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\URL
      **/
     public function getPrescribingInfo() {
         return $this->properties['prescribingInfo'];
@@ -549,7 +549,7 @@ class Drug extends Substance
     /**
      * Link to the drug's label details.
      *
-     * @param $labelDetails \LengthOfRope\JSONLD\Schema\URL
+     * @param $labelDetails \LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setLabelDetails($labelDetails): static {
@@ -559,7 +559,7 @@ class Drug extends Substance
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\URL
      **/
     public function getLabelDetails() {
         return $this->properties['labelDetails'];

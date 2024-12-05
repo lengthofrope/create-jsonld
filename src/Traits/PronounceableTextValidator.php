@@ -24,19 +24,55 @@
  * THE SOFTWARE.
  **/
 
-namespace LengthOfRope\JSONLD\Schema;
+namespace LengthOfRope\JSONLD\Traits;
 
-/**
- * Text representing an XPath (typically but not necessarily version 1.0).
- *
- * @see https://schema.org/XPathType
- * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
- **/
-class XPathType extends Text
+use TypeError;
+
+trait PronounceableTextValidator
 {
-    public static function factory(): XPathType
+    private ?string $value = null;
+
+    /**
+     * setValue
+     *
+     * @param $value
+     * @return static
+     **/
+    public function setValue(string $value): static
     {
-        return new XPathType('https://schema.org/', 'XPathType');
+        $this->value = $value;
+
+        return $this;
     }
 
+    /**
+     * Validate
+     *
+     * @return bool
+     **/
+    public function validate(): bool
+    {
+        if (!is_string($this->value)) {
+            return false;
+        }
+
+        return true;
+    }
+
+    /**
+     * getValue
+     *
+     * @return mixed
+     **/
+    public function getValue(): string
+    {
+        if (!$this->validate()) {
+            throw new TypeError(sprintf(
+                'Expected a string, got %s instead.',
+                is_object($this->value) ? get_class($this->value) : gettype($this->value)
+            ));
+        }
+
+        return $this->value;
+    }
 }

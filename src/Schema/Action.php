@@ -211,7 +211,7 @@ class Action extends Thing
     /**
      * Indicates a target EntryPoint, or url, for an Action.
      *
-     * @param $target \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\EntryPoint
+     * @param $target \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\EntryPoint
      * @return static
      **/
     public function setTarget($target): static {
@@ -221,7 +221,7 @@ class Action extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\EntryPoint
+     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\EntryPoint
      **/
     public function getTarget() {
         return $this->properties['target'];

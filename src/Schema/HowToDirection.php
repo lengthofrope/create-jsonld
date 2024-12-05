@@ -43,7 +43,7 @@ class HowToDirection extends ListItem
     /**
      * A media object representing the circumstances before performing this direction.
      *
-     * @param $beforeMedia \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\MediaObject
+     * @param $beforeMedia \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\MediaObject
      * @return static
      **/
     public function setBeforeMedia($beforeMedia): static {
@@ -53,7 +53,7 @@ class HowToDirection extends ListItem
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\MediaObject
+     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\MediaObject
      **/
     public function getBeforeMedia() {
         return $this->properties['beforeMedia'];
@@ -119,7 +119,7 @@ class HowToDirection extends ListItem
     /**
      * A media object representing the circumstances while performing this direction.
      *
-     * @param $duringMedia \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\MediaObject
+     * @param $duringMedia \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\MediaObject
      * @return static
      **/
     public function setDuringMedia($duringMedia): static {
@@ -129,7 +129,7 @@ class HowToDirection extends ListItem
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\MediaObject
+     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\MediaObject
      **/
     public function getDuringMedia() {
         return $this->properties['duringMedia'];
@@ -176,7 +176,7 @@ class HowToDirection extends ListItem
     /**
      * A media object representing the circumstances after performing this direction.
      *
-     * @param $afterMedia \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\MediaObject
+     * @param $afterMedia \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\MediaObject
      * @return static
      **/
     public function setAfterMedia($afterMedia): static {
@@ -186,7 +186,7 @@ class HowToDirection extends ListItem
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\MediaObject
+     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\MediaObject
      **/
     public function getAfterMedia() {
         return $this->properties['afterMedia'];

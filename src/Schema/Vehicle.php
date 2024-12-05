@@ -134,7 +134,7 @@ class Vehicle extends Product
     /**
      * Indicates that the vehicle meets the respective emission standard.
      *
-     * @param $meetsEmissionStandard \LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @param $meetsEmissionStandard \LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setMeetsEmissionStandard($meetsEmissionStandard): static {
@@ -144,7 +144,7 @@ class Vehicle extends Product
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getMeetsEmissionStandard() {
         return $this->properties['meetsEmissionStandard'];
@@ -455,7 +455,7 @@ class Vehicle extends Product
      * The type of component used for transmitting the power from a rotating power
      * source to the wheels or other relevant component(s) ("gearbox" for cars).
      *
-     * @param $vehicleTransmission \LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @param $vehicleTransmission \LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setVehicleTransmission($vehicleTransmission): static {
@@ -465,7 +465,7 @@ class Vehicle extends Product
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getVehicleTransmission() {
         return $this->properties['vehicleTransmission'];
@@ -752,7 +752,7 @@ class Vehicle extends Product
      * vehicle has only one engine, this property can be attached directly to the
      * vehicle.
      *
-     * @param $fuelType \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\Text
+     * @param $fuelType \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setFuelType($fuelType): static {
@@ -762,7 +762,7 @@ class Vehicle extends Product
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getFuelType() {
         return $this->properties['fuelType'];
@@ -771,7 +771,7 @@ class Vehicle extends Product
      * Indicates the design and body style of the vehicle (e.g. station wagon,
      * hatchback, etc.).
      *
-     * @param $bodyType \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\QualitativeValue
+     * @param $bodyType \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\QualitativeValue
      * @return static
      **/
     public function setBodyType($bodyType): static {
@@ -781,7 +781,7 @@ class Vehicle extends Product
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\QualitativeValue
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\QualitativeValue
      **/
     public function getBodyType() {
         return $this->properties['bodyType'];

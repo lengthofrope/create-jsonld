@@ -42,7 +42,7 @@ class SoftwareApplication extends CreativeWork
     /**
      * Minimum memory requirements.
      *
-     * @param $memoryRequirements \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @param $memoryRequirements \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setMemoryRequirements($memoryRequirements): static {
@@ -52,7 +52,7 @@ class SoftwareApplication extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getMemoryRequirements() {
         return $this->properties['memoryRequirements'];
@@ -79,7 +79,7 @@ class SoftwareApplication extends CreativeWork
     /**
      * A link to a screenshot image of the app.
      *
-     * @param $screenshot \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\ImageObject
+     * @param $screenshot \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\ImageObject
      * @return static
      **/
     public function setScreenshot($screenshot): static {
@@ -89,7 +89,7 @@ class SoftwareApplication extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\ImageObject
+     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\ImageObject
      **/
     public function getScreenshot() {
         return $this->properties['screenshot'];
@@ -97,7 +97,7 @@ class SoftwareApplication extends CreativeWork
     /**
      * Description of what changed in this version.
      *
-     * @param $releaseNotes \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @param $releaseNotes \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setReleaseNotes($releaseNotes): static {
@@ -107,7 +107,7 @@ class SoftwareApplication extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getReleaseNotes() {
         return $this->properties['releaseNotes'];
@@ -133,7 +133,7 @@ class SoftwareApplication extends CreativeWork
     /**
      * Type of software application, e.g. 'Game, Multimedia'.
      *
-     * @param $applicationCategory \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @param $applicationCategory \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setApplicationCategory($applicationCategory): static {
@@ -143,7 +143,7 @@ class SoftwareApplication extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getApplicationCategory() {
         return $this->properties['applicationCategory'];
@@ -266,7 +266,7 @@ class SoftwareApplication extends CreativeWork
      * distribution package, but required to run the application (examples: DirectX,
      * Java or .NET runtime).
      *
-     * @param $requirements \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @param $requirements \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setRequirements($requirements): static {
@@ -276,7 +276,7 @@ class SoftwareApplication extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getRequirements() {
         return $this->properties['requirements'];
@@ -284,7 +284,7 @@ class SoftwareApplication extends CreativeWork
     /**
      * Storage requirements (free space required).
      *
-     * @param $storageRequirements \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @param $storageRequirements \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setStorageRequirements($storageRequirements): static {
@@ -294,7 +294,7 @@ class SoftwareApplication extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getStorageRequirements() {
         return $this->properties['storageRequirements'];
@@ -360,7 +360,7 @@ class SoftwareApplication extends CreativeWork
      * distribution package, but required to run the application (examples: DirectX,
      * Java or .NET runtime).
      *
-     * @param $softwareRequirements \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @param $softwareRequirements \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setSoftwareRequirements($softwareRequirements): static {
@@ -370,7 +370,7 @@ class SoftwareApplication extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getSoftwareRequirements() {
         return $this->properties['softwareRequirements'];
@@ -397,7 +397,7 @@ class SoftwareApplication extends CreativeWork
     /**
      * If the file can be downloaded, URL to download the binary.
      *
-     * @param $downloadUrl \LengthOfRope\JSONLD\Schema\URL
+     * @param $downloadUrl \LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setDownloadUrl($downloadUrl): static {
@@ -407,7 +407,7 @@ class SoftwareApplication extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\URL
      **/
     public function getDownloadUrl() {
         return $this->properties['downloadUrl'];
@@ -434,7 +434,7 @@ class SoftwareApplication extends CreativeWork
      * Features or modules provided by this application (and possibly required by other
      * applications).
      *
-     * @param $featureList \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @param $featureList \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setFeatureList($featureList): static {
@@ -444,7 +444,7 @@ class SoftwareApplication extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getFeatureList() {
         return $this->properties['featureList'];
@@ -452,7 +452,7 @@ class SoftwareApplication extends CreativeWork
     /**
      * Subcategory of the application, e.g. 'Arcade Game'.
      *
-     * @param $applicationSubCategory \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @param $applicationSubCategory \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setApplicationSubCategory($applicationSubCategory): static {
@@ -462,7 +462,7 @@ class SoftwareApplication extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getApplicationSubCategory() {
         return $this->properties['applicationSubCategory'];
@@ -470,7 +470,7 @@ class SoftwareApplication extends CreativeWork
     /**
      * URL at which the app may be installed, if different from the URL of the item.
      *
-     * @param $installUrl \LengthOfRope\JSONLD\Schema\URL
+     * @param $installUrl \LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setInstallUrl($installUrl): static {
@@ -480,7 +480,7 @@ class SoftwareApplication extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\URL
      **/
     public function getInstallUrl() {
         return $this->properties['installUrl'];

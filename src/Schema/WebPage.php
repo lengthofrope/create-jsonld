@@ -46,7 +46,7 @@ class WebPage extends CreativeWork
     /**
      * A link related to this web page, for example to other related web pages.
      *
-     * @param $relatedLink \LengthOfRope\JSONLD\Schema\URL
+     * @param $relatedLink \LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setRelatedLink($relatedLink): static {
@@ -56,7 +56,7 @@ class WebPage extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\URL
      **/
     public function getRelatedLink() {
         return $this->properties['relatedLink'];
@@ -102,7 +102,7 @@ class WebPage extends CreativeWork
      * One of the more significant URLs on the page. Typically, these are the
      * non-navigation links that are clicked on the most.
      *
-     * @param $significantLink \LengthOfRope\JSONLD\Schema\URL
+     * @param $significantLink \LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setSignificantLink($significantLink): static {
@@ -112,7 +112,7 @@ class WebPage extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\URL
      **/
     public function getSignificantLink() {
         return $this->properties['significantLink'];
@@ -158,7 +158,7 @@ class WebPage extends CreativeWork
      * The most significant URLs on the page. Typically, these are the non-navigation
      * links that are clicked on the most.
      *
-     * @param $significantLinks \LengthOfRope\JSONLD\Schema\URL
+     * @param $significantLinks \LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setSignificantLinks($significantLinks): static {
@@ -168,7 +168,7 @@ class WebPage extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\URL
      **/
     public function getSignificantLinks() {
         return $this->properties['significantLinks'];
@@ -237,7 +237,7 @@ class WebPage extends CreativeWork
      * a possible value of the *speakable* property.
      *
      *
-     * @param $speakable \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\SpeakableSpecification
+     * @param $speakable \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\SpeakableSpecification
      * @return static
      **/
     public function setSpeakable($speakable): static {
@@ -247,7 +247,7 @@ class WebPage extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\SpeakableSpecification
+     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\SpeakableSpecification
      **/
     public function getSpeakable() {
         return $this->properties['speakable'];

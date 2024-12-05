@@ -65,7 +65,7 @@ class PublicationVolume extends CreativeWork
     /**
      * The page on which the work starts; for example "135" or "xiii".
      *
-     * @param $pageStart \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Integer
+     * @param $pageStart \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Integer
      * @return static
      **/
     public function setPageStart($pageStart): static {
@@ -75,7 +75,7 @@ class PublicationVolume extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Integer
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Integer
      **/
     public function getPageStart() {
         return $this->properties['pageStart'];
@@ -84,7 +84,7 @@ class PublicationVolume extends CreativeWork
      * Identifies the volume of publication or multi-part work; for example, "iii" or
      * "2".
      *
-     * @param $volumeNumber \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Integer
+     * @param $volumeNumber \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Integer
      * @return static
      **/
     public function setVolumeNumber($volumeNumber): static {
@@ -94,7 +94,7 @@ class PublicationVolume extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Integer
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Integer
      **/
     public function getVolumeNumber() {
         return $this->properties['volumeNumber'];
@@ -102,7 +102,7 @@ class PublicationVolume extends CreativeWork
     /**
      * The page on which the work ends; for example "138" or "xvi".
      *
-     * @param $pageEnd \LengthOfRope\JSONLD\Schema\Integer|\LengthOfRope\JSONLD\DataType\Text
+     * @param $pageEnd \LengthOfRope\JSONLD\DataType\Integer|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setPageEnd($pageEnd): static {
@@ -112,7 +112,7 @@ class PublicationVolume extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Integer|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\Integer|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getPageEnd() {
         return $this->properties['pageEnd'];

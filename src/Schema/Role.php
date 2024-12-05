@@ -51,7 +51,7 @@ class Role extends Intangible
      * an organization. For example, an athlete in a SportsTeam might play in the
      * position named 'Quarterback'.
      *
-     * @param $namedPosition \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @param $namedPosition \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setNamedPosition($namedPosition): static {
@@ -61,7 +61,7 @@ class Role extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getNamedPosition() {
         return $this->properties['namedPosition'];
@@ -72,7 +72,7 @@ class Role extends Intangible
      * 'penciller', and 'letterer'; or an athlete in a SportsTeam might play in the
      * position named 'Quarterback'.
      *
-     * @param $roleName \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @param $roleName \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setRoleName($roleName): static {
@@ -82,7 +82,7 @@ class Role extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getRoleName() {
         return $this->properties['roleName'];

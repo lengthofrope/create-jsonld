@@ -118,7 +118,7 @@ class Order extends Intangible
     /**
      * The URL for sending a payment.
      *
-     * @param $paymentUrl \LengthOfRope\JSONLD\Schema\URL
+     * @param $paymentUrl \LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setPaymentUrl($paymentUrl): static {
@@ -128,7 +128,7 @@ class Order extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\URL
      **/
     public function getPaymentUrl() {
         return $this->properties['paymentUrl'];

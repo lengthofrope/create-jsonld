@@ -81,7 +81,7 @@ class Observation extends QuantitativeValue
      * A subproperty of [[measurementTechnique]] that can be used for specifying
      * specific methods, in particular via [[MeasurementMethodEnum]].
      *
-     * @param $measurementMethod \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\MeasurementMethodEnum|\LengthOfRope\JSONLD\DataType\Text
+     * @param $measurementMethod \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\MeasurementMethodEnum|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setMeasurementMethod($measurementMethod): static {
@@ -91,7 +91,7 @@ class Observation extends QuantitativeValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\MeasurementMethodEnum|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\MeasurementMethodEnum|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getMeasurementMethod() {
         return $this->properties['measurementMethod'];
@@ -238,7 +238,7 @@ class Observation extends QuantitativeValue
      * the corresponding [[measurementTechnique]]. The value can also be from an
      * enumeration, organized as a [[MeasurementMetholdEnumeration]].
      *
-     * @param $measurementTechnique \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\MeasurementMethodEnum
+     * @param $measurementTechnique \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\MeasurementMethodEnum
      * @return static
      **/
     public function setMeasurementTechnique($measurementTechnique): static {
@@ -248,7 +248,7 @@ class Observation extends QuantitativeValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\MeasurementMethodEnum
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\MeasurementMethodEnum
      **/
     public function getMeasurementTechnique() {
         return $this->properties['measurementTechnique'];

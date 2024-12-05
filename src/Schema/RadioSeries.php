@@ -117,7 +117,7 @@ class RadioSeries extends CreativeWorkSeries
     /**
      * The number of seasons in this series.
      *
-     * @param $numberOfSeasons \LengthOfRope\JSONLD\Schema\Integer
+     * @param $numberOfSeasons \LengthOfRope\JSONLD\DataType\Integer
      * @return static
      **/
     public function setNumberOfSeasons($numberOfSeasons): static {
@@ -127,7 +127,7 @@ class RadioSeries extends CreativeWorkSeries
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Integer
+     * @return \LengthOfRope\JSONLD\DataType\Integer
      **/
     public function getNumberOfSeasons() {
         return $this->properties['numberOfSeasons'];
@@ -190,7 +190,7 @@ class RadioSeries extends CreativeWorkSeries
     /**
      * A season in a media series.
      *
-     * @param $season \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\CreativeWorkSeason
+     * @param $season \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\CreativeWorkSeason
      * @return static
      **/
     public function setSeason($season): static {
@@ -200,7 +200,7 @@ class RadioSeries extends CreativeWorkSeries
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\CreativeWorkSeason
+     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\CreativeWorkSeason
      **/
     public function getSeason() {
         return $this->properties['season'];
@@ -247,7 +247,7 @@ class RadioSeries extends CreativeWorkSeries
     /**
      * The number of episodes in this season or series.
      *
-     * @param $numberOfEpisodes \LengthOfRope\JSONLD\Schema\Integer
+     * @param $numberOfEpisodes \LengthOfRope\JSONLD\DataType\Integer
      * @return static
      **/
     public function setNumberOfEpisodes($numberOfEpisodes): static {
@@ -257,7 +257,7 @@ class RadioSeries extends CreativeWorkSeries
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Integer
+     * @return \LengthOfRope\JSONLD\DataType\Integer
      **/
     public function getNumberOfEpisodes() {
         return $this->properties['numberOfEpisodes'];

@@ -64,7 +64,7 @@ class PodcastSeries extends CreativeWorkSeries
      * The URL for a feed, e.g. associated with a podcast series, blog, or series of
      * date-stamped updates. This is usually RSS or Atom.
      *
-     * @param $webFeed \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DataFeed
+     * @param $webFeed \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\DataFeed
      * @return static
      **/
     public function setWebFeed($webFeed): static {
@@ -74,7 +74,7 @@ class PodcastSeries extends CreativeWorkSeries
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DataFeed
+     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\DataFeed
      **/
     public function getWebFeed() {
         return $this->properties['webFeed'];

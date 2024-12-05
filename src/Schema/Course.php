@@ -86,7 +86,7 @@ class Course extends CreativeWork
      * occupational credential awarded as a consequence of successful completion of
      * this course or program.
      *
-     * @param $occupationalCredentialAwarded \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential|\LengthOfRope\JSONLD\Schema\URL
+     * @param $occupationalCredentialAwarded \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setOccupationalCredentialAwarded($occupationalCredentialAwarded): static {
@@ -96,7 +96,7 @@ class Course extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getOccupationalCredentialAwarded() {
         return $this->properties['occupationalCredentialAwarded'];
@@ -143,7 +143,7 @@ class Course extends CreativeWork
     /**
      * The total number of students that have enrolled in the history of the course.
      *
-     * @param $totalHistoricalEnrollment \LengthOfRope\JSONLD\Schema\Integer
+     * @param $totalHistoricalEnrollment \LengthOfRope\JSONLD\DataType\Integer
      * @return static
      **/
     public function setTotalHistoricalEnrollment($totalHistoricalEnrollment): static {
@@ -153,7 +153,7 @@ class Course extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Integer
+     * @return \LengthOfRope\JSONLD\DataType\Integer
      **/
     public function getTotalHistoricalEnrollment() {
         return $this->properties['totalHistoricalEnrollment'];
@@ -162,7 +162,7 @@ class Course extends CreativeWork
      * The number of credits or units awarded by a Course or required to complete an
      * EducationalOccupationalProgram.
      *
-     * @param $numberOfCredits \LengthOfRope\JSONLD\Schema\Integer|\LengthOfRope\JSONLD\Schema\StructuredValue
+     * @param $numberOfCredits \LengthOfRope\JSONLD\DataType\Integer|\LengthOfRope\JSONLD\Schema\StructuredValue
      * @return static
      **/
     public function setNumberOfCredits($numberOfCredits): static {
@@ -172,7 +172,7 @@ class Course extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Integer|\LengthOfRope\JSONLD\Schema\StructuredValue
+     * @return \LengthOfRope\JSONLD\DataType\Integer|\LengthOfRope\JSONLD\Schema\StructuredValue
      **/
     public function getNumberOfCredits() {
         return $this->properties['numberOfCredits'];
@@ -182,7 +182,7 @@ class Course extends CreativeWork
      * educational credential awarded as a consequence of successful completion of this
      * course or program.
      *
-     * @param $educationalCredentialAwarded \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential|\LengthOfRope\JSONLD\Schema\URL
+     * @param $educationalCredentialAwarded \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setEducationalCredentialAwarded($educationalCredentialAwarded): static {
@@ -192,7 +192,7 @@ class Course extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getEducationalCredentialAwarded() {
         return $this->properties['educationalCredentialAwarded'];

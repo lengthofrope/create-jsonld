@@ -138,7 +138,7 @@ class Organization extends Thing
      * not distinguish skill levels here, or relate this to educational content,
      * events, objectives or [[JobPosting]] descriptions.
      *
-     * @param $knowsAbout \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\DataType\Text
+     * @param $knowsAbout \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setKnowsAbout($knowsAbout): static {
@@ -148,7 +148,7 @@ class Organization extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getKnowsAbout() {
         return $this->properties['knowsAbout'];
@@ -166,7 +166,7 @@ class Organization extends Thing
      * schema.org terminology.
      *
      *
-     * @param $publishingPrinciples \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\CreativeWork
+     * @param $publishingPrinciples \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\CreativeWork
      * @return static
      **/
     public function setPublishingPrinciples($publishingPrinciples): static {
@@ -176,7 +176,7 @@ class Organization extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\CreativeWork
+     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\CreativeWork
      **/
     public function getPublishingPrinciples() {
         return $this->properties['publishingPrinciples'];
@@ -261,7 +261,7 @@ class Organization extends Thing
      * describing the newsroom’s diversity policy on both staffing and sources,
      * typically providing staffing data.
      *
-     * @param $diversityPolicy \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\URL
+     * @param $diversityPolicy \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setDiversityPolicy($diversityPolicy): static {
@@ -271,7 +271,7 @@ class Organization extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getDiversityPolicy() {
         return $this->properties['diversityPolicy'];
@@ -501,7 +501,7 @@ class Organization extends Thing
      * ethicsPolicy is typically a statement describing the personal, organizational,
      * and corporate standards of behavior expected by the organization.
      *
-     * @param $ethicsPolicy \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\CreativeWork
+     * @param $ethicsPolicy \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\CreativeWork
      * @return static
      **/
     public function setEthicsPolicy($ethicsPolicy): static {
@@ -511,7 +511,7 @@ class Organization extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\CreativeWork
+     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\CreativeWork
      **/
     public function getEthicsPolicy() {
         return $this->properties['ethicsPolicy'];
@@ -648,7 +648,7 @@ class Organization extends Thing
      * Keywords or tags used to describe some item. Multiple textual entries in a
      * keywords list are typically delimited by commas, or by repeating the property.
      *
-     * @param $keywords \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text
+     * @param $keywords \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setKeywords($keywords): static {
@@ -658,7 +658,7 @@ class Organization extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getKeywords() {
         return $this->properties['keywords'];
@@ -722,7 +722,7 @@ class Organization extends Thing
     /**
      * An associated logo.
      *
-     * @param $logo \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\ImageObject
+     * @param $logo \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\ImageObject
      * @return static
      **/
     public function setLogo($logo): static {
@@ -732,7 +732,7 @@ class Organization extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\ImageObject
+     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\ImageObject
      **/
     public function getLogo() {
         return $this->properties['logo'];
@@ -854,7 +854,7 @@ class Organization extends Thing
      * For an [[Organization]] (typically a [[NewsMediaOrganization]]), a statement
      * about policy on use of unnamed sources and the decision process required.
      *
-     * @param $unnamedSourcesPolicy \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\URL
+     * @param $unnamedSourcesPolicy \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setUnnamedSourcesPolicy($unnamedSourcesPolicy): static {
@@ -864,7 +864,7 @@ class Organization extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getUnnamedSourcesPolicy() {
         return $this->properties['unnamedSourcesPolicy'];
@@ -965,7 +965,7 @@ class Organization extends Thing
      * For an [[Organization]] (e.g. [[NewsMediaOrganization]]), a statement describing
      * (in news media, the newsroom’s) disclosure and correction policy for errors.
      *
-     * @param $correctionsPolicy \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\URL
+     * @param $correctionsPolicy \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setCorrectionsPolicy($correctionsPolicy): static {
@@ -975,7 +975,7 @@ class Organization extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getCorrectionsPolicy() {
         return $this->properties['correctionsPolicy'];
@@ -1033,7 +1033,7 @@ class Organization extends Thing
      * <code>8013</code>)  should be attached to a [[Product]] or a
      * [[ProductModel]].</li></ul> Other item types should be adapted similarly.
      *
-     * @param $hasGS1DigitalLink \LengthOfRope\JSONLD\Schema\URL
+     * @param $hasGS1DigitalLink \LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setHasGS1DigitalLink($hasGS1DigitalLink): static {
@@ -1043,7 +1043,7 @@ class Organization extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\URL
      **/
     public function getHasGS1DigitalLink() {
         return $this->properties['hasGS1DigitalLink'];
@@ -1130,7 +1130,7 @@ class Organization extends Thing
      * Note that the [[funder]] is also available and can be used to make basic
      * funder information machine-readable.
      *
-     * @param $ownershipFundingInfo \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\AboutPage
+     * @param $ownershipFundingInfo \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\AboutPage
      * @return static
      **/
     public function setOwnershipFundingInfo($ownershipFundingInfo): static {
@@ -1140,7 +1140,7 @@ class Organization extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\AboutPage
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\AboutPage
      **/
     public function getOwnershipFundingInfo() {
         return $this->properties['ownershipFundingInfo'];
@@ -1186,7 +1186,7 @@ class Organization extends Thing
      * a report on staffing diversity issues. In a news context this might be for
      * example ASNE or RTDNA (US) reports, or self-reported.
      *
-     * @param $diversityStaffingReport \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\Article
+     * @param $diversityStaffingReport \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\Article
      * @return static
      **/
     public function setDiversityStaffingReport($diversityStaffingReport): static {
@@ -1196,7 +1196,7 @@ class Organization extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\Article
+     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\Article
      **/
     public function getDiversityStaffingReport() {
         return $this->properties['diversityStaffingReport'];
@@ -1337,7 +1337,7 @@ class Organization extends Thing
      * including involving the public - digitally or otherwise -- in coverage
      * decisions, reporting and activities after publication.
      *
-     * @param $actionableFeedbackPolicy \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\CreativeWork
+     * @param $actionableFeedbackPolicy \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\CreativeWork
      * @return static
      **/
     public function setActionableFeedbackPolicy($actionableFeedbackPolicy): static {
@@ -1347,7 +1347,7 @@ class Organization extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\CreativeWork
+     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\CreativeWork
      **/
     public function getActionableFeedbackPolicy() {
         return $this->properties['actionableFeedbackPolicy'];

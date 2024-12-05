@@ -24,38 +24,38 @@
  * THE SOFTWARE.
  **/
 
-namespace LengthOfRope\JSONLD\Schema;
+namespace LengthOfRope\JSONLD\DataType;
+
+use LengthOfRope\JSONLD\Interfaces\IValidator;
+use LengthOfRope\JSONLD\Traits;
 
 /**
- * Financial services business.
+ * Data type: Integer.
  *
- * @see https://schema.org/FinancialService
+ * @see https://schema.org/Integer
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class FinancialService extends LocalBusiness
+class TypeInteger extends TypeNumber implements IValidator
 {
-    public static function factory(): FinancialService
+    use Traits\IntegerValidator;
+
+    public static function factory(): TypeInteger
     {
-        return new FinancialService('https://schema.org/', 'FinancialService');
+        return new TypeInteger('https://schema.org/', 'Integer');
     }
 
+
     /**
-     * Description of fees, commissions, and other terms applied either to a class of
-     * financial product, or by a financial service organization.
+     * Retrieve the elements (and all childrens) as an array
      *
-     * @param $feesAndCommissionsSpecification \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
-     * @return static
-     **/
-    public function setFeesAndCommissionsSpecification($feesAndCommissionsSpecification): static {
-        $this->properties['feesAndCommissionsSpecification'] = $feesAndCommissionsSpecification;
+     * @return array
+     */
+    public function getDataArray()
+    {
+        $arr = parent::getDataArray();
 
-        return $this;
-    }
+        $arr['@value'] = $this->getValue();
 
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
-     **/
-    public function getFeesAndCommissionsSpecification() {
-        return $this->properties['feesAndCommissionsSpecification'];
+        return $arr;
     }
 }

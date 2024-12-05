@@ -320,7 +320,7 @@ class Place extends Thing
      * Keywords or tags used to describe some item. Multiple textual entries in a
      * keywords list are typically delimited by commas, or by repeating the property.
      *
-     * @param $keywords \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text
+     * @param $keywords \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setKeywords($keywords): static {
@@ -330,7 +330,7 @@ class Place extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getKeywords() {
         return $this->properties['keywords'];
@@ -375,7 +375,7 @@ class Place extends Thing
     /**
      * An associated logo.
      *
-     * @param $logo \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\ImageObject
+     * @param $logo \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\ImageObject
      * @return static
      **/
     public function setLogo($logo): static {
@@ -385,7 +385,7 @@ class Place extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\ImageObject
+     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\ImageObject
      **/
     public function getLogo() {
         return $this->properties['logo'];
@@ -534,7 +534,7 @@ class Place extends Thing
     /**
      * A URL to a map of the place.
      *
-     * @param $map \LengthOfRope\JSONLD\Schema\URL
+     * @param $map \LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setMap($map): static {
@@ -544,7 +544,7 @@ class Place extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\URL
      **/
     public function getMap() {
         return $this->properties['map'];
@@ -564,7 +564,7 @@ class Place extends Thing
      * <code>8013</code>)  should be attached to a [[Product]] or a
      * [[ProductModel]].</li></ul> Other item types should be adapted similarly.
      *
-     * @param $hasGS1DigitalLink \LengthOfRope\JSONLD\Schema\URL
+     * @param $hasGS1DigitalLink \LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setHasGS1DigitalLink($hasGS1DigitalLink): static {
@@ -574,7 +574,7 @@ class Place extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\URL
      **/
     public function getHasGS1DigitalLink() {
         return $this->properties['hasGS1DigitalLink'];
@@ -660,7 +660,7 @@ class Place extends Thing
     /**
      * A URL to a map of the place.
      *
-     * @param $maps \LengthOfRope\JSONLD\Schema\URL
+     * @param $maps \LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setMaps($maps): static {
@@ -670,7 +670,7 @@ class Place extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\URL
      **/
     public function getMaps() {
         return $this->properties['maps'];
@@ -835,7 +835,7 @@ class Place extends Thing
      * [[Accommodation]] or [[ApartmentComplex]] in a real estate setting, as well as
      * other kinds of tours as appropriate.
      *
-     * @param $tourBookingPage \LengthOfRope\JSONLD\Schema\URL
+     * @param $tourBookingPage \LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setTourBookingPage($tourBookingPage): static {
@@ -845,7 +845,7 @@ class Place extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\URL
      **/
     public function getTourBookingPage() {
         return $this->properties['tourBookingPage'];
@@ -909,7 +909,7 @@ class Place extends Thing
     /**
      * A URL to a map of the place.
      *
-     * @param $hasMap \LengthOfRope\JSONLD\Schema\Map|\LengthOfRope\JSONLD\Schema\URL
+     * @param $hasMap \LengthOfRope\JSONLD\Schema\Map|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setHasMap($hasMap): static {
@@ -919,7 +919,7 @@ class Place extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Map|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\Schema\Map|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getHasMap() {
         return $this->properties['hasMap'];
@@ -927,7 +927,7 @@ class Place extends Thing
     /**
      * The total number of individuals that may attend an event or venue.
      *
-     * @param $maximumAttendeeCapacity \LengthOfRope\JSONLD\Schema\Integer
+     * @param $maximumAttendeeCapacity \LengthOfRope\JSONLD\DataType\Integer
      * @return static
      **/
     public function setMaximumAttendeeCapacity($maximumAttendeeCapacity): static {
@@ -937,7 +937,7 @@ class Place extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Integer
+     * @return \LengthOfRope\JSONLD\DataType\Integer
      **/
     public function getMaximumAttendeeCapacity() {
         return $this->properties['maximumAttendeeCapacity'];

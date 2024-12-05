@@ -42,7 +42,7 @@ class Book extends CreativeWork
     /**
      * The number of pages in the book.
      *
-     * @param $numberOfPages \LengthOfRope\JSONLD\Schema\Integer
+     * @param $numberOfPages \LengthOfRope\JSONLD\DataType\Integer
      * @return static
      **/
     public function setNumberOfPages($numberOfPages): static {
@@ -52,7 +52,7 @@ class Book extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Integer
+     * @return \LengthOfRope\JSONLD\DataType\Integer
      **/
     public function getNumberOfPages() {
         return $this->properties['numberOfPages'];

@@ -24,19 +24,67 @@
  * THE SOFTWARE.
  **/
 
-namespace LengthOfRope\JSONLD\Schema;
+namespace LengthOfRope\JSONLD\Traits;
 
-/**
- * Data type: Integer.
- *
- * @see https://schema.org/Integer
- * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
- **/
-class Integer extends Number
+use DOMDocument;
+use DOMXPath;
+use Exception;
+use TypeError;
+
+trait XPathTypeValidator
 {
-    public static function factory(): Integer
+    private ?string $value = null;
+
+    /**
+     * setValue
+     *
+     * @param $value
+     * @return static
+     **/
+    public function setValue(string $value): static
     {
-        return new Integer('https://schema.org/', 'Integer');
+        $this->value = $value;
+
+        return $this;
     }
 
+    /**
+     * Validate
+     *
+     * @return bool
+     **/
+    public function validate(): bool
+    {
+        if (!is_string($this->value)) {
+            return false;
+        }
+
+        // Check if the value is a valid XPath
+        $xpath = new DOMXPath(new DOMDocument());
+
+        try {
+            $xpath->evaluate($this->value);
+        } catch (Exception $e) {
+            return false;
+        }
+
+        return true;
+    }
+
+    /**
+     * getValue
+     *
+     * @return mixed
+     **/
+    public function getValue(): string
+    {
+        if (!$this->validate()) {
+            throw new TypeError(sprintf(
+                'Expected a string, got %s instead.',
+                is_object($this->value) ? get_class($this->value) : gettype($this->value)
+            ));
+        }
+
+        return $this->value;
+    }
 }

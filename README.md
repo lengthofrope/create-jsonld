@@ -74,6 +74,12 @@ try {
 ```
 
 ## Version history
+1.1.2
+
+- Fix missing dataypes
+- Allow adding nested Create objects to simulate arrays and keep validation working
+- Add additional validation checks for new datatypes
+
 1.1.1
 
 - Add typehinting

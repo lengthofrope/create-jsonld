@@ -43,7 +43,7 @@ class VisualArtwork extends CreativeWork
      * A material used as a surface in some artwork, e.g. Canvas, Paper, Wood, Board,
      * etc.
      *
-     * @param $surface \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\DataType\Text
+     * @param $surface \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setSurface($surface): static {
@@ -53,7 +53,7 @@ class VisualArtwork extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getSurface() {
         return $this->properties['surface'];
@@ -101,7 +101,7 @@ class VisualArtwork extends CreativeWork
      * Cyanotype, Digital, Lithograph, DryPoint, Intaglio, Pastel, Woodcut, Pencil,
      * Mixed Media, etc.)
      *
-     * @param $artMedium \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @param $artMedium \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setArtMedium($artMedium): static {
@@ -111,7 +111,7 @@ class VisualArtwork extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getArtMedium() {
         return $this->properties['artMedium'];
@@ -139,7 +139,7 @@ class VisualArtwork extends CreativeWork
      * e.g. for a limited edition of 20 prints, 'artEdition' refers to the total number
      * of copies (in this example "20").
      *
-     * @param $artEdition \LengthOfRope\JSONLD\Schema\Integer|\LengthOfRope\JSONLD\DataType\Text
+     * @param $artEdition \LengthOfRope\JSONLD\DataType\Integer|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setArtEdition($artEdition): static {
@@ -149,7 +149,7 @@ class VisualArtwork extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Integer|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\Integer|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getArtEdition() {
         return $this->properties['artEdition'];
@@ -157,7 +157,7 @@ class VisualArtwork extends CreativeWork
     /**
      * The supporting materials for the artwork, e.g. Canvas, Paper, Wood, Board, etc.
      *
-     * @param $artworkSurface \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @param $artworkSurface \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setArtworkSurface($artworkSurface): static {
@@ -167,7 +167,7 @@ class VisualArtwork extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getArtworkSurface() {
         return $this->properties['artworkSurface'];
@@ -213,7 +213,7 @@ class VisualArtwork extends CreativeWork
     /**
      * e.g. Painting, Drawing, Sculpture, Print, Photograph, Assemblage, Collage, etc.
      *
-     * @param $artform \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @param $artform \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setArtform($artform): static {
@@ -223,7 +223,7 @@ class VisualArtwork extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getArtform() {
         return $this->properties['artform'];

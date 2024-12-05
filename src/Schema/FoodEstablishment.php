@@ -43,7 +43,7 @@ class FoodEstablishment extends LocalBusiness
      * Either the actual menu as a structured representation, as text, or a URL of the
      * menu.
      *
-     * @param $menu \LengthOfRope\JSONLD\Schema\Menu|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @param $menu \LengthOfRope\JSONLD\Schema\Menu|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setMenu($menu): static {
@@ -53,7 +53,7 @@ class FoodEstablishment extends LocalBusiness
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Menu|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\Schema\Menu|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getMenu() {
         return $this->properties['menu'];
@@ -62,7 +62,7 @@ class FoodEstablishment extends LocalBusiness
      * Either the actual menu as a structured representation, as text, or a URL of the
      * menu.
      *
-     * @param $hasMenu \LengthOfRope\JSONLD\Schema\Menu|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @param $hasMenu \LengthOfRope\JSONLD\Schema\Menu|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setHasMenu($hasMenu): static {
@@ -72,7 +72,7 @@ class FoodEstablishment extends LocalBusiness
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Menu|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\Schema\Menu|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getHasMenu() {
         return $this->properties['hasMenu'];
@@ -121,7 +121,7 @@ class FoodEstablishment extends LocalBusiness
      * Boolean, an URL at which reservations can be made or (for backwards
      * compatibility) the strings ```Yes``` or ```No```.
      *
-     * @param $acceptsReservations \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Boolean|\LengthOfRope\JSONLD\Schema\URL
+     * @param $acceptsReservations \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Boolean|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setAcceptsReservations($acceptsReservations): static {
@@ -131,7 +131,7 @@ class FoodEstablishment extends LocalBusiness
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Boolean|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Boolean|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getAcceptsReservations() {
         return $this->properties['acceptsReservations'];

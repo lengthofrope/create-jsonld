@@ -198,7 +198,7 @@ class Product extends Thing
     /**
      * A material that something is made from, e.g. leather, wool, cotton, paper.
      *
-     * @param $material \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\Product|\LengthOfRope\JSONLD\DataType\Text
+     * @param $material \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\Product|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setMaterial($material): static {
@@ -208,7 +208,7 @@ class Product extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\Product|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\Product|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getMaterial() {
         return $this->properties['material'];
@@ -368,7 +368,7 @@ class Product extends Thing
      * Keywords or tags used to describe some item. Multiple textual entries in a
      * keywords list are typically delimited by commas, or by repeating the property.
      *
-     * @param $keywords \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text
+     * @param $keywords \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setKeywords($keywords): static {
@@ -378,7 +378,7 @@ class Product extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getKeywords() {
         return $this->properties['keywords'];
@@ -408,7 +408,7 @@ class Product extends Thing
     /**
      * An associated logo.
      *
-     * @param $logo \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\ImageObject
+     * @param $logo \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\ImageObject
      * @return static
      **/
     public function setLogo($logo): static {
@@ -418,7 +418,7 @@ class Product extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\ImageObject
+     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\ImageObject
      **/
     public function getLogo() {
         return $this->properties['logo'];
@@ -436,7 +436,7 @@ class Product extends Thing
      * ASINs are most commonly encoded as text strings, but the [asin] property
      * supports URL/URI as potential values too.
      *
-     * @param $asin \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @param $asin \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setAsin($asin): static {
@@ -446,7 +446,7 @@ class Product extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getAsin() {
         return $this->properties['asin'];
@@ -599,7 +599,7 @@ class Product extends Thing
      * A category for the item. Greater signs or slashes can be used to informally
      * indicate a category hierarchy.
      *
-     * @param $category \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\Schema\PhysicalActivityCategory|\LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @param $category \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\Schema\PhysicalActivityCategory|\LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setCategory($category): static {
@@ -609,7 +609,7 @@ class Product extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\Schema\PhysicalActivityCategory|\LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\Schema\PhysicalActivityCategory|\LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getCategory() {
         return $this->properties['category'];
@@ -629,7 +629,7 @@ class Product extends Thing
      * <code>8013</code>)  should be attached to a [[Product]] or a
      * [[ProductModel]].</li></ul> Other item types should be adapted similarly.
      *
-     * @param $hasGS1DigitalLink \LengthOfRope\JSONLD\Schema\URL
+     * @param $hasGS1DigitalLink \LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setHasGS1DigitalLink($hasGS1DigitalLink): static {
@@ -639,7 +639,7 @@ class Product extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\URL
      **/
     public function getHasGS1DigitalLink() {
         return $this->properties['hasGS1DigitalLink'];
@@ -707,7 +707,7 @@ class Product extends Thing
      * and not a definition of GTINs in general - see the GS1 documentation for
      * authoritative details.
      *
-     * @param $gtin \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @param $gtin \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setGtin($gtin): static {
@@ -717,7 +717,7 @@ class Product extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getGtin() {
         return $this->properties['gtin'];
@@ -1109,7 +1109,7 @@ class Product extends Thing
      * textual description specified in the [[color]] property. This can be a URL or a
      * fully described ImageObject.
      *
-     * @param $colorSwatch \LengthOfRope\JSONLD\Schema\ImageObject|\LengthOfRope\JSONLD\Schema\URL
+     * @param $colorSwatch \LengthOfRope\JSONLD\Schema\ImageObject|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setColorSwatch($colorSwatch): static {
@@ -1119,7 +1119,7 @@ class Product extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\ImageObject|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\Schema\ImageObject|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getColorSwatch() {
         return $this->properties['colorSwatch'];

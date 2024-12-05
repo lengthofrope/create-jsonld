@@ -91,7 +91,7 @@ class Movie extends CreativeWork
      * [[editEIDR]] for a more edit-specific description.
      *
      *
-     * @param $titleEIDR \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @param $titleEIDR \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setTitleEIDR($titleEIDR): static {
@@ -101,7 +101,7 @@ class Movie extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getTitleEIDR() {
         return $this->properties['titleEIDR'];

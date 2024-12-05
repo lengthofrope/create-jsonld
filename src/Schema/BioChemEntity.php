@@ -44,7 +44,7 @@ class BioChemEntity extends Thing
      * Subcellular location where this BioChemEntity is located; please use
      * PropertyValue if you want to include any evidence.
      *
-     * @param $isLocatedInSubcellularLocation \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\PropertyValue
+     * @param $isLocatedInSubcellularLocation \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\PropertyValue
      * @return static
      **/
     public function setIsLocatedInSubcellularLocation($isLocatedInSubcellularLocation): static {
@@ -54,7 +54,7 @@ class BioChemEntity extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\PropertyValue
+     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\PropertyValue
      **/
     public function getIsLocatedInSubcellularLocation() {
         return $this->properties['isLocatedInSubcellularLocation'];
@@ -100,7 +100,7 @@ class BioChemEntity extends Thing
      * Biological process this BioChemEntity is involved in; please use PropertyValue
      * if you want to include any evidence.
      *
-     * @param $isInvolvedInBiologicalProcess \LengthOfRope\JSONLD\Schema\PropertyValue|\LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm
+     * @param $isInvolvedInBiologicalProcess \LengthOfRope\JSONLD\Schema\PropertyValue|\LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm
      * @return static
      **/
     public function setIsInvolvedInBiologicalProcess($isInvolvedInBiologicalProcess): static {
@@ -110,7 +110,7 @@ class BioChemEntity extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\PropertyValue|\LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm
+     * @return \LengthOfRope\JSONLD\Schema\PropertyValue|\LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm
      **/
     public function getIsInvolvedInBiologicalProcess() {
         return $this->properties['isInvolvedInBiologicalProcess'];
@@ -174,7 +174,7 @@ class BioChemEntity extends Thing
      * A common representation such as a protein sequence or chemical structure for
      * this entity. For images use schema.org/image.
      *
-     * @param $hasRepresentation \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\PropertyValue
+     * @param $hasRepresentation \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\PropertyValue
      * @return static
      **/
     public function setHasRepresentation($hasRepresentation): static {
@@ -184,7 +184,7 @@ class BioChemEntity extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\PropertyValue
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\PropertyValue
      **/
     public function getHasRepresentation() {
         return $this->properties['hasRepresentation'];
@@ -211,7 +211,7 @@ class BioChemEntity extends Thing
      * Molecular function performed by this BioChemEntity; please use PropertyValue if
      * you want to include any evidence.
      *
-     * @param $hasMolecularFunction \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\PropertyValue
+     * @param $hasMolecularFunction \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\PropertyValue
      * @return static
      **/
     public function setHasMolecularFunction($hasMolecularFunction): static {
@@ -221,7 +221,7 @@ class BioChemEntity extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\PropertyValue
+     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\PropertyValue
      **/
     public function getHasMolecularFunction() {
         return $this->properties['hasMolecularFunction'];
@@ -248,7 +248,7 @@ class BioChemEntity extends Thing
      * The taxonomic grouping of the organism that expresses, encodes, or in some way
      * related to the BioChemEntity.
      *
-     * @param $taxonomicRange \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\Taxon
+     * @param $taxonomicRange \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\Taxon
      * @return static
      **/
     public function setTaxonomicRange($taxonomicRange): static {
@@ -258,7 +258,7 @@ class BioChemEntity extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\Taxon
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\Taxon
      **/
     public function getTaxonomicRange() {
         return $this->properties['taxonomicRange'];
@@ -268,7 +268,7 @@ class BioChemEntity extends Thing
      * or a URL. If you want to add an evidence supporting the association, please use
      * PropertyValue.
      *
-     * @param $associatedDisease \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\PropertyValue|\LengthOfRope\JSONLD\Schema\MedicalCondition
+     * @param $associatedDisease \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\PropertyValue|\LengthOfRope\JSONLD\Schema\MedicalCondition
      * @return static
      **/
     public function setAssociatedDisease($associatedDisease): static {
@@ -278,7 +278,7 @@ class BioChemEntity extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\PropertyValue|\LengthOfRope\JSONLD\Schema\MedicalCondition
+     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\PropertyValue|\LengthOfRope\JSONLD\Schema\MedicalCondition
      **/
     public function getAssociatedDisease() {
         return $this->properties['associatedDisease'];

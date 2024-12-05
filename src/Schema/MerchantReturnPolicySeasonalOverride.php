@@ -136,7 +136,7 @@ class MerchantReturnPolicySeasonalOverride extends Intangible
      * date) that a product can be returned. Used when the [[returnPolicyCategory]]
      * property is specified as [[MerchantReturnFiniteReturnWindow]].
      *
-     * @param $merchantReturnDays \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\Schema\Integer|\LengthOfRope\JSONLD\DataType\DateTime
+     * @param $merchantReturnDays \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\Integer|\LengthOfRope\JSONLD\DataType\DateTime
      * @return static
      **/
     public function setMerchantReturnDays($merchantReturnDays): static {
@@ -146,7 +146,7 @@ class MerchantReturnPolicySeasonalOverride extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\Schema\Integer|\LengthOfRope\JSONLD\DataType\DateTime
+     * @return \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\Integer|\LengthOfRope\JSONLD\DataType\DateTime
      **/
     public function getMerchantReturnDays() {
         return $this->properties['merchantReturnDays'];

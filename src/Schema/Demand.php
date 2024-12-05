@@ -250,7 +250,7 @@ class Demand extends Intangible
      * ASINs are most commonly encoded as text strings, but the [asin] property
      * supports URL/URI as potential values too.
      *
-     * @param $asin \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @param $asin \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setAsin($asin): static {
@@ -260,7 +260,7 @@ class Demand extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getAsin() {
         return $this->properties['asin'];
@@ -464,7 +464,7 @@ class Demand extends Intangible
      * and not a definition of GTINs in general - see the GS1 documentation for
      * authoritative details.
      *
-     * @param $gtin \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @param $gtin \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setGtin($gtin): static {
@@ -474,7 +474,7 @@ class Demand extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getGtin() {
         return $this->properties['gtin'];

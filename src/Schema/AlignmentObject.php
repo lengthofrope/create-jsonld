@@ -65,7 +65,7 @@ class AlignmentObject extends Intangible
     /**
      * The URL of a node in an established educational framework.
      *
-     * @param $targetUrl \LengthOfRope\JSONLD\Schema\URL
+     * @param $targetUrl \LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setTargetUrl($targetUrl): static {
@@ -75,7 +75,7 @@ class AlignmentObject extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\URL
      **/
     public function getTargetUrl() {
         return $this->properties['targetUrl'];

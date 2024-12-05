@@ -90,7 +90,7 @@ class InteractionCounter extends StructuredValue
      * The number of interactions for the CreativeWork using the WebSite or
      * SoftwareApplication.
      *
-     * @param $userInteractionCount \LengthOfRope\JSONLD\Schema\Integer
+     * @param $userInteractionCount \LengthOfRope\JSONLD\DataType\Integer
      * @return static
      **/
     public function setUserInteractionCount($userInteractionCount): static {
@@ -100,7 +100,7 @@ class InteractionCounter extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Integer
+     * @return \LengthOfRope\JSONLD\DataType\Integer
      **/
     public function getUserInteractionCount() {
         return $this->properties['userInteractionCount'];

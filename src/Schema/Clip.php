@@ -136,7 +136,7 @@ class Clip extends CreativeWork
     /**
      * Position of the clip within an ordered group of clips.
      *
-     * @param $clipNumber \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Integer
+     * @param $clipNumber \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Integer
      * @return static
      **/
     public function setClipNumber($clipNumber): static {
@@ -146,7 +146,7 @@ class Clip extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Integer
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Integer
      **/
     public function getClipNumber() {
         return $this->properties['clipNumber'];

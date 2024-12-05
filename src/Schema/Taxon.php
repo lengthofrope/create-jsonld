@@ -42,7 +42,7 @@ class Taxon extends Thing
     /**
      * Closest parent taxon of the taxon in question.
      *
-     * @param $parentTaxon \LengthOfRope\JSONLD\Schema\Taxon|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @param $parentTaxon \LengthOfRope\JSONLD\Schema\Taxon|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setParentTaxon($parentTaxon): static {
@@ -52,7 +52,7 @@ class Taxon extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Taxon|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\Schema\Taxon|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getParentTaxon() {
         return $this->properties['parentTaxon'];
@@ -60,7 +60,7 @@ class Taxon extends Thing
     /**
      * Closest child taxa of the taxon in question.
      *
-     * @param $childTaxon \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\Taxon
+     * @param $childTaxon \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\Taxon
      * @return static
      **/
     public function setChildTaxon($childTaxon): static {
@@ -70,7 +70,7 @@ class Taxon extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\Taxon
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\Taxon
      **/
     public function getChildTaxon() {
         return $this->properties['childTaxon'];
@@ -80,7 +80,7 @@ class Taxon extends Thing
      * vocabulary – typically the ranks from TDWG TaxonRank ontology or equivalent
      * Wikidata URIs.
      *
-     * @param $taxonRank \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\PropertyValue
+     * @param $taxonRank \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\PropertyValue
      * @return static
      **/
     public function setTaxonRank($taxonRank): static {
@@ -90,7 +90,7 @@ class Taxon extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\PropertyValue
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\PropertyValue
      **/
     public function getTaxonRank() {
         return $this->properties['taxonRank'];

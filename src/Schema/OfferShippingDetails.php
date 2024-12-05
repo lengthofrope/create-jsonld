@@ -115,7 +115,7 @@ class OfferShippingDetails extends StructuredValue
      * Link to a page containing [[ShippingRateSettings]] and [[DeliveryTimeSettings]]
      * details.
      *
-     * @param $shippingSettingsLink \LengthOfRope\JSONLD\Schema\URL
+     * @param $shippingSettingsLink \LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setShippingSettingsLink($shippingSettingsLink): static {
@@ -125,7 +125,7 @@ class OfferShippingDetails extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\URL
      **/
     public function getShippingSettingsLink() {
         return $this->properties['shippingSettingsLink'];
