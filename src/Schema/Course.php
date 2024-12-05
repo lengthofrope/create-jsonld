@@ -143,7 +143,7 @@ class Course extends CreativeWork
     /**
      * The total number of students that have enrolled in the history of the course.
      *
-     * @param $totalHistoricalEnrollment \LengthOfRope\JSONLD\Schema\Integer
+     * @param $totalHistoricalEnrollment \LengthOfRope\JSONLD\DataType\Integer
      * @return static
      **/
     public function setTotalHistoricalEnrollment($totalHistoricalEnrollment): static {
@@ -153,7 +153,7 @@ class Course extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Integer
+     * @return \LengthOfRope\JSONLD\DataType\Integer
      **/
     public function getTotalHistoricalEnrollment() {
         return $this->properties['totalHistoricalEnrollment'];
@@ -162,7 +162,7 @@ class Course extends CreativeWork
      * The number of credits or units awarded by a Course or required to complete an
      * EducationalOccupationalProgram.
      *
-     * @param $numberOfCredits \LengthOfRope\JSONLD\Schema\Integer|\LengthOfRope\JSONLD\Schema\StructuredValue
+     * @param $numberOfCredits \LengthOfRope\JSONLD\DataType\Integer|\LengthOfRope\JSONLD\Schema\StructuredValue
      * @return static
      **/
     public function setNumberOfCredits($numberOfCredits): static {
@@ -172,7 +172,7 @@ class Course extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Integer|\LengthOfRope\JSONLD\Schema\StructuredValue
+     * @return \LengthOfRope\JSONLD\DataType\Integer|\LengthOfRope\JSONLD\Schema\StructuredValue
      **/
     public function getNumberOfCredits() {
         return $this->properties['numberOfCredits'];

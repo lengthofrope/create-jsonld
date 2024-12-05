@@ -485,7 +485,7 @@ class CreativeWork extends Thing
     /**
      * The position of an item in a series or sequence of items.
      *
-     * @param $position \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Integer
+     * @param $position \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Integer
      * @return static
      **/
     public function setPosition($position): static {
@@ -495,7 +495,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Integer
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Integer
      **/
     public function getPosition() {
         return $this->properties['position'];
@@ -541,7 +541,7 @@ class CreativeWork extends Thing
      * received. This is most applicable to works published in Web sites with
      * commenting system; additional comments may exist elsewhere.
      *
-     * @param $commentCount \LengthOfRope\JSONLD\Schema\Integer
+     * @param $commentCount \LengthOfRope\JSONLD\DataType\Integer
      * @return static
      **/
     public function setCommentCount($commentCount): static {
@@ -551,7 +551,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Integer
+     * @return \LengthOfRope\JSONLD\DataType\Integer
      **/
     public function getCommentCount() {
         return $this->properties['commentCount'];

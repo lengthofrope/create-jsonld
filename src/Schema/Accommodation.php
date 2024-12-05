@@ -238,7 +238,7 @@ class Accommodation extends Place
      * Bathrooms and one Half Bathroom, the Bathrooms Total Integer will be 3.". See
      * also [[numberOfRooms]].
      *
-     * @param $numberOfBathroomsTotal \LengthOfRope\JSONLD\Schema\Integer
+     * @param $numberOfBathroomsTotal \LengthOfRope\JSONLD\DataType\Integer
      * @return static
      **/
     public function setNumberOfBathroomsTotal($numberOfBathroomsTotal): static {
@@ -248,7 +248,7 @@ class Accommodation extends Place
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Integer
+     * @return \LengthOfRope\JSONLD\DataType\Integer
      **/
     public function getNumberOfBathroomsTotal() {
         return $this->properties['numberOfBathroomsTotal'];

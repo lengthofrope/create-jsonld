@@ -339,7 +339,7 @@ class JobPosting extends Intangible
      * The number of positions open for this job posting. Use a positive integer. Do
      * not use if the number of positions is unclear or not known.
      *
-     * @param $totalJobOpenings \LengthOfRope\JSONLD\Schema\Integer
+     * @param $totalJobOpenings \LengthOfRope\JSONLD\DataType\Integer
      * @return static
      **/
     public function setTotalJobOpenings($totalJobOpenings): static {
@@ -349,7 +349,7 @@ class JobPosting extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Integer
+     * @return \LengthOfRope\JSONLD\DataType\Integer
      **/
     public function getTotalJobOpenings() {
         return $this->properties['totalJobOpenings'];

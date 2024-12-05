@@ -246,7 +246,7 @@ class EducationalOccupationalProgram extends Intangible
     /**
      * The maximum number of students who may be enrolled in the program.
      *
-     * @param $maximumEnrollment \LengthOfRope\JSONLD\Schema\Integer
+     * @param $maximumEnrollment \LengthOfRope\JSONLD\DataType\Integer
      * @return static
      **/
     public function setMaximumEnrollment($maximumEnrollment): static {
@@ -256,7 +256,7 @@ class EducationalOccupationalProgram extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Integer
+     * @return \LengthOfRope\JSONLD\DataType\Integer
      **/
     public function getMaximumEnrollment() {
         return $this->properties['maximumEnrollment'];
@@ -306,7 +306,7 @@ class EducationalOccupationalProgram extends Intangible
      * The number of credits or units a full-time student would be expected to take in
      * 1 term however 'term' is defined by the institution.
      *
-     * @param $typicalCreditsPerTerm \LengthOfRope\JSONLD\Schema\StructuredValue|\LengthOfRope\JSONLD\Schema\Integer
+     * @param $typicalCreditsPerTerm \LengthOfRope\JSONLD\Schema\StructuredValue|\LengthOfRope\JSONLD\DataType\Integer
      * @return static
      **/
     public function setTypicalCreditsPerTerm($typicalCreditsPerTerm): static {
@@ -316,7 +316,7 @@ class EducationalOccupationalProgram extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\StructuredValue|\LengthOfRope\JSONLD\Schema\Integer
+     * @return \LengthOfRope\JSONLD\Schema\StructuredValue|\LengthOfRope\JSONLD\DataType\Integer
      **/
     public function getTypicalCreditsPerTerm() {
         return $this->properties['typicalCreditsPerTerm'];
@@ -344,7 +344,7 @@ class EducationalOccupationalProgram extends Intangible
      * The number of credits or units awarded by a Course or required to complete an
      * EducationalOccupationalProgram.
      *
-     * @param $numberOfCredits \LengthOfRope\JSONLD\Schema\Integer|\LengthOfRope\JSONLD\Schema\StructuredValue
+     * @param $numberOfCredits \LengthOfRope\JSONLD\DataType\Integer|\LengthOfRope\JSONLD\Schema\StructuredValue
      * @return static
      **/
     public function setNumberOfCredits($numberOfCredits): static {
@@ -354,7 +354,7 @@ class EducationalOccupationalProgram extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Integer|\LengthOfRope\JSONLD\Schema\StructuredValue
+     * @return \LengthOfRope\JSONLD\DataType\Integer|\LengthOfRope\JSONLD\Schema\StructuredValue
      **/
     public function getNumberOfCredits() {
         return $this->properties['numberOfCredits'];

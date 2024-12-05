@@ -197,7 +197,7 @@ class Event extends Thing
      * [[eventAttendanceMode]] is [[OnlineEventAttendanceMode]] (or the online aspects,
      * in the case of a [[MixedEventAttendanceMode]]).
      *
-     * @param $maximumVirtualAttendeeCapacity \LengthOfRope\JSONLD\Schema\Integer
+     * @param $maximumVirtualAttendeeCapacity \LengthOfRope\JSONLD\DataType\Integer
      * @return static
      **/
     public function setMaximumVirtualAttendeeCapacity($maximumVirtualAttendeeCapacity): static {
@@ -207,7 +207,7 @@ class Event extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Integer
+     * @return \LengthOfRope\JSONLD\DataType\Integer
      **/
     public function getMaximumVirtualAttendeeCapacity() {
         return $this->properties['maximumVirtualAttendeeCapacity'];
@@ -480,7 +480,7 @@ class Event extends Thing
     /**
      * The number of attendee places for an event that remain unallocated.
      *
-     * @param $remainingAttendeeCapacity \LengthOfRope\JSONLD\Schema\Integer
+     * @param $remainingAttendeeCapacity \LengthOfRope\JSONLD\DataType\Integer
      * @return static
      **/
     public function setRemainingAttendeeCapacity($remainingAttendeeCapacity): static {
@@ -490,7 +490,7 @@ class Event extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Integer
+     * @return \LengthOfRope\JSONLD\DataType\Integer
      **/
     public function getRemainingAttendeeCapacity() {
         return $this->properties['remainingAttendeeCapacity'];
@@ -633,7 +633,7 @@ class Event extends Thing
      * [[eventAttendanceMode]] is [[OfflineEventAttendanceMode]] (or the offline
      * aspects, in the case of a [[MixedEventAttendanceMode]]).
      *
-     * @param $maximumPhysicalAttendeeCapacity \LengthOfRope\JSONLD\Schema\Integer
+     * @param $maximumPhysicalAttendeeCapacity \LengthOfRope\JSONLD\DataType\Integer
      * @return static
      **/
     public function setMaximumPhysicalAttendeeCapacity($maximumPhysicalAttendeeCapacity): static {
@@ -643,7 +643,7 @@ class Event extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Integer
+     * @return \LengthOfRope\JSONLD\DataType\Integer
      **/
     public function getMaximumPhysicalAttendeeCapacity() {
         return $this->properties['maximumPhysicalAttendeeCapacity'];
@@ -783,7 +783,7 @@ class Event extends Thing
     /**
      * The total number of individuals that may attend an event or venue.
      *
-     * @param $maximumAttendeeCapacity \LengthOfRope\JSONLD\Schema\Integer
+     * @param $maximumAttendeeCapacity \LengthOfRope\JSONLD\DataType\Integer
      * @return static
      **/
     public function setMaximumAttendeeCapacity($maximumAttendeeCapacity): static {
@@ -793,7 +793,7 @@ class Event extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Integer
+     * @return \LengthOfRope\JSONLD\DataType\Integer
      **/
     public function getMaximumAttendeeCapacity() {
         return $this->properties['maximumAttendeeCapacity'];

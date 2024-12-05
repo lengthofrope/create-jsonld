@@ -66,7 +66,7 @@ class Article extends CreativeWork
     /**
      * The page on which the work starts; for example "135" or "xiii".
      *
-     * @param $pageStart \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Integer
+     * @param $pageStart \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Integer
      * @return static
      **/
     public function setPageStart($pageStart): static {
@@ -76,7 +76,7 @@ class Article extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Integer
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Integer
      **/
     public function getPageStart() {
         return $this->properties['pageStart'];
@@ -123,7 +123,7 @@ class Article extends CreativeWork
     /**
      * The number of words in the text of the Article.
      *
-     * @param $wordCount \LengthOfRope\JSONLD\Schema\Integer
+     * @param $wordCount \LengthOfRope\JSONLD\DataType\Integer
      * @return static
      **/
     public function setWordCount($wordCount): static {
@@ -133,7 +133,7 @@ class Article extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Integer
+     * @return \LengthOfRope\JSONLD\DataType\Integer
      **/
     public function getWordCount() {
         return $this->properties['wordCount'];
@@ -141,7 +141,7 @@ class Article extends CreativeWork
     /**
      * The page on which the work ends; for example "138" or "xvi".
      *
-     * @param $pageEnd \LengthOfRope\JSONLD\Schema\Integer|\LengthOfRope\JSONLD\DataType\Text
+     * @param $pageEnd \LengthOfRope\JSONLD\DataType\Integer|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setPageEnd($pageEnd): static {
@@ -151,7 +151,7 @@ class Article extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Integer|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\Integer|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getPageEnd() {
         return $this->properties['pageEnd'];

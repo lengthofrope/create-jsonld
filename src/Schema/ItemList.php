@@ -46,7 +46,7 @@ class ItemList extends Intangible
      * describe all items in a list (e.g., multi-page pagination); in such cases, the
      * numberOfItems would be for the entire list.
      *
-     * @param $numberOfItems \LengthOfRope\JSONLD\Schema\Integer
+     * @param $numberOfItems \LengthOfRope\JSONLD\DataType\Integer
      * @return static
      **/
     public function setNumberOfItems($numberOfItems): static {
@@ -56,7 +56,7 @@ class ItemList extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Integer
+     * @return \LengthOfRope\JSONLD\DataType\Integer
      **/
     public function getNumberOfItems() {
         return $this->properties['numberOfItems'];

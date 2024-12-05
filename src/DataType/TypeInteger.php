@@ -24,7 +24,10 @@
  * THE SOFTWARE.
  **/
 
-namespace LengthOfRope\JSONLD\Schema;
+namespace LengthOfRope\JSONLD\DataType;
+
+use LengthOfRope\JSONLD\Interfaces\IValidator;
+use LengthOfRope\JSONLD\Traits;
 
 /**
  * Data type: Integer.
@@ -32,11 +35,27 @@ namespace LengthOfRope\JSONLD\Schema;
  * @see https://schema.org/Integer
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class Integer extends Number
+class TypeInteger extends TypeNumber implements IValidator
 {
-    public static function factory(): Integer
+    use Traits\IntegerValidator;
+
+    public static function factory(): TypeInteger
     {
-        return new Integer('https://schema.org/', 'Integer');
+        return new TypeInteger('https://schema.org/', 'Integer');
     }
 
+
+    /**
+     * Retrieve the elements (and all childrens) as an array
+     *
+     * @return array
+     */
+    public function getDataArray()
+    {
+        $arr = parent::getDataArray();
+
+        $arr['@value'] = $this->getValue();
+
+        return $arr;
+    }
 }

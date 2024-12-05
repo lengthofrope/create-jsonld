@@ -80,7 +80,7 @@ class CreativeWorkSeason extends CreativeWork
     /**
      * Position of the season within an ordered group of seasons.
      *
-     * @param $seasonNumber \LengthOfRope\JSONLD\Schema\Integer|\LengthOfRope\JSONLD\DataType\Text
+     * @param $seasonNumber \LengthOfRope\JSONLD\DataType\Integer|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setSeasonNumber($seasonNumber): static {
@@ -90,7 +90,7 @@ class CreativeWorkSeason extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Integer|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\Integer|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getSeasonNumber() {
         return $this->properties['seasonNumber'];
@@ -192,7 +192,7 @@ class CreativeWorkSeason extends CreativeWork
     /**
      * The number of episodes in this season or series.
      *
-     * @param $numberOfEpisodes \LengthOfRope\JSONLD\Schema\Integer
+     * @param $numberOfEpisodes \LengthOfRope\JSONLD\DataType\Integer
      * @return static
      **/
     public function setNumberOfEpisodes($numberOfEpisodes): static {
@@ -202,7 +202,7 @@ class CreativeWorkSeason extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Integer
+     * @return \LengthOfRope\JSONLD\DataType\Integer
      **/
     public function getNumberOfEpisodes() {
         return $this->properties['numberOfEpisodes'];

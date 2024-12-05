@@ -46,7 +46,7 @@ class TaxiReservation extends Reservation
     /**
      * Number of people the reservation should accommodate.
      *
-     * @param $partySize \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Integer
+     * @param $partySize \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\Integer
      * @return static
      **/
     public function setPartySize($partySize): static {
@@ -56,7 +56,7 @@ class TaxiReservation extends Reservation
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Integer
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\Integer
      **/
     public function getPartySize() {
         return $this->properties['partySize'];

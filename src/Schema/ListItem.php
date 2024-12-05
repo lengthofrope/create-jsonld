@@ -42,7 +42,7 @@ class ListItem extends Intangible
     /**
      * The position of an item in a series or sequence of items.
      *
-     * @param $position \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Integer
+     * @param $position \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Integer
      * @return static
      **/
     public function setPosition($position): static {
@@ -52,7 +52,7 @@ class ListItem extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Integer
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Integer
      **/
     public function getPosition() {
         return $this->properties['position'];

@@ -78,7 +78,7 @@ class GameServer extends Intangible
     /**
      * Number of players on the server.
      *
-     * @param $playersOnline \LengthOfRope\JSONLD\Schema\Integer
+     * @param $playersOnline \LengthOfRope\JSONLD\DataType\Integer
      * @return static
      **/
     public function setPlayersOnline($playersOnline): static {
@@ -88,7 +88,7 @@ class GameServer extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Integer
+     * @return \LengthOfRope\JSONLD\DataType\Integer
      **/
     public function getPlayersOnline() {
         return $this->properties['playersOnline'];

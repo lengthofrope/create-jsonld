@@ -139,7 +139,7 @@ class VisualArtwork extends CreativeWork
      * e.g. for a limited edition of 20 prints, 'artEdition' refers to the total number
      * of copies (in this example "20").
      *
-     * @param $artEdition \LengthOfRope\JSONLD\Schema\Integer|\LengthOfRope\JSONLD\DataType\Text
+     * @param $artEdition \LengthOfRope\JSONLD\DataType\Integer|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setArtEdition($artEdition): static {
@@ -149,7 +149,7 @@ class VisualArtwork extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Integer|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\Integer|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getArtEdition() {
         return $this->properties['artEdition'];

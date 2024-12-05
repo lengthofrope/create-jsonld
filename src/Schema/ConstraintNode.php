@@ -53,7 +53,7 @@ class ConstraintNode extends Intangible
      * [[StatisticalVariable]] or other construct that is defined using properties on
      * template-style nodes.
      *
-     * @param $numConstraints \LengthOfRope\JSONLD\Schema\Integer
+     * @param $numConstraints \LengthOfRope\JSONLD\DataType\Integer
      * @return static
      **/
     public function setNumConstraints($numConstraints): static {
@@ -63,7 +63,7 @@ class ConstraintNode extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Integer
+     * @return \LengthOfRope\JSONLD\DataType\Integer
      **/
     public function getNumConstraints() {
         return $this->properties['numConstraints'];

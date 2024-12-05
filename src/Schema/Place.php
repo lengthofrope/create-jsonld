@@ -927,7 +927,7 @@ class Place extends Thing
     /**
      * The total number of individuals that may attend an event or venue.
      *
-     * @param $maximumAttendeeCapacity \LengthOfRope\JSONLD\Schema\Integer
+     * @param $maximumAttendeeCapacity \LengthOfRope\JSONLD\DataType\Integer
      * @return static
      **/
     public function setMaximumAttendeeCapacity($maximumAttendeeCapacity): static {
@@ -937,7 +937,7 @@ class Place extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Integer
+     * @return \LengthOfRope\JSONLD\DataType\Integer
      **/
     public function getMaximumAttendeeCapacity() {
         return $this->properties['maximumAttendeeCapacity'];
