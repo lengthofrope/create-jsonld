@@ -2,7 +2,10 @@
 require_once dirname(__DIR__) . '/vendor/autoload.php';
 
 use \LengthOfRope\JSONLD;
+use LengthOfRope\JSONLD\Create;
 use LengthOfRope\JSONLD\DataType;
+use LengthOfRope\JSONLD\DataType\TypeDate;
+use LengthOfRope\JSONLD\DataType\TypeText;
 use \LengthOfRope\JSONLD\Schema;
 
 $Create = JSONLD\Create::factory()
@@ -63,10 +66,10 @@ $Create = JSONLD\Create::factory()
                 ->setSameAs("https://www.lengthofrope.nl")
                 ->setImage("https://www.lengthofrope.nl/logo.png")
         )
-        ->setHasCourseInstance([
+        ->setHasCourseInstance(Create::factory()->add(
             Schema\CourseInstance::factory()
-                ->setName("PHP Course 1")
-                ->setStartDate("2019-01-01")
+                ->setName(TypeText::factory()->setValue("PHP Course 1"))
+                ->setStartDate(TypeDate::factory()->setValue(DateTime::createFromFormat("d-m-Y", "01-01-2019")))
                 ->setEndDate("2019-01-03")
                 ->setLocation(
                     Schema\Place::factory()
@@ -78,7 +81,7 @@ $Create = JSONLD\Create::factory()
                                 ->setAddressCountry("NL")
                                 ->setAddressLocality("Amersfoort")
                         )
-            ),
+            ))->add(
             Schema\CourseInstance::factory()
             ->setName("PHP Course 1")
             ->setStartDate("2019-01-01")
@@ -94,15 +97,15 @@ $Create = JSONLD\Create::factory()
                             ->setAddressLocality("Amersfoort")
                     )
             )
-        ])
+            ))
 );
 
 // Test if the datatypes validate
 if ($Create->validate()) {
-    echo "All data is valid\n";
+    echo $Create->getJSONLD();
 } else {
     echo "Some data is invalid\n";
 }
 //echo "<pre>";
 //print_r($Create->getDataArray());
-print_r($Create->getJSONLDScript());
+

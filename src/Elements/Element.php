@@ -26,6 +26,7 @@
 
 namespace LengthOfRope\JSONLD\Elements;
 
+use LengthOfRope\JSONLD\Create;
 use LengthOfRope\JSONLD\Interfaces;
 
 /**
@@ -87,6 +88,8 @@ abstract class Element implements Interfaces\IElement
         foreach($this->properties as $property) {
             if ($property instanceof Interfaces\IValidator && !$property->validate()) {
                 return false;
+            } elseif($property instanceof Create && !$property->validate()) {
+                return false;
             }
         }
 
@@ -133,7 +136,7 @@ abstract class Element implements Interfaces\IElement
         foreach($this->properties as $name => $property) {
             if ($property instanceof Interfaces\IElement) {
                 $arr[$name] = $property->getDataArray();
-            } else if (is_array($property)) {
+            } elseif (is_array($property)) {
                 $arr[$name] = array();
                 foreach($property as $subProperty) {
                     if ($subProperty instanceof Interfaces\IElement) {
