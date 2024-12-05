@@ -54,7 +54,7 @@ class Certification extends CreativeWork
      * Indicates the current status of a certification: active or inactive. See also
      * [gs1:certificationStatus](https://www.gs1.org/voc/certificationStatus).
      *
-     * @param $certificationStatus 
+     * @param $certificationStatus \LengthOfRope\JSONLD\Schema\CertificationStatusEnumeration
      * @return static
      **/
     public function setCertificationStatus($certificationStatus): static {
@@ -64,7 +64,7 @@ class Certification extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\CertificationStatusEnumeration
      **/
     public function getCertificationStatus() {
         return $this->properties['certificationStatus'];
@@ -73,7 +73,7 @@ class Certification extends CreativeWork
      * The organization issuing the item, for example a [[Permit]], [[Ticket]], or
      * [[Certification]].
      *
-     * @param $issuedBy 
+     * @param $issuedBy \LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setIssuedBy($issuedBy): static {
@@ -83,7 +83,7 @@ class Certification extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getIssuedBy() {
         return $this->properties['issuedBy'];
@@ -92,7 +92,7 @@ class Certification extends CreativeWork
      * Date when a certification was last audited. See also
      * [gs1:certificationAuditDate](https://www.gs1.org/voc/certificationAuditDate).
      *
-     * @param $auditDate |
+     * @param $auditDate \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
      * @return static
      **/
     public function setAuditDate($auditDate): static {
@@ -102,7 +102,7 @@ class Certification extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
      **/
     public function getAuditDate() {
         return $this->properties['auditDate'];
@@ -114,7 +114,7 @@ class Certification extends CreativeWork
      * range of measurements for adjustable products, for example belts and ski
      * bindings.
      *
-     * @param $hasMeasurement 
+     * @param $hasMeasurement \LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setHasMeasurement($hasMeasurement): static {
@@ -124,7 +124,7 @@ class Certification extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getHasMeasurement() {
         return $this->properties['hasMeasurement'];
@@ -133,7 +133,7 @@ class Certification extends CreativeWork
      * The geographic area where the item is valid. Applies for example to a
      * [[Permit]], a [[Certification]], or an [[EducationalOccupationalCredential]].
      *
-     * @param $validIn 
+     * @param $validIn \LengthOfRope\JSONLD\Schema\AdministrativeArea
      * @return static
      **/
     public function setValidIn($validIn): static {
@@ -143,7 +143,7 @@ class Certification extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\AdministrativeArea
      **/
     public function getValidIn() {
         return $this->properties['validIn'];
@@ -151,7 +151,7 @@ class Certification extends CreativeWork
     /**
      * The subject matter of the content.
      *
-     * @param $about 
+     * @param $about \LengthOfRope\JSONLD\Schema\Thing
      * @return static
      **/
     public function setAbout($about): static {
@@ -161,7 +161,7 @@ class Certification extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Thing
      **/
     public function getAbout() {
         return $this->properties['about'];
@@ -172,7 +172,7 @@ class Certification extends CreativeWork
      * the certification instance. See also
      * [gs1:certificationIdentification](https://www.gs1.org/voc/certificationIdentification).
      *
-     * @param $certificationIdentification |
+     * @param $certificationIdentification \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DefinedTerm
      * @return static
      **/
     public function setCertificationIdentification($certificationIdentification): static {
@@ -182,7 +182,7 @@ class Certification extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DefinedTerm
      **/
     public function getCertificationIdentification() {
         return $this->properties['certificationIdentification'];
@@ -193,7 +193,7 @@ class Certification extends CreativeWork
      * requirements of the certification instance are fulfilled. See also
      * [gs1:certificationValue](https://www.gs1.org/voc/certificationValue).
      *
-     * @param $certificationRating 
+     * @param $certificationRating \LengthOfRope\JSONLD\Schema\Rating
      * @return static
      **/
     public function setCertificationRating($certificationRating): static {
@@ -203,7 +203,7 @@ class Certification extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Rating
      **/
     public function getCertificationRating() {
         return $this->properties['certificationRating'];
@@ -212,7 +212,7 @@ class Certification extends CreativeWork
      * Date of first publication or broadcast. For example the date a [[CreativeWork]]
      * was broadcast or a [[Certification]] was issued.
      *
-     * @param $datePublished |
+     * @param $datePublished \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
      * @return static
      **/
     public function setDatePublished($datePublished): static {
@@ -222,7 +222,7 @@ class Certification extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
      **/
     public function getDatePublished() {
         return $this->properties['datePublished'];
@@ -230,7 +230,7 @@ class Certification extends CreativeWork
     /**
      * An associated logo.
      *
-     * @param $logo |
+     * @param $logo \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\ImageObject
      * @return static
      **/
     public function setLogo($logo): static {
@@ -240,7 +240,7 @@ class Certification extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\ImageObject
      **/
     public function getLogo() {
         return $this->properties['logo'];
@@ -248,7 +248,7 @@ class Certification extends CreativeWork
     /**
      * The date when the item becomes valid.
      *
-     * @param $validFrom |
+     * @param $validFrom \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
      * @return static
      **/
     public function setValidFrom($validFrom): static {
@@ -258,7 +258,7 @@ class Certification extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
      **/
     public function getValidFrom() {
         return $this->properties['validFrom'];
@@ -270,7 +270,7 @@ class Certification extends CreativeWork
      * that it may no longer be relevant (or helpful to highlight) after some date, or
      * a [[Certification]] the validity has expired.
      *
-     * @param $expires |
+     * @param $expires \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
      * @return static
      **/
     public function setExpires($expires): static {
@@ -280,7 +280,7 @@ class Certification extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
      **/
     public function getExpires() {
         return $this->properties['expires'];

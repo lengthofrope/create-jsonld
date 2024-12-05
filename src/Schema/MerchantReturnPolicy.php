@@ -51,7 +51,7 @@ class MerchantReturnPolicy extends Intangible
      * using those properties, rather than using the generic property/value mechanism.
      *
      *
-     * @param $additionalProperty 
+     * @param $additionalProperty \LengthOfRope\JSONLD\Schema\PropertyValue
      * @return static
      **/
     public function setAdditionalProperty($additionalProperty): static {
@@ -61,7 +61,7 @@ class MerchantReturnPolicy extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\PropertyValue
      **/
     public function getAdditionalProperty() {
         return $this->properties['additionalProperty'];
@@ -69,7 +69,7 @@ class MerchantReturnPolicy extends Intangible
     /**
      * The type of return fees for purchased products (for any return reason).
      *
-     * @param $returnFees 
+     * @param $returnFees \LengthOfRope\JSONLD\Schema\ReturnFeesEnumeration
      * @return static
      **/
     public function setReturnFees($returnFees): static {
@@ -79,7 +79,7 @@ class MerchantReturnPolicy extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\ReturnFeesEnumeration
      **/
     public function getReturnFees() {
         return $this->properties['returnFees'];
@@ -87,7 +87,7 @@ class MerchantReturnPolicy extends Intangible
     /**
      * Seasonal override of a return policy.
      *
-     * @param $returnPolicySeasonalOverride 
+     * @param $returnPolicySeasonalOverride \LengthOfRope\JSONLD\Schema\MerchantReturnPolicySeasonalOverride
      * @return static
      **/
     public function setReturnPolicySeasonalOverride($returnPolicySeasonalOverride): static {
@@ -97,7 +97,7 @@ class MerchantReturnPolicy extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MerchantReturnPolicySeasonalOverride
      **/
     public function getReturnPolicySeasonalOverride() {
         return $this->properties['returnPolicySeasonalOverride'];
@@ -106,7 +106,7 @@ class MerchantReturnPolicy extends Intangible
      * Are in-store returns offered? (For more advanced return methods use the
      * [[returnMethod]] property.)
      *
-     * @param $inStoreReturnsOffered 
+     * @param $inStoreReturnsOffered \LengthOfRope\JSONLD\DataType\Boolean
      * @return static
      **/
     public function setInStoreReturnsOffered($inStoreReturnsOffered): static {
@@ -116,7 +116,7 @@ class MerchantReturnPolicy extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Boolean
      **/
     public function getInStoreReturnsOffered() {
         return $this->properties['inStoreReturnsOffered'];
@@ -124,7 +124,7 @@ class MerchantReturnPolicy extends Intangible
     /**
      * The type of return fees for returns of defect products.
      *
-     * @param $itemDefectReturnFees 
+     * @param $itemDefectReturnFees \LengthOfRope\JSONLD\Schema\ReturnFeesEnumeration
      * @return static
      **/
     public function setItemDefectReturnFees($itemDefectReturnFees): static {
@@ -134,7 +134,7 @@ class MerchantReturnPolicy extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\ReturnFeesEnumeration
      **/
     public function getItemDefectReturnFees() {
         return $this->properties['itemDefectReturnFees'];
@@ -143,7 +143,7 @@ class MerchantReturnPolicy extends Intangible
      * The method (from an enumeration) by which the customer obtains a return shipping
      * label for a product returned due to customer remorse.
      *
-     * @param $customerRemorseReturnLabelSource 
+     * @param $customerRemorseReturnLabelSource \LengthOfRope\JSONLD\Schema\ReturnLabelSourceEnumeration
      * @return static
      **/
     public function setCustomerRemorseReturnLabelSource($customerRemorseReturnLabelSource): static {
@@ -153,7 +153,7 @@ class MerchantReturnPolicy extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\ReturnLabelSourceEnumeration
      **/
     public function getCustomerRemorseReturnLabelSource() {
         return $this->properties['customerRemorseReturnLabelSource'];
@@ -161,7 +161,7 @@ class MerchantReturnPolicy extends Intangible
     /**
      * The type of return method offered, specified from an enumeration.
      *
-     * @param $returnMethod 
+     * @param $returnMethod \LengthOfRope\JSONLD\Schema\ReturnMethodEnumeration
      * @return static
      **/
     public function setReturnMethod($returnMethod): static {
@@ -171,7 +171,7 @@ class MerchantReturnPolicy extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\ReturnMethodEnumeration
      **/
     public function getReturnMethod() {
         return $this->properties['returnMethod'];
@@ -179,7 +179,7 @@ class MerchantReturnPolicy extends Intangible
     /**
      * A refund type, from an enumerated list.
      *
-     * @param $refundType 
+     * @param $refundType \LengthOfRope\JSONLD\Schema\RefundTypeEnumeration
      * @return static
      **/
     public function setRefundType($refundType): static {
@@ -189,7 +189,7 @@ class MerchantReturnPolicy extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\RefundTypeEnumeration
      **/
     public function getRefundType() {
         return $this->properties['refundType'];
@@ -198,7 +198,7 @@ class MerchantReturnPolicy extends Intangible
      * The membership program tier an Offer (or a PriceSpecification,
      * OfferShippingDetails, or MerchantReturnPolicy under an Offer) is valid for.
      *
-     * @param $validForMemberTier 
+     * @param $validForMemberTier \LengthOfRope\JSONLD\Schema\MemberProgramTier
      * @return static
      **/
     public function setValidForMemberTier($validForMemberTier): static {
@@ -208,7 +208,7 @@ class MerchantReturnPolicy extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MemberProgramTier
      **/
     public function getValidForMemberTier() {
         return $this->properties['validForMemberTier'];
@@ -217,7 +217,7 @@ class MerchantReturnPolicy extends Intangible
      * The method (from an enumeration) by which the customer obtains a return shipping
      * label for a defect product.
      *
-     * @param $itemDefectReturnLabelSource 
+     * @param $itemDefectReturnLabelSource \LengthOfRope\JSONLD\Schema\ReturnLabelSourceEnumeration
      * @return static
      **/
     public function setItemDefectReturnLabelSource($itemDefectReturnLabelSource): static {
@@ -227,7 +227,7 @@ class MerchantReturnPolicy extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\ReturnLabelSourceEnumeration
      **/
     public function getItemDefectReturnLabelSource() {
         return $this->properties['itemDefectReturnLabelSource'];
@@ -239,7 +239,7 @@ class MerchantReturnPolicy extends Intangible
      * code](http://en.wikipedia.org/wiki/ISO_3166-1). Note that this can be different
      * from the country where the product was originally shipped from or sent to.
      *
-     * @param $returnPolicyCountry |
+     * @param $returnPolicyCountry \LengthOfRope\JSONLD\Schema\Country|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setReturnPolicyCountry($returnPolicyCountry): static {
@@ -249,7 +249,7 @@ class MerchantReturnPolicy extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Country|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getReturnPolicyCountry() {
         return $this->properties['returnPolicyCountry'];
@@ -258,7 +258,7 @@ class MerchantReturnPolicy extends Intangible
      * Amount of shipping costs for defect product returns. Applicable when property
      * [[itemDefectReturnFees]] equals [[ReturnShippingFees]].
      *
-     * @param $itemDefectReturnShippingFeesAmount 
+     * @param $itemDefectReturnShippingFeesAmount \LengthOfRope\JSONLD\Schema\MonetaryAmount
      * @return static
      **/
     public function setItemDefectReturnShippingFeesAmount($itemDefectReturnShippingFeesAmount): static {
@@ -268,7 +268,7 @@ class MerchantReturnPolicy extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount
      **/
     public function getItemDefectReturnShippingFeesAmount() {
         return $this->properties['itemDefectReturnShippingFeesAmount'];
@@ -277,7 +277,7 @@ class MerchantReturnPolicy extends Intangible
      * The method (from an enumeration) by which the customer obtains a return shipping
      * label for a product returned for any reason.
      *
-     * @param $returnLabelSource 
+     * @param $returnLabelSource \LengthOfRope\JSONLD\Schema\ReturnLabelSourceEnumeration
      * @return static
      **/
     public function setReturnLabelSource($returnLabelSource): static {
@@ -287,7 +287,7 @@ class MerchantReturnPolicy extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\ReturnLabelSourceEnumeration
      **/
     public function getReturnLabelSource() {
         return $this->properties['returnLabelSource'];
@@ -296,7 +296,7 @@ class MerchantReturnPolicy extends Intangible
      * Amount of shipping costs for product returns (for any reason). Applicable when
      * property [[returnFees]] equals [[ReturnShippingFees]].
      *
-     * @param $returnShippingFeesAmount 
+     * @param $returnShippingFeesAmount \LengthOfRope\JSONLD\Schema\MonetaryAmount
      * @return static
      **/
     public function setReturnShippingFeesAmount($returnShippingFeesAmount): static {
@@ -306,7 +306,7 @@ class MerchantReturnPolicy extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount
      **/
     public function getReturnShippingFeesAmount() {
         return $this->properties['returnShippingFeesAmount'];
@@ -314,7 +314,7 @@ class MerchantReturnPolicy extends Intangible
     /**
      * Specifies a Web page or service by URL, for product returns.
      *
-     * @param $merchantReturnLink 
+     * @param $merchantReturnLink \LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setMerchantReturnLink($merchantReturnLink): static {
@@ -324,7 +324,7 @@ class MerchantReturnPolicy extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\URL
      **/
     public function getMerchantReturnLink() {
         return $this->properties['merchantReturnLink'];
@@ -334,7 +334,7 @@ class MerchantReturnPolicy extends Intangible
      * Applicable when property [[customerRemorseReturnFees]] equals
      * [[ReturnShippingFees]].
      *
-     * @param $customerRemorseReturnShippingFeesAmount 
+     * @param $customerRemorseReturnShippingFeesAmount \LengthOfRope\JSONLD\Schema\MonetaryAmount
      * @return static
      **/
     public function setCustomerRemorseReturnShippingFeesAmount($customerRemorseReturnShippingFeesAmount): static {
@@ -344,7 +344,7 @@ class MerchantReturnPolicy extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount
      **/
     public function getCustomerRemorseReturnShippingFeesAmount() {
         return $this->properties['customerRemorseReturnShippingFeesAmount'];
@@ -352,7 +352,7 @@ class MerchantReturnPolicy extends Intangible
     /**
      * The type of return fees if the product is returned due to customer remorse.
      *
-     * @param $customerRemorseReturnFees 
+     * @param $customerRemorseReturnFees \LengthOfRope\JSONLD\Schema\ReturnFeesEnumeration
      * @return static
      **/
     public function setCustomerRemorseReturnFees($customerRemorseReturnFees): static {
@@ -362,7 +362,7 @@ class MerchantReturnPolicy extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\ReturnFeesEnumeration
      **/
     public function getCustomerRemorseReturnFees() {
         return $this->properties['customerRemorseReturnFees'];
@@ -373,7 +373,7 @@ class MerchantReturnPolicy extends Intangible
      * for product return policies to specify the condition of products accepted for
      * returns.
      *
-     * @param $itemCondition 
+     * @param $itemCondition \LengthOfRope\JSONLD\Schema\OfferItemCondition
      * @return static
      **/
     public function setItemCondition($itemCondition): static {
@@ -383,7 +383,7 @@ class MerchantReturnPolicy extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\OfferItemCondition
      **/
     public function getItemCondition() {
         return $this->properties['itemCondition'];
@@ -393,7 +393,7 @@ class MerchantReturnPolicy extends Intangible
      * date) that a product can be returned. Used when the [[returnPolicyCategory]]
      * property is specified as [[MerchantReturnFiniteReturnWindow]].
      *
-     * @param $merchantReturnDays ||
+     * @param $merchantReturnDays \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\Schema\Integer|\LengthOfRope\JSONLD\DataType\DateTime
      * @return static
      **/
     public function setMerchantReturnDays($merchantReturnDays): static {
@@ -403,7 +403,7 @@ class MerchantReturnPolicy extends Intangible
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\Schema\Integer|\LengthOfRope\JSONLD\DataType\DateTime
      **/
     public function getMerchantReturnDays() {
         return $this->properties['merchantReturnDays'];
@@ -411,7 +411,7 @@ class MerchantReturnPolicy extends Intangible
     /**
      * Specifies an applicable return policy (from an enumeration).
      *
-     * @param $returnPolicyCategory 
+     * @param $returnPolicyCategory \LengthOfRope\JSONLD\Schema\MerchantReturnEnumeration
      * @return static
      **/
     public function setReturnPolicyCategory($returnPolicyCategory): static {
@@ -421,7 +421,7 @@ class MerchantReturnPolicy extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MerchantReturnEnumeration
      **/
     public function getReturnPolicyCategory() {
         return $this->properties['returnPolicyCategory'];
@@ -430,7 +430,7 @@ class MerchantReturnPolicy extends Intangible
      * A country where a particular merchant return policy applies to, for example the
      * two-letter ISO 3166-1 alpha-2 country code.
      *
-     * @param $applicableCountry |
+     * @param $applicableCountry \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Country
      * @return static
      **/
     public function setApplicableCountry($applicableCountry): static {
@@ -440,7 +440,7 @@ class MerchantReturnPolicy extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Country
      **/
     public function getApplicableCountry() {
         return $this->properties['applicableCountry'];
@@ -450,7 +450,7 @@ class MerchantReturnPolicy extends Intangible
      * use [[Number]] to specify a percentage of the product price paid by the
      * customer.
      *
-     * @param $restockingFee |
+     * @param $restockingFee \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setRestockingFee($restockingFee): static {
@@ -460,7 +460,7 @@ class MerchantReturnPolicy extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\Number
      **/
     public function getRestockingFee() {
         return $this->properties['restockingFee'];

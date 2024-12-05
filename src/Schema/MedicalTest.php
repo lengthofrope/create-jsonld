@@ -42,7 +42,7 @@ class MedicalTest extends MedicalEntity
     /**
      * A condition the test is used to diagnose.
      *
-     * @param $usedToDiagnose 
+     * @param $usedToDiagnose \LengthOfRope\JSONLD\Schema\MedicalCondition
      * @return static
      **/
     public function setUsedToDiagnose($usedToDiagnose): static {
@@ -52,7 +52,7 @@ class MedicalTest extends MedicalEntity
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MedicalCondition
      **/
     public function getUsedToDiagnose() {
         return $this->properties['usedToDiagnose'];
@@ -60,7 +60,7 @@ class MedicalTest extends MedicalEntity
     /**
      * A sign detected by the test.
      *
-     * @param $signDetected 
+     * @param $signDetected \LengthOfRope\JSONLD\Schema\MedicalSign
      * @return static
      **/
     public function setSignDetected($signDetected): static {
@@ -70,7 +70,7 @@ class MedicalTest extends MedicalEntity
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MedicalSign
      **/
     public function getSignDetected() {
         return $this->properties['signDetected'];
@@ -78,7 +78,7 @@ class MedicalTest extends MedicalEntity
     /**
      * Drugs that affect the test's results.
      *
-     * @param $affectedBy 
+     * @param $affectedBy \LengthOfRope\JSONLD\Schema\Drug
      * @return static
      **/
     public function setAffectedBy($affectedBy): static {
@@ -88,7 +88,7 @@ class MedicalTest extends MedicalEntity
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Drug
      **/
     public function getAffectedBy() {
         return $this->properties['affectedBy'];
@@ -96,7 +96,7 @@ class MedicalTest extends MedicalEntity
     /**
      * Device used to perform the test.
      *
-     * @param $usesDevice 
+     * @param $usesDevice \LengthOfRope\JSONLD\Schema\MedicalDevice
      * @return static
      **/
     public function setUsesDevice($usesDevice): static {
@@ -106,7 +106,7 @@ class MedicalTest extends MedicalEntity
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MedicalDevice
      **/
     public function getUsesDevice() {
         return $this->properties['usesDevice'];
@@ -114,7 +114,7 @@ class MedicalTest extends MedicalEntity
     /**
      * Range of acceptable values for a typical patient, when applicable.
      *
-     * @param $normalRange |
+     * @param $normalRange \LengthOfRope\JSONLD\Schema\MedicalEnumeration|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setNormalRange($normalRange): static {
@@ -124,7 +124,7 @@ class MedicalTest extends MedicalEntity
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\MedicalEnumeration|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getNormalRange() {
         return $this->properties['normalRange'];

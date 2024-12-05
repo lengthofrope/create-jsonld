@@ -46,7 +46,7 @@ class TaxiReservation extends Reservation
     /**
      * Number of people the reservation should accommodate.
      *
-     * @param $partySize |
+     * @param $partySize \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Integer
      * @return static
      **/
     public function setPartySize($partySize): static {
@@ -56,7 +56,7 @@ class TaxiReservation extends Reservation
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Integer
      **/
     public function getPartySize() {
         return $this->properties['partySize'];
@@ -64,7 +64,7 @@ class TaxiReservation extends Reservation
     /**
      * When a taxi will pick up a passenger or a rental car can be picked up.
      *
-     * @param $pickupTime 
+     * @param $pickupTime \LengthOfRope\JSONLD\DataType\DateTime
      * @return static
      **/
     public function setPickupTime($pickupTime): static {
@@ -74,7 +74,7 @@ class TaxiReservation extends Reservation
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\DateTime
      **/
     public function getPickupTime() {
         return $this->properties['pickupTime'];
@@ -82,7 +82,7 @@ class TaxiReservation extends Reservation
     /**
      * Where a taxi will pick up a passenger or a rental car can be picked up.
      *
-     * @param $pickupLocation 
+     * @param $pickupLocation \LengthOfRope\JSONLD\Schema\Place
      * @return static
      **/
     public function setPickupLocation($pickupLocation): static {
@@ -92,7 +92,7 @@ class TaxiReservation extends Reservation
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Place
      **/
     public function getPickupLocation() {
         return $this->properties['pickupLocation'];

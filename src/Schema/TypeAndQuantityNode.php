@@ -45,7 +45,7 @@ class TypeAndQuantityNode extends StructuredValue
      * a URL. Other codes than the UN/CEFACT Common Code may be used with a prefix
      * followed by a colon.
      *
-     * @param $unitCode |
+     * @param $unitCode \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setUnitCode($unitCode): static {
@@ -55,7 +55,7 @@ class TypeAndQuantityNode extends StructuredValue
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      **/
     public function getUnitCode() {
         return $this->properties['unitCode'];
@@ -63,7 +63,7 @@ class TypeAndQuantityNode extends StructuredValue
     /**
      * The quantity of the goods included in the offer.
      *
-     * @param $amountOfThisGood 
+     * @param $amountOfThisGood \LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setAmountOfThisGood($amountOfThisGood): static {
@@ -73,7 +73,7 @@ class TypeAndQuantityNode extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Number
      **/
     public function getAmountOfThisGood() {
         return $this->properties['amountOfThisGood'];
@@ -81,7 +81,7 @@ class TypeAndQuantityNode extends StructuredValue
     /**
      * The product that this structured value is referring to.
      *
-     * @param $typeOfGood |
+     * @param $typeOfGood \LengthOfRope\JSONLD\Schema\Product|\LengthOfRope\JSONLD\Schema\Service
      * @return static
      **/
     public function setTypeOfGood($typeOfGood): static {
@@ -91,7 +91,7 @@ class TypeAndQuantityNode extends StructuredValue
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Product|\LengthOfRope\JSONLD\Schema\Service
      **/
     public function getTypeOfGood() {
         return $this->properties['typeOfGood'];
@@ -101,7 +101,7 @@ class TypeAndQuantityNode extends StructuredValue
      * component of a bundle (TypeAndQuantityNode). The default is
      * http://purl.org/goodrelations/v1#Sell.
      *
-     * @param $businessFunction 
+     * @param $businessFunction \LengthOfRope\JSONLD\Schema\BusinessFunction
      * @return static
      **/
     public function setBusinessFunction($businessFunction): static {
@@ -111,7 +111,7 @@ class TypeAndQuantityNode extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\BusinessFunction
      **/
     public function getBusinessFunction() {
         return $this->properties['businessFunction'];
@@ -121,7 +121,7 @@ class TypeAndQuantityNode extends StructuredValue
      * provide a standard unit code for
      * <a href='unitCode'>unitCode</a>.
      *
-     * @param $unitText 
+     * @param $unitText \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setUnitText($unitText): static {
@@ -131,7 +131,7 @@ class TypeAndQuantityNode extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getUnitText() {
         return $this->properties['unitText'];

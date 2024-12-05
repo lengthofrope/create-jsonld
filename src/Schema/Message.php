@@ -43,7 +43,7 @@ class Message extends CreativeWork
      * A sub property of participant. The participant who is at the receiving end of
      * the action.
      *
-     * @param $recipient |||
+     * @param $recipient \LengthOfRope\JSONLD\Schema\Audience|\LengthOfRope\JSONLD\Schema\ContactPoint|\LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setRecipient($recipient): static {
@@ -53,7 +53,7 @@ class Message extends CreativeWork
     }
 
     /**
-     * @return |||
+     * @return \LengthOfRope\JSONLD\Schema\Audience|\LengthOfRope\JSONLD\Schema\ContactPoint|\LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getRecipient() {
         return $this->properties['recipient'];
@@ -62,7 +62,7 @@ class Message extends CreativeWork
      * The date/time at which the message has been read by the recipient if a single
      * recipient exists.
      *
-     * @param $dateRead |
+     * @param $dateRead \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
      * @return static
      **/
     public function setDateRead($dateRead): static {
@@ -72,7 +72,7 @@ class Message extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
      **/
     public function getDateRead() {
         return $this->properties['dateRead'];
@@ -80,7 +80,7 @@ class Message extends CreativeWork
     /**
      * The date/time at which the message was sent.
      *
-     * @param $dateSent 
+     * @param $dateSent \LengthOfRope\JSONLD\DataType\DateTime
      * @return static
      **/
     public function setDateSent($dateSent): static {
@@ -90,7 +90,7 @@ class Message extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\DateTime
      **/
     public function getDateSent() {
         return $this->properties['dateSent'];
@@ -98,7 +98,7 @@ class Message extends CreativeWork
     /**
      * A sub property of recipient. The recipient blind copied on a message.
      *
-     * @param $bccRecipient ||
+     * @param $bccRecipient \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\ContactPoint
      * @return static
      **/
     public function setBccRecipient($bccRecipient): static {
@@ -108,7 +108,7 @@ class Message extends CreativeWork
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\ContactPoint
      **/
     public function getBccRecipient() {
         return $this->properties['bccRecipient'];
@@ -116,7 +116,7 @@ class Message extends CreativeWork
     /**
      * A sub property of recipient. The recipient copied on a message.
      *
-     * @param $ccRecipient ||
+     * @param $ccRecipient \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\ContactPoint
      * @return static
      **/
     public function setCcRecipient($ccRecipient): static {
@@ -126,7 +126,7 @@ class Message extends CreativeWork
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\ContactPoint
      **/
     public function getCcRecipient() {
         return $this->properties['ccRecipient'];
@@ -134,7 +134,7 @@ class Message extends CreativeWork
     /**
      * A sub property of recipient. The recipient who was directly sent the message.
      *
-     * @param $toRecipient |||
+     * @param $toRecipient \LengthOfRope\JSONLD\Schema\Audience|\LengthOfRope\JSONLD\Schema\ContactPoint|\LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setToRecipient($toRecipient): static {
@@ -144,7 +144,7 @@ class Message extends CreativeWork
     }
 
     /**
-     * @return |||
+     * @return \LengthOfRope\JSONLD\Schema\Audience|\LengthOfRope\JSONLD\Schema\ContactPoint|\LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getToRecipient() {
         return $this->properties['toRecipient'];
@@ -152,7 +152,7 @@ class Message extends CreativeWork
     /**
      * The date/time the message was received if a single recipient exists.
      *
-     * @param $dateReceived 
+     * @param $dateReceived \LengthOfRope\JSONLD\DataType\DateTime
      * @return static
      **/
     public function setDateReceived($dateReceived): static {
@@ -162,7 +162,7 @@ class Message extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\DateTime
      **/
     public function getDateReceived() {
         return $this->properties['dateReceived'];
@@ -170,7 +170,7 @@ class Message extends CreativeWork
     /**
      * A CreativeWork attached to the message.
      *
-     * @param $messageAttachment 
+     * @param $messageAttachment \LengthOfRope\JSONLD\Schema\CreativeWork
      * @return static
      **/
     public function setMessageAttachment($messageAttachment): static {
@@ -180,7 +180,7 @@ class Message extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork
      **/
     public function getMessageAttachment() {
         return $this->properties['messageAttachment'];
@@ -189,7 +189,7 @@ class Message extends CreativeWork
      * A sub property of participant. The participant who is at the sending end of the
      * action.
      *
-     * @param $sender ||
+     * @param $sender \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\Audience|\LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setSender($sender): static {
@@ -199,7 +199,7 @@ class Message extends CreativeWork
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\Audience|\LengthOfRope\JSONLD\Schema\Person
      **/
     public function getSender() {
         return $this->properties['sender'];

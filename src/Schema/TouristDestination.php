@@ -52,7 +52,7 @@ class TouristDestination extends Place
     /**
      * Attraction located at destination.
      *
-     * @param $includesAttraction 
+     * @param $includesAttraction \LengthOfRope\JSONLD\Schema\TouristAttraction
      * @return static
      **/
     public function setIncludesAttraction($includesAttraction): static {
@@ -62,7 +62,7 @@ class TouristDestination extends Place
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\TouristAttraction
      **/
     public function getIncludesAttraction() {
         return $this->properties['includesAttraction'];
@@ -71,7 +71,7 @@ class TouristDestination extends Place
      * Attraction suitable for type(s) of tourist. E.g. children, visitors from a
      * particular country, etc.
      *
-     * @param $touristType |
+     * @param $touristType \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Audience
      * @return static
      **/
     public function setTouristType($touristType): static {
@@ -81,7 +81,7 @@ class TouristDestination extends Place
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Audience
      **/
     public function getTouristType() {
         return $this->properties['touristType'];

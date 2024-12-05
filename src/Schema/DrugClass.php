@@ -44,7 +44,7 @@ class DrugClass extends MedicalEntity
     /**
      * Specifying a drug or medicine used in a medication procedure.
      *
-     * @param $drug 
+     * @param $drug \LengthOfRope\JSONLD\Schema\Drug
      * @return static
      **/
     public function setDrug($drug): static {
@@ -54,7 +54,7 @@ class DrugClass extends MedicalEntity
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Drug
      **/
     public function getDrug() {
         return $this->properties['drug'];

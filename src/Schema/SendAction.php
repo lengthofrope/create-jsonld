@@ -48,7 +48,7 @@ class SendAction extends TransferAction
     /**
      * A sub property of instrument. The method of delivery.
      *
-     * @param $deliveryMethod 
+     * @param $deliveryMethod \LengthOfRope\JSONLD\Schema\DeliveryMethod
      * @return static
      **/
     public function setDeliveryMethod($deliveryMethod): static {
@@ -58,7 +58,7 @@ class SendAction extends TransferAction
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\DeliveryMethod
      **/
     public function getDeliveryMethod() {
         return $this->properties['deliveryMethod'];
@@ -67,7 +67,7 @@ class SendAction extends TransferAction
      * A sub property of participant. The participant who is at the receiving end of
      * the action.
      *
-     * @param $recipient |||
+     * @param $recipient \LengthOfRope\JSONLD\Schema\Audience|\LengthOfRope\JSONLD\Schema\ContactPoint|\LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setRecipient($recipient): static {
@@ -77,7 +77,7 @@ class SendAction extends TransferAction
     }
 
     /**
-     * @return |||
+     * @return \LengthOfRope\JSONLD\Schema\Audience|\LengthOfRope\JSONLD\Schema\ContactPoint|\LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getRecipient() {
         return $this->properties['recipient'];

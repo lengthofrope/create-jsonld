@@ -43,7 +43,7 @@ class MedicalGuidelineRecommendation extends MedicalGuideline
     /**
      * Strength of the guideline's recommendation (e.g. 'class I').
      *
-     * @param $recommendationStrength 
+     * @param $recommendationStrength \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setRecommendationStrength($recommendationStrength): static {
@@ -53,7 +53,7 @@ class MedicalGuidelineRecommendation extends MedicalGuideline
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getRecommendationStrength() {
         return $this->properties['recommendationStrength'];

@@ -42,7 +42,7 @@ class PaymentChargeSpecification extends PriceSpecification
     /**
      * The payment method(s) to which the payment charge specification applies.
      *
-     * @param $appliesToPaymentMethod 
+     * @param $appliesToPaymentMethod \LengthOfRope\JSONLD\Schema\PaymentMethod
      * @return static
      **/
     public function setAppliesToPaymentMethod($appliesToPaymentMethod): static {
@@ -52,7 +52,7 @@ class PaymentChargeSpecification extends PriceSpecification
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\PaymentMethod
      **/
     public function getAppliesToPaymentMethod() {
         return $this->properties['appliesToPaymentMethod'];
@@ -61,7 +61,7 @@ class PaymentChargeSpecification extends PriceSpecification
      * The delivery method(s) to which the delivery charge or payment charge
      * specification applies.
      *
-     * @param $appliesToDeliveryMethod 
+     * @param $appliesToDeliveryMethod \LengthOfRope\JSONLD\Schema\DeliveryMethod
      * @return static
      **/
     public function setAppliesToDeliveryMethod($appliesToDeliveryMethod): static {
@@ -71,7 +71,7 @@ class PaymentChargeSpecification extends PriceSpecification
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\DeliveryMethod
      **/
     public function getAppliesToDeliveryMethod() {
         return $this->properties['appliesToDeliveryMethod'];

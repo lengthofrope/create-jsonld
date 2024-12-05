@@ -43,7 +43,7 @@ class TravelAction extends MoveAction
     /**
      * The distance travelled, e.g. exercising or travelling.
      *
-     * @param $distance 
+     * @param $distance \LengthOfRope\JSONLD\Schema\Distance
      * @return static
      **/
     public function setDistance($distance): static {
@@ -53,7 +53,7 @@ class TravelAction extends MoveAction
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Distance
      **/
     public function getDistance() {
         return $this->properties['distance'];

@@ -49,7 +49,7 @@ class MedicalGuideline extends MedicalEntity
      * Source of the data used to formulate the guidance, e.g. RCT, consensus opinion,
      * etc.
      *
-     * @param $evidenceOrigin 
+     * @param $evidenceOrigin \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setEvidenceOrigin($evidenceOrigin): static {
@@ -59,7 +59,7 @@ class MedicalGuideline extends MedicalEntity
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getEvidenceOrigin() {
         return $this->properties['evidenceOrigin'];
@@ -67,7 +67,7 @@ class MedicalGuideline extends MedicalEntity
     /**
      * Date on which this guideline's recommendation was made.
      *
-     * @param $guidelineDate 
+     * @param $guidelineDate \LengthOfRope\JSONLD\DataType\Date
      * @return static
      **/
     public function setGuidelineDate($guidelineDate): static {
@@ -77,7 +77,7 @@ class MedicalGuideline extends MedicalEntity
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Date
      **/
     public function getGuidelineDate() {
         return $this->properties['guidelineDate'];
@@ -85,7 +85,7 @@ class MedicalGuideline extends MedicalEntity
     /**
      * The medical conditions, treatments, etc. that are the subject of the guideline.
      *
-     * @param $guidelineSubject 
+     * @param $guidelineSubject \LengthOfRope\JSONLD\Schema\MedicalEntity
      * @return static
      **/
     public function setGuidelineSubject($guidelineSubject): static {
@@ -95,7 +95,7 @@ class MedicalGuideline extends MedicalEntity
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MedicalEntity
      **/
     public function getGuidelineSubject() {
         return $this->properties['guidelineSubject'];
@@ -103,7 +103,7 @@ class MedicalGuideline extends MedicalEntity
     /**
      * Strength of evidence of the data used to formulate the guideline (enumerated).
      *
-     * @param $evidenceLevel 
+     * @param $evidenceLevel \LengthOfRope\JSONLD\Schema\MedicalEvidenceLevel
      * @return static
      **/
     public function setEvidenceLevel($evidenceLevel): static {
@@ -113,7 +113,7 @@ class MedicalGuideline extends MedicalEntity
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MedicalEvidenceLevel
      **/
     public function getEvidenceLevel() {
         return $this->properties['evidenceLevel'];

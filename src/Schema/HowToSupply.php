@@ -43,7 +43,7 @@ class HowToSupply extends HowToItem
      * The estimated cost of the supply or supplies consumed when performing
      * instructions.
      *
-     * @param $estimatedCost |
+     * @param $estimatedCost \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setEstimatedCost($estimatedCost): static {
@@ -53,7 +53,7 @@ class HowToSupply extends HowToItem
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getEstimatedCost() {
         return $this->properties['estimatedCost'];

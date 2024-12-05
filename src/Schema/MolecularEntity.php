@@ -45,7 +45,7 @@ class MolecularEntity extends BioChemEntity
      * Systematic method of naming chemical compounds as recommended by the
      * International Union of Pure and Applied Chemistry (IUPAC).
      *
-     * @param $iupacName 
+     * @param $iupacName \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setIupacName($iupacName): static {
@@ -55,7 +55,7 @@ class MolecularEntity extends BioChemEntity
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getIupacName() {
         return $this->properties['iupacName'];
@@ -66,7 +66,7 @@ class MolecularEntity extends BioChemEntity
      * indicators may need to be escaped in the string in formats where the backslash
      * is an escape character.
      *
-     * @param $smiles 
+     * @param $smiles \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setSmiles($smiles): static {
@@ -76,7 +76,7 @@ class MolecularEntity extends BioChemEntity
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getSmiles() {
         return $this->properties['smiles'];
@@ -85,7 +85,7 @@ class MolecularEntity extends BioChemEntity
      * The empirical formula is the simplest whole number ratio of all the atoms in a
      * molecule.
      *
-     * @param $molecularFormula 
+     * @param $molecularFormula \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setMolecularFormula($molecularFormula): static {
@@ -95,7 +95,7 @@ class MolecularEntity extends BioChemEntity
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getMolecularFormula() {
         return $this->properties['molecularFormula'];
@@ -103,7 +103,7 @@ class MolecularEntity extends BioChemEntity
     /**
      * Intended use of the BioChemEntity by humans.
      *
-     * @param $potentialUse 
+     * @param $potentialUse \LengthOfRope\JSONLD\Schema\DefinedTerm
      * @return static
      **/
     public function setPotentialUse($potentialUse): static {
@@ -113,7 +113,7 @@ class MolecularEntity extends BioChemEntity
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\DefinedTerm
      **/
     public function getPotentialUse() {
         return $this->properties['potentialUse'];
@@ -121,7 +121,7 @@ class MolecularEntity extends BioChemEntity
     /**
      * InChIKey is a hashed version of the full InChI (using the SHA-256 algorithm).
      *
-     * @param $inChIKey 
+     * @param $inChIKey \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setInChIKey($inChIKey): static {
@@ -131,7 +131,7 @@ class MolecularEntity extends BioChemEntity
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getInChIKey() {
         return $this->properties['inChIKey'];
@@ -141,7 +141,7 @@ class MolecularEntity extends BioChemEntity
      * Units should be included in the form '&lt;Number&gt; &lt;unit&gt;', for example
      * '12 amu' or as '&lt;QuantitativeValue&gt;.
      *
-     * @param $molecularWeight |
+     * @param $molecularWeight \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setMolecularWeight($molecularWeight): static {
@@ -151,7 +151,7 @@ class MolecularEntity extends BioChemEntity
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getMolecularWeight() {
         return $this->properties['molecularWeight'];
@@ -161,7 +161,7 @@ class MolecularEntity extends BioChemEntity
      * electronic data sources thus enabling easier linking of diverse data
      * compilations.
      *
-     * @param $inChI 
+     * @param $inChI \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setInChI($inChI): static {
@@ -171,7 +171,7 @@ class MolecularEntity extends BioChemEntity
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getInChI() {
         return $this->properties['inChI'];
@@ -179,7 +179,7 @@ class MolecularEntity extends BioChemEntity
     /**
      * A role played by the BioChemEntity within a chemical context.
      *
-     * @param $chemicalRole 
+     * @param $chemicalRole \LengthOfRope\JSONLD\Schema\DefinedTerm
      * @return static
      **/
     public function setChemicalRole($chemicalRole): static {
@@ -189,7 +189,7 @@ class MolecularEntity extends BioChemEntity
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\DefinedTerm
      **/
     public function getChemicalRole() {
         return $this->properties['chemicalRole'];
@@ -201,7 +201,7 @@ class MolecularEntity extends BioChemEntity
      * in the form '&lt;Number&gt; &lt;unit&gt;', for example '770.230488 g/mol' or as
      * '&lt;QuantitativeValue&gt;.
      *
-     * @param $monoisotopicMolecularWeight |
+     * @param $monoisotopicMolecularWeight \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setMonoisotopicMolecularWeight($monoisotopicMolecularWeight): static {
@@ -211,7 +211,7 @@ class MolecularEntity extends BioChemEntity
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getMonoisotopicMolecularWeight() {
         return $this->properties['monoisotopicMolecularWeight'];

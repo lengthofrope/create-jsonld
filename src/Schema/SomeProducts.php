@@ -42,7 +42,7 @@ class SomeProducts extends Product
     /**
      * The current approximate inventory level for the item or items.
      *
-     * @param $inventoryLevel 
+     * @param $inventoryLevel \LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setInventoryLevel($inventoryLevel): static {
@@ -52,7 +52,7 @@ class SomeProducts extends Product
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getInventoryLevel() {
         return $this->properties['inventoryLevel'];

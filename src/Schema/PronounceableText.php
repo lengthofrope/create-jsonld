@@ -44,7 +44,7 @@ class PronounceableText extends Text
      * [[speechToTextMarkup]]. For example the city name of Houston in IPA:
      * /ˈhjuːstən/.
      *
-     * @param $phoneticText 
+     * @param $phoneticText \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setPhoneticText($phoneticText): static {
@@ -54,7 +54,7 @@ class PronounceableText extends Text
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getPhoneticText() {
         return $this->properties['phoneticText'];
@@ -62,7 +62,7 @@ class PronounceableText extends Text
     /**
      * Text value being annotated.
      *
-     * @param $textValue 
+     * @param $textValue \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setTextValue($textValue): static {
@@ -72,7 +72,7 @@ class PronounceableText extends Text
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getTextValue() {
         return $this->properties['textValue'];
@@ -82,7 +82,7 @@ class PronounceableText extends Text
      * of the language codes from the [IETF BCP 47
      * standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
      *
-     * @param $inLanguage |
+     * @param $inLanguage \LengthOfRope\JSONLD\Schema\Language|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setInLanguage($inLanguage): static {
@@ -92,7 +92,7 @@ class PronounceableText extends Text
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Language|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getInLanguage() {
         return $this->properties['inLanguage'];
@@ -101,7 +101,7 @@ class PronounceableText extends Text
      * Form of markup used. eg. [SSML](https://www.w3.org/TR/speech-synthesis11) or
      * [IPA](https://www.wikidata.org/wiki/Property:P898).
      *
-     * @param $speechToTextMarkup 
+     * @param $speechToTextMarkup \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setSpeechToTextMarkup($speechToTextMarkup): static {
@@ -111,7 +111,7 @@ class PronounceableText extends Text
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getSpeechToTextMarkup() {
         return $this->properties['speechToTextMarkup'];

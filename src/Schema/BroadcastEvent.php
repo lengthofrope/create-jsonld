@@ -42,7 +42,7 @@ class BroadcastEvent extends PublicationEvent
     /**
      * True if the broadcast is of a live event.
      *
-     * @param $isLiveBroadcast 
+     * @param $isLiveBroadcast \LengthOfRope\JSONLD\DataType\Boolean
      * @return static
      **/
     public function setIsLiveBroadcast($isLiveBroadcast): static {
@@ -52,7 +52,7 @@ class BroadcastEvent extends PublicationEvent
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Boolean
      **/
     public function getIsLiveBroadcast() {
         return $this->properties['isLiveBroadcast'];
@@ -60,7 +60,7 @@ class BroadcastEvent extends PublicationEvent
     /**
      * The event being broadcast such as a sporting event or awards ceremony.
      *
-     * @param $broadcastOfEvent 
+     * @param $broadcastOfEvent \LengthOfRope\JSONLD\Schema\Event
      * @return static
      **/
     public function setBroadcastOfEvent($broadcastOfEvent): static {
@@ -70,7 +70,7 @@ class BroadcastEvent extends PublicationEvent
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Event
      **/
     public function getBroadcastOfEvent() {
         return $this->properties['broadcastOfEvent'];
@@ -78,7 +78,7 @@ class BroadcastEvent extends PublicationEvent
     /**
      * The type of screening or video broadcast used (e.g. IMAX, 3D, SD, HD, etc.).
      *
-     * @param $videoFormat 
+     * @param $videoFormat \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setVideoFormat($videoFormat): static {
@@ -88,7 +88,7 @@ class BroadcastEvent extends PublicationEvent
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getVideoFormat() {
         return $this->properties['videoFormat'];
@@ -97,7 +97,7 @@ class BroadcastEvent extends PublicationEvent
      * Languages in which subtitles/captions are available, in [IETF BCP 47 standard
      * format](http://tools.ietf.org/html/bcp47).
      *
-     * @param $subtitleLanguage |
+     * @param $subtitleLanguage \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Language
      * @return static
      **/
     public function setSubtitleLanguage($subtitleLanguage): static {
@@ -107,7 +107,7 @@ class BroadcastEvent extends PublicationEvent
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Language
      **/
     public function getSubtitleLanguage() {
         return $this->properties['subtitleLanguage'];

@@ -57,7 +57,7 @@ class CivicStructure extends Place
      * datetime=&quot;Mo-Su&quot;&gt;Monday through Sunday, all
      * day&lt;/time&gt;</code>.
      *
-     * @param $openingHours 
+     * @param $openingHours \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setOpeningHours($openingHours): static {
@@ -67,7 +67,7 @@ class CivicStructure extends Place
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getOpeningHours() {
         return $this->properties['openingHours'];

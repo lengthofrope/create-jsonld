@@ -58,7 +58,7 @@ class Grant extends Intangible
      * A person or organization that supports (sponsors) something through some kind of
      * financial contribution.
      *
-     * @param $funder |
+     * @param $funder \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setFunder($funder): static {
@@ -68,7 +68,7 @@ class Grant extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getFunder() {
         return $this->properties['funder'];
@@ -77,7 +77,7 @@ class Grant extends Intangible
      * Indicates something directly or indirectly funded or sponsored through a
      * [[Grant]]. See also [[ownershipFundingInfo]].
      *
-     * @param $fundedItem ||||||
+     * @param $fundedItem \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\BioChemEntity|\LengthOfRope\JSONLD\Schema\Event|\LengthOfRope\JSONLD\Schema\MedicalEntity|\LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\Product
      * @return static
      **/
     public function setFundedItem($fundedItem): static {
@@ -87,7 +87,7 @@ class Grant extends Intangible
     }
 
     /**
-     * @return ||||||
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\BioChemEntity|\LengthOfRope\JSONLD\Schema\Event|\LengthOfRope\JSONLD\Schema\MedicalEntity|\LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\Product
      **/
     public function getFundedItem() {
         return $this->properties['fundedItem'];
@@ -97,7 +97,7 @@ class Grant extends Intangible
      * financial contribution. E.g. a sponsor of a Medical Study or a corporate sponsor
      * of an event.
      *
-     * @param $sponsor |
+     * @param $sponsor \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setSponsor($sponsor): static {
@@ -107,7 +107,7 @@ class Grant extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getSponsor() {
         return $this->properties['sponsor'];

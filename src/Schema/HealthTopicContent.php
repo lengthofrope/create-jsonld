@@ -51,7 +51,7 @@ class HealthTopicContent extends WebContent
      * [[HealthTopicContent]]. For example, that the content is an overview, or that it
      * talks about treatment, self-care, treatments or their side-effects.
      *
-     * @param $hasHealthAspect 
+     * @param $hasHealthAspect \LengthOfRope\JSONLD\Schema\HealthAspectEnumeration
      * @return static
      **/
     public function setHasHealthAspect($hasHealthAspect): static {
@@ -61,7 +61,7 @@ class HealthTopicContent extends WebContent
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\HealthAspectEnumeration
      **/
     public function getHasHealthAspect() {
         return $this->properties['hasHealthAspect'];

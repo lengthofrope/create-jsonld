@@ -45,7 +45,7 @@ class Order extends Intangible
      * The offer(s) -- e.g., product, quantity and price combinations -- included in
      * the order.
      *
-     * @param $acceptedOffer 
+     * @param $acceptedOffer \LengthOfRope\JSONLD\Schema\Offer
      * @return static
      **/
     public function setAcceptedOffer($acceptedOffer): static {
@@ -55,7 +55,7 @@ class Order extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Offer
      **/
     public function getAcceptedOffer() {
         return $this->properties['acceptedOffer'];
@@ -63,7 +63,7 @@ class Order extends Intangible
     /**
      * Party placing the order or paying the invoice.
      *
-     * @param $customer |
+     * @param $customer \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setCustomer($customer): static {
@@ -73,7 +73,7 @@ class Order extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getCustomer() {
         return $this->properties['customer'];
@@ -82,7 +82,7 @@ class Order extends Intangible
      * Indicates whether the offer was accepted as a gift for someone other than the
      * buyer.
      *
-     * @param $isGift 
+     * @param $isGift \LengthOfRope\JSONLD\DataType\Boolean
      * @return static
      **/
     public function setIsGift($isGift): static {
@@ -92,7 +92,7 @@ class Order extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Boolean
      **/
     public function getIsGift() {
         return $this->properties['isGift'];
@@ -100,7 +100,7 @@ class Order extends Intangible
     /**
      * The name of the credit card or other method of payment for the order.
      *
-     * @param $paymentMethod |
+     * @param $paymentMethod \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\PaymentMethod
      * @return static
      **/
     public function setPaymentMethod($paymentMethod): static {
@@ -110,7 +110,7 @@ class Order extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\PaymentMethod
      **/
     public function getPaymentMethod() {
         return $this->properties['paymentMethod'];
@@ -118,7 +118,7 @@ class Order extends Intangible
     /**
      * The URL for sending a payment.
      *
-     * @param $paymentUrl 
+     * @param $paymentUrl \LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setPaymentUrl($paymentUrl): static {
@@ -128,7 +128,7 @@ class Order extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\URL
      **/
     public function getPaymentUrl() {
         return $this->properties['paymentUrl'];
@@ -136,7 +136,7 @@ class Order extends Intangible
     /**
      * 'merchant' is an out-dated term for 'seller'.
      *
-     * @param $merchant |
+     * @param $merchant \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setMerchant($merchant): static {
@@ -146,7 +146,7 @@ class Order extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getMerchant() {
         return $this->properties['merchant'];
@@ -154,7 +154,7 @@ class Order extends Intangible
     /**
      * The order is being paid as part of the referenced Invoice.
      *
-     * @param $partOfInvoice 
+     * @param $partOfInvoice \LengthOfRope\JSONLD\Schema\Invoice
      * @return static
      **/
     public function setPartOfInvoice($partOfInvoice): static {
@@ -164,7 +164,7 @@ class Order extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Invoice
      **/
     public function getPartOfInvoice() {
         return $this->properties['partOfInvoice'];
@@ -172,7 +172,7 @@ class Order extends Intangible
     /**
      * The date that payment is due.
      *
-     * @param $paymentDueDate |
+     * @param $paymentDueDate \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
      * @return static
      **/
     public function setPaymentDueDate($paymentDueDate): static {
@@ -182,7 +182,7 @@ class Order extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
      **/
     public function getPaymentDueDate() {
         return $this->properties['paymentDueDate'];
@@ -193,7 +193,7 @@ class Order extends Intangible
      * involved in an exchange.  If it is not clear whether an entity is a broker,
      * seller, or buyer, the latter two terms are preferred.
      *
-     * @param $broker |
+     * @param $broker \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setBroker($broker): static {
@@ -203,7 +203,7 @@ class Order extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\Person
      **/
     public function getBroker() {
         return $this->properties['broker'];
@@ -211,7 +211,7 @@ class Order extends Intangible
     /**
      * Any discount applied (to an Order).
      *
-     * @param $discount |
+     * @param $discount \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setDiscount($discount): static {
@@ -221,7 +221,7 @@ class Order extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Number
      **/
     public function getDiscount() {
         return $this->properties['discount'];
@@ -229,7 +229,7 @@ class Order extends Intangible
     /**
      * Date order was placed.
      *
-     * @param $orderDate |
+     * @param $orderDate \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
      * @return static
      **/
     public function setOrderDate($orderDate): static {
@@ -239,7 +239,7 @@ class Order extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
      **/
     public function getOrderDate() {
         return $this->properties['orderDate'];
@@ -248,7 +248,7 @@ class Order extends Intangible
      * An identifier for the method of payment used (e.g. the last 4 digits of the
      * credit card).
      *
-     * @param $paymentMethodId 
+     * @param $paymentMethodId \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setPaymentMethodId($paymentMethodId): static {
@@ -258,7 +258,7 @@ class Order extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getPaymentMethodId() {
         return $this->properties['paymentMethodId'];
@@ -266,7 +266,7 @@ class Order extends Intangible
     /**
      * The item ordered.
      *
-     * @param $orderedItem ||
+     * @param $orderedItem \LengthOfRope\JSONLD\Schema\Service|\LengthOfRope\JSONLD\Schema\Product|\LengthOfRope\JSONLD\Schema\OrderItem
      * @return static
      **/
     public function setOrderedItem($orderedItem): static {
@@ -276,7 +276,7 @@ class Order extends Intangible
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\Schema\Service|\LengthOfRope\JSONLD\Schema\Product|\LengthOfRope\JSONLD\Schema\OrderItem
      **/
     public function getOrderedItem() {
         return $this->properties['orderedItem'];
@@ -284,7 +284,7 @@ class Order extends Intangible
     /**
      * The date that payment is due.
      *
-     * @param $paymentDue 
+     * @param $paymentDue \LengthOfRope\JSONLD\DataType\DateTime
      * @return static
      **/
     public function setPaymentDue($paymentDue): static {
@@ -294,7 +294,7 @@ class Order extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\DateTime
      **/
     public function getPaymentDue() {
         return $this->properties['paymentDue'];
@@ -303,7 +303,7 @@ class Order extends Intangible
      * An entity which offers (sells / leases / lends / loans) the services / goods.  A
      * seller may also be a provider.
      *
-     * @param $seller |
+     * @param $seller \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setSeller($seller): static {
@@ -313,7 +313,7 @@ class Order extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getSeller() {
         return $this->properties['seller'];
@@ -328,7 +328,7 @@ class Order extends Intangible
      * Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and
      * other currency types, e.g. "Ithaca HOUR".
      *
-     * @param $discountCurrency 
+     * @param $discountCurrency \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setDiscountCurrency($discountCurrency): static {
@@ -338,7 +338,7 @@ class Order extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getDiscountCurrency() {
         return $this->properties['discountCurrency'];
@@ -346,7 +346,7 @@ class Order extends Intangible
     /**
      * The delivery of the parcel related to this order or order item.
      *
-     * @param $orderDelivery 
+     * @param $orderDelivery \LengthOfRope\JSONLD\Schema\ParcelDelivery
      * @return static
      **/
     public function setOrderDelivery($orderDelivery): static {
@@ -356,7 +356,7 @@ class Order extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\ParcelDelivery
      **/
     public function getOrderDelivery() {
         return $this->properties['orderDelivery'];
@@ -364,7 +364,7 @@ class Order extends Intangible
     /**
      * The billing address for the order.
      *
-     * @param $billingAddress 
+     * @param $billingAddress \LengthOfRope\JSONLD\Schema\PostalAddress
      * @return static
      **/
     public function setBillingAddress($billingAddress): static {
@@ -374,7 +374,7 @@ class Order extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\PostalAddress
      **/
     public function getBillingAddress() {
         return $this->properties['billingAddress'];
@@ -382,7 +382,7 @@ class Order extends Intangible
     /**
      * A number that confirms the given order or payment has been received.
      *
-     * @param $confirmationNumber 
+     * @param $confirmationNumber \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setConfirmationNumber($confirmationNumber): static {
@@ -392,7 +392,7 @@ class Order extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getConfirmationNumber() {
         return $this->properties['confirmationNumber'];
@@ -400,7 +400,7 @@ class Order extends Intangible
     /**
      * The current status of the order.
      *
-     * @param $orderStatus 
+     * @param $orderStatus \LengthOfRope\JSONLD\Schema\OrderStatus
      * @return static
      **/
     public function setOrderStatus($orderStatus): static {
@@ -410,7 +410,7 @@ class Order extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\OrderStatus
      **/
     public function getOrderStatus() {
         return $this->properties['orderStatus'];
@@ -418,7 +418,7 @@ class Order extends Intangible
     /**
      * Code used to redeem a discount.
      *
-     * @param $discountCode 
+     * @param $discountCode \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setDiscountCode($discountCode): static {
@@ -428,7 +428,7 @@ class Order extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getDiscountCode() {
         return $this->properties['discountCode'];
@@ -436,7 +436,7 @@ class Order extends Intangible
     /**
      * The identifier of the transaction.
      *
-     * @param $orderNumber 
+     * @param $orderNumber \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setOrderNumber($orderNumber): static {
@@ -446,7 +446,7 @@ class Order extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getOrderNumber() {
         return $this->properties['orderNumber'];

@@ -43,7 +43,7 @@ class MenuItem extends Intangible
      * Indicates a dietary restriction or guideline for which this recipe or menu item
      * is suitable, e.g. diabetic, halal etc.
      *
-     * @param $suitableForDiet 
+     * @param $suitableForDiet \LengthOfRope\JSONLD\Schema\RestrictedDiet
      * @return static
      **/
     public function setSuitableForDiet($suitableForDiet): static {
@@ -53,7 +53,7 @@ class MenuItem extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\RestrictedDiet
      **/
     public function getSuitableForDiet() {
         return $this->properties['suitableForDiet'];
@@ -63,7 +63,7 @@ class MenuItem extends Intangible
      * can be added to this menu item. Additionally it can be a menu section containing
      * allowed add-on menu items for this menu item.
      *
-     * @param $menuAddOn |
+     * @param $menuAddOn \LengthOfRope\JSONLD\Schema\MenuSection|\LengthOfRope\JSONLD\Schema\MenuItem
      * @return static
      **/
     public function setMenuAddOn($menuAddOn): static {
@@ -73,7 +73,7 @@ class MenuItem extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\MenuSection|\LengthOfRope\JSONLD\Schema\MenuItem
      **/
     public function getMenuAddOn() {
         return $this->properties['menuAddOn'];
@@ -81,7 +81,7 @@ class MenuItem extends Intangible
     /**
      * Nutrition information about the recipe or menu item.
      *
-     * @param $nutrition 
+     * @param $nutrition \LengthOfRope\JSONLD\Schema\NutritionInformation
      * @return static
      **/
     public function setNutrition($nutrition): static {
@@ -91,7 +91,7 @@ class MenuItem extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\NutritionInformation
      **/
     public function getNutrition() {
         return $this->properties['nutrition'];
@@ -106,7 +106,7 @@ class MenuItem extends Intangible
      * Product, can clarify the nature of the offer.
      *
      *
-     * @param $offers |
+     * @param $offers \LengthOfRope\JSONLD\Schema\Offer|\LengthOfRope\JSONLD\Schema\Demand
      * @return static
      **/
     public function setOffers($offers): static {
@@ -116,7 +116,7 @@ class MenuItem extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Offer|\LengthOfRope\JSONLD\Schema\Demand
      **/
     public function getOffers() {
         return $this->properties['offers'];

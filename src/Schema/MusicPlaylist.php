@@ -42,7 +42,7 @@ class MusicPlaylist extends CreativeWork
     /**
      * The number of tracks in this album or playlist.
      *
-     * @param $numTracks 
+     * @param $numTracks \LengthOfRope\JSONLD\Schema\Integer
      * @return static
      **/
     public function setNumTracks($numTracks): static {
@@ -52,7 +52,7 @@ class MusicPlaylist extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Integer
      **/
     public function getNumTracks() {
         return $this->properties['numTracks'];
@@ -60,7 +60,7 @@ class MusicPlaylist extends CreativeWork
     /**
      * A music recording (track)&#x2014;usually a single song.
      *
-     * @param $tracks 
+     * @param $tracks \LengthOfRope\JSONLD\Schema\MusicRecording
      * @return static
      **/
     public function setTracks($tracks): static {
@@ -70,7 +70,7 @@ class MusicPlaylist extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MusicRecording
      **/
     public function getTracks() {
         return $this->properties['tracks'];
@@ -79,7 +79,7 @@ class MusicPlaylist extends CreativeWork
      * A music recording (track)&#x2014;usually a single song. If an ItemList is given,
      * the list should contain items of type MusicRecording.
      *
-     * @param $track |
+     * @param $track \LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\MusicRecording
      * @return static
      **/
     public function setTrack($track): static {
@@ -89,7 +89,7 @@ class MusicPlaylist extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\MusicRecording
      **/
     public function getTrack() {
         return $this->properties['track'];

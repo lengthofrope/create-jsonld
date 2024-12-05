@@ -43,7 +43,7 @@ class Airline extends Organization
      * The type of boarding policy used by the airline (e.g. zone-based or
      * group-based).
      *
-     * @param $boardingPolicy 
+     * @param $boardingPolicy \LengthOfRope\JSONLD\Schema\BoardingPolicyType
      * @return static
      **/
     public function setBoardingPolicy($boardingPolicy): static {
@@ -53,7 +53,7 @@ class Airline extends Organization
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\BoardingPolicyType
      **/
     public function getBoardingPolicy() {
         return $this->properties['boardingPolicy'];
@@ -61,7 +61,7 @@ class Airline extends Organization
     /**
      * IATA identifier for an airline or airport.
      *
-     * @param $iataCode 
+     * @param $iataCode \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setIataCode($iataCode): static {
@@ -71,7 +71,7 @@ class Airline extends Organization
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getIataCode() {
         return $this->properties['iataCode'];

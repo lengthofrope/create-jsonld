@@ -44,7 +44,7 @@ class ProductCollection extends Product
      * This links to a node or nodes indicating the exact quantity of the products
      * included in  an [[Offer]] or [[ProductCollection]].
      *
-     * @param $includesObject 
+     * @param $includesObject \LengthOfRope\JSONLD\Schema\TypeAndQuantityNode
      * @return static
      **/
     public function setIncludesObject($includesObject): static {
@@ -54,7 +54,7 @@ class ProductCollection extends Product
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\TypeAndQuantityNode
      **/
     public function getIncludesObject() {
         return $this->properties['includesObject'];

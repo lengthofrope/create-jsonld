@@ -46,7 +46,7 @@ class DietarySupplement extends Substance
      * The drug or supplement's legal status, including any controlled substance
      * schedules that apply.
      *
-     * @param $legalStatus ||
+     * @param $legalStatus \LengthOfRope\JSONLD\Schema\DrugLegalStatus|\LengthOfRope\JSONLD\Schema\MedicalEnumeration|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setLegalStatus($legalStatus): static {
@@ -56,7 +56,7 @@ class DietarySupplement extends Substance
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\Schema\DrugLegalStatus|\LengthOfRope\JSONLD\Schema\MedicalEnumeration|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getLegalStatus() {
         return $this->properties['legalStatus'];
@@ -65,7 +65,7 @@ class DietarySupplement extends Substance
      * Recommended intake of this supplement for a given population as defined by a
      * specific recommending authority.
      *
-     * @param $recommendedIntake 
+     * @param $recommendedIntake \LengthOfRope\JSONLD\Schema\RecommendedDoseSchedule
      * @return static
      **/
     public function setRecommendedIntake($recommendedIntake): static {
@@ -75,7 +75,7 @@ class DietarySupplement extends Substance
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\RecommendedDoseSchedule
      **/
     public function getRecommendedIntake() {
         return $this->properties['recommendedIntake'];
@@ -84,7 +84,7 @@ class DietarySupplement extends Substance
      * The specific biochemical interaction through which this drug or supplement
      * produces its pharmacological effect.
      *
-     * @param $mechanismOfAction 
+     * @param $mechanismOfAction \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setMechanismOfAction($mechanismOfAction): static {
@@ -94,7 +94,7 @@ class DietarySupplement extends Substance
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getMechanismOfAction() {
         return $this->properties['mechanismOfAction'];
@@ -104,7 +104,7 @@ class DietarySupplement extends Substance
      * interactions with other drugs and foods, pregnancy, breastfeeding, known adverse
      * reactions, and documented efficacy of the supplement.
      *
-     * @param $safetyConsideration 
+     * @param $safetyConsideration \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setSafetyConsideration($safetyConsideration): static {
@@ -114,7 +114,7 @@ class DietarySupplement extends Substance
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getSafetyConsideration() {
         return $this->properties['safetyConsideration'];
@@ -122,7 +122,7 @@ class DietarySupplement extends Substance
     /**
      * True if this item's name is a proprietary/brand name (vs. generic name).
      *
-     * @param $isProprietary 
+     * @param $isProprietary \LengthOfRope\JSONLD\DataType\Boolean
      * @return static
      **/
     public function setIsProprietary($isProprietary): static {
@@ -132,7 +132,7 @@ class DietarySupplement extends Substance
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Boolean
      **/
     public function getIsProprietary() {
         return $this->properties['isProprietary'];
@@ -141,7 +141,7 @@ class DietarySupplement extends Substance
      * Characteristics of the population for which this is intended, or which typically
      * uses it, e.g. 'adults'.
      *
-     * @param $targetPopulation 
+     * @param $targetPopulation \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setTargetPopulation($targetPopulation): static {
@@ -151,7 +151,7 @@ class DietarySupplement extends Substance
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getTargetPopulation() {
         return $this->properties['targetPopulation'];
@@ -159,7 +159,7 @@ class DietarySupplement extends Substance
     /**
      * Proprietary name given to the diet plan, typically by its originator or creator.
      *
-     * @param $proprietaryName 
+     * @param $proprietaryName \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setProprietaryName($proprietaryName): static {
@@ -169,7 +169,7 @@ class DietarySupplement extends Substance
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getProprietaryName() {
         return $this->properties['proprietaryName'];
@@ -178,7 +178,7 @@ class DietarySupplement extends Substance
      * Recommended intake of this supplement for a given population as defined by a
      * specific recommending authority.
      *
-     * @param $maximumIntake 
+     * @param $maximumIntake \LengthOfRope\JSONLD\Schema\MaximumDoseSchedule
      * @return static
      **/
     public function setMaximumIntake($maximumIntake): static {
@@ -188,7 +188,7 @@ class DietarySupplement extends Substance
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MaximumDoseSchedule
      **/
     public function getMaximumIntake() {
         return $this->properties['maximumIntake'];
@@ -196,7 +196,7 @@ class DietarySupplement extends Substance
     /**
      * The generic name of this drug or supplement.
      *
-     * @param $nonProprietaryName 
+     * @param $nonProprietaryName \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setNonProprietaryName($nonProprietaryName): static {
@@ -206,7 +206,7 @@ class DietarySupplement extends Substance
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getNonProprietaryName() {
         return $this->properties['nonProprietaryName'];
@@ -214,7 +214,7 @@ class DietarySupplement extends Substance
     /**
      * An active ingredient, typically chemical compounds and/or biologic substances.
      *
-     * @param $activeIngredient 
+     * @param $activeIngredient \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setActiveIngredient($activeIngredient): static {
@@ -224,7 +224,7 @@ class DietarySupplement extends Substance
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getActiveIngredient() {
         return $this->properties['activeIngredient'];

@@ -42,7 +42,7 @@ class DiagnosticLab extends MedicalOrganization
     /**
      * A diagnostic test or procedure offered by this lab.
      *
-     * @param $availableTest 
+     * @param $availableTest \LengthOfRope\JSONLD\Schema\MedicalTest
      * @return static
      **/
     public function setAvailableTest($availableTest): static {
@@ -52,7 +52,7 @@ class DiagnosticLab extends MedicalOrganization
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MedicalTest
      **/
     public function getAvailableTest() {
         return $this->properties['availableTest'];

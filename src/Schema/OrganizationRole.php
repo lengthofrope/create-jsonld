@@ -43,7 +43,7 @@ class OrganizationRole extends Role
      * A number associated with a role in an organization, for example, the number on
      * an athlete's jersey.
      *
-     * @param $numberedPosition 
+     * @param $numberedPosition \LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setNumberedPosition($numberedPosition): static {
@@ -53,7 +53,7 @@ class OrganizationRole extends Role
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Number
      **/
     public function getNumberedPosition() {
         return $this->properties['numberedPosition'];

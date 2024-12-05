@@ -47,7 +47,7 @@ class DeliveryChargeSpecification extends PriceSpecification
      * See also [[eligibleRegion]].
      *
      *
-     * @param $ineligibleRegion ||
+     * @param $ineligibleRegion \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\GeoShape
      * @return static
      **/
     public function setIneligibleRegion($ineligibleRegion): static {
@@ -57,7 +57,7 @@ class DeliveryChargeSpecification extends PriceSpecification
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\GeoShape
      **/
     public function getIneligibleRegion() {
         return $this->properties['ineligibleRegion'];
@@ -65,7 +65,7 @@ class DeliveryChargeSpecification extends PriceSpecification
     /**
      * The geographic area where a service or offered item is provided.
      *
-     * @param $areaServed |||
+     * @param $areaServed \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeoShape|\LengthOfRope\JSONLD\Schema\AdministrativeArea
      * @return static
      **/
     public function setAreaServed($areaServed): static {
@@ -75,7 +75,7 @@ class DeliveryChargeSpecification extends PriceSpecification
     }
 
     /**
-     * @return |||
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeoShape|\LengthOfRope\JSONLD\Schema\AdministrativeArea
      **/
     public function getAreaServed() {
         return $this->properties['areaServed'];
@@ -88,7 +88,7 @@ class DeliveryChargeSpecification extends PriceSpecification
      * See also [[ineligibleRegion]].
      *
      *
-     * @param $eligibleRegion ||
+     * @param $eligibleRegion \LengthOfRope\JSONLD\Schema\GeoShape|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Place
      * @return static
      **/
     public function setEligibleRegion($eligibleRegion): static {
@@ -98,7 +98,7 @@ class DeliveryChargeSpecification extends PriceSpecification
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\Schema\GeoShape|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Place
      **/
     public function getEligibleRegion() {
         return $this->properties['eligibleRegion'];
@@ -107,7 +107,7 @@ class DeliveryChargeSpecification extends PriceSpecification
      * The delivery method(s) to which the delivery charge or payment charge
      * specification applies.
      *
-     * @param $appliesToDeliveryMethod 
+     * @param $appliesToDeliveryMethod \LengthOfRope\JSONLD\Schema\DeliveryMethod
      * @return static
      **/
     public function setAppliesToDeliveryMethod($appliesToDeliveryMethod): static {
@@ -117,7 +117,7 @@ class DeliveryChargeSpecification extends PriceSpecification
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\DeliveryMethod
      **/
     public function getAppliesToDeliveryMethod() {
         return $this->properties['appliesToDeliveryMethod'];

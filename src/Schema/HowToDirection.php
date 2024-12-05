@@ -43,7 +43,7 @@ class HowToDirection extends ListItem
     /**
      * A media object representing the circumstances before performing this direction.
      *
-     * @param $beforeMedia |
+     * @param $beforeMedia \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\MediaObject
      * @return static
      **/
     public function setBeforeMedia($beforeMedia): static {
@@ -53,7 +53,7 @@ class HowToDirection extends ListItem
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\MediaObject
      **/
     public function getBeforeMedia() {
         return $this->properties['beforeMedia'];
@@ -62,7 +62,7 @@ class HowToDirection extends ListItem
      * The length of time it takes to prepare the items to be used in instructions or a
      * direction, in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
      *
-     * @param $prepTime 
+     * @param $prepTime \LengthOfRope\JSONLD\Schema\Duration
      * @return static
      **/
     public function setPrepTime($prepTime): static {
@@ -72,7 +72,7 @@ class HowToDirection extends ListItem
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Duration
      **/
     public function getPrepTime() {
         return $this->properties['prepTime'];
@@ -81,7 +81,7 @@ class HowToDirection extends ListItem
      * A sub property of instrument. An object used (but not consumed) when performing
      * instructions or a direction.
      *
-     * @param $tool |
+     * @param $tool \LengthOfRope\JSONLD\Schema\HowToTool|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setTool($tool): static {
@@ -91,7 +91,7 @@ class HowToDirection extends ListItem
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\HowToTool|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getTool() {
         return $this->properties['tool'];
@@ -101,7 +101,7 @@ class HowToDirection extends ListItem
      * to prepare the supplies), in [ISO 8601 duration
      * format](http://en.wikipedia.org/wiki/ISO_8601).
      *
-     * @param $totalTime 
+     * @param $totalTime \LengthOfRope\JSONLD\Schema\Duration
      * @return static
      **/
     public function setTotalTime($totalTime): static {
@@ -111,7 +111,7 @@ class HowToDirection extends ListItem
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Duration
      **/
     public function getTotalTime() {
         return $this->properties['totalTime'];
@@ -119,7 +119,7 @@ class HowToDirection extends ListItem
     /**
      * A media object representing the circumstances while performing this direction.
      *
-     * @param $duringMedia |
+     * @param $duringMedia \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\MediaObject
      * @return static
      **/
     public function setDuringMedia($duringMedia): static {
@@ -129,7 +129,7 @@ class HowToDirection extends ListItem
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\MediaObject
      **/
     public function getDuringMedia() {
         return $this->properties['duringMedia'];
@@ -139,7 +139,7 @@ class HowToDirection extends ListItem
      * including time to prepare the supplies), in [ISO 8601 duration
      * format](http://en.wikipedia.org/wiki/ISO_8601).
      *
-     * @param $performTime 
+     * @param $performTime \LengthOfRope\JSONLD\Schema\Duration
      * @return static
      **/
     public function setPerformTime($performTime): static {
@@ -149,7 +149,7 @@ class HowToDirection extends ListItem
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Duration
      **/
     public function getPerformTime() {
         return $this->properties['performTime'];
@@ -158,7 +158,7 @@ class HowToDirection extends ListItem
      * A sub-property of instrument. A supply consumed when performing instructions or
      * a direction.
      *
-     * @param $supply |
+     * @param $supply \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\HowToSupply
      * @return static
      **/
     public function setSupply($supply): static {
@@ -168,7 +168,7 @@ class HowToDirection extends ListItem
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\HowToSupply
      **/
     public function getSupply() {
         return $this->properties['supply'];
@@ -176,7 +176,7 @@ class HowToDirection extends ListItem
     /**
      * A media object representing the circumstances after performing this direction.
      *
-     * @param $afterMedia |
+     * @param $afterMedia \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\MediaObject
      * @return static
      **/
     public function setAfterMedia($afterMedia): static {
@@ -186,7 +186,7 @@ class HowToDirection extends ListItem
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\MediaObject
      **/
     public function getAfterMedia() {
         return $this->properties['afterMedia'];

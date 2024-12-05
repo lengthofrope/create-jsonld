@@ -45,7 +45,7 @@ class InteractionCounter extends StructuredValue
      * [[LikeAction]]. For down votes use [[DislikeAction]]. Otherwise, use the most
      * specific Action.
      *
-     * @param $interactionType 
+     * @param $interactionType \LengthOfRope\JSONLD\Schema\Action
      * @return static
      **/
     public function setInteractionType($interactionType): static {
@@ -55,7 +55,7 @@ class InteractionCounter extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Action
      **/
     public function getInteractionType() {
         return $this->properties['interactionType'];
@@ -71,7 +71,7 @@ class InteractionCounter extends StructuredValue
      * describing dates with times. This situation may be clarified in future
      * revisions.
      *
-     * @param $endTime |
+     * @param $endTime \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Time
      * @return static
      **/
     public function setEndTime($endTime): static {
@@ -81,7 +81,7 @@ class InteractionCounter extends StructuredValue
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Time
      **/
     public function getEndTime() {
         return $this->properties['endTime'];
@@ -90,7 +90,7 @@ class InteractionCounter extends StructuredValue
      * The number of interactions for the CreativeWork using the WebSite or
      * SoftwareApplication.
      *
-     * @param $userInteractionCount 
+     * @param $userInteractionCount \LengthOfRope\JSONLD\Schema\Integer
      * @return static
      **/
     public function setUserInteractionCount($userInteractionCount): static {
@@ -100,7 +100,7 @@ class InteractionCounter extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Integer
      **/
     public function getUserInteractionCount() {
         return $this->properties['userInteractionCount'];
@@ -109,7 +109,7 @@ class InteractionCounter extends StructuredValue
      * The location of, for example, where an event is happening, where an organization
      * is located, or where an action takes place.
      *
-     * @param $location |||
+     * @param $location \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\VirtualLocation|\LengthOfRope\JSONLD\Schema\PostalAddress
      * @return static
      **/
     public function setLocation($location): static {
@@ -119,7 +119,7 @@ class InteractionCounter extends StructuredValue
     }
 
     /**
-     * @return |||
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\VirtualLocation|\LengthOfRope\JSONLD\Schema\PostalAddress
      **/
     public function getLocation() {
         return $this->properties['location'];
@@ -127,7 +127,7 @@ class InteractionCounter extends StructuredValue
     /**
      * The WebSite or SoftwareApplication where the interactions took place.
      *
-     * @param $interactionService |
+     * @param $interactionService \LengthOfRope\JSONLD\Schema\WebSite|\LengthOfRope\JSONLD\Schema\SoftwareApplication
      * @return static
      **/
     public function setInteractionService($interactionService): static {
@@ -137,7 +137,7 @@ class InteractionCounter extends StructuredValue
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\WebSite|\LengthOfRope\JSONLD\Schema\SoftwareApplication
      **/
     public function getInteractionService() {
         return $this->properties['interactionService'];
@@ -153,7 +153,7 @@ class InteractionCounter extends StructuredValue
      * describing dates with times. This situation may be clarified in future
      * revisions.
      *
-     * @param $startTime |
+     * @param $startTime \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Time
      * @return static
      **/
     public function setStartTime($startTime): static {
@@ -163,7 +163,7 @@ class InteractionCounter extends StructuredValue
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Time
      **/
     public function getStartTime() {
         return $this->properties['startTime'];

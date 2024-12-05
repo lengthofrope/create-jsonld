@@ -43,7 +43,7 @@ class WebApplication extends SoftwareApplication
      * Specifies browser requirements in human-readable text. For example, 'requires
      * HTML5 support'.
      *
-     * @param $browserRequirements 
+     * @param $browserRequirements \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setBrowserRequirements($browserRequirements): static {
@@ -53,7 +53,7 @@ class WebApplication extends SoftwareApplication
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getBrowserRequirements() {
         return $this->properties['browserRequirements'];

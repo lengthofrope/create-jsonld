@@ -45,7 +45,7 @@ class MediaReviewItem extends CreativeWork
      * In the context of a [[MediaReview]], indicates specific media item(s) that are
      * grouped using a [[MediaReviewItem]].
      *
-     * @param $mediaItemAppearance 
+     * @param $mediaItemAppearance \LengthOfRope\JSONLD\Schema\MediaObject
      * @return static
      **/
     public function setMediaItemAppearance($mediaItemAppearance): static {
@@ -55,7 +55,7 @@ class MediaReviewItem extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MediaObject
      **/
     public function getMediaItemAppearance() {
         return $this->properties['mediaItemAppearance'];

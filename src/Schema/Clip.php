@@ -44,7 +44,7 @@ class Clip extends CreativeWork
      * in an event. Actors can be associated with individual items or with a series,
      * episode, clip.
      *
-     * @param $actor |
+     * @param $actor \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\PerformingGroup
      * @return static
      **/
     public function setActor($actor): static {
@@ -54,7 +54,7 @@ class Clip extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\PerformingGroup
      **/
     public function getActor() {
         return $this->properties['actor'];
@@ -62,7 +62,7 @@ class Clip extends CreativeWork
     /**
      * The episode to which this clip belongs.
      *
-     * @param $partOfEpisode 
+     * @param $partOfEpisode \LengthOfRope\JSONLD\Schema\Episode
      * @return static
      **/
     public function setPartOfEpisode($partOfEpisode): static {
@@ -72,7 +72,7 @@ class Clip extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Episode
      **/
     public function getPartOfEpisode() {
         return $this->properties['partOfEpisode'];
@@ -80,7 +80,7 @@ class Clip extends CreativeWork
     /**
      * The season to which this episode belongs.
      *
-     * @param $partOfSeason 
+     * @param $partOfSeason \LengthOfRope\JSONLD\Schema\CreativeWorkSeason
      * @return static
      **/
     public function setPartOfSeason($partOfSeason): static {
@@ -90,7 +90,7 @@ class Clip extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWorkSeason
      **/
     public function getPartOfSeason() {
         return $this->properties['partOfSeason'];
@@ -99,7 +99,7 @@ class Clip extends CreativeWork
      * An actor, e.g. in TV, radio, movie, video games etc. Actors can be associated
      * with individual items or with a series, episode, clip.
      *
-     * @param $actors 
+     * @param $actors \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setActors($actors): static {
@@ -109,7 +109,7 @@ class Clip extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
     public function getActors() {
         return $this->properties['actors'];
@@ -118,7 +118,7 @@ class Clip extends CreativeWork
      * A director of e.g. TV, radio, movie, video games etc. content. Directors can be
      * associated with individual items or with a series, episode, clip.
      *
-     * @param $directors 
+     * @param $directors \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setDirectors($directors): static {
@@ -128,7 +128,7 @@ class Clip extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
     public function getDirectors() {
         return $this->properties['directors'];
@@ -136,7 +136,7 @@ class Clip extends CreativeWork
     /**
      * Position of the clip within an ordered group of clips.
      *
-     * @param $clipNumber |
+     * @param $clipNumber \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Integer
      * @return static
      **/
     public function setClipNumber($clipNumber): static {
@@ -146,7 +146,7 @@ class Clip extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Integer
      **/
     public function getClipNumber() {
         return $this->properties['clipNumber'];
@@ -155,7 +155,7 @@ class Clip extends CreativeWork
      * The end time of the clip expressed as the number of seconds from the beginning
      * of the work.
      *
-     * @param $endOffset |
+     * @param $endOffset \LengthOfRope\JSONLD\Schema\HyperTocEntry|\LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setEndOffset($endOffset): static {
@@ -165,7 +165,7 @@ class Clip extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\HyperTocEntry|\LengthOfRope\JSONLD\DataType\Number
      **/
     public function getEndOffset() {
         return $this->properties['endOffset'];
@@ -173,7 +173,7 @@ class Clip extends CreativeWork
     /**
      * The series to which this episode or season belongs.
      *
-     * @param $partOfSeries 
+     * @param $partOfSeries \LengthOfRope\JSONLD\Schema\CreativeWorkSeries
      * @return static
      **/
     public function setPartOfSeries($partOfSeries): static {
@@ -183,7 +183,7 @@ class Clip extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWorkSeries
      **/
     public function getPartOfSeries() {
         return $this->properties['partOfSeries'];
@@ -192,7 +192,7 @@ class Clip extends CreativeWork
      * The start time of the clip expressed as the number of seconds from the beginning
      * of the work.
      *
-     * @param $startOffset |
+     * @param $startOffset \LengthOfRope\JSONLD\Schema\HyperTocEntry|\LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setStartOffset($startOffset): static {
@@ -202,7 +202,7 @@ class Clip extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\HyperTocEntry|\LengthOfRope\JSONLD\DataType\Number
      **/
     public function getStartOffset() {
         return $this->properties['startOffset'];
@@ -212,7 +212,7 @@ class Clip extends CreativeWork
      * Directors can be associated with individual items or with a series, episode,
      * clip.
      *
-     * @param $director 
+     * @param $director \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setDirector($director): static {
@@ -222,7 +222,7 @@ class Clip extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
     public function getDirector() {
         return $this->properties['director'];
@@ -230,7 +230,7 @@ class Clip extends CreativeWork
     /**
      * The composer of the soundtrack.
      *
-     * @param $musicBy |
+     * @param $musicBy \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\MusicGroup
      * @return static
      **/
     public function setMusicBy($musicBy): static {
@@ -240,7 +240,7 @@ class Clip extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\MusicGroup
      **/
     public function getMusicBy() {
         return $this->properties['musicBy'];

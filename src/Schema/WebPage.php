@@ -46,7 +46,7 @@ class WebPage extends CreativeWork
     /**
      * A link related to this web page, for example to other related web pages.
      *
-     * @param $relatedLink 
+     * @param $relatedLink \LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setRelatedLink($relatedLink): static {
@@ -56,7 +56,7 @@ class WebPage extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\URL
      **/
     public function getRelatedLink() {
         return $this->properties['relatedLink'];
@@ -64,7 +64,7 @@ class WebPage extends CreativeWork
     /**
      * A set of links that can help a user understand and navigate a website hierarchy.
      *
-     * @param $breadcrumb |
+     * @param $breadcrumb \LengthOfRope\JSONLD\Schema\BreadcrumbList|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setBreadcrumb($breadcrumb): static {
@@ -74,7 +74,7 @@ class WebPage extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\BreadcrumbList|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getBreadcrumb() {
         return $this->properties['breadcrumb'];
@@ -83,7 +83,7 @@ class WebPage extends CreativeWork
      * People or organizations that have reviewed the content on this web page for
      * accuracy and/or completeness.
      *
-     * @param $reviewedBy |
+     * @param $reviewedBy \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setReviewedBy($reviewedBy): static {
@@ -93,7 +93,7 @@ class WebPage extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getReviewedBy() {
         return $this->properties['reviewedBy'];
@@ -102,7 +102,7 @@ class WebPage extends CreativeWork
      * One of the more significant URLs on the page. Typically, these are the
      * non-navigation links that are clicked on the most.
      *
-     * @param $significantLink 
+     * @param $significantLink \LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setSignificantLink($significantLink): static {
@@ -112,7 +112,7 @@ class WebPage extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\URL
      **/
     public function getSignificantLink() {
         return $this->properties['significantLink'];
@@ -121,7 +121,7 @@ class WebPage extends CreativeWork
      * Date on which the content on this web page was last reviewed for accuracy and/or
      * completeness.
      *
-     * @param $lastReviewed 
+     * @param $lastReviewed \LengthOfRope\JSONLD\DataType\Date
      * @return static
      **/
     public function setLastReviewed($lastReviewed): static {
@@ -131,7 +131,7 @@ class WebPage extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Date
      **/
     public function getLastReviewed() {
         return $this->properties['lastReviewed'];
@@ -139,7 +139,7 @@ class WebPage extends CreativeWork
     /**
      * Indicates the main image on the page.
      *
-     * @param $primaryImageOfPage 
+     * @param $primaryImageOfPage \LengthOfRope\JSONLD\Schema\ImageObject
      * @return static
      **/
     public function setPrimaryImageOfPage($primaryImageOfPage): static {
@@ -149,7 +149,7 @@ class WebPage extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\ImageObject
      **/
     public function getPrimaryImageOfPage() {
         return $this->properties['primaryImageOfPage'];
@@ -158,7 +158,7 @@ class WebPage extends CreativeWork
      * The most significant URLs on the page. Typically, these are the non-navigation
      * links that are clicked on the most.
      *
-     * @param $significantLinks 
+     * @param $significantLinks \LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setSignificantLinks($significantLinks): static {
@@ -168,7 +168,7 @@ class WebPage extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\URL
      **/
     public function getSignificantLinks() {
         return $this->properties['significantLinks'];
@@ -176,7 +176,7 @@ class WebPage extends CreativeWork
     /**
      * One of the domain specialities to which this web page's content applies.
      *
-     * @param $specialty 
+     * @param $specialty \LengthOfRope\JSONLD\Schema\Specialty
      * @return static
      **/
     public function setSpecialty($specialty): static {
@@ -186,7 +186,7 @@ class WebPage extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Specialty
      **/
     public function getSpecialty() {
         return $this->properties['specialty'];
@@ -194,7 +194,7 @@ class WebPage extends CreativeWork
     /**
      * Indicates if this web page element is the main subject of the page.
      *
-     * @param $mainContentOfPage 
+     * @param $mainContentOfPage \LengthOfRope\JSONLD\Schema\WebPageElement
      * @return static
      **/
     public function setMainContentOfPage($mainContentOfPage): static {
@@ -204,7 +204,7 @@ class WebPage extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\WebPageElement
      **/
     public function getMainContentOfPage() {
         return $this->properties['mainContentOfPage'];
@@ -237,7 +237,7 @@ class WebPage extends CreativeWork
      * a possible value of the *speakable* property.
      *
      *
-     * @param $speakable |
+     * @param $speakable \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\SpeakableSpecification
      * @return static
      **/
     public function setSpeakable($speakable): static {
@@ -247,7 +247,7 @@ class WebPage extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\SpeakableSpecification
      **/
     public function getSpeakable() {
         return $this->properties['speakable'];

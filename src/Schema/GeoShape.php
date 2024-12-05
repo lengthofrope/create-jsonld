@@ -49,7 +49,7 @@ class GeoShape extends StructuredValue
      * alpha-3](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) country code such as
      * "SGP" or a full country name such as "Singapore" can also be used.
      *
-     * @param $addressCountry |
+     * @param $addressCountry \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Country
      * @return static
      **/
     public function setAddressCountry($addressCountry): static {
@@ -59,7 +59,7 @@ class GeoShape extends StructuredValue
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Country
      **/
     public function getAddressCountry() {
         return $this->properties['addressCountry'];
@@ -67,7 +67,7 @@ class GeoShape extends StructuredValue
     /**
      * Physical address of the item.
      *
-     * @param $address |
+     * @param $address \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\PostalAddress
      * @return static
      **/
     public function setAddress($address): static {
@@ -77,7 +77,7 @@ class GeoShape extends StructuredValue
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\PostalAddress
      **/
     public function getAddress() {
         return $this->properties['address'];
@@ -87,7 +87,7 @@ class GeoShape extends StructuredValue
      * and ending points are the same. A polygon is expressed as a series of four or
      * more space delimited points where the first and final points are identical.
      *
-     * @param $polygon 
+     * @param $polygon \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setPolygon($polygon): static {
@@ -97,7 +97,7 @@ class GeoShape extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getPolygon() {
         return $this->properties['polygon'];
@@ -105,7 +105,7 @@ class GeoShape extends StructuredValue
     /**
      * The postal code. For example, 94043.
      *
-     * @param $postalCode 
+     * @param $postalCode \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setPostalCode($postalCode): static {
@@ -115,7 +115,7 @@ class GeoShape extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getPostalCode() {
         return $this->properties['postalCode'];
@@ -125,7 +125,7 @@ class GeoShape extends StructuredValue
      * latitude and longitude. A circle is expressed as a pair followed by a radius in
      * meters.
      *
-     * @param $circle 
+     * @param $circle \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setCircle($circle): static {
@@ -135,7 +135,7 @@ class GeoShape extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getCircle() {
         return $this->properties['circle'];
@@ -146,7 +146,7 @@ class GeoShape extends StructuredValue
      * form 'NUMBER UNIT\_OF\_MEASUREMENT' (e.g., '1,000 m', '3,200 ft') while numbers
      * alone should be assumed to be a value in meters.
      *
-     * @param $elevation |
+     * @param $elevation \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setElevation($elevation): static {
@@ -156,7 +156,7 @@ class GeoShape extends StructuredValue
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Number
      **/
     public function getElevation() {
         return $this->properties['elevation'];
@@ -165,7 +165,7 @@ class GeoShape extends StructuredValue
      * A line is a point-to-point path consisting of two or more points. A line is
      * expressed as a series of two or more point objects separated by space.
      *
-     * @param $line 
+     * @param $line \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setLine($line): static {
@@ -175,7 +175,7 @@ class GeoShape extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getLine() {
         return $this->properties['line'];
@@ -185,7 +185,7 @@ class GeoShape extends StructuredValue
      * point is the lower corner, the second point is the upper corner. A box is
      * expressed as two points separated by a space character.
      *
-     * @param $box 
+     * @param $box \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setBox($box): static {
@@ -195,7 +195,7 @@ class GeoShape extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getBox() {
         return $this->properties['box'];

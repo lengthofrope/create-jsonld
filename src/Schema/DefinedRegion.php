@@ -62,7 +62,7 @@ class DefinedRegion extends StructuredValue
      * alpha-3](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) country code such as
      * "SGP" or a full country name such as "Singapore" can also be used.
      *
-     * @param $addressCountry |
+     * @param $addressCountry \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Country
      * @return static
      **/
     public function setAddressCountry($addressCountry): static {
@@ -72,7 +72,7 @@ class DefinedRegion extends StructuredValue
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Country
      **/
     public function getAddressCountry() {
         return $this->properties['addressCountry'];
@@ -80,7 +80,7 @@ class DefinedRegion extends StructuredValue
     /**
      * The postal code. For example, 94043.
      *
-     * @param $postalCode 
+     * @param $postalCode \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setPostalCode($postalCode): static {
@@ -90,7 +90,7 @@ class DefinedRegion extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getPostalCode() {
         return $this->properties['postalCode'];
@@ -100,7 +100,7 @@ class DefinedRegion extends StructuredValue
      * California or another appropriate first-level [Administrative
      * division](https://en.wikipedia.org/wiki/List_of_administrative_divisions_by_country).
      *
-     * @param $addressRegion 
+     * @param $addressRegion \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setAddressRegion($addressRegion): static {
@@ -110,7 +110,7 @@ class DefinedRegion extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getAddressRegion() {
         return $this->properties['addressRegion'];
@@ -119,7 +119,7 @@ class DefinedRegion extends StructuredValue
      * A defined range of postal codes indicated by a common textual prefix. Used for
      * non-numeric systems such as UK.
      *
-     * @param $postalCodePrefix 
+     * @param $postalCodePrefix \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setPostalCodePrefix($postalCodePrefix): static {
@@ -129,7 +129,7 @@ class DefinedRegion extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getPostalCodePrefix() {
         return $this->properties['postalCodePrefix'];
@@ -137,7 +137,7 @@ class DefinedRegion extends StructuredValue
     /**
      * A defined range of postal codes.
      *
-     * @param $postalCodeRange 
+     * @param $postalCodeRange \LengthOfRope\JSONLD\Schema\PostalCodeRangeSpecification
      * @return static
      **/
     public function setPostalCodeRange($postalCodeRange): static {
@@ -147,7 +147,7 @@ class DefinedRegion extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\PostalCodeRangeSpecification
      **/
     public function getPostalCodeRange() {
         return $this->properties['postalCodeRange'];

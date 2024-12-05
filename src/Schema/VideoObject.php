@@ -44,7 +44,7 @@ class VideoObject extends MediaObject
      * in an event. Actors can be associated with individual items or with a series,
      * episode, clip.
      *
-     * @param $actor |
+     * @param $actor \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\PerformingGroup
      * @return static
      **/
     public function setActor($actor): static {
@@ -54,7 +54,7 @@ class VideoObject extends MediaObject
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\PerformingGroup
      **/
     public function getActor() {
         return $this->properties['actor'];
@@ -63,7 +63,7 @@ class VideoObject extends MediaObject
      * An actor, e.g. in TV, radio, movie, video games etc. Actors can be associated
      * with individual items or with a series, episode, clip.
      *
-     * @param $actors 
+     * @param $actors \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setActors($actors): static {
@@ -73,7 +73,7 @@ class VideoObject extends MediaObject
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
     public function getActors() {
         return $this->properties['actors'];
@@ -82,7 +82,7 @@ class VideoObject extends MediaObject
      * If this MediaObject is an AudioObject or VideoObject, the transcript of that
      * object.
      *
-     * @param $transcript 
+     * @param $transcript \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setTranscript($transcript): static {
@@ -92,7 +92,7 @@ class VideoObject extends MediaObject
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getTranscript() {
         return $this->properties['transcript'];
@@ -101,7 +101,7 @@ class VideoObject extends MediaObject
      * A director of e.g. TV, radio, movie, video games etc. content. Directors can be
      * associated with individual items or with a series, episode, clip.
      *
-     * @param $directors 
+     * @param $directors \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setDirectors($directors): static {
@@ -111,7 +111,7 @@ class VideoObject extends MediaObject
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
     public function getDirectors() {
         return $this->properties['directors'];
@@ -119,7 +119,7 @@ class VideoObject extends MediaObject
     /**
      * The quality of the video.
      *
-     * @param $videoQuality 
+     * @param $videoQuality \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setVideoQuality($videoQuality): static {
@@ -129,7 +129,7 @@ class VideoObject extends MediaObject
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getVideoQuality() {
         return $this->properties['videoQuality'];
@@ -137,7 +137,7 @@ class VideoObject extends MediaObject
     /**
      * The frame size of the video.
      *
-     * @param $videoFrameSize 
+     * @param $videoFrameSize \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setVideoFrameSize($videoFrameSize): static {
@@ -147,7 +147,7 @@ class VideoObject extends MediaObject
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getVideoFrameSize() {
         return $this->properties['videoFrameSize'];
@@ -157,7 +157,7 @@ class VideoObject extends MediaObject
      * Directors can be associated with individual items or with a series, episode,
      * clip.
      *
-     * @param $director 
+     * @param $director \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setDirector($director): static {
@@ -167,7 +167,7 @@ class VideoObject extends MediaObject
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
     public function getDirector() {
         return $this->properties['director'];
@@ -176,7 +176,7 @@ class VideoObject extends MediaObject
      * The caption for this object. For downloadable machine formats (closed caption,
      * subtitles etc.) use MediaObject and indicate the [[encodingFormat]].
      *
-     * @param $caption |
+     * @param $caption \LengthOfRope\JSONLD\Schema\MediaObject|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setCaption($caption): static {
@@ -186,7 +186,7 @@ class VideoObject extends MediaObject
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\MediaObject|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getCaption() {
         return $this->properties['caption'];
@@ -194,7 +194,7 @@ class VideoObject extends MediaObject
     /**
      * The composer of the soundtrack.
      *
-     * @param $musicBy |
+     * @param $musicBy \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\MusicGroup
      * @return static
      **/
     public function setMusicBy($musicBy): static {
@@ -204,7 +204,7 @@ class VideoObject extends MediaObject
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\MusicGroup
      **/
     public function getMusicBy() {
         return $this->properties['musicBy'];
@@ -212,7 +212,7 @@ class VideoObject extends MediaObject
     /**
      * Represents textual captioning from a [[MediaObject]], e.g. text of a 'meme'.
      *
-     * @param $embeddedTextCaption 
+     * @param $embeddedTextCaption \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setEmbeddedTextCaption($embeddedTextCaption): static {
@@ -222,7 +222,7 @@ class VideoObject extends MediaObject
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getEmbeddedTextCaption() {
         return $this->properties['embeddedTextCaption'];

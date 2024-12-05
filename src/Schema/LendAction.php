@@ -47,7 +47,7 @@ class LendAction extends TransferAction
     /**
      * A sub property of participant. The person that borrows the object being lent.
      *
-     * @param $borrower 
+     * @param $borrower \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setBorrower($borrower): static {
@@ -57,7 +57,7 @@ class LendAction extends TransferAction
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
     public function getBorrower() {
         return $this->properties['borrower'];

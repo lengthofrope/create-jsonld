@@ -74,6 +74,11 @@ try {
 ```
 
 ## Version history
+1.1.1
+
+- Add typehinting
+- Add support for retuning arrays with objects
+
 1.1.0
 
 - Add basic validation for the introduced DataTypes

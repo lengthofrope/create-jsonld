@@ -43,7 +43,7 @@ class MedicalRiskEstimator extends MedicalEntity
     /**
      * The condition, complication, or symptom whose risk is being estimated.
      *
-     * @param $estimatesRiskOf 
+     * @param $estimatesRiskOf \LengthOfRope\JSONLD\Schema\MedicalEntity
      * @return static
      **/
     public function setEstimatesRiskOf($estimatesRiskOf): static {
@@ -53,7 +53,7 @@ class MedicalRiskEstimator extends MedicalEntity
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MedicalEntity
      **/
     public function getEstimatesRiskOf() {
         return $this->properties['estimatesRiskOf'];
@@ -62,7 +62,7 @@ class MedicalRiskEstimator extends MedicalEntity
      * A modifiable or non-modifiable risk factor included in the calculation, e.g.
      * age, coexisting condition.
      *
-     * @param $includedRiskFactor 
+     * @param $includedRiskFactor \LengthOfRope\JSONLD\Schema\MedicalRiskFactor
      * @return static
      **/
     public function setIncludedRiskFactor($includedRiskFactor): static {
@@ -72,7 +72,7 @@ class MedicalRiskEstimator extends MedicalEntity
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MedicalRiskFactor
      **/
     public function getIncludedRiskFactor() {
         return $this->properties['includedRiskFactor'];

@@ -42,7 +42,7 @@ class Hospital extends CivicStructure
     /**
      * A medical specialty of the provider.
      *
-     * @param $medicalSpecialty 
+     * @param $medicalSpecialty \LengthOfRope\JSONLD\Schema\MedicalSpecialty
      * @return static
      **/
     public function setMedicalSpecialty($medicalSpecialty): static {
@@ -52,7 +52,7 @@ class Hospital extends CivicStructure
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MedicalSpecialty
      **/
     public function getMedicalSpecialty() {
         return $this->properties['medicalSpecialty'];
@@ -60,7 +60,7 @@ class Hospital extends CivicStructure
     /**
      * A medical service available from this provider.
      *
-     * @param $availableService ||
+     * @param $availableService \LengthOfRope\JSONLD\Schema\MedicalTest|\LengthOfRope\JSONLD\Schema\MedicalTherapy|\LengthOfRope\JSONLD\Schema\MedicalProcedure
      * @return static
      **/
     public function setAvailableService($availableService): static {
@@ -70,7 +70,7 @@ class Hospital extends CivicStructure
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\Schema\MedicalTest|\LengthOfRope\JSONLD\Schema\MedicalTherapy|\LengthOfRope\JSONLD\Schema\MedicalProcedure
      **/
     public function getAvailableService() {
         return $this->properties['availableService'];
@@ -79,7 +79,7 @@ class Hospital extends CivicStructure
      * Indicates data describing a hospital, e.g. a CDC [[CDCPMDRecord]] or as some
      * kind of [[Dataset]].
      *
-     * @param $healthcareReportingData |
+     * @param $healthcareReportingData \LengthOfRope\JSONLD\Schema\CDCPMDRecord|\LengthOfRope\JSONLD\Schema\Dataset
      * @return static
      **/
     public function setHealthcareReportingData($healthcareReportingData): static {
@@ -89,7 +89,7 @@ class Hospital extends CivicStructure
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\CDCPMDRecord|\LengthOfRope\JSONLD\Schema\Dataset
      **/
     public function getHealthcareReportingData() {
         return $this->properties['healthcareReportingData'];

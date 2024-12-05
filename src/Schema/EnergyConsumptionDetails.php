@@ -51,7 +51,7 @@ class EnergyConsumptionDetails extends Intangible
      * energy consumption for televisions placed on the market after January 1, 2020 is
      * scaled from D to A+++.
      *
-     * @param $energyEfficiencyScaleMin 
+     * @param $energyEfficiencyScaleMin \LengthOfRope\JSONLD\Schema\EUEnergyEfficiencyEnumeration
      * @return static
      **/
     public function setEnergyEfficiencyScaleMin($energyEfficiencyScaleMin): static {
@@ -61,7 +61,7 @@ class EnergyConsumptionDetails extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\EUEnergyEfficiencyEnumeration
      **/
     public function getEnergyEfficiencyScaleMin() {
         return $this->properties['energyEfficiencyScaleMin'];
@@ -71,7 +71,7 @@ class EnergyConsumptionDetails extends Intangible
      * range of values or a yes/no certification) for a product according to an
      * international energy efficiency standard.
      *
-     * @param $hasEnergyEfficiencyCategory 
+     * @param $hasEnergyEfficiencyCategory \LengthOfRope\JSONLD\Schema\EnergyEfficiencyEnumeration
      * @return static
      **/
     public function setHasEnergyEfficiencyCategory($hasEnergyEfficiencyCategory): static {
@@ -81,7 +81,7 @@ class EnergyConsumptionDetails extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\EnergyEfficiencyEnumeration
      **/
     public function getHasEnergyEfficiencyCategory() {
         return $this->properties['hasEnergyEfficiencyCategory'];
@@ -92,7 +92,7 @@ class EnergyConsumptionDetails extends Intangible
      * consumption for televisions placed on the market after January 1, 2020 is scaled
      * from D to A+++.
      *
-     * @param $energyEfficiencyScaleMax 
+     * @param $energyEfficiencyScaleMax \LengthOfRope\JSONLD\Schema\EUEnergyEfficiencyEnumeration
      * @return static
      **/
     public function setEnergyEfficiencyScaleMax($energyEfficiencyScaleMax): static {
@@ -102,7 +102,7 @@ class EnergyConsumptionDetails extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\EUEnergyEfficiencyEnumeration
      **/
     public function getEnergyEfficiencyScaleMax() {
         return $this->properties['energyEfficiencyScaleMax'];

@@ -56,7 +56,7 @@ class MedicalCause extends MedicalEntity
     /**
      * The condition, complication, symptom, sign, etc. caused.
      *
-     * @param $causeOf 
+     * @param $causeOf \LengthOfRope\JSONLD\Schema\MedicalEntity
      * @return static
      **/
     public function setCauseOf($causeOf): static {
@@ -66,7 +66,7 @@ class MedicalCause extends MedicalEntity
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MedicalEntity
      **/
     public function getCauseOf() {
         return $this->properties['causeOf'];

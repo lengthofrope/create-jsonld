@@ -44,7 +44,7 @@ class TherapeuticProcedure extends MedicalProcedure
      * A dosing schedule for the drug for a given population, either observed,
      * recommended, or maximum dose based on the type used.
      *
-     * @param $doseSchedule 
+     * @param $doseSchedule \LengthOfRope\JSONLD\Schema\DoseSchedule
      * @return static
      **/
     public function setDoseSchedule($doseSchedule): static {
@@ -54,7 +54,7 @@ class TherapeuticProcedure extends MedicalProcedure
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\DoseSchedule
      **/
     public function getDoseSchedule() {
         return $this->properties['doseSchedule'];
@@ -62,7 +62,7 @@ class TherapeuticProcedure extends MedicalProcedure
     /**
      * Specifying a drug or medicine used in a medication procedure.
      *
-     * @param $drug 
+     * @param $drug \LengthOfRope\JSONLD\Schema\Drug
      * @return static
      **/
     public function setDrug($drug): static {
@@ -72,7 +72,7 @@ class TherapeuticProcedure extends MedicalProcedure
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Drug
      **/
     public function getDrug() {
         return $this->properties['drug'];
@@ -83,7 +83,7 @@ class TherapeuticProcedure extends MedicalProcedure
      * damage; requiring hospitalization; or otherwise life-threatening or requiring
      * immediate medical attention), tag it as a seriousAdverseOutcome instead.
      *
-     * @param $adverseOutcome 
+     * @param $adverseOutcome \LengthOfRope\JSONLD\Schema\MedicalEntity
      * @return static
      **/
     public function setAdverseOutcome($adverseOutcome): static {
@@ -93,7 +93,7 @@ class TherapeuticProcedure extends MedicalProcedure
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MedicalEntity
      **/
     public function getAdverseOutcome() {
         return $this->properties['adverseOutcome'];

@@ -44,7 +44,7 @@ class Blog extends CreativeWork
     /**
      * A posting that is part of this blog.
      *
-     * @param $blogPost 
+     * @param $blogPost \LengthOfRope\JSONLD\Schema\BlogPosting
      * @return static
      **/
     public function setBlogPost($blogPost): static {
@@ -54,7 +54,7 @@ class Blog extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\BlogPosting
      **/
     public function getBlogPost() {
         return $this->properties['blogPost'];
@@ -64,7 +64,7 @@ class Blog extends CreativeWork
      * publication. You can repeat this property to identify different formats of, or
      * the linking ISSN (ISSN-L) for, this serial publication.
      *
-     * @param $issn 
+     * @param $issn \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setIssn($issn): static {
@@ -74,7 +74,7 @@ class Blog extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getIssn() {
         return $this->properties['issn'];
@@ -84,7 +84,7 @@ class Blog extends CreativeWork
      * term a "Blog" was once known as a "weblog", and that what we term a
      * "BlogPosting" is now often colloquially referred to as a "blog".
      *
-     * @param $blogPosts 
+     * @param $blogPosts \LengthOfRope\JSONLD\Schema\BlogPosting
      * @return static
      **/
     public function setBlogPosts($blogPosts): static {
@@ -94,7 +94,7 @@ class Blog extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\BlogPosting
      **/
     public function getBlogPosts() {
         return $this->properties['blogPosts'];

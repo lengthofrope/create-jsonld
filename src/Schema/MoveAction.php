@@ -48,7 +48,7 @@ class MoveAction extends Action
      * A sub property of location. The final location of the object or the agent after
      * the action.
      *
-     * @param $toLocation 
+     * @param $toLocation \LengthOfRope\JSONLD\Schema\Place
      * @return static
      **/
     public function setToLocation($toLocation): static {
@@ -58,7 +58,7 @@ class MoveAction extends Action
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Place
      **/
     public function getToLocation() {
         return $this->properties['toLocation'];
@@ -67,7 +67,7 @@ class MoveAction extends Action
      * A sub property of location. The original location of the object or the agent
      * before the action.
      *
-     * @param $fromLocation 
+     * @param $fromLocation \LengthOfRope\JSONLD\Schema\Place
      * @return static
      **/
     public function setFromLocation($fromLocation): static {
@@ -77,7 +77,7 @@ class MoveAction extends Action
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Place
      **/
     public function getFromLocation() {
         return $this->properties['fromLocation'];

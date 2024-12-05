@@ -66,7 +66,7 @@ class PriceSpecification extends StructuredValue
      * (U+0039)) rather than superficially similar Unicode symbols.
      *
      *
-     * @param $price |
+     * @param $price \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setPrice($price): static {
@@ -76,7 +76,7 @@ class PriceSpecification extends StructuredValue
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Number
      **/
     public function getPrice() {
         return $this->properties['price'];
@@ -86,7 +86,7 @@ class PriceSpecification extends StructuredValue
      * can be used to express the units the points are issued in. (E.g. stars, miles,
      * etc.)
      *
-     * @param $membershipPointsEarned |
+     * @param $membershipPointsEarned \LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setMembershipPointsEarned($membershipPointsEarned): static {
@@ -96,7 +96,7 @@ class PriceSpecification extends StructuredValue
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getMembershipPointsEarned() {
         return $this->properties['membershipPointsEarned'];
@@ -105,7 +105,7 @@ class PriceSpecification extends StructuredValue
      * The membership program tier an Offer (or a PriceSpecification,
      * OfferShippingDetails, or MerchantReturnPolicy under an Offer) is valid for.
      *
-     * @param $validForMemberTier 
+     * @param $validForMemberTier \LengthOfRope\JSONLD\Schema\MemberProgramTier
      * @return static
      **/
     public function setValidForMemberTier($validForMemberTier): static {
@@ -115,7 +115,7 @@ class PriceSpecification extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MemberProgramTier
      **/
     public function getValidForMemberTier() {
         return $this->properties['validForMemberTier'];
@@ -124,7 +124,7 @@ class PriceSpecification extends StructuredValue
      * Specifies whether the applicable value-added tax (VAT) is included in the price
      * specification or not.
      *
-     * @param $valueAddedTaxIncluded 
+     * @param $valueAddedTaxIncluded \LengthOfRope\JSONLD\DataType\Boolean
      * @return static
      **/
     public function setValueAddedTaxIncluded($valueAddedTaxIncluded): static {
@@ -134,7 +134,7 @@ class PriceSpecification extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Boolean
      **/
     public function getValueAddedTaxIncluded() {
         return $this->properties['valueAddedTaxIncluded'];
@@ -144,7 +144,7 @@ class PriceSpecification extends StructuredValue
      * or price specification is valid. This allows e.g. specifying that a certain
      * freight charge is valid only for a certain quantity.
      *
-     * @param $eligibleQuantity 
+     * @param $eligibleQuantity \LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setEligibleQuantity($eligibleQuantity): static {
@@ -154,7 +154,7 @@ class PriceSpecification extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getEligibleQuantity() {
         return $this->properties['eligibleQuantity'];
@@ -163,7 +163,7 @@ class PriceSpecification extends StructuredValue
      * The date after when the item is not valid. For example the end of an offer,
      * salary period, or a period of opening hours.
      *
-     * @param $validThrough |
+     * @param $validThrough \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
      * @return static
      **/
     public function setValidThrough($validThrough): static {
@@ -173,7 +173,7 @@ class PriceSpecification extends StructuredValue
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
      **/
     public function getValidThrough() {
         return $this->properties['validThrough'];
@@ -189,7 +189,7 @@ class PriceSpecification extends StructuredValue
      * Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and
      * other currency types, e.g. "Ithaca HOUR".
      *
-     * @param $priceCurrency 
+     * @param $priceCurrency \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setPriceCurrency($priceCurrency): static {
@@ -199,7 +199,7 @@ class PriceSpecification extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getPriceCurrency() {
         return $this->properties['priceCurrency'];
@@ -207,7 +207,7 @@ class PriceSpecification extends StructuredValue
     /**
      * The highest price if the price is a range.
      *
-     * @param $maxPrice 
+     * @param $maxPrice \LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setMaxPrice($maxPrice): static {
@@ -217,7 +217,7 @@ class PriceSpecification extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Number
      **/
     public function getMaxPrice() {
         return $this->properties['maxPrice'];
@@ -225,7 +225,7 @@ class PriceSpecification extends StructuredValue
     /**
      * The date when the item becomes valid.
      *
-     * @param $validFrom |
+     * @param $validFrom \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
      * @return static
      **/
     public function setValidFrom($validFrom): static {
@@ -235,7 +235,7 @@ class PriceSpecification extends StructuredValue
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
      **/
     public function getValidFrom() {
         return $this->properties['validFrom'];
@@ -243,7 +243,7 @@ class PriceSpecification extends StructuredValue
     /**
      * The lowest price if the price is a range.
      *
-     * @param $minPrice 
+     * @param $minPrice \LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setMinPrice($minPrice): static {
@@ -253,7 +253,7 @@ class PriceSpecification extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Number
      **/
     public function getMinPrice() {
         return $this->properties['minPrice'];
@@ -264,7 +264,7 @@ class PriceSpecification extends StructuredValue
      * express free shipping above a certain order volume, or to limit the acceptance
      * of credit cards to purchases to a certain minimal amount.
      *
-     * @param $eligibleTransactionVolume 
+     * @param $eligibleTransactionVolume \LengthOfRope\JSONLD\Schema\PriceSpecification
      * @return static
      **/
     public function setEligibleTransactionVolume($eligibleTransactionVolume): static {
@@ -274,7 +274,7 @@ class PriceSpecification extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\PriceSpecification
      **/
     public function getEligibleTransactionVolume() {
         return $this->properties['eligibleTransactionVolume'];

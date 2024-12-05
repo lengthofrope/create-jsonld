@@ -43,7 +43,7 @@ class ReservationPackage extends Reservation
      * The individual reservations included in the package. Typically a repeated
      * property.
      *
-     * @param $subReservation 
+     * @param $subReservation \LengthOfRope\JSONLD\Schema\Reservation
      * @return static
      **/
     public function setSubReservation($subReservation): static {
@@ -53,7 +53,7 @@ class ReservationPackage extends Reservation
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Reservation
      **/
     public function getSubReservation() {
         return $this->properties['subReservation'];

@@ -43,7 +43,7 @@ class HealthPlanFormulary extends Intangible
     /**
      * The costs to the patient for services under this network or formulary.
      *
-     * @param $healthPlanCostSharing 
+     * @param $healthPlanCostSharing \LengthOfRope\JSONLD\DataType\Boolean
      * @return static
      **/
     public function setHealthPlanCostSharing($healthPlanCostSharing): static {
@@ -53,7 +53,7 @@ class HealthPlanFormulary extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Boolean
      **/
     public function getHealthPlanCostSharing() {
         return $this->properties['healthPlanCostSharing'];
@@ -61,7 +61,7 @@ class HealthPlanFormulary extends Intangible
     /**
      * The tier(s) of drugs offered by this formulary or insurance plan.
      *
-     * @param $healthPlanDrugTier 
+     * @param $healthPlanDrugTier \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setHealthPlanDrugTier($healthPlanDrugTier): static {
@@ -71,7 +71,7 @@ class HealthPlanFormulary extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getHealthPlanDrugTier() {
         return $this->properties['healthPlanDrugTier'];
@@ -79,7 +79,7 @@ class HealthPlanFormulary extends Intangible
     /**
      * Whether prescriptions can be delivered by mail.
      *
-     * @param $offersPrescriptionByMail 
+     * @param $offersPrescriptionByMail \LengthOfRope\JSONLD\DataType\Boolean
      * @return static
      **/
     public function setOffersPrescriptionByMail($offersPrescriptionByMail): static {
@@ -89,7 +89,7 @@ class HealthPlanFormulary extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Boolean
      **/
     public function getOffersPrescriptionByMail() {
         return $this->properties['offersPrescriptionByMail'];

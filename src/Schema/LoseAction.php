@@ -42,7 +42,7 @@ class LoseAction extends AchieveAction
     /**
      * A sub property of participant. The winner of the action.
      *
-     * @param $winner 
+     * @param $winner \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setWinner($winner): static {
@@ -52,7 +52,7 @@ class LoseAction extends AchieveAction
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
     public function getWinner() {
         return $this->properties['winner'];

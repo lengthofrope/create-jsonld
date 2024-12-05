@@ -44,7 +44,7 @@ class BroadcastChannel extends Intangible
      * e.g. 87-99. In addition a shortcut idiom is supported for frequencies of AM and
      * FM radio channels, e.g. "87 FM".
      *
-     * @param $broadcastFrequency |
+     * @param $broadcastFrequency \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\BroadcastFrequencySpecification
      * @return static
      **/
     public function setBroadcastFrequency($broadcastFrequency): static {
@@ -54,7 +54,7 @@ class BroadcastChannel extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\BroadcastFrequencySpecification
      **/
     public function getBroadcastFrequency() {
         return $this->properties['broadcastFrequency'];
@@ -62,7 +62,7 @@ class BroadcastChannel extends Intangible
     /**
      * The CableOrSatelliteService offering the channel.
      *
-     * @param $inBroadcastLineup 
+     * @param $inBroadcastLineup \LengthOfRope\JSONLD\Schema\CableOrSatelliteService
      * @return static
      **/
     public function setInBroadcastLineup($inBroadcastLineup): static {
@@ -72,7 +72,7 @@ class BroadcastChannel extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\CableOrSatelliteService
      **/
     public function getInBroadcastLineup() {
         return $this->properties['inBroadcastLineup'];
@@ -81,7 +81,7 @@ class BroadcastChannel extends Intangible
      * The unique address by which the BroadcastService can be identified in a provider
      * lineup. In US, this is typically a number.
      *
-     * @param $broadcastChannelId 
+     * @param $broadcastChannelId \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setBroadcastChannelId($broadcastChannelId): static {
@@ -91,7 +91,7 @@ class BroadcastChannel extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getBroadcastChannelId() {
         return $this->properties['broadcastChannelId'];
@@ -100,7 +100,7 @@ class BroadcastChannel extends Intangible
      * The type of service required to have access to the channel (e.g. Standard or
      * Premium).
      *
-     * @param $broadcastServiceTier 
+     * @param $broadcastServiceTier \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setBroadcastServiceTier($broadcastServiceTier): static {
@@ -110,7 +110,7 @@ class BroadcastChannel extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getBroadcastServiceTier() {
         return $this->properties['broadcastServiceTier'];
@@ -118,7 +118,7 @@ class BroadcastChannel extends Intangible
     /**
      * The BroadcastService offered on this channel.
      *
-     * @param $providesBroadcastService 
+     * @param $providesBroadcastService \LengthOfRope\JSONLD\Schema\BroadcastService
      * @return static
      **/
     public function setProvidesBroadcastService($providesBroadcastService): static {
@@ -128,7 +128,7 @@ class BroadcastChannel extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\BroadcastService
      **/
     public function getProvidesBroadcastService() {
         return $this->properties['providesBroadcastService'];
@@ -136,7 +136,7 @@ class BroadcastChannel extends Intangible
     /**
      * Genre of the creative work, broadcast channel or group.
      *
-     * @param $genre |
+     * @param $genre \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setGenre($genre): static {
@@ -146,7 +146,7 @@ class BroadcastChannel extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      **/
     public function getGenre() {
         return $this->properties['genre'];

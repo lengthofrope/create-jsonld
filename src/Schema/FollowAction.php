@@ -57,7 +57,7 @@ class FollowAction extends InteractAction
     /**
      * A sub property of object. The person or organization being followed.
      *
-     * @param $followee |
+     * @param $followee \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setFollowee($followee): static {
@@ -67,7 +67,7 @@ class FollowAction extends InteractAction
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getFollowee() {
         return $this->properties['followee'];

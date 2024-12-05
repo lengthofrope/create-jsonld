@@ -42,7 +42,7 @@ class CategoryCodeSet extends DefinedTermSet
     /**
      * A Category code contained in this code set.
      *
-     * @param $hasCategoryCode 
+     * @param $hasCategoryCode \LengthOfRope\JSONLD\Schema\CategoryCode
      * @return static
      **/
     public function setHasCategoryCode($hasCategoryCode): static {
@@ -52,7 +52,7 @@ class CategoryCodeSet extends DefinedTermSet
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\CategoryCode
      **/
     public function getHasCategoryCode() {
         return $this->properties['hasCategoryCode'];

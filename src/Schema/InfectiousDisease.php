@@ -46,7 +46,7 @@ class InfectiousDisease extends MedicalCondition
     /**
      * The class of infectious agent (bacteria, prion, etc.) that causes the disease.
      *
-     * @param $infectiousAgentClass 
+     * @param $infectiousAgentClass \LengthOfRope\JSONLD\Schema\InfectiousAgentClass
      * @return static
      **/
     public function setInfectiousAgentClass($infectiousAgentClass): static {
@@ -56,7 +56,7 @@ class InfectiousDisease extends MedicalCondition
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\InfectiousAgentClass
      **/
     public function getInfectiousAgentClass() {
         return $this->properties['infectiousAgentClass'];
@@ -65,7 +65,7 @@ class InfectiousDisease extends MedicalCondition
      * How the disease spreads, either as a route or vector, for example 'direct
      * contact', 'Aedes aegypti', etc.
      *
-     * @param $transmissionMethod 
+     * @param $transmissionMethod \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setTransmissionMethod($transmissionMethod): static {
@@ -75,7 +75,7 @@ class InfectiousDisease extends MedicalCondition
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getTransmissionMethod() {
         return $this->properties['transmissionMethod'];
@@ -83,7 +83,7 @@ class InfectiousDisease extends MedicalCondition
     /**
      * The actual infectious agent, such as a specific bacterium.
      *
-     * @param $infectiousAgent 
+     * @param $infectiousAgent \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setInfectiousAgent($infectiousAgent): static {
@@ -93,7 +93,7 @@ class InfectiousDisease extends MedicalCondition
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getInfectiousAgent() {
         return $this->properties['infectiousAgent'];

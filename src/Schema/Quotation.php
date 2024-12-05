@@ -46,7 +46,7 @@ class Quotation extends CreativeWork
      * The (e.g. fictional) character, Person or Organization to whom the quotation is
      * attributed within the containing CreativeWork.
      *
-     * @param $spokenByCharacter |
+     * @param $spokenByCharacter \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setSpokenByCharacter($spokenByCharacter): static {
@@ -56,7 +56,7 @@ class Quotation extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\Person
      **/
     public function getSpokenByCharacter() {
         return $this->properties['spokenByCharacter'];

@@ -44,7 +44,7 @@ class MathSolver extends CreativeWork
      * variable, simplified, or transformed. This can take many formats, e.g. LaTeX,
      * Ascii-Math, or math as you would write with a keyboard.
      *
-     * @param $mathExpression |
+     * @param $mathExpression \LengthOfRope\JSONLD\Schema\SolveMathAction|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setMathExpression($mathExpression): static {
@@ -54,7 +54,7 @@ class MathSolver extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\SolveMathAction|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getMathExpression() {
         return $this->properties['mathExpression'];

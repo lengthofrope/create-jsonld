@@ -44,7 +44,7 @@ class UserComments extends UserInteraction
     /**
      * The time at which the UserComment was made.
      *
-     * @param $commentTime |
+     * @param $commentTime \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
      * @return static
      **/
     public function setCommentTime($commentTime): static {
@@ -54,7 +54,7 @@ class UserComments extends UserInteraction
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
      **/
     public function getCommentTime() {
         return $this->properties['commentTime'];
@@ -62,7 +62,7 @@ class UserComments extends UserInteraction
     /**
      * Specifies the CreativeWork associated with the UserComment.
      *
-     * @param $discusses 
+     * @param $discusses \LengthOfRope\JSONLD\Schema\CreativeWork
      * @return static
      **/
     public function setDiscusses($discusses): static {
@@ -72,7 +72,7 @@ class UserComments extends UserInteraction
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork
      **/
     public function getDiscusses() {
         return $this->properties['discusses'];
@@ -81,7 +81,7 @@ class UserComments extends UserInteraction
      * The creator/author of this CreativeWork. This is the same as the Author property
      * for CreativeWork.
      *
-     * @param $creator |
+     * @param $creator \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setCreator($creator): static {
@@ -91,7 +91,7 @@ class UserComments extends UserInteraction
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getCreator() {
         return $this->properties['creator'];
@@ -99,7 +99,7 @@ class UserComments extends UserInteraction
     /**
      * The text of the UserComment.
      *
-     * @param $commentText 
+     * @param $commentText \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setCommentText($commentText): static {
@@ -109,7 +109,7 @@ class UserComments extends UserInteraction
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getCommentText() {
         return $this->properties['commentText'];
@@ -117,7 +117,7 @@ class UserComments extends UserInteraction
     /**
      * The URL at which a reply may be posted to the specified UserComment.
      *
-     * @param $replyToUrl 
+     * @param $replyToUrl \LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setReplyToUrl($replyToUrl): static {
@@ -127,7 +127,7 @@ class UserComments extends UserInteraction
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\URL
      **/
     public function getReplyToUrl() {
         return $this->properties['replyToUrl'];

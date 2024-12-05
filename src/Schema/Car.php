@@ -52,7 +52,7 @@ class Car extends Vehicle
      * * Note 3: Note that you can use [[minValue]] and [[maxValue]] to indicate
      * ranges.
      *
-     * @param $roofLoad 
+     * @param $roofLoad \LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setRoofLoad($roofLoad): static {
@@ -62,7 +62,7 @@ class Car extends Vehicle
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getRoofLoad() {
         return $this->properties['roofLoad'];
@@ -72,7 +72,7 @@ class Car extends Vehicle
      * for classifying vehicles. ACRISS stands for Association of Car Rental Industry
      * Systems and Standards.
      *
-     * @param $acrissCode 
+     * @param $acrissCode \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setAcrissCode($acrissCode): static {
@@ -82,7 +82,7 @@ class Car extends Vehicle
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getAcrissCode() {
         return $this->properties['acrissCode'];

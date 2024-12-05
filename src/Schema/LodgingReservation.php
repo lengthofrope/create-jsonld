@@ -45,7 +45,7 @@ class LodgingReservation extends Reservation
     /**
      * The number of adults staying in the unit.
      *
-     * @param $numAdults |
+     * @param $numAdults \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Integer
      * @return static
      **/
     public function setNumAdults($numAdults): static {
@@ -55,7 +55,7 @@ class LodgingReservation extends Reservation
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Integer
      **/
     public function getNumAdults() {
         return $this->properties['numAdults'];
@@ -64,7 +64,7 @@ class LodgingReservation extends Reservation
      * Textual description of the unit type (including suite vs. room, size of bed,
      * etc.).
      *
-     * @param $lodgingUnitType |
+     * @param $lodgingUnitType \LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setLodgingUnitType($lodgingUnitType): static {
@@ -74,7 +74,7 @@ class LodgingReservation extends Reservation
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getLodgingUnitType() {
         return $this->properties['lodgingUnitType'];
@@ -82,7 +82,7 @@ class LodgingReservation extends Reservation
     /**
      * The latest someone may check out of a lodging establishment.
      *
-     * @param $checkoutTime |
+     * @param $checkoutTime \LengthOfRope\JSONLD\DataType\Time|\LengthOfRope\JSONLD\DataType\DateTime
      * @return static
      **/
     public function setCheckoutTime($checkoutTime): static {
@@ -92,7 +92,7 @@ class LodgingReservation extends Reservation
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Time|\LengthOfRope\JSONLD\DataType\DateTime
      **/
     public function getCheckoutTime() {
         return $this->properties['checkoutTime'];
@@ -100,7 +100,7 @@ class LodgingReservation extends Reservation
     /**
      * The earliest someone may check into a lodging establishment.
      *
-     * @param $checkinTime |
+     * @param $checkinTime \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Time
      * @return static
      **/
     public function setCheckinTime($checkinTime): static {
@@ -110,7 +110,7 @@ class LodgingReservation extends Reservation
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Time
      **/
     public function getCheckinTime() {
         return $this->properties['checkinTime'];
@@ -118,7 +118,7 @@ class LodgingReservation extends Reservation
     /**
      * A full description of the lodging unit.
      *
-     * @param $lodgingUnitDescription 
+     * @param $lodgingUnitDescription \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setLodgingUnitDescription($lodgingUnitDescription): static {
@@ -128,7 +128,7 @@ class LodgingReservation extends Reservation
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getLodgingUnitDescription() {
         return $this->properties['lodgingUnitDescription'];
@@ -136,7 +136,7 @@ class LodgingReservation extends Reservation
     /**
      * The number of children staying in the unit.
      *
-     * @param $numChildren |
+     * @param $numChildren \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Integer
      * @return static
      **/
     public function setNumChildren($numChildren): static {
@@ -146,7 +146,7 @@ class LodgingReservation extends Reservation
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Integer
      **/
     public function getNumChildren() {
         return $this->properties['numChildren'];

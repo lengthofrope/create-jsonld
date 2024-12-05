@@ -43,7 +43,7 @@ class ParentAudience extends PeopleAudience
     /**
      * Maximal age of the child.
      *
-     * @param $childMaxAge 
+     * @param $childMaxAge \LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setChildMaxAge($childMaxAge): static {
@@ -53,7 +53,7 @@ class ParentAudience extends PeopleAudience
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Number
      **/
     public function getChildMaxAge() {
         return $this->properties['childMaxAge'];
@@ -61,7 +61,7 @@ class ParentAudience extends PeopleAudience
     /**
      * Minimal age of the child.
      *
-     * @param $childMinAge 
+     * @param $childMinAge \LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setChildMinAge($childMinAge): static {
@@ -71,7 +71,7 @@ class ParentAudience extends PeopleAudience
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Number
      **/
     public function getChildMinAge() {
         return $this->properties['childMinAge'];

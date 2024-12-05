@@ -43,7 +43,7 @@ class CookAction extends CreateAction
      * A sub property of location. The specific food establishment where the action
      * occurred.
      *
-     * @param $foodEstablishment |
+     * @param $foodEstablishment \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\FoodEstablishment
      * @return static
      **/
     public function setFoodEstablishment($foodEstablishment): static {
@@ -53,7 +53,7 @@ class CookAction extends CreateAction
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\FoodEstablishment
      **/
     public function getFoodEstablishment() {
         return $this->properties['foodEstablishment'];
@@ -61,7 +61,7 @@ class CookAction extends CreateAction
     /**
      * A sub property of location. The specific food event where the action occurred.
      *
-     * @param $foodEvent 
+     * @param $foodEvent \LengthOfRope\JSONLD\Schema\FoodEvent
      * @return static
      **/
     public function setFoodEvent($foodEvent): static {
@@ -71,7 +71,7 @@ class CookAction extends CreateAction
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\FoodEvent
      **/
     public function getFoodEvent() {
         return $this->properties['foodEvent'];
@@ -80,7 +80,7 @@ class CookAction extends CreateAction
      * A sub property of instrument. The recipe/instructions used to perform the
      * action.
      *
-     * @param $recipe 
+     * @param $recipe \LengthOfRope\JSONLD\Schema\Recipe
      * @return static
      **/
     public function setRecipe($recipe): static {
@@ -90,7 +90,7 @@ class CookAction extends CreateAction
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Recipe
      **/
     public function getRecipe() {
         return $this->properties['recipe'];

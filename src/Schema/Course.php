@@ -47,7 +47,7 @@ class Course extends CreativeWork
      * Indicates (typically several) Syllabus entities that lay out what each section
      * of the overall course will cover.
      *
-     * @param $syllabusSections 
+     * @param $syllabusSections \LengthOfRope\JSONLD\Schema\Syllabus
      * @return static
      **/
     public function setSyllabusSections($syllabusSections): static {
@@ -57,7 +57,7 @@ class Course extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Syllabus
      **/
     public function getSyllabusSections() {
         return $this->properties['syllabusSections'];
@@ -66,7 +66,7 @@ class Course extends CreativeWork
      * The identifier for the [[Course]] used by the course [[provider]] (e.g. CS101 or
      * 6.001).
      *
-     * @param $courseCode 
+     * @param $courseCode \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setCourseCode($courseCode): static {
@@ -76,7 +76,7 @@ class Course extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getCourseCode() {
         return $this->properties['courseCode'];
@@ -86,7 +86,7 @@ class Course extends CreativeWork
      * occupational credential awarded as a consequence of successful completion of
      * this course or program.
      *
-     * @param $occupationalCredentialAwarded ||
+     * @param $occupationalCredentialAwarded \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential|\LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setOccupationalCredentialAwarded($occupationalCredentialAwarded): static {
@@ -96,7 +96,7 @@ class Course extends CreativeWork
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential|\LengthOfRope\JSONLD\Schema\URL
      **/
     public function getOccupationalCredentialAwarded() {
         return $this->properties['occupationalCredentialAwarded'];
@@ -106,7 +106,7 @@ class Course extends CreativeWork
      * textual description like "permission of instructor". Requirements may be a
      * pre-requisite competency, referenced using [[AlignmentObject]].
      *
-     * @param $coursePrerequisites ||
+     * @param $coursePrerequisites \LengthOfRope\JSONLD\Schema\AlignmentObject|\LengthOfRope\JSONLD\Schema\Course|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setCoursePrerequisites($coursePrerequisites): static {
@@ -116,7 +116,7 @@ class Course extends CreativeWork
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\Schema\AlignmentObject|\LengthOfRope\JSONLD\Schema\Course|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getCoursePrerequisites() {
         return $this->properties['coursePrerequisites'];
@@ -125,7 +125,7 @@ class Course extends CreativeWork
      * An offering of the course at a specific time and place or through specific media
      * or mode of study or to a specific section of students.
      *
-     * @param $hasCourseInstance 
+     * @param $hasCourseInstance \LengthOfRope\JSONLD\Schema\CourseInstance
      * @return static
      **/
     public function setHasCourseInstance($hasCourseInstance): static {
@@ -135,7 +135,7 @@ class Course extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\CourseInstance
      **/
     public function getHasCourseInstance() {
         return $this->properties['hasCourseInstance'];
@@ -143,7 +143,7 @@ class Course extends CreativeWork
     /**
      * The total number of students that have enrolled in the history of the course.
      *
-     * @param $totalHistoricalEnrollment 
+     * @param $totalHistoricalEnrollment \LengthOfRope\JSONLD\Schema\Integer
      * @return static
      **/
     public function setTotalHistoricalEnrollment($totalHistoricalEnrollment): static {
@@ -153,7 +153,7 @@ class Course extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Integer
      **/
     public function getTotalHistoricalEnrollment() {
         return $this->properties['totalHistoricalEnrollment'];
@@ -162,7 +162,7 @@ class Course extends CreativeWork
      * The number of credits or units awarded by a Course or required to complete an
      * EducationalOccupationalProgram.
      *
-     * @param $numberOfCredits |
+     * @param $numberOfCredits \LengthOfRope\JSONLD\Schema\Integer|\LengthOfRope\JSONLD\Schema\StructuredValue
      * @return static
      **/
     public function setNumberOfCredits($numberOfCredits): static {
@@ -172,7 +172,7 @@ class Course extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Integer|\LengthOfRope\JSONLD\Schema\StructuredValue
      **/
     public function getNumberOfCredits() {
         return $this->properties['numberOfCredits'];
@@ -182,7 +182,7 @@ class Course extends CreativeWork
      * educational credential awarded as a consequence of successful completion of this
      * course or program.
      *
-     * @param $educationalCredentialAwarded ||
+     * @param $educationalCredentialAwarded \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential|\LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setEducationalCredentialAwarded($educationalCredentialAwarded): static {
@@ -192,7 +192,7 @@ class Course extends CreativeWork
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential|\LengthOfRope\JSONLD\Schema\URL
      **/
     public function getEducationalCredentialAwarded() {
         return $this->properties['educationalCredentialAwarded'];
@@ -202,7 +202,7 @@ class Course extends CreativeWork
      * of the language codes from the [IETF BCP 47
      * standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].
      *
-     * @param $availableLanguage |
+     * @param $availableLanguage \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Language
      * @return static
      **/
     public function setAvailableLanguage($availableLanguage): static {
@@ -212,7 +212,7 @@ class Course extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Language
      **/
     public function getAvailableLanguage() {
         return $this->properties['availableLanguage'];
@@ -221,7 +221,7 @@ class Course extends CreativeWork
      * A financial aid type or program which students may use to pay for tuition or
      * fees associated with the program.
      *
-     * @param $financialAidEligible |
+     * @param $financialAidEligible \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DefinedTerm
      * @return static
      **/
     public function setFinancialAidEligible($financialAidEligible): static {
@@ -231,7 +231,7 @@ class Course extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DefinedTerm
      **/
     public function getFinancialAidEligible() {
         return $this->properties['financialAidEligible'];

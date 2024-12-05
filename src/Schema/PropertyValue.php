@@ -49,7 +49,7 @@ class PropertyValue extends StructuredValue
     /**
      * The lower value of some characteristic or property.
      *
-     * @param $minValue 
+     * @param $minValue \LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setMinValue($minValue): static {
@@ -59,7 +59,7 @@ class PropertyValue extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Number
      **/
     public function getMinValue() {
         return $this->properties['minValue'];
@@ -76,7 +76,7 @@ class PropertyValue extends StructuredValue
      * Standards bodies should promote a standard prefix for the identifiers of
      * properties from their standards.
      *
-     * @param $propertyID |
+     * @param $propertyID \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setPropertyID($propertyID): static {
@@ -86,7 +86,7 @@ class PropertyValue extends StructuredValue
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      **/
     public function getPropertyID() {
         return $this->properties['propertyID'];
@@ -94,7 +94,7 @@ class PropertyValue extends StructuredValue
     /**
      * The upper value of some characteristic or property.
      *
-     * @param $maxValue 
+     * @param $maxValue \LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setMaxValue($maxValue): static {
@@ -104,7 +104,7 @@ class PropertyValue extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Number
      **/
     public function getMaxValue() {
         return $this->properties['maxValue'];
@@ -114,7 +114,7 @@ class PropertyValue extends StructuredValue
      * a URL. Other codes than the UN/CEFACT Common Code may be used with a prefix
      * followed by a colon.
      *
-     * @param $unitCode |
+     * @param $unitCode \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setUnitCode($unitCode): static {
@@ -124,7 +124,7 @@ class PropertyValue extends StructuredValue
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      **/
     public function getUnitCode() {
         return $this->properties['unitCode'];
@@ -133,7 +133,7 @@ class PropertyValue extends StructuredValue
      * A subproperty of [[measurementTechnique]] that can be used for specifying
      * specific methods, in particular via [[MeasurementMethodEnum]].
      *
-     * @param $measurementMethod |||
+     * @param $measurementMethod \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\MeasurementMethodEnum|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setMeasurementMethod($measurementMethod): static {
@@ -143,7 +143,7 @@ class PropertyValue extends StructuredValue
     }
 
     /**
-     * @return |||
+     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\MeasurementMethodEnum|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getMeasurementMethod() {
         return $this->properties['measurementMethod'];
@@ -161,7 +161,7 @@ class PropertyValue extends StructuredValue
      * * Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal
      * point. Avoid using these symbols as a readability separator.
      *
-     * @param $value |||
+     * @param $value \LengthOfRope\JSONLD\DataType\Boolean|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\Schema\StructuredValue
      * @return static
      **/
     public function setValue($value): static {
@@ -171,7 +171,7 @@ class PropertyValue extends StructuredValue
     }
 
     /**
-     * @return |||
+     * @return \LengthOfRope\JSONLD\DataType\Boolean|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\Schema\StructuredValue
      **/
     public function getValue() {
         return $this->properties['value'];
@@ -204,7 +204,7 @@ class PropertyValue extends StructuredValue
      * the corresponding [[measurementTechnique]]. The value can also be from an
      * enumeration, organized as a [[MeasurementMetholdEnumeration]].
      *
-     * @param $measurementTechnique |||
+     * @param $measurementTechnique \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\MeasurementMethodEnum
      * @return static
      **/
     public function setMeasurementTechnique($measurementTechnique): static {
@@ -214,7 +214,7 @@ class PropertyValue extends StructuredValue
     }
 
     /**
-     * @return |||
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\MeasurementMethodEnum
      **/
     public function getMeasurementTechnique() {
         return $this->properties['measurementTechnique'];
@@ -223,7 +223,7 @@ class PropertyValue extends StructuredValue
      * A secondary value that provides additional information on the original value,
      * e.g. a reference temperature or a type of measurement.
      *
-     * @param $valueReference |||||||
+     * @param $valueReference \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\PropertyValue|\LengthOfRope\JSONLD\Schema\MeasurementTypeEnumeration|\LengthOfRope\JSONLD\Schema\StructuredValue|\LengthOfRope\JSONLD\Schema\Enumeration|\LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setValueReference($valueReference): static {
@@ -233,7 +233,7 @@ class PropertyValue extends StructuredValue
     }
 
     /**
-     * @return |||||||
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\PropertyValue|\LengthOfRope\JSONLD\Schema\MeasurementTypeEnumeration|\LengthOfRope\JSONLD\Schema\StructuredValue|\LengthOfRope\JSONLD\Schema\Enumeration|\LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getValueReference() {
         return $this->properties['valueReference'];
@@ -243,7 +243,7 @@ class PropertyValue extends StructuredValue
      * provide a standard unit code for
      * <a href='unitCode'>unitCode</a>.
      *
-     * @param $unitText 
+     * @param $unitText \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setUnitText($unitText): static {
@@ -253,7 +253,7 @@ class PropertyValue extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getUnitText() {
         return $this->properties['unitText'];

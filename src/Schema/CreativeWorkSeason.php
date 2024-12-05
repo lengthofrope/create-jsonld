@@ -44,7 +44,7 @@ class CreativeWorkSeason extends CreativeWork
      * in an event. Actors can be associated with individual items or with a series,
      * episode, clip.
      *
-     * @param $actor |
+     * @param $actor \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\PerformingGroup
      * @return static
      **/
     public function setActor($actor): static {
@@ -54,7 +54,7 @@ class CreativeWorkSeason extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\PerformingGroup
      **/
     public function getActor() {
         return $this->properties['actor'];
@@ -62,7 +62,7 @@ class CreativeWorkSeason extends CreativeWork
     /**
      * The trailer of a movie or TV/radio series, season, episode, etc.
      *
-     * @param $trailer 
+     * @param $trailer \LengthOfRope\JSONLD\Schema\VideoObject
      * @return static
      **/
     public function setTrailer($trailer): static {
@@ -72,7 +72,7 @@ class CreativeWorkSeason extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\VideoObject
      **/
     public function getTrailer() {
         return $this->properties['trailer'];
@@ -80,7 +80,7 @@ class CreativeWorkSeason extends CreativeWork
     /**
      * Position of the season within an ordered group of seasons.
      *
-     * @param $seasonNumber |
+     * @param $seasonNumber \LengthOfRope\JSONLD\Schema\Integer|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setSeasonNumber($seasonNumber): static {
@@ -90,7 +90,7 @@ class CreativeWorkSeason extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Integer|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getSeasonNumber() {
         return $this->properties['seasonNumber'];
@@ -98,7 +98,7 @@ class CreativeWorkSeason extends CreativeWork
     /**
      * An episode of a TV, radio or game media within a series or season.
      *
-     * @param $episode 
+     * @param $episode \LengthOfRope\JSONLD\Schema\Episode
      * @return static
      **/
     public function setEpisode($episode): static {
@@ -108,7 +108,7 @@ class CreativeWorkSeason extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Episode
      **/
     public function getEpisode() {
         return $this->properties['episode'];
@@ -117,7 +117,7 @@ class CreativeWorkSeason extends CreativeWork
      * The start date and time of the item (in [ISO 8601 date
      * format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
-     * @param $startDate |
+     * @param $startDate \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
      * @return static
      **/
     public function setStartDate($startDate): static {
@@ -127,7 +127,7 @@ class CreativeWorkSeason extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
      **/
     public function getStartDate() {
         return $this->properties['startDate'];
@@ -136,7 +136,7 @@ class CreativeWorkSeason extends CreativeWork
      * The production company or studio responsible for the item, e.g. series, video
      * game, episode etc.
      *
-     * @param $productionCompany 
+     * @param $productionCompany \LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setProductionCompany($productionCompany): static {
@@ -146,7 +146,7 @@ class CreativeWorkSeason extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getProductionCompany() {
         return $this->properties['productionCompany'];
@@ -154,7 +154,7 @@ class CreativeWorkSeason extends CreativeWork
     /**
      * The series to which this episode or season belongs.
      *
-     * @param $partOfSeries 
+     * @param $partOfSeries \LengthOfRope\JSONLD\Schema\CreativeWorkSeries
      * @return static
      **/
     public function setPartOfSeries($partOfSeries): static {
@@ -164,7 +164,7 @@ class CreativeWorkSeason extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWorkSeries
      **/
     public function getPartOfSeries() {
         return $this->properties['partOfSeries'];
@@ -174,7 +174,7 @@ class CreativeWorkSeason extends CreativeWork
      * Directors can be associated with individual items or with a series, episode,
      * clip.
      *
-     * @param $director 
+     * @param $director \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setDirector($director): static {
@@ -184,7 +184,7 @@ class CreativeWorkSeason extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
     public function getDirector() {
         return $this->properties['director'];
@@ -192,7 +192,7 @@ class CreativeWorkSeason extends CreativeWork
     /**
      * The number of episodes in this season or series.
      *
-     * @param $numberOfEpisodes 
+     * @param $numberOfEpisodes \LengthOfRope\JSONLD\Schema\Integer
      * @return static
      **/
     public function setNumberOfEpisodes($numberOfEpisodes): static {
@@ -202,7 +202,7 @@ class CreativeWorkSeason extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Integer
      **/
     public function getNumberOfEpisodes() {
         return $this->properties['numberOfEpisodes'];
@@ -211,7 +211,7 @@ class CreativeWorkSeason extends CreativeWork
      * The end date and time of the item (in [ISO 8601 date
      * format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
-     * @param $endDate |
+     * @param $endDate \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
      * @return static
      **/
     public function setEndDate($endDate): static {
@@ -221,7 +221,7 @@ class CreativeWorkSeason extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
      **/
     public function getEndDate() {
         return $this->properties['endDate'];
@@ -229,7 +229,7 @@ class CreativeWorkSeason extends CreativeWork
     /**
      * An episode of a TV/radio series or season.
      *
-     * @param $episodes 
+     * @param $episodes \LengthOfRope\JSONLD\Schema\Episode
      * @return static
      **/
     public function setEpisodes($episodes): static {
@@ -239,7 +239,7 @@ class CreativeWorkSeason extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Episode
      **/
     public function getEpisodes() {
         return $this->properties['episodes'];

@@ -57,7 +57,7 @@ class Claim extends CreativeWork
     /**
      * Indicates the first known occurrence of a [[Claim]] in some [[CreativeWork]].
      *
-     * @param $firstAppearance 
+     * @param $firstAppearance \LengthOfRope\JSONLD\Schema\CreativeWork
      * @return static
      **/
     public function setFirstAppearance($firstAppearance): static {
@@ -67,7 +67,7 @@ class Claim extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork
      **/
     public function getFirstAppearance() {
         return $this->properties['firstAppearance'];
@@ -75,7 +75,7 @@ class Claim extends CreativeWork
     /**
      * Indicates an occurrence of a [[Claim]] in some [[CreativeWork]].
      *
-     * @param $appearance 
+     * @param $appearance \LengthOfRope\JSONLD\Schema\CreativeWork
      * @return static
      **/
     public function setAppearance($appearance): static {
@@ -85,7 +85,7 @@ class Claim extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork
      **/
     public function getAppearance() {
         return $this->properties['appearance'];
@@ -95,7 +95,7 @@ class Claim extends CreativeWork
      * [[interpretedAsClaim]] property can be used to indicate a claim contained,
      * implied or refined from the content of a [[MediaObject]].
      *
-     * @param $claimInterpreter |
+     * @param $claimInterpreter \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setClaimInterpreter($claimInterpreter): static {
@@ -105,7 +105,7 @@ class Claim extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getClaimInterpreter() {
         return $this->properties['claimInterpreter'];

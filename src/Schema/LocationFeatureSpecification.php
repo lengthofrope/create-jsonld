@@ -45,7 +45,7 @@ class LocationFeatureSpecification extends PropertyValue
      * The date after when the item is not valid. For example the end of an offer,
      * salary period, or a period of opening hours.
      *
-     * @param $validThrough |
+     * @param $validThrough \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
      * @return static
      **/
     public function setValidThrough($validThrough): static {
@@ -55,7 +55,7 @@ class LocationFeatureSpecification extends PropertyValue
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
      **/
     public function getValidThrough() {
         return $this->properties['validThrough'];
@@ -63,7 +63,7 @@ class LocationFeatureSpecification extends PropertyValue
     /**
      * The hours during which this service or contact is available.
      *
-     * @param $hoursAvailable 
+     * @param $hoursAvailable \LengthOfRope\JSONLD\Schema\OpeningHoursSpecification
      * @return static
      **/
     public function setHoursAvailable($hoursAvailable): static {
@@ -73,7 +73,7 @@ class LocationFeatureSpecification extends PropertyValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\OpeningHoursSpecification
      **/
     public function getHoursAvailable() {
         return $this->properties['hoursAvailable'];
@@ -81,7 +81,7 @@ class LocationFeatureSpecification extends PropertyValue
     /**
      * The date when the item becomes valid.
      *
-     * @param $validFrom |
+     * @param $validFrom \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
      * @return static
      **/
     public function setValidFrom($validFrom): static {
@@ -91,7 +91,7 @@ class LocationFeatureSpecification extends PropertyValue
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
      **/
     public function getValidFrom() {
         return $this->properties['validFrom'];

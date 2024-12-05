@@ -43,7 +43,7 @@ class VoteAction extends ChooseAction
     /**
      * A sub property of object. The candidate subject of this action.
      *
-     * @param $candidate 
+     * @param $candidate \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setCandidate($candidate): static {
@@ -53,7 +53,7 @@ class VoteAction extends ChooseAction
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
     public function getCandidate() {
         return $this->properties['candidate'];

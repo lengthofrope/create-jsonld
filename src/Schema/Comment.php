@@ -47,7 +47,7 @@ class Comment extends CreativeWork
      * [[Article]] or other [[CreativeWork]]. See also [[comment]] which points from
      * something to a comment about it.
      *
-     * @param $parentItem |
+     * @param $parentItem \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\Comment
      * @return static
      **/
     public function setParentItem($parentItem): static {
@@ -57,7 +57,7 @@ class Comment extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\Comment
      **/
     public function getParentItem() {
         return $this->properties['parentItem'];
@@ -66,7 +66,7 @@ class Comment extends CreativeWork
      * The number of downvotes this question, answer or comment has received from the
      * community.
      *
-     * @param $downvoteCount 
+     * @param $downvoteCount \LengthOfRope\JSONLD\Schema\Integer
      * @return static
      **/
     public function setDownvoteCount($downvoteCount): static {
@@ -76,7 +76,7 @@ class Comment extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Integer
      **/
     public function getDownvoteCount() {
         return $this->properties['downvoteCount'];
@@ -85,7 +85,7 @@ class Comment extends CreativeWork
      * A CreativeWork such as an image, video, or audio clip shared as part of this
      * posting.
      *
-     * @param $sharedContent 
+     * @param $sharedContent \LengthOfRope\JSONLD\Schema\CreativeWork
      * @return static
      **/
     public function setSharedContent($sharedContent): static {
@@ -95,7 +95,7 @@ class Comment extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork
      **/
     public function getSharedContent() {
         return $this->properties['sharedContent'];
@@ -104,7 +104,7 @@ class Comment extends CreativeWork
      * The number of upvotes this question, answer or comment has received from the
      * community.
      *
-     * @param $upvoteCount 
+     * @param $upvoteCount \LengthOfRope\JSONLD\Schema\Integer
      * @return static
      **/
     public function setUpvoteCount($upvoteCount): static {
@@ -114,7 +114,7 @@ class Comment extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Integer
      **/
     public function getUpvoteCount() {
         return $this->properties['upvoteCount'];

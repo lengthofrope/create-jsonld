@@ -50,7 +50,7 @@ class HotelRoom extends Room
      * room used by a single person).
      * Typical unit code(s): C62 for person.
      *
-     * @param $occupancy 
+     * @param $occupancy \LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setOccupancy($occupancy): static {
@@ -60,7 +60,7 @@ class HotelRoom extends Room
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getOccupancy() {
         return $this->properties['occupancy'];
@@ -72,7 +72,7 @@ class HotelRoom extends Room
      * instance of BedDetails. For more detailed information, use the amenityFeature
      * property.
      *
-     * @param $bed ||
+     * @param $bed \LengthOfRope\JSONLD\Schema\BedType|\LengthOfRope\JSONLD\Schema\BedDetails|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setBed($bed): static {
@@ -82,7 +82,7 @@ class HotelRoom extends Room
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\Schema\BedType|\LengthOfRope\JSONLD\Schema\BedDetails|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getBed() {
         return $this->properties['bed'];

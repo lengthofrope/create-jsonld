@@ -42,7 +42,7 @@ class BoatTrip extends Trip
     /**
      * The terminal or port from which the boat departs.
      *
-     * @param $departureBoatTerminal 
+     * @param $departureBoatTerminal \LengthOfRope\JSONLD\Schema\BoatTerminal
      * @return static
      **/
     public function setDepartureBoatTerminal($departureBoatTerminal): static {
@@ -52,7 +52,7 @@ class BoatTrip extends Trip
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\BoatTerminal
      **/
     public function getDepartureBoatTerminal() {
         return $this->properties['departureBoatTerminal'];
@@ -60,7 +60,7 @@ class BoatTrip extends Trip
     /**
      * The terminal or port from which the boat arrives.
      *
-     * @param $arrivalBoatTerminal 
+     * @param $arrivalBoatTerminal \LengthOfRope\JSONLD\Schema\BoatTerminal
      * @return static
      **/
     public function setArrivalBoatTerminal($arrivalBoatTerminal): static {
@@ -70,7 +70,7 @@ class BoatTrip extends Trip
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\BoatTerminal
      **/
     public function getArrivalBoatTerminal() {
         return $this->properties['arrivalBoatTerminal'];

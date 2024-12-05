@@ -45,7 +45,7 @@ class ProgramMembership extends Intangible
      * can be used to express the units the points are issued in. (E.g. stars, miles,
      * etc.)
      *
-     * @param $membershipPointsEarned |
+     * @param $membershipPointsEarned \LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setMembershipPointsEarned($membershipPointsEarned): static {
@@ -55,7 +55,7 @@ class ProgramMembership extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getMembershipPointsEarned() {
         return $this->properties['membershipPointsEarned'];
@@ -64,7 +64,7 @@ class ProgramMembership extends Intangible
      * The program providing the membership. It is preferable to use
      * [:program](https://schema.org/program) instead.
      *
-     * @param $programName 
+     * @param $programName \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setProgramName($programName): static {
@@ -74,7 +74,7 @@ class ProgramMembership extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getProgramName() {
         return $this->properties['programName'];
@@ -82,7 +82,7 @@ class ProgramMembership extends Intangible
     /**
      * A unique identifier for the membership.
      *
-     * @param $membershipNumber 
+     * @param $membershipNumber \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setMembershipNumber($membershipNumber): static {
@@ -92,7 +92,7 @@ class ProgramMembership extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getMembershipNumber() {
         return $this->properties['membershipNumber'];
@@ -101,7 +101,7 @@ class ProgramMembership extends Intangible
      * The [MemberProgram](https://schema.org/MemberProgram) associated with a
      * [ProgramMembership](https://schema.org/ProgramMembership).
      *
-     * @param $program 
+     * @param $program \LengthOfRope\JSONLD\Schema\MemberProgram
      * @return static
      **/
     public function setProgram($program): static {
@@ -111,7 +111,7 @@ class ProgramMembership extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MemberProgram
      **/
     public function getProgram() {
         return $this->properties['program'];
@@ -120,7 +120,7 @@ class ProgramMembership extends Intangible
      * A member of an Organization or a ProgramMembership. Organizations can be members
      * of organizations; ProgramMembership is typically for individuals.
      *
-     * @param $member |
+     * @param $member \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setMember($member): static {
@@ -130,7 +130,7 @@ class ProgramMembership extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getMember() {
         return $this->properties['member'];
@@ -139,7 +139,7 @@ class ProgramMembership extends Intangible
      * The Organization (airline, travelers' club, retailer, etc.) the membership is
      * made with or which offers the  MemberProgram.
      *
-     * @param $hostingOrganization 
+     * @param $hostingOrganization \LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setHostingOrganization($hostingOrganization): static {
@@ -149,7 +149,7 @@ class ProgramMembership extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getHostingOrganization() {
         return $this->properties['hostingOrganization'];
@@ -157,7 +157,7 @@ class ProgramMembership extends Intangible
     /**
      * A member of this organization.
      *
-     * @param $members |
+     * @param $members \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setMembers($members): static {
@@ -167,7 +167,7 @@ class ProgramMembership extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\Person
      **/
     public function getMembers() {
         return $this->properties['members'];

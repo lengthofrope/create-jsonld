@@ -44,7 +44,7 @@ class MedicalClinic extends MedicalBusiness
     /**
      * A medical specialty of the provider.
      *
-     * @param $medicalSpecialty 
+     * @param $medicalSpecialty \LengthOfRope\JSONLD\Schema\MedicalSpecialty
      * @return static
      **/
     public function setMedicalSpecialty($medicalSpecialty): static {
@@ -54,7 +54,7 @@ class MedicalClinic extends MedicalBusiness
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MedicalSpecialty
      **/
     public function getMedicalSpecialty() {
         return $this->properties['medicalSpecialty'];
@@ -62,7 +62,7 @@ class MedicalClinic extends MedicalBusiness
     /**
      * A medical service available from this provider.
      *
-     * @param $availableService ||
+     * @param $availableService \LengthOfRope\JSONLD\Schema\MedicalTest|\LengthOfRope\JSONLD\Schema\MedicalTherapy|\LengthOfRope\JSONLD\Schema\MedicalProcedure
      * @return static
      **/
     public function setAvailableService($availableService): static {
@@ -72,7 +72,7 @@ class MedicalClinic extends MedicalBusiness
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\Schema\MedicalTest|\LengthOfRope\JSONLD\Schema\MedicalTherapy|\LengthOfRope\JSONLD\Schema\MedicalProcedure
      **/
     public function getAvailableService() {
         return $this->properties['availableService'];

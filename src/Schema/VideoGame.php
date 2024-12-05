@@ -45,7 +45,7 @@ class VideoGame extends Game
      * in an event. Actors can be associated with individual items or with a series,
      * episode, clip.
      *
-     * @param $actor |
+     * @param $actor \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\PerformingGroup
      * @return static
      **/
     public function setActor($actor): static {
@@ -55,7 +55,7 @@ class VideoGame extends Game
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\PerformingGroup
      **/
     public function getActor() {
         return $this->properties['actor'];
@@ -65,7 +65,7 @@ class VideoGame extends Game
      * href="http://en.wikipedia.org/wiki/Category:Video_game_platforms">video
      * games</a>.
      *
-     * @param $gamePlatform ||
+     * @param $gamePlatform \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setGamePlatform($gamePlatform): static {
@@ -75,7 +75,7 @@ class VideoGame extends Game
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      **/
     public function getGamePlatform() {
         return $this->properties['gamePlatform'];
@@ -83,7 +83,7 @@ class VideoGame extends Game
     /**
      * The trailer of a movie or TV/radio series, season, episode, etc.
      *
-     * @param $trailer 
+     * @param $trailer \LengthOfRope\JSONLD\Schema\VideoObject
      * @return static
      **/
     public function setTrailer($trailer): static {
@@ -93,7 +93,7 @@ class VideoGame extends Game
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\VideoObject
      **/
     public function getTrailer() {
         return $this->properties['trailer'];
@@ -102,7 +102,7 @@ class VideoGame extends Game
      * An actor, e.g. in TV, radio, movie, video games etc. Actors can be associated
      * with individual items or with a series, episode, clip.
      *
-     * @param $actors 
+     * @param $actors \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setActors($actors): static {
@@ -112,7 +112,7 @@ class VideoGame extends Game
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
     public function getActors() {
         return $this->properties['actors'];
@@ -120,7 +120,7 @@ class VideoGame extends Game
     /**
      * The server on which  it is possible to play the game.
      *
-     * @param $gameServer 
+     * @param $gameServer \LengthOfRope\JSONLD\Schema\GameServer
      * @return static
      **/
     public function setGameServer($gameServer): static {
@@ -130,7 +130,7 @@ class VideoGame extends Game
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\GameServer
      **/
     public function getGameServer() {
         return $this->properties['gameServer'];
@@ -138,7 +138,7 @@ class VideoGame extends Game
     /**
      * Links to tips, tactics, etc.
      *
-     * @param $gameTip 
+     * @param $gameTip \LengthOfRope\JSONLD\Schema\CreativeWork
      * @return static
      **/
     public function setGameTip($gameTip): static {
@@ -148,7 +148,7 @@ class VideoGame extends Game
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork
      **/
     public function getGameTip() {
         return $this->properties['gameTip'];
@@ -157,7 +157,7 @@ class VideoGame extends Game
      * A director of e.g. TV, radio, movie, video games etc. content. Directors can be
      * associated with individual items or with a series, episode, clip.
      *
-     * @param $directors 
+     * @param $directors \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setDirectors($directors): static {
@@ -167,7 +167,7 @@ class VideoGame extends Game
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
     public function getDirectors() {
         return $this->properties['directors'];
@@ -175,7 +175,7 @@ class VideoGame extends Game
     /**
      * Cheat codes to the game.
      *
-     * @param $cheatCode 
+     * @param $cheatCode \LengthOfRope\JSONLD\Schema\CreativeWork
      * @return static
      **/
     public function setCheatCode($cheatCode): static {
@@ -185,7 +185,7 @@ class VideoGame extends Game
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork
      **/
     public function getCheatCode() {
         return $this->properties['cheatCode'];
@@ -193,7 +193,7 @@ class VideoGame extends Game
     /**
      * The edition of a video game.
      *
-     * @param $gameEdition 
+     * @param $gameEdition \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setGameEdition($gameEdition): static {
@@ -203,7 +203,7 @@ class VideoGame extends Game
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getGameEdition() {
         return $this->properties['gameEdition'];
@@ -212,7 +212,7 @@ class VideoGame extends Game
      * Indicates whether this game is multi-player, co-op or single-player.  The game
      * can be marked as multi-player, co-op and single-player at the same time.
      *
-     * @param $playMode 
+     * @param $playMode \LengthOfRope\JSONLD\Schema\GamePlayMode
      * @return static
      **/
     public function setPlayMode($playMode): static {
@@ -222,7 +222,7 @@ class VideoGame extends Game
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\GamePlayMode
      **/
     public function getPlayMode() {
         return $this->properties['playMode'];
@@ -232,7 +232,7 @@ class VideoGame extends Game
      * Directors can be associated with individual items or with a series, episode,
      * clip.
      *
-     * @param $director 
+     * @param $director \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setDirector($director): static {
@@ -242,7 +242,7 @@ class VideoGame extends Game
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
     public function getDirector() {
         return $this->properties['director'];
@@ -250,7 +250,7 @@ class VideoGame extends Game
     /**
      * The composer of the soundtrack.
      *
-     * @param $musicBy |
+     * @param $musicBy \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\MusicGroup
      * @return static
      **/
     public function setMusicBy($musicBy): static {
@@ -260,7 +260,7 @@ class VideoGame extends Game
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\MusicGroup
      **/
     public function getMusicBy() {
         return $this->properties['musicBy'];

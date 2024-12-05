@@ -43,7 +43,7 @@ class Muscle extends AnatomicalStructure
     /**
      * The blood vessel that carries blood from the heart to the muscle.
      *
-     * @param $bloodSupply 
+     * @param $bloodSupply \LengthOfRope\JSONLD\Schema\Vessel
      * @return static
      **/
     public function setBloodSupply($bloodSupply): static {
@@ -53,7 +53,7 @@ class Muscle extends AnatomicalStructure
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Vessel
      **/
     public function getBloodSupply() {
         return $this->properties['bloodSupply'];
@@ -61,7 +61,7 @@ class Muscle extends AnatomicalStructure
     /**
      * The muscle whose action counteracts the specified muscle.
      *
-     * @param $antagonist 
+     * @param $antagonist \LengthOfRope\JSONLD\Schema\Muscle
      * @return static
      **/
     public function setAntagonist($antagonist): static {
@@ -71,7 +71,7 @@ class Muscle extends AnatomicalStructure
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Muscle
      **/
     public function getAntagonist() {
         return $this->properties['antagonist'];
@@ -79,7 +79,7 @@ class Muscle extends AnatomicalStructure
     /**
      * The place of attachment of a muscle, or what the muscle moves.
      *
-     * @param $insertion 
+     * @param $insertion \LengthOfRope\JSONLD\Schema\AnatomicalStructure
      * @return static
      **/
     public function setInsertion($insertion): static {
@@ -89,7 +89,7 @@ class Muscle extends AnatomicalStructure
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\AnatomicalStructure
      **/
     public function getInsertion() {
         return $this->properties['insertion'];
@@ -97,7 +97,7 @@ class Muscle extends AnatomicalStructure
     /**
      * The movement the muscle generates.
      *
-     * @param $muscleAction 
+     * @param $muscleAction \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setMuscleAction($muscleAction): static {
@@ -107,7 +107,7 @@ class Muscle extends AnatomicalStructure
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getMuscleAction() {
         return $this->properties['muscleAction'];
@@ -115,7 +115,7 @@ class Muscle extends AnatomicalStructure
     /**
      * The underlying innervation associated with the muscle.
      *
-     * @param $nerve 
+     * @param $nerve \LengthOfRope\JSONLD\Schema\Nerve
      * @return static
      **/
     public function setNerve($nerve): static {
@@ -125,7 +125,7 @@ class Muscle extends AnatomicalStructure
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Nerve
      **/
     public function getNerve() {
         return $this->properties['nerve'];

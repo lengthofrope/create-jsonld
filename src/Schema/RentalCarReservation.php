@@ -45,7 +45,7 @@ class RentalCarReservation extends Reservation
     /**
      * When a taxi will pick up a passenger or a rental car can be picked up.
      *
-     * @param $pickupTime 
+     * @param $pickupTime \LengthOfRope\JSONLD\DataType\DateTime
      * @return static
      **/
     public function setPickupTime($pickupTime): static {
@@ -55,7 +55,7 @@ class RentalCarReservation extends Reservation
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\DateTime
      **/
     public function getPickupTime() {
         return $this->properties['pickupTime'];
@@ -63,7 +63,7 @@ class RentalCarReservation extends Reservation
     /**
      * When a rental car can be dropped off.
      *
-     * @param $dropoffTime 
+     * @param $dropoffTime \LengthOfRope\JSONLD\DataType\DateTime
      * @return static
      **/
     public function setDropoffTime($dropoffTime): static {
@@ -73,7 +73,7 @@ class RentalCarReservation extends Reservation
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\DateTime
      **/
     public function getDropoffTime() {
         return $this->properties['dropoffTime'];
@@ -81,7 +81,7 @@ class RentalCarReservation extends Reservation
     /**
      * Where a taxi will pick up a passenger or a rental car can be picked up.
      *
-     * @param $pickupLocation 
+     * @param $pickupLocation \LengthOfRope\JSONLD\Schema\Place
      * @return static
      **/
     public function setPickupLocation($pickupLocation): static {
@@ -91,7 +91,7 @@ class RentalCarReservation extends Reservation
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Place
      **/
     public function getPickupLocation() {
         return $this->properties['pickupLocation'];
@@ -99,7 +99,7 @@ class RentalCarReservation extends Reservation
     /**
      * Where a rental car can be dropped off.
      *
-     * @param $dropoffLocation 
+     * @param $dropoffLocation \LengthOfRope\JSONLD\Schema\Place
      * @return static
      **/
     public function setDropoffLocation($dropoffLocation): static {
@@ -109,7 +109,7 @@ class RentalCarReservation extends Reservation
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Place
      **/
     public function getDropoffLocation() {
         return $this->properties['dropoffLocation'];

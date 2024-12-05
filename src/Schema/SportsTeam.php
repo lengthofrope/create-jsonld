@@ -43,7 +43,7 @@ class SportsTeam extends SportsOrganization
      * A person that acts as performing member of a sports team; a player as opposed to
      * a coach.
      *
-     * @param $athlete 
+     * @param $athlete \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setAthlete($athlete): static {
@@ -53,7 +53,7 @@ class SportsTeam extends SportsOrganization
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
     public function getAthlete() {
         return $this->properties['athlete'];
@@ -61,7 +61,7 @@ class SportsTeam extends SportsOrganization
     /**
      * A person that acts in a coaching role for a sports team.
      *
-     * @param $coach 
+     * @param $coach \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setCoach($coach): static {
@@ -71,7 +71,7 @@ class SportsTeam extends SportsOrganization
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
     public function getCoach() {
         return $this->properties['coach'];
@@ -85,7 +85,7 @@ class SportsTeam extends SportsOrganization
      * the gender of individuals, we do not try to enumerate all possibilities. A
      * mixed-gender [[SportsTeam]] can be indicated with a text value of "Mixed".
      *
-     * @param $gender |
+     * @param $gender \LengthOfRope\JSONLD\Schema\GenderType|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setGender($gender): static {
@@ -95,7 +95,7 @@ class SportsTeam extends SportsOrganization
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\GenderType|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getGender() {
         return $this->properties['gender'];

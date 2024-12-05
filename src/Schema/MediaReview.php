@@ -53,7 +53,7 @@ class MediaReview extends Review
      * Link to the page containing an original version of the content, or directly to
      * an online copy of the original [[MediaObject]] content, e.g. video file.
      *
-     * @param $originalMediaLink ||
+     * @param $originalMediaLink \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\WebPage|\LengthOfRope\JSONLD\Schema\MediaObject
      * @return static
      **/
     public function setOriginalMediaLink($originalMediaLink): static {
@@ -63,7 +63,7 @@ class MediaReview extends Review
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\WebPage|\LengthOfRope\JSONLD\Schema\MediaObject
      **/
     public function getOriginalMediaLink() {
         return $this->properties['originalMediaLink'];
@@ -73,7 +73,7 @@ class MediaReview extends Review
      * background information that can contribute to better interpretation of the
      * [[MediaObject]].
      *
-     * @param $originalMediaContextDescription 
+     * @param $originalMediaContextDescription \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setOriginalMediaContextDescription($originalMediaContextDescription): static {
@@ -83,7 +83,7 @@ class MediaReview extends Review
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getOriginalMediaContextDescription() {
         return $this->properties['originalMediaContextDescription'];
@@ -92,7 +92,7 @@ class MediaReview extends Review
      * Indicates a MediaManipulationRatingEnumeration classification of a media object
      * (in the context of how it was published or shared).
      *
-     * @param $mediaAuthenticityCategory 
+     * @param $mediaAuthenticityCategory \LengthOfRope\JSONLD\Schema\MediaManipulationRatingEnumeration
      * @return static
      **/
     public function setMediaAuthenticityCategory($mediaAuthenticityCategory): static {
@@ -102,7 +102,7 @@ class MediaReview extends Review
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MediaManipulationRatingEnumeration
      **/
     public function getMediaAuthenticityCategory() {
         return $this->properties['mediaAuthenticityCategory'];

@@ -47,7 +47,7 @@ class HyperToc extends CreativeWork
      * A media object that encodes this CreativeWork. This property is a synonym for
      * encoding.
      *
-     * @param $associatedMedia 
+     * @param $associatedMedia \LengthOfRope\JSONLD\Schema\MediaObject
      * @return static
      **/
     public function setAssociatedMedia($associatedMedia): static {
@@ -57,7 +57,7 @@ class HyperToc extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MediaObject
      **/
     public function getAssociatedMedia() {
         return $this->properties['associatedMedia'];
@@ -65,7 +65,7 @@ class HyperToc extends CreativeWork
     /**
      * Indicates a [[HyperTocEntry]] in a [[HyperToc]].
      *
-     * @param $tocEntry 
+     * @param $tocEntry \LengthOfRope\JSONLD\Schema\HyperTocEntry
      * @return static
      **/
     public function setTocEntry($tocEntry): static {
@@ -75,7 +75,7 @@ class HyperToc extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\HyperTocEntry
      **/
     public function getTocEntry() {
         return $this->properties['tocEntry'];

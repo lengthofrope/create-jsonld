@@ -43,7 +43,7 @@ class ExchangeRateSpecification extends StructuredValue
      * The difference between the price at which a broker or other intermediary buys
      * and sells foreign currency.
      *
-     * @param $exchangeRateSpread |
+     * @param $exchangeRateSpread \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setExchangeRateSpread($exchangeRateSpread): static {
@@ -53,7 +53,7 @@ class ExchangeRateSpecification extends StructuredValue
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\Number
      **/
     public function getExchangeRateSpread() {
         return $this->properties['exchangeRateSpread'];
@@ -68,7 +68,7 @@ class ExchangeRateSpecification extends StructuredValue
      * Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and
      * other currency types, e.g. "Ithaca HOUR".
      *
-     * @param $currency 
+     * @param $currency \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setCurrency($currency): static {
@@ -78,7 +78,7 @@ class ExchangeRateSpecification extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getCurrency() {
         return $this->properties['currency'];
@@ -86,7 +86,7 @@ class ExchangeRateSpecification extends StructuredValue
     /**
      * The current price of a currency.
      *
-     * @param $currentExchangeRate 
+     * @param $currentExchangeRate \LengthOfRope\JSONLD\Schema\UnitPriceSpecification
      * @return static
      **/
     public function setCurrentExchangeRate($currentExchangeRate): static {
@@ -96,7 +96,7 @@ class ExchangeRateSpecification extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\UnitPriceSpecification
      **/
     public function getCurrentExchangeRate() {
         return $this->properties['currentExchangeRate'];

@@ -45,7 +45,7 @@ class Event extends Thing
      * The main performer or performers of the event&#x2014;for example, a presenter,
      * musician, or actor.
      *
-     * @param $performers |
+     * @param $performers \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setPerformers($performers): static {
@@ -55,7 +55,7 @@ class Event extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getPerformers() {
         return $this->properties['performers'];
@@ -63,7 +63,7 @@ class Event extends Thing
     /**
      * An organizer of an Event.
      *
-     * @param $organizer |
+     * @param $organizer \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setOrganizer($organizer): static {
@@ -73,7 +73,7 @@ class Event extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getOrganizer() {
         return $this->properties['organizer'];
@@ -81,7 +81,7 @@ class Event extends Thing
     /**
      * A secondary contributor to the CreativeWork or Event.
      *
-     * @param $contributor |
+     * @param $contributor \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setContributor($contributor): static {
@@ -91,7 +91,7 @@ class Event extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\Person
      **/
     public function getContributor() {
         return $this->properties['contributor'];
@@ -99,7 +99,7 @@ class Event extends Thing
     /**
      * A work performed in some event, for example a play performed in a TheaterEvent.
      *
-     * @param $workPerformed 
+     * @param $workPerformed \LengthOfRope\JSONLD\Schema\CreativeWork
      * @return static
      **/
     public function setWorkPerformed($workPerformed): static {
@@ -109,7 +109,7 @@ class Event extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork
      **/
     public function getWorkPerformed() {
         return $this->properties['workPerformed'];
@@ -119,7 +119,7 @@ class Event extends Thing
      * in an event. Actors can be associated with individual items or with a series,
      * episode, clip.
      *
-     * @param $actor |
+     * @param $actor \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\PerformingGroup
      * @return static
      **/
     public function setActor($actor): static {
@@ -129,7 +129,7 @@ class Event extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\PerformingGroup
      **/
     public function getActor() {
         return $this->properties['actor'];
@@ -138,7 +138,7 @@ class Event extends Thing
      * The eventAttendanceMode of an event indicates whether it occurs online, offline,
      * or a mix.
      *
-     * @param $eventAttendanceMode 
+     * @param $eventAttendanceMode \LengthOfRope\JSONLD\Schema\EventAttendanceModeEnumeration
      * @return static
      **/
     public function setEventAttendanceMode($eventAttendanceMode): static {
@@ -148,7 +148,7 @@ class Event extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\EventAttendanceModeEnumeration
      **/
     public function getEventAttendanceMode() {
         return $this->properties['eventAttendanceMode'];
@@ -157,7 +157,7 @@ class Event extends Thing
      * A [[Grant]] that directly or indirectly provide funding or sponsorship for this
      * item. See also [[ownershipFundingInfo]].
      *
-     * @param $funding 
+     * @param $funding \LengthOfRope\JSONLD\Schema\Grant
      * @return static
      **/
     public function setFunding($funding): static {
@@ -167,7 +167,7 @@ class Event extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Grant
      **/
     public function getFunding() {
         return $this->properties['funding'];
@@ -177,7 +177,7 @@ class Event extends Thing
      * Specific subproperties are available for workPerformed (e.g. a play), or
      * a workPresented (a Movie at a ScreeningEvent).
      *
-     * @param $workFeatured 
+     * @param $workFeatured \LengthOfRope\JSONLD\Schema\CreativeWork
      * @return static
      **/
     public function setWorkFeatured($workFeatured): static {
@@ -187,7 +187,7 @@ class Event extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork
      **/
     public function getWorkFeatured() {
         return $this->properties['workFeatured'];
@@ -197,7 +197,7 @@ class Event extends Thing
      * [[eventAttendanceMode]] is [[OnlineEventAttendanceMode]] (or the online aspects,
      * in the case of a [[MixedEventAttendanceMode]]).
      *
-     * @param $maximumVirtualAttendeeCapacity 
+     * @param $maximumVirtualAttendeeCapacity \LengthOfRope\JSONLD\Schema\Integer
      * @return static
      **/
     public function setMaximumVirtualAttendeeCapacity($maximumVirtualAttendeeCapacity): static {
@@ -207,7 +207,7 @@ class Event extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Integer
      **/
     public function getMaximumVirtualAttendeeCapacity() {
         return $this->properties['maximumVirtualAttendeeCapacity'];
@@ -216,7 +216,7 @@ class Event extends Thing
      * An Event that is part of this event. For example, a conference event includes
      * many presentations, each of which is a subEvent of the conference.
      *
-     * @param $subEvent 
+     * @param $subEvent \LengthOfRope\JSONLD\Schema\Event
      * @return static
      **/
     public function setSubEvent($subEvent): static {
@@ -226,7 +226,7 @@ class Event extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Event
      **/
     public function getSubEvent() {
         return $this->properties['subEvent'];
@@ -234,7 +234,7 @@ class Event extends Thing
     /**
      * The subject matter of the content.
      *
-     * @param $about 
+     * @param $about \LengthOfRope\JSONLD\Schema\Thing
      * @return static
      **/
     public function setAbout($about): static {
@@ -244,7 +244,7 @@ class Event extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Thing
      **/
     public function getAbout() {
         return $this->properties['about'];
@@ -252,7 +252,7 @@ class Event extends Thing
     /**
      * The CreativeWork that captured all or part of this Event.
      *
-     * @param $recordedIn 
+     * @param $recordedIn \LengthOfRope\JSONLD\Schema\CreativeWork
      * @return static
      **/
     public function setRecordedIn($recordedIn): static {
@@ -262,7 +262,7 @@ class Event extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork
      **/
     public function getRecordedIn() {
         return $this->properties['recordedIn'];
@@ -271,7 +271,7 @@ class Event extends Thing
      * A person or organization that supports (sponsors) something through some kind of
      * financial contribution.
      *
-     * @param $funder |
+     * @param $funder \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setFunder($funder): static {
@@ -281,7 +281,7 @@ class Event extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getFunder() {
         return $this->properties['funder'];
@@ -290,7 +290,7 @@ class Event extends Thing
      * Events that are a part of this event. For example, a conference event includes
      * many presentations, each subEvents of the conference.
      *
-     * @param $subEvents 
+     * @param $subEvents \LengthOfRope\JSONLD\Schema\Event
      * @return static
      **/
     public function setSubEvents($subEvents): static {
@@ -300,7 +300,7 @@ class Event extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Event
      **/
     public function getSubEvents() {
         return $this->properties['subEvents'];
@@ -309,7 +309,7 @@ class Event extends Thing
      * Keywords or tags used to describe some item. Multiple textual entries in a
      * keywords list are typically delimited by commas, or by repeating the property.
      *
-     * @param $keywords ||
+     * @param $keywords \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setKeywords($keywords): static {
@@ -319,7 +319,7 @@ class Event extends Thing
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getKeywords() {
         return $this->properties['keywords'];
@@ -327,7 +327,7 @@ class Event extends Thing
     /**
      * A flag to signal that the item, event, or place is accessible for free.
      *
-     * @param $isAccessibleForFree 
+     * @param $isAccessibleForFree \LengthOfRope\JSONLD\DataType\Boolean
      * @return static
      **/
     public function setIsAccessibleForFree($isAccessibleForFree): static {
@@ -337,7 +337,7 @@ class Event extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Boolean
      **/
     public function getIsAccessibleForFree() {
         return $this->properties['isAccessibleForFree'];
@@ -349,7 +349,7 @@ class Event extends Thing
      * (rare) case of an event that has been postponed and rescheduled multiple times,
      * this field may be repeated.
      *
-     * @param $previousStartDate 
+     * @param $previousStartDate \LengthOfRope\JSONLD\DataType\Date
      * @return static
      **/
     public function setPreviousStartDate($previousStartDate): static {
@@ -359,7 +359,7 @@ class Event extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Date
      **/
     public function getPreviousStartDate() {
         return $this->properties['previousStartDate'];
@@ -368,7 +368,7 @@ class Event extends Thing
      * A performer at the event&#x2014;for example, a presenter, musician, musical
      * group or actor.
      *
-     * @param $performer |
+     * @param $performer \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setPerformer($performer): static {
@@ -378,7 +378,7 @@ class Event extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getPerformer() {
         return $this->properties['performer'];
@@ -387,7 +387,7 @@ class Event extends Thing
      * The location of, for example, where an event is happening, where an organization
      * is located, or where an action takes place.
      *
-     * @param $location |||
+     * @param $location \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\VirtualLocation|\LengthOfRope\JSONLD\Schema\PostalAddress
      * @return static
      **/
     public function setLocation($location): static {
@@ -397,7 +397,7 @@ class Event extends Thing
     }
 
     /**
-     * @return |||
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\VirtualLocation|\LengthOfRope\JSONLD\Schema\PostalAddress
      **/
     public function getLocation() {
         return $this->properties['location'];
@@ -406,7 +406,7 @@ class Event extends Thing
      * The start date and time of the item (in [ISO 8601 date
      * format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
-     * @param $startDate |
+     * @param $startDate \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
      * @return static
      **/
     public function setStartDate($startDate): static {
@@ -416,7 +416,7 @@ class Event extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
      **/
     public function getStartDate() {
         return $this->properties['startDate'];
@@ -424,7 +424,7 @@ class Event extends Thing
     /**
      * The typical expected age range, e.g. '7-9', '11-'.
      *
-     * @param $typicalAgeRange 
+     * @param $typicalAgeRange \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setTypicalAgeRange($typicalAgeRange): static {
@@ -434,7 +434,7 @@ class Event extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getTypicalAgeRange() {
         return $this->properties['typicalAgeRange'];
@@ -444,7 +444,7 @@ class Event extends Thing
      * regional differences and technical requirements of a target market, or that
      * translates during some event.
      *
-     * @param $translator |
+     * @param $translator \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setTranslator($translator): static {
@@ -454,7 +454,7 @@ class Event extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getTranslator() {
         return $this->properties['translator'];
@@ -462,7 +462,7 @@ class Event extends Thing
     /**
      * A review of the item.
      *
-     * @param $review 
+     * @param $review \LengthOfRope\JSONLD\Schema\Review
      * @return static
      **/
     public function setReview($review): static {
@@ -472,7 +472,7 @@ class Event extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Review
      **/
     public function getReview() {
         return $this->properties['review'];
@@ -480,7 +480,7 @@ class Event extends Thing
     /**
      * The number of attendee places for an event that remain unallocated.
      *
-     * @param $remainingAttendeeCapacity 
+     * @param $remainingAttendeeCapacity \LengthOfRope\JSONLD\Schema\Integer
      * @return static
      **/
     public function setRemainingAttendeeCapacity($remainingAttendeeCapacity): static {
@@ -490,7 +490,7 @@ class Event extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Integer
      **/
     public function getRemainingAttendeeCapacity() {
         return $this->properties['remainingAttendeeCapacity'];
@@ -512,7 +512,7 @@ class Event extends Thing
      * different months
      * or seasons.
      *
-     * @param $eventSchedule 
+     * @param $eventSchedule \LengthOfRope\JSONLD\Schema\Schedule
      * @return static
      **/
     public function setEventSchedule($eventSchedule): static {
@@ -522,7 +522,7 @@ class Event extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Schedule
      **/
     public function getEventSchedule() {
         return $this->properties['eventSchedule'];
@@ -537,7 +537,7 @@ class Event extends Thing
      * Product, can clarify the nature of the offer.
      *
      *
-     * @param $offers |
+     * @param $offers \LengthOfRope\JSONLD\Schema\Offer|\LengthOfRope\JSONLD\Schema\Demand
      * @return static
      **/
     public function setOffers($offers): static {
@@ -547,7 +547,7 @@ class Event extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Offer|\LengthOfRope\JSONLD\Schema\Demand
      **/
     public function getOffers() {
         return $this->properties['offers'];
@@ -556,7 +556,7 @@ class Event extends Thing
      * The duration of the item (movie, audio recording, event, etc.) in [ISO 8601
      * duration format](http://en.wikipedia.org/wiki/ISO_8601).
      *
-     * @param $duration 
+     * @param $duration \LengthOfRope\JSONLD\Schema\Duration
      * @return static
      **/
     public function setDuration($duration): static {
@@ -566,7 +566,7 @@ class Event extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Duration
      **/
     public function getDuration() {
         return $this->properties['duration'];
@@ -575,7 +575,7 @@ class Event extends Thing
      * An event that this event is a part of. For example, a collection of individual
      * music performances might each have a music festival as their superEvent.
      *
-     * @param $superEvent 
+     * @param $superEvent \LengthOfRope\JSONLD\Schema\Event
      * @return static
      **/
     public function setSuperEvent($superEvent): static {
@@ -585,7 +585,7 @@ class Event extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Event
      **/
     public function getSuperEvent() {
         return $this->properties['superEvent'];
@@ -595,7 +595,7 @@ class Event extends Thing
      * Directors can be associated with individual items or with a series, episode,
      * clip.
      *
-     * @param $director 
+     * @param $director \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setDirector($director): static {
@@ -605,7 +605,7 @@ class Event extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
     public function getDirector() {
         return $this->properties['director'];
@@ -613,7 +613,7 @@ class Event extends Thing
     /**
      * The time admission will commence.
      *
-     * @param $doorTime |
+     * @param $doorTime \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Time
      * @return static
      **/
     public function setDoorTime($doorTime): static {
@@ -623,7 +623,7 @@ class Event extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Time
      **/
     public function getDoorTime() {
         return $this->properties['doorTime'];
@@ -633,7 +633,7 @@ class Event extends Thing
      * [[eventAttendanceMode]] is [[OfflineEventAttendanceMode]] (or the offline
      * aspects, in the case of a [[MixedEventAttendanceMode]]).
      *
-     * @param $maximumPhysicalAttendeeCapacity 
+     * @param $maximumPhysicalAttendeeCapacity \LengthOfRope\JSONLD\Schema\Integer
      * @return static
      **/
     public function setMaximumPhysicalAttendeeCapacity($maximumPhysicalAttendeeCapacity): static {
@@ -643,7 +643,7 @@ class Event extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Integer
      **/
     public function getMaximumPhysicalAttendeeCapacity() {
         return $this->properties['maximumPhysicalAttendeeCapacity'];
@@ -651,7 +651,7 @@ class Event extends Thing
     /**
      * A person or organization attending the event.
      *
-     * @param $attendee |
+     * @param $attendee \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setAttendee($attendee): static {
@@ -661,7 +661,7 @@ class Event extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getAttendee() {
         return $this->properties['attendee'];
@@ -671,7 +671,7 @@ class Event extends Thing
      * financial contribution. E.g. a sponsor of a Medical Study or a corporate sponsor
      * of an event.
      *
-     * @param $sponsor |
+     * @param $sponsor \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setSponsor($sponsor): static {
@@ -681,7 +681,7 @@ class Event extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getSponsor() {
         return $this->properties['sponsor'];
@@ -689,7 +689,7 @@ class Event extends Thing
     /**
      * The overall rating, based on a collection of reviews or ratings, of the item.
      *
-     * @param $aggregateRating 
+     * @param $aggregateRating \LengthOfRope\JSONLD\Schema\AggregateRating
      * @return static
      **/
     public function setAggregateRating($aggregateRating): static {
@@ -699,7 +699,7 @@ class Event extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\AggregateRating
      **/
     public function getAggregateRating() {
         return $this->properties['aggregateRating'];
@@ -709,7 +709,7 @@ class Event extends Thing
      * of the language codes from the [IETF BCP 47
      * standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
      *
-     * @param $inLanguage |
+     * @param $inLanguage \LengthOfRope\JSONLD\Schema\Language|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setInLanguage($inLanguage): static {
@@ -719,7 +719,7 @@ class Event extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Language|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getInLanguage() {
         return $this->properties['inLanguage'];
@@ -728,7 +728,7 @@ class Event extends Thing
      * The end date and time of the item (in [ISO 8601 date
      * format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
-     * @param $endDate |
+     * @param $endDate \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
      * @return static
      **/
     public function setEndDate($endDate): static {
@@ -738,7 +738,7 @@ class Event extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
      **/
     public function getEndDate() {
         return $this->properties['endDate'];
@@ -746,7 +746,7 @@ class Event extends Thing
     /**
      * A person attending the event.
      *
-     * @param $attendees |
+     * @param $attendees \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setAttendees($attendees): static {
@@ -756,7 +756,7 @@ class Event extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\Person
      **/
     public function getAttendees() {
         return $this->properties['attendees'];
@@ -765,7 +765,7 @@ class Event extends Thing
      * An eventStatus of an event represents its status; particularly useful when an
      * event is cancelled or rescheduled.
      *
-     * @param $eventStatus 
+     * @param $eventStatus \LengthOfRope\JSONLD\Schema\EventStatusType
      * @return static
      **/
     public function setEventStatus($eventStatus): static {
@@ -775,7 +775,7 @@ class Event extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\EventStatusType
      **/
     public function getEventStatus() {
         return $this->properties['eventStatus'];
@@ -783,7 +783,7 @@ class Event extends Thing
     /**
      * The total number of individuals that may attend an event or venue.
      *
-     * @param $maximumAttendeeCapacity 
+     * @param $maximumAttendeeCapacity \LengthOfRope\JSONLD\Schema\Integer
      * @return static
      **/
     public function setMaximumAttendeeCapacity($maximumAttendeeCapacity): static {
@@ -793,7 +793,7 @@ class Event extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Integer
      **/
     public function getMaximumAttendeeCapacity() {
         return $this->properties['maximumAttendeeCapacity'];
@@ -802,7 +802,7 @@ class Event extends Thing
      * The person or organization who wrote a composition, or who is the composer of a
      * work performed at some event.
      *
-     * @param $composer |
+     * @param $composer \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setComposer($composer): static {
@@ -812,7 +812,7 @@ class Event extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getComposer() {
         return $this->properties['composer'];
@@ -820,7 +820,7 @@ class Event extends Thing
     /**
      * An intended audience, i.e. a group for whom something was created.
      *
-     * @param $audience 
+     * @param $audience \LengthOfRope\JSONLD\Schema\Audience
      * @return static
      **/
     public function setAudience($audience): static {
@@ -830,7 +830,7 @@ class Event extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Audience
      **/
     public function getAudience() {
         return $this->properties['audience'];

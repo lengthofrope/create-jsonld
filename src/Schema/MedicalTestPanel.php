@@ -42,7 +42,7 @@ class MedicalTestPanel extends MedicalTest
     /**
      * A component test of the panel.
      *
-     * @param $subTest 
+     * @param $subTest \LengthOfRope\JSONLD\Schema\MedicalTest
      * @return static
      **/
     public function setSubTest($subTest): static {
@@ -52,7 +52,7 @@ class MedicalTestPanel extends MedicalTest
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MedicalTest
      **/
     public function getSubTest() {
         return $this->properties['subTest'];

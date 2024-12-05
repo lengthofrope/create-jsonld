@@ -45,7 +45,7 @@ class IndividualPhysician extends Physician
     /**
      * A [[MedicalOrganization]] where the [[IndividualPhysician]] practices.
      *
-     * @param $practicesAt 
+     * @param $practicesAt \LengthOfRope\JSONLD\Schema\MedicalOrganization
      * @return static
      **/
     public function setPracticesAt($practicesAt): static {
@@ -55,7 +55,7 @@ class IndividualPhysician extends Physician
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MedicalOrganization
      **/
     public function getPracticesAt() {
         return $this->properties['practicesAt'];

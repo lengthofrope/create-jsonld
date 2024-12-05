@@ -42,7 +42,7 @@ class DeliveryEvent extends Event
     /**
      * After this date, the item will no longer be available for pickup.
      *
-     * @param $availableThrough 
+     * @param $availableThrough \LengthOfRope\JSONLD\DataType\DateTime
      * @return static
      **/
     public function setAvailableThrough($availableThrough): static {
@@ -52,7 +52,7 @@ class DeliveryEvent extends Event
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\DateTime
      **/
     public function getAvailableThrough() {
         return $this->properties['availableThrough'];
@@ -60,7 +60,7 @@ class DeliveryEvent extends Event
     /**
      * When the item is available for pickup from the store, locker, etc.
      *
-     * @param $availableFrom 
+     * @param $availableFrom \LengthOfRope\JSONLD\DataType\DateTime
      * @return static
      **/
     public function setAvailableFrom($availableFrom): static {
@@ -70,7 +70,7 @@ class DeliveryEvent extends Event
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\DateTime
      **/
     public function getAvailableFrom() {
         return $this->properties['availableFrom'];
@@ -78,7 +78,7 @@ class DeliveryEvent extends Event
     /**
      * Method used for delivery or shipping.
      *
-     * @param $hasDeliveryMethod 
+     * @param $hasDeliveryMethod \LengthOfRope\JSONLD\Schema\DeliveryMethod
      * @return static
      **/
     public function setHasDeliveryMethod($hasDeliveryMethod): static {
@@ -88,7 +88,7 @@ class DeliveryEvent extends Event
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\DeliveryMethod
      **/
     public function getHasDeliveryMethod() {
         return $this->properties['hasDeliveryMethod'];
@@ -96,7 +96,7 @@ class DeliveryEvent extends Event
     /**
      * Password, PIN, or access code needed for delivery (e.g. from a locker).
      *
-     * @param $accessCode 
+     * @param $accessCode \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setAccessCode($accessCode): static {
@@ -106,7 +106,7 @@ class DeliveryEvent extends Event
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getAccessCode() {
         return $this->properties['accessCode'];

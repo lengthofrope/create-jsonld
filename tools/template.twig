@@ -44,7 +44,7 @@ class {{ class }} extends {{ classExtends }}
     /**
 {{ property.comment }}
      *
-     * @param ${{ property.label }} {% for range in property.rangeIncludes %}{{ range.class }}{% if loop.last == false %}|{% endif %}{% endfor %}
+     * @param ${{ property.label }} {% for range in property.rangeIncludes %}{{ range }}{% if loop.last == false %}|{% endif %}{% endfor %}
 
      * @return static
      **/
@@ -55,7 +55,7 @@ class {{ class }} extends {{ classExtends }}
     }
 
     /**
-     * @return {% for range in property.rangeIncludes %}{{ range.class }}{% if loop.last == false %}|{% endif %}{% endfor %}
+     * @return {% for range in property.rangeIncludes %}{{ range }}{% if loop.last == false %}|{% endif %}{% endfor %}
 
      **/
     public function {{ property.getter }}() {

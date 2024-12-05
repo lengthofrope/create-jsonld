@@ -44,7 +44,7 @@ class Nerve extends AnatomicalStructure
      * The branches that delineate from the nerve bundle. Not to be confused with
      * [[branchOf]].
      *
-     * @param $branch 
+     * @param $branch \LengthOfRope\JSONLD\Schema\AnatomicalStructure
      * @return static
      **/
     public function setBranch($branch): static {
@@ -54,7 +54,7 @@ class Nerve extends AnatomicalStructure
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\AnatomicalStructure
      **/
     public function getBranch() {
         return $this->properties['branch'];
@@ -62,7 +62,7 @@ class Nerve extends AnatomicalStructure
     /**
      * The neurological pathway extension that involves muscle control.
      *
-     * @param $nerveMotor 
+     * @param $nerveMotor \LengthOfRope\JSONLD\Schema\Muscle
      * @return static
      **/
     public function setNerveMotor($nerveMotor): static {
@@ -72,7 +72,7 @@ class Nerve extends AnatomicalStructure
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Muscle
      **/
     public function getNerveMotor() {
         return $this->properties['nerveMotor'];
@@ -81,7 +81,7 @@ class Nerve extends AnatomicalStructure
      * The neurological pathway extension that inputs and sends information to the
      * brain or spinal cord.
      *
-     * @param $sensoryUnit |
+     * @param $sensoryUnit \LengthOfRope\JSONLD\Schema\AnatomicalStructure|\LengthOfRope\JSONLD\Schema\SuperficialAnatomy
      * @return static
      **/
     public function setSensoryUnit($sensoryUnit): static {
@@ -91,7 +91,7 @@ class Nerve extends AnatomicalStructure
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\AnatomicalStructure|\LengthOfRope\JSONLD\Schema\SuperficialAnatomy
      **/
     public function getSensoryUnit() {
         return $this->properties['sensoryUnit'];
@@ -99,7 +99,7 @@ class Nerve extends AnatomicalStructure
     /**
      * The neurological pathway that originates the neurons.
      *
-     * @param $sourcedFrom 
+     * @param $sourcedFrom \LengthOfRope\JSONLD\Schema\BrainStructure
      * @return static
      **/
     public function setSourcedFrom($sourcedFrom): static {
@@ -109,7 +109,7 @@ class Nerve extends AnatomicalStructure
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\BrainStructure
      **/
     public function getSourcedFrom() {
         return $this->properties['sourcedFrom'];

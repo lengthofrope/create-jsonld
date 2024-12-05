@@ -44,7 +44,7 @@ class ChemicalSubstance extends BioChemEntity
     /**
      * Intended use of the BioChemEntity by humans.
      *
-     * @param $potentialUse 
+     * @param $potentialUse \LengthOfRope\JSONLD\Schema\DefinedTerm
      * @return static
      **/
     public function setPotentialUse($potentialUse): static {
@@ -54,7 +54,7 @@ class ChemicalSubstance extends BioChemEntity
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\DefinedTerm
      **/
     public function getPotentialUse() {
         return $this->properties['potentialUse'];
@@ -62,7 +62,7 @@ class ChemicalSubstance extends BioChemEntity
     /**
      * A role played by the BioChemEntity within a chemical context.
      *
-     * @param $chemicalRole 
+     * @param $chemicalRole \LengthOfRope\JSONLD\Schema\DefinedTerm
      * @return static
      **/
     public function setChemicalRole($chemicalRole): static {
@@ -72,7 +72,7 @@ class ChemicalSubstance extends BioChemEntity
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\DefinedTerm
      **/
     public function getChemicalRole() {
         return $this->properties['chemicalRole'];
@@ -81,7 +81,7 @@ class ChemicalSubstance extends BioChemEntity
      * The chemical composition describes the identity and relative ratio of the
      * chemical elements that make up the substance.
      *
-     * @param $chemicalComposition 
+     * @param $chemicalComposition \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setChemicalComposition($chemicalComposition): static {
@@ -91,7 +91,7 @@ class ChemicalSubstance extends BioChemEntity
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getChemicalComposition() {
         return $this->properties['chemicalComposition'];

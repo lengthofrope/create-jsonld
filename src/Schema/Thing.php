@@ -42,7 +42,7 @@ class Thing extends \LengthOfRope\JSONLD\Elements\Element
     /**
      * The name of the item.
      *
-     * @param $name 
+     * @param $name \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setName($name): static {
@@ -52,7 +52,7 @@ class Thing extends \LengthOfRope\JSONLD\Elements\Element
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getName() {
         return $this->properties['name'];
@@ -63,7 +63,7 @@ class Thing extends \LengthOfRope\JSONLD\Elements\Element
      * particular, name) may be necessary for the description to be useful for
      * disambiguation.
      *
-     * @param $disambiguatingDescription 
+     * @param $disambiguatingDescription \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setDisambiguatingDescription($disambiguatingDescription): static {
@@ -73,7 +73,7 @@ class Thing extends \LengthOfRope\JSONLD\Elements\Element
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getDisambiguatingDescription() {
         return $this->properties['disambiguatingDescription'];
@@ -82,7 +82,7 @@ class Thing extends \LengthOfRope\JSONLD\Elements\Element
      * Indicates a potential Action, which describes an idealized action in which this
      * thing would play an 'object' role.
      *
-     * @param $potentialAction 
+     * @param $potentialAction \LengthOfRope\JSONLD\Schema\Action
      * @return static
      **/
     public function setPotentialAction($potentialAction): static {
@@ -92,7 +92,7 @@ class Thing extends \LengthOfRope\JSONLD\Elements\Element
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Action
      **/
     public function getPotentialAction() {
         return $this->properties['potentialAction'];
@@ -100,7 +100,7 @@ class Thing extends \LengthOfRope\JSONLD\Elements\Element
     /**
      * URL of the item.
      *
-     * @param $url 
+     * @param $url \LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setUrl($url): static {
@@ -110,7 +110,7 @@ class Thing extends \LengthOfRope\JSONLD\Elements\Element
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\URL
      **/
     public function getUrl() {
         return $this->properties['url'];
@@ -123,7 +123,7 @@ class Thing extends \LengthOfRope\JSONLD\Elements\Element
      * details.
      *
      *
-     * @param $identifier ||
+     * @param $identifier \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\PropertyValue
      * @return static
      **/
     public function setIdentifier($identifier): static {
@@ -133,7 +133,7 @@ class Thing extends \LengthOfRope\JSONLD\Elements\Element
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\PropertyValue
      **/
     public function getIdentifier() {
         return $this->properties['identifier'];
@@ -141,7 +141,7 @@ class Thing extends \LengthOfRope\JSONLD\Elements\Element
     /**
      * A CreativeWork or Event about this Thing.
      *
-     * @param $subjectOf |
+     * @param $subjectOf \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\Event
      * @return static
      **/
     public function setSubjectOf($subjectOf): static {
@@ -151,7 +151,7 @@ class Thing extends \LengthOfRope\JSONLD\Elements\Element
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\Event
      **/
     public function getSubjectOf() {
         return $this->properties['subjectOf'];
@@ -159,7 +159,7 @@ class Thing extends \LengthOfRope\JSONLD\Elements\Element
     /**
      * A description of the item.
      *
-     * @param $description |
+     * @param $description \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\TextObject
      * @return static
      **/
     public function setDescription($description): static {
@@ -169,7 +169,7 @@ class Thing extends \LengthOfRope\JSONLD\Elements\Element
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\TextObject
      **/
     public function getDescription() {
         return $this->properties['description'];
@@ -184,7 +184,7 @@ class Thing extends \LengthOfRope\JSONLD\Elements\Element
      * reference. In the case of text values, the class label should follow the
      * schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>.
      *
-     * @param $additionalType |
+     * @param $additionalType \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setAdditionalType($additionalType): static {
@@ -194,7 +194,7 @@ class Thing extends \LengthOfRope\JSONLD\Elements\Element
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      **/
     public function getAdditionalType() {
         return $this->properties['additionalType'];
@@ -203,7 +203,7 @@ class Thing extends \LengthOfRope\JSONLD\Elements\Element
      * An image of the item. This can be a [[URL]] or a fully described
      * [[ImageObject]].
      *
-     * @param $image |
+     * @param $image \LengthOfRope\JSONLD\Schema\ImageObject|\LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setImage($image): static {
@@ -213,7 +213,7 @@ class Thing extends \LengthOfRope\JSONLD\Elements\Element
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\ImageObject|\LengthOfRope\JSONLD\Schema\URL
      **/
     public function getImage() {
         return $this->properties['image'];
@@ -222,7 +222,7 @@ class Thing extends \LengthOfRope\JSONLD\Elements\Element
      * URL of a reference Web page that unambiguously indicates the item's identity.
      * E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
      *
-     * @param $sameAs 
+     * @param $sameAs \LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setSameAs($sameAs): static {
@@ -232,7 +232,7 @@ class Thing extends \LengthOfRope\JSONLD\Elements\Element
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\URL
      **/
     public function getSameAs() {
         return $this->properties['sameAs'];
@@ -240,7 +240,7 @@ class Thing extends \LengthOfRope\JSONLD\Elements\Element
     /**
      * An alias for the item.
      *
-     * @param $alternateName 
+     * @param $alternateName \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setAlternateName($alternateName): static {
@@ -250,7 +250,7 @@ class Thing extends \LengthOfRope\JSONLD\Elements\Element
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getAlternateName() {
         return $this->properties['alternateName'];
@@ -260,7 +260,7 @@ class Thing extends \LengthOfRope\JSONLD\Elements\Element
      * being described. See [background
      * notes](/docs/datamodel.html#mainEntityBackground) for details.
      *
-     * @param $mainEntityOfPage |
+     * @param $mainEntityOfPage \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setMainEntityOfPage($mainEntityOfPage): static {
@@ -270,7 +270,7 @@ class Thing extends \LengthOfRope\JSONLD\Elements\Element
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\URL
      **/
     public function getMainEntityOfPage() {
         return $this->properties['mainEntityOfPage'];

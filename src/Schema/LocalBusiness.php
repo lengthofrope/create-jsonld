@@ -44,7 +44,7 @@ class LocalBusiness extends Place
     /**
      * The price range of the business, for example ```$$$```.
      *
-     * @param $priceRange 
+     * @param $priceRange \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setPriceRange($priceRange): static {
@@ -54,7 +54,7 @@ class LocalBusiness extends Place
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getPriceRange() {
         return $this->properties['priceRange'];
@@ -77,7 +77,7 @@ class LocalBusiness extends Place
      * datetime=&quot;Mo-Su&quot;&gt;Monday through Sunday, all
      * day&lt;/time&gt;</code>.
      *
-     * @param $openingHours 
+     * @param $openingHours \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setOpeningHours($openingHours): static {
@@ -87,7 +87,7 @@ class LocalBusiness extends Place
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getOpeningHours() {
         return $this->properties['openingHours'];
@@ -95,7 +95,7 @@ class LocalBusiness extends Place
     /**
      * Cash, Credit Card, Cryptocurrency, Local Exchange Tradings System, etc.
      *
-     * @param $paymentAccepted 
+     * @param $paymentAccepted \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setPaymentAccepted($paymentAccepted): static {
@@ -105,7 +105,7 @@ class LocalBusiness extends Place
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getPaymentAccepted() {
         return $this->properties['paymentAccepted'];
@@ -114,7 +114,7 @@ class LocalBusiness extends Place
      * The larger organization that this local business is a branch of, if any. Not to
      * be confused with (anatomical) [[branch]].
      *
-     * @param $branchOf 
+     * @param $branchOf \LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setBranchOf($branchOf): static {
@@ -124,7 +124,7 @@ class LocalBusiness extends Place
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getBranchOf() {
         return $this->properties['branchOf'];
@@ -139,7 +139,7 @@ class LocalBusiness extends Place
      * Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and
      * other currency types, e.g. "Ithaca HOUR".
      *
-     * @param $currenciesAccepted 
+     * @param $currenciesAccepted \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setCurrenciesAccepted($currenciesAccepted): static {
@@ -149,7 +149,7 @@ class LocalBusiness extends Place
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getCurrenciesAccepted() {
         return $this->properties['currenciesAccepted'];

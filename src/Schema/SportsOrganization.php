@@ -43,7 +43,7 @@ class SportsOrganization extends Organization
     /**
      * A type of sport (e.g. Baseball).
      *
-     * @param $sport |
+     * @param $sport \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setSport($sport): static {
@@ -53,7 +53,7 @@ class SportsOrganization extends Organization
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      **/
     public function getSport() {
         return $this->properties['sport'];

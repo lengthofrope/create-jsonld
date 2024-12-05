@@ -42,7 +42,7 @@ class ImagingTest extends MedicalTest
     /**
      * Imaging technique used.
      *
-     * @param $imagingTechnique 
+     * @param $imagingTechnique \LengthOfRope\JSONLD\Schema\MedicalImagingTechnique
      * @return static
      **/
     public function setImagingTechnique($imagingTechnique): static {
@@ -52,7 +52,7 @@ class ImagingTest extends MedicalTest
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MedicalImagingTechnique
      **/
     public function getImagingTechnique() {
         return $this->properties['imagingTechnique'];

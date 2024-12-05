@@ -42,7 +42,7 @@ class CategoryCode extends DefinedTerm
     /**
      * A [[CategoryCodeSet]] that contains this category code.
      *
-     * @param $inCodeSet |
+     * @param $inCodeSet \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\CategoryCodeSet
      * @return static
      **/
     public function setInCodeSet($inCodeSet): static {
@@ -52,7 +52,7 @@ class CategoryCode extends DefinedTerm
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\CategoryCodeSet
      **/
     public function getInCodeSet() {
         return $this->properties['inCodeSet'];
@@ -60,7 +60,7 @@ class CategoryCode extends DefinedTerm
     /**
      * A short textual code that uniquely identifies the value.
      *
-     * @param $codeValue 
+     * @param $codeValue \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setCodeValue($codeValue): static {
@@ -70,7 +70,7 @@ class CategoryCode extends DefinedTerm
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getCodeValue() {
         return $this->properties['codeValue'];

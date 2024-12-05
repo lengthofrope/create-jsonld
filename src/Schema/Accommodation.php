@@ -52,7 +52,7 @@ class Accommodation extends Place
      * Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for
      * square yard.
      *
-     * @param $floorSize 
+     * @param $floorSize \LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setFloorSize($floorSize): static {
@@ -62,7 +62,7 @@ class Accommodation extends Place
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getFloorSize() {
         return $this->properties['floorSize'];
@@ -74,7 +74,7 @@ class Accommodation extends Place
      * and [PropertyType](https://ddwiki.reso.org/display/DDW17/PropertyType+Field)
      * fields  for suggested values).
      *
-     * @param $accommodationCategory 
+     * @param $accommodationCategory \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setAccommodationCategory($accommodationCategory): static {
@@ -84,7 +84,7 @@ class Accommodation extends Place
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getAccommodationCategory() {
         return $this->properties['accommodationCategory'];
@@ -93,7 +93,7 @@ class Accommodation extends Place
      * Indicates whether pets are allowed to enter the accommodation or lodging
      * business. More detailed information can be put in a text value.
      *
-     * @param $petsAllowed |
+     * @param $petsAllowed \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Boolean
      * @return static
      **/
     public function setPetsAllowed($petsAllowed): static {
@@ -103,7 +103,7 @@ class Accommodation extends Place
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Boolean
      **/
     public function getPetsAllowed() {
         return $this->properties['petsAllowed'];
@@ -115,7 +115,7 @@ class Accommodation extends Place
      * room used by a single person).
      * Typical unit code(s): C62 for person.
      *
-     * @param $occupancy 
+     * @param $occupancy \LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setOccupancy($occupancy): static {
@@ -125,7 +125,7 @@ class Accommodation extends Place
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getOccupancy() {
         return $this->properties['occupancy'];
@@ -134,7 +134,7 @@ class Accommodation extends Place
      * The total integer number of bedrooms in a some [[Accommodation]],
      * [[ApartmentComplex]] or [[FloorPlan]].
      *
-     * @param $numberOfBedrooms |
+     * @param $numberOfBedrooms \LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setNumberOfBedrooms($numberOfBedrooms): static {
@@ -144,7 +144,7 @@ class Accommodation extends Place
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getNumberOfBedrooms() {
         return $this->properties['numberOfBedrooms'];
@@ -153,7 +153,7 @@ class Accommodation extends Place
      * Length of the lease for some [[Accommodation]], either particular to some
      * [[Offer]] or in some cases intrinsic to the property.
      *
-     * @param $leaseLength |
+     * @param $leaseLength \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Duration
      * @return static
      **/
     public function setLeaseLength($leaseLength): static {
@@ -163,7 +163,7 @@ class Accommodation extends Place
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Duration
      **/
     public function getLeaseLength() {
         return $this->properties['leaseLength'];
@@ -175,7 +175,7 @@ class Accommodation extends Place
      * instance of BedDetails. For more detailed information, use the amenityFeature
      * property.
      *
-     * @param $bed ||
+     * @param $bed \LengthOfRope\JSONLD\Schema\BedType|\LengthOfRope\JSONLD\Schema\BedDetails|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setBed($bed): static {
@@ -185,7 +185,7 @@ class Accommodation extends Place
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\Schema\BedType|\LengthOfRope\JSONLD\Schema\BedDetails|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getBed() {
         return $this->properties['bed'];
@@ -193,7 +193,7 @@ class Accommodation extends Place
     /**
      * Indications regarding the permitted usage of the accommodation.
      *
-     * @param $permittedUsage 
+     * @param $permittedUsage \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setPermittedUsage($permittedUsage): static {
@@ -203,7 +203,7 @@ class Accommodation extends Place
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getPermittedUsage() {
         return $this->properties['permittedUsage'];
@@ -215,7 +215,7 @@ class Accommodation extends Place
      * internationally](https://en.wikipedia.org/wiki/Storey#Consecutive_number_floor_designations),
      * the local system should be used where possible.
      *
-     * @param $floorLevel 
+     * @param $floorLevel \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setFloorLevel($floorLevel): static {
@@ -225,7 +225,7 @@ class Accommodation extends Place
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getFloorLevel() {
         return $this->properties['floorLevel'];
@@ -238,7 +238,7 @@ class Accommodation extends Place
      * Bathrooms and one Half Bathroom, the Bathrooms Total Integer will be 3.". See
      * also [[numberOfRooms]].
      *
-     * @param $numberOfBathroomsTotal 
+     * @param $numberOfBathroomsTotal \LengthOfRope\JSONLD\Schema\Integer
      * @return static
      **/
     public function setNumberOfBathroomsTotal($numberOfBathroomsTotal): static {
@@ -248,7 +248,7 @@ class Accommodation extends Place
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Integer
      **/
     public function getNumberOfBathroomsTotal() {
         return $this->properties['numberOfBathroomsTotal'];
@@ -256,7 +256,7 @@ class Accommodation extends Place
     /**
      * A floorplan of some [[Accommodation]].
      *
-     * @param $accommodationFloorPlan 
+     * @param $accommodationFloorPlan \LengthOfRope\JSONLD\Schema\FloorPlan
      * @return static
      **/
     public function setAccommodationFloorPlan($accommodationFloorPlan): static {
@@ -266,7 +266,7 @@ class Accommodation extends Place
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\FloorPlan
      **/
     public function getAccommodationFloorPlan() {
         return $this->properties['accommodationFloorPlan'];
@@ -276,7 +276,7 @@ class Accommodation extends Place
      * [[Accommodation]]. This corresponds to the [BathroomsFull field in
      * RESO](https://ddwiki.reso.org/display/DDW17/BathroomsFull+Field).
      *
-     * @param $numberOfFullBathrooms 
+     * @param $numberOfFullBathrooms \LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setNumberOfFullBathrooms($numberOfFullBathrooms): static {
@@ -286,7 +286,7 @@ class Accommodation extends Place
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Number
      **/
     public function getNumberOfFullBathrooms() {
         return $this->properties['numberOfFullBathrooms'];
@@ -297,7 +297,7 @@ class Accommodation extends Place
      * Typical unit code(s): ROM for room or C62 for no unit. The type of room can be
      * put in the unitText property of the QuantitativeValue.
      *
-     * @param $numberOfRooms |
+     * @param $numberOfRooms \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setNumberOfRooms($numberOfRooms): static {
@@ -307,7 +307,7 @@ class Accommodation extends Place
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\Number
      **/
     public function getNumberOfRooms() {
         return $this->properties['numberOfRooms'];
@@ -317,7 +317,7 @@ class Accommodation extends Place
      * generic property does not make a statement about whether the feature is included
      * in an offer for the main accommodation or available at extra costs.
      *
-     * @param $amenityFeature 
+     * @param $amenityFeature \LengthOfRope\JSONLD\Schema\LocationFeatureSpecification
      * @return static
      **/
     public function setAmenityFeature($amenityFeature): static {
@@ -327,7 +327,7 @@ class Accommodation extends Place
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\LocationFeatureSpecification
      **/
     public function getAmenityFeature() {
         return $this->properties['amenityFeature'];
@@ -337,7 +337,7 @@ class Accommodation extends Place
      * [[Accommodation]] or [[ApartmentComplex]] in a real estate setting, as well as
      * other kinds of tours as appropriate.
      *
-     * @param $tourBookingPage 
+     * @param $tourBookingPage \LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setTourBookingPage($tourBookingPage): static {
@@ -347,7 +347,7 @@ class Accommodation extends Place
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\URL
      **/
     public function getTourBookingPage() {
         return $this->properties['tourBookingPage'];
@@ -357,7 +357,7 @@ class Accommodation extends Place
      * [[Accommodation]]. This corresponds to the [BathroomsPartial field in
      * RESO](https://ddwiki.reso.org/display/DDW17/BathroomsPartial+Field).
      *
-     * @param $numberOfPartialBathrooms 
+     * @param $numberOfPartialBathrooms \LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setNumberOfPartialBathrooms($numberOfPartialBathrooms): static {
@@ -367,7 +367,7 @@ class Accommodation extends Place
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Number
      **/
     public function getNumberOfPartialBathrooms() {
         return $this->properties['numberOfPartialBathrooms'];
@@ -377,7 +377,7 @@ class Accommodation extends Place
      * [YearBuilt field in
      * RESO](https://ddwiki.reso.org/display/DDW17/YearBuilt+Field).
      *
-     * @param $yearBuilt 
+     * @param $yearBuilt \LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setYearBuilt($yearBuilt): static {
@@ -387,7 +387,7 @@ class Accommodation extends Place
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Number
      **/
     public function getYearBuilt() {
         return $this->properties['yearBuilt'];

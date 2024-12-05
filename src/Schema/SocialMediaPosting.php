@@ -44,7 +44,7 @@ class SocialMediaPosting extends Article
      * A CreativeWork such as an image, video, or audio clip shared as part of this
      * posting.
      *
-     * @param $sharedContent 
+     * @param $sharedContent \LengthOfRope\JSONLD\Schema\CreativeWork
      * @return static
      **/
     public function setSharedContent($sharedContent): static {
@@ -54,7 +54,7 @@ class SocialMediaPosting extends Article
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork
      **/
     public function getSharedContent() {
         return $this->properties['sharedContent'];

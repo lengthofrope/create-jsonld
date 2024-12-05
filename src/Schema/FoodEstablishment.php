@@ -43,7 +43,7 @@ class FoodEstablishment extends LocalBusiness
      * Either the actual menu as a structured representation, as text, or a URL of the
      * menu.
      *
-     * @param $menu ||
+     * @param $menu \LengthOfRope\JSONLD\Schema\Menu|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setMenu($menu): static {
@@ -53,7 +53,7 @@ class FoodEstablishment extends LocalBusiness
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\Schema\Menu|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      **/
     public function getMenu() {
         return $this->properties['menu'];
@@ -62,7 +62,7 @@ class FoodEstablishment extends LocalBusiness
      * Either the actual menu as a structured representation, as text, or a URL of the
      * menu.
      *
-     * @param $hasMenu ||
+     * @param $hasMenu \LengthOfRope\JSONLD\Schema\Menu|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setHasMenu($hasMenu): static {
@@ -72,7 +72,7 @@ class FoodEstablishment extends LocalBusiness
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\Schema\Menu|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      **/
     public function getHasMenu() {
         return $this->properties['hasMenu'];
@@ -83,7 +83,7 @@ class FoodEstablishment extends LocalBusiness
      * the rating organization, e.g. as an Organization with name such as (e.g. HOTREC,
      * DEHOGA, WHR, or Hotelstars).
      *
-     * @param $starRating 
+     * @param $starRating \LengthOfRope\JSONLD\Schema\Rating
      * @return static
      **/
     public function setStarRating($starRating): static {
@@ -93,7 +93,7 @@ class FoodEstablishment extends LocalBusiness
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Rating
      **/
     public function getStarRating() {
         return $this->properties['starRating'];
@@ -101,7 +101,7 @@ class FoodEstablishment extends LocalBusiness
     /**
      * The cuisine of the restaurant.
      *
-     * @param $servesCuisine 
+     * @param $servesCuisine \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setServesCuisine($servesCuisine): static {
@@ -111,7 +111,7 @@ class FoodEstablishment extends LocalBusiness
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getServesCuisine() {
         return $this->properties['servesCuisine'];
@@ -121,7 +121,7 @@ class FoodEstablishment extends LocalBusiness
      * Boolean, an URL at which reservations can be made or (for backwards
      * compatibility) the strings ```Yes``` or ```No```.
      *
-     * @param $acceptsReservations ||
+     * @param $acceptsReservations \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Boolean|\LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setAcceptsReservations($acceptsReservations): static {
@@ -131,7 +131,7 @@ class FoodEstablishment extends LocalBusiness
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Boolean|\LengthOfRope\JSONLD\Schema\URL
      **/
     public function getAcceptsReservations() {
         return $this->properties['acceptsReservations'];

@@ -43,7 +43,7 @@ class Question extends Comment
     /**
      * The number of answers this question has received.
      *
-     * @param $answerCount 
+     * @param $answerCount \LengthOfRope\JSONLD\Schema\Integer
      * @return static
      **/
     public function setAnswerCount($answerCount): static {
@@ -53,7 +53,7 @@ class Question extends Comment
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Integer
      **/
     public function getAnswerCount() {
         return $this->properties['answerCount'];
@@ -64,7 +64,7 @@ class Question extends Comment
      * [[Article]] or other [[CreativeWork]]. See also [[comment]] which points from
      * something to a comment about it.
      *
-     * @param $parentItem |
+     * @param $parentItem \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\Comment
      * @return static
      **/
     public function setParentItem($parentItem): static {
@@ -74,7 +74,7 @@ class Question extends Comment
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\Comment
      **/
     public function getParentItem() {
         return $this->properties['parentItem'];
@@ -84,7 +84,7 @@ class Question extends Comment
      * site. Sites vary in their selection mechanisms, e.g. drawing on community
      * opinion and/or the view of the Question author.
      *
-     * @param $acceptedAnswer |
+     * @param $acceptedAnswer \LengthOfRope\JSONLD\Schema\Answer|\LengthOfRope\JSONLD\Schema\ItemList
      * @return static
      **/
     public function setAcceptedAnswer($acceptedAnswer): static {
@@ -94,7 +94,7 @@ class Question extends Comment
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Answer|\LengthOfRope\JSONLD\Schema\ItemList
      **/
     public function getAcceptedAnswer() {
         return $this->properties['acceptedAnswer'];
@@ -104,7 +104,7 @@ class Question extends Comment
      * indicates the format of question being given. Example: "Multiple choice", "Open
      * ended", "Flashcard".
      *
-     * @param $eduQuestionType 
+     * @param $eduQuestionType \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setEduQuestionType($eduQuestionType): static {
@@ -114,7 +114,7 @@ class Question extends Comment
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getEduQuestionType() {
         return $this->properties['eduQuestionType'];
@@ -123,7 +123,7 @@ class Question extends Comment
      * An answer (possibly one of several, possibly incorrect) to a Question, e.g. on a
      * Question/Answer site.
      *
-     * @param $suggestedAnswer |
+     * @param $suggestedAnswer \LengthOfRope\JSONLD\Schema\Answer|\LengthOfRope\JSONLD\Schema\ItemList
      * @return static
      **/
     public function setSuggestedAnswer($suggestedAnswer): static {
@@ -133,7 +133,7 @@ class Question extends Comment
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Answer|\LengthOfRope\JSONLD\Schema\ItemList
      **/
     public function getSuggestedAnswer() {
         return $this->properties['suggestedAnswer'];

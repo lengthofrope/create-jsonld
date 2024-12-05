@@ -42,7 +42,7 @@ class UpdateAction extends Action
     /**
      * A sub property of object. The collection target of the action.
      *
-     * @param $collection 
+     * @param $collection \LengthOfRope\JSONLD\Schema\Thing
      * @return static
      **/
     public function setCollection($collection): static {
@@ -52,7 +52,7 @@ class UpdateAction extends Action
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Thing
      **/
     public function getCollection() {
         return $this->properties['collection'];
@@ -60,7 +60,7 @@ class UpdateAction extends Action
     /**
      * A sub property of object. The collection target of the action.
      *
-     * @param $targetCollection 
+     * @param $targetCollection \LengthOfRope\JSONLD\Schema\Thing
      * @return static
      **/
     public function setTargetCollection($targetCollection): static {
@@ -70,7 +70,7 @@ class UpdateAction extends Action
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Thing
      **/
     public function getTargetCollection() {
         return $this->properties['targetCollection'];

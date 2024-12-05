@@ -43,7 +43,7 @@ class DefinedTermSet extends CreativeWork
     /**
      * A Defined Term contained in this term set.
      *
-     * @param $hasDefinedTerm 
+     * @param $hasDefinedTerm \LengthOfRope\JSONLD\Schema\DefinedTerm
      * @return static
      **/
     public function setHasDefinedTerm($hasDefinedTerm): static {
@@ -53,7 +53,7 @@ class DefinedTermSet extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\DefinedTerm
      **/
     public function getHasDefinedTerm() {
         return $this->properties['hasDefinedTerm'];

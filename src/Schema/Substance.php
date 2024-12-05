@@ -44,7 +44,7 @@ class Substance extends MedicalEntity
      * Recommended intake of this supplement for a given population as defined by a
      * specific recommending authority.
      *
-     * @param $maximumIntake 
+     * @param $maximumIntake \LengthOfRope\JSONLD\Schema\MaximumDoseSchedule
      * @return static
      **/
     public function setMaximumIntake($maximumIntake): static {
@@ -54,7 +54,7 @@ class Substance extends MedicalEntity
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MaximumDoseSchedule
      **/
     public function getMaximumIntake() {
         return $this->properties['maximumIntake'];
@@ -62,7 +62,7 @@ class Substance extends MedicalEntity
     /**
      * An active ingredient, typically chemical compounds and/or biologic substances.
      *
-     * @param $activeIngredient 
+     * @param $activeIngredient \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setActiveIngredient($activeIngredient): static {
@@ -72,7 +72,7 @@ class Substance extends MedicalEntity
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getActiveIngredient() {
         return $this->properties['activeIngredient'];

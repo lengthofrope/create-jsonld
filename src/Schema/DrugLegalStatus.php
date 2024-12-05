@@ -42,7 +42,7 @@ class DrugLegalStatus extends MedicalIntangible
     /**
      * The location in which the status applies.
      *
-     * @param $applicableLocation 
+     * @param $applicableLocation \LengthOfRope\JSONLD\Schema\AdministrativeArea
      * @return static
      **/
     public function setApplicableLocation($applicableLocation): static {
@@ -52,7 +52,7 @@ class DrugLegalStatus extends MedicalIntangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\AdministrativeArea
      **/
     public function getApplicableLocation() {
         return $this->properties['applicableLocation'];

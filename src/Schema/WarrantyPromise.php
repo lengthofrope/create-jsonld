@@ -44,7 +44,7 @@ class WarrantyPromise extends StructuredValue
     /**
      * The scope of the warranty promise.
      *
-     * @param $warrantyScope 
+     * @param $warrantyScope \LengthOfRope\JSONLD\Schema\WarrantyScope
      * @return static
      **/
     public function setWarrantyScope($warrantyScope): static {
@@ -54,7 +54,7 @@ class WarrantyPromise extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\WarrantyScope
      **/
     public function getWarrantyScope() {
         return $this->properties['warrantyScope'];
@@ -63,7 +63,7 @@ class WarrantyPromise extends StructuredValue
      * The duration of the warranty promise. Common unitCode values are ANN for year,
      * MON for months, or DAY for days.
      *
-     * @param $durationOfWarranty 
+     * @param $durationOfWarranty \LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setDurationOfWarranty($durationOfWarranty): static {
@@ -73,7 +73,7 @@ class WarrantyPromise extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getDurationOfWarranty() {
         return $this->properties['durationOfWarranty'];

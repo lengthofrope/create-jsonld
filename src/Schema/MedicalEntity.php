@@ -43,7 +43,7 @@ class MedicalEntity extends Thing
      * The drug or supplement's legal status, including any controlled substance
      * schedules that apply.
      *
-     * @param $legalStatus ||
+     * @param $legalStatus \LengthOfRope\JSONLD\Schema\DrugLegalStatus|\LengthOfRope\JSONLD\Schema\MedicalEnumeration|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setLegalStatus($legalStatus): static {
@@ -53,7 +53,7 @@ class MedicalEntity extends Thing
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\Schema\DrugLegalStatus|\LengthOfRope\JSONLD\Schema\MedicalEnumeration|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getLegalStatus() {
         return $this->properties['legalStatus'];
@@ -62,7 +62,7 @@ class MedicalEntity extends Thing
      * If applicable, the organization that officially recognizes this entity as part
      * of its endorsed system of medicine.
      *
-     * @param $recognizingAuthority 
+     * @param $recognizingAuthority \LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setRecognizingAuthority($recognizingAuthority): static {
@@ -72,7 +72,7 @@ class MedicalEntity extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getRecognizingAuthority() {
         return $this->properties['recognizingAuthority'];
@@ -81,7 +81,7 @@ class MedicalEntity extends Thing
      * A [[Grant]] that directly or indirectly provide funding or sponsorship for this
      * item. See also [[ownershipFundingInfo]].
      *
-     * @param $funding 
+     * @param $funding \LengthOfRope\JSONLD\Schema\Grant
      * @return static
      **/
     public function setFunding($funding): static {
@@ -91,7 +91,7 @@ class MedicalEntity extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Grant
      **/
     public function getFunding() {
         return $this->properties['funding'];
@@ -100,7 +100,7 @@ class MedicalEntity extends Thing
      * A medical code for the entity, taken from a controlled vocabulary or ontology
      * such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
      *
-     * @param $code 
+     * @param $code \LengthOfRope\JSONLD\Schema\MedicalCode
      * @return static
      **/
     public function setCode($code): static {
@@ -110,7 +110,7 @@ class MedicalEntity extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MedicalCode
      **/
     public function getCode() {
         return $this->properties['code'];
@@ -119,7 +119,7 @@ class MedicalEntity extends Thing
      * The system of medicine that includes this MedicalEntity, for example
      * 'evidence-based', 'homeopathic', 'chiropractic', etc.
      *
-     * @param $medicineSystem 
+     * @param $medicineSystem \LengthOfRope\JSONLD\Schema\MedicineSystem
      * @return static
      **/
     public function setMedicineSystem($medicineSystem): static {
@@ -129,7 +129,7 @@ class MedicalEntity extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MedicineSystem
      **/
     public function getMedicineSystem() {
         return $this->properties['medicineSystem'];
@@ -137,7 +137,7 @@ class MedicalEntity extends Thing
     /**
      * A medical study or trial related to this entity.
      *
-     * @param $study 
+     * @param $study \LengthOfRope\JSONLD\Schema\MedicalStudy
      * @return static
      **/
     public function setStudy($study): static {
@@ -147,7 +147,7 @@ class MedicalEntity extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MedicalStudy
      **/
     public function getStudy() {
         return $this->properties['study'];
@@ -155,7 +155,7 @@ class MedicalEntity extends Thing
     /**
      * A medical guideline related to this entity.
      *
-     * @param $guideline 
+     * @param $guideline \LengthOfRope\JSONLD\Schema\MedicalGuideline
      * @return static
      **/
     public function setGuideline($guideline): static {
@@ -165,7 +165,7 @@ class MedicalEntity extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MedicalGuideline
      **/
     public function getGuideline() {
         return $this->properties['guideline'];
@@ -173,7 +173,7 @@ class MedicalEntity extends Thing
     /**
      * If applicable, a medical specialty in which this entity is relevant.
      *
-     * @param $relevantSpecialty 
+     * @param $relevantSpecialty \LengthOfRope\JSONLD\Schema\MedicalSpecialty
      * @return static
      **/
     public function setRelevantSpecialty($relevantSpecialty): static {
@@ -183,7 +183,7 @@ class MedicalEntity extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MedicalSpecialty
      **/
     public function getRelevantSpecialty() {
         return $this->properties['relevantSpecialty'];

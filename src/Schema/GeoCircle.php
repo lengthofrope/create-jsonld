@@ -48,7 +48,7 @@ class GeoCircle extends GeoShape
     /**
      * Indicates the GeoCoordinates at the centre of a GeoShape, e.g. GeoCircle.
      *
-     * @param $geoMidpoint 
+     * @param $geoMidpoint \LengthOfRope\JSONLD\Schema\GeoCoordinates
      * @return static
      **/
     public function setGeoMidpoint($geoMidpoint): static {
@@ -58,7 +58,7 @@ class GeoCircle extends GeoShape
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\GeoCoordinates
      **/
     public function getGeoMidpoint() {
         return $this->properties['geoMidpoint'];
@@ -67,7 +67,7 @@ class GeoCircle extends GeoShape
      * Indicates the approximate radius of a GeoCircle (metres unless indicated
      * otherwise via Distance notation).
      *
-     * @param $geoRadius ||
+     * @param $geoRadius \LengthOfRope\JSONLD\Schema\Distance|\LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setGeoRadius($geoRadius): static {
@@ -77,7 +77,7 @@ class GeoCircle extends GeoShape
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\Schema\Distance|\LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getGeoRadius() {
         return $this->properties['geoRadius'];

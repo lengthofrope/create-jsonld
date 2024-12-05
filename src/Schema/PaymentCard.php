@@ -44,7 +44,7 @@ class PaymentCard extends FinancialProduct
      * A secure method for consumers to purchase products or services via debit, credit
      * or smartcards by using RFID or NFC technology.
      *
-     * @param $contactlessPayment 
+     * @param $contactlessPayment \LengthOfRope\JSONLD\DataType\Boolean
      * @return static
      **/
     public function setContactlessPayment($contactlessPayment): static {
@@ -54,7 +54,7 @@ class PaymentCard extends FinancialProduct
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Boolean
      **/
     public function getContactlessPayment() {
         return $this->properties['contactlessPayment'];
@@ -63,7 +63,7 @@ class PaymentCard extends FinancialProduct
      * A cardholder benefit that pays the cardholder a small percentage of their net
      * expenditures.
      *
-     * @param $cashBack |
+     * @param $cashBack \LengthOfRope\JSONLD\DataType\Boolean|\LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setCashBack($cashBack): static {
@@ -73,7 +73,7 @@ class PaymentCard extends FinancialProduct
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Boolean|\LengthOfRope\JSONLD\DataType\Number
      **/
     public function getCashBack() {
         return $this->properties['cashBack'];
@@ -82,7 +82,7 @@ class PaymentCard extends FinancialProduct
      * A floor limit is the amount of money above which credit card transactions must
      * be authorized.
      *
-     * @param $floorLimit 
+     * @param $floorLimit \LengthOfRope\JSONLD\Schema\MonetaryAmount
      * @return static
      **/
     public function setFloorLimit($floorLimit): static {
@@ -92,7 +92,7 @@ class PaymentCard extends FinancialProduct
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount
      **/
     public function getFloorLimit() {
         return $this->properties['floorLimit'];
@@ -101,7 +101,7 @@ class PaymentCard extends FinancialProduct
      * The minimum payment is the lowest amount of money that one is required to pay on
      * a credit card statement each month.
      *
-     * @param $monthlyMinimumRepaymentAmount |
+     * @param $monthlyMinimumRepaymentAmount \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setMonthlyMinimumRepaymentAmount($monthlyMinimumRepaymentAmount): static {
@@ -111,7 +111,7 @@ class PaymentCard extends FinancialProduct
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\Number
      **/
     public function getMonthlyMinimumRepaymentAmount() {
         return $this->properties['monthlyMinimumRepaymentAmount'];

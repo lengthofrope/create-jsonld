@@ -47,7 +47,7 @@ class SearchAction extends Action
     /**
      * A sub property of instrument. The query used on this action.
      *
-     * @param $query 
+     * @param $query \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setQuery($query): static {
@@ -57,7 +57,7 @@ class SearchAction extends Action
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getQuery() {
         return $this->properties['query'];

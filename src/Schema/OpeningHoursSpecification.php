@@ -51,7 +51,7 @@ class OpeningHoursSpecification extends StructuredValue
     /**
      * The day of the week for which these opening hours are valid.
      *
-     * @param $dayOfWeek 
+     * @param $dayOfWeek \LengthOfRope\JSONLD\Schema\DayOfWeek
      * @return static
      **/
     public function setDayOfWeek($dayOfWeek): static {
@@ -61,7 +61,7 @@ class OpeningHoursSpecification extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\DayOfWeek
      **/
     public function getDayOfWeek() {
         return $this->properties['dayOfWeek'];
@@ -69,7 +69,7 @@ class OpeningHoursSpecification extends StructuredValue
     /**
      * The closing hour of the place or service on the given day(s) of the week.
      *
-     * @param $closes 
+     * @param $closes \LengthOfRope\JSONLD\DataType\Time
      * @return static
      **/
     public function setCloses($closes): static {
@@ -79,7 +79,7 @@ class OpeningHoursSpecification extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Time
      **/
     public function getCloses() {
         return $this->properties['closes'];
@@ -88,7 +88,7 @@ class OpeningHoursSpecification extends StructuredValue
      * The date after when the item is not valid. For example the end of an offer,
      * salary period, or a period of opening hours.
      *
-     * @param $validThrough |
+     * @param $validThrough \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
      * @return static
      **/
     public function setValidThrough($validThrough): static {
@@ -98,7 +98,7 @@ class OpeningHoursSpecification extends StructuredValue
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
      **/
     public function getValidThrough() {
         return $this->properties['validThrough'];
@@ -106,7 +106,7 @@ class OpeningHoursSpecification extends StructuredValue
     /**
      * The opening hour of the place or service on the given day(s) of the week.
      *
-     * @param $opens 
+     * @param $opens \LengthOfRope\JSONLD\DataType\Time
      * @return static
      **/
     public function setOpens($opens): static {
@@ -116,7 +116,7 @@ class OpeningHoursSpecification extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Time
      **/
     public function getOpens() {
         return $this->properties['opens'];
@@ -124,7 +124,7 @@ class OpeningHoursSpecification extends StructuredValue
     /**
      * The date when the item becomes valid.
      *
-     * @param $validFrom |
+     * @param $validFrom \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
      * @return static
      **/
     public function setValidFrom($validFrom): static {
@@ -134,7 +134,7 @@ class OpeningHoursSpecification extends StructuredValue
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
      **/
     public function getValidFrom() {
         return $this->properties['validFrom'];

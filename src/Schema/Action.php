@@ -49,7 +49,7 @@ class Action extends Thing
     /**
      * Description of the process by which the action was performed.
      *
-     * @param $actionProcess 
+     * @param $actionProcess \LengthOfRope\JSONLD\Schema\HowTo
      * @return static
      **/
     public function setActionProcess($actionProcess): static {
@@ -59,7 +59,7 @@ class Action extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\HowTo
      **/
     public function getActionProcess() {
         return $this->properties['actionProcess'];
@@ -67,7 +67,7 @@ class Action extends Thing
     /**
      * The result produced in the action. E.g. John wrote *a book*.
      *
-     * @param $result 
+     * @param $result \LengthOfRope\JSONLD\Schema\Thing
      * @return static
      **/
     public function setResult($result): static {
@@ -77,7 +77,7 @@ class Action extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Thing
      **/
     public function getResult() {
         return $this->properties['result'];
@@ -93,7 +93,7 @@ class Action extends Thing
      * describing dates with times. This situation may be clarified in future
      * revisions.
      *
-     * @param $endTime |
+     * @param $endTime \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Time
      * @return static
      **/
     public function setEndTime($endTime): static {
@@ -103,7 +103,7 @@ class Action extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Time
      **/
     public function getEndTime() {
         return $this->properties['endTime'];
@@ -112,7 +112,7 @@ class Action extends Thing
      * The direct performer or driver of the action (animate or inanimate). E.g. *John*
      * wrote a book.
      *
-     * @param $agent |
+     * @param $agent \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setAgent($agent): static {
@@ -122,7 +122,7 @@ class Action extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getAgent() {
         return $this->properties['agent'];
@@ -130,7 +130,7 @@ class Action extends Thing
     /**
      * For failed actions, more information on the cause of the failure.
      *
-     * @param $error 
+     * @param $error \LengthOfRope\JSONLD\Schema\Thing
      * @return static
      **/
     public function setError($error): static {
@@ -140,7 +140,7 @@ class Action extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Thing
      **/
     public function getError() {
         return $this->properties['error'];
@@ -149,7 +149,7 @@ class Action extends Thing
      * The location of, for example, where an event is happening, where an organization
      * is located, or where an action takes place.
      *
-     * @param $location |||
+     * @param $location \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\VirtualLocation|\LengthOfRope\JSONLD\Schema\PostalAddress
      * @return static
      **/
     public function setLocation($location): static {
@@ -159,7 +159,7 @@ class Action extends Thing
     }
 
     /**
-     * @return |||
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\VirtualLocation|\LengthOfRope\JSONLD\Schema\PostalAddress
      **/
     public function getLocation() {
         return $this->properties['location'];
@@ -167,7 +167,7 @@ class Action extends Thing
     /**
      * Indicates the current disposition of the Action.
      *
-     * @param $actionStatus 
+     * @param $actionStatus \LengthOfRope\JSONLD\Schema\ActionStatusType
      * @return static
      **/
     public function setActionStatus($actionStatus): static {
@@ -177,7 +177,7 @@ class Action extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\ActionStatusType
      **/
     public function getActionStatus() {
         return $this->properties['actionStatus'];
@@ -193,7 +193,7 @@ class Action extends Thing
      * describing dates with times. This situation may be clarified in future
      * revisions.
      *
-     * @param $startTime |
+     * @param $startTime \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Time
      * @return static
      **/
     public function setStartTime($startTime): static {
@@ -203,7 +203,7 @@ class Action extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Time
      **/
     public function getStartTime() {
         return $this->properties['startTime'];
@@ -211,7 +211,7 @@ class Action extends Thing
     /**
      * Indicates a target EntryPoint, or url, for an Action.
      *
-     * @param $target |
+     * @param $target \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\EntryPoint
      * @return static
      **/
     public function setTarget($target): static {
@@ -221,7 +221,7 @@ class Action extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\EntryPoint
      **/
     public function getTarget() {
         return $this->properties['target'];
@@ -230,7 +230,7 @@ class Action extends Thing
      * Other co-agents that participated in the action indirectly. E.g. John wrote a
      * book with *Steve*.
      *
-     * @param $participant |
+     * @param $participant \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setParticipant($participant): static {
@@ -240,7 +240,7 @@ class Action extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getParticipant() {
         return $this->properties['participant'];
@@ -249,7 +249,7 @@ class Action extends Thing
      * The object that helped the agent perform the action. E.g. John wrote a book with
      * *a pen*.
      *
-     * @param $instrument 
+     * @param $instrument \LengthOfRope\JSONLD\Schema\Thing
      * @return static
      **/
     public function setInstrument($instrument): static {
@@ -259,7 +259,7 @@ class Action extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Thing
      **/
     public function getInstrument() {
         return $this->properties['instrument'];
@@ -269,7 +269,7 @@ class Action extends Thing
      * producer. Another party (a seller) may offer those services or goods on behalf
      * of the provider. A provider may also serve as the seller.
      *
-     * @param $provider |
+     * @param $provider \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setProvider($provider): static {
@@ -279,7 +279,7 @@ class Action extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getProvider() {
         return $this->properties['provider'];
@@ -289,7 +289,7 @@ class Action extends Thing
      * changed. Also known as the semantic roles patient, affected or undergoer (which
      * change their state) or theme (which doesn't). E.g. John read *a book*.
      *
-     * @param $object 
+     * @param $object \LengthOfRope\JSONLD\Schema\Thing
      * @return static
      **/
     public function setObject($object): static {
@@ -299,7 +299,7 @@ class Action extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Thing
      **/
     public function getObject() {
         return $this->properties['object'];

@@ -42,7 +42,7 @@ class Residence extends Place
     /**
      * A floorplan of some [[Accommodation]].
      *
-     * @param $accommodationFloorPlan 
+     * @param $accommodationFloorPlan \LengthOfRope\JSONLD\Schema\FloorPlan
      * @return static
      **/
     public function setAccommodationFloorPlan($accommodationFloorPlan): static {
@@ -52,7 +52,7 @@ class Residence extends Place
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\FloorPlan
      **/
     public function getAccommodationFloorPlan() {
         return $this->properties['accommodationFloorPlan'];

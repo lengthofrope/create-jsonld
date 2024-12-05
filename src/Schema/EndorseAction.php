@@ -42,7 +42,7 @@ class EndorseAction extends ReactAction
     /**
      * A sub property of participant. The person/organization being supported.
      *
-     * @param $endorsee |
+     * @param $endorsee \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setEndorsee($endorsee): static {
@@ -52,7 +52,7 @@ class EndorseAction extends ReactAction
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getEndorsee() {
         return $this->properties['endorsee'];

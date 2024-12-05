@@ -44,7 +44,7 @@ class Property extends Intangible
      * Relates a property to a class that is (one of) the type(s) the property is
      * expected to be used on.
      *
-     * @param $domainIncludes 
+     * @param $domainIncludes \LengthOfRope\JSONLD\Schema\Class
      * @return static
      **/
     public function setDomainIncludes($domainIncludes): static {
@@ -54,7 +54,7 @@ class Property extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Class
      **/
     public function getDomainIncludes() {
         return $this->properties['domainIncludes'];
@@ -66,7 +66,7 @@ class Property extends Intangible
      * don't have explicit inverses; in these situations RDFa and JSON-LD syntax for
      * reverse properties can be used.
      *
-     * @param $inverseOf 
+     * @param $inverseOf \LengthOfRope\JSONLD\Schema\Property
      * @return static
      **/
     public function setInverseOf($inverseOf): static {
@@ -76,7 +76,7 @@ class Property extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Property
      **/
     public function getInverseOf() {
         return $this->properties['inverseOf'];
@@ -85,7 +85,7 @@ class Property extends Intangible
      * Relates a term (i.e. a property, class or enumeration) to one that supersedes
      * it.
      *
-     * @param $supersededBy ||
+     * @param $supersededBy \LengthOfRope\JSONLD\Schema\Property|\LengthOfRope\JSONLD\Schema\Class|\LengthOfRope\JSONLD\Schema\Enumeration
      * @return static
      **/
     public function setSupersededBy($supersededBy): static {
@@ -95,7 +95,7 @@ class Property extends Intangible
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\Schema\Property|\LengthOfRope\JSONLD\Schema\Class|\LengthOfRope\JSONLD\Schema\Enumeration
      **/
     public function getSupersededBy() {
         return $this->properties['supersededBy'];
@@ -104,7 +104,7 @@ class Property extends Intangible
      * Relates a property to a class that constitutes (one of) the expected type(s) for
      * values of the property.
      *
-     * @param $rangeIncludes 
+     * @param $rangeIncludes \LengthOfRope\JSONLD\Schema\Class
      * @return static
      **/
     public function setRangeIncludes($rangeIncludes): static {
@@ -114,7 +114,7 @@ class Property extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Class
      **/
     public function getRangeIncludes() {
         return $this->properties['rangeIncludes'];

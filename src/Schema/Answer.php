@@ -45,7 +45,7 @@ class Answer extends Comment
      * [[Article]] or other [[CreativeWork]]. See also [[comment]] which points from
      * something to a comment about it.
      *
-     * @param $parentItem |
+     * @param $parentItem \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\Comment
      * @return static
      **/
     public function setParentItem($parentItem): static {
@@ -55,7 +55,7 @@ class Answer extends Comment
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\Comment
      **/
     public function getParentItem() {
         return $this->properties['parentItem'];
@@ -64,7 +64,7 @@ class Answer extends Comment
      * A step-by-step or full explanation about Answer. Can outline how this Answer was
      * achieved or contain more broad clarification or statement about it.
      *
-     * @param $answerExplanation |
+     * @param $answerExplanation \LengthOfRope\JSONLD\Schema\Comment|\LengthOfRope\JSONLD\Schema\WebContent
      * @return static
      **/
     public function setAnswerExplanation($answerExplanation): static {
@@ -74,7 +74,7 @@ class Answer extends Comment
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Comment|\LengthOfRope\JSONLD\Schema\WebContent
      **/
     public function getAnswerExplanation() {
         return $this->properties['answerExplanation'];

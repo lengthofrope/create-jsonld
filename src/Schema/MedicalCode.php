@@ -42,7 +42,7 @@ class MedicalCode extends CategoryCode
     /**
      * The coding system, e.g. 'ICD-10'.
      *
-     * @param $codingSystem 
+     * @param $codingSystem \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setCodingSystem($codingSystem): static {
@@ -52,7 +52,7 @@ class MedicalCode extends CategoryCode
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getCodingSystem() {
         return $this->properties['codingSystem'];
@@ -60,7 +60,7 @@ class MedicalCode extends CategoryCode
     /**
      * A short textual code that uniquely identifies the value.
      *
-     * @param $codeValue 
+     * @param $codeValue \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setCodeValue($codeValue): static {
@@ -70,7 +70,7 @@ class MedicalCode extends CategoryCode
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getCodeValue() {
         return $this->properties['codeValue'];

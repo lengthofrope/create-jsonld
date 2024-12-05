@@ -45,7 +45,7 @@ class CreativeWork extends Thing
      * SoftwareApplication. The most specific child type of InteractionCounter should
      * be used.
      *
-     * @param $interactionStatistic 
+     * @param $interactionStatistic \LengthOfRope\JSONLD\Schema\InteractionCounter
      * @return static
      **/
     public function setInteractionStatistic($interactionStatistic): static {
@@ -55,7 +55,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\InteractionCounter
      **/
     public function getInteractionStatistic() {
         return $this->properties['interactionStatistic'];
@@ -63,7 +63,7 @@ class CreativeWork extends Thing
     /**
      * A secondary contributor to the CreativeWork or Event.
      *
-     * @param $contributor |
+     * @param $contributor \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setContributor($contributor): static {
@@ -73,7 +73,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\Person
      **/
     public function getContributor() {
         return $this->properties['contributor'];
@@ -91,7 +91,7 @@ class CreativeWork extends Thing
      * schema.org terminology.
      *
      *
-     * @param $publishingPrinciples |
+     * @param $publishingPrinciples \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\CreativeWork
      * @return static
      **/
     public function setPublishingPrinciples($publishingPrinciples): static {
@@ -101,7 +101,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\CreativeWork
      **/
     public function getPublishingPrinciples() {
         return $this->properties['publishingPrinciples'];
@@ -109,7 +109,7 @@ class CreativeWork extends Thing
     /**
      * A creative work that this work is an example/instance/realization/derivation of.
      *
-     * @param $exampleOfWork 
+     * @param $exampleOfWork \LengthOfRope\JSONLD\Schema\CreativeWork
      * @return static
      **/
     public function setExampleOfWork($exampleOfWork): static {
@@ -119,7 +119,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork
      **/
     public function getExampleOfWork() {
         return $this->properties['exampleOfWork'];
@@ -128,7 +128,7 @@ class CreativeWork extends Thing
      * The specific time described by a creative work, for works (e.g. articles, video
      * objects etc.) that emphasise a particular moment within an Event.
      *
-     * @param $contentReferenceTime 
+     * @param $contentReferenceTime \LengthOfRope\JSONLD\DataType\DateTime
      * @return static
      **/
     public function setContentReferenceTime($contentReferenceTime): static {
@@ -138,7 +138,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\DateTime
      **/
     public function getContentReferenceTime() {
         return $this->properties['contentReferenceTime'];
@@ -152,7 +152,7 @@ class CreativeWork extends Thing
      * Unregistered or niche file formats can be indicated instead via the most
      * appropriate URL, e.g. defining Web page or a Wikipedia entry.
      *
-     * @param $fileFormat |
+     * @param $fileFormat \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setFileFormat($fileFormat): static {
@@ -162,7 +162,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      **/
     public function getFileFormat() {
         return $this->properties['fileFormat'];
@@ -171,7 +171,7 @@ class CreativeWork extends Thing
      * Text of a notice appropriate for describing the copyright aspects of this
      * Creative Work, ideally indicating the owner of the copyright for the Work.
      *
-     * @param $copyrightNotice 
+     * @param $copyrightNotice \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setCopyrightNotice($copyrightNotice): static {
@@ -181,7 +181,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getCopyrightNotice() {
         return $this->properties['copyrightNotice'];
@@ -193,7 +193,7 @@ class CreativeWork extends Thing
      * described using a simple property, for example to express that a resource
      * [[teaches]] or [[assesses]] a competency.
      *
-     * @param $educationalAlignment 
+     * @param $educationalAlignment \LengthOfRope\JSONLD\Schema\AlignmentObject
      * @return static
      **/
     public function setEducationalAlignment($educationalAlignment): static {
@@ -203,7 +203,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\AlignmentObject
      **/
     public function getEducationalAlignment() {
         return $this->properties['educationalAlignment'];
@@ -212,7 +212,7 @@ class CreativeWork extends Thing
      * Indicates that the CreativeWork contains a reference to, but is not necessarily
      * about a concept.
      *
-     * @param $mentions 
+     * @param $mentions \LengthOfRope\JSONLD\Schema\Thing
      * @return static
      **/
     public function setMentions($mentions): static {
@@ -222,7 +222,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Thing
      **/
     public function getMentions() {
         return $this->properties['mentions'];
@@ -232,7 +232,7 @@ class CreativeWork extends Thing
      * (e.g. [[temporalCoverage]], [[dateCreated]], [[dateModified]],
      * [[datePublished]]) are not known to be appropriate.
      *
-     * @param $temporal |
+     * @param $temporal \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setTemporal($temporal): static {
@@ -242,7 +242,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getTemporal() {
         return $this->properties['temporal'];
@@ -250,7 +250,7 @@ class CreativeWork extends Thing
     /**
      * A material that something is made from, e.g. leather, wool, cotton, paper.
      *
-     * @param $material ||
+     * @param $material \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\Product|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setMaterial($material): static {
@@ -260,7 +260,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\Product|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getMaterial() {
         return $this->properties['material'];
@@ -269,7 +269,7 @@ class CreativeWork extends Thing
      * A media object that encodes this CreativeWork. This property is a synonym for
      * encoding.
      *
-     * @param $associatedMedia 
+     * @param $associatedMedia \LengthOfRope\JSONLD\Schema\MediaObject
      * @return static
      **/
     public function setAssociatedMedia($associatedMedia): static {
@@ -279,7 +279,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MediaObject
      **/
     public function getAssociatedMedia() {
         return $this->properties['associatedMedia'];
@@ -287,7 +287,7 @@ class CreativeWork extends Thing
     /**
      * The version of the CreativeWork embodied by a specified resource.
      *
-     * @param $version |
+     * @param $version \LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setVersion($version): static {
@@ -297,7 +297,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getVersion() {
         return $this->properties['version'];
@@ -305,7 +305,7 @@ class CreativeWork extends Thing
     /**
      * An award won by or for this item.
      *
-     * @param $award 
+     * @param $award \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setAward($award): static {
@@ -315,7 +315,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getAward() {
         return $this->properties['award'];
@@ -324,7 +324,7 @@ class CreativeWork extends Thing
      * The predominant type or kind characterizing the learning resource. For example,
      * 'presentation', 'handout'.
      *
-     * @param $learningResourceType |
+     * @param $learningResourceType \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DefinedTerm
      * @return static
      **/
     public function setLearningResourceType($learningResourceType): static {
@@ -334,7 +334,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DefinedTerm
      **/
     public function getLearningResourceType() {
         return $this->properties['learningResourceType'];
@@ -343,7 +343,7 @@ class CreativeWork extends Thing
      * A media object that encodes this CreativeWork. This property is a synonym for
      * associatedMedia.
      *
-     * @param $encoding 
+     * @param $encoding \LengthOfRope\JSONLD\Schema\MediaObject
      * @return static
      **/
     public function setEncoding($encoding): static {
@@ -353,7 +353,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MediaObject
      **/
     public function getEncoding() {
         return $this->properties['encoding'];
@@ -362,7 +362,7 @@ class CreativeWork extends Thing
      * The Event where the CreativeWork was recorded. The CreativeWork may capture all
      * or part of the event.
      *
-     * @param $recordedAt 
+     * @param $recordedAt \LengthOfRope\JSONLD\Schema\Event
      * @return static
      **/
     public function setRecordedAt($recordedAt): static {
@@ -372,7 +372,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Event
      **/
     public function getRecordedAt() {
         return $this->properties['recordedAt'];
@@ -390,7 +390,7 @@ class CreativeWork extends Thing
      * Unregistered or niche encoding and file formats can be indicated instead via the
      * most appropriate URL, e.g. defining Web page or a Wikipedia/Wikidata entry.
      *
-     * @param $encodingFormat |
+     * @param $encodingFormat \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setEncodingFormat($encodingFormat): static {
@@ -400,7 +400,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getEncodingFormat() {
         return $this->properties['encodingFormat'];
@@ -412,7 +412,7 @@ class CreativeWork extends Thing
      * non-visual users" or "short descriptions are present and no long descriptions
      * are needed".
      *
-     * @param $accessibilitySummary 
+     * @param $accessibilitySummary \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setAccessibilitySummary($accessibilitySummary): static {
@@ -422,7 +422,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getAccessibilitySummary() {
         return $this->properties['accessibilitySummary'];
@@ -430,7 +430,7 @@ class CreativeWork extends Thing
     /**
      * Specifies the Person who edited the CreativeWork.
      *
-     * @param $editor 
+     * @param $editor \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setEditor($editor): static {
@@ -440,7 +440,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
     public function getEditor() {
         return $this->properties['editor'];
@@ -448,7 +448,7 @@ class CreativeWork extends Thing
     /**
      * The party holding the legal copyright to the CreativeWork.
      *
-     * @param $copyrightHolder |
+     * @param $copyrightHolder \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setCopyrightHolder($copyrightHolder): static {
@@ -458,7 +458,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getCopyrightHolder() {
         return $this->properties['copyrightHolder'];
@@ -467,7 +467,7 @@ class CreativeWork extends Thing
      * A [[Grant]] that directly or indirectly provide funding or sponsorship for this
      * item. See also [[ownershipFundingInfo]].
      *
-     * @param $funding 
+     * @param $funding \LengthOfRope\JSONLD\Schema\Grant
      * @return static
      **/
     public function setFunding($funding): static {
@@ -477,7 +477,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Grant
      **/
     public function getFunding() {
         return $this->properties['funding'];
@@ -485,7 +485,7 @@ class CreativeWork extends Thing
     /**
      * The position of an item in a series or sequence of items.
      *
-     * @param $position |
+     * @param $position \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Integer
      * @return static
      **/
     public function setPosition($position): static {
@@ -495,7 +495,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Integer
      **/
     public function getPosition() {
         return $this->properties['position'];
@@ -503,7 +503,7 @@ class CreativeWork extends Thing
     /**
      * The subject matter of the content.
      *
-     * @param $about 
+     * @param $about \LengthOfRope\JSONLD\Schema\Thing
      * @return static
      **/
     public function setAbout($about): static {
@@ -513,7 +513,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Thing
      **/
     public function getAbout() {
         return $this->properties['about'];
@@ -521,7 +521,7 @@ class CreativeWork extends Thing
     /**
      * A secondary title of the CreativeWork.
      *
-     * @param $alternativeHeadline 
+     * @param $alternativeHeadline \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setAlternativeHeadline($alternativeHeadline): static {
@@ -531,7 +531,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getAlternativeHeadline() {
         return $this->properties['alternativeHeadline'];
@@ -541,7 +541,7 @@ class CreativeWork extends Thing
      * received. This is most applicable to works published in Web sites with
      * commenting system; additional comments may exist elsewhere.
      *
-     * @param $commentCount 
+     * @param $commentCount \LengthOfRope\JSONLD\Schema\Integer
      * @return static
      **/
     public function setCommentCount($commentCount): static {
@@ -551,7 +551,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Integer
      **/
     public function getCommentCount() {
         return $this->properties['commentCount'];
@@ -560,7 +560,7 @@ class CreativeWork extends Thing
      * A person or organization that supports (sponsors) something through some kind of
      * financial contribution.
      *
-     * @param $funder |
+     * @param $funder \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setFunder($funder): static {
@@ -570,7 +570,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getFunder() {
         return $this->properties['funder'];
@@ -579,7 +579,7 @@ class CreativeWork extends Thing
      * Date of first publication or broadcast. For example the date a [[CreativeWork]]
      * was broadcast or a [[Certification]] was issued.
      *
-     * @param $datePublished |
+     * @param $datePublished \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
      * @return static
      **/
     public function setDatePublished($datePublished): static {
@@ -589,7 +589,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
      **/
     public function getDatePublished() {
         return $this->properties['datePublished'];
@@ -597,7 +597,7 @@ class CreativeWork extends Thing
     /**
      * Indicates whether this content is family friendly.
      *
-     * @param $isFamilyFriendly 
+     * @param $isFamilyFriendly \LengthOfRope\JSONLD\DataType\Boolean
      * @return static
      **/
     public function setIsFamilyFriendly($isFamilyFriendly): static {
@@ -607,7 +607,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Boolean
      **/
     public function getIsFamilyFriendly() {
         return $this->properties['isFamilyFriendly'];
@@ -615,7 +615,7 @@ class CreativeWork extends Thing
     /**
      * Comments, typically from users.
      *
-     * @param $comment 
+     * @param $comment \LengthOfRope\JSONLD\Schema\Comment
      * @return static
      **/
     public function setComment($comment): static {
@@ -625,7 +625,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Comment
      **/
     public function getComment() {
         return $this->properties['comment'];
@@ -634,7 +634,7 @@ class CreativeWork extends Thing
      * A resource from which this work is derived or from which it is a modification or
      * adaptation.
      *
-     * @param $isBasedOn ||
+     * @param $isBasedOn \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\Product|\LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setIsBasedOn($isBasedOn): static {
@@ -644,7 +644,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\Product|\LengthOfRope\JSONLD\Schema\URL
      **/
     public function getIsBasedOn() {
         return $this->properties['isBasedOn'];
@@ -652,7 +652,7 @@ class CreativeWork extends Thing
     /**
      * The Organization on whose behalf the creator was working.
      *
-     * @param $sourceOrganization 
+     * @param $sourceOrganization \LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setSourceOrganization($sourceOrganization): static {
@@ -662,7 +662,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getSourceOrganization() {
         return $this->properties['sourceOrganization'];
@@ -672,7 +672,7 @@ class CreativeWork extends Thing
      * repeated for multiple sources. For example,
      * http://example.com/great-multiplication-intro.html.
      *
-     * @param $isBasedOnUrl ||
+     * @param $isBasedOnUrl \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\Product|\LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setIsBasedOnUrl($isBasedOnUrl): static {
@@ -682,7 +682,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\Product|\LengthOfRope\JSONLD\Schema\URL
      **/
     public function getIsBasedOnUrl() {
         return $this->properties['isBasedOnUrl'];
@@ -690,7 +690,7 @@ class CreativeWork extends Thing
     /**
      * Thumbnail image for an image or video.
      *
-     * @param $thumbnail 
+     * @param $thumbnail \LengthOfRope\JSONLD\Schema\ImageObject
      * @return static
      **/
     public function setThumbnail($thumbnail): static {
@@ -700,7 +700,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\ImageObject
      **/
     public function getThumbnail() {
         return $this->properties['thumbnail'];
@@ -708,7 +708,7 @@ class CreativeWork extends Thing
     /**
      * An embedded video object.
      *
-     * @param $video |
+     * @param $video \LengthOfRope\JSONLD\Schema\Clip|\LengthOfRope\JSONLD\Schema\VideoObject
      * @return static
      **/
     public function setVideo($video): static {
@@ -718,7 +718,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Clip|\LengthOfRope\JSONLD\Schema\VideoObject
      **/
     public function getVideo() {
         return $this->properties['video'];
@@ -727,7 +727,7 @@ class CreativeWork extends Thing
      * Keywords or tags used to describe some item. Multiple textual entries in a
      * keywords list are typically delimited by commas, or by repeating the property.
      *
-     * @param $keywords ||
+     * @param $keywords \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setKeywords($keywords): static {
@@ -737,7 +737,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getKeywords() {
         return $this->properties['keywords'];
@@ -746,7 +746,7 @@ class CreativeWork extends Thing
      * Text that can be used to credit person(s) and/or organization(s) associated with
      * a published Creative Work.
      *
-     * @param $creditText 
+     * @param $creditText \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setCreditText($creditText): static {
@@ -756,7 +756,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getCreditText() {
         return $this->properties['creditText'];
@@ -768,7 +768,7 @@ class CreativeWork extends Thing
      * cases, the [[width]], [[height]], [[depth]] and [[weight]] properties may be
      * more applicable.
      *
-     * @param $size |||
+     * @param $size \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\SizeSpecification|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DefinedTerm
      * @return static
      **/
     public function setSize($size): static {
@@ -778,7 +778,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return |||
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\SizeSpecification|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DefinedTerm
      **/
     public function getSize() {
         return $this->properties['size'];
@@ -786,7 +786,7 @@ class CreativeWork extends Thing
     /**
      * A license document that applies to this content, typically indicated by URL.
      *
-     * @param $license |
+     * @param $license \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setLicense($license): static {
@@ -796,7 +796,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\URL
      **/
     public function getLicense() {
         return $this->properties['license'];
@@ -804,7 +804,7 @@ class CreativeWork extends Thing
     /**
      * A flag to signal that the item, event, or place is accessible for free.
      *
-     * @param $isAccessibleForFree 
+     * @param $isAccessibleForFree \LengthOfRope\JSONLD\DataType\Boolean
      * @return static
      **/
     public function setIsAccessibleForFree($isAccessibleForFree): static {
@@ -814,7 +814,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Boolean
      **/
     public function getIsAccessibleForFree() {
         return $this->properties['isAccessibleForFree'];
@@ -823,7 +823,7 @@ class CreativeWork extends Thing
      * Indicates a page documenting how licenses can be purchased or otherwise
      * acquired, for the current item.
      *
-     * @param $acquireLicensePage |
+     * @param $acquireLicensePage \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\CreativeWork
      * @return static
      **/
     public function setAcquireLicensePage($acquireLicensePage): static {
@@ -833,7 +833,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\CreativeWork
      **/
     public function getAcquireLicensePage() {
         return $this->properties['acquireLicensePage'];
@@ -841,7 +841,7 @@ class CreativeWork extends Thing
     /**
      * A link to the page containing the comments of the CreativeWork.
      *
-     * @param $discussionUrl 
+     * @param $discussionUrl \LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setDiscussionUrl($discussionUrl): static {
@@ -851,7 +851,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\URL
      **/
     public function getDiscussionUrl() {
         return $this->properties['discussionUrl'];
@@ -870,7 +870,7 @@ class CreativeWork extends Thing
      * description.
      *
      *
-     * @param $editEIDR |
+     * @param $editEIDR \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setEditEIDR($editEIDR): static {
@@ -880,7 +880,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      **/
     public function getEditEIDR() {
         return $this->properties['editEIDR'];
@@ -893,7 +893,7 @@ class CreativeWork extends Thing
      * areas that the dataset describes: a dataset of New York weather would have
      * spatialCoverage which was the place: the state of New York.
      *
-     * @param $spatialCoverage 
+     * @param $spatialCoverage \LengthOfRope\JSONLD\Schema\Place
      * @return static
      **/
     public function setSpatialCoverage($spatialCoverage): static {
@@ -903,7 +903,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Place
      **/
     public function getSpatialCoverage() {
         return $this->properties['spatialCoverage'];
@@ -916,7 +916,7 @@ class CreativeWork extends Thing
      * existing content with more explicitly structured metadata. The
      * [[sdPublisher]] property helps make such practices more explicit.
      *
-     * @param $sdPublisher |
+     * @param $sdPublisher \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setSdPublisher($sdPublisher): static {
@@ -926,7 +926,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getSdPublisher() {
         return $this->properties['sdPublisher'];
@@ -935,7 +935,7 @@ class CreativeWork extends Thing
      * The date on which the CreativeWork was created or the item was added to a
      * DataFeed.
      *
-     * @param $dateCreated |
+     * @param $dateCreated \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
      * @return static
      **/
     public function setDateCreated($dateCreated): static {
@@ -945,7 +945,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
      **/
     public function getDateCreated() {
         return $this->properties['dateCreated'];
@@ -953,7 +953,7 @@ class CreativeWork extends Thing
     /**
      * A media object that encodes this CreativeWork.
      *
-     * @param $encodings 
+     * @param $encodings \LengthOfRope\JSONLD\Schema\MediaObject
      * @return static
      **/
     public function setEncodings($encodings): static {
@@ -963,7 +963,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MediaObject
      **/
     public function getEncodings() {
         return $this->properties['encodings'];
@@ -972,7 +972,7 @@ class CreativeWork extends Thing
      * A citation or reference to another creative work, such as another publication,
      * web page, scholarly article, etc.
      *
-     * @param $citation |
+     * @param $citation \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setCitation($citation): static {
@@ -982,7 +982,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getCitation() {
         return $this->properties['citation'];
@@ -991,7 +991,7 @@ class CreativeWork extends Thing
      * Approximate or typical time it usually takes to work with or through the content
      * of this work for the typical or target audience.
      *
-     * @param $timeRequired 
+     * @param $timeRequired \LengthOfRope\JSONLD\Schema\Duration
      * @return static
      **/
     public function setTimeRequired($timeRequired): static {
@@ -1001,7 +1001,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Duration
      **/
     public function getTimeRequired() {
         return $this->properties['timeRequired'];
@@ -1009,7 +1009,7 @@ class CreativeWork extends Thing
     /**
      * Fictional person connected with a creative work.
      *
-     * @param $character 
+     * @param $character \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setCharacter($character): static {
@@ -1019,7 +1019,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
     public function getCharacter() {
         return $this->properties['character'];
@@ -1029,7 +1029,7 @@ class CreativeWork extends Thing
      * flag'. Values are typically expressed as text, although links to controlled
      * value schemes are also supported.
      *
-     * @param $pattern |
+     * @param $pattern \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DefinedTerm
      * @return static
      **/
     public function setPattern($pattern): static {
@@ -1039,7 +1039,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DefinedTerm
      **/
     public function getPattern() {
         return $this->properties['pattern'];
@@ -1047,7 +1047,7 @@ class CreativeWork extends Thing
     /**
      * The typical expected age range, e.g. '7-9', '11-'.
      *
-     * @param $typicalAgeRange 
+     * @param $typicalAgeRange \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setTypicalAgeRange($typicalAgeRange): static {
@@ -1057,7 +1057,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getTypicalAgeRange() {
         return $this->properties['typicalAgeRange'];
@@ -1067,7 +1067,7 @@ class CreativeWork extends Thing
      * regional differences and technical requirements of a target market, or that
      * translates during some event.
      *
-     * @param $translator |
+     * @param $translator \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setTranslator($translator): static {
@@ -1077,7 +1077,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getTranslator() {
         return $this->properties['translator'];
@@ -1085,7 +1085,7 @@ class CreativeWork extends Thing
     /**
      * A thumbnail image relevant to the Thing.
      *
-     * @param $thumbnailUrl 
+     * @param $thumbnailUrl \LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setThumbnailUrl($thumbnailUrl): static {
@@ -1095,7 +1095,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\URL
      **/
     public function getThumbnailUrl() {
         return $this->properties['thumbnailUrl'];
@@ -1104,7 +1104,7 @@ class CreativeWork extends Thing
      * Indicates an IPTCDigitalSourceEnumeration code indicating the nature of the
      * digital source(s) for some [[CreativeWork]].
      *
-     * @param $digitalSourceType 
+     * @param $digitalSourceType \LengthOfRope\JSONLD\Schema\IPTCDigitalSourceEnumeration
      * @return static
      **/
     public function setDigitalSourceType($digitalSourceType): static {
@@ -1114,7 +1114,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\IPTCDigitalSourceEnumeration
      **/
     public function getDigitalSourceType() {
         return $this->properties['digitalSourceType'];
@@ -1123,7 +1123,7 @@ class CreativeWork extends Thing
      * The person or organization who produced the work (e.g. music album, movie,
      * TV/radio series etc.).
      *
-     * @param $producer |
+     * @param $producer \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setProducer($producer): static {
@@ -1133,7 +1133,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getProducer() {
         return $this->properties['producer'];
@@ -1143,7 +1143,7 @@ class CreativeWork extends Thing
      * resource. Values should be drawn from the [approved
      * vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessibilityControl-vocabulary).
      *
-     * @param $accessibilityControl 
+     * @param $accessibilityControl \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setAccessibilityControl($accessibilityControl): static {
@@ -1153,7 +1153,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getAccessibilityControl() {
         return $this->properties['accessibilityControl'];
@@ -1163,7 +1163,7 @@ class CreativeWork extends Thing
      * HTML 5 provides a special mechanism for indicating authorship via the rel tag.
      * That is equivalent to this and may be used interchangeably.
      *
-     * @param $author |
+     * @param $author \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setAuthor($author): static {
@@ -1173,7 +1173,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getAuthor() {
         return $this->properties['author'];
@@ -1183,7 +1183,7 @@ class CreativeWork extends Thing
      * Examples of educational levels include 'beginner', 'intermediate' or 'advanced',
      * and formal sets of level indicators.
      *
-     * @param $educationalLevel ||
+     * @param $educationalLevel \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm
      * @return static
      **/
     public function setEducationalLevel($educationalLevel): static {
@@ -1193,7 +1193,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm
      **/
     public function getEducationalLevel() {
         return $this->properties['educationalLevel'];
@@ -1201,7 +1201,7 @@ class CreativeWork extends Thing
     /**
      * Genre of the creative work, broadcast channel or group.
      *
-     * @param $genre |
+     * @param $genre \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setGenre($genre): static {
@@ -1211,7 +1211,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      **/
     public function getGenre() {
         return $this->properties['genre'];
@@ -1220,7 +1220,7 @@ class CreativeWork extends Thing
      * Indicates an item or CreativeWork that this item, or CreativeWork (in some
      * sense), is part of.
      *
-     * @param $isPartOf |
+     * @param $isPartOf \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setIsPartOf($isPartOf): static {
@@ -1230,7 +1230,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\URL
      **/
     public function getIsPartOf() {
         return $this->properties['isPartOf'];
@@ -1242,7 +1242,7 @@ class CreativeWork extends Thing
      * enforcement organizations. In such cases, the referenced page may not directly
      * publish the content.
      *
-     * @param $archivedAt |
+     * @param $archivedAt \LengthOfRope\JSONLD\Schema\WebPage|\LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setArchivedAt($archivedAt): static {
@@ -1252,7 +1252,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\WebPage|\LengthOfRope\JSONLD\Schema\URL
      **/
     public function getArchivedAt() {
         return $this->properties['archivedAt'];
@@ -1261,7 +1261,7 @@ class CreativeWork extends Thing
      * The year during which the claimed copyright for the CreativeWork was first
      * asserted.
      *
-     * @param $copyrightYear 
+     * @param $copyrightYear \LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setCopyrightYear($copyrightYear): static {
@@ -1271,7 +1271,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Number
      **/
     public function getCopyrightYear() {
         return $this->properties['copyrightYear'];
@@ -1279,7 +1279,7 @@ class CreativeWork extends Thing
     /**
      * Headline of the article.
      *
-     * @param $headline 
+     * @param $headline \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setHeadline($headline): static {
@@ -1289,7 +1289,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getHeadline() {
         return $this->properties['headline'];
@@ -1297,7 +1297,7 @@ class CreativeWork extends Thing
     /**
      * Review of the item.
      *
-     * @param $reviews 
+     * @param $reviews \LengthOfRope\JSONLD\Schema\Review
      * @return static
      **/
     public function setReviews($reviews): static {
@@ -1307,7 +1307,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Review
      **/
     public function getReviews() {
         return $this->properties['reviews'];
@@ -1317,7 +1317,7 @@ class CreativeWork extends Thing
      * the content of a [[MediaObject]] or other [[CreativeWork]]. The interpreting
      * party can be indicated using [[claimInterpreter]].
      *
-     * @param $interpretedAsClaim 
+     * @param $interpretedAsClaim \LengthOfRope\JSONLD\Schema\Claim
      * @return static
      **/
     public function setInterpretedAsClaim($interpretedAsClaim): static {
@@ -1327,7 +1327,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Claim
      **/
     public function getInterpretedAsClaim() {
         return $this->properties['interpretedAsClaim'];
@@ -1335,7 +1335,7 @@ class CreativeWork extends Thing
     /**
      * The publisher of the creative work.
      *
-     * @param $publisher |
+     * @param $publisher \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setPublisher($publisher): static {
@@ -1345,7 +1345,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getPublisher() {
         return $this->properties['publisher'];
@@ -1353,7 +1353,7 @@ class CreativeWork extends Thing
     /**
      * A review of the item.
      *
-     * @param $review 
+     * @param $review \LengthOfRope\JSONLD\Schema\Review
      * @return static
      **/
     public function setReview($review): static {
@@ -1363,7 +1363,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Review
      **/
     public function getReview() {
         return $this->properties['review'];
@@ -1373,7 +1373,7 @@ class CreativeWork extends Thing
      * terms include Incomplete, Draft, Published, Obsolete. Some organizations define
      * a set of terms for the stages of their publication lifecycle.
      *
-     * @param $creativeWorkStatus |
+     * @param $creativeWorkStatus \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DefinedTerm
      * @return static
      **/
     public function setCreativeWorkStatus($creativeWorkStatus): static {
@@ -1383,7 +1383,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DefinedTerm
      **/
     public function getCreativeWorkStatus() {
         return $this->properties['creativeWorkStatus'];
@@ -1391,7 +1391,7 @@ class CreativeWork extends Thing
     /**
      * An embedded audio object.
      *
-     * @param $audio ||
+     * @param $audio \LengthOfRope\JSONLD\Schema\MusicRecording|\LengthOfRope\JSONLD\Schema\AudioObject|\LengthOfRope\JSONLD\Schema\Clip
      * @return static
      **/
     public function setAudio($audio): static {
@@ -1401,7 +1401,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\Schema\MusicRecording|\LengthOfRope\JSONLD\Schema\AudioObject|\LengthOfRope\JSONLD\Schema\Clip
      **/
     public function getAudio() {
         return $this->properties['audio'];
@@ -1410,7 +1410,7 @@ class CreativeWork extends Thing
      * The purpose of a work in the context of education; for example, 'assignment',
      * 'group work'.
      *
-     * @param $educationalUse |
+     * @param $educationalUse \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DefinedTerm
      * @return static
      **/
     public function setEducationalUse($educationalUse): static {
@@ -1420,7 +1420,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DefinedTerm
      **/
     public function getEducationalUse() {
         return $this->properties['educationalUse'];
@@ -1439,7 +1439,7 @@ class CreativeWork extends Thing
      * interpretation of this may vary by context and product type, and cannot be fully
      * enumerated here.
      *
-     * @param $countryOfOrigin 
+     * @param $countryOfOrigin \LengthOfRope\JSONLD\Schema\Country
      * @return static
      **/
     public function setCountryOfOrigin($countryOfOrigin): static {
@@ -1449,7 +1449,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Country
      **/
     public function getCountryOfOrigin() {
         return $this->properties['countryOfOrigin'];
@@ -1458,7 +1458,7 @@ class CreativeWork extends Thing
      * The predominant mode of learning supported by the learning resource. Acceptable
      * values are 'active', 'expositive', or 'mixed'.
      *
-     * @param $interactivityType 
+     * @param $interactivityType \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setInteractivityType($interactivityType): static {
@@ -1468,7 +1468,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getInteractivityType() {
         return $this->properties['interactivityType'];
@@ -1483,7 +1483,7 @@ class CreativeWork extends Thing
      * Product, can clarify the nature of the offer.
      *
      *
-     * @param $offers |
+     * @param $offers \LengthOfRope\JSONLD\Schema\Offer|\LengthOfRope\JSONLD\Schema\Demand
      * @return static
      **/
     public function setOffers($offers): static {
@@ -1493,7 +1493,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Offer|\LengthOfRope\JSONLD\Schema\Demand
      **/
     public function getOffers() {
         return $this->properties['offers'];
@@ -1517,7 +1517,7 @@ class CreativeWork extends Thing
      * specified final date. This is tentative and might be updated in future when ISO
      * 8601 is officially updated.
      *
-     * @param $temporalCoverage ||
+     * @param $temporalCoverage \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\DataType\DateTime
      * @return static
      **/
     public function setTemporalCoverage($temporalCoverage): static {
@@ -1527,7 +1527,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\DataType\DateTime
      **/
     public function getTemporalCoverage() {
         return $this->properties['temporalCoverage'];
@@ -1536,7 +1536,7 @@ class CreativeWork extends Thing
      * A license document that applies to this structured data, typically indicated by
      * URL.
      *
-     * @param $sdLicense |
+     * @param $sdLicense \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setSdLicense($sdLicense): static {
@@ -1546,7 +1546,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\URL
      **/
     public function getSdLicense() {
         return $this->properties['sdLicense'];
@@ -1554,7 +1554,7 @@ class CreativeWork extends Thing
     /**
      * The publishing division which published the comic.
      *
-     * @param $publisherImprint 
+     * @param $publisherImprint \LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setPublisherImprint($publisherImprint): static {
@@ -1564,7 +1564,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getPublisherImprint() {
         return $this->properties['publisherImprint'];
@@ -1574,7 +1574,7 @@ class CreativeWork extends Thing
      * producer. Another party (a seller) may offer those services or goods on behalf
      * of the provider. A provider may also serve as the seller.
      *
-     * @param $provider |
+     * @param $provider \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setProvider($provider): static {
@@ -1584,7 +1584,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getProvider() {
         return $this->properties['provider'];
@@ -1592,7 +1592,7 @@ class CreativeWork extends Thing
     /**
      * Specifies the Person that is legally accountable for the CreativeWork.
      *
-     * @param $accountablePerson 
+     * @param $accountablePerson \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setAccountablePerson($accountablePerson): static {
@@ -1602,7 +1602,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
     public function getAccountablePerson() {
         return $this->properties['accountablePerson'];
@@ -1613,7 +1613,7 @@ class CreativeWork extends Thing
      * “Monkeys Pilgerfahrt” and a Vietnamese  translation Tây du ký bình
      * khảo.
      *
-     * @param $workTranslation 
+     * @param $workTranslation \LengthOfRope\JSONLD\Schema\CreativeWork
      * @return static
      **/
     public function setWorkTranslation($workTranslation): static {
@@ -1623,7 +1623,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork
      **/
     public function getWorkTranslation() {
         return $this->properties['workTranslation'];
@@ -1631,7 +1631,7 @@ class CreativeWork extends Thing
     /**
      * Official rating of a piece of content&#x2014;for example, 'MPAA PG-13'.
      *
-     * @param $contentRating |
+     * @param $contentRating \LengthOfRope\JSONLD\Schema\Rating|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setContentRating($contentRating): static {
@@ -1641,7 +1641,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Rating|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getContentRating() {
         return $this->properties['contentRating'];
@@ -1649,7 +1649,7 @@ class CreativeWork extends Thing
     /**
      * Awards won by or for this item.
      *
-     * @param $awards 
+     * @param $awards \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setAwards($awards): static {
@@ -1659,7 +1659,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getAwards() {
         return $this->properties['awards'];
@@ -1669,7 +1669,7 @@ class CreativeWork extends Thing
      * (e.g. [[locationCreated]], [[spatialCoverage]], [[contentLocation]]) are not
      * known to be appropriate.
      *
-     * @param $spatial 
+     * @param $spatial \LengthOfRope\JSONLD\Schema\Place
      * @return static
      **/
     public function setSpatial($spatial): static {
@@ -1679,7 +1679,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Place
      **/
     public function getSpatial() {
         return $this->properties['spatial'];
@@ -1688,7 +1688,7 @@ class CreativeWork extends Thing
      * The item being described is intended to assess the competency or learning
      * outcome defined by the referenced term.
      *
-     * @param $assesses |
+     * @param $assesses \LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setAssesses($assesses): static {
@@ -1698,7 +1698,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getAssesses() {
         return $this->properties['assesses'];
@@ -1707,7 +1707,7 @@ class CreativeWork extends Thing
      * The work that this work has been translated from. E.g. 物种起源 is a
      * translationOf “On the Origin of Species”.
      *
-     * @param $translationOfWork 
+     * @param $translationOfWork \LengthOfRope\JSONLD\Schema\CreativeWork
      * @return static
      **/
     public function setTranslationOfWork($translationOfWork): static {
@@ -1717,7 +1717,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork
      **/
     public function getTranslationOfWork() {
         return $this->properties['translationOfWork'];
@@ -1732,7 +1732,7 @@ class CreativeWork extends Thing
      * ```http://dublincore.org/specifications/dublin-core/dces/1999-07-02/``` but this
      * has not been carefully explored in the community.
      *
-     * @param $schemaVersion |
+     * @param $schemaVersion \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setSchemaVersion($schemaVersion): static {
@@ -1742,7 +1742,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      **/
     public function getSchemaVersion() {
         return $this->properties['schemaVersion'];
@@ -1751,7 +1751,7 @@ class CreativeWork extends Thing
      * The location where the CreativeWork was created, which may not be the same as
      * the location depicted in the CreativeWork.
      *
-     * @param $locationCreated 
+     * @param $locationCreated \LengthOfRope\JSONLD\Schema\Place
      * @return static
      **/
     public function setLocationCreated($locationCreated): static {
@@ -1761,7 +1761,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Place
      **/
     public function getLocationCreated() {
         return $this->properties['locationCreated'];
@@ -1770,7 +1770,7 @@ class CreativeWork extends Thing
      * The item being described is intended to help a person learn the competency or
      * learning outcome defined by the referenced term.
      *
-     * @param $teaches |
+     * @param $teaches \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DefinedTerm
      * @return static
      **/
     public function setTeaches($teaches): static {
@@ -1780,7 +1780,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DefinedTerm
      **/
     public function getTeaches() {
         return $this->properties['teaches'];
@@ -1788,7 +1788,7 @@ class CreativeWork extends Thing
     /**
      * Indicates the primary entity described in some page or other CreativeWork.
      *
-     * @param $mainEntity 
+     * @param $mainEntity \LengthOfRope\JSONLD\Schema\Thing
      * @return static
      **/
     public function setMainEntity($mainEntity): static {
@@ -1798,7 +1798,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Thing
      **/
     public function getMainEntity() {
         return $this->properties['mainEntity'];
@@ -1812,7 +1812,7 @@ class CreativeWork extends Thing
      * For example "Available by appointment from the Reading Room" or "Accessible only
      * from logged-in accounts ".
      *
-     * @param $conditionsOfAccess 
+     * @param $conditionsOfAccess \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setConditionsOfAccess($conditionsOfAccess): static {
@@ -1822,7 +1822,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getConditionsOfAccess() {
         return $this->properties['conditionsOfAccess'];
@@ -1830,7 +1830,7 @@ class CreativeWork extends Thing
     /**
      * A publication event associated with the item.
      *
-     * @param $publication 
+     * @param $publication \LengthOfRope\JSONLD\Schema\PublicationEvent
      * @return static
      **/
     public function setPublication($publication): static {
@@ -1840,7 +1840,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\PublicationEvent
      **/
     public function getPublication() {
         return $this->properties['publication'];
@@ -1860,7 +1860,7 @@ class CreativeWork extends Thing
      * usage rights for an image that is also available under non-commercial creative
      * commons licenses.
      *
-     * @param $usageInfo |
+     * @param $usageInfo \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\CreativeWork
      * @return static
      **/
     public function setUsageInfo($usageInfo): static {
@@ -1870,7 +1870,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\CreativeWork
      **/
     public function getUsageInfo() {
         return $this->properties['usageInfo'];
@@ -1881,7 +1881,7 @@ class CreativeWork extends Thing
      * [approved
      * vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessModeSufficient-vocabulary).
      *
-     * @param $accessModeSufficient 
+     * @param $accessModeSufficient \LengthOfRope\JSONLD\Schema\ItemList
      * @return static
      **/
     public function setAccessModeSufficient($accessModeSufficient): static {
@@ -1891,7 +1891,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\ItemList
      **/
     public function getAccessModeSufficient() {
         return $this->properties['accessModeSufficient'];
@@ -1910,7 +1910,7 @@ class CreativeWork extends Thing
      * Ubuntu, as well as upstream maintainers of the underlying work.
      *
      *
-     * @param $maintainer |
+     * @param $maintainer \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setMaintainer($maintainer): static {
@@ -1920,7 +1920,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getMaintainer() {
         return $this->properties['maintainer'];
@@ -1930,7 +1930,7 @@ class CreativeWork extends Thing
      * Values should be drawn from the [approved
      * vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessibilityAPI-vocabulary).
      *
-     * @param $accessibilityAPI 
+     * @param $accessibilityAPI \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setAccessibilityAPI($accessibilityAPI): static {
@@ -1940,7 +1940,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getAccessibilityAPI() {
         return $this->properties['accessibilityAPI'];
@@ -1949,7 +1949,7 @@ class CreativeWork extends Thing
      * Indicates an item or CreativeWork that is part of this item, or CreativeWork (in
      * some sense).
      *
-     * @param $hasPart 
+     * @param $hasPart \LengthOfRope\JSONLD\Schema\CreativeWork
      * @return static
      **/
     public function setHasPart($hasPart): static {
@@ -1959,7 +1959,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork
      **/
     public function getHasPart() {
         return $this->properties['hasPart'];
@@ -1970,7 +1970,7 @@ class CreativeWork extends Thing
      * [approved
      * vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessibilityFeature-vocabulary).
      *
-     * @param $accessibilityFeature 
+     * @param $accessibilityFeature \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setAccessibilityFeature($accessibilityFeature): static {
@@ -1980,7 +1980,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getAccessibilityFeature() {
         return $this->properties['accessibilityFeature'];
@@ -1988,7 +1988,7 @@ class CreativeWork extends Thing
     /**
      * The textual content of this CreativeWork.
      *
-     * @param $text 
+     * @param $text \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setText($text): static {
@@ -1998,7 +1998,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getText() {
         return $this->properties['text'];
@@ -2007,7 +2007,7 @@ class CreativeWork extends Thing
      * Indicates a correction to a [[CreativeWork]], either via a
      * [[CorrectionComment]], textually or in another document.
      *
-     * @param $correction ||
+     * @param $correction \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\CorrectionComment
      * @return static
      **/
     public function setCorrection($correction): static {
@@ -2017,7 +2017,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\CorrectionComment
      **/
     public function getCorrection() {
         return $this->properties['correction'];
@@ -2027,7 +2027,7 @@ class CreativeWork extends Thing
      * financial contribution. E.g. a sponsor of a Medical Study or a corporate sponsor
      * of an event.
      *
-     * @param $sponsor |
+     * @param $sponsor \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setSponsor($sponsor): static {
@@ -2037,7 +2037,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getSponsor() {
         return $this->properties['sponsor'];
@@ -2046,7 +2046,7 @@ class CreativeWork extends Thing
      * Example/instance/realization/derivation of the concept of this creative work.
      * E.g. the paperback edition, first edition, or e-book.
      *
-     * @param $workExample 
+     * @param $workExample \LengthOfRope\JSONLD\Schema\CreativeWork
      * @return static
      **/
     public function setWorkExample($workExample): static {
@@ -2056,7 +2056,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork
      **/
     public function getWorkExample() {
         return $this->properties['workExample'];
@@ -2064,7 +2064,7 @@ class CreativeWork extends Thing
     /**
      * An abstract is a short description that summarizes a [[CreativeWork]].
      *
-     * @param $abstract 
+     * @param $abstract \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setAbstract($abstract): static {
@@ -2074,7 +2074,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getAbstract() {
         return $this->properties['abstract'];
@@ -2082,7 +2082,7 @@ class CreativeWork extends Thing
     /**
      * The overall rating, based on a collection of reviews or ratings, of the item.
      *
-     * @param $aggregateRating 
+     * @param $aggregateRating \LengthOfRope\JSONLD\Schema\AggregateRating
      * @return static
      **/
     public function setAggregateRating($aggregateRating): static {
@@ -2092,7 +2092,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\AggregateRating
      **/
     public function getAggregateRating() {
         return $this->properties['aggregateRating'];
@@ -2101,7 +2101,7 @@ class CreativeWork extends Thing
      * The location depicted or described in the content. For example, the location in
      * a photograph or painting.
      *
-     * @param $contentLocation 
+     * @param $contentLocation \LengthOfRope\JSONLD\Schema\Place
      * @return static
      **/
     public function setContentLocation($contentLocation): static {
@@ -2111,7 +2111,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Place
      **/
     public function getContentLocation() {
         return $this->properties['contentLocation'];
@@ -2120,7 +2120,7 @@ class CreativeWork extends Thing
      * The creator/author of this CreativeWork. This is the same as the Author property
      * for CreativeWork.
      *
-     * @param $creator |
+     * @param $creator \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setCreator($creator): static {
@@ -2130,7 +2130,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getCreator() {
         return $this->properties['creator'];
@@ -2142,7 +2142,7 @@ class CreativeWork extends Thing
      * that it may no longer be relevant (or helpful to highlight) after some date, or
      * a [[Certification]] the validity has expired.
      *
-     * @param $expires |
+     * @param $expires \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
      * @return static
      **/
     public function setExpires($expires): static {
@@ -2152,7 +2152,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
      **/
     public function getExpires() {
         return $this->properties['expires'];
@@ -2161,7 +2161,7 @@ class CreativeWork extends Thing
      * Indicates the date on which the current structured data was generated /
      * published. Typically used alongside [[sdPublisher]].
      *
-     * @param $sdDatePublished 
+     * @param $sdDatePublished \LengthOfRope\JSONLD\DataType\Date
      * @return static
      **/
     public function setSdDatePublished($sdDatePublished): static {
@@ -2171,7 +2171,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Date
      **/
     public function getSdDatePublished() {
         return $this->properties['sdDatePublished'];
@@ -2181,7 +2181,7 @@ class CreativeWork extends Thing
      * of the language codes from the [IETF BCP 47
      * standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
      *
-     * @param $inLanguage |
+     * @param $inLanguage \LengthOfRope\JSONLD\Schema\Language|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setInLanguage($inLanguage): static {
@@ -2191,7 +2191,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Language|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getInLanguage() {
         return $this->properties['inLanguage'];
@@ -2199,7 +2199,7 @@ class CreativeWork extends Thing
     /**
      * The place and time the release was issued, expressed as a PublicationEvent.
      *
-     * @param $releasedEvent 
+     * @param $releasedEvent \LengthOfRope\JSONLD\Schema\PublicationEvent
      * @return static
      **/
     public function setReleasedEvent($releasedEvent): static {
@@ -2209,7 +2209,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\PublicationEvent
      **/
     public function getReleasedEvent() {
         return $this->properties['releasedEvent'];
@@ -2218,7 +2218,7 @@ class CreativeWork extends Thing
      * The date on which the CreativeWork was most recently modified or when the item's
      * entry was modified within a DataFeed.
      *
-     * @param $dateModified |
+     * @param $dateModified \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
      * @return static
      **/
     public function setDateModified($dateModified): static {
@@ -2228,7 +2228,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
      **/
     public function getDateModified() {
         return $this->properties['dateModified'];
@@ -2239,7 +2239,7 @@ class CreativeWork extends Thing
      * [approved
      * vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessibilityHazard-vocabulary).
      *
-     * @param $accessibilityHazard 
+     * @param $accessibilityHazard \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setAccessibilityHazard($accessibilityHazard): static {
@@ -2249,7 +2249,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getAccessibilityHazard() {
         return $this->properties['accessibilityHazard'];
@@ -2259,7 +2259,7 @@ class CreativeWork extends Thing
      * may process or perceive information. Values should be drawn from the [approved
      * vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessMode-vocabulary).
      *
-     * @param $accessMode 
+     * @param $accessMode \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setAccessMode($accessMode): static {
@@ -2269,7 +2269,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getAccessMode() {
         return $this->properties['accessMode'];
@@ -2277,7 +2277,7 @@ class CreativeWork extends Thing
     /**
      * An intended audience, i.e. a group for whom something was created.
      *
-     * @param $audience 
+     * @param $audience \LengthOfRope\JSONLD\Schema\Audience
      * @return static
      **/
     public function setAudience($audience): static {
@@ -2287,7 +2287,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Audience
      **/
     public function getAudience() {
         return $this->properties['audience'];

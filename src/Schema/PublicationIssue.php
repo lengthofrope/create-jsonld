@@ -48,7 +48,7 @@ class PublicationIssue extends CreativeWork
      * Any description of pages that is not separated into pageStart and pageEnd; for
      * example, "1-6, 9, 55" or "10-12, 46-49".
      *
-     * @param $pagination 
+     * @param $pagination \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setPagination($pagination): static {
@@ -58,7 +58,7 @@ class PublicationIssue extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getPagination() {
         return $this->properties['pagination'];
@@ -66,7 +66,7 @@ class PublicationIssue extends CreativeWork
     /**
      * The page on which the work starts; for example "135" or "xiii".
      *
-     * @param $pageStart |
+     * @param $pageStart \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Integer
      * @return static
      **/
     public function setPageStart($pageStart): static {
@@ -76,7 +76,7 @@ class PublicationIssue extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Integer
      **/
     public function getPageStart() {
         return $this->properties['pageStart'];
@@ -84,7 +84,7 @@ class PublicationIssue extends CreativeWork
     /**
      * Identifies the issue of publication; for example, "iii" or "2".
      *
-     * @param $issueNumber |
+     * @param $issueNumber \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Integer
      * @return static
      **/
     public function setIssueNumber($issueNumber): static {
@@ -94,7 +94,7 @@ class PublicationIssue extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Integer
      **/
     public function getIssueNumber() {
         return $this->properties['issueNumber'];
@@ -102,7 +102,7 @@ class PublicationIssue extends CreativeWork
     /**
      * The page on which the work ends; for example "138" or "xvi".
      *
-     * @param $pageEnd |
+     * @param $pageEnd \LengthOfRope\JSONLD\Schema\Integer|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setPageEnd($pageEnd): static {
@@ -112,7 +112,7 @@ class PublicationIssue extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Integer|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getPageEnd() {
         return $this->properties['pageEnd'];

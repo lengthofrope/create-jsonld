@@ -43,7 +43,7 @@ class Enumeration extends Intangible
      * Relates a term (i.e. a property, class or enumeration) to one that supersedes
      * it.
      *
-     * @param $supersededBy ||
+     * @param $supersededBy \LengthOfRope\JSONLD\Schema\Property|\LengthOfRope\JSONLD\Schema\Class|\LengthOfRope\JSONLD\Schema\Enumeration
      * @return static
      **/
     public function setSupersededBy($supersededBy): static {
@@ -53,7 +53,7 @@ class Enumeration extends Intangible
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\Schema\Property|\LengthOfRope\JSONLD\Schema\Class|\LengthOfRope\JSONLD\Schema\Enumeration
      **/
     public function getSupersededBy() {
         return $this->properties['supersededBy'];

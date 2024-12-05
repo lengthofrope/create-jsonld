@@ -42,7 +42,7 @@ class WinAction extends AchieveAction
     /**
      * A sub property of participant. The loser of the action.
      *
-     * @param $loser 
+     * @param $loser \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setLoser($loser): static {
@@ -52,7 +52,7 @@ class WinAction extends AchieveAction
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
     public function getLoser() {
         return $this->properties['loser'];
