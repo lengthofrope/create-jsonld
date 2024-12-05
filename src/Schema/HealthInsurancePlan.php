@@ -43,7 +43,7 @@ class HealthInsurancePlan extends Intangible
      * The standard for interpreting the Plan ID. The preferred is "HIOS". See the
      * Centers for Medicare & Medicaid Services for more details.
      *
-     * @param $usesHealthPlanIdStandard \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @param $usesHealthPlanIdStandard \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setUsesHealthPlanIdStandard($usesHealthPlanIdStandard): static {
@@ -53,7 +53,7 @@ class HealthInsurancePlan extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getUsesHealthPlanIdStandard() {
         return $this->properties['usesHealthPlanIdStandard'];
@@ -62,7 +62,7 @@ class HealthInsurancePlan extends Intangible
      * The URL that goes directly to the summary of benefits and coverage for the
      * specific standard plan or plan variation.
      *
-     * @param $benefitsSummaryUrl \LengthOfRope\JSONLD\Schema\URL
+     * @param $benefitsSummaryUrl \LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setBenefitsSummaryUrl($benefitsSummaryUrl): static {
@@ -72,7 +72,7 @@ class HealthInsurancePlan extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\URL
      **/
     public function getBenefitsSummaryUrl() {
         return $this->properties['benefitsSummaryUrl'];
@@ -81,7 +81,7 @@ class HealthInsurancePlan extends Intangible
      * The URL that goes directly to the plan brochure for the specific standard plan
      * or plan variation.
      *
-     * @param $healthPlanMarketingUrl \LengthOfRope\JSONLD\Schema\URL
+     * @param $healthPlanMarketingUrl \LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setHealthPlanMarketingUrl($healthPlanMarketingUrl): static {
@@ -91,7 +91,7 @@ class HealthInsurancePlan extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\URL
      **/
     public function getHealthPlanMarketingUrl() {
         return $this->properties['healthPlanMarketingUrl'];

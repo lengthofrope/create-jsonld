@@ -24,19 +24,63 @@
  * THE SOFTWARE.
  **/
 
-namespace LengthOfRope\JSONLD\Schema;
+namespace LengthOfRope\JSONLD\Traits;
 
-/**
- * Data type: URL.
- *
- * @see https://schema.org/URL
- * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
- **/
-class URL extends Text
+use TypeError;
+
+trait CssSelectoryTypeValidator
 {
-    public static function factory(): URL
+    private ?string $value = null;
+
+    /**
+     * setValue
+     *
+     * @param $value
+     * @return static
+     **/
+    public function setValue(string $value): static
     {
-        return new URL('https://schema.org/', 'URL');
+        $this->value = $value;
+
+        return $this;
     }
 
+    /**
+     * Validate
+     *
+     * @return bool
+     **/
+    public function validate(): bool
+    {
+        // Validate if $this->value is formatted as a css selector
+        if (!is_string($this->value)) {
+            return false;
+        }
+
+        // Regular expression to validate CSS selectors
+        $pattern = '/^[a-zA-Z0-9\-_#\.\s\[\]=\'":]+$/';
+
+        if (!preg_match($pattern, $this->value)) {
+            return false;
+        }
+
+        return true;
+    }
+
+    /**
+     * getValue
+     *
+     * @return mixed
+     **/
+    public function getValue(): string
+    {
+        if (!$this->validate()) {
+            throw new TypeError(sprintf(
+                'Expected a css selector, got %s instead.',
+                is_object($this->value) ? get_class($this->value) : gettype($this->value)
+            ));
+        }
+
+        return $this->value;
+    }
 }

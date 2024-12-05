@@ -184,7 +184,7 @@ class Article extends CreativeWork
      * a possible value of the *speakable* property.
      *
      *
-     * @param $speakable \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\SpeakableSpecification
+     * @param $speakable \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\SpeakableSpecification
      * @return static
      **/
     public function setSpeakable($speakable): static {
@@ -194,7 +194,7 @@ class Article extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\SpeakableSpecification
+     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\SpeakableSpecification
      **/
     public function getSpeakable() {
         return $this->properties['speakable'];

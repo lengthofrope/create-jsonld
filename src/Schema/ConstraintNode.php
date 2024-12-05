@@ -74,7 +74,7 @@ class ConstraintNode extends Intangible
      * or from other compatible (e.g. RDF) systems such as DataCommons.org or
      * Wikidata.org.
      *
-     * @param $constraintProperty \LengthOfRope\JSONLD\Schema\Property|\LengthOfRope\JSONLD\Schema\URL
+     * @param $constraintProperty \LengthOfRope\JSONLD\Schema\Property|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setConstraintProperty($constraintProperty): static {
@@ -84,7 +84,7 @@ class ConstraintNode extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Property|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\Schema\Property|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getConstraintProperty() {
         return $this->properties['constraintProperty'];

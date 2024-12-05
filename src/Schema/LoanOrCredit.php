@@ -104,7 +104,7 @@ class LoanOrCredit extends FinancialProduct
     /**
      * The type of a loan or credit.
      *
-     * @param $loanType \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @param $loanType \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setLoanType($loanType): static {
@@ -114,7 +114,7 @@ class LoanOrCredit extends FinancialProduct
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getLoanType() {
         return $this->properties['loanType'];

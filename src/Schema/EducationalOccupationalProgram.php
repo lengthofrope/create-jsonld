@@ -146,7 +146,7 @@ class EducationalOccupationalProgram extends Intangible
      * occupational credential awarded as a consequence of successful completion of
      * this course or program.
      *
-     * @param $occupationalCredentialAwarded \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential|\LengthOfRope\JSONLD\Schema\URL
+     * @param $occupationalCredentialAwarded \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setOccupationalCredentialAwarded($occupationalCredentialAwarded): static {
@@ -156,7 +156,7 @@ class EducationalOccupationalProgram extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getOccupationalCredentialAwarded() {
         return $this->properties['occupationalCredentialAwarded'];
@@ -268,7 +268,7 @@ class EducationalOccupationalProgram extends Intangible
      * reference to a term from a controlled vocabulary (e.g.
      * https://ceds.ed.gov/element/001311#Asynchronous ).
      *
-     * @param $educationalProgramMode \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @param $educationalProgramMode \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setEducationalProgramMode($educationalProgramMode): static {
@@ -278,7 +278,7 @@ class EducationalOccupationalProgram extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getEducationalProgramMode() {
         return $this->properties['educationalProgramMode'];
@@ -427,7 +427,7 @@ class EducationalOccupationalProgram extends Intangible
      * educational credential awarded as a consequence of successful completion of this
      * course or program.
      *
-     * @param $educationalCredentialAwarded \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential|\LengthOfRope\JSONLD\Schema\URL
+     * @param $educationalCredentialAwarded \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setEducationalCredentialAwarded($educationalCredentialAwarded): static {
@@ -437,7 +437,7 @@ class EducationalOccupationalProgram extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getEducationalCredentialAwarded() {
         return $this->properties['educationalCredentialAwarded'];

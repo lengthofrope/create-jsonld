@@ -115,7 +115,7 @@ class MediaObject extends CreativeWork
      * Unregistered or niche encoding and file formats can be indicated instead via the
      * most appropriate URL, e.g. defining Web page or a Wikipedia/Wikidata entry.
      *
-     * @param $encodingFormat \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\DataType\Text
+     * @param $encodingFormat \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setEncodingFormat($encodingFormat): static {
@@ -125,7 +125,7 @@ class MediaObject extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getEncodingFormat() {
         return $this->properties['encodingFormat'];
@@ -178,7 +178,7 @@ class MediaObject extends CreativeWork
     /**
      * Actual bytes of the media object, for example the image file or video file.
      *
-     * @param $contentUrl \LengthOfRope\JSONLD\Schema\URL
+     * @param $contentUrl \LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setContentUrl($contentUrl): static {
@@ -188,7 +188,7 @@ class MediaObject extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\URL
      **/
     public function getContentUrl() {
         return $this->properties['contentUrl'];
@@ -356,7 +356,7 @@ class MediaObject extends CreativeWork
      * information in the ```src``` element of an ```embed``` tag and should not be the
      * same as the content of the ```loc``` tag.
      *
-     * @param $embedUrl \LengthOfRope\JSONLD\Schema\URL
+     * @param $embedUrl \LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setEmbedUrl($embedUrl): static {
@@ -366,7 +366,7 @@ class MediaObject extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\URL
      **/
     public function getEmbedUrl() {
         return $this->properties['embedUrl'];

@@ -337,7 +337,7 @@ class Accommodation extends Place
      * [[Accommodation]] or [[ApartmentComplex]] in a real estate setting, as well as
      * other kinds of tours as appropriate.
      *
-     * @param $tourBookingPage \LengthOfRope\JSONLD\Schema\URL
+     * @param $tourBookingPage \LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setTourBookingPage($tourBookingPage): static {
@@ -347,7 +347,7 @@ class Accommodation extends Place
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\URL
      **/
     public function getTourBookingPage() {
         return $this->properties['tourBookingPage'];

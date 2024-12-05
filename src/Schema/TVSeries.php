@@ -91,7 +91,7 @@ class TVSeries extends CreativeWork
      * [[editEIDR]] for a more edit-specific description.
      *
      *
-     * @param $titleEIDR \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @param $titleEIDR \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setTitleEIDR($titleEIDR): static {
@@ -101,7 +101,7 @@ class TVSeries extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getTitleEIDR() {
         return $this->properties['titleEIDR'];
@@ -219,7 +219,7 @@ class TVSeries extends CreativeWork
     /**
      * A season in a media series.
      *
-     * @param $season \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\CreativeWorkSeason
+     * @param $season \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\CreativeWorkSeason
      * @return static
      **/
     public function setSeason($season): static {
@@ -229,7 +229,7 @@ class TVSeries extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\CreativeWorkSeason
+     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\CreativeWorkSeason
      **/
     public function getSeason() {
         return $this->properties['season'];

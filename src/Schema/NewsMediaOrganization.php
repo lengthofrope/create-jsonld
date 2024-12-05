@@ -45,7 +45,7 @@ class NewsMediaOrganization extends Organization
      * describing the newsroom’s diversity policy on both staffing and sources,
      * typically providing staffing data.
      *
-     * @param $diversityPolicy \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\URL
+     * @param $diversityPolicy \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setDiversityPolicy($diversityPolicy): static {
@@ -55,7 +55,7 @@ class NewsMediaOrganization extends Organization
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getDiversityPolicy() {
         return $this->properties['diversityPolicy'];
@@ -67,7 +67,7 @@ class NewsMediaOrganization extends Organization
      * ethicsPolicy is typically a statement describing the personal, organizational,
      * and corporate standards of behavior expected by the organization.
      *
-     * @param $ethicsPolicy \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\CreativeWork
+     * @param $ethicsPolicy \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\CreativeWork
      * @return static
      **/
     public function setEthicsPolicy($ethicsPolicy): static {
@@ -77,7 +77,7 @@ class NewsMediaOrganization extends Organization
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\CreativeWork
+     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\CreativeWork
      **/
     public function getEthicsPolicy() {
         return $this->properties['ethicsPolicy'];
@@ -86,7 +86,7 @@ class NewsMediaOrganization extends Organization
      * For a [[NewsMediaOrganization]], a link to the masthead page or a page listing
      * top editorial management.
      *
-     * @param $masthead \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\URL
+     * @param $masthead \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setMasthead($masthead): static {
@@ -96,7 +96,7 @@ class NewsMediaOrganization extends Organization
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getMasthead() {
         return $this->properties['masthead'];
@@ -105,7 +105,7 @@ class NewsMediaOrganization extends Organization
      * Disclosure about verification and fact-checking processes for a
      * [[NewsMediaOrganization]] or other fact-checking [[Organization]].
      *
-     * @param $verificationFactCheckingPolicy \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\URL
+     * @param $verificationFactCheckingPolicy \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setVerificationFactCheckingPolicy($verificationFactCheckingPolicy): static {
@@ -115,7 +115,7 @@ class NewsMediaOrganization extends Organization
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getVerificationFactCheckingPolicy() {
         return $this->properties['verificationFactCheckingPolicy'];
@@ -124,7 +124,7 @@ class NewsMediaOrganization extends Organization
      * For a [[NewsMediaOrganization]] or other news-related [[Organization]], a
      * statement explaining when authors of articles are not named in bylines.
      *
-     * @param $noBylinesPolicy \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\URL
+     * @param $noBylinesPolicy \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setNoBylinesPolicy($noBylinesPolicy): static {
@@ -134,7 +134,7 @@ class NewsMediaOrganization extends Organization
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getNoBylinesPolicy() {
         return $this->properties['noBylinesPolicy'];
@@ -143,7 +143,7 @@ class NewsMediaOrganization extends Organization
      * For an [[Organization]] (typically a [[NewsMediaOrganization]]), a statement
      * about policy on use of unnamed sources and the decision process required.
      *
-     * @param $unnamedSourcesPolicy \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\URL
+     * @param $unnamedSourcesPolicy \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setUnnamedSourcesPolicy($unnamedSourcesPolicy): static {
@@ -153,7 +153,7 @@ class NewsMediaOrganization extends Organization
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getUnnamedSourcesPolicy() {
         return $this->properties['unnamedSourcesPolicy'];
@@ -162,7 +162,7 @@ class NewsMediaOrganization extends Organization
      * For an [[Organization]] (e.g. [[NewsMediaOrganization]]), a statement describing
      * (in news media, the newsroom’s) disclosure and correction policy for errors.
      *
-     * @param $correctionsPolicy \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\URL
+     * @param $correctionsPolicy \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setCorrectionsPolicy($correctionsPolicy): static {
@@ -172,7 +172,7 @@ class NewsMediaOrganization extends Organization
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getCorrectionsPolicy() {
         return $this->properties['correctionsPolicy'];
@@ -184,7 +184,7 @@ class NewsMediaOrganization extends Organization
      * Note that the [[funder]] is also available and can be used to make basic
      * funder information machine-readable.
      *
-     * @param $ownershipFundingInfo \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\AboutPage
+     * @param $ownershipFundingInfo \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\AboutPage
      * @return static
      **/
     public function setOwnershipFundingInfo($ownershipFundingInfo): static {
@@ -194,7 +194,7 @@ class NewsMediaOrganization extends Organization
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\AboutPage
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\AboutPage
      **/
     public function getOwnershipFundingInfo() {
         return $this->properties['ownershipFundingInfo'];
@@ -204,7 +204,7 @@ class NewsMediaOrganization extends Organization
      * a report on staffing diversity issues. In a news context this might be for
      * example ASNE or RTDNA (US) reports, or self-reported.
      *
-     * @param $diversityStaffingReport \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\Article
+     * @param $diversityStaffingReport \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\Article
      * @return static
      **/
     public function setDiversityStaffingReport($diversityStaffingReport): static {
@@ -214,7 +214,7 @@ class NewsMediaOrganization extends Organization
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\Article
+     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\Article
      **/
     public function getDiversityStaffingReport() {
         return $this->properties['diversityStaffingReport'];
@@ -225,7 +225,7 @@ class NewsMediaOrganization extends Organization
      * including involving the public - digitally or otherwise -- in coverage
      * decisions, reporting and activities after publication.
      *
-     * @param $actionableFeedbackPolicy \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\CreativeWork
+     * @param $actionableFeedbackPolicy \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\CreativeWork
      * @return static
      **/
     public function setActionableFeedbackPolicy($actionableFeedbackPolicy): static {
@@ -235,7 +235,7 @@ class NewsMediaOrganization extends Organization
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\CreativeWork
+     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\CreativeWork
      **/
     public function getActionableFeedbackPolicy() {
         return $this->properties['actionableFeedbackPolicy'];
@@ -244,7 +244,7 @@ class NewsMediaOrganization extends Organization
      * For a [[NewsMediaOrganization]], a statement on coverage priorities, including
      * any public agenda or stance on issues.
      *
-     * @param $missionCoveragePrioritiesPolicy \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\CreativeWork
+     * @param $missionCoveragePrioritiesPolicy \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\CreativeWork
      * @return static
      **/
     public function setMissionCoveragePrioritiesPolicy($missionCoveragePrioritiesPolicy): static {
@@ -254,7 +254,7 @@ class NewsMediaOrganization extends Organization
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\CreativeWork
+     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\CreativeWork
      **/
     public function getMissionCoveragePrioritiesPolicy() {
         return $this->properties['missionCoveragePrioritiesPolicy'];

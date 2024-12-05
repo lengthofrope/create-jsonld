@@ -24,38 +24,55 @@
  * THE SOFTWARE.
  **/
 
-namespace LengthOfRope\JSONLD\Schema;
+namespace LengthOfRope\JSONLD\Traits;
 
-/**
- * Financial services business.
- *
- * @see https://schema.org/FinancialService
- * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
- **/
-class FinancialService extends LocalBusiness
+use TypeError;
+
+trait FalseValidator
 {
-    public static function factory(): FinancialService
-    {
-        return new FinancialService('https://schema.org/', 'FinancialService');
-    }
+    private ?bool $value = null;
 
     /**
-     * Description of fees, commissions, and other terms applied either to a class of
-     * financial product, or by a financial service organization.
+     * setValue
      *
-     * @param $feesAndCommissionsSpecification \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @param $value
      * @return static
      **/
-    public function setFeesAndCommissionsSpecification($feesAndCommissionsSpecification): static {
-        $this->properties['feesAndCommissionsSpecification'] = $feesAndCommissionsSpecification;
+    public function setValue(bool $value): static
+    {
+        $this->value = $value;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * Validate
+     *
+     * @return bool
      **/
-    public function getFeesAndCommissionsSpecification() {
-        return $this->properties['feesAndCommissionsSpecification'];
+    public function validate(): bool
+    {
+        if (!is_bool($this->value) && $this->value !== false) {
+            return false;
+        }
+
+        return true;
+    }
+
+    /**
+     * getValue
+     *
+     * @return bool
+     **/
+    public function getValue(): bool
+    {
+        if (!$this->validate()) {
+            throw new TypeError(sprintf(
+                'Expected a boolean with the false value, got %s instead.',
+                is_object($this->value) ? get_class($this->value) : gettype($this->value)
+            ));
+        }
+
+        return $this->value;
     }
 }

@@ -45,7 +45,7 @@ class FinancialProduct extends Service
      * Description of fees, commissions, and other terms applied either to a class of
      * financial product, or by a financial service organization.
      *
-     * @param $feesAndCommissionsSpecification \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @param $feesAndCommissionsSpecification \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setFeesAndCommissionsSpecification($feesAndCommissionsSpecification): static {
@@ -55,7 +55,7 @@ class FinancialProduct extends Service
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getFeesAndCommissionsSpecification() {
         return $this->properties['feesAndCommissionsSpecification'];

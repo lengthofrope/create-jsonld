@@ -44,7 +44,7 @@ class JobPosting extends Intangible
      * terms such as those in O*net may be used, but note that there is no way to
      * specify the level of ability as well as its nature when using a defined term.
      *
-     * @param $physicalRequirement \LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @param $physicalRequirement \LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setPhysicalRequirement($physicalRequirement): static {
@@ -54,7 +54,7 @@ class JobPosting extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getPhysicalRequirement() {
         return $this->properties['physicalRequirement'];
@@ -208,7 +208,7 @@ class JobPosting extends Intangible
     /**
      * A description of any security clearance requirements of the job.
      *
-     * @param $securityClearanceRequirement \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @param $securityClearanceRequirement \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setSecurityClearanceRequirement($securityClearanceRequirement): static {
@@ -218,7 +218,7 @@ class JobPosting extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getSecurityClearanceRequirement() {
         return $this->properties['securityClearanceRequirement'];
@@ -489,7 +489,7 @@ class JobPosting extends Intangible
      * be used, but note that there is no way to specify the level of ability as well
      * as its nature when using a defined term.
      *
-     * @param $sensoryRequirement \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text
+     * @param $sensoryRequirement \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setSensoryRequirement($sensoryRequirement): static {
@@ -499,7 +499,7 @@ class JobPosting extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getSensoryRequirement() {
         return $this->properties['sensoryRequirement'];

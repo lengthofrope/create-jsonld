@@ -119,7 +119,7 @@ class SpecialAnnouncement extends CreativeWork
      * The URL for a feed, e.g. associated with a podcast series, blog, or series of
      * date-stamped updates. This is usually RSS or Atom.
      *
-     * @param $webFeed \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DataFeed
+     * @param $webFeed \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\DataFeed
      * @return static
      **/
     public function setWebFeed($webFeed): static {
@@ -129,7 +129,7 @@ class SpecialAnnouncement extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DataFeed
+     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\DataFeed
      **/
     public function getWebFeed() {
         return $this->properties['webFeed'];
@@ -155,7 +155,7 @@ class SpecialAnnouncement extends CreativeWork
     /**
      * Information about disease prevention.
      *
-     * @param $diseasePreventionInfo \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\WebContent
+     * @param $diseasePreventionInfo \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\WebContent
      * @return static
      **/
     public function setDiseasePreventionInfo($diseasePreventionInfo): static {
@@ -165,7 +165,7 @@ class SpecialAnnouncement extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\WebContent
+     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\WebContent
      **/
     public function getDiseasePreventionInfo() {
         return $this->properties['diseasePreventionInfo'];
@@ -173,7 +173,7 @@ class SpecialAnnouncement extends CreativeWork
     /**
      * Information about public transport closures.
      *
-     * @param $publicTransportClosuresInfo \LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\Schema\URL
+     * @param $publicTransportClosuresInfo \LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setPublicTransportClosuresInfo($publicTransportClosuresInfo): static {
@@ -183,7 +183,7 @@ class SpecialAnnouncement extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getPublicTransportClosuresInfo() {
         return $this->properties['publicTransportClosuresInfo'];
@@ -192,7 +192,7 @@ class SpecialAnnouncement extends CreativeWork
      * A category for the item. Greater signs or slashes can be used to informally
      * indicate a category hierarchy.
      *
-     * @param $category \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\Schema\PhysicalActivityCategory|\LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @param $category \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\Schema\PhysicalActivityCategory|\LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setCategory($category): static {
@@ -202,7 +202,7 @@ class SpecialAnnouncement extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\Schema\PhysicalActivityCategory|\LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\Schema\PhysicalActivityCategory|\LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getCategory() {
         return $this->properties['category'];
@@ -210,7 +210,7 @@ class SpecialAnnouncement extends CreativeWork
     /**
      * Information about school closures.
      *
-     * @param $schoolClosuresInfo \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\WebContent
+     * @param $schoolClosuresInfo \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\WebContent
      * @return static
      **/
     public function setSchoolClosuresInfo($schoolClosuresInfo): static {
@@ -220,7 +220,7 @@ class SpecialAnnouncement extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\WebContent
+     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\WebContent
      **/
     public function getSchoolClosuresInfo() {
         return $this->properties['schoolClosuresInfo'];
@@ -228,7 +228,7 @@ class SpecialAnnouncement extends CreativeWork
     /**
      * Guidelines about quarantine rules, e.g. in the context of a pandemic.
      *
-     * @param $quarantineGuidelines \LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\Schema\URL
+     * @param $quarantineGuidelines \LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setQuarantineGuidelines($quarantineGuidelines): static {
@@ -238,7 +238,7 @@ class SpecialAnnouncement extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getQuarantineGuidelines() {
         return $this->properties['quarantineGuidelines'];
@@ -265,7 +265,7 @@ class SpecialAnnouncement extends CreativeWork
     /**
      * Information about travel bans, e.g. in the context of a pandemic.
      *
-     * @param $travelBans \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\WebContent
+     * @param $travelBans \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\WebContent
      * @return static
      **/
     public function setTravelBans($travelBans): static {
@@ -275,7 +275,7 @@ class SpecialAnnouncement extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\WebContent
+     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\WebContent
      **/
     public function getTravelBans() {
         return $this->properties['travelBans'];
@@ -287,7 +287,7 @@ class SpecialAnnouncement extends CreativeWork
      * dataset. When a [[WebContent]] URL is
      * provided, the page indicated might also contain more such markup.
      *
-     * @param $diseaseSpreadStatistics \LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\Schema\Dataset|\LengthOfRope\JSONLD\Schema\Observation|\LengthOfRope\JSONLD\Schema\URL
+     * @param $diseaseSpreadStatistics \LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\Schema\Dataset|\LengthOfRope\JSONLD\Schema\Observation|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setDiseaseSpreadStatistics($diseaseSpreadStatistics): static {
@@ -297,7 +297,7 @@ class SpecialAnnouncement extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\Schema\Dataset|\LengthOfRope\JSONLD\Schema\Observation|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\Schema\Dataset|\LengthOfRope\JSONLD\Schema\Observation|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getDiseaseSpreadStatistics() {
         return $this->properties['diseaseSpreadStatistics'];
@@ -306,7 +306,7 @@ class SpecialAnnouncement extends CreativeWork
      * Information about getting tested (for a [[MedicalCondition]]), e.g. in the
      * context of a pandemic.
      *
-     * @param $gettingTestedInfo \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\WebContent
+     * @param $gettingTestedInfo \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\WebContent
      * @return static
      **/
     public function setGettingTestedInfo($gettingTestedInfo): static {
@@ -316,7 +316,7 @@ class SpecialAnnouncement extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\WebContent
+     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\WebContent
      **/
     public function getGettingTestedInfo() {
         return $this->properties['gettingTestedInfo'];
@@ -347,7 +347,7 @@ class SpecialAnnouncement extends CreativeWork
      * not required to be) the main page containing [[SpecialAnnouncement]] markup on a
      * site.
      *
-     * @param $newsUpdatesAndGuidelines \LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\Schema\URL
+     * @param $newsUpdatesAndGuidelines \LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setNewsUpdatesAndGuidelines($newsUpdatesAndGuidelines): static {
@@ -357,7 +357,7 @@ class SpecialAnnouncement extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getNewsUpdatesAndGuidelines() {
         return $this->properties['newsUpdatesAndGuidelines'];

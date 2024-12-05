@@ -24,19 +24,38 @@
  * THE SOFTWARE.
  **/
 
-namespace LengthOfRope\JSONLD\Schema;
+namespace LengthOfRope\JSONLD\DataType;
+
+use LengthOfRope\JSONLD\Interfaces\IValidator;
+use LengthOfRope\JSONLD\Traits;
 
 /**
- * Text representing a CSS selector.
+ * Data type: URL.
  *
- * @see https://schema.org/CssSelectorType
+ * @see https://schema.org/URL
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class CssSelectorType extends Text
+class TypeURL extends TypeText implements IValidator
 {
-    public static function factory(): CssSelectorType
+    use Traits\URLValidator;
+
+    public static function factory(): TypeURL
     {
-        return new CssSelectorType('https://schema.org/', 'CssSelectorType');
+        return new TypeURL('https://schema.org/', 'URL');
     }
 
+
+    /**
+     * Retrieve the elements (and all childrens) as an array
+     *
+     * @return array
+     */
+    public function getDataArray()
+    {
+        $arr = parent::getDataArray();
+
+        $arr['@value'] = $this->getValue();
+
+        return $arr;
+    }
 }

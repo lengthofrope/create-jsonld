@@ -53,7 +53,7 @@ class MediaReview extends Review
      * Link to the page containing an original version of the content, or directly to
      * an online copy of the original [[MediaObject]] content, e.g. video file.
      *
-     * @param $originalMediaLink \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\WebPage|\LengthOfRope\JSONLD\Schema\MediaObject
+     * @param $originalMediaLink \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\WebPage|\LengthOfRope\JSONLD\Schema\MediaObject
      * @return static
      **/
     public function setOriginalMediaLink($originalMediaLink): static {
@@ -63,7 +63,7 @@ class MediaReview extends Review
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\WebPage|\LengthOfRope\JSONLD\Schema\MediaObject
+     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\WebPage|\LengthOfRope\JSONLD\Schema\MediaObject
      **/
     public function getOriginalMediaLink() {
         return $this->properties['originalMediaLink'];

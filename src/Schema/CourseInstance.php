@@ -66,7 +66,7 @@ class CourseInstance extends Event
      * "asynchronous"; "full-time" or "part-time") or as a URL reference to a term from
      * a controlled vocabulary (e.g. https://ceds.ed.gov/element/001311#Asynchronous).
      *
-     * @param $courseMode \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @param $courseMode \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setCourseMode($courseMode): static {
@@ -76,7 +76,7 @@ class CourseInstance extends Event
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getCourseMode() {
         return $this->properties['courseMode'];

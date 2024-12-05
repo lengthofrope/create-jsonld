@@ -45,7 +45,8 @@ class Build
     private $props = array();
     private $dataTypes = array(
         'Boolean', 'Time', 'Number', 'DateTime',
-        'Text', 'Date', 'Float', 'Integer',
+        'Text', 'Date', 'Float', 'Integer', 'False', 'True',
+        'CssSelectorType', 'PronounceableText', 'URL', 'XPathType',
     );
 
     /**

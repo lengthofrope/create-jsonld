@@ -314,7 +314,7 @@ class MerchantReturnPolicy extends Intangible
     /**
      * Specifies a Web page or service by URL, for product returns.
      *
-     * @param $merchantReturnLink \LengthOfRope\JSONLD\Schema\URL
+     * @param $merchantReturnLink \LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setMerchantReturnLink($merchantReturnLink): static {
@@ -324,7 +324,7 @@ class MerchantReturnPolicy extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\URL
      **/
     public function getMerchantReturnLink() {
         return $this->properties['merchantReturnLink'];

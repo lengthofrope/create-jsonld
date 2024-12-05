@@ -98,7 +98,7 @@ class ServiceChannel extends Intangible
     /**
      * The website to access the service.
      *
-     * @param $serviceUrl \LengthOfRope\JSONLD\Schema\URL
+     * @param $serviceUrl \LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setServiceUrl($serviceUrl): static {
@@ -108,7 +108,7 @@ class ServiceChannel extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\URL
      **/
     public function getServiceUrl() {
         return $this->properties['serviceUrl'];

@@ -86,7 +86,7 @@ class Course extends CreativeWork
      * occupational credential awarded as a consequence of successful completion of
      * this course or program.
      *
-     * @param $occupationalCredentialAwarded \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential|\LengthOfRope\JSONLD\Schema\URL
+     * @param $occupationalCredentialAwarded \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setOccupationalCredentialAwarded($occupationalCredentialAwarded): static {
@@ -96,7 +96,7 @@ class Course extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getOccupationalCredentialAwarded() {
         return $this->properties['occupationalCredentialAwarded'];
@@ -182,7 +182,7 @@ class Course extends CreativeWork
      * educational credential awarded as a consequence of successful completion of this
      * course or program.
      *
-     * @param $educationalCredentialAwarded \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential|\LengthOfRope\JSONLD\Schema\URL
+     * @param $educationalCredentialAwarded \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setEducationalCredentialAwarded($educationalCredentialAwarded): static {
@@ -192,7 +192,7 @@ class Course extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getEducationalCredentialAwarded() {
         return $this->properties['educationalCredentialAwarded'];

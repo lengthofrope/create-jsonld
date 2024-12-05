@@ -87,7 +87,7 @@ class UnitPriceSpecification extends PriceSpecification
      * a URL. Other codes than the UN/CEFACT Common Code may be used with a prefix
      * followed by a colon.
      *
-     * @param $unitCode \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @param $unitCode \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setUnitCode($unitCode): static {
@@ -97,7 +97,7 @@ class UnitPriceSpecification extends PriceSpecification
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getUnitCode() {
         return $this->properties['unitCode'];

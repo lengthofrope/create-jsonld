@@ -95,7 +95,7 @@ class EngineSpecification extends StructuredValue
     /**
      * The type of engine or engines powering the vehicle.
      *
-     * @param $engineType \LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @param $engineType \LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setEngineType($engineType): static {
@@ -105,7 +105,7 @@ class EngineSpecification extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getEngineType() {
         return $this->properties['engineType'];
@@ -140,7 +140,7 @@ class EngineSpecification extends StructuredValue
      * vehicle has only one engine, this property can be attached directly to the
      * vehicle.
      *
-     * @param $fuelType \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\Text
+     * @param $fuelType \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setFuelType($fuelType): static {
@@ -150,7 +150,7 @@ class EngineSpecification extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getFuelType() {
         return $this->properties['fuelType'];

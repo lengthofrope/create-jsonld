@@ -44,7 +44,7 @@ class EntryPoint extends Intangible
      * To specify a specific application or operating system instance, use
      * actionApplication.
      *
-     * @param $actionPlatform \LengthOfRope\JSONLD\Schema\DigitalPlatformEnumeration|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @param $actionPlatform \LengthOfRope\JSONLD\Schema\DigitalPlatformEnumeration|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setActionPlatform($actionPlatform): static {
@@ -54,7 +54,7 @@ class EntryPoint extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\DigitalPlatformEnumeration|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\Schema\DigitalPlatformEnumeration|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getActionPlatform() {
         return $this->properties['actionPlatform'];

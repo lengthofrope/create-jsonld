@@ -80,7 +80,7 @@ class Person extends Thing
     /**
      * A colleague of the person.
      *
-     * @param $colleague \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\URL
+     * @param $colleague \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setColleague($colleague): static {
@@ -90,7 +90,7 @@ class Person extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getColleague() {
         return $this->properties['colleague'];
@@ -138,7 +138,7 @@ class Person extends Thing
      * not distinguish skill levels here, or relate this to educational content,
      * events, objectives or [[JobPosting]] descriptions.
      *
-     * @param $knowsAbout \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\DataType\Text
+     * @param $knowsAbout \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setKnowsAbout($knowsAbout): static {
@@ -148,7 +148,7 @@ class Person extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getKnowsAbout() {
         return $this->properties['knowsAbout'];
@@ -166,7 +166,7 @@ class Person extends Thing
      * schema.org terminology.
      *
      *
-     * @param $publishingPrinciples \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\CreativeWork
+     * @param $publishingPrinciples \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\CreativeWork
      * @return static
      **/
     public function setPublishingPrinciples($publishingPrinciples): static {
@@ -176,7 +176,7 @@ class Person extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\CreativeWork
+     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\CreativeWork
      **/
     public function getPublishingPrinciples() {
         return $this->properties['publishingPrinciples'];

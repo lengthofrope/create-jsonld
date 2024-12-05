@@ -149,7 +149,7 @@ class FloorPlan extends Intangible
     /**
      * A schematic image showing the floorplan layout.
      *
-     * @param $layoutImage \LengthOfRope\JSONLD\Schema\ImageObject|\LengthOfRope\JSONLD\Schema\URL
+     * @param $layoutImage \LengthOfRope\JSONLD\Schema\ImageObject|\LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setLayoutImage($layoutImage): static {
@@ -159,7 +159,7 @@ class FloorPlan extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\ImageObject|\LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\Schema\ImageObject|\LengthOfRope\JSONLD\DataType\URL
      **/
     public function getLayoutImage() {
         return $this->properties['layoutImage'];

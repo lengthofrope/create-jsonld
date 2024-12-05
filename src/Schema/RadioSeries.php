@@ -190,7 +190,7 @@ class RadioSeries extends CreativeWorkSeries
     /**
      * A season in a media series.
      *
-     * @param $season \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\CreativeWorkSeason
+     * @param $season \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\CreativeWorkSeason
      * @return static
      **/
     public function setSeason($season): static {
@@ -200,7 +200,7 @@ class RadioSeries extends CreativeWorkSeries
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\CreativeWorkSeason
+     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\CreativeWorkSeason
      **/
     public function getSeason() {
         return $this->properties['season'];

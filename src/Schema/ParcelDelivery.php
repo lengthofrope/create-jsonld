@@ -152,7 +152,7 @@ class ParcelDelivery extends Intangible
     /**
      * Tracking url for the parcel delivery.
      *
-     * @param $trackingUrl \LengthOfRope\JSONLD\Schema\URL
+     * @param $trackingUrl \LengthOfRope\JSONLD\DataType\URL
      * @return static
      **/
     public function setTrackingUrl($trackingUrl): static {
@@ -162,7 +162,7 @@ class ParcelDelivery extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\URL
+     * @return \LengthOfRope\JSONLD\DataType\URL
      **/
     public function getTrackingUrl() {
         return $this->properties['trackingUrl'];

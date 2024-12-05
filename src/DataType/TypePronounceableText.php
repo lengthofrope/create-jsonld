@@ -24,7 +24,10 @@
  * THE SOFTWARE.
  **/
 
-namespace LengthOfRope\JSONLD\Schema;
+namespace LengthOfRope\JSONLD\DataType;
+
+use LengthOfRope\JSONLD\Interfaces\IValidator;
+use LengthOfRope\JSONLD\Traits;
 
 /**
  * Data type: PronounceableText.
@@ -32,11 +35,13 @@ namespace LengthOfRope\JSONLD\Schema;
  * @see https://schema.org/PronounceableText
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PronounceableText extends Text
+class TypePronounceableText extends TypeText implements IValidator
 {
-    public static function factory(): PronounceableText
+    use Traits\PronounceableTextValidator;
+
+    public static function factory(): TypePronounceableText
     {
-        return new PronounceableText('https://schema.org/', 'PronounceableText');
+        return new TypePronounceableText('https://schema.org/', 'PronounceableText');
     }
 
     /**
@@ -44,7 +49,7 @@ class PronounceableText extends Text
      * [[speechToTextMarkup]]. For example the city name of Houston in IPA:
      * /ˈhjuːstən/.
      *
-     * @param $phoneticText \LengthOfRope\JSONLD\DataType\Text
+     * @param $phoneticText 
      * @return static
      **/
     public function setPhoneticText($phoneticText): static {
@@ -54,7 +59,7 @@ class PronounceableText extends Text
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return 
      **/
     public function getPhoneticText() {
         return $this->properties['phoneticText'];
@@ -62,7 +67,7 @@ class PronounceableText extends Text
     /**
      * Text value being annotated.
      *
-     * @param $textValue \LengthOfRope\JSONLD\DataType\Text
+     * @param $textValue 
      * @return static
      **/
     public function setTextValue($textValue): static {
@@ -72,7 +77,7 @@ class PronounceableText extends Text
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return 
      **/
     public function getTextValue() {
         return $this->properties['textValue'];
@@ -82,7 +87,7 @@ class PronounceableText extends Text
      * of the language codes from the [IETF BCP 47
      * standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
      *
-     * @param $inLanguage \LengthOfRope\JSONLD\Schema\Language|\LengthOfRope\JSONLD\DataType\Text
+     * @param $inLanguage |
      * @return static
      **/
     public function setInLanguage($inLanguage): static {
@@ -92,7 +97,7 @@ class PronounceableText extends Text
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Language|\LengthOfRope\JSONLD\DataType\Text
+     * @return |
      **/
     public function getInLanguage() {
         return $this->properties['inLanguage'];
@@ -101,7 +106,7 @@ class PronounceableText extends Text
      * Form of markup used. eg. [SSML](https://www.w3.org/TR/speech-synthesis11) or
      * [IPA](https://www.wikidata.org/wiki/Property:P898).
      *
-     * @param $speechToTextMarkup \LengthOfRope\JSONLD\DataType\Text
+     * @param $speechToTextMarkup 
      * @return static
      **/
     public function setSpeechToTextMarkup($speechToTextMarkup): static {
@@ -111,9 +116,23 @@ class PronounceableText extends Text
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return 
      **/
     public function getSpeechToTextMarkup() {
         return $this->properties['speechToTextMarkup'];
+    }
+
+    /**
+     * Retrieve the elements (and all childrens) as an array
+     *
+     * @return array
+     */
+    public function getDataArray()
+    {
+        $arr = parent::getDataArray();
+
+        $arr['@value'] = $this->getValue();
+
+        return $arr;
     }
 }
