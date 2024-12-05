@@ -44,7 +44,7 @@ class SeekToAction extends Action
      * The start time of the clip expressed as the number of seconds from the beginning
      * of the work.
      *
-     * @param $startOffset |
+     * @param $startOffset \LengthOfRope\JSONLD\Schema\HyperTocEntry|\LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setStartOffset($startOffset): static {
@@ -54,7 +54,7 @@ class SeekToAction extends Action
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\HyperTocEntry|\LengthOfRope\JSONLD\DataType\Number
      **/
     public function getStartOffset() {
         return $this->properties['startOffset'];

@@ -58,7 +58,7 @@ class OfferShippingDetails extends StructuredValue
      * Typically, the maxValue and currency values (of the [[MonetaryAmount]]) are most
      * appropriate.
      *
-     * @param $shippingRate 
+     * @param $shippingRate \LengthOfRope\JSONLD\Schema\MonetaryAmount
      * @return static
      **/
     public function setShippingRate($shippingRate): static {
@@ -68,7 +68,7 @@ class OfferShippingDetails extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount
      **/
     public function getShippingRate() {
         return $this->properties['shippingRate'];
@@ -77,7 +77,7 @@ class OfferShippingDetails extends StructuredValue
      * The membership program tier an Offer (or a PriceSpecification,
      * OfferShippingDetails, or MerchantReturnPolicy under an Offer) is valid for.
      *
-     * @param $validForMemberTier 
+     * @param $validForMemberTier \LengthOfRope\JSONLD\Schema\MemberProgramTier
      * @return static
      **/
     public function setValidForMemberTier($validForMemberTier): static {
@@ -87,7 +87,7 @@ class OfferShippingDetails extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MemberProgramTier
      **/
     public function getValidForMemberTier() {
         return $this->properties['validForMemberTier'];
@@ -96,7 +96,7 @@ class OfferShippingDetails extends StructuredValue
      * indicates (possibly multiple) shipping destinations. These can be defined in
      * several ways, e.g. postalCode ranges.
      *
-     * @param $shippingDestination 
+     * @param $shippingDestination \LengthOfRope\JSONLD\Schema\DefinedRegion
      * @return static
      **/
     public function setShippingDestination($shippingDestination): static {
@@ -106,7 +106,7 @@ class OfferShippingDetails extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\DefinedRegion
      **/
     public function getShippingDestination() {
         return $this->properties['shippingDestination'];
@@ -115,7 +115,7 @@ class OfferShippingDetails extends StructuredValue
      * Link to a page containing [[ShippingRateSettings]] and [[DeliveryTimeSettings]]
      * details.
      *
-     * @param $shippingSettingsLink 
+     * @param $shippingSettingsLink \LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setShippingSettingsLink($shippingSettingsLink): static {
@@ -125,7 +125,7 @@ class OfferShippingDetails extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\URL
      **/
     public function getShippingSettingsLink() {
         return $this->properties['shippingSettingsLink'];
@@ -134,7 +134,7 @@ class OfferShippingDetails extends StructuredValue
      * Label to match an [[OfferShippingDetails]] with a [[DeliveryTimeSettings]]
      * (within the context of a [[shippingSettingsLink]] cross-reference).
      *
-     * @param $transitTimeLabel 
+     * @param $transitTimeLabel \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setTransitTimeLabel($transitTimeLabel): static {
@@ -144,7 +144,7 @@ class OfferShippingDetails extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getTransitTimeLabel() {
         return $this->properties['transitTimeLabel'];
@@ -153,7 +153,7 @@ class OfferShippingDetails extends StructuredValue
      * The total delay between the receipt of the order and the goods reaching the
      * final customer.
      *
-     * @param $deliveryTime 
+     * @param $deliveryTime \LengthOfRope\JSONLD\Schema\ShippingDeliveryTime
      * @return static
      **/
     public function setDeliveryTime($deliveryTime): static {
@@ -163,7 +163,7 @@ class OfferShippingDetails extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\ShippingDeliveryTime
      **/
     public function getDeliveryTime() {
         return $this->properties['deliveryTime'];
@@ -171,7 +171,7 @@ class OfferShippingDetails extends StructuredValue
     /**
      * The height of the item.
      *
-     * @param $height |
+     * @param $height \LengthOfRope\JSONLD\Schema\Distance|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setHeight($height): static {
@@ -181,7 +181,7 @@ class OfferShippingDetails extends StructuredValue
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Distance|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getHeight() {
         return $this->properties['height'];
@@ -189,7 +189,7 @@ class OfferShippingDetails extends StructuredValue
     /**
      * The width of the item.
      *
-     * @param $width |
+     * @param $width \LengthOfRope\JSONLD\Schema\Distance|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setWidth($width): static {
@@ -199,7 +199,7 @@ class OfferShippingDetails extends StructuredValue
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Distance|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getWidth() {
         return $this->properties['width'];
@@ -207,7 +207,7 @@ class OfferShippingDetails extends StructuredValue
     /**
      * The weight of the product or person.
      *
-     * @param $weight 
+     * @param $weight \LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setWeight($weight): static {
@@ -217,7 +217,7 @@ class OfferShippingDetails extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getWeight() {
         return $this->properties['weight'];
@@ -225,7 +225,7 @@ class OfferShippingDetails extends StructuredValue
     /**
      * The depth of the item.
      *
-     * @param $depth |
+     * @param $depth \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Distance
      * @return static
      **/
     public function setDepth($depth): static {
@@ -235,7 +235,7 @@ class OfferShippingDetails extends StructuredValue
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Distance
      **/
     public function getDepth() {
         return $this->properties['depth'];
@@ -244,7 +244,7 @@ class OfferShippingDetails extends StructuredValue
      * Indicates when shipping to a particular [[shippingDestination]] is not
      * available.
      *
-     * @param $doesNotShip 
+     * @param $doesNotShip \LengthOfRope\JSONLD\DataType\Boolean
      * @return static
      **/
     public function setDoesNotShip($doesNotShip): static {
@@ -254,7 +254,7 @@ class OfferShippingDetails extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Boolean
      **/
     public function getDoesNotShip() {
         return $this->properties['doesNotShip'];
@@ -263,7 +263,7 @@ class OfferShippingDetails extends StructuredValue
      * Label to match an [[OfferShippingDetails]] with a [[ShippingRateSettings]]
      * (within the context of a [[shippingSettingsLink]] cross-reference).
      *
-     * @param $shippingLabel 
+     * @param $shippingLabel \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setShippingLabel($shippingLabel): static {
@@ -273,7 +273,7 @@ class OfferShippingDetails extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getShippingLabel() {
         return $this->properties['shippingLabel'];
@@ -281,7 +281,7 @@ class OfferShippingDetails extends StructuredValue
     /**
      * Indicates the origin of a shipment, i.e. where it should be coming from.
      *
-     * @param $shippingOrigin 
+     * @param $shippingOrigin \LengthOfRope\JSONLD\Schema\DefinedRegion
      * @return static
      **/
     public function setShippingOrigin($shippingOrigin): static {
@@ -291,7 +291,7 @@ class OfferShippingDetails extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\DefinedRegion
      **/
     public function getShippingOrigin() {
         return $this->properties['shippingOrigin'];

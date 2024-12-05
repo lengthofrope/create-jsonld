@@ -46,7 +46,7 @@ class AskAction extends CommunicateAction
     /**
      * A sub property of object. A question.
      *
-     * @param $question 
+     * @param $question \LengthOfRope\JSONLD\Schema\Question
      * @return static
      **/
     public function setQuestion($question): static {
@@ -56,7 +56,7 @@ class AskAction extends CommunicateAction
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Question
      **/
     public function getQuestion() {
         return $this->properties['question'];

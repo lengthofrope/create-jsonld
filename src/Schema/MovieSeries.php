@@ -44,7 +44,7 @@ class MovieSeries extends CreativeWorkSeries
      * in an event. Actors can be associated with individual items or with a series,
      * episode, clip.
      *
-     * @param $actor |
+     * @param $actor \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\PerformingGroup
      * @return static
      **/
     public function setActor($actor): static {
@@ -54,7 +54,7 @@ class MovieSeries extends CreativeWorkSeries
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\PerformingGroup
      **/
     public function getActor() {
         return $this->properties['actor'];
@@ -62,7 +62,7 @@ class MovieSeries extends CreativeWorkSeries
     /**
      * The trailer of a movie or TV/radio series, season, episode, etc.
      *
-     * @param $trailer 
+     * @param $trailer \LengthOfRope\JSONLD\Schema\VideoObject
      * @return static
      **/
     public function setTrailer($trailer): static {
@@ -72,7 +72,7 @@ class MovieSeries extends CreativeWorkSeries
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\VideoObject
      **/
     public function getTrailer() {
         return $this->properties['trailer'];
@@ -81,7 +81,7 @@ class MovieSeries extends CreativeWorkSeries
      * An actor, e.g. in TV, radio, movie, video games etc. Actors can be associated
      * with individual items or with a series, episode, clip.
      *
-     * @param $actors 
+     * @param $actors \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setActors($actors): static {
@@ -91,7 +91,7 @@ class MovieSeries extends CreativeWorkSeries
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
     public function getActors() {
         return $this->properties['actors'];
@@ -100,7 +100,7 @@ class MovieSeries extends CreativeWorkSeries
      * A director of e.g. TV, radio, movie, video games etc. content. Directors can be
      * associated with individual items or with a series, episode, clip.
      *
-     * @param $directors 
+     * @param $directors \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setDirectors($directors): static {
@@ -110,7 +110,7 @@ class MovieSeries extends CreativeWorkSeries
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
     public function getDirectors() {
         return $this->properties['directors'];
@@ -119,7 +119,7 @@ class MovieSeries extends CreativeWorkSeries
      * The production company or studio responsible for the item, e.g. series, video
      * game, episode etc.
      *
-     * @param $productionCompany 
+     * @param $productionCompany \LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setProductionCompany($productionCompany): static {
@@ -129,7 +129,7 @@ class MovieSeries extends CreativeWorkSeries
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getProductionCompany() {
         return $this->properties['productionCompany'];
@@ -139,7 +139,7 @@ class MovieSeries extends CreativeWorkSeries
      * Directors can be associated with individual items or with a series, episode,
      * clip.
      *
-     * @param $director 
+     * @param $director \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setDirector($director): static {
@@ -149,7 +149,7 @@ class MovieSeries extends CreativeWorkSeries
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
     public function getDirector() {
         return $this->properties['director'];
@@ -157,7 +157,7 @@ class MovieSeries extends CreativeWorkSeries
     /**
      * The composer of the soundtrack.
      *
-     * @param $musicBy |
+     * @param $musicBy \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\MusicGroup
      * @return static
      **/
     public function setMusicBy($musicBy): static {
@@ -167,7 +167,7 @@ class MovieSeries extends CreativeWorkSeries
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\MusicGroup
      **/
     public function getMusicBy() {
         return $this->properties['musicBy'];

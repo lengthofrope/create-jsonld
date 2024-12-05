@@ -43,7 +43,7 @@ class OccupationalExperienceRequirements extends Intangible
     /**
      * Indicates the minimal number of months of experience required for a position.
      *
-     * @param $monthsOfExperience 
+     * @param $monthsOfExperience \LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setMonthsOfExperience($monthsOfExperience): static {
@@ -53,7 +53,7 @@ class OccupationalExperienceRequirements extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Number
      **/
     public function getMonthsOfExperience() {
         return $this->properties['monthsOfExperience'];

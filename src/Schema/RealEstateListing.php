@@ -46,7 +46,7 @@ class RealEstateListing extends WebPage
     /**
      * Publication date of an online listing.
      *
-     * @param $datePosted |
+     * @param $datePosted \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
      * @return static
      **/
     public function setDatePosted($datePosted): static {
@@ -56,7 +56,7 @@ class RealEstateListing extends WebPage
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
      **/
     public function getDatePosted() {
         return $this->properties['datePosted'];
@@ -65,7 +65,7 @@ class RealEstateListing extends WebPage
      * Length of the lease for some [[Accommodation]], either particular to some
      * [[Offer]] or in some cases intrinsic to the property.
      *
-     * @param $leaseLength |
+     * @param $leaseLength \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Duration
      * @return static
      **/
     public function setLeaseLength($leaseLength): static {
@@ -75,7 +75,7 @@ class RealEstateListing extends WebPage
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Duration
      **/
     public function getLeaseLength() {
         return $this->properties['leaseLength'];

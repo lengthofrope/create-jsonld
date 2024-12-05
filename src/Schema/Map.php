@@ -42,7 +42,7 @@ class Map extends CreativeWork
     /**
      * Indicates the kind of Map, from the MapCategoryType Enumeration.
      *
-     * @param $mapType 
+     * @param $mapType \LengthOfRope\JSONLD\Schema\MapCategoryType
      * @return static
      **/
     public function setMapType($mapType): static {
@@ -52,7 +52,7 @@ class Map extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MapCategoryType
      **/
     public function getMapType() {
         return $this->properties['mapType'];

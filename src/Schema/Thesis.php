@@ -43,7 +43,7 @@ class Thesis extends CreativeWork
     /**
      * Qualification, candidature, degree, application that Thesis supports.
      *
-     * @param $inSupportOf 
+     * @param $inSupportOf \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setInSupportOf($inSupportOf): static {
@@ -53,7 +53,7 @@ class Thesis extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getInSupportOf() {
         return $this->properties['inSupportOf'];

@@ -42,7 +42,7 @@ class MusicRelease extends MusicPlaylist
     /**
      * The album this is a release of.
      *
-     * @param $releaseOf 
+     * @param $releaseOf \LengthOfRope\JSONLD\Schema\MusicAlbum
      * @return static
      **/
     public function setReleaseOf($releaseOf): static {
@@ -52,7 +52,7 @@ class MusicRelease extends MusicPlaylist
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MusicAlbum
      **/
     public function getReleaseOf() {
         return $this->properties['releaseOf'];
@@ -61,7 +61,7 @@ class MusicRelease extends MusicPlaylist
      * Format of this release (the type of recording media used, i.e. compact disc,
      * digital media, LP, etc.).
      *
-     * @param $musicReleaseFormat 
+     * @param $musicReleaseFormat \LengthOfRope\JSONLD\Schema\MusicReleaseFormatType
      * @return static
      **/
     public function setMusicReleaseFormat($musicReleaseFormat): static {
@@ -71,7 +71,7 @@ class MusicRelease extends MusicPlaylist
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MusicReleaseFormatType
      **/
     public function getMusicReleaseFormat() {
         return $this->properties['musicReleaseFormat'];
@@ -79,7 +79,7 @@ class MusicRelease extends MusicPlaylist
     /**
      * The label that issued the release.
      *
-     * @param $recordLabel 
+     * @param $recordLabel \LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setRecordLabel($recordLabel): static {
@@ -89,7 +89,7 @@ class MusicRelease extends MusicPlaylist
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getRecordLabel() {
         return $this->properties['recordLabel'];
@@ -98,7 +98,7 @@ class MusicRelease extends MusicPlaylist
      * The duration of the item (movie, audio recording, event, etc.) in [ISO 8601
      * duration format](http://en.wikipedia.org/wiki/ISO_8601).
      *
-     * @param $duration 
+     * @param $duration \LengthOfRope\JSONLD\Schema\Duration
      * @return static
      **/
     public function setDuration($duration): static {
@@ -108,7 +108,7 @@ class MusicRelease extends MusicPlaylist
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Duration
      **/
     public function getDuration() {
         return $this->properties['duration'];
@@ -118,7 +118,7 @@ class MusicRelease extends MusicPlaylist
      * example, Red and Blue is credited to "Stefani Germanotta Band", but by Lady
      * Gaga.
      *
-     * @param $creditedTo |
+     * @param $creditedTo \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setCreditedTo($creditedTo): static {
@@ -128,7 +128,7 @@ class MusicRelease extends MusicPlaylist
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getCreditedTo() {
         return $this->properties['creditedTo'];
@@ -136,7 +136,7 @@ class MusicRelease extends MusicPlaylist
     /**
      * The catalog number for the release.
      *
-     * @param $catalogNumber 
+     * @param $catalogNumber \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setCatalogNumber($catalogNumber): static {
@@ -146,7 +146,7 @@ class MusicRelease extends MusicPlaylist
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getCatalogNumber() {
         return $this->properties['catalogNumber'];

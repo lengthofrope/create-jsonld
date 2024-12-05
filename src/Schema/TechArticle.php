@@ -43,7 +43,7 @@ class TechArticle extends Article
     /**
      * Proficiency needed for this content; expected values: 'Beginner', 'Expert'.
      *
-     * @param $proficiencyLevel 
+     * @param $proficiencyLevel \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setProficiencyLevel($proficiencyLevel): static {
@@ -53,7 +53,7 @@ class TechArticle extends Article
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getProficiencyLevel() {
         return $this->properties['proficiencyLevel'];
@@ -61,7 +61,7 @@ class TechArticle extends Article
     /**
      * Prerequisites needed to fulfill steps in article.
      *
-     * @param $dependencies 
+     * @param $dependencies \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setDependencies($dependencies): static {
@@ -71,7 +71,7 @@ class TechArticle extends Article
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getDependencies() {
         return $this->properties['dependencies'];

@@ -63,7 +63,7 @@ class StatisticalVariable extends ConstraintNode
      * Data Cube, Data Commons, Wikidata, or schema.org extensions such as
      * [GS1's](https://www.gs1.org/voc/?show=properties).
      *
-     * @param $measuredProperty 
+     * @param $measuredProperty \LengthOfRope\JSONLD\Schema\Property
      * @return static
      **/
     public function setMeasuredProperty($measuredProperty): static {
@@ -73,7 +73,7 @@ class StatisticalVariable extends ConstraintNode
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Property
      **/
     public function getMeasuredProperty() {
         return $this->properties['measuredProperty'];
@@ -85,7 +85,7 @@ class StatisticalVariable extends ConstraintNode
      * from other compatible (e.g. RDF) systems such as DataCommons.org or
      * Wikidata.org.
      *
-     * @param $statType ||
+     * @param $statType \LengthOfRope\JSONLD\Schema\Property|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setStatType($statType): static {
@@ -95,7 +95,7 @@ class StatisticalVariable extends ConstraintNode
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\Schema\Property|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      **/
     public function getStatType() {
         return $this->properties['statType'];
@@ -104,7 +104,7 @@ class StatisticalVariable extends ConstraintNode
      * A subproperty of [[measurementTechnique]] that can be used for specifying
      * specific methods, in particular via [[MeasurementMethodEnum]].
      *
-     * @param $measurementMethod |||
+     * @param $measurementMethod \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\MeasurementMethodEnum|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setMeasurementMethod($measurementMethod): static {
@@ -114,7 +114,7 @@ class StatisticalVariable extends ConstraintNode
     }
 
     /**
-     * @return |||
+     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\MeasurementMethodEnum|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getMeasurementMethod() {
         return $this->properties['measurementMethod'];
@@ -123,7 +123,7 @@ class StatisticalVariable extends ConstraintNode
      * Provides additional qualification to an observation. For example, a GDP
      * observation measures the Nominal value.
      *
-     * @param $measurementQualifier 
+     * @param $measurementQualifier \LengthOfRope\JSONLD\Schema\Enumeration
      * @return static
      **/
     public function setMeasurementQualifier($measurementQualifier): static {
@@ -133,7 +133,7 @@ class StatisticalVariable extends ConstraintNode
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Enumeration
      **/
     public function getMeasurementQualifier() {
         return $this->properties['measurementQualifier'];
@@ -142,7 +142,7 @@ class StatisticalVariable extends ConstraintNode
      * Identifies the denominator variable when an observation represents a ratio or
      * percentage.
      *
-     * @param $measurementDenominator 
+     * @param $measurementDenominator \LengthOfRope\JSONLD\Schema\StatisticalVariable
      * @return static
      **/
     public function setMeasurementDenominator($measurementDenominator): static {
@@ -152,7 +152,7 @@ class StatisticalVariable extends ConstraintNode
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\StatisticalVariable
      **/
     public function getMeasurementDenominator() {
         return $this->properties['measurementDenominator'];
@@ -185,7 +185,7 @@ class StatisticalVariable extends ConstraintNode
      * the corresponding [[measurementTechnique]]. The value can also be from an
      * enumeration, organized as a [[MeasurementMetholdEnumeration]].
      *
-     * @param $measurementTechnique |||
+     * @param $measurementTechnique \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\MeasurementMethodEnum
      * @return static
      **/
     public function setMeasurementTechnique($measurementTechnique): static {
@@ -195,7 +195,7 @@ class StatisticalVariable extends ConstraintNode
     }
 
     /**
-     * @return |||
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\MeasurementMethodEnum
      **/
     public function getMeasurementTechnique() {
         return $this->properties['measurementTechnique'];
@@ -205,7 +205,7 @@ class StatisticalVariable extends ConstraintNode
      * [[StatisticalPopulation]] or all cases within the scope of a
      * [[StatisticalVariable]].
      *
-     * @param $populationType 
+     * @param $populationType \LengthOfRope\JSONLD\Schema\Class
      * @return static
      **/
     public function setPopulationType($populationType): static {
@@ -215,7 +215,7 @@ class StatisticalVariable extends ConstraintNode
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Class
      **/
     public function getPopulationType() {
         return $this->properties['populationType'];

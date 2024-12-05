@@ -42,7 +42,7 @@ class BusTrip extends Trip
     /**
      * The unique identifier for the bus.
      *
-     * @param $busNumber 
+     * @param $busNumber \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setBusNumber($busNumber): static {
@@ -52,7 +52,7 @@ class BusTrip extends Trip
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getBusNumber() {
         return $this->properties['busNumber'];
@@ -60,7 +60,7 @@ class BusTrip extends Trip
     /**
      * The name of the bus (e.g. Bolt Express).
      *
-     * @param $busName 
+     * @param $busName \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setBusName($busName): static {
@@ -70,7 +70,7 @@ class BusTrip extends Trip
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getBusName() {
         return $this->properties['busName'];
@@ -78,7 +78,7 @@ class BusTrip extends Trip
     /**
      * The stop or station from which the bus arrives.
      *
-     * @param $arrivalBusStop |
+     * @param $arrivalBusStop \LengthOfRope\JSONLD\Schema\BusStop|\LengthOfRope\JSONLD\Schema\BusStation
      * @return static
      **/
     public function setArrivalBusStop($arrivalBusStop): static {
@@ -88,7 +88,7 @@ class BusTrip extends Trip
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\BusStop|\LengthOfRope\JSONLD\Schema\BusStation
      **/
     public function getArrivalBusStop() {
         return $this->properties['arrivalBusStop'];
@@ -96,7 +96,7 @@ class BusTrip extends Trip
     /**
      * The stop or station from which the bus departs.
      *
-     * @param $departureBusStop |
+     * @param $departureBusStop \LengthOfRope\JSONLD\Schema\BusStation|\LengthOfRope\JSONLD\Schema\BusStop
      * @return static
      **/
     public function setDepartureBusStop($departureBusStop): static {
@@ -106,7 +106,7 @@ class BusTrip extends Trip
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\BusStation|\LengthOfRope\JSONLD\Schema\BusStop
      **/
     public function getDepartureBusStop() {
         return $this->properties['departureBusStop'];

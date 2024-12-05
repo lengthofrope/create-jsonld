@@ -43,7 +43,7 @@ class CommentAction extends CommunicateAction
      * A sub property of result. The Comment created or sent as a result of this
      * action.
      *
-     * @param $resultComment 
+     * @param $resultComment \LengthOfRope\JSONLD\Schema\Comment
      * @return static
      **/
     public function setResultComment($resultComment): static {
@@ -53,7 +53,7 @@ class CommentAction extends CommunicateAction
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Comment
      **/
     public function getResultComment() {
         return $this->properties['resultComment'];

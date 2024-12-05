@@ -44,7 +44,7 @@ class ContactPoint extends StructuredValue
      * purposes. For example, a sales contact point, a PR contact point and so on. This
      * property is used to specify the kind of contact point.
      *
-     * @param $contactType 
+     * @param $contactType \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setContactType($contactType): static {
@@ -54,7 +54,7 @@ class ContactPoint extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getContactType() {
         return $this->properties['contactType'];
@@ -62,7 +62,7 @@ class ContactPoint extends StructuredValue
     /**
      * The telephone number.
      *
-     * @param $telephone 
+     * @param $telephone \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setTelephone($telephone): static {
@@ -72,7 +72,7 @@ class ContactPoint extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getTelephone() {
         return $this->properties['telephone'];
@@ -83,7 +83,7 @@ class ContactPoint extends StructuredValue
      * product line (e.g. "iPhone") or a general category of products or services (e.g.
      * "smartphones").
      *
-     * @param $productSupported |
+     * @param $productSupported \LengthOfRope\JSONLD\Schema\Product|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setProductSupported($productSupported): static {
@@ -93,7 +93,7 @@ class ContactPoint extends StructuredValue
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Product|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getProductSupported() {
         return $this->properties['productSupported'];
@@ -101,7 +101,7 @@ class ContactPoint extends StructuredValue
     /**
      * The fax number.
      *
-     * @param $faxNumber 
+     * @param $faxNumber \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setFaxNumber($faxNumber): static {
@@ -111,7 +111,7 @@ class ContactPoint extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getFaxNumber() {
         return $this->properties['faxNumber'];
@@ -119,7 +119,7 @@ class ContactPoint extends StructuredValue
     /**
      * Email address.
      *
-     * @param $email 
+     * @param $email \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setEmail($email): static {
@@ -129,7 +129,7 @@ class ContactPoint extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getEmail() {
         return $this->properties['email'];
@@ -137,7 +137,7 @@ class ContactPoint extends StructuredValue
     /**
      * The geographic area where a service or offered item is provided.
      *
-     * @param $areaServed |||
+     * @param $areaServed \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeoShape|\LengthOfRope\JSONLD\Schema\AdministrativeArea
      * @return static
      **/
     public function setAreaServed($areaServed): static {
@@ -147,7 +147,7 @@ class ContactPoint extends StructuredValue
     }
 
     /**
-     * @return |||
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeoShape|\LengthOfRope\JSONLD\Schema\AdministrativeArea
      **/
     public function getAreaServed() {
         return $this->properties['areaServed'];
@@ -156,7 +156,7 @@ class ContactPoint extends StructuredValue
      * An option available on this contact point (e.g. a toll-free number or support
      * for hearing-impaired callers).
      *
-     * @param $contactOption 
+     * @param $contactOption \LengthOfRope\JSONLD\Schema\ContactPointOption
      * @return static
      **/
     public function setContactOption($contactOption): static {
@@ -166,7 +166,7 @@ class ContactPoint extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\ContactPointOption
      **/
     public function getContactOption() {
         return $this->properties['contactOption'];
@@ -174,7 +174,7 @@ class ContactPoint extends StructuredValue
     /**
      * The geographic area where the service is provided.
      *
-     * @param $serviceArea ||
+     * @param $serviceArea \LengthOfRope\JSONLD\Schema\GeoShape|\LengthOfRope\JSONLD\Schema\AdministrativeArea|\LengthOfRope\JSONLD\Schema\Place
      * @return static
      **/
     public function setServiceArea($serviceArea): static {
@@ -184,7 +184,7 @@ class ContactPoint extends StructuredValue
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\Schema\GeoShape|\LengthOfRope\JSONLD\Schema\AdministrativeArea|\LengthOfRope\JSONLD\Schema\Place
      **/
     public function getServiceArea() {
         return $this->properties['serviceArea'];
@@ -192,7 +192,7 @@ class ContactPoint extends StructuredValue
     /**
      * The hours during which this service or contact is available.
      *
-     * @param $hoursAvailable 
+     * @param $hoursAvailable \LengthOfRope\JSONLD\Schema\OpeningHoursSpecification
      * @return static
      **/
     public function setHoursAvailable($hoursAvailable): static {
@@ -202,7 +202,7 @@ class ContactPoint extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\OpeningHoursSpecification
      **/
     public function getHoursAvailable() {
         return $this->properties['hoursAvailable'];
@@ -212,7 +212,7 @@ class ContactPoint extends StructuredValue
      * of the language codes from the [IETF BCP 47
      * standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].
      *
-     * @param $availableLanguage |
+     * @param $availableLanguage \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Language
      * @return static
      **/
     public function setAvailableLanguage($availableLanguage): static {
@@ -222,7 +222,7 @@ class ContactPoint extends StructuredValue
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Language
      **/
     public function getAvailableLanguage() {
         return $this->properties['availableLanguage'];

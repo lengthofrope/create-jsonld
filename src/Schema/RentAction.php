@@ -44,7 +44,7 @@ class RentAction extends TradeAction
     /**
      * A sub property of participant. The real estate agent involved in the action.
      *
-     * @param $realEstateAgent 
+     * @param $realEstateAgent \LengthOfRope\JSONLD\Schema\RealEstateAgent
      * @return static
      **/
     public function setRealEstateAgent($realEstateAgent): static {
@@ -54,7 +54,7 @@ class RentAction extends TradeAction
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\RealEstateAgent
      **/
     public function getRealEstateAgent() {
         return $this->properties['realEstateAgent'];
@@ -62,7 +62,7 @@ class RentAction extends TradeAction
     /**
      * A sub property of participant. The owner of the real estate property.
      *
-     * @param $landlord |
+     * @param $landlord \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setLandlord($landlord): static {
@@ -72,7 +72,7 @@ class RentAction extends TradeAction
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getLandlord() {
         return $this->properties['landlord'];

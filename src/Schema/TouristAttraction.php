@@ -47,7 +47,7 @@ class TouristAttraction extends Place
      * Attraction suitable for type(s) of tourist. E.g. children, visitors from a
      * particular country, etc.
      *
-     * @param $touristType |
+     * @param $touristType \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Audience
      * @return static
      **/
     public function setTouristType($touristType): static {
@@ -57,7 +57,7 @@ class TouristAttraction extends Place
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Audience
      **/
     public function getTouristType() {
         return $this->properties['touristType'];
@@ -67,7 +67,7 @@ class TouristAttraction extends Place
      * of the language codes from the [IETF BCP 47
      * standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].
      *
-     * @param $availableLanguage |
+     * @param $availableLanguage \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Language
      * @return static
      **/
     public function setAvailableLanguage($availableLanguage): static {
@@ -77,7 +77,7 @@ class TouristAttraction extends Place
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Language
      **/
     public function getAvailableLanguage() {
         return $this->properties['availableLanguage'];

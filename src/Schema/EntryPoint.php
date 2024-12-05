@@ -44,7 +44,7 @@ class EntryPoint extends Intangible
      * To specify a specific application or operating system instance, use
      * actionApplication.
      *
-     * @param $actionPlatform ||
+     * @param $actionPlatform \LengthOfRope\JSONLD\Schema\DigitalPlatformEnumeration|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setActionPlatform($actionPlatform): static {
@@ -54,7 +54,7 @@ class EntryPoint extends Intangible
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\Schema\DigitalPlatformEnumeration|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      **/
     public function getActionPlatform() {
         return $this->properties['actionPlatform'];
@@ -62,7 +62,7 @@ class EntryPoint extends Intangible
     /**
      * The supported content type(s) for an EntryPoint response.
      *
-     * @param $contentType 
+     * @param $contentType \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setContentType($contentType): static {
@@ -72,7 +72,7 @@ class EntryPoint extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getContentType() {
         return $this->properties['contentType'];
@@ -80,7 +80,7 @@ class EntryPoint extends Intangible
     /**
      * An application that can complete the request.
      *
-     * @param $actionApplication 
+     * @param $actionApplication \LengthOfRope\JSONLD\Schema\SoftwareApplication
      * @return static
      **/
     public function setActionApplication($actionApplication): static {
@@ -90,7 +90,7 @@ class EntryPoint extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\SoftwareApplication
      **/
     public function getActionApplication() {
         return $this->properties['actionApplication'];
@@ -98,7 +98,7 @@ class EntryPoint extends Intangible
     /**
      * The supported encoding type(s) for an EntryPoint request.
      *
-     * @param $encodingType 
+     * @param $encodingType \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setEncodingType($encodingType): static {
@@ -108,7 +108,7 @@ class EntryPoint extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getEncodingType() {
         return $this->properties['encodingType'];
@@ -117,7 +117,7 @@ class EntryPoint extends Intangible
      * An url template (RFC6570) that will be used to construct the target of the
      * execution of the action.
      *
-     * @param $urlTemplate 
+     * @param $urlTemplate \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setUrlTemplate($urlTemplate): static {
@@ -127,7 +127,7 @@ class EntryPoint extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getUrlTemplate() {
         return $this->properties['urlTemplate'];
@@ -136,7 +136,7 @@ class EntryPoint extends Intangible
      * An HTTP method that specifies the appropriate HTTP method for a request to an
      * HTTP EntryPoint. Values are capitalized strings as used in HTTP.
      *
-     * @param $httpMethod 
+     * @param $httpMethod \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setHttpMethod($httpMethod): static {
@@ -146,7 +146,7 @@ class EntryPoint extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getHttpMethod() {
         return $this->properties['httpMethod'];
@@ -154,7 +154,7 @@ class EntryPoint extends Intangible
     /**
      * An application that can complete the request.
      *
-     * @param $application 
+     * @param $application \LengthOfRope\JSONLD\Schema\SoftwareApplication
      * @return static
      **/
     public function setApplication($application): static {
@@ -164,7 +164,7 @@ class EntryPoint extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\SoftwareApplication
      **/
     public function getApplication() {
         return $this->properties['application'];

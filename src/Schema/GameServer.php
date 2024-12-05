@@ -42,7 +42,7 @@ class GameServer extends Intangible
     /**
      * Status of a game server.
      *
-     * @param $serverStatus 
+     * @param $serverStatus \LengthOfRope\JSONLD\Schema\GameServerStatus
      * @return static
      **/
     public function setServerStatus($serverStatus): static {
@@ -52,7 +52,7 @@ class GameServer extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\GameServerStatus
      **/
     public function getServerStatus() {
         return $this->properties['serverStatus'];
@@ -60,7 +60,7 @@ class GameServer extends Intangible
     /**
      * Video game which is played on this server.
      *
-     * @param $game 
+     * @param $game \LengthOfRope\JSONLD\Schema\VideoGame
      * @return static
      **/
     public function setGame($game): static {
@@ -70,7 +70,7 @@ class GameServer extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\VideoGame
      **/
     public function getGame() {
         return $this->properties['game'];
@@ -78,7 +78,7 @@ class GameServer extends Intangible
     /**
      * Number of players on the server.
      *
-     * @param $playersOnline 
+     * @param $playersOnline \LengthOfRope\JSONLD\Schema\Integer
      * @return static
      **/
     public function setPlayersOnline($playersOnline): static {
@@ -88,7 +88,7 @@ class GameServer extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Integer
      **/
     public function getPlayersOnline() {
         return $this->properties['playersOnline'];

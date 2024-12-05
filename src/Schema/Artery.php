@@ -42,7 +42,7 @@ class Artery extends Vessel
     /**
      * The area to which the artery supplies blood.
      *
-     * @param $supplyTo 
+     * @param $supplyTo \LengthOfRope\JSONLD\Schema\AnatomicalStructure
      * @return static
      **/
     public function setSupplyTo($supplyTo): static {
@@ -52,7 +52,7 @@ class Artery extends Vessel
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\AnatomicalStructure
      **/
     public function getSupplyTo() {
         return $this->properties['supplyTo'];
@@ -60,7 +60,7 @@ class Artery extends Vessel
     /**
      * The branches that comprise the arterial structure.
      *
-     * @param $arterialBranch 
+     * @param $arterialBranch \LengthOfRope\JSONLD\Schema\AnatomicalStructure
      * @return static
      **/
     public function setArterialBranch($arterialBranch): static {
@@ -70,7 +70,7 @@ class Artery extends Vessel
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\AnatomicalStructure
      **/
     public function getArterialBranch() {
         return $this->properties['arterialBranch'];

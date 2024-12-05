@@ -46,7 +46,7 @@ class MonetaryAmount extends StructuredValue
     /**
      * The lower value of some characteristic or property.
      *
-     * @param $minValue 
+     * @param $minValue \LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setMinValue($minValue): static {
@@ -56,7 +56,7 @@ class MonetaryAmount extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Number
      **/
     public function getMinValue() {
         return $this->properties['minValue'];
@@ -64,7 +64,7 @@ class MonetaryAmount extends StructuredValue
     /**
      * The upper value of some characteristic or property.
      *
-     * @param $maxValue 
+     * @param $maxValue \LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setMaxValue($maxValue): static {
@@ -74,7 +74,7 @@ class MonetaryAmount extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Number
      **/
     public function getMaxValue() {
         return $this->properties['maxValue'];
@@ -89,7 +89,7 @@ class MonetaryAmount extends StructuredValue
      * Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and
      * other currency types, e.g. "Ithaca HOUR".
      *
-     * @param $currency 
+     * @param $currency \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setCurrency($currency): static {
@@ -99,7 +99,7 @@ class MonetaryAmount extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getCurrency() {
         return $this->properties['currency'];
@@ -108,7 +108,7 @@ class MonetaryAmount extends StructuredValue
      * The date after when the item is not valid. For example the end of an offer,
      * salary period, or a period of opening hours.
      *
-     * @param $validThrough |
+     * @param $validThrough \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
      * @return static
      **/
     public function setValidThrough($validThrough): static {
@@ -118,7 +118,7 @@ class MonetaryAmount extends StructuredValue
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
      **/
     public function getValidThrough() {
         return $this->properties['validThrough'];
@@ -136,7 +136,7 @@ class MonetaryAmount extends StructuredValue
      * * Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal
      * point. Avoid using these symbols as a readability separator.
      *
-     * @param $value |||
+     * @param $value \LengthOfRope\JSONLD\DataType\Boolean|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\Schema\StructuredValue
      * @return static
      **/
     public function setValue($value): static {
@@ -146,7 +146,7 @@ class MonetaryAmount extends StructuredValue
     }
 
     /**
-     * @return |||
+     * @return \LengthOfRope\JSONLD\DataType\Boolean|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\Schema\StructuredValue
      **/
     public function getValue() {
         return $this->properties['value'];
@@ -154,7 +154,7 @@ class MonetaryAmount extends StructuredValue
     /**
      * The date when the item becomes valid.
      *
-     * @param $validFrom |
+     * @param $validFrom \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
      * @return static
      **/
     public function setValidFrom($validFrom): static {
@@ -164,7 +164,7 @@ class MonetaryAmount extends StructuredValue
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
      **/
     public function getValidFrom() {
         return $this->properties['validFrom'];

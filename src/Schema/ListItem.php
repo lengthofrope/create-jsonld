@@ -42,7 +42,7 @@ class ListItem extends Intangible
     /**
      * The position of an item in a series or sequence of items.
      *
-     * @param $position |
+     * @param $position \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Integer
      * @return static
      **/
     public function setPosition($position): static {
@@ -52,7 +52,7 @@ class ListItem extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Integer
      **/
     public function getPosition() {
         return $this->properties['position'];
@@ -61,7 +61,7 @@ class ListItem extends Intangible
      * An entity represented by an entry in a list or data feed (e.g. an 'artist' in a
      * list of 'artists').
      *
-     * @param $item 
+     * @param $item \LengthOfRope\JSONLD\Schema\Thing
      * @return static
      **/
     public function setItem($item): static {
@@ -71,7 +71,7 @@ class ListItem extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Thing
      **/
     public function getItem() {
         return $this->properties['item'];
@@ -79,7 +79,7 @@ class ListItem extends Intangible
     /**
      * A link to the ListItem that precedes the current one.
      *
-     * @param $previousItem 
+     * @param $previousItem \LengthOfRope\JSONLD\Schema\ListItem
      * @return static
      **/
     public function setPreviousItem($previousItem): static {
@@ -89,7 +89,7 @@ class ListItem extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\ListItem
      **/
     public function getPreviousItem() {
         return $this->properties['previousItem'];
@@ -97,7 +97,7 @@ class ListItem extends Intangible
     /**
      * A link to the ListItem that follows the current one.
      *
-     * @param $nextItem 
+     * @param $nextItem \LengthOfRope\JSONLD\Schema\ListItem
      * @return static
      **/
     public function setNextItem($nextItem): static {
@@ -107,7 +107,7 @@ class ListItem extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\ListItem
      **/
     public function getNextItem() {
         return $this->properties['nextItem'];

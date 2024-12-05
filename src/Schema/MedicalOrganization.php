@@ -44,7 +44,7 @@ class MedicalOrganization extends Organization
      * Name or unique ID of network. (Networks are often reused across different
      * insurance plans.)
      *
-     * @param $healthPlanNetworkId 
+     * @param $healthPlanNetworkId \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setHealthPlanNetworkId($healthPlanNetworkId): static {
@@ -54,7 +54,7 @@ class MedicalOrganization extends Organization
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getHealthPlanNetworkId() {
         return $this->properties['healthPlanNetworkId'];
@@ -62,7 +62,7 @@ class MedicalOrganization extends Organization
     /**
      * A medical specialty of the provider.
      *
-     * @param $medicalSpecialty 
+     * @param $medicalSpecialty \LengthOfRope\JSONLD\Schema\MedicalSpecialty
      * @return static
      **/
     public function setMedicalSpecialty($medicalSpecialty): static {
@@ -72,7 +72,7 @@ class MedicalOrganization extends Organization
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MedicalSpecialty
      **/
     public function getMedicalSpecialty() {
         return $this->properties['medicalSpecialty'];
@@ -80,7 +80,7 @@ class MedicalOrganization extends Organization
     /**
      * Whether the provider is accepting new patients.
      *
-     * @param $isAcceptingNewPatients 
+     * @param $isAcceptingNewPatients \LengthOfRope\JSONLD\DataType\Boolean
      * @return static
      **/
     public function setIsAcceptingNewPatients($isAcceptingNewPatients): static {
@@ -90,7 +90,7 @@ class MedicalOrganization extends Organization
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Boolean
      **/
     public function getIsAcceptingNewPatients() {
         return $this->properties['isAcceptingNewPatients'];

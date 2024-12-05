@@ -43,7 +43,7 @@ class MusicAlbum extends MusicPlaylist
      * Classification of the album by its type of content: soundtrack, live album,
      * studio album, etc.
      *
-     * @param $albumProductionType 
+     * @param $albumProductionType \LengthOfRope\JSONLD\Schema\MusicAlbumProductionType
      * @return static
      **/
     public function setAlbumProductionType($albumProductionType): static {
@@ -53,7 +53,7 @@ class MusicAlbum extends MusicPlaylist
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MusicAlbumProductionType
      **/
     public function getAlbumProductionType() {
         return $this->properties['albumProductionType'];
@@ -61,7 +61,7 @@ class MusicAlbum extends MusicPlaylist
     /**
      * A release of this album.
      *
-     * @param $albumRelease 
+     * @param $albumRelease \LengthOfRope\JSONLD\Schema\MusicRelease
      * @return static
      **/
     public function setAlbumRelease($albumRelease): static {
@@ -71,7 +71,7 @@ class MusicAlbum extends MusicPlaylist
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MusicRelease
      **/
     public function getAlbumRelease() {
         return $this->properties['albumRelease'];
@@ -79,7 +79,7 @@ class MusicAlbum extends MusicPlaylist
     /**
      * The artist that performed this album or recording.
      *
-     * @param $byArtist |
+     * @param $byArtist \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\MusicGroup
      * @return static
      **/
     public function setByArtist($byArtist): static {
@@ -89,7 +89,7 @@ class MusicAlbum extends MusicPlaylist
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\MusicGroup
      **/
     public function getByArtist() {
         return $this->properties['byArtist'];
@@ -97,7 +97,7 @@ class MusicAlbum extends MusicPlaylist
     /**
      * The kind of release which this album is: single, EP or album.
      *
-     * @param $albumReleaseType 
+     * @param $albumReleaseType \LengthOfRope\JSONLD\Schema\MusicAlbumReleaseType
      * @return static
      **/
     public function setAlbumReleaseType($albumReleaseType): static {
@@ -107,7 +107,7 @@ class MusicAlbum extends MusicPlaylist
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MusicAlbumReleaseType
      **/
     public function getAlbumReleaseType() {
         return $this->properties['albumReleaseType'];

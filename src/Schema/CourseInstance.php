@@ -45,7 +45,7 @@ class CourseInstance extends Event
      * A person assigned to instruct or provide instructional assistance for the
      * [[CourseInstance]].
      *
-     * @param $instructor 
+     * @param $instructor \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setInstructor($instructor): static {
@@ -55,7 +55,7 @@ class CourseInstance extends Event
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
     public function getInstructor() {
         return $this->properties['instructor'];
@@ -66,7 +66,7 @@ class CourseInstance extends Event
      * "asynchronous"; "full-time" or "part-time") or as a URL reference to a term from
      * a controlled vocabulary (e.g. https://ceds.ed.gov/element/001311#Asynchronous).
      *
-     * @param $courseMode |
+     * @param $courseMode \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setCourseMode($courseMode): static {
@@ -76,7 +76,7 @@ class CourseInstance extends Event
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      **/
     public function getCourseMode() {
         return $this->properties['courseMode'];
@@ -84,7 +84,7 @@ class CourseInstance extends Event
     /**
      * Represents the length and pace of a course, expressed as a [[Schedule]].
      *
-     * @param $courseSchedule 
+     * @param $courseSchedule \LengthOfRope\JSONLD\Schema\Schedule
      * @return static
      **/
     public function setCourseSchedule($courseSchedule): static {
@@ -94,7 +94,7 @@ class CourseInstance extends Event
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Schedule
      **/
     public function getCourseSchedule() {
         return $this->properties['courseSchedule'];
@@ -105,7 +105,7 @@ class CourseInstance extends Event
      * hours of lectures, 1 hour of lab work and 3 hours of independent study per
      * week".
      *
-     * @param $courseWorkload 
+     * @param $courseWorkload \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setCourseWorkload($courseWorkload): static {
@@ -115,7 +115,7 @@ class CourseInstance extends Event
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getCourseWorkload() {
         return $this->properties['courseWorkload'];

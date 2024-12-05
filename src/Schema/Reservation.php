@@ -48,7 +48,7 @@ class Reservation extends Intangible
     /**
      * The date and time the reservation was booked.
      *
-     * @param $bookingTime 
+     * @param $bookingTime \LengthOfRope\JSONLD\DataType\DateTime
      * @return static
      **/
     public function setBookingTime($bookingTime): static {
@@ -58,7 +58,7 @@ class Reservation extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\DateTime
      **/
     public function getBookingTime() {
         return $this->properties['bookingTime'];
@@ -66,7 +66,7 @@ class Reservation extends Intangible
     /**
      * The person or organization the reservation or ticket is for.
      *
-     * @param $underName |
+     * @param $underName \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setUnderName($underName): static {
@@ -76,7 +76,7 @@ class Reservation extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getUnderName() {
         return $this->properties['underName'];
@@ -87,7 +87,7 @@ class Reservation extends Intangible
      * involved in an exchange.  If it is not clear whether an entity is a broker,
      * seller, or buyer, the latter two terms are preferred.
      *
-     * @param $broker |
+     * @param $broker \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setBroker($broker): static {
@@ -97,7 +97,7 @@ class Reservation extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\Person
      **/
     public function getBroker() {
         return $this->properties['broker'];
@@ -105,7 +105,7 @@ class Reservation extends Intangible
     /**
      * A ticket associated with the reservation.
      *
-     * @param $reservedTicket 
+     * @param $reservedTicket \LengthOfRope\JSONLD\Schema\Ticket
      * @return static
      **/
     public function setReservedTicket($reservedTicket): static {
@@ -115,7 +115,7 @@ class Reservation extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Ticket
      **/
     public function getReservedTicket() {
         return $this->properties['reservedTicket'];
@@ -124,7 +124,7 @@ class Reservation extends Intangible
      * Any membership in a frequent flyer, hotel loyalty program, etc. being applied to
      * the reservation.
      *
-     * @param $programMembershipUsed 
+     * @param $programMembershipUsed \LengthOfRope\JSONLD\Schema\ProgramMembership
      * @return static
      **/
     public function setProgramMembershipUsed($programMembershipUsed): static {
@@ -134,7 +134,7 @@ class Reservation extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\ProgramMembership
      **/
     public function getProgramMembershipUsed() {
         return $this->properties['programMembershipUsed'];
@@ -142,7 +142,7 @@ class Reservation extends Intangible
     /**
      * The date and time the reservation was modified.
      *
-     * @param $modifiedTime 
+     * @param $modifiedTime \LengthOfRope\JSONLD\DataType\DateTime
      * @return static
      **/
     public function setModifiedTime($modifiedTime): static {
@@ -152,7 +152,7 @@ class Reservation extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\DateTime
      **/
     public function getModifiedTime() {
         return $this->properties['modifiedTime'];
@@ -160,7 +160,7 @@ class Reservation extends Intangible
     /**
      * The thing -- flight, event, restaurant, etc. being reserved.
      *
-     * @param $reservationFor 
+     * @param $reservationFor \LengthOfRope\JSONLD\Schema\Thing
      * @return static
      **/
     public function setReservationFor($reservationFor): static {
@@ -170,7 +170,7 @@ class Reservation extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Thing
      **/
     public function getReservationFor() {
         return $this->properties['reservationFor'];
@@ -186,7 +186,7 @@ class Reservation extends Intangible
      * Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and
      * other currency types, e.g. "Ithaca HOUR".
      *
-     * @param $priceCurrency 
+     * @param $priceCurrency \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setPriceCurrency($priceCurrency): static {
@@ -196,7 +196,7 @@ class Reservation extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getPriceCurrency() {
         return $this->properties['priceCurrency'];
@@ -206,7 +206,7 @@ class Reservation extends Intangible
      * producer. Another party (a seller) may offer those services or goods on behalf
      * of the provider. A provider may also serve as the seller.
      *
-     * @param $provider |
+     * @param $provider \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setProvider($provider): static {
@@ -216,7 +216,7 @@ class Reservation extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getProvider() {
         return $this->properties['provider'];
@@ -232,7 +232,7 @@ class Reservation extends Intangible
      * * Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal
      * point. Avoid using these symbols as a readability separator.
      *
-     * @param $totalPrice ||
+     * @param $totalPrice \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\PriceSpecification|\LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setTotalPrice($totalPrice): static {
@@ -242,7 +242,7 @@ class Reservation extends Intangible
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\PriceSpecification|\LengthOfRope\JSONLD\DataType\Number
      **/
     public function getTotalPrice() {
         return $this->properties['totalPrice'];
@@ -250,7 +250,7 @@ class Reservation extends Intangible
     /**
      * A unique identifier for the reservation.
      *
-     * @param $reservationId 
+     * @param $reservationId \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setReservationId($reservationId): static {
@@ -260,7 +260,7 @@ class Reservation extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getReservationId() {
         return $this->properties['reservationId'];
@@ -268,7 +268,7 @@ class Reservation extends Intangible
     /**
      * The current status of the reservation.
      *
-     * @param $reservationStatus 
+     * @param $reservationStatus \LengthOfRope\JSONLD\Schema\ReservationStatusType
      * @return static
      **/
     public function setReservationStatus($reservationStatus): static {
@@ -278,7 +278,7 @@ class Reservation extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\ReservationStatusType
      **/
     public function getReservationStatus() {
         return $this->properties['reservationStatus'];
@@ -287,7 +287,7 @@ class Reservation extends Intangible
      * 'bookingAgent' is an out-dated term indicating a 'broker' that serves as a
      * booking agent.
      *
-     * @param $bookingAgent |
+     * @param $bookingAgent \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setBookingAgent($bookingAgent): static {
@@ -297,7 +297,7 @@ class Reservation extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getBookingAgent() {
         return $this->properties['bookingAgent'];

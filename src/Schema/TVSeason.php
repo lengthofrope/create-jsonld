@@ -53,7 +53,7 @@ class TVSeason extends CreativeWork
      * [[editEIDR]] for a more edit-specific description.
      *
      *
-     * @param $titleEIDR |
+     * @param $titleEIDR \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setTitleEIDR($titleEIDR): static {
@@ -63,7 +63,7 @@ class TVSeason extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      **/
     public function getTitleEIDR() {
         return $this->properties['titleEIDR'];
@@ -82,7 +82,7 @@ class TVSeason extends CreativeWork
      * interpretation of this may vary by context and product type, and cannot be fully
      * enumerated here.
      *
-     * @param $countryOfOrigin 
+     * @param $countryOfOrigin \LengthOfRope\JSONLD\Schema\Country
      * @return static
      **/
     public function setCountryOfOrigin($countryOfOrigin): static {
@@ -92,7 +92,7 @@ class TVSeason extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Country
      **/
     public function getCountryOfOrigin() {
         return $this->properties['countryOfOrigin'];
@@ -100,7 +100,7 @@ class TVSeason extends CreativeWork
     /**
      * The TV series to which this episode or season belongs.
      *
-     * @param $partOfTVSeries 
+     * @param $partOfTVSeries \LengthOfRope\JSONLD\Schema\TVSeries
      * @return static
      **/
     public function setPartOfTVSeries($partOfTVSeries): static {
@@ -110,7 +110,7 @@ class TVSeason extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\TVSeries
      **/
     public function getPartOfTVSeries() {
         return $this->properties['partOfTVSeries'];

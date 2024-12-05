@@ -61,7 +61,7 @@ class CreativeWorkSeries extends CreativeWork
      * publication. You can repeat this property to identify different formats of, or
      * the linking ISSN (ISSN-L) for, this serial publication.
      *
-     * @param $issn 
+     * @param $issn \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setIssn($issn): static {
@@ -71,7 +71,7 @@ class CreativeWorkSeries extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getIssn() {
         return $this->properties['issn'];
@@ -80,7 +80,7 @@ class CreativeWorkSeries extends CreativeWork
      * The start date and time of the item (in [ISO 8601 date
      * format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
-     * @param $startDate |
+     * @param $startDate \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
      * @return static
      **/
     public function setStartDate($startDate): static {
@@ -90,7 +90,7 @@ class CreativeWorkSeries extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
      **/
     public function getStartDate() {
         return $this->properties['startDate'];
@@ -99,7 +99,7 @@ class CreativeWorkSeries extends CreativeWork
      * The end date and time of the item (in [ISO 8601 date
      * format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
-     * @param $endDate |
+     * @param $endDate \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
      * @return static
      **/
     public function setEndDate($endDate): static {
@@ -109,7 +109,7 @@ class CreativeWorkSeries extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
      **/
     public function getEndDate() {
         return $this->properties['endDate'];

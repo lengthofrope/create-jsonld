@@ -43,7 +43,7 @@ class DataFeedItem extends Intangible
      * The date on which the CreativeWork was created or the item was added to a
      * DataFeed.
      *
-     * @param $dateCreated |
+     * @param $dateCreated \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
      * @return static
      **/
     public function setDateCreated($dateCreated): static {
@@ -53,7 +53,7 @@ class DataFeedItem extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
      **/
     public function getDateCreated() {
         return $this->properties['dateCreated'];
@@ -61,7 +61,7 @@ class DataFeedItem extends Intangible
     /**
      * The datetime the item was removed from the DataFeed.
      *
-     * @param $dateDeleted |
+     * @param $dateDeleted \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
      * @return static
      **/
     public function setDateDeleted($dateDeleted): static {
@@ -71,7 +71,7 @@ class DataFeedItem extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
      **/
     public function getDateDeleted() {
         return $this->properties['dateDeleted'];
@@ -80,7 +80,7 @@ class DataFeedItem extends Intangible
      * An entity represented by an entry in a list or data feed (e.g. an 'artist' in a
      * list of 'artists').
      *
-     * @param $item 
+     * @param $item \LengthOfRope\JSONLD\Schema\Thing
      * @return static
      **/
     public function setItem($item): static {
@@ -90,7 +90,7 @@ class DataFeedItem extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Thing
      **/
     public function getItem() {
         return $this->properties['item'];
@@ -99,7 +99,7 @@ class DataFeedItem extends Intangible
      * The date on which the CreativeWork was most recently modified or when the item's
      * entry was modified within a DataFeed.
      *
-     * @param $dateModified |
+     * @param $dateModified \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
      * @return static
      **/
     public function setDateModified($dateModified): static {
@@ -109,7 +109,7 @@ class DataFeedItem extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
      **/
     public function getDateModified() {
         return $this->properties['dateModified'];

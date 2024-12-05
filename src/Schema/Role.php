@@ -51,7 +51,7 @@ class Role extends Intangible
      * an organization. For example, an athlete in a SportsTeam might play in the
      * position named 'Quarterback'.
      *
-     * @param $namedPosition |
+     * @param $namedPosition \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setNamedPosition($namedPosition): static {
@@ -61,7 +61,7 @@ class Role extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      **/
     public function getNamedPosition() {
         return $this->properties['namedPosition'];
@@ -72,7 +72,7 @@ class Role extends Intangible
      * 'penciller', and 'letterer'; or an athlete in a SportsTeam might play in the
      * position named 'Quarterback'.
      *
-     * @param $roleName |
+     * @param $roleName \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setRoleName($roleName): static {
@@ -82,7 +82,7 @@ class Role extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      **/
     public function getRoleName() {
         return $this->properties['roleName'];
@@ -91,7 +91,7 @@ class Role extends Intangible
      * The start date and time of the item (in [ISO 8601 date
      * format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
-     * @param $startDate |
+     * @param $startDate \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
      * @return static
      **/
     public function setStartDate($startDate): static {
@@ -101,7 +101,7 @@ class Role extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
      **/
     public function getStartDate() {
         return $this->properties['startDate'];
@@ -110,7 +110,7 @@ class Role extends Intangible
      * The end date and time of the item (in [ISO 8601 date
      * format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
-     * @param $endDate |
+     * @param $endDate \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
      * @return static
      **/
     public function setEndDate($endDate): static {
@@ -120,7 +120,7 @@ class Role extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
      **/
     public function getEndDate() {
         return $this->properties['endDate'];

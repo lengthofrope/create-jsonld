@@ -42,7 +42,7 @@ class TVClip extends Clip
     /**
      * The TV series to which this episode or season belongs.
      *
-     * @param $partOfTVSeries 
+     * @param $partOfTVSeries \LengthOfRope\JSONLD\Schema\TVSeries
      * @return static
      **/
     public function setPartOfTVSeries($partOfTVSeries): static {
@@ -52,7 +52,7 @@ class TVClip extends Clip
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\TVSeries
      **/
     public function getPartOfTVSeries() {
         return $this->properties['partOfTVSeries'];

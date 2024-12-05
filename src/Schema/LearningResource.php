@@ -55,7 +55,7 @@ class LearningResource extends CreativeWork
      * described using a simple property, for example to express that a resource
      * [[teaches]] or [[assesses]] a competency.
      *
-     * @param $educationalAlignment 
+     * @param $educationalAlignment \LengthOfRope\JSONLD\Schema\AlignmentObject
      * @return static
      **/
     public function setEducationalAlignment($educationalAlignment): static {
@@ -65,7 +65,7 @@ class LearningResource extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\AlignmentObject
      **/
     public function getEducationalAlignment() {
         return $this->properties['educationalAlignment'];
@@ -74,7 +74,7 @@ class LearningResource extends CreativeWork
      * The predominant type or kind characterizing the learning resource. For example,
      * 'presentation', 'handout'.
      *
-     * @param $learningResourceType |
+     * @param $learningResourceType \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DefinedTerm
      * @return static
      **/
     public function setLearningResourceType($learningResourceType): static {
@@ -84,7 +84,7 @@ class LearningResource extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DefinedTerm
      **/
     public function getLearningResourceType() {
         return $this->properties['learningResourceType'];
@@ -94,7 +94,7 @@ class LearningResource extends CreativeWork
      * Examples of educational levels include 'beginner', 'intermediate' or 'advanced',
      * and formal sets of level indicators.
      *
-     * @param $educationalLevel ||
+     * @param $educationalLevel \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm
      * @return static
      **/
     public function setEducationalLevel($educationalLevel): static {
@@ -104,7 +104,7 @@ class LearningResource extends CreativeWork
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm
      **/
     public function getEducationalLevel() {
         return $this->properties['educationalLevel'];
@@ -113,7 +113,7 @@ class LearningResource extends CreativeWork
      * The purpose of a work in the context of education; for example, 'assignment',
      * 'group work'.
      *
-     * @param $educationalUse |
+     * @param $educationalUse \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DefinedTerm
      * @return static
      **/
     public function setEducationalUse($educationalUse): static {
@@ -123,7 +123,7 @@ class LearningResource extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DefinedTerm
      **/
     public function getEducationalUse() {
         return $this->properties['educationalUse'];
@@ -132,7 +132,7 @@ class LearningResource extends CreativeWork
      * The item being described is intended to assess the competency or learning
      * outcome defined by the referenced term.
      *
-     * @param $assesses |
+     * @param $assesses \LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setAssesses($assesses): static {
@@ -142,7 +142,7 @@ class LearningResource extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getAssesses() {
         return $this->properties['assesses'];
@@ -151,7 +151,7 @@ class LearningResource extends CreativeWork
      * The item being described is intended to help a person learn the competency or
      * learning outcome defined by the referenced term.
      *
-     * @param $teaches |
+     * @param $teaches \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DefinedTerm
      * @return static
      **/
     public function setTeaches($teaches): static {
@@ -161,7 +161,7 @@ class LearningResource extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DefinedTerm
      **/
     public function getTeaches() {
         return $this->properties['teaches'];
@@ -171,7 +171,7 @@ class LearningResource extends CreativeWork
      * person or other entity in order to do something such as earn an Educational
      * Occupational Credential or understand a LearningResource.
      *
-     * @param $competencyRequired ||
+     * @param $competencyRequired \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm
      * @return static
      **/
     public function setCompetencyRequired($competencyRequired): static {
@@ -181,7 +181,7 @@ class LearningResource extends CreativeWork
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm
      **/
     public function getCompetencyRequired() {
         return $this->properties['competencyRequired'];

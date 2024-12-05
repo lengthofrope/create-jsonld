@@ -42,7 +42,7 @@ class Place extends Thing
     /**
      * Photographs of this place.
      *
-     * @param $photos |
+     * @param $photos \LengthOfRope\JSONLD\Schema\Photograph|\LengthOfRope\JSONLD\Schema\ImageObject
      * @return static
      **/
     public function setPhotos($photos): static {
@@ -52,7 +52,7 @@ class Place extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Photograph|\LengthOfRope\JSONLD\Schema\ImageObject
      **/
     public function getPhotos() {
         return $this->properties['photos'];
@@ -68,7 +68,7 @@ class Place extends Thing
      * using those properties, rather than using the generic property/value mechanism.
      *
      *
-     * @param $additionalProperty 
+     * @param $additionalProperty \LengthOfRope\JSONLD\Schema\PropertyValue
      * @return static
      **/
     public function setAdditionalProperty($additionalProperty): static {
@@ -78,7 +78,7 @@ class Place extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\PropertyValue
      **/
     public function getAdditionalProperty() {
         return $this->properties['additionalProperty'];
@@ -88,7 +88,7 @@ class Place extends Thing
      * Activities (ISIC), Revision 4 code for a particular organization, business
      * person, or place.
      *
-     * @param $isicV4 
+     * @param $isicV4 \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setIsicV4($isicV4): static {
@@ -98,7 +98,7 @@ class Place extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getIsicV4() {
         return $this->properties['isicV4'];
@@ -106,7 +106,7 @@ class Place extends Thing
     /**
      * The basic containment relation between a place and one that contains it.
      *
-     * @param $containedInPlace 
+     * @param $containedInPlace \LengthOfRope\JSONLD\Schema\Place
      * @return static
      **/
     public function setContainedInPlace($containedInPlace): static {
@@ -116,7 +116,7 @@ class Place extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Place
      **/
     public function getContainedInPlace() {
         return $this->properties['containedInPlace'];
@@ -124,7 +124,7 @@ class Place extends Thing
     /**
      * The telephone number.
      *
-     * @param $telephone 
+     * @param $telephone \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setTelephone($telephone): static {
@@ -134,7 +134,7 @@ class Place extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getTelephone() {
         return $this->properties['telephone'];
@@ -147,7 +147,7 @@ class Place extends Thing
      * boundary of one geometry intersects the exterior of the other" (a symmetric
      * relationship).
      *
-     * @param $geoEquals |
+     * @param $geoEquals \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
      * @return static
      **/
     public function setGeoEquals($geoEquals): static {
@@ -157,7 +157,7 @@ class Place extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
      **/
     public function getGeoEquals() {
         return $this->properties['geoEquals'];
@@ -165,7 +165,7 @@ class Place extends Thing
     /**
      * Physical address of the item.
      *
-     * @param $address |
+     * @param $address \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\PostalAddress
      * @return static
      **/
     public function setAddress($address): static {
@@ -175,7 +175,7 @@ class Place extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\PostalAddress
      **/
     public function getAddress() {
         return $this->properties['address'];
@@ -184,7 +184,7 @@ class Place extends Thing
      * Certification information about a product, organization, service, place, or
      * person.
      *
-     * @param $hasCertification 
+     * @param $hasCertification \LengthOfRope\JSONLD\Schema\Certification
      * @return static
      **/
     public function setHasCertification($hasCertification): static {
@@ -194,7 +194,7 @@ class Place extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Certification
      **/
     public function getHasCertification() {
         return $this->properties['hasCertification'];
@@ -208,7 +208,7 @@ class Place extends Thing
      * the code "3047" is a branchCode for a particular branch.
      *
      *
-     * @param $branchCode 
+     * @param $branchCode \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setBranchCode($branchCode): static {
@@ -218,7 +218,7 @@ class Place extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getBranchCode() {
         return $this->properties['branchCode'];
@@ -228,7 +228,7 @@ class Place extends Thing
      * relating a geometry to one that contains it, i.e. it is inside (i.e. within) its
      * interior. As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      *
-     * @param $geoWithin |
+     * @param $geoWithin \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
      * @return static
      **/
     public function setGeoWithin($geoWithin): static {
@@ -238,7 +238,7 @@ class Place extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
      **/
     public function getGeoWithin() {
         return $this->properties['geoWithin'];
@@ -246,7 +246,7 @@ class Place extends Thing
     /**
      * The fax number.
      *
-     * @param $faxNumber 
+     * @param $faxNumber \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setFaxNumber($faxNumber): static {
@@ -256,7 +256,7 @@ class Place extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getFaxNumber() {
         return $this->properties['faxNumber'];
@@ -264,7 +264,7 @@ class Place extends Thing
     /**
      * Upcoming or past event associated with this place, organization, or action.
      *
-     * @param $event 
+     * @param $event \LengthOfRope\JSONLD\Schema\Event
      * @return static
      **/
     public function setEvent($event): static {
@@ -274,7 +274,7 @@ class Place extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Event
      **/
     public function getEvent() {
         return $this->properties['event'];
@@ -282,7 +282,7 @@ class Place extends Thing
     /**
      * Upcoming or past events associated with this place or organization.
      *
-     * @param $events 
+     * @param $events \LengthOfRope\JSONLD\Schema\Event
      * @return static
      **/
     public function setEvents($events): static {
@@ -292,7 +292,7 @@ class Place extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Event
      **/
     public function getEvents() {
         return $this->properties['events'];
@@ -301,7 +301,7 @@ class Place extends Thing
      * The latitude of a location. For example ```37.42242``` ([WGS
      * 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
      *
-     * @param $latitude |
+     * @param $latitude \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setLatitude($latitude): static {
@@ -311,7 +311,7 @@ class Place extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Number
      **/
     public function getLatitude() {
         return $this->properties['latitude'];
@@ -320,7 +320,7 @@ class Place extends Thing
      * Keywords or tags used to describe some item. Multiple textual entries in a
      * keywords list are typically delimited by commas, or by repeating the property.
      *
-     * @param $keywords ||
+     * @param $keywords \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setKeywords($keywords): static {
@@ -330,7 +330,7 @@ class Place extends Thing
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getKeywords() {
         return $this->properties['keywords'];
@@ -339,7 +339,7 @@ class Place extends Thing
      * Indicates whether it is allowed to smoke in the place, e.g. in the restaurant,
      * hotel or hotel room.
      *
-     * @param $smokingAllowed 
+     * @param $smokingAllowed \LengthOfRope\JSONLD\DataType\Boolean
      * @return static
      **/
     public function setSmokingAllowed($smokingAllowed): static {
@@ -349,7 +349,7 @@ class Place extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Boolean
      **/
     public function getSmokingAllowed() {
         return $this->properties['smokingAllowed'];
@@ -357,7 +357,7 @@ class Place extends Thing
     /**
      * A flag to signal that the item, event, or place is accessible for free.
      *
-     * @param $isAccessibleForFree 
+     * @param $isAccessibleForFree \LengthOfRope\JSONLD\DataType\Boolean
      * @return static
      **/
     public function setIsAccessibleForFree($isAccessibleForFree): static {
@@ -367,7 +367,7 @@ class Place extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Boolean
      **/
     public function getIsAccessibleForFree() {
         return $this->properties['isAccessibleForFree'];
@@ -375,7 +375,7 @@ class Place extends Thing
     /**
      * An associated logo.
      *
-     * @param $logo |
+     * @param $logo \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\ImageObject
      * @return static
      **/
     public function setLogo($logo): static {
@@ -385,7 +385,7 @@ class Place extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\ImageObject
      **/
     public function getLogo() {
         return $this->properties['logo'];
@@ -396,7 +396,7 @@ class Place extends Thing
      * of (the interior or boundary of) a". As defined in
      * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      *
-     * @param $geoCovers |
+     * @param $geoCovers \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
      * @return static
      **/
     public function setGeoCovers($geoCovers): static {
@@ -406,7 +406,7 @@ class Place extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
      **/
     public function getGeoCovers() {
         return $this->properties['geoCovers'];
@@ -415,7 +415,7 @@ class Place extends Thing
      * The longitude of a location. For example ```-122.08585``` ([WGS
      * 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
      *
-     * @param $longitude |
+     * @param $longitude \LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setLongitude($longitude): static {
@@ -425,7 +425,7 @@ class Place extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getLongitude() {
         return $this->properties['longitude'];
@@ -436,7 +436,7 @@ class Place extends Thing
      * in a car. In the case of [[CovidTestingFacility]] such facilities could
      * potentially help with social distancing from other potentially-infected users.
      *
-     * @param $hasDriveThroughService 
+     * @param $hasDriveThroughService \LengthOfRope\JSONLD\DataType\Boolean
      * @return static
      **/
     public function setHasDriveThroughService($hasDriveThroughService): static {
@@ -446,7 +446,7 @@ class Place extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Boolean
      **/
     public function getHasDriveThroughService() {
         return $this->properties['hasDriveThroughService'];
@@ -458,7 +458,7 @@ class Place extends Thing
      * than that of at least one of them". As defined in
      * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      *
-     * @param $geoCrosses |
+     * @param $geoCrosses \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
      * @return static
      **/
     public function setGeoCrosses($geoCrosses): static {
@@ -468,7 +468,7 @@ class Place extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
      **/
     public function getGeoCrosses() {
         return $this->properties['geoCrosses'];
@@ -479,7 +479,7 @@ class Place extends Thing
      * some but not all points in common. As defined in
      * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      *
-     * @param $geoOverlaps |
+     * @param $geoOverlaps \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
      * @return static
      **/
     public function setGeoOverlaps($geoOverlaps): static {
@@ -489,7 +489,7 @@ class Place extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
      **/
     public function getGeoOverlaps() {
         return $this->properties['geoOverlaps'];
@@ -497,7 +497,7 @@ class Place extends Thing
     /**
      * The geo coordinates of the place.
      *
-     * @param $geo |
+     * @param $geo \LengthOfRope\JSONLD\Schema\GeoCoordinates|\LengthOfRope\JSONLD\Schema\GeoShape
      * @return static
      **/
     public function setGeo($geo): static {
@@ -507,7 +507,7 @@ class Place extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\GeoCoordinates|\LengthOfRope\JSONLD\Schema\GeoShape
      **/
     public function getGeo() {
         return $this->properties['geo'];
@@ -516,7 +516,7 @@ class Place extends Thing
      * A flag to signal that the [[Place]] is open to public visitors.  If this
      * property is omitted there is no assumed default boolean value.
      *
-     * @param $publicAccess 
+     * @param $publicAccess \LengthOfRope\JSONLD\DataType\Boolean
      * @return static
      **/
     public function setPublicAccess($publicAccess): static {
@@ -526,7 +526,7 @@ class Place extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Boolean
      **/
     public function getPublicAccess() {
         return $this->properties['publicAccess'];
@@ -534,7 +534,7 @@ class Place extends Thing
     /**
      * A URL to a map of the place.
      *
-     * @param $map 
+     * @param $map \LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setMap($map): static {
@@ -544,7 +544,7 @@ class Place extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\URL
      **/
     public function getMap() {
         return $this->properties['map'];
@@ -564,7 +564,7 @@ class Place extends Thing
      * <code>8013</code>)  should be attached to a [[Product]] or a
      * [[ProductModel]].</li></ul> Other item types should be adapted similarly.
      *
-     * @param $hasGS1DigitalLink 
+     * @param $hasGS1DigitalLink \LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setHasGS1DigitalLink($hasGS1DigitalLink): static {
@@ -574,7 +574,7 @@ class Place extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\URL
      **/
     public function getHasGS1DigitalLink() {
         return $this->properties['hasGS1DigitalLink'];
@@ -582,7 +582,7 @@ class Place extends Thing
     /**
      * Review of the item.
      *
-     * @param $reviews 
+     * @param $reviews \LengthOfRope\JSONLD\Schema\Review
      * @return static
      **/
     public function setReviews($reviews): static {
@@ -592,7 +592,7 @@ class Place extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Review
      **/
     public function getReviews() {
         return $this->properties['reviews'];
@@ -603,7 +603,7 @@ class Place extends Thing
      * organization, person, or place. The GLN is a 13-digit number used to identify
      * parties and physical locations.
      *
-     * @param $globalLocationNumber 
+     * @param $globalLocationNumber \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setGlobalLocationNumber($globalLocationNumber): static {
@@ -613,7 +613,7 @@ class Place extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getGlobalLocationNumber() {
         return $this->properties['globalLocationNumber'];
@@ -624,7 +624,7 @@ class Place extends Thing
      * a set of disconnected geometries." (A symmetric relationship, as defined in
      * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).)
      *
-     * @param $geoDisjoint |
+     * @param $geoDisjoint \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
      * @return static
      **/
     public function setGeoDisjoint($geoDisjoint): static {
@@ -634,7 +634,7 @@ class Place extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
      **/
     public function getGeoDisjoint() {
         return $this->properties['geoDisjoint'];
@@ -642,7 +642,7 @@ class Place extends Thing
     /**
      * A review of the item.
      *
-     * @param $review 
+     * @param $review \LengthOfRope\JSONLD\Schema\Review
      * @return static
      **/
     public function setReview($review): static {
@@ -652,7 +652,7 @@ class Place extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Review
      **/
     public function getReview() {
         return $this->properties['review'];
@@ -660,7 +660,7 @@ class Place extends Thing
     /**
      * A URL to a map of the place.
      *
-     * @param $maps 
+     * @param $maps \LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setMaps($maps): static {
@@ -670,7 +670,7 @@ class Place extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\URL
      **/
     public function getMaps() {
         return $this->properties['maps'];
@@ -678,7 +678,7 @@ class Place extends Thing
     /**
      * The opening hours of a certain place.
      *
-     * @param $openingHoursSpecification 
+     * @param $openingHoursSpecification \LengthOfRope\JSONLD\Schema\OpeningHoursSpecification
      * @return static
      **/
     public function setOpeningHoursSpecification($openingHoursSpecification): static {
@@ -688,7 +688,7 @@ class Place extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\OpeningHoursSpecification
      **/
     public function getOpeningHoursSpecification() {
         return $this->properties['openingHoursSpecification'];
@@ -700,7 +700,7 @@ class Place extends Thing
      * b lies in the interior of a". As defined in
      * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      *
-     * @param $geoContains |
+     * @param $geoContains \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
      * @return static
      **/
     public function setGeoContains($geoContains): static {
@@ -710,7 +710,7 @@ class Place extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
      **/
     public function getGeoContains() {
         return $this->properties['geoContains'];
@@ -718,7 +718,7 @@ class Place extends Thing
     /**
      * The basic containment relation between a place and another that it contains.
      *
-     * @param $containsPlace 
+     * @param $containsPlace \LengthOfRope\JSONLD\Schema\Place
      * @return static
      **/
     public function setContainsPlace($containsPlace): static {
@@ -728,7 +728,7 @@ class Place extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Place
      **/
     public function getContainsPlace() {
         return $this->properties['containsPlace'];
@@ -736,7 +736,7 @@ class Place extends Thing
     /**
      * The basic containment relation between a place and one that contains it.
      *
-     * @param $containedIn 
+     * @param $containedIn \LengthOfRope\JSONLD\Schema\Place
      * @return static
      **/
     public function setContainedIn($containedIn): static {
@@ -746,7 +746,7 @@ class Place extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Place
      **/
     public function getContainedIn() {
         return $this->properties['containedIn'];
@@ -757,7 +757,7 @@ class Place extends Thing
      * interior points." (A symmetric relationship, as defined in
      * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).)
      *
-     * @param $geoTouches |
+     * @param $geoTouches \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
      * @return static
      **/
     public function setGeoTouches($geoTouches): static {
@@ -767,7 +767,7 @@ class Place extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
      **/
     public function getGeoTouches() {
         return $this->properties['geoTouches'];
@@ -775,7 +775,7 @@ class Place extends Thing
     /**
      * A slogan or motto associated with the item.
      *
-     * @param $slogan 
+     * @param $slogan \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setSlogan($slogan): static {
@@ -785,7 +785,7 @@ class Place extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getSlogan() {
         return $this->properties['slogan'];
@@ -795,7 +795,7 @@ class Place extends Thing
      * generic property does not make a statement about whether the feature is included
      * in an offer for the main accommodation or available at extra costs.
      *
-     * @param $amenityFeature 
+     * @param $amenityFeature \LengthOfRope\JSONLD\Schema\LocationFeatureSpecification
      * @return static
      **/
     public function setAmenityFeature($amenityFeature): static {
@@ -805,7 +805,7 @@ class Place extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\LocationFeatureSpecification
      **/
     public function getAmenityFeature() {
         return $this->properties['amenityFeature'];
@@ -815,7 +815,7 @@ class Place extends Thing
      * represent) have at least one point in common. As defined in
      * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      *
-     * @param $geoIntersects |
+     * @param $geoIntersects \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
      * @return static
      **/
     public function setGeoIntersects($geoIntersects): static {
@@ -825,7 +825,7 @@ class Place extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
      **/
     public function getGeoIntersects() {
         return $this->properties['geoIntersects'];
@@ -835,7 +835,7 @@ class Place extends Thing
      * [[Accommodation]] or [[ApartmentComplex]] in a real estate setting, as well as
      * other kinds of tours as appropriate.
      *
-     * @param $tourBookingPage 
+     * @param $tourBookingPage \LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setTourBookingPage($tourBookingPage): static {
@@ -845,7 +845,7 @@ class Place extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\URL
      **/
     public function getTourBookingPage() {
         return $this->properties['tourBookingPage'];
@@ -855,7 +855,7 @@ class Place extends Thing
      * relating a geometry to another that covers it. As defined in
      * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      *
-     * @param $geoCoveredBy |
+     * @param $geoCoveredBy \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
      * @return static
      **/
     public function setGeoCoveredBy($geoCoveredBy): static {
@@ -865,7 +865,7 @@ class Place extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
      **/
     public function getGeoCoveredBy() {
         return $this->properties['geoCoveredBy'];
@@ -873,7 +873,7 @@ class Place extends Thing
     /**
      * A photograph of this place.
      *
-     * @param $photo |
+     * @param $photo \LengthOfRope\JSONLD\Schema\Photograph|\LengthOfRope\JSONLD\Schema\ImageObject
      * @return static
      **/
     public function setPhoto($photo): static {
@@ -883,7 +883,7 @@ class Place extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Photograph|\LengthOfRope\JSONLD\Schema\ImageObject
      **/
     public function getPhoto() {
         return $this->properties['photo'];
@@ -891,7 +891,7 @@ class Place extends Thing
     /**
      * The overall rating, based on a collection of reviews or ratings, of the item.
      *
-     * @param $aggregateRating 
+     * @param $aggregateRating \LengthOfRope\JSONLD\Schema\AggregateRating
      * @return static
      **/
     public function setAggregateRating($aggregateRating): static {
@@ -901,7 +901,7 @@ class Place extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\AggregateRating
      **/
     public function getAggregateRating() {
         return $this->properties['aggregateRating'];
@@ -909,7 +909,7 @@ class Place extends Thing
     /**
      * A URL to a map of the place.
      *
-     * @param $hasMap |
+     * @param $hasMap \LengthOfRope\JSONLD\Schema\Map|\LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setHasMap($hasMap): static {
@@ -919,7 +919,7 @@ class Place extends Thing
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Map|\LengthOfRope\JSONLD\Schema\URL
      **/
     public function getHasMap() {
         return $this->properties['hasMap'];
@@ -927,7 +927,7 @@ class Place extends Thing
     /**
      * The total number of individuals that may attend an event or venue.
      *
-     * @param $maximumAttendeeCapacity 
+     * @param $maximumAttendeeCapacity \LengthOfRope\JSONLD\Schema\Integer
      * @return static
      **/
     public function setMaximumAttendeeCapacity($maximumAttendeeCapacity): static {
@@ -937,7 +937,7 @@ class Place extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Integer
      **/
     public function getMaximumAttendeeCapacity() {
         return $this->properties['maximumAttendeeCapacity'];
@@ -949,7 +949,7 @@ class Place extends Thing
      * [[openingHoursSpecification]] or [[openingHours]].
      *
      *
-     * @param $specialOpeningHoursSpecification 
+     * @param $specialOpeningHoursSpecification \LengthOfRope\JSONLD\Schema\OpeningHoursSpecification
      * @return static
      **/
     public function setSpecialOpeningHoursSpecification($specialOpeningHoursSpecification): static {
@@ -959,7 +959,7 @@ class Place extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\OpeningHoursSpecification
      **/
     public function getSpecialOpeningHoursSpecification() {
         return $this->properties['specialOpeningHoursSpecification'];

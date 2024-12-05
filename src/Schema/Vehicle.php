@@ -46,7 +46,7 @@ class Vehicle extends Product
      *
      * Typical unit code(s): C62 for persons.
      *
-     * @param $vehicleSeatingCapacity |
+     * @param $vehicleSeatingCapacity \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setVehicleSeatingCapacity($vehicleSeatingCapacity): static {
@@ -56,7 +56,7 @@ class Vehicle extends Product
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\Number
      **/
     public function getVehicleSeatingCapacity() {
         return $this->properties['vehicleSeatingCapacity'];
@@ -66,7 +66,7 @@ class Vehicle extends Product
      * put "g/km" into the unitText property of that value, since there is no UN/CEFACT
      * Common Code for "g/km".
      *
-     * @param $emissionsCO2 
+     * @param $emissionsCO2 \LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setEmissionsCO2($emissionsCO2): static {
@@ -76,7 +76,7 @@ class Vehicle extends Product
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Number
      **/
     public function getEmissionsCO2() {
         return $this->properties['emissionsCO2'];
@@ -86,7 +86,7 @@ class Vehicle extends Product
      *
      * Typical unit code(s): C62.
      *
-     * @param $numberOfPreviousOwners |
+     * @param $numberOfPreviousOwners \LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setNumberOfPreviousOwners($numberOfPreviousOwners): static {
@@ -96,7 +96,7 @@ class Vehicle extends Product
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getNumberOfPreviousOwners() {
         return $this->properties['numberOfPreviousOwners'];
@@ -116,7 +116,7 @@ class Vehicle extends Product
      * * Note 4: Note that you can use [[minValue]] and [[maxValue]] to indicate
      * ranges.
      *
-     * @param $payload 
+     * @param $payload \LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setPayload($payload): static {
@@ -126,7 +126,7 @@ class Vehicle extends Product
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getPayload() {
         return $this->properties['payload'];
@@ -134,7 +134,7 @@ class Vehicle extends Product
     /**
      * Indicates that the vehicle meets the respective emission standard.
      *
-     * @param $meetsEmissionStandard ||
+     * @param $meetsEmissionStandard \LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setMeetsEmissionStandard($meetsEmissionStandard): static {
@@ -144,7 +144,7 @@ class Vehicle extends Product
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      **/
     public function getMeetsEmissionStandard() {
         return $this->properties['meetsEmissionStandard'];
@@ -152,7 +152,7 @@ class Vehicle extends Product
     /**
      * The position of the steering wheel or similar device (mostly for cars).
      *
-     * @param $steeringPosition 
+     * @param $steeringPosition \LengthOfRope\JSONLD\Schema\SteeringPositionValue
      * @return static
      **/
     public function setSteeringPosition($steeringPosition): static {
@@ -162,7 +162,7 @@ class Vehicle extends Product
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\SteeringPositionValue
      **/
     public function getSteeringPosition() {
         return $this->properties['steeringPosition'];
@@ -170,7 +170,7 @@ class Vehicle extends Product
     /**
      * The date of production of the item, e.g. vehicle.
      *
-     * @param $productionDate 
+     * @param $productionDate \LengthOfRope\JSONLD\DataType\Date
      * @return static
      **/
     public function setProductionDate($productionDate): static {
@@ -180,7 +180,7 @@ class Vehicle extends Product
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Date
      **/
     public function getProductionDate() {
         return $this->properties['productionDate'];
@@ -189,7 +189,7 @@ class Vehicle extends Product
      * The Vehicle Identification Number (VIN) is a unique serial number used by the
      * automotive industry to identify individual motor vehicles.
      *
-     * @param $vehicleIdentificationNumber 
+     * @param $vehicleIdentificationNumber \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setVehicleIdentificationNumber($vehicleIdentificationNumber): static {
@@ -199,7 +199,7 @@ class Vehicle extends Product
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getVehicleIdentificationNumber() {
         return $this->properties['vehicleIdentificationNumber'];
@@ -208,7 +208,7 @@ class Vehicle extends Product
      * A [callsign](https://en.wikipedia.org/wiki/Call_sign), as used in broadcasting
      * and radio communications to identify people, radio and TV stations, or vehicles.
      *
-     * @param $callSign 
+     * @param $callSign \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setCallSign($callSign): static {
@@ -218,7 +218,7 @@ class Vehicle extends Product
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getCallSign() {
         return $this->properties['callSign'];
@@ -236,7 +236,7 @@ class Vehicle extends Product
      * ("at 80 km/h") or usage pattern ("city traffic"). You can use [[valueReference]]
      * to link the value for the fuel consumption to another value.
      *
-     * @param $fuelConsumption 
+     * @param $fuelConsumption \LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setFuelConsumption($fuelConsumption): static {
@@ -246,7 +246,7 @@ class Vehicle extends Product
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getFuelConsumption() {
         return $this->properties['fuelConsumption'];
@@ -256,7 +256,7 @@ class Vehicle extends Product
      *
      * Typical unit code(s): C62.
      *
-     * @param $numberOfDoors |
+     * @param $numberOfDoors \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setNumberOfDoors($numberOfDoors): static {
@@ -266,7 +266,7 @@ class Vehicle extends Product
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\Number
      **/
     public function getNumberOfDoors() {
         return $this->properties['numberOfDoors'];
@@ -274,7 +274,7 @@ class Vehicle extends Product
     /**
      * A textual description of known damages, both repaired and unrepaired.
      *
-     * @param $knownVehicleDamages 
+     * @param $knownVehicleDamages \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setKnownVehicleDamages($knownVehicleDamages): static {
@@ -284,7 +284,7 @@ class Vehicle extends Product
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getKnownVehicleDamages() {
         return $this->properties['knownVehicleDamages'];
@@ -297,7 +297,7 @@ class Vehicle extends Product
      * Typical unit code(s): LTR for liters, GLL of US gallons, GLI for UK / imperial
      * gallons, AMH for ampere-hours (for electrical vehicles).
      *
-     * @param $fuelCapacity 
+     * @param $fuelCapacity \LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setFuelCapacity($fuelCapacity): static {
@@ -307,7 +307,7 @@ class Vehicle extends Product
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getFuelCapacity() {
         return $this->properties['fuelCapacity'];
@@ -320,7 +320,7 @@ class Vehicle extends Product
      *
      * Note: You can use [[minValue]] and [[maxValue]] to indicate ranges.
      *
-     * @param $cargoVolume 
+     * @param $cargoVolume \LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setCargoVolume($cargoVolume): static {
@@ -330,7 +330,7 @@ class Vehicle extends Product
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getCargoVolume() {
         return $this->properties['cargoVolume'];
@@ -339,7 +339,7 @@ class Vehicle extends Product
      * A short text indicating the configuration of the vehicle, e.g. '5dr hatchback ST
      * 2.5 MT 225 hp' or 'limited edition'.
      *
-     * @param $vehicleConfiguration 
+     * @param $vehicleConfiguration \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setVehicleConfiguration($vehicleConfiguration): static {
@@ -349,7 +349,7 @@ class Vehicle extends Product
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getVehicleConfiguration() {
         return $this->properties['vehicleConfiguration'];
@@ -357,7 +357,7 @@ class Vehicle extends Product
     /**
      * The color or color combination of the interior of the vehicle.
      *
-     * @param $vehicleInteriorColor 
+     * @param $vehicleInteriorColor \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setVehicleInteriorColor($vehicleInteriorColor): static {
@@ -367,7 +367,7 @@ class Vehicle extends Product
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getVehicleInteriorColor() {
         return $this->properties['vehicleInteriorColor'];
@@ -376,7 +376,7 @@ class Vehicle extends Product
      * The release date of a vehicle model (often used to differentiate versions of the
      * same make and model).
      *
-     * @param $vehicleModelDate 
+     * @param $vehicleModelDate \LengthOfRope\JSONLD\DataType\Date
      * @return static
      **/
     public function setVehicleModelDate($vehicleModelDate): static {
@@ -386,7 +386,7 @@ class Vehicle extends Product
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Date
      **/
     public function getVehicleModelDate() {
         return $this->properties['vehicleModelDate'];
@@ -397,7 +397,7 @@ class Vehicle extends Product
      *
      * Typical unit code(s): KMT for kilometers, SMI for statute miles.
      *
-     * @param $mileageFromOdometer 
+     * @param $mileageFromOdometer \LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setMileageFromOdometer($mileageFromOdometer): static {
@@ -407,7 +407,7 @@ class Vehicle extends Product
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getMileageFromOdometer() {
         return $this->properties['mileageFromOdometer'];
@@ -418,7 +418,7 @@ class Vehicle extends Product
      *
      * Typical unit code(s): C62 for persons.
      *
-     * @param $seatingCapacity |
+     * @param $seatingCapacity \LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setSeatingCapacity($seatingCapacity): static {
@@ -428,7 +428,7 @@ class Vehicle extends Product
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getSeatingCapacity() {
         return $this->properties['seatingCapacity'];
@@ -436,7 +436,7 @@ class Vehicle extends Product
     /**
      * The number or type of airbags in the vehicle.
      *
-     * @param $numberOfAirbags |
+     * @param $numberOfAirbags \LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setNumberOfAirbags($numberOfAirbags): static {
@@ -446,7 +446,7 @@ class Vehicle extends Product
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getNumberOfAirbags() {
         return $this->properties['numberOfAirbags'];
@@ -455,7 +455,7 @@ class Vehicle extends Product
      * The type of component used for transmitting the power from a rotating power
      * source to the wheels or other relevant component(s) ("gearbox" for cars).
      *
-     * @param $vehicleTransmission ||
+     * @param $vehicleTransmission \LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setVehicleTransmission($vehicleTransmission): static {
@@ -465,7 +465,7 @@ class Vehicle extends Product
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      **/
     public function getVehicleTransmission() {
         return $this->properties['vehicleTransmission'];
@@ -474,7 +474,7 @@ class Vehicle extends Product
      * The release date of a vehicle model (often used to differentiate versions of the
      * same make and model).
      *
-     * @param $modelDate 
+     * @param $modelDate \LengthOfRope\JSONLD\DataType\Date
      * @return static
      **/
     public function setModelDate($modelDate): static {
@@ -484,7 +484,7 @@ class Vehicle extends Product
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Date
      **/
     public function getModelDate() {
         return $this->properties['modelDate'];
@@ -495,7 +495,7 @@ class Vehicle extends Product
      *
      * Typical unit code(s): C62.
      *
-     * @param $numberOfForwardGears |
+     * @param $numberOfForwardGears \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setNumberOfForwardGears($numberOfForwardGears): static {
@@ -505,7 +505,7 @@ class Vehicle extends Product
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\Number
      **/
     public function getNumberOfForwardGears() {
         return $this->properties['numberOfForwardGears'];
@@ -515,7 +515,7 @@ class Vehicle extends Product
      * commercial rental, driving school, or as a taxi. The legislation in many
      * countries requires this information to be revealed when offering a car for sale.
      *
-     * @param $vehicleSpecialUsage |
+     * @param $vehicleSpecialUsage \LengthOfRope\JSONLD\Schema\CarUsageType|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setVehicleSpecialUsage($vehicleSpecialUsage): static {
@@ -525,7 +525,7 @@ class Vehicle extends Product
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\CarUsageType|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getVehicleSpecialUsage() {
         return $this->properties['vehicleSpecialUsage'];
@@ -542,7 +542,7 @@ class Vehicle extends Product
      * [[QuantitativeValue]] of 0..60 mph or 0..100 km/h to specify the reference
      * speeds.
      *
-     * @param $accelerationTime 
+     * @param $accelerationTime \LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setAccelerationTime($accelerationTime): static {
@@ -552,7 +552,7 @@ class Vehicle extends Product
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getAccelerationTime() {
         return $this->properties['accelerationTime'];
@@ -560,7 +560,7 @@ class Vehicle extends Product
     /**
      * Information about the engine or engines of the vehicle.
      *
-     * @param $vehicleEngine 
+     * @param $vehicleEngine \LengthOfRope\JSONLD\Schema\EngineSpecification
      * @return static
      **/
     public function setVehicleEngine($vehicleEngine): static {
@@ -570,7 +570,7 @@ class Vehicle extends Product
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\EngineSpecification
      **/
     public function getVehicleEngine() {
         return $this->properties['vehicleEngine'];
@@ -588,7 +588,7 @@ class Vehicle extends Product
      * * Note 3: Note that you can use [[minValue]] and [[maxValue]] to indicate
      * ranges.
      *
-     * @param $weightTotal 
+     * @param $weightTotal \LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setWeightTotal($weightTotal): static {
@@ -598,7 +598,7 @@ class Vehicle extends Product
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getWeightTotal() {
         return $this->properties['weightTotal'];
@@ -614,7 +614,7 @@ class Vehicle extends Product
      * * Note 3: Note that you can use [[minValue]] and [[maxValue]] to indicate
      * ranges.
      *
-     * @param $trailerWeight 
+     * @param $trailerWeight \LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setTrailerWeight($trailerWeight): static {
@@ -624,7 +624,7 @@ class Vehicle extends Product
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getTrailerWeight() {
         return $this->properties['trailerWeight'];
@@ -634,7 +634,7 @@ class Vehicle extends Product
      *
      * Typical unit code(s): C62.
      *
-     * @param $numberOfAxles |
+     * @param $numberOfAxles \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setNumberOfAxles($numberOfAxles): static {
@@ -644,7 +644,7 @@ class Vehicle extends Product
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\Number
      **/
     public function getNumberOfAxles() {
         return $this->properties['numberOfAxles'];
@@ -663,7 +663,7 @@ class Vehicle extends Product
      * link to information about how the given value has been determined using the
      * [[valueReference]] property.
      *
-     * @param $speed 
+     * @param $speed \LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setSpeed($speed): static {
@@ -673,7 +673,7 @@ class Vehicle extends Product
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getSpeed() {
         return $this->properties['speed'];
@@ -684,7 +684,7 @@ class Vehicle extends Product
      * material used, an interior type can also be based on vehicle usage or target
      * audience.
      *
-     * @param $vehicleInteriorType 
+     * @param $vehicleInteriorType \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setVehicleInteriorType($vehicleInteriorType): static {
@@ -694,7 +694,7 @@ class Vehicle extends Product
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getVehicleInteriorType() {
         return $this->properties['vehicleInteriorType'];
@@ -713,7 +713,7 @@ class Vehicle extends Product
      * ("at 80 km/h") or usage pattern ("city traffic"). You can use [[valueReference]]
      * to link the value for the fuel economy to another value.
      *
-     * @param $fuelEfficiency 
+     * @param $fuelEfficiency \LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setFuelEfficiency($fuelEfficiency): static {
@@ -723,7 +723,7 @@ class Vehicle extends Product
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getFuelEfficiency() {
         return $this->properties['fuelEfficiency'];
@@ -732,7 +732,7 @@ class Vehicle extends Product
      * The date of the first registration of the vehicle with the respective public
      * authorities.
      *
-     * @param $dateVehicleFirstRegistered 
+     * @param $dateVehicleFirstRegistered \LengthOfRope\JSONLD\DataType\Date
      * @return static
      **/
     public function setDateVehicleFirstRegistered($dateVehicleFirstRegistered): static {
@@ -742,7 +742,7 @@ class Vehicle extends Product
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Date
      **/
     public function getDateVehicleFirstRegistered() {
         return $this->properties['dateVehicleFirstRegistered'];
@@ -752,7 +752,7 @@ class Vehicle extends Product
      * vehicle has only one engine, this property can be attached directly to the
      * vehicle.
      *
-     * @param $fuelType ||
+     * @param $fuelType \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setFuelType($fuelType): static {
@@ -762,7 +762,7 @@ class Vehicle extends Product
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getFuelType() {
         return $this->properties['fuelType'];
@@ -771,7 +771,7 @@ class Vehicle extends Product
      * Indicates the design and body style of the vehicle (e.g. station wagon,
      * hatchback, etc.).
      *
-     * @param $bodyType ||
+     * @param $bodyType \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\QualitativeValue
      * @return static
      **/
     public function setBodyType($bodyType): static {
@@ -781,7 +781,7 @@ class Vehicle extends Product
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\QualitativeValue
      **/
     public function getBodyType() {
         return $this->properties['bodyType'];
@@ -790,7 +790,7 @@ class Vehicle extends Product
      * The drive wheel configuration, i.e. which roadwheels will receive torque from
      * the vehicle's engine via the drivetrain.
      *
-     * @param $driveWheelConfiguration |
+     * @param $driveWheelConfiguration \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DriveWheelConfigurationValue
      * @return static
      **/
     public function setDriveWheelConfiguration($driveWheelConfiguration): static {
@@ -800,7 +800,7 @@ class Vehicle extends Product
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DriveWheelConfigurationValue
      **/
     public function getDriveWheelConfiguration() {
         return $this->properties['driveWheelConfiguration'];
@@ -818,7 +818,7 @@ class Vehicle extends Product
      * * Note 3: Note that you can use [[minValue]] and [[maxValue]] to indicate
      * ranges.
      *
-     * @param $tongueWeight 
+     * @param $tongueWeight \LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setTongueWeight($tongueWeight): static {
@@ -828,7 +828,7 @@ class Vehicle extends Product
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getTongueWeight() {
         return $this->properties['tongueWeight'];
@@ -836,7 +836,7 @@ class Vehicle extends Product
     /**
      * The date the item, e.g. vehicle, was purchased by the current owner.
      *
-     * @param $purchaseDate 
+     * @param $purchaseDate \LengthOfRope\JSONLD\DataType\Date
      * @return static
      **/
     public function setPurchaseDate($purchaseDate): static {
@@ -846,7 +846,7 @@ class Vehicle extends Product
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Date
      **/
     public function getPurchaseDate() {
         return $this->properties['purchaseDate'];
@@ -857,7 +857,7 @@ class Vehicle extends Product
      * Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT
      * for foot/feet.
      *
-     * @param $wheelbase 
+     * @param $wheelbase \LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setWheelbase($wheelbase): static {
@@ -867,7 +867,7 @@ class Vehicle extends Product
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getWheelbase() {
         return $this->properties['wheelbase'];

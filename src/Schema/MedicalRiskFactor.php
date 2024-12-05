@@ -43,7 +43,7 @@ class MedicalRiskFactor extends MedicalEntity
     /**
      * The condition, complication, etc. influenced by this factor.
      *
-     * @param $increasesRiskOf 
+     * @param $increasesRiskOf \LengthOfRope\JSONLD\Schema\MedicalEntity
      * @return static
      **/
     public function setIncreasesRiskOf($increasesRiskOf): static {
@@ -53,7 +53,7 @@ class MedicalRiskFactor extends MedicalEntity
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MedicalEntity
      **/
     public function getIncreasesRiskOf() {
         return $this->properties['increasesRiskOf'];

@@ -46,7 +46,7 @@ class DefinedTerm extends Intangible
     /**
      * A [[DefinedTermSet]] that contains this term.
      *
-     * @param $inDefinedTermSet |
+     * @param $inDefinedTermSet \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTermSet
      * @return static
      **/
     public function setInDefinedTermSet($inDefinedTermSet): static {
@@ -56,7 +56,7 @@ class DefinedTerm extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTermSet
      **/
     public function getInDefinedTermSet() {
         return $this->properties['inDefinedTermSet'];
@@ -64,7 +64,7 @@ class DefinedTerm extends Intangible
     /**
      * A code that identifies this [[DefinedTerm]] within a [[DefinedTermSet]].
      *
-     * @param $termCode 
+     * @param $termCode \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setTermCode($termCode): static {
@@ -74,7 +74,7 @@ class DefinedTerm extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getTermCode() {
         return $this->properties['termCode'];

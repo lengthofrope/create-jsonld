@@ -42,7 +42,7 @@ class Audience extends Intangible
     /**
      * The geographic area associated with the audience.
      *
-     * @param $geographicArea 
+     * @param $geographicArea \LengthOfRope\JSONLD\Schema\AdministrativeArea
      * @return static
      **/
     public function setGeographicArea($geographicArea): static {
@@ -52,7 +52,7 @@ class Audience extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\AdministrativeArea
      **/
     public function getGeographicArea() {
         return $this->properties['geographicArea'];
@@ -61,7 +61,7 @@ class Audience extends Intangible
      * The target group associated with a given audience (e.g. veterans, car owners,
      * musicians, etc.).
      *
-     * @param $audienceType 
+     * @param $audienceType \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setAudienceType($audienceType): static {
@@ -71,7 +71,7 @@ class Audience extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getAudienceType() {
         return $this->properties['audienceType'];

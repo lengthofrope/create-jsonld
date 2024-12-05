@@ -43,7 +43,7 @@ class Brand extends Intangible
     /**
      * An associated logo.
      *
-     * @param $logo |
+     * @param $logo \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\ImageObject
      * @return static
      **/
     public function setLogo($logo): static {
@@ -53,7 +53,7 @@ class Brand extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\ImageObject
      **/
     public function getLogo() {
         return $this->properties['logo'];
@@ -61,7 +61,7 @@ class Brand extends Intangible
     /**
      * A review of the item.
      *
-     * @param $review 
+     * @param $review \LengthOfRope\JSONLD\Schema\Review
      * @return static
      **/
     public function setReview($review): static {
@@ -71,7 +71,7 @@ class Brand extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Review
      **/
     public function getReview() {
         return $this->properties['review'];
@@ -79,7 +79,7 @@ class Brand extends Intangible
     /**
      * A slogan or motto associated with the item.
      *
-     * @param $slogan 
+     * @param $slogan \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setSlogan($slogan): static {
@@ -89,7 +89,7 @@ class Brand extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getSlogan() {
         return $this->properties['slogan'];
@@ -97,7 +97,7 @@ class Brand extends Intangible
     /**
      * The overall rating, based on a collection of reviews or ratings, of the item.
      *
-     * @param $aggregateRating 
+     * @param $aggregateRating \LengthOfRope\JSONLD\Schema\AggregateRating
      * @return static
      **/
     public function setAggregateRating($aggregateRating): static {
@@ -107,7 +107,7 @@ class Brand extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\AggregateRating
      **/
     public function getAggregateRating() {
         return $this->properties['aggregateRating'];

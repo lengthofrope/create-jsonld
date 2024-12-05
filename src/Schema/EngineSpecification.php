@@ -52,7 +52,7 @@ class EngineSpecification extends StructuredValue
      * determined using the [[valueReference]] property.
      * * Note 3: You can use [[minValue]] and [[maxValue]] to indicate ranges.
      *
-     * @param $enginePower 
+     * @param $enginePower \LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setEnginePower($enginePower): static {
@@ -62,7 +62,7 @@ class EngineSpecification extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getEnginePower() {
         return $this->properties['enginePower'];
@@ -77,7 +77,7 @@ class EngineSpecification extends StructuredValue
      * determined using the [[valueReference]] property.
      * * Note 2: You can use [[minValue]] and [[maxValue]] to indicate ranges.
      *
-     * @param $engineDisplacement 
+     * @param $engineDisplacement \LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setEngineDisplacement($engineDisplacement): static {
@@ -87,7 +87,7 @@ class EngineSpecification extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getEngineDisplacement() {
         return $this->properties['engineDisplacement'];
@@ -95,7 +95,7 @@ class EngineSpecification extends StructuredValue
     /**
      * The type of engine or engines powering the vehicle.
      *
-     * @param $engineType ||
+     * @param $engineType \LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setEngineType($engineType): static {
@@ -105,7 +105,7 @@ class EngineSpecification extends StructuredValue
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      **/
     public function getEngineType() {
         return $this->properties['engineType'];
@@ -120,7 +120,7 @@ class EngineSpecification extends StructuredValue
      * determined (e.g. reference RPM) using the [[valueReference]] property.
      * * Note 2: You can use [[minValue]] and [[maxValue]] to indicate ranges.
      *
-     * @param $torque 
+     * @param $torque \LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setTorque($torque): static {
@@ -130,7 +130,7 @@ class EngineSpecification extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getTorque() {
         return $this->properties['torque'];
@@ -140,7 +140,7 @@ class EngineSpecification extends StructuredValue
      * vehicle has only one engine, this property can be attached directly to the
      * vehicle.
      *
-     * @param $fuelType ||
+     * @param $fuelType \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setFuelType($fuelType): static {
@@ -150,7 +150,7 @@ class EngineSpecification extends StructuredValue
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getFuelType() {
         return $this->properties['fuelType'];

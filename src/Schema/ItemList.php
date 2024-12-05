@@ -46,7 +46,7 @@ class ItemList extends Intangible
      * describe all items in a list (e.g., multi-page pagination); in such cases, the
      * numberOfItems would be for the entire list.
      *
-     * @param $numberOfItems 
+     * @param $numberOfItems \LengthOfRope\JSONLD\Schema\Integer
      * @return static
      **/
     public function setNumberOfItems($numberOfItems): static {
@@ -56,7 +56,7 @@ class ItemList extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Integer
      **/
     public function getNumberOfItems() {
         return $this->properties['numberOfItems'];
@@ -74,7 +74,7 @@ class ItemList extends Intangible
      * Note: The order of elements in your mark-up is not sufficient for indicating the
      * order or elements.  Use ListItem with a 'position' property in such cases.
      *
-     * @param $itemListElement ||
+     * @param $itemListElement \LengthOfRope\JSONLD\Schema\ListItem|\LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setItemListElement($itemListElement): static {
@@ -84,7 +84,7 @@ class ItemList extends Intangible
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\Schema\ListItem|\LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getItemListElement() {
         return $this->properties['itemListElement'];
@@ -92,7 +92,7 @@ class ItemList extends Intangible
     /**
      * Type of ordering (e.g. Ascending, Descending, Unordered).
      *
-     * @param $itemListOrder |
+     * @param $itemListOrder \LengthOfRope\JSONLD\Schema\ItemListOrderType|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setItemListOrder($itemListOrder): static {
@@ -102,7 +102,7 @@ class ItemList extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\ItemListOrderType|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getItemListOrder() {
         return $this->properties['itemListOrder'];

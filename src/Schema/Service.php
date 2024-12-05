@@ -44,7 +44,7 @@ class Service extends Intangible
      * The type of service being offered, e.g. veterans' benefits, emergency relief,
      * etc.
      *
-     * @param $serviceType |
+     * @param $serviceType \LengthOfRope\JSONLD\Schema\GovernmentBenefitsType|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setServiceType($serviceType): static {
@@ -54,7 +54,7 @@ class Service extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\GovernmentBenefitsType|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getServiceType() {
         return $this->properties['serviceType'];
@@ -62,7 +62,7 @@ class Service extends Intangible
     /**
      * Human-readable terms of service documentation.
      *
-     * @param $termsOfService |
+     * @param $termsOfService \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setTermsOfService($termsOfService): static {
@@ -72,7 +72,7 @@ class Service extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      **/
     public function getTermsOfService() {
         return $this->properties['termsOfService'];
@@ -80,7 +80,7 @@ class Service extends Intangible
     /**
      * A pointer to another, functionally similar product (or multiple products).
      *
-     * @param $isSimilarTo |
+     * @param $isSimilarTo \LengthOfRope\JSONLD\Schema\Product|\LengthOfRope\JSONLD\Schema\Service
      * @return static
      **/
     public function setIsSimilarTo($isSimilarTo): static {
@@ -90,7 +90,7 @@ class Service extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Product|\LengthOfRope\JSONLD\Schema\Service
      **/
     public function getIsSimilarTo() {
         return $this->properties['isSimilarTo'];
@@ -98,7 +98,7 @@ class Service extends Intangible
     /**
      * An award won by or for this item.
      *
-     * @param $award 
+     * @param $award \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setAward($award): static {
@@ -108,7 +108,7 @@ class Service extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getAward() {
         return $this->properties['award'];
@@ -119,7 +119,7 @@ class Service extends Intangible
      * involved in an exchange.  If it is not clear whether an entity is a broker,
      * seller, or buyer, the latter two terms are preferred.
      *
-     * @param $broker |
+     * @param $broker \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setBroker($broker): static {
@@ -129,7 +129,7 @@ class Service extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\Person
      **/
     public function getBroker() {
         return $this->properties['broker'];
@@ -137,7 +137,7 @@ class Service extends Intangible
     /**
      * Indicates an OfferCatalog listing for this Organization, Person, or Service.
      *
-     * @param $hasOfferCatalog 
+     * @param $hasOfferCatalog \LengthOfRope\JSONLD\Schema\OfferCatalog
      * @return static
      **/
     public function setHasOfferCatalog($hasOfferCatalog): static {
@@ -147,7 +147,7 @@ class Service extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\OfferCatalog
      **/
     public function getHasOfferCatalog() {
         return $this->properties['hasOfferCatalog'];
@@ -156,7 +156,7 @@ class Service extends Intangible
      * Certification information about a product, organization, service, place, or
      * person.
      *
-     * @param $hasCertification 
+     * @param $hasCertification \LengthOfRope\JSONLD\Schema\Certification
      * @return static
      **/
     public function setHasCertification($hasCertification): static {
@@ -166,7 +166,7 @@ class Service extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Certification
      **/
     public function getHasCertification() {
         return $this->properties['hasCertification'];
@@ -174,7 +174,7 @@ class Service extends Intangible
     /**
      * The audience eligible for this service.
      *
-     * @param $serviceAudience 
+     * @param $serviceAudience \LengthOfRope\JSONLD\Schema\Audience
      * @return static
      **/
     public function setServiceAudience($serviceAudience): static {
@@ -184,7 +184,7 @@ class Service extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Audience
      **/
     public function getServiceAudience() {
         return $this->properties['serviceAudience'];
@@ -192,7 +192,7 @@ class Service extends Intangible
     /**
      * An associated logo.
      *
-     * @param $logo |
+     * @param $logo \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\ImageObject
      * @return static
      **/
     public function setLogo($logo): static {
@@ -202,7 +202,7 @@ class Service extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\ImageObject
      **/
     public function getLogo() {
         return $this->properties['logo'];
@@ -210,7 +210,7 @@ class Service extends Intangible
     /**
      * The geographic area where a service or offered item is provided.
      *
-     * @param $areaServed |||
+     * @param $areaServed \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeoShape|\LengthOfRope\JSONLD\Schema\AdministrativeArea
      * @return static
      **/
     public function setAreaServed($areaServed): static {
@@ -220,7 +220,7 @@ class Service extends Intangible
     }
 
     /**
-     * @return |||
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeoShape|\LengthOfRope\JSONLD\Schema\AdministrativeArea
      **/
     public function getAreaServed() {
         return $this->properties['areaServed'];
@@ -228,7 +228,7 @@ class Service extends Intangible
     /**
      * The geographic area where the service is provided.
      *
-     * @param $serviceArea ||
+     * @param $serviceArea \LengthOfRope\JSONLD\Schema\GeoShape|\LengthOfRope\JSONLD\Schema\AdministrativeArea|\LengthOfRope\JSONLD\Schema\Place
      * @return static
      **/
     public function setServiceArea($serviceArea): static {
@@ -238,7 +238,7 @@ class Service extends Intangible
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\Schema\GeoShape|\LengthOfRope\JSONLD\Schema\AdministrativeArea|\LengthOfRope\JSONLD\Schema\Place
      **/
     public function getServiceArea() {
         return $this->properties['serviceArea'];
@@ -247,7 +247,7 @@ class Service extends Intangible
      * The brand(s) associated with a product or service, or the brand(s) maintained by
      * an organization or business person.
      *
-     * @param $brand |
+     * @param $brand \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\Brand
      * @return static
      **/
     public function setBrand($brand): static {
@@ -257,7 +257,7 @@ class Service extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\Brand
      **/
     public function getBrand() {
         return $this->properties['brand'];
@@ -266,7 +266,7 @@ class Service extends Intangible
      * A category for the item. Greater signs or slashes can be used to informally
      * indicate a category hierarchy.
      *
-     * @param $category ||||
+     * @param $category \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\Schema\PhysicalActivityCategory|\LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setCategory($category): static {
@@ -276,7 +276,7 @@ class Service extends Intangible
     }
 
     /**
-     * @return ||||
+     * @return \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\Schema\PhysicalActivityCategory|\LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      **/
     public function getCategory() {
         return $this->properties['category'];
@@ -284,7 +284,7 @@ class Service extends Intangible
     /**
      * Indicates the mobility of a provided service (e.g. 'static', 'dynamic').
      *
-     * @param $providerMobility 
+     * @param $providerMobility \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setProviderMobility($providerMobility): static {
@@ -294,7 +294,7 @@ class Service extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getProviderMobility() {
         return $this->properties['providerMobility'];
@@ -302,7 +302,7 @@ class Service extends Intangible
     /**
      * A pointer to another, somehow related product (or multiple products).
      *
-     * @param $isRelatedTo |
+     * @param $isRelatedTo \LengthOfRope\JSONLD\Schema\Product|\LengthOfRope\JSONLD\Schema\Service
      * @return static
      **/
     public function setIsRelatedTo($isRelatedTo): static {
@@ -312,7 +312,7 @@ class Service extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Product|\LengthOfRope\JSONLD\Schema\Service
      **/
     public function getIsRelatedTo() {
         return $this->properties['isRelatedTo'];
@@ -320,7 +320,7 @@ class Service extends Intangible
     /**
      * The hours during which this service or contact is available.
      *
-     * @param $hoursAvailable 
+     * @param $hoursAvailable \LengthOfRope\JSONLD\Schema\OpeningHoursSpecification
      * @return static
      **/
     public function setHoursAvailable($hoursAvailable): static {
@@ -330,7 +330,7 @@ class Service extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\OpeningHoursSpecification
      **/
     public function getHoursAvailable() {
         return $this->properties['hoursAvailable'];
@@ -338,7 +338,7 @@ class Service extends Intangible
     /**
      * A review of the item.
      *
-     * @param $review 
+     * @param $review \LengthOfRope\JSONLD\Schema\Review
      * @return static
      **/
     public function setReview($review): static {
@@ -348,7 +348,7 @@ class Service extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Review
      **/
     public function getReview() {
         return $this->properties['review'];
@@ -356,7 +356,7 @@ class Service extends Intangible
     /**
      * The tangible thing generated by the service, e.g. a passport, permit, etc.
      *
-     * @param $produces 
+     * @param $produces \LengthOfRope\JSONLD\Schema\Thing
      * @return static
      **/
     public function setProduces($produces): static {
@@ -366,7 +366,7 @@ class Service extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Thing
      **/
     public function getProduces() {
         return $this->properties['produces'];
@@ -381,7 +381,7 @@ class Service extends Intangible
      * Product, can clarify the nature of the offer.
      *
      *
-     * @param $offers |
+     * @param $offers \LengthOfRope\JSONLD\Schema\Offer|\LengthOfRope\JSONLD\Schema\Demand
      * @return static
      **/
     public function setOffers($offers): static {
@@ -391,7 +391,7 @@ class Service extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Offer|\LengthOfRope\JSONLD\Schema\Demand
      **/
     public function getOffers() {
         return $this->properties['offers'];
@@ -401,7 +401,7 @@ class Service extends Intangible
      * producer. Another party (a seller) may offer those services or goods on behalf
      * of the provider. A provider may also serve as the seller.
      *
-     * @param $provider |
+     * @param $provider \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setProvider($provider): static {
@@ -411,7 +411,7 @@ class Service extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getProvider() {
         return $this->properties['provider'];
@@ -419,7 +419,7 @@ class Service extends Intangible
     /**
      * A slogan or motto associated with the item.
      *
-     * @param $slogan 
+     * @param $slogan \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setSlogan($slogan): static {
@@ -429,7 +429,7 @@ class Service extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getSlogan() {
         return $this->properties['slogan'];
@@ -437,7 +437,7 @@ class Service extends Intangible
     /**
      * The overall rating, based on a collection of reviews or ratings, of the item.
      *
-     * @param $aggregateRating 
+     * @param $aggregateRating \LengthOfRope\JSONLD\Schema\AggregateRating
      * @return static
      **/
     public function setAggregateRating($aggregateRating): static {
@@ -447,7 +447,7 @@ class Service extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\AggregateRating
      **/
     public function getAggregateRating() {
         return $this->properties['aggregateRating'];
@@ -455,7 +455,7 @@ class Service extends Intangible
     /**
      * The tangible thing generated by the service, e.g. a passport, permit, etc.
      *
-     * @param $serviceOutput 
+     * @param $serviceOutput \LengthOfRope\JSONLD\Schema\Thing
      * @return static
      **/
     public function setServiceOutput($serviceOutput): static {
@@ -465,7 +465,7 @@ class Service extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Thing
      **/
     public function getServiceOutput() {
         return $this->properties['serviceOutput'];
@@ -474,7 +474,7 @@ class Service extends Intangible
      * A means of accessing the service (e.g. a phone bank, a web site, a location,
      * etc.).
      *
-     * @param $availableChannel 
+     * @param $availableChannel \LengthOfRope\JSONLD\Schema\ServiceChannel
      * @return static
      **/
     public function setAvailableChannel($availableChannel): static {
@@ -484,7 +484,7 @@ class Service extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\ServiceChannel
      **/
     public function getAvailableChannel() {
         return $this->properties['availableChannel'];
@@ -492,7 +492,7 @@ class Service extends Intangible
     /**
      * An intended audience, i.e. a group for whom something was created.
      *
-     * @param $audience 
+     * @param $audience \LengthOfRope\JSONLD\Schema\Audience
      * @return static
      **/
     public function setAudience($audience): static {
@@ -502,7 +502,7 @@ class Service extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Audience
      **/
     public function getAudience() {
         return $this->properties['audience'];

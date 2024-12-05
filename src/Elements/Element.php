@@ -133,6 +133,15 @@ abstract class Element implements Interfaces\IElement
         foreach($this->properties as $name => $property) {
             if ($property instanceof Interfaces\IElement) {
                 $arr[$name] = $property->getDataArray();
+            } else if (is_array($property)) {
+                $arr[$name] = array();
+                foreach($property as $subProperty) {
+                    if ($subProperty instanceof Interfaces\IElement) {
+                        $arr[$name][] = $subProperty->getDataArray();
+                    } else {
+                        $arr[$name][] = $subProperty;
+                    }
+                }
             } else {
                 $arr[$name] = $property;
             }

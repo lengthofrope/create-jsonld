@@ -44,7 +44,7 @@ class DigitalDocument extends CreativeWork
      * write an electronic document). For a public document, specify a grantee with an
      * Audience with audienceType equal to "public".
      *
-     * @param $hasDigitalDocumentPermission 
+     * @param $hasDigitalDocumentPermission \LengthOfRope\JSONLD\Schema\DigitalDocumentPermission
      * @return static
      **/
     public function setHasDigitalDocumentPermission($hasDigitalDocumentPermission): static {
@@ -54,7 +54,7 @@ class DigitalDocument extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\DigitalDocumentPermission
      **/
     public function getHasDigitalDocumentPermission() {
         return $this->properties['hasDigitalDocumentPermission'];

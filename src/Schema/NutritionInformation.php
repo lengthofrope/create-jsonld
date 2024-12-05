@@ -42,7 +42,7 @@ class NutritionInformation extends StructuredValue
     /**
      * The number of grams of protein.
      *
-     * @param $proteinContent 
+     * @param $proteinContent \LengthOfRope\JSONLD\Schema\Mass
      * @return static
      **/
     public function setProteinContent($proteinContent): static {
@@ -52,7 +52,7 @@ class NutritionInformation extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Mass
      **/
     public function getProteinContent() {
         return $this->properties['proteinContent'];
@@ -60,7 +60,7 @@ class NutritionInformation extends StructuredValue
     /**
      * The number of milligrams of sodium.
      *
-     * @param $sodiumContent 
+     * @param $sodiumContent \LengthOfRope\JSONLD\Schema\Mass
      * @return static
      **/
     public function setSodiumContent($sodiumContent): static {
@@ -70,7 +70,7 @@ class NutritionInformation extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Mass
      **/
     public function getSodiumContent() {
         return $this->properties['sodiumContent'];
@@ -78,7 +78,7 @@ class NutritionInformation extends StructuredValue
     /**
      * The number of milligrams of cholesterol.
      *
-     * @param $cholesterolContent 
+     * @param $cholesterolContent \LengthOfRope\JSONLD\Schema\Mass
      * @return static
      **/
     public function setCholesterolContent($cholesterolContent): static {
@@ -88,7 +88,7 @@ class NutritionInformation extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Mass
      **/
     public function getCholesterolContent() {
         return $this->properties['cholesterolContent'];
@@ -96,7 +96,7 @@ class NutritionInformation extends StructuredValue
     /**
      * The number of grams of fat.
      *
-     * @param $fatContent 
+     * @param $fatContent \LengthOfRope\JSONLD\Schema\Mass
      * @return static
      **/
     public function setFatContent($fatContent): static {
@@ -106,7 +106,7 @@ class NutritionInformation extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Mass
      **/
     public function getFatContent() {
         return $this->properties['fatContent'];
@@ -114,7 +114,7 @@ class NutritionInformation extends StructuredValue
     /**
      * The number of grams of fiber.
      *
-     * @param $fiberContent 
+     * @param $fiberContent \LengthOfRope\JSONLD\Schema\Mass
      * @return static
      **/
     public function setFiberContent($fiberContent): static {
@@ -124,7 +124,7 @@ class NutritionInformation extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Mass
      **/
     public function getFiberContent() {
         return $this->properties['fiberContent'];
@@ -132,7 +132,7 @@ class NutritionInformation extends StructuredValue
     /**
      * The serving size, in terms of the number of volume or mass.
      *
-     * @param $servingSize 
+     * @param $servingSize \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setServingSize($servingSize): static {
@@ -142,7 +142,7 @@ class NutritionInformation extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getServingSize() {
         return $this->properties['servingSize'];
@@ -150,7 +150,7 @@ class NutritionInformation extends StructuredValue
     /**
      * The number of grams of saturated fat.
      *
-     * @param $saturatedFatContent 
+     * @param $saturatedFatContent \LengthOfRope\JSONLD\Schema\Mass
      * @return static
      **/
     public function setSaturatedFatContent($saturatedFatContent): static {
@@ -160,7 +160,7 @@ class NutritionInformation extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Mass
      **/
     public function getSaturatedFatContent() {
         return $this->properties['saturatedFatContent'];
@@ -168,7 +168,7 @@ class NutritionInformation extends StructuredValue
     /**
      * The number of grams of unsaturated fat.
      *
-     * @param $unsaturatedFatContent 
+     * @param $unsaturatedFatContent \LengthOfRope\JSONLD\Schema\Mass
      * @return static
      **/
     public function setUnsaturatedFatContent($unsaturatedFatContent): static {
@@ -178,7 +178,7 @@ class NutritionInformation extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Mass
      **/
     public function getUnsaturatedFatContent() {
         return $this->properties['unsaturatedFatContent'];
@@ -186,7 +186,7 @@ class NutritionInformation extends StructuredValue
     /**
      * The number of grams of carbohydrates.
      *
-     * @param $carbohydrateContent 
+     * @param $carbohydrateContent \LengthOfRope\JSONLD\Schema\Mass
      * @return static
      **/
     public function setCarbohydrateContent($carbohydrateContent): static {
@@ -196,7 +196,7 @@ class NutritionInformation extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Mass
      **/
     public function getCarbohydrateContent() {
         return $this->properties['carbohydrateContent'];
@@ -204,7 +204,7 @@ class NutritionInformation extends StructuredValue
     /**
      * The number of grams of trans fat.
      *
-     * @param $transFatContent 
+     * @param $transFatContent \LengthOfRope\JSONLD\Schema\Mass
      * @return static
      **/
     public function setTransFatContent($transFatContent): static {
@@ -214,7 +214,7 @@ class NutritionInformation extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Mass
      **/
     public function getTransFatContent() {
         return $this->properties['transFatContent'];
@@ -222,7 +222,7 @@ class NutritionInformation extends StructuredValue
     /**
      * The number of calories.
      *
-     * @param $calories 
+     * @param $calories \LengthOfRope\JSONLD\Schema\Energy
      * @return static
      **/
     public function setCalories($calories): static {
@@ -232,7 +232,7 @@ class NutritionInformation extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Energy
      **/
     public function getCalories() {
         return $this->properties['calories'];
@@ -240,7 +240,7 @@ class NutritionInformation extends StructuredValue
     /**
      * The number of grams of sugar.
      *
-     * @param $sugarContent 
+     * @param $sugarContent \LengthOfRope\JSONLD\Schema\Mass
      * @return static
      **/
     public function setSugarContent($sugarContent): static {
@@ -250,7 +250,7 @@ class NutritionInformation extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Mass
      **/
     public function getSugarContent() {
         return $this->properties['sugarContent'];

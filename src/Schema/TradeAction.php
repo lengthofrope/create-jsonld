@@ -65,7 +65,7 @@ class TradeAction extends Action
      * (U+0039)) rather than superficially similar Unicode symbols.
      *
      *
-     * @param $price |
+     * @param $price \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setPrice($price): static {
@@ -75,7 +75,7 @@ class TradeAction extends Action
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Number
      **/
     public function getPrice() {
         return $this->properties['price'];
@@ -84,7 +84,7 @@ class TradeAction extends Action
      * One or more detailed price specifications, indicating the unit price and
      * delivery or payment charges.
      *
-     * @param $priceSpecification 
+     * @param $priceSpecification \LengthOfRope\JSONLD\Schema\PriceSpecification
      * @return static
      **/
     public function setPriceSpecification($priceSpecification): static {
@@ -94,7 +94,7 @@ class TradeAction extends Action
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\PriceSpecification
      **/
     public function getPriceSpecification() {
         return $this->properties['priceSpecification'];
@@ -110,7 +110,7 @@ class TradeAction extends Action
      * Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and
      * other currency types, e.g. "Ithaca HOUR".
      *
-     * @param $priceCurrency 
+     * @param $priceCurrency \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setPriceCurrency($priceCurrency): static {
@@ -120,7 +120,7 @@ class TradeAction extends Action
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getPriceCurrency() {
         return $this->properties['priceCurrency'];

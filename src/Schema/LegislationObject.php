@@ -46,7 +46,7 @@ class LegislationObject extends Legislation
      * multiple files with different legal values. Typically a digitally signed PDF
      * have a "stronger" legal value than the HTML file of the same act.
      *
-     * @param $legislationLegalValue 
+     * @param $legislationLegalValue \LengthOfRope\JSONLD\Schema\LegalValueLevel
      * @return static
      **/
     public function setLegislationLegalValue($legislationLegalValue): static {
@@ -56,7 +56,7 @@ class LegislationObject extends Legislation
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\LegalValueLevel
      **/
     public function getLegislationLegalValue() {
         return $this->properties['legislationLegalValue'];

@@ -46,7 +46,7 @@ class SingleFamilyResidence extends House
      * room used by a single person).
      * Typical unit code(s): C62 for person.
      *
-     * @param $occupancy 
+     * @param $occupancy \LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setOccupancy($occupancy): static {
@@ -56,7 +56,7 @@ class SingleFamilyResidence extends House
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getOccupancy() {
         return $this->properties['occupancy'];
@@ -67,7 +67,7 @@ class SingleFamilyResidence extends House
      * Typical unit code(s): ROM for room or C62 for no unit. The type of room can be
      * put in the unitText property of the QuantitativeValue.
      *
-     * @param $numberOfRooms |
+     * @param $numberOfRooms \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setNumberOfRooms($numberOfRooms): static {
@@ -77,7 +77,7 @@ class SingleFamilyResidence extends House
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\Number
      **/
     public function getNumberOfRooms() {
         return $this->properties['numberOfRooms'];

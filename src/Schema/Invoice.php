@@ -42,7 +42,7 @@ class Invoice extends Intangible
     /**
      * Party placing the order or paying the invoice.
      *
-     * @param $customer |
+     * @param $customer \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setCustomer($customer): static {
@@ -52,7 +52,7 @@ class Invoice extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getCustomer() {
         return $this->properties['customer'];
@@ -60,7 +60,7 @@ class Invoice extends Intangible
     /**
      * The name of the credit card or other method of payment for the order.
      *
-     * @param $paymentMethod |
+     * @param $paymentMethod \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\PaymentMethod
      * @return static
      **/
     public function setPaymentMethod($paymentMethod): static {
@@ -70,7 +70,7 @@ class Invoice extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\PaymentMethod
      **/
     public function getPaymentMethod() {
         return $this->properties['paymentMethod'];
@@ -78,7 +78,7 @@ class Invoice extends Intangible
     /**
      * The date that payment is due.
      *
-     * @param $paymentDueDate |
+     * @param $paymentDueDate \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
      * @return static
      **/
     public function setPaymentDueDate($paymentDueDate): static {
@@ -88,7 +88,7 @@ class Invoice extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
      **/
     public function getPaymentDueDate() {
         return $this->properties['paymentDueDate'];
@@ -99,7 +99,7 @@ class Invoice extends Intangible
      * involved in an exchange.  If it is not clear whether an entity is a broker,
      * seller, or buyer, the latter two terms are preferred.
      *
-     * @param $broker |
+     * @param $broker \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setBroker($broker): static {
@@ -109,7 +109,7 @@ class Invoice extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\Person
      **/
     public function getBroker() {
         return $this->properties['broker'];
@@ -117,7 +117,7 @@ class Invoice extends Intangible
     /**
      * The total amount due.
      *
-     * @param $totalPaymentDue |
+     * @param $totalPaymentDue \LengthOfRope\JSONLD\Schema\PriceSpecification|\LengthOfRope\JSONLD\Schema\MonetaryAmount
      * @return static
      **/
     public function setTotalPaymentDue($totalPaymentDue): static {
@@ -127,7 +127,7 @@ class Invoice extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\PriceSpecification|\LengthOfRope\JSONLD\Schema\MonetaryAmount
      **/
     public function getTotalPaymentDue() {
         return $this->properties['totalPaymentDue'];
@@ -135,7 +135,7 @@ class Invoice extends Intangible
     /**
      * The date the invoice is scheduled to be paid.
      *
-     * @param $scheduledPaymentDate 
+     * @param $scheduledPaymentDate \LengthOfRope\JSONLD\DataType\Date
      * @return static
      **/
     public function setScheduledPaymentDate($scheduledPaymentDate): static {
@@ -145,7 +145,7 @@ class Invoice extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Date
      **/
     public function getScheduledPaymentDate() {
         return $this->properties['scheduledPaymentDate'];
@@ -154,7 +154,7 @@ class Invoice extends Intangible
      * An identifier for the method of payment used (e.g. the last 4 digits of the
      * credit card).
      *
-     * @param $paymentMethodId 
+     * @param $paymentMethodId \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setPaymentMethodId($paymentMethodId): static {
@@ -164,7 +164,7 @@ class Invoice extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getPaymentMethodId() {
         return $this->properties['paymentMethodId'];
@@ -172,7 +172,7 @@ class Invoice extends Intangible
     /**
      * The date that payment is due.
      *
-     * @param $paymentDue 
+     * @param $paymentDue \LengthOfRope\JSONLD\DataType\DateTime
      * @return static
      **/
     public function setPaymentDue($paymentDue): static {
@@ -182,7 +182,7 @@ class Invoice extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\DateTime
      **/
     public function getPaymentDue() {
         return $this->properties['paymentDue'];
@@ -190,7 +190,7 @@ class Invoice extends Intangible
     /**
      * The time interval used to compute the invoice.
      *
-     * @param $billingPeriod 
+     * @param $billingPeriod \LengthOfRope\JSONLD\Schema\Duration
      * @return static
      **/
     public function setBillingPeriod($billingPeriod): static {
@@ -200,7 +200,7 @@ class Invoice extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Duration
      **/
     public function getBillingPeriod() {
         return $this->properties['billingPeriod'];
@@ -208,7 +208,7 @@ class Invoice extends Intangible
     /**
      * A number that confirms the given order or payment has been received.
      *
-     * @param $confirmationNumber 
+     * @param $confirmationNumber \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setConfirmationNumber($confirmationNumber): static {
@@ -218,7 +218,7 @@ class Invoice extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getConfirmationNumber() {
         return $this->properties['confirmationNumber'];
@@ -226,7 +226,7 @@ class Invoice extends Intangible
     /**
      * The status of payment; whether the invoice has been paid or not.
      *
-     * @param $paymentStatus |
+     * @param $paymentStatus \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\PaymentStatusType
      * @return static
      **/
     public function setPaymentStatus($paymentStatus): static {
@@ -236,7 +236,7 @@ class Invoice extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\PaymentStatusType
      **/
     public function getPaymentStatus() {
         return $this->properties['paymentStatus'];
@@ -245,7 +245,7 @@ class Invoice extends Intangible
      * A category for the item. Greater signs or slashes can be used to informally
      * indicate a category hierarchy.
      *
-     * @param $category ||||
+     * @param $category \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\Schema\PhysicalActivityCategory|\LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setCategory($category): static {
@@ -255,7 +255,7 @@ class Invoice extends Intangible
     }
 
     /**
-     * @return ||||
+     * @return \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\Schema\PhysicalActivityCategory|\LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      **/
     public function getCategory() {
         return $this->properties['category'];
@@ -264,7 +264,7 @@ class Invoice extends Intangible
      * The Order(s) related to this Invoice. One or more Orders may be combined into a
      * single Invoice.
      *
-     * @param $referencesOrder 
+     * @param $referencesOrder \LengthOfRope\JSONLD\Schema\Order
      * @return static
      **/
     public function setReferencesOrder($referencesOrder): static {
@@ -274,7 +274,7 @@ class Invoice extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Order
      **/
     public function getReferencesOrder() {
         return $this->properties['referencesOrder'];
@@ -282,7 +282,7 @@ class Invoice extends Intangible
     /**
      * The identifier for the account the payment will be applied to.
      *
-     * @param $accountId 
+     * @param $accountId \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setAccountId($accountId): static {
@@ -292,7 +292,7 @@ class Invoice extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getAccountId() {
         return $this->properties['accountId'];
@@ -302,7 +302,7 @@ class Invoice extends Intangible
      * producer. Another party (a seller) may offer those services or goods on behalf
      * of the provider. A provider may also serve as the seller.
      *
-     * @param $provider |
+     * @param $provider \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setProvider($provider): static {
@@ -312,7 +312,7 @@ class Invoice extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getProvider() {
         return $this->properties['provider'];
@@ -320,7 +320,7 @@ class Invoice extends Intangible
     /**
      * The minimum payment required at this time.
      *
-     * @param $minimumPaymentDue |
+     * @param $minimumPaymentDue \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\Schema\PriceSpecification
      * @return static
      **/
     public function setMinimumPaymentDue($minimumPaymentDue): static {
@@ -330,7 +330,7 @@ class Invoice extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\Schema\PriceSpecification
      **/
     public function getMinimumPaymentDue() {
         return $this->properties['minimumPaymentDue'];

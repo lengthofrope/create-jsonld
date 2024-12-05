@@ -44,7 +44,7 @@ class WebPageElement extends CreativeWork
      * the latter case, multiple matches within a page can constitute a single
      * conceptual "Web page element".
      *
-     * @param $cssSelector 
+     * @param $cssSelector \LengthOfRope\JSONLD\Schema\CssSelectorType
      * @return static
      **/
     public function setCssSelector($cssSelector): static {
@@ -54,7 +54,7 @@ class WebPageElement extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\CssSelectorType
      **/
     public function getCssSelector() {
         return $this->properties['cssSelector'];
@@ -64,7 +64,7 @@ class WebPageElement extends CreativeWork
      * latter case, multiple matches within a page can constitute a single conceptual
      * "Web page element".
      *
-     * @param $xpath 
+     * @param $xpath \LengthOfRope\JSONLD\Schema\XPathType
      * @return static
      **/
     public function setXpath($xpath): static {
@@ -74,7 +74,7 @@ class WebPageElement extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\XPathType
      **/
     public function getXpath() {
         return $this->properties['xpath'];

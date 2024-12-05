@@ -43,7 +43,7 @@ class Permit extends Intangible
      * The organization issuing the item, for example a [[Permit]], [[Ticket]], or
      * [[Certification]].
      *
-     * @param $issuedBy 
+     * @param $issuedBy \LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setIssuedBy($issuedBy): static {
@@ -53,7 +53,7 @@ class Permit extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getIssuedBy() {
         return $this->properties['issuedBy'];
@@ -62,7 +62,7 @@ class Permit extends Intangible
      * The geographic area where the item is valid. Applies for example to a
      * [[Permit]], a [[Certification]], or an [[EducationalOccupationalCredential]].
      *
-     * @param $validIn 
+     * @param $validIn \LengthOfRope\JSONLD\Schema\AdministrativeArea
      * @return static
      **/
     public function setValidIn($validIn): static {
@@ -72,7 +72,7 @@ class Permit extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\AdministrativeArea
      **/
     public function getValidIn() {
         return $this->properties['validIn'];
@@ -80,7 +80,7 @@ class Permit extends Intangible
     /**
      * The duration of validity of a permit or similar thing.
      *
-     * @param $validFor 
+     * @param $validFor \LengthOfRope\JSONLD\Schema\Duration
      * @return static
      **/
     public function setValidFor($validFor): static {
@@ -90,7 +90,7 @@ class Permit extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Duration
      **/
     public function getValidFor() {
         return $this->properties['validFor'];
@@ -98,7 +98,7 @@ class Permit extends Intangible
     /**
      * The service through which the permit was granted.
      *
-     * @param $issuedThrough 
+     * @param $issuedThrough \LengthOfRope\JSONLD\Schema\Service
      * @return static
      **/
     public function setIssuedThrough($issuedThrough): static {
@@ -108,7 +108,7 @@ class Permit extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Service
      **/
     public function getIssuedThrough() {
         return $this->properties['issuedThrough'];
@@ -116,7 +116,7 @@ class Permit extends Intangible
     /**
      * The date when the item is no longer valid.
      *
-     * @param $validUntil 
+     * @param $validUntil \LengthOfRope\JSONLD\DataType\Date
      * @return static
      **/
     public function setValidUntil($validUntil): static {
@@ -126,7 +126,7 @@ class Permit extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Date
      **/
     public function getValidUntil() {
         return $this->properties['validUntil'];
@@ -134,7 +134,7 @@ class Permit extends Intangible
     /**
      * The date when the item becomes valid.
      *
-     * @param $validFrom |
+     * @param $validFrom \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
      * @return static
      **/
     public function setValidFrom($validFrom): static {
@@ -144,7 +144,7 @@ class Permit extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
      **/
     public function getValidFrom() {
         return $this->properties['validFrom'];
@@ -152,7 +152,7 @@ class Permit extends Intangible
     /**
      * The target audience for this permit.
      *
-     * @param $permitAudience 
+     * @param $permitAudience \LengthOfRope\JSONLD\Schema\Audience
      * @return static
      **/
     public function setPermitAudience($permitAudience): static {
@@ -162,7 +162,7 @@ class Permit extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Audience
      **/
     public function getPermitAudience() {
         return $this->properties['permitAudience'];

@@ -44,7 +44,7 @@ class ReviewAction extends AssessAction
      * A sub property of result. The review that resulted in the performing of the
      * action.
      *
-     * @param $resultReview 
+     * @param $resultReview \LengthOfRope\JSONLD\Schema\Review
      * @return static
      **/
     public function setResultReview($resultReview): static {
@@ -54,7 +54,7 @@ class ReviewAction extends AssessAction
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Review
      **/
     public function getResultReview() {
         return $this->properties['resultReview'];

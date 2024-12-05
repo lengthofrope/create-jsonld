@@ -44,7 +44,7 @@ class MortgageLoan extends LoanOrCredit
      * Amount of mortgage mandate that can be converted into a proper mortgage at a
      * later stage.
      *
-     * @param $loanMortgageMandateAmount 
+     * @param $loanMortgageMandateAmount \LengthOfRope\JSONLD\Schema\MonetaryAmount
      * @return static
      **/
     public function setLoanMortgageMandateAmount($loanMortgageMandateAmount): static {
@@ -54,7 +54,7 @@ class MortgageLoan extends LoanOrCredit
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount
      **/
     public function getLoanMortgageMandateAmount() {
         return $this->properties['loanMortgageMandateAmount'];
@@ -63,7 +63,7 @@ class MortgageLoan extends LoanOrCredit
      * Whether borrower is a resident of the jurisdiction where the property is
      * located.
      *
-     * @param $domiciledMortgage 
+     * @param $domiciledMortgage \LengthOfRope\JSONLD\DataType\Boolean
      * @return static
      **/
     public function setDomiciledMortgage($domiciledMortgage): static {
@@ -73,7 +73,7 @@ class MortgageLoan extends LoanOrCredit
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Boolean
      **/
     public function getDomiciledMortgage() {
         return $this->properties['domiciledMortgage'];

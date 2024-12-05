@@ -44,7 +44,7 @@ class ProductModel extends Product
      * A pointer from a newer variant of a product  to its previous, often discontinued
      * predecessor.
      *
-     * @param $successorOf 
+     * @param $successorOf \LengthOfRope\JSONLD\Schema\ProductModel
      * @return static
      **/
     public function setSuccessorOf($successorOf): static {
@@ -54,7 +54,7 @@ class ProductModel extends Product
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\ProductModel
      **/
     public function getSuccessorOf() {
         return $this->properties['successorOf'];
@@ -63,7 +63,7 @@ class ProductModel extends Product
      * A pointer from a previous, often discontinued variant of the product to its
      * newer variant.
      *
-     * @param $predecessorOf 
+     * @param $predecessorOf \LengthOfRope\JSONLD\Schema\ProductModel
      * @return static
      **/
     public function setPredecessorOf($predecessorOf): static {
@@ -73,7 +73,7 @@ class ProductModel extends Product
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\ProductModel
      **/
     public function getPredecessorOf() {
         return $this->properties['predecessorOf'];
@@ -89,7 +89,7 @@ class ProductModel extends Product
      * values distinguish amongst those variants). When used with [[ProductGroup]],
      * this property can apply to any [[Product]] included in the group.
      *
-     * @param $isVariantOf |
+     * @param $isVariantOf \LengthOfRope\JSONLD\Schema\ProductModel|\LengthOfRope\JSONLD\Schema\ProductGroup
      * @return static
      **/
     public function setIsVariantOf($isVariantOf): static {
@@ -99,7 +99,7 @@ class ProductModel extends Product
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\ProductModel|\LengthOfRope\JSONLD\Schema\ProductGroup
      **/
     public function getIsVariantOf() {
         return $this->properties['isVariantOf'];

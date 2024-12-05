@@ -42,7 +42,7 @@ class AggregateRating extends Rating
     /**
      * The count of total number of ratings.
      *
-     * @param $ratingCount 
+     * @param $ratingCount \LengthOfRope\JSONLD\Schema\Integer
      * @return static
      **/
     public function setRatingCount($ratingCount): static {
@@ -52,7 +52,7 @@ class AggregateRating extends Rating
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Integer
      **/
     public function getRatingCount() {
         return $this->properties['ratingCount'];
@@ -60,7 +60,7 @@ class AggregateRating extends Rating
     /**
      * The count of total number of reviews.
      *
-     * @param $reviewCount 
+     * @param $reviewCount \LengthOfRope\JSONLD\Schema\Integer
      * @return static
      **/
     public function setReviewCount($reviewCount): static {
@@ -70,7 +70,7 @@ class AggregateRating extends Rating
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Integer
      **/
     public function getReviewCount() {
         return $this->properties['reviewCount'];
@@ -78,7 +78,7 @@ class AggregateRating extends Rating
     /**
      * The item that is being reviewed/rated.
      *
-     * @param $itemReviewed 
+     * @param $itemReviewed \LengthOfRope\JSONLD\Schema\Thing
      * @return static
      **/
     public function setItemReviewed($itemReviewed): static {
@@ -88,7 +88,7 @@ class AggregateRating extends Rating
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Thing
      **/
     public function getItemReviewed() {
         return $this->properties['itemReviewed'];

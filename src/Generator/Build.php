@@ -244,6 +244,14 @@ class Build
             // Multiline property comments
             foreach ($item->props as $key => $prop) {
                 $item->props[$key]['comment'] = $this->multiline($prop['comment'], 80, 5);
+                foreach($item->props[$key]['rangeIncludes'] as $rangeId => $range) {
+                    $item->props[$key]['rangeIncludes'][$rangeId] = str_replace('schema:', '', $range->{'@id'});
+                    if (in_array($item->props[$key]['rangeIncludes'][$rangeId], $this->dataTypes)) {
+                        $item->props[$key]['rangeIncludes'][$rangeId] = '\\LengthOfRope\\JSONLD\\DataType\\' . $item->props[$key]['rangeIncludes'][$rangeId];
+                    } else {
+                        $item->props[$key]['rangeIncludes'][$rangeId] = '\\LengthOfRope\\JSONLD\\Schema\\' . $item->props[$key]['rangeIncludes'][$rangeId];
+                    }
+                }
             }
 
             $content = $twig->render($tmpl, array(

@@ -43,7 +43,7 @@ class PlanAction extends OrganizeAction
     /**
      * The time the object is scheduled to.
      *
-     * @param $scheduledTime |
+     * @param $scheduledTime \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
      * @return static
      **/
     public function setScheduledTime($scheduledTime): static {
@@ -53,7 +53,7 @@ class PlanAction extends OrganizeAction
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
      **/
     public function getScheduledTime() {
         return $this->properties['scheduledTime'];

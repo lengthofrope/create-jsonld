@@ -43,7 +43,7 @@ class MedicalSignOrSymptom extends MedicalCondition
     /**
      * A possible treatment to address this condition, sign or symptom.
      *
-     * @param $possibleTreatment 
+     * @param $possibleTreatment \LengthOfRope\JSONLD\Schema\MedicalTherapy
      * @return static
      **/
     public function setPossibleTreatment($possibleTreatment): static {
@@ -53,7 +53,7 @@ class MedicalSignOrSymptom extends MedicalCondition
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MedicalTherapy
      **/
     public function getPossibleTreatment() {
         return $this->properties['possibleTreatment'];

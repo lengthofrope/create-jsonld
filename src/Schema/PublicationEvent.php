@@ -44,7 +44,7 @@ class PublicationEvent extends Event
     /**
      * An agent associated with the publication event.
      *
-     * @param $publishedBy |
+     * @param $publishedBy \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setPublishedBy($publishedBy): static {
@@ -54,7 +54,7 @@ class PublicationEvent extends Event
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getPublishedBy() {
         return $this->properties['publishedBy'];
@@ -62,7 +62,7 @@ class PublicationEvent extends Event
     /**
      * A broadcast service associated with the publication event.
      *
-     * @param $publishedOn 
+     * @param $publishedOn \LengthOfRope\JSONLD\Schema\BroadcastService
      * @return static
      **/
     public function setPublishedOn($publishedOn): static {
@@ -72,7 +72,7 @@ class PublicationEvent extends Event
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\BroadcastService
      **/
     public function getPublishedOn() {
         return $this->properties['publishedOn'];
@@ -80,7 +80,7 @@ class PublicationEvent extends Event
     /**
      * A flag to signal that the item, event, or place is accessible for free.
      *
-     * @param $free 
+     * @param $free \LengthOfRope\JSONLD\DataType\Boolean
      * @return static
      **/
     public function setFree($free): static {
@@ -90,7 +90,7 @@ class PublicationEvent extends Event
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Boolean
      **/
     public function getFree() {
         return $this->properties['free'];

@@ -45,7 +45,7 @@ class BuyAction extends TradeAction
      * An entity which offers (sells / leases / lends / loans) the services / goods.  A
      * seller may also be a provider.
      *
-     * @param $seller |
+     * @param $seller \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setSeller($seller): static {
@@ -55,7 +55,7 @@ class BuyAction extends TradeAction
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getSeller() {
         return $this->properties['seller'];
@@ -63,7 +63,7 @@ class BuyAction extends TradeAction
     /**
      * 'vendor' is an earlier term for 'seller'.
      *
-     * @param $vendor |
+     * @param $vendor \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setVendor($vendor): static {
@@ -73,7 +73,7 @@ class BuyAction extends TradeAction
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getVendor() {
         return $this->properties['vendor'];
@@ -81,7 +81,7 @@ class BuyAction extends TradeAction
     /**
      * The warranty promise(s) included in the offer.
      *
-     * @param $warrantyPromise 
+     * @param $warrantyPromise \LengthOfRope\JSONLD\Schema\WarrantyPromise
      * @return static
      **/
     public function setWarrantyPromise($warrantyPromise): static {
@@ -91,7 +91,7 @@ class BuyAction extends TradeAction
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\WarrantyPromise
      **/
     public function getWarrantyPromise() {
         return $this->properties['warrantyPromise'];

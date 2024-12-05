@@ -46,7 +46,7 @@ class GeoCoordinates extends StructuredValue
      * alpha-3](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) country code such as
      * "SGP" or a full country name such as "Singapore" can also be used.
      *
-     * @param $addressCountry |
+     * @param $addressCountry \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Country
      * @return static
      **/
     public function setAddressCountry($addressCountry): static {
@@ -56,7 +56,7 @@ class GeoCoordinates extends StructuredValue
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Country
      **/
     public function getAddressCountry() {
         return $this->properties['addressCountry'];
@@ -64,7 +64,7 @@ class GeoCoordinates extends StructuredValue
     /**
      * Physical address of the item.
      *
-     * @param $address |
+     * @param $address \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\PostalAddress
      * @return static
      **/
     public function setAddress($address): static {
@@ -74,7 +74,7 @@ class GeoCoordinates extends StructuredValue
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\PostalAddress
      **/
     public function getAddress() {
         return $this->properties['address'];
@@ -82,7 +82,7 @@ class GeoCoordinates extends StructuredValue
     /**
      * The postal code. For example, 94043.
      *
-     * @param $postalCode 
+     * @param $postalCode \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setPostalCode($postalCode): static {
@@ -92,7 +92,7 @@ class GeoCoordinates extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getPostalCode() {
         return $this->properties['postalCode'];
@@ -101,7 +101,7 @@ class GeoCoordinates extends StructuredValue
      * The latitude of a location. For example ```37.42242``` ([WGS
      * 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
      *
-     * @param $latitude |
+     * @param $latitude \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setLatitude($latitude): static {
@@ -111,7 +111,7 @@ class GeoCoordinates extends StructuredValue
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Number
      **/
     public function getLatitude() {
         return $this->properties['latitude'];
@@ -122,7 +122,7 @@ class GeoCoordinates extends StructuredValue
      * form 'NUMBER UNIT\_OF\_MEASUREMENT' (e.g., '1,000 m', '3,200 ft') while numbers
      * alone should be assumed to be a value in meters.
      *
-     * @param $elevation |
+     * @param $elevation \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setElevation($elevation): static {
@@ -132,7 +132,7 @@ class GeoCoordinates extends StructuredValue
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Number
      **/
     public function getElevation() {
         return $this->properties['elevation'];
@@ -141,7 +141,7 @@ class GeoCoordinates extends StructuredValue
      * The longitude of a location. For example ```-122.08585``` ([WGS
      * 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
      *
-     * @param $longitude |
+     * @param $longitude \LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setLongitude($longitude): static {
@@ -151,7 +151,7 @@ class GeoCoordinates extends StructuredValue
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getLongitude() {
         return $this->properties['longitude'];

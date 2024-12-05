@@ -58,7 +58,7 @@ class PaymentMethod extends Intangible
     /**
      * The type of a payment method.
      *
-     * @param $paymentMethodType 
+     * @param $paymentMethodType \LengthOfRope\JSONLD\Schema\PaymentMethodType
      * @return static
      **/
     public function setPaymentMethodType($paymentMethodType): static {
@@ -68,7 +68,7 @@ class PaymentMethod extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\PaymentMethodType
      **/
     public function getPaymentMethodType() {
         return $this->properties['paymentMethodType'];

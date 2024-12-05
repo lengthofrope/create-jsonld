@@ -42,7 +42,7 @@ class TrainTrip extends Trip
     /**
      * The name of the train (e.g. The Orient Express).
      *
-     * @param $trainName 
+     * @param $trainName \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setTrainName($trainName): static {
@@ -52,7 +52,7 @@ class TrainTrip extends Trip
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getTrainName() {
         return $this->properties['trainName'];
@@ -60,7 +60,7 @@ class TrainTrip extends Trip
     /**
      * The station where the train trip ends.
      *
-     * @param $arrivalStation 
+     * @param $arrivalStation \LengthOfRope\JSONLD\Schema\TrainStation
      * @return static
      **/
     public function setArrivalStation($arrivalStation): static {
@@ -70,7 +70,7 @@ class TrainTrip extends Trip
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\TrainStation
      **/
     public function getArrivalStation() {
         return $this->properties['arrivalStation'];
@@ -78,7 +78,7 @@ class TrainTrip extends Trip
     /**
      * The station from which the train departs.
      *
-     * @param $departureStation 
+     * @param $departureStation \LengthOfRope\JSONLD\Schema\TrainStation
      * @return static
      **/
     public function setDepartureStation($departureStation): static {
@@ -88,7 +88,7 @@ class TrainTrip extends Trip
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\TrainStation
      **/
     public function getDepartureStation() {
         return $this->properties['departureStation'];
@@ -96,7 +96,7 @@ class TrainTrip extends Trip
     /**
      * The unique identifier for the train.
      *
-     * @param $trainNumber 
+     * @param $trainNumber \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setTrainNumber($trainNumber): static {
@@ -106,7 +106,7 @@ class TrainTrip extends Trip
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getTrainNumber() {
         return $this->properties['trainNumber'];
@@ -114,7 +114,7 @@ class TrainTrip extends Trip
     /**
      * The platform from which the train departs.
      *
-     * @param $departurePlatform 
+     * @param $departurePlatform \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setDeparturePlatform($departurePlatform): static {
@@ -124,7 +124,7 @@ class TrainTrip extends Trip
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getDeparturePlatform() {
         return $this->properties['departurePlatform'];
@@ -132,7 +132,7 @@ class TrainTrip extends Trip
     /**
      * The platform where the train arrives.
      *
-     * @param $arrivalPlatform 
+     * @param $arrivalPlatform \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setArrivalPlatform($arrivalPlatform): static {
@@ -142,7 +142,7 @@ class TrainTrip extends Trip
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getArrivalPlatform() {
         return $this->properties['arrivalPlatform'];

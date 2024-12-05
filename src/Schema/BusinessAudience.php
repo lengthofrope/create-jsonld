@@ -43,7 +43,7 @@ class BusinessAudience extends Audience
     /**
      * The size of the business in annual revenue.
      *
-     * @param $yearlyRevenue 
+     * @param $yearlyRevenue \LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setYearlyRevenue($yearlyRevenue): static {
@@ -53,7 +53,7 @@ class BusinessAudience extends Audience
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getYearlyRevenue() {
         return $this->properties['yearlyRevenue'];
@@ -61,7 +61,7 @@ class BusinessAudience extends Audience
     /**
      * The age of the business.
      *
-     * @param $yearsInOperation 
+     * @param $yearsInOperation \LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setYearsInOperation($yearsInOperation): static {
@@ -71,7 +71,7 @@ class BusinessAudience extends Audience
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getYearsInOperation() {
         return $this->properties['yearsInOperation'];
@@ -79,7 +79,7 @@ class BusinessAudience extends Audience
     /**
      * The number of employees in an organization, e.g. business.
      *
-     * @param $numberOfEmployees 
+     * @param $numberOfEmployees \LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setNumberOfEmployees($numberOfEmployees): static {
@@ -89,7 +89,7 @@ class BusinessAudience extends Audience
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getNumberOfEmployees() {
         return $this->properties['numberOfEmployees'];

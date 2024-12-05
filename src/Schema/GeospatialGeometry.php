@@ -48,7 +48,7 @@ class GeospatialGeometry extends Intangible
      * boundary of one geometry intersects the exterior of the other" (a symmetric
      * relationship).
      *
-     * @param $geoEquals |
+     * @param $geoEquals \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
      * @return static
      **/
     public function setGeoEquals($geoEquals): static {
@@ -58,7 +58,7 @@ class GeospatialGeometry extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
      **/
     public function getGeoEquals() {
         return $this->properties['geoEquals'];
@@ -68,7 +68,7 @@ class GeospatialGeometry extends Intangible
      * relating a geometry to one that contains it, i.e. it is inside (i.e. within) its
      * interior. As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      *
-     * @param $geoWithin |
+     * @param $geoWithin \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
      * @return static
      **/
     public function setGeoWithin($geoWithin): static {
@@ -78,7 +78,7 @@ class GeospatialGeometry extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
      **/
     public function getGeoWithin() {
         return $this->properties['geoWithin'];
@@ -89,7 +89,7 @@ class GeospatialGeometry extends Intangible
      * of (the interior or boundary of) a". As defined in
      * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      *
-     * @param $geoCovers |
+     * @param $geoCovers \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
      * @return static
      **/
     public function setGeoCovers($geoCovers): static {
@@ -99,7 +99,7 @@ class GeospatialGeometry extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
      **/
     public function getGeoCovers() {
         return $this->properties['geoCovers'];
@@ -111,7 +111,7 @@ class GeospatialGeometry extends Intangible
      * than that of at least one of them". As defined in
      * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      *
-     * @param $geoCrosses |
+     * @param $geoCrosses \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
      * @return static
      **/
     public function setGeoCrosses($geoCrosses): static {
@@ -121,7 +121,7 @@ class GeospatialGeometry extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
      **/
     public function getGeoCrosses() {
         return $this->properties['geoCrosses'];
@@ -132,7 +132,7 @@ class GeospatialGeometry extends Intangible
      * some but not all points in common. As defined in
      * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      *
-     * @param $geoOverlaps |
+     * @param $geoOverlaps \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
      * @return static
      **/
     public function setGeoOverlaps($geoOverlaps): static {
@@ -142,7 +142,7 @@ class GeospatialGeometry extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
      **/
     public function getGeoOverlaps() {
         return $this->properties['geoOverlaps'];
@@ -153,7 +153,7 @@ class GeospatialGeometry extends Intangible
      * a set of disconnected geometries." (A symmetric relationship, as defined in
      * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).)
      *
-     * @param $geoDisjoint |
+     * @param $geoDisjoint \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
      * @return static
      **/
     public function setGeoDisjoint($geoDisjoint): static {
@@ -163,7 +163,7 @@ class GeospatialGeometry extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
      **/
     public function getGeoDisjoint() {
         return $this->properties['geoDisjoint'];
@@ -175,7 +175,7 @@ class GeospatialGeometry extends Intangible
      * b lies in the interior of a". As defined in
      * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      *
-     * @param $geoContains |
+     * @param $geoContains \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
      * @return static
      **/
     public function setGeoContains($geoContains): static {
@@ -185,7 +185,7 @@ class GeospatialGeometry extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
      **/
     public function getGeoContains() {
         return $this->properties['geoContains'];
@@ -196,7 +196,7 @@ class GeospatialGeometry extends Intangible
      * interior points." (A symmetric relationship, as defined in
      * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).)
      *
-     * @param $geoTouches |
+     * @param $geoTouches \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
      * @return static
      **/
     public function setGeoTouches($geoTouches): static {
@@ -206,7 +206,7 @@ class GeospatialGeometry extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
      **/
     public function getGeoTouches() {
         return $this->properties['geoTouches'];
@@ -216,7 +216,7 @@ class GeospatialGeometry extends Intangible
      * represent) have at least one point in common. As defined in
      * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      *
-     * @param $geoIntersects |
+     * @param $geoIntersects \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
      * @return static
      **/
     public function setGeoIntersects($geoIntersects): static {
@@ -226,7 +226,7 @@ class GeospatialGeometry extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
      **/
     public function getGeoIntersects() {
         return $this->properties['geoIntersects'];
@@ -236,7 +236,7 @@ class GeospatialGeometry extends Intangible
      * relating a geometry to another that covers it. As defined in
      * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      *
-     * @param $geoCoveredBy |
+     * @param $geoCoveredBy \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
      * @return static
      **/
     public function setGeoCoveredBy($geoCoveredBy): static {
@@ -246,7 +246,7 @@ class GeospatialGeometry extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
      **/
     public function getGeoCoveredBy() {
         return $this->properties['geoCoveredBy'];

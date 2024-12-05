@@ -45,7 +45,7 @@ class Rating extends Intangible
      * particularly applicable to ratings associated with "fact check" markup using
      * [[ClaimReview]].
      *
-     * @param $ratingExplanation 
+     * @param $ratingExplanation \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setRatingExplanation($ratingExplanation): static {
@@ -55,7 +55,7 @@ class Rating extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getRatingExplanation() {
         return $this->properties['ratingExplanation'];
@@ -63,7 +63,7 @@ class Rating extends Intangible
     /**
      * The highest value allowed in this rating system.
      *
-     * @param $bestRating |
+     * @param $bestRating \LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setBestRating($bestRating): static {
@@ -73,7 +73,7 @@ class Rating extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getBestRating() {
         return $this->properties['bestRating'];
@@ -83,7 +83,7 @@ class Rating extends Intangible
      * HTML 5 provides a special mechanism for indicating authorship via the rel tag.
      * That is equivalent to this and may be used interchangeably.
      *
-     * @param $author |
+     * @param $author \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setAuthor($author): static {
@@ -93,7 +93,7 @@ class Rating extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getAuthor() {
         return $this->properties['author'];
@@ -101,7 +101,7 @@ class Rating extends Intangible
     /**
      * This Review or Rating is relevant to this part or facet of the itemReviewed.
      *
-     * @param $reviewAspect 
+     * @param $reviewAspect \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setReviewAspect($reviewAspect): static {
@@ -111,7 +111,7 @@ class Rating extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getReviewAspect() {
         return $this->properties['reviewAspect'];
@@ -119,7 +119,7 @@ class Rating extends Intangible
     /**
      * The lowest value allowed in this rating system.
      *
-     * @param $worstRating |
+     * @param $worstRating \LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setWorstRating($worstRating): static {
@@ -129,7 +129,7 @@ class Rating extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getWorstRating() {
         return $this->properties['worstRating'];
@@ -144,7 +144,7 @@ class Rating extends Intangible
      * * Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal
      * point. Avoid using these symbols as a readability separator.
      *
-     * @param $ratingValue |
+     * @param $ratingValue \LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setRatingValue($ratingValue): static {
@@ -154,7 +154,7 @@ class Rating extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getRatingValue() {
         return $this->properties['ratingValue'];

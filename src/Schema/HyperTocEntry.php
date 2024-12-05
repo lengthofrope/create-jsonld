@@ -51,7 +51,7 @@ class HyperTocEntry extends CreativeWork
      * A media object that encodes this CreativeWork. This property is a synonym for
      * encoding.
      *
-     * @param $associatedMedia 
+     * @param $associatedMedia \LengthOfRope\JSONLD\Schema\MediaObject
      * @return static
      **/
     public function setAssociatedMedia($associatedMedia): static {
@@ -61,7 +61,7 @@ class HyperTocEntry extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MediaObject
      **/
     public function getAssociatedMedia() {
         return $this->properties['associatedMedia'];
@@ -70,7 +70,7 @@ class HyperTocEntry extends CreativeWork
      * A [[HyperTocEntry]] can have a [[tocContinuation]] indicated, which is another
      * [[HyperTocEntry]] that would be the default next item to play or render.
      *
-     * @param $tocContinuation 
+     * @param $tocContinuation \LengthOfRope\JSONLD\Schema\HyperTocEntry
      * @return static
      **/
     public function setTocContinuation($tocContinuation): static {
@@ -80,7 +80,7 @@ class HyperTocEntry extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\HyperTocEntry
      **/
     public function getTocContinuation() {
         return $this->properties['tocContinuation'];
@@ -89,7 +89,7 @@ class HyperTocEntry extends CreativeWork
      * Text of an utterances (spoken words, lyrics etc.) that occurs at a certain
      * section of a media object, represented as a [[HyperTocEntry]].
      *
-     * @param $utterances 
+     * @param $utterances \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setUtterances($utterances): static {
@@ -99,7 +99,7 @@ class HyperTocEntry extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getUtterances() {
         return $this->properties['utterances'];

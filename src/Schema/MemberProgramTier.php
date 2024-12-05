@@ -47,7 +47,7 @@ class MemberProgramTier extends Intangible
      * to spend a minimum amount to join the tier. If a tier is free to join then this
      * property does not need to be specified.
      *
-     * @param $hasTierRequirement |||
+     * @param $hasTierRequirement \LengthOfRope\JSONLD\Schema\CreditCard|\LengthOfRope\JSONLD\Schema\UnitPriceSpecification|\LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setHasTierRequirement($hasTierRequirement): static {
@@ -57,7 +57,7 @@ class MemberProgramTier extends Intangible
     }
 
     /**
-     * @return |||
+     * @return \LengthOfRope\JSONLD\Schema\CreditCard|\LengthOfRope\JSONLD\Schema\UnitPriceSpecification|\LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getHasTierRequirement() {
         return $this->properties['hasTierRequirement'];
@@ -67,7 +67,7 @@ class MemberProgramTier extends Intangible
      * can be used to express the units the points are issued in. (E.g. stars, miles,
      * etc.)
      *
-     * @param $membershipPointsEarned |
+     * @param $membershipPointsEarned \LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setMembershipPointsEarned($membershipPointsEarned): static {
@@ -77,7 +77,7 @@ class MemberProgramTier extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getMembershipPointsEarned() {
         return $this->properties['membershipPointsEarned'];
@@ -85,7 +85,7 @@ class MemberProgramTier extends Intangible
     /**
      * A member benefit for a particular tier of a loyalty program.
      *
-     * @param $hasTierBenefit 
+     * @param $hasTierBenefit \LengthOfRope\JSONLD\Schema\TierBenefitEnumeration
      * @return static
      **/
     public function setHasTierBenefit($hasTierBenefit): static {
@@ -95,7 +95,7 @@ class MemberProgramTier extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\TierBenefitEnumeration
      **/
     public function getHasTierBenefit() {
         return $this->properties['hasTierBenefit'];
@@ -103,7 +103,7 @@ class MemberProgramTier extends Intangible
     /**
      * The member program this tier is a part of.
      *
-     * @param $isTierOf 
+     * @param $isTierOf \LengthOfRope\JSONLD\Schema\MemberProgram
      * @return static
      **/
     public function setIsTierOf($isTierOf): static {
@@ -113,7 +113,7 @@ class MemberProgramTier extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MemberProgram
      **/
     public function getIsTierOf() {
         return $this->properties['isTierOf'];

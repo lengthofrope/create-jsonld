@@ -44,7 +44,7 @@ class ExercisePlan extends PhysicalActivity
     /**
      * How often one should break from the activity.
      *
-     * @param $restPeriods |
+     * @param $restPeriods \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setRestPeriods($restPeriods): static {
@@ -54,7 +54,7 @@ class ExercisePlan extends PhysicalActivity
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getRestPeriods() {
         return $this->properties['restPeriods'];
@@ -64,7 +64,7 @@ class ExercisePlan extends PhysicalActivity
      * articulated to the patient. This may include the order of exercises, the number
      * of repetitions of movement, quantitative distance, progressions over time, etc.
      *
-     * @param $additionalVariable 
+     * @param $additionalVariable \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setAdditionalVariable($additionalVariable): static {
@@ -74,7 +74,7 @@ class ExercisePlan extends PhysicalActivity
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getAdditionalVariable() {
         return $this->properties['additionalVariable'];
@@ -83,7 +83,7 @@ class ExercisePlan extends PhysicalActivity
      * Quantitative measure gauging the degree of force involved in the exercise, for
      * example, heartbeats per minute. May include the velocity of the movement.
      *
-     * @param $intensity |
+     * @param $intensity \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setIntensity($intensity): static {
@@ -93,7 +93,7 @@ class ExercisePlan extends PhysicalActivity
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getIntensity() {
         return $this->properties['intensity'];
@@ -101,7 +101,7 @@ class ExercisePlan extends PhysicalActivity
     /**
      * Number of times one should repeat the activity.
      *
-     * @param $repetitions |
+     * @param $repetitions \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setRepetitions($repetitions): static {
@@ -111,7 +111,7 @@ class ExercisePlan extends PhysicalActivity
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\Number
      **/
     public function getRepetitions() {
         return $this->properties['repetitions'];
@@ -119,7 +119,7 @@ class ExercisePlan extends PhysicalActivity
     /**
      * Length of time to engage in the activity.
      *
-     * @param $activityDuration |
+     * @param $activityDuration \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Duration
      * @return static
      **/
     public function setActivityDuration($activityDuration): static {
@@ -129,7 +129,7 @@ class ExercisePlan extends PhysicalActivity
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Duration
      **/
     public function getActivityDuration() {
         return $this->properties['activityDuration'];
@@ -138,7 +138,7 @@ class ExercisePlan extends PhysicalActivity
      * Quantitative measure of the physiologic output of the exercise; also referred to
      * as energy expenditure.
      *
-     * @param $workload |
+     * @param $workload \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Energy
      * @return static
      **/
     public function setWorkload($workload): static {
@@ -148,7 +148,7 @@ class ExercisePlan extends PhysicalActivity
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Energy
      **/
     public function getWorkload() {
         return $this->properties['workload'];
@@ -157,7 +157,7 @@ class ExercisePlan extends PhysicalActivity
      * Type(s) of exercise or activity, such as strength training, flexibility
      * training, aerobics, cardiac rehabilitation, etc.
      *
-     * @param $exerciseType 
+     * @param $exerciseType \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setExerciseType($exerciseType): static {
@@ -167,7 +167,7 @@ class ExercisePlan extends PhysicalActivity
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getExerciseType() {
         return $this->properties['exerciseType'];
@@ -175,7 +175,7 @@ class ExercisePlan extends PhysicalActivity
     /**
      * How often one should engage in the activity.
      *
-     * @param $activityFrequency |
+     * @param $activityFrequency \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setActivityFrequency($activityFrequency): static {
@@ -185,7 +185,7 @@ class ExercisePlan extends PhysicalActivity
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getActivityFrequency() {
         return $this->properties['activityFrequency'];

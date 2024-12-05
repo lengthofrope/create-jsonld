@@ -43,7 +43,7 @@ class CommunicateAction extends InteractAction
     /**
      * A sub property of instrument. The language used on this action.
      *
-     * @param $language 
+     * @param $language \LengthOfRope\JSONLD\Schema\Language
      * @return static
      **/
     public function setLanguage($language): static {
@@ -53,7 +53,7 @@ class CommunicateAction extends InteractAction
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Language
      **/
     public function getLanguage() {
         return $this->properties['language'];
@@ -62,7 +62,7 @@ class CommunicateAction extends InteractAction
      * A sub property of participant. The participant who is at the receiving end of
      * the action.
      *
-     * @param $recipient |||
+     * @param $recipient \LengthOfRope\JSONLD\Schema\Audience|\LengthOfRope\JSONLD\Schema\ContactPoint|\LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setRecipient($recipient): static {
@@ -72,7 +72,7 @@ class CommunicateAction extends InteractAction
     }
 
     /**
-     * @return |||
+     * @return \LengthOfRope\JSONLD\Schema\Audience|\LengthOfRope\JSONLD\Schema\ContactPoint|\LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getRecipient() {
         return $this->properties['recipient'];
@@ -80,7 +80,7 @@ class CommunicateAction extends InteractAction
     /**
      * The subject matter of the content.
      *
-     * @param $about 
+     * @param $about \LengthOfRope\JSONLD\Schema\Thing
      * @return static
      **/
     public function setAbout($about): static {
@@ -90,7 +90,7 @@ class CommunicateAction extends InteractAction
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Thing
      **/
     public function getAbout() {
         return $this->properties['about'];
@@ -100,7 +100,7 @@ class CommunicateAction extends InteractAction
      * of the language codes from the [IETF BCP 47
      * standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
      *
-     * @param $inLanguage |
+     * @param $inLanguage \LengthOfRope\JSONLD\Schema\Language|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setInLanguage($inLanguage): static {
@@ -110,7 +110,7 @@ class CommunicateAction extends InteractAction
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Language|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getInLanguage() {
         return $this->properties['inLanguage'];

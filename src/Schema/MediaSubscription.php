@@ -44,7 +44,7 @@ class MediaSubscription extends Intangible
      * An Offer which must be accepted before the user can perform the Action. For
      * example, the user may need to buy a movie before being able to watch it.
      *
-     * @param $expectsAcceptanceOf 
+     * @param $expectsAcceptanceOf \LengthOfRope\JSONLD\Schema\Offer
      * @return static
      **/
     public function setExpectsAcceptanceOf($expectsAcceptanceOf): static {
@@ -54,7 +54,7 @@ class MediaSubscription extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Offer
      **/
     public function getExpectsAcceptanceOf() {
         return $this->properties['expectsAcceptanceOf'];
@@ -64,7 +64,7 @@ class MediaSubscription extends Intangible
      * example, many media apps require a cable/satellite provider to authenticate your
      * subscription before playing media.
      *
-     * @param $authenticator 
+     * @param $authenticator \LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setAuthenticator($authenticator): static {
@@ -74,7 +74,7 @@ class MediaSubscription extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getAuthenticator() {
         return $this->properties['authenticator'];

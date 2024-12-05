@@ -45,7 +45,7 @@ class BroadcastService extends Service
      * e.g. 87-99. In addition a shortcut idiom is supported for frequencies of AM and
      * FM radio channels, e.g. "87 FM".
      *
-     * @param $broadcastFrequency |
+     * @param $broadcastFrequency \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\BroadcastFrequencySpecification
      * @return static
      **/
     public function setBroadcastFrequency($broadcastFrequency): static {
@@ -55,7 +55,7 @@ class BroadcastService extends Service
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\BroadcastFrequencySpecification
      **/
     public function getBroadcastFrequency() {
         return $this->properties['broadcastFrequency'];
@@ -64,7 +64,7 @@ class BroadcastService extends Service
      * The timezone in [ISO 8601 format](http://en.wikipedia.org/wiki/ISO_8601) for
      * which the service bases its broadcasts.
      *
-     * @param $broadcastTimezone 
+     * @param $broadcastTimezone \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setBroadcastTimezone($broadcastTimezone): static {
@@ -74,7 +74,7 @@ class BroadcastService extends Service
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getBroadcastTimezone() {
         return $this->properties['broadcastTimezone'];
@@ -82,7 +82,7 @@ class BroadcastService extends Service
     /**
      * The organization owning or operating the broadcast service.
      *
-     * @param $broadcaster 
+     * @param $broadcaster \LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setBroadcaster($broadcaster): static {
@@ -92,7 +92,7 @@ class BroadcastService extends Service
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getBroadcaster() {
         return $this->properties['broadcaster'];
@@ -101,7 +101,7 @@ class BroadcastService extends Service
      * A [callsign](https://en.wikipedia.org/wiki/Call_sign), as used in broadcasting
      * and radio communications to identify people, radio and TV stations, or vehicles.
      *
-     * @param $callSign 
+     * @param $callSign \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setCallSign($callSign): static {
@@ -111,7 +111,7 @@ class BroadcastService extends Service
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getCallSign() {
         return $this->properties['callSign'];
@@ -120,7 +120,7 @@ class BroadcastService extends Service
      * A broadcast service to which the broadcast service may belong to such as
      * regional variations of a national channel.
      *
-     * @param $parentService 
+     * @param $parentService \LengthOfRope\JSONLD\Schema\BroadcastService
      * @return static
      **/
     public function setParentService($parentService): static {
@@ -130,7 +130,7 @@ class BroadcastService extends Service
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\BroadcastService
      **/
     public function getParentService() {
         return $this->properties['parentService'];
@@ -138,7 +138,7 @@ class BroadcastService extends Service
     /**
      * The media network(s) whose content is broadcast on this station.
      *
-     * @param $broadcastAffiliateOf 
+     * @param $broadcastAffiliateOf \LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setBroadcastAffiliateOf($broadcastAffiliateOf): static {
@@ -148,7 +148,7 @@ class BroadcastService extends Service
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getBroadcastAffiliateOf() {
         return $this->properties['broadcastAffiliateOf'];
@@ -156,7 +156,7 @@ class BroadcastService extends Service
     /**
      * The type of screening or video broadcast used (e.g. IMAX, 3D, SD, HD, etc.).
      *
-     * @param $videoFormat 
+     * @param $videoFormat \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setVideoFormat($videoFormat): static {
@@ -166,7 +166,7 @@ class BroadcastService extends Service
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getVideoFormat() {
         return $this->properties['videoFormat'];
@@ -175,7 +175,7 @@ class BroadcastService extends Service
      * The name displayed in the channel guide. For many US affiliates, it is the
      * network name.
      *
-     * @param $broadcastDisplayName 
+     * @param $broadcastDisplayName \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setBroadcastDisplayName($broadcastDisplayName): static {
@@ -185,7 +185,7 @@ class BroadcastService extends Service
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getBroadcastDisplayName() {
         return $this->properties['broadcastDisplayName'];
@@ -193,7 +193,7 @@ class BroadcastService extends Service
     /**
      * A broadcast channel of a broadcast service.
      *
-     * @param $hasBroadcastChannel 
+     * @param $hasBroadcastChannel \LengthOfRope\JSONLD\Schema\BroadcastChannel
      * @return static
      **/
     public function setHasBroadcastChannel($hasBroadcastChannel): static {
@@ -203,7 +203,7 @@ class BroadcastService extends Service
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\BroadcastChannel
      **/
     public function getHasBroadcastChannel() {
         return $this->properties['hasBroadcastChannel'];
@@ -211,7 +211,7 @@ class BroadcastService extends Service
     /**
      * The area within which users can expect to reach the broadcast service.
      *
-     * @param $area 
+     * @param $area \LengthOfRope\JSONLD\Schema\Place
      * @return static
      **/
     public function setArea($area): static {
@@ -221,7 +221,7 @@ class BroadcastService extends Service
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Place
      **/
     public function getArea() {
         return $this->properties['area'];
@@ -231,7 +231,7 @@ class BroadcastService extends Service
      * of the language codes from the [IETF BCP 47
      * standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
      *
-     * @param $inLanguage |
+     * @param $inLanguage \LengthOfRope\JSONLD\Schema\Language|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setInLanguage($inLanguage): static {
@@ -241,7 +241,7 @@ class BroadcastService extends Service
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Language|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getInLanguage() {
         return $this->properties['inLanguage'];

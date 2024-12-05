@@ -60,7 +60,7 @@ class StatisticalPopulation extends Intangible
      * [[StatisticalPopulation]] or all cases within the scope of a
      * [[StatisticalVariable]].
      *
-     * @param $populationType 
+     * @param $populationType \LengthOfRope\JSONLD\Schema\Class
      * @return static
      **/
     public function setPopulationType($populationType): static {
@@ -70,7 +70,7 @@ class StatisticalPopulation extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Class
      **/
     public function getPopulationType() {
         return $this->properties['populationType'];

@@ -49,7 +49,7 @@ class MedicalObservationalStudy extends MedicalStudy
     /**
      * Specifics about the observational study design (enumerated).
      *
-     * @param $studyDesign 
+     * @param $studyDesign \LengthOfRope\JSONLD\Schema\MedicalObservationalStudyDesign
      * @return static
      **/
     public function setStudyDesign($studyDesign): static {
@@ -59,7 +59,7 @@ class MedicalObservationalStudy extends MedicalStudy
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MedicalObservationalStudyDesign
      **/
     public function getStudyDesign() {
         return $this->properties['studyDesign'];

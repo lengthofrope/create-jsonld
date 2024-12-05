@@ -50,7 +50,7 @@ class MedicalStudy extends MedicalEntity
      * A subject of the study, i.e. one of the medical conditions, therapies, devices,
      * drugs, etc. investigated by the study.
      *
-     * @param $studySubject 
+     * @param $studySubject \LengthOfRope\JSONLD\Schema\MedicalEntity
      * @return static
      **/
     public function setStudySubject($studySubject): static {
@@ -60,7 +60,7 @@ class MedicalStudy extends MedicalEntity
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MedicalEntity
      **/
     public function getStudySubject() {
         return $this->properties['studySubject'];
@@ -68,7 +68,7 @@ class MedicalStudy extends MedicalEntity
     /**
      * The status of the study (enumerated).
      *
-     * @param $status ||
+     * @param $status \LengthOfRope\JSONLD\Schema\MedicalStudyStatus|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EventStatusType
      * @return static
      **/
     public function setStatus($status): static {
@@ -78,7 +78,7 @@ class MedicalStudy extends MedicalEntity
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\Schema\MedicalStudyStatus|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EventStatusType
      **/
     public function getStatus() {
         return $this->properties['status'];
@@ -87,7 +87,7 @@ class MedicalStudy extends MedicalEntity
      * Specifying the health condition(s) of a patient, medical study, or other target
      * audience.
      *
-     * @param $healthCondition 
+     * @param $healthCondition \LengthOfRope\JSONLD\Schema\MedicalCondition
      * @return static
      **/
     public function setHealthCondition($healthCondition): static {
@@ -97,7 +97,7 @@ class MedicalStudy extends MedicalEntity
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MedicalCondition
      **/
     public function getHealthCondition() {
         return $this->properties['healthCondition'];
@@ -105,7 +105,7 @@ class MedicalStudy extends MedicalEntity
     /**
      * The location in which the study is taking/took place.
      *
-     * @param $studyLocation 
+     * @param $studyLocation \LengthOfRope\JSONLD\Schema\AdministrativeArea
      * @return static
      **/
     public function setStudyLocation($studyLocation): static {
@@ -115,7 +115,7 @@ class MedicalStudy extends MedicalEntity
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\AdministrativeArea
      **/
     public function getStudyLocation() {
         return $this->properties['studyLocation'];
@@ -125,7 +125,7 @@ class MedicalStudy extends MedicalEntity
      * financial contribution. E.g. a sponsor of a Medical Study or a corporate sponsor
      * of an event.
      *
-     * @param $sponsor |
+     * @param $sponsor \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setSponsor($sponsor): static {
@@ -135,7 +135,7 @@ class MedicalStudy extends MedicalEntity
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getSponsor() {
         return $this->properties['sponsor'];

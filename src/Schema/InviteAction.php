@@ -42,7 +42,7 @@ class InviteAction extends CommunicateAction
     /**
      * Upcoming or past event associated with this place, organization, or action.
      *
-     * @param $event 
+     * @param $event \LengthOfRope\JSONLD\Schema\Event
      * @return static
      **/
     public function setEvent($event): static {
@@ -52,7 +52,7 @@ class InviteAction extends CommunicateAction
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Event
      **/
     public function getEvent() {
         return $this->properties['event'];

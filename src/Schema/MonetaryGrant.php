@@ -43,7 +43,7 @@ class MonetaryGrant extends Grant
      * A person or organization that supports (sponsors) something through some kind of
      * financial contribution.
      *
-     * @param $funder |
+     * @param $funder \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setFunder($funder): static {
@@ -53,7 +53,7 @@ class MonetaryGrant extends Grant
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getFunder() {
         return $this->properties['funder'];
@@ -61,7 +61,7 @@ class MonetaryGrant extends Grant
     /**
      * The amount of money.
      *
-     * @param $amount |
+     * @param $amount \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setAmount($amount): static {
@@ -71,7 +71,7 @@ class MonetaryGrant extends Grant
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\Number
      **/
     public function getAmount() {
         return $this->properties['amount'];

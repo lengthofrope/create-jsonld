@@ -43,7 +43,7 @@ class Patient extends Person
      * One or more alternative conditions considered in the differential diagnosis
      * process as output of a diagnosis process.
      *
-     * @param $diagnosis 
+     * @param $diagnosis \LengthOfRope\JSONLD\Schema\MedicalCondition
      * @return static
      **/
     public function setDiagnosis($diagnosis): static {
@@ -53,7 +53,7 @@ class Patient extends Person
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MedicalCondition
      **/
     public function getDiagnosis() {
         return $this->properties['diagnosis'];
@@ -61,7 +61,7 @@ class Patient extends Person
     /**
      * Specifying a drug or medicine used in a medication procedure.
      *
-     * @param $drug 
+     * @param $drug \LengthOfRope\JSONLD\Schema\Drug
      * @return static
      **/
     public function setDrug($drug): static {
@@ -71,7 +71,7 @@ class Patient extends Person
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Drug
      **/
     public function getDrug() {
         return $this->properties['drug'];
@@ -80,7 +80,7 @@ class Patient extends Person
      * Specifying the health condition(s) of a patient, medical study, or other target
      * audience.
      *
-     * @param $healthCondition 
+     * @param $healthCondition \LengthOfRope\JSONLD\Schema\MedicalCondition
      * @return static
      **/
     public function setHealthCondition($healthCondition): static {
@@ -90,7 +90,7 @@ class Patient extends Person
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MedicalCondition
      **/
     public function getHealthCondition() {
         return $this->properties['healthCondition'];

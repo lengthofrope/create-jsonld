@@ -42,7 +42,7 @@ class SportsEvent extends Event
     /**
      * A competitor in a sports event.
      *
-     * @param $competitor |
+     * @param $competitor \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\SportsTeam
      * @return static
      **/
     public function setCompetitor($competitor): static {
@@ -52,7 +52,7 @@ class SportsEvent extends Event
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\SportsTeam
      **/
     public function getCompetitor() {
         return $this->properties['competitor'];
@@ -60,7 +60,7 @@ class SportsEvent extends Event
     /**
      * The home team in a sports event.
      *
-     * @param $homeTeam |
+     * @param $homeTeam \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\SportsTeam
      * @return static
      **/
     public function setHomeTeam($homeTeam): static {
@@ -70,7 +70,7 @@ class SportsEvent extends Event
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\SportsTeam
      **/
     public function getHomeTeam() {
         return $this->properties['homeTeam'];
@@ -78,7 +78,7 @@ class SportsEvent extends Event
     /**
      * The away team in a sports event.
      *
-     * @param $awayTeam |
+     * @param $awayTeam \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\SportsTeam
      * @return static
      **/
     public function setAwayTeam($awayTeam): static {
@@ -88,7 +88,7 @@ class SportsEvent extends Event
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\SportsTeam
      **/
     public function getAwayTeam() {
         return $this->properties['awayTeam'];
@@ -96,7 +96,7 @@ class SportsEvent extends Event
     /**
      * A type of sport (e.g. Baseball).
      *
-     * @param $sport |
+     * @param $sport \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setSport($sport): static {
@@ -106,7 +106,7 @@ class SportsEvent extends Event
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      **/
     public function getSport() {
         return $this->properties['sport'];

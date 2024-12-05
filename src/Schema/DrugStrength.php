@@ -42,7 +42,7 @@ class DrugStrength extends MedicalIntangible
     /**
      * The units of an active ingredient's strength, e.g. mg.
      *
-     * @param $strengthUnit 
+     * @param $strengthUnit \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setStrengthUnit($strengthUnit): static {
@@ -52,7 +52,7 @@ class DrugStrength extends MedicalIntangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getStrengthUnit() {
         return $this->properties['strengthUnit'];
@@ -60,7 +60,7 @@ class DrugStrength extends MedicalIntangible
     /**
      * The value of an active ingredient's strength, e.g. 325.
      *
-     * @param $strengthValue 
+     * @param $strengthValue \LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setStrengthValue($strengthValue): static {
@@ -70,7 +70,7 @@ class DrugStrength extends MedicalIntangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Number
      **/
     public function getStrengthValue() {
         return $this->properties['strengthValue'];
@@ -78,7 +78,7 @@ class DrugStrength extends MedicalIntangible
     /**
      * The location in which the strength is available.
      *
-     * @param $availableIn 
+     * @param $availableIn \LengthOfRope\JSONLD\Schema\AdministrativeArea
      * @return static
      **/
     public function setAvailableIn($availableIn): static {
@@ -88,7 +88,7 @@ class DrugStrength extends MedicalIntangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\AdministrativeArea
      **/
     public function getAvailableIn() {
         return $this->properties['availableIn'];
@@ -97,7 +97,7 @@ class DrugStrength extends MedicalIntangible
      * Recommended intake of this supplement for a given population as defined by a
      * specific recommending authority.
      *
-     * @param $maximumIntake 
+     * @param $maximumIntake \LengthOfRope\JSONLD\Schema\MaximumDoseSchedule
      * @return static
      **/
     public function setMaximumIntake($maximumIntake): static {
@@ -107,7 +107,7 @@ class DrugStrength extends MedicalIntangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MaximumDoseSchedule
      **/
     public function getMaximumIntake() {
         return $this->properties['maximumIntake'];
@@ -115,7 +115,7 @@ class DrugStrength extends MedicalIntangible
     /**
      * An active ingredient, typically chemical compounds and/or biologic substances.
      *
-     * @param $activeIngredient 
+     * @param $activeIngredient \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setActiveIngredient($activeIngredient): static {
@@ -125,7 +125,7 @@ class DrugStrength extends MedicalIntangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getActiveIngredient() {
         return $this->properties['activeIngredient'];

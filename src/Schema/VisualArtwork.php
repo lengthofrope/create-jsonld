@@ -43,7 +43,7 @@ class VisualArtwork extends CreativeWork
      * A material used as a surface in some artwork, e.g. Canvas, Paper, Wood, Board,
      * etc.
      *
-     * @param $surface |
+     * @param $surface \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setSurface($surface): static {
@@ -53,7 +53,7 @@ class VisualArtwork extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getSurface() {
         return $this->properties['surface'];
@@ -62,7 +62,7 @@ class VisualArtwork extends CreativeWork
      * The individual who adds lettering, including speech balloons and sound effects,
      * to artwork.
      *
-     * @param $letterer 
+     * @param $letterer \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setLetterer($letterer): static {
@@ -72,7 +72,7 @@ class VisualArtwork extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
     public function getLetterer() {
         return $this->properties['letterer'];
@@ -81,7 +81,7 @@ class VisualArtwork extends CreativeWork
      * The individual who traces over the pencil drawings in ink after pencils are
      * complete.
      *
-     * @param $inker 
+     * @param $inker \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setInker($inker): static {
@@ -91,7 +91,7 @@ class VisualArtwork extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
     public function getInker() {
         return $this->properties['inker'];
@@ -101,7 +101,7 @@ class VisualArtwork extends CreativeWork
      * Cyanotype, Digital, Lithograph, DryPoint, Intaglio, Pastel, Woodcut, Pencil,
      * Mixed Media, etc.)
      *
-     * @param $artMedium |
+     * @param $artMedium \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setArtMedium($artMedium): static {
@@ -111,7 +111,7 @@ class VisualArtwork extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      **/
     public function getArtMedium() {
         return $this->properties['artMedium'];
@@ -119,7 +119,7 @@ class VisualArtwork extends CreativeWork
     /**
      * The individual who adds color to inked drawings.
      *
-     * @param $colorist 
+     * @param $colorist \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setColorist($colorist): static {
@@ -129,7 +129,7 @@ class VisualArtwork extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
     public function getColorist() {
         return $this->properties['colorist'];
@@ -139,7 +139,7 @@ class VisualArtwork extends CreativeWork
      * e.g. for a limited edition of 20 prints, 'artEdition' refers to the total number
      * of copies (in this example "20").
      *
-     * @param $artEdition |
+     * @param $artEdition \LengthOfRope\JSONLD\Schema\Integer|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setArtEdition($artEdition): static {
@@ -149,7 +149,7 @@ class VisualArtwork extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Integer|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getArtEdition() {
         return $this->properties['artEdition'];
@@ -157,7 +157,7 @@ class VisualArtwork extends CreativeWork
     /**
      * The supporting materials for the artwork, e.g. Canvas, Paper, Wood, Board, etc.
      *
-     * @param $artworkSurface |
+     * @param $artworkSurface \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setArtworkSurface($artworkSurface): static {
@@ -167,7 +167,7 @@ class VisualArtwork extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      **/
     public function getArtworkSurface() {
         return $this->properties['artworkSurface'];
@@ -177,7 +177,7 @@ class VisualArtwork extends CreativeWork
      * in a medium other than pencils or digital line art--for example, if the
      * primary artwork is done in watercolors or digital paints.
      *
-     * @param $artist 
+     * @param $artist \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setArtist($artist): static {
@@ -187,7 +187,7 @@ class VisualArtwork extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
     public function getArtist() {
         return $this->properties['artist'];
@@ -195,7 +195,7 @@ class VisualArtwork extends CreativeWork
     /**
      * The height of the item.
      *
-     * @param $height |
+     * @param $height \LengthOfRope\JSONLD\Schema\Distance|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setHeight($height): static {
@@ -205,7 +205,7 @@ class VisualArtwork extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Distance|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getHeight() {
         return $this->properties['height'];
@@ -213,7 +213,7 @@ class VisualArtwork extends CreativeWork
     /**
      * e.g. Painting, Drawing, Sculpture, Print, Photograph, Assemblage, Collage, etc.
      *
-     * @param $artform |
+     * @param $artform \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setArtform($artform): static {
@@ -223,7 +223,7 @@ class VisualArtwork extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      **/
     public function getArtform() {
         return $this->properties['artform'];
@@ -231,7 +231,7 @@ class VisualArtwork extends CreativeWork
     /**
      * The width of the item.
      *
-     * @param $width |
+     * @param $width \LengthOfRope\JSONLD\Schema\Distance|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setWidth($width): static {
@@ -241,7 +241,7 @@ class VisualArtwork extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Distance|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getWidth() {
         return $this->properties['width'];
@@ -249,7 +249,7 @@ class VisualArtwork extends CreativeWork
     /**
      * The individual who draws the primary narrative artwork.
      *
-     * @param $penciler 
+     * @param $penciler \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setPenciler($penciler): static {
@@ -259,7 +259,7 @@ class VisualArtwork extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
     public function getPenciler() {
         return $this->properties['penciler'];
@@ -267,7 +267,7 @@ class VisualArtwork extends CreativeWork
     /**
      * The weight of the product or person.
      *
-     * @param $weight 
+     * @param $weight \LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setWeight($weight): static {
@@ -277,7 +277,7 @@ class VisualArtwork extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getWeight() {
         return $this->properties['weight'];
@@ -285,7 +285,7 @@ class VisualArtwork extends CreativeWork
     /**
      * The depth of the item.
      *
-     * @param $depth |
+     * @param $depth \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Distance
      * @return static
      **/
     public function setDepth($depth): static {
@@ -295,7 +295,7 @@ class VisualArtwork extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Distance
      **/
     public function getDepth() {
         return $this->properties['depth'];

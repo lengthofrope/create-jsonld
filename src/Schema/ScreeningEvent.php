@@ -42,7 +42,7 @@ class ScreeningEvent extends Event
     /**
      * The type of screening or video broadcast used (e.g. IMAX, 3D, SD, HD, etc.).
      *
-     * @param $videoFormat 
+     * @param $videoFormat \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setVideoFormat($videoFormat): static {
@@ -52,7 +52,7 @@ class ScreeningEvent extends Event
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getVideoFormat() {
         return $this->properties['videoFormat'];
@@ -61,7 +61,7 @@ class ScreeningEvent extends Event
      * Languages in which subtitles/captions are available, in [IETF BCP 47 standard
      * format](http://tools.ietf.org/html/bcp47).
      *
-     * @param $subtitleLanguage |
+     * @param $subtitleLanguage \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Language
      * @return static
      **/
     public function setSubtitleLanguage($subtitleLanguage): static {
@@ -71,7 +71,7 @@ class ScreeningEvent extends Event
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Language
      **/
     public function getSubtitleLanguage() {
         return $this->properties['subtitleLanguage'];
@@ -79,7 +79,7 @@ class ScreeningEvent extends Event
     /**
      * The movie presented during this event.
      *
-     * @param $workPresented 
+     * @param $workPresented \LengthOfRope\JSONLD\Schema\Movie
      * @return static
      **/
     public function setWorkPresented($workPresented): static {
@@ -89,7 +89,7 @@ class ScreeningEvent extends Event
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Movie
      **/
     public function getWorkPresented() {
         return $this->properties['workPresented'];

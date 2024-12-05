@@ -43,7 +43,7 @@ class ConsumeAction extends Action
      * An Offer which must be accepted before the user can perform the Action. For
      * example, the user may need to buy a movie before being able to watch it.
      *
-     * @param $expectsAcceptanceOf 
+     * @param $expectsAcceptanceOf \LengthOfRope\JSONLD\Schema\Offer
      * @return static
      **/
     public function setExpectsAcceptanceOf($expectsAcceptanceOf): static {
@@ -53,7 +53,7 @@ class ConsumeAction extends Action
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Offer
      **/
     public function getExpectsAcceptanceOf() {
         return $this->properties['expectsAcceptanceOf'];
@@ -63,7 +63,7 @@ class ConsumeAction extends Action
      * more than one value is specified, fulfilling one set of requirements will allow
      * the Action to be performed.
      *
-     * @param $actionAccessibilityRequirement 
+     * @param $actionAccessibilityRequirement \LengthOfRope\JSONLD\Schema\ActionAccessSpecification
      * @return static
      **/
     public function setActionAccessibilityRequirement($actionAccessibilityRequirement): static {
@@ -73,7 +73,7 @@ class ConsumeAction extends Action
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\ActionAccessSpecification
      **/
     public function getActionAccessibilityRequirement() {
         return $this->properties['actionAccessibilityRequirement'];

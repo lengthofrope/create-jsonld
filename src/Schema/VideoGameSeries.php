@@ -44,7 +44,7 @@ class VideoGameSeries extends CreativeWorkSeries
      * in an event. Actors can be associated with individual items or with a series,
      * episode, clip.
      *
-     * @param $actor |
+     * @param $actor \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\PerformingGroup
      * @return static
      **/
     public function setActor($actor): static {
@@ -54,7 +54,7 @@ class VideoGameSeries extends CreativeWorkSeries
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\PerformingGroup
      **/
     public function getActor() {
         return $this->properties['actor'];
@@ -64,7 +64,7 @@ class VideoGameSeries extends CreativeWorkSeries
      * href="http://en.wikipedia.org/wiki/Category:Video_game_platforms">video
      * games</a>.
      *
-     * @param $gamePlatform ||
+     * @param $gamePlatform \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setGamePlatform($gamePlatform): static {
@@ -74,7 +74,7 @@ class VideoGameSeries extends CreativeWorkSeries
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      **/
     public function getGamePlatform() {
         return $this->properties['gamePlatform'];
@@ -82,7 +82,7 @@ class VideoGameSeries extends CreativeWorkSeries
     /**
      * The trailer of a movie or TV/radio series, season, episode, etc.
      *
-     * @param $trailer 
+     * @param $trailer \LengthOfRope\JSONLD\Schema\VideoObject
      * @return static
      **/
     public function setTrailer($trailer): static {
@@ -92,7 +92,7 @@ class VideoGameSeries extends CreativeWorkSeries
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\VideoObject
      **/
     public function getTrailer() {
         return $this->properties['trailer'];
@@ -101,7 +101,7 @@ class VideoGameSeries extends CreativeWorkSeries
      * An actor, e.g. in TV, radio, movie, video games etc. Actors can be associated
      * with individual items or with a series, episode, clip.
      *
-     * @param $actors 
+     * @param $actors \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setActors($actors): static {
@@ -111,7 +111,7 @@ class VideoGameSeries extends CreativeWorkSeries
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
     public function getActors() {
         return $this->properties['actors'];
@@ -119,7 +119,7 @@ class VideoGameSeries extends CreativeWorkSeries
     /**
      * A season that is part of the media series.
      *
-     * @param $containsSeason 
+     * @param $containsSeason \LengthOfRope\JSONLD\Schema\CreativeWorkSeason
      * @return static
      **/
     public function setContainsSeason($containsSeason): static {
@@ -129,7 +129,7 @@ class VideoGameSeries extends CreativeWorkSeries
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWorkSeason
      **/
     public function getContainsSeason() {
         return $this->properties['containsSeason'];
@@ -137,7 +137,7 @@ class VideoGameSeries extends CreativeWorkSeries
     /**
      * The number of seasons in this series.
      *
-     * @param $numberOfSeasons 
+     * @param $numberOfSeasons \LengthOfRope\JSONLD\Schema\Integer
      * @return static
      **/
     public function setNumberOfSeasons($numberOfSeasons): static {
@@ -147,7 +147,7 @@ class VideoGameSeries extends CreativeWorkSeries
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Integer
      **/
     public function getNumberOfSeasons() {
         return $this->properties['numberOfSeasons'];
@@ -156,7 +156,7 @@ class VideoGameSeries extends CreativeWorkSeries
      * The task that a player-controlled character, or group of characters may complete
      * in order to gain a reward.
      *
-     * @param $quest 
+     * @param $quest \LengthOfRope\JSONLD\Schema\Thing
      * @return static
      **/
     public function setQuest($quest): static {
@@ -166,7 +166,7 @@ class VideoGameSeries extends CreativeWorkSeries
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Thing
      **/
     public function getQuest() {
         return $this->properties['quest'];
@@ -174,7 +174,7 @@ class VideoGameSeries extends CreativeWorkSeries
     /**
      * An episode of a TV, radio or game media within a series or season.
      *
-     * @param $episode 
+     * @param $episode \LengthOfRope\JSONLD\Schema\Episode
      * @return static
      **/
     public function setEpisode($episode): static {
@@ -184,7 +184,7 @@ class VideoGameSeries extends CreativeWorkSeries
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Episode
      **/
     public function getEpisode() {
         return $this->properties['episode'];
@@ -192,7 +192,7 @@ class VideoGameSeries extends CreativeWorkSeries
     /**
      * Indicate how many people can play this game (minimum, maximum, or range).
      *
-     * @param $numberOfPlayers 
+     * @param $numberOfPlayers \LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setNumberOfPlayers($numberOfPlayers): static {
@@ -202,7 +202,7 @@ class VideoGameSeries extends CreativeWorkSeries
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getNumberOfPlayers() {
         return $this->properties['numberOfPlayers'];
@@ -211,7 +211,7 @@ class VideoGameSeries extends CreativeWorkSeries
      * A director of e.g. TV, radio, movie, video games etc. content. Directors can be
      * associated with individual items or with a series, episode, clip.
      *
-     * @param $directors 
+     * @param $directors \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setDirectors($directors): static {
@@ -221,7 +221,7 @@ class VideoGameSeries extends CreativeWorkSeries
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
     public function getDirectors() {
         return $this->properties['directors'];
@@ -229,7 +229,7 @@ class VideoGameSeries extends CreativeWorkSeries
     /**
      * Cheat codes to the game.
      *
-     * @param $cheatCode 
+     * @param $cheatCode \LengthOfRope\JSONLD\Schema\CreativeWork
      * @return static
      **/
     public function setCheatCode($cheatCode): static {
@@ -239,7 +239,7 @@ class VideoGameSeries extends CreativeWorkSeries
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork
      **/
     public function getCheatCode() {
         return $this->properties['cheatCode'];
@@ -247,7 +247,7 @@ class VideoGameSeries extends CreativeWorkSeries
     /**
      * A season in a media series.
      *
-     * @param $seasons 
+     * @param $seasons \LengthOfRope\JSONLD\Schema\CreativeWorkSeason
      * @return static
      **/
     public function setSeasons($seasons): static {
@@ -257,7 +257,7 @@ class VideoGameSeries extends CreativeWorkSeries
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWorkSeason
      **/
     public function getSeasons() {
         return $this->properties['seasons'];
@@ -266,7 +266,7 @@ class VideoGameSeries extends CreativeWorkSeries
      * An item is an object within the game world that can be collected by a player or,
      * occasionally, a non-player character.
      *
-     * @param $gameItem 
+     * @param $gameItem \LengthOfRope\JSONLD\Schema\Thing
      * @return static
      **/
     public function setGameItem($gameItem): static {
@@ -276,7 +276,7 @@ class VideoGameSeries extends CreativeWorkSeries
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Thing
      **/
     public function getGameItem() {
         return $this->properties['gameItem'];
@@ -284,7 +284,7 @@ class VideoGameSeries extends CreativeWorkSeries
     /**
      * Real or fictional location of the game (or part of game).
      *
-     * @param $gameLocation ||
+     * @param $gameLocation \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\PostalAddress|\LengthOfRope\JSONLD\Schema\Place
      * @return static
      **/
     public function setGameLocation($gameLocation): static {
@@ -294,7 +294,7 @@ class VideoGameSeries extends CreativeWorkSeries
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\PostalAddress|\LengthOfRope\JSONLD\Schema\Place
      **/
     public function getGameLocation() {
         return $this->properties['gameLocation'];
@@ -302,7 +302,7 @@ class VideoGameSeries extends CreativeWorkSeries
     /**
      * A season in a media series.
      *
-     * @param $season |
+     * @param $season \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\CreativeWorkSeason
      * @return static
      **/
     public function setSeason($season): static {
@@ -312,7 +312,7 @@ class VideoGameSeries extends CreativeWorkSeries
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\CreativeWorkSeason
      **/
     public function getSeason() {
         return $this->properties['season'];
@@ -321,7 +321,7 @@ class VideoGameSeries extends CreativeWorkSeries
      * The production company or studio responsible for the item, e.g. series, video
      * game, episode etc.
      *
-     * @param $productionCompany 
+     * @param $productionCompany \LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setProductionCompany($productionCompany): static {
@@ -331,7 +331,7 @@ class VideoGameSeries extends CreativeWorkSeries
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getProductionCompany() {
         return $this->properties['productionCompany'];
@@ -340,7 +340,7 @@ class VideoGameSeries extends CreativeWorkSeries
      * A piece of data that represents a particular aspect of a fictional character
      * (skill, power, character points, advantage, disadvantage).
      *
-     * @param $characterAttribute 
+     * @param $characterAttribute \LengthOfRope\JSONLD\Schema\Thing
      * @return static
      **/
     public function setCharacterAttribute($characterAttribute): static {
@@ -350,7 +350,7 @@ class VideoGameSeries extends CreativeWorkSeries
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Thing
      **/
     public function getCharacterAttribute() {
         return $this->properties['characterAttribute'];
@@ -359,7 +359,7 @@ class VideoGameSeries extends CreativeWorkSeries
      * Indicates whether this game is multi-player, co-op or single-player.  The game
      * can be marked as multi-player, co-op and single-player at the same time.
      *
-     * @param $playMode 
+     * @param $playMode \LengthOfRope\JSONLD\Schema\GamePlayMode
      * @return static
      **/
     public function setPlayMode($playMode): static {
@@ -369,7 +369,7 @@ class VideoGameSeries extends CreativeWorkSeries
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\GamePlayMode
      **/
     public function getPlayMode() {
         return $this->properties['playMode'];
@@ -379,7 +379,7 @@ class VideoGameSeries extends CreativeWorkSeries
      * Directors can be associated with individual items or with a series, episode,
      * clip.
      *
-     * @param $director 
+     * @param $director \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setDirector($director): static {
@@ -389,7 +389,7 @@ class VideoGameSeries extends CreativeWorkSeries
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
     public function getDirector() {
         return $this->properties['director'];
@@ -397,7 +397,7 @@ class VideoGameSeries extends CreativeWorkSeries
     /**
      * The number of episodes in this season or series.
      *
-     * @param $numberOfEpisodes 
+     * @param $numberOfEpisodes \LengthOfRope\JSONLD\Schema\Integer
      * @return static
      **/
     public function setNumberOfEpisodes($numberOfEpisodes): static {
@@ -407,7 +407,7 @@ class VideoGameSeries extends CreativeWorkSeries
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Integer
      **/
     public function getNumberOfEpisodes() {
         return $this->properties['numberOfEpisodes'];
@@ -415,7 +415,7 @@ class VideoGameSeries extends CreativeWorkSeries
     /**
      * The composer of the soundtrack.
      *
-     * @param $musicBy |
+     * @param $musicBy \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\MusicGroup
      * @return static
      **/
     public function setMusicBy($musicBy): static {
@@ -425,7 +425,7 @@ class VideoGameSeries extends CreativeWorkSeries
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\MusicGroup
      **/
     public function getMusicBy() {
         return $this->properties['musicBy'];
@@ -433,7 +433,7 @@ class VideoGameSeries extends CreativeWorkSeries
     /**
      * An episode of a TV/radio series or season.
      *
-     * @param $episodes 
+     * @param $episodes \LengthOfRope\JSONLD\Schema\Episode
      * @return static
      **/
     public function setEpisodes($episodes): static {
@@ -443,7 +443,7 @@ class VideoGameSeries extends CreativeWorkSeries
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Episode
      **/
     public function getEpisodes() {
         return $this->properties['episodes'];

@@ -43,7 +43,7 @@ class MedicalDevice extends MedicalEntity
      * A description of the procedure involved in setting up, using, and/or installing
      * the device.
      *
-     * @param $procedure 
+     * @param $procedure \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setProcedure($procedure): static {
@@ -53,7 +53,7 @@ class MedicalDevice extends MedicalEntity
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getProcedure() {
         return $this->properties['procedure'];
@@ -62,7 +62,7 @@ class MedicalDevice extends MedicalEntity
      * A description of the workup, testing, and other preparations required before
      * implanting this device.
      *
-     * @param $preOp 
+     * @param $preOp \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setPreOp($preOp): static {
@@ -72,7 +72,7 @@ class MedicalDevice extends MedicalEntity
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getPreOp() {
         return $this->properties['preOp'];
@@ -83,7 +83,7 @@ class MedicalDevice extends MedicalEntity
      * damage; requiring hospitalization; or otherwise life-threatening or requiring
      * immediate medical attention), tag it as a seriousAdverseOutcome instead.
      *
-     * @param $adverseOutcome 
+     * @param $adverseOutcome \LengthOfRope\JSONLD\Schema\MedicalEntity
      * @return static
      **/
     public function setAdverseOutcome($adverseOutcome): static {
@@ -93,7 +93,7 @@ class MedicalDevice extends MedicalEntity
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MedicalEntity
      **/
     public function getAdverseOutcome() {
         return $this->properties['adverseOutcome'];
@@ -101,7 +101,7 @@ class MedicalDevice extends MedicalEntity
     /**
      * A contraindication for this therapy.
      *
-     * @param $contraindication |
+     * @param $contraindication \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\MedicalContraindication
      * @return static
      **/
     public function setContraindication($contraindication): static {
@@ -111,7 +111,7 @@ class MedicalDevice extends MedicalEntity
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\MedicalContraindication
      **/
     public function getContraindication() {
         return $this->properties['contraindication'];
@@ -124,7 +124,7 @@ class MedicalDevice extends MedicalEntity
      * jeopardize the patient and may require medical or surgical intervention to
      * prevent one of the outcomes in this definition.
      *
-     * @param $seriousAdverseOutcome 
+     * @param $seriousAdverseOutcome \LengthOfRope\JSONLD\Schema\MedicalEntity
      * @return static
      **/
     public function setSeriousAdverseOutcome($seriousAdverseOutcome): static {
@@ -134,7 +134,7 @@ class MedicalDevice extends MedicalEntity
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MedicalEntity
      **/
     public function getSeriousAdverseOutcome() {
         return $this->properties['seriousAdverseOutcome'];
@@ -143,7 +143,7 @@ class MedicalDevice extends MedicalEntity
      * A description of the postoperative procedures, care, and/or followups for this
      * device.
      *
-     * @param $postOp 
+     * @param $postOp \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setPostOp($postOp): static {
@@ -153,7 +153,7 @@ class MedicalDevice extends MedicalEntity
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getPostOp() {
         return $this->properties['postOp'];

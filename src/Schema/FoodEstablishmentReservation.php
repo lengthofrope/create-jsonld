@@ -45,7 +45,7 @@ class FoodEstablishmentReservation extends Reservation
     /**
      * Number of people the reservation should accommodate.
      *
-     * @param $partySize |
+     * @param $partySize \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Integer
      * @return static
      **/
     public function setPartySize($partySize): static {
@@ -55,7 +55,7 @@ class FoodEstablishmentReservation extends Reservation
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Integer
      **/
     public function getPartySize() {
         return $this->properties['partySize'];
@@ -71,7 +71,7 @@ class FoodEstablishmentReservation extends Reservation
      * describing dates with times. This situation may be clarified in future
      * revisions.
      *
-     * @param $endTime |
+     * @param $endTime \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Time
      * @return static
      **/
     public function setEndTime($endTime): static {
@@ -81,7 +81,7 @@ class FoodEstablishmentReservation extends Reservation
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Time
      **/
     public function getEndTime() {
         return $this->properties['endTime'];
@@ -97,7 +97,7 @@ class FoodEstablishmentReservation extends Reservation
      * describing dates with times. This situation may be clarified in future
      * revisions.
      *
-     * @param $startTime |
+     * @param $startTime \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Time
      * @return static
      **/
     public function setStartTime($startTime): static {
@@ -107,7 +107,7 @@ class FoodEstablishmentReservation extends Reservation
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Time
      **/
     public function getStartTime() {
         return $this->properties['startTime'];

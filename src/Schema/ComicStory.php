@@ -47,7 +47,7 @@ class ComicStory extends CreativeWork
      * The individual who adds lettering, including speech balloons and sound effects,
      * to artwork.
      *
-     * @param $letterer 
+     * @param $letterer \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setLetterer($letterer): static {
@@ -57,7 +57,7 @@ class ComicStory extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
     public function getLetterer() {
         return $this->properties['letterer'];
@@ -66,7 +66,7 @@ class ComicStory extends CreativeWork
      * The individual who traces over the pencil drawings in ink after pencils are
      * complete.
      *
-     * @param $inker 
+     * @param $inker \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setInker($inker): static {
@@ -76,7 +76,7 @@ class ComicStory extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
     public function getInker() {
         return $this->properties['inker'];
@@ -84,7 +84,7 @@ class ComicStory extends CreativeWork
     /**
      * The individual who adds color to inked drawings.
      *
-     * @param $colorist 
+     * @param $colorist \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setColorist($colorist): static {
@@ -94,7 +94,7 @@ class ComicStory extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
     public function getColorist() {
         return $this->properties['colorist'];
@@ -104,7 +104,7 @@ class ComicStory extends CreativeWork
      * in a medium other than pencils or digital line art--for example, if the
      * primary artwork is done in watercolors or digital paints.
      *
-     * @param $artist 
+     * @param $artist \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setArtist($artist): static {
@@ -114,7 +114,7 @@ class ComicStory extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
     public function getArtist() {
         return $this->properties['artist'];
@@ -122,7 +122,7 @@ class ComicStory extends CreativeWork
     /**
      * The individual who draws the primary narrative artwork.
      *
-     * @param $penciler 
+     * @param $penciler \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setPenciler($penciler): static {
@@ -132,7 +132,7 @@ class ComicStory extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
     public function getPenciler() {
         return $this->properties['penciler'];

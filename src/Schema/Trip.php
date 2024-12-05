@@ -42,7 +42,7 @@ class Trip extends Intangible
     /**
      * The expected departure time.
      *
-     * @param $departureTime |
+     * @param $departureTime \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Time
      * @return static
      **/
     public function setDepartureTime($departureTime): static {
@@ -52,7 +52,7 @@ class Trip extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Time
      **/
     public function getDepartureTime() {
         return $this->properties['departureTime'];
@@ -61,7 +61,7 @@ class Trip extends Intangible
      * Identifies that this [[Trip]] is a subTrip of another Trip.  For example Day 1,
      * Day 2, etc. of a multi-day trip.
      *
-     * @param $partOfTrip 
+     * @param $partOfTrip \LengthOfRope\JSONLD\Schema\Trip
      * @return static
      **/
     public function setPartOfTrip($partOfTrip): static {
@@ -71,7 +71,7 @@ class Trip extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Trip
      **/
     public function getPartOfTrip() {
         return $this->properties['partOfTrip'];
@@ -79,7 +79,7 @@ class Trip extends Intangible
     /**
      * The location of origin of the trip, prior to any destination(s).
      *
-     * @param $tripOrigin 
+     * @param $tripOrigin \LengthOfRope\JSONLD\Schema\Place
      * @return static
      **/
     public function setTripOrigin($tripOrigin): static {
@@ -89,7 +89,7 @@ class Trip extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Place
      **/
     public function getTripOrigin() {
         return $this->properties['tripOrigin'];
@@ -98,7 +98,7 @@ class Trip extends Intangible
      * Destination(s) ( [[Place]] ) that make up a trip. For a trip where destination
      * order is important use [[ItemList]] to specify that order (see examples).
      *
-     * @param $itinerary |
+     * @param $itinerary \LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\Place
      * @return static
      **/
     public function setItinerary($itinerary): static {
@@ -108,7 +108,7 @@ class Trip extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\Place
      **/
     public function getItinerary() {
         return $this->properties['itinerary'];
@@ -116,7 +116,7 @@ class Trip extends Intangible
     /**
      * The expected arrival time.
      *
-     * @param $arrivalTime |
+     * @param $arrivalTime \LengthOfRope\JSONLD\DataType\Time|\LengthOfRope\JSONLD\DataType\DateTime
      * @return static
      **/
     public function setArrivalTime($arrivalTime): static {
@@ -126,7 +126,7 @@ class Trip extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Time|\LengthOfRope\JSONLD\DataType\DateTime
      **/
     public function getArrivalTime() {
         return $this->properties['arrivalTime'];
@@ -141,7 +141,7 @@ class Trip extends Intangible
      * Product, can clarify the nature of the offer.
      *
      *
-     * @param $offers |
+     * @param $offers \LengthOfRope\JSONLD\Schema\Offer|\LengthOfRope\JSONLD\Schema\Demand
      * @return static
      **/
     public function setOffers($offers): static {
@@ -151,7 +151,7 @@ class Trip extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Offer|\LengthOfRope\JSONLD\Schema\Demand
      **/
     public function getOffers() {
         return $this->properties['offers'];
@@ -161,7 +161,7 @@ class Trip extends Intangible
      * producer. Another party (a seller) may offer those services or goods on behalf
      * of the provider. A provider may also serve as the seller.
      *
-     * @param $provider |
+     * @param $provider \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setProvider($provider): static {
@@ -171,7 +171,7 @@ class Trip extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getProvider() {
         return $this->properties['provider'];
@@ -180,7 +180,7 @@ class Trip extends Intangible
      * Identifies a [[Trip]] that is a subTrip of this Trip.  For example Day 1, Day 2,
      * etc. of a multi-day trip.
      *
-     * @param $subTrip 
+     * @param $subTrip \LengthOfRope\JSONLD\Schema\Trip
      * @return static
      **/
     public function setSubTrip($subTrip): static {
@@ -190,7 +190,7 @@ class Trip extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Trip
      **/
     public function getSubTrip() {
         return $this->properties['subTrip'];

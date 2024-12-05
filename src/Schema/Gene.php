@@ -47,7 +47,7 @@ class Gene extends BioChemEntity
      * Tissue, organ, biological sample, etc in which activity of this gene has been
      * observed experimentally. For example brain, digestive system.
      *
-     * @param $expressedIn |||
+     * @param $expressedIn \LengthOfRope\JSONLD\Schema\AnatomicalStructure|\LengthOfRope\JSONLD\Schema\AnatomicalSystem|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\BioChemEntity
      * @return static
      **/
     public function setExpressedIn($expressedIn): static {
@@ -57,7 +57,7 @@ class Gene extends BioChemEntity
     }
 
     /**
-     * @return |||
+     * @return \LengthOfRope\JSONLD\Schema\AnatomicalStructure|\LengthOfRope\JSONLD\Schema\AnatomicalSystem|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\BioChemEntity
      **/
     public function getExpressedIn() {
         return $this->properties['expressedIn'];
@@ -66,7 +66,7 @@ class Gene extends BioChemEntity
      * A symbolic representation of a BioChemEntity. For example, a nucleotide sequence
      * of a Gene or an amino acid sequence of a Protein.
      *
-     * @param $hasBioPolymerSequence 
+     * @param $hasBioPolymerSequence \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setHasBioPolymerSequence($hasBioPolymerSequence): static {
@@ -76,7 +76,7 @@ class Gene extends BioChemEntity
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getHasBioPolymerSequence() {
         return $this->properties['hasBioPolymerSequence'];
@@ -84,7 +84,7 @@ class Gene extends BioChemEntity
     /**
      * Another BioChemEntity encoded by this one.
      *
-     * @param $encodesBioChemEntity 
+     * @param $encodesBioChemEntity \LengthOfRope\JSONLD\Schema\BioChemEntity
      * @return static
      **/
     public function setEncodesBioChemEntity($encodesBioChemEntity): static {
@@ -94,7 +94,7 @@ class Gene extends BioChemEntity
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\BioChemEntity
      **/
     public function getEncodesBioChemEntity() {
         return $this->properties['encodesBioChemEntity'];
@@ -102,7 +102,7 @@ class Gene extends BioChemEntity
     /**
      * Another gene which is a variation of this one.
      *
-     * @param $alternativeOf 
+     * @param $alternativeOf \LengthOfRope\JSONLD\Schema\Gene
      * @return static
      **/
     public function setAlternativeOf($alternativeOf): static {
@@ -112,7 +112,7 @@ class Gene extends BioChemEntity
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Gene
      **/
     public function getAlternativeOf() {
         return $this->properties['alternativeOf'];

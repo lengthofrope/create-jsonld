@@ -42,7 +42,7 @@ class Audiobook extends AudioObject
     /**
      * A person who reads (performs) the audiobook.
      *
-     * @param $readBy 
+     * @param $readBy \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setReadBy($readBy): static {
@@ -52,7 +52,7 @@ class Audiobook extends AudioObject
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
     public function getReadBy() {
         return $this->properties['readBy'];
@@ -61,7 +61,7 @@ class Audiobook extends AudioObject
      * The duration of the item (movie, audio recording, event, etc.) in [ISO 8601
      * duration format](http://en.wikipedia.org/wiki/ISO_8601).
      *
-     * @param $duration 
+     * @param $duration \LengthOfRope\JSONLD\Schema\Duration
      * @return static
      **/
     public function setDuration($duration): static {
@@ -71,7 +71,7 @@ class Audiobook extends AudioObject
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Duration
      **/
     public function getDuration() {
         return $this->properties['duration'];

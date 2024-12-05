@@ -46,7 +46,7 @@ class WorkBasedProgram extends EducationalOccupationalProgram
     /**
      * The estimated salary earned while in the program.
      *
-     * @param $trainingSalary 
+     * @param $trainingSalary \LengthOfRope\JSONLD\Schema\MonetaryAmountDistribution
      * @return static
      **/
     public function setTrainingSalary($trainingSalary): static {
@@ -56,7 +56,7 @@ class WorkBasedProgram extends EducationalOccupationalProgram
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmountDistribution
      **/
     public function getTrainingSalary() {
         return $this->properties['trainingSalary'];
@@ -72,7 +72,7 @@ class WorkBasedProgram extends EducationalOccupationalProgram
      * Note: for historical reasons, any textual label and formal code provided as a
      * literal may be assumed to be from O*NET-SOC.
      *
-     * @param $occupationalCategory |
+     * @param $occupationalCategory \LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setOccupationalCategory($occupationalCategory): static {
@@ -82,7 +82,7 @@ class WorkBasedProgram extends EducationalOccupationalProgram
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getOccupationalCategory() {
         return $this->properties['occupationalCategory'];

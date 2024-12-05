@@ -42,7 +42,7 @@ class QuantitativeValueDistribution extends StructuredValue
     /**
      * The 90th percentile value.
      *
-     * @param $percentile90 
+     * @param $percentile90 \LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setPercentile90($percentile90): static {
@@ -52,7 +52,7 @@ class QuantitativeValueDistribution extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Number
      **/
     public function getPercentile90() {
         return $this->properties['percentile90'];
@@ -60,7 +60,7 @@ class QuantitativeValueDistribution extends StructuredValue
     /**
      * The 10th percentile value.
      *
-     * @param $percentile10 
+     * @param $percentile10 \LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setPercentile10($percentile10): static {
@@ -70,7 +70,7 @@ class QuantitativeValueDistribution extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Number
      **/
     public function getPercentile10() {
         return $this->properties['percentile10'];
@@ -78,7 +78,7 @@ class QuantitativeValueDistribution extends StructuredValue
     /**
      * The median value.
      *
-     * @param $median 
+     * @param $median \LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setMedian($median): static {
@@ -88,7 +88,7 @@ class QuantitativeValueDistribution extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Number
      **/
     public function getMedian() {
         return $this->properties['median'];
@@ -97,7 +97,7 @@ class QuantitativeValueDistribution extends StructuredValue
      * The duration of the item (movie, audio recording, event, etc.) in [ISO 8601
      * duration format](http://en.wikipedia.org/wiki/ISO_8601).
      *
-     * @param $duration 
+     * @param $duration \LengthOfRope\JSONLD\Schema\Duration
      * @return static
      **/
     public function setDuration($duration): static {
@@ -107,7 +107,7 @@ class QuantitativeValueDistribution extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Duration
      **/
     public function getDuration() {
         return $this->properties['duration'];
@@ -115,7 +115,7 @@ class QuantitativeValueDistribution extends StructuredValue
     /**
      * The 75th percentile value.
      *
-     * @param $percentile75 
+     * @param $percentile75 \LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setPercentile75($percentile75): static {
@@ -125,7 +125,7 @@ class QuantitativeValueDistribution extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Number
      **/
     public function getPercentile75() {
         return $this->properties['percentile75'];
@@ -133,7 +133,7 @@ class QuantitativeValueDistribution extends StructuredValue
     /**
      * The 25th percentile value.
      *
-     * @param $percentile25 
+     * @param $percentile25 \LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setPercentile25($percentile25): static {
@@ -143,7 +143,7 @@ class QuantitativeValueDistribution extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Number
      **/
     public function getPercentile25() {
         return $this->properties['percentile25'];

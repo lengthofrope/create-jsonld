@@ -50,7 +50,7 @@ class Legislation extends CreativeWork
      * relationships, use the <a
      * href="/legislationConsolidates">legislationConsolidates</a> property.
      *
-     * @param $legislationChanges 
+     * @param $legislationChanges \LengthOfRope\JSONLD\Schema\Legislation
      * @return static
      **/
     public function setLegislationChanges($legislationChanges): static {
@@ -60,7 +60,7 @@ class Legislation extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Legislation
      **/
     public function getLegislationChanges() {
         return $this->properties['legislationChanges'];
@@ -69,7 +69,7 @@ class Legislation extends CreativeWork
      * Whether the legislation is currently in force, not in force, or partially in
      * force.
      *
-     * @param $legislationLegalForce 
+     * @param $legislationLegalForce \LengthOfRope\JSONLD\Schema\LegalForceStatus
      * @return static
      **/
     public function setLegislationLegalForce($legislationLegalForce): static {
@@ -79,7 +79,7 @@ class Legislation extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\LegalForceStatus
      **/
     public function getLegislationLegalForce() {
         return $this->properties['legislationLegalForce'];
@@ -87,7 +87,7 @@ class Legislation extends CreativeWork
     /**
      * The jurisdiction from which the legislation originates.
      *
-     * @param $legislationJurisdiction |
+     * @param $legislationJurisdiction \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\AdministrativeArea
      * @return static
      **/
     public function setLegislationJurisdiction($legislationJurisdiction): static {
@@ -97,7 +97,7 @@ class Legislation extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\AdministrativeArea
      **/
     public function getLegislationJurisdiction() {
         return $this->properties['legislationJurisdiction'];
@@ -110,7 +110,7 @@ class Legislation extends CreativeWork
      * example an informative consolidated law of a European Union's member state
      * "applies" the consolidated version of the European Directive implemented in it.
      *
-     * @param $legislationApplies 
+     * @param $legislationApplies \LengthOfRope\JSONLD\Schema\Legislation
      * @return static
      **/
     public function setLegislationApplies($legislationApplies): static {
@@ -120,7 +120,7 @@ class Legislation extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Legislation
      **/
     public function getLegislationApplies() {
         return $this->properties['legislationApplies'];
@@ -129,7 +129,7 @@ class Legislation extends CreativeWork
      * Indicates a legal jurisdiction, e.g. of some legislation, or where some
      * government service is based.
      *
-     * @param $jurisdiction |
+     * @param $jurisdiction \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\AdministrativeArea
      * @return static
      **/
     public function setJurisdiction($jurisdiction): static {
@@ -139,7 +139,7 @@ class Legislation extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\AdministrativeArea
      **/
     public function getJurisdiction() {
         return $this->properties['jurisdiction'];
@@ -151,7 +151,7 @@ class Legislation extends CreativeWork
      * the original version or the previous consolidated version, and to the
      * legislations making the change.
      *
-     * @param $legislationConsolidates 
+     * @param $legislationConsolidates \LengthOfRope\JSONLD\Schema\Legislation
      * @return static
      **/
     public function setLegislationConsolidates($legislationConsolidates): static {
@@ -161,7 +161,7 @@ class Legislation extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Legislation
      **/
     public function getLegislationConsolidates() {
         return $this->properties['legislationConsolidates'];
@@ -171,7 +171,7 @@ class Legislation extends CreativeWork
      * the text is officially aknowledged to be a legislation, even though it might not
      * even be published or in force.
      *
-     * @param $legislationDate 
+     * @param $legislationDate \LengthOfRope\JSONLD\DataType\Date
      * @return static
      **/
     public function setLegislationDate($legislationDate): static {
@@ -181,7 +181,7 @@ class Legislation extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Date
      **/
     public function getLegislationDate() {
         return $this->properties['legislationDate'];
@@ -191,7 +191,7 @@ class Legislation extends CreativeWork
      * parliament (for primary legislation) or government (for secondary legislation).
      * This indicates the "legal author" of the law, as opposed to its physical author.
      *
-     * @param $legislationPassedBy |
+     * @param $legislationPassedBy \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setLegislationPassedBy($legislationPassedBy): static {
@@ -201,7 +201,7 @@ class Legislation extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getLegislationPassedBy() {
         return $this->properties['legislationPassedBy'];
@@ -211,7 +211,7 @@ class Legislation extends CreativeWork
      * like the CELEX at EU level or the NOR in France, or a web-based, URL/URI
      * identifier, like an ELI (European Legislation Identifier) or an URN-Lex.
      *
-     * @param $legislationIdentifier |
+     * @param $legislationIdentifier \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setLegislationIdentifier($legislationIdentifier): static {
@@ -221,7 +221,7 @@ class Legislation extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      **/
     public function getLegislationIdentifier() {
         return $this->properties['legislationIdentifier'];
@@ -233,7 +233,7 @@ class Legislation extends CreativeWork
      * transpose European Directives. This indicates a legally binding link between the
      * 2 legislations.
      *
-     * @param $legislationTransposes 
+     * @param $legislationTransposes \LengthOfRope\JSONLD\Schema\Legislation
      * @return static
      **/
     public function setLegislationTransposes($legislationTransposes): static {
@@ -243,7 +243,7 @@ class Legislation extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Legislation
      **/
     public function getLegislationTransposes() {
         return $this->properties['legislationTransposes'];
@@ -253,7 +253,7 @@ class Legislation extends CreativeWork
      * (e.g.: when looking at the law on the 2016-04-07 (= dateVersion), I get the
      * consolidation of 2015-04-12 of the "National Insurance Contributions Act 2015")
      *
-     * @param $legislationDateVersion 
+     * @param $legislationDateVersion \LengthOfRope\JSONLD\DataType\Date
      * @return static
      **/
     public function setLegislationDateVersion($legislationDateVersion): static {
@@ -263,7 +263,7 @@ class Legislation extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Date
      **/
     public function getLegislationDateVersion() {
         return $this->properties['legislationDateVersion'];
@@ -273,7 +273,7 @@ class Legislation extends CreativeWork
      * "decree", "regulation", "statutory instrument", "loi organique", "règlement
      * grand-ducal", etc., depending on the country.
      *
-     * @param $legislationType |
+     * @param $legislationType \LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setLegislationType($legislationType): static {
@@ -283,7 +283,7 @@ class Legislation extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getLegislationType() {
         return $this->properties['legislationType'];
@@ -294,7 +294,7 @@ class Legislation extends CreativeWork
      * legislation, or the adressee for potential questions about the legislation once
      * it is published.
      *
-     * @param $legislationResponsible |
+     * @param $legislationResponsible \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setLegislationResponsible($legislationResponsible): static {
@@ -304,7 +304,7 @@ class Legislation extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getLegislationResponsible() {
         return $this->properties['legislationResponsible'];

@@ -42,7 +42,7 @@ class MusicRecording extends CreativeWork
     /**
      * The playlist to which this recording belongs.
      *
-     * @param $inPlaylist 
+     * @param $inPlaylist \LengthOfRope\JSONLD\Schema\MusicPlaylist
      * @return static
      **/
     public function setInPlaylist($inPlaylist): static {
@@ -52,7 +52,7 @@ class MusicRecording extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MusicPlaylist
      **/
     public function getInPlaylist() {
         return $this->properties['inPlaylist'];
@@ -60,7 +60,7 @@ class MusicRecording extends CreativeWork
     /**
      * The International Standard Recording Code for the recording.
      *
-     * @param $isrcCode 
+     * @param $isrcCode \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setIsrcCode($isrcCode): static {
@@ -70,7 +70,7 @@ class MusicRecording extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getIsrcCode() {
         return $this->properties['isrcCode'];
@@ -78,7 +78,7 @@ class MusicRecording extends CreativeWork
     /**
      * The artist that performed this album or recording.
      *
-     * @param $byArtist |
+     * @param $byArtist \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\MusicGroup
      * @return static
      **/
     public function setByArtist($byArtist): static {
@@ -88,7 +88,7 @@ class MusicRecording extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\MusicGroup
      **/
     public function getByArtist() {
         return $this->properties['byArtist'];
@@ -97,7 +97,7 @@ class MusicRecording extends CreativeWork
      * The duration of the item (movie, audio recording, event, etc.) in [ISO 8601
      * duration format](http://en.wikipedia.org/wiki/ISO_8601).
      *
-     * @param $duration 
+     * @param $duration \LengthOfRope\JSONLD\Schema\Duration
      * @return static
      **/
     public function setDuration($duration): static {
@@ -107,7 +107,7 @@ class MusicRecording extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Duration
      **/
     public function getDuration() {
         return $this->properties['duration'];
@@ -115,7 +115,7 @@ class MusicRecording extends CreativeWork
     /**
      * The composition this track is a recording of.
      *
-     * @param $recordingOf 
+     * @param $recordingOf \LengthOfRope\JSONLD\Schema\MusicComposition
      * @return static
      **/
     public function setRecordingOf($recordingOf): static {
@@ -125,7 +125,7 @@ class MusicRecording extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MusicComposition
      **/
     public function getRecordingOf() {
         return $this->properties['recordingOf'];
@@ -133,7 +133,7 @@ class MusicRecording extends CreativeWork
     /**
      * The album to which this recording belongs.
      *
-     * @param $inAlbum 
+     * @param $inAlbum \LengthOfRope\JSONLD\Schema\MusicAlbum
      * @return static
      **/
     public function setInAlbum($inAlbum): static {
@@ -143,7 +143,7 @@ class MusicRecording extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MusicAlbum
      **/
     public function getInAlbum() {
         return $this->properties['inAlbum'];

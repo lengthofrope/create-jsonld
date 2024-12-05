@@ -43,7 +43,7 @@ class PeopleAudience extends Audience
     /**
      * Audiences defined by a person's minimum age.
      *
-     * @param $requiredMinAge 
+     * @param $requiredMinAge \LengthOfRope\JSONLD\Schema\Integer
      * @return static
      **/
     public function setRequiredMinAge($requiredMinAge): static {
@@ -53,7 +53,7 @@ class PeopleAudience extends Audience
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Integer
      **/
     public function getRequiredMinAge() {
         return $this->properties['requiredMinAge'];
@@ -61,7 +61,7 @@ class PeopleAudience extends Audience
     /**
      * Audiences defined by a person's maximum age.
      *
-     * @param $requiredMaxAge 
+     * @param $requiredMaxAge \LengthOfRope\JSONLD\Schema\Integer
      * @return static
      **/
     public function setRequiredMaxAge($requiredMaxAge): static {
@@ -71,7 +71,7 @@ class PeopleAudience extends Audience
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Integer
      **/
     public function getRequiredMaxAge() {
         return $this->properties['requiredMaxAge'];
@@ -80,7 +80,7 @@ class PeopleAudience extends Audience
      * The age or age range for the intended audience or person, for example 3-12
      * months for infants, 1-5 years for toddlers.
      *
-     * @param $suggestedAge 
+     * @param $suggestedAge \LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setSuggestedAge($suggestedAge): static {
@@ -90,7 +90,7 @@ class PeopleAudience extends Audience
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getSuggestedAge() {
         return $this->properties['suggestedAge'];
@@ -99,7 +99,7 @@ class PeopleAudience extends Audience
      * The suggested gender of the intended person or audience, for example "male",
      * "female", or "unisex".
      *
-     * @param $suggestedGender |
+     * @param $suggestedGender \LengthOfRope\JSONLD\Schema\GenderType|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setSuggestedGender($suggestedGender): static {
@@ -109,7 +109,7 @@ class PeopleAudience extends Audience
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\GenderType|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getSuggestedGender() {
         return $this->properties['suggestedGender'];
@@ -118,7 +118,7 @@ class PeopleAudience extends Audience
      * Specifying the health condition(s) of a patient, medical study, or other target
      * audience.
      *
-     * @param $healthCondition 
+     * @param $healthCondition \LengthOfRope\JSONLD\Schema\MedicalCondition
      * @return static
      **/
     public function setHealthCondition($healthCondition): static {
@@ -128,7 +128,7 @@ class PeopleAudience extends Audience
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MedicalCondition
      **/
     public function getHealthCondition() {
         return $this->properties['healthCondition'];
@@ -138,7 +138,7 @@ class PeopleAudience extends Audience
      * example inseam between 32 and 34 inches or height between 170 and 190 cm.
      * Typically found on a size chart for wearable products.
      *
-     * @param $suggestedMeasurement 
+     * @param $suggestedMeasurement \LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setSuggestedMeasurement($suggestedMeasurement): static {
@@ -148,7 +148,7 @@ class PeopleAudience extends Audience
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getSuggestedMeasurement() {
         return $this->properties['suggestedMeasurement'];
@@ -156,7 +156,7 @@ class PeopleAudience extends Audience
     /**
      * Audiences defined by a person's gender.
      *
-     * @param $requiredGender 
+     * @param $requiredGender \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setRequiredGender($requiredGender): static {
@@ -166,7 +166,7 @@ class PeopleAudience extends Audience
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getRequiredGender() {
         return $this->properties['requiredGender'];
@@ -174,7 +174,7 @@ class PeopleAudience extends Audience
     /**
      * Minimum recommended age in years for the audience or user.
      *
-     * @param $suggestedMinAge 
+     * @param $suggestedMinAge \LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setSuggestedMinAge($suggestedMinAge): static {
@@ -184,7 +184,7 @@ class PeopleAudience extends Audience
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Number
      **/
     public function getSuggestedMinAge() {
         return $this->properties['suggestedMinAge'];
@@ -192,7 +192,7 @@ class PeopleAudience extends Audience
     /**
      * Maximum recommended age in years for the audience or user.
      *
-     * @param $suggestedMaxAge 
+     * @param $suggestedMaxAge \LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setSuggestedMaxAge($suggestedMaxAge): static {
@@ -202,7 +202,7 @@ class PeopleAudience extends Audience
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Number
      **/
     public function getSuggestedMaxAge() {
         return $this->properties['suggestedMaxAge'];

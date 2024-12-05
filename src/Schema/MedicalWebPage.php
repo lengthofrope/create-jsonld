@@ -44,7 +44,7 @@ class MedicalWebPage extends WebPage
      * 'diagnosis', 'treatment', 'causes', 'prognosis', 'etiology', 'epidemiology',
      * etc.
      *
-     * @param $aspect 
+     * @param $aspect \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setAspect($aspect): static {
@@ -54,7 +54,7 @@ class MedicalWebPage extends WebPage
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getAspect() {
         return $this->properties['aspect'];
@@ -62,7 +62,7 @@ class MedicalWebPage extends WebPage
     /**
      * Medical audience for page.
      *
-     * @param $medicalAudience |
+     * @param $medicalAudience \LengthOfRope\JSONLD\Schema\MedicalAudienceType|\LengthOfRope\JSONLD\Schema\MedicalAudience
      * @return static
      **/
     public function setMedicalAudience($medicalAudience): static {
@@ -72,7 +72,7 @@ class MedicalWebPage extends WebPage
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\MedicalAudienceType|\LengthOfRope\JSONLD\Schema\MedicalAudience
      **/
     public function getMedicalAudience() {
         return $this->properties['medicalAudience'];

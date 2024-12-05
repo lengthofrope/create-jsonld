@@ -43,7 +43,7 @@ class MedicalSign extends MedicalSignOrSymptom
     /**
      * A diagnostic test that can identify this sign.
      *
-     * @param $identifyingTest 
+     * @param $identifyingTest \LengthOfRope\JSONLD\Schema\MedicalTest
      * @return static
      **/
     public function setIdentifyingTest($identifyingTest): static {
@@ -53,7 +53,7 @@ class MedicalSign extends MedicalSignOrSymptom
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MedicalTest
      **/
     public function getIdentifyingTest() {
         return $this->properties['identifyingTest'];
@@ -61,7 +61,7 @@ class MedicalSign extends MedicalSignOrSymptom
     /**
      * A physical examination that can identify this sign.
      *
-     * @param $identifyingExam 
+     * @param $identifyingExam \LengthOfRope\JSONLD\Schema\PhysicalExam
      * @return static
      **/
     public function setIdentifyingExam($identifyingExam): static {
@@ -71,7 +71,7 @@ class MedicalSign extends MedicalSignOrSymptom
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\PhysicalExam
      **/
     public function getIdentifyingExam() {
         return $this->properties['identifyingExam'];

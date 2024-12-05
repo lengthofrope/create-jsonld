@@ -42,7 +42,7 @@ class OrderAction extends TradeAction
     /**
      * A sub property of instrument. The method of delivery.
      *
-     * @param $deliveryMethod 
+     * @param $deliveryMethod \LengthOfRope\JSONLD\Schema\DeliveryMethod
      * @return static
      **/
     public function setDeliveryMethod($deliveryMethod): static {
@@ -52,7 +52,7 @@ class OrderAction extends TradeAction
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\DeliveryMethod
      **/
     public function getDeliveryMethod() {
         return $this->properties['deliveryMethod'];

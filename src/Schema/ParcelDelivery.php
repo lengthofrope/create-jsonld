@@ -43,7 +43,7 @@ class ParcelDelivery extends Intangible
      * 'carrier' is an out-dated term indicating the 'provider' for parcel delivery and
      * flights.
      *
-     * @param $carrier 
+     * @param $carrier \LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setCarrier($carrier): static {
@@ -53,7 +53,7 @@ class ParcelDelivery extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getCarrier() {
         return $this->properties['carrier'];
@@ -61,7 +61,7 @@ class ParcelDelivery extends Intangible
     /**
      * Destination address.
      *
-     * @param $deliveryAddress 
+     * @param $deliveryAddress \LengthOfRope\JSONLD\Schema\PostalAddress
      * @return static
      **/
     public function setDeliveryAddress($deliveryAddress): static {
@@ -71,7 +71,7 @@ class ParcelDelivery extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\PostalAddress
      **/
     public function getDeliveryAddress() {
         return $this->properties['deliveryAddress'];
@@ -80,7 +80,7 @@ class ParcelDelivery extends Intangible
      * New entry added as the package passes through each leg of its journey (from
      * shipment to final delivery).
      *
-     * @param $deliveryStatus 
+     * @param $deliveryStatus \LengthOfRope\JSONLD\Schema\DeliveryEvent
      * @return static
      **/
     public function setDeliveryStatus($deliveryStatus): static {
@@ -90,7 +90,7 @@ class ParcelDelivery extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\DeliveryEvent
      **/
     public function getDeliveryStatus() {
         return $this->properties['deliveryStatus'];
@@ -98,7 +98,7 @@ class ParcelDelivery extends Intangible
     /**
      * The overall order the items in this delivery were included in.
      *
-     * @param $partOfOrder 
+     * @param $partOfOrder \LengthOfRope\JSONLD\Schema\Order
      * @return static
      **/
     public function setPartOfOrder($partOfOrder): static {
@@ -108,7 +108,7 @@ class ParcelDelivery extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Order
      **/
     public function getPartOfOrder() {
         return $this->properties['partOfOrder'];
@@ -116,7 +116,7 @@ class ParcelDelivery extends Intangible
     /**
      * Shipper tracking number.
      *
-     * @param $trackingNumber 
+     * @param $trackingNumber \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setTrackingNumber($trackingNumber): static {
@@ -126,7 +126,7 @@ class ParcelDelivery extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getTrackingNumber() {
         return $this->properties['trackingNumber'];
@@ -134,7 +134,7 @@ class ParcelDelivery extends Intangible
     /**
      * Shipper's address.
      *
-     * @param $originAddress 
+     * @param $originAddress \LengthOfRope\JSONLD\Schema\PostalAddress
      * @return static
      **/
     public function setOriginAddress($originAddress): static {
@@ -144,7 +144,7 @@ class ParcelDelivery extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\PostalAddress
      **/
     public function getOriginAddress() {
         return $this->properties['originAddress'];
@@ -152,7 +152,7 @@ class ParcelDelivery extends Intangible
     /**
      * Tracking url for the parcel delivery.
      *
-     * @param $trackingUrl 
+     * @param $trackingUrl \LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setTrackingUrl($trackingUrl): static {
@@ -162,7 +162,7 @@ class ParcelDelivery extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\URL
      **/
     public function getTrackingUrl() {
         return $this->properties['trackingUrl'];
@@ -170,7 +170,7 @@ class ParcelDelivery extends Intangible
     /**
      * Item(s) being shipped.
      *
-     * @param $itemShipped 
+     * @param $itemShipped \LengthOfRope\JSONLD\Schema\Product
      * @return static
      **/
     public function setItemShipped($itemShipped): static {
@@ -180,7 +180,7 @@ class ParcelDelivery extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Product
      **/
     public function getItemShipped() {
         return $this->properties['itemShipped'];
@@ -188,7 +188,7 @@ class ParcelDelivery extends Intangible
     /**
      * The latest date the package may arrive.
      *
-     * @param $expectedArrivalUntil |
+     * @param $expectedArrivalUntil \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
      * @return static
      **/
     public function setExpectedArrivalUntil($expectedArrivalUntil): static {
@@ -198,7 +198,7 @@ class ParcelDelivery extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
      **/
     public function getExpectedArrivalUntil() {
         return $this->properties['expectedArrivalUntil'];
@@ -206,7 +206,7 @@ class ParcelDelivery extends Intangible
     /**
      * Method used for delivery or shipping.
      *
-     * @param $hasDeliveryMethod 
+     * @param $hasDeliveryMethod \LengthOfRope\JSONLD\Schema\DeliveryMethod
      * @return static
      **/
     public function setHasDeliveryMethod($hasDeliveryMethod): static {
@@ -216,7 +216,7 @@ class ParcelDelivery extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\DeliveryMethod
      **/
     public function getHasDeliveryMethod() {
         return $this->properties['hasDeliveryMethod'];
@@ -226,7 +226,7 @@ class ParcelDelivery extends Intangible
      * producer. Another party (a seller) may offer those services or goods on behalf
      * of the provider. A provider may also serve as the seller.
      *
-     * @param $provider |
+     * @param $provider \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setProvider($provider): static {
@@ -236,7 +236,7 @@ class ParcelDelivery extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getProvider() {
         return $this->properties['provider'];
@@ -244,7 +244,7 @@ class ParcelDelivery extends Intangible
     /**
      * The earliest date the package may arrive.
      *
-     * @param $expectedArrivalFrom |
+     * @param $expectedArrivalFrom \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
      * @return static
      **/
     public function setExpectedArrivalFrom($expectedArrivalFrom): static {
@@ -254,7 +254,7 @@ class ParcelDelivery extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
      **/
     public function getExpectedArrivalFrom() {
         return $this->properties['expectedArrivalFrom'];

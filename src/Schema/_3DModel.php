@@ -51,7 +51,7 @@ class _3DModel extends MediaObject
      * Whether the 3DModel allows resizing. For example, room layout applications often
      * do not allow 3DModel elements to be resized to reflect reality.
      *
-     * @param $isResizable 
+     * @param $isResizable \LengthOfRope\JSONLD\DataType\Boolean
      * @return static
      **/
     public function setIsResizable($isResizable): static {
@@ -61,7 +61,7 @@ class _3DModel extends MediaObject
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Boolean
      **/
     public function getIsResizable() {
         return $this->properties['isResizable'];

@@ -45,7 +45,7 @@ class SellAction extends TradeAction
      * A sub property of participant. The participant/person/organization that bought
      * the object.
      *
-     * @param $buyer |
+     * @param $buyer \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setBuyer($buyer): static {
@@ -55,7 +55,7 @@ class SellAction extends TradeAction
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\Person
      **/
     public function getBuyer() {
         return $this->properties['buyer'];
@@ -63,7 +63,7 @@ class SellAction extends TradeAction
     /**
      * The warranty promise(s) included in the offer.
      *
-     * @param $warrantyPromise 
+     * @param $warrantyPromise \LengthOfRope\JSONLD\Schema\WarrantyPromise
      * @return static
      **/
     public function setWarrantyPromise($warrantyPromise): static {
@@ -73,7 +73,7 @@ class SellAction extends TradeAction
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\WarrantyPromise
      **/
     public function getWarrantyPromise() {
         return $this->properties['warrantyPromise'];

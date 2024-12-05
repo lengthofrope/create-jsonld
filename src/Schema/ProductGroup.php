@@ -53,7 +53,7 @@ class ProductGroup extends Product
      * Indicates a [[Product]] that is a member of this [[ProductGroup]] (or
      * [[ProductModel]]).
      *
-     * @param $hasVariant 
+     * @param $hasVariant \LengthOfRope\JSONLD\Schema\Product
      * @return static
      **/
     public function setHasVariant($hasVariant): static {
@@ -63,7 +63,7 @@ class ProductGroup extends Product
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Product
      **/
     public function getHasVariant() {
         return $this->properties['hasVariant'];
@@ -74,7 +74,7 @@ class ProductGroup extends Product
      * their short name e.g. "color"; terms defined elsewhere can be referenced with
      * their URIs.
      *
-     * @param $variesBy |
+     * @param $variesBy \LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setVariesBy($variesBy): static {
@@ -84,7 +84,7 @@ class ProductGroup extends Product
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getVariesBy() {
         return $this->properties['variesBy'];
@@ -92,7 +92,7 @@ class ProductGroup extends Product
     /**
      * Indicates a textual identifier for a ProductGroup.
      *
-     * @param $productGroupID 
+     * @param $productGroupID \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setProductGroupID($productGroupID): static {
@@ -102,7 +102,7 @@ class ProductGroup extends Product
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getProductGroupID() {
         return $this->properties['productGroupID'];

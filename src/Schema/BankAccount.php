@@ -43,7 +43,7 @@ class BankAccount extends FinancialProduct
     /**
      * The type of a bank account.
      *
-     * @param $bankAccountType |
+     * @param $bankAccountType \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setBankAccountType($bankAccountType): static {
@@ -53,7 +53,7 @@ class BankAccount extends FinancialProduct
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getBankAccountType() {
         return $this->properties['bankAccountType'];
@@ -61,7 +61,7 @@ class BankAccount extends FinancialProduct
     /**
      * A minimum amount that has to be paid in every month.
      *
-     * @param $accountMinimumInflow 
+     * @param $accountMinimumInflow \LengthOfRope\JSONLD\Schema\MonetaryAmount
      * @return static
      **/
     public function setAccountMinimumInflow($accountMinimumInflow): static {
@@ -71,7 +71,7 @@ class BankAccount extends FinancialProduct
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount
      **/
     public function getAccountMinimumInflow() {
         return $this->properties['accountMinimumInflow'];
@@ -82,7 +82,7 @@ class BankAccount extends FinancialProduct
      * money even if the account has no funds in it. Basically the bank allows people
      * to borrow a set amount of money.
      *
-     * @param $accountOverdraftLimit 
+     * @param $accountOverdraftLimit \LengthOfRope\JSONLD\Schema\MonetaryAmount
      * @return static
      **/
     public function setAccountOverdraftLimit($accountOverdraftLimit): static {
@@ -92,7 +92,7 @@ class BankAccount extends FinancialProduct
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount
      **/
     public function getAccountOverdraftLimit() {
         return $this->properties['accountOverdraftLimit'];

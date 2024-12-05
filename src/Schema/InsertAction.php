@@ -43,7 +43,7 @@ class InsertAction extends AddAction
      * A sub property of location. The final location of the object or the agent after
      * the action.
      *
-     * @param $toLocation 
+     * @param $toLocation \LengthOfRope\JSONLD\Schema\Place
      * @return static
      **/
     public function setToLocation($toLocation): static {
@@ -53,7 +53,7 @@ class InsertAction extends AddAction
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Place
      **/
     public function getToLocation() {
         return $this->properties['toLocation'];

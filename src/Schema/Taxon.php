@@ -42,7 +42,7 @@ class Taxon extends Thing
     /**
      * Closest parent taxon of the taxon in question.
      *
-     * @param $parentTaxon ||
+     * @param $parentTaxon \LengthOfRope\JSONLD\Schema\Taxon|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setParentTaxon($parentTaxon): static {
@@ -52,7 +52,7 @@ class Taxon extends Thing
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\Schema\Taxon|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      **/
     public function getParentTaxon() {
         return $this->properties['parentTaxon'];
@@ -60,7 +60,7 @@ class Taxon extends Thing
     /**
      * Closest child taxa of the taxon in question.
      *
-     * @param $childTaxon ||
+     * @param $childTaxon \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\Taxon
      * @return static
      **/
     public function setChildTaxon($childTaxon): static {
@@ -70,7 +70,7 @@ class Taxon extends Thing
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\Taxon
      **/
     public function getChildTaxon() {
         return $this->properties['childTaxon'];
@@ -80,7 +80,7 @@ class Taxon extends Thing
      * vocabulary – typically the ranks from TDWG TaxonRank ontology or equivalent
      * Wikidata URIs.
      *
-     * @param $taxonRank ||
+     * @param $taxonRank \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\PropertyValue
      * @return static
      **/
     public function setTaxonRank($taxonRank): static {
@@ -90,7 +90,7 @@ class Taxon extends Thing
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\PropertyValue
      **/
     public function getTaxonRank() {
         return $this->properties['taxonRank'];
@@ -98,7 +98,7 @@ class Taxon extends Thing
     /**
      * A Defined Term contained in this term set.
      *
-     * @param $hasDefinedTerm 
+     * @param $hasDefinedTerm \LengthOfRope\JSONLD\Schema\DefinedTerm
      * @return static
      **/
     public function setHasDefinedTerm($hasDefinedTerm): static {
@@ -108,7 +108,7 @@ class Taxon extends Thing
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\DefinedTerm
      **/
     public function getHasDefinedTerm() {
         return $this->properties['hasDefinedTerm'];

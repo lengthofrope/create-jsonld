@@ -44,7 +44,7 @@ class Recipe extends HowTo
     /**
      * The method of cooking, such as Frying, Steaming, ...
      *
-     * @param $cookingMethod 
+     * @param $cookingMethod \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setCookingMethod($cookingMethod): static {
@@ -54,7 +54,7 @@ class Recipe extends HowTo
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getCookingMethod() {
         return $this->properties['cookingMethod'];
@@ -63,7 +63,7 @@ class Recipe extends HowTo
      * The time it takes to actually cook the dish, in [ISO 8601 duration
      * format](http://en.wikipedia.org/wiki/ISO_8601).
      *
-     * @param $cookTime 
+     * @param $cookTime \LengthOfRope\JSONLD\Schema\Duration
      * @return static
      **/
     public function setCookTime($cookTime): static {
@@ -73,7 +73,7 @@ class Recipe extends HowTo
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Duration
      **/
     public function getCookTime() {
         return $this->properties['cookTime'];
@@ -82,7 +82,7 @@ class Recipe extends HowTo
      * Indicates a dietary restriction or guideline for which this recipe or menu item
      * is suitable, e.g. diabetic, halal etc.
      *
-     * @param $suitableForDiet 
+     * @param $suitableForDiet \LengthOfRope\JSONLD\Schema\RestrictedDiet
      * @return static
      **/
     public function setSuitableForDiet($suitableForDiet): static {
@@ -92,7 +92,7 @@ class Recipe extends HowTo
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\RestrictedDiet
      **/
     public function getSuitableForDiet() {
         return $this->properties['suitableForDiet'];
@@ -101,7 +101,7 @@ class Recipe extends HowTo
      * The quantity produced by the recipe (for example, number of people served,
      * number of servings, etc).
      *
-     * @param $recipeYield |
+     * @param $recipeYield \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setRecipeYield($recipeYield): static {
@@ -111,7 +111,7 @@ class Recipe extends HowTo
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getRecipeYield() {
         return $this->properties['recipeYield'];
@@ -119,7 +119,7 @@ class Recipe extends HowTo
     /**
      * A single ingredient used in the recipe, e.g. sugar, flour or garlic.
      *
-     * @param $ingredients 
+     * @param $ingredients \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setIngredients($ingredients): static {
@@ -129,7 +129,7 @@ class Recipe extends HowTo
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getIngredients() {
         return $this->properties['ingredients'];
@@ -138,7 +138,7 @@ class Recipe extends HowTo
      * A step in making the recipe, in the form of a single item (document, video,
      * etc.) or an ordered list with HowToStep and/or HowToSection items.
      *
-     * @param $recipeInstructions ||
+     * @param $recipeInstructions \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\ItemList
      * @return static
      **/
     public function setRecipeInstructions($recipeInstructions): static {
@@ -148,7 +148,7 @@ class Recipe extends HowTo
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\ItemList
      **/
     public function getRecipeInstructions() {
         return $this->properties['recipeInstructions'];
@@ -156,7 +156,7 @@ class Recipe extends HowTo
     /**
      * Nutrition information about the recipe or menu item.
      *
-     * @param $nutrition 
+     * @param $nutrition \LengthOfRope\JSONLD\Schema\NutritionInformation
      * @return static
      **/
     public function setNutrition($nutrition): static {
@@ -166,7 +166,7 @@ class Recipe extends HowTo
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\NutritionInformation
      **/
     public function getNutrition() {
         return $this->properties['nutrition'];
@@ -174,7 +174,7 @@ class Recipe extends HowTo
     /**
      * The category of the recipe—for example, appetizer, entree, etc.
      *
-     * @param $recipeCategory 
+     * @param $recipeCategory \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setRecipeCategory($recipeCategory): static {
@@ -184,7 +184,7 @@ class Recipe extends HowTo
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getRecipeCategory() {
         return $this->properties['recipeCategory'];
@@ -192,7 +192,7 @@ class Recipe extends HowTo
     /**
      * A single ingredient used in the recipe, e.g. sugar, flour or garlic.
      *
-     * @param $recipeIngredient 
+     * @param $recipeIngredient \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setRecipeIngredient($recipeIngredient): static {
@@ -202,7 +202,7 @@ class Recipe extends HowTo
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getRecipeIngredient() {
         return $this->properties['recipeIngredient'];
@@ -210,7 +210,7 @@ class Recipe extends HowTo
     /**
      * The cuisine of the recipe (for example, French or Ethiopian).
      *
-     * @param $recipeCuisine 
+     * @param $recipeCuisine \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setRecipeCuisine($recipeCuisine): static {
@@ -220,7 +220,7 @@ class Recipe extends HowTo
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getRecipeCuisine() {
         return $this->properties['recipeCuisine'];

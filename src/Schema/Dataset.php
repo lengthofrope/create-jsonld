@@ -43,7 +43,7 @@ class Dataset extends CreativeWork
      * A data catalog which contains this dataset (this property was previously
      * 'catalog', preferred name is now 'includedInDataCatalog').
      *
-     * @param $includedDataCatalog 
+     * @param $includedDataCatalog \LengthOfRope\JSONLD\Schema\DataCatalog
      * @return static
      **/
     public function setIncludedDataCatalog($includedDataCatalog): static {
@@ -53,7 +53,7 @@ class Dataset extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\DataCatalog
      **/
     public function getIncludedDataCatalog() {
         return $this->properties['includedDataCatalog'];
@@ -63,7 +63,7 @@ class Dataset extends CreativeWork
      * publication. You can repeat this property to identify different formats of, or
      * the linking ISSN (ISSN-L) for, this serial publication.
      *
-     * @param $issn 
+     * @param $issn \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setIssn($issn): static {
@@ -73,7 +73,7 @@ class Dataset extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getIssn() {
         return $this->properties['issn'];
@@ -81,7 +81,7 @@ class Dataset extends CreativeWork
     /**
      * A data catalog which contains this dataset.
      *
-     * @param $includedInDataCatalog 
+     * @param $includedInDataCatalog \LengthOfRope\JSONLD\Schema\DataCatalog
      * @return static
      **/
     public function setIncludedInDataCatalog($includedInDataCatalog): static {
@@ -91,7 +91,7 @@ class Dataset extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\DataCatalog
      **/
     public function getIncludedInDataCatalog() {
         return $this->properties['includedInDataCatalog'];
@@ -100,7 +100,7 @@ class Dataset extends CreativeWork
      * A subproperty of [[measurementTechnique]] that can be used for specifying
      * specific methods, in particular via [[MeasurementMethodEnum]].
      *
-     * @param $measurementMethod |||
+     * @param $measurementMethod \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\MeasurementMethodEnum|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setMeasurementMethod($measurementMethod): static {
@@ -110,7 +110,7 @@ class Dataset extends CreativeWork
     }
 
     /**
-     * @return |||
+     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\MeasurementMethodEnum|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getMeasurementMethod() {
         return $this->properties['measurementMethod'];
@@ -121,7 +121,7 @@ class Dataset extends CreativeWork
      * pairs of identifier and description using PropertyValue, or more explicitly as a
      * [[StatisticalVariable]].
      *
-     * @param $variableMeasured |||
+     * @param $variableMeasured \LengthOfRope\JSONLD\Schema\StatisticalVariable|\LengthOfRope\JSONLD\Schema\Property|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\PropertyValue
      * @return static
      **/
     public function setVariableMeasured($variableMeasured): static {
@@ -131,7 +131,7 @@ class Dataset extends CreativeWork
     }
 
     /**
-     * @return |||
+     * @return \LengthOfRope\JSONLD\Schema\StatisticalVariable|\LengthOfRope\JSONLD\Schema\Property|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\PropertyValue
      **/
     public function getVariableMeasured() {
         return $this->properties['variableMeasured'];
@@ -139,7 +139,7 @@ class Dataset extends CreativeWork
     /**
      * A data catalog which contains this dataset.
      *
-     * @param $catalog 
+     * @param $catalog \LengthOfRope\JSONLD\Schema\DataCatalog
      * @return static
      **/
     public function setCatalog($catalog): static {
@@ -149,7 +149,7 @@ class Dataset extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\DataCatalog
      **/
     public function getCatalog() {
         return $this->properties['catalog'];
@@ -158,7 +158,7 @@ class Dataset extends CreativeWork
      * The range of temporal applicability of a dataset, e.g. for a 2011 census
      * dataset, the year 2011 (in ISO 8601 time interval format).
      *
-     * @param $datasetTimeInterval 
+     * @param $datasetTimeInterval \LengthOfRope\JSONLD\DataType\DateTime
      * @return static
      **/
     public function setDatasetTimeInterval($datasetTimeInterval): static {
@@ -168,7 +168,7 @@ class Dataset extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\DateTime
      **/
     public function getDatasetTimeInterval() {
         return $this->properties['datasetTimeInterval'];
@@ -182,7 +182,7 @@ class Dataset extends CreativeWork
      * Different distributions might include or exclude different subsets of the entire
      * dataset, for example.
      *
-     * @param $distribution 
+     * @param $distribution \LengthOfRope\JSONLD\Schema\DataDownload
      * @return static
      **/
     public function setDistribution($distribution): static {
@@ -192,7 +192,7 @@ class Dataset extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\DataDownload
      **/
     public function getDistribution() {
         return $this->properties['distribution'];
@@ -225,7 +225,7 @@ class Dataset extends CreativeWork
      * the corresponding [[measurementTechnique]]. The value can also be from an
      * enumeration, organized as a [[MeasurementMetholdEnumeration]].
      *
-     * @param $measurementTechnique |||
+     * @param $measurementTechnique \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\MeasurementMethodEnum
      * @return static
      **/
     public function setMeasurementTechnique($measurementTechnique): static {
@@ -235,7 +235,7 @@ class Dataset extends CreativeWork
     }
 
     /**
-     * @return |||
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\MeasurementMethodEnum
      **/
     public function getMeasurementTechnique() {
         return $this->properties['measurementTechnique'];

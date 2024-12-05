@@ -43,7 +43,7 @@ class PostalCodeRangeSpecification extends StructuredValue
     /**
      * Last postal code in the range (included). Needs to be after [[postalCodeBegin]].
      *
-     * @param $postalCodeEnd 
+     * @param $postalCodeEnd \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setPostalCodeEnd($postalCodeEnd): static {
@@ -53,7 +53,7 @@ class PostalCodeRangeSpecification extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getPostalCodeEnd() {
         return $this->properties['postalCodeEnd'];
@@ -61,7 +61,7 @@ class PostalCodeRangeSpecification extends StructuredValue
     /**
      * First postal code in a range (included).
      *
-     * @param $postalCodeBegin 
+     * @param $postalCodeBegin \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setPostalCodeBegin($postalCodeBegin): static {
@@ -71,7 +71,7 @@ class PostalCodeRangeSpecification extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getPostalCodeBegin() {
         return $this->properties['postalCodeBegin'];

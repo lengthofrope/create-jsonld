@@ -44,7 +44,7 @@ class LymphaticVessel extends Vessel
      * The anatomical or organ system drained by this vessel; generally refers to a
      * specific part of an organ.
      *
-     * @param $regionDrained |
+     * @param $regionDrained \LengthOfRope\JSONLD\Schema\AnatomicalSystem|\LengthOfRope\JSONLD\Schema\AnatomicalStructure
      * @return static
      **/
     public function setRegionDrained($regionDrained): static {
@@ -54,7 +54,7 @@ class LymphaticVessel extends Vessel
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\AnatomicalSystem|\LengthOfRope\JSONLD\Schema\AnatomicalStructure
      **/
     public function getRegionDrained() {
         return $this->properties['regionDrained'];
@@ -62,7 +62,7 @@ class LymphaticVessel extends Vessel
     /**
      * The vasculature the lymphatic structure runs, or efferents, to.
      *
-     * @param $runsTo 
+     * @param $runsTo \LengthOfRope\JSONLD\Schema\Vessel
      * @return static
      **/
     public function setRunsTo($runsTo): static {
@@ -72,7 +72,7 @@ class LymphaticVessel extends Vessel
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Vessel
      **/
     public function getRunsTo() {
         return $this->properties['runsTo'];
@@ -80,7 +80,7 @@ class LymphaticVessel extends Vessel
     /**
      * The vasculature the lymphatic structure originates, or afferents, from.
      *
-     * @param $originatesFrom 
+     * @param $originatesFrom \LengthOfRope\JSONLD\Schema\Vessel
      * @return static
      **/
     public function setOriginatesFrom($originatesFrom): static {
@@ -90,7 +90,7 @@ class LymphaticVessel extends Vessel
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Vessel
      **/
     public function getOriginatesFrom() {
         return $this->properties['originatesFrom'];

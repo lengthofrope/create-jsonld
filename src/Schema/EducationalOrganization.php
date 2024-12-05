@@ -42,7 +42,7 @@ class EducationalOrganization extends CivicStructure
     /**
      * Alumni of an organization.
      *
-     * @param $alumni 
+     * @param $alumni \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setAlumni($alumni): static {
@@ -52,7 +52,7 @@ class EducationalOrganization extends CivicStructure
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
     public function getAlumni() {
         return $this->properties['alumni'];

@@ -47,7 +47,7 @@ class MedicalTherapy extends TherapeuticProcedure
     /**
      * A contraindication for this therapy.
      *
-     * @param $contraindication |
+     * @param $contraindication \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\MedicalContraindication
      * @return static
      **/
     public function setContraindication($contraindication): static {
@@ -57,7 +57,7 @@ class MedicalTherapy extends TherapeuticProcedure
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\MedicalContraindication
      **/
     public function getContraindication() {
         return $this->properties['contraindication'];
@@ -70,7 +70,7 @@ class MedicalTherapy extends TherapeuticProcedure
      * jeopardize the patient and may require medical or surgical intervention to
      * prevent one of the outcomes in this definition.
      *
-     * @param $seriousAdverseOutcome 
+     * @param $seriousAdverseOutcome \LengthOfRope\JSONLD\Schema\MedicalEntity
      * @return static
      **/
     public function setSeriousAdverseOutcome($seriousAdverseOutcome): static {
@@ -80,7 +80,7 @@ class MedicalTherapy extends TherapeuticProcedure
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MedicalEntity
      **/
     public function getSeriousAdverseOutcome() {
         return $this->properties['seriousAdverseOutcome'];
@@ -88,7 +88,7 @@ class MedicalTherapy extends TherapeuticProcedure
     /**
      * A therapy that duplicates or overlaps this one.
      *
-     * @param $duplicateTherapy 
+     * @param $duplicateTherapy \LengthOfRope\JSONLD\Schema\MedicalTherapy
      * @return static
      **/
     public function setDuplicateTherapy($duplicateTherapy): static {
@@ -98,7 +98,7 @@ class MedicalTherapy extends TherapeuticProcedure
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MedicalTherapy
      **/
     public function getDuplicateTherapy() {
         return $this->properties['duplicateTherapy'];

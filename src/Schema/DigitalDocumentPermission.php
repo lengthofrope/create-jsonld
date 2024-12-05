@@ -42,7 +42,7 @@ class DigitalDocumentPermission extends Intangible
     /**
      * The type of permission granted the person, organization, or audience.
      *
-     * @param $permissionType 
+     * @param $permissionType \LengthOfRope\JSONLD\Schema\DigitalDocumentPermissionType
      * @return static
      **/
     public function setPermissionType($permissionType): static {
@@ -52,7 +52,7 @@ class DigitalDocumentPermission extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\DigitalDocumentPermissionType
      **/
     public function getPermissionType() {
         return $this->properties['permissionType'];
@@ -61,7 +61,7 @@ class DigitalDocumentPermission extends Intangible
      * The person, organization, contact point, or audience that has been granted this
      * permission.
      *
-     * @param $grantee |||
+     * @param $grantee \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\Audience|\LengthOfRope\JSONLD\Schema\ContactPoint
      * @return static
      **/
     public function setGrantee($grantee): static {
@@ -71,7 +71,7 @@ class DigitalDocumentPermission extends Intangible
     }
 
     /**
-     * @return |||
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\Audience|\LengthOfRope\JSONLD\Schema\ContactPoint
      **/
     public function getGrantee() {
         return $this->properties['grantee'];

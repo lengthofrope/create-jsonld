@@ -45,7 +45,7 @@ class GovernmentService extends Service
      * representation of services that are provided by an organization, but operated by
      * another organization like a subcontractor.
      *
-     * @param $serviceOperator 
+     * @param $serviceOperator \LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setServiceOperator($serviceOperator): static {
@@ -55,7 +55,7 @@ class GovernmentService extends Service
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getServiceOperator() {
         return $this->properties['serviceOperator'];
@@ -64,7 +64,7 @@ class GovernmentService extends Service
      * Indicates a legal jurisdiction, e.g. of some legislation, or where some
      * government service is based.
      *
-     * @param $jurisdiction |
+     * @param $jurisdiction \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\AdministrativeArea
      * @return static
      **/
     public function setJurisdiction($jurisdiction): static {
@@ -74,7 +74,7 @@ class GovernmentService extends Service
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\AdministrativeArea
      **/
     public function getJurisdiction() {
         return $this->properties['jurisdiction'];

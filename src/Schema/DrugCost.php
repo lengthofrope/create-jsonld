@@ -48,7 +48,7 @@ class DrugCost extends MedicalEntity
     /**
      * The cost per unit of the drug.
      *
-     * @param $costPerUnit ||
+     * @param $costPerUnit \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\Schema\QualitativeValue
      * @return static
      **/
     public function setCostPerUnit($costPerUnit): static {
@@ -58,7 +58,7 @@ class DrugCost extends MedicalEntity
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\Schema\QualitativeValue
      **/
     public function getCostPerUnit() {
         return $this->properties['costPerUnit'];
@@ -67,7 +67,7 @@ class DrugCost extends MedicalEntity
      * Additional details to capture the origin of the cost data. For example,
      * 'Medicare Part B'.
      *
-     * @param $costOrigin 
+     * @param $costOrigin \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setCostOrigin($costOrigin): static {
@@ -77,7 +77,7 @@ class DrugCost extends MedicalEntity
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getCostOrigin() {
         return $this->properties['costOrigin'];
@@ -85,7 +85,7 @@ class DrugCost extends MedicalEntity
     /**
      * The category of cost, such as wholesale, retail, reimbursement cap, etc.
      *
-     * @param $costCategory 
+     * @param $costCategory \LengthOfRope\JSONLD\Schema\DrugCostCategory
      * @return static
      **/
     public function setCostCategory($costCategory): static {
@@ -95,7 +95,7 @@ class DrugCost extends MedicalEntity
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\DrugCostCategory
      **/
     public function getCostCategory() {
         return $this->properties['costCategory'];
@@ -103,7 +103,7 @@ class DrugCost extends MedicalEntity
     /**
      * The unit in which the drug is measured, e.g. '5 mg tablet'.
      *
-     * @param $drugUnit 
+     * @param $drugUnit \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setDrugUnit($drugUnit): static {
@@ -113,7 +113,7 @@ class DrugCost extends MedicalEntity
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getDrugUnit() {
         return $this->properties['drugUnit'];
@@ -122,7 +122,7 @@ class DrugCost extends MedicalEntity
      * The currency (in 3-letter) of the drug cost. See:
      * http://en.wikipedia.org/wiki/ISO_4217.
      *
-     * @param $costCurrency 
+     * @param $costCurrency \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setCostCurrency($costCurrency): static {
@@ -132,7 +132,7 @@ class DrugCost extends MedicalEntity
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getCostCurrency() {
         return $this->properties['costCurrency'];
@@ -140,7 +140,7 @@ class DrugCost extends MedicalEntity
     /**
      * The location in which the status applies.
      *
-     * @param $applicableLocation 
+     * @param $applicableLocation \LengthOfRope\JSONLD\Schema\AdministrativeArea
      * @return static
      **/
     public function setApplicableLocation($applicableLocation): static {
@@ -150,7 +150,7 @@ class DrugCost extends MedicalEntity
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\AdministrativeArea
      **/
     public function getApplicableLocation() {
         return $this->properties['applicableLocation'];

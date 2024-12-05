@@ -51,7 +51,7 @@ class Physician extends MedicalOrganization
      * Note: for historical reasons, any textual label and formal code provided as a
      * literal may be assumed to be from O*NET-SOC.
      *
-     * @param $occupationalCategory |
+     * @param $occupationalCategory \LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setOccupationalCategory($occupationalCategory): static {
@@ -61,7 +61,7 @@ class Physician extends MedicalOrganization
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getOccupationalCategory() {
         return $this->properties['occupationalCategory'];
@@ -69,7 +69,7 @@ class Physician extends MedicalOrganization
     /**
      * A medical specialty of the provider.
      *
-     * @param $medicalSpecialty 
+     * @param $medicalSpecialty \LengthOfRope\JSONLD\Schema\MedicalSpecialty
      * @return static
      **/
     public function setMedicalSpecialty($medicalSpecialty): static {
@@ -79,7 +79,7 @@ class Physician extends MedicalOrganization
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MedicalSpecialty
      **/
     public function getMedicalSpecialty() {
         return $this->properties['medicalSpecialty'];
@@ -87,7 +87,7 @@ class Physician extends MedicalOrganization
     /**
      * A medical service available from this provider.
      *
-     * @param $availableService ||
+     * @param $availableService \LengthOfRope\JSONLD\Schema\MedicalTest|\LengthOfRope\JSONLD\Schema\MedicalTherapy|\LengthOfRope\JSONLD\Schema\MedicalProcedure
      * @return static
      **/
     public function setAvailableService($availableService): static {
@@ -97,7 +97,7 @@ class Physician extends MedicalOrganization
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\Schema\MedicalTest|\LengthOfRope\JSONLD\Schema\MedicalTherapy|\LengthOfRope\JSONLD\Schema\MedicalProcedure
      **/
     public function getAvailableService() {
         return $this->properties['availableService'];
@@ -108,7 +108,7 @@ class Physician extends MedicalOrganization
      * is a unique 10-digit identification number issued to health care providers
      * in the United States by the Centers for Medicare and Medicaid Services.
      *
-     * @param $usNPI 
+     * @param $usNPI \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setUsNPI($usNPI): static {
@@ -118,7 +118,7 @@ class Physician extends MedicalOrganization
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getUsNPI() {
         return $this->properties['usNPI'];
@@ -126,7 +126,7 @@ class Physician extends MedicalOrganization
     /**
      * A hospital with which the physician or office is affiliated.
      *
-     * @param $hospitalAffiliation 
+     * @param $hospitalAffiliation \LengthOfRope\JSONLD\Schema\Hospital
      * @return static
      **/
     public function setHospitalAffiliation($hospitalAffiliation): static {
@@ -136,7 +136,7 @@ class Physician extends MedicalOrganization
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Hospital
      **/
     public function getHospitalAffiliation() {
         return $this->properties['hospitalAffiliation'];

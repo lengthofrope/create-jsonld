@@ -42,7 +42,7 @@ class ImageObject extends MediaObject
     /**
      * Indicates whether this image is representative of the content of the page.
      *
-     * @param $representativeOfPage 
+     * @param $representativeOfPage \LengthOfRope\JSONLD\DataType\Boolean
      * @return static
      **/
     public function setRepresentativeOfPage($representativeOfPage): static {
@@ -52,7 +52,7 @@ class ImageObject extends MediaObject
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Boolean
      **/
     public function getRepresentativeOfPage() {
         return $this->properties['representativeOfPage'];
@@ -61,7 +61,7 @@ class ImageObject extends MediaObject
      * The caption for this object. For downloadable machine formats (closed caption,
      * subtitles etc.) use MediaObject and indicate the [[encodingFormat]].
      *
-     * @param $caption |
+     * @param $caption \LengthOfRope\JSONLD\Schema\MediaObject|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setCaption($caption): static {
@@ -71,7 +71,7 @@ class ImageObject extends MediaObject
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\MediaObject|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getCaption() {
         return $this->properties['caption'];
@@ -79,7 +79,7 @@ class ImageObject extends MediaObject
     /**
      * exif data for this object.
      *
-     * @param $exifData |
+     * @param $exifData \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\PropertyValue
      * @return static
      **/
     public function setExifData($exifData): static {
@@ -89,7 +89,7 @@ class ImageObject extends MediaObject
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\PropertyValue
      **/
     public function getExifData() {
         return $this->properties['exifData'];
@@ -97,7 +97,7 @@ class ImageObject extends MediaObject
     /**
      * Represents textual captioning from a [[MediaObject]], e.g. text of a 'meme'.
      *
-     * @param $embeddedTextCaption 
+     * @param $embeddedTextCaption \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setEmbeddedTextCaption($embeddedTextCaption): static {
@@ -107,7 +107,7 @@ class ImageObject extends MediaObject
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getEmbeddedTextCaption() {
         return $this->properties['embeddedTextCaption'];

@@ -43,7 +43,7 @@ class OrderItem extends Intangible
     /**
      * The current status of the order item.
      *
-     * @param $orderItemStatus 
+     * @param $orderItemStatus \LengthOfRope\JSONLD\Schema\OrderStatus
      * @return static
      **/
     public function setOrderItemStatus($orderItemStatus): static {
@@ -53,7 +53,7 @@ class OrderItem extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\OrderStatus
      **/
     public function getOrderItemStatus() {
         return $this->properties['orderItemStatus'];
@@ -61,7 +61,7 @@ class OrderItem extends Intangible
     /**
      * The item ordered.
      *
-     * @param $orderedItem ||
+     * @param $orderedItem \LengthOfRope\JSONLD\Schema\Service|\LengthOfRope\JSONLD\Schema\Product|\LengthOfRope\JSONLD\Schema\OrderItem
      * @return static
      **/
     public function setOrderedItem($orderedItem): static {
@@ -71,7 +71,7 @@ class OrderItem extends Intangible
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\Schema\Service|\LengthOfRope\JSONLD\Schema\Product|\LengthOfRope\JSONLD\Schema\OrderItem
      **/
     public function getOrderedItem() {
         return $this->properties['orderedItem'];
@@ -79,7 +79,7 @@ class OrderItem extends Intangible
     /**
      * The delivery of the parcel related to this order or order item.
      *
-     * @param $orderDelivery 
+     * @param $orderDelivery \LengthOfRope\JSONLD\Schema\ParcelDelivery
      * @return static
      **/
     public function setOrderDelivery($orderDelivery): static {
@@ -89,7 +89,7 @@ class OrderItem extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\ParcelDelivery
      **/
     public function getOrderDelivery() {
         return $this->properties['orderDelivery'];
@@ -98,7 +98,7 @@ class OrderItem extends Intangible
      * The number of the item ordered. If the property is not set, assume the quantity
      * is one.
      *
-     * @param $orderQuantity |
+     * @param $orderQuantity \LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setOrderQuantity($orderQuantity): static {
@@ -108,7 +108,7 @@ class OrderItem extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getOrderQuantity() {
         return $this->properties['orderQuantity'];
@@ -116,7 +116,7 @@ class OrderItem extends Intangible
     /**
      * The identifier of the order item.
      *
-     * @param $orderItemNumber 
+     * @param $orderItemNumber \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setOrderItemNumber($orderItemNumber): static {
@@ -126,7 +126,7 @@ class OrderItem extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getOrderItemNumber() {
         return $this->properties['orderItemNumber'];

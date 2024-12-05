@@ -42,7 +42,7 @@ class RepaymentSpecification extends StructuredValue
     /**
      * The amount to be paid as a penalty in the event of early payment of the loan.
      *
-     * @param $earlyPrepaymentPenalty 
+     * @param $earlyPrepaymentPenalty \LengthOfRope\JSONLD\Schema\MonetaryAmount
      * @return static
      **/
     public function setEarlyPrepaymentPenalty($earlyPrepaymentPenalty): static {
@@ -52,7 +52,7 @@ class RepaymentSpecification extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount
      **/
     public function getEarlyPrepaymentPenalty() {
         return $this->properties['earlyPrepaymentPenalty'];
@@ -60,7 +60,7 @@ class RepaymentSpecification extends StructuredValue
     /**
      * The amount of money to pay in a single payment.
      *
-     * @param $loanPaymentAmount 
+     * @param $loanPaymentAmount \LengthOfRope\JSONLD\Schema\MonetaryAmount
      * @return static
      **/
     public function setLoanPaymentAmount($loanPaymentAmount): static {
@@ -70,7 +70,7 @@ class RepaymentSpecification extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount
      **/
     public function getLoanPaymentAmount() {
         return $this->properties['loanPaymentAmount'];
@@ -79,7 +79,7 @@ class RepaymentSpecification extends StructuredValue
      * Frequency of payments due, i.e. number of months between payments. This is
      * defined as a frequency, i.e. the reciprocal of a period of time.
      *
-     * @param $loanPaymentFrequency 
+     * @param $loanPaymentFrequency \LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setLoanPaymentFrequency($loanPaymentFrequency): static {
@@ -89,7 +89,7 @@ class RepaymentSpecification extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Number
      **/
     public function getLoanPaymentFrequency() {
         return $this->properties['loanPaymentFrequency'];
@@ -99,7 +99,7 @@ class RepaymentSpecification extends StructuredValue
      * good/service. The payment typically represents only a percentage of the full
      * purchase price.
      *
-     * @param $downPayment |
+     * @param $downPayment \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setDownPayment($downPayment): static {
@@ -109,7 +109,7 @@ class RepaymentSpecification extends StructuredValue
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\Number
      **/
     public function getDownPayment() {
         return $this->properties['downPayment'];
@@ -119,7 +119,7 @@ class RepaymentSpecification extends StructuredValue
      * For monthly paying loans this is the number of months from the contractual first
      * payment date to the maturity date.
      *
-     * @param $numberOfLoanPayments 
+     * @param $numberOfLoanPayments \LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setNumberOfLoanPayments($numberOfLoanPayments): static {
@@ -129,7 +129,7 @@ class RepaymentSpecification extends StructuredValue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Number
      **/
     public function getNumberOfLoanPayments() {
         return $this->properties['numberOfLoanPayments'];

@@ -44,7 +44,7 @@ class MobileApplication extends SoftwareApplication
      * Specifies specific carrier(s) requirements for the application (e.g. an
      * application may only work on a specific carrier network).
      *
-     * @param $carrierRequirements 
+     * @param $carrierRequirements \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setCarrierRequirements($carrierRequirements): static {
@@ -54,7 +54,7 @@ class MobileApplication extends SoftwareApplication
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getCarrierRequirements() {
         return $this->properties['carrierRequirements'];

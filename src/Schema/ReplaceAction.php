@@ -42,7 +42,7 @@ class ReplaceAction extends UpdateAction
     /**
      * A sub property of object. The object that replaces.
      *
-     * @param $replacer 
+     * @param $replacer \LengthOfRope\JSONLD\Schema\Thing
      * @return static
      **/
     public function setReplacer($replacer): static {
@@ -52,7 +52,7 @@ class ReplaceAction extends UpdateAction
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Thing
      **/
     public function getReplacer() {
         return $this->properties['replacer'];
@@ -60,7 +60,7 @@ class ReplaceAction extends UpdateAction
     /**
      * A sub property of object. The object that is being replaced.
      *
-     * @param $replacee 
+     * @param $replacee \LengthOfRope\JSONLD\Schema\Thing
      * @return static
      **/
     public function setReplacee($replacee): static {
@@ -70,7 +70,7 @@ class ReplaceAction extends UpdateAction
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Thing
      **/
     public function getReplacee() {
         return $this->properties['replacee'];

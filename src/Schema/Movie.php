@@ -44,7 +44,7 @@ class Movie extends CreativeWork
      * in an event. Actors can be associated with individual items or with a series,
      * episode, clip.
      *
-     * @param $actor |
+     * @param $actor \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\PerformingGroup
      * @return static
      **/
     public function setActor($actor): static {
@@ -54,7 +54,7 @@ class Movie extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\PerformingGroup
      **/
     public function getActor() {
         return $this->properties['actor'];
@@ -62,7 +62,7 @@ class Movie extends CreativeWork
     /**
      * The trailer of a movie or TV/radio series, season, episode, etc.
      *
-     * @param $trailer 
+     * @param $trailer \LengthOfRope\JSONLD\Schema\VideoObject
      * @return static
      **/
     public function setTrailer($trailer): static {
@@ -72,7 +72,7 @@ class Movie extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\VideoObject
      **/
     public function getTrailer() {
         return $this->properties['trailer'];
@@ -91,7 +91,7 @@ class Movie extends CreativeWork
      * [[editEIDR]] for a more edit-specific description.
      *
      *
-     * @param $titleEIDR |
+     * @param $titleEIDR \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setTitleEIDR($titleEIDR): static {
@@ -101,7 +101,7 @@ class Movie extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      **/
     public function getTitleEIDR() {
         return $this->properties['titleEIDR'];
@@ -110,7 +110,7 @@ class Movie extends CreativeWork
      * An actor, e.g. in TV, radio, movie, video games etc. Actors can be associated
      * with individual items or with a series, episode, clip.
      *
-     * @param $actors 
+     * @param $actors \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setActors($actors): static {
@@ -120,7 +120,7 @@ class Movie extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
     public function getActors() {
         return $this->properties['actors'];
@@ -129,7 +129,7 @@ class Movie extends CreativeWork
      * A director of e.g. TV, radio, movie, video games etc. content. Directors can be
      * associated with individual items or with a series, episode, clip.
      *
-     * @param $directors 
+     * @param $directors \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setDirectors($directors): static {
@@ -139,7 +139,7 @@ class Movie extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
     public function getDirectors() {
         return $this->properties['directors'];
@@ -148,7 +148,7 @@ class Movie extends CreativeWork
      * Languages in which subtitles/captions are available, in [IETF BCP 47 standard
      * format](http://tools.ietf.org/html/bcp47).
      *
-     * @param $subtitleLanguage |
+     * @param $subtitleLanguage \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Language
      * @return static
      **/
     public function setSubtitleLanguage($subtitleLanguage): static {
@@ -158,7 +158,7 @@ class Movie extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Language
      **/
     public function getSubtitleLanguage() {
         return $this->properties['subtitleLanguage'];
@@ -167,7 +167,7 @@ class Movie extends CreativeWork
      * The production company or studio responsible for the item, e.g. series, video
      * game, episode etc.
      *
-     * @param $productionCompany 
+     * @param $productionCompany \LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setProductionCompany($productionCompany): static {
@@ -177,7 +177,7 @@ class Movie extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getProductionCompany() {
         return $this->properties['productionCompany'];
@@ -196,7 +196,7 @@ class Movie extends CreativeWork
      * interpretation of this may vary by context and product type, and cannot be fully
      * enumerated here.
      *
-     * @param $countryOfOrigin 
+     * @param $countryOfOrigin \LengthOfRope\JSONLD\Schema\Country
      * @return static
      **/
     public function setCountryOfOrigin($countryOfOrigin): static {
@@ -206,7 +206,7 @@ class Movie extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Country
      **/
     public function getCountryOfOrigin() {
         return $this->properties['countryOfOrigin'];
@@ -215,7 +215,7 @@ class Movie extends CreativeWork
      * The duration of the item (movie, audio recording, event, etc.) in [ISO 8601
      * duration format](http://en.wikipedia.org/wiki/ISO_8601).
      *
-     * @param $duration 
+     * @param $duration \LengthOfRope\JSONLD\Schema\Duration
      * @return static
      **/
     public function setDuration($duration): static {
@@ -225,7 +225,7 @@ class Movie extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Duration
      **/
     public function getDuration() {
         return $this->properties['duration'];
@@ -235,7 +235,7 @@ class Movie extends CreativeWork
      * Directors can be associated with individual items or with a series, episode,
      * clip.
      *
-     * @param $director 
+     * @param $director \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setDirector($director): static {
@@ -245,7 +245,7 @@ class Movie extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
     public function getDirector() {
         return $this->properties['director'];
@@ -253,7 +253,7 @@ class Movie extends CreativeWork
     /**
      * The composer of the soundtrack.
      *
-     * @param $musicBy |
+     * @param $musicBy \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\MusicGroup
      * @return static
      **/
     public function setMusicBy($musicBy): static {
@@ -263,7 +263,7 @@ class Movie extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\MusicGroup
      **/
     public function getMusicBy() {
         return $this->properties['musicBy'];

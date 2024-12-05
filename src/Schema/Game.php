@@ -45,7 +45,7 @@ class Game extends CreativeWork
      * The task that a player-controlled character, or group of characters may complete
      * in order to gain a reward.
      *
-     * @param $quest 
+     * @param $quest \LengthOfRope\JSONLD\Schema\Thing
      * @return static
      **/
     public function setQuest($quest): static {
@@ -55,7 +55,7 @@ class Game extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Thing
      **/
     public function getQuest() {
         return $this->properties['quest'];
@@ -63,7 +63,7 @@ class Game extends CreativeWork
     /**
      * Indicate how many people can play this game (minimum, maximum, or range).
      *
-     * @param $numberOfPlayers 
+     * @param $numberOfPlayers \LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setNumberOfPlayers($numberOfPlayers): static {
@@ -73,7 +73,7 @@ class Game extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getNumberOfPlayers() {
         return $this->properties['numberOfPlayers'];
@@ -82,7 +82,7 @@ class Game extends CreativeWork
      * An item is an object within the game world that can be collected by a player or,
      * occasionally, a non-player character.
      *
-     * @param $gameItem 
+     * @param $gameItem \LengthOfRope\JSONLD\Schema\Thing
      * @return static
      **/
     public function setGameItem($gameItem): static {
@@ -92,7 +92,7 @@ class Game extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Thing
      **/
     public function getGameItem() {
         return $this->properties['gameItem'];
@@ -100,7 +100,7 @@ class Game extends CreativeWork
     /**
      * Real or fictional location of the game (or part of game).
      *
-     * @param $gameLocation ||
+     * @param $gameLocation \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\PostalAddress|\LengthOfRope\JSONLD\Schema\Place
      * @return static
      **/
     public function setGameLocation($gameLocation): static {
@@ -110,7 +110,7 @@ class Game extends CreativeWork
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\PostalAddress|\LengthOfRope\JSONLD\Schema\Place
      **/
     public function getGameLocation() {
         return $this->properties['gameLocation'];
@@ -119,7 +119,7 @@ class Game extends CreativeWork
      * A piece of data that represents a particular aspect of a fictional character
      * (skill, power, character points, advantage, disadvantage).
      *
-     * @param $characterAttribute 
+     * @param $characterAttribute \LengthOfRope\JSONLD\Schema\Thing
      * @return static
      **/
     public function setCharacterAttribute($characterAttribute): static {
@@ -129,7 +129,7 @@ class Game extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Thing
      **/
     public function getCharacterAttribute() {
         return $this->properties['characterAttribute'];

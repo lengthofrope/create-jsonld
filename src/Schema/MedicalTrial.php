@@ -45,7 +45,7 @@ class MedicalTrial extends MedicalStudy
     /**
      * Specifics about the trial design (enumerated).
      *
-     * @param $trialDesign 
+     * @param $trialDesign \LengthOfRope\JSONLD\Schema\MedicalTrialDesign
      * @return static
      **/
     public function setTrialDesign($trialDesign): static {
@@ -55,7 +55,7 @@ class MedicalTrial extends MedicalStudy
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MedicalTrialDesign
      **/
     public function getTrialDesign() {
         return $this->properties['trialDesign'];

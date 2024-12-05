@@ -42,7 +42,7 @@ class MerchantReturnPolicySeasonalOverride extends Intangible
     /**
      * The type of return fees for purchased products (for any return reason).
      *
-     * @param $returnFees 
+     * @param $returnFees \LengthOfRope\JSONLD\Schema\ReturnFeesEnumeration
      * @return static
      **/
     public function setReturnFees($returnFees): static {
@@ -52,7 +52,7 @@ class MerchantReturnPolicySeasonalOverride extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\ReturnFeesEnumeration
      **/
     public function getReturnFees() {
         return $this->properties['returnFees'];
@@ -60,7 +60,7 @@ class MerchantReturnPolicySeasonalOverride extends Intangible
     /**
      * The type of return method offered, specified from an enumeration.
      *
-     * @param $returnMethod 
+     * @param $returnMethod \LengthOfRope\JSONLD\Schema\ReturnMethodEnumeration
      * @return static
      **/
     public function setReturnMethod($returnMethod): static {
@@ -70,7 +70,7 @@ class MerchantReturnPolicySeasonalOverride extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\ReturnMethodEnumeration
      **/
     public function getReturnMethod() {
         return $this->properties['returnMethod'];
@@ -78,7 +78,7 @@ class MerchantReturnPolicySeasonalOverride extends Intangible
     /**
      * A refund type, from an enumerated list.
      *
-     * @param $refundType 
+     * @param $refundType \LengthOfRope\JSONLD\Schema\RefundTypeEnumeration
      * @return static
      **/
     public function setRefundType($refundType): static {
@@ -88,7 +88,7 @@ class MerchantReturnPolicySeasonalOverride extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\RefundTypeEnumeration
      **/
     public function getRefundType() {
         return $this->properties['refundType'];
@@ -97,7 +97,7 @@ class MerchantReturnPolicySeasonalOverride extends Intangible
      * Amount of shipping costs for product returns (for any reason). Applicable when
      * property [[returnFees]] equals [[ReturnShippingFees]].
      *
-     * @param $returnShippingFeesAmount 
+     * @param $returnShippingFeesAmount \LengthOfRope\JSONLD\Schema\MonetaryAmount
      * @return static
      **/
     public function setReturnShippingFeesAmount($returnShippingFeesAmount): static {
@@ -107,7 +107,7 @@ class MerchantReturnPolicySeasonalOverride extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount
      **/
     public function getReturnShippingFeesAmount() {
         return $this->properties['returnShippingFeesAmount'];
@@ -116,7 +116,7 @@ class MerchantReturnPolicySeasonalOverride extends Intangible
      * The start date and time of the item (in [ISO 8601 date
      * format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
-     * @param $startDate |
+     * @param $startDate \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
      * @return static
      **/
     public function setStartDate($startDate): static {
@@ -126,7 +126,7 @@ class MerchantReturnPolicySeasonalOverride extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
      **/
     public function getStartDate() {
         return $this->properties['startDate'];
@@ -136,7 +136,7 @@ class MerchantReturnPolicySeasonalOverride extends Intangible
      * date) that a product can be returned. Used when the [[returnPolicyCategory]]
      * property is specified as [[MerchantReturnFiniteReturnWindow]].
      *
-     * @param $merchantReturnDays ||
+     * @param $merchantReturnDays \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\Schema\Integer|\LengthOfRope\JSONLD\DataType\DateTime
      * @return static
      **/
     public function setMerchantReturnDays($merchantReturnDays): static {
@@ -146,7 +146,7 @@ class MerchantReturnPolicySeasonalOverride extends Intangible
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\Schema\Integer|\LengthOfRope\JSONLD\DataType\DateTime
      **/
     public function getMerchantReturnDays() {
         return $this->properties['merchantReturnDays'];
@@ -154,7 +154,7 @@ class MerchantReturnPolicySeasonalOverride extends Intangible
     /**
      * Specifies an applicable return policy (from an enumeration).
      *
-     * @param $returnPolicyCategory 
+     * @param $returnPolicyCategory \LengthOfRope\JSONLD\Schema\MerchantReturnEnumeration
      * @return static
      **/
     public function setReturnPolicyCategory($returnPolicyCategory): static {
@@ -164,7 +164,7 @@ class MerchantReturnPolicySeasonalOverride extends Intangible
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MerchantReturnEnumeration
      **/
     public function getReturnPolicyCategory() {
         return $this->properties['returnPolicyCategory'];
@@ -173,7 +173,7 @@ class MerchantReturnPolicySeasonalOverride extends Intangible
      * The end date and time of the item (in [ISO 8601 date
      * format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
-     * @param $endDate |
+     * @param $endDate \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
      * @return static
      **/
     public function setEndDate($endDate): static {
@@ -183,7 +183,7 @@ class MerchantReturnPolicySeasonalOverride extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
      **/
     public function getEndDate() {
         return $this->properties['endDate'];
@@ -193,7 +193,7 @@ class MerchantReturnPolicySeasonalOverride extends Intangible
      * use [[Number]] to specify a percentage of the product price paid by the
      * customer.
      *
-     * @param $restockingFee |
+     * @param $restockingFee \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setRestockingFee($restockingFee): static {
@@ -203,7 +203,7 @@ class MerchantReturnPolicySeasonalOverride extends Intangible
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\Number
      **/
     public function getRestockingFee() {
         return $this->properties['restockingFee'];

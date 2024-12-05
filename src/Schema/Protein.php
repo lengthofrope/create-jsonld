@@ -49,7 +49,7 @@ class Protein extends BioChemEntity
      * A symbolic representation of a BioChemEntity. For example, a nucleotide sequence
      * of a Gene or an amino acid sequence of a Protein.
      *
-     * @param $hasBioPolymerSequence 
+     * @param $hasBioPolymerSequence \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setHasBioPolymerSequence($hasBioPolymerSequence): static {
@@ -59,7 +59,7 @@ class Protein extends BioChemEntity
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getHasBioPolymerSequence() {
         return $this->properties['hasBioPolymerSequence'];

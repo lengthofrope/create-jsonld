@@ -42,7 +42,7 @@ class MusicComposition extends CreativeWork
     /**
      * The date and place the work was first performed.
      *
-     * @param $firstPerformance 
+     * @param $firstPerformance \LengthOfRope\JSONLD\Schema\Event
      * @return static
      **/
     public function setFirstPerformance($firstPerformance): static {
@@ -52,7 +52,7 @@ class MusicComposition extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Event
      **/
     public function getFirstPerformance() {
         return $this->properties['firstPerformance'];
@@ -60,7 +60,7 @@ class MusicComposition extends CreativeWork
     /**
      * An audio recording of the work.
      *
-     * @param $recordedAs 
+     * @param $recordedAs \LengthOfRope\JSONLD\Schema\MusicRecording
      * @return static
      **/
     public function setRecordedAs($recordedAs): static {
@@ -70,7 +70,7 @@ class MusicComposition extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MusicRecording
      **/
     public function getRecordedAs() {
         return $this->properties['recordedAs'];
@@ -78,7 +78,7 @@ class MusicComposition extends CreativeWork
     /**
      * The words in the song.
      *
-     * @param $lyrics 
+     * @param $lyrics \LengthOfRope\JSONLD\Schema\CreativeWork
      * @return static
      **/
     public function setLyrics($lyrics): static {
@@ -88,7 +88,7 @@ class MusicComposition extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork
      **/
     public function getLyrics() {
         return $this->properties['lyrics'];
@@ -96,7 +96,7 @@ class MusicComposition extends CreativeWork
     /**
      * The International Standard Musical Work Code for the composition.
      *
-     * @param $iswcCode 
+     * @param $iswcCode \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setIswcCode($iswcCode): static {
@@ -106,7 +106,7 @@ class MusicComposition extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getIswcCode() {
         return $this->properties['iswcCode'];
@@ -114,7 +114,7 @@ class MusicComposition extends CreativeWork
     /**
      * Smaller compositions included in this work (e.g. a movement in a symphony).
      *
-     * @param $includedComposition 
+     * @param $includedComposition \LengthOfRope\JSONLD\Schema\MusicComposition
      * @return static
      **/
     public function setIncludedComposition($includedComposition): static {
@@ -124,7 +124,7 @@ class MusicComposition extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MusicComposition
      **/
     public function getIncludedComposition() {
         return $this->properties['includedComposition'];
@@ -132,7 +132,7 @@ class MusicComposition extends CreativeWork
     /**
      * The person who wrote the words.
      *
-     * @param $lyricist 
+     * @param $lyricist \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setLyricist($lyricist): static {
@@ -142,7 +142,7 @@ class MusicComposition extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
     public function getLyricist() {
         return $this->properties['lyricist'];
@@ -150,7 +150,7 @@ class MusicComposition extends CreativeWork
     /**
      * An arrangement derived from the composition.
      *
-     * @param $musicArrangement 
+     * @param $musicArrangement \LengthOfRope\JSONLD\Schema\MusicComposition
      * @return static
      **/
     public function setMusicArrangement($musicArrangement): static {
@@ -160,7 +160,7 @@ class MusicComposition extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\MusicComposition
      **/
     public function getMusicArrangement() {
         return $this->properties['musicArrangement'];
@@ -168,7 +168,7 @@ class MusicComposition extends CreativeWork
     /**
      * The type of composition (e.g. overture, sonata, symphony, etc.).
      *
-     * @param $musicCompositionForm 
+     * @param $musicCompositionForm \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setMusicCompositionForm($musicCompositionForm): static {
@@ -178,7 +178,7 @@ class MusicComposition extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getMusicCompositionForm() {
         return $this->properties['musicCompositionForm'];
@@ -186,7 +186,7 @@ class MusicComposition extends CreativeWork
     /**
      * The key, mode, or scale this composition uses.
      *
-     * @param $musicalKey 
+     * @param $musicalKey \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setMusicalKey($musicalKey): static {
@@ -196,7 +196,7 @@ class MusicComposition extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getMusicalKey() {
         return $this->properties['musicalKey'];
@@ -205,7 +205,7 @@ class MusicComposition extends CreativeWork
      * The person or organization who wrote a composition, or who is the composer of a
      * work performed at some event.
      *
-     * @param $composer |
+     * @param $composer \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setComposer($composer): static {
@@ -215,7 +215,7 @@ class MusicComposition extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getComposer() {
         return $this->properties['composer'];

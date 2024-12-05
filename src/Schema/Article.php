@@ -48,7 +48,7 @@ class Article extends CreativeWork
      * Any description of pages that is not separated into pageStart and pageEnd; for
      * example, "1-6, 9, 55" or "10-12, 46-49".
      *
-     * @param $pagination 
+     * @param $pagination \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setPagination($pagination): static {
@@ -58,7 +58,7 @@ class Article extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getPagination() {
         return $this->properties['pagination'];
@@ -66,7 +66,7 @@ class Article extends CreativeWork
     /**
      * The page on which the work starts; for example "135" or "xiii".
      *
-     * @param $pageStart |
+     * @param $pageStart \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Integer
      * @return static
      **/
     public function setPageStart($pageStart): static {
@@ -76,7 +76,7 @@ class Article extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Integer
      **/
     public function getPageStart() {
         return $this->properties['pageStart'];
@@ -87,7 +87,7 @@ class Article extends CreativeWork
      * created. In a journalistic setting this could include information about
      * reporting process, methods, interviews, data sources, etc.
      *
-     * @param $backstory |
+     * @param $backstory \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setBackstory($backstory): static {
@@ -97,7 +97,7 @@ class Article extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getBackstory() {
         return $this->properties['backstory'];
@@ -105,7 +105,7 @@ class Article extends CreativeWork
     /**
      * The actual body of the article.
      *
-     * @param $articleBody 
+     * @param $articleBody \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setArticleBody($articleBody): static {
@@ -115,7 +115,7 @@ class Article extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getArticleBody() {
         return $this->properties['articleBody'];
@@ -123,7 +123,7 @@ class Article extends CreativeWork
     /**
      * The number of words in the text of the Article.
      *
-     * @param $wordCount 
+     * @param $wordCount \LengthOfRope\JSONLD\Schema\Integer
      * @return static
      **/
     public function setWordCount($wordCount): static {
@@ -133,7 +133,7 @@ class Article extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Integer
      **/
     public function getWordCount() {
         return $this->properties['wordCount'];
@@ -141,7 +141,7 @@ class Article extends CreativeWork
     /**
      * The page on which the work ends; for example "138" or "xvi".
      *
-     * @param $pageEnd |
+     * @param $pageEnd \LengthOfRope\JSONLD\Schema\Integer|\LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setPageEnd($pageEnd): static {
@@ -151,7 +151,7 @@ class Article extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\Integer|\LengthOfRope\JSONLD\DataType\Text
      **/
     public function getPageEnd() {
         return $this->properties['pageEnd'];
@@ -184,7 +184,7 @@ class Article extends CreativeWork
      * a possible value of the *speakable* property.
      *
      *
-     * @param $speakable |
+     * @param $speakable \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\SpeakableSpecification
      * @return static
      **/
     public function setSpeakable($speakable): static {
@@ -194,7 +194,7 @@ class Article extends CreativeWork
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\SpeakableSpecification
      **/
     public function getSpeakable() {
         return $this->properties['speakable'];
@@ -203,7 +203,7 @@ class Article extends CreativeWork
      * Articles may belong to one or more 'sections' in a magazine or newspaper, such
      * as Sports, Lifestyle, etc.
      *
-     * @param $articleSection 
+     * @param $articleSection \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setArticleSection($articleSection): static {
@@ -213,7 +213,7 @@ class Article extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getArticleSection() {
         return $this->properties['articleSection'];

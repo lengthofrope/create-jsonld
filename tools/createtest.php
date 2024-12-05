@@ -5,7 +5,8 @@ use \LengthOfRope\JSONLD;
 use LengthOfRope\JSONLD\DataType;
 use \LengthOfRope\JSONLD\Schema;
 
-$Create = JSONLD\Create::factory()->add(
+$Create = JSONLD\Create::factory()
+->add(
     Schema\Person::factory()
         ->setId("https://www.lengthofrope.nl/authors/#john-doe")
         ->setName(DataType\TypeText::factory()->setValue("John Doe"))
@@ -62,7 +63,7 @@ $Create = JSONLD\Create::factory()->add(
                 ->setSameAs("https://www.lengthofrope.nl")
                 ->setImage("https://www.lengthofrope.nl/logo.png")
         )
-        ->setHasCourseInstance(
+        ->setHasCourseInstance([
             Schema\CourseInstance::factory()
                 ->setName("PHP Course 1")
                 ->setStartDate("2019-01-01")
@@ -77,8 +78,23 @@ $Create = JSONLD\Create::factory()->add(
                                 ->setAddressCountry("NL")
                                 ->setAddressLocality("Amersfoort")
                         )
-                )
-        )
+            ),
+            Schema\CourseInstance::factory()
+            ->setName("PHP Course 1")
+            ->setStartDate("2019-01-01")
+            ->setEndDate("2019-01-03")
+            ->setLocation(
+                Schema\Place::factory()
+                    ->setName("LengthOfRope")
+                    ->setAddress(
+                        Schema\PostalAddress::factory()
+                            ->setPostalCode("1234 AA")
+                            ->setStreetAddress("Somewhere 12")
+                            ->setAddressCountry("NL")
+                            ->setAddressLocality("Amersfoort")
+                    )
+            )
+        ])
 );
 
 // Test if the datatypes validate

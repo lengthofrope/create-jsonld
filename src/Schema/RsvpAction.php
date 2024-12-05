@@ -44,7 +44,7 @@ class RsvpAction extends InformAction
      * If responding yes, the number of guests who will attend in addition to the
      * invitee.
      *
-     * @param $additionalNumberOfGuests 
+     * @param $additionalNumberOfGuests \LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setAdditionalNumberOfGuests($additionalNumberOfGuests): static {
@@ -54,7 +54,7 @@ class RsvpAction extends InformAction
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Number
      **/
     public function getAdditionalNumberOfGuests() {
         return $this->properties['additionalNumberOfGuests'];
@@ -62,7 +62,7 @@ class RsvpAction extends InformAction
     /**
      * Comments, typically from users.
      *
-     * @param $comment 
+     * @param $comment \LengthOfRope\JSONLD\Schema\Comment
      * @return static
      **/
     public function setComment($comment): static {
@@ -72,7 +72,7 @@ class RsvpAction extends InformAction
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Comment
      **/
     public function getComment() {
         return $this->properties['comment'];
@@ -80,7 +80,7 @@ class RsvpAction extends InformAction
     /**
      * The response (yes, no, maybe) to the RSVP.
      *
-     * @param $rsvpResponse 
+     * @param $rsvpResponse \LengthOfRope\JSONLD\Schema\RsvpResponseType
      * @return static
      **/
     public function setRsvpResponse($rsvpResponse): static {
@@ -90,7 +90,7 @@ class RsvpAction extends InformAction
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\RsvpResponseType
      **/
     public function getRsvpResponse() {
         return $this->properties['rsvpResponse'];

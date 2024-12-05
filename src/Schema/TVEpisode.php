@@ -53,7 +53,7 @@ class TVEpisode extends Episode
      * [[editEIDR]] for a more edit-specific description.
      *
      *
-     * @param $titleEIDR |
+     * @param $titleEIDR \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setTitleEIDR($titleEIDR): static {
@@ -63,7 +63,7 @@ class TVEpisode extends Episode
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL
      **/
     public function getTitleEIDR() {
         return $this->properties['titleEIDR'];
@@ -72,7 +72,7 @@ class TVEpisode extends Episode
      * Languages in which subtitles/captions are available, in [IETF BCP 47 standard
      * format](http://tools.ietf.org/html/bcp47).
      *
-     * @param $subtitleLanguage |
+     * @param $subtitleLanguage \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Language
      * @return static
      **/
     public function setSubtitleLanguage($subtitleLanguage): static {
@@ -82,7 +82,7 @@ class TVEpisode extends Episode
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Language
      **/
     public function getSubtitleLanguage() {
         return $this->properties['subtitleLanguage'];
@@ -101,7 +101,7 @@ class TVEpisode extends Episode
      * interpretation of this may vary by context and product type, and cannot be fully
      * enumerated here.
      *
-     * @param $countryOfOrigin 
+     * @param $countryOfOrigin \LengthOfRope\JSONLD\Schema\Country
      * @return static
      **/
     public function setCountryOfOrigin($countryOfOrigin): static {
@@ -111,7 +111,7 @@ class TVEpisode extends Episode
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Country
      **/
     public function getCountryOfOrigin() {
         return $this->properties['countryOfOrigin'];
@@ -119,7 +119,7 @@ class TVEpisode extends Episode
     /**
      * The TV series to which this episode or season belongs.
      *
-     * @param $partOfTVSeries 
+     * @param $partOfTVSeries \LengthOfRope\JSONLD\Schema\TVSeries
      * @return static
      **/
     public function setPartOfTVSeries($partOfTVSeries): static {
@@ -129,7 +129,7 @@ class TVEpisode extends Episode
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\TVSeries
      **/
     public function getPartOfTVSeries() {
         return $this->properties['partOfTVSeries'];

@@ -45,7 +45,7 @@ class MoneyTransfer extends TransferAction
      * institution operating the beneficiary’s bank account or releasing funds for
      * the beneficiary.
      *
-     * @param $beneficiaryBank |
+     * @param $beneficiaryBank \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\BankOrCreditUnion
      * @return static
      **/
     public function setBeneficiaryBank($beneficiaryBank): static {
@@ -55,7 +55,7 @@ class MoneyTransfer extends TransferAction
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\BankOrCreditUnion
      **/
     public function getBeneficiaryBank() {
         return $this->properties['beneficiaryBank'];
@@ -63,7 +63,7 @@ class MoneyTransfer extends TransferAction
     /**
      * The amount of money.
      *
-     * @param $amount |
+     * @param $amount \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setAmount($amount): static {
@@ -73,7 +73,7 @@ class MoneyTransfer extends TransferAction
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\Number
      **/
     public function getAmount() {
         return $this->properties['amount'];

@@ -64,7 +64,7 @@ class DonateAction extends TransferAction
      * (U+0039)) rather than superficially similar Unicode symbols.
      *
      *
-     * @param $price |
+     * @param $price \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Number
      * @return static
      **/
     public function setPrice($price): static {
@@ -74,7 +74,7 @@ class DonateAction extends TransferAction
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Number
      **/
     public function getPrice() {
         return $this->properties['price'];
@@ -83,7 +83,7 @@ class DonateAction extends TransferAction
      * A sub property of participant. The participant who is at the receiving end of
      * the action.
      *
-     * @param $recipient |||
+     * @param $recipient \LengthOfRope\JSONLD\Schema\Audience|\LengthOfRope\JSONLD\Schema\ContactPoint|\LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setRecipient($recipient): static {
@@ -93,7 +93,7 @@ class DonateAction extends TransferAction
     }
 
     /**
-     * @return |||
+     * @return \LengthOfRope\JSONLD\Schema\Audience|\LengthOfRope\JSONLD\Schema\ContactPoint|\LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getRecipient() {
         return $this->properties['recipient'];
@@ -102,7 +102,7 @@ class DonateAction extends TransferAction
      * One or more detailed price specifications, indicating the unit price and
      * delivery or payment charges.
      *
-     * @param $priceSpecification 
+     * @param $priceSpecification \LengthOfRope\JSONLD\Schema\PriceSpecification
      * @return static
      **/
     public function setPriceSpecification($priceSpecification): static {
@@ -112,7 +112,7 @@ class DonateAction extends TransferAction
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\PriceSpecification
      **/
     public function getPriceSpecification() {
         return $this->properties['priceSpecification'];
@@ -128,7 +128,7 @@ class DonateAction extends TransferAction
      * Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and
      * other currency types, e.g. "Ithaca HOUR".
      *
-     * @param $priceCurrency 
+     * @param $priceCurrency \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setPriceCurrency($priceCurrency): static {
@@ -138,7 +138,7 @@ class DonateAction extends TransferAction
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getPriceCurrency() {
         return $this->properties['priceCurrency'];

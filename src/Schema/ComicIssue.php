@@ -50,7 +50,7 @@ class ComicIssue extends PublicationIssue
      * The individual who adds lettering, including speech balloons and sound effects,
      * to artwork.
      *
-     * @param $letterer 
+     * @param $letterer \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setLetterer($letterer): static {
@@ -60,7 +60,7 @@ class ComicIssue extends PublicationIssue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
     public function getLetterer() {
         return $this->properties['letterer'];
@@ -69,7 +69,7 @@ class ComicIssue extends PublicationIssue
      * The individual who traces over the pencil drawings in ink after pencils are
      * complete.
      *
-     * @param $inker 
+     * @param $inker \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setInker($inker): static {
@@ -79,7 +79,7 @@ class ComicIssue extends PublicationIssue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
     public function getInker() {
         return $this->properties['inker'];
@@ -87,7 +87,7 @@ class ComicIssue extends PublicationIssue
     /**
      * The individual who adds color to inked drawings.
      *
-     * @param $colorist 
+     * @param $colorist \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setColorist($colorist): static {
@@ -97,7 +97,7 @@ class ComicIssue extends PublicationIssue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
     public function getColorist() {
         return $this->properties['colorist'];
@@ -107,7 +107,7 @@ class ComicIssue extends PublicationIssue
      * in a medium other than pencils or digital line art--for example, if the
      * primary artwork is done in watercolors or digital paints.
      *
-     * @param $artist 
+     * @param $artist \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setArtist($artist): static {
@@ -117,7 +117,7 @@ class ComicIssue extends PublicationIssue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
     public function getArtist() {
         return $this->properties['artist'];
@@ -125,7 +125,7 @@ class ComicIssue extends PublicationIssue
     /**
      * The individual who draws the primary narrative artwork.
      *
-     * @param $penciler 
+     * @param $penciler \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setPenciler($penciler): static {
@@ -135,7 +135,7 @@ class ComicIssue extends PublicationIssue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
     public function getPenciler() {
         return $this->properties['penciler'];
@@ -146,7 +146,7 @@ class ComicIssue extends PublicationIssue
      * Hitch
      * Variant Cover" or "2nd Printing Variant".
      *
-     * @param $variantCover 
+     * @param $variantCover \LengthOfRope\JSONLD\DataType\Text
      * @return static
      **/
     public function setVariantCover($variantCover): static {
@@ -156,7 +156,7 @@ class ComicIssue extends PublicationIssue
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\DataType\Text
      **/
     public function getVariantCover() {
         return $this->properties['variantCover'];

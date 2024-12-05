@@ -52,7 +52,7 @@ class PlayAction extends Action
     /**
      * Upcoming or past event associated with this place, organization, or action.
      *
-     * @param $event 
+     * @param $event \LengthOfRope\JSONLD\Schema\Event
      * @return static
      **/
     public function setEvent($event): static {
@@ -62,7 +62,7 @@ class PlayAction extends Action
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Event
      **/
     public function getEvent() {
         return $this->properties['event'];
@@ -70,7 +70,7 @@ class PlayAction extends Action
     /**
      * An intended audience, i.e. a group for whom something was created.
      *
-     * @param $audience 
+     * @param $audience \LengthOfRope\JSONLD\Schema\Audience
      * @return static
      **/
     public function setAudience($audience): static {
@@ -80,7 +80,7 @@ class PlayAction extends Action
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Audience
      **/
     public function getAudience() {
         return $this->properties['audience'];

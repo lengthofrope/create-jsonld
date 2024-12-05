@@ -43,7 +43,7 @@ class ApartmentComplex extends Residence
      * Indicates whether pets are allowed to enter the accommodation or lodging
      * business. More detailed information can be put in a text value.
      *
-     * @param $petsAllowed |
+     * @param $petsAllowed \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Boolean
      * @return static
      **/
     public function setPetsAllowed($petsAllowed): static {
@@ -53,7 +53,7 @@ class ApartmentComplex extends Residence
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Boolean
      **/
     public function getPetsAllowed() {
         return $this->properties['petsAllowed'];
@@ -62,7 +62,7 @@ class ApartmentComplex extends Residence
      * The total integer number of bedrooms in a some [[Accommodation]],
      * [[ApartmentComplex]] or [[FloorPlan]].
      *
-     * @param $numberOfBedrooms |
+     * @param $numberOfBedrooms \LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setNumberOfBedrooms($numberOfBedrooms): static {
@@ -72,7 +72,7 @@ class ApartmentComplex extends Residence
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getNumberOfBedrooms() {
         return $this->properties['numberOfBedrooms'];
@@ -83,7 +83,7 @@ class ApartmentComplex extends Residence
      * [[FloorPlan]] (within its specific [[ApartmentComplex]]). See also
      * [[numberOfAccommodationUnits]].
      *
-     * @param $numberOfAvailableAccommodationUnits 
+     * @param $numberOfAvailableAccommodationUnits \LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setNumberOfAvailableAccommodationUnits($numberOfAvailableAccommodationUnits): static {
@@ -93,7 +93,7 @@ class ApartmentComplex extends Residence
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getNumberOfAvailableAccommodationUnits() {
         return $this->properties['numberOfAvailableAccommodationUnits'];
@@ -104,7 +104,7 @@ class ApartmentComplex extends Residence
      * [[FloorPlan]] (within its specific [[ApartmentComplex]]). See also
      * [[numberOfAvailableAccommodationUnits]].
      *
-     * @param $numberOfAccommodationUnits 
+     * @param $numberOfAccommodationUnits \LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setNumberOfAccommodationUnits($numberOfAccommodationUnits): static {
@@ -114,7 +114,7 @@ class ApartmentComplex extends Residence
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getNumberOfAccommodationUnits() {
         return $this->properties['numberOfAccommodationUnits'];
@@ -124,7 +124,7 @@ class ApartmentComplex extends Residence
      * [[Accommodation]] or [[ApartmentComplex]] in a real estate setting, as well as
      * other kinds of tours as appropriate.
      *
-     * @param $tourBookingPage 
+     * @param $tourBookingPage \LengthOfRope\JSONLD\Schema\URL
      * @return static
      **/
     public function setTourBookingPage($tourBookingPage): static {
@@ -134,7 +134,7 @@ class ApartmentComplex extends Residence
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\URL
      **/
     public function getTourBookingPage() {
         return $this->properties['tourBookingPage'];

@@ -43,7 +43,7 @@ class Vein extends Vessel
      * The anatomical or organ system drained by this vessel; generally refers to a
      * specific part of an organ.
      *
-     * @param $regionDrained |
+     * @param $regionDrained \LengthOfRope\JSONLD\Schema\AnatomicalSystem|\LengthOfRope\JSONLD\Schema\AnatomicalStructure
      * @return static
      **/
     public function setRegionDrained($regionDrained): static {
@@ -53,7 +53,7 @@ class Vein extends Vessel
     }
 
     /**
-     * @return |
+     * @return \LengthOfRope\JSONLD\Schema\AnatomicalSystem|\LengthOfRope\JSONLD\Schema\AnatomicalStructure
      **/
     public function getRegionDrained() {
         return $this->properties['regionDrained'];
@@ -61,7 +61,7 @@ class Vein extends Vessel
     /**
      * The vasculature that the vein drains into.
      *
-     * @param $drainsTo 
+     * @param $drainsTo \LengthOfRope\JSONLD\Schema\Vessel
      * @return static
      **/
     public function setDrainsTo($drainsTo): static {
@@ -71,7 +71,7 @@ class Vein extends Vessel
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Vessel
      **/
     public function getDrainsTo() {
         return $this->properties['drainsTo'];
@@ -80,7 +80,7 @@ class Vein extends Vessel
      * The anatomical or organ system that the vein flows into; a larger structure that
      * the vein connects to.
      *
-     * @param $tributary 
+     * @param $tributary \LengthOfRope\JSONLD\Schema\AnatomicalStructure
      * @return static
      **/
     public function setTributary($tributary): static {
@@ -90,7 +90,7 @@ class Vein extends Vessel
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\AnatomicalStructure
      **/
     public function getTributary() {
         return $this->properties['tributary'];

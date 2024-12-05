@@ -43,7 +43,7 @@ class PerformAction extends PlayAction
      * A sub property of location. The entertainment business where the action
      * occurred.
      *
-     * @param $entertainmentBusiness 
+     * @param $entertainmentBusiness \LengthOfRope\JSONLD\Schema\EntertainmentBusiness
      * @return static
      **/
     public function setEntertainmentBusiness($entertainmentBusiness): static {
@@ -53,7 +53,7 @@ class PerformAction extends PlayAction
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\EntertainmentBusiness
      **/
     public function getEntertainmentBusiness() {
         return $this->properties['entertainmentBusiness'];

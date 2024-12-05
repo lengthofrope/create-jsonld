@@ -46,7 +46,7 @@ class EducationalOccupationalCredential extends CreativeWork
      * credential. Note: recognition may include a process of quality assurance or
      * accreditation.
      *
-     * @param $recognizedBy 
+     * @param $recognizedBy \LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setRecognizedBy($recognizedBy): static {
@@ -56,7 +56,7 @@ class EducationalOccupationalCredential extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getRecognizedBy() {
         return $this->properties['recognizedBy'];
@@ -65,7 +65,7 @@ class EducationalOccupationalCredential extends CreativeWork
      * The geographic area where the item is valid. Applies for example to a
      * [[Permit]], a [[Certification]], or an [[EducationalOccupationalCredential]].
      *
-     * @param $validIn 
+     * @param $validIn \LengthOfRope\JSONLD\Schema\AdministrativeArea
      * @return static
      **/
     public function setValidIn($validIn): static {
@@ -75,7 +75,7 @@ class EducationalOccupationalCredential extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\AdministrativeArea
      **/
     public function getValidIn() {
         return $this->properties['validIn'];
@@ -83,7 +83,7 @@ class EducationalOccupationalCredential extends CreativeWork
     /**
      * The duration of validity of a permit or similar thing.
      *
-     * @param $validFor 
+     * @param $validFor \LengthOfRope\JSONLD\Schema\Duration
      * @return static
      **/
     public function setValidFor($validFor): static {
@@ -93,7 +93,7 @@ class EducationalOccupationalCredential extends CreativeWork
     }
 
     /**
-     * @return 
+     * @return \LengthOfRope\JSONLD\Schema\Duration
      **/
     public function getValidFor() {
         return $this->properties['validFor'];
@@ -103,7 +103,7 @@ class EducationalOccupationalCredential extends CreativeWork
      * Examples of educational levels include 'beginner', 'intermediate' or 'advanced',
      * and formal sets of level indicators.
      *
-     * @param $educationalLevel ||
+     * @param $educationalLevel \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm
      * @return static
      **/
     public function setEducationalLevel($educationalLevel): static {
@@ -113,7 +113,7 @@ class EducationalOccupationalCredential extends CreativeWork
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm
      **/
     public function getEducationalLevel() {
         return $this->properties['educationalLevel'];
@@ -122,7 +122,7 @@ class EducationalOccupationalCredential extends CreativeWork
      * The category or type of credential being described, for example "degree”,
      * “certificate”, “badge”, or more specific term.
      *
-     * @param $credentialCategory ||
+     * @param $credentialCategory \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm
      * @return static
      **/
     public function setCredentialCategory($credentialCategory): static {
@@ -132,7 +132,7 @@ class EducationalOccupationalCredential extends CreativeWork
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm
      **/
     public function getCredentialCategory() {
         return $this->properties['credentialCategory'];
@@ -142,7 +142,7 @@ class EducationalOccupationalCredential extends CreativeWork
      * person or other entity in order to do something such as earn an Educational
      * Occupational Credential or understand a LearningResource.
      *
-     * @param $competencyRequired ||
+     * @param $competencyRequired \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm
      * @return static
      **/
     public function setCompetencyRequired($competencyRequired): static {
@@ -152,7 +152,7 @@ class EducationalOccupationalCredential extends CreativeWork
     }
 
     /**
-     * @return ||
+     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm
      **/
     public function getCompetencyRequired() {
         return $this->properties['competencyRequired'];
