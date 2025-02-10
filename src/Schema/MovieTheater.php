@@ -42,7 +42,7 @@ class MovieTheater extends CivicStructure
     /**
      * The number of screens in the movie theater.
      *
-     * @param $screenCount \LengthOfRope\JSONLD\DataType\Number
+     * @param $screenCount \LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setScreenCount($screenCount): static {
@@ -52,7 +52,7 @@ class MovieTheater extends CivicStructure
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getScreenCount() {
         return $this->properties['screenCount'];

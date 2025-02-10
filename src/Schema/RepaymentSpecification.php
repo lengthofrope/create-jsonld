@@ -79,7 +79,7 @@ class RepaymentSpecification extends StructuredValue
      * Frequency of payments due, i.e. number of months between payments. This is
      * defined as a frequency, i.e. the reciprocal of a period of time.
      *
-     * @param $loanPaymentFrequency \LengthOfRope\JSONLD\DataType\Number
+     * @param $loanPaymentFrequency \LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setLoanPaymentFrequency($loanPaymentFrequency): static {
@@ -89,7 +89,7 @@ class RepaymentSpecification extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getLoanPaymentFrequency() {
         return $this->properties['loanPaymentFrequency'];
@@ -99,7 +99,7 @@ class RepaymentSpecification extends StructuredValue
      * good/service. The payment typically represents only a percentage of the full
      * purchase price.
      *
-     * @param $downPayment \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\Number
+     * @param $downPayment \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setDownPayment($downPayment): static {
@@ -109,7 +109,7 @@ class RepaymentSpecification extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getDownPayment() {
         return $this->properties['downPayment'];
@@ -119,7 +119,7 @@ class RepaymentSpecification extends StructuredValue
      * For monthly paying loans this is the number of months from the contractual first
      * payment date to the maturity date.
      *
-     * @param $numberOfLoanPayments \LengthOfRope\JSONLD\DataType\Number
+     * @param $numberOfLoanPayments \LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setNumberOfLoanPayments($numberOfLoanPayments): static {
@@ -129,7 +129,7 @@ class RepaymentSpecification extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getNumberOfLoanPayments() {
         return $this->properties['numberOfLoanPayments'];

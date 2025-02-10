@@ -62,7 +62,7 @@ class Substance extends MedicalEntity
     /**
      * An active ingredient, typically chemical compounds and/or biologic substances.
      *
-     * @param $activeIngredient \LengthOfRope\JSONLD\DataType\Text
+     * @param $activeIngredient \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setActiveIngredient($activeIngredient): static {
@@ -72,7 +72,7 @@ class Substance extends MedicalEntity
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getActiveIngredient() {
         return $this->properties['activeIngredient'];

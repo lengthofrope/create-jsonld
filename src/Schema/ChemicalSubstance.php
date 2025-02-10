@@ -81,7 +81,7 @@ class ChemicalSubstance extends BioChemEntity
      * The chemical composition describes the identity and relative ratio of the
      * chemical elements that make up the substance.
      *
-     * @param $chemicalComposition \LengthOfRope\JSONLD\DataType\Text
+     * @param $chemicalComposition \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setChemicalComposition($chemicalComposition): static {
@@ -91,7 +91,7 @@ class ChemicalSubstance extends BioChemEntity
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getChemicalComposition() {
         return $this->properties['chemicalComposition'];

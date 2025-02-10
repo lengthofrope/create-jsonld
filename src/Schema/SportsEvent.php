@@ -96,7 +96,7 @@ class SportsEvent extends Event
     /**
      * A type of sport (e.g. Baseball).
      *
-     * @param $sport \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @param $sport \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setSport($sport): static {
@@ -106,7 +106,7 @@ class SportsEvent extends Event
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getSport() {
         return $this->properties['sport'];

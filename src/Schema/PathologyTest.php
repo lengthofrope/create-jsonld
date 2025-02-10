@@ -43,7 +43,7 @@ class PathologyTest extends MedicalTest
     /**
      * The type of tissue sample required for the test.
      *
-     * @param $tissueSample \LengthOfRope\JSONLD\DataType\Text
+     * @param $tissueSample \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setTissueSample($tissueSample): static {
@@ -53,7 +53,7 @@ class PathologyTest extends MedicalTest
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getTissueSample() {
         return $this->properties['tissueSample'];

@@ -80,7 +80,7 @@ class Person extends Thing
     /**
      * A colleague of the person.
      *
-     * @param $colleague \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\DataType\URL
+     * @param $colleague \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setColleague($colleague): static {
@@ -90,7 +90,7 @@ class Person extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getColleague() {
         return $this->properties['colleague'];
@@ -138,7 +138,7 @@ class Person extends Thing
      * not distinguish skill levels here, or relate this to educational content,
      * events, objectives or [[JobPosting]] descriptions.
      *
-     * @param $knowsAbout \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\DataType\Text
+     * @param $knowsAbout \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setKnowsAbout($knowsAbout): static {
@@ -148,7 +148,7 @@ class Person extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getKnowsAbout() {
         return $this->properties['knowsAbout'];
@@ -166,7 +166,7 @@ class Person extends Thing
      * schema.org terminology.
      *
      *
-     * @param $publishingPrinciples \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\CreativeWork
+     * @param $publishingPrinciples \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\CreativeWork
      * @return static
      **/
     public function setPublishingPrinciples($publishingPrinciples): static {
@@ -176,7 +176,7 @@ class Person extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\CreativeWork
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\CreativeWork
      **/
     public function getPublishingPrinciples() {
         return $this->properties['publishingPrinciples'];
@@ -186,7 +186,7 @@ class Person extends Thing
      * Activities (ISIC), Revision 4 code for a particular organization, business
      * person, or place.
      *
-     * @param $isicV4 \LengthOfRope\JSONLD\DataType\Text
+     * @param $isicV4 \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setIsicV4($isicV4): static {
@@ -196,7 +196,7 @@ class Person extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getIsicV4() {
         return $this->properties['isicV4'];
@@ -204,7 +204,7 @@ class Person extends Thing
     /**
      * The telephone number.
      *
-     * @param $telephone \LengthOfRope\JSONLD\DataType\Text
+     * @param $telephone \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setTelephone($telephone): static {
@@ -214,7 +214,7 @@ class Person extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getTelephone() {
         return $this->properties['telephone'];
@@ -240,7 +240,7 @@ class Person extends Thing
     /**
      * The Value-added Tax ID of the organization or person.
      *
-     * @param $vatID \LengthOfRope\JSONLD\DataType\Text
+     * @param $vatID \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setVatID($vatID): static {
@@ -250,7 +250,7 @@ class Person extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getVatID() {
         return $this->properties['vatID'];
@@ -261,7 +261,7 @@ class Person extends Thing
      * here. Use language codes from the [IETF BCP 47
      * standard](http://tools.ietf.org/html/bcp47).
      *
-     * @param $knowsLanguage \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Language
+     * @param $knowsLanguage \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Language
      * @return static
      **/
     public function setKnowsLanguage($knowsLanguage): static {
@@ -271,7 +271,7 @@ class Person extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Language
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Language
      **/
     public function getKnowsLanguage() {
         return $this->properties['knowsLanguage'];
@@ -279,7 +279,7 @@ class Person extends Thing
     /**
      * Family name. In the U.S., the last name of a Person.
      *
-     * @param $familyName \LengthOfRope\JSONLD\DataType\Text
+     * @param $familyName \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setFamilyName($familyName): static {
@@ -289,7 +289,7 @@ class Person extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getFamilyName() {
         return $this->properties['familyName'];
@@ -297,7 +297,7 @@ class Person extends Thing
     /**
      * An honorific prefix preceding a Person's name such as Dr/Mrs/Mr.
      *
-     * @param $honorificPrefix \LengthOfRope\JSONLD\DataType\Text
+     * @param $honorificPrefix \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setHonorificPrefix($honorificPrefix): static {
@@ -307,7 +307,7 @@ class Person extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getHonorificPrefix() {
         return $this->properties['honorificPrefix'];
@@ -315,7 +315,7 @@ class Person extends Thing
     /**
      * An award won by or for this item.
      *
-     * @param $award \LengthOfRope\JSONLD\DataType\Text
+     * @param $award \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setAward($award): static {
@@ -325,7 +325,7 @@ class Person extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getAward() {
         return $this->properties['award'];
@@ -333,7 +333,7 @@ class Person extends Thing
     /**
      * Physical address of the item.
      *
-     * @param $address \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\PostalAddress
+     * @param $address \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\PostalAddress
      * @return static
      **/
     public function setAddress($address): static {
@@ -343,7 +343,7 @@ class Person extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\PostalAddress
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\PostalAddress
      **/
     public function getAddress() {
         return $this->properties['address'];
@@ -352,7 +352,7 @@ class Person extends Thing
      * A [callsign](https://en.wikipedia.org/wiki/Call_sign), as used in broadcasting
      * and radio communications to identify people, radio and TV stations, or vehicles.
      *
-     * @param $callSign \LengthOfRope\JSONLD\DataType\Text
+     * @param $callSign \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setCallSign($callSign): static {
@@ -362,7 +362,7 @@ class Person extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getCallSign() {
         return $this->properties['callSign'];
@@ -462,7 +462,7 @@ class Person extends Thing
     /**
      * Given name. In the U.S., the first name of a Person.
      *
-     * @param $givenName \LengthOfRope\JSONLD\DataType\Text
+     * @param $givenName \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setGivenName($givenName): static {
@@ -472,7 +472,7 @@ class Person extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getGivenName() {
         return $this->properties['givenName'];
@@ -535,7 +535,7 @@ class Person extends Thing
     /**
      * The fax number.
      *
-     * @param $faxNumber \LengthOfRope\JSONLD\DataType\Text
+     * @param $faxNumber \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setFaxNumber($faxNumber): static {
@@ -545,7 +545,7 @@ class Person extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getFaxNumber() {
         return $this->properties['faxNumber'];
@@ -571,7 +571,7 @@ class Person extends Thing
     /**
      * Email address.
      *
-     * @param $email \LengthOfRope\JSONLD\DataType\Text
+     * @param $email \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setEmail($email): static {
@@ -581,7 +581,7 @@ class Person extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getEmail() {
         return $this->properties['email'];
@@ -590,7 +590,7 @@ class Person extends Thing
      * The North American Industry Classification System (NAICS) code for a particular
      * organization or business person.
      *
-     * @param $naics \LengthOfRope\JSONLD\DataType\Text
+     * @param $naics \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setNaics($naics): static {
@@ -600,7 +600,7 @@ class Person extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getNaics() {
         return $this->properties['naics'];
@@ -664,7 +664,7 @@ class Person extends Thing
      * The Tax / Fiscal ID of the organization or person, e.g. the TIN in the US or the
      * CIF/NIF in Spain.
      *
-     * @param $taxID \LengthOfRope\JSONLD\DataType\Text
+     * @param $taxID \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setTaxID($taxID): static {
@@ -674,7 +674,7 @@ class Person extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getTaxID() {
         return $this->properties['taxID'];
@@ -720,7 +720,7 @@ class Person extends Thing
      * a competency that is either claimed by a person, an organization or desired or
      * required to fulfill a role or to work in an occupation.
      *
-     * @param $skills \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DefinedTerm
+     * @param $skills \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DefinedTerm
      * @return static
      **/
     public function setSkills($skills): static {
@@ -730,7 +730,7 @@ class Person extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DefinedTerm
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DefinedTerm
      **/
     public function getSkills() {
         return $this->properties['skills'];
@@ -738,7 +738,7 @@ class Person extends Thing
     /**
      * Date of birth.
      *
-     * @param $birthDate \LengthOfRope\JSONLD\DataType\Date
+     * @param $birthDate \LengthOfRope\JSONLD\DataType\TypeDate
      * @return static
      **/
     public function setBirthDate($birthDate): static {
@@ -748,7 +748,7 @@ class Person extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Date
+     * @return \LengthOfRope\JSONLD\DataType\TypeDate
      **/
     public function getBirthDate() {
         return $this->properties['birthDate'];
@@ -811,7 +811,7 @@ class Person extends Thing
     /**
      * The job title of the person (for example, Financial Manager).
      *
-     * @param $jobTitle \LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text
+     * @param $jobTitle \LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setJobTitle($jobTitle): static {
@@ -821,7 +821,7 @@ class Person extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getJobTitle() {
         return $this->properties['jobTitle'];
@@ -829,7 +829,7 @@ class Person extends Thing
     /**
      * An honorific suffix following a Person's name such as M.D./PhD/MSCSW.
      *
-     * @param $honorificSuffix \LengthOfRope\JSONLD\DataType\Text
+     * @param $honorificSuffix \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setHonorificSuffix($honorificSuffix): static {
@@ -839,7 +839,7 @@ class Person extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getHonorificSuffix() {
         return $this->properties['honorificSuffix'];
@@ -974,7 +974,7 @@ class Person extends Thing
     /**
      * Date of death.
      *
-     * @param $deathDate \LengthOfRope\JSONLD\DataType\Date
+     * @param $deathDate \LengthOfRope\JSONLD\DataType\TypeDate
      * @return static
      **/
     public function setDeathDate($deathDate): static {
@@ -984,7 +984,7 @@ class Person extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Date
+     * @return \LengthOfRope\JSONLD\DataType\TypeDate
      **/
     public function getDeathDate() {
         return $this->properties['deathDate'];
@@ -1010,7 +1010,7 @@ class Person extends Thing
     /**
      * An additional name for a Person, can be used for a middle name.
      *
-     * @param $additionalName \LengthOfRope\JSONLD\DataType\Text
+     * @param $additionalName \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setAdditionalName($additionalName): static {
@@ -1020,7 +1020,7 @@ class Person extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getAdditionalName() {
         return $this->properties['additionalName'];
@@ -1067,7 +1067,7 @@ class Person extends Thing
      * organization, person, or place. The GLN is a 13-digit number used to identify
      * parties and physical locations.
      *
-     * @param $globalLocationNumber \LengthOfRope\JSONLD\DataType\Text
+     * @param $globalLocationNumber \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setGlobalLocationNumber($globalLocationNumber): static {
@@ -1077,7 +1077,7 @@ class Person extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getGlobalLocationNumber() {
         return $this->properties['globalLocationNumber'];
@@ -1109,7 +1109,7 @@ class Person extends Thing
      * the gender of individuals, we do not try to enumerate all possibilities. A
      * mixed-gender [[SportsTeam]] can be indicated with a text value of "Mixed".
      *
-     * @param $gender \LengthOfRope\JSONLD\Schema\GenderType|\LengthOfRope\JSONLD\DataType\Text
+     * @param $gender \LengthOfRope\JSONLD\Schema\GenderType|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setGender($gender): static {
@@ -1119,7 +1119,7 @@ class Person extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\GenderType|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\GenderType|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getGender() {
         return $this->properties['gender'];
@@ -1127,7 +1127,7 @@ class Person extends Thing
     /**
      * Awards won by or for this item.
      *
-     * @param $awards \LengthOfRope\JSONLD\DataType\Text
+     * @param $awards \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setAwards($awards): static {
@@ -1137,7 +1137,7 @@ class Person extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getAwards() {
         return $this->properties['awards'];
@@ -1182,7 +1182,7 @@ class Person extends Thing
      * The Dun & Bradstreet DUNS number for identifying an organization or business
      * person.
      *
-     * @param $duns \LengthOfRope\JSONLD\DataType\Text
+     * @param $duns \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setDuns($duns): static {
@@ -1192,7 +1192,7 @@ class Person extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getDuns() {
         return $this->properties['duns'];

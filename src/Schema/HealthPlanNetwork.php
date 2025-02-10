@@ -42,7 +42,7 @@ class HealthPlanNetwork extends Intangible
     /**
      * The costs to the patient for services under this network or formulary.
      *
-     * @param $healthPlanCostSharing \LengthOfRope\JSONLD\DataType\Boolean
+     * @param $healthPlanCostSharing \LengthOfRope\JSONLD\DataType\TypeBoolean
      * @return static
      **/
     public function setHealthPlanCostSharing($healthPlanCostSharing): static {
@@ -52,7 +52,7 @@ class HealthPlanNetwork extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Boolean
+     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean
      **/
     public function getHealthPlanCostSharing() {
         return $this->properties['healthPlanCostSharing'];
@@ -61,7 +61,7 @@ class HealthPlanNetwork extends Intangible
      * Name or unique ID of network. (Networks are often reused across different
      * insurance plans.)
      *
-     * @param $healthPlanNetworkId \LengthOfRope\JSONLD\DataType\Text
+     * @param $healthPlanNetworkId \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setHealthPlanNetworkId($healthPlanNetworkId): static {
@@ -71,7 +71,7 @@ class HealthPlanNetwork extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getHealthPlanNetworkId() {
         return $this->properties['healthPlanNetworkId'];
@@ -79,7 +79,7 @@ class HealthPlanNetwork extends Intangible
     /**
      * The tier(s) for this network.
      *
-     * @param $healthPlanNetworkTier \LengthOfRope\JSONLD\DataType\Text
+     * @param $healthPlanNetworkTier \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setHealthPlanNetworkTier($healthPlanNetworkTier): static {
@@ -89,7 +89,7 @@ class HealthPlanNetwork extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getHealthPlanNetworkTier() {
         return $this->properties['healthPlanNetworkTier'];

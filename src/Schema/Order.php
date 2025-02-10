@@ -82,7 +82,7 @@ class Order extends Intangible
      * Indicates whether the offer was accepted as a gift for someone other than the
      * buyer.
      *
-     * @param $isGift \LengthOfRope\JSONLD\DataType\Boolean
+     * @param $isGift \LengthOfRope\JSONLD\DataType\TypeBoolean
      * @return static
      **/
     public function setIsGift($isGift): static {
@@ -92,7 +92,7 @@ class Order extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Boolean
+     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean
      **/
     public function getIsGift() {
         return $this->properties['isGift'];
@@ -100,7 +100,7 @@ class Order extends Intangible
     /**
      * The name of the credit card or other method of payment for the order.
      *
-     * @param $paymentMethod \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\PaymentMethod
+     * @param $paymentMethod \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\PaymentMethod
      * @return static
      **/
     public function setPaymentMethod($paymentMethod): static {
@@ -110,7 +110,7 @@ class Order extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\PaymentMethod
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\PaymentMethod
      **/
     public function getPaymentMethod() {
         return $this->properties['paymentMethod'];
@@ -118,7 +118,7 @@ class Order extends Intangible
     /**
      * The URL for sending a payment.
      *
-     * @param $paymentUrl \LengthOfRope\JSONLD\DataType\URL
+     * @param $paymentUrl \LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setPaymentUrl($paymentUrl): static {
@@ -128,7 +128,7 @@ class Order extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getPaymentUrl() {
         return $this->properties['paymentUrl'];
@@ -172,7 +172,7 @@ class Order extends Intangible
     /**
      * The date that payment is due.
      *
-     * @param $paymentDueDate \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
+     * @param $paymentDueDate \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
      * @return static
      **/
     public function setPaymentDueDate($paymentDueDate): static {
@@ -182,7 +182,7 @@ class Order extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
+     * @return \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
      **/
     public function getPaymentDueDate() {
         return $this->properties['paymentDueDate'];
@@ -211,7 +211,7 @@ class Order extends Intangible
     /**
      * Any discount applied (to an Order).
      *
-     * @param $discount \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Number
+     * @param $discount \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setDiscount($discount): static {
@@ -221,7 +221,7 @@ class Order extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getDiscount() {
         return $this->properties['discount'];
@@ -229,7 +229,7 @@ class Order extends Intangible
     /**
      * Date order was placed.
      *
-     * @param $orderDate \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
+     * @param $orderDate \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
      * @return static
      **/
     public function setOrderDate($orderDate): static {
@@ -239,7 +239,7 @@ class Order extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
+     * @return \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
      **/
     public function getOrderDate() {
         return $this->properties['orderDate'];
@@ -248,7 +248,7 @@ class Order extends Intangible
      * An identifier for the method of payment used (e.g. the last 4 digits of the
      * credit card).
      *
-     * @param $paymentMethodId \LengthOfRope\JSONLD\DataType\Text
+     * @param $paymentMethodId \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setPaymentMethodId($paymentMethodId): static {
@@ -258,7 +258,7 @@ class Order extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getPaymentMethodId() {
         return $this->properties['paymentMethodId'];
@@ -284,7 +284,7 @@ class Order extends Intangible
     /**
      * The date that payment is due.
      *
-     * @param $paymentDue \LengthOfRope\JSONLD\DataType\DateTime
+     * @param $paymentDue \LengthOfRope\JSONLD\DataType\TypeDateTime
      * @return static
      **/
     public function setPaymentDue($paymentDue): static {
@@ -294,7 +294,7 @@ class Order extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\DateTime
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime
      **/
     public function getPaymentDue() {
         return $this->properties['paymentDue'];
@@ -328,7 +328,7 @@ class Order extends Intangible
      * Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and
      * other currency types, e.g. "Ithaca HOUR".
      *
-     * @param $discountCurrency \LengthOfRope\JSONLD\DataType\Text
+     * @param $discountCurrency \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setDiscountCurrency($discountCurrency): static {
@@ -338,7 +338,7 @@ class Order extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getDiscountCurrency() {
         return $this->properties['discountCurrency'];
@@ -382,7 +382,7 @@ class Order extends Intangible
     /**
      * A number that confirms the given order or payment has been received.
      *
-     * @param $confirmationNumber \LengthOfRope\JSONLD\DataType\Text
+     * @param $confirmationNumber \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setConfirmationNumber($confirmationNumber): static {
@@ -392,7 +392,7 @@ class Order extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getConfirmationNumber() {
         return $this->properties['confirmationNumber'];
@@ -418,7 +418,7 @@ class Order extends Intangible
     /**
      * Code used to redeem a discount.
      *
-     * @param $discountCode \LengthOfRope\JSONLD\DataType\Text
+     * @param $discountCode \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setDiscountCode($discountCode): static {
@@ -428,7 +428,7 @@ class Order extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getDiscountCode() {
         return $this->properties['discountCode'];
@@ -436,7 +436,7 @@ class Order extends Intangible
     /**
      * The identifier of the transaction.
      *
-     * @param $orderNumber \LengthOfRope\JSONLD\DataType\Text
+     * @param $orderNumber \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setOrderNumber($orderNumber): static {
@@ -446,7 +446,7 @@ class Order extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getOrderNumber() {
         return $this->properties['orderNumber'];

@@ -43,7 +43,7 @@ class Brand extends Intangible
     /**
      * An associated logo.
      *
-     * @param $logo \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\ImageObject
+     * @param $logo \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\ImageObject
      * @return static
      **/
     public function setLogo($logo): static {
@@ -53,7 +53,7 @@ class Brand extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\ImageObject
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\ImageObject
      **/
     public function getLogo() {
         return $this->properties['logo'];
@@ -79,7 +79,7 @@ class Brand extends Intangible
     /**
      * A slogan or motto associated with the item.
      *
-     * @param $slogan \LengthOfRope\JSONLD\DataType\Text
+     * @param $slogan \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setSlogan($slogan): static {
@@ -89,7 +89,7 @@ class Brand extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getSlogan() {
         return $this->properties['slogan'];

@@ -44,7 +44,7 @@ class PerformanceRole extends Role
      * The name of a character played in some acting or performing role, i.e. in a
      * PerformanceRole.
      *
-     * @param $characterName \LengthOfRope\JSONLD\DataType\Text
+     * @param $characterName \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setCharacterName($characterName): static {
@@ -54,7 +54,7 @@ class PerformanceRole extends Role
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getCharacterName() {
         return $this->properties['characterName'];

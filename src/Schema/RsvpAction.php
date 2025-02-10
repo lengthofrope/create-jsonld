@@ -44,7 +44,7 @@ class RsvpAction extends InformAction
      * If responding yes, the number of guests who will attend in addition to the
      * invitee.
      *
-     * @param $additionalNumberOfGuests \LengthOfRope\JSONLD\DataType\Number
+     * @param $additionalNumberOfGuests \LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setAdditionalNumberOfGuests($additionalNumberOfGuests): static {
@@ -54,7 +54,7 @@ class RsvpAction extends InformAction
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getAdditionalNumberOfGuests() {
         return $this->properties['additionalNumberOfGuests'];

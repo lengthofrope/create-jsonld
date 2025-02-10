@@ -69,7 +69,7 @@ class Review extends CreativeWork
      * necessary), or if ordered, as a list (in which case the most positive is at the
      * beginning of the list).
      *
-     * @param $positiveNotes \LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\Schema\ListItem|\LengthOfRope\JSONLD\DataType\Text
+     * @param $positiveNotes \LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\Schema\ListItem|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setPositiveNotes($positiveNotes): static {
@@ -79,7 +79,7 @@ class Review extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\Schema\ListItem|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\Schema\ListItem|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getPositiveNotes() {
         return $this->properties['positiveNotes'];
@@ -109,7 +109,7 @@ class Review extends CreativeWork
     /**
      * The actual body of the review.
      *
-     * @param $reviewBody \LengthOfRope\JSONLD\DataType\Text
+     * @param $reviewBody \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setReviewBody($reviewBody): static {
@@ -119,7 +119,7 @@ class Review extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getReviewBody() {
         return $this->properties['reviewBody'];
@@ -145,7 +145,7 @@ class Review extends CreativeWork
     /**
      * This Review or Rating is relevant to this part or facet of the itemReviewed.
      *
-     * @param $reviewAspect \LengthOfRope\JSONLD\DataType\Text
+     * @param $reviewAspect \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setReviewAspect($reviewAspect): static {
@@ -155,7 +155,7 @@ class Review extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getReviewAspect() {
         return $this->properties['reviewAspect'];
@@ -195,7 +195,7 @@ class Review extends CreativeWork
      * necessary), or if ordered, as a list (in which case the most negative is at the
      * beginning of the list).
      *
-     * @param $negativeNotes \LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\ListItem|\LengthOfRope\JSONLD\DataType\Text
+     * @param $negativeNotes \LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\ListItem|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setNegativeNotes($negativeNotes): static {
@@ -205,7 +205,7 @@ class Review extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\ListItem|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\ListItem|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getNegativeNotes() {
         return $this->properties['negativeNotes'];

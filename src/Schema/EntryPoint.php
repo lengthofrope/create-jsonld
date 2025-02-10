@@ -44,7 +44,7 @@ class EntryPoint extends Intangible
      * To specify a specific application or operating system instance, use
      * actionApplication.
      *
-     * @param $actionPlatform \LengthOfRope\JSONLD\Schema\DigitalPlatformEnumeration|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @param $actionPlatform \LengthOfRope\JSONLD\Schema\DigitalPlatformEnumeration|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setActionPlatform($actionPlatform): static {
@@ -54,7 +54,7 @@ class EntryPoint extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\DigitalPlatformEnumeration|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\Schema\DigitalPlatformEnumeration|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getActionPlatform() {
         return $this->properties['actionPlatform'];
@@ -62,7 +62,7 @@ class EntryPoint extends Intangible
     /**
      * The supported content type(s) for an EntryPoint response.
      *
-     * @param $contentType \LengthOfRope\JSONLD\DataType\Text
+     * @param $contentType \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setContentType($contentType): static {
@@ -72,7 +72,7 @@ class EntryPoint extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getContentType() {
         return $this->properties['contentType'];
@@ -98,7 +98,7 @@ class EntryPoint extends Intangible
     /**
      * The supported encoding type(s) for an EntryPoint request.
      *
-     * @param $encodingType \LengthOfRope\JSONLD\DataType\Text
+     * @param $encodingType \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setEncodingType($encodingType): static {
@@ -108,7 +108,7 @@ class EntryPoint extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getEncodingType() {
         return $this->properties['encodingType'];
@@ -117,7 +117,7 @@ class EntryPoint extends Intangible
      * An url template (RFC6570) that will be used to construct the target of the
      * execution of the action.
      *
-     * @param $urlTemplate \LengthOfRope\JSONLD\DataType\Text
+     * @param $urlTemplate \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setUrlTemplate($urlTemplate): static {
@@ -127,7 +127,7 @@ class EntryPoint extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getUrlTemplate() {
         return $this->properties['urlTemplate'];
@@ -136,7 +136,7 @@ class EntryPoint extends Intangible
      * An HTTP method that specifies the appropriate HTTP method for a request to an
      * HTTP EntryPoint. Values are capitalized strings as used in HTTP.
      *
-     * @param $httpMethod \LengthOfRope\JSONLD\DataType\Text
+     * @param $httpMethod \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setHttpMethod($httpMethod): static {
@@ -146,7 +146,7 @@ class EntryPoint extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getHttpMethod() {
         return $this->properties['httpMethod'];

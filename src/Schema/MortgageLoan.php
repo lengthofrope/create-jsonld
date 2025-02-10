@@ -63,7 +63,7 @@ class MortgageLoan extends LoanOrCredit
      * Whether borrower is a resident of the jurisdiction where the property is
      * located.
      *
-     * @param $domiciledMortgage \LengthOfRope\JSONLD\DataType\Boolean
+     * @param $domiciledMortgage \LengthOfRope\JSONLD\DataType\TypeBoolean
      * @return static
      **/
     public function setDomiciledMortgage($domiciledMortgage): static {
@@ -73,7 +73,7 @@ class MortgageLoan extends LoanOrCredit
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Boolean
+     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean
      **/
     public function getDomiciledMortgage() {
         return $this->properties['domiciledMortgage'];

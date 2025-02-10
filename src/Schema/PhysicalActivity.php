@@ -46,7 +46,7 @@ class PhysicalActivity extends LifestyleModification
      * Changes in the normal mechanical, physical, and biochemical functions that are
      * associated with this activity or condition.
      *
-     * @param $pathophysiology \LengthOfRope\JSONLD\DataType\Text
+     * @param $pathophysiology \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setPathophysiology($pathophysiology): static {
@@ -56,7 +56,7 @@ class PhysicalActivity extends LifestyleModification
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getPathophysiology() {
         return $this->properties['pathophysiology'];
@@ -84,7 +84,7 @@ class PhysicalActivity extends LifestyleModification
      * A category for the item. Greater signs or slashes can be used to informally
      * indicate a category hierarchy.
      *
-     * @param $category \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\Schema\PhysicalActivityCategory|\LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @param $category \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\Schema\PhysicalActivityCategory|\LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setCategory($category): static {
@@ -94,7 +94,7 @@ class PhysicalActivity extends LifestyleModification
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\Schema\PhysicalActivityCategory|\LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\Schema\PhysicalActivityCategory|\LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getCategory() {
         return $this->properties['category'];
@@ -102,7 +102,7 @@ class PhysicalActivity extends LifestyleModification
     /**
      * The characteristics of associated patients, such as age, gender, race etc.
      *
-     * @param $epidemiology \LengthOfRope\JSONLD\DataType\Text
+     * @param $epidemiology \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setEpidemiology($epidemiology): static {
@@ -112,7 +112,7 @@ class PhysicalActivity extends LifestyleModification
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getEpidemiology() {
         return $this->properties['epidemiology'];

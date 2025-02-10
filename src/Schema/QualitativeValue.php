@@ -184,7 +184,7 @@ class QualitativeValue extends Enumeration
      * A secondary value that provides additional information on the original value,
      * e.g. a reference temperature or a type of measurement.
      *
-     * @param $valueReference \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\PropertyValue|\LengthOfRope\JSONLD\Schema\MeasurementTypeEnumeration|\LengthOfRope\JSONLD\Schema\StructuredValue|\LengthOfRope\JSONLD\Schema\Enumeration|\LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\Schema\QuantitativeValue
+     * @param $valueReference \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\PropertyValue|\LengthOfRope\JSONLD\Schema\MeasurementTypeEnumeration|\LengthOfRope\JSONLD\Schema\StructuredValue|\LengthOfRope\JSONLD\Schema\Enumeration|\LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setValueReference($valueReference): static {
@@ -194,7 +194,7 @@ class QualitativeValue extends Enumeration
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\PropertyValue|\LengthOfRope\JSONLD\Schema\MeasurementTypeEnumeration|\LengthOfRope\JSONLD\Schema\StructuredValue|\LengthOfRope\JSONLD\Schema\Enumeration|\LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\Schema\QuantitativeValue
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\PropertyValue|\LengthOfRope\JSONLD\Schema\MeasurementTypeEnumeration|\LengthOfRope\JSONLD\Schema\StructuredValue|\LengthOfRope\JSONLD\Schema\Enumeration|\LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getValueReference() {
         return $this->properties['valueReference'];

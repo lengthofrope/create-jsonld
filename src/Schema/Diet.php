@@ -43,7 +43,7 @@ class Diet extends CreativeWork
     /**
      * Medical expert advice related to the plan.
      *
-     * @param $expertConsiderations \LengthOfRope\JSONLD\DataType\Text
+     * @param $expertConsiderations \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setExpertConsiderations($expertConsiderations): static {
@@ -53,7 +53,7 @@ class Diet extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getExpertConsiderations() {
         return $this->properties['expertConsiderations'];
@@ -82,7 +82,7 @@ class Diet extends CreativeWork
      * alterations/deviations from the USDA or other regulatory body's approved dietary
      * guidelines.
      *
-     * @param $dietFeatures \LengthOfRope\JSONLD\DataType\Text
+     * @param $dietFeatures \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setDietFeatures($dietFeatures): static {
@@ -92,7 +92,7 @@ class Diet extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getDietFeatures() {
         return $this->properties['dietFeatures'];
@@ -100,7 +100,7 @@ class Diet extends CreativeWork
     /**
      * Specific physiologic benefits associated to the plan.
      *
-     * @param $physiologicalBenefits \LengthOfRope\JSONLD\DataType\Text
+     * @param $physiologicalBenefits \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setPhysiologicalBenefits($physiologicalBenefits): static {
@@ -110,7 +110,7 @@ class Diet extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getPhysiologicalBenefits() {
         return $this->properties['physiologicalBenefits'];
@@ -118,7 +118,7 @@ class Diet extends CreativeWork
     /**
      * Specific physiologic risks associated to the diet plan.
      *
-     * @param $risks \LengthOfRope\JSONLD\DataType\Text
+     * @param $risks \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setRisks($risks): static {
@@ -128,7 +128,7 @@ class Diet extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getRisks() {
         return $this->properties['risks'];

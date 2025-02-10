@@ -47,7 +47,7 @@ class MedicalTherapy extends TherapeuticProcedure
     /**
      * A contraindication for this therapy.
      *
-     * @param $contraindication \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\MedicalContraindication
+     * @param $contraindication \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\MedicalContraindication
      * @return static
      **/
     public function setContraindication($contraindication): static {
@@ -57,7 +57,7 @@ class MedicalTherapy extends TherapeuticProcedure
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\MedicalContraindication
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\MedicalContraindication
      **/
     public function getContraindication() {
         return $this->properties['contraindication'];

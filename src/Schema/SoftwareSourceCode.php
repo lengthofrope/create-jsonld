@@ -44,7 +44,7 @@ class SoftwareSourceCode extends CreativeWork
      * What type of code sample: full (compile ready) solution, code snippet, inline
      * code, scripts, template.
      *
-     * @param $sampleType \LengthOfRope\JSONLD\DataType\Text
+     * @param $sampleType \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setSampleType($sampleType): static {
@@ -54,7 +54,7 @@ class SoftwareSourceCode extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getSampleType() {
         return $this->properties['sampleType'];
@@ -62,7 +62,7 @@ class SoftwareSourceCode extends CreativeWork
     /**
      * The computer programming language.
      *
-     * @param $programmingLanguage \LengthOfRope\JSONLD\Schema\ComputerLanguage|\LengthOfRope\JSONLD\DataType\Text
+     * @param $programmingLanguage \LengthOfRope\JSONLD\Schema\ComputerLanguage|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setProgrammingLanguage($programmingLanguage): static {
@@ -72,7 +72,7 @@ class SoftwareSourceCode extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\ComputerLanguage|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\ComputerLanguage|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getProgrammingLanguage() {
         return $this->properties['programmingLanguage'];
@@ -81,7 +81,7 @@ class SoftwareSourceCode extends CreativeWork
      * What type of code sample: full (compile ready) solution, code snippet, inline
      * code, scripts, template.
      *
-     * @param $codeSampleType \LengthOfRope\JSONLD\DataType\Text
+     * @param $codeSampleType \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setCodeSampleType($codeSampleType): static {
@@ -91,7 +91,7 @@ class SoftwareSourceCode extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getCodeSampleType() {
         return $this->properties['codeSampleType'];
@@ -100,7 +100,7 @@ class SoftwareSourceCode extends CreativeWork
      * Runtime platform or script interpreter dependencies (example: Java v1, Python
      * 2.3, .NET Framework 3.0).
      *
-     * @param $runtime \LengthOfRope\JSONLD\DataType\Text
+     * @param $runtime \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setRuntime($runtime): static {
@@ -110,7 +110,7 @@ class SoftwareSourceCode extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getRuntime() {
         return $this->properties['runtime'];
@@ -138,7 +138,7 @@ class SoftwareSourceCode extends CreativeWork
      * Runtime platform or script interpreter dependencies (example: Java v1, Python
      * 2.3, .NET Framework 3.0).
      *
-     * @param $runtimePlatform \LengthOfRope\JSONLD\DataType\Text
+     * @param $runtimePlatform \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setRuntimePlatform($runtimePlatform): static {
@@ -148,7 +148,7 @@ class SoftwareSourceCode extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getRuntimePlatform() {
         return $this->properties['runtimePlatform'];
@@ -157,7 +157,7 @@ class SoftwareSourceCode extends CreativeWork
      * Link to the repository where the un-compiled, human readable code and related
      * code is located (SVN, GitHub, CodePlex).
      *
-     * @param $codeRepository \LengthOfRope\JSONLD\DataType\URL
+     * @param $codeRepository \LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setCodeRepository($codeRepository): static {
@@ -167,7 +167,7 @@ class SoftwareSourceCode extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getCodeRepository() {
         return $this->properties['codeRepository'];

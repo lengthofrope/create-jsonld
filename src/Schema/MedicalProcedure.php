@@ -45,7 +45,7 @@ class MedicalProcedure extends MedicalEntity
      * Typical preparation that a patient must undergo before having the procedure
      * performed.
      *
-     * @param $preparation \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\MedicalEntity
+     * @param $preparation \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\MedicalEntity
      * @return static
      **/
     public function setPreparation($preparation): static {
@@ -55,7 +55,7 @@ class MedicalProcedure extends MedicalEntity
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\MedicalEntity
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\MedicalEntity
      **/
     public function getPreparation() {
         return $this->properties['preparation'];
@@ -81,7 +81,7 @@ class MedicalProcedure extends MedicalEntity
     /**
      * How the procedure is performed.
      *
-     * @param $howPerformed \LengthOfRope\JSONLD\DataType\Text
+     * @param $howPerformed \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setHowPerformed($howPerformed): static {
@@ -91,7 +91,7 @@ class MedicalProcedure extends MedicalEntity
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getHowPerformed() {
         return $this->properties['howPerformed'];
@@ -99,7 +99,7 @@ class MedicalProcedure extends MedicalEntity
     /**
      * The status of the study (enumerated).
      *
-     * @param $status \LengthOfRope\JSONLD\Schema\MedicalStudyStatus|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EventStatusType
+     * @param $status \LengthOfRope\JSONLD\Schema\MedicalStudyStatus|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\EventStatusType
      * @return static
      **/
     public function setStatus($status): static {
@@ -109,7 +109,7 @@ class MedicalProcedure extends MedicalEntity
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\MedicalStudyStatus|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EventStatusType
+     * @return \LengthOfRope\JSONLD\Schema\MedicalStudyStatus|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\EventStatusType
      **/
     public function getStatus() {
         return $this->properties['status'];
@@ -117,7 +117,7 @@ class MedicalProcedure extends MedicalEntity
     /**
      * Typical or recommended followup care after the procedure is performed.
      *
-     * @param $followup \LengthOfRope\JSONLD\DataType\Text
+     * @param $followup \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setFollowup($followup): static {
@@ -127,7 +127,7 @@ class MedicalProcedure extends MedicalEntity
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getFollowup() {
         return $this->properties['followup'];
@@ -135,7 +135,7 @@ class MedicalProcedure extends MedicalEntity
     /**
      * Location in the body of the anatomical structure.
      *
-     * @param $bodyLocation \LengthOfRope\JSONLD\DataType\Text
+     * @param $bodyLocation \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setBodyLocation($bodyLocation): static {
@@ -145,7 +145,7 @@ class MedicalProcedure extends MedicalEntity
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getBodyLocation() {
         return $this->properties['bodyLocation'];

@@ -49,7 +49,7 @@ class CDCPMDRecord extends StructuredValue
      * numicubeds - ICU BEDS: Total number of staffed inpatient intensive care unit
      * (ICU) beds.
      *
-     * @param $cvdNumICUBeds \LengthOfRope\JSONLD\DataType\Number
+     * @param $cvdNumICUBeds \LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setCvdNumICUBeds($cvdNumICUBeds): static {
@@ -59,7 +59,7 @@ class CDCPMDRecord extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getCvdNumICUBeds() {
         return $this->properties['cvdNumICUBeds'];
@@ -67,7 +67,7 @@ class CDCPMDRecord extends StructuredValue
     /**
      * Publication date of an online listing.
      *
-     * @param $datePosted \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
+     * @param $datePosted \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
      * @return static
      **/
     public function setDatePosted($datePosted): static {
@@ -77,7 +77,7 @@ class CDCPMDRecord extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
      **/
     public function getDatePosted() {
         return $this->properties['datePosted'];
@@ -86,7 +86,7 @@ class CDCPMDRecord extends StructuredValue
      * numc19overflowpats - ED/OVERFLOW: Patients with suspected or confirmed COVID-19
      * who are in the ED or any overflow location awaiting an inpatient bed.
      *
-     * @param $cvdNumC19OverflowPats \LengthOfRope\JSONLD\DataType\Number
+     * @param $cvdNumC19OverflowPats \LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setCvdNumC19OverflowPats($cvdNumC19OverflowPats): static {
@@ -96,7 +96,7 @@ class CDCPMDRecord extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getCvdNumC19OverflowPats() {
         return $this->properties['cvdNumC19OverflowPats'];
@@ -104,7 +104,7 @@ class CDCPMDRecord extends StructuredValue
     /**
      * numvent - MECHANICAL VENTILATORS: Total number of ventilators available.
      *
-     * @param $cvdNumVent \LengthOfRope\JSONLD\DataType\Number
+     * @param $cvdNumVent \LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setCvdNumVent($cvdNumVent): static {
@@ -114,7 +114,7 @@ class CDCPMDRecord extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getCvdNumVent() {
         return $this->properties['cvdNumVent'];
@@ -122,7 +122,7 @@ class CDCPMDRecord extends StructuredValue
     /**
      * collectiondate - Date for which patient counts are reported.
      *
-     * @param $cvdCollectionDate \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Text
+     * @param $cvdCollectionDate \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setCvdCollectionDate($cvdCollectionDate): static {
@@ -132,7 +132,7 @@ class CDCPMDRecord extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getCvdCollectionDate() {
         return $this->properties['cvdCollectionDate'];
@@ -141,7 +141,7 @@ class CDCPMDRecord extends StructuredValue
      * numicubedsocc - ICU BED OCCUPANCY: Total number of staffed inpatient ICU beds
      * that are occupied.
      *
-     * @param $cvdNumICUBedsOcc \LengthOfRope\JSONLD\DataType\Number
+     * @param $cvdNumICUBedsOcc \LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setCvdNumICUBedsOcc($cvdNumICUBedsOcc): static {
@@ -151,7 +151,7 @@ class CDCPMDRecord extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getCvdNumICUBedsOcc() {
         return $this->properties['cvdNumICUBedsOcc'];
@@ -160,7 +160,7 @@ class CDCPMDRecord extends StructuredValue
      * numbedsocc - HOSPITAL INPATIENT BED OCCUPANCY: Total number of staffed inpatient
      * beds that are occupied.
      *
-     * @param $cvdNumBedsOcc \LengthOfRope\JSONLD\DataType\Number
+     * @param $cvdNumBedsOcc \LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setCvdNumBedsOcc($cvdNumBedsOcc): static {
@@ -170,7 +170,7 @@ class CDCPMDRecord extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getCvdNumBedsOcc() {
         return $this->properties['cvdNumBedsOcc'];
@@ -180,7 +180,7 @@ class CDCPMDRecord extends StructuredValue
      * beds, including all staffed, ICU, licensed, and overflow (surge) beds used for
      * inpatients or outpatients.
      *
-     * @param $cvdNumTotBeds \LengthOfRope\JSONLD\DataType\Number
+     * @param $cvdNumTotBeds \LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setCvdNumTotBeds($cvdNumTotBeds): static {
@@ -190,7 +190,7 @@ class CDCPMDRecord extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getCvdNumTotBeds() {
         return $this->properties['cvdNumTotBeds'];
@@ -199,7 +199,7 @@ class CDCPMDRecord extends StructuredValue
      * numc19hosppats - HOSPITALIZED: Patients currently hospitalized in an inpatient
      * care location who have suspected or confirmed COVID-19.
      *
-     * @param $cvdNumC19HospPats \LengthOfRope\JSONLD\DataType\Number
+     * @param $cvdNumC19HospPats \LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setCvdNumC19HospPats($cvdNumC19HospPats): static {
@@ -209,7 +209,7 @@ class CDCPMDRecord extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getCvdNumC19HospPats() {
         return $this->properties['cvdNumC19HospPats'];
@@ -218,7 +218,7 @@ class CDCPMDRecord extends StructuredValue
      * numbeds - HOSPITAL INPATIENT BEDS: Inpatient beds, including all staffed,
      * licensed, and overflow (surge) beds used for inpatients.
      *
-     * @param $cvdNumBeds \LengthOfRope\JSONLD\DataType\Number
+     * @param $cvdNumBeds \LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setCvdNumBeds($cvdNumBeds): static {
@@ -228,7 +228,7 @@ class CDCPMDRecord extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getCvdNumBeds() {
         return $this->properties['cvdNumBeds'];
@@ -238,7 +238,7 @@ class CDCPMDRecord extends StructuredValue
      * location with onset of suspected or confirmed COVID-19 14 or more days after
      * hospitalization.
      *
-     * @param $cvdNumC19HOPats \LengthOfRope\JSONLD\DataType\Number
+     * @param $cvdNumC19HOPats \LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setCvdNumC19HOPats($cvdNumC19HOPats): static {
@@ -248,7 +248,7 @@ class CDCPMDRecord extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getCvdNumC19HOPats() {
         return $this->properties['cvdNumC19HOPats'];
@@ -258,7 +258,7 @@ class CDCPMDRecord extends StructuredValue
      * [[cvdFacilityCounty]] to indicate the county. To provide other details,
      * [[healthcareReportingData]] can be used on a [[Hospital]] entry.
      *
-     * @param $cvdFacilityId \LengthOfRope\JSONLD\DataType\Text
+     * @param $cvdFacilityId \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setCvdFacilityId($cvdFacilityId): static {
@@ -268,7 +268,7 @@ class CDCPMDRecord extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getCvdFacilityId() {
         return $this->properties['cvdFacilityId'];
@@ -276,7 +276,7 @@ class CDCPMDRecord extends StructuredValue
     /**
      * numventuse - MECHANICAL VENTILATORS IN USE: Total number of ventilators in use.
      *
-     * @param $cvdNumVentUse \LengthOfRope\JSONLD\DataType\Number
+     * @param $cvdNumVentUse \LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setCvdNumVentUse($cvdNumVentUse): static {
@@ -286,7 +286,7 @@ class CDCPMDRecord extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getCvdNumVentUse() {
         return $this->properties['cvdNumVentUse'];
@@ -296,7 +296,7 @@ class CDCPMDRecord extends StructuredValue
      * [[cvdFacilityId]] to identify the facility. To provide other details,
      * [[healthcareReportingData]] can be used on a [[Hospital]] entry.
      *
-     * @param $cvdFacilityCounty \LengthOfRope\JSONLD\DataType\Text
+     * @param $cvdFacilityCounty \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setCvdFacilityCounty($cvdFacilityCounty): static {
@@ -306,7 +306,7 @@ class CDCPMDRecord extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getCvdFacilityCounty() {
         return $this->properties['cvdFacilityCounty'];
@@ -315,7 +315,7 @@ class CDCPMDRecord extends StructuredValue
      * numc19died - DEATHS: Patients with suspected or confirmed COVID-19 who died in
      * the hospital, ED, or any overflow location.
      *
-     * @param $cvdNumC19Died \LengthOfRope\JSONLD\DataType\Number
+     * @param $cvdNumC19Died \LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setCvdNumC19Died($cvdNumC19Died): static {
@@ -325,7 +325,7 @@ class CDCPMDRecord extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getCvdNumC19Died() {
         return $this->properties['cvdNumC19Died'];
@@ -335,7 +335,7 @@ class CDCPMDRecord extends StructuredValue
      * confirmed COVID-19 who are in the ED or any overflow location awaiting an
      * inpatient bed and on a mechanical ventilator.
      *
-     * @param $cvdNumC19OFMechVentPats \LengthOfRope\JSONLD\DataType\Number
+     * @param $cvdNumC19OFMechVentPats \LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setCvdNumC19OFMechVentPats($cvdNumC19OFMechVentPats): static {
@@ -345,7 +345,7 @@ class CDCPMDRecord extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getCvdNumC19OFMechVentPats() {
         return $this->properties['cvdNumC19OFMechVentPats'];
@@ -355,7 +355,7 @@ class CDCPMDRecord extends StructuredValue
      * NHSN inpatient care location who have suspected or confirmed COVID-19 and are on
      * a mechanical ventilator.
      *
-     * @param $cvdNumC19MechVentPats \LengthOfRope\JSONLD\DataType\Number
+     * @param $cvdNumC19MechVentPats \LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setCvdNumC19MechVentPats($cvdNumC19MechVentPats): static {
@@ -365,7 +365,7 @@ class CDCPMDRecord extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getCvdNumC19MechVentPats() {
         return $this->properties['cvdNumC19MechVentPats'];

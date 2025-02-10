@@ -43,7 +43,7 @@ class ExchangeRateSpecification extends StructuredValue
      * The difference between the price at which a broker or other intermediary buys
      * and sells foreign currency.
      *
-     * @param $exchangeRateSpread \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\Number
+     * @param $exchangeRateSpread \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setExchangeRateSpread($exchangeRateSpread): static {
@@ -53,7 +53,7 @@ class ExchangeRateSpecification extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getExchangeRateSpread() {
         return $this->properties['exchangeRateSpread'];
@@ -68,7 +68,7 @@ class ExchangeRateSpecification extends StructuredValue
      * Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and
      * other currency types, e.g. "Ithaca HOUR".
      *
-     * @param $currency \LengthOfRope\JSONLD\DataType\Text
+     * @param $currency \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setCurrency($currency): static {
@@ -78,7 +78,7 @@ class ExchangeRateSpecification extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getCurrency() {
         return $this->properties['currency'];

@@ -43,7 +43,7 @@ class PeopleAudience extends Audience
     /**
      * Audiences defined by a person's minimum age.
      *
-     * @param $requiredMinAge \LengthOfRope\JSONLD\DataType\Integer
+     * @param $requiredMinAge \LengthOfRope\JSONLD\DataType\TypeInteger
      * @return static
      **/
     public function setRequiredMinAge($requiredMinAge): static {
@@ -53,7 +53,7 @@ class PeopleAudience extends Audience
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Integer
+     * @return \LengthOfRope\JSONLD\DataType\TypeInteger
      **/
     public function getRequiredMinAge() {
         return $this->properties['requiredMinAge'];
@@ -61,7 +61,7 @@ class PeopleAudience extends Audience
     /**
      * Audiences defined by a person's maximum age.
      *
-     * @param $requiredMaxAge \LengthOfRope\JSONLD\DataType\Integer
+     * @param $requiredMaxAge \LengthOfRope\JSONLD\DataType\TypeInteger
      * @return static
      **/
     public function setRequiredMaxAge($requiredMaxAge): static {
@@ -71,7 +71,7 @@ class PeopleAudience extends Audience
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Integer
+     * @return \LengthOfRope\JSONLD\DataType\TypeInteger
      **/
     public function getRequiredMaxAge() {
         return $this->properties['requiredMaxAge'];
@@ -99,7 +99,7 @@ class PeopleAudience extends Audience
      * The suggested gender of the intended person or audience, for example "male",
      * "female", or "unisex".
      *
-     * @param $suggestedGender \LengthOfRope\JSONLD\Schema\GenderType|\LengthOfRope\JSONLD\DataType\Text
+     * @param $suggestedGender \LengthOfRope\JSONLD\Schema\GenderType|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setSuggestedGender($suggestedGender): static {
@@ -109,7 +109,7 @@ class PeopleAudience extends Audience
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\GenderType|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\GenderType|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getSuggestedGender() {
         return $this->properties['suggestedGender'];
@@ -156,7 +156,7 @@ class PeopleAudience extends Audience
     /**
      * Audiences defined by a person's gender.
      *
-     * @param $requiredGender \LengthOfRope\JSONLD\DataType\Text
+     * @param $requiredGender \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setRequiredGender($requiredGender): static {
@@ -166,7 +166,7 @@ class PeopleAudience extends Audience
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getRequiredGender() {
         return $this->properties['requiredGender'];
@@ -174,7 +174,7 @@ class PeopleAudience extends Audience
     /**
      * Minimum recommended age in years for the audience or user.
      *
-     * @param $suggestedMinAge \LengthOfRope\JSONLD\DataType\Number
+     * @param $suggestedMinAge \LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setSuggestedMinAge($suggestedMinAge): static {
@@ -184,7 +184,7 @@ class PeopleAudience extends Audience
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getSuggestedMinAge() {
         return $this->properties['suggestedMinAge'];
@@ -192,7 +192,7 @@ class PeopleAudience extends Audience
     /**
      * Maximum recommended age in years for the audience or user.
      *
-     * @param $suggestedMaxAge \LengthOfRope\JSONLD\DataType\Number
+     * @param $suggestedMaxAge \LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setSuggestedMaxAge($suggestedMaxAge): static {
@@ -202,7 +202,7 @@ class PeopleAudience extends Audience
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getSuggestedMaxAge() {
         return $this->properties['suggestedMaxAge'];

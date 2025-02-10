@@ -79,7 +79,7 @@ class Offer extends Intangible
      * The beginning of the availability of the product or service included in the
      * offer.
      *
-     * @param $availabilityStarts \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\Time|\LengthOfRope\JSONLD\DataType\DateTime
+     * @param $availabilityStarts \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeTime|\LengthOfRope\JSONLD\DataType\TypeDateTime
      * @return static
      **/
     public function setAvailabilityStarts($availabilityStarts): static {
@@ -89,7 +89,7 @@ class Offer extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\Time|\LengthOfRope\JSONLD\DataType\DateTime
+     * @return \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeTime|\LengthOfRope\JSONLD\DataType\TypeDateTime
      **/
     public function getAvailabilityStarts() {
         return $this->properties['availabilityStarts'];
@@ -162,7 +162,7 @@ class Offer extends Intangible
      * (U+0039)) rather than superficially similar Unicode symbols.
      *
      *
-     * @param $price \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Number
+     * @param $price \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setPrice($price): static {
@@ -172,7 +172,7 @@ class Offer extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getPrice() {
         return $this->properties['price'];
@@ -196,7 +196,7 @@ class Offer extends Intangible
      * should not be taken as an endorsement of this publication style.
      *
      *
-     * @param $mobileUrl \LengthOfRope\JSONLD\DataType\Text
+     * @param $mobileUrl \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setMobileUrl($mobileUrl): static {
@@ -206,7 +206,7 @@ class Offer extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getMobileUrl() {
         return $this->properties['mobileUrl'];
@@ -235,7 +235,7 @@ class Offer extends Intangible
      * attached to an offer, it is a shortcut for the serial number of the product
      * included in the offer.
      *
-     * @param $serialNumber \LengthOfRope\JSONLD\DataType\Text
+     * @param $serialNumber \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setSerialNumber($serialNumber): static {
@@ -245,7 +245,7 @@ class Offer extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getSerialNumber() {
         return $this->properties['serialNumber'];
@@ -317,7 +317,7 @@ class Offer extends Intangible
      * See also [[eligibleRegion]].
      *
      *
-     * @param $ineligibleRegion \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\GeoShape
+     * @param $ineligibleRegion \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\GeoShape
      * @return static
      **/
     public function setIneligibleRegion($ineligibleRegion): static {
@@ -327,7 +327,7 @@ class Offer extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\GeoShape
+     * @return \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\GeoShape
      **/
     public function getIneligibleRegion() {
         return $this->properties['ineligibleRegion'];
@@ -335,7 +335,7 @@ class Offer extends Intangible
     /**
      * The date after which the price is no longer available.
      *
-     * @param $priceValidUntil \LengthOfRope\JSONLD\DataType\Date
+     * @param $priceValidUntil \LengthOfRope\JSONLD\DataType\TypeDate
      * @return static
      **/
     public function setPriceValidUntil($priceValidUntil): static {
@@ -345,7 +345,7 @@ class Offer extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Date
+     * @return \LengthOfRope\JSONLD\DataType\TypeDate
      **/
     public function getPriceValidUntil() {
         return $this->properties['priceValidUntil'];
@@ -372,7 +372,7 @@ class Offer extends Intangible
     /**
      * Indicates whether this content is family friendly.
      *
-     * @param $isFamilyFriendly \LengthOfRope\JSONLD\DataType\Boolean
+     * @param $isFamilyFriendly \LengthOfRope\JSONLD\DataType\TypeBoolean
      * @return static
      **/
     public function setIsFamilyFriendly($isFamilyFriendly): static {
@@ -382,7 +382,7 @@ class Offer extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Boolean
+     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean
      **/
     public function getIsFamilyFriendly() {
         return $this->properties['isFamilyFriendly'];
@@ -475,7 +475,7 @@ class Offer extends Intangible
      * ASINs are most commonly encoded as text strings, but the [asin] property
      * supports URL/URI as potential values too.
      *
-     * @param $asin \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @param $asin \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setAsin($asin): static {
@@ -485,7 +485,7 @@ class Offer extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getAsin() {
         return $this->properties['asin'];
@@ -496,7 +496,7 @@ class Offer extends Intangible
      * interpolating parameters such as the logged in user ID, product ID, quantity,
      * discount code etc. Parameter naming and standardization are not specified here.
      *
-     * @param $checkoutPageURLTemplate \LengthOfRope\JSONLD\DataType\Text
+     * @param $checkoutPageURLTemplate \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setCheckoutPageURLTemplate($checkoutPageURLTemplate): static {
@@ -506,7 +506,7 @@ class Offer extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getCheckoutPageURLTemplate() {
         return $this->properties['checkoutPageURLTemplate'];
@@ -518,7 +518,7 @@ class Offer extends Intangible
      * GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more
      * details.
      *
-     * @param $gtin13 \LengthOfRope\JSONLD\DataType\Text
+     * @param $gtin13 \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setGtin13($gtin13): static {
@@ -528,7 +528,7 @@ class Offer extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getGtin13() {
         return $this->properties['gtin13'];
@@ -574,7 +574,7 @@ class Offer extends Intangible
     /**
      * The geographic area where a service or offered item is provided.
      *
-     * @param $areaServed \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeoShape|\LengthOfRope\JSONLD\Schema\AdministrativeArea
+     * @param $areaServed \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeoShape|\LengthOfRope\JSONLD\Schema\AdministrativeArea
      * @return static
      **/
     public function setAreaServed($areaServed): static {
@@ -584,7 +584,7 @@ class Offer extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeoShape|\LengthOfRope\JSONLD\Schema\AdministrativeArea
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeoShape|\LengthOfRope\JSONLD\Schema\AdministrativeArea
      **/
     public function getAreaServed() {
         return $this->properties['areaServed'];
@@ -593,7 +593,7 @@ class Offer extends Intangible
      * The date after when the item is not valid. For example the end of an offer,
      * salary period, or a period of opening hours.
      *
-     * @param $validThrough \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
+     * @param $validThrough \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
      * @return static
      **/
     public function setValidThrough($validThrough): static {
@@ -603,7 +603,7 @@ class Offer extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
      **/
     public function getValidThrough() {
         return $this->properties['validThrough'];
@@ -612,7 +612,7 @@ class Offer extends Intangible
      * The Manufacturer Part Number (MPN) of the product, or the product to which the
      * offer refers.
      *
-     * @param $mpn \LengthOfRope\JSONLD\DataType\Text
+     * @param $mpn \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setMpn($mpn): static {
@@ -622,7 +622,7 @@ class Offer extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getMpn() {
         return $this->properties['mpn'];
@@ -705,7 +705,7 @@ class Offer extends Intangible
      * The payment method(s) that are accepted in general by an organization, or for
      * some specific demand or offer.
      *
-     * @param $acceptedPaymentMethod \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\PaymentMethod|\LengthOfRope\JSONLD\Schema\LoanOrCredit
+     * @param $acceptedPaymentMethod \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\PaymentMethod|\LengthOfRope\JSONLD\Schema\LoanOrCredit
      * @return static
      **/
     public function setAcceptedPaymentMethod($acceptedPaymentMethod): static {
@@ -715,7 +715,7 @@ class Offer extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\PaymentMethod|\LengthOfRope\JSONLD\Schema\LoanOrCredit
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\PaymentMethod|\LengthOfRope\JSONLD\Schema\LoanOrCredit
      **/
     public function getAcceptedPaymentMethod() {
         return $this->properties['acceptedPaymentMethod'];
@@ -724,7 +724,7 @@ class Offer extends Intangible
      * A category for the item. Greater signs or slashes can be used to informally
      * indicate a category hierarchy.
      *
-     * @param $category \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\Schema\PhysicalActivityCategory|\LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @param $category \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\Schema\PhysicalActivityCategory|\LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setCategory($category): static {
@@ -734,7 +734,7 @@ class Offer extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\Schema\PhysicalActivityCategory|\LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\Schema\PhysicalActivityCategory|\LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getCategory() {
         return $this->properties['category'];
@@ -754,7 +754,7 @@ class Offer extends Intangible
      * <code>8013</code>)  should be attached to a [[Product]] or a
      * [[ProductModel]].</li></ul> Other item types should be adapted similarly.
      *
-     * @param $hasGS1DigitalLink \LengthOfRope\JSONLD\DataType\URL
+     * @param $hasGS1DigitalLink \LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setHasGS1DigitalLink($hasGS1DigitalLink): static {
@@ -764,7 +764,7 @@ class Offer extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getHasGS1DigitalLink() {
         return $this->properties['hasGS1DigitalLink'];
@@ -774,7 +774,7 @@ class Offer extends Intangible
      * code is also known as EAN/UCC-8 or 8-digit EAN. See [GS1 GTIN
      * Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more details.
      *
-     * @param $gtin8 \LengthOfRope\JSONLD\DataType\Text
+     * @param $gtin8 \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setGtin8($gtin8): static {
@@ -784,7 +784,7 @@ class Offer extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getGtin8() {
         return $this->properties['gtin8'];
@@ -832,7 +832,7 @@ class Offer extends Intangible
      * and not a definition of GTINs in general - see the GS1 documentation for
      * authoritative details.
      *
-     * @param $gtin \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @param $gtin \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setGtin($gtin): static {
@@ -842,7 +842,7 @@ class Offer extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getGtin() {
         return $this->properties['gtin'];
@@ -876,7 +876,7 @@ class Offer extends Intangible
      * Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and
      * other currency types, e.g. "Ithaca HOUR".
      *
-     * @param $priceCurrency \LengthOfRope\JSONLD\DataType\Text
+     * @param $priceCurrency \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setPriceCurrency($priceCurrency): static {
@@ -886,7 +886,7 @@ class Offer extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getPriceCurrency() {
         return $this->properties['priceCurrency'];
@@ -896,7 +896,7 @@ class Offer extends Intangible
      * [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more
      * details.
      *
-     * @param $gtin14 \LengthOfRope\JSONLD\DataType\Text
+     * @param $gtin14 \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setGtin14($gtin14): static {
@@ -906,7 +906,7 @@ class Offer extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getGtin14() {
         return $this->properties['gtin14'];
@@ -1017,7 +1017,7 @@ class Offer extends Intangible
      * See also [[ineligibleRegion]].
      *
      *
-     * @param $eligibleRegion \LengthOfRope\JSONLD\Schema\GeoShape|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Place
+     * @param $eligibleRegion \LengthOfRope\JSONLD\Schema\GeoShape|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Place
      * @return static
      **/
     public function setEligibleRegion($eligibleRegion): static {
@@ -1027,7 +1027,7 @@ class Offer extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\GeoShape|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Place
+     * @return \LengthOfRope\JSONLD\Schema\GeoShape|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Place
      **/
     public function getEligibleRegion() {
         return $this->properties['eligibleRegion'];
@@ -1039,7 +1039,7 @@ class Offer extends Intangible
      * GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more
      * details.
      *
-     * @param $gtin12 \LengthOfRope\JSONLD\DataType\Text
+     * @param $gtin12 \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setGtin12($gtin12): static {
@@ -1049,7 +1049,7 @@ class Offer extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getGtin12() {
         return $this->properties['gtin12'];
@@ -1057,7 +1057,7 @@ class Offer extends Intangible
     /**
      * The date when the item becomes valid.
      *
-     * @param $validFrom \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
+     * @param $validFrom \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
      * @return static
      **/
     public function setValidFrom($validFrom): static {
@@ -1067,7 +1067,7 @@ class Offer extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
      **/
     public function getValidFrom() {
         return $this->properties['validFrom'];
@@ -1075,7 +1075,7 @@ class Offer extends Intangible
     /**
      * The end of the availability of the product or service included in the offer.
      *
-     * @param $availabilityEnds \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Time|\LengthOfRope\JSONLD\DataType\Date
+     * @param $availabilityEnds \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeTime|\LengthOfRope\JSONLD\DataType\TypeDate
      * @return static
      **/
     public function setAvailabilityEnds($availabilityEnds): static {
@@ -1085,7 +1085,7 @@ class Offer extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Time|\LengthOfRope\JSONLD\DataType\Date
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeTime|\LengthOfRope\JSONLD\DataType\TypeDate
      **/
     public function getAvailabilityEnds() {
         return $this->properties['availabilityEnds'];
@@ -1149,7 +1149,7 @@ class Offer extends Intangible
      * The Stock Keeping Unit (SKU), i.e. a merchant-specific identifier for a product
      * or service, or the product to which the offer refers.
      *
-     * @param $sku \LengthOfRope\JSONLD\DataType\Text
+     * @param $sku \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setSku($sku): static {
@@ -1159,7 +1159,7 @@ class Offer extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getSku() {
         return $this->properties['sku'];

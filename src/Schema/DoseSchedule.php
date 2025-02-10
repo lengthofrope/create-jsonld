@@ -42,7 +42,7 @@ class DoseSchedule extends MedicalIntangible
     /**
      * How often the dose is taken, e.g. 'daily'.
      *
-     * @param $frequency \LengthOfRope\JSONLD\DataType\Text
+     * @param $frequency \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setFrequency($frequency): static {
@@ -52,7 +52,7 @@ class DoseSchedule extends MedicalIntangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getFrequency() {
         return $this->properties['frequency'];
@@ -61,7 +61,7 @@ class DoseSchedule extends MedicalIntangible
      * Characteristics of the population for which this is intended, or which typically
      * uses it, e.g. 'adults'.
      *
-     * @param $targetPopulation \LengthOfRope\JSONLD\DataType\Text
+     * @param $targetPopulation \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setTargetPopulation($targetPopulation): static {
@@ -71,7 +71,7 @@ class DoseSchedule extends MedicalIntangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getTargetPopulation() {
         return $this->properties['targetPopulation'];
@@ -79,7 +79,7 @@ class DoseSchedule extends MedicalIntangible
     /**
      * The unit of the dose, e.g. 'mg'.
      *
-     * @param $doseUnit \LengthOfRope\JSONLD\DataType\Text
+     * @param $doseUnit \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setDoseUnit($doseUnit): static {
@@ -89,7 +89,7 @@ class DoseSchedule extends MedicalIntangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getDoseUnit() {
         return $this->properties['doseUnit'];
@@ -97,7 +97,7 @@ class DoseSchedule extends MedicalIntangible
     /**
      * The value of the dose, e.g. 500.
      *
-     * @param $doseValue \LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\Schema\QualitativeValue
+     * @param $doseValue \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\Schema\QualitativeValue
      * @return static
      **/
     public function setDoseValue($doseValue): static {
@@ -107,7 +107,7 @@ class DoseSchedule extends MedicalIntangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\Schema\QualitativeValue
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\Schema\QualitativeValue
      **/
     public function getDoseValue() {
         return $this->properties['doseValue'];

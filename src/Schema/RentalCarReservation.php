@@ -45,7 +45,7 @@ class RentalCarReservation extends Reservation
     /**
      * When a taxi will pick up a passenger or a rental car can be picked up.
      *
-     * @param $pickupTime \LengthOfRope\JSONLD\DataType\DateTime
+     * @param $pickupTime \LengthOfRope\JSONLD\DataType\TypeDateTime
      * @return static
      **/
     public function setPickupTime($pickupTime): static {
@@ -55,7 +55,7 @@ class RentalCarReservation extends Reservation
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\DateTime
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime
      **/
     public function getPickupTime() {
         return $this->properties['pickupTime'];
@@ -63,7 +63,7 @@ class RentalCarReservation extends Reservation
     /**
      * When a rental car can be dropped off.
      *
-     * @param $dropoffTime \LengthOfRope\JSONLD\DataType\DateTime
+     * @param $dropoffTime \LengthOfRope\JSONLD\DataType\TypeDateTime
      * @return static
      **/
     public function setDropoffTime($dropoffTime): static {
@@ -73,7 +73,7 @@ class RentalCarReservation extends Reservation
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\DateTime
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime
      **/
     public function getDropoffTime() {
         return $this->properties['dropoffTime'];

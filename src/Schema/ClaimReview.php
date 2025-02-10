@@ -43,7 +43,7 @@ class ClaimReview extends Review
     /**
      * A short summary of the specific claims reviewed in a ClaimReview.
      *
-     * @param $claimReviewed \LengthOfRope\JSONLD\DataType\Text
+     * @param $claimReviewed \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setClaimReviewed($claimReviewed): static {
@@ -53,7 +53,7 @@ class ClaimReview extends Review
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getClaimReviewed() {
         return $this->properties['claimReviewed'];

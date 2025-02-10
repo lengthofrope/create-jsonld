@@ -115,7 +115,7 @@ class OfferShippingDetails extends StructuredValue
      * Link to a page containing [[ShippingRateSettings]] and [[DeliveryTimeSettings]]
      * details.
      *
-     * @param $shippingSettingsLink \LengthOfRope\JSONLD\DataType\URL
+     * @param $shippingSettingsLink \LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setShippingSettingsLink($shippingSettingsLink): static {
@@ -125,7 +125,7 @@ class OfferShippingDetails extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getShippingSettingsLink() {
         return $this->properties['shippingSettingsLink'];
@@ -134,7 +134,7 @@ class OfferShippingDetails extends StructuredValue
      * Label to match an [[OfferShippingDetails]] with a [[DeliveryTimeSettings]]
      * (within the context of a [[shippingSettingsLink]] cross-reference).
      *
-     * @param $transitTimeLabel \LengthOfRope\JSONLD\DataType\Text
+     * @param $transitTimeLabel \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setTransitTimeLabel($transitTimeLabel): static {
@@ -144,7 +144,7 @@ class OfferShippingDetails extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getTransitTimeLabel() {
         return $this->properties['transitTimeLabel'];
@@ -244,7 +244,7 @@ class OfferShippingDetails extends StructuredValue
      * Indicates when shipping to a particular [[shippingDestination]] is not
      * available.
      *
-     * @param $doesNotShip \LengthOfRope\JSONLD\DataType\Boolean
+     * @param $doesNotShip \LengthOfRope\JSONLD\DataType\TypeBoolean
      * @return static
      **/
     public function setDoesNotShip($doesNotShip): static {
@@ -254,7 +254,7 @@ class OfferShippingDetails extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Boolean
+     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean
      **/
     public function getDoesNotShip() {
         return $this->properties['doesNotShip'];
@@ -263,7 +263,7 @@ class OfferShippingDetails extends StructuredValue
      * Label to match an [[OfferShippingDetails]] with a [[ShippingRateSettings]]
      * (within the context of a [[shippingSettingsLink]] cross-reference).
      *
-     * @param $shippingLabel \LengthOfRope\JSONLD\DataType\Text
+     * @param $shippingLabel \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setShippingLabel($shippingLabel): static {
@@ -273,7 +273,7 @@ class OfferShippingDetails extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getShippingLabel() {
         return $this->properties['shippingLabel'];

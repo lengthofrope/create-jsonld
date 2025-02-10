@@ -231,7 +231,7 @@ class Episode extends CreativeWork
     /**
      * Position of the episode within an ordered group of episodes.
      *
-     * @param $episodeNumber \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Integer
+     * @param $episodeNumber \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeInteger
      * @return static
      **/
     public function setEpisodeNumber($episodeNumber): static {
@@ -241,7 +241,7 @@ class Episode extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Integer
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeInteger
      **/
     public function getEpisodeNumber() {
         return $this->properties['episodeNumber'];

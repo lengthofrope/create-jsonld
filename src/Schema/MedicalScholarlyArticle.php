@@ -44,7 +44,7 @@ class MedicalScholarlyArticle extends ScholarlyArticle
      * catalog. See also [MeSH
      * documentation](http://www.nlm.nih.gov/mesh/pubtypes.html).
      *
-     * @param $publicationType \LengthOfRope\JSONLD\DataType\Text
+     * @param $publicationType \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setPublicationType($publicationType): static {
@@ -54,7 +54,7 @@ class MedicalScholarlyArticle extends ScholarlyArticle
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getPublicationType() {
         return $this->properties['publicationType'];

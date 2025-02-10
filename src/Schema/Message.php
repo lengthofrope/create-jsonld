@@ -62,7 +62,7 @@ class Message extends CreativeWork
      * The date/time at which the message has been read by the recipient if a single
      * recipient exists.
      *
-     * @param $dateRead \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
+     * @param $dateRead \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
      * @return static
      **/
     public function setDateRead($dateRead): static {
@@ -72,7 +72,7 @@ class Message extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
      **/
     public function getDateRead() {
         return $this->properties['dateRead'];
@@ -80,7 +80,7 @@ class Message extends CreativeWork
     /**
      * The date/time at which the message was sent.
      *
-     * @param $dateSent \LengthOfRope\JSONLD\DataType\DateTime
+     * @param $dateSent \LengthOfRope\JSONLD\DataType\TypeDateTime
      * @return static
      **/
     public function setDateSent($dateSent): static {
@@ -90,7 +90,7 @@ class Message extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\DateTime
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime
      **/
     public function getDateSent() {
         return $this->properties['dateSent'];
@@ -152,7 +152,7 @@ class Message extends CreativeWork
     /**
      * The date/time the message was received if a single recipient exists.
      *
-     * @param $dateReceived \LengthOfRope\JSONLD\DataType\DateTime
+     * @param $dateReceived \LengthOfRope\JSONLD\DataType\TypeDateTime
      * @return static
      **/
     public function setDateReceived($dateReceived): static {
@@ -162,7 +162,7 @@ class Message extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\DateTime
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime
      **/
     public function getDateReceived() {
         return $this->properties['dateReceived'];

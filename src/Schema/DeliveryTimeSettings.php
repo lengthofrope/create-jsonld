@@ -71,7 +71,7 @@ class DeliveryTimeSettings extends StructuredValue
      * [[DeliveryTimeSettings]]) or shippingLabel (for [[ShippingRateSettings]]), since
      * this property is for use with unlabelled settings.
      *
-     * @param $isUnlabelledFallback \LengthOfRope\JSONLD\DataType\Boolean
+     * @param $isUnlabelledFallback \LengthOfRope\JSONLD\DataType\TypeBoolean
      * @return static
      **/
     public function setIsUnlabelledFallback($isUnlabelledFallback): static {
@@ -81,7 +81,7 @@ class DeliveryTimeSettings extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Boolean
+     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean
      **/
     public function getIsUnlabelledFallback() {
         return $this->properties['isUnlabelledFallback'];
@@ -90,7 +90,7 @@ class DeliveryTimeSettings extends StructuredValue
      * Label to match an [[OfferShippingDetails]] with a [[DeliveryTimeSettings]]
      * (within the context of a [[shippingSettingsLink]] cross-reference).
      *
-     * @param $transitTimeLabel \LengthOfRope\JSONLD\DataType\Text
+     * @param $transitTimeLabel \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setTransitTimeLabel($transitTimeLabel): static {
@@ -100,7 +100,7 @@ class DeliveryTimeSettings extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getTransitTimeLabel() {
         return $this->properties['transitTimeLabel'];

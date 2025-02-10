@@ -43,7 +43,7 @@ class ApartmentComplex extends Residence
      * Indicates whether pets are allowed to enter the accommodation or lodging
      * business. More detailed information can be put in a text value.
      *
-     * @param $petsAllowed \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Boolean
+     * @param $petsAllowed \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeBoolean
      * @return static
      **/
     public function setPetsAllowed($petsAllowed): static {
@@ -53,7 +53,7 @@ class ApartmentComplex extends Residence
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Boolean
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeBoolean
      **/
     public function getPetsAllowed() {
         return $this->properties['petsAllowed'];
@@ -62,7 +62,7 @@ class ApartmentComplex extends Residence
      * The total integer number of bedrooms in a some [[Accommodation]],
      * [[ApartmentComplex]] or [[FloorPlan]].
      *
-     * @param $numberOfBedrooms \LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\Schema\QuantitativeValue
+     * @param $numberOfBedrooms \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setNumberOfBedrooms($numberOfBedrooms): static {
@@ -72,7 +72,7 @@ class ApartmentComplex extends Residence
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\Schema\QuantitativeValue
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getNumberOfBedrooms() {
         return $this->properties['numberOfBedrooms'];
@@ -124,7 +124,7 @@ class ApartmentComplex extends Residence
      * [[Accommodation]] or [[ApartmentComplex]] in a real estate setting, as well as
      * other kinds of tours as appropriate.
      *
-     * @param $tourBookingPage \LengthOfRope\JSONLD\DataType\URL
+     * @param $tourBookingPage \LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setTourBookingPage($tourBookingPage): static {
@@ -134,7 +134,7 @@ class ApartmentComplex extends Residence
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getTourBookingPage() {
         return $this->properties['tourBookingPage'];

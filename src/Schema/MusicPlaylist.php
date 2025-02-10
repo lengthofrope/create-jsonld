@@ -42,7 +42,7 @@ class MusicPlaylist extends CreativeWork
     /**
      * The number of tracks in this album or playlist.
      *
-     * @param $numTracks \LengthOfRope\JSONLD\DataType\Integer
+     * @param $numTracks \LengthOfRope\JSONLD\DataType\TypeInteger
      * @return static
      **/
     public function setNumTracks($numTracks): static {
@@ -52,7 +52,7 @@ class MusicPlaylist extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Integer
+     * @return \LengthOfRope\JSONLD\DataType\TypeInteger
      **/
     public function getNumTracks() {
         return $this->properties['numTracks'];

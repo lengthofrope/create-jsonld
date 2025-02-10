@@ -72,7 +72,7 @@ class Car extends Vehicle
      * for classifying vehicles. ACRISS stands for Association of Car Rental Industry
      * Systems and Standards.
      *
-     * @param $acrissCode \LengthOfRope\JSONLD\DataType\Text
+     * @param $acrissCode \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setAcrissCode($acrissCode): static {
@@ -82,7 +82,7 @@ class Car extends Vehicle
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getAcrissCode() {
         return $this->properties['acrissCode'];

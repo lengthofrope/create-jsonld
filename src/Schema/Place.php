@@ -88,7 +88,7 @@ class Place extends Thing
      * Activities (ISIC), Revision 4 code for a particular organization, business
      * person, or place.
      *
-     * @param $isicV4 \LengthOfRope\JSONLD\DataType\Text
+     * @param $isicV4 \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setIsicV4($isicV4): static {
@@ -98,7 +98,7 @@ class Place extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getIsicV4() {
         return $this->properties['isicV4'];
@@ -124,7 +124,7 @@ class Place extends Thing
     /**
      * The telephone number.
      *
-     * @param $telephone \LengthOfRope\JSONLD\DataType\Text
+     * @param $telephone \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setTelephone($telephone): static {
@@ -134,7 +134,7 @@ class Place extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getTelephone() {
         return $this->properties['telephone'];
@@ -165,7 +165,7 @@ class Place extends Thing
     /**
      * Physical address of the item.
      *
-     * @param $address \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\PostalAddress
+     * @param $address \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\PostalAddress
      * @return static
      **/
     public function setAddress($address): static {
@@ -175,7 +175,7 @@ class Place extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\PostalAddress
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\PostalAddress
      **/
     public function getAddress() {
         return $this->properties['address'];
@@ -208,7 +208,7 @@ class Place extends Thing
      * the code "3047" is a branchCode for a particular branch.
      *
      *
-     * @param $branchCode \LengthOfRope\JSONLD\DataType\Text
+     * @param $branchCode \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setBranchCode($branchCode): static {
@@ -218,7 +218,7 @@ class Place extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getBranchCode() {
         return $this->properties['branchCode'];
@@ -246,7 +246,7 @@ class Place extends Thing
     /**
      * The fax number.
      *
-     * @param $faxNumber \LengthOfRope\JSONLD\DataType\Text
+     * @param $faxNumber \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setFaxNumber($faxNumber): static {
@@ -256,7 +256,7 @@ class Place extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getFaxNumber() {
         return $this->properties['faxNumber'];
@@ -301,7 +301,7 @@ class Place extends Thing
      * The latitude of a location. For example ```37.42242``` ([WGS
      * 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
      *
-     * @param $latitude \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Number
+     * @param $latitude \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setLatitude($latitude): static {
@@ -311,7 +311,7 @@ class Place extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getLatitude() {
         return $this->properties['latitude'];
@@ -320,7 +320,7 @@ class Place extends Thing
      * Keywords or tags used to describe some item. Multiple textual entries in a
      * keywords list are typically delimited by commas, or by repeating the property.
      *
-     * @param $keywords \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text
+     * @param $keywords \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setKeywords($keywords): static {
@@ -330,7 +330,7 @@ class Place extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getKeywords() {
         return $this->properties['keywords'];
@@ -339,7 +339,7 @@ class Place extends Thing
      * Indicates whether it is allowed to smoke in the place, e.g. in the restaurant,
      * hotel or hotel room.
      *
-     * @param $smokingAllowed \LengthOfRope\JSONLD\DataType\Boolean
+     * @param $smokingAllowed \LengthOfRope\JSONLD\DataType\TypeBoolean
      * @return static
      **/
     public function setSmokingAllowed($smokingAllowed): static {
@@ -349,7 +349,7 @@ class Place extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Boolean
+     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean
      **/
     public function getSmokingAllowed() {
         return $this->properties['smokingAllowed'];
@@ -357,7 +357,7 @@ class Place extends Thing
     /**
      * A flag to signal that the item, event, or place is accessible for free.
      *
-     * @param $isAccessibleForFree \LengthOfRope\JSONLD\DataType\Boolean
+     * @param $isAccessibleForFree \LengthOfRope\JSONLD\DataType\TypeBoolean
      * @return static
      **/
     public function setIsAccessibleForFree($isAccessibleForFree): static {
@@ -367,7 +367,7 @@ class Place extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Boolean
+     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean
      **/
     public function getIsAccessibleForFree() {
         return $this->properties['isAccessibleForFree'];
@@ -375,7 +375,7 @@ class Place extends Thing
     /**
      * An associated logo.
      *
-     * @param $logo \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\ImageObject
+     * @param $logo \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\ImageObject
      * @return static
      **/
     public function setLogo($logo): static {
@@ -385,7 +385,7 @@ class Place extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\ImageObject
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\ImageObject
      **/
     public function getLogo() {
         return $this->properties['logo'];
@@ -415,7 +415,7 @@ class Place extends Thing
      * The longitude of a location. For example ```-122.08585``` ([WGS
      * 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
      *
-     * @param $longitude \LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\DataType\Text
+     * @param $longitude \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setLongitude($longitude): static {
@@ -425,7 +425,7 @@ class Place extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getLongitude() {
         return $this->properties['longitude'];
@@ -436,7 +436,7 @@ class Place extends Thing
      * in a car. In the case of [[CovidTestingFacility]] such facilities could
      * potentially help with social distancing from other potentially-infected users.
      *
-     * @param $hasDriveThroughService \LengthOfRope\JSONLD\DataType\Boolean
+     * @param $hasDriveThroughService \LengthOfRope\JSONLD\DataType\TypeBoolean
      * @return static
      **/
     public function setHasDriveThroughService($hasDriveThroughService): static {
@@ -446,7 +446,7 @@ class Place extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Boolean
+     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean
      **/
     public function getHasDriveThroughService() {
         return $this->properties['hasDriveThroughService'];
@@ -516,7 +516,7 @@ class Place extends Thing
      * A flag to signal that the [[Place]] is open to public visitors.  If this
      * property is omitted there is no assumed default boolean value.
      *
-     * @param $publicAccess \LengthOfRope\JSONLD\DataType\Boolean
+     * @param $publicAccess \LengthOfRope\JSONLD\DataType\TypeBoolean
      * @return static
      **/
     public function setPublicAccess($publicAccess): static {
@@ -526,7 +526,7 @@ class Place extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Boolean
+     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean
      **/
     public function getPublicAccess() {
         return $this->properties['publicAccess'];
@@ -534,7 +534,7 @@ class Place extends Thing
     /**
      * A URL to a map of the place.
      *
-     * @param $map \LengthOfRope\JSONLD\DataType\URL
+     * @param $map \LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setMap($map): static {
@@ -544,7 +544,7 @@ class Place extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getMap() {
         return $this->properties['map'];
@@ -564,7 +564,7 @@ class Place extends Thing
      * <code>8013</code>)  should be attached to a [[Product]] or a
      * [[ProductModel]].</li></ul> Other item types should be adapted similarly.
      *
-     * @param $hasGS1DigitalLink \LengthOfRope\JSONLD\DataType\URL
+     * @param $hasGS1DigitalLink \LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setHasGS1DigitalLink($hasGS1DigitalLink): static {
@@ -574,7 +574,7 @@ class Place extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getHasGS1DigitalLink() {
         return $this->properties['hasGS1DigitalLink'];
@@ -603,7 +603,7 @@ class Place extends Thing
      * organization, person, or place. The GLN is a 13-digit number used to identify
      * parties and physical locations.
      *
-     * @param $globalLocationNumber \LengthOfRope\JSONLD\DataType\Text
+     * @param $globalLocationNumber \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setGlobalLocationNumber($globalLocationNumber): static {
@@ -613,7 +613,7 @@ class Place extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getGlobalLocationNumber() {
         return $this->properties['globalLocationNumber'];
@@ -660,7 +660,7 @@ class Place extends Thing
     /**
      * A URL to a map of the place.
      *
-     * @param $maps \LengthOfRope\JSONLD\DataType\URL
+     * @param $maps \LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setMaps($maps): static {
@@ -670,7 +670,7 @@ class Place extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getMaps() {
         return $this->properties['maps'];
@@ -775,7 +775,7 @@ class Place extends Thing
     /**
      * A slogan or motto associated with the item.
      *
-     * @param $slogan \LengthOfRope\JSONLD\DataType\Text
+     * @param $slogan \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setSlogan($slogan): static {
@@ -785,7 +785,7 @@ class Place extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getSlogan() {
         return $this->properties['slogan'];
@@ -835,7 +835,7 @@ class Place extends Thing
      * [[Accommodation]] or [[ApartmentComplex]] in a real estate setting, as well as
      * other kinds of tours as appropriate.
      *
-     * @param $tourBookingPage \LengthOfRope\JSONLD\DataType\URL
+     * @param $tourBookingPage \LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setTourBookingPage($tourBookingPage): static {
@@ -845,7 +845,7 @@ class Place extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getTourBookingPage() {
         return $this->properties['tourBookingPage'];
@@ -909,7 +909,7 @@ class Place extends Thing
     /**
      * A URL to a map of the place.
      *
-     * @param $hasMap \LengthOfRope\JSONLD\Schema\Map|\LengthOfRope\JSONLD\DataType\URL
+     * @param $hasMap \LengthOfRope\JSONLD\Schema\Map|\LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setHasMap($hasMap): static {
@@ -919,7 +919,7 @@ class Place extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Map|\LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\Schema\Map|\LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getHasMap() {
         return $this->properties['hasMap'];
@@ -927,7 +927,7 @@ class Place extends Thing
     /**
      * The total number of individuals that may attend an event or venue.
      *
-     * @param $maximumAttendeeCapacity \LengthOfRope\JSONLD\DataType\Integer
+     * @param $maximumAttendeeCapacity \LengthOfRope\JSONLD\DataType\TypeInteger
      * @return static
      **/
     public function setMaximumAttendeeCapacity($maximumAttendeeCapacity): static {
@@ -937,7 +937,7 @@ class Place extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Integer
+     * @return \LengthOfRope\JSONLD\DataType\TypeInteger
      **/
     public function getMaximumAttendeeCapacity() {
         return $this->properties['maximumAttendeeCapacity'];

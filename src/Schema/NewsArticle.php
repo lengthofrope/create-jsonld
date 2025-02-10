@@ -49,7 +49,7 @@ class NewsArticle extends Article
      * on which the article is found. Please note that this field is intended for the
      * exact page name (e.g. A5, B18).
      *
-     * @param $printPage \LengthOfRope\JSONLD\DataType\Text
+     * @param $printPage \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setPrintPage($printPage): static {
@@ -59,7 +59,7 @@ class NewsArticle extends Article
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getPrintPage() {
         return $this->properties['printPage'];
@@ -67,7 +67,7 @@ class NewsArticle extends Article
     /**
      * The edition of the print product in which the NewsArticle appears.
      *
-     * @param $printEdition \LengthOfRope\JSONLD\DataType\Text
+     * @param $printEdition \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setPrintEdition($printEdition): static {
@@ -77,7 +77,7 @@ class NewsArticle extends Article
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getPrintEdition() {
         return $this->properties['printEdition'];
@@ -98,7 +98,7 @@ class NewsArticle extends Article
      * Washington", "Beijing/Moscow", "QUEZON CITY, Philippines".
      *
      *
-     * @param $dateline \LengthOfRope\JSONLD\DataType\Text
+     * @param $dateline \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setDateline($dateline): static {
@@ -108,7 +108,7 @@ class NewsArticle extends Article
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getDateline() {
         return $this->properties['dateline'];
@@ -116,7 +116,7 @@ class NewsArticle extends Article
     /**
      * The number of the column in which the NewsArticle appears in the print edition.
      *
-     * @param $printColumn \LengthOfRope\JSONLD\DataType\Text
+     * @param $printColumn \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setPrintColumn($printColumn): static {
@@ -126,7 +126,7 @@ class NewsArticle extends Article
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getPrintColumn() {
         return $this->properties['printColumn'];
@@ -135,7 +135,7 @@ class NewsArticle extends Article
      * If this NewsArticle appears in print, this field indicates the print section in
      * which the article appeared.
      *
-     * @param $printSection \LengthOfRope\JSONLD\DataType\Text
+     * @param $printSection \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setPrintSection($printSection): static {
@@ -145,7 +145,7 @@ class NewsArticle extends Article
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getPrintSection() {
         return $this->properties['printSection'];

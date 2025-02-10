@@ -47,7 +47,7 @@ class AlignmentObject extends Intangible
     /**
      * The framework to which the resource being described is aligned.
      *
-     * @param $educationalFramework \LengthOfRope\JSONLD\DataType\Text
+     * @param $educationalFramework \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setEducationalFramework($educationalFramework): static {
@@ -57,7 +57,7 @@ class AlignmentObject extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getEducationalFramework() {
         return $this->properties['educationalFramework'];
@@ -65,7 +65,7 @@ class AlignmentObject extends Intangible
     /**
      * The URL of a node in an established educational framework.
      *
-     * @param $targetUrl \LengthOfRope\JSONLD\DataType\URL
+     * @param $targetUrl \LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setTargetUrl($targetUrl): static {
@@ -75,7 +75,7 @@ class AlignmentObject extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getTargetUrl() {
         return $this->properties['targetUrl'];
@@ -85,7 +85,7 @@ class AlignmentObject extends Intangible
      * Recommended values include: 'requires', 'textComplexity', 'readingLevel', and
      * 'educationalSubject'.
      *
-     * @param $alignmentType \LengthOfRope\JSONLD\DataType\Text
+     * @param $alignmentType \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setAlignmentType($alignmentType): static {
@@ -95,7 +95,7 @@ class AlignmentObject extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getAlignmentType() {
         return $this->properties['alignmentType'];
@@ -103,7 +103,7 @@ class AlignmentObject extends Intangible
     /**
      * The description of a node in an established educational framework.
      *
-     * @param $targetDescription \LengthOfRope\JSONLD\DataType\Text
+     * @param $targetDescription \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setTargetDescription($targetDescription): static {
@@ -113,7 +113,7 @@ class AlignmentObject extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getTargetDescription() {
         return $this->properties['targetDescription'];
@@ -121,7 +121,7 @@ class AlignmentObject extends Intangible
     /**
      * The name of a node in an established educational framework.
      *
-     * @param $targetName \LengthOfRope\JSONLD\DataType\Text
+     * @param $targetName \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setTargetName($targetName): static {
@@ -131,7 +131,7 @@ class AlignmentObject extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getTargetName() {
         return $this->properties['targetName'];

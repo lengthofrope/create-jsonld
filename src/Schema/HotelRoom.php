@@ -72,7 +72,7 @@ class HotelRoom extends Room
      * instance of BedDetails. For more detailed information, use the amenityFeature
      * property.
      *
-     * @param $bed \LengthOfRope\JSONLD\Schema\BedType|\LengthOfRope\JSONLD\Schema\BedDetails|\LengthOfRope\JSONLD\DataType\Text
+     * @param $bed \LengthOfRope\JSONLD\Schema\BedType|\LengthOfRope\JSONLD\Schema\BedDetails|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setBed($bed): static {
@@ -82,7 +82,7 @@ class HotelRoom extends Room
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\BedType|\LengthOfRope\JSONLD\Schema\BedDetails|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\BedType|\LengthOfRope\JSONLD\Schema\BedDetails|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getBed() {
         return $this->properties['bed'];

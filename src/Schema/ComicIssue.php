@@ -146,7 +146,7 @@ class ComicIssue extends PublicationIssue
      * Hitch
      * Variant Cover" or "2nd Printing Variant".
      *
-     * @param $variantCover \LengthOfRope\JSONLD\DataType\Text
+     * @param $variantCover \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setVariantCover($variantCover): static {
@@ -156,7 +156,7 @@ class ComicIssue extends PublicationIssue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getVariantCover() {
         return $this->properties['variantCover'];

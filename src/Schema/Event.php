@@ -197,7 +197,7 @@ class Event extends Thing
      * [[eventAttendanceMode]] is [[OnlineEventAttendanceMode]] (or the online aspects,
      * in the case of a [[MixedEventAttendanceMode]]).
      *
-     * @param $maximumVirtualAttendeeCapacity \LengthOfRope\JSONLD\DataType\Integer
+     * @param $maximumVirtualAttendeeCapacity \LengthOfRope\JSONLD\DataType\TypeInteger
      * @return static
      **/
     public function setMaximumVirtualAttendeeCapacity($maximumVirtualAttendeeCapacity): static {
@@ -207,7 +207,7 @@ class Event extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Integer
+     * @return \LengthOfRope\JSONLD\DataType\TypeInteger
      **/
     public function getMaximumVirtualAttendeeCapacity() {
         return $this->properties['maximumVirtualAttendeeCapacity'];
@@ -309,7 +309,7 @@ class Event extends Thing
      * Keywords or tags used to describe some item. Multiple textual entries in a
      * keywords list are typically delimited by commas, or by repeating the property.
      *
-     * @param $keywords \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text
+     * @param $keywords \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setKeywords($keywords): static {
@@ -319,7 +319,7 @@ class Event extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getKeywords() {
         return $this->properties['keywords'];
@@ -327,7 +327,7 @@ class Event extends Thing
     /**
      * A flag to signal that the item, event, or place is accessible for free.
      *
-     * @param $isAccessibleForFree \LengthOfRope\JSONLD\DataType\Boolean
+     * @param $isAccessibleForFree \LengthOfRope\JSONLD\DataType\TypeBoolean
      * @return static
      **/
     public function setIsAccessibleForFree($isAccessibleForFree): static {
@@ -337,7 +337,7 @@ class Event extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Boolean
+     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean
      **/
     public function getIsAccessibleForFree() {
         return $this->properties['isAccessibleForFree'];
@@ -349,7 +349,7 @@ class Event extends Thing
      * (rare) case of an event that has been postponed and rescheduled multiple times,
      * this field may be repeated.
      *
-     * @param $previousStartDate \LengthOfRope\JSONLD\DataType\Date
+     * @param $previousStartDate \LengthOfRope\JSONLD\DataType\TypeDate
      * @return static
      **/
     public function setPreviousStartDate($previousStartDate): static {
@@ -359,7 +359,7 @@ class Event extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Date
+     * @return \LengthOfRope\JSONLD\DataType\TypeDate
      **/
     public function getPreviousStartDate() {
         return $this->properties['previousStartDate'];
@@ -387,7 +387,7 @@ class Event extends Thing
      * The location of, for example, where an event is happening, where an organization
      * is located, or where an action takes place.
      *
-     * @param $location \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\VirtualLocation|\LengthOfRope\JSONLD\Schema\PostalAddress
+     * @param $location \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\VirtualLocation|\LengthOfRope\JSONLD\Schema\PostalAddress
      * @return static
      **/
     public function setLocation($location): static {
@@ -397,7 +397,7 @@ class Event extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\VirtualLocation|\LengthOfRope\JSONLD\Schema\PostalAddress
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\VirtualLocation|\LengthOfRope\JSONLD\Schema\PostalAddress
      **/
     public function getLocation() {
         return $this->properties['location'];
@@ -406,7 +406,7 @@ class Event extends Thing
      * The start date and time of the item (in [ISO 8601 date
      * format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
-     * @param $startDate \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
+     * @param $startDate \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
      * @return static
      **/
     public function setStartDate($startDate): static {
@@ -416,7 +416,7 @@ class Event extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
      **/
     public function getStartDate() {
         return $this->properties['startDate'];
@@ -424,7 +424,7 @@ class Event extends Thing
     /**
      * The typical expected age range, e.g. '7-9', '11-'.
      *
-     * @param $typicalAgeRange \LengthOfRope\JSONLD\DataType\Text
+     * @param $typicalAgeRange \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setTypicalAgeRange($typicalAgeRange): static {
@@ -434,7 +434,7 @@ class Event extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getTypicalAgeRange() {
         return $this->properties['typicalAgeRange'];
@@ -480,7 +480,7 @@ class Event extends Thing
     /**
      * The number of attendee places for an event that remain unallocated.
      *
-     * @param $remainingAttendeeCapacity \LengthOfRope\JSONLD\DataType\Integer
+     * @param $remainingAttendeeCapacity \LengthOfRope\JSONLD\DataType\TypeInteger
      * @return static
      **/
     public function setRemainingAttendeeCapacity($remainingAttendeeCapacity): static {
@@ -490,7 +490,7 @@ class Event extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Integer
+     * @return \LengthOfRope\JSONLD\DataType\TypeInteger
      **/
     public function getRemainingAttendeeCapacity() {
         return $this->properties['remainingAttendeeCapacity'];
@@ -613,7 +613,7 @@ class Event extends Thing
     /**
      * The time admission will commence.
      *
-     * @param $doorTime \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Time
+     * @param $doorTime \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeTime
      * @return static
      **/
     public function setDoorTime($doorTime): static {
@@ -623,7 +623,7 @@ class Event extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Time
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeTime
      **/
     public function getDoorTime() {
         return $this->properties['doorTime'];
@@ -633,7 +633,7 @@ class Event extends Thing
      * [[eventAttendanceMode]] is [[OfflineEventAttendanceMode]] (or the offline
      * aspects, in the case of a [[MixedEventAttendanceMode]]).
      *
-     * @param $maximumPhysicalAttendeeCapacity \LengthOfRope\JSONLD\DataType\Integer
+     * @param $maximumPhysicalAttendeeCapacity \LengthOfRope\JSONLD\DataType\TypeInteger
      * @return static
      **/
     public function setMaximumPhysicalAttendeeCapacity($maximumPhysicalAttendeeCapacity): static {
@@ -643,7 +643,7 @@ class Event extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Integer
+     * @return \LengthOfRope\JSONLD\DataType\TypeInteger
      **/
     public function getMaximumPhysicalAttendeeCapacity() {
         return $this->properties['maximumPhysicalAttendeeCapacity'];
@@ -709,7 +709,7 @@ class Event extends Thing
      * of the language codes from the [IETF BCP 47
      * standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
      *
-     * @param $inLanguage \LengthOfRope\JSONLD\Schema\Language|\LengthOfRope\JSONLD\DataType\Text
+     * @param $inLanguage \LengthOfRope\JSONLD\Schema\Language|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setInLanguage($inLanguage): static {
@@ -719,7 +719,7 @@ class Event extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Language|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\Language|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getInLanguage() {
         return $this->properties['inLanguage'];
@@ -728,7 +728,7 @@ class Event extends Thing
      * The end date and time of the item (in [ISO 8601 date
      * format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
-     * @param $endDate \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
+     * @param $endDate \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
      * @return static
      **/
     public function setEndDate($endDate): static {
@@ -738,7 +738,7 @@ class Event extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
+     * @return \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
      **/
     public function getEndDate() {
         return $this->properties['endDate'];
@@ -783,7 +783,7 @@ class Event extends Thing
     /**
      * The total number of individuals that may attend an event or venue.
      *
-     * @param $maximumAttendeeCapacity \LengthOfRope\JSONLD\DataType\Integer
+     * @param $maximumAttendeeCapacity \LengthOfRope\JSONLD\DataType\TypeInteger
      * @return static
      **/
     public function setMaximumAttendeeCapacity($maximumAttendeeCapacity): static {
@@ -793,7 +793,7 @@ class Event extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Integer
+     * @return \LengthOfRope\JSONLD\DataType\TypeInteger
      **/
     public function getMaximumAttendeeCapacity() {
         return $this->properties['maximumAttendeeCapacity'];

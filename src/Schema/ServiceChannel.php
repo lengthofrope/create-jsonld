@@ -98,7 +98,7 @@ class ServiceChannel extends Intangible
     /**
      * The website to access the service.
      *
-     * @param $serviceUrl \LengthOfRope\JSONLD\DataType\URL
+     * @param $serviceUrl \LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setServiceUrl($serviceUrl): static {
@@ -108,7 +108,7 @@ class ServiceChannel extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getServiceUrl() {
         return $this->properties['serviceUrl'];
@@ -172,7 +172,7 @@ class ServiceChannel extends Intangible
      * of the language codes from the [IETF BCP 47
      * standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].
      *
-     * @param $availableLanguage \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Language
+     * @param $availableLanguage \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Language
      * @return static
      **/
     public function setAvailableLanguage($availableLanguage): static {
@@ -182,7 +182,7 @@ class ServiceChannel extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Language
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Language
      **/
     public function getAvailableLanguage() {
         return $this->properties['availableLanguage'];

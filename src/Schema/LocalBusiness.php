@@ -44,7 +44,7 @@ class LocalBusiness extends Place
     /**
      * The price range of the business, for example ```$$$```.
      *
-     * @param $priceRange \LengthOfRope\JSONLD\DataType\Text
+     * @param $priceRange \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setPriceRange($priceRange): static {
@@ -54,7 +54,7 @@ class LocalBusiness extends Place
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getPriceRange() {
         return $this->properties['priceRange'];
@@ -77,7 +77,7 @@ class LocalBusiness extends Place
      * datetime=&quot;Mo-Su&quot;&gt;Monday through Sunday, all
      * day&lt;/time&gt;</code>.
      *
-     * @param $openingHours \LengthOfRope\JSONLD\DataType\Text
+     * @param $openingHours \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setOpeningHours($openingHours): static {
@@ -87,7 +87,7 @@ class LocalBusiness extends Place
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getOpeningHours() {
         return $this->properties['openingHours'];
@@ -95,7 +95,7 @@ class LocalBusiness extends Place
     /**
      * Cash, Credit Card, Cryptocurrency, Local Exchange Tradings System, etc.
      *
-     * @param $paymentAccepted \LengthOfRope\JSONLD\DataType\Text
+     * @param $paymentAccepted \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setPaymentAccepted($paymentAccepted): static {
@@ -105,7 +105,7 @@ class LocalBusiness extends Place
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getPaymentAccepted() {
         return $this->properties['paymentAccepted'];
@@ -139,7 +139,7 @@ class LocalBusiness extends Place
      * Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and
      * other currency types, e.g. "Ithaca HOUR".
      *
-     * @param $currenciesAccepted \LengthOfRope\JSONLD\DataType\Text
+     * @param $currenciesAccepted \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setCurrenciesAccepted($currenciesAccepted): static {
@@ -149,7 +149,7 @@ class LocalBusiness extends Place
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getCurrenciesAccepted() {
         return $this->properties['currenciesAccepted'];

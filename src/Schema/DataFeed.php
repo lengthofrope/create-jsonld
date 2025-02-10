@@ -43,7 +43,7 @@ class DataFeed extends Dataset
     /**
      * An item within a data feed. Data feeds may have many elements.
      *
-     * @param $dataFeedElement \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DataFeedItem
+     * @param $dataFeedElement \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DataFeedItem
      * @return static
      **/
     public function setDataFeedElement($dataFeedElement): static {
@@ -53,7 +53,7 @@ class DataFeed extends Dataset
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DataFeedItem
+     * @return \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DataFeedItem
      **/
     public function getDataFeedElement() {
         return $this->properties['dataFeedElement'];

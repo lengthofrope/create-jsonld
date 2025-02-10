@@ -79,7 +79,7 @@ class Ticket extends Intangible
     /**
      * The unique identifier for the ticket.
      *
-     * @param $ticketNumber \LengthOfRope\JSONLD\DataType\Text
+     * @param $ticketNumber \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setTicketNumber($ticketNumber): static {
@@ -89,7 +89,7 @@ class Ticket extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getTicketNumber() {
         return $this->properties['ticketNumber'];
@@ -123,7 +123,7 @@ class Ticket extends Intangible
      * Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and
      * other currency types, e.g. "Ithaca HOUR".
      *
-     * @param $priceCurrency \LengthOfRope\JSONLD\DataType\Text
+     * @param $priceCurrency \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setPriceCurrency($priceCurrency): static {
@@ -133,7 +133,7 @@ class Ticket extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getPriceCurrency() {
         return $this->properties['priceCurrency'];
@@ -149,7 +149,7 @@ class Ticket extends Intangible
      * * Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal
      * point. Avoid using these symbols as a readability separator.
      *
-     * @param $totalPrice \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\PriceSpecification|\LengthOfRope\JSONLD\DataType\Number
+     * @param $totalPrice \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\PriceSpecification|\LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setTotalPrice($totalPrice): static {
@@ -159,7 +159,7 @@ class Ticket extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\PriceSpecification|\LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\PriceSpecification|\LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getTotalPrice() {
         return $this->properties['totalPrice'];
@@ -167,7 +167,7 @@ class Ticket extends Intangible
     /**
      * The date the ticket was issued.
      *
-     * @param $dateIssued \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
+     * @param $dateIssued \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
      * @return static
      **/
     public function setDateIssued($dateIssued): static {
@@ -177,7 +177,7 @@ class Ticket extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
+     * @return \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
      **/
     public function getDateIssued() {
         return $this->properties['dateIssued'];
@@ -185,7 +185,7 @@ class Ticket extends Intangible
     /**
      * Reference to an asset (e.g., Barcode, QR code image or PDF) usable for entrance.
      *
-     * @param $ticketToken \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @param $ticketToken \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setTicketToken($ticketToken): static {
@@ -195,7 +195,7 @@ class Ticket extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getTicketToken() {
         return $this->properties['ticketToken'];

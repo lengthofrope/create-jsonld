@@ -52,7 +52,7 @@ class Schedule extends Intangible
      * be specified using either [[DayOfWeek]], or alternatively [[Text]] conforming to
      * iCal's syntax for byDay recurrence rules.
      *
-     * @param $byDay \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DayOfWeek
+     * @param $byDay \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DayOfWeek
      * @return static
      **/
     public function setByDay($byDay): static {
@@ -62,7 +62,7 @@ class Schedule extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DayOfWeek
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DayOfWeek
      **/
     public function getByDay() {
         return $this->properties['byDay'];
@@ -78,7 +78,7 @@ class Schedule extends Intangible
      * describing dates with times. This situation may be clarified in future
      * revisions.
      *
-     * @param $endTime \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Time
+     * @param $endTime \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeTime
      * @return static
      **/
     public function setEndTime($endTime): static {
@@ -88,7 +88,7 @@ class Schedule extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Time
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeTime
      **/
     public function getEndTime() {
         return $this->properties['endTime'];
@@ -96,7 +96,7 @@ class Schedule extends Intangible
     /**
      * Defines the number of times a recurring [[Event]] will take place.
      *
-     * @param $repeatCount \LengthOfRope\JSONLD\DataType\Integer
+     * @param $repeatCount \LengthOfRope\JSONLD\DataType\TypeInteger
      * @return static
      **/
     public function setRepeatCount($repeatCount): static {
@@ -106,7 +106,7 @@ class Schedule extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Integer
+     * @return \LengthOfRope\JSONLD\DataType\TypeInteger
      **/
     public function getRepeatCount() {
         return $this->properties['repeatCount'];
@@ -117,7 +117,7 @@ class Schedule extends Intangible
      * conjunction with byDay to indicate concepts like the first and third Mondays of
      * a month.
      *
-     * @param $byMonthWeek \LengthOfRope\JSONLD\DataType\Integer
+     * @param $byMonthWeek \LengthOfRope\JSONLD\DataType\TypeInteger
      * @return static
      **/
     public function setByMonthWeek($byMonthWeek): static {
@@ -127,7 +127,7 @@ class Schedule extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Integer
+     * @return \LengthOfRope\JSONLD\DataType\TypeInteger
      **/
     public function getByMonthWeek() {
         return $this->properties['byMonthWeek'];
@@ -136,7 +136,7 @@ class Schedule extends Intangible
      * The start date and time of the item (in [ISO 8601 date
      * format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
-     * @param $startDate \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
+     * @param $startDate \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
      * @return static
      **/
     public function setStartDate($startDate): static {
@@ -146,7 +146,7 @@ class Schedule extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
      **/
     public function getStartDate() {
         return $this->properties['startDate'];
@@ -155,7 +155,7 @@ class Schedule extends Intangible
      * Defines the day(s) of the month on which a recurring [[Event]] takes place.
      * Specified as an [[Integer]] between 1-31.
      *
-     * @param $byMonthDay \LengthOfRope\JSONLD\DataType\Integer
+     * @param $byMonthDay \LengthOfRope\JSONLD\DataType\TypeInteger
      * @return static
      **/
     public function setByMonthDay($byMonthDay): static {
@@ -165,7 +165,7 @@ class Schedule extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Integer
+     * @return \LengthOfRope\JSONLD\DataType\TypeInteger
      **/
     public function getByMonthDay() {
         return $this->properties['byMonthDay'];
@@ -181,7 +181,7 @@ class Schedule extends Intangible
      * describing dates with times. This situation may be clarified in future
      * revisions.
      *
-     * @param $startTime \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Time
+     * @param $startTime \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeTime
      * @return static
      **/
     public function setStartTime($startTime): static {
@@ -191,7 +191,7 @@ class Schedule extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Time
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeTime
      **/
     public function getStartTime() {
         return $this->properties['startTime'];
@@ -200,7 +200,7 @@ class Schedule extends Intangible
      * Defines the month(s) of the year on which a recurring [[Event]] takes place.
      * Specified as an [[Integer]] between 1-12. January is 1.
      *
-     * @param $byMonth \LengthOfRope\JSONLD\DataType\Integer
+     * @param $byMonth \LengthOfRope\JSONLD\DataType\TypeInteger
      * @return static
      **/
     public function setByMonth($byMonth): static {
@@ -210,7 +210,7 @@ class Schedule extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Integer
+     * @return \LengthOfRope\JSONLD\DataType\TypeInteger
      **/
     public function getByMonth() {
         return $this->properties['byMonth'];
@@ -239,7 +239,7 @@ class Schedule extends Intangible
      * [[Schedule]]. The intervals between
      * events should be defined as a [[Duration]] of time.
      *
-     * @param $repeatFrequency \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Duration
+     * @param $repeatFrequency \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Duration
      * @return static
      **/
     public function setRepeatFrequency($repeatFrequency): static {
@@ -249,7 +249,7 @@ class Schedule extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Duration
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Duration
      **/
     public function getRepeatFrequency() {
         return $this->properties['repeatFrequency'];
@@ -259,7 +259,7 @@ class Schedule extends Intangible
      * given. The value provided should be among those listed in the IANA Time Zone
      * Database.
      *
-     * @param $scheduleTimezone \LengthOfRope\JSONLD\DataType\Text
+     * @param $scheduleTimezone \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setScheduleTimezone($scheduleTimezone): static {
@@ -269,7 +269,7 @@ class Schedule extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getScheduleTimezone() {
         return $this->properties['scheduleTimezone'];
@@ -278,7 +278,7 @@ class Schedule extends Intangible
      * The end date and time of the item (in [ISO 8601 date
      * format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
-     * @param $endDate \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
+     * @param $endDate \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
      * @return static
      **/
     public function setEndDate($endDate): static {
@@ -288,7 +288,7 @@ class Schedule extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
+     * @return \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
      **/
     public function getEndDate() {
         return $this->properties['endDate'];
@@ -304,7 +304,7 @@ class Schedule extends Intangible
      * excluded from the schedule. This allows a whole day to be excluded from
      * the schedule without having to itemise every scheduled event.
      *
-     * @param $exceptDate \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
+     * @param $exceptDate \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
      * @return static
      **/
     public function setExceptDate($exceptDate): static {
@@ -314,7 +314,7 @@ class Schedule extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
      **/
     public function getExceptDate() {
         return $this->properties['exceptDate'];

@@ -43,7 +43,7 @@ class MedicalEntity extends Thing
      * The drug or supplement's legal status, including any controlled substance
      * schedules that apply.
      *
-     * @param $legalStatus \LengthOfRope\JSONLD\Schema\DrugLegalStatus|\LengthOfRope\JSONLD\Schema\MedicalEnumeration|\LengthOfRope\JSONLD\DataType\Text
+     * @param $legalStatus \LengthOfRope\JSONLD\Schema\DrugLegalStatus|\LengthOfRope\JSONLD\Schema\MedicalEnumeration|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setLegalStatus($legalStatus): static {
@@ -53,7 +53,7 @@ class MedicalEntity extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\DrugLegalStatus|\LengthOfRope\JSONLD\Schema\MedicalEnumeration|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\DrugLegalStatus|\LengthOfRope\JSONLD\Schema\MedicalEnumeration|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getLegalStatus() {
         return $this->properties['legalStatus'];

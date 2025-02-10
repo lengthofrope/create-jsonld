@@ -45,7 +45,7 @@ class TypeAndQuantityNode extends StructuredValue
      * a URL. Other codes than the UN/CEFACT Common Code may be used with a prefix
      * followed by a colon.
      *
-     * @param $unitCode \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @param $unitCode \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setUnitCode($unitCode): static {
@@ -55,7 +55,7 @@ class TypeAndQuantityNode extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getUnitCode() {
         return $this->properties['unitCode'];
@@ -63,7 +63,7 @@ class TypeAndQuantityNode extends StructuredValue
     /**
      * The quantity of the goods included in the offer.
      *
-     * @param $amountOfThisGood \LengthOfRope\JSONLD\DataType\Number
+     * @param $amountOfThisGood \LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setAmountOfThisGood($amountOfThisGood): static {
@@ -73,7 +73,7 @@ class TypeAndQuantityNode extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getAmountOfThisGood() {
         return $this->properties['amountOfThisGood'];
@@ -121,7 +121,7 @@ class TypeAndQuantityNode extends StructuredValue
      * provide a standard unit code for
      * <a href='unitCode'>unitCode</a>.
      *
-     * @param $unitText \LengthOfRope\JSONLD\DataType\Text
+     * @param $unitText \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setUnitText($unitText): static {
@@ -131,7 +131,7 @@ class TypeAndQuantityNode extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getUnitText() {
         return $this->properties['unitText'];

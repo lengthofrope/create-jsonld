@@ -66,7 +66,7 @@ class CourseInstance extends Event
      * "asynchronous"; "full-time" or "part-time") or as a URL reference to a term from
      * a controlled vocabulary (e.g. https://ceds.ed.gov/element/001311#Asynchronous).
      *
-     * @param $courseMode \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @param $courseMode \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setCourseMode($courseMode): static {
@@ -76,7 +76,7 @@ class CourseInstance extends Event
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getCourseMode() {
         return $this->properties['courseMode'];
@@ -105,7 +105,7 @@ class CourseInstance extends Event
      * hours of lectures, 1 hour of lab work and 3 hours of independent study per
      * week".
      *
-     * @param $courseWorkload \LengthOfRope\JSONLD\DataType\Text
+     * @param $courseWorkload \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setCourseWorkload($courseWorkload): static {
@@ -115,7 +115,7 @@ class CourseInstance extends Event
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getCourseWorkload() {
         return $this->properties['courseWorkload'];

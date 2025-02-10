@@ -47,7 +47,7 @@ class FlightReservation extends Reservation
      * The priority status assigned to a passenger for security or boarding (e.g.
      * FastTrack or Priority).
      *
-     * @param $passengerPriorityStatus \LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\Text
+     * @param $passengerPriorityStatus \LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setPassengerPriorityStatus($passengerPriorityStatus): static {
@@ -57,7 +57,7 @@ class FlightReservation extends Reservation
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getPassengerPriorityStatus() {
         return $this->properties['passengerPriorityStatus'];
@@ -65,7 +65,7 @@ class FlightReservation extends Reservation
     /**
      * The passenger's sequence number as assigned by the airline.
      *
-     * @param $passengerSequenceNumber \LengthOfRope\JSONLD\DataType\Text
+     * @param $passengerSequenceNumber \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setPassengerSequenceNumber($passengerSequenceNumber): static {
@@ -75,7 +75,7 @@ class FlightReservation extends Reservation
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getPassengerSequenceNumber() {
         return $this->properties['passengerSequenceNumber'];
@@ -83,7 +83,7 @@ class FlightReservation extends Reservation
     /**
      * The airline-specific indicator of boarding order / preference.
      *
-     * @param $boardingGroup \LengthOfRope\JSONLD\DataType\Text
+     * @param $boardingGroup \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setBoardingGroup($boardingGroup): static {
@@ -93,7 +93,7 @@ class FlightReservation extends Reservation
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getBoardingGroup() {
         return $this->properties['boardingGroup'];
@@ -101,7 +101,7 @@ class FlightReservation extends Reservation
     /**
      * The type of security screening the passenger is subject to.
      *
-     * @param $securityScreening \LengthOfRope\JSONLD\DataType\Text
+     * @param $securityScreening \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setSecurityScreening($securityScreening): static {
@@ -111,7 +111,7 @@ class FlightReservation extends Reservation
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getSecurityScreening() {
         return $this->properties['securityScreening'];

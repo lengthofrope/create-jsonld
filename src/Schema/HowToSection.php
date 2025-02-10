@@ -44,7 +44,7 @@ class HowToSection extends ListItem
      * A single step item (as HowToStep, text, document, video, etc.) or a HowToSection
      * (originally misnamed 'steps'; 'step' is preferred).
      *
-     * @param $steps \LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\Text
+     * @param $steps \LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setSteps($steps): static {
@@ -54,7 +54,7 @@ class HowToSection extends ListItem
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getSteps() {
         return $this->properties['steps'];

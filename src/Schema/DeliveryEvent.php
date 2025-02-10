@@ -42,7 +42,7 @@ class DeliveryEvent extends Event
     /**
      * After this date, the item will no longer be available for pickup.
      *
-     * @param $availableThrough \LengthOfRope\JSONLD\DataType\DateTime
+     * @param $availableThrough \LengthOfRope\JSONLD\DataType\TypeDateTime
      * @return static
      **/
     public function setAvailableThrough($availableThrough): static {
@@ -52,7 +52,7 @@ class DeliveryEvent extends Event
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\DateTime
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime
      **/
     public function getAvailableThrough() {
         return $this->properties['availableThrough'];
@@ -60,7 +60,7 @@ class DeliveryEvent extends Event
     /**
      * When the item is available for pickup from the store, locker, etc.
      *
-     * @param $availableFrom \LengthOfRope\JSONLD\DataType\DateTime
+     * @param $availableFrom \LengthOfRope\JSONLD\DataType\TypeDateTime
      * @return static
      **/
     public function setAvailableFrom($availableFrom): static {
@@ -70,7 +70,7 @@ class DeliveryEvent extends Event
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\DateTime
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime
      **/
     public function getAvailableFrom() {
         return $this->properties['availableFrom'];
@@ -96,7 +96,7 @@ class DeliveryEvent extends Event
     /**
      * Password, PIN, or access code needed for delivery (e.g. from a locker).
      *
-     * @param $accessCode \LengthOfRope\JSONLD\DataType\Text
+     * @param $accessCode \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setAccessCode($accessCode): static {
@@ -106,7 +106,7 @@ class DeliveryEvent extends Event
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getAccessCode() {
         return $this->properties['accessCode'];

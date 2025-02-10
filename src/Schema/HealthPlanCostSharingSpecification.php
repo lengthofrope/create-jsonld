@@ -42,7 +42,7 @@ class HealthPlanCostSharingSpecification extends Intangible
     /**
      * The category or type of pharmacy associated with this cost sharing.
      *
-     * @param $healthPlanPharmacyCategory \LengthOfRope\JSONLD\DataType\Text
+     * @param $healthPlanPharmacyCategory \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setHealthPlanPharmacyCategory($healthPlanPharmacyCategory): static {
@@ -52,7 +52,7 @@ class HealthPlanCostSharingSpecification extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getHealthPlanPharmacyCategory() {
         return $this->properties['healthPlanPharmacyCategory'];
@@ -78,7 +78,7 @@ class HealthPlanCostSharingSpecification extends Intangible
     /**
      * The rate of coinsurance expressed as a number between 0.0 and 1.0.
      *
-     * @param $healthPlanCoinsuranceRate \LengthOfRope\JSONLD\DataType\Number
+     * @param $healthPlanCoinsuranceRate \LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setHealthPlanCoinsuranceRate($healthPlanCoinsuranceRate): static {
@@ -88,7 +88,7 @@ class HealthPlanCostSharingSpecification extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getHealthPlanCoinsuranceRate() {
         return $this->properties['healthPlanCoinsuranceRate'];
@@ -97,7 +97,7 @@ class HealthPlanCostSharingSpecification extends Intangible
      * Whether the coinsurance applies before or after deductible, etc. TODO: Is this a
      * closed set?
      *
-     * @param $healthPlanCoinsuranceOption \LengthOfRope\JSONLD\DataType\Text
+     * @param $healthPlanCoinsuranceOption \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setHealthPlanCoinsuranceOption($healthPlanCoinsuranceOption): static {
@@ -107,7 +107,7 @@ class HealthPlanCostSharingSpecification extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getHealthPlanCoinsuranceOption() {
         return $this->properties['healthPlanCoinsuranceOption'];
@@ -116,7 +116,7 @@ class HealthPlanCostSharingSpecification extends Intangible
      * Whether the copay is before or after deductible, etc. TODO: Is this a closed
      * set?
      *
-     * @param $healthPlanCopayOption \LengthOfRope\JSONLD\DataType\Text
+     * @param $healthPlanCopayOption \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setHealthPlanCopayOption($healthPlanCopayOption): static {
@@ -126,7 +126,7 @@ class HealthPlanCostSharingSpecification extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getHealthPlanCopayOption() {
         return $this->properties['healthPlanCopayOption'];

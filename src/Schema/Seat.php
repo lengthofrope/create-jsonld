@@ -42,7 +42,7 @@ class Seat extends Intangible
     /**
      * The section location of the reserved seat (e.g. Orchestra).
      *
-     * @param $seatSection \LengthOfRope\JSONLD\DataType\Text
+     * @param $seatSection \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setSeatSection($seatSection): static {
@@ -52,7 +52,7 @@ class Seat extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getSeatSection() {
         return $this->properties['seatSection'];
@@ -60,7 +60,7 @@ class Seat extends Intangible
     /**
      * The location of the reserved seat (e.g., 27).
      *
-     * @param $seatNumber \LengthOfRope\JSONLD\DataType\Text
+     * @param $seatNumber \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setSeatNumber($seatNumber): static {
@@ -70,7 +70,7 @@ class Seat extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getSeatNumber() {
         return $this->properties['seatNumber'];
@@ -78,7 +78,7 @@ class Seat extends Intangible
     /**
      * The row location of the reserved seat (e.g., B).
      *
-     * @param $seatRow \LengthOfRope\JSONLD\DataType\Text
+     * @param $seatRow \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setSeatRow($seatRow): static {
@@ -88,7 +88,7 @@ class Seat extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getSeatRow() {
         return $this->properties['seatRow'];
@@ -96,7 +96,7 @@ class Seat extends Intangible
     /**
      * The type/class of the seat.
      *
-     * @param $seatingType \LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\Text
+     * @param $seatingType \LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setSeatingType($seatingType): static {
@@ -106,7 +106,7 @@ class Seat extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getSeatingType() {
         return $this->properties['seatingType'];

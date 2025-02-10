@@ -60,7 +60,7 @@ class MusicRecording extends CreativeWork
     /**
      * The International Standard Recording Code for the recording.
      *
-     * @param $isrcCode \LengthOfRope\JSONLD\DataType\Text
+     * @param $isrcCode \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setIsrcCode($isrcCode): static {
@@ -70,7 +70,7 @@ class MusicRecording extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getIsrcCode() {
         return $this->properties['isrcCode'];

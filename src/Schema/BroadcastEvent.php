@@ -42,7 +42,7 @@ class BroadcastEvent extends PublicationEvent
     /**
      * True if the broadcast is of a live event.
      *
-     * @param $isLiveBroadcast \LengthOfRope\JSONLD\DataType\Boolean
+     * @param $isLiveBroadcast \LengthOfRope\JSONLD\DataType\TypeBoolean
      * @return static
      **/
     public function setIsLiveBroadcast($isLiveBroadcast): static {
@@ -52,7 +52,7 @@ class BroadcastEvent extends PublicationEvent
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Boolean
+     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean
      **/
     public function getIsLiveBroadcast() {
         return $this->properties['isLiveBroadcast'];
@@ -78,7 +78,7 @@ class BroadcastEvent extends PublicationEvent
     /**
      * The type of screening or video broadcast used (e.g. IMAX, 3D, SD, HD, etc.).
      *
-     * @param $videoFormat \LengthOfRope\JSONLD\DataType\Text
+     * @param $videoFormat \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setVideoFormat($videoFormat): static {
@@ -88,7 +88,7 @@ class BroadcastEvent extends PublicationEvent
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getVideoFormat() {
         return $this->properties['videoFormat'];
@@ -97,7 +97,7 @@ class BroadcastEvent extends PublicationEvent
      * Languages in which subtitles/captions are available, in [IETF BCP 47 standard
      * format](http://tools.ietf.org/html/bcp47).
      *
-     * @param $subtitleLanguage \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Language
+     * @param $subtitleLanguage \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Language
      * @return static
      **/
     public function setSubtitleLanguage($subtitleLanguage): static {
@@ -107,7 +107,7 @@ class BroadcastEvent extends PublicationEvent
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Language
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Language
      **/
     public function getSubtitleLanguage() {
         return $this->properties['subtitleLanguage'];

@@ -47,7 +47,7 @@ class SpeakableSpecification extends Intangible
      * the latter case, multiple matches within a page can constitute a single
      * conceptual "Web page element".
      *
-     * @param $cssSelector \LengthOfRope\JSONLD\DataType\CssSelectorType
+     * @param $cssSelector \LengthOfRope\JSONLD\DataType\TypeCssSelectorType
      * @return static
      **/
     public function setCssSelector($cssSelector): static {
@@ -57,7 +57,7 @@ class SpeakableSpecification extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\CssSelectorType
+     * @return \LengthOfRope\JSONLD\DataType\TypeCssSelectorType
      **/
     public function getCssSelector() {
         return $this->properties['cssSelector'];
@@ -67,7 +67,7 @@ class SpeakableSpecification extends Intangible
      * latter case, multiple matches within a page can constitute a single conceptual
      * "Web page element".
      *
-     * @param $xpath \LengthOfRope\JSONLD\DataType\XPathType
+     * @param $xpath \LengthOfRope\JSONLD\DataType\TypeXPathType
      * @return static
      **/
     public function setXpath($xpath): static {
@@ -77,7 +77,7 @@ class SpeakableSpecification extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\XPathType
+     * @return \LengthOfRope\JSONLD\DataType\TypeXPathType
      **/
     public function getXpath() {
         return $this->properties['xpath'];

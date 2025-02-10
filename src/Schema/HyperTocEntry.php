@@ -89,7 +89,7 @@ class HyperTocEntry extends CreativeWork
      * Text of an utterances (spoken words, lyrics etc.) that occurs at a certain
      * section of a media object, represented as a [[HyperTocEntry]].
      *
-     * @param $utterances \LengthOfRope\JSONLD\DataType\Text
+     * @param $utterances \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setUtterances($utterances): static {
@@ -99,7 +99,7 @@ class HyperTocEntry extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getUtterances() {
         return $this->properties['utterances'];

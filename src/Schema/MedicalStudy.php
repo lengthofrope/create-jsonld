@@ -68,7 +68,7 @@ class MedicalStudy extends MedicalEntity
     /**
      * The status of the study (enumerated).
      *
-     * @param $status \LengthOfRope\JSONLD\Schema\MedicalStudyStatus|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EventStatusType
+     * @param $status \LengthOfRope\JSONLD\Schema\MedicalStudyStatus|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\EventStatusType
      * @return static
      **/
     public function setStatus($status): static {
@@ -78,7 +78,7 @@ class MedicalStudy extends MedicalEntity
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\MedicalStudyStatus|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EventStatusType
+     * @return \LengthOfRope\JSONLD\Schema\MedicalStudyStatus|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\EventStatusType
      **/
     public function getStatus() {
         return $this->properties['status'];

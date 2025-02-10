@@ -62,7 +62,7 @@ class WriteAction extends CreateAction
      * of the language codes from the [IETF BCP 47
      * standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
      *
-     * @param $inLanguage \LengthOfRope\JSONLD\Schema\Language|\LengthOfRope\JSONLD\DataType\Text
+     * @param $inLanguage \LengthOfRope\JSONLD\Schema\Language|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setInLanguage($inLanguage): static {
@@ -72,7 +72,7 @@ class WriteAction extends CreateAction
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Language|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\Language|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getInLanguage() {
         return $this->properties['inLanguage'];

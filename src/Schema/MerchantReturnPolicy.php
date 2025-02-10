@@ -106,7 +106,7 @@ class MerchantReturnPolicy extends Intangible
      * Are in-store returns offered? (For more advanced return methods use the
      * [[returnMethod]] property.)
      *
-     * @param $inStoreReturnsOffered \LengthOfRope\JSONLD\DataType\Boolean
+     * @param $inStoreReturnsOffered \LengthOfRope\JSONLD\DataType\TypeBoolean
      * @return static
      **/
     public function setInStoreReturnsOffered($inStoreReturnsOffered): static {
@@ -116,7 +116,7 @@ class MerchantReturnPolicy extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Boolean
+     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean
      **/
     public function getInStoreReturnsOffered() {
         return $this->properties['inStoreReturnsOffered'];
@@ -239,7 +239,7 @@ class MerchantReturnPolicy extends Intangible
      * code](http://en.wikipedia.org/wiki/ISO_3166-1). Note that this can be different
      * from the country where the product was originally shipped from or sent to.
      *
-     * @param $returnPolicyCountry \LengthOfRope\JSONLD\Schema\Country|\LengthOfRope\JSONLD\DataType\Text
+     * @param $returnPolicyCountry \LengthOfRope\JSONLD\Schema\Country|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setReturnPolicyCountry($returnPolicyCountry): static {
@@ -249,7 +249,7 @@ class MerchantReturnPolicy extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Country|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\Country|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getReturnPolicyCountry() {
         return $this->properties['returnPolicyCountry'];
@@ -314,7 +314,7 @@ class MerchantReturnPolicy extends Intangible
     /**
      * Specifies a Web page or service by URL, for product returns.
      *
-     * @param $merchantReturnLink \LengthOfRope\JSONLD\DataType\URL
+     * @param $merchantReturnLink \LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setMerchantReturnLink($merchantReturnLink): static {
@@ -324,7 +324,7 @@ class MerchantReturnPolicy extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getMerchantReturnLink() {
         return $this->properties['merchantReturnLink'];
@@ -393,7 +393,7 @@ class MerchantReturnPolicy extends Intangible
      * date) that a product can be returned. Used when the [[returnPolicyCategory]]
      * property is specified as [[MerchantReturnFiniteReturnWindow]].
      *
-     * @param $merchantReturnDays \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\Integer|\LengthOfRope\JSONLD\DataType\DateTime
+     * @param $merchantReturnDays \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeInteger|\LengthOfRope\JSONLD\DataType\TypeDateTime
      * @return static
      **/
     public function setMerchantReturnDays($merchantReturnDays): static {
@@ -403,7 +403,7 @@ class MerchantReturnPolicy extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\Integer|\LengthOfRope\JSONLD\DataType\DateTime
+     * @return \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeInteger|\LengthOfRope\JSONLD\DataType\TypeDateTime
      **/
     public function getMerchantReturnDays() {
         return $this->properties['merchantReturnDays'];
@@ -430,7 +430,7 @@ class MerchantReturnPolicy extends Intangible
      * A country where a particular merchant return policy applies to, for example the
      * two-letter ISO 3166-1 alpha-2 country code.
      *
-     * @param $applicableCountry \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Country
+     * @param $applicableCountry \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Country
      * @return static
      **/
     public function setApplicableCountry($applicableCountry): static {
@@ -440,7 +440,7 @@ class MerchantReturnPolicy extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Country
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Country
      **/
     public function getApplicableCountry() {
         return $this->properties['applicableCountry'];
@@ -450,7 +450,7 @@ class MerchantReturnPolicy extends Intangible
      * use [[Number]] to specify a percentage of the product price paid by the
      * customer.
      *
-     * @param $restockingFee \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\Number
+     * @param $restockingFee \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setRestockingFee($restockingFee): static {
@@ -460,7 +460,7 @@ class MerchantReturnPolicy extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getRestockingFee() {
         return $this->properties['restockingFee'];

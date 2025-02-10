@@ -42,7 +42,7 @@ class Airport extends CivicStructure
     /**
      * IATA identifier for an airline or airport.
      *
-     * @param $iataCode \LengthOfRope\JSONLD\DataType\Text
+     * @param $iataCode \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setIataCode($iataCode): static {
@@ -52,7 +52,7 @@ class Airport extends CivicStructure
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getIataCode() {
         return $this->properties['iataCode'];
@@ -60,7 +60,7 @@ class Airport extends CivicStructure
     /**
      * ICAO identifier for an airport.
      *
-     * @param $icaoCode \LengthOfRope\JSONLD\DataType\Text
+     * @param $icaoCode \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setIcaoCode($icaoCode): static {
@@ -70,7 +70,7 @@ class Airport extends CivicStructure
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getIcaoCode() {
         return $this->properties['icaoCode'];

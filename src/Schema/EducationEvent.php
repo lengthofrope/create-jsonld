@@ -44,7 +44,7 @@ class EducationEvent extends Event
      * Examples of educational levels include 'beginner', 'intermediate' or 'advanced',
      * and formal sets of level indicators.
      *
-     * @param $educationalLevel \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm
+     * @param $educationalLevel \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\DefinedTerm
      * @return static
      **/
     public function setEducationalLevel($educationalLevel): static {
@@ -54,7 +54,7 @@ class EducationEvent extends Event
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\DefinedTerm
      **/
     public function getEducationalLevel() {
         return $this->properties['educationalLevel'];
@@ -63,7 +63,7 @@ class EducationEvent extends Event
      * The item being described is intended to assess the competency or learning
      * outcome defined by the referenced term.
      *
-     * @param $assesses \LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text
+     * @param $assesses \LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setAssesses($assesses): static {
@@ -73,7 +73,7 @@ class EducationEvent extends Event
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getAssesses() {
         return $this->properties['assesses'];
@@ -82,7 +82,7 @@ class EducationEvent extends Event
      * The item being described is intended to help a person learn the competency or
      * learning outcome defined by the referenced term.
      *
-     * @param $teaches \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DefinedTerm
+     * @param $teaches \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DefinedTerm
      * @return static
      **/
     public function setTeaches($teaches): static {
@@ -92,7 +92,7 @@ class EducationEvent extends Event
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DefinedTerm
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DefinedTerm
      **/
     public function getTeaches() {
         return $this->properties['teaches'];

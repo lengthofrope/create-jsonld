@@ -42,7 +42,7 @@ class Book extends CreativeWork
     /**
      * The number of pages in the book.
      *
-     * @param $numberOfPages \LengthOfRope\JSONLD\DataType\Integer
+     * @param $numberOfPages \LengthOfRope\JSONLD\DataType\TypeInteger
      * @return static
      **/
     public function setNumberOfPages($numberOfPages): static {
@@ -52,7 +52,7 @@ class Book extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Integer
+     * @return \LengthOfRope\JSONLD\DataType\TypeInteger
      **/
     public function getNumberOfPages() {
         return $this->properties['numberOfPages'];
@@ -96,7 +96,7 @@ class Book extends CreativeWork
     /**
      * The ISBN of the book.
      *
-     * @param $isbn \LengthOfRope\JSONLD\DataType\Text
+     * @param $isbn \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setIsbn($isbn): static {
@@ -106,7 +106,7 @@ class Book extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getIsbn() {
         return $this->properties['isbn'];
@@ -114,7 +114,7 @@ class Book extends CreativeWork
     /**
      * The edition of the book.
      *
-     * @param $bookEdition \LengthOfRope\JSONLD\DataType\Text
+     * @param $bookEdition \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setBookEdition($bookEdition): static {
@@ -124,7 +124,7 @@ class Book extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getBookEdition() {
         return $this->properties['bookEdition'];
@@ -132,7 +132,7 @@ class Book extends CreativeWork
     /**
      * Indicates whether the book is an abridged edition.
      *
-     * @param $abridged \LengthOfRope\JSONLD\DataType\Boolean
+     * @param $abridged \LengthOfRope\JSONLD\DataType\TypeBoolean
      * @return static
      **/
     public function setAbridged($abridged): static {
@@ -142,7 +142,7 @@ class Book extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Boolean
+     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean
      **/
     public function getAbridged() {
         return $this->properties['abridged'];

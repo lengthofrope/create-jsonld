@@ -80,7 +80,7 @@ class PublicationEvent extends Event
     /**
      * A flag to signal that the item, event, or place is accessible for free.
      *
-     * @param $free \LengthOfRope\JSONLD\DataType\Boolean
+     * @param $free \LengthOfRope\JSONLD\DataType\TypeBoolean
      * @return static
      **/
     public function setFree($free): static {
@@ -90,7 +90,7 @@ class PublicationEvent extends Event
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Boolean
+     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean
      **/
     public function getFree() {
         return $this->properties['free'];

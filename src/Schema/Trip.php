@@ -42,7 +42,7 @@ class Trip extends Intangible
     /**
      * The expected departure time.
      *
-     * @param $departureTime \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Time
+     * @param $departureTime \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeTime
      * @return static
      **/
     public function setDepartureTime($departureTime): static {
@@ -52,7 +52,7 @@ class Trip extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Time
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeTime
      **/
     public function getDepartureTime() {
         return $this->properties['departureTime'];
@@ -116,7 +116,7 @@ class Trip extends Intangible
     /**
      * The expected arrival time.
      *
-     * @param $arrivalTime \LengthOfRope\JSONLD\DataType\Time|\LengthOfRope\JSONLD\DataType\DateTime
+     * @param $arrivalTime \LengthOfRope\JSONLD\DataType\TypeTime|\LengthOfRope\JSONLD\DataType\TypeDateTime
      * @return static
      **/
     public function setArrivalTime($arrivalTime): static {
@@ -126,7 +126,7 @@ class Trip extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Time|\LengthOfRope\JSONLD\DataType\DateTime
+     * @return \LengthOfRope\JSONLD\DataType\TypeTime|\LengthOfRope\JSONLD\DataType\TypeDateTime
      **/
     public function getArrivalTime() {
         return $this->properties['arrivalTime'];

@@ -42,7 +42,7 @@ class DrugStrength extends MedicalIntangible
     /**
      * The units of an active ingredient's strength, e.g. mg.
      *
-     * @param $strengthUnit \LengthOfRope\JSONLD\DataType\Text
+     * @param $strengthUnit \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setStrengthUnit($strengthUnit): static {
@@ -52,7 +52,7 @@ class DrugStrength extends MedicalIntangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getStrengthUnit() {
         return $this->properties['strengthUnit'];
@@ -60,7 +60,7 @@ class DrugStrength extends MedicalIntangible
     /**
      * The value of an active ingredient's strength, e.g. 325.
      *
-     * @param $strengthValue \LengthOfRope\JSONLD\DataType\Number
+     * @param $strengthValue \LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setStrengthValue($strengthValue): static {
@@ -70,7 +70,7 @@ class DrugStrength extends MedicalIntangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getStrengthValue() {
         return $this->properties['strengthValue'];
@@ -115,7 +115,7 @@ class DrugStrength extends MedicalIntangible
     /**
      * An active ingredient, typically chemical compounds and/or biologic substances.
      *
-     * @param $activeIngredient \LengthOfRope\JSONLD\DataType\Text
+     * @param $activeIngredient \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setActiveIngredient($activeIngredient): static {
@@ -125,7 +125,7 @@ class DrugStrength extends MedicalIntangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getActiveIngredient() {
         return $this->properties['activeIngredient'];

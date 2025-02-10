@@ -60,7 +60,7 @@ class Invoice extends Intangible
     /**
      * The name of the credit card or other method of payment for the order.
      *
-     * @param $paymentMethod \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\PaymentMethod
+     * @param $paymentMethod \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\PaymentMethod
      * @return static
      **/
     public function setPaymentMethod($paymentMethod): static {
@@ -70,7 +70,7 @@ class Invoice extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\PaymentMethod
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\PaymentMethod
      **/
     public function getPaymentMethod() {
         return $this->properties['paymentMethod'];
@@ -78,7 +78,7 @@ class Invoice extends Intangible
     /**
      * The date that payment is due.
      *
-     * @param $paymentDueDate \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
+     * @param $paymentDueDate \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
      * @return static
      **/
     public function setPaymentDueDate($paymentDueDate): static {
@@ -88,7 +88,7 @@ class Invoice extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
+     * @return \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
      **/
     public function getPaymentDueDate() {
         return $this->properties['paymentDueDate'];
@@ -135,7 +135,7 @@ class Invoice extends Intangible
     /**
      * The date the invoice is scheduled to be paid.
      *
-     * @param $scheduledPaymentDate \LengthOfRope\JSONLD\DataType\Date
+     * @param $scheduledPaymentDate \LengthOfRope\JSONLD\DataType\TypeDate
      * @return static
      **/
     public function setScheduledPaymentDate($scheduledPaymentDate): static {
@@ -145,7 +145,7 @@ class Invoice extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Date
+     * @return \LengthOfRope\JSONLD\DataType\TypeDate
      **/
     public function getScheduledPaymentDate() {
         return $this->properties['scheduledPaymentDate'];
@@ -154,7 +154,7 @@ class Invoice extends Intangible
      * An identifier for the method of payment used (e.g. the last 4 digits of the
      * credit card).
      *
-     * @param $paymentMethodId \LengthOfRope\JSONLD\DataType\Text
+     * @param $paymentMethodId \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setPaymentMethodId($paymentMethodId): static {
@@ -164,7 +164,7 @@ class Invoice extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getPaymentMethodId() {
         return $this->properties['paymentMethodId'];
@@ -172,7 +172,7 @@ class Invoice extends Intangible
     /**
      * The date that payment is due.
      *
-     * @param $paymentDue \LengthOfRope\JSONLD\DataType\DateTime
+     * @param $paymentDue \LengthOfRope\JSONLD\DataType\TypeDateTime
      * @return static
      **/
     public function setPaymentDue($paymentDue): static {
@@ -182,7 +182,7 @@ class Invoice extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\DateTime
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime
      **/
     public function getPaymentDue() {
         return $this->properties['paymentDue'];
@@ -208,7 +208,7 @@ class Invoice extends Intangible
     /**
      * A number that confirms the given order or payment has been received.
      *
-     * @param $confirmationNumber \LengthOfRope\JSONLD\DataType\Text
+     * @param $confirmationNumber \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setConfirmationNumber($confirmationNumber): static {
@@ -218,7 +218,7 @@ class Invoice extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getConfirmationNumber() {
         return $this->properties['confirmationNumber'];
@@ -226,7 +226,7 @@ class Invoice extends Intangible
     /**
      * The status of payment; whether the invoice has been paid or not.
      *
-     * @param $paymentStatus \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\PaymentStatusType
+     * @param $paymentStatus \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\PaymentStatusType
      * @return static
      **/
     public function setPaymentStatus($paymentStatus): static {
@@ -236,7 +236,7 @@ class Invoice extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\PaymentStatusType
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\PaymentStatusType
      **/
     public function getPaymentStatus() {
         return $this->properties['paymentStatus'];
@@ -245,7 +245,7 @@ class Invoice extends Intangible
      * A category for the item. Greater signs or slashes can be used to informally
      * indicate a category hierarchy.
      *
-     * @param $category \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\Schema\PhysicalActivityCategory|\LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @param $category \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\Schema\PhysicalActivityCategory|\LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setCategory($category): static {
@@ -255,7 +255,7 @@ class Invoice extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\Schema\PhysicalActivityCategory|\LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\Schema\PhysicalActivityCategory|\LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getCategory() {
         return $this->properties['category'];
@@ -282,7 +282,7 @@ class Invoice extends Intangible
     /**
      * The identifier for the account the payment will be applied to.
      *
-     * @param $accountId \LengthOfRope\JSONLD\DataType\Text
+     * @param $accountId \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setAccountId($accountId): static {
@@ -292,7 +292,7 @@ class Invoice extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getAccountId() {
         return $this->properties['accountId'];

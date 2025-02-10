@@ -44,7 +44,7 @@ class PaymentCard extends FinancialProduct
      * A secure method for consumers to purchase products or services via debit, credit
      * or smartcards by using RFID or NFC technology.
      *
-     * @param $contactlessPayment \LengthOfRope\JSONLD\DataType\Boolean
+     * @param $contactlessPayment \LengthOfRope\JSONLD\DataType\TypeBoolean
      * @return static
      **/
     public function setContactlessPayment($contactlessPayment): static {
@@ -54,7 +54,7 @@ class PaymentCard extends FinancialProduct
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Boolean
+     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean
      **/
     public function getContactlessPayment() {
         return $this->properties['contactlessPayment'];
@@ -63,7 +63,7 @@ class PaymentCard extends FinancialProduct
      * A cardholder benefit that pays the cardholder a small percentage of their net
      * expenditures.
      *
-     * @param $cashBack \LengthOfRope\JSONLD\DataType\Boolean|\LengthOfRope\JSONLD\DataType\Number
+     * @param $cashBack \LengthOfRope\JSONLD\DataType\TypeBoolean|\LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setCashBack($cashBack): static {
@@ -73,7 +73,7 @@ class PaymentCard extends FinancialProduct
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Boolean|\LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean|\LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getCashBack() {
         return $this->properties['cashBack'];
@@ -101,7 +101,7 @@ class PaymentCard extends FinancialProduct
      * The minimum payment is the lowest amount of money that one is required to pay on
      * a credit card statement each month.
      *
-     * @param $monthlyMinimumRepaymentAmount \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\Number
+     * @param $monthlyMinimumRepaymentAmount \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setMonthlyMinimumRepaymentAmount($monthlyMinimumRepaymentAmount): static {
@@ -111,7 +111,7 @@ class PaymentCard extends FinancialProduct
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getMonthlyMinimumRepaymentAmount() {
         return $this->properties['monthlyMinimumRepaymentAmount'];

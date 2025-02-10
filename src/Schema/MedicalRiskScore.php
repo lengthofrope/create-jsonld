@@ -43,7 +43,7 @@ class MedicalRiskScore extends MedicalRiskEstimator
     /**
      * The algorithm or rules to follow to compute the score.
      *
-     * @param $algorithm \LengthOfRope\JSONLD\DataType\Text
+     * @param $algorithm \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setAlgorithm($algorithm): static {
@@ -53,7 +53,7 @@ class MedicalRiskScore extends MedicalRiskEstimator
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getAlgorithm() {
         return $this->properties['algorithm'];

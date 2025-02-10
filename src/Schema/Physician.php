@@ -51,7 +51,7 @@ class Physician extends MedicalOrganization
      * Note: for historical reasons, any textual label and formal code provided as a
      * literal may be assumed to be from O*NET-SOC.
      *
-     * @param $occupationalCategory \LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\Text
+     * @param $occupationalCategory \LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setOccupationalCategory($occupationalCategory): static {
@@ -61,7 +61,7 @@ class Physician extends MedicalOrganization
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getOccupationalCategory() {
         return $this->properties['occupationalCategory'];
@@ -108,7 +108,7 @@ class Physician extends MedicalOrganization
      * is a unique 10-digit identification number issued to health care providers
      * in the United States by the Centers for Medicare and Medicaid Services.
      *
-     * @param $usNPI \LengthOfRope\JSONLD\DataType\Text
+     * @param $usNPI \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setUsNPI($usNPI): static {
@@ -118,7 +118,7 @@ class Physician extends MedicalOrganization
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getUsNPI() {
         return $this->properties['usNPI'];

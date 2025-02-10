@@ -123,7 +123,7 @@ class AnatomicalSystem extends MedicalEntity
      * anatomical system, including potential abnormal changes in the mechanical,
      * physical, and biochemical functions of the system.
      *
-     * @param $associatedPathophysiology \LengthOfRope\JSONLD\DataType\Text
+     * @param $associatedPathophysiology \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setAssociatedPathophysiology($associatedPathophysiology): static {
@@ -133,7 +133,7 @@ class AnatomicalSystem extends MedicalEntity
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getAssociatedPathophysiology() {
         return $this->properties['associatedPathophysiology'];

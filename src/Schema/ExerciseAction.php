@@ -263,7 +263,7 @@ class ExerciseAction extends PlayAction
      * Type(s) of exercise or activity, such as strength training, flexibility
      * training, aerobics, cardiac rehabilitation, etc.
      *
-     * @param $exerciseType \LengthOfRope\JSONLD\DataType\Text
+     * @param $exerciseType \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setExerciseType($exerciseType): static {
@@ -273,7 +273,7 @@ class ExerciseAction extends PlayAction
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getExerciseType() {
         return $this->properties['exerciseType'];

@@ -49,7 +49,7 @@ class ShippingDeliveryTime extends StructuredValue
      * "23:30:00-05:00" would represent 6:30 pm Eastern Standard Time (EST) which is 5
      * hours behind Coordinated Universal Time (UTC).
      *
-     * @param $cutoffTime \LengthOfRope\JSONLD\DataType\Time
+     * @param $cutoffTime \LengthOfRope\JSONLD\DataType\TypeTime
      * @return static
      **/
     public function setCutoffTime($cutoffTime): static {
@@ -59,7 +59,7 @@ class ShippingDeliveryTime extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Time
+     * @return \LengthOfRope\JSONLD\DataType\TypeTime
      **/
     public function getCutoffTime() {
         return $this->properties['cutoffTime'];

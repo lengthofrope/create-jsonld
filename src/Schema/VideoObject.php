@@ -82,7 +82,7 @@ class VideoObject extends MediaObject
      * If this MediaObject is an AudioObject or VideoObject, the transcript of that
      * object.
      *
-     * @param $transcript \LengthOfRope\JSONLD\DataType\Text
+     * @param $transcript \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setTranscript($transcript): static {
@@ -92,7 +92,7 @@ class VideoObject extends MediaObject
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getTranscript() {
         return $this->properties['transcript'];
@@ -119,7 +119,7 @@ class VideoObject extends MediaObject
     /**
      * The quality of the video.
      *
-     * @param $videoQuality \LengthOfRope\JSONLD\DataType\Text
+     * @param $videoQuality \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setVideoQuality($videoQuality): static {
@@ -129,7 +129,7 @@ class VideoObject extends MediaObject
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getVideoQuality() {
         return $this->properties['videoQuality'];
@@ -137,7 +137,7 @@ class VideoObject extends MediaObject
     /**
      * The frame size of the video.
      *
-     * @param $videoFrameSize \LengthOfRope\JSONLD\DataType\Text
+     * @param $videoFrameSize \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setVideoFrameSize($videoFrameSize): static {
@@ -147,7 +147,7 @@ class VideoObject extends MediaObject
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getVideoFrameSize() {
         return $this->properties['videoFrameSize'];
@@ -176,7 +176,7 @@ class VideoObject extends MediaObject
      * The caption for this object. For downloadable machine formats (closed caption,
      * subtitles etc.) use MediaObject and indicate the [[encodingFormat]].
      *
-     * @param $caption \LengthOfRope\JSONLD\Schema\MediaObject|\LengthOfRope\JSONLD\DataType\Text
+     * @param $caption \LengthOfRope\JSONLD\Schema\MediaObject|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setCaption($caption): static {
@@ -186,7 +186,7 @@ class VideoObject extends MediaObject
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\MediaObject|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\MediaObject|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getCaption() {
         return $this->properties['caption'];
@@ -212,7 +212,7 @@ class VideoObject extends MediaObject
     /**
      * Represents textual captioning from a [[MediaObject]], e.g. text of a 'meme'.
      *
-     * @param $embeddedTextCaption \LengthOfRope\JSONLD\DataType\Text
+     * @param $embeddedTextCaption \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setEmbeddedTextCaption($embeddedTextCaption): static {
@@ -222,7 +222,7 @@ class VideoObject extends MediaObject
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getEmbeddedTextCaption() {
         return $this->properties['embeddedTextCaption'];

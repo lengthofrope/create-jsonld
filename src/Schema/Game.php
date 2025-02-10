@@ -100,7 +100,7 @@ class Game extends CreativeWork
     /**
      * Real or fictional location of the game (or part of game).
      *
-     * @param $gameLocation \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\PostalAddress|\LengthOfRope\JSONLD\Schema\Place
+     * @param $gameLocation \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\PostalAddress|\LengthOfRope\JSONLD\Schema\Place
      * @return static
      **/
     public function setGameLocation($gameLocation): static {
@@ -110,7 +110,7 @@ class Game extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\PostalAddress|\LengthOfRope\JSONLD\Schema\Place
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\PostalAddress|\LengthOfRope\JSONLD\Schema\Place
      **/
     public function getGameLocation() {
         return $this->properties['gameLocation'];

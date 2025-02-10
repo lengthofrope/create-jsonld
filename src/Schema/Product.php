@@ -44,7 +44,7 @@ class Product extends Thing
      * The release date of a product or product model. This can be used to distinguish
      * the exact variant of a product.
      *
-     * @param $releaseDate \LengthOfRope\JSONLD\DataType\Date
+     * @param $releaseDate \LengthOfRope\JSONLD\DataType\TypeDate
      * @return static
      **/
     public function setReleaseDate($releaseDate): static {
@@ -54,7 +54,7 @@ class Product extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Date
+     * @return \LengthOfRope\JSONLD\DataType\TypeDate
      **/
     public function getReleaseDate() {
         return $this->properties['releaseDate'];
@@ -104,7 +104,7 @@ class Product extends Thing
      * should not be taken as an endorsement of this publication style.
      *
      *
-     * @param $mobileUrl \LengthOfRope\JSONLD\DataType\Text
+     * @param $mobileUrl \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setMobileUrl($mobileUrl): static {
@@ -114,7 +114,7 @@ class Product extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getMobileUrl() {
         return $this->properties['mobileUrl'];
@@ -143,7 +143,7 @@ class Product extends Thing
      * an external source. It is recommended to additionally provide strong product
      * identifiers via the gtin8/gtin13/gtin14 and mpn properties.
      *
-     * @param $model \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\ProductModel
+     * @param $model \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\ProductModel
      * @return static
      **/
     public function setModel($model): static {
@@ -153,7 +153,7 @@ class Product extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\ProductModel
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\ProductModel
      **/
     public function getModel() {
         return $this->properties['model'];
@@ -161,7 +161,7 @@ class Product extends Thing
     /**
      * The date of production of the item, e.g. vehicle.
      *
-     * @param $productionDate \LengthOfRope\JSONLD\DataType\Date
+     * @param $productionDate \LengthOfRope\JSONLD\DataType\TypeDate
      * @return static
      **/
     public function setProductionDate($productionDate): static {
@@ -171,7 +171,7 @@ class Product extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Date
+     * @return \LengthOfRope\JSONLD\DataType\TypeDate
      **/
     public function getProductionDate() {
         return $this->properties['productionDate'];
@@ -198,7 +198,7 @@ class Product extends Thing
     /**
      * A material that something is made from, e.g. leather, wool, cotton, paper.
      *
-     * @param $material \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\Product|\LengthOfRope\JSONLD\DataType\Text
+     * @param $material \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\Product|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setMaterial($material): static {
@@ -208,7 +208,7 @@ class Product extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\Product|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\Product|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getMaterial() {
         return $this->properties['material'];
@@ -238,7 +238,7 @@ class Product extends Thing
     /**
      * An award won by or for this item.
      *
-     * @param $award \LengthOfRope\JSONLD\DataType\Text
+     * @param $award \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setAward($award): static {
@@ -248,7 +248,7 @@ class Product extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getAward() {
         return $this->properties['award'];
@@ -257,7 +257,7 @@ class Product extends Thing
      * Indicates the [[productGroupID]] for a [[ProductGroup]] that this product
      * [[isVariantOf]].
      *
-     * @param $inProductGroupWithID \LengthOfRope\JSONLD\DataType\Text
+     * @param $inProductGroupWithID \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setInProductGroupWithID($inProductGroupWithID): static {
@@ -267,7 +267,7 @@ class Product extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getInProductGroupWithID() {
         return $this->properties['inProductGroupWithID'];
@@ -331,7 +331,7 @@ class Product extends Thing
     /**
      * Indicates whether this content is family friendly.
      *
-     * @param $isFamilyFriendly \LengthOfRope\JSONLD\DataType\Boolean
+     * @param $isFamilyFriendly \LengthOfRope\JSONLD\DataType\TypeBoolean
      * @return static
      **/
     public function setIsFamilyFriendly($isFamilyFriendly): static {
@@ -341,7 +341,7 @@ class Product extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Boolean
+     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean
      **/
     public function getIsFamilyFriendly() {
         return $this->properties['isFamilyFriendly'];
@@ -349,7 +349,7 @@ class Product extends Thing
     /**
      * The place where the product was assembled.
      *
-     * @param $countryOfAssembly \LengthOfRope\JSONLD\DataType\Text
+     * @param $countryOfAssembly \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setCountryOfAssembly($countryOfAssembly): static {
@@ -359,7 +359,7 @@ class Product extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getCountryOfAssembly() {
         return $this->properties['countryOfAssembly'];
@@ -368,7 +368,7 @@ class Product extends Thing
      * Keywords or tags used to describe some item. Multiple textual entries in a
      * keywords list are typically delimited by commas, or by repeating the property.
      *
-     * @param $keywords \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text
+     * @param $keywords \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setKeywords($keywords): static {
@@ -378,7 +378,7 @@ class Product extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getKeywords() {
         return $this->properties['keywords'];
@@ -390,7 +390,7 @@ class Product extends Thing
      * cases, the [[width]], [[height]], [[depth]] and [[weight]] properties may be
      * more applicable.
      *
-     * @param $size \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\SizeSpecification|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DefinedTerm
+     * @param $size \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\SizeSpecification|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DefinedTerm
      * @return static
      **/
     public function setSize($size): static {
@@ -400,7 +400,7 @@ class Product extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\SizeSpecification|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DefinedTerm
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\SizeSpecification|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DefinedTerm
      **/
     public function getSize() {
         return $this->properties['size'];
@@ -408,7 +408,7 @@ class Product extends Thing
     /**
      * An associated logo.
      *
-     * @param $logo \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\ImageObject
+     * @param $logo \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\ImageObject
      * @return static
      **/
     public function setLogo($logo): static {
@@ -418,7 +418,7 @@ class Product extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\ImageObject
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\ImageObject
      **/
     public function getLogo() {
         return $this->properties['logo'];
@@ -436,7 +436,7 @@ class Product extends Thing
      * ASINs are most commonly encoded as text strings, but the [asin] property
      * supports URL/URI as potential values too.
      *
-     * @param $asin \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @param $asin \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setAsin($asin): static {
@@ -446,7 +446,7 @@ class Product extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getAsin() {
         return $this->properties['asin'];
@@ -458,7 +458,7 @@ class Product extends Thing
      * GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more
      * details.
      *
-     * @param $gtin13 \LengthOfRope\JSONLD\DataType\Text
+     * @param $gtin13 \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setGtin13($gtin13): static {
@@ -468,7 +468,7 @@ class Product extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getGtin13() {
         return $this->properties['gtin13'];
@@ -504,7 +504,7 @@ class Product extends Thing
      * necessary), or if ordered, as a list (in which case the most positive is at the
      * beginning of the list).
      *
-     * @param $positiveNotes \LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\Schema\ListItem|\LengthOfRope\JSONLD\DataType\Text
+     * @param $positiveNotes \LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\Schema\ListItem|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setPositiveNotes($positiveNotes): static {
@@ -514,7 +514,7 @@ class Product extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\Schema\ListItem|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\Schema\ListItem|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getPositiveNotes() {
         return $this->properties['positiveNotes'];
@@ -523,7 +523,7 @@ class Product extends Thing
      * The Manufacturer Part Number (MPN) of the product, or the product to which the
      * offer refers.
      *
-     * @param $mpn \LengthOfRope\JSONLD\DataType\Text
+     * @param $mpn \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setMpn($mpn): static {
@@ -533,7 +533,7 @@ class Product extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getMpn() {
         return $this->properties['mpn'];
@@ -543,7 +543,7 @@ class Product extends Thing
      * flag'. Values are typically expressed as text, although links to controlled
      * value schemes are also supported.
      *
-     * @param $pattern \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DefinedTerm
+     * @param $pattern \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DefinedTerm
      * @return static
      **/
     public function setPattern($pattern): static {
@@ -553,7 +553,7 @@ class Product extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DefinedTerm
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DefinedTerm
      **/
     public function getPattern() {
         return $this->properties['pattern'];
@@ -599,7 +599,7 @@ class Product extends Thing
      * A category for the item. Greater signs or slashes can be used to informally
      * indicate a category hierarchy.
      *
-     * @param $category \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\Schema\PhysicalActivityCategory|\LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @param $category \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\Schema\PhysicalActivityCategory|\LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setCategory($category): static {
@@ -609,7 +609,7 @@ class Product extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\Schema\PhysicalActivityCategory|\LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\Schema\PhysicalActivityCategory|\LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getCategory() {
         return $this->properties['category'];
@@ -629,7 +629,7 @@ class Product extends Thing
      * <code>8013</code>)  should be attached to a [[Product]] or a
      * [[ProductModel]].</li></ul> Other item types should be adapted similarly.
      *
-     * @param $hasGS1DigitalLink \LengthOfRope\JSONLD\DataType\URL
+     * @param $hasGS1DigitalLink \LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setHasGS1DigitalLink($hasGS1DigitalLink): static {
@@ -639,7 +639,7 @@ class Product extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getHasGS1DigitalLink() {
         return $this->properties['hasGS1DigitalLink'];
@@ -649,7 +649,7 @@ class Product extends Thing
      * code is also known as EAN/UCC-8 or 8-digit EAN. See [GS1 GTIN
      * Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more details.
      *
-     * @param $gtin8 \LengthOfRope\JSONLD\DataType\Text
+     * @param $gtin8 \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setGtin8($gtin8): static {
@@ -659,7 +659,7 @@ class Product extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getGtin8() {
         return $this->properties['gtin8'];
@@ -707,7 +707,7 @@ class Product extends Thing
      * and not a definition of GTINs in general - see the GS1 documentation for
      * authoritative details.
      *
-     * @param $gtin \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @param $gtin \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setGtin($gtin): static {
@@ -717,7 +717,7 @@ class Product extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getGtin() {
         return $this->properties['gtin'];
@@ -761,7 +761,7 @@ class Product extends Thing
     /**
      * The color of the product.
      *
-     * @param $color \LengthOfRope\JSONLD\DataType\Text
+     * @param $color \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setColor($color): static {
@@ -771,7 +771,7 @@ class Product extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getColor() {
         return $this->properties['color'];
@@ -810,7 +810,7 @@ class Product extends Thing
      * [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more
      * details.
      *
-     * @param $gtin14 \LengthOfRope\JSONLD\DataType\Text
+     * @param $gtin14 \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setGtin14($gtin14): static {
@@ -820,7 +820,7 @@ class Product extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getGtin14() {
         return $this->properties['gtin14'];
@@ -911,7 +911,7 @@ class Product extends Thing
     /**
      * Awards won by or for this item.
      *
-     * @param $awards \LengthOfRope\JSONLD\DataType\Text
+     * @param $awards \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setAwards($awards): static {
@@ -921,7 +921,7 @@ class Product extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getAwards() {
         return $this->properties['awards'];
@@ -992,7 +992,7 @@ class Product extends Thing
     /**
      * A slogan or motto associated with the item.
      *
-     * @param $slogan \LengthOfRope\JSONLD\DataType\Text
+     * @param $slogan \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setSlogan($slogan): static {
@@ -1002,7 +1002,7 @@ class Product extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getSlogan() {
         return $this->properties['slogan'];
@@ -1011,7 +1011,7 @@ class Product extends Thing
      * The place where the item (typically [[Product]]) was last processed and tested
      * before importation.
      *
-     * @param $countryOfLastProcessing \LengthOfRope\JSONLD\DataType\Text
+     * @param $countryOfLastProcessing \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setCountryOfLastProcessing($countryOfLastProcessing): static {
@@ -1021,7 +1021,7 @@ class Product extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getCountryOfLastProcessing() {
         return $this->properties['countryOfLastProcessing'];
@@ -1051,7 +1051,7 @@ class Product extends Thing
      * GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more
      * details.
      *
-     * @param $gtin12 \LengthOfRope\JSONLD\DataType\Text
+     * @param $gtin12 \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setGtin12($gtin12): static {
@@ -1061,7 +1061,7 @@ class Product extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getGtin12() {
         return $this->properties['gtin12'];
@@ -1071,7 +1071,7 @@ class Product extends Thing
      * number](https://en.wikipedia.org/wiki/NATO_Stock_Number) (nsn) of a [[Product]].
      *
      *
-     * @param $nsn \LengthOfRope\JSONLD\DataType\Text
+     * @param $nsn \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setNsn($nsn): static {
@@ -1081,7 +1081,7 @@ class Product extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getNsn() {
         return $this->properties['nsn'];
@@ -1109,7 +1109,7 @@ class Product extends Thing
      * textual description specified in the [[color]] property. This can be a URL or a
      * fully described ImageObject.
      *
-     * @param $colorSwatch \LengthOfRope\JSONLD\Schema\ImageObject|\LengthOfRope\JSONLD\DataType\URL
+     * @param $colorSwatch \LengthOfRope\JSONLD\Schema\ImageObject|\LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setColorSwatch($colorSwatch): static {
@@ -1119,7 +1119,7 @@ class Product extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\ImageObject|\LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\Schema\ImageObject|\LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getColorSwatch() {
         return $this->properties['colorSwatch'];
@@ -1157,7 +1157,7 @@ class Product extends Thing
      * necessary), or if ordered, as a list (in which case the most negative is at the
      * beginning of the list).
      *
-     * @param $negativeNotes \LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\ListItem|\LengthOfRope\JSONLD\DataType\Text
+     * @param $negativeNotes \LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\ListItem|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setNegativeNotes($negativeNotes): static {
@@ -1167,7 +1167,7 @@ class Product extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\ListItem|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\ListItem|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getNegativeNotes() {
         return $this->properties['negativeNotes'];
@@ -1176,7 +1176,7 @@ class Product extends Thing
      * The Stock Keeping Unit (SKU), i.e. a merchant-specific identifier for a product
      * or service, or the product to which the offer refers.
      *
-     * @param $sku \LengthOfRope\JSONLD\DataType\Text
+     * @param $sku \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setSku($sku): static {
@@ -1186,7 +1186,7 @@ class Product extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getSku() {
         return $this->properties['sku'];
@@ -1195,7 +1195,7 @@ class Product extends Thing
      * The product identifier, such as ISBN. For example: ``` meta itemprop="productID"
      * content="isbn:123-456-789" ```.
      *
-     * @param $productID \LengthOfRope\JSONLD\DataType\Text
+     * @param $productID \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setProductID($productID): static {
@@ -1205,7 +1205,7 @@ class Product extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getProductID() {
         return $this->properties['productID'];
@@ -1213,7 +1213,7 @@ class Product extends Thing
     /**
      * The date the item, e.g. vehicle, was purchased by the current owner.
      *
-     * @param $purchaseDate \LengthOfRope\JSONLD\DataType\Date
+     * @param $purchaseDate \LengthOfRope\JSONLD\DataType\TypeDate
      * @return static
      **/
     public function setPurchaseDate($purchaseDate): static {
@@ -1223,7 +1223,7 @@ class Product extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Date
+     * @return \LengthOfRope\JSONLD\DataType\TypeDate
      **/
     public function getPurchaseDate() {
         return $this->properties['purchaseDate'];

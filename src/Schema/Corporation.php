@@ -46,7 +46,7 @@ class Corporation extends Organization
      * recommend using the controlled vocabulary of Market Identifier Codes (MIC)
      * specified in ISO 15022.
      *
-     * @param $tickerSymbol \LengthOfRope\JSONLD\DataType\Text
+     * @param $tickerSymbol \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setTickerSymbol($tickerSymbol): static {
@@ -56,7 +56,7 @@ class Corporation extends Organization
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getTickerSymbol() {
         return $this->properties['tickerSymbol'];
