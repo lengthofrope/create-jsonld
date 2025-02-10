@@ -74,7 +74,11 @@ try {
 ```
 
 ## Version history
-1.1.2
+1.1.3
+
+- Fix datatype docblock issues
+
+- 1.1.2
 
 - Fix missing dataypes
 - Allow adding nested Create objects to simulate arrays and keep validation working
