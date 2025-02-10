@@ -44,7 +44,7 @@ class JobPosting extends Intangible
      * terms such as those in O*net may be used, but note that there is no way to
      * specify the level of ability as well as its nature when using a defined term.
      *
-     * @param $physicalRequirement \LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @param $physicalRequirement \LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setPhysicalRequirement($physicalRequirement): static {
@@ -54,7 +54,7 @@ class JobPosting extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getPhysicalRequirement() {
         return $this->properties['physicalRequirement'];
@@ -62,7 +62,7 @@ class JobPosting extends Intangible
     /**
      * Specific qualifications required for this role or Occupation.
      *
-     * @param $qualifications \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential
+     * @param $qualifications \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential
      * @return static
      **/
     public function setQualifications($qualifications): static {
@@ -72,7 +72,7 @@ class JobPosting extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential
      **/
     public function getQualifications() {
         return $this->properties['qualifications'];
@@ -81,7 +81,7 @@ class JobPosting extends Intangible
      * Type of employment (e.g. full-time, part-time, contract, temporary, seasonal,
      * internship).
      *
-     * @param $employmentType \LengthOfRope\JSONLD\DataType\Text
+     * @param $employmentType \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setEmploymentType($employmentType): static {
@@ -91,7 +91,7 @@ class JobPosting extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getEmploymentType() {
         return $this->properties['employmentType'];
@@ -99,7 +99,7 @@ class JobPosting extends Intangible
     /**
      * An indicator as to whether a position is available for an immediate start.
      *
-     * @param $jobImmediateStart \LengthOfRope\JSONLD\DataType\Boolean
+     * @param $jobImmediateStart \LengthOfRope\JSONLD\DataType\TypeBoolean
      * @return static
      **/
     public function setJobImmediateStart($jobImmediateStart): static {
@@ -109,7 +109,7 @@ class JobPosting extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Boolean
+     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean
      **/
     public function getJobImmediateStart() {
         return $this->properties['jobImmediateStart'];
@@ -118,7 +118,7 @@ class JobPosting extends Intangible
      * The legal requirements such as citizenship, visa and other documentation
      * required for an applicant to this job.
      *
-     * @param $eligibilityToWorkRequirement \LengthOfRope\JSONLD\DataType\Text
+     * @param $eligibilityToWorkRequirement \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setEligibilityToWorkRequirement($eligibilityToWorkRequirement): static {
@@ -128,7 +128,7 @@ class JobPosting extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getEligibilityToWorkRequirement() {
         return $this->properties['eligibilityToWorkRequirement'];
@@ -136,7 +136,7 @@ class JobPosting extends Intangible
     /**
      * Description of bonus and commission compensation aspects of the job.
      *
-     * @param $incentiveCompensation \LengthOfRope\JSONLD\DataType\Text
+     * @param $incentiveCompensation \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setIncentiveCompensation($incentiveCompensation): static {
@@ -146,7 +146,7 @@ class JobPosting extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getIncentiveCompensation() {
         return $this->properties['incentiveCompensation'];
@@ -172,7 +172,7 @@ class JobPosting extends Intangible
     /**
      * Publication date of an online listing.
      *
-     * @param $datePosted \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
+     * @param $datePosted \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
      * @return static
      **/
     public function setDatePosted($datePosted): static {
@@ -182,7 +182,7 @@ class JobPosting extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
      **/
     public function getDatePosted() {
         return $this->properties['datePosted'];
@@ -208,7 +208,7 @@ class JobPosting extends Intangible
     /**
      * A description of any security clearance requirements of the job.
      *
-     * @param $securityClearanceRequirement \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @param $securityClearanceRequirement \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setSecurityClearanceRequirement($securityClearanceRequirement): static {
@@ -218,7 +218,7 @@ class JobPosting extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getSecurityClearanceRequirement() {
         return $this->properties['securityClearanceRequirement'];
@@ -226,7 +226,7 @@ class JobPosting extends Intangible
     /**
      * Description of skills and experience needed for the position or Occupation.
      *
-     * @param $experienceRequirements \LengthOfRope\JSONLD\Schema\OccupationalExperienceRequirements|\LengthOfRope\JSONLD\DataType\Text
+     * @param $experienceRequirements \LengthOfRope\JSONLD\Schema\OccupationalExperienceRequirements|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setExperienceRequirements($experienceRequirements): static {
@@ -236,7 +236,7 @@ class JobPosting extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\OccupationalExperienceRequirements|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\OccupationalExperienceRequirements|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getExperienceRequirements() {
         return $this->properties['experienceRequirements'];
@@ -247,7 +247,7 @@ class JobPosting extends Intangible
      * Estimated salaries  are often computed by outside organizations rather than the
      * hiring organization, who may not have committed to the estimated value.
      *
-     * @param $estimatedSalary \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\Schema\MonetaryAmountDistribution
+     * @param $estimatedSalary \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\Schema\MonetaryAmountDistribution
      * @return static
      **/
     public function setEstimatedSalary($estimatedSalary): static {
@@ -257,7 +257,7 @@ class JobPosting extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\Schema\MonetaryAmountDistribution
+     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\Schema\MonetaryAmountDistribution
      **/
     public function getEstimatedSalary() {
         return $this->properties['estimatedSalary'];
@@ -266,7 +266,7 @@ class JobPosting extends Intangible
      * The currency (coded using [ISO 4217](http://en.wikipedia.org/wiki/ISO_4217))
      * used for the main salary information in this job posting or for this employee.
      *
-     * @param $salaryCurrency \LengthOfRope\JSONLD\DataType\Text
+     * @param $salaryCurrency \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setSalaryCurrency($salaryCurrency): static {
@@ -276,7 +276,7 @@ class JobPosting extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getSalaryCurrency() {
         return $this->properties['salaryCurrency'];
@@ -284,7 +284,7 @@ class JobPosting extends Intangible
     /**
      * Description of benefits associated with the job.
      *
-     * @param $jobBenefits \LengthOfRope\JSONLD\DataType\Text
+     * @param $jobBenefits \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setJobBenefits($jobBenefits): static {
@@ -294,7 +294,7 @@ class JobPosting extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getJobBenefits() {
         return $this->properties['jobBenefits'];
@@ -302,7 +302,7 @@ class JobPosting extends Intangible
     /**
      * A description of the job location (e.g. TELECOMMUTE for telecommute jobs).
      *
-     * @param $jobLocationType \LengthOfRope\JSONLD\DataType\Text
+     * @param $jobLocationType \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setJobLocationType($jobLocationType): static {
@@ -312,7 +312,7 @@ class JobPosting extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getJobLocationType() {
         return $this->properties['jobLocationType'];
@@ -339,7 +339,7 @@ class JobPosting extends Intangible
      * The number of positions open for this job posting. Use a positive integer. Do
      * not use if the number of positions is unclear or not known.
      *
-     * @param $totalJobOpenings \LengthOfRope\JSONLD\DataType\Integer
+     * @param $totalJobOpenings \LengthOfRope\JSONLD\DataType\TypeInteger
      * @return static
      **/
     public function setTotalJobOpenings($totalJobOpenings): static {
@@ -349,7 +349,7 @@ class JobPosting extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Integer
+     * @return \LengthOfRope\JSONLD\DataType\TypeInteger
      **/
     public function getTotalJobOpenings() {
         return $this->properties['totalJobOpenings'];
@@ -359,7 +359,7 @@ class JobPosting extends Intangible
      * a competency that is either claimed by a person, an organization or desired or
      * required to fulfill a role or to work in an occupation.
      *
-     * @param $skills \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DefinedTerm
+     * @param $skills \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DefinedTerm
      * @return static
      **/
     public function setSkills($skills): static {
@@ -369,7 +369,7 @@ class JobPosting extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DefinedTerm
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DefinedTerm
      **/
     public function getSkills() {
         return $this->properties['skills'];
@@ -404,7 +404,7 @@ class JobPosting extends Intangible
      * applying directly online for the specified job, navigating directly from the
      * JobPosting url(s) supplied.
      *
-     * @param $directApply \LengthOfRope\JSONLD\DataType\Boolean
+     * @param $directApply \LengthOfRope\JSONLD\DataType\TypeBoolean
      * @return static
      **/
     public function setDirectApply($directApply): static {
@@ -414,7 +414,7 @@ class JobPosting extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Boolean
+     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean
      **/
     public function getDirectApply() {
         return $this->properties['directApply'];
@@ -423,7 +423,7 @@ class JobPosting extends Intangible
      * A description of the employer, career opportunities and work environment for
      * this position.
      *
-     * @param $employerOverview \LengthOfRope\JSONLD\DataType\Text
+     * @param $employerOverview \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setEmployerOverview($employerOverview): static {
@@ -433,7 +433,7 @@ class JobPosting extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getEmployerOverview() {
         return $this->properties['employerOverview'];
@@ -442,7 +442,7 @@ class JobPosting extends Intangible
      * The date after when the item is not valid. For example the end of an offer,
      * salary period, or a period of opening hours.
      *
-     * @param $validThrough \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
+     * @param $validThrough \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
      * @return static
      **/
     public function setValidThrough($validThrough): static {
@@ -452,7 +452,7 @@ class JobPosting extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
      **/
     public function getValidThrough() {
         return $this->properties['validThrough'];
@@ -468,7 +468,7 @@ class JobPosting extends Intangible
      * Note: for historical reasons, any textual label and formal code provided as a
      * literal may be assumed to be from O*NET-SOC.
      *
-     * @param $occupationalCategory \LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\Text
+     * @param $occupationalCategory \LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setOccupationalCategory($occupationalCategory): static {
@@ -478,7 +478,7 @@ class JobPosting extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getOccupationalCategory() {
         return $this->properties['occupationalCategory'];
@@ -489,7 +489,7 @@ class JobPosting extends Intangible
      * be used, but note that there is no way to specify the level of ability as well
      * as its nature when using a defined term.
      *
-     * @param $sensoryRequirement \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text
+     * @param $sensoryRequirement \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setSensoryRequirement($sensoryRequirement): static {
@@ -499,7 +499,7 @@ class JobPosting extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getSensoryRequirement() {
         return $this->properties['sensoryRequirement'];
@@ -507,7 +507,7 @@ class JobPosting extends Intangible
     /**
      * The typical working hours for this job (e.g. 1st shift, night shift, 8am-5pm).
      *
-     * @param $workHours \LengthOfRope\JSONLD\DataType\Text
+     * @param $workHours \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setWorkHours($workHours): static {
@@ -517,7 +517,7 @@ class JobPosting extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getWorkHours() {
         return $this->properties['workHours'];
@@ -547,7 +547,7 @@ class JobPosting extends Intangible
      * qualifications (as indicated by [[educationRequirements]]). If true, indicates
      * that satisfying one of these requirements is sufficient.
      *
-     * @param $experienceInPlaceOfEducation \LengthOfRope\JSONLD\DataType\Boolean
+     * @param $experienceInPlaceOfEducation \LengthOfRope\JSONLD\DataType\TypeBoolean
      * @return static
      **/
     public function setExperienceInPlaceOfEducation($experienceInPlaceOfEducation): static {
@@ -557,7 +557,7 @@ class JobPosting extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Boolean
+     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean
      **/
     public function getExperienceInPlaceOfEducation() {
         return $this->properties['experienceInPlaceOfEducation'];
@@ -565,7 +565,7 @@ class JobPosting extends Intangible
     /**
      * Responsibilities associated with this role or Occupation.
      *
-     * @param $responsibilities \LengthOfRope\JSONLD\DataType\Text
+     * @param $responsibilities \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setResponsibilities($responsibilities): static {
@@ -575,7 +575,7 @@ class JobPosting extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getResponsibilities() {
         return $this->properties['responsibilities'];
@@ -585,7 +585,7 @@ class JobPosting extends Intangible
      * work. Choose a specific date in the future or use the jobImmediateStart property
      * to indicate the position is to be filled as soon as possible.
      *
-     * @param $jobStartDate \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\Text
+     * @param $jobStartDate \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setJobStartDate($jobStartDate): static {
@@ -595,7 +595,7 @@ class JobPosting extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getJobStartDate() {
         return $this->properties['jobStartDate'];
@@ -603,7 +603,7 @@ class JobPosting extends Intangible
     /**
      * The base salary of the job or of an employee in an EmployeeRole.
      *
-     * @param $baseSalary \LengthOfRope\JSONLD\Schema\PriceSpecification|\LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\Number
+     * @param $baseSalary \LengthOfRope\JSONLD\Schema\PriceSpecification|\LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setBaseSalary($baseSalary): static {
@@ -613,7 +613,7 @@ class JobPosting extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\PriceSpecification|\LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\Schema\PriceSpecification|\LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getBaseSalary() {
         return $this->properties['baseSalary'];
@@ -621,7 +621,7 @@ class JobPosting extends Intangible
     /**
      * Description of bonus and commission compensation aspects of the job.
      *
-     * @param $incentives \LengthOfRope\JSONLD\DataType\Text
+     * @param $incentives \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setIncentives($incentives): static {
@@ -631,7 +631,7 @@ class JobPosting extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getIncentives() {
         return $this->properties['incentives'];
@@ -657,7 +657,7 @@ class JobPosting extends Intangible
     /**
      * Educational background needed for the position or Occupation.
      *
-     * @param $educationRequirements \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential
+     * @param $educationRequirements \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential
      * @return static
      **/
     public function setEducationRequirements($educationRequirements): static {
@@ -667,7 +667,7 @@ class JobPosting extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential
      **/
     public function getEducationRequirements() {
         return $this->properties['educationRequirements'];
@@ -676,7 +676,7 @@ class JobPosting extends Intangible
      * Any special commitments associated with this job posting. Valid entries include
      * VeteranCommit, MilitarySpouseCommit, etc.
      *
-     * @param $specialCommitments \LengthOfRope\JSONLD\DataType\Text
+     * @param $specialCommitments \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setSpecialCommitments($specialCommitments): static {
@@ -686,7 +686,7 @@ class JobPosting extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getSpecialCommitments() {
         return $this->properties['specialCommitments'];
@@ -694,7 +694,7 @@ class JobPosting extends Intangible
     /**
      * The industry associated with the job position.
      *
-     * @param $industry \LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text
+     * @param $industry \LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setIndustry($industry): static {
@@ -704,7 +704,7 @@ class JobPosting extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getIndustry() {
         return $this->properties['industry'];
@@ -712,7 +712,7 @@ class JobPosting extends Intangible
     /**
      * Description of benefits associated with the job.
      *
-     * @param $benefits \LengthOfRope\JSONLD\DataType\Text
+     * @param $benefits \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setBenefits($benefits): static {
@@ -722,7 +722,7 @@ class JobPosting extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getBenefits() {
         return $this->properties['benefits'];
@@ -730,7 +730,7 @@ class JobPosting extends Intangible
     /**
      * The title of the job.
      *
-     * @param $title \LengthOfRope\JSONLD\DataType\Text
+     * @param $title \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setTitle($title): static {
@@ -740,7 +740,7 @@ class JobPosting extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getTitle() {
         return $this->properties['title'];

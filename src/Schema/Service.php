@@ -44,7 +44,7 @@ class Service extends Intangible
      * The type of service being offered, e.g. veterans' benefits, emergency relief,
      * etc.
      *
-     * @param $serviceType \LengthOfRope\JSONLD\Schema\GovernmentBenefitsType|\LengthOfRope\JSONLD\DataType\Text
+     * @param $serviceType \LengthOfRope\JSONLD\Schema\GovernmentBenefitsType|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setServiceType($serviceType): static {
@@ -54,7 +54,7 @@ class Service extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\GovernmentBenefitsType|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\GovernmentBenefitsType|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getServiceType() {
         return $this->properties['serviceType'];
@@ -62,7 +62,7 @@ class Service extends Intangible
     /**
      * Human-readable terms of service documentation.
      *
-     * @param $termsOfService \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @param $termsOfService \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setTermsOfService($termsOfService): static {
@@ -72,7 +72,7 @@ class Service extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getTermsOfService() {
         return $this->properties['termsOfService'];
@@ -98,7 +98,7 @@ class Service extends Intangible
     /**
      * An award won by or for this item.
      *
-     * @param $award \LengthOfRope\JSONLD\DataType\Text
+     * @param $award \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setAward($award): static {
@@ -108,7 +108,7 @@ class Service extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getAward() {
         return $this->properties['award'];
@@ -192,7 +192,7 @@ class Service extends Intangible
     /**
      * An associated logo.
      *
-     * @param $logo \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\ImageObject
+     * @param $logo \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\ImageObject
      * @return static
      **/
     public function setLogo($logo): static {
@@ -202,7 +202,7 @@ class Service extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\ImageObject
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\ImageObject
      **/
     public function getLogo() {
         return $this->properties['logo'];
@@ -210,7 +210,7 @@ class Service extends Intangible
     /**
      * The geographic area where a service or offered item is provided.
      *
-     * @param $areaServed \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeoShape|\LengthOfRope\JSONLD\Schema\AdministrativeArea
+     * @param $areaServed \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeoShape|\LengthOfRope\JSONLD\Schema\AdministrativeArea
      * @return static
      **/
     public function setAreaServed($areaServed): static {
@@ -220,7 +220,7 @@ class Service extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeoShape|\LengthOfRope\JSONLD\Schema\AdministrativeArea
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeoShape|\LengthOfRope\JSONLD\Schema\AdministrativeArea
      **/
     public function getAreaServed() {
         return $this->properties['areaServed'];
@@ -266,7 +266,7 @@ class Service extends Intangible
      * A category for the item. Greater signs or slashes can be used to informally
      * indicate a category hierarchy.
      *
-     * @param $category \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\Schema\PhysicalActivityCategory|\LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @param $category \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\Schema\PhysicalActivityCategory|\LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setCategory($category): static {
@@ -276,7 +276,7 @@ class Service extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\Schema\PhysicalActivityCategory|\LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\Schema\PhysicalActivityCategory|\LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getCategory() {
         return $this->properties['category'];
@@ -284,7 +284,7 @@ class Service extends Intangible
     /**
      * Indicates the mobility of a provided service (e.g. 'static', 'dynamic').
      *
-     * @param $providerMobility \LengthOfRope\JSONLD\DataType\Text
+     * @param $providerMobility \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setProviderMobility($providerMobility): static {
@@ -294,7 +294,7 @@ class Service extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getProviderMobility() {
         return $this->properties['providerMobility'];
@@ -419,7 +419,7 @@ class Service extends Intangible
     /**
      * A slogan or motto associated with the item.
      *
-     * @param $slogan \LengthOfRope\JSONLD\DataType\Text
+     * @param $slogan \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setSlogan($slogan): static {
@@ -429,7 +429,7 @@ class Service extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getSlogan() {
         return $this->properties['slogan'];

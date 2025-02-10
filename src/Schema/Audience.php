@@ -61,7 +61,7 @@ class Audience extends Intangible
      * The target group associated with a given audience (e.g. veterans, car owners,
      * musicians, etc.).
      *
-     * @param $audienceType \LengthOfRope\JSONLD\DataType\Text
+     * @param $audienceType \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setAudienceType($audienceType): static {
@@ -71,7 +71,7 @@ class Audience extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getAudienceType() {
         return $this->properties['audienceType'];

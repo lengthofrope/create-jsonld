@@ -89,7 +89,7 @@ class FloorPlan extends Intangible
      * Indicates whether pets are allowed to enter the accommodation or lodging
      * business. More detailed information can be put in a text value.
      *
-     * @param $petsAllowed \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Boolean
+     * @param $petsAllowed \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeBoolean
      * @return static
      **/
     public function setPetsAllowed($petsAllowed): static {
@@ -99,7 +99,7 @@ class FloorPlan extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Boolean
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeBoolean
      **/
     public function getPetsAllowed() {
         return $this->properties['petsAllowed'];
@@ -108,7 +108,7 @@ class FloorPlan extends Intangible
      * The total integer number of bedrooms in a some [[Accommodation]],
      * [[ApartmentComplex]] or [[FloorPlan]].
      *
-     * @param $numberOfBedrooms \LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\Schema\QuantitativeValue
+     * @param $numberOfBedrooms \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setNumberOfBedrooms($numberOfBedrooms): static {
@@ -118,7 +118,7 @@ class FloorPlan extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\Schema\QuantitativeValue
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getNumberOfBedrooms() {
         return $this->properties['numberOfBedrooms'];
@@ -131,7 +131,7 @@ class FloorPlan extends Intangible
      * Bathrooms and one Half Bathroom, the Bathrooms Total Integer will be 3.". See
      * also [[numberOfRooms]].
      *
-     * @param $numberOfBathroomsTotal \LengthOfRope\JSONLD\DataType\Integer
+     * @param $numberOfBathroomsTotal \LengthOfRope\JSONLD\DataType\TypeInteger
      * @return static
      **/
     public function setNumberOfBathroomsTotal($numberOfBathroomsTotal): static {
@@ -141,7 +141,7 @@ class FloorPlan extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Integer
+     * @return \LengthOfRope\JSONLD\DataType\TypeInteger
      **/
     public function getNumberOfBathroomsTotal() {
         return $this->properties['numberOfBathroomsTotal'];
@@ -149,7 +149,7 @@ class FloorPlan extends Intangible
     /**
      * A schematic image showing the floorplan layout.
      *
-     * @param $layoutImage \LengthOfRope\JSONLD\Schema\ImageObject|\LengthOfRope\JSONLD\DataType\URL
+     * @param $layoutImage \LengthOfRope\JSONLD\Schema\ImageObject|\LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setLayoutImage($layoutImage): static {
@@ -159,7 +159,7 @@ class FloorPlan extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\ImageObject|\LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\Schema\ImageObject|\LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getLayoutImage() {
         return $this->properties['layoutImage'];
@@ -190,7 +190,7 @@ class FloorPlan extends Intangible
      * [[Accommodation]]. This corresponds to the [BathroomsFull field in
      * RESO](https://ddwiki.reso.org/display/DDW17/BathroomsFull+Field).
      *
-     * @param $numberOfFullBathrooms \LengthOfRope\JSONLD\DataType\Number
+     * @param $numberOfFullBathrooms \LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setNumberOfFullBathrooms($numberOfFullBathrooms): static {
@@ -200,7 +200,7 @@ class FloorPlan extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getNumberOfFullBathrooms() {
         return $this->properties['numberOfFullBathrooms'];
@@ -232,7 +232,7 @@ class FloorPlan extends Intangible
      * Typical unit code(s): ROM for room or C62 for no unit. The type of room can be
      * put in the unitText property of the QuantitativeValue.
      *
-     * @param $numberOfRooms \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\Number
+     * @param $numberOfRooms \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setNumberOfRooms($numberOfRooms): static {
@@ -242,7 +242,7 @@ class FloorPlan extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getNumberOfRooms() {
         return $this->properties['numberOfRooms'];
@@ -272,7 +272,7 @@ class FloorPlan extends Intangible
      * [[Accommodation]]. This corresponds to the [BathroomsPartial field in
      * RESO](https://ddwiki.reso.org/display/DDW17/BathroomsPartial+Field).
      *
-     * @param $numberOfPartialBathrooms \LengthOfRope\JSONLD\DataType\Number
+     * @param $numberOfPartialBathrooms \LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setNumberOfPartialBathrooms($numberOfPartialBathrooms): static {
@@ -282,7 +282,7 @@ class FloorPlan extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getNumberOfPartialBathrooms() {
         return $this->properties['numberOfPartialBathrooms'];

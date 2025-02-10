@@ -52,7 +52,7 @@ class DatedMoneySpecification extends StructuredValue
      * Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and
      * other currency types, e.g. "Ithaca HOUR".
      *
-     * @param $currency \LengthOfRope\JSONLD\DataType\Text
+     * @param $currency \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setCurrency($currency): static {
@@ -62,7 +62,7 @@ class DatedMoneySpecification extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getCurrency() {
         return $this->properties['currency'];
@@ -70,7 +70,7 @@ class DatedMoneySpecification extends StructuredValue
     /**
      * The amount of money.
      *
-     * @param $amount \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\Number
+     * @param $amount \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setAmount($amount): static {
@@ -80,7 +80,7 @@ class DatedMoneySpecification extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getAmount() {
         return $this->properties['amount'];
@@ -89,7 +89,7 @@ class DatedMoneySpecification extends StructuredValue
      * The start date and time of the item (in [ISO 8601 date
      * format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
-     * @param $startDate \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
+     * @param $startDate \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
      * @return static
      **/
     public function setStartDate($startDate): static {
@@ -99,7 +99,7 @@ class DatedMoneySpecification extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
      **/
     public function getStartDate() {
         return $this->properties['startDate'];
@@ -108,7 +108,7 @@ class DatedMoneySpecification extends StructuredValue
      * The end date and time of the item (in [ISO 8601 date
      * format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
-     * @param $endDate \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
+     * @param $endDate \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
      * @return static
      **/
     public function setEndDate($endDate): static {
@@ -118,7 +118,7 @@ class DatedMoneySpecification extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
+     * @return \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
      **/
     public function getEndDate() {
         return $this->properties['endDate'];

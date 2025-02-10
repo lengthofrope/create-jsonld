@@ -60,7 +60,7 @@ class SuperficialAnatomy extends MedicalEntity
      * characteristics of the superficial anatomy can suggest underlying medical
      * conditions or courses of treatment.
      *
-     * @param $significance \LengthOfRope\JSONLD\DataType\Text
+     * @param $significance \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setSignificance($significance): static {
@@ -70,7 +70,7 @@ class SuperficialAnatomy extends MedicalEntity
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getSignificance() {
         return $this->properties['significance'];
@@ -134,7 +134,7 @@ class SuperficialAnatomy extends MedicalEntity
      * anatomical system, including potential abnormal changes in the mechanical,
      * physical, and biochemical functions of the system.
      *
-     * @param $associatedPathophysiology \LengthOfRope\JSONLD\DataType\Text
+     * @param $associatedPathophysiology \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setAssociatedPathophysiology($associatedPathophysiology): static {
@@ -144,7 +144,7 @@ class SuperficialAnatomy extends MedicalEntity
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getAssociatedPathophysiology() {
         return $this->properties['associatedPathophysiology'];

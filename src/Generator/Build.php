@@ -248,7 +248,7 @@ class Build
                 foreach($item->props[$key]['rangeIncludes'] as $rangeId => $range) {
                     $item->props[$key]['rangeIncludes'][$rangeId] = str_replace('schema:', '', $range->{'@id'});
                     if (in_array($item->props[$key]['rangeIncludes'][$rangeId], $this->dataTypes)) {
-                        $item->props[$key]['rangeIncludes'][$rangeId] = '\\LengthOfRope\\JSONLD\\DataType\\' . $item->props[$key]['rangeIncludes'][$rangeId];
+                        $item->props[$key]['rangeIncludes'][$rangeId] = '\\LengthOfRope\\JSONLD\\DataType\\Type' . $item->props[$key]['rangeIncludes'][$rangeId];
                     } else {
                         $item->props[$key]['rangeIncludes'][$rangeId] = '\\LengthOfRope\\JSONLD\\Schema\\' . $item->props[$key]['rangeIncludes'][$rangeId];
                     }

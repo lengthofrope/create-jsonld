@@ -49,7 +49,7 @@ class MedicalGuideline extends MedicalEntity
      * Source of the data used to formulate the guidance, e.g. RCT, consensus opinion,
      * etc.
      *
-     * @param $evidenceOrigin \LengthOfRope\JSONLD\DataType\Text
+     * @param $evidenceOrigin \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setEvidenceOrigin($evidenceOrigin): static {
@@ -59,7 +59,7 @@ class MedicalGuideline extends MedicalEntity
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getEvidenceOrigin() {
         return $this->properties['evidenceOrigin'];
@@ -67,7 +67,7 @@ class MedicalGuideline extends MedicalEntity
     /**
      * Date on which this guideline's recommendation was made.
      *
-     * @param $guidelineDate \LengthOfRope\JSONLD\DataType\Date
+     * @param $guidelineDate \LengthOfRope\JSONLD\DataType\TypeDate
      * @return static
      **/
     public function setGuidelineDate($guidelineDate): static {
@@ -77,7 +77,7 @@ class MedicalGuideline extends MedicalEntity
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Date
+     * @return \LengthOfRope\JSONLD\DataType\TypeDate
      **/
     public function getGuidelineDate() {
         return $this->properties['guidelineDate'];

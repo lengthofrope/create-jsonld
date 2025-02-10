@@ -43,7 +43,7 @@ class ActionAccessSpecification extends Intangible
      * The beginning of the availability of the product or service included in the
      * offer.
      *
-     * @param $availabilityStarts \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\Time|\LengthOfRope\JSONLD\DataType\DateTime
+     * @param $availabilityStarts \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeTime|\LengthOfRope\JSONLD\DataType\TypeDateTime
      * @return static
      **/
     public function setAvailabilityStarts($availabilityStarts): static {
@@ -53,7 +53,7 @@ class ActionAccessSpecification extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\Time|\LengthOfRope\JSONLD\DataType\DateTime
+     * @return \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeTime|\LengthOfRope\JSONLD\DataType\TypeDateTime
      **/
     public function getAvailabilityStarts() {
         return $this->properties['availabilityStarts'];
@@ -66,7 +66,7 @@ class ActionAccessSpecification extends Intangible
      * See also [[eligibleRegion]].
      *
      *
-     * @param $ineligibleRegion \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\GeoShape
+     * @param $ineligibleRegion \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\GeoShape
      * @return static
      **/
     public function setIneligibleRegion($ineligibleRegion): static {
@@ -76,7 +76,7 @@ class ActionAccessSpecification extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\GeoShape
+     * @return \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\GeoShape
      **/
     public function getIneligibleRegion() {
         return $this->properties['ineligibleRegion'];
@@ -104,7 +104,7 @@ class ActionAccessSpecification extends Intangible
      * A category for the item. Greater signs or slashes can be used to informally
      * indicate a category hierarchy.
      *
-     * @param $category \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\Schema\PhysicalActivityCategory|\LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @param $category \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\Schema\PhysicalActivityCategory|\LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setCategory($category): static {
@@ -114,7 +114,7 @@ class ActionAccessSpecification extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\Schema\PhysicalActivityCategory|\LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\Schema\PhysicalActivityCategory|\LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getCategory() {
         return $this->properties['category'];
@@ -124,7 +124,7 @@ class ActionAccessSpecification extends Intangible
      * Allowed values are ```true``` or ```false``` (note that an earlier version had
      * 'yes', 'no').
      *
-     * @param $requiresSubscription \LengthOfRope\JSONLD\DataType\Boolean|\LengthOfRope\JSONLD\Schema\MediaSubscription
+     * @param $requiresSubscription \LengthOfRope\JSONLD\DataType\TypeBoolean|\LengthOfRope\JSONLD\Schema\MediaSubscription
      * @return static
      **/
     public function setRequiresSubscription($requiresSubscription): static {
@@ -134,7 +134,7 @@ class ActionAccessSpecification extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Boolean|\LengthOfRope\JSONLD\Schema\MediaSubscription
+     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean|\LengthOfRope\JSONLD\Schema\MediaSubscription
      **/
     public function getRequiresSubscription() {
         return $this->properties['requiresSubscription'];
@@ -147,7 +147,7 @@ class ActionAccessSpecification extends Intangible
      * See also [[ineligibleRegion]].
      *
      *
-     * @param $eligibleRegion \LengthOfRope\JSONLD\Schema\GeoShape|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Place
+     * @param $eligibleRegion \LengthOfRope\JSONLD\Schema\GeoShape|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Place
      * @return static
      **/
     public function setEligibleRegion($eligibleRegion): static {
@@ -157,7 +157,7 @@ class ActionAccessSpecification extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\GeoShape|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Place
+     * @return \LengthOfRope\JSONLD\Schema\GeoShape|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Place
      **/
     public function getEligibleRegion() {
         return $this->properties['eligibleRegion'];
@@ -165,7 +165,7 @@ class ActionAccessSpecification extends Intangible
     /**
      * The end of the availability of the product or service included in the offer.
      *
-     * @param $availabilityEnds \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Time|\LengthOfRope\JSONLD\DataType\Date
+     * @param $availabilityEnds \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeTime|\LengthOfRope\JSONLD\DataType\TypeDate
      * @return static
      **/
     public function setAvailabilityEnds($availabilityEnds): static {
@@ -175,7 +175,7 @@ class ActionAccessSpecification extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Time|\LengthOfRope\JSONLD\DataType\Date
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeTime|\LengthOfRope\JSONLD\DataType\TypeDate
      **/
     public function getAvailabilityEnds() {
         return $this->properties['availabilityEnds'];

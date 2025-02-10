@@ -116,7 +116,7 @@ class Permit extends Intangible
     /**
      * The date when the item is no longer valid.
      *
-     * @param $validUntil \LengthOfRope\JSONLD\DataType\Date
+     * @param $validUntil \LengthOfRope\JSONLD\DataType\TypeDate
      * @return static
      **/
     public function setValidUntil($validUntil): static {
@@ -126,7 +126,7 @@ class Permit extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Date
+     * @return \LengthOfRope\JSONLD\DataType\TypeDate
      **/
     public function getValidUntil() {
         return $this->properties['validUntil'];
@@ -134,7 +134,7 @@ class Permit extends Intangible
     /**
      * The date when the item becomes valid.
      *
-     * @param $validFrom \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
+     * @param $validFrom \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
      * @return static
      **/
     public function setValidFrom($validFrom): static {
@@ -144,7 +144,7 @@ class Permit extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
      **/
     public function getValidFrom() {
         return $this->properties['validFrom'];

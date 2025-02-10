@@ -46,7 +46,7 @@ class DefinedTerm extends Intangible
     /**
      * A [[DefinedTermSet]] that contains this term.
      *
-     * @param $inDefinedTermSet \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\DefinedTermSet
+     * @param $inDefinedTermSet \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\DefinedTermSet
      * @return static
      **/
     public function setInDefinedTermSet($inDefinedTermSet): static {
@@ -56,7 +56,7 @@ class DefinedTerm extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\DefinedTermSet
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\DefinedTermSet
      **/
     public function getInDefinedTermSet() {
         return $this->properties['inDefinedTermSet'];
@@ -64,7 +64,7 @@ class DefinedTerm extends Intangible
     /**
      * A code that identifies this [[DefinedTerm]] within a [[DefinedTermSet]].
      *
-     * @param $termCode \LengthOfRope\JSONLD\DataType\Text
+     * @param $termCode \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setTermCode($termCode): static {
@@ -74,7 +74,7 @@ class DefinedTerm extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getTermCode() {
         return $this->properties['termCode'];

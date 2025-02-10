@@ -65,7 +65,7 @@ class VideoGame extends Game
      * href="http://en.wikipedia.org/wiki/Category:Video_game_platforms">video
      * games</a>.
      *
-     * @param $gamePlatform \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @param $gamePlatform \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setGamePlatform($gamePlatform): static {
@@ -75,7 +75,7 @@ class VideoGame extends Game
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getGamePlatform() {
         return $this->properties['gamePlatform'];
@@ -193,7 +193,7 @@ class VideoGame extends Game
     /**
      * The edition of a video game.
      *
-     * @param $gameEdition \LengthOfRope\JSONLD\DataType\Text
+     * @param $gameEdition \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setGameEdition($gameEdition): static {
@@ -203,7 +203,7 @@ class VideoGame extends Game
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getGameEdition() {
         return $this->properties['gameEdition'];

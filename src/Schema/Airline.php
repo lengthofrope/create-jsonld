@@ -61,7 +61,7 @@ class Airline extends Organization
     /**
      * IATA identifier for an airline or airport.
      *
-     * @param $iataCode \LengthOfRope\JSONLD\DataType\Text
+     * @param $iataCode \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setIataCode($iataCode): static {
@@ -71,7 +71,7 @@ class Airline extends Organization
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getIataCode() {
         return $this->properties['iataCode'];

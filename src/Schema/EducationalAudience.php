@@ -42,7 +42,7 @@ class EducationalAudience extends Audience
     /**
      * An educationalRole of an EducationalAudience.
      *
-     * @param $educationalRole \LengthOfRope\JSONLD\DataType\Text
+     * @param $educationalRole \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setEducationalRole($educationalRole): static {
@@ -52,7 +52,7 @@ class EducationalAudience extends Audience
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getEducationalRole() {
         return $this->properties['educationalRole'];

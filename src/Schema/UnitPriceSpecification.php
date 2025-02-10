@@ -67,7 +67,7 @@ class UnitPriceSpecification extends PriceSpecification
      * form text string for price types that are not already predefined in
      * PriceTypeEnumeration.
      *
-     * @param $priceType \LengthOfRope\JSONLD\Schema\PriceTypeEnumeration|\LengthOfRope\JSONLD\DataType\Text
+     * @param $priceType \LengthOfRope\JSONLD\Schema\PriceTypeEnumeration|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setPriceType($priceType): static {
@@ -77,7 +77,7 @@ class UnitPriceSpecification extends PriceSpecification
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\PriceTypeEnumeration|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\PriceTypeEnumeration|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getPriceType() {
         return $this->properties['priceType'];
@@ -87,7 +87,7 @@ class UnitPriceSpecification extends PriceSpecification
      * a URL. Other codes than the UN/CEFACT Common Code may be used with a prefix
      * followed by a colon.
      *
-     * @param $unitCode \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @param $unitCode \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setUnitCode($unitCode): static {
@@ -97,7 +97,7 @@ class UnitPriceSpecification extends PriceSpecification
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getUnitCode() {
         return $this->properties['unitCode'];
@@ -127,7 +127,7 @@ class UnitPriceSpecification extends PriceSpecification
      * the basis for the billing. The unit of measurement is specified by the unitCode
      * property.
      *
-     * @param $billingIncrement \LengthOfRope\JSONLD\DataType\Number
+     * @param $billingIncrement \LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setBillingIncrement($billingIncrement): static {
@@ -137,7 +137,7 @@ class UnitPriceSpecification extends PriceSpecification
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getBillingIncrement() {
         return $this->properties['billingIncrement'];
@@ -148,7 +148,7 @@ class UnitPriceSpecification extends PriceSpecification
      * payment plan. Type can be either a Duration or a Number (in which case the unit
      * of measurement, for example month, is specified by the unitCode property).
      *
-     * @param $billingDuration \LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Duration
+     * @param $billingDuration \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Duration
      * @return static
      **/
     public function setBillingDuration($billingDuration): static {
@@ -158,7 +158,7 @@ class UnitPriceSpecification extends PriceSpecification
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Duration
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Duration
      **/
     public function getBillingDuration() {
         return $this->properties['billingDuration'];
@@ -169,7 +169,7 @@ class UnitPriceSpecification extends PriceSpecification
      * first year of a subscription. The unit of measurement is specified by the
      * unitCode property.
      *
-     * @param $billingStart \LengthOfRope\JSONLD\DataType\Number
+     * @param $billingStart \LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setBillingStart($billingStart): static {
@@ -179,7 +179,7 @@ class UnitPriceSpecification extends PriceSpecification
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getBillingStart() {
         return $this->properties['billingStart'];
@@ -189,7 +189,7 @@ class UnitPriceSpecification extends PriceSpecification
      * provide a standard unit code for
      * <a href='unitCode'>unitCode</a>.
      *
-     * @param $unitText \LengthOfRope\JSONLD\DataType\Text
+     * @param $unitText \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setUnitText($unitText): static {
@@ -199,7 +199,7 @@ class UnitPriceSpecification extends PriceSpecification
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getUnitText() {
         return $this->properties['unitText'];

@@ -97,7 +97,7 @@ class Muscle extends AnatomicalStructure
     /**
      * The movement the muscle generates.
      *
-     * @param $muscleAction \LengthOfRope\JSONLD\DataType\Text
+     * @param $muscleAction \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setMuscleAction($muscleAction): static {
@@ -107,7 +107,7 @@ class Muscle extends AnatomicalStructure
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getMuscleAction() {
         return $this->properties['muscleAction'];

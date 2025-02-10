@@ -74,7 +74,7 @@ class ProductGroup extends Product
      * their short name e.g. "color"; terms defined elsewhere can be referenced with
      * their URIs.
      *
-     * @param $variesBy \LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text
+     * @param $variesBy \LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setVariesBy($variesBy): static {
@@ -84,7 +84,7 @@ class ProductGroup extends Product
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getVariesBy() {
         return $this->properties['variesBy'];
@@ -92,7 +92,7 @@ class ProductGroup extends Product
     /**
      * Indicates a textual identifier for a ProductGroup.
      *
-     * @param $productGroupID \LengthOfRope\JSONLD\DataType\Text
+     * @param $productGroupID \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setProductGroupID($productGroupID): static {
@@ -102,7 +102,7 @@ class ProductGroup extends Product
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getProductGroupID() {
         return $this->properties['productGroupID'];

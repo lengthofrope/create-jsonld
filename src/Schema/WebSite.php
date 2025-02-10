@@ -45,7 +45,7 @@ class WebSite extends CreativeWork
      * publication. You can repeat this property to identify different formats of, or
      * the linking ISSN (ISSN-L) for, this serial publication.
      *
-     * @param $issn \LengthOfRope\JSONLD\DataType\Text
+     * @param $issn \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setIssn($issn): static {
@@ -55,7 +55,7 @@ class WebSite extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getIssn() {
         return $this->properties['issn'];

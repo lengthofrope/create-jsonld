@@ -88,7 +88,7 @@ class SizeSpecification extends QualitativeValue
      * The suggested gender of the intended person or audience, for example "male",
      * "female", or "unisex".
      *
-     * @param $suggestedGender \LengthOfRope\JSONLD\Schema\GenderType|\LengthOfRope\JSONLD\DataType\Text
+     * @param $suggestedGender \LengthOfRope\JSONLD\Schema\GenderType|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setSuggestedGender($suggestedGender): static {
@@ -98,7 +98,7 @@ class SizeSpecification extends QualitativeValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\GenderType|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\GenderType|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getSuggestedGender() {
         return $this->properties['suggestedGender'];
@@ -129,7 +129,7 @@ class SizeSpecification extends QualitativeValue
      * for wearable products. Multiple values can be combined, for example "men's big
      * and tall", "petite maternity" or "regular".
      *
-     * @param $sizeGroup \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\SizeGroupEnumeration
+     * @param $sizeGroup \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\SizeGroupEnumeration
      * @return static
      **/
     public function setSizeGroup($sizeGroup): static {
@@ -139,7 +139,7 @@ class SizeSpecification extends QualitativeValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\SizeGroupEnumeration
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\SizeGroupEnumeration
      **/
     public function getSizeGroup() {
         return $this->properties['sizeGroup'];
@@ -149,7 +149,7 @@ class SizeSpecification extends QualitativeValue
      * (for example, "GS1" or "ISO-EN13402"), country code (for example "US" or "JP"),
      * or a measuring system (for example "Metric" or "Imperial").
      *
-     * @param $sizeSystem \LengthOfRope\JSONLD\Schema\SizeSystemEnumeration|\LengthOfRope\JSONLD\DataType\Text
+     * @param $sizeSystem \LengthOfRope\JSONLD\Schema\SizeSystemEnumeration|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setSizeSystem($sizeSystem): static {
@@ -159,7 +159,7 @@ class SizeSpecification extends QualitativeValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\SizeSystemEnumeration|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\SizeSystemEnumeration|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getSizeSystem() {
         return $this->properties['sizeSystem'];

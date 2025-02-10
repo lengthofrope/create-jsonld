@@ -43,7 +43,7 @@ class HowToItem extends ListItem
     /**
      * The required quantity of the item(s).
      *
-     * @param $requiredQuantity \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Number
+     * @param $requiredQuantity \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setRequiredQuantity($requiredQuantity): static {
@@ -53,7 +53,7 @@ class HowToItem extends ListItem
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getRequiredQuantity() {
         return $this->properties['requiredQuantity'];

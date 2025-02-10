@@ -114,7 +114,7 @@ class MedicalTest extends MedicalEntity
     /**
      * Range of acceptable values for a typical patient, when applicable.
      *
-     * @param $normalRange \LengthOfRope\JSONLD\Schema\MedicalEnumeration|\LengthOfRope\JSONLD\DataType\Text
+     * @param $normalRange \LengthOfRope\JSONLD\Schema\MedicalEnumeration|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setNormalRange($normalRange): static {
@@ -124,7 +124,7 @@ class MedicalTest extends MedicalEntity
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\MedicalEnumeration|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\MedicalEnumeration|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getNormalRange() {
         return $this->properties['normalRange'];

@@ -42,7 +42,7 @@ class ImageObject extends MediaObject
     /**
      * Indicates whether this image is representative of the content of the page.
      *
-     * @param $representativeOfPage \LengthOfRope\JSONLD\DataType\Boolean
+     * @param $representativeOfPage \LengthOfRope\JSONLD\DataType\TypeBoolean
      * @return static
      **/
     public function setRepresentativeOfPage($representativeOfPage): static {
@@ -52,7 +52,7 @@ class ImageObject extends MediaObject
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Boolean
+     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean
      **/
     public function getRepresentativeOfPage() {
         return $this->properties['representativeOfPage'];
@@ -61,7 +61,7 @@ class ImageObject extends MediaObject
      * The caption for this object. For downloadable machine formats (closed caption,
      * subtitles etc.) use MediaObject and indicate the [[encodingFormat]].
      *
-     * @param $caption \LengthOfRope\JSONLD\Schema\MediaObject|\LengthOfRope\JSONLD\DataType\Text
+     * @param $caption \LengthOfRope\JSONLD\Schema\MediaObject|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setCaption($caption): static {
@@ -71,7 +71,7 @@ class ImageObject extends MediaObject
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\MediaObject|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\MediaObject|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getCaption() {
         return $this->properties['caption'];
@@ -79,7 +79,7 @@ class ImageObject extends MediaObject
     /**
      * exif data for this object.
      *
-     * @param $exifData \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\PropertyValue
+     * @param $exifData \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\PropertyValue
      * @return static
      **/
     public function setExifData($exifData): static {
@@ -89,7 +89,7 @@ class ImageObject extends MediaObject
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\PropertyValue
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\PropertyValue
      **/
     public function getExifData() {
         return $this->properties['exifData'];
@@ -97,7 +97,7 @@ class ImageObject extends MediaObject
     /**
      * Represents textual captioning from a [[MediaObject]], e.g. text of a 'meme'.
      *
-     * @param $embeddedTextCaption \LengthOfRope\JSONLD\DataType\Text
+     * @param $embeddedTextCaption \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setEmbeddedTextCaption($embeddedTextCaption): static {
@@ -107,7 +107,7 @@ class ImageObject extends MediaObject
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getEmbeddedTextCaption() {
         return $this->properties['embeddedTextCaption'];

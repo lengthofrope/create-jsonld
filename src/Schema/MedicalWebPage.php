@@ -44,7 +44,7 @@ class MedicalWebPage extends WebPage
      * 'diagnosis', 'treatment', 'causes', 'prognosis', 'etiology', 'epidemiology',
      * etc.
      *
-     * @param $aspect \LengthOfRope\JSONLD\DataType\Text
+     * @param $aspect \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setAspect($aspect): static {
@@ -54,7 +54,7 @@ class MedicalWebPage extends WebPage
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getAspect() {
         return $this->properties['aspect'];

@@ -42,7 +42,7 @@ class APIReference extends TechArticle
     /**
      * Type of app development: phone, Metro style, desktop, XBox, etc.
      *
-     * @param $targetPlatform \LengthOfRope\JSONLD\DataType\Text
+     * @param $targetPlatform \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setTargetPlatform($targetPlatform): static {
@@ -52,7 +52,7 @@ class APIReference extends TechArticle
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getTargetPlatform() {
         return $this->properties['targetPlatform'];
@@ -60,7 +60,7 @@ class APIReference extends TechArticle
     /**
      * Library file name, e.g., mscorlib.dll, system.web.dll.
      *
-     * @param $executableLibraryName \LengthOfRope\JSONLD\DataType\Text
+     * @param $executableLibraryName \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setExecutableLibraryName($executableLibraryName): static {
@@ -70,7 +70,7 @@ class APIReference extends TechArticle
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getExecutableLibraryName() {
         return $this->properties['executableLibraryName'];
@@ -78,7 +78,7 @@ class APIReference extends TechArticle
     /**
      * Associated product/technology version. E.g., .NET Framework 4.5.
      *
-     * @param $assemblyVersion \LengthOfRope\JSONLD\DataType\Text
+     * @param $assemblyVersion \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setAssemblyVersion($assemblyVersion): static {
@@ -88,7 +88,7 @@ class APIReference extends TechArticle
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getAssemblyVersion() {
         return $this->properties['assemblyVersion'];
@@ -96,7 +96,7 @@ class APIReference extends TechArticle
     /**
      * Indicates whether API is managed or unmanaged.
      *
-     * @param $programmingModel \LengthOfRope\JSONLD\DataType\Text
+     * @param $programmingModel \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setProgrammingModel($programmingModel): static {
@@ -106,7 +106,7 @@ class APIReference extends TechArticle
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getProgrammingModel() {
         return $this->properties['programmingModel'];
@@ -114,7 +114,7 @@ class APIReference extends TechArticle
     /**
      * Library file name, e.g., mscorlib.dll, system.web.dll.
      *
-     * @param $assembly \LengthOfRope\JSONLD\DataType\Text
+     * @param $assembly \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setAssembly($assembly): static {
@@ -124,7 +124,7 @@ class APIReference extends TechArticle
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getAssembly() {
         return $this->properties['assembly'];

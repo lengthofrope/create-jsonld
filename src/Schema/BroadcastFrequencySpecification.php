@@ -42,7 +42,7 @@ class BroadcastFrequencySpecification extends Intangible
     /**
      * The subchannel used for the broadcast.
      *
-     * @param $broadcastSubChannel \LengthOfRope\JSONLD\DataType\Text
+     * @param $broadcastSubChannel \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setBroadcastSubChannel($broadcastSubChannel): static {
@@ -52,7 +52,7 @@ class BroadcastFrequencySpecification extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getBroadcastSubChannel() {
         return $this->properties['broadcastSubChannel'];
@@ -60,7 +60,7 @@ class BroadcastFrequencySpecification extends Intangible
     /**
      * The modulation (e.g. FM, AM, etc) used by a particular broadcast service.
      *
-     * @param $broadcastSignalModulation \LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\Text
+     * @param $broadcastSignalModulation \LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setBroadcastSignalModulation($broadcastSignalModulation): static {
@@ -70,7 +70,7 @@ class BroadcastFrequencySpecification extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getBroadcastSignalModulation() {
         return $this->properties['broadcastSignalModulation'];
@@ -78,7 +78,7 @@ class BroadcastFrequencySpecification extends Intangible
     /**
      * The frequency in MHz for a particular broadcast.
      *
-     * @param $broadcastFrequencyValue \LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\Schema\QuantitativeValue
+     * @param $broadcastFrequencyValue \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setBroadcastFrequencyValue($broadcastFrequencyValue): static {
@@ -88,7 +88,7 @@ class BroadcastFrequencySpecification extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\Schema\QuantitativeValue
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getBroadcastFrequencyValue() {
         return $this->properties['broadcastFrequencyValue'];

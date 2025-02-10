@@ -44,7 +44,7 @@ class UserComments extends UserInteraction
     /**
      * The time at which the UserComment was made.
      *
-     * @param $commentTime \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
+     * @param $commentTime \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
      * @return static
      **/
     public function setCommentTime($commentTime): static {
@@ -54,7 +54,7 @@ class UserComments extends UserInteraction
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
      **/
     public function getCommentTime() {
         return $this->properties['commentTime'];
@@ -99,7 +99,7 @@ class UserComments extends UserInteraction
     /**
      * The text of the UserComment.
      *
-     * @param $commentText \LengthOfRope\JSONLD\DataType\Text
+     * @param $commentText \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setCommentText($commentText): static {
@@ -109,7 +109,7 @@ class UserComments extends UserInteraction
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getCommentText() {
         return $this->properties['commentText'];
@@ -117,7 +117,7 @@ class UserComments extends UserInteraction
     /**
      * The URL at which a reply may be posted to the specified UserComment.
      *
-     * @param $replyToUrl \LengthOfRope\JSONLD\DataType\URL
+     * @param $replyToUrl \LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setReplyToUrl($replyToUrl): static {
@@ -127,7 +127,7 @@ class UserComments extends UserInteraction
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getReplyToUrl() {
         return $this->properties['replyToUrl'];

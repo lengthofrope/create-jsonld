@@ -62,7 +62,7 @@ class Organization extends Thing
     /**
      * The official name of the organization, e.g. the registered company name.
      *
-     * @param $legalName \LengthOfRope\JSONLD\DataType\Text
+     * @param $legalName \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setLegalName($legalName): static {
@@ -72,7 +72,7 @@ class Organization extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getLegalName() {
         return $this->properties['legalName'];
@@ -138,7 +138,7 @@ class Organization extends Thing
      * not distinguish skill levels here, or relate this to educational content,
      * events, objectives or [[JobPosting]] descriptions.
      *
-     * @param $knowsAbout \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\DataType\Text
+     * @param $knowsAbout \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setKnowsAbout($knowsAbout): static {
@@ -148,7 +148,7 @@ class Organization extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getKnowsAbout() {
         return $this->properties['knowsAbout'];
@@ -166,7 +166,7 @@ class Organization extends Thing
      * schema.org terminology.
      *
      *
-     * @param $publishingPrinciples \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\CreativeWork
+     * @param $publishingPrinciples \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\CreativeWork
      * @return static
      **/
     public function setPublishingPrinciples($publishingPrinciples): static {
@@ -176,7 +176,7 @@ class Organization extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\CreativeWork
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\CreativeWork
      **/
     public function getPublishingPrinciples() {
         return $this->properties['publishingPrinciples'];
@@ -204,7 +204,7 @@ class Organization extends Thing
      * Activities (ISIC), Revision 4 code for a particular organization, business
      * person, or place.
      *
-     * @param $isicV4 \LengthOfRope\JSONLD\DataType\Text
+     * @param $isicV4 \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setIsicV4($isicV4): static {
@@ -214,7 +214,7 @@ class Organization extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getIsicV4() {
         return $this->properties['isicV4'];
@@ -240,7 +240,7 @@ class Organization extends Thing
     /**
      * The telephone number.
      *
-     * @param $telephone \LengthOfRope\JSONLD\DataType\Text
+     * @param $telephone \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setTelephone($telephone): static {
@@ -250,7 +250,7 @@ class Organization extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getTelephone() {
         return $this->properties['telephone'];
@@ -261,7 +261,7 @@ class Organization extends Thing
      * describing the newsroom’s diversity policy on both staffing and sources,
      * typically providing staffing data.
      *
-     * @param $diversityPolicy \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\URL
+     * @param $diversityPolicy \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setDiversityPolicy($diversityPolicy): static {
@@ -271,7 +271,7 @@ class Organization extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getDiversityPolicy() {
         return $this->properties['diversityPolicy'];
@@ -298,7 +298,7 @@ class Organization extends Thing
     /**
      * The date that this organization was founded.
      *
-     * @param $foundingDate \LengthOfRope\JSONLD\DataType\Date
+     * @param $foundingDate \LengthOfRope\JSONLD\DataType\TypeDate
      * @return static
      **/
     public function setFoundingDate($foundingDate): static {
@@ -308,7 +308,7 @@ class Organization extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Date
+     * @return \LengthOfRope\JSONLD\DataType\TypeDate
      **/
     public function getFoundingDate() {
         return $this->properties['foundingDate'];
@@ -316,7 +316,7 @@ class Organization extends Thing
     /**
      * The Value-added Tax ID of the organization or person.
      *
-     * @param $vatID \LengthOfRope\JSONLD\DataType\Text
+     * @param $vatID \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setVatID($vatID): static {
@@ -326,7 +326,7 @@ class Organization extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getVatID() {
         return $this->properties['vatID'];
@@ -337,7 +337,7 @@ class Organization extends Thing
      * here. Use language codes from the [IETF BCP 47
      * standard](http://tools.ietf.org/html/bcp47).
      *
-     * @param $knowsLanguage \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Language
+     * @param $knowsLanguage \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Language
      * @return static
      **/
     public function setKnowsLanguage($knowsLanguage): static {
@@ -347,7 +347,7 @@ class Organization extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Language
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Language
      **/
     public function getKnowsLanguage() {
         return $this->properties['knowsLanguage'];
@@ -368,7 +368,7 @@ class Organization extends Thing
      * populating [vatID](https://schema.org/vatID) or
      * [taxID](https://schema.org/taxID), as ISO identifiers are less ambiguous.
      *
-     * @param $iso6523Code \LengthOfRope\JSONLD\DataType\Text
+     * @param $iso6523Code \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setIso6523Code($iso6523Code): static {
@@ -378,7 +378,7 @@ class Organization extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getIso6523Code() {
         return $this->properties['iso6523Code'];
@@ -386,7 +386,7 @@ class Organization extends Thing
     /**
      * An award won by or for this item.
      *
-     * @param $award \LengthOfRope\JSONLD\DataType\Text
+     * @param $award \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setAward($award): static {
@@ -396,7 +396,7 @@ class Organization extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getAward() {
         return $this->properties['award'];
@@ -404,7 +404,7 @@ class Organization extends Thing
     /**
      * Physical address of the item.
      *
-     * @param $address \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\PostalAddress
+     * @param $address \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\PostalAddress
      * @return static
      **/
     public function setAddress($address): static {
@@ -414,7 +414,7 @@ class Organization extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\PostalAddress
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\PostalAddress
      **/
     public function getAddress() {
         return $this->properties['address'];
@@ -501,7 +501,7 @@ class Organization extends Thing
      * ethicsPolicy is typically a statement describing the personal, organizational,
      * and corporate standards of behavior expected by the organization.
      *
-     * @param $ethicsPolicy \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\CreativeWork
+     * @param $ethicsPolicy \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\CreativeWork
      * @return static
      **/
     public function setEthicsPolicy($ethicsPolicy): static {
@@ -511,7 +511,7 @@ class Organization extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\CreativeWork
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\CreativeWork
      **/
     public function getEthicsPolicy() {
         return $this->properties['ethicsPolicy'];
@@ -556,7 +556,7 @@ class Organization extends Thing
     /**
      * The fax number.
      *
-     * @param $faxNumber \LengthOfRope\JSONLD\DataType\Text
+     * @param $faxNumber \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setFaxNumber($faxNumber): static {
@@ -566,7 +566,7 @@ class Organization extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getFaxNumber() {
         return $this->properties['faxNumber'];
@@ -574,7 +574,7 @@ class Organization extends Thing
     /**
      * Email address.
      *
-     * @param $email \LengthOfRope\JSONLD\DataType\Text
+     * @param $email \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setEmail($email): static {
@@ -584,7 +584,7 @@ class Organization extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getEmail() {
         return $this->properties['email'];
@@ -593,7 +593,7 @@ class Organization extends Thing
      * The North American Industry Classification System (NAICS) code for a particular
      * organization or business person.
      *
-     * @param $naics \LengthOfRope\JSONLD\DataType\Text
+     * @param $naics \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setNaics($naics): static {
@@ -603,7 +603,7 @@ class Organization extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getNaics() {
         return $this->properties['naics'];
@@ -648,7 +648,7 @@ class Organization extends Thing
      * Keywords or tags used to describe some item. Multiple textual entries in a
      * keywords list are typically delimited by commas, or by repeating the property.
      *
-     * @param $keywords \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text
+     * @param $keywords \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setKeywords($keywords): static {
@@ -658,7 +658,7 @@ class Organization extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getKeywords() {
         return $this->properties['keywords'];
@@ -704,7 +704,7 @@ class Organization extends Thing
      * The Tax / Fiscal ID of the organization or person, e.g. the TIN in the US or the
      * CIF/NIF in Spain.
      *
-     * @param $taxID \LengthOfRope\JSONLD\DataType\Text
+     * @param $taxID \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setTaxID($taxID): static {
@@ -714,7 +714,7 @@ class Organization extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getTaxID() {
         return $this->properties['taxID'];
@@ -722,7 +722,7 @@ class Organization extends Thing
     /**
      * An associated logo.
      *
-     * @param $logo \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\ImageObject
+     * @param $logo \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\ImageObject
      * @return static
      **/
     public function setLogo($logo): static {
@@ -732,7 +732,7 @@ class Organization extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\ImageObject
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\ImageObject
      **/
     public function getLogo() {
         return $this->properties['logo'];
@@ -742,7 +742,7 @@ class Organization extends Thing
      * a competency that is either claimed by a person, an organization or desired or
      * required to fulfill a role or to work in an occupation.
      *
-     * @param $skills \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DefinedTerm
+     * @param $skills \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DefinedTerm
      * @return static
      **/
     public function setSkills($skills): static {
@@ -752,7 +752,7 @@ class Organization extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DefinedTerm
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DefinedTerm
      **/
     public function getSkills() {
         return $this->properties['skills'];
@@ -760,7 +760,7 @@ class Organization extends Thing
     /**
      * The geographic area where a service or offered item is provided.
      *
-     * @param $areaServed \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeoShape|\LengthOfRope\JSONLD\Schema\AdministrativeArea
+     * @param $areaServed \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeoShape|\LengthOfRope\JSONLD\Schema\AdministrativeArea
      * @return static
      **/
     public function setAreaServed($areaServed): static {
@@ -770,7 +770,7 @@ class Organization extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeoShape|\LengthOfRope\JSONLD\Schema\AdministrativeArea
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeoShape|\LengthOfRope\JSONLD\Schema\AdministrativeArea
      **/
     public function getAreaServed() {
         return $this->properties['areaServed'];
@@ -799,7 +799,7 @@ class Organization extends Thing
      * The location of, for example, where an event is happening, where an organization
      * is located, or where an action takes place.
      *
-     * @param $location \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\VirtualLocation|\LengthOfRope\JSONLD\Schema\PostalAddress
+     * @param $location \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\VirtualLocation|\LengthOfRope\JSONLD\Schema\PostalAddress
      * @return static
      **/
     public function setLocation($location): static {
@@ -809,7 +809,7 @@ class Organization extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\VirtualLocation|\LengthOfRope\JSONLD\Schema\PostalAddress
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\VirtualLocation|\LengthOfRope\JSONLD\Schema\PostalAddress
      **/
     public function getLocation() {
         return $this->properties['location'];
@@ -854,7 +854,7 @@ class Organization extends Thing
      * For an [[Organization]] (typically a [[NewsMediaOrganization]]), a statement
      * about policy on use of unnamed sources and the decision process required.
      *
-     * @param $unnamedSourcesPolicy \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\URL
+     * @param $unnamedSourcesPolicy \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setUnnamedSourcesPolicy($unnamedSourcesPolicy): static {
@@ -864,7 +864,7 @@ class Organization extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getUnnamedSourcesPolicy() {
         return $this->properties['unnamedSourcesPolicy'];
@@ -891,7 +891,7 @@ class Organization extends Thing
     /**
      * The date that this organization was dissolved.
      *
-     * @param $dissolutionDate \LengthOfRope\JSONLD\DataType\Date
+     * @param $dissolutionDate \LengthOfRope\JSONLD\DataType\TypeDate
      * @return static
      **/
     public function setDissolutionDate($dissolutionDate): static {
@@ -901,7 +901,7 @@ class Organization extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Date
+     * @return \LengthOfRope\JSONLD\DataType\TypeDate
      **/
     public function getDissolutionDate() {
         return $this->properties['dissolutionDate'];
@@ -946,7 +946,7 @@ class Organization extends Thing
      * An organization identifier that uniquely identifies a legal entity as defined in
      * ISO 17442.
      *
-     * @param $leiCode \LengthOfRope\JSONLD\DataType\Text
+     * @param $leiCode \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setLeiCode($leiCode): static {
@@ -956,7 +956,7 @@ class Organization extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getLeiCode() {
         return $this->properties['leiCode'];
@@ -965,7 +965,7 @@ class Organization extends Thing
      * For an [[Organization]] (e.g. [[NewsMediaOrganization]]), a statement describing
      * (in news media, the newsroom’s) disclosure and correction policy for errors.
      *
-     * @param $correctionsPolicy \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\URL
+     * @param $correctionsPolicy \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setCorrectionsPolicy($correctionsPolicy): static {
@@ -975,7 +975,7 @@ class Organization extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getCorrectionsPolicy() {
         return $this->properties['correctionsPolicy'];
@@ -984,7 +984,7 @@ class Organization extends Thing
      * The payment method(s) that are accepted in general by an organization, or for
      * some specific demand or offer.
      *
-     * @param $acceptedPaymentMethod \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\PaymentMethod|\LengthOfRope\JSONLD\Schema\LoanOrCredit
+     * @param $acceptedPaymentMethod \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\PaymentMethod|\LengthOfRope\JSONLD\Schema\LoanOrCredit
      * @return static
      **/
     public function setAcceptedPaymentMethod($acceptedPaymentMethod): static {
@@ -994,7 +994,7 @@ class Organization extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\PaymentMethod|\LengthOfRope\JSONLD\Schema\LoanOrCredit
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\PaymentMethod|\LengthOfRope\JSONLD\Schema\LoanOrCredit
      **/
     public function getAcceptedPaymentMethod() {
         return $this->properties['acceptedPaymentMethod'];
@@ -1033,7 +1033,7 @@ class Organization extends Thing
      * <code>8013</code>)  should be attached to a [[Product]] or a
      * [[ProductModel]].</li></ul> Other item types should be adapted similarly.
      *
-     * @param $hasGS1DigitalLink \LengthOfRope\JSONLD\DataType\URL
+     * @param $hasGS1DigitalLink \LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setHasGS1DigitalLink($hasGS1DigitalLink): static {
@@ -1043,7 +1043,7 @@ class Organization extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getHasGS1DigitalLink() {
         return $this->properties['hasGS1DigitalLink'];
@@ -1090,7 +1090,7 @@ class Organization extends Thing
      * organization, person, or place. The GLN is a 13-digit number used to identify
      * parties and physical locations.
      *
-     * @param $globalLocationNumber \LengthOfRope\JSONLD\DataType\Text
+     * @param $globalLocationNumber \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setGlobalLocationNumber($globalLocationNumber): static {
@@ -1100,7 +1100,7 @@ class Organization extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getGlobalLocationNumber() {
         return $this->properties['globalLocationNumber'];
@@ -1130,7 +1130,7 @@ class Organization extends Thing
      * Note that the [[funder]] is also available and can be used to make basic
      * funder information machine-readable.
      *
-     * @param $ownershipFundingInfo \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\AboutPage
+     * @param $ownershipFundingInfo \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\AboutPage
      * @return static
      **/
     public function setOwnershipFundingInfo($ownershipFundingInfo): static {
@@ -1140,7 +1140,7 @@ class Organization extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\AboutPage
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\AboutPage
      **/
     public function getOwnershipFundingInfo() {
         return $this->properties['ownershipFundingInfo'];
@@ -1148,7 +1148,7 @@ class Organization extends Thing
     /**
      * Awards won by or for this item.
      *
-     * @param $awards \LengthOfRope\JSONLD\DataType\Text
+     * @param $awards \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setAwards($awards): static {
@@ -1158,7 +1158,7 @@ class Organization extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getAwards() {
         return $this->properties['awards'];
@@ -1186,7 +1186,7 @@ class Organization extends Thing
      * a report on staffing diversity issues. In a news context this might be for
      * example ASNE or RTDNA (US) reports, or self-reported.
      *
-     * @param $diversityStaffingReport \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\Article
+     * @param $diversityStaffingReport \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\Article
      * @return static
      **/
     public function setDiversityStaffingReport($diversityStaffingReport): static {
@@ -1196,7 +1196,7 @@ class Organization extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\Article
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\Article
      **/
     public function getDiversityStaffingReport() {
         return $this->properties['diversityStaffingReport'];
@@ -1204,7 +1204,7 @@ class Organization extends Thing
     /**
      * A slogan or motto associated with the item.
      *
-     * @param $slogan \LengthOfRope\JSONLD\DataType\Text
+     * @param $slogan \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setSlogan($slogan): static {
@@ -1214,7 +1214,7 @@ class Organization extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getSlogan() {
         return $this->properties['slogan'];
@@ -1278,7 +1278,7 @@ class Organization extends Thing
      * The Dun & Bradstreet DUNS number for identifying an organization or business
      * person.
      *
-     * @param $duns \LengthOfRope\JSONLD\DataType\Text
+     * @param $duns \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setDuns($duns): static {
@@ -1288,7 +1288,7 @@ class Organization extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getDuns() {
         return $this->properties['duns'];
@@ -1337,7 +1337,7 @@ class Organization extends Thing
      * including involving the public - digitally or otherwise -- in coverage
      * decisions, reporting and activities after publication.
      *
-     * @param $actionableFeedbackPolicy \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\CreativeWork
+     * @param $actionableFeedbackPolicy \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\CreativeWork
      * @return static
      **/
     public function setActionableFeedbackPolicy($actionableFeedbackPolicy): static {
@@ -1347,7 +1347,7 @@ class Organization extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\CreativeWork
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\CreativeWork
      **/
     public function getActionableFeedbackPolicy() {
         return $this->properties['actionableFeedbackPolicy'];

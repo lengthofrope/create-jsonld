@@ -51,7 +51,7 @@ class CompoundPriceSpecification extends PriceSpecification
      * form text string for price types that are not already predefined in
      * PriceTypeEnumeration.
      *
-     * @param $priceType \LengthOfRope\JSONLD\Schema\PriceTypeEnumeration|\LengthOfRope\JSONLD\DataType\Text
+     * @param $priceType \LengthOfRope\JSONLD\Schema\PriceTypeEnumeration|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setPriceType($priceType): static {
@@ -61,7 +61,7 @@ class CompoundPriceSpecification extends PriceSpecification
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\PriceTypeEnumeration|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\PriceTypeEnumeration|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getPriceType() {
         return $this->properties['priceType'];

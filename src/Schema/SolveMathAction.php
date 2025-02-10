@@ -45,7 +45,7 @@ class SolveMathAction extends Action
      * indicates the format of question being given. Example: "Multiple choice", "Open
      * ended", "Flashcard".
      *
-     * @param $eduQuestionType \LengthOfRope\JSONLD\DataType\Text
+     * @param $eduQuestionType \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setEduQuestionType($eduQuestionType): static {
@@ -55,7 +55,7 @@ class SolveMathAction extends Action
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getEduQuestionType() {
         return $this->properties['eduQuestionType'];

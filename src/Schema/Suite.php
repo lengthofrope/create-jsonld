@@ -75,7 +75,7 @@ class Suite extends Accommodation
      * instance of BedDetails. For more detailed information, use the amenityFeature
      * property.
      *
-     * @param $bed \LengthOfRope\JSONLD\Schema\BedType|\LengthOfRope\JSONLD\Schema\BedDetails|\LengthOfRope\JSONLD\DataType\Text
+     * @param $bed \LengthOfRope\JSONLD\Schema\BedType|\LengthOfRope\JSONLD\Schema\BedDetails|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setBed($bed): static {
@@ -85,7 +85,7 @@ class Suite extends Accommodation
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\BedType|\LengthOfRope\JSONLD\Schema\BedDetails|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\BedType|\LengthOfRope\JSONLD\Schema\BedDetails|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getBed() {
         return $this->properties['bed'];
@@ -96,7 +96,7 @@ class Suite extends Accommodation
      * Typical unit code(s): ROM for room or C62 for no unit. The type of room can be
      * put in the unitText property of the QuantitativeValue.
      *
-     * @param $numberOfRooms \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\Number
+     * @param $numberOfRooms \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setNumberOfRooms($numberOfRooms): static {
@@ -106,7 +106,7 @@ class Suite extends Accommodation
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getNumberOfRooms() {
         return $this->properties['numberOfRooms'];

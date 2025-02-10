@@ -42,7 +42,7 @@ class PropertyValueSpecification extends Intangible
     /**
      * Specifies the allowed range for number of characters in a literal value.
      *
-     * @param $valueMaxLength \LengthOfRope\JSONLD\DataType\Number
+     * @param $valueMaxLength \LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setValueMaxLength($valueMaxLength): static {
@@ -52,7 +52,7 @@ class PropertyValueSpecification extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getValueMaxLength() {
         return $this->properties['valueMaxLength'];
@@ -60,7 +60,7 @@ class PropertyValueSpecification extends Intangible
     /**
      * Specifies the minimum allowed range for number of characters in a literal value.
      *
-     * @param $valueMinLength \LengthOfRope\JSONLD\DataType\Number
+     * @param $valueMinLength \LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setValueMinLength($valueMinLength): static {
@@ -70,7 +70,7 @@ class PropertyValueSpecification extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getValueMinLength() {
         return $this->properties['valueMinLength'];
@@ -78,7 +78,7 @@ class PropertyValueSpecification extends Intangible
     /**
      * Whether multiple values are allowed for the property.  Default is false.
      *
-     * @param $multipleValues \LengthOfRope\JSONLD\DataType\Boolean
+     * @param $multipleValues \LengthOfRope\JSONLD\DataType\TypeBoolean
      * @return static
      **/
     public function setMultipleValues($multipleValues): static {
@@ -88,7 +88,7 @@ class PropertyValueSpecification extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Boolean
+     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean
      **/
     public function getMultipleValues() {
         return $this->properties['multipleValues'];
@@ -96,7 +96,7 @@ class PropertyValueSpecification extends Intangible
     /**
      * The lower value of some characteristic or property.
      *
-     * @param $minValue \LengthOfRope\JSONLD\DataType\Number
+     * @param $minValue \LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setMinValue($minValue): static {
@@ -106,7 +106,7 @@ class PropertyValueSpecification extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getMinValue() {
         return $this->properties['minValue'];
@@ -116,7 +116,7 @@ class PropertyValueSpecification extends Intangible
      * property that also has a value makes it act similar to a "hidden" input in an
      * HTML form.
      *
-     * @param $readonlyValue \LengthOfRope\JSONLD\DataType\Boolean
+     * @param $readonlyValue \LengthOfRope\JSONLD\DataType\TypeBoolean
      * @return static
      **/
     public function setReadonlyValue($readonlyValue): static {
@@ -126,7 +126,7 @@ class PropertyValueSpecification extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Boolean
+     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean
      **/
     public function getReadonlyValue() {
         return $this->properties['readonlyValue'];
@@ -134,7 +134,7 @@ class PropertyValueSpecification extends Intangible
     /**
      * The upper value of some characteristic or property.
      *
-     * @param $maxValue \LengthOfRope\JSONLD\DataType\Number
+     * @param $maxValue \LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setMaxValue($maxValue): static {
@@ -144,7 +144,7 @@ class PropertyValueSpecification extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getMaxValue() {
         return $this->properties['maxValue'];
@@ -153,7 +153,7 @@ class PropertyValueSpecification extends Intangible
      * The stepValue attribute indicates the granularity that is expected (and
      * required) of the value in a PropertyValueSpecification.
      *
-     * @param $stepValue \LengthOfRope\JSONLD\DataType\Number
+     * @param $stepValue \LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setStepValue($stepValue): static {
@@ -163,7 +163,7 @@ class PropertyValueSpecification extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getStepValue() {
         return $this->properties['stepValue'];
@@ -173,7 +173,7 @@ class PropertyValueSpecification extends Intangible
      * default is a literal value, for properties that expect an object, it's an ID
      * reference to one of the current values.
      *
-     * @param $defaultValue \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\DataType\Text
+     * @param $defaultValue \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setDefaultValue($defaultValue): static {
@@ -183,7 +183,7 @@ class PropertyValueSpecification extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getDefaultValue() {
         return $this->properties['defaultValue'];
@@ -192,7 +192,7 @@ class PropertyValueSpecification extends Intangible
      * Indicates the name of the PropertyValueSpecification to be used in URL templates
      * and form encoding in a manner analogous to HTML's input@name.
      *
-     * @param $valueName \LengthOfRope\JSONLD\DataType\Text
+     * @param $valueName \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setValueName($valueName): static {
@@ -202,7 +202,7 @@ class PropertyValueSpecification extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getValueName() {
         return $this->properties['valueName'];
@@ -211,7 +211,7 @@ class PropertyValueSpecification extends Intangible
      * Specifies a regular expression for testing literal values according to the HTML
      * spec.
      *
-     * @param $valuePattern \LengthOfRope\JSONLD\DataType\Text
+     * @param $valuePattern \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setValuePattern($valuePattern): static {
@@ -221,7 +221,7 @@ class PropertyValueSpecification extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getValuePattern() {
         return $this->properties['valuePattern'];
@@ -230,7 +230,7 @@ class PropertyValueSpecification extends Intangible
      * Whether the property must be filled in to complete the action.  Default is
      * false.
      *
-     * @param $valueRequired \LengthOfRope\JSONLD\DataType\Boolean
+     * @param $valueRequired \LengthOfRope\JSONLD\DataType\TypeBoolean
      * @return static
      **/
     public function setValueRequired($valueRequired): static {
@@ -240,7 +240,7 @@ class PropertyValueSpecification extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Boolean
+     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean
      **/
     public function getValueRequired() {
         return $this->properties['valueRequired'];

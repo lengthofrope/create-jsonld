@@ -132,7 +132,7 @@ class NutritionInformation extends StructuredValue
     /**
      * The serving size, in terms of the number of volume or mass.
      *
-     * @param $servingSize \LengthOfRope\JSONLD\DataType\Text
+     * @param $servingSize \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setServingSize($servingSize): static {
@@ -142,7 +142,7 @@ class NutritionInformation extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getServingSize() {
         return $this->properties['servingSize'];

@@ -116,7 +116,7 @@ class ParcelDelivery extends Intangible
     /**
      * Shipper tracking number.
      *
-     * @param $trackingNumber \LengthOfRope\JSONLD\DataType\Text
+     * @param $trackingNumber \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setTrackingNumber($trackingNumber): static {
@@ -126,7 +126,7 @@ class ParcelDelivery extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getTrackingNumber() {
         return $this->properties['trackingNumber'];
@@ -152,7 +152,7 @@ class ParcelDelivery extends Intangible
     /**
      * Tracking url for the parcel delivery.
      *
-     * @param $trackingUrl \LengthOfRope\JSONLD\DataType\URL
+     * @param $trackingUrl \LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setTrackingUrl($trackingUrl): static {
@@ -162,7 +162,7 @@ class ParcelDelivery extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getTrackingUrl() {
         return $this->properties['trackingUrl'];
@@ -188,7 +188,7 @@ class ParcelDelivery extends Intangible
     /**
      * The latest date the package may arrive.
      *
-     * @param $expectedArrivalUntil \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
+     * @param $expectedArrivalUntil \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
      * @return static
      **/
     public function setExpectedArrivalUntil($expectedArrivalUntil): static {
@@ -198,7 +198,7 @@ class ParcelDelivery extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
      **/
     public function getExpectedArrivalUntil() {
         return $this->properties['expectedArrivalUntil'];
@@ -244,7 +244,7 @@ class ParcelDelivery extends Intangible
     /**
      * The earliest date the package may arrive.
      *
-     * @param $expectedArrivalFrom \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
+     * @param $expectedArrivalFrom \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
      * @return static
      **/
     public function setExpectedArrivalFrom($expectedArrivalFrom): static {
@@ -254,7 +254,7 @@ class ParcelDelivery extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
+     * @return \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
      **/
     public function getExpectedArrivalFrom() {
         return $this->properties['expectedArrivalFrom'];

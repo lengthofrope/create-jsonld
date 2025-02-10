@@ -79,7 +79,7 @@ class MusicGroup extends PerformingGroup
     /**
      * Genre of the creative work, broadcast channel or group.
      *
-     * @param $genre \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @param $genre \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setGenre($genre): static {
@@ -89,7 +89,7 @@ class MusicGroup extends PerformingGroup
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getGenre() {
         return $this->properties['genre'];

@@ -43,7 +43,7 @@ class BankAccount extends FinancialProduct
     /**
      * The type of a bank account.
      *
-     * @param $bankAccountType \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\DataType\Text
+     * @param $bankAccountType \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setBankAccountType($bankAccountType): static {
@@ -53,7 +53,7 @@ class BankAccount extends FinancialProduct
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getBankAccountType() {
         return $this->properties['bankAccountType'];

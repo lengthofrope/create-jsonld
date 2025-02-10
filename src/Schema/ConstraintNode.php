@@ -53,7 +53,7 @@ class ConstraintNode extends Intangible
      * [[StatisticalVariable]] or other construct that is defined using properties on
      * template-style nodes.
      *
-     * @param $numConstraints \LengthOfRope\JSONLD\DataType\Integer
+     * @param $numConstraints \LengthOfRope\JSONLD\DataType\TypeInteger
      * @return static
      **/
     public function setNumConstraints($numConstraints): static {
@@ -63,7 +63,7 @@ class ConstraintNode extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Integer
+     * @return \LengthOfRope\JSONLD\DataType\TypeInteger
      **/
     public function getNumConstraints() {
         return $this->properties['numConstraints'];
@@ -74,7 +74,7 @@ class ConstraintNode extends Intangible
      * or from other compatible (e.g. RDF) systems such as DataCommons.org or
      * Wikidata.org.
      *
-     * @param $constraintProperty \LengthOfRope\JSONLD\Schema\Property|\LengthOfRope\JSONLD\DataType\URL
+     * @param $constraintProperty \LengthOfRope\JSONLD\Schema\Property|\LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setConstraintProperty($constraintProperty): static {
@@ -84,7 +84,7 @@ class ConstraintNode extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Property|\LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\Schema\Property|\LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getConstraintProperty() {
         return $this->properties['constraintProperty'];

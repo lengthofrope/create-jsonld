@@ -68,7 +68,7 @@ class LoanOrCredit extends FinancialProduct
      * Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and
      * other currency types, e.g. "Ithaca HOUR".
      *
-     * @param $currency \LengthOfRope\JSONLD\DataType\Text
+     * @param $currency \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setCurrency($currency): static {
@@ -78,7 +78,7 @@ class LoanOrCredit extends FinancialProduct
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getCurrency() {
         return $this->properties['currency'];
@@ -86,7 +86,7 @@ class LoanOrCredit extends FinancialProduct
     /**
      * The amount of money.
      *
-     * @param $amount \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\Number
+     * @param $amount \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setAmount($amount): static {
@@ -96,7 +96,7 @@ class LoanOrCredit extends FinancialProduct
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getAmount() {
         return $this->properties['amount'];
@@ -104,7 +104,7 @@ class LoanOrCredit extends FinancialProduct
     /**
      * The type of a loan or credit.
      *
-     * @param $loanType \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @param $loanType \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setLoanType($loanType): static {
@@ -114,7 +114,7 @@ class LoanOrCredit extends FinancialProduct
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getLoanType() {
         return $this->properties['loanType'];
@@ -124,7 +124,7 @@ class LoanOrCredit extends FinancialProduct
      * Recourse is where you still have the opportunity to go back to the borrower for
      * the rest of the money.
      *
-     * @param $recourseLoan \LengthOfRope\JSONLD\DataType\Boolean
+     * @param $recourseLoan \LengthOfRope\JSONLD\DataType\TypeBoolean
      * @return static
      **/
     public function setRecourseLoan($recourseLoan): static {
@@ -134,7 +134,7 @@ class LoanOrCredit extends FinancialProduct
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Boolean
+     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean
      **/
     public function getRecourseLoan() {
         return $this->properties['recourseLoan'];
@@ -143,7 +143,7 @@ class LoanOrCredit extends FinancialProduct
      * Whether the terms for payment of interest can be renegotiated during the life of
      * the loan.
      *
-     * @param $renegotiableLoan \LengthOfRope\JSONLD\DataType\Boolean
+     * @param $renegotiableLoan \LengthOfRope\JSONLD\DataType\TypeBoolean
      * @return static
      **/
     public function setRenegotiableLoan($renegotiableLoan): static {
@@ -153,7 +153,7 @@ class LoanOrCredit extends FinancialProduct
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Boolean
+     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean
      **/
     public function getRenegotiableLoan() {
         return $this->properties['renegotiableLoan'];
@@ -201,7 +201,7 @@ class LoanOrCredit extends FinancialProduct
      * Assets required to secure loan or credit repayments. It may take form of third
      * party pledge, goods, financial instruments (cash, securities, etc.)
      *
-     * @param $requiredCollateral \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\DataType\Text
+     * @param $requiredCollateral \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setRequiredCollateral($requiredCollateral): static {
@@ -211,7 +211,7 @@ class LoanOrCredit extends FinancialProduct
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getRequiredCollateral() {
         return $this->properties['requiredCollateral'];

@@ -43,7 +43,7 @@ class LodgingBusiness extends LocalBusiness
      * Indicates whether pets are allowed to enter the accommodation or lodging
      * business. More detailed information can be put in a text value.
      *
-     * @param $petsAllowed \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Boolean
+     * @param $petsAllowed \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeBoolean
      * @return static
      **/
     public function setPetsAllowed($petsAllowed): static {
@@ -53,7 +53,7 @@ class LodgingBusiness extends LocalBusiness
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Boolean
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeBoolean
      **/
     public function getPetsAllowed() {
         return $this->properties['petsAllowed'];
@@ -82,7 +82,7 @@ class LodgingBusiness extends LocalBusiness
     /**
      * The latest someone may check out of a lodging establishment.
      *
-     * @param $checkoutTime \LengthOfRope\JSONLD\DataType\Time|\LengthOfRope\JSONLD\DataType\DateTime
+     * @param $checkoutTime \LengthOfRope\JSONLD\DataType\TypeTime|\LengthOfRope\JSONLD\DataType\TypeDateTime
      * @return static
      **/
     public function setCheckoutTime($checkoutTime): static {
@@ -92,7 +92,7 @@ class LodgingBusiness extends LocalBusiness
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Time|\LengthOfRope\JSONLD\DataType\DateTime
+     * @return \LengthOfRope\JSONLD\DataType\TypeTime|\LengthOfRope\JSONLD\DataType\TypeDateTime
      **/
     public function getCheckoutTime() {
         return $this->properties['checkoutTime'];
@@ -100,7 +100,7 @@ class LodgingBusiness extends LocalBusiness
     /**
      * The earliest someone may check into a lodging establishment.
      *
-     * @param $checkinTime \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Time
+     * @param $checkinTime \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeTime
      * @return static
      **/
     public function setCheckinTime($checkinTime): static {
@@ -110,7 +110,7 @@ class LodgingBusiness extends LocalBusiness
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Time
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeTime
      **/
     public function getCheckinTime() {
         return $this->properties['checkinTime'];
@@ -121,7 +121,7 @@ class LodgingBusiness extends LocalBusiness
      * Typical unit code(s): ROM for room or C62 for no unit. The type of room can be
      * put in the unitText property of the QuantitativeValue.
      *
-     * @param $numberOfRooms \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\Number
+     * @param $numberOfRooms \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setNumberOfRooms($numberOfRooms): static {
@@ -131,7 +131,7 @@ class LodgingBusiness extends LocalBusiness
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getNumberOfRooms() {
         return $this->properties['numberOfRooms'];
@@ -161,7 +161,7 @@ class LodgingBusiness extends LocalBusiness
      * of the language codes from the [IETF BCP 47
      * standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].
      *
-     * @param $availableLanguage \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Language
+     * @param $availableLanguage \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Language
      * @return static
      **/
     public function setAvailableLanguage($availableLanguage): static {
@@ -171,7 +171,7 @@ class LodgingBusiness extends LocalBusiness
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Language
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Language
      **/
     public function getAvailableLanguage() {
         return $this->properties['availableLanguage'];

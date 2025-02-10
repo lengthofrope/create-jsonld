@@ -49,7 +49,7 @@ class MonetaryAmountDistribution extends QuantitativeValueDistribution
      * Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and
      * other currency types, e.g. "Ithaca HOUR".
      *
-     * @param $currency \LengthOfRope\JSONLD\DataType\Text
+     * @param $currency \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setCurrency($currency): static {
@@ -59,7 +59,7 @@ class MonetaryAmountDistribution extends QuantitativeValueDistribution
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getCurrency() {
         return $this->properties['currency'];

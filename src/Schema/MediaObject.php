@@ -64,7 +64,7 @@ class MediaObject extends CreativeWork
     /**
      * File size in (mega/kilo)bytes.
      *
-     * @param $contentSize \LengthOfRope\JSONLD\DataType\Text
+     * @param $contentSize \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setContentSize($contentSize): static {
@@ -74,7 +74,7 @@ class MediaObject extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getContentSize() {
         return $this->properties['contentSize'];
@@ -87,7 +87,7 @@ class MediaObject extends CreativeWork
      * See also [[eligibleRegion]].
      *
      *
-     * @param $ineligibleRegion \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\GeoShape
+     * @param $ineligibleRegion \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\GeoShape
      * @return static
      **/
     public function setIneligibleRegion($ineligibleRegion): static {
@@ -97,7 +97,7 @@ class MediaObject extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\GeoShape
+     * @return \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\GeoShape
      **/
     public function getIneligibleRegion() {
         return $this->properties['ineligibleRegion'];
@@ -115,7 +115,7 @@ class MediaObject extends CreativeWork
      * Unregistered or niche encoding and file formats can be indicated instead via the
      * most appropriate URL, e.g. defining Web page or a Wikipedia/Wikidata entry.
      *
-     * @param $encodingFormat \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\DataType\Text
+     * @param $encodingFormat \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setEncodingFormat($encodingFormat): static {
@@ -125,7 +125,7 @@ class MediaObject extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getEncodingFormat() {
         return $this->properties['encodingFormat'];
@@ -141,7 +141,7 @@ class MediaObject extends CreativeWork
      * describing dates with times. This situation may be clarified in future
      * revisions.
      *
-     * @param $endTime \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Time
+     * @param $endTime \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeTime
      * @return static
      **/
     public function setEndTime($endTime): static {
@@ -151,7 +151,7 @@ class MediaObject extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Time
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeTime
      **/
     public function getEndTime() {
         return $this->properties['endTime'];
@@ -160,7 +160,7 @@ class MediaObject extends CreativeWork
      * Date (including time if available) when this media object was uploaded to this
      * site.
      *
-     * @param $uploadDate \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
+     * @param $uploadDate \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
      * @return static
      **/
     public function setUploadDate($uploadDate): static {
@@ -170,7 +170,7 @@ class MediaObject extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
+     * @return \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
      **/
     public function getUploadDate() {
         return $this->properties['uploadDate'];
@@ -178,7 +178,7 @@ class MediaObject extends CreativeWork
     /**
      * Actual bytes of the media object, for example the image file or video file.
      *
-     * @param $contentUrl \LengthOfRope\JSONLD\DataType\URL
+     * @param $contentUrl \LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setContentUrl($contentUrl): static {
@@ -188,7 +188,7 @@ class MediaObject extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getContentUrl() {
         return $this->properties['contentUrl'];
@@ -204,7 +204,7 @@ class MediaObject extends CreativeWork
      * describing dates with times. This situation may be clarified in future
      * revisions.
      *
-     * @param $startTime \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Time
+     * @param $startTime \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeTime
      * @return static
      **/
     public function setStartTime($startTime): static {
@@ -214,7 +214,7 @@ class MediaObject extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Time
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeTime
      **/
     public function getStartTime() {
         return $this->properties['startTime'];
@@ -300,7 +300,7 @@ class MediaObject extends CreativeWork
      * the item. For example, a zero-length input has value
      * 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'.
      *
-     * @param $sha256 \LengthOfRope\JSONLD\DataType\Text
+     * @param $sha256 \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setSha256($sha256): static {
@@ -310,7 +310,7 @@ class MediaObject extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getSha256() {
         return $this->properties['sha256'];
@@ -336,7 +336,7 @@ class MediaObject extends CreativeWork
     /**
      * The bitrate of the media object.
      *
-     * @param $bitrate \LengthOfRope\JSONLD\DataType\Text
+     * @param $bitrate \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setBitrate($bitrate): static {
@@ -346,7 +346,7 @@ class MediaObject extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getBitrate() {
         return $this->properties['bitrate'];
@@ -356,7 +356,7 @@ class MediaObject extends CreativeWork
      * information in the ```src``` element of an ```embed``` tag and should not be the
      * same as the content of the ```loc``` tag.
      *
-     * @param $embedUrl \LengthOfRope\JSONLD\DataType\URL
+     * @param $embedUrl \LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setEmbedUrl($embedUrl): static {
@@ -366,7 +366,7 @@ class MediaObject extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getEmbedUrl() {
         return $this->properties['embedUrl'];
@@ -376,7 +376,7 @@ class MediaObject extends CreativeWork
      * Allowed values are ```true``` or ```false``` (note that an earlier version had
      * 'yes', 'no').
      *
-     * @param $requiresSubscription \LengthOfRope\JSONLD\DataType\Boolean|\LengthOfRope\JSONLD\Schema\MediaSubscription
+     * @param $requiresSubscription \LengthOfRope\JSONLD\DataType\TypeBoolean|\LengthOfRope\JSONLD\Schema\MediaSubscription
      * @return static
      **/
     public function setRequiresSubscription($requiresSubscription): static {
@@ -386,7 +386,7 @@ class MediaObject extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Boolean|\LengthOfRope\JSONLD\Schema\MediaSubscription
+     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean|\LengthOfRope\JSONLD\Schema\MediaSubscription
      **/
     public function getRequiresSubscription() {
         return $this->properties['requiresSubscription'];
@@ -394,7 +394,7 @@ class MediaObject extends CreativeWork
     /**
      * Player type required&#x2014;for example, Flash or Silverlight.
      *
-     * @param $playerType \LengthOfRope\JSONLD\DataType\Text
+     * @param $playerType \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setPlayerType($playerType): static {
@@ -404,7 +404,7 @@ class MediaObject extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getPlayerType() {
         return $this->properties['playerType'];

@@ -44,7 +44,7 @@ class Recipe extends HowTo
     /**
      * The method of cooking, such as Frying, Steaming, ...
      *
-     * @param $cookingMethod \LengthOfRope\JSONLD\DataType\Text
+     * @param $cookingMethod \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setCookingMethod($cookingMethod): static {
@@ -54,7 +54,7 @@ class Recipe extends HowTo
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getCookingMethod() {
         return $this->properties['cookingMethod'];
@@ -101,7 +101,7 @@ class Recipe extends HowTo
      * The quantity produced by the recipe (for example, number of people served,
      * number of servings, etc).
      *
-     * @param $recipeYield \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\Text
+     * @param $recipeYield \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setRecipeYield($recipeYield): static {
@@ -111,7 +111,7 @@ class Recipe extends HowTo
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getRecipeYield() {
         return $this->properties['recipeYield'];
@@ -119,7 +119,7 @@ class Recipe extends HowTo
     /**
      * A single ingredient used in the recipe, e.g. sugar, flour or garlic.
      *
-     * @param $ingredients \LengthOfRope\JSONLD\DataType\Text
+     * @param $ingredients \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setIngredients($ingredients): static {
@@ -129,7 +129,7 @@ class Recipe extends HowTo
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getIngredients() {
         return $this->properties['ingredients'];
@@ -138,7 +138,7 @@ class Recipe extends HowTo
      * A step in making the recipe, in the form of a single item (document, video,
      * etc.) or an ordered list with HowToStep and/or HowToSection items.
      *
-     * @param $recipeInstructions \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\ItemList
+     * @param $recipeInstructions \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\ItemList
      * @return static
      **/
     public function setRecipeInstructions($recipeInstructions): static {
@@ -148,7 +148,7 @@ class Recipe extends HowTo
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\ItemList
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\ItemList
      **/
     public function getRecipeInstructions() {
         return $this->properties['recipeInstructions'];
@@ -174,7 +174,7 @@ class Recipe extends HowTo
     /**
      * The category of the recipe—for example, appetizer, entree, etc.
      *
-     * @param $recipeCategory \LengthOfRope\JSONLD\DataType\Text
+     * @param $recipeCategory \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setRecipeCategory($recipeCategory): static {
@@ -184,7 +184,7 @@ class Recipe extends HowTo
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getRecipeCategory() {
         return $this->properties['recipeCategory'];
@@ -192,7 +192,7 @@ class Recipe extends HowTo
     /**
      * A single ingredient used in the recipe, e.g. sugar, flour or garlic.
      *
-     * @param $recipeIngredient \LengthOfRope\JSONLD\DataType\Text
+     * @param $recipeIngredient \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setRecipeIngredient($recipeIngredient): static {
@@ -202,7 +202,7 @@ class Recipe extends HowTo
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getRecipeIngredient() {
         return $this->properties['recipeIngredient'];
@@ -210,7 +210,7 @@ class Recipe extends HowTo
     /**
      * The cuisine of the recipe (for example, French or Ethiopian).
      *
-     * @param $recipeCuisine \LengthOfRope\JSONLD\DataType\Text
+     * @param $recipeCuisine \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setRecipeCuisine($recipeCuisine): static {
@@ -220,7 +220,7 @@ class Recipe extends HowTo
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getRecipeCuisine() {
         return $this->properties['recipeCuisine'];

@@ -136,7 +136,7 @@ class Clip extends CreativeWork
     /**
      * Position of the clip within an ordered group of clips.
      *
-     * @param $clipNumber \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Integer
+     * @param $clipNumber \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeInteger
      * @return static
      **/
     public function setClipNumber($clipNumber): static {
@@ -146,7 +146,7 @@ class Clip extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Integer
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeInteger
      **/
     public function getClipNumber() {
         return $this->properties['clipNumber'];
@@ -155,7 +155,7 @@ class Clip extends CreativeWork
      * The end time of the clip expressed as the number of seconds from the beginning
      * of the work.
      *
-     * @param $endOffset \LengthOfRope\JSONLD\Schema\HyperTocEntry|\LengthOfRope\JSONLD\DataType\Number
+     * @param $endOffset \LengthOfRope\JSONLD\Schema\HyperTocEntry|\LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setEndOffset($endOffset): static {
@@ -165,7 +165,7 @@ class Clip extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\HyperTocEntry|\LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\Schema\HyperTocEntry|\LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getEndOffset() {
         return $this->properties['endOffset'];
@@ -192,7 +192,7 @@ class Clip extends CreativeWork
      * The start time of the clip expressed as the number of seconds from the beginning
      * of the work.
      *
-     * @param $startOffset \LengthOfRope\JSONLD\Schema\HyperTocEntry|\LengthOfRope\JSONLD\DataType\Number
+     * @param $startOffset \LengthOfRope\JSONLD\Schema\HyperTocEntry|\LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setStartOffset($startOffset): static {
@@ -202,7 +202,7 @@ class Clip extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\HyperTocEntry|\LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\Schema\HyperTocEntry|\LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getStartOffset() {
         return $this->properties['startOffset'];

@@ -43,7 +43,7 @@ class Report extends Article
      * The number or other unique designator assigned to a Report by the publishing
      * organization.
      *
-     * @param $reportNumber \LengthOfRope\JSONLD\DataType\Text
+     * @param $reportNumber \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setReportNumber($reportNumber): static {
@@ -53,7 +53,7 @@ class Report extends Article
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getReportNumber() {
         return $this->properties['reportNumber'];

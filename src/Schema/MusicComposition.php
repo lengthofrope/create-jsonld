@@ -96,7 +96,7 @@ class MusicComposition extends CreativeWork
     /**
      * The International Standard Musical Work Code for the composition.
      *
-     * @param $iswcCode \LengthOfRope\JSONLD\DataType\Text
+     * @param $iswcCode \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setIswcCode($iswcCode): static {
@@ -106,7 +106,7 @@ class MusicComposition extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getIswcCode() {
         return $this->properties['iswcCode'];
@@ -168,7 +168,7 @@ class MusicComposition extends CreativeWork
     /**
      * The type of composition (e.g. overture, sonata, symphony, etc.).
      *
-     * @param $musicCompositionForm \LengthOfRope\JSONLD\DataType\Text
+     * @param $musicCompositionForm \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setMusicCompositionForm($musicCompositionForm): static {
@@ -178,7 +178,7 @@ class MusicComposition extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getMusicCompositionForm() {
         return $this->properties['musicCompositionForm'];
@@ -186,7 +186,7 @@ class MusicComposition extends CreativeWork
     /**
      * The key, mode, or scale this composition uses.
      *
-     * @param $musicalKey \LengthOfRope\JSONLD\DataType\Text
+     * @param $musicalKey \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setMusicalKey($musicalKey): static {
@@ -196,7 +196,7 @@ class MusicComposition extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getMusicalKey() {
         return $this->properties['musicalKey'];

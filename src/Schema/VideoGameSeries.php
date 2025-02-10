@@ -64,7 +64,7 @@ class VideoGameSeries extends CreativeWorkSeries
      * href="http://en.wikipedia.org/wiki/Category:Video_game_platforms">video
      * games</a>.
      *
-     * @param $gamePlatform \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @param $gamePlatform \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setGamePlatform($gamePlatform): static {
@@ -74,7 +74,7 @@ class VideoGameSeries extends CreativeWorkSeries
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getGamePlatform() {
         return $this->properties['gamePlatform'];
@@ -137,7 +137,7 @@ class VideoGameSeries extends CreativeWorkSeries
     /**
      * The number of seasons in this series.
      *
-     * @param $numberOfSeasons \LengthOfRope\JSONLD\DataType\Integer
+     * @param $numberOfSeasons \LengthOfRope\JSONLD\DataType\TypeInteger
      * @return static
      **/
     public function setNumberOfSeasons($numberOfSeasons): static {
@@ -147,7 +147,7 @@ class VideoGameSeries extends CreativeWorkSeries
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Integer
+     * @return \LengthOfRope\JSONLD\DataType\TypeInteger
      **/
     public function getNumberOfSeasons() {
         return $this->properties['numberOfSeasons'];
@@ -284,7 +284,7 @@ class VideoGameSeries extends CreativeWorkSeries
     /**
      * Real or fictional location of the game (or part of game).
      *
-     * @param $gameLocation \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\PostalAddress|\LengthOfRope\JSONLD\Schema\Place
+     * @param $gameLocation \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\PostalAddress|\LengthOfRope\JSONLD\Schema\Place
      * @return static
      **/
     public function setGameLocation($gameLocation): static {
@@ -294,7 +294,7 @@ class VideoGameSeries extends CreativeWorkSeries
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\PostalAddress|\LengthOfRope\JSONLD\Schema\Place
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\PostalAddress|\LengthOfRope\JSONLD\Schema\Place
      **/
     public function getGameLocation() {
         return $this->properties['gameLocation'];
@@ -302,7 +302,7 @@ class VideoGameSeries extends CreativeWorkSeries
     /**
      * A season in a media series.
      *
-     * @param $season \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\CreativeWorkSeason
+     * @param $season \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\CreativeWorkSeason
      * @return static
      **/
     public function setSeason($season): static {
@@ -312,7 +312,7 @@ class VideoGameSeries extends CreativeWorkSeries
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\CreativeWorkSeason
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\CreativeWorkSeason
      **/
     public function getSeason() {
         return $this->properties['season'];
@@ -397,7 +397,7 @@ class VideoGameSeries extends CreativeWorkSeries
     /**
      * The number of episodes in this season or series.
      *
-     * @param $numberOfEpisodes \LengthOfRope\JSONLD\DataType\Integer
+     * @param $numberOfEpisodes \LengthOfRope\JSONLD\DataType\TypeInteger
      * @return static
      **/
     public function setNumberOfEpisodes($numberOfEpisodes): static {
@@ -407,7 +407,7 @@ class VideoGameSeries extends CreativeWorkSeries
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Integer
+     * @return \LengthOfRope\JSONLD\DataType\TypeInteger
      **/
     public function getNumberOfEpisodes() {
         return $this->properties['numberOfEpisodes'];

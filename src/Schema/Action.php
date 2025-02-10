@@ -93,7 +93,7 @@ class Action extends Thing
      * describing dates with times. This situation may be clarified in future
      * revisions.
      *
-     * @param $endTime \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Time
+     * @param $endTime \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeTime
      * @return static
      **/
     public function setEndTime($endTime): static {
@@ -103,7 +103,7 @@ class Action extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Time
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeTime
      **/
     public function getEndTime() {
         return $this->properties['endTime'];
@@ -149,7 +149,7 @@ class Action extends Thing
      * The location of, for example, where an event is happening, where an organization
      * is located, or where an action takes place.
      *
-     * @param $location \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\VirtualLocation|\LengthOfRope\JSONLD\Schema\PostalAddress
+     * @param $location \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\VirtualLocation|\LengthOfRope\JSONLD\Schema\PostalAddress
      * @return static
      **/
     public function setLocation($location): static {
@@ -159,7 +159,7 @@ class Action extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\VirtualLocation|\LengthOfRope\JSONLD\Schema\PostalAddress
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\VirtualLocation|\LengthOfRope\JSONLD\Schema\PostalAddress
      **/
     public function getLocation() {
         return $this->properties['location'];
@@ -193,7 +193,7 @@ class Action extends Thing
      * describing dates with times. This situation may be clarified in future
      * revisions.
      *
-     * @param $startTime \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Time
+     * @param $startTime \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeTime
      * @return static
      **/
     public function setStartTime($startTime): static {
@@ -203,7 +203,7 @@ class Action extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Time
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeTime
      **/
     public function getStartTime() {
         return $this->properties['startTime'];
@@ -211,7 +211,7 @@ class Action extends Thing
     /**
      * Indicates a target EntryPoint, or url, for an Action.
      *
-     * @param $target \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\EntryPoint
+     * @param $target \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\EntryPoint
      * @return static
      **/
     public function setTarget($target): static {
@@ -221,7 +221,7 @@ class Action extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\EntryPoint
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\EntryPoint
      **/
     public function getTarget() {
         return $this->properties['target'];

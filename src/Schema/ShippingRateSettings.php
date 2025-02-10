@@ -111,7 +111,7 @@ class ShippingRateSettings extends StructuredValue
      * [[DeliveryTimeSettings]]) or shippingLabel (for [[ShippingRateSettings]]), since
      * this property is for use with unlabelled settings.
      *
-     * @param $isUnlabelledFallback \LengthOfRope\JSONLD\DataType\Boolean
+     * @param $isUnlabelledFallback \LengthOfRope\JSONLD\DataType\TypeBoolean
      * @return static
      **/
     public function setIsUnlabelledFallback($isUnlabelledFallback): static {
@@ -121,7 +121,7 @@ class ShippingRateSettings extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Boolean
+     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean
      **/
     public function getIsUnlabelledFallback() {
         return $this->properties['isUnlabelledFallback'];
@@ -130,7 +130,7 @@ class ShippingRateSettings extends StructuredValue
      * Indicates when shipping to a particular [[shippingDestination]] is not
      * available.
      *
-     * @param $doesNotShip \LengthOfRope\JSONLD\DataType\Boolean
+     * @param $doesNotShip \LengthOfRope\JSONLD\DataType\TypeBoolean
      * @return static
      **/
     public function setDoesNotShip($doesNotShip): static {
@@ -140,7 +140,7 @@ class ShippingRateSettings extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Boolean
+     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean
      **/
     public function getDoesNotShip() {
         return $this->properties['doesNotShip'];
@@ -149,7 +149,7 @@ class ShippingRateSettings extends StructuredValue
      * Label to match an [[OfferShippingDetails]] with a [[ShippingRateSettings]]
      * (within the context of a [[shippingSettingsLink]] cross-reference).
      *
-     * @param $shippingLabel \LengthOfRope\JSONLD\DataType\Text
+     * @param $shippingLabel \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setShippingLabel($shippingLabel): static {
@@ -159,7 +159,7 @@ class ShippingRateSettings extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getShippingLabel() {
         return $this->properties['shippingLabel'];

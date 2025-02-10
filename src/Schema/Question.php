@@ -43,7 +43,7 @@ class Question extends Comment
     /**
      * The number of answers this question has received.
      *
-     * @param $answerCount \LengthOfRope\JSONLD\DataType\Integer
+     * @param $answerCount \LengthOfRope\JSONLD\DataType\TypeInteger
      * @return static
      **/
     public function setAnswerCount($answerCount): static {
@@ -53,7 +53,7 @@ class Question extends Comment
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Integer
+     * @return \LengthOfRope\JSONLD\DataType\TypeInteger
      **/
     public function getAnswerCount() {
         return $this->properties['answerCount'];
@@ -104,7 +104,7 @@ class Question extends Comment
      * indicates the format of question being given. Example: "Multiple choice", "Open
      * ended", "Flashcard".
      *
-     * @param $eduQuestionType \LengthOfRope\JSONLD\DataType\Text
+     * @param $eduQuestionType \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setEduQuestionType($eduQuestionType): static {
@@ -114,7 +114,7 @@ class Question extends Comment
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getEduQuestionType() {
         return $this->properties['eduQuestionType'];

@@ -56,7 +56,7 @@ class AggregateOffer extends Offer
      * * Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal
      * point. Avoid using these symbols as a readability separator.
      *
-     * @param $lowPrice \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Number
+     * @param $lowPrice \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setLowPrice($lowPrice): static {
@@ -66,7 +66,7 @@ class AggregateOffer extends Offer
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getLowPrice() {
         return $this->properties['lowPrice'];
@@ -81,7 +81,7 @@ class AggregateOffer extends Offer
      * * Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal
      * point. Avoid using these symbols as a readability separator.
      *
-     * @param $highPrice \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Number
+     * @param $highPrice \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setHighPrice($highPrice): static {
@@ -91,7 +91,7 @@ class AggregateOffer extends Offer
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getHighPrice() {
         return $this->properties['highPrice'];
@@ -124,7 +124,7 @@ class AggregateOffer extends Offer
     /**
      * The number of offers for the product.
      *
-     * @param $offerCount \LengthOfRope\JSONLD\DataType\Integer
+     * @param $offerCount \LengthOfRope\JSONLD\DataType\TypeInteger
      * @return static
      **/
     public function setOfferCount($offerCount): static {
@@ -134,7 +134,7 @@ class AggregateOffer extends Offer
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Integer
+     * @return \LengthOfRope\JSONLD\DataType\TypeInteger
      **/
     public function getOfferCount() {
         return $this->properties['offerCount'];

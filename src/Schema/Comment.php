@@ -66,7 +66,7 @@ class Comment extends CreativeWork
      * The number of downvotes this question, answer or comment has received from the
      * community.
      *
-     * @param $downvoteCount \LengthOfRope\JSONLD\DataType\Integer
+     * @param $downvoteCount \LengthOfRope\JSONLD\DataType\TypeInteger
      * @return static
      **/
     public function setDownvoteCount($downvoteCount): static {
@@ -76,7 +76,7 @@ class Comment extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Integer
+     * @return \LengthOfRope\JSONLD\DataType\TypeInteger
      **/
     public function getDownvoteCount() {
         return $this->properties['downvoteCount'];
@@ -104,7 +104,7 @@ class Comment extends CreativeWork
      * The number of upvotes this question, answer or comment has received from the
      * community.
      *
-     * @param $upvoteCount \LengthOfRope\JSONLD\DataType\Integer
+     * @param $upvoteCount \LengthOfRope\JSONLD\DataType\TypeInteger
      * @return static
      **/
     public function setUpvoteCount($upvoteCount): static {
@@ -114,7 +114,7 @@ class Comment extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Integer
+     * @return \LengthOfRope\JSONLD\DataType\TypeInteger
      **/
     public function getUpvoteCount() {
         return $this->properties['upvoteCount'];

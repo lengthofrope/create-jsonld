@@ -136,7 +136,7 @@ class MusicRelease extends MusicPlaylist
     /**
      * The catalog number for the release.
      *
-     * @param $catalogNumber \LengthOfRope\JSONLD\DataType\Text
+     * @param $catalogNumber \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setCatalogNumber($catalogNumber): static {
@@ -146,7 +146,7 @@ class MusicRelease extends MusicPlaylist
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getCatalogNumber() {
         return $this->properties['catalogNumber'];

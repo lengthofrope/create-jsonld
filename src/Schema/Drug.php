@@ -65,7 +65,7 @@ class Drug extends Substance
      * Any precaution, guidance, contraindication, etc. related to this drug's use
      * during pregnancy.
      *
-     * @param $pregnancyWarning \LengthOfRope\JSONLD\DataType\Text
+     * @param $pregnancyWarning \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setPregnancyWarning($pregnancyWarning): static {
@@ -75,7 +75,7 @@ class Drug extends Substance
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getPregnancyWarning() {
         return $this->properties['pregnancyWarning'];
@@ -102,7 +102,7 @@ class Drug extends Substance
      * The drug or supplement's legal status, including any controlled substance
      * schedules that apply.
      *
-     * @param $legalStatus \LengthOfRope\JSONLD\Schema\DrugLegalStatus|\LengthOfRope\JSONLD\Schema\MedicalEnumeration|\LengthOfRope\JSONLD\DataType\Text
+     * @param $legalStatus \LengthOfRope\JSONLD\Schema\DrugLegalStatus|\LengthOfRope\JSONLD\Schema\MedicalEnumeration|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setLegalStatus($legalStatus): static {
@@ -112,7 +112,7 @@ class Drug extends Substance
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\DrugLegalStatus|\LengthOfRope\JSONLD\Schema\MedicalEnumeration|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\DrugLegalStatus|\LengthOfRope\JSONLD\Schema\MedicalEnumeration|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getLegalStatus() {
         return $this->properties['legalStatus'];
@@ -122,7 +122,7 @@ class Drug extends Substance
      * concentration (pharmacokinetics, pK) and biological effects (pharmacodynamics,
      * pD).
      *
-     * @param $clinicalPharmacology \LengthOfRope\JSONLD\DataType\Text
+     * @param $clinicalPharmacology \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setClinicalPharmacology($clinicalPharmacology): static {
@@ -132,7 +132,7 @@ class Drug extends Substance
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getClinicalPharmacology() {
         return $this->properties['clinicalPharmacology'];
@@ -141,7 +141,7 @@ class Drug extends Substance
      * A dosage form in which this drug/supplement is available, e.g. 'tablet',
      * 'suspension', 'injection'.
      *
-     * @param $dosageForm \LengthOfRope\JSONLD\DataType\Text
+     * @param $dosageForm \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setDosageForm($dosageForm): static {
@@ -151,7 +151,7 @@ class Drug extends Substance
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getDosageForm() {
         return $this->properties['dosageForm'];
@@ -159,7 +159,7 @@ class Drug extends Substance
     /**
      * True if the drug is available in a generic form (regardless of name).
      *
-     * @param $isAvailableGenerically \LengthOfRope\JSONLD\DataType\Boolean
+     * @param $isAvailableGenerically \LengthOfRope\JSONLD\DataType\TypeBoolean
      * @return static
      **/
     public function setIsAvailableGenerically($isAvailableGenerically): static {
@@ -169,7 +169,7 @@ class Drug extends Substance
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Boolean
+     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean
      **/
     public function getIsAvailableGenerically() {
         return $this->properties['isAvailableGenerically'];
@@ -178,7 +178,7 @@ class Drug extends Substance
      * Indicates the status of drug prescription, e.g. local catalogs classifications
      * or whether the drug is available by prescription or over-the-counter, etc.
      *
-     * @param $prescriptionStatus \LengthOfRope\JSONLD\Schema\DrugPrescriptionStatus|\LengthOfRope\JSONLD\DataType\Text
+     * @param $prescriptionStatus \LengthOfRope\JSONLD\Schema\DrugPrescriptionStatus|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setPrescriptionStatus($prescriptionStatus): static {
@@ -188,7 +188,7 @@ class Drug extends Substance
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\DrugPrescriptionStatus|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\DrugPrescriptionStatus|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getPrescriptionStatus() {
         return $this->properties['prescriptionStatus'];
@@ -197,7 +197,7 @@ class Drug extends Substance
      * Any precaution, guidance, contraindication, etc. related to this drug's use by
      * breastfeeding mothers.
      *
-     * @param $breastfeedingWarning \LengthOfRope\JSONLD\DataType\Text
+     * @param $breastfeedingWarning \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setBreastfeedingWarning($breastfeedingWarning): static {
@@ -207,7 +207,7 @@ class Drug extends Substance
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getBreastfeedingWarning() {
         return $this->properties['breastfeedingWarning'];
@@ -216,7 +216,7 @@ class Drug extends Substance
      * Any precaution, guidance, contraindication, etc. related to consumption of
      * alcohol while taking this drug.
      *
-     * @param $alcoholWarning \LengthOfRope\JSONLD\DataType\Text
+     * @param $alcoholWarning \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setAlcoholWarning($alcoholWarning): static {
@@ -226,7 +226,7 @@ class Drug extends Substance
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getAlcoholWarning() {
         return $this->properties['alcoholWarning'];
@@ -254,7 +254,7 @@ class Drug extends Substance
      * The specific biochemical interaction through which this drug or supplement
      * produces its pharmacological effect.
      *
-     * @param $mechanismOfAction \LengthOfRope\JSONLD\DataType\Text
+     * @param $mechanismOfAction \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setMechanismOfAction($mechanismOfAction): static {
@@ -264,7 +264,7 @@ class Drug extends Substance
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getMechanismOfAction() {
         return $this->properties['mechanismOfAction'];
@@ -272,7 +272,7 @@ class Drug extends Substance
     /**
      * True if this item's name is a proprietary/brand name (vs. generic name).
      *
-     * @param $isProprietary \LengthOfRope\JSONLD\DataType\Boolean
+     * @param $isProprietary \LengthOfRope\JSONLD\DataType\TypeBoolean
      * @return static
      **/
     public function setIsProprietary($isProprietary): static {
@@ -282,7 +282,7 @@ class Drug extends Substance
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Boolean
+     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean
      **/
     public function getIsProprietary() {
         return $this->properties['isProprietary'];
@@ -312,7 +312,7 @@ class Drug extends Substance
      * concentration (pharmacokinetics, pK) and biological effects (pharmacodynamics,
      * pD).
      *
-     * @param $clincalPharmacology \LengthOfRope\JSONLD\DataType\Text
+     * @param $clincalPharmacology \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setClincalPharmacology($clincalPharmacology): static {
@@ -322,7 +322,7 @@ class Drug extends Substance
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getClincalPharmacology() {
         return $this->properties['clincalPharmacology'];
@@ -331,7 +331,7 @@ class Drug extends Substance
      * Any information related to overdose on a drug, including signs or symptoms,
      * treatments, contact information for emergency response.
      *
-     * @param $overdosage \LengthOfRope\JSONLD\DataType\Text
+     * @param $overdosage \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setOverdosage($overdosage): static {
@@ -341,7 +341,7 @@ class Drug extends Substance
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getOverdosage() {
         return $this->properties['overdosage'];
@@ -350,7 +350,7 @@ class Drug extends Substance
      * Any precaution, guidance, contraindication, etc. related to consumption of
      * specific foods while taking this drug.
      *
-     * @param $foodWarning \LengthOfRope\JSONLD\DataType\Text
+     * @param $foodWarning \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setFoodWarning($foodWarning): static {
@@ -360,7 +360,7 @@ class Drug extends Substance
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getFoodWarning() {
         return $this->properties['foodWarning'];
@@ -404,7 +404,7 @@ class Drug extends Substance
     /**
      * Any FDA or other warnings about the drug (text or URL).
      *
-     * @param $warning \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @param $warning \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setWarning($warning): static {
@@ -414,7 +414,7 @@ class Drug extends Substance
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getWarning() {
         return $this->properties['warning'];
@@ -422,7 +422,7 @@ class Drug extends Substance
     /**
      * A route by which this drug may be administered, e.g. 'oral'.
      *
-     * @param $administrationRoute \LengthOfRope\JSONLD\DataType\Text
+     * @param $administrationRoute \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setAdministrationRoute($administrationRoute): static {
@@ -432,7 +432,7 @@ class Drug extends Substance
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getAdministrationRoute() {
         return $this->properties['administrationRoute'];
@@ -440,7 +440,7 @@ class Drug extends Substance
     /**
      * Proprietary name given to the diet plan, typically by its originator or creator.
      *
-     * @param $proprietaryName \LengthOfRope\JSONLD\DataType\Text
+     * @param $proprietaryName \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setProprietaryName($proprietaryName): static {
@@ -450,7 +450,7 @@ class Drug extends Substance
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getProprietaryName() {
         return $this->properties['proprietaryName'];
@@ -458,7 +458,7 @@ class Drug extends Substance
     /**
      * Link to prescribing information for the drug.
      *
-     * @param $prescribingInfo \LengthOfRope\JSONLD\DataType\URL
+     * @param $prescribingInfo \LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setPrescribingInfo($prescribingInfo): static {
@@ -468,7 +468,7 @@ class Drug extends Substance
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getPrescribingInfo() {
         return $this->properties['prescribingInfo'];
@@ -495,7 +495,7 @@ class Drug extends Substance
     /**
      * The generic name of this drug or supplement.
      *
-     * @param $nonProprietaryName \LengthOfRope\JSONLD\DataType\Text
+     * @param $nonProprietaryName \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setNonProprietaryName($nonProprietaryName): static {
@@ -505,7 +505,7 @@ class Drug extends Substance
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getNonProprietaryName() {
         return $this->properties['nonProprietaryName'];
@@ -513,7 +513,7 @@ class Drug extends Substance
     /**
      * The unit in which the drug is measured, e.g. '5 mg tablet'.
      *
-     * @param $drugUnit \LengthOfRope\JSONLD\DataType\Text
+     * @param $drugUnit \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setDrugUnit($drugUnit): static {
@@ -523,7 +523,7 @@ class Drug extends Substance
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getDrugUnit() {
         return $this->properties['drugUnit'];
@@ -531,7 +531,7 @@ class Drug extends Substance
     /**
      * An active ingredient, typically chemical compounds and/or biologic substances.
      *
-     * @param $activeIngredient \LengthOfRope\JSONLD\DataType\Text
+     * @param $activeIngredient \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setActiveIngredient($activeIngredient): static {
@@ -541,7 +541,7 @@ class Drug extends Substance
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getActiveIngredient() {
         return $this->properties['activeIngredient'];
@@ -549,7 +549,7 @@ class Drug extends Substance
     /**
      * Link to the drug's label details.
      *
-     * @param $labelDetails \LengthOfRope\JSONLD\DataType\URL
+     * @param $labelDetails \LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setLabelDetails($labelDetails): static {
@@ -559,7 +559,7 @@ class Drug extends Substance
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getLabelDetails() {
         return $this->properties['labelDetails'];
@@ -567,7 +567,7 @@ class Drug extends Substance
     /**
      * The RxCUI drug identifier from RXNORM.
      *
-     * @param $rxcui \LengthOfRope\JSONLD\DataType\Text
+     * @param $rxcui \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setRxcui($rxcui): static {
@@ -577,7 +577,7 @@ class Drug extends Substance
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getRxcui() {
         return $this->properties['rxcui'];

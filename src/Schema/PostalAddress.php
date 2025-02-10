@@ -46,7 +46,7 @@ class PostalAddress extends ContactPoint
      * alpha-3](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) country code such as
      * "SGP" or a full country name such as "Singapore" can also be used.
      *
-     * @param $addressCountry \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Country
+     * @param $addressCountry \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Country
      * @return static
      **/
     public function setAddressCountry($addressCountry): static {
@@ -56,7 +56,7 @@ class PostalAddress extends ContactPoint
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Country
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Country
      **/
     public function getAddressCountry() {
         return $this->properties['addressCountry'];
@@ -64,7 +64,7 @@ class PostalAddress extends ContactPoint
     /**
      * The postal code. For example, 94043.
      *
-     * @param $postalCode \LengthOfRope\JSONLD\DataType\Text
+     * @param $postalCode \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setPostalCode($postalCode): static {
@@ -74,7 +74,7 @@ class PostalAddress extends ContactPoint
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getPostalCode() {
         return $this->properties['postalCode'];
@@ -83,7 +83,7 @@ class PostalAddress extends ContactPoint
      * The locality in which the street address is, and which is in the region. For
      * example, Mountain View.
      *
-     * @param $addressLocality \LengthOfRope\JSONLD\DataType\Text
+     * @param $addressLocality \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setAddressLocality($addressLocality): static {
@@ -93,7 +93,7 @@ class PostalAddress extends ContactPoint
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getAddressLocality() {
         return $this->properties['addressLocality'];
@@ -101,7 +101,7 @@ class PostalAddress extends ContactPoint
     /**
      * The street address. For example, 1600 Amphitheatre Pkwy.
      *
-     * @param $streetAddress \LengthOfRope\JSONLD\DataType\Text
+     * @param $streetAddress \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setStreetAddress($streetAddress): static {
@@ -111,7 +111,7 @@ class PostalAddress extends ContactPoint
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getStreetAddress() {
         return $this->properties['streetAddress'];
@@ -119,7 +119,7 @@ class PostalAddress extends ContactPoint
     /**
      * The post office box number for PO box addresses.
      *
-     * @param $postOfficeBoxNumber \LengthOfRope\JSONLD\DataType\Text
+     * @param $postOfficeBoxNumber \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setPostOfficeBoxNumber($postOfficeBoxNumber): static {
@@ -129,7 +129,7 @@ class PostalAddress extends ContactPoint
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getPostOfficeBoxNumber() {
         return $this->properties['postOfficeBoxNumber'];
@@ -139,7 +139,7 @@ class PostalAddress extends ContactPoint
      * California or another appropriate first-level [Administrative
      * division](https://en.wikipedia.org/wiki/List_of_administrative_divisions_by_country).
      *
-     * @param $addressRegion \LengthOfRope\JSONLD\DataType\Text
+     * @param $addressRegion \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setAddressRegion($addressRegion): static {
@@ -149,7 +149,7 @@ class PostalAddress extends ContactPoint
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getAddressRegion() {
         return $this->properties['addressRegion'];

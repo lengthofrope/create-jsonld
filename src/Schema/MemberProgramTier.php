@@ -47,7 +47,7 @@ class MemberProgramTier extends Intangible
      * to spend a minimum amount to join the tier. If a tier is free to join then this
      * property does not need to be specified.
      *
-     * @param $hasTierRequirement \LengthOfRope\JSONLD\Schema\CreditCard|\LengthOfRope\JSONLD\Schema\UnitPriceSpecification|\LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\Text
+     * @param $hasTierRequirement \LengthOfRope\JSONLD\Schema\CreditCard|\LengthOfRope\JSONLD\Schema\UnitPriceSpecification|\LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setHasTierRequirement($hasTierRequirement): static {
@@ -57,7 +57,7 @@ class MemberProgramTier extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\CreditCard|\LengthOfRope\JSONLD\Schema\UnitPriceSpecification|\LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\CreditCard|\LengthOfRope\JSONLD\Schema\UnitPriceSpecification|\LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getHasTierRequirement() {
         return $this->properties['hasTierRequirement'];
@@ -67,7 +67,7 @@ class MemberProgramTier extends Intangible
      * can be used to express the units the points are issued in. (E.g. stars, miles,
      * etc.)
      *
-     * @param $membershipPointsEarned \LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\Schema\QuantitativeValue
+     * @param $membershipPointsEarned \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setMembershipPointsEarned($membershipPointsEarned): static {
@@ -77,7 +77,7 @@ class MemberProgramTier extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\Schema\QuantitativeValue
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getMembershipPointsEarned() {
         return $this->properties['membershipPointsEarned'];

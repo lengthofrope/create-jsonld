@@ -43,7 +43,7 @@ class AudioObject extends MediaObject
      * If this MediaObject is an AudioObject or VideoObject, the transcript of that
      * object.
      *
-     * @param $transcript \LengthOfRope\JSONLD\DataType\Text
+     * @param $transcript \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setTranscript($transcript): static {
@@ -53,7 +53,7 @@ class AudioObject extends MediaObject
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getTranscript() {
         return $this->properties['transcript'];
@@ -62,7 +62,7 @@ class AudioObject extends MediaObject
      * The caption for this object. For downloadable machine formats (closed caption,
      * subtitles etc.) use MediaObject and indicate the [[encodingFormat]].
      *
-     * @param $caption \LengthOfRope\JSONLD\Schema\MediaObject|\LengthOfRope\JSONLD\DataType\Text
+     * @param $caption \LengthOfRope\JSONLD\Schema\MediaObject|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setCaption($caption): static {
@@ -72,7 +72,7 @@ class AudioObject extends MediaObject
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\MediaObject|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\MediaObject|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getCaption() {
         return $this->properties['caption'];
@@ -80,7 +80,7 @@ class AudioObject extends MediaObject
     /**
      * Represents textual captioning from a [[MediaObject]], e.g. text of a 'meme'.
      *
-     * @param $embeddedTextCaption \LengthOfRope\JSONLD\DataType\Text
+     * @param $embeddedTextCaption \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setEmbeddedTextCaption($embeddedTextCaption): static {
@@ -90,7 +90,7 @@ class AudioObject extends MediaObject
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getEmbeddedTextCaption() {
         return $this->properties['embeddedTextCaption'];

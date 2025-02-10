@@ -64,7 +64,7 @@ class GovernmentService extends Service
      * Indicates a legal jurisdiction, e.g. of some legislation, or where some
      * government service is based.
      *
-     * @param $jurisdiction \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\AdministrativeArea
+     * @param $jurisdiction \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\AdministrativeArea
      * @return static
      **/
     public function setJurisdiction($jurisdiction): static {
@@ -74,7 +74,7 @@ class GovernmentService extends Service
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\AdministrativeArea
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\AdministrativeArea
      **/
     public function getJurisdiction() {
         return $this->properties['jurisdiction'];

@@ -61,7 +61,7 @@ class Flight extends Trip
     /**
      * Identifier of the flight's arrival terminal.
      *
-     * @param $arrivalTerminal \LengthOfRope\JSONLD\DataType\Text
+     * @param $arrivalTerminal \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setArrivalTerminal($arrivalTerminal): static {
@@ -71,7 +71,7 @@ class Flight extends Trip
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getArrivalTerminal() {
         return $this->properties['arrivalTerminal'];
@@ -79,7 +79,7 @@ class Flight extends Trip
     /**
      * Identifier of the flight's departure gate.
      *
-     * @param $departureGate \LengthOfRope\JSONLD\DataType\Text
+     * @param $departureGate \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setDepartureGate($departureGate): static {
@@ -89,7 +89,7 @@ class Flight extends Trip
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getDepartureGate() {
         return $this->properties['departureGate'];
@@ -134,7 +134,7 @@ class Flight extends Trip
     /**
      * The kind of aircraft (e.g., "Boeing 747").
      *
-     * @param $aircraft \LengthOfRope\JSONLD\Schema\Vehicle|\LengthOfRope\JSONLD\DataType\Text
+     * @param $aircraft \LengthOfRope\JSONLD\Schema\Vehicle|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setAircraft($aircraft): static {
@@ -144,7 +144,7 @@ class Flight extends Trip
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Vehicle|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\Vehicle|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getAircraft() {
         return $this->properties['aircraft'];
@@ -171,7 +171,7 @@ class Flight extends Trip
     /**
      * Identifier of the flight's arrival gate.
      *
-     * @param $arrivalGate \LengthOfRope\JSONLD\DataType\Text
+     * @param $arrivalGate \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setArrivalGate($arrivalGate): static {
@@ -181,7 +181,7 @@ class Flight extends Trip
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getArrivalGate() {
         return $this->properties['arrivalGate'];
@@ -189,7 +189,7 @@ class Flight extends Trip
     /**
      * The time when a passenger can check into the flight online.
      *
-     * @param $webCheckinTime \LengthOfRope\JSONLD\DataType\DateTime
+     * @param $webCheckinTime \LengthOfRope\JSONLD\DataType\TypeDateTime
      * @return static
      **/
     public function setWebCheckinTime($webCheckinTime): static {
@@ -199,7 +199,7 @@ class Flight extends Trip
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\DateTime
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime
      **/
     public function getWebCheckinTime() {
         return $this->properties['webCheckinTime'];
@@ -207,7 +207,7 @@ class Flight extends Trip
     /**
      * The estimated time the flight will take.
      *
-     * @param $estimatedFlightDuration \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Duration
+     * @param $estimatedFlightDuration \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Duration
      * @return static
      **/
     public function setEstimatedFlightDuration($estimatedFlightDuration): static {
@@ -217,7 +217,7 @@ class Flight extends Trip
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Duration
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Duration
      **/
     public function getEstimatedFlightDuration() {
         return $this->properties['estimatedFlightDuration'];
@@ -225,7 +225,7 @@ class Flight extends Trip
     /**
      * The distance of the flight.
      *
-     * @param $flightDistance \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Distance
+     * @param $flightDistance \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Distance
      * @return static
      **/
     public function setFlightDistance($flightDistance): static {
@@ -235,7 +235,7 @@ class Flight extends Trip
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Distance
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Distance
      **/
     public function getFlightDistance() {
         return $this->properties['flightDistance'];
@@ -243,7 +243,7 @@ class Flight extends Trip
     /**
      * Description of the meals that will be provided or available for purchase.
      *
-     * @param $mealService \LengthOfRope\JSONLD\DataType\Text
+     * @param $mealService \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setMealService($mealService): static {
@@ -253,7 +253,7 @@ class Flight extends Trip
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getMealService() {
         return $this->properties['mealService'];
@@ -261,7 +261,7 @@ class Flight extends Trip
     /**
      * Identifier of the flight's departure terminal.
      *
-     * @param $departureTerminal \LengthOfRope\JSONLD\DataType\Text
+     * @param $departureTerminal \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setDepartureTerminal($departureTerminal): static {
@@ -271,7 +271,7 @@ class Flight extends Trip
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getDepartureTerminal() {
         return $this->properties['departureTerminal'];
@@ -299,7 +299,7 @@ class Flight extends Trip
      * if describing United flight 110, where the IATA code for United is 'UA', the
      * flightNumber is 'UA110'.
      *
-     * @param $flightNumber \LengthOfRope\JSONLD\DataType\Text
+     * @param $flightNumber \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setFlightNumber($flightNumber): static {
@@ -309,7 +309,7 @@ class Flight extends Trip
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getFlightNumber() {
         return $this->properties['flightNumber'];

@@ -66,7 +66,7 @@ class Gene extends BioChemEntity
      * A symbolic representation of a BioChemEntity. For example, a nucleotide sequence
      * of a Gene or an amino acid sequence of a Protein.
      *
-     * @param $hasBioPolymerSequence \LengthOfRope\JSONLD\DataType\Text
+     * @param $hasBioPolymerSequence \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setHasBioPolymerSequence($hasBioPolymerSequence): static {
@@ -76,7 +76,7 @@ class Gene extends BioChemEntity
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getHasBioPolymerSequence() {
         return $this->properties['hasBioPolymerSequence'];

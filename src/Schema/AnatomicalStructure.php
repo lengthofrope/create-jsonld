@@ -152,7 +152,7 @@ class AnatomicalStructure extends MedicalEntity
     /**
      * Location in the body of the anatomical structure.
      *
-     * @param $bodyLocation \LengthOfRope\JSONLD\DataType\Text
+     * @param $bodyLocation \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setBodyLocation($bodyLocation): static {
@@ -162,7 +162,7 @@ class AnatomicalStructure extends MedicalEntity
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getBodyLocation() {
         return $this->properties['bodyLocation'];
@@ -172,7 +172,7 @@ class AnatomicalStructure extends MedicalEntity
      * anatomical system, including potential abnormal changes in the mechanical,
      * physical, and biochemical functions of the system.
      *
-     * @param $associatedPathophysiology \LengthOfRope\JSONLD\DataType\Text
+     * @param $associatedPathophysiology \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setAssociatedPathophysiology($associatedPathophysiology): static {
@@ -182,7 +182,7 @@ class AnatomicalStructure extends MedicalEntity
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getAssociatedPathophysiology() {
         return $this->properties['associatedPathophysiology'];

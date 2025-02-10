@@ -42,7 +42,7 @@ class Joint extends AnatomicalStructure
     /**
      * The biomechanical properties of the bone.
      *
-     * @param $biomechnicalClass \LengthOfRope\JSONLD\DataType\Text
+     * @param $biomechnicalClass \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setBiomechnicalClass($biomechnicalClass): static {
@@ -52,7 +52,7 @@ class Joint extends AnatomicalStructure
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getBiomechnicalClass() {
         return $this->properties['biomechnicalClass'];
@@ -60,7 +60,7 @@ class Joint extends AnatomicalStructure
     /**
      * The name given to how bone physically connects to each other.
      *
-     * @param $structuralClass \LengthOfRope\JSONLD\DataType\Text
+     * @param $structuralClass \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setStructuralClass($structuralClass): static {
@@ -70,7 +70,7 @@ class Joint extends AnatomicalStructure
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getStructuralClass() {
         return $this->properties['structuralClass'];
@@ -78,7 +78,7 @@ class Joint extends AnatomicalStructure
     /**
      * The degree of mobility the joint allows.
      *
-     * @param $functionalClass \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\MedicalEntity
+     * @param $functionalClass \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\MedicalEntity
      * @return static
      **/
     public function setFunctionalClass($functionalClass): static {
@@ -88,7 +88,7 @@ class Joint extends AnatomicalStructure
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\MedicalEntity
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\MedicalEntity
      **/
     public function getFunctionalClass() {
         return $this->properties['functionalClass'];

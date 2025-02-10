@@ -45,7 +45,7 @@ class LiveBlogPosting extends BlogPosting
      * may begin before the Event's start time. The LiveBlogPosting may also be created
      * before coverage begins.
      *
-     * @param $coverageStartTime \LengthOfRope\JSONLD\DataType\DateTime
+     * @param $coverageStartTime \LengthOfRope\JSONLD\DataType\TypeDateTime
      * @return static
      **/
     public function setCoverageStartTime($coverageStartTime): static {
@@ -55,7 +55,7 @@ class LiveBlogPosting extends BlogPosting
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\DateTime
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime
      **/
     public function getCoverageStartTime() {
         return $this->properties['coverageStartTime'];
@@ -82,7 +82,7 @@ class LiveBlogPosting extends BlogPosting
      * The time when the live blog will stop covering the Event. Note that coverage may
      * continue after the Event concludes.
      *
-     * @param $coverageEndTime \LengthOfRope\JSONLD\DataType\DateTime
+     * @param $coverageEndTime \LengthOfRope\JSONLD\DataType\TypeDateTime
      * @return static
      **/
     public function setCoverageEndTime($coverageEndTime): static {
@@ -92,7 +92,7 @@ class LiveBlogPosting extends BlogPosting
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\DateTime
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime
      **/
     public function getCoverageEndTime() {
         return $this->properties['coverageEndTime'];

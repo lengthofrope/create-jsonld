@@ -43,7 +43,7 @@ class InvestmentOrDeposit extends FinancialProduct
     /**
      * The amount of money.
      *
-     * @param $amount \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\Number
+     * @param $amount \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setAmount($amount): static {
@@ -53,7 +53,7 @@ class InvestmentOrDeposit extends FinancialProduct
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getAmount() {
         return $this->properties['amount'];

@@ -80,7 +80,7 @@ class CreativeWorkSeason extends CreativeWork
     /**
      * Position of the season within an ordered group of seasons.
      *
-     * @param $seasonNumber \LengthOfRope\JSONLD\DataType\Integer|\LengthOfRope\JSONLD\DataType\Text
+     * @param $seasonNumber \LengthOfRope\JSONLD\DataType\TypeInteger|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setSeasonNumber($seasonNumber): static {
@@ -90,7 +90,7 @@ class CreativeWorkSeason extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Integer|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeInteger|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getSeasonNumber() {
         return $this->properties['seasonNumber'];
@@ -117,7 +117,7 @@ class CreativeWorkSeason extends CreativeWork
      * The start date and time of the item (in [ISO 8601 date
      * format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
-     * @param $startDate \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
+     * @param $startDate \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
      * @return static
      **/
     public function setStartDate($startDate): static {
@@ -127,7 +127,7 @@ class CreativeWorkSeason extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
      **/
     public function getStartDate() {
         return $this->properties['startDate'];
@@ -192,7 +192,7 @@ class CreativeWorkSeason extends CreativeWork
     /**
      * The number of episodes in this season or series.
      *
-     * @param $numberOfEpisodes \LengthOfRope\JSONLD\DataType\Integer
+     * @param $numberOfEpisodes \LengthOfRope\JSONLD\DataType\TypeInteger
      * @return static
      **/
     public function setNumberOfEpisodes($numberOfEpisodes): static {
@@ -202,7 +202,7 @@ class CreativeWorkSeason extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Integer
+     * @return \LengthOfRope\JSONLD\DataType\TypeInteger
      **/
     public function getNumberOfEpisodes() {
         return $this->properties['numberOfEpisodes'];
@@ -211,7 +211,7 @@ class CreativeWorkSeason extends CreativeWork
      * The end date and time of the item (in [ISO 8601 date
      * format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
-     * @param $endDate \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
+     * @param $endDate \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
      * @return static
      **/
     public function setEndDate($endDate): static {
@@ -221,7 +221,7 @@ class CreativeWorkSeason extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
+     * @return \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
      **/
     public function getEndDate() {
         return $this->properties['endDate'];

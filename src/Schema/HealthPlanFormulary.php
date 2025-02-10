@@ -43,7 +43,7 @@ class HealthPlanFormulary extends Intangible
     /**
      * The costs to the patient for services under this network or formulary.
      *
-     * @param $healthPlanCostSharing \LengthOfRope\JSONLD\DataType\Boolean
+     * @param $healthPlanCostSharing \LengthOfRope\JSONLD\DataType\TypeBoolean
      * @return static
      **/
     public function setHealthPlanCostSharing($healthPlanCostSharing): static {
@@ -53,7 +53,7 @@ class HealthPlanFormulary extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Boolean
+     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean
      **/
     public function getHealthPlanCostSharing() {
         return $this->properties['healthPlanCostSharing'];
@@ -61,7 +61,7 @@ class HealthPlanFormulary extends Intangible
     /**
      * The tier(s) of drugs offered by this formulary or insurance plan.
      *
-     * @param $healthPlanDrugTier \LengthOfRope\JSONLD\DataType\Text
+     * @param $healthPlanDrugTier \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setHealthPlanDrugTier($healthPlanDrugTier): static {
@@ -71,7 +71,7 @@ class HealthPlanFormulary extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getHealthPlanDrugTier() {
         return $this->properties['healthPlanDrugTier'];
@@ -79,7 +79,7 @@ class HealthPlanFormulary extends Intangible
     /**
      * Whether prescriptions can be delivered by mail.
      *
-     * @param $offersPrescriptionByMail \LengthOfRope\JSONLD\DataType\Boolean
+     * @param $offersPrescriptionByMail \LengthOfRope\JSONLD\DataType\TypeBoolean
      * @return static
      **/
     public function setOffersPrescriptionByMail($offersPrescriptionByMail): static {
@@ -89,7 +89,7 @@ class HealthPlanFormulary extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Boolean
+     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean
      **/
     public function getOffersPrescriptionByMail() {
         return $this->properties['offersPrescriptionByMail'];

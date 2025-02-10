@@ -67,7 +67,7 @@ class GeoCircle extends GeoShape
      * Indicates the approximate radius of a GeoCircle (metres unless indicated
      * otherwise via Distance notation).
      *
-     * @param $geoRadius \LengthOfRope\JSONLD\Schema\Distance|\LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\DataType\Text
+     * @param $geoRadius \LengthOfRope\JSONLD\Schema\Distance|\LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setGeoRadius($geoRadius): static {
@@ -77,7 +77,7 @@ class GeoCircle extends GeoShape
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Distance|\LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\Distance|\LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getGeoRadius() {
         return $this->properties['geoRadius'];

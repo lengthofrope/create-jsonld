@@ -42,7 +42,7 @@ class BusTrip extends Trip
     /**
      * The unique identifier for the bus.
      *
-     * @param $busNumber \LengthOfRope\JSONLD\DataType\Text
+     * @param $busNumber \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setBusNumber($busNumber): static {
@@ -52,7 +52,7 @@ class BusTrip extends Trip
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getBusNumber() {
         return $this->properties['busNumber'];
@@ -60,7 +60,7 @@ class BusTrip extends Trip
     /**
      * The name of the bus (e.g. Bolt Express).
      *
-     * @param $busName \LengthOfRope\JSONLD\DataType\Text
+     * @param $busName \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setBusName($busName): static {
@@ -70,7 +70,7 @@ class BusTrip extends Trip
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getBusName() {
         return $this->properties['busName'];

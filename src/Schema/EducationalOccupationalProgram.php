@@ -89,7 +89,7 @@ class EducationalOccupationalProgram extends Intangible
      * rolling admissions) can be described in a textual string, rather than as a
      * DateTime.
      *
-     * @param $applicationDeadline \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\Text
+     * @param $applicationDeadline \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setApplicationDeadline($applicationDeadline): static {
@@ -99,7 +99,7 @@ class EducationalOccupationalProgram extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getApplicationDeadline() {
         return $this->properties['applicationDeadline'];
@@ -126,7 +126,7 @@ class EducationalOccupationalProgram extends Intangible
      * The type of educational or occupational program. For example, classroom,
      * internship, alternance, etc.
      *
-     * @param $programType \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DefinedTerm
+     * @param $programType \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DefinedTerm
      * @return static
      **/
     public function setProgramType($programType): static {
@@ -136,7 +136,7 @@ class EducationalOccupationalProgram extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DefinedTerm
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DefinedTerm
      **/
     public function getProgramType() {
         return $this->properties['programType'];
@@ -146,7 +146,7 @@ class EducationalOccupationalProgram extends Intangible
      * occupational credential awarded as a consequence of successful completion of
      * this course or program.
      *
-     * @param $occupationalCredentialAwarded \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential|\LengthOfRope\JSONLD\DataType\URL
+     * @param $occupationalCredentialAwarded \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential|\LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setOccupationalCredentialAwarded($occupationalCredentialAwarded): static {
@@ -156,7 +156,7 @@ class EducationalOccupationalProgram extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential|\LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential|\LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getOccupationalCredentialAwarded() {
         return $this->properties['occupationalCredentialAwarded'];
@@ -166,7 +166,7 @@ class EducationalOccupationalProgram extends Intangible
      * are common units for term. For example, if the student can only take 2 semesters
      * for the program in one year, then termsPerYear should be 2.
      *
-     * @param $termsPerYear \LengthOfRope\JSONLD\DataType\Number
+     * @param $termsPerYear \LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setTermsPerYear($termsPerYear): static {
@@ -176,7 +176,7 @@ class EducationalOccupationalProgram extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getTermsPerYear() {
         return $this->properties['termsPerYear'];
@@ -228,7 +228,7 @@ class EducationalOccupationalProgram extends Intangible
      * Note: for historical reasons, any textual label and formal code provided as a
      * literal may be assumed to be from O*NET-SOC.
      *
-     * @param $occupationalCategory \LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\Text
+     * @param $occupationalCategory \LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setOccupationalCategory($occupationalCategory): static {
@@ -238,7 +238,7 @@ class EducationalOccupationalProgram extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getOccupationalCategory() {
         return $this->properties['occupationalCategory'];
@@ -246,7 +246,7 @@ class EducationalOccupationalProgram extends Intangible
     /**
      * The maximum number of students who may be enrolled in the program.
      *
-     * @param $maximumEnrollment \LengthOfRope\JSONLD\DataType\Integer
+     * @param $maximumEnrollment \LengthOfRope\JSONLD\DataType\TypeInteger
      * @return static
      **/
     public function setMaximumEnrollment($maximumEnrollment): static {
@@ -256,7 +256,7 @@ class EducationalOccupationalProgram extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Integer
+     * @return \LengthOfRope\JSONLD\DataType\TypeInteger
      **/
     public function getMaximumEnrollment() {
         return $this->properties['maximumEnrollment'];
@@ -268,7 +268,7 @@ class EducationalOccupationalProgram extends Intangible
      * reference to a term from a controlled vocabulary (e.g.
      * https://ceds.ed.gov/element/001311#Asynchronous ).
      *
-     * @param $educationalProgramMode \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @param $educationalProgramMode \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setEducationalProgramMode($educationalProgramMode): static {
@@ -278,7 +278,7 @@ class EducationalOccupationalProgram extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getEducationalProgramMode() {
         return $this->properties['educationalProgramMode'];
@@ -287,7 +287,7 @@ class EducationalOccupationalProgram extends Intangible
      * The start date and time of the item (in [ISO 8601 date
      * format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
-     * @param $startDate \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
+     * @param $startDate \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
      * @return static
      **/
     public function setStartDate($startDate): static {
@@ -297,7 +297,7 @@ class EducationalOccupationalProgram extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
      **/
     public function getStartDate() {
         return $this->properties['startDate'];
@@ -306,7 +306,7 @@ class EducationalOccupationalProgram extends Intangible
      * The number of credits or units a full-time student would be expected to take in
      * 1 term however 'term' is defined by the institution.
      *
-     * @param $typicalCreditsPerTerm \LengthOfRope\JSONLD\Schema\StructuredValue|\LengthOfRope\JSONLD\DataType\Integer
+     * @param $typicalCreditsPerTerm \LengthOfRope\JSONLD\Schema\StructuredValue|\LengthOfRope\JSONLD\DataType\TypeInteger
      * @return static
      **/
     public function setTypicalCreditsPerTerm($typicalCreditsPerTerm): static {
@@ -316,7 +316,7 @@ class EducationalOccupationalProgram extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\StructuredValue|\LengthOfRope\JSONLD\DataType\Integer
+     * @return \LengthOfRope\JSONLD\Schema\StructuredValue|\LengthOfRope\JSONLD\DataType\TypeInteger
      **/
     public function getTypicalCreditsPerTerm() {
         return $this->properties['typicalCreditsPerTerm'];
@@ -325,7 +325,7 @@ class EducationalOccupationalProgram extends Intangible
      * The date at which the program begins collecting applications for the next
      * enrollment cycle.
      *
-     * @param $applicationStartDate \LengthOfRope\JSONLD\DataType\Date
+     * @param $applicationStartDate \LengthOfRope\JSONLD\DataType\TypeDate
      * @return static
      **/
     public function setApplicationStartDate($applicationStartDate): static {
@@ -335,7 +335,7 @@ class EducationalOccupationalProgram extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Date
+     * @return \LengthOfRope\JSONLD\DataType\TypeDate
      **/
     public function getApplicationStartDate() {
         return $this->properties['applicationStartDate'];
@@ -344,7 +344,7 @@ class EducationalOccupationalProgram extends Intangible
      * The number of credits or units awarded by a Course or required to complete an
      * EducationalOccupationalProgram.
      *
-     * @param $numberOfCredits \LengthOfRope\JSONLD\DataType\Integer|\LengthOfRope\JSONLD\Schema\StructuredValue
+     * @param $numberOfCredits \LengthOfRope\JSONLD\DataType\TypeInteger|\LengthOfRope\JSONLD\Schema\StructuredValue
      * @return static
      **/
     public function setNumberOfCredits($numberOfCredits): static {
@@ -354,7 +354,7 @@ class EducationalOccupationalProgram extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Integer|\LengthOfRope\JSONLD\Schema\StructuredValue
+     * @return \LengthOfRope\JSONLD\DataType\TypeInteger|\LengthOfRope\JSONLD\Schema\StructuredValue
      **/
     public function getNumberOfCredits() {
         return $this->properties['numberOfCredits'];
@@ -407,7 +407,7 @@ class EducationalOccupationalProgram extends Intangible
     /**
      * Prerequisites for enrolling in the program.
      *
-     * @param $programPrerequisites \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential|\LengthOfRope\JSONLD\Schema\AlignmentObject|\LengthOfRope\JSONLD\Schema\Course
+     * @param $programPrerequisites \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential|\LengthOfRope\JSONLD\Schema\AlignmentObject|\LengthOfRope\JSONLD\Schema\Course
      * @return static
      **/
     public function setProgramPrerequisites($programPrerequisites): static {
@@ -417,7 +417,7 @@ class EducationalOccupationalProgram extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential|\LengthOfRope\JSONLD\Schema\AlignmentObject|\LengthOfRope\JSONLD\Schema\Course
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential|\LengthOfRope\JSONLD\Schema\AlignmentObject|\LengthOfRope\JSONLD\Schema\Course
      **/
     public function getProgramPrerequisites() {
         return $this->properties['programPrerequisites'];
@@ -427,7 +427,7 @@ class EducationalOccupationalProgram extends Intangible
      * educational credential awarded as a consequence of successful completion of this
      * course or program.
      *
-     * @param $educationalCredentialAwarded \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential|\LengthOfRope\JSONLD\DataType\URL
+     * @param $educationalCredentialAwarded \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential|\LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setEducationalCredentialAwarded($educationalCredentialAwarded): static {
@@ -437,7 +437,7 @@ class EducationalOccupationalProgram extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential|\LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential|\LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getEducationalCredentialAwarded() {
         return $this->properties['educationalCredentialAwarded'];
@@ -466,7 +466,7 @@ class EducationalOccupationalProgram extends Intangible
      * A financial aid type or program which students may use to pay for tuition or
      * fees associated with the program.
      *
-     * @param $financialAidEligible \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DefinedTerm
+     * @param $financialAidEligible \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DefinedTerm
      * @return static
      **/
     public function setFinancialAidEligible($financialAidEligible): static {
@@ -476,7 +476,7 @@ class EducationalOccupationalProgram extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DefinedTerm
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DefinedTerm
      **/
     public function getFinancialAidEligible() {
         return $this->properties['financialAidEligible'];
@@ -485,7 +485,7 @@ class EducationalOccupationalProgram extends Intangible
      * The end date and time of the item (in [ISO 8601 date
      * format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
-     * @param $endDate \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
+     * @param $endDate \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
      * @return static
      **/
     public function setEndDate($endDate): static {
@@ -495,7 +495,7 @@ class EducationalOccupationalProgram extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Date|\LengthOfRope\JSONLD\DataType\DateTime
+     * @return \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
      **/
     public function getEndDate() {
         return $this->properties['endDate'];
@@ -503,7 +503,7 @@ class EducationalOccupationalProgram extends Intangible
     /**
      * The time of day the program normally runs. For example, "evenings".
      *
-     * @param $timeOfDay \LengthOfRope\JSONLD\DataType\Text
+     * @param $timeOfDay \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setTimeOfDay($timeOfDay): static {
@@ -513,7 +513,7 @@ class EducationalOccupationalProgram extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getTimeOfDay() {
         return $this->properties['timeOfDay'];

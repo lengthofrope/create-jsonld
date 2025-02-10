@@ -42,7 +42,7 @@ class Occupation extends Intangible
     /**
      * Specific qualifications required for this role or Occupation.
      *
-     * @param $qualifications \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential
+     * @param $qualifications \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential
      * @return static
      **/
     public function setQualifications($qualifications): static {
@@ -52,7 +52,7 @@ class Occupation extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential
      **/
     public function getQualifications() {
         return $this->properties['qualifications'];
@@ -60,7 +60,7 @@ class Occupation extends Intangible
     /**
      * Description of skills and experience needed for the position or Occupation.
      *
-     * @param $experienceRequirements \LengthOfRope\JSONLD\Schema\OccupationalExperienceRequirements|\LengthOfRope\JSONLD\DataType\Text
+     * @param $experienceRequirements \LengthOfRope\JSONLD\Schema\OccupationalExperienceRequirements|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setExperienceRequirements($experienceRequirements): static {
@@ -70,7 +70,7 @@ class Occupation extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\OccupationalExperienceRequirements|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\OccupationalExperienceRequirements|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getExperienceRequirements() {
         return $this->properties['experienceRequirements'];
@@ -81,7 +81,7 @@ class Occupation extends Intangible
      * Estimated salaries  are often computed by outside organizations rather than the
      * hiring organization, who may not have committed to the estimated value.
      *
-     * @param $estimatedSalary \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\Schema\MonetaryAmountDistribution
+     * @param $estimatedSalary \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\Schema\MonetaryAmountDistribution
      * @return static
      **/
     public function setEstimatedSalary($estimatedSalary): static {
@@ -91,7 +91,7 @@ class Occupation extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\Number|\LengthOfRope\JSONLD\Schema\MonetaryAmountDistribution
+     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\Schema\MonetaryAmountDistribution
      **/
     public function getEstimatedSalary() {
         return $this->properties['estimatedSalary'];
@@ -101,7 +101,7 @@ class Occupation extends Intangible
      * a competency that is either claimed by a person, an organization or desired or
      * required to fulfill a role or to work in an occupation.
      *
-     * @param $skills \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DefinedTerm
+     * @param $skills \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DefinedTerm
      * @return static
      **/
     public function setSkills($skills): static {
@@ -111,7 +111,7 @@ class Occupation extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\DefinedTerm
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DefinedTerm
      **/
     public function getSkills() {
         return $this->properties['skills'];
@@ -127,7 +127,7 @@ class Occupation extends Intangible
      * Note: for historical reasons, any textual label and formal code provided as a
      * literal may be assumed to be from O*NET-SOC.
      *
-     * @param $occupationalCategory \LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\Text
+     * @param $occupationalCategory \LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setOccupationalCategory($occupationalCategory): static {
@@ -137,7 +137,7 @@ class Occupation extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getOccupationalCategory() {
         return $this->properties['occupationalCategory'];
@@ -145,7 +145,7 @@ class Occupation extends Intangible
     /**
      * Responsibilities associated with this role or Occupation.
      *
-     * @param $responsibilities \LengthOfRope\JSONLD\DataType\Text
+     * @param $responsibilities \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setResponsibilities($responsibilities): static {
@@ -155,7 +155,7 @@ class Occupation extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getResponsibilities() {
         return $this->properties['responsibilities'];
@@ -182,7 +182,7 @@ class Occupation extends Intangible
     /**
      * Educational background needed for the position or Occupation.
      *
-     * @param $educationRequirements \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential
+     * @param $educationRequirements \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential
      * @return static
      **/
     public function setEducationRequirements($educationRequirements): static {
@@ -192,7 +192,7 @@ class Occupation extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential
      **/
     public function getEducationRequirements() {
         return $this->properties['educationRequirements'];

@@ -63,7 +63,7 @@ class HowTo extends CreativeWork
      * A sub property of instrument. An object used (but not consumed) when performing
      * instructions or a direction.
      *
-     * @param $tool \LengthOfRope\JSONLD\Schema\HowToTool|\LengthOfRope\JSONLD\DataType\Text
+     * @param $tool \LengthOfRope\JSONLD\Schema\HowToTool|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setTool($tool): static {
@@ -73,7 +73,7 @@ class HowTo extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\HowToTool|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\HowToTool|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getTool() {
         return $this->properties['tool'];
@@ -102,7 +102,7 @@ class HowTo extends CreativeWork
      * A single step item (as HowToStep, text, document, video, etc.) or a HowToSection
      * (originally misnamed 'steps'; 'step' is preferred).
      *
-     * @param $steps \LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\Text
+     * @param $steps \LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setSteps($steps): static {
@@ -112,7 +112,7 @@ class HowTo extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getSteps() {
         return $this->properties['steps'];
@@ -121,7 +121,7 @@ class HowTo extends CreativeWork
      * The estimated cost of the supply or supplies consumed when performing
      * instructions.
      *
-     * @param $estimatedCost \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\Text
+     * @param $estimatedCost \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setEstimatedCost($estimatedCost): static {
@@ -131,7 +131,7 @@ class HowTo extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getEstimatedCost() {
         return $this->properties['estimatedCost'];
@@ -160,7 +160,7 @@ class HowTo extends CreativeWork
      * A sub-property of instrument. A supply consumed when performing instructions or
      * a direction.
      *
-     * @param $supply \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\HowToSupply
+     * @param $supply \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\HowToSupply
      * @return static
      **/
     public function setSupply($supply): static {
@@ -170,7 +170,7 @@ class HowTo extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\HowToSupply
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\HowToSupply
      **/
     public function getSupply() {
         return $this->properties['supply'];
@@ -179,7 +179,7 @@ class HowTo extends CreativeWork
      * A single step item (as HowToStep, text, document, video, etc.) or a
      * HowToSection.
      *
-     * @param $step \LengthOfRope\JSONLD\Schema\HowToSection|\LengthOfRope\JSONLD\Schema\HowToStep|\LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\Text
+     * @param $step \LengthOfRope\JSONLD\Schema\HowToSection|\LengthOfRope\JSONLD\Schema\HowToStep|\LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setStep($step): static {
@@ -189,7 +189,7 @@ class HowTo extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\HowToSection|\LengthOfRope\JSONLD\Schema\HowToStep|\LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\HowToSection|\LengthOfRope\JSONLD\Schema\HowToStep|\LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getStep() {
         return $this->properties['step'];
@@ -198,7 +198,7 @@ class HowTo extends CreativeWork
      * The quantity that results by performing instructions. For example, a paper
      * airplane, 10 personalized candles.
      *
-     * @param $yield \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\Text
+     * @param $yield \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setYield($yield): static {
@@ -208,7 +208,7 @@ class HowTo extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getYield() {
         return $this->properties['yield'];

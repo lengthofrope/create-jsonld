@@ -43,7 +43,7 @@ class OwnershipInfo extends StructuredValue
     /**
      * The date and time of obtaining the product.
      *
-     * @param $ownedFrom \LengthOfRope\JSONLD\DataType\DateTime
+     * @param $ownedFrom \LengthOfRope\JSONLD\DataType\TypeDateTime
      * @return static
      **/
     public function setOwnedFrom($ownedFrom): static {
@@ -53,7 +53,7 @@ class OwnershipInfo extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\DateTime
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime
      **/
     public function getOwnedFrom() {
         return $this->properties['ownedFrom'];
@@ -61,7 +61,7 @@ class OwnershipInfo extends StructuredValue
     /**
      * The date and time of giving up ownership on the product.
      *
-     * @param $ownedThrough \LengthOfRope\JSONLD\DataType\DateTime
+     * @param $ownedThrough \LengthOfRope\JSONLD\DataType\TypeDateTime
      * @return static
      **/
     public function setOwnedThrough($ownedThrough): static {
@@ -71,7 +71,7 @@ class OwnershipInfo extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\DateTime
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime
      **/
     public function getOwnedThrough() {
         return $this->properties['ownedThrough'];

@@ -45,7 +45,7 @@ class MedicalCondition extends MedicalEntity
      * Changes in the normal mechanical, physical, and biochemical functions that are
      * associated with this activity or condition.
      *
-     * @param $pathophysiology \LengthOfRope\JSONLD\DataType\Text
+     * @param $pathophysiology \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setPathophysiology($pathophysiology): static {
@@ -55,7 +55,7 @@ class MedicalCondition extends MedicalEntity
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getPathophysiology() {
         return $this->properties['pathophysiology'];
@@ -65,7 +65,7 @@ class MedicalCondition extends MedicalEntity
      * Complications may include worsening of the signs or symptoms of the disease,
      * extension of the condition to other organ systems, etc.
      *
-     * @param $possibleComplication \LengthOfRope\JSONLD\DataType\Text
+     * @param $possibleComplication \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setPossibleComplication($possibleComplication): static {
@@ -75,7 +75,7 @@ class MedicalCondition extends MedicalEntity
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getPossibleComplication() {
         return $this->properties['possibleComplication'];
@@ -102,7 +102,7 @@ class MedicalCondition extends MedicalEntity
      * The likely outcome in either the short term or long term of the medical
      * condition.
      *
-     * @param $expectedPrognosis \LengthOfRope\JSONLD\DataType\Text
+     * @param $expectedPrognosis \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setExpectedPrognosis($expectedPrognosis): static {
@@ -112,7 +112,7 @@ class MedicalCondition extends MedicalEntity
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getExpectedPrognosis() {
         return $this->properties['expectedPrognosis'];
@@ -273,7 +273,7 @@ class MedicalCondition extends MedicalEntity
     /**
      * The status of the study (enumerated).
      *
-     * @param $status \LengthOfRope\JSONLD\Schema\MedicalStudyStatus|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EventStatusType
+     * @param $status \LengthOfRope\JSONLD\Schema\MedicalStudyStatus|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\EventStatusType
      * @return static
      **/
     public function setStatus($status): static {
@@ -283,7 +283,7 @@ class MedicalCondition extends MedicalEntity
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\MedicalStudyStatus|\LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\EventStatusType
+     * @return \LengthOfRope\JSONLD\Schema\MedicalStudyStatus|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\EventStatusType
      **/
     public function getStatus() {
         return $this->properties['status'];
@@ -311,7 +311,7 @@ class MedicalCondition extends MedicalEntity
      * The expected progression of the condition if it is not treated and allowed to
      * progress naturally.
      *
-     * @param $naturalProgression \LengthOfRope\JSONLD\DataType\Text
+     * @param $naturalProgression \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setNaturalProgression($naturalProgression): static {
@@ -321,7 +321,7 @@ class MedicalCondition extends MedicalEntity
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getNaturalProgression() {
         return $this->properties['naturalProgression'];
@@ -329,7 +329,7 @@ class MedicalCondition extends MedicalEntity
     /**
      * The characteristics of associated patients, such as age, gender, race etc.
      *
-     * @param $epidemiology \LengthOfRope\JSONLD\DataType\Text
+     * @param $epidemiology \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setEpidemiology($epidemiology): static {
@@ -339,7 +339,7 @@ class MedicalCondition extends MedicalEntity
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getEpidemiology() {
         return $this->properties['epidemiology'];

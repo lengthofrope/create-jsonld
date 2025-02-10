@@ -48,7 +48,7 @@ class TouristTrip extends Trip
      * Attraction suitable for type(s) of tourist. E.g. children, visitors from a
      * particular country, etc.
      *
-     * @param $touristType \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Audience
+     * @param $touristType \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Audience
      * @return static
      **/
     public function setTouristType($touristType): static {
@@ -58,7 +58,7 @@ class TouristTrip extends Trip
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\Audience
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Audience
      **/
     public function getTouristType() {
         return $this->properties['touristType'];

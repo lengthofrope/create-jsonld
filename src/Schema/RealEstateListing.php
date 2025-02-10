@@ -46,7 +46,7 @@ class RealEstateListing extends WebPage
     /**
      * Publication date of an online listing.
      *
-     * @param $datePosted \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
+     * @param $datePosted \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
      * @return static
      **/
     public function setDatePosted($datePosted): static {
@@ -56,7 +56,7 @@ class RealEstateListing extends WebPage
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\DateTime|\LengthOfRope\JSONLD\DataType\Date
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
      **/
     public function getDatePosted() {
         return $this->properties['datePosted'];

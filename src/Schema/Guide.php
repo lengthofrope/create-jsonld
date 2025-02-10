@@ -47,7 +47,7 @@ class Guide extends CreativeWork
     /**
      * This Review or Rating is relevant to this part or facet of the itemReviewed.
      *
-     * @param $reviewAspect \LengthOfRope\JSONLD\DataType\Text
+     * @param $reviewAspect \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setReviewAspect($reviewAspect): static {
@@ -57,7 +57,7 @@ class Guide extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getReviewAspect() {
         return $this->properties['reviewAspect'];

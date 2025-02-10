@@ -45,7 +45,7 @@ class IndividualProduct extends Product
      * attached to an offer, it is a shortcut for the serial number of the product
      * included in the offer.
      *
-     * @param $serialNumber \LengthOfRope\JSONLD\DataType\Text
+     * @param $serialNumber \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setSerialNumber($serialNumber): static {
@@ -55,7 +55,7 @@ class IndividualProduct extends Product
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getSerialNumber() {
         return $this->properties['serialNumber'];

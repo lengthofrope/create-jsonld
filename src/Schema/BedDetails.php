@@ -46,7 +46,7 @@ class BedDetails extends Intangible
      * The type of bed to which the BedDetail refers, i.e. the type of bed available in
      * the quantity indicated by quantity.
      *
-     * @param $typeOfBed \LengthOfRope\JSONLD\Schema\BedType|\LengthOfRope\JSONLD\DataType\Text
+     * @param $typeOfBed \LengthOfRope\JSONLD\Schema\BedType|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setTypeOfBed($typeOfBed): static {
@@ -56,7 +56,7 @@ class BedDetails extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\BedType|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\BedType|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getTypeOfBed() {
         return $this->properties['typeOfBed'];
@@ -65,7 +65,7 @@ class BedDetails extends Intangible
      * The quantity of the given bed type available in the HotelRoom, Suite, House, or
      * Apartment.
      *
-     * @param $numberOfBeds \LengthOfRope\JSONLD\DataType\Number
+     * @param $numberOfBeds \LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setNumberOfBeds($numberOfBeds): static {
@@ -75,7 +75,7 @@ class BedDetails extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getNumberOfBeds() {
         return $this->properties['numberOfBeds'];

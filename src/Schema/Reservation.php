@@ -48,7 +48,7 @@ class Reservation extends Intangible
     /**
      * The date and time the reservation was booked.
      *
-     * @param $bookingTime \LengthOfRope\JSONLD\DataType\DateTime
+     * @param $bookingTime \LengthOfRope\JSONLD\DataType\TypeDateTime
      * @return static
      **/
     public function setBookingTime($bookingTime): static {
@@ -58,7 +58,7 @@ class Reservation extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\DateTime
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime
      **/
     public function getBookingTime() {
         return $this->properties['bookingTime'];
@@ -142,7 +142,7 @@ class Reservation extends Intangible
     /**
      * The date and time the reservation was modified.
      *
-     * @param $modifiedTime \LengthOfRope\JSONLD\DataType\DateTime
+     * @param $modifiedTime \LengthOfRope\JSONLD\DataType\TypeDateTime
      * @return static
      **/
     public function setModifiedTime($modifiedTime): static {
@@ -152,7 +152,7 @@ class Reservation extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\DateTime
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime
      **/
     public function getModifiedTime() {
         return $this->properties['modifiedTime'];
@@ -186,7 +186,7 @@ class Reservation extends Intangible
      * Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and
      * other currency types, e.g. "Ithaca HOUR".
      *
-     * @param $priceCurrency \LengthOfRope\JSONLD\DataType\Text
+     * @param $priceCurrency \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setPriceCurrency($priceCurrency): static {
@@ -196,7 +196,7 @@ class Reservation extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getPriceCurrency() {
         return $this->properties['priceCurrency'];
@@ -232,7 +232,7 @@ class Reservation extends Intangible
      * * Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal
      * point. Avoid using these symbols as a readability separator.
      *
-     * @param $totalPrice \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\PriceSpecification|\LengthOfRope\JSONLD\DataType\Number
+     * @param $totalPrice \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\PriceSpecification|\LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setTotalPrice($totalPrice): static {
@@ -242,7 +242,7 @@ class Reservation extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\Schema\PriceSpecification|\LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\PriceSpecification|\LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getTotalPrice() {
         return $this->properties['totalPrice'];
@@ -250,7 +250,7 @@ class Reservation extends Intangible
     /**
      * A unique identifier for the reservation.
      *
-     * @param $reservationId \LengthOfRope\JSONLD\DataType\Text
+     * @param $reservationId \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setReservationId($reservationId): static {
@@ -260,7 +260,7 @@ class Reservation extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getReservationId() {
         return $this->properties['reservationId'];

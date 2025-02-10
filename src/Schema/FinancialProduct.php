@@ -45,7 +45,7 @@ class FinancialProduct extends Service
      * Description of fees, commissions, and other terms applied either to a class of
      * financial product, or by a financial service organization.
      *
-     * @param $feesAndCommissionsSpecification \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @param $feesAndCommissionsSpecification \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setFeesAndCommissionsSpecification($feesAndCommissionsSpecification): static {
@@ -55,7 +55,7 @@ class FinancialProduct extends Service
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\URL
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getFeesAndCommissionsSpecification() {
         return $this->properties['feesAndCommissionsSpecification'];
@@ -64,7 +64,7 @@ class FinancialProduct extends Service
      * The interest rate, charged or paid, applicable to the financial product. Note:
      * This is different from the calculated annualPercentageRate.
      *
-     * @param $interestRate \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\Number
+     * @param $interestRate \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setInterestRate($interestRate): static {
@@ -74,7 +74,7 @@ class FinancialProduct extends Service
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getInterestRate() {
         return $this->properties['interestRate'];
@@ -85,7 +85,7 @@ class FinancialProduct extends Service
      * over the term of a loan. This includes any fees or additional costs associated
      * with the transaction.
      *
-     * @param $annualPercentageRate \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\Number
+     * @param $annualPercentageRate \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setAnnualPercentageRate($annualPercentageRate): static {
@@ -95,7 +95,7 @@ class FinancialProduct extends Service
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getAnnualPercentageRate() {
         return $this->properties['annualPercentageRate'];

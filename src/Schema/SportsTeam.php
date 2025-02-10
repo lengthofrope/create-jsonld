@@ -85,7 +85,7 @@ class SportsTeam extends SportsOrganization
      * the gender of individuals, we do not try to enumerate all possibilities. A
      * mixed-gender [[SportsTeam]] can be indicated with a text value of "Mixed".
      *
-     * @param $gender \LengthOfRope\JSONLD\Schema\GenderType|\LengthOfRope\JSONLD\DataType\Text
+     * @param $gender \LengthOfRope\JSONLD\Schema\GenderType|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setGender($gender): static {
@@ -95,7 +95,7 @@ class SportsTeam extends SportsOrganization
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\GenderType|\LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\Schema\GenderType|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getGender() {
         return $this->properties['gender'];

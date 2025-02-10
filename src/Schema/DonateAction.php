@@ -64,7 +64,7 @@ class DonateAction extends TransferAction
      * (U+0039)) rather than superficially similar Unicode symbols.
      *
      *
-     * @param $price \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Number
+     * @param $price \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setPrice($price): static {
@@ -74,7 +74,7 @@ class DonateAction extends TransferAction
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text|\LengthOfRope\JSONLD\DataType\Number
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getPrice() {
         return $this->properties['price'];
@@ -128,7 +128,7 @@ class DonateAction extends TransferAction
      * Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and
      * other currency types, e.g. "Ithaca HOUR".
      *
-     * @param $priceCurrency \LengthOfRope\JSONLD\DataType\Text
+     * @param $priceCurrency \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setPriceCurrency($priceCurrency): static {
@@ -138,7 +138,7 @@ class DonateAction extends TransferAction
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getPriceCurrency() {
         return $this->properties['priceCurrency'];

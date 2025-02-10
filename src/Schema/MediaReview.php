@@ -53,7 +53,7 @@ class MediaReview extends Review
      * Link to the page containing an original version of the content, or directly to
      * an online copy of the original [[MediaObject]] content, e.g. video file.
      *
-     * @param $originalMediaLink \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\WebPage|\LengthOfRope\JSONLD\Schema\MediaObject
+     * @param $originalMediaLink \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\WebPage|\LengthOfRope\JSONLD\Schema\MediaObject
      * @return static
      **/
     public function setOriginalMediaLink($originalMediaLink): static {
@@ -63,7 +63,7 @@ class MediaReview extends Review
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\URL|\LengthOfRope\JSONLD\Schema\WebPage|\LengthOfRope\JSONLD\Schema\MediaObject
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\WebPage|\LengthOfRope\JSONLD\Schema\MediaObject
      **/
     public function getOriginalMediaLink() {
         return $this->properties['originalMediaLink'];
@@ -73,7 +73,7 @@ class MediaReview extends Review
      * background information that can contribute to better interpretation of the
      * [[MediaObject]].
      *
-     * @param $originalMediaContextDescription \LengthOfRope\JSONLD\DataType\Text
+     * @param $originalMediaContextDescription \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setOriginalMediaContextDescription($originalMediaContextDescription): static {
@@ -83,7 +83,7 @@ class MediaReview extends Review
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\Text
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getOriginalMediaContextDescription() {
         return $this->properties['originalMediaContextDescription'];
