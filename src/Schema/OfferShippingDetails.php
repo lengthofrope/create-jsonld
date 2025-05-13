@@ -58,7 +58,7 @@ class OfferShippingDetails extends StructuredValue
      * Typically, the maxValue and currency values (of the [[MonetaryAmount]]) are most
      * appropriate.
      *
-     * @param $shippingRate \LengthOfRope\JSONLD\Schema\MonetaryAmount
+     * @param $shippingRate \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\Schema\ShippingRateSettings
      * @return static
      **/
     public function setShippingRate($shippingRate): static {
@@ -68,86 +68,82 @@ class OfferShippingDetails extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount
+     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\Schema\ShippingRateSettings
      **/
     public function getShippingRate() {
         return $this->properties['shippingRate'];
     }
     /**
-     * The membership program tier an Offer (or a PriceSpecification,
-     * OfferShippingDetails, or MerchantReturnPolicy under an Offer) is valid for.
+     * The weight of the product or person.
      *
-     * @param $validForMemberTier \LengthOfRope\JSONLD\Schema\MemberProgramTier
+     * @param $weight \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Mass
      * @return static
      **/
-    public function setValidForMemberTier($validForMemberTier): static {
-        $this->properties['validForMemberTier'] = $validForMemberTier;
+    public function setWeight($weight): static {
+        $this->properties['weight'] = $weight;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\MemberProgramTier
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Mass
      **/
-    public function getValidForMemberTier() {
-        return $this->properties['validForMemberTier'];
+    public function getWeight() {
+        return $this->properties['weight'];
     }
     /**
-     * indicates (possibly multiple) shipping destinations. These can be defined in
-     * several ways, e.g. postalCode ranges.
+     * The depth of the item.
      *
-     * @param $shippingDestination \LengthOfRope\JSONLD\Schema\DefinedRegion
+     * @param $depth \LengthOfRope\JSONLD\Schema\Distance|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
-    public function setShippingDestination($shippingDestination): static {
-        $this->properties['shippingDestination'] = $shippingDestination;
+    public function setDepth($depth): static {
+        $this->properties['depth'] = $depth;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\DefinedRegion
+     * @return \LengthOfRope\JSONLD\Schema\Distance|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
-    public function getShippingDestination() {
-        return $this->properties['shippingDestination'];
+    public function getDepth() {
+        return $this->properties['depth'];
     }
     /**
-     * Link to a page containing [[ShippingRateSettings]] and [[DeliveryTimeSettings]]
-     * details.
+     * Specification of a shipping service offered by the organization.
      *
-     * @param $shippingSettingsLink \LengthOfRope\JSONLD\DataType\TypeURL
+     * @param $hasShippingService \LengthOfRope\JSONLD\Schema\ShippingService
      * @return static
      **/
-    public function setShippingSettingsLink($shippingSettingsLink): static {
-        $this->properties['shippingSettingsLink'] = $shippingSettingsLink;
+    public function setHasShippingService($hasShippingService): static {
+        $this->properties['hasShippingService'] = $hasShippingService;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeURL
+     * @return \LengthOfRope\JSONLD\Schema\ShippingService
      **/
-    public function getShippingSettingsLink() {
-        return $this->properties['shippingSettingsLink'];
+    public function getHasShippingService() {
+        return $this->properties['hasShippingService'];
     }
     /**
-     * Label to match an [[OfferShippingDetails]] with a [[DeliveryTimeSettings]]
-     * (within the context of a [[shippingSettingsLink]] cross-reference).
+     * The width of the item.
      *
-     * @param $transitTimeLabel \LengthOfRope\JSONLD\DataType\TypeText
+     * @param $width \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Distance
      * @return static
      **/
-    public function setTransitTimeLabel($transitTimeLabel): static {
-        $this->properties['transitTimeLabel'] = $transitTimeLabel;
+    public function setWidth($width): static {
+        $this->properties['width'] = $width;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Distance
      **/
-    public function getTransitTimeLabel() {
-        return $this->properties['transitTimeLabel'];
+    public function getWidth() {
+        return $this->properties['width'];
     }
     /**
      * The total delay between the receipt of the order and the goods reaching the
@@ -169,76 +165,23 @@ class OfferShippingDetails extends StructuredValue
         return $this->properties['deliveryTime'];
     }
     /**
-     * The height of the item.
+     * indicates (possibly multiple) shipping destinations. These can be defined in
+     * several ways, e.g. postalCode ranges.
      *
-     * @param $height \LengthOfRope\JSONLD\Schema\Distance|\LengthOfRope\JSONLD\Schema\QuantitativeValue
+     * @param $shippingDestination \LengthOfRope\JSONLD\Schema\DefinedRegion
      * @return static
      **/
-    public function setHeight($height): static {
-        $this->properties['height'] = $height;
+    public function setShippingDestination($shippingDestination): static {
+        $this->properties['shippingDestination'] = $shippingDestination;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Distance|\LengthOfRope\JSONLD\Schema\QuantitativeValue
+     * @return \LengthOfRope\JSONLD\Schema\DefinedRegion
      **/
-    public function getHeight() {
-        return $this->properties['height'];
-    }
-    /**
-     * The width of the item.
-     *
-     * @param $width \LengthOfRope\JSONLD\Schema\Distance|\LengthOfRope\JSONLD\Schema\QuantitativeValue
-     * @return static
-     **/
-    public function setWidth($width): static {
-        $this->properties['width'] = $width;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Distance|\LengthOfRope\JSONLD\Schema\QuantitativeValue
-     **/
-    public function getWidth() {
-        return $this->properties['width'];
-    }
-    /**
-     * The weight of the product or person.
-     *
-     * @param $weight \LengthOfRope\JSONLD\Schema\QuantitativeValue
-     * @return static
-     **/
-    public function setWeight($weight): static {
-        $this->properties['weight'] = $weight;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
-     **/
-    public function getWeight() {
-        return $this->properties['weight'];
-    }
-    /**
-     * The depth of the item.
-     *
-     * @param $depth \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Distance
-     * @return static
-     **/
-    public function setDepth($depth): static {
-        $this->properties['depth'] = $depth;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Distance
-     **/
-    public function getDepth() {
-        return $this->properties['depth'];
+    public function getShippingDestination() {
+        return $this->properties['shippingDestination'];
     }
     /**
      * Indicates when shipping to a particular [[shippingDestination]] is not
@@ -260,23 +203,23 @@ class OfferShippingDetails extends StructuredValue
         return $this->properties['doesNotShip'];
     }
     /**
-     * Label to match an [[OfferShippingDetails]] with a [[ShippingRateSettings]]
-     * (within the context of a [[shippingSettingsLink]] cross-reference).
+     * The membership program tier an Offer (or a PriceSpecification,
+     * OfferShippingDetails, or MerchantReturnPolicy under an Offer) is valid for.
      *
-     * @param $shippingLabel \LengthOfRope\JSONLD\DataType\TypeText
+     * @param $validForMemberTier \LengthOfRope\JSONLD\Schema\MemberProgramTier
      * @return static
      **/
-    public function setShippingLabel($shippingLabel): static {
-        $this->properties['shippingLabel'] = $shippingLabel;
+    public function setValidForMemberTier($validForMemberTier): static {
+        $this->properties['validForMemberTier'] = $validForMemberTier;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\Schema\MemberProgramTier
      **/
-    public function getShippingLabel() {
-        return $this->properties['shippingLabel'];
+    public function getValidForMemberTier() {
+        return $this->properties['validForMemberTier'];
     }
     /**
      * Indicates the origin of a shipment, i.e. where it should be coming from.
@@ -295,5 +238,23 @@ class OfferShippingDetails extends StructuredValue
      **/
     public function getShippingOrigin() {
         return $this->properties['shippingOrigin'];
+    }
+    /**
+     * The height of the item.
+     *
+     * @param $height \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Distance
+     * @return static
+     **/
+    public function setHeight($height): static {
+        $this->properties['height'] = $height;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Distance
+     **/
+    public function getHeight() {
+        return $this->properties['height'];
     }
 }

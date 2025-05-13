@@ -40,24 +40,6 @@ class MusicPlaylist extends CreativeWork
     }
 
     /**
-     * The number of tracks in this album or playlist.
-     *
-     * @param $numTracks \LengthOfRope\JSONLD\DataType\TypeInteger
-     * @return static
-     **/
-    public function setNumTracks($numTracks): static {
-        $this->properties['numTracks'] = $numTracks;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeInteger
-     **/
-    public function getNumTracks() {
-        return $this->properties['numTracks'];
-    }
-    /**
      * A music recording (track)&#x2014;usually a single song.
      *
      * @param $tracks \LengthOfRope\JSONLD\Schema\MusicRecording
@@ -79,7 +61,7 @@ class MusicPlaylist extends CreativeWork
      * A music recording (track)&#x2014;usually a single song. If an ItemList is given,
      * the list should contain items of type MusicRecording.
      *
-     * @param $track \LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\MusicRecording
+     * @param $track \LengthOfRope\JSONLD\Schema\MusicRecording|\LengthOfRope\JSONLD\Schema\ItemList
      * @return static
      **/
     public function setTrack($track): static {
@@ -89,9 +71,27 @@ class MusicPlaylist extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\MusicRecording
+     * @return \LengthOfRope\JSONLD\Schema\MusicRecording|\LengthOfRope\JSONLD\Schema\ItemList
      **/
     public function getTrack() {
         return $this->properties['track'];
+    }
+    /**
+     * The number of tracks in this album or playlist.
+     *
+     * @param $numTracks \LengthOfRope\JSONLD\DataType\TypeInteger
+     * @return static
+     **/
+    public function setNumTracks($numTracks): static {
+        $this->properties['numTracks'] = $numTracks;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeInteger
+     **/
+    public function getNumTracks() {
+        return $this->properties['numTracks'];
     }
 }

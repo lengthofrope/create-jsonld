@@ -44,6 +44,26 @@ class SizeSpecification extends QualitativeValue
     }
 
     /**
+     * A suggested range of body measurements for the intended audience or person, for
+     * example inseam between 32 and 34 inches or height between 170 and 190 cm.
+     * Typically found on a size chart for wearable products.
+     *
+     * @param $suggestedMeasurement \LengthOfRope\JSONLD\Schema\QuantitativeValue
+     * @return static
+     **/
+    public function setSuggestedMeasurement($suggestedMeasurement): static {
+        $this->properties['suggestedMeasurement'] = $suggestedMeasurement;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
+     **/
+    public function getSuggestedMeasurement() {
+        return $this->properties['suggestedMeasurement'];
+    }
+    /**
      * A measurement of an item, For example, the inseam of pants, the wheel size of a
      * bicycle, the gauge of a screw, or the carbon footprint measured for
      * certification by an authority. Usually an exact measurement, but can also be a
@@ -88,7 +108,7 @@ class SizeSpecification extends QualitativeValue
      * The suggested gender of the intended person or audience, for example "male",
      * "female", or "unisex".
      *
-     * @param $suggestedGender \LengthOfRope\JSONLD\Schema\GenderType|\LengthOfRope\JSONLD\DataType\TypeText
+     * @param $suggestedGender \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\GenderType
      * @return static
      **/
     public function setSuggestedGender($suggestedGender): static {
@@ -98,30 +118,10 @@ class SizeSpecification extends QualitativeValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\GenderType|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\GenderType
      **/
     public function getSuggestedGender() {
         return $this->properties['suggestedGender'];
-    }
-    /**
-     * A suggested range of body measurements for the intended audience or person, for
-     * example inseam between 32 and 34 inches or height between 170 and 190 cm.
-     * Typically found on a size chart for wearable products.
-     *
-     * @param $suggestedMeasurement \LengthOfRope\JSONLD\Schema\QuantitativeValue
-     * @return static
-     **/
-    public function setSuggestedMeasurement($suggestedMeasurement): static {
-        $this->properties['suggestedMeasurement'] = $suggestedMeasurement;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
-     **/
-    public function getSuggestedMeasurement() {
-        return $this->properties['suggestedMeasurement'];
     }
     /**
      * The size group (also known as "size type") for a product's size. Size groups are
@@ -129,7 +129,7 @@ class SizeSpecification extends QualitativeValue
      * for wearable products. Multiple values can be combined, for example "men's big
      * and tall", "petite maternity" or "regular".
      *
-     * @param $sizeGroup \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\SizeGroupEnumeration
+     * @param $sizeGroup \LengthOfRope\JSONLD\Schema\SizeGroupEnumeration|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setSizeGroup($sizeGroup): static {
@@ -139,7 +139,7 @@ class SizeSpecification extends QualitativeValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\SizeGroupEnumeration
+     * @return \LengthOfRope\JSONLD\Schema\SizeGroupEnumeration|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getSizeGroup() {
         return $this->properties['sizeGroup'];

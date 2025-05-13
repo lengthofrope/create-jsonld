@@ -41,23 +41,25 @@ class TherapeuticProcedure extends MedicalProcedure
     }
 
     /**
-     * A dosing schedule for the drug for a given population, either observed,
-     * recommended, or maximum dose based on the type used.
+     * A possible complication and/or side effect of this therapy. If it is known that
+     * an adverse outcome is serious (resulting in death, disability, or permanent
+     * damage; requiring hospitalization; or otherwise life-threatening or requiring
+     * immediate medical attention), tag it as a seriousAdverseOutcome instead.
      *
-     * @param $doseSchedule \LengthOfRope\JSONLD\Schema\DoseSchedule
+     * @param $adverseOutcome \LengthOfRope\JSONLD\Schema\MedicalEntity
      * @return static
      **/
-    public function setDoseSchedule($doseSchedule): static {
-        $this->properties['doseSchedule'] = $doseSchedule;
+    public function setAdverseOutcome($adverseOutcome): static {
+        $this->properties['adverseOutcome'] = $adverseOutcome;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\DoseSchedule
+     * @return \LengthOfRope\JSONLD\Schema\MedicalEntity
      **/
-    public function getDoseSchedule() {
-        return $this->properties['doseSchedule'];
+    public function getAdverseOutcome() {
+        return $this->properties['adverseOutcome'];
     }
     /**
      * Specifying a drug or medicine used in a medication procedure.
@@ -78,24 +80,22 @@ class TherapeuticProcedure extends MedicalProcedure
         return $this->properties['drug'];
     }
     /**
-     * A possible complication and/or side effect of this therapy. If it is known that
-     * an adverse outcome is serious (resulting in death, disability, or permanent
-     * damage; requiring hospitalization; or otherwise life-threatening or requiring
-     * immediate medical attention), tag it as a seriousAdverseOutcome instead.
+     * A dosing schedule for the drug for a given population, either observed,
+     * recommended, or maximum dose based on the type used.
      *
-     * @param $adverseOutcome \LengthOfRope\JSONLD\Schema\MedicalEntity
+     * @param $doseSchedule \LengthOfRope\JSONLD\Schema\DoseSchedule
      * @return static
      **/
-    public function setAdverseOutcome($adverseOutcome): static {
-        $this->properties['adverseOutcome'] = $adverseOutcome;
+    public function setDoseSchedule($doseSchedule): static {
+        $this->properties['doseSchedule'] = $doseSchedule;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\MedicalEntity
+     * @return \LengthOfRope\JSONLD\Schema\DoseSchedule
      **/
-    public function getAdverseOutcome() {
-        return $this->properties['adverseOutcome'];
+    public function getDoseSchedule() {
+        return $this->properties['doseSchedule'];
     }
 }

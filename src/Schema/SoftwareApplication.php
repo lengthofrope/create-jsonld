@@ -40,115 +40,6 @@ class SoftwareApplication extends CreativeWork
     }
 
     /**
-     * Minimum memory requirements.
-     *
-     * @param $memoryRequirements \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
-     * @return static
-     **/
-    public function setMemoryRequirements($memoryRequirements): static {
-        $this->properties['memoryRequirements'] = $memoryRequirements;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
-     **/
-    public function getMemoryRequirements() {
-        return $this->properties['memoryRequirements'];
-    }
-    /**
-     * Device required to run the application. Used in cases where a specific
-     * make/model is required to run the application.
-     *
-     * @param $device \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setDevice($device): static {
-        $this->properties['device'] = $device;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getDevice() {
-        return $this->properties['device'];
-    }
-    /**
-     * A link to a screenshot image of the app.
-     *
-     * @param $screenshot \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\ImageObject
-     * @return static
-     **/
-    public function setScreenshot($screenshot): static {
-        $this->properties['screenshot'] = $screenshot;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\ImageObject
-     **/
-    public function getScreenshot() {
-        return $this->properties['screenshot'];
-    }
-    /**
-     * Description of what changed in this version.
-     *
-     * @param $releaseNotes \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
-     * @return static
-     **/
-    public function setReleaseNotes($releaseNotes): static {
-        $this->properties['releaseNotes'] = $releaseNotes;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
-     **/
-    public function getReleaseNotes() {
-        return $this->properties['releaseNotes'];
-    }
-    /**
-     * Supporting data for a SoftwareApplication.
-     *
-     * @param $supportingData \LengthOfRope\JSONLD\Schema\DataFeed
-     * @return static
-     **/
-    public function setSupportingData($supportingData): static {
-        $this->properties['supportingData'] = $supportingData;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\DataFeed
-     **/
-    public function getSupportingData() {
-        return $this->properties['supportingData'];
-    }
-    /**
-     * Type of software application, e.g. 'Game, Multimedia'.
-     *
-     * @param $applicationCategory \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
-     * @return static
-     **/
-    public function setApplicationCategory($applicationCategory): static {
-        $this->properties['applicationCategory'] = $applicationCategory;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
-     **/
-    public function getApplicationCategory() {
-        return $this->properties['applicationCategory'];
-    }
-    /**
      * Countries for which the application is not supported. You can also provide the
      * two-letter ISO 3166-1 alpha-2 country code.
      *
@@ -166,25 +57,6 @@ class SoftwareApplication extends CreativeWork
      **/
     public function getCountriesNotSupported() {
         return $this->properties['countriesNotSupported'];
-    }
-    /**
-     * Permission(s) required to run the app (for example, a mobile app may require
-     * full internet access or may run only on wifi).
-     *
-     * @param $permissions \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setPermissions($permissions): static {
-        $this->properties['permissions'] = $permissions;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getPermissions() {
-        return $this->properties['permissions'];
     }
     /**
      * Operating systems supported (Windows 7, OS X 10.6, Android 1.6).
@@ -205,14 +77,31 @@ class SoftwareApplication extends CreativeWork
         return $this->properties['operatingSystem'];
     }
     /**
-     * Device required to run the application. Used in cases where a specific
-     * make/model is required to run the application.
+     * A link to a screenshot image of the app.
      *
-     * @param $availableOnDevice \LengthOfRope\JSONLD\DataType\TypeText
+     * @param $screenshot \LengthOfRope\JSONLD\Schema\ImageObject|\LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
-    public function setAvailableOnDevice($availableOnDevice): static {
-        $this->properties['availableOnDevice'] = $availableOnDevice;
+    public function setScreenshot($screenshot): static {
+        $this->properties['screenshot'] = $screenshot;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\ImageObject|\LengthOfRope\JSONLD\DataType\TypeURL
+     **/
+    public function getScreenshot() {
+        return $this->properties['screenshot'];
+    }
+    /**
+     * Version of the software instance.
+     *
+     * @param $softwareVersion \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setSoftwareVersion($softwareVersion): static {
+        $this->properties['softwareVersion'] = $softwareVersion;
 
         return $this;
     }
@@ -220,26 +109,8 @@ class SoftwareApplication extends CreativeWork
     /**
      * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
-    public function getAvailableOnDevice() {
-        return $this->properties['availableOnDevice'];
-    }
-    /**
-     * Software application help.
-     *
-     * @param $softwareHelp \LengthOfRope\JSONLD\Schema\CreativeWork
-     * @return static
-     **/
-    public function setSoftwareHelp($softwareHelp): static {
-        $this->properties['softwareHelp'] = $softwareHelp;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\CreativeWork
-     **/
-    public function getSoftwareHelp() {
-        return $this->properties['softwareHelp'];
+    public function getSoftwareVersion() {
+        return $this->properties['softwareVersion'];
     }
     /**
      * Size of the application / package (e.g. 18MB). In the absence of a unit (MB, KB
@@ -261,52 +132,14 @@ class SoftwareApplication extends CreativeWork
         return $this->properties['fileSize'];
     }
     /**
-     * Component dependency requirements for application. This includes runtime
-     * environments and shared libraries that are not included in the application
-     * distribution package, but required to run the application (examples: DirectX,
-     * Java or .NET runtime).
+     * Device required to run the application. Used in cases where a specific
+     * make/model is required to run the application.
      *
-     * @param $requirements \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
+     * @param $availableOnDevice \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
-    public function setRequirements($requirements): static {
-        $this->properties['requirements'] = $requirements;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
-     **/
-    public function getRequirements() {
-        return $this->properties['requirements'];
-    }
-    /**
-     * Storage requirements (free space required).
-     *
-     * @param $storageRequirements \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
-     * @return static
-     **/
-    public function setStorageRequirements($storageRequirements): static {
-        $this->properties['storageRequirements'] = $storageRequirements;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
-     **/
-    public function getStorageRequirements() {
-        return $this->properties['storageRequirements'];
-    }
-    /**
-     * Processor architecture required to run the application (e.g. IA64).
-     *
-     * @param $processorRequirements \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setProcessorRequirements($processorRequirements): static {
-        $this->properties['processorRequirements'] = $processorRequirements;
+    public function setAvailableOnDevice($availableOnDevice): static {
+        $this->properties['availableOnDevice'] = $availableOnDevice;
 
         return $this;
     }
@@ -314,66 +147,8 @@ class SoftwareApplication extends CreativeWork
     /**
      * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
-    public function getProcessorRequirements() {
-        return $this->properties['processorRequirements'];
-    }
-    /**
-     * Countries for which the application is supported. You can also provide the
-     * two-letter ISO 3166-1 alpha-2 country code.
-     *
-     * @param $countriesSupported \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setCountriesSupported($countriesSupported): static {
-        $this->properties['countriesSupported'] = $countriesSupported;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getCountriesSupported() {
-        return $this->properties['countriesSupported'];
-    }
-    /**
-     * Additional content for a software application.
-     *
-     * @param $softwareAddOn \LengthOfRope\JSONLD\Schema\SoftwareApplication
-     * @return static
-     **/
-    public function setSoftwareAddOn($softwareAddOn): static {
-        $this->properties['softwareAddOn'] = $softwareAddOn;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\SoftwareApplication
-     **/
-    public function getSoftwareAddOn() {
-        return $this->properties['softwareAddOn'];
-    }
-    /**
-     * Component dependency requirements for application. This includes runtime
-     * environments and shared libraries that are not included in the application
-     * distribution package, but required to run the application (examples: DirectX,
-     * Java or .NET runtime).
-     *
-     * @param $softwareRequirements \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
-     * @return static
-     **/
-    public function setSoftwareRequirements($softwareRequirements): static {
-        $this->properties['softwareRequirements'] = $softwareRequirements;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
-     **/
-    public function getSoftwareRequirements() {
-        return $this->properties['softwareRequirements'];
+    public function getAvailableOnDevice() {
+        return $this->properties['availableOnDevice'];
     }
     /**
      * The name of the application suite to which the application belongs (e.g. Excel
@@ -395,13 +170,67 @@ class SoftwareApplication extends CreativeWork
         return $this->properties['applicationSuite'];
     }
     /**
-     * If the file can be downloaded, URL to download the binary.
+     * Minimum memory requirements.
      *
-     * @param $downloadUrl \LengthOfRope\JSONLD\DataType\TypeURL
+     * @param $memoryRequirements \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
-    public function setDownloadUrl($downloadUrl): static {
-        $this->properties['downloadUrl'] = $downloadUrl;
+    public function setMemoryRequirements($memoryRequirements): static {
+        $this->properties['memoryRequirements'] = $memoryRequirements;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
+     **/
+    public function getMemoryRequirements() {
+        return $this->properties['memoryRequirements'];
+    }
+    /**
+     * Type of software application, e.g. 'Game, Multimedia'.
+     *
+     * @param $applicationCategory \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setApplicationCategory($applicationCategory): static {
+        $this->properties['applicationCategory'] = $applicationCategory;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getApplicationCategory() {
+        return $this->properties['applicationCategory'];
+    }
+    /**
+     * Description of what changed in this version.
+     *
+     * @param $releaseNotes \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setReleaseNotes($releaseNotes): static {
+        $this->properties['releaseNotes'] = $releaseNotes;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getReleaseNotes() {
+        return $this->properties['releaseNotes'];
+    }
+    /**
+     * URL at which the app may be installed, if different from the URL of the item.
+     *
+     * @param $installUrl \LengthOfRope\JSONLD\DataType\TypeURL
+     * @return static
+     **/
+    public function setInstallUrl($installUrl): static {
+        $this->properties['installUrl'] = $installUrl;
 
         return $this;
     }
@@ -409,17 +238,39 @@ class SoftwareApplication extends CreativeWork
     /**
      * @return \LengthOfRope\JSONLD\DataType\TypeURL
      **/
-    public function getDownloadUrl() {
-        return $this->properties['downloadUrl'];
+    public function getInstallUrl() {
+        return $this->properties['installUrl'];
     }
     /**
-     * Version of the software instance.
+     * Component dependency requirements for application. This includes runtime
+     * environments and shared libraries that are not included in the application
+     * distribution package, but required to run the application (examples: DirectX,
+     * Java or .NET runtime).
      *
-     * @param $softwareVersion \LengthOfRope\JSONLD\DataType\TypeText
+     * @param $requirements \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
-    public function setSoftwareVersion($softwareVersion): static {
-        $this->properties['softwareVersion'] = $softwareVersion;
+    public function setRequirements($requirements): static {
+        $this->properties['requirements'] = $requirements;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getRequirements() {
+        return $this->properties['requirements'];
+    }
+    /**
+     * Countries for which the application is supported. You can also provide the
+     * two-letter ISO 3166-1 alpha-2 country code.
+     *
+     * @param $countriesSupported \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setCountriesSupported($countriesSupported): static {
+        $this->properties['countriesSupported'] = $countriesSupported;
 
         return $this;
     }
@@ -427,8 +278,121 @@ class SoftwareApplication extends CreativeWork
     /**
      * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
-    public function getSoftwareVersion() {
-        return $this->properties['softwareVersion'];
+    public function getCountriesSupported() {
+        return $this->properties['countriesSupported'];
+    }
+    /**
+     * Supporting data for a SoftwareApplication.
+     *
+     * @param $supportingData \LengthOfRope\JSONLD\Schema\DataFeed
+     * @return static
+     **/
+    public function setSupportingData($supportingData): static {
+        $this->properties['supportingData'] = $supportingData;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\DataFeed
+     **/
+    public function getSupportingData() {
+        return $this->properties['supportingData'];
+    }
+    /**
+     * Device required to run the application. Used in cases where a specific
+     * make/model is required to run the application.
+     *
+     * @param $device \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setDevice($device): static {
+        $this->properties['device'] = $device;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getDevice() {
+        return $this->properties['device'];
+    }
+    /**
+     * Software application help.
+     *
+     * @param $softwareHelp \LengthOfRope\JSONLD\Schema\CreativeWork
+     * @return static
+     **/
+    public function setSoftwareHelp($softwareHelp): static {
+        $this->properties['softwareHelp'] = $softwareHelp;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork
+     **/
+    public function getSoftwareHelp() {
+        return $this->properties['softwareHelp'];
+    }
+    /**
+     * Processor architecture required to run the application (e.g. IA64).
+     *
+     * @param $processorRequirements \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setProcessorRequirements($processorRequirements): static {
+        $this->properties['processorRequirements'] = $processorRequirements;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getProcessorRequirements() {
+        return $this->properties['processorRequirements'];
+    }
+    /**
+     * Component dependency requirements for application. This includes runtime
+     * environments and shared libraries that are not included in the application
+     * distribution package, but required to run the application (examples: DirectX,
+     * Java or .NET runtime).
+     *
+     * @param $softwareRequirements \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setSoftwareRequirements($softwareRequirements): static {
+        $this->properties['softwareRequirements'] = $softwareRequirements;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getSoftwareRequirements() {
+        return $this->properties['softwareRequirements'];
+    }
+    /**
+     * Permission(s) required to run the app (for example, a mobile app may require
+     * full internet access or may run only on wifi).
+     *
+     * @param $permissions \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setPermissions($permissions): static {
+        $this->properties['permissions'] = $permissions;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getPermissions() {
+        return $this->properties['permissions'];
     }
     /**
      * Features or modules provided by this application (and possibly required by other
@@ -450,6 +414,60 @@ class SoftwareApplication extends CreativeWork
         return $this->properties['featureList'];
     }
     /**
+     * Additional content for a software application.
+     *
+     * @param $softwareAddOn \LengthOfRope\JSONLD\Schema\SoftwareApplication
+     * @return static
+     **/
+    public function setSoftwareAddOn($softwareAddOn): static {
+        $this->properties['softwareAddOn'] = $softwareAddOn;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\SoftwareApplication
+     **/
+    public function getSoftwareAddOn() {
+        return $this->properties['softwareAddOn'];
+    }
+    /**
+     * If the file can be downloaded, URL to download the binary.
+     *
+     * @param $downloadUrl \LengthOfRope\JSONLD\DataType\TypeURL
+     * @return static
+     **/
+    public function setDownloadUrl($downloadUrl): static {
+        $this->properties['downloadUrl'] = $downloadUrl;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL
+     **/
+    public function getDownloadUrl() {
+        return $this->properties['downloadUrl'];
+    }
+    /**
+     * Storage requirements (free space required).
+     *
+     * @param $storageRequirements \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setStorageRequirements($storageRequirements): static {
+        $this->properties['storageRequirements'] = $storageRequirements;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getStorageRequirements() {
+        return $this->properties['storageRequirements'];
+    }
+    /**
      * Subcategory of the application, e.g. 'Arcade Game'.
      *
      * @param $applicationSubCategory \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
@@ -466,23 +484,5 @@ class SoftwareApplication extends CreativeWork
      **/
     public function getApplicationSubCategory() {
         return $this->properties['applicationSubCategory'];
-    }
-    /**
-     * URL at which the app may be installed, if different from the URL of the item.
-     *
-     * @param $installUrl \LengthOfRope\JSONLD\DataType\TypeURL
-     * @return static
-     **/
-    public function setInstallUrl($installUrl): static {
-        $this->properties['installUrl'] = $installUrl;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeURL
-     **/
-    public function getInstallUrl() {
-        return $this->properties['installUrl'];
     }
 }

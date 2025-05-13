@@ -45,26 +45,6 @@ class TypePronounceableText extends TypeText implements IValidator
     }
 
     /**
-     * Representation of a text [[textValue]] using the specified
-     * [[speechToTextMarkup]]. For example the city name of Houston in IPA:
-     * /ˈhjuːstən/.
-     *
-     * @param $phoneticText 
-     * @return static
-     **/
-    public function setPhoneticText($phoneticText): static {
-        $this->properties['phoneticText'] = $phoneticText;
-
-        return $this;
-    }
-
-    /**
-     * @return 
-     **/
-    public function getPhoneticText() {
-        return $this->properties['phoneticText'];
-    }
-    /**
      * Text value being annotated.
      *
      * @param $textValue 
@@ -101,6 +81,26 @@ class TypePronounceableText extends TypeText implements IValidator
      **/
     public function getInLanguage() {
         return $this->properties['inLanguage'];
+    }
+    /**
+     * Representation of a text [[textValue]] using the specified
+     * [[speechToTextMarkup]]. For example the city name of Houston in IPA:
+     * /ˈhjuːstən/.
+     *
+     * @param $phoneticText 
+     * @return static
+     **/
+    public function setPhoneticText($phoneticText): static {
+        $this->properties['phoneticText'] = $phoneticText;
+
+        return $this;
+    }
+
+    /**
+     * @return 
+     **/
+    public function getPhoneticText() {
+        return $this->properties['phoneticText'];
     }
     /**
      * Form of markup used. eg. [SSML](https://www.w3.org/TR/speech-synthesis11) or

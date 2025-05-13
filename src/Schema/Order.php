@@ -42,173 +42,6 @@ class Order extends Intangible
     }
 
     /**
-     * The offer(s) -- e.g., product, quantity and price combinations -- included in
-     * the order.
-     *
-     * @param $acceptedOffer \LengthOfRope\JSONLD\Schema\Offer
-     * @return static
-     **/
-    public function setAcceptedOffer($acceptedOffer): static {
-        $this->properties['acceptedOffer'] = $acceptedOffer;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Offer
-     **/
-    public function getAcceptedOffer() {
-        return $this->properties['acceptedOffer'];
-    }
-    /**
-     * Party placing the order or paying the invoice.
-     *
-     * @param $customer \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
-     * @return static
-     **/
-    public function setCustomer($customer): static {
-        $this->properties['customer'] = $customer;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
-     **/
-    public function getCustomer() {
-        return $this->properties['customer'];
-    }
-    /**
-     * Indicates whether the offer was accepted as a gift for someone other than the
-     * buyer.
-     *
-     * @param $isGift \LengthOfRope\JSONLD\DataType\TypeBoolean
-     * @return static
-     **/
-    public function setIsGift($isGift): static {
-        $this->properties['isGift'] = $isGift;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean
-     **/
-    public function getIsGift() {
-        return $this->properties['isGift'];
-    }
-    /**
-     * The name of the credit card or other method of payment for the order.
-     *
-     * @param $paymentMethod \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\PaymentMethod
-     * @return static
-     **/
-    public function setPaymentMethod($paymentMethod): static {
-        $this->properties['paymentMethod'] = $paymentMethod;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\PaymentMethod
-     **/
-    public function getPaymentMethod() {
-        return $this->properties['paymentMethod'];
-    }
-    /**
-     * The URL for sending a payment.
-     *
-     * @param $paymentUrl \LengthOfRope\JSONLD\DataType\TypeURL
-     * @return static
-     **/
-    public function setPaymentUrl($paymentUrl): static {
-        $this->properties['paymentUrl'] = $paymentUrl;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeURL
-     **/
-    public function getPaymentUrl() {
-        return $this->properties['paymentUrl'];
-    }
-    /**
-     * 'merchant' is an out-dated term for 'seller'.
-     *
-     * @param $merchant \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
-     * @return static
-     **/
-    public function setMerchant($merchant): static {
-        $this->properties['merchant'] = $merchant;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
-     **/
-    public function getMerchant() {
-        return $this->properties['merchant'];
-    }
-    /**
-     * The order is being paid as part of the referenced Invoice.
-     *
-     * @param $partOfInvoice \LengthOfRope\JSONLD\Schema\Invoice
-     * @return static
-     **/
-    public function setPartOfInvoice($partOfInvoice): static {
-        $this->properties['partOfInvoice'] = $partOfInvoice;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Invoice
-     **/
-    public function getPartOfInvoice() {
-        return $this->properties['partOfInvoice'];
-    }
-    /**
-     * The date that payment is due.
-     *
-     * @param $paymentDueDate \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
-     * @return static
-     **/
-    public function setPaymentDueDate($paymentDueDate): static {
-        $this->properties['paymentDueDate'] = $paymentDueDate;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
-     **/
-    public function getPaymentDueDate() {
-        return $this->properties['paymentDueDate'];
-    }
-    /**
-     * An entity that arranges for an exchange between a buyer and a seller.  In most
-     * cases a broker never acquires or releases ownership of a product or service
-     * involved in an exchange.  If it is not clear whether an entity is a broker,
-     * seller, or buyer, the latter two terms are preferred.
-     *
-     * @param $broker \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\Person
-     * @return static
-     **/
-    public function setBroker($broker): static {
-        $this->properties['broker'] = $broker;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\Person
-     **/
-    public function getBroker() {
-        return $this->properties['broker'];
-    }
-    /**
      * Any discount applied (to an Order).
      *
      * @param $discount \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeNumber
@@ -225,98 +58,6 @@ class Order extends Intangible
      **/
     public function getDiscount() {
         return $this->properties['discount'];
-    }
-    /**
-     * Date order was placed.
-     *
-     * @param $orderDate \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
-     * @return static
-     **/
-    public function setOrderDate($orderDate): static {
-        $this->properties['orderDate'] = $orderDate;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
-     **/
-    public function getOrderDate() {
-        return $this->properties['orderDate'];
-    }
-    /**
-     * An identifier for the method of payment used (e.g. the last 4 digits of the
-     * credit card).
-     *
-     * @param $paymentMethodId \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setPaymentMethodId($paymentMethodId): static {
-        $this->properties['paymentMethodId'] = $paymentMethodId;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getPaymentMethodId() {
-        return $this->properties['paymentMethodId'];
-    }
-    /**
-     * The item ordered.
-     *
-     * @param $orderedItem \LengthOfRope\JSONLD\Schema\Service|\LengthOfRope\JSONLD\Schema\Product|\LengthOfRope\JSONLD\Schema\OrderItem
-     * @return static
-     **/
-    public function setOrderedItem($orderedItem): static {
-        $this->properties['orderedItem'] = $orderedItem;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Service|\LengthOfRope\JSONLD\Schema\Product|\LengthOfRope\JSONLD\Schema\OrderItem
-     **/
-    public function getOrderedItem() {
-        return $this->properties['orderedItem'];
-    }
-    /**
-     * The date that payment is due.
-     *
-     * @param $paymentDue \LengthOfRope\JSONLD\DataType\TypeDateTime
-     * @return static
-     **/
-    public function setPaymentDue($paymentDue): static {
-        $this->properties['paymentDue'] = $paymentDue;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime
-     **/
-    public function getPaymentDue() {
-        return $this->properties['paymentDue'];
-    }
-    /**
-     * An entity which offers (sells / leases / lends / loans) the services / goods.  A
-     * seller may also be a provider.
-     *
-     * @param $seller \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
-     * @return static
-     **/
-    public function setSeller($seller): static {
-        $this->properties['seller'] = $seller;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
-     **/
-    public function getSeller() {
-        return $this->properties['seller'];
     }
     /**
      * The currency of the discount.
@@ -344,22 +85,113 @@ class Order extends Intangible
         return $this->properties['discountCurrency'];
     }
     /**
-     * The delivery of the parcel related to this order or order item.
+     * Indicates whether the offer was accepted as a gift for someone other than the
+     * buyer.
      *
-     * @param $orderDelivery \LengthOfRope\JSONLD\Schema\ParcelDelivery
+     * @param $isGift \LengthOfRope\JSONLD\DataType\TypeBoolean
      * @return static
      **/
-    public function setOrderDelivery($orderDelivery): static {
-        $this->properties['orderDelivery'] = $orderDelivery;
+    public function setIsGift($isGift): static {
+        $this->properties['isGift'] = $isGift;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\ParcelDelivery
+     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean
      **/
-    public function getOrderDelivery() {
-        return $this->properties['orderDelivery'];
+    public function getIsGift() {
+        return $this->properties['isGift'];
+    }
+    /**
+     * The item ordered.
+     *
+     * @param $orderedItem \LengthOfRope\JSONLD\Schema\Product|\LengthOfRope\JSONLD\Schema\OrderItem|\LengthOfRope\JSONLD\Schema\Service
+     * @return static
+     **/
+    public function setOrderedItem($orderedItem): static {
+        $this->properties['orderedItem'] = $orderedItem;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Product|\LengthOfRope\JSONLD\Schema\OrderItem|\LengthOfRope\JSONLD\Schema\Service
+     **/
+    public function getOrderedItem() {
+        return $this->properties['orderedItem'];
+    }
+    /**
+     * The date that payment is due.
+     *
+     * @param $paymentDue \LengthOfRope\JSONLD\DataType\TypeDateTime
+     * @return static
+     **/
+    public function setPaymentDue($paymentDue): static {
+        $this->properties['paymentDue'] = $paymentDue;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime
+     **/
+    public function getPaymentDue() {
+        return $this->properties['paymentDue'];
+    }
+    /**
+     * Party placing the order or paying the invoice.
+     *
+     * @param $customer \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
+     * @return static
+     **/
+    public function setCustomer($customer): static {
+        $this->properties['customer'] = $customer;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
+     **/
+    public function getCustomer() {
+        return $this->properties['customer'];
+    }
+    /**
+     * The order is being paid as part of the referenced Invoice.
+     *
+     * @param $partOfInvoice \LengthOfRope\JSONLD\Schema\Invoice
+     * @return static
+     **/
+    public function setPartOfInvoice($partOfInvoice): static {
+        $this->properties['partOfInvoice'] = $partOfInvoice;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Invoice
+     **/
+    public function getPartOfInvoice() {
+        return $this->properties['partOfInvoice'];
+    }
+    /**
+     * Date order was placed.
+     *
+     * @param $orderDate \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
+     * @return static
+     **/
+    public function setOrderDate($orderDate): static {
+        $this->properties['orderDate'] = $orderDate;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
+     **/
+    public function getOrderDate() {
+        return $this->properties['orderDate'];
     }
     /**
      * The billing address for the order.
@@ -398,22 +230,172 @@ class Order extends Intangible
         return $this->properties['confirmationNumber'];
     }
     /**
-     * The current status of the order.
+     * An entity which offers (sells / leases / lends / loans) the services / goods.  A
+     * seller may also be a provider.
      *
-     * @param $orderStatus \LengthOfRope\JSONLD\Schema\OrderStatus
+     * @param $seller \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
-    public function setOrderStatus($orderStatus): static {
-        $this->properties['orderStatus'] = $orderStatus;
+    public function setSeller($seller): static {
+        $this->properties['seller'] = $seller;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\OrderStatus
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
-    public function getOrderStatus() {
-        return $this->properties['orderStatus'];
+    public function getSeller() {
+        return $this->properties['seller'];
+    }
+    /**
+     * The identifier of the transaction.
+     *
+     * @param $orderNumber \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setOrderNumber($orderNumber): static {
+        $this->properties['orderNumber'] = $orderNumber;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getOrderNumber() {
+        return $this->properties['orderNumber'];
+    }
+    /**
+     * The name of the credit card or other method of payment for the order.
+     *
+     * @param $paymentMethod \LengthOfRope\JSONLD\Schema\PaymentMethod|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setPaymentMethod($paymentMethod): static {
+        $this->properties['paymentMethod'] = $paymentMethod;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\PaymentMethod|\LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getPaymentMethod() {
+        return $this->properties['paymentMethod'];
+    }
+    /**
+     * An entity that arranges for an exchange between a buyer and a seller.  In most
+     * cases a broker never acquires or releases ownership of a product or service
+     * involved in an exchange.  If it is not clear whether an entity is a broker,
+     * seller, or buyer, the latter two terms are preferred.
+     *
+     * @param $broker \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\Person
+     * @return static
+     **/
+    public function setBroker($broker): static {
+        $this->properties['broker'] = $broker;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\Person
+     **/
+    public function getBroker() {
+        return $this->properties['broker'];
+    }
+    /**
+     * The date that payment is due.
+     *
+     * @param $paymentDueDate \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
+     * @return static
+     **/
+    public function setPaymentDueDate($paymentDueDate): static {
+        $this->properties['paymentDueDate'] = $paymentDueDate;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
+     **/
+    public function getPaymentDueDate() {
+        return $this->properties['paymentDueDate'];
+    }
+    /**
+     * The offer(s) -- e.g., product, quantity and price combinations -- included in
+     * the order.
+     *
+     * @param $acceptedOffer \LengthOfRope\JSONLD\Schema\Offer
+     * @return static
+     **/
+    public function setAcceptedOffer($acceptedOffer): static {
+        $this->properties['acceptedOffer'] = $acceptedOffer;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Offer
+     **/
+    public function getAcceptedOffer() {
+        return $this->properties['acceptedOffer'];
+    }
+    /**
+     * The URL for sending a payment.
+     *
+     * @param $paymentUrl \LengthOfRope\JSONLD\DataType\TypeURL
+     * @return static
+     **/
+    public function setPaymentUrl($paymentUrl): static {
+        $this->properties['paymentUrl'] = $paymentUrl;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL
+     **/
+    public function getPaymentUrl() {
+        return $this->properties['paymentUrl'];
+    }
+    /**
+     * The delivery of the parcel related to this order or order item.
+     *
+     * @param $orderDelivery \LengthOfRope\JSONLD\Schema\ParcelDelivery
+     * @return static
+     **/
+    public function setOrderDelivery($orderDelivery): static {
+        $this->properties['orderDelivery'] = $orderDelivery;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\ParcelDelivery
+     **/
+    public function getOrderDelivery() {
+        return $this->properties['orderDelivery'];
+    }
+    /**
+     * An identifier for the method of payment used (e.g. the last 4 digits of the
+     * credit card).
+     *
+     * @param $paymentMethodId \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setPaymentMethodId($paymentMethodId): static {
+        $this->properties['paymentMethodId'] = $paymentMethodId;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getPaymentMethodId() {
+        return $this->properties['paymentMethodId'];
     }
     /**
      * Code used to redeem a discount.
@@ -434,21 +416,39 @@ class Order extends Intangible
         return $this->properties['discountCode'];
     }
     /**
-     * The identifier of the transaction.
+     * The current status of the order.
      *
-     * @param $orderNumber \LengthOfRope\JSONLD\DataType\TypeText
+     * @param $orderStatus \LengthOfRope\JSONLD\Schema\OrderStatus
      * @return static
      **/
-    public function setOrderNumber($orderNumber): static {
-        $this->properties['orderNumber'] = $orderNumber;
+    public function setOrderStatus($orderStatus): static {
+        $this->properties['orderStatus'] = $orderStatus;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\Schema\OrderStatus
      **/
-    public function getOrderNumber() {
-        return $this->properties['orderNumber'];
+    public function getOrderStatus() {
+        return $this->properties['orderStatus'];
+    }
+    /**
+     * 'merchant' is an out-dated term for 'seller'.
+     *
+     * @param $merchant \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
+     * @return static
+     **/
+    public function setMerchant($merchant): static {
+        $this->properties['merchant'] = $merchant;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
+     **/
+    public function getMerchant() {
+        return $this->properties['merchant'];
     }
 }

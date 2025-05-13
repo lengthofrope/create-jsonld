@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  * @see https://schema.org/ReviewNewsArticle
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ReviewNewsArticle extends NewsArticle
+class ReviewNewsArticle extends CriticReview
 {
     public static function factory(): ReviewNewsArticle
     {

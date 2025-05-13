@@ -50,6 +50,25 @@ class TouristDestination extends Place
     }
 
     /**
+     * Attraction suitable for type(s) of tourist. E.g. children, visitors from a
+     * particular country, etc.
+     *
+     * @param $touristType \LengthOfRope\JSONLD\Schema\Audience|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setTouristType($touristType): static {
+        $this->properties['touristType'] = $touristType;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Audience|\LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getTouristType() {
+        return $this->properties['touristType'];
+    }
+    /**
      * Attraction located at destination.
      *
      * @param $includesAttraction \LengthOfRope\JSONLD\Schema\TouristAttraction
@@ -66,24 +85,5 @@ class TouristDestination extends Place
      **/
     public function getIncludesAttraction() {
         return $this->properties['includesAttraction'];
-    }
-    /**
-     * Attraction suitable for type(s) of tourist. E.g. children, visitors from a
-     * particular country, etc.
-     *
-     * @param $touristType \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Audience
-     * @return static
-     **/
-    public function setTouristType($touristType): static {
-        $this->properties['touristType'] = $touristType;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Audience
-     **/
-    public function getTouristType() {
-        return $this->properties['touristType'];
     }
 }

@@ -44,7 +44,7 @@ namespace LengthOfRope\JSONLD\Schema;
  * @see https://schema.org/CreditCard
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class CreditCard extends LoanOrCredit
+class CreditCard extends PaymentCard
 {
     public static function factory(): CreditCard
     {

@@ -40,6 +40,44 @@ class LodgingBusiness extends LocalBusiness
     }
 
     /**
+     * An intended audience, i.e. a group for whom something was created.
+     *
+     * @param $audience \LengthOfRope\JSONLD\Schema\Audience
+     * @return static
+     **/
+    public function setAudience($audience): static {
+        $this->properties['audience'] = $audience;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Audience
+     **/
+    public function getAudience() {
+        return $this->properties['audience'];
+    }
+    /**
+     * An amenity feature (e.g. a characteristic or service) of the Accommodation. This
+     * generic property does not make a statement about whether the feature is included
+     * in an offer for the main accommodation or available at extra costs.
+     *
+     * @param $amenityFeature \LengthOfRope\JSONLD\Schema\LocationFeatureSpecification
+     * @return static
+     **/
+    public function setAmenityFeature($amenityFeature): static {
+        $this->properties['amenityFeature'] = $amenityFeature;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\LocationFeatureSpecification
+     **/
+    public function getAmenityFeature() {
+        return $this->properties['amenityFeature'];
+    }
+    /**
      * Indicates whether pets are allowed to enter the accommodation or lodging
      * business. More detailed information can be put in a text value.
      *
@@ -57,6 +95,24 @@ class LodgingBusiness extends LocalBusiness
      **/
     public function getPetsAllowed() {
         return $this->properties['petsAllowed'];
+    }
+    /**
+     * The earliest someone may check into a lodging establishment.
+     *
+     * @param $checkinTime \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeTime
+     * @return static
+     **/
+    public function setCheckinTime($checkinTime): static {
+        $this->properties['checkinTime'] = $checkinTime;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeTime
+     **/
+    public function getCheckinTime() {
+        return $this->properties['checkinTime'];
     }
     /**
      * An official rating for a lodging business or food establishment, e.g. from
@@ -80,48 +136,12 @@ class LodgingBusiness extends LocalBusiness
         return $this->properties['starRating'];
     }
     /**
-     * The latest someone may check out of a lodging establishment.
-     *
-     * @param $checkoutTime \LengthOfRope\JSONLD\DataType\TypeTime|\LengthOfRope\JSONLD\DataType\TypeDateTime
-     * @return static
-     **/
-    public function setCheckoutTime($checkoutTime): static {
-        $this->properties['checkoutTime'] = $checkoutTime;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeTime|\LengthOfRope\JSONLD\DataType\TypeDateTime
-     **/
-    public function getCheckoutTime() {
-        return $this->properties['checkoutTime'];
-    }
-    /**
-     * The earliest someone may check into a lodging establishment.
-     *
-     * @param $checkinTime \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeTime
-     * @return static
-     **/
-    public function setCheckinTime($checkinTime): static {
-        $this->properties['checkinTime'] = $checkinTime;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeTime
-     **/
-    public function getCheckinTime() {
-        return $this->properties['checkinTime'];
-    }
-    /**
      * The number of rooms (excluding bathrooms and closets) of the accommodation or
      * lodging business.
      * Typical unit code(s): ROM for room or C62 for no unit. The type of room can be
      * put in the unitText property of the QuantitativeValue.
      *
-     * @param $numberOfRooms \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\TypeNumber
+     * @param $numberOfRooms \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setNumberOfRooms($numberOfRooms): static {
@@ -131,37 +151,35 @@ class LodgingBusiness extends LocalBusiness
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\TypeNumber
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getNumberOfRooms() {
         return $this->properties['numberOfRooms'];
     }
     /**
-     * An amenity feature (e.g. a characteristic or service) of the Accommodation. This
-     * generic property does not make a statement about whether the feature is included
-     * in an offer for the main accommodation or available at extra costs.
+     * The latest someone may check out of a lodging establishment.
      *
-     * @param $amenityFeature \LengthOfRope\JSONLD\Schema\LocationFeatureSpecification
+     * @param $checkoutTime \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeTime
      * @return static
      **/
-    public function setAmenityFeature($amenityFeature): static {
-        $this->properties['amenityFeature'] = $amenityFeature;
+    public function setCheckoutTime($checkoutTime): static {
+        $this->properties['checkoutTime'] = $checkoutTime;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\LocationFeatureSpecification
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeTime
      **/
-    public function getAmenityFeature() {
-        return $this->properties['amenityFeature'];
+    public function getCheckoutTime() {
+        return $this->properties['checkoutTime'];
     }
     /**
      * A language someone may use with or at the item, service or place. Please use one
      * of the language codes from the [IETF BCP 47
      * standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].
      *
-     * @param $availableLanguage \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Language
+     * @param $availableLanguage \LengthOfRope\JSONLD\Schema\Language|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setAvailableLanguage($availableLanguage): static {
@@ -171,27 +189,9 @@ class LodgingBusiness extends LocalBusiness
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Language
+     * @return \LengthOfRope\JSONLD\Schema\Language|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getAvailableLanguage() {
         return $this->properties['availableLanguage'];
-    }
-    /**
-     * An intended audience, i.e. a group for whom something was created.
-     *
-     * @param $audience \LengthOfRope\JSONLD\Schema\Audience
-     * @return static
-     **/
-    public function setAudience($audience): static {
-        $this->properties['audience'] = $audience;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Audience
-     **/
-    public function getAudience() {
-        return $this->properties['audience'];
     }
 }

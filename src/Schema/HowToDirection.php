@@ -41,6 +41,24 @@ class HowToDirection extends ListItem
     }
 
     /**
+     * A media object representing the circumstances while performing this direction.
+     *
+     * @param $duringMedia \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\MediaObject
+     * @return static
+     **/
+    public function setDuringMedia($duringMedia): static {
+        $this->properties['duringMedia'] = $duringMedia;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\MediaObject
+     **/
+    public function getDuringMedia() {
+        return $this->properties['duringMedia'];
+    }
+    /**
      * A media object representing the circumstances before performing this direction.
      *
      * @param $beforeMedia \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\MediaObject
@@ -57,44 +75,6 @@ class HowToDirection extends ListItem
      **/
     public function getBeforeMedia() {
         return $this->properties['beforeMedia'];
-    }
-    /**
-     * The length of time it takes to prepare the items to be used in instructions or a
-     * direction, in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
-     *
-     * @param $prepTime \LengthOfRope\JSONLD\Schema\Duration
-     * @return static
-     **/
-    public function setPrepTime($prepTime): static {
-        $this->properties['prepTime'] = $prepTime;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Duration
-     **/
-    public function getPrepTime() {
-        return $this->properties['prepTime'];
-    }
-    /**
-     * A sub property of instrument. An object used (but not consumed) when performing
-     * instructions or a direction.
-     *
-     * @param $tool \LengthOfRope\JSONLD\Schema\HowToTool|\LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setTool($tool): static {
-        $this->properties['tool'] = $tool;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\HowToTool|\LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getTool() {
-        return $this->properties['tool'];
     }
     /**
      * The total time required to perform instructions or a direction (including time
@@ -117,22 +97,23 @@ class HowToDirection extends ListItem
         return $this->properties['totalTime'];
     }
     /**
-     * A media object representing the circumstances while performing this direction.
+     * A sub-property of instrument. A supply consumed when performing instructions or
+     * a direction.
      *
-     * @param $duringMedia \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\MediaObject
+     * @param $supply \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\HowToSupply
      * @return static
      **/
-    public function setDuringMedia($duringMedia): static {
-        $this->properties['duringMedia'] = $duringMedia;
+    public function setSupply($supply): static {
+        $this->properties['supply'] = $supply;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\MediaObject
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\HowToSupply
      **/
-    public function getDuringMedia() {
-        return $this->properties['duringMedia'];
+    public function getSupply() {
+        return $this->properties['supply'];
     }
     /**
      * The length of time it takes to perform instructions or a direction (not
@@ -155,23 +136,42 @@ class HowToDirection extends ListItem
         return $this->properties['performTime'];
     }
     /**
-     * A sub-property of instrument. A supply consumed when performing instructions or
-     * a direction.
+     * A sub property of instrument. An object used (but not consumed) when performing
+     * instructions or a direction.
      *
-     * @param $supply \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\HowToSupply
+     * @param $tool \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\HowToTool
      * @return static
      **/
-    public function setSupply($supply): static {
-        $this->properties['supply'] = $supply;
+    public function setTool($tool): static {
+        $this->properties['tool'] = $tool;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\HowToSupply
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\HowToTool
      **/
-    public function getSupply() {
-        return $this->properties['supply'];
+    public function getTool() {
+        return $this->properties['tool'];
+    }
+    /**
+     * The length of time it takes to prepare the items to be used in instructions or a
+     * direction, in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
+     *
+     * @param $prepTime \LengthOfRope\JSONLD\Schema\Duration
+     * @return static
+     **/
+    public function setPrepTime($prepTime): static {
+        $this->properties['prepTime'] = $prepTime;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Duration
+     **/
+    public function getPrepTime() {
+        return $this->properties['prepTime'];
     }
     /**
      * A media object representing the circumstances after performing this direction.

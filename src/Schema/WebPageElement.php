@@ -40,26 +40,6 @@ class WebPageElement extends CreativeWork
     }
 
     /**
-     * A CSS selector, e.g. of a [[SpeakableSpecification]] or [[WebPageElement]]. In
-     * the latter case, multiple matches within a page can constitute a single
-     * conceptual "Web page element".
-     *
-     * @param $cssSelector \LengthOfRope\JSONLD\DataType\TypeCssSelectorType
-     * @return static
-     **/
-    public function setCssSelector($cssSelector): static {
-        $this->properties['cssSelector'] = $cssSelector;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeCssSelectorType
-     **/
-    public function getCssSelector() {
-        return $this->properties['cssSelector'];
-    }
-    /**
      * An XPath, e.g. of a [[SpeakableSpecification]] or [[WebPageElement]]. In the
      * latter case, multiple matches within a page can constitute a single conceptual
      * "Web page element".
@@ -78,5 +58,25 @@ class WebPageElement extends CreativeWork
      **/
     public function getXpath() {
         return $this->properties['xpath'];
+    }
+    /**
+     * A CSS selector, e.g. of a [[SpeakableSpecification]] or [[WebPageElement]]. In
+     * the latter case, multiple matches within a page can constitute a single
+     * conceptual "Web page element".
+     *
+     * @param $cssSelector \LengthOfRope\JSONLD\DataType\TypeCssSelectorType
+     * @return static
+     **/
+    public function setCssSelector($cssSelector): static {
+        $this->properties['cssSelector'] = $cssSelector;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeCssSelectorType
+     **/
+    public function getCssSelector() {
+        return $this->properties['cssSelector'];
     }
 }

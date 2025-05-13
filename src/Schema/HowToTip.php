@@ -35,7 +35,7 @@ namespace LengthOfRope\JSONLD\Schema;
  * @see https://schema.org/HowToTip
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class HowToTip extends ListItem
+class HowToTip extends CreativeWork
 {
     public static function factory(): HowToTip
     {

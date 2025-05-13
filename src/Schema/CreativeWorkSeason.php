@@ -40,60 +40,40 @@ class CreativeWorkSeason extends CreativeWork
     }
 
     /**
-     * An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or
-     * in an event. Actors can be associated with individual items or with a series,
-     * episode, clip.
+     * The series to which this episode or season belongs.
      *
-     * @param $actor \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\PerformingGroup
+     * @param $partOfSeries \LengthOfRope\JSONLD\Schema\CreativeWorkSeries
      * @return static
      **/
-    public function setActor($actor): static {
-        $this->properties['actor'] = $actor;
+    public function setPartOfSeries($partOfSeries): static {
+        $this->properties['partOfSeries'] = $partOfSeries;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\PerformingGroup
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWorkSeries
      **/
-    public function getActor() {
-        return $this->properties['actor'];
+    public function getPartOfSeries() {
+        return $this->properties['partOfSeries'];
     }
     /**
-     * The trailer of a movie or TV/radio series, season, episode, etc.
+     * An episode of a TV/radio series or season.
      *
-     * @param $trailer \LengthOfRope\JSONLD\Schema\VideoObject
+     * @param $episodes \LengthOfRope\JSONLD\Schema\Episode
      * @return static
      **/
-    public function setTrailer($trailer): static {
-        $this->properties['trailer'] = $trailer;
+    public function setEpisodes($episodes): static {
+        $this->properties['episodes'] = $episodes;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\VideoObject
+     * @return \LengthOfRope\JSONLD\Schema\Episode
      **/
-    public function getTrailer() {
-        return $this->properties['trailer'];
-    }
-    /**
-     * Position of the season within an ordered group of seasons.
-     *
-     * @param $seasonNumber \LengthOfRope\JSONLD\DataType\TypeInteger|\LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setSeasonNumber($seasonNumber): static {
-        $this->properties['seasonNumber'] = $seasonNumber;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeInteger|\LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getSeasonNumber() {
-        return $this->properties['seasonNumber'];
+    public function getEpisodes() {
+        return $this->properties['episodes'];
     }
     /**
      * An episode of a TV, radio or game media within a series or season.
@@ -112,6 +92,26 @@ class CreativeWorkSeason extends CreativeWork
      **/
     public function getEpisode() {
         return $this->properties['episode'];
+    }
+    /**
+     * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event.
+     * Directors can be associated with individual items or with a series, episode,
+     * clip.
+     *
+     * @param $director \LengthOfRope\JSONLD\Schema\Person
+     * @return static
+     **/
+    public function setDirector($director): static {
+        $this->properties['director'] = $director;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Person
+     **/
+    public function getDirector() {
+        return $this->properties['director'];
     }
     /**
      * The start date and time of the item (in [ISO 8601 date
@@ -152,42 +152,60 @@ class CreativeWorkSeason extends CreativeWork
         return $this->properties['productionCompany'];
     }
     /**
-     * The series to which this episode or season belongs.
+     * The trailer of a movie or TV/radio series, season, episode, etc.
      *
-     * @param $partOfSeries \LengthOfRope\JSONLD\Schema\CreativeWorkSeries
+     * @param $trailer \LengthOfRope\JSONLD\Schema\VideoObject
      * @return static
      **/
-    public function setPartOfSeries($partOfSeries): static {
-        $this->properties['partOfSeries'] = $partOfSeries;
+    public function setTrailer($trailer): static {
+        $this->properties['trailer'] = $trailer;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\CreativeWorkSeries
+     * @return \LengthOfRope\JSONLD\Schema\VideoObject
      **/
-    public function getPartOfSeries() {
-        return $this->properties['partOfSeries'];
+    public function getTrailer() {
+        return $this->properties['trailer'];
     }
     /**
-     * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event.
-     * Directors can be associated with individual items or with a series, episode,
-     * clip.
+     * An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or
+     * in an event. Actors can be associated with individual items or with a series,
+     * episode, clip.
      *
-     * @param $director \LengthOfRope\JSONLD\Schema\Person
+     * @param $actor \LengthOfRope\JSONLD\Schema\PerformingGroup|\LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
-    public function setDirector($director): static {
-        $this->properties['director'] = $director;
+    public function setActor($actor): static {
+        $this->properties['actor'] = $actor;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Person
+     * @return \LengthOfRope\JSONLD\Schema\PerformingGroup|\LengthOfRope\JSONLD\Schema\Person
      **/
-    public function getDirector() {
-        return $this->properties['director'];
+    public function getActor() {
+        return $this->properties['actor'];
+    }
+    /**
+     * Position of the season within an ordered group of seasons.
+     *
+     * @param $seasonNumber \LengthOfRope\JSONLD\DataType\TypeInteger|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setSeasonNumber($seasonNumber): static {
+        $this->properties['seasonNumber'] = $seasonNumber;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeInteger|\LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getSeasonNumber() {
+        return $this->properties['seasonNumber'];
     }
     /**
      * The number of episodes in this season or series.
@@ -225,23 +243,5 @@ class CreativeWorkSeason extends CreativeWork
      **/
     public function getEndDate() {
         return $this->properties['endDate'];
-    }
-    /**
-     * An episode of a TV/radio series or season.
-     *
-     * @param $episodes \LengthOfRope\JSONLD\Schema\Episode
-     * @return static
-     **/
-    public function setEpisodes($episodes): static {
-        $this->properties['episodes'] = $episodes;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Episode
-     **/
-    public function getEpisodes() {
-        return $this->properties['episodes'];
     }
 }

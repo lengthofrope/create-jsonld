@@ -43,10 +43,47 @@ class DietarySupplement extends Substance
     }
 
     /**
+     * Recommended intake of this supplement for a given population as defined by a
+     * specific recommending authority.
+     *
+     * @param $maximumIntake \LengthOfRope\JSONLD\Schema\MaximumDoseSchedule
+     * @return static
+     **/
+    public function setMaximumIntake($maximumIntake): static {
+        $this->properties['maximumIntake'] = $maximumIntake;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\MaximumDoseSchedule
+     **/
+    public function getMaximumIntake() {
+        return $this->properties['maximumIntake'];
+    }
+    /**
+     * An active ingredient, typically chemical compounds and/or biologic substances.
+     *
+     * @param $activeIngredient \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setActiveIngredient($activeIngredient): static {
+        $this->properties['activeIngredient'] = $activeIngredient;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getActiveIngredient() {
+        return $this->properties['activeIngredient'];
+    }
+    /**
      * The drug or supplement's legal status, including any controlled substance
      * schedules that apply.
      *
-     * @param $legalStatus \LengthOfRope\JSONLD\Schema\DrugLegalStatus|\LengthOfRope\JSONLD\Schema\MedicalEnumeration|\LengthOfRope\JSONLD\DataType\TypeText
+     * @param $legalStatus \LengthOfRope\JSONLD\Schema\MedicalEnumeration|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DrugLegalStatus
      * @return static
      **/
     public function setLegalStatus($legalStatus): static {
@@ -56,48 +93,10 @@ class DietarySupplement extends Substance
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\DrugLegalStatus|\LengthOfRope\JSONLD\Schema\MedicalEnumeration|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\Schema\MedicalEnumeration|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DrugLegalStatus
      **/
     public function getLegalStatus() {
         return $this->properties['legalStatus'];
-    }
-    /**
-     * Recommended intake of this supplement for a given population as defined by a
-     * specific recommending authority.
-     *
-     * @param $recommendedIntake \LengthOfRope\JSONLD\Schema\RecommendedDoseSchedule
-     * @return static
-     **/
-    public function setRecommendedIntake($recommendedIntake): static {
-        $this->properties['recommendedIntake'] = $recommendedIntake;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\RecommendedDoseSchedule
-     **/
-    public function getRecommendedIntake() {
-        return $this->properties['recommendedIntake'];
-    }
-    /**
-     * The specific biochemical interaction through which this drug or supplement
-     * produces its pharmacological effect.
-     *
-     * @param $mechanismOfAction \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setMechanismOfAction($mechanismOfAction): static {
-        $this->properties['mechanismOfAction'] = $mechanismOfAction;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getMechanismOfAction() {
-        return $this->properties['mechanismOfAction'];
     }
     /**
      * Any potential safety concern associated with the supplement. May include
@@ -120,22 +119,59 @@ class DietarySupplement extends Substance
         return $this->properties['safetyConsideration'];
     }
     /**
-     * True if this item's name is a proprietary/brand name (vs. generic name).
+     * Proprietary name given to the diet plan, typically by its originator or creator.
      *
-     * @param $isProprietary \LengthOfRope\JSONLD\DataType\TypeBoolean
+     * @param $proprietaryName \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
-    public function setIsProprietary($isProprietary): static {
-        $this->properties['isProprietary'] = $isProprietary;
+    public function setProprietaryName($proprietaryName): static {
+        $this->properties['proprietaryName'] = $proprietaryName;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
-    public function getIsProprietary() {
-        return $this->properties['isProprietary'];
+    public function getProprietaryName() {
+        return $this->properties['proprietaryName'];
+    }
+    /**
+     * The specific biochemical interaction through which this drug or supplement
+     * produces its pharmacological effect.
+     *
+     * @param $mechanismOfAction \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setMechanismOfAction($mechanismOfAction): static {
+        $this->properties['mechanismOfAction'] = $mechanismOfAction;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getMechanismOfAction() {
+        return $this->properties['mechanismOfAction'];
+    }
+    /**
+     * The generic name of this drug or supplement.
+     *
+     * @param $nonProprietaryName \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setNonProprietaryName($nonProprietaryName): static {
+        $this->properties['nonProprietaryName'] = $nonProprietaryName;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getNonProprietaryName() {
+        return $this->properties['nonProprietaryName'];
     }
     /**
      * Characteristics of the population for which this is intended, or which typically
@@ -157,76 +193,40 @@ class DietarySupplement extends Substance
         return $this->properties['targetPopulation'];
     }
     /**
-     * Proprietary name given to the diet plan, typically by its originator or creator.
-     *
-     * @param $proprietaryName \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setProprietaryName($proprietaryName): static {
-        $this->properties['proprietaryName'] = $proprietaryName;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getProprietaryName() {
-        return $this->properties['proprietaryName'];
-    }
-    /**
      * Recommended intake of this supplement for a given population as defined by a
      * specific recommending authority.
      *
-     * @param $maximumIntake \LengthOfRope\JSONLD\Schema\MaximumDoseSchedule
+     * @param $recommendedIntake \LengthOfRope\JSONLD\Schema\RecommendedDoseSchedule
      * @return static
      **/
-    public function setMaximumIntake($maximumIntake): static {
-        $this->properties['maximumIntake'] = $maximumIntake;
+    public function setRecommendedIntake($recommendedIntake): static {
+        $this->properties['recommendedIntake'] = $recommendedIntake;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\MaximumDoseSchedule
+     * @return \LengthOfRope\JSONLD\Schema\RecommendedDoseSchedule
      **/
-    public function getMaximumIntake() {
-        return $this->properties['maximumIntake'];
+    public function getRecommendedIntake() {
+        return $this->properties['recommendedIntake'];
     }
     /**
-     * The generic name of this drug or supplement.
+     * True if this item's name is a proprietary/brand name (vs. generic name).
      *
-     * @param $nonProprietaryName \LengthOfRope\JSONLD\DataType\TypeText
+     * @param $isProprietary \LengthOfRope\JSONLD\DataType\TypeBoolean
      * @return static
      **/
-    public function setNonProprietaryName($nonProprietaryName): static {
-        $this->properties['nonProprietaryName'] = $nonProprietaryName;
+    public function setIsProprietary($isProprietary): static {
+        $this->properties['isProprietary'] = $isProprietary;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean
      **/
-    public function getNonProprietaryName() {
-        return $this->properties['nonProprietaryName'];
-    }
-    /**
-     * An active ingredient, typically chemical compounds and/or biologic substances.
-     *
-     * @param $activeIngredient \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setActiveIngredient($activeIngredient): static {
-        $this->properties['activeIngredient'] = $activeIngredient;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getActiveIngredient() {
-        return $this->properties['activeIngredient'];
+    public function getIsProprietary() {
+        return $this->properties['isProprietary'];
     }
 }

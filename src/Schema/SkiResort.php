@@ -32,7 +32,7 @@ namespace LengthOfRope\JSONLD\Schema;
  * @see https://schema.org/SkiResort
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class SkiResort extends SportsActivityLocation
+class SkiResort extends Resort
 {
     public static function factory(): SkiResort
     {

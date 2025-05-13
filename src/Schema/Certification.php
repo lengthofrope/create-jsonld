@@ -51,25 +51,6 @@ class Certification extends CreativeWork
     }
 
     /**
-     * Indicates the current status of a certification: active or inactive. See also
-     * [gs1:certificationStatus](https://www.gs1.org/voc/certificationStatus).
-     *
-     * @param $certificationStatus \LengthOfRope\JSONLD\Schema\CertificationStatusEnumeration
-     * @return static
-     **/
-    public function setCertificationStatus($certificationStatus): static {
-        $this->properties['certificationStatus'] = $certificationStatus;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\CertificationStatusEnumeration
-     **/
-    public function getCertificationStatus() {
-        return $this->properties['certificationStatus'];
-    }
-    /**
      * The organization issuing the item, for example a [[Permit]], [[Ticket]], or
      * [[Certification]].
      *
@@ -87,105 +68,6 @@ class Certification extends CreativeWork
      **/
     public function getIssuedBy() {
         return $this->properties['issuedBy'];
-    }
-    /**
-     * Date when a certification was last audited. See also
-     * [gs1:certificationAuditDate](https://www.gs1.org/voc/certificationAuditDate).
-     *
-     * @param $auditDate \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
-     * @return static
-     **/
-    public function setAuditDate($auditDate): static {
-        $this->properties['auditDate'] = $auditDate;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
-     **/
-    public function getAuditDate() {
-        return $this->properties['auditDate'];
-    }
-    /**
-     * A measurement of an item, For example, the inseam of pants, the wheel size of a
-     * bicycle, the gauge of a screw, or the carbon footprint measured for
-     * certification by an authority. Usually an exact measurement, but can also be a
-     * range of measurements for adjustable products, for example belts and ski
-     * bindings.
-     *
-     * @param $hasMeasurement \LengthOfRope\JSONLD\Schema\QuantitativeValue
-     * @return static
-     **/
-    public function setHasMeasurement($hasMeasurement): static {
-        $this->properties['hasMeasurement'] = $hasMeasurement;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
-     **/
-    public function getHasMeasurement() {
-        return $this->properties['hasMeasurement'];
-    }
-    /**
-     * The geographic area where the item is valid. Applies for example to a
-     * [[Permit]], a [[Certification]], or an [[EducationalOccupationalCredential]].
-     *
-     * @param $validIn \LengthOfRope\JSONLD\Schema\AdministrativeArea
-     * @return static
-     **/
-    public function setValidIn($validIn): static {
-        $this->properties['validIn'] = $validIn;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\AdministrativeArea
-     **/
-    public function getValidIn() {
-        return $this->properties['validIn'];
-    }
-    /**
-     * The subject matter of the content.
-     *
-     * @param $about \LengthOfRope\JSONLD\Schema\Thing
-     * @return static
-     **/
-    public function setAbout($about): static {
-        $this->properties['about'] = $about;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Thing
-     **/
-    public function getAbout() {
-        return $this->properties['about'];
-    }
-    /**
-     * Identifier of a certification instance (as registered with an independent
-     * certification body). Typically this identifier can be used to consult and verify
-     * the certification instance. See also
-     * [gs1:certificationIdentification](https://www.gs1.org/voc/certificationIdentification).
-     *
-     * @param $certificationIdentification \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DefinedTerm
-     * @return static
-     **/
-    public function setCertificationIdentification($certificationIdentification): static {
-        $this->properties['certificationIdentification'] = $certificationIdentification;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DefinedTerm
-     **/
-    public function getCertificationIdentification() {
-        return $this->properties['certificationIdentification'];
     }
     /**
      * Rating of a certification instance (as defined by an independent certification
@@ -228,6 +110,146 @@ class Certification extends CreativeWork
         return $this->properties['datePublished'];
     }
     /**
+     * A measurement of an item, For example, the inseam of pants, the wheel size of a
+     * bicycle, the gauge of a screw, or the carbon footprint measured for
+     * certification by an authority. Usually an exact measurement, but can also be a
+     * range of measurements for adjustable products, for example belts and ski
+     * bindings.
+     *
+     * @param $hasMeasurement \LengthOfRope\JSONLD\Schema\QuantitativeValue
+     * @return static
+     **/
+    public function setHasMeasurement($hasMeasurement): static {
+        $this->properties['hasMeasurement'] = $hasMeasurement;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
+     **/
+    public function getHasMeasurement() {
+        return $this->properties['hasMeasurement'];
+    }
+    /**
+     * Indicates the current status of a certification: active or inactive. See also
+     * [gs1:certificationStatus](https://www.gs1.org/voc/certificationStatus).
+     *
+     * @param $certificationStatus \LengthOfRope\JSONLD\Schema\CertificationStatusEnumeration
+     * @return static
+     **/
+    public function setCertificationStatus($certificationStatus): static {
+        $this->properties['certificationStatus'] = $certificationStatus;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\CertificationStatusEnumeration
+     **/
+    public function getCertificationStatus() {
+        return $this->properties['certificationStatus'];
+    }
+    /**
+     * Date the content expires and is no longer useful or available. For example a
+     * [[VideoObject]] or [[NewsArticle]] whose availability or relevance is
+     * time-limited, a [[ClaimReview]] fact check whose publisher wants to indicate
+     * that it may no longer be relevant (or helpful to highlight) after some date, or
+     * a [[Certification]] the validity has expired.
+     *
+     * @param $expires \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
+     * @return static
+     **/
+    public function setExpires($expires): static {
+        $this->properties['expires'] = $expires;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
+     **/
+    public function getExpires() {
+        return $this->properties['expires'];
+    }
+    /**
+     * The subject matter of the content.
+     *
+     * @param $about \LengthOfRope\JSONLD\Schema\Thing
+     * @return static
+     **/
+    public function setAbout($about): static {
+        $this->properties['about'] = $about;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Thing
+     **/
+    public function getAbout() {
+        return $this->properties['about'];
+    }
+    /**
+     * Identifier of a certification instance (as registered with an independent
+     * certification body). Typically this identifier can be used to consult and verify
+     * the certification instance. See also
+     * [gs1:certificationIdentification](https://www.gs1.org/voc/certificationIdentification).
+     *
+     * @param $certificationIdentification \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DefinedTerm
+     * @return static
+     **/
+    public function setCertificationIdentification($certificationIdentification): static {
+        $this->properties['certificationIdentification'] = $certificationIdentification;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DefinedTerm
+     **/
+    public function getCertificationIdentification() {
+        return $this->properties['certificationIdentification'];
+    }
+    /**
+     * The geographic area where the item is valid. Applies for example to a
+     * [[Permit]], a [[Certification]], or an [[EducationalOccupationalCredential]].
+     *
+     * @param $validIn \LengthOfRope\JSONLD\Schema\AdministrativeArea
+     * @return static
+     **/
+    public function setValidIn($validIn): static {
+        $this->properties['validIn'] = $validIn;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\AdministrativeArea
+     **/
+    public function getValidIn() {
+        return $this->properties['validIn'];
+    }
+    /**
+     * Date when a certification was last audited. See also
+     * [gs1:certificationAuditDate](https://www.gs1.org/voc/certificationAuditDate).
+     *
+     * @param $auditDate \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
+     * @return static
+     **/
+    public function setAuditDate($auditDate): static {
+        $this->properties['auditDate'] = $auditDate;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
+     **/
+    public function getAuditDate() {
+        return $this->properties['auditDate'];
+    }
+    /**
      * An associated logo.
      *
      * @param $logo \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\ImageObject
@@ -248,7 +270,7 @@ class Certification extends CreativeWork
     /**
      * The date when the item becomes valid.
      *
-     * @param $validFrom \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
+     * @param $validFrom \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
      * @return static
      **/
     public function setValidFrom($validFrom): static {
@@ -258,31 +280,9 @@ class Certification extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
+     * @return \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
      **/
     public function getValidFrom() {
         return $this->properties['validFrom'];
-    }
-    /**
-     * Date the content expires and is no longer useful or available. For example a
-     * [[VideoObject]] or [[NewsArticle]] whose availability or relevance is
-     * time-limited, a [[ClaimReview]] fact check whose publisher wants to indicate
-     * that it may no longer be relevant (or helpful to highlight) after some date, or
-     * a [[Certification]] the validity has expired.
-     *
-     * @param $expires \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
-     * @return static
-     **/
-    public function setExpires($expires): static {
-        $this->properties['expires'] = $expires;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
-     **/
-    public function getExpires() {
-        return $this->properties['expires'];
     }
 }

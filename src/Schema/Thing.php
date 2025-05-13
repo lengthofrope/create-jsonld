@@ -40,45 +40,6 @@ class Thing extends \LengthOfRope\JSONLD\Elements\Element
     }
 
     /**
-     * The name of the item.
-     *
-     * @param $name \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setName($name): static {
-        $this->properties['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getName() {
-        return $this->properties['name'];
-    }
-    /**
-     * A sub property of description. A short description of the item used to
-     * disambiguate from other, similar items. Information from other properties (in
-     * particular, name) may be necessary for the description to be useful for
-     * disambiguation.
-     *
-     * @param $disambiguatingDescription \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setDisambiguatingDescription($disambiguatingDescription): static {
-        $this->properties['disambiguatingDescription'] = $disambiguatingDescription;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getDisambiguatingDescription() {
-        return $this->properties['disambiguatingDescription'];
-    }
-    /**
      * Indicates a potential Action, which describes an idealized action in which this
      * thing would play an 'object' role.
      *
@@ -98,24 +59,6 @@ class Thing extends \LengthOfRope\JSONLD\Elements\Element
         return $this->properties['potentialAction'];
     }
     /**
-     * URL of the item.
-     *
-     * @param $url \LengthOfRope\JSONLD\DataType\TypeURL
-     * @return static
-     **/
-    public function setUrl($url): static {
-        $this->properties['url'] = $url;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeURL
-     **/
-    public function getUrl() {
-        return $this->properties['url'];
-    }
-    /**
      * The identifier property represents any kind of identifier for any kind of
      * [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
      * properties for representing many of these, either as textual strings or as URL
@@ -123,7 +66,7 @@ class Thing extends \LengthOfRope\JSONLD\Elements\Element
      * details.
      *
      *
-     * @param $identifier \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\PropertyValue
+     * @param $identifier \LengthOfRope\JSONLD\Schema\PropertyValue|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setIdentifier($identifier): static {
@@ -133,28 +76,10 @@ class Thing extends \LengthOfRope\JSONLD\Elements\Element
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\PropertyValue
+     * @return \LengthOfRope\JSONLD\Schema\PropertyValue|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getIdentifier() {
         return $this->properties['identifier'];
-    }
-    /**
-     * A CreativeWork or Event about this Thing.
-     *
-     * @param $subjectOf \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\Event
-     * @return static
-     **/
-    public function setSubjectOf($subjectOf): static {
-        $this->properties['subjectOf'] = $subjectOf;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\Event
-     **/
-    public function getSubjectOf() {
-        return $this->properties['subjectOf'];
     }
     /**
      * A description of the item.
@@ -175,29 +100,96 @@ class Thing extends \LengthOfRope\JSONLD\Elements\Element
         return $this->properties['description'];
     }
     /**
-     * An additional type for the item, typically used for adding more specific types
-     * from external vocabularies in microdata syntax. This is a relationship between
-     * something and a class that the thing is in. Typically the value is a
-     * URI-identified RDF class, and in this case corresponds to the
-     * use of rdf:type in RDF. Text values can be used sparingly, for cases where
-     * useful information can be added without their being an appropriate schema to
-     * reference. In the case of text values, the class label should follow the
-     * schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>.
+     * URL of the item.
      *
-     * @param $additionalType \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
+     * @param $url \LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
-    public function setAdditionalType($additionalType): static {
-        $this->properties['additionalType'] = $additionalType;
+    public function setUrl($url): static {
+        $this->properties['url'] = $url;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL
      **/
-    public function getAdditionalType() {
-        return $this->properties['additionalType'];
+    public function getUrl() {
+        return $this->properties['url'];
+    }
+    /**
+     * An alias for the item.
+     *
+     * @param $alternateName \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setAlternateName($alternateName): static {
+        $this->properties['alternateName'] = $alternateName;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getAlternateName() {
+        return $this->properties['alternateName'];
+    }
+    /**
+     * A CreativeWork or Event about this Thing.
+     *
+     * @param $subjectOf \LengthOfRope\JSONLD\Schema\Event|\LengthOfRope\JSONLD\Schema\CreativeWork
+     * @return static
+     **/
+    public function setSubjectOf($subjectOf): static {
+        $this->properties['subjectOf'] = $subjectOf;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Event|\LengthOfRope\JSONLD\Schema\CreativeWork
+     **/
+    public function getSubjectOf() {
+        return $this->properties['subjectOf'];
+    }
+    /**
+     * The name of the item.
+     *
+     * @param $name \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setName($name): static {
+        $this->properties['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getName() {
+        return $this->properties['name'];
+    }
+    /**
+     * Indicates a page (or other CreativeWork) for which this thing is the main entity
+     * being described. See [background
+     * notes](/docs/datamodel.html#mainEntityBackground) for details.
+     *
+     * @param $mainEntityOfPage \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\TypeURL
+     * @return static
+     **/
+    public function setMainEntityOfPage($mainEntityOfPage): static {
+        $this->properties['mainEntityOfPage'] = $mainEntityOfPage;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\TypeURL
+     **/
+    public function getMainEntityOfPage() {
+        return $this->properties['mainEntityOfPage'];
     }
     /**
      * An image of the item. This can be a [[URL]] or a fully described
@@ -238,13 +230,16 @@ class Thing extends \LengthOfRope\JSONLD\Elements\Element
         return $this->properties['sameAs'];
     }
     /**
-     * An alias for the item.
+     * A sub property of description. A short description of the item used to
+     * disambiguate from other, similar items. Information from other properties (in
+     * particular, name) may be necessary for the description to be useful for
+     * disambiguation.
      *
-     * @param $alternateName \LengthOfRope\JSONLD\DataType\TypeText
+     * @param $disambiguatingDescription \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
-    public function setAlternateName($alternateName): static {
-        $this->properties['alternateName'] = $alternateName;
+    public function setDisambiguatingDescription($disambiguatingDescription): static {
+        $this->properties['disambiguatingDescription'] = $disambiguatingDescription;
 
         return $this;
     }
@@ -252,27 +247,32 @@ class Thing extends \LengthOfRope\JSONLD\Elements\Element
     /**
      * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
-    public function getAlternateName() {
-        return $this->properties['alternateName'];
+    public function getDisambiguatingDescription() {
+        return $this->properties['disambiguatingDescription'];
     }
     /**
-     * Indicates a page (or other CreativeWork) for which this thing is the main entity
-     * being described. See [background
-     * notes](/docs/datamodel.html#mainEntityBackground) for details.
+     * An additional type for the item, typically used for adding more specific types
+     * from external vocabularies in microdata syntax. This is a relationship between
+     * something and a class that the thing is in. Typically the value is a
+     * URI-identified RDF class, and in this case corresponds to the
+     * use of rdf:type in RDF. Text values can be used sparingly, for cases where
+     * useful information can be added without their being an appropriate schema to
+     * reference. In the case of text values, the class label should follow the
+     * schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>.
      *
-     * @param $mainEntityOfPage \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\TypeURL
+     * @param $additionalType \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
-    public function setMainEntityOfPage($mainEntityOfPage): static {
-        $this->properties['mainEntityOfPage'] = $mainEntityOfPage;
+    public function setAdditionalType($additionalType): static {
+        $this->properties['additionalType'] = $additionalType;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\TypeURL
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      **/
-    public function getMainEntityOfPage() {
-        return $this->properties['mainEntityOfPage'];
+    public function getAdditionalType() {
+        return $this->properties['additionalType'];
     }
 }

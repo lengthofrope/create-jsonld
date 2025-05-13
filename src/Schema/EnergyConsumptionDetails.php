@@ -67,26 +67,6 @@ class EnergyConsumptionDetails extends Intangible
         return $this->properties['energyEfficiencyScaleMin'];
     }
     /**
-     * Defines the energy efficiency Category (which could be either a rating out of
-     * range of values or a yes/no certification) for a product according to an
-     * international energy efficiency standard.
-     *
-     * @param $hasEnergyEfficiencyCategory \LengthOfRope\JSONLD\Schema\EnergyEfficiencyEnumeration
-     * @return static
-     **/
-    public function setHasEnergyEfficiencyCategory($hasEnergyEfficiencyCategory): static {
-        $this->properties['hasEnergyEfficiencyCategory'] = $hasEnergyEfficiencyCategory;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\EnergyEfficiencyEnumeration
-     **/
-    public function getHasEnergyEfficiencyCategory() {
-        return $this->properties['hasEnergyEfficiencyCategory'];
-    }
-    /**
      * Specifies the most energy efficient class on the regulated EU energy consumption
      * scale for the product category a product belongs to. For example, energy
      * consumption for televisions placed on the market after January 1, 2020 is scaled
@@ -106,5 +86,25 @@ class EnergyConsumptionDetails extends Intangible
      **/
     public function getEnergyEfficiencyScaleMax() {
         return $this->properties['energyEfficiencyScaleMax'];
+    }
+    /**
+     * Defines the energy efficiency Category (which could be either a rating out of
+     * range of values or a yes/no certification) for a product according to an
+     * international energy efficiency standard.
+     *
+     * @param $hasEnergyEfficiencyCategory \LengthOfRope\JSONLD\Schema\EnergyEfficiencyEnumeration
+     * @return static
+     **/
+    public function setHasEnergyEfficiencyCategory($hasEnergyEfficiencyCategory): static {
+        $this->properties['hasEnergyEfficiencyCategory'] = $hasEnergyEfficiencyCategory;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\EnergyEfficiencyEnumeration
+     **/
+    public function getHasEnergyEfficiencyCategory() {
+        return $this->properties['hasEnergyEfficiencyCategory'];
     }
 }

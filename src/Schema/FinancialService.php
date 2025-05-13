@@ -43,7 +43,7 @@ class FinancialService extends LocalBusiness
      * Description of fees, commissions, and other terms applied either to a class of
      * financial product, or by a financial service organization.
      *
-     * @param $feesAndCommissionsSpecification \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
+     * @param $feesAndCommissionsSpecification \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setFeesAndCommissionsSpecification($feesAndCommissionsSpecification): static {
@@ -53,7 +53,7 @@ class FinancialService extends LocalBusiness
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getFeesAndCommissionsSpecification() {
         return $this->properties['feesAndCommissionsSpecification'];

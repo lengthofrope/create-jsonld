@@ -40,42 +40,6 @@ class Seat extends Intangible
     }
 
     /**
-     * The section location of the reserved seat (e.g. Orchestra).
-     *
-     * @param $seatSection \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setSeatSection($seatSection): static {
-        $this->properties['seatSection'] = $seatSection;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getSeatSection() {
-        return $this->properties['seatSection'];
-    }
-    /**
-     * The location of the reserved seat (e.g., 27).
-     *
-     * @param $seatNumber \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setSeatNumber($seatNumber): static {
-        $this->properties['seatNumber'] = $seatNumber;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getSeatNumber() {
-        return $this->properties['seatNumber'];
-    }
-    /**
      * The row location of the reserved seat (e.g., B).
      *
      * @param $seatRow \LengthOfRope\JSONLD\DataType\TypeText
@@ -94,6 +58,24 @@ class Seat extends Intangible
         return $this->properties['seatRow'];
     }
     /**
+     * The section location of the reserved seat (e.g. Orchestra).
+     *
+     * @param $seatSection \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setSeatSection($seatSection): static {
+        $this->properties['seatSection'] = $seatSection;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getSeatSection() {
+        return $this->properties['seatSection'];
+    }
+    /**
      * The type/class of the seat.
      *
      * @param $seatingType \LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\TypeText
@@ -110,5 +92,23 @@ class Seat extends Intangible
      **/
     public function getSeatingType() {
         return $this->properties['seatingType'];
+    }
+    /**
+     * The location of the reserved seat (e.g., 27).
+     *
+     * @param $seatNumber \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setSeatNumber($seatNumber): static {
+        $this->properties['seatNumber'] = $seatNumber;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getSeatNumber() {
+        return $this->properties['seatNumber'];
     }
 }

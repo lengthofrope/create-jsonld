@@ -58,6 +58,24 @@ class HealthPlanNetwork extends Intangible
         return $this->properties['healthPlanCostSharing'];
     }
     /**
+     * The tier(s) for this network.
+     *
+     * @param $healthPlanNetworkTier \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setHealthPlanNetworkTier($healthPlanNetworkTier): static {
+        $this->properties['healthPlanNetworkTier'] = $healthPlanNetworkTier;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getHealthPlanNetworkTier() {
+        return $this->properties['healthPlanNetworkTier'];
+    }
+    /**
      * Name or unique ID of network. (Networks are often reused across different
      * insurance plans.)
      *
@@ -75,23 +93,5 @@ class HealthPlanNetwork extends Intangible
      **/
     public function getHealthPlanNetworkId() {
         return $this->properties['healthPlanNetworkId'];
-    }
-    /**
-     * The tier(s) for this network.
-     *
-     * @param $healthPlanNetworkTier \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setHealthPlanNetworkTier($healthPlanNetworkTier): static {
-        $this->properties['healthPlanNetworkTier'] = $healthPlanNetworkTier;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getHealthPlanNetworkTier() {
-        return $this->properties['healthPlanNetworkTier'];
     }
 }

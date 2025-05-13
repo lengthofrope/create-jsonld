@@ -41,29 +41,10 @@ class PaymentCard extends FinancialProduct
     }
 
     /**
-     * A secure method for consumers to purchase products or services via debit, credit
-     * or smartcards by using RFID or NFC technology.
-     *
-     * @param $contactlessPayment \LengthOfRope\JSONLD\DataType\TypeBoolean
-     * @return static
-     **/
-    public function setContactlessPayment($contactlessPayment): static {
-        $this->properties['contactlessPayment'] = $contactlessPayment;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean
-     **/
-    public function getContactlessPayment() {
-        return $this->properties['contactlessPayment'];
-    }
-    /**
      * A cardholder benefit that pays the cardholder a small percentage of their net
      * expenditures.
      *
-     * @param $cashBack \LengthOfRope\JSONLD\DataType\TypeBoolean|\LengthOfRope\JSONLD\DataType\TypeNumber
+     * @param $cashBack \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\DataType\TypeBoolean
      * @return static
      **/
     public function setCashBack($cashBack): static {
@@ -73,7 +54,7 @@ class PaymentCard extends FinancialProduct
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean|\LengthOfRope\JSONLD\DataType\TypeNumber
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\DataType\TypeBoolean
      **/
     public function getCashBack() {
         return $this->properties['cashBack'];
@@ -115,5 +96,24 @@ class PaymentCard extends FinancialProduct
      **/
     public function getMonthlyMinimumRepaymentAmount() {
         return $this->properties['monthlyMinimumRepaymentAmount'];
+    }
+    /**
+     * A secure method for consumers to purchase products or services via debit, credit
+     * or smartcards by using RFID or NFC technology.
+     *
+     * @param $contactlessPayment \LengthOfRope\JSONLD\DataType\TypeBoolean
+     * @return static
+     **/
+    public function setContactlessPayment($contactlessPayment): static {
+        $this->properties['contactlessPayment'] = $contactlessPayment;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean
+     **/
+    public function getContactlessPayment() {
+        return $this->properties['contactlessPayment'];
     }
 }

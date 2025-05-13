@@ -62,6 +62,45 @@ class EducationalOccupationalCredential extends CreativeWork
         return $this->properties['recognizedBy'];
     }
     /**
+     * The level in terms of progression through an educational or training context.
+     * Examples of educational levels include 'beginner', 'intermediate' or 'advanced',
+     * and formal sets of level indicators.
+     *
+     * @param $educationalLevel \LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setEducationalLevel($educationalLevel): static {
+        $this->properties['educationalLevel'] = $educationalLevel;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getEducationalLevel() {
+        return $this->properties['educationalLevel'];
+    }
+    /**
+     * The category or type of credential being described, for example "degree”,
+     * “certificate”, “badge”, or more specific term.
+     *
+     * @param $credentialCategory \LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setCredentialCategory($credentialCategory): static {
+        $this->properties['credentialCategory'] = $credentialCategory;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getCredentialCategory() {
+        return $this->properties['credentialCategory'];
+    }
+    /**
      * The geographic area where the item is valid. Applies for example to a
      * [[Permit]], a [[Certification]], or an [[EducationalOccupationalCredential]].
      *
@@ -81,6 +120,26 @@ class EducationalOccupationalCredential extends CreativeWork
         return $this->properties['validIn'];
     }
     /**
+     * Knowledge, skill, ability or personal attribute that must be demonstrated by a
+     * person or other entity in order to do something such as earn an Educational
+     * Occupational Credential or understand a LearningResource.
+     *
+     * @param $competencyRequired \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\TypeURL
+     * @return static
+     **/
+    public function setCompetencyRequired($competencyRequired): static {
+        $this->properties['competencyRequired'] = $competencyRequired;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\TypeURL
+     **/
+    public function getCompetencyRequired() {
+        return $this->properties['competencyRequired'];
+    }
+    /**
      * The duration of validity of a permit or similar thing.
      *
      * @param $validFor \LengthOfRope\JSONLD\Schema\Duration
@@ -97,64 +156,5 @@ class EducationalOccupationalCredential extends CreativeWork
      **/
     public function getValidFor() {
         return $this->properties['validFor'];
-    }
-    /**
-     * The level in terms of progression through an educational or training context.
-     * Examples of educational levels include 'beginner', 'intermediate' or 'advanced',
-     * and formal sets of level indicators.
-     *
-     * @param $educationalLevel \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\DefinedTerm
-     * @return static
-     **/
-    public function setEducationalLevel($educationalLevel): static {
-        $this->properties['educationalLevel'] = $educationalLevel;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\DefinedTerm
-     **/
-    public function getEducationalLevel() {
-        return $this->properties['educationalLevel'];
-    }
-    /**
-     * The category or type of credential being described, for example "degree”,
-     * “certificate”, “badge”, or more specific term.
-     *
-     * @param $credentialCategory \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\DefinedTerm
-     * @return static
-     **/
-    public function setCredentialCategory($credentialCategory): static {
-        $this->properties['credentialCategory'] = $credentialCategory;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\DefinedTerm
-     **/
-    public function getCredentialCategory() {
-        return $this->properties['credentialCategory'];
-    }
-    /**
-     * Knowledge, skill, ability or personal attribute that must be demonstrated by a
-     * person or other entity in order to do something such as earn an Educational
-     * Occupational Credential or understand a LearningResource.
-     *
-     * @param $competencyRequired \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\DefinedTerm
-     * @return static
-     **/
-    public function setCompetencyRequired($competencyRequired): static {
-        $this->properties['competencyRequired'] = $competencyRequired;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\DefinedTerm
-     **/
-    public function getCompetencyRequired() {
-        return $this->properties['competencyRequired'];
     }
 }

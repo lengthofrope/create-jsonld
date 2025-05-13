@@ -34,13 +34,31 @@ namespace LengthOfRope\JSONLD\Schema;
  * @see https://schema.org/MedicalClinic
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MedicalClinic extends MedicalBusiness
+class MedicalClinic extends MedicalOrganization
 {
     public static function factory(): MedicalClinic
     {
         return new MedicalClinic('https://schema.org/', 'MedicalClinic');
     }
 
+    /**
+     * A medical service available from this provider.
+     *
+     * @param $availableService \LengthOfRope\JSONLD\Schema\MedicalTherapy|\LengthOfRope\JSONLD\Schema\MedicalTest|\LengthOfRope\JSONLD\Schema\MedicalProcedure
+     * @return static
+     **/
+    public function setAvailableService($availableService): static {
+        $this->properties['availableService'] = $availableService;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\MedicalTherapy|\LengthOfRope\JSONLD\Schema\MedicalTest|\LengthOfRope\JSONLD\Schema\MedicalProcedure
+     **/
+    public function getAvailableService() {
+        return $this->properties['availableService'];
+    }
     /**
      * A medical specialty of the provider.
      *
@@ -58,23 +76,5 @@ class MedicalClinic extends MedicalBusiness
      **/
     public function getMedicalSpecialty() {
         return $this->properties['medicalSpecialty'];
-    }
-    /**
-     * A medical service available from this provider.
-     *
-     * @param $availableService \LengthOfRope\JSONLD\Schema\MedicalTest|\LengthOfRope\JSONLD\Schema\MedicalTherapy|\LengthOfRope\JSONLD\Schema\MedicalProcedure
-     * @return static
-     **/
-    public function setAvailableService($availableService): static {
-        $this->properties['availableService'] = $availableService;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\MedicalTest|\LengthOfRope\JSONLD\Schema\MedicalTherapy|\LengthOfRope\JSONLD\Schema\MedicalProcedure
-     **/
-    public function getAvailableService() {
-        return $this->properties['availableService'];
     }
 }

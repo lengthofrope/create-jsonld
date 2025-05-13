@@ -43,6 +43,141 @@ class PriceSpecification extends StructuredValue
     }
 
     /**
+     * The interval and unit of measurement of ordering quantities for which the offer
+     * or price specification is valid. This allows e.g. specifying that a certain
+     * freight charge is valid only for a certain quantity.
+     *
+     * @param $eligibleQuantity \LengthOfRope\JSONLD\Schema\QuantitativeValue
+     * @return static
+     **/
+    public function setEligibleQuantity($eligibleQuantity): static {
+        $this->properties['eligibleQuantity'] = $eligibleQuantity;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
+     **/
+    public function getEligibleQuantity() {
+        return $this->properties['eligibleQuantity'];
+    }
+    /**
+     * Specifies whether the applicable value-added tax (VAT) is included in the price
+     * specification or not.
+     *
+     * @param $valueAddedTaxIncluded \LengthOfRope\JSONLD\DataType\TypeBoolean
+     * @return static
+     **/
+    public function setValueAddedTaxIncluded($valueAddedTaxIncluded): static {
+        $this->properties['valueAddedTaxIncluded'] = $valueAddedTaxIncluded;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean
+     **/
+    public function getValueAddedTaxIncluded() {
+        return $this->properties['valueAddedTaxIncluded'];
+    }
+    /**
+     * The highest price if the price is a range.
+     *
+     * @param $maxPrice \LengthOfRope\JSONLD\DataType\TypeNumber
+     * @return static
+     **/
+    public function setMaxPrice($maxPrice): static {
+        $this->properties['maxPrice'] = $maxPrice;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
+     **/
+    public function getMaxPrice() {
+        return $this->properties['maxPrice'];
+    }
+    /**
+     * The lowest price if the price is a range.
+     *
+     * @param $minPrice \LengthOfRope\JSONLD\DataType\TypeNumber
+     * @return static
+     **/
+    public function setMinPrice($minPrice): static {
+        $this->properties['minPrice'] = $minPrice;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
+     **/
+    public function getMinPrice() {
+        return $this->properties['minPrice'];
+    }
+    /**
+     * The date after when the item is not valid. For example the end of an offer,
+     * salary period, or a period of opening hours.
+     *
+     * @param $validThrough \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
+     * @return static
+     **/
+    public function setValidThrough($validThrough): static {
+        $this->properties['validThrough'] = $validThrough;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
+     **/
+    public function getValidThrough() {
+        return $this->properties['validThrough'];
+    }
+    /**
+     * The number of membership points earned by the member. If necessary, the unitText
+     * can be used to express the units the points are issued in. (E.g. stars, miles,
+     * etc.)
+     *
+     * @param $membershipPointsEarned \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\TypeNumber
+     * @return static
+     **/
+    public function setMembershipPointsEarned($membershipPointsEarned): static {
+        $this->properties['membershipPointsEarned'] = $membershipPointsEarned;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\TypeNumber
+     **/
+    public function getMembershipPointsEarned() {
+        return $this->properties['membershipPointsEarned'];
+    }
+    /**
+     * The transaction volume, in a monetary unit, for which the offer or price
+     * specification is valid, e.g. for indicating a minimal purchasing volume, to
+     * express free shipping above a certain order volume, or to limit the acceptance
+     * of credit cards to purchases to a certain minimal amount.
+     *
+     * @param $eligibleTransactionVolume \LengthOfRope\JSONLD\Schema\PriceSpecification
+     * @return static
+     **/
+    public function setEligibleTransactionVolume($eligibleTransactionVolume): static {
+        $this->properties['eligibleTransactionVolume'] = $eligibleTransactionVolume;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\PriceSpecification
+     **/
+    public function getEligibleTransactionVolume() {
+        return $this->properties['eligibleTransactionVolume'];
+    }
+    /**
      * The offer price of a product, or of a price component when attached to
      * PriceSpecification and its subtypes.
      *
@@ -66,7 +201,7 @@ class PriceSpecification extends StructuredValue
      * (U+0039)) rather than superficially similar Unicode symbols.
      *
      *
-     * @param $price \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeNumber
+     * @param $price \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setPrice($price): static {
@@ -76,107 +211,10 @@ class PriceSpecification extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeNumber
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getPrice() {
         return $this->properties['price'];
-    }
-    /**
-     * The number of membership points earned by the member. If necessary, the unitText
-     * can be used to express the units the points are issued in. (E.g. stars, miles,
-     * etc.)
-     *
-     * @param $membershipPointsEarned \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\Schema\QuantitativeValue
-     * @return static
-     **/
-    public function setMembershipPointsEarned($membershipPointsEarned): static {
-        $this->properties['membershipPointsEarned'] = $membershipPointsEarned;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\Schema\QuantitativeValue
-     **/
-    public function getMembershipPointsEarned() {
-        return $this->properties['membershipPointsEarned'];
-    }
-    /**
-     * The membership program tier an Offer (or a PriceSpecification,
-     * OfferShippingDetails, or MerchantReturnPolicy under an Offer) is valid for.
-     *
-     * @param $validForMemberTier \LengthOfRope\JSONLD\Schema\MemberProgramTier
-     * @return static
-     **/
-    public function setValidForMemberTier($validForMemberTier): static {
-        $this->properties['validForMemberTier'] = $validForMemberTier;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\MemberProgramTier
-     **/
-    public function getValidForMemberTier() {
-        return $this->properties['validForMemberTier'];
-    }
-    /**
-     * Specifies whether the applicable value-added tax (VAT) is included in the price
-     * specification or not.
-     *
-     * @param $valueAddedTaxIncluded \LengthOfRope\JSONLD\DataType\TypeBoolean
-     * @return static
-     **/
-    public function setValueAddedTaxIncluded($valueAddedTaxIncluded): static {
-        $this->properties['valueAddedTaxIncluded'] = $valueAddedTaxIncluded;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean
-     **/
-    public function getValueAddedTaxIncluded() {
-        return $this->properties['valueAddedTaxIncluded'];
-    }
-    /**
-     * The interval and unit of measurement of ordering quantities for which the offer
-     * or price specification is valid. This allows e.g. specifying that a certain
-     * freight charge is valid only for a certain quantity.
-     *
-     * @param $eligibleQuantity \LengthOfRope\JSONLD\Schema\QuantitativeValue
-     * @return static
-     **/
-    public function setEligibleQuantity($eligibleQuantity): static {
-        $this->properties['eligibleQuantity'] = $eligibleQuantity;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
-     **/
-    public function getEligibleQuantity() {
-        return $this->properties['eligibleQuantity'];
-    }
-    /**
-     * The date after when the item is not valid. For example the end of an offer,
-     * salary period, or a period of opening hours.
-     *
-     * @param $validThrough \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
-     * @return static
-     **/
-    public function setValidThrough($validThrough): static {
-        $this->properties['validThrough'] = $validThrough;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
-     **/
-    public function getValidThrough() {
-        return $this->properties['validThrough'];
     }
     /**
      * The currency of the price, or a price component when attached to
@@ -205,27 +243,28 @@ class PriceSpecification extends StructuredValue
         return $this->properties['priceCurrency'];
     }
     /**
-     * The highest price if the price is a range.
+     * The membership program tier an Offer (or a PriceSpecification,
+     * OfferShippingDetails, or MerchantReturnPolicy under an Offer) is valid for.
      *
-     * @param $maxPrice \LengthOfRope\JSONLD\DataType\TypeNumber
+     * @param $validForMemberTier \LengthOfRope\JSONLD\Schema\MemberProgramTier
      * @return static
      **/
-    public function setMaxPrice($maxPrice): static {
-        $this->properties['maxPrice'] = $maxPrice;
+    public function setValidForMemberTier($validForMemberTier): static {
+        $this->properties['validForMemberTier'] = $validForMemberTier;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
+     * @return \LengthOfRope\JSONLD\Schema\MemberProgramTier
      **/
-    public function getMaxPrice() {
-        return $this->properties['maxPrice'];
+    public function getValidForMemberTier() {
+        return $this->properties['validForMemberTier'];
     }
     /**
      * The date when the item becomes valid.
      *
-     * @param $validFrom \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
+     * @param $validFrom \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
      * @return static
      **/
     public function setValidFrom($validFrom): static {
@@ -235,48 +274,9 @@ class PriceSpecification extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
+     * @return \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
      **/
     public function getValidFrom() {
         return $this->properties['validFrom'];
-    }
-    /**
-     * The lowest price if the price is a range.
-     *
-     * @param $minPrice \LengthOfRope\JSONLD\DataType\TypeNumber
-     * @return static
-     **/
-    public function setMinPrice($minPrice): static {
-        $this->properties['minPrice'] = $minPrice;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
-     **/
-    public function getMinPrice() {
-        return $this->properties['minPrice'];
-    }
-    /**
-     * The transaction volume, in a monetary unit, for which the offer or price
-     * specification is valid, e.g. for indicating a minimal purchasing volume, to
-     * express free shipping above a certain order volume, or to limit the acceptance
-     * of credit cards to purchases to a certain minimal amount.
-     *
-     * @param $eligibleTransactionVolume \LengthOfRope\JSONLD\Schema\PriceSpecification
-     * @return static
-     **/
-    public function setEligibleTransactionVolume($eligibleTransactionVolume): static {
-        $this->properties['eligibleTransactionVolume'] = $eligibleTransactionVolume;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\PriceSpecification
-     **/
-    public function getEligibleTransactionVolume() {
-        return $this->properties['eligibleTransactionVolume'];
     }
 }

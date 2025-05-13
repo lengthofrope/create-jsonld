@@ -32,7 +32,7 @@ namespace LengthOfRope\JSONLD\Schema;
  * @see https://schema.org/PoliceStation
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class PoliceStation extends EmergencyService
+class PoliceStation extends CivicStructure
 {
     public static function factory(): PoliceStation
     {

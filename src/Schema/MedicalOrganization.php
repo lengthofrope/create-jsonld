@@ -41,6 +41,24 @@ class MedicalOrganization extends Organization
     }
 
     /**
+     * A medical specialty of the provider.
+     *
+     * @param $medicalSpecialty \LengthOfRope\JSONLD\Schema\MedicalSpecialty
+     * @return static
+     **/
+    public function setMedicalSpecialty($medicalSpecialty): static {
+        $this->properties['medicalSpecialty'] = $medicalSpecialty;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\MedicalSpecialty
+     **/
+    public function getMedicalSpecialty() {
+        return $this->properties['medicalSpecialty'];
+    }
+    /**
      * Name or unique ID of network. (Networks are often reused across different
      * insurance plans.)
      *
@@ -58,24 +76,6 @@ class MedicalOrganization extends Organization
      **/
     public function getHealthPlanNetworkId() {
         return $this->properties['healthPlanNetworkId'];
-    }
-    /**
-     * A medical specialty of the provider.
-     *
-     * @param $medicalSpecialty \LengthOfRope\JSONLD\Schema\MedicalSpecialty
-     * @return static
-     **/
-    public function setMedicalSpecialty($medicalSpecialty): static {
-        $this->properties['medicalSpecialty'] = $medicalSpecialty;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\MedicalSpecialty
-     **/
-    public function getMedicalSpecialty() {
-        return $this->properties['medicalSpecialty'];
     }
     /**
      * Whether the provider is accepting new patients.

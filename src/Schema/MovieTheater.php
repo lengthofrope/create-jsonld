@@ -32,7 +32,7 @@ namespace LengthOfRope\JSONLD\Schema;
  * @see https://schema.org/MovieTheater
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class MovieTheater extends CivicStructure
+class MovieTheater extends EntertainmentBusiness
 {
     public static function factory(): MovieTheater
     {

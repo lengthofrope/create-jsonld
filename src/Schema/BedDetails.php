@@ -46,7 +46,7 @@ class BedDetails extends Intangible
      * The type of bed to which the BedDetail refers, i.e. the type of bed available in
      * the quantity indicated by quantity.
      *
-     * @param $typeOfBed \LengthOfRope\JSONLD\Schema\BedType|\LengthOfRope\JSONLD\DataType\TypeText
+     * @param $typeOfBed \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\BedType
      * @return static
      **/
     public function setTypeOfBed($typeOfBed): static {
@@ -56,7 +56,7 @@ class BedDetails extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\BedType|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\BedType
      **/
     public function getTypeOfBed() {
         return $this->properties['typeOfBed'];

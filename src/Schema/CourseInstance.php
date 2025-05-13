@@ -61,25 +61,25 @@ class CourseInstance extends Event
         return $this->properties['instructor'];
     }
     /**
-     * The medium or means of delivery of the course instance or the mode of study,
-     * either as a text label (e.g. "online", "onsite" or "blended"; "synchronous" or
-     * "asynchronous"; "full-time" or "part-time") or as a URL reference to a term from
-     * a controlled vocabulary (e.g. https://ceds.ed.gov/element/001311#Asynchronous).
+     * The amount of work expected of students taking the course, often provided as a
+     * figure per week or per month, and may be broken down by type. For example, "2
+     * hours of lectures, 1 hour of lab work and 3 hours of independent study per
+     * week".
      *
-     * @param $courseMode \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
+     * @param $courseWorkload \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
-    public function setCourseMode($courseMode): static {
-        $this->properties['courseMode'] = $courseMode;
+    public function setCourseWorkload($courseWorkload): static {
+        $this->properties['courseWorkload'] = $courseWorkload;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
-    public function getCourseMode() {
-        return $this->properties['courseMode'];
+    public function getCourseWorkload() {
+        return $this->properties['courseWorkload'];
     }
     /**
      * Represents the length and pace of a course, expressed as a [[Schedule]].
@@ -100,24 +100,24 @@ class CourseInstance extends Event
         return $this->properties['courseSchedule'];
     }
     /**
-     * The amount of work expected of students taking the course, often provided as a
-     * figure per week or per month, and may be broken down by type. For example, "2
-     * hours of lectures, 1 hour of lab work and 3 hours of independent study per
-     * week".
+     * The medium or means of delivery of the course instance or the mode of study,
+     * either as a text label (e.g. "online", "onsite" or "blended"; "synchronous" or
+     * "asynchronous"; "full-time" or "part-time") or as a URL reference to a term from
+     * a controlled vocabulary (e.g. https://ceds.ed.gov/element/001311#Asynchronous).
      *
-     * @param $courseWorkload \LengthOfRope\JSONLD\DataType\TypeText
+     * @param $courseMode \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
-    public function setCourseWorkload($courseWorkload): static {
-        $this->properties['courseWorkload'] = $courseWorkload;
+    public function setCourseMode($courseMode): static {
+        $this->properties['courseMode'] = $courseMode;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      **/
-    public function getCourseWorkload() {
-        return $this->properties['courseWorkload'];
+    public function getCourseMode() {
+        return $this->properties['courseMode'];
     }
 }

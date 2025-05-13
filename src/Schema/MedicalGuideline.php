@@ -46,6 +46,24 @@ class MedicalGuideline extends MedicalEntity
     }
 
     /**
+     * The medical conditions, treatments, etc. that are the subject of the guideline.
+     *
+     * @param $guidelineSubject \LengthOfRope\JSONLD\Schema\MedicalEntity
+     * @return static
+     **/
+    public function setGuidelineSubject($guidelineSubject): static {
+        $this->properties['guidelineSubject'] = $guidelineSubject;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\MedicalEntity
+     **/
+    public function getGuidelineSubject() {
+        return $this->properties['guidelineSubject'];
+    }
+    /**
      * Source of the data used to formulate the guidance, e.g. RCT, consensus opinion,
      * etc.
      *
@@ -81,24 +99,6 @@ class MedicalGuideline extends MedicalEntity
      **/
     public function getGuidelineDate() {
         return $this->properties['guidelineDate'];
-    }
-    /**
-     * The medical conditions, treatments, etc. that are the subject of the guideline.
-     *
-     * @param $guidelineSubject \LengthOfRope\JSONLD\Schema\MedicalEntity
-     * @return static
-     **/
-    public function setGuidelineSubject($guidelineSubject): static {
-        $this->properties['guidelineSubject'] = $guidelineSubject;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\MedicalEntity
-     **/
-    public function getGuidelineSubject() {
-        return $this->properties['guidelineSubject'];
     }
     /**
      * Strength of evidence of the data used to formulate the guideline (enumerated).

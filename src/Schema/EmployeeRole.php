@@ -40,6 +40,24 @@ class EmployeeRole extends OrganizationRole
     }
 
     /**
+     * The base salary of the job or of an employee in an EmployeeRole.
+     *
+     * @param $baseSalary \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\Schema\PriceSpecification
+     * @return static
+     **/
+    public function setBaseSalary($baseSalary): static {
+        $this->properties['baseSalary'] = $baseSalary;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\Schema\PriceSpecification
+     **/
+    public function getBaseSalary() {
+        return $this->properties['baseSalary'];
+    }
+    /**
      * The currency (coded using [ISO 4217](http://en.wikipedia.org/wiki/ISO_4217))
      * used for the main salary information in this job posting or for this employee.
      *
@@ -57,23 +75,5 @@ class EmployeeRole extends OrganizationRole
      **/
     public function getSalaryCurrency() {
         return $this->properties['salaryCurrency'];
-    }
-    /**
-     * The base salary of the job or of an employee in an EmployeeRole.
-     *
-     * @param $baseSalary \LengthOfRope\JSONLD\Schema\PriceSpecification|\LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\TypeNumber
-     * @return static
-     **/
-    public function setBaseSalary($baseSalary): static {
-        $this->properties['baseSalary'] = $baseSalary;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\PriceSpecification|\LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\TypeNumber
-     **/
-    public function getBaseSalary() {
-        return $this->properties['baseSalary'];
     }
 }

@@ -50,23 +50,23 @@ class MediaReview extends Review
     }
 
     /**
-     * Link to the page containing an original version of the content, or directly to
-     * an online copy of the original [[MediaObject]] content, e.g. video file.
+     * Indicates a MediaManipulationRatingEnumeration classification of a media object
+     * (in the context of how it was published or shared).
      *
-     * @param $originalMediaLink \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\WebPage|\LengthOfRope\JSONLD\Schema\MediaObject
+     * @param $mediaAuthenticityCategory \LengthOfRope\JSONLD\Schema\MediaManipulationRatingEnumeration
      * @return static
      **/
-    public function setOriginalMediaLink($originalMediaLink): static {
-        $this->properties['originalMediaLink'] = $originalMediaLink;
+    public function setMediaAuthenticityCategory($mediaAuthenticityCategory): static {
+        $this->properties['mediaAuthenticityCategory'] = $mediaAuthenticityCategory;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\WebPage|\LengthOfRope\JSONLD\Schema\MediaObject
+     * @return \LengthOfRope\JSONLD\Schema\MediaManipulationRatingEnumeration
      **/
-    public function getOriginalMediaLink() {
-        return $this->properties['originalMediaLink'];
+    public function getMediaAuthenticityCategory() {
+        return $this->properties['mediaAuthenticityCategory'];
     }
     /**
      * Describes, in a [[MediaReview]] when dealing with [[DecontextualizedContent]],
@@ -89,22 +89,22 @@ class MediaReview extends Review
         return $this->properties['originalMediaContextDescription'];
     }
     /**
-     * Indicates a MediaManipulationRatingEnumeration classification of a media object
-     * (in the context of how it was published or shared).
+     * Link to the page containing an original version of the content, or directly to
+     * an online copy of the original [[MediaObject]] content, e.g. video file.
      *
-     * @param $mediaAuthenticityCategory \LengthOfRope\JSONLD\Schema\MediaManipulationRatingEnumeration
+     * @param $originalMediaLink \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\MediaObject|\LengthOfRope\JSONLD\Schema\WebPage
      * @return static
      **/
-    public function setMediaAuthenticityCategory($mediaAuthenticityCategory): static {
-        $this->properties['mediaAuthenticityCategory'] = $mediaAuthenticityCategory;
+    public function setOriginalMediaLink($originalMediaLink): static {
+        $this->properties['originalMediaLink'] = $originalMediaLink;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\MediaManipulationRatingEnumeration
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\MediaObject|\LengthOfRope\JSONLD\Schema\WebPage
      **/
-    public function getMediaAuthenticityCategory() {
-        return $this->properties['mediaAuthenticityCategory'];
+    public function getOriginalMediaLink() {
+        return $this->properties['originalMediaLink'];
     }
 }

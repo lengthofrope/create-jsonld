@@ -40,6 +40,24 @@ class ImageObject extends MediaObject
     }
 
     /**
+     * Represents textual captioning from a [[MediaObject]], e.g. text of a 'meme'.
+     *
+     * @param $embeddedTextCaption \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setEmbeddedTextCaption($embeddedTextCaption): static {
+        $this->properties['embeddedTextCaption'] = $embeddedTextCaption;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getEmbeddedTextCaption() {
+        return $this->properties['embeddedTextCaption'];
+    }
+    /**
      * Indicates whether this image is representative of the content of the page.
      *
      * @param $representativeOfPage \LengthOfRope\JSONLD\DataType\TypeBoolean
@@ -56,25 +74,6 @@ class ImageObject extends MediaObject
      **/
     public function getRepresentativeOfPage() {
         return $this->properties['representativeOfPage'];
-    }
-    /**
-     * The caption for this object. For downloadable machine formats (closed caption,
-     * subtitles etc.) use MediaObject and indicate the [[encodingFormat]].
-     *
-     * @param $caption \LengthOfRope\JSONLD\Schema\MediaObject|\LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setCaption($caption): static {
-        $this->properties['caption'] = $caption;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\MediaObject|\LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getCaption() {
-        return $this->properties['caption'];
     }
     /**
      * exif data for this object.
@@ -95,21 +94,22 @@ class ImageObject extends MediaObject
         return $this->properties['exifData'];
     }
     /**
-     * Represents textual captioning from a [[MediaObject]], e.g. text of a 'meme'.
+     * The caption for this object. For downloadable machine formats (closed caption,
+     * subtitles etc.) use MediaObject and indicate the [[encodingFormat]].
      *
-     * @param $embeddedTextCaption \LengthOfRope\JSONLD\DataType\TypeText
+     * @param $caption \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\MediaObject
      * @return static
      **/
-    public function setEmbeddedTextCaption($embeddedTextCaption): static {
-        $this->properties['embeddedTextCaption'] = $embeddedTextCaption;
+    public function setCaption($caption): static {
+        $this->properties['caption'] = $caption;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\MediaObject
      **/
-    public function getEmbeddedTextCaption() {
-        return $this->properties['embeddedTextCaption'];
+    public function getCaption() {
+        return $this->properties['caption'];
     }
 }

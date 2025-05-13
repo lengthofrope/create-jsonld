@@ -41,24 +41,6 @@ class Brand extends Intangible
     }
 
     /**
-     * An associated logo.
-     *
-     * @param $logo \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\ImageObject
-     * @return static
-     **/
-    public function setLogo($logo): static {
-        $this->properties['logo'] = $logo;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\ImageObject
-     **/
-    public function getLogo() {
-        return $this->properties['logo'];
-    }
-    /**
      * A review of the item.
      *
      * @param $review \LengthOfRope\JSONLD\Schema\Review
@@ -75,6 +57,24 @@ class Brand extends Intangible
      **/
     public function getReview() {
         return $this->properties['review'];
+    }
+    /**
+     * The overall rating, based on a collection of reviews or ratings, of the item.
+     *
+     * @param $aggregateRating \LengthOfRope\JSONLD\Schema\AggregateRating
+     * @return static
+     **/
+    public function setAggregateRating($aggregateRating): static {
+        $this->properties['aggregateRating'] = $aggregateRating;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\AggregateRating
+     **/
+    public function getAggregateRating() {
+        return $this->properties['aggregateRating'];
     }
     /**
      * A slogan or motto associated with the item.
@@ -95,21 +95,21 @@ class Brand extends Intangible
         return $this->properties['slogan'];
     }
     /**
-     * The overall rating, based on a collection of reviews or ratings, of the item.
+     * An associated logo.
      *
-     * @param $aggregateRating \LengthOfRope\JSONLD\Schema\AggregateRating
+     * @param $logo \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\ImageObject
      * @return static
      **/
-    public function setAggregateRating($aggregateRating): static {
-        $this->properties['aggregateRating'] = $aggregateRating;
+    public function setLogo($logo): static {
+        $this->properties['logo'] = $logo;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\AggregateRating
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\ImageObject
      **/
-    public function getAggregateRating() {
-        return $this->properties['aggregateRating'];
+    public function getLogo() {
+        return $this->properties['logo'];
     }
 }

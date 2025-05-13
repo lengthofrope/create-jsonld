@@ -34,7 +34,7 @@ namespace LengthOfRope\JSONLD\Schema;
  * @see https://schema.org/ExercisePlan
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ExercisePlan extends PhysicalActivity
+class ExercisePlan extends CreativeWork
 {
     public static function factory(): ExercisePlan
     {
@@ -42,42 +42,23 @@ class ExercisePlan extends PhysicalActivity
     }
 
     /**
-     * How often one should break from the activity.
+     * Quantitative measure of the physiologic output of the exercise; also referred to
+     * as energy expenditure.
      *
-     * @param $restPeriods \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\TypeText
+     * @param $workload \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Energy
      * @return static
      **/
-    public function setRestPeriods($restPeriods): static {
-        $this->properties['restPeriods'] = $restPeriods;
+    public function setWorkload($workload): static {
+        $this->properties['workload'] = $workload;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Energy
      **/
-    public function getRestPeriods() {
-        return $this->properties['restPeriods'];
-    }
-    /**
-     * Any additional component of the exercise prescription that may need to be
-     * articulated to the patient. This may include the order of exercises, the number
-     * of repetitions of movement, quantitative distance, progressions over time, etc.
-     *
-     * @param $additionalVariable \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setAdditionalVariable($additionalVariable): static {
-        $this->properties['additionalVariable'] = $additionalVariable;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getAdditionalVariable() {
-        return $this->properties['additionalVariable'];
+    public function getWorkload() {
+        return $this->properties['workload'];
     }
     /**
      * Quantitative measure gauging the degree of force involved in the exercise, for
@@ -119,7 +100,7 @@ class ExercisePlan extends PhysicalActivity
     /**
      * Length of time to engage in the activity.
      *
-     * @param $activityDuration \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Duration
+     * @param $activityDuration \LengthOfRope\JSONLD\Schema\Duration|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setActivityDuration($activityDuration): static {
@@ -129,29 +110,66 @@ class ExercisePlan extends PhysicalActivity
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Duration
+     * @return \LengthOfRope\JSONLD\Schema\Duration|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getActivityDuration() {
         return $this->properties['activityDuration'];
     }
     /**
-     * Quantitative measure of the physiologic output of the exercise; also referred to
-     * as energy expenditure.
+     * How often one should break from the activity.
      *
-     * @param $workload \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Energy
+     * @param $restPeriods \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
-    public function setWorkload($workload): static {
-        $this->properties['workload'] = $workload;
+    public function setRestPeriods($restPeriods): static {
+        $this->properties['restPeriods'] = $restPeriods;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Energy
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\TypeText
      **/
-    public function getWorkload() {
-        return $this->properties['workload'];
+    public function getRestPeriods() {
+        return $this->properties['restPeriods'];
+    }
+    /**
+     * Any additional component of the exercise prescription that may need to be
+     * articulated to the patient. This may include the order of exercises, the number
+     * of repetitions of movement, quantitative distance, progressions over time, etc.
+     *
+     * @param $additionalVariable \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setAdditionalVariable($additionalVariable): static {
+        $this->properties['additionalVariable'] = $additionalVariable;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getAdditionalVariable() {
+        return $this->properties['additionalVariable'];
+    }
+    /**
+     * How often one should engage in the activity.
+     *
+     * @param $activityFrequency \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setActivityFrequency($activityFrequency): static {
+        $this->properties['activityFrequency'] = $activityFrequency;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getActivityFrequency() {
+        return $this->properties['activityFrequency'];
     }
     /**
      * Type(s) of exercise or activity, such as strength training, flexibility
@@ -171,23 +189,5 @@ class ExercisePlan extends PhysicalActivity
      **/
     public function getExerciseType() {
         return $this->properties['exerciseType'];
-    }
-    /**
-     * How often one should engage in the activity.
-     *
-     * @param $activityFrequency \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\QuantitativeValue
-     * @return static
-     **/
-    public function setActivityFrequency($activityFrequency): static {
-        $this->properties['activityFrequency'] = $activityFrequency;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\QuantitativeValue
-     **/
-    public function getActivityFrequency() {
-        return $this->properties['activityFrequency'];
     }
 }

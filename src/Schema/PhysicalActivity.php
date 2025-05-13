@@ -43,6 +43,24 @@ class PhysicalActivity extends LifestyleModification
     }
 
     /**
+     * The characteristics of associated patients, such as age, gender, race etc.
+     *
+     * @param $epidemiology \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setEpidemiology($epidemiology): static {
+        $this->properties['epidemiology'] = $epidemiology;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getEpidemiology() {
+        return $this->properties['epidemiology'];
+    }
+    /**
      * Changes in the normal mechanical, physical, and biochemical functions that are
      * associated with this activity or condition.
      *
@@ -62,29 +80,10 @@ class PhysicalActivity extends LifestyleModification
         return $this->properties['pathophysiology'];
     }
     /**
-     * The anatomy of the underlying organ system or structures associated with this
-     * entity.
-     *
-     * @param $associatedAnatomy \LengthOfRope\JSONLD\Schema\AnatomicalStructure|\LengthOfRope\JSONLD\Schema\AnatomicalSystem|\LengthOfRope\JSONLD\Schema\SuperficialAnatomy
-     * @return static
-     **/
-    public function setAssociatedAnatomy($associatedAnatomy): static {
-        $this->properties['associatedAnatomy'] = $associatedAnatomy;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\AnatomicalStructure|\LengthOfRope\JSONLD\Schema\AnatomicalSystem|\LengthOfRope\JSONLD\Schema\SuperficialAnatomy
-     **/
-    public function getAssociatedAnatomy() {
-        return $this->properties['associatedAnatomy'];
-    }
-    /**
      * A category for the item. Greater signs or slashes can be used to informally
      * indicate a category hierarchy.
      *
-     * @param $category \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\Schema\PhysicalActivityCategory|\LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
+     * @param $category \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\PhysicalActivityCategory
      * @return static
      **/
     public function setCategory($category): static {
@@ -94,27 +93,28 @@ class PhysicalActivity extends LifestyleModification
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\Schema\PhysicalActivityCategory|\LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\PhysicalActivityCategory
      **/
     public function getCategory() {
         return $this->properties['category'];
     }
     /**
-     * The characteristics of associated patients, such as age, gender, race etc.
+     * The anatomy of the underlying organ system or structures associated with this
+     * entity.
      *
-     * @param $epidemiology \LengthOfRope\JSONLD\DataType\TypeText
+     * @param $associatedAnatomy \LengthOfRope\JSONLD\Schema\SuperficialAnatomy|\LengthOfRope\JSONLD\Schema\AnatomicalSystem|\LengthOfRope\JSONLD\Schema\AnatomicalStructure
      * @return static
      **/
-    public function setEpidemiology($epidemiology): static {
-        $this->properties['epidemiology'] = $epidemiology;
+    public function setAssociatedAnatomy($associatedAnatomy): static {
+        $this->properties['associatedAnatomy'] = $associatedAnatomy;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\Schema\SuperficialAnatomy|\LengthOfRope\JSONLD\Schema\AnatomicalSystem|\LengthOfRope\JSONLD\Schema\AnatomicalStructure
      **/
-    public function getEpidemiology() {
-        return $this->properties['epidemiology'];
+    public function getAssociatedAnatomy() {
+        return $this->properties['associatedAnatomy'];
     }
 }

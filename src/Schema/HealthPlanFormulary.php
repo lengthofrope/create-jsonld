@@ -59,24 +59,6 @@ class HealthPlanFormulary extends Intangible
         return $this->properties['healthPlanCostSharing'];
     }
     /**
-     * The tier(s) of drugs offered by this formulary or insurance plan.
-     *
-     * @param $healthPlanDrugTier \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setHealthPlanDrugTier($healthPlanDrugTier): static {
-        $this->properties['healthPlanDrugTier'] = $healthPlanDrugTier;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getHealthPlanDrugTier() {
-        return $this->properties['healthPlanDrugTier'];
-    }
-    /**
      * Whether prescriptions can be delivered by mail.
      *
      * @param $offersPrescriptionByMail \LengthOfRope\JSONLD\DataType\TypeBoolean
@@ -93,5 +75,23 @@ class HealthPlanFormulary extends Intangible
      **/
     public function getOffersPrescriptionByMail() {
         return $this->properties['offersPrescriptionByMail'];
+    }
+    /**
+     * The tier(s) of drugs offered by this formulary or insurance plan.
+     *
+     * @param $healthPlanDrugTier \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setHealthPlanDrugTier($healthPlanDrugTier): static {
+        $this->properties['healthPlanDrugTier'] = $healthPlanDrugTier;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getHealthPlanDrugTier() {
+        return $this->properties['healthPlanDrugTier'];
     }
 }

@@ -41,24 +41,6 @@ class Menu extends CreativeWork
     }
 
     /**
-     * A food or drink item contained in a menu or menu section.
-     *
-     * @param $hasMenuItem \LengthOfRope\JSONLD\Schema\MenuItem
-     * @return static
-     **/
-    public function setHasMenuItem($hasMenuItem): static {
-        $this->properties['hasMenuItem'] = $hasMenuItem;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\MenuItem
-     **/
-    public function getHasMenuItem() {
-        return $this->properties['hasMenuItem'];
-    }
-    /**
      * A subgrouping of the menu (by dishes, course, serving time period, etc.).
      *
      * @param $hasMenuSection \LengthOfRope\JSONLD\Schema\MenuSection
@@ -75,5 +57,23 @@ class Menu extends CreativeWork
      **/
     public function getHasMenuSection() {
         return $this->properties['hasMenuSection'];
+    }
+    /**
+     * A food or drink item contained in a menu or menu section.
+     *
+     * @param $hasMenuItem \LengthOfRope\JSONLD\Schema\MenuItem
+     * @return static
+     **/
+    public function setHasMenuItem($hasMenuItem): static {
+        $this->properties['hasMenuItem'] = $hasMenuItem;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\MenuItem
+     **/
+    public function getHasMenuItem() {
+        return $this->properties['hasMenuItem'];
     }
 }

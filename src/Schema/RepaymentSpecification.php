@@ -76,25 +76,6 @@ class RepaymentSpecification extends StructuredValue
         return $this->properties['loanPaymentAmount'];
     }
     /**
-     * Frequency of payments due, i.e. number of months between payments. This is
-     * defined as a frequency, i.e. the reciprocal of a period of time.
-     *
-     * @param $loanPaymentFrequency \LengthOfRope\JSONLD\DataType\TypeNumber
-     * @return static
-     **/
-    public function setLoanPaymentFrequency($loanPaymentFrequency): static {
-        $this->properties['loanPaymentFrequency'] = $loanPaymentFrequency;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
-     **/
-    public function getLoanPaymentFrequency() {
-        return $this->properties['loanPaymentFrequency'];
-    }
-    /**
      * a type of payment made in cash during the onset of the purchase of an expensive
      * good/service. The payment typically represents only a percentage of the full
      * purchase price.
@@ -133,5 +114,24 @@ class RepaymentSpecification extends StructuredValue
      **/
     public function getNumberOfLoanPayments() {
         return $this->properties['numberOfLoanPayments'];
+    }
+    /**
+     * Frequency of payments due, i.e. number of months between payments. This is
+     * defined as a frequency, i.e. the reciprocal of a period of time.
+     *
+     * @param $loanPaymentFrequency \LengthOfRope\JSONLD\DataType\TypeNumber
+     * @return static
+     **/
+    public function setLoanPaymentFrequency($loanPaymentFrequency): static {
+        $this->properties['loanPaymentFrequency'] = $loanPaymentFrequency;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
+     **/
+    public function getLoanPaymentFrequency() {
+        return $this->properties['loanPaymentFrequency'];
     }
 }

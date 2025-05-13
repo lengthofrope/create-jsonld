@@ -42,13 +42,13 @@ class QualitativeValue extends Enumeration
 
     /**
      * This ordering relation for qualitative values indicates that the subject is
-     * equal to the object.
+     * greater than the object.
      *
-     * @param $equal \LengthOfRope\JSONLD\Schema\QualitativeValue
+     * @param $greater \LengthOfRope\JSONLD\Schema\QualitativeValue
      * @return static
      **/
-    public function setEqual($equal): static {
-        $this->properties['equal'] = $equal;
+    public function setGreater($greater): static {
+        $this->properties['greater'] = $greater;
 
         return $this;
     }
@@ -56,8 +56,27 @@ class QualitativeValue extends Enumeration
     /**
      * @return \LengthOfRope\JSONLD\Schema\QualitativeValue
      **/
-    public function getEqual() {
-        return $this->properties['equal'];
+    public function getGreater() {
+        return $this->properties['greater'];
+    }
+    /**
+     * A secondary value that provides additional information on the original value,
+     * e.g. a reference temperature or a type of measurement.
+     *
+     * @param $valueReference \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\StructuredValue|\LengthOfRope\JSONLD\Schema\PropertyValue|\LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Enumeration|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\MeasurementTypeEnumeration
+     * @return static
+     **/
+    public function setValueReference($valueReference): static {
+        $this->properties['valueReference'] = $valueReference;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\StructuredValue|\LengthOfRope\JSONLD\Schema\PropertyValue|\LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Enumeration|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\MeasurementTypeEnumeration
+     **/
+    public function getValueReference() {
+        return $this->properties['valueReference'];
     }
     /**
      * A property-value pair representing an additional characteristic of the entity,
@@ -87,25 +106,6 @@ class QualitativeValue extends Enumeration
     }
     /**
      * This ordering relation for qualitative values indicates that the subject is
-     * lesser than the object.
-     *
-     * @param $lesser \LengthOfRope\JSONLD\Schema\QualitativeValue
-     * @return static
-     **/
-    public function setLesser($lesser): static {
-        $this->properties['lesser'] = $lesser;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\QualitativeValue
-     **/
-    public function getLesser() {
-        return $this->properties['lesser'];
-    }
-    /**
-     * This ordering relation for qualitative values indicates that the subject is
      * lesser than or equal to the object.
      *
      * @param $lesserOrEqual \LengthOfRope\JSONLD\Schema\QualitativeValue
@@ -125,13 +125,13 @@ class QualitativeValue extends Enumeration
     }
     /**
      * This ordering relation for qualitative values indicates that the subject is
-     * greater than or equal to the object.
+     * lesser than the object.
      *
-     * @param $greaterOrEqual \LengthOfRope\JSONLD\Schema\QualitativeValue
+     * @param $lesser \LengthOfRope\JSONLD\Schema\QualitativeValue
      * @return static
      **/
-    public function setGreaterOrEqual($greaterOrEqual): static {
-        $this->properties['greaterOrEqual'] = $greaterOrEqual;
+    public function setLesser($lesser): static {
+        $this->properties['lesser'] = $lesser;
 
         return $this;
     }
@@ -139,18 +139,18 @@ class QualitativeValue extends Enumeration
     /**
      * @return \LengthOfRope\JSONLD\Schema\QualitativeValue
      **/
-    public function getGreaterOrEqual() {
-        return $this->properties['greaterOrEqual'];
+    public function getLesser() {
+        return $this->properties['lesser'];
     }
     /**
      * This ordering relation for qualitative values indicates that the subject is
-     * greater than the object.
+     * equal to the object.
      *
-     * @param $greater \LengthOfRope\JSONLD\Schema\QualitativeValue
+     * @param $equal \LengthOfRope\JSONLD\Schema\QualitativeValue
      * @return static
      **/
-    public function setGreater($greater): static {
-        $this->properties['greater'] = $greater;
+    public function setEqual($equal): static {
+        $this->properties['equal'] = $equal;
 
         return $this;
     }
@@ -158,8 +158,8 @@ class QualitativeValue extends Enumeration
     /**
      * @return \LengthOfRope\JSONLD\Schema\QualitativeValue
      **/
-    public function getGreater() {
-        return $this->properties['greater'];
+    public function getEqual() {
+        return $this->properties['equal'];
     }
     /**
      * This ordering relation for qualitative values indicates that the subject is not
@@ -181,22 +181,22 @@ class QualitativeValue extends Enumeration
         return $this->properties['nonEqual'];
     }
     /**
-     * A secondary value that provides additional information on the original value,
-     * e.g. a reference temperature or a type of measurement.
+     * This ordering relation for qualitative values indicates that the subject is
+     * greater than or equal to the object.
      *
-     * @param $valueReference \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\PropertyValue|\LengthOfRope\JSONLD\Schema\MeasurementTypeEnumeration|\LengthOfRope\JSONLD\Schema\StructuredValue|\LengthOfRope\JSONLD\Schema\Enumeration|\LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\Schema\QuantitativeValue
+     * @param $greaterOrEqual \LengthOfRope\JSONLD\Schema\QualitativeValue
      * @return static
      **/
-    public function setValueReference($valueReference): static {
-        $this->properties['valueReference'] = $valueReference;
+    public function setGreaterOrEqual($greaterOrEqual): static {
+        $this->properties['greaterOrEqual'] = $greaterOrEqual;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\PropertyValue|\LengthOfRope\JSONLD\Schema\MeasurementTypeEnumeration|\LengthOfRope\JSONLD\Schema\StructuredValue|\LengthOfRope\JSONLD\Schema\Enumeration|\LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\Schema\QuantitativeValue
+     * @return \LengthOfRope\JSONLD\Schema\QualitativeValue
      **/
-    public function getValueReference() {
-        return $this->properties['valueReference'];
+    public function getGreaterOrEqual() {
+        return $this->properties['greaterOrEqual'];
     }
 }

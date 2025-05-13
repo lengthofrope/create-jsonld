@@ -42,25 +42,6 @@ class LocationFeatureSpecification extends PropertyValue
     }
 
     /**
-     * The date after when the item is not valid. For example the end of an offer,
-     * salary period, or a period of opening hours.
-     *
-     * @param $validThrough \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
-     * @return static
-     **/
-    public function setValidThrough($validThrough): static {
-        $this->properties['validThrough'] = $validThrough;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
-     **/
-    public function getValidThrough() {
-        return $this->properties['validThrough'];
-    }
-    /**
      * The hours during which this service or contact is available.
      *
      * @param $hoursAvailable \LengthOfRope\JSONLD\Schema\OpeningHoursSpecification
@@ -79,9 +60,28 @@ class LocationFeatureSpecification extends PropertyValue
         return $this->properties['hoursAvailable'];
     }
     /**
+     * The date after when the item is not valid. For example the end of an offer,
+     * salary period, or a period of opening hours.
+     *
+     * @param $validThrough \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
+     * @return static
+     **/
+    public function setValidThrough($validThrough): static {
+        $this->properties['validThrough'] = $validThrough;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
+     **/
+    public function getValidThrough() {
+        return $this->properties['validThrough'];
+    }
+    /**
      * The date when the item becomes valid.
      *
-     * @param $validFrom \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
+     * @param $validFrom \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
      * @return static
      **/
     public function setValidFrom($validFrom): static {
@@ -91,7 +91,7 @@ class LocationFeatureSpecification extends PropertyValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
+     * @return \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
      **/
     public function getValidFrom() {
         return $this->properties['validFrom'];

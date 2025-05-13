@@ -58,6 +58,132 @@ class Review extends CreativeWork
         return $this->properties['associatedReview'];
     }
     /**
+     * Provides negative considerations regarding something, most typically in pro/con
+     * lists for reviews (alongside [[positiveNotes]]). For symmetry
+     *
+     * In the case of a [[Review]], the property describes the [[itemReviewed]] from
+     * the perspective of the review; in the case of a [[Product]], the product itself
+     * is being described. Since product descriptions
+     * tend to emphasise positive claims, it may be relatively unusual to find
+     * [[negativeNotes]] used in this way. Nevertheless for the sake of symmetry,
+     * [[negativeNotes]] can be used on [[Product]].
+     *
+     * The property values can be expressed either as unstructured text (repeated as
+     * necessary), or if ordered, as a list (in which case the most negative is at the
+     * beginning of the list).
+     *
+     * @param $negativeNotes \LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\ListItem
+     * @return static
+     **/
+    public function setNegativeNotes($negativeNotes): static {
+        $this->properties['negativeNotes'] = $negativeNotes;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\ListItem
+     **/
+    public function getNegativeNotes() {
+        return $this->properties['negativeNotes'];
+    }
+    /**
+     * This Review or Rating is relevant to this part or facet of the itemReviewed.
+     *
+     * @param $reviewAspect \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setReviewAspect($reviewAspect): static {
+        $this->properties['reviewAspect'] = $reviewAspect;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getReviewAspect() {
+        return $this->properties['reviewAspect'];
+    }
+    /**
+     * An associated [[MediaReview]], related by specific common content, topic or
+     * claim. The expectation is that this property would be most typically used in
+     * cases where a single activity is conducting both claim reviews and media
+     * reviews, in which case [[relatedMediaReview]] would commonly be used on a
+     * [[ClaimReview]], while [[relatedClaimReview]] would be used on [[MediaReview]].
+     *
+     * @param $associatedMediaReview \LengthOfRope\JSONLD\Schema\Review
+     * @return static
+     **/
+    public function setAssociatedMediaReview($associatedMediaReview): static {
+        $this->properties['associatedMediaReview'] = $associatedMediaReview;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Review
+     **/
+    public function getAssociatedMediaReview() {
+        return $this->properties['associatedMediaReview'];
+    }
+    /**
+     * The item that is being reviewed/rated.
+     *
+     * @param $itemReviewed \LengthOfRope\JSONLD\Schema\Thing
+     * @return static
+     **/
+    public function setItemReviewed($itemReviewed): static {
+        $this->properties['itemReviewed'] = $itemReviewed;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Thing
+     **/
+    public function getItemReviewed() {
+        return $this->properties['itemReviewed'];
+    }
+    /**
+     * The rating given in this review. Note that reviews can themselves be rated. The
+     * ```reviewRating``` applies to rating given by the review. The
+     * [[aggregateRating]] property applies to the review itself, as a creative work.
+     *
+     * @param $reviewRating \LengthOfRope\JSONLD\Schema\Rating
+     * @return static
+     **/
+    public function setReviewRating($reviewRating): static {
+        $this->properties['reviewRating'] = $reviewRating;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Rating
+     **/
+    public function getReviewRating() {
+        return $this->properties['reviewRating'];
+    }
+    /**
+     * The actual body of the review.
+     *
+     * @param $reviewBody \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setReviewBody($reviewBody): static {
+        $this->properties['reviewBody'] = $reviewBody;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getReviewBody() {
+        return $this->properties['reviewBody'];
+    }
+    /**
      * Provides positive considerations regarding something, for example product
      * highlights or (alongside [[negativeNotes]]) pro/con lists for reviews.
      *
@@ -69,7 +195,7 @@ class Review extends CreativeWork
      * necessary), or if ordered, as a list (in which case the most positive is at the
      * beginning of the list).
      *
-     * @param $positiveNotes \LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\Schema\ListItem|\LengthOfRope\JSONLD\DataType\TypeText
+     * @param $positiveNotes \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\Schema\ListItem
      * @return static
      **/
     public function setPositiveNotes($positiveNotes): static {
@@ -79,7 +205,7 @@ class Review extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\Schema\ListItem|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\Schema\ListItem
      **/
     public function getPositiveNotes() {
         return $this->properties['positiveNotes'];
@@ -105,131 +231,5 @@ class Review extends CreativeWork
      **/
     public function getAssociatedClaimReview() {
         return $this->properties['associatedClaimReview'];
-    }
-    /**
-     * The actual body of the review.
-     *
-     * @param $reviewBody \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setReviewBody($reviewBody): static {
-        $this->properties['reviewBody'] = $reviewBody;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getReviewBody() {
-        return $this->properties['reviewBody'];
-    }
-    /**
-     * The item that is being reviewed/rated.
-     *
-     * @param $itemReviewed \LengthOfRope\JSONLD\Schema\Thing
-     * @return static
-     **/
-    public function setItemReviewed($itemReviewed): static {
-        $this->properties['itemReviewed'] = $itemReviewed;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Thing
-     **/
-    public function getItemReviewed() {
-        return $this->properties['itemReviewed'];
-    }
-    /**
-     * This Review or Rating is relevant to this part or facet of the itemReviewed.
-     *
-     * @param $reviewAspect \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setReviewAspect($reviewAspect): static {
-        $this->properties['reviewAspect'] = $reviewAspect;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getReviewAspect() {
-        return $this->properties['reviewAspect'];
-    }
-    /**
-     * The rating given in this review. Note that reviews can themselves be rated. The
-     * ```reviewRating``` applies to rating given by the review. The
-     * [[aggregateRating]] property applies to the review itself, as a creative work.
-     *
-     * @param $reviewRating \LengthOfRope\JSONLD\Schema\Rating
-     * @return static
-     **/
-    public function setReviewRating($reviewRating): static {
-        $this->properties['reviewRating'] = $reviewRating;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Rating
-     **/
-    public function getReviewRating() {
-        return $this->properties['reviewRating'];
-    }
-    /**
-     * Provides negative considerations regarding something, most typically in pro/con
-     * lists for reviews (alongside [[positiveNotes]]). For symmetry
-     *
-     * In the case of a [[Review]], the property describes the [[itemReviewed]] from
-     * the perspective of the review; in the case of a [[Product]], the product itself
-     * is being described. Since product descriptions
-     * tend to emphasise positive claims, it may be relatively unusual to find
-     * [[negativeNotes]] used in this way. Nevertheless for the sake of symmetry,
-     * [[negativeNotes]] can be used on [[Product]].
-     *
-     * The property values can be expressed either as unstructured text (repeated as
-     * necessary), or if ordered, as a list (in which case the most negative is at the
-     * beginning of the list).
-     *
-     * @param $negativeNotes \LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\ListItem|\LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setNegativeNotes($negativeNotes): static {
-        $this->properties['negativeNotes'] = $negativeNotes;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\ListItem|\LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getNegativeNotes() {
-        return $this->properties['negativeNotes'];
-    }
-    /**
-     * An associated [[MediaReview]], related by specific common content, topic or
-     * claim. The expectation is that this property would be most typically used in
-     * cases where a single activity is conducting both claim reviews and media
-     * reviews, in which case [[relatedMediaReview]] would commonly be used on a
-     * [[ClaimReview]], while [[relatedClaimReview]] would be used on [[MediaReview]].
-     *
-     * @param $associatedMediaReview \LengthOfRope\JSONLD\Schema\Review
-     * @return static
-     **/
-    public function setAssociatedMediaReview($associatedMediaReview): static {
-        $this->properties['associatedMediaReview'] = $associatedMediaReview;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Review
-     **/
-    public function getAssociatedMediaReview() {
-        return $this->properties['associatedMediaReview'];
     }
 }

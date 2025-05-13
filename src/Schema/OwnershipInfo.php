@@ -41,6 +41,24 @@ class OwnershipInfo extends StructuredValue
     }
 
     /**
+     * The organization or person from which the product was acquired.
+     *
+     * @param $acquiredFrom \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
+     * @return static
+     **/
+    public function setAcquiredFrom($acquiredFrom): static {
+        $this->properties['acquiredFrom'] = $acquiredFrom;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
+     **/
+    public function getAcquiredFrom() {
+        return $this->properties['acquiredFrom'];
+    }
+    /**
      * The date and time of obtaining the product.
      *
      * @param $ownedFrom \LengthOfRope\JSONLD\DataType\TypeDateTime
@@ -57,24 +75,6 @@ class OwnershipInfo extends StructuredValue
      **/
     public function getOwnedFrom() {
         return $this->properties['ownedFrom'];
-    }
-    /**
-     * The date and time of giving up ownership on the product.
-     *
-     * @param $ownedThrough \LengthOfRope\JSONLD\DataType\TypeDateTime
-     * @return static
-     **/
-    public function setOwnedThrough($ownedThrough): static {
-        $this->properties['ownedThrough'] = $ownedThrough;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime
-     **/
-    public function getOwnedThrough() {
-        return $this->properties['ownedThrough'];
     }
     /**
      * The product that this structured value is referring to.
@@ -95,21 +95,21 @@ class OwnershipInfo extends StructuredValue
         return $this->properties['typeOfGood'];
     }
     /**
-     * The organization or person from which the product was acquired.
+     * The date and time of giving up ownership on the product.
      *
-     * @param $acquiredFrom \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
+     * @param $ownedThrough \LengthOfRope\JSONLD\DataType\TypeDateTime
      * @return static
      **/
-    public function setAcquiredFrom($acquiredFrom): static {
-        $this->properties['acquiredFrom'] = $acquiredFrom;
+    public function setOwnedThrough($ownedThrough): static {
+        $this->properties['ownedThrough'] = $ownedThrough;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime
      **/
-    public function getAcquiredFrom() {
-        return $this->properties['acquiredFrom'];
+    public function getOwnedThrough() {
+        return $this->properties['ownedThrough'];
     }
 }

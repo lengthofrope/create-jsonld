@@ -47,6 +47,27 @@ class ConstraintNode extends Intangible
     }
 
     /**
+     * Indicates a property used as a constraint. For example, in the definition of a
+     * [[StatisticalVariable]]. The value is a property, either from within Schema.org
+     * or from other compatible (e.g. RDF) systems such as DataCommons.org or
+     * Wikidata.org.
+     *
+     * @param $constraintProperty \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\Property
+     * @return static
+     **/
+    public function setConstraintProperty($constraintProperty): static {
+        $this->properties['constraintProperty'] = $constraintProperty;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\Property
+     **/
+    public function getConstraintProperty() {
+        return $this->properties['constraintProperty'];
+    }
+    /**
      * Indicates the number of constraints property values defined for a particular
      * [[ConstraintNode]] such as [[StatisticalVariable]]. This helps applications
      * understand if they have access to a sufficiently complete description of a
@@ -67,26 +88,5 @@ class ConstraintNode extends Intangible
      **/
     public function getNumConstraints() {
         return $this->properties['numConstraints'];
-    }
-    /**
-     * Indicates a property used as a constraint. For example, in the definition of a
-     * [[StatisticalVariable]]. The value is a property, either from within Schema.org
-     * or from other compatible (e.g. RDF) systems such as DataCommons.org or
-     * Wikidata.org.
-     *
-     * @param $constraintProperty \LengthOfRope\JSONLD\Schema\Property|\LengthOfRope\JSONLD\DataType\TypeURL
-     * @return static
-     **/
-    public function setConstraintProperty($constraintProperty): static {
-        $this->properties['constraintProperty'] = $constraintProperty;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Property|\LengthOfRope\JSONLD\DataType\TypeURL
-     **/
-    public function getConstraintProperty() {
-        return $this->properties['constraintProperty'];
     }
 }

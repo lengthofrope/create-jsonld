@@ -41,24 +41,6 @@ class Question extends Comment
     }
 
     /**
-     * The number of answers this question has received.
-     *
-     * @param $answerCount \LengthOfRope\JSONLD\DataType\TypeInteger
-     * @return static
-     **/
-    public function setAnswerCount($answerCount): static {
-        $this->properties['answerCount'] = $answerCount;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeInteger
-     **/
-    public function getAnswerCount() {
-        return $this->properties['answerCount'];
-    }
-    /**
      * The parent of a question, answer or item in general. Typically used for Q/A
      * discussion threads e.g. a chain of comments with the first comment being an
      * [[Article]] or other [[CreativeWork]]. See also [[comment]] which points from
@@ -78,26 +60,6 @@ class Question extends Comment
      **/
     public function getParentItem() {
         return $this->properties['parentItem'];
-    }
-    /**
-     * The answer(s) that has been accepted as best, typically on a Question/Answer
-     * site. Sites vary in their selection mechanisms, e.g. drawing on community
-     * opinion and/or the view of the Question author.
-     *
-     * @param $acceptedAnswer \LengthOfRope\JSONLD\Schema\Answer|\LengthOfRope\JSONLD\Schema\ItemList
-     * @return static
-     **/
-    public function setAcceptedAnswer($acceptedAnswer): static {
-        $this->properties['acceptedAnswer'] = $acceptedAnswer;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Answer|\LengthOfRope\JSONLD\Schema\ItemList
-     **/
-    public function getAcceptedAnswer() {
-        return $this->properties['acceptedAnswer'];
     }
     /**
      * For questions that are part of learning resources (e.g. Quiz), eduQuestionType
@@ -120,6 +82,26 @@ class Question extends Comment
         return $this->properties['eduQuestionType'];
     }
     /**
+     * The answer(s) that has been accepted as best, typically on a Question/Answer
+     * site. Sites vary in their selection mechanisms, e.g. drawing on community
+     * opinion and/or the view of the Question author.
+     *
+     * @param $acceptedAnswer \LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\Answer
+     * @return static
+     **/
+    public function setAcceptedAnswer($acceptedAnswer): static {
+        $this->properties['acceptedAnswer'] = $acceptedAnswer;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\Answer
+     **/
+    public function getAcceptedAnswer() {
+        return $this->properties['acceptedAnswer'];
+    }
+    /**
      * An answer (possibly one of several, possibly incorrect) to a Question, e.g. on a
      * Question/Answer site.
      *
@@ -137,5 +119,23 @@ class Question extends Comment
      **/
     public function getSuggestedAnswer() {
         return $this->properties['suggestedAnswer'];
+    }
+    /**
+     * The number of answers this question has received.
+     *
+     * @param $answerCount \LengthOfRope\JSONLD\DataType\TypeInteger
+     * @return static
+     **/
+    public function setAnswerCount($answerCount): static {
+        $this->properties['answerCount'] = $answerCount;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeInteger
+     **/
+    public function getAnswerCount() {
+        return $this->properties['answerCount'];
     }
 }

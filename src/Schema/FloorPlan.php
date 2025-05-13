@@ -48,15 +48,16 @@ class FloorPlan extends Intangible
     }
 
     /**
-     * The size of the accommodation, e.g. in square meter or squarefoot.
-     * Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for
-     * square yard.
+     * Indicates the number of available accommodation units in an
+     * [[ApartmentComplex]], or the number of accommodation units for a specific
+     * [[FloorPlan]] (within its specific [[ApartmentComplex]]). See also
+     * [[numberOfAccommodationUnits]].
      *
-     * @param $floorSize \LengthOfRope\JSONLD\Schema\QuantitativeValue
+     * @param $numberOfAvailableAccommodationUnits \LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
-    public function setFloorSize($floorSize): static {
-        $this->properties['floorSize'] = $floorSize;
+    public function setNumberOfAvailableAccommodationUnits($numberOfAvailableAccommodationUnits): static {
+        $this->properties['numberOfAvailableAccommodationUnits'] = $numberOfAvailableAccommodationUnits;
 
         return $this;
     }
@@ -64,26 +65,72 @@ class FloorPlan extends Intangible
     /**
      * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
-    public function getFloorSize() {
-        return $this->properties['floorSize'];
+    public function getNumberOfAvailableAccommodationUnits() {
+        return $this->properties['numberOfAvailableAccommodationUnits'];
     }
     /**
-     * Indicates some accommodation that this floor plan describes.
+     * The total integer number of bathrooms in some [[Accommodation]], following real
+     * estate conventions as [documented in
+     * RESO](https://ddwiki.reso.org/display/DDW17/BathroomsTotalInteger+Field): "The
+     * simple sum of the number of bathrooms. For example for a property with two Full
+     * Bathrooms and one Half Bathroom, the Bathrooms Total Integer will be 3.". See
+     * also [[numberOfRooms]].
      *
-     * @param $isPlanForApartment \LengthOfRope\JSONLD\Schema\Accommodation
+     * @param $numberOfBathroomsTotal \LengthOfRope\JSONLD\DataType\TypeInteger
      * @return static
      **/
-    public function setIsPlanForApartment($isPlanForApartment): static {
-        $this->properties['isPlanForApartment'] = $isPlanForApartment;
+    public function setNumberOfBathroomsTotal($numberOfBathroomsTotal): static {
+        $this->properties['numberOfBathroomsTotal'] = $numberOfBathroomsTotal;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Accommodation
+     * @return \LengthOfRope\JSONLD\DataType\TypeInteger
      **/
-    public function getIsPlanForApartment() {
-        return $this->properties['isPlanForApartment'];
+    public function getNumberOfBathroomsTotal() {
+        return $this->properties['numberOfBathroomsTotal'];
+    }
+    /**
+     * An amenity feature (e.g. a characteristic or service) of the Accommodation. This
+     * generic property does not make a statement about whether the feature is included
+     * in an offer for the main accommodation or available at extra costs.
+     *
+     * @param $amenityFeature \LengthOfRope\JSONLD\Schema\LocationFeatureSpecification
+     * @return static
+     **/
+    public function setAmenityFeature($amenityFeature): static {
+        $this->properties['amenityFeature'] = $amenityFeature;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\LocationFeatureSpecification
+     **/
+    public function getAmenityFeature() {
+        return $this->properties['amenityFeature'];
+    }
+    /**
+     * Indicates the total (available plus unavailable) number of accommodation units
+     * in an [[ApartmentComplex]], or the number of accommodation units for a specific
+     * [[FloorPlan]] (within its specific [[ApartmentComplex]]). See also
+     * [[numberOfAvailableAccommodationUnits]].
+     *
+     * @param $numberOfAccommodationUnits \LengthOfRope\JSONLD\Schema\QuantitativeValue
+     * @return static
+     **/
+    public function setNumberOfAccommodationUnits($numberOfAccommodationUnits): static {
+        $this->properties['numberOfAccommodationUnits'] = $numberOfAccommodationUnits;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
+     **/
+    public function getNumberOfAccommodationUnits() {
+        return $this->properties['numberOfAccommodationUnits'];
     }
     /**
      * Indicates whether pets are allowed to enter the accommodation or lodging
@@ -124,57 +171,33 @@ class FloorPlan extends Intangible
         return $this->properties['numberOfBedrooms'];
     }
     /**
-     * The total integer number of bathrooms in some [[Accommodation]], following real
-     * estate conventions as [documented in
-     * RESO](https://ddwiki.reso.org/display/DDW17/BathroomsTotalInteger+Field): "The
-     * simple sum of the number of bathrooms. For example for a property with two Full
-     * Bathrooms and one Half Bathroom, the Bathrooms Total Integer will be 3.". See
-     * also [[numberOfRooms]].
+     * Indicates some accommodation that this floor plan describes.
      *
-     * @param $numberOfBathroomsTotal \LengthOfRope\JSONLD\DataType\TypeInteger
+     * @param $isPlanForApartment \LengthOfRope\JSONLD\Schema\Accommodation
      * @return static
      **/
-    public function setNumberOfBathroomsTotal($numberOfBathroomsTotal): static {
-        $this->properties['numberOfBathroomsTotal'] = $numberOfBathroomsTotal;
+    public function setIsPlanForApartment($isPlanForApartment): static {
+        $this->properties['isPlanForApartment'] = $isPlanForApartment;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeInteger
+     * @return \LengthOfRope\JSONLD\Schema\Accommodation
      **/
-    public function getNumberOfBathroomsTotal() {
-        return $this->properties['numberOfBathroomsTotal'];
+    public function getIsPlanForApartment() {
+        return $this->properties['isPlanForApartment'];
     }
     /**
-     * A schematic image showing the floorplan layout.
+     * The size of the accommodation, e.g. in square meter or squarefoot.
+     * Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for
+     * square yard.
      *
-     * @param $layoutImage \LengthOfRope\JSONLD\Schema\ImageObject|\LengthOfRope\JSONLD\DataType\TypeURL
+     * @param $floorSize \LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
-    public function setLayoutImage($layoutImage): static {
-        $this->properties['layoutImage'] = $layoutImage;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\ImageObject|\LengthOfRope\JSONLD\DataType\TypeURL
-     **/
-    public function getLayoutImage() {
-        return $this->properties['layoutImage'];
-    }
-    /**
-     * Indicates the number of available accommodation units in an
-     * [[ApartmentComplex]], or the number of accommodation units for a specific
-     * [[FloorPlan]] (within its specific [[ApartmentComplex]]). See also
-     * [[numberOfAccommodationUnits]].
-     *
-     * @param $numberOfAvailableAccommodationUnits \LengthOfRope\JSONLD\Schema\QuantitativeValue
-     * @return static
-     **/
-    public function setNumberOfAvailableAccommodationUnits($numberOfAvailableAccommodationUnits): static {
-        $this->properties['numberOfAvailableAccommodationUnits'] = $numberOfAvailableAccommodationUnits;
+    public function setFloorSize($floorSize): static {
+        $this->properties['floorSize'] = $floorSize;
 
         return $this;
     }
@@ -182,90 +205,8 @@ class FloorPlan extends Intangible
     /**
      * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
-    public function getNumberOfAvailableAccommodationUnits() {
-        return $this->properties['numberOfAvailableAccommodationUnits'];
-    }
-    /**
-     * Number of full bathrooms - The total number of full and ¾ bathrooms in an
-     * [[Accommodation]]. This corresponds to the [BathroomsFull field in
-     * RESO](https://ddwiki.reso.org/display/DDW17/BathroomsFull+Field).
-     *
-     * @param $numberOfFullBathrooms \LengthOfRope\JSONLD\DataType\TypeNumber
-     * @return static
-     **/
-    public function setNumberOfFullBathrooms($numberOfFullBathrooms): static {
-        $this->properties['numberOfFullBathrooms'] = $numberOfFullBathrooms;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
-     **/
-    public function getNumberOfFullBathrooms() {
-        return $this->properties['numberOfFullBathrooms'];
-    }
-    /**
-     * Indicates the total (available plus unavailable) number of accommodation units
-     * in an [[ApartmentComplex]], or the number of accommodation units for a specific
-     * [[FloorPlan]] (within its specific [[ApartmentComplex]]). See also
-     * [[numberOfAvailableAccommodationUnits]].
-     *
-     * @param $numberOfAccommodationUnits \LengthOfRope\JSONLD\Schema\QuantitativeValue
-     * @return static
-     **/
-    public function setNumberOfAccommodationUnits($numberOfAccommodationUnits): static {
-        $this->properties['numberOfAccommodationUnits'] = $numberOfAccommodationUnits;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
-     **/
-    public function getNumberOfAccommodationUnits() {
-        return $this->properties['numberOfAccommodationUnits'];
-    }
-    /**
-     * The number of rooms (excluding bathrooms and closets) of the accommodation or
-     * lodging business.
-     * Typical unit code(s): ROM for room or C62 for no unit. The type of room can be
-     * put in the unitText property of the QuantitativeValue.
-     *
-     * @param $numberOfRooms \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\TypeNumber
-     * @return static
-     **/
-    public function setNumberOfRooms($numberOfRooms): static {
-        $this->properties['numberOfRooms'] = $numberOfRooms;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\TypeNumber
-     **/
-    public function getNumberOfRooms() {
-        return $this->properties['numberOfRooms'];
-    }
-    /**
-     * An amenity feature (e.g. a characteristic or service) of the Accommodation. This
-     * generic property does not make a statement about whether the feature is included
-     * in an offer for the main accommodation or available at extra costs.
-     *
-     * @param $amenityFeature \LengthOfRope\JSONLD\Schema\LocationFeatureSpecification
-     * @return static
-     **/
-    public function setAmenityFeature($amenityFeature): static {
-        $this->properties['amenityFeature'] = $amenityFeature;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\LocationFeatureSpecification
-     **/
-    public function getAmenityFeature() {
-        return $this->properties['amenityFeature'];
+    public function getFloorSize() {
+        return $this->properties['floorSize'];
     }
     /**
      * Number of partial bathrooms - The total number of half and ¼ bathrooms in an
@@ -286,5 +227,64 @@ class FloorPlan extends Intangible
      **/
     public function getNumberOfPartialBathrooms() {
         return $this->properties['numberOfPartialBathrooms'];
+    }
+    /**
+     * A schematic image showing the floorplan layout.
+     *
+     * @param $layoutImage \LengthOfRope\JSONLD\Schema\ImageObject|\LengthOfRope\JSONLD\DataType\TypeURL
+     * @return static
+     **/
+    public function setLayoutImage($layoutImage): static {
+        $this->properties['layoutImage'] = $layoutImage;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\ImageObject|\LengthOfRope\JSONLD\DataType\TypeURL
+     **/
+    public function getLayoutImage() {
+        return $this->properties['layoutImage'];
+    }
+    /**
+     * The number of rooms (excluding bathrooms and closets) of the accommodation or
+     * lodging business.
+     * Typical unit code(s): ROM for room or C62 for no unit. The type of room can be
+     * put in the unitText property of the QuantitativeValue.
+     *
+     * @param $numberOfRooms \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\Schema\QuantitativeValue
+     * @return static
+     **/
+    public function setNumberOfRooms($numberOfRooms): static {
+        $this->properties['numberOfRooms'] = $numberOfRooms;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\Schema\QuantitativeValue
+     **/
+    public function getNumberOfRooms() {
+        return $this->properties['numberOfRooms'];
+    }
+    /**
+     * Number of full bathrooms - The total number of full and ¾ bathrooms in an
+     * [[Accommodation]]. This corresponds to the [BathroomsFull field in
+     * RESO](https://ddwiki.reso.org/display/DDW17/BathroomsFull+Field).
+     *
+     * @param $numberOfFullBathrooms \LengthOfRope\JSONLD\DataType\TypeNumber
+     * @return static
+     **/
+    public function setNumberOfFullBathrooms($numberOfFullBathrooms): static {
+        $this->properties['numberOfFullBathrooms'] = $numberOfFullBathrooms;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
+     **/
+    public function getNumberOfFullBathrooms() {
+        return $this->properties['numberOfFullBathrooms'];
     }
 }

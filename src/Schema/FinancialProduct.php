@@ -45,7 +45,7 @@ class FinancialProduct extends Service
      * Description of fees, commissions, and other terms applied either to a class of
      * financial product, or by a financial service organization.
      *
-     * @param $feesAndCommissionsSpecification \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
+     * @param $feesAndCommissionsSpecification \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setFeesAndCommissionsSpecification($feesAndCommissionsSpecification): static {
@@ -55,29 +55,10 @@ class FinancialProduct extends Service
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getFeesAndCommissionsSpecification() {
         return $this->properties['feesAndCommissionsSpecification'];
-    }
-    /**
-     * The interest rate, charged or paid, applicable to the financial product. Note:
-     * This is different from the calculated annualPercentageRate.
-     *
-     * @param $interestRate \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\TypeNumber
-     * @return static
-     **/
-    public function setInterestRate($interestRate): static {
-        $this->properties['interestRate'] = $interestRate;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\TypeNumber
-     **/
-    public function getInterestRate() {
-        return $this->properties['interestRate'];
     }
     /**
      * The annual rate that is charged for borrowing (or made by investing), expressed
@@ -99,5 +80,24 @@ class FinancialProduct extends Service
      **/
     public function getAnnualPercentageRate() {
         return $this->properties['annualPercentageRate'];
+    }
+    /**
+     * The interest rate, charged or paid, applicable to the financial product. Note:
+     * This is different from the calculated annualPercentageRate.
+     *
+     * @param $interestRate \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\TypeNumber
+     * @return static
+     **/
+    public function setInterestRate($interestRate): static {
+        $this->properties['interestRate'] = $interestRate;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\TypeNumber
+     **/
+    public function getInterestRate() {
+        return $this->properties['interestRate'];
     }
 }

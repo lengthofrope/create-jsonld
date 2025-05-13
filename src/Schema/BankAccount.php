@@ -41,22 +41,25 @@ class BankAccount extends FinancialProduct
     }
 
     /**
-     * The type of a bank account.
+     * An overdraft is an extension of credit from a lending institution when an
+     * account reaches zero. An overdraft allows the individual to continue withdrawing
+     * money even if the account has no funds in it. Basically the bank allows people
+     * to borrow a set amount of money.
      *
-     * @param $bankAccountType \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\DataType\TypeText
+     * @param $accountOverdraftLimit \LengthOfRope\JSONLD\Schema\MonetaryAmount
      * @return static
      **/
-    public function setBankAccountType($bankAccountType): static {
-        $this->properties['bankAccountType'] = $bankAccountType;
+    public function setAccountOverdraftLimit($accountOverdraftLimit): static {
+        $this->properties['accountOverdraftLimit'] = $accountOverdraftLimit;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount
      **/
-    public function getBankAccountType() {
-        return $this->properties['bankAccountType'];
+    public function getAccountOverdraftLimit() {
+        return $this->properties['accountOverdraftLimit'];
     }
     /**
      * A minimum amount that has to be paid in every month.
@@ -77,24 +80,21 @@ class BankAccount extends FinancialProduct
         return $this->properties['accountMinimumInflow'];
     }
     /**
-     * An overdraft is an extension of credit from a lending institution when an
-     * account reaches zero. An overdraft allows the individual to continue withdrawing
-     * money even if the account has no funds in it. Basically the bank allows people
-     * to borrow a set amount of money.
+     * The type of a bank account.
      *
-     * @param $accountOverdraftLimit \LengthOfRope\JSONLD\Schema\MonetaryAmount
+     * @param $bankAccountType \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
-    public function setAccountOverdraftLimit($accountOverdraftLimit): static {
-        $this->properties['accountOverdraftLimit'] = $accountOverdraftLimit;
+    public function setBankAccountType($bankAccountType): static {
+        $this->properties['bankAccountType'] = $bankAccountType;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      **/
-    public function getAccountOverdraftLimit() {
-        return $this->properties['accountOverdraftLimit'];
+    public function getBankAccountType() {
+        return $this->properties['bankAccountType'];
     }
 }

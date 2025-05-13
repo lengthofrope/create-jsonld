@@ -43,6 +43,24 @@ class DatedMoneySpecification extends StructuredValue
     }
 
     /**
+     * The amount of money.
+     *
+     * @param $amount \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\TypeNumber
+     * @return static
+     **/
+    public function setAmount($amount): static {
+        $this->properties['amount'] = $amount;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\TypeNumber
+     **/
+    public function getAmount() {
+        return $this->properties['amount'];
+    }
+    /**
      * The currency in which the monetary amount is expressed.
      *
      * Use standard formats: [ISO 4217 currency
@@ -66,24 +84,6 @@ class DatedMoneySpecification extends StructuredValue
      **/
     public function getCurrency() {
         return $this->properties['currency'];
-    }
-    /**
-     * The amount of money.
-     *
-     * @param $amount \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\TypeNumber
-     * @return static
-     **/
-    public function setAmount($amount): static {
-        $this->properties['amount'] = $amount;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\TypeNumber
-     **/
-    public function getAmount() {
-        return $this->properties['amount'];
     }
     /**
      * The start date and time of the item (in [ISO 8601 date

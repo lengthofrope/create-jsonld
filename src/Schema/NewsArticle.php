@@ -45,26 +45,6 @@ class NewsArticle extends Article
     }
 
     /**
-     * If this NewsArticle appears in print, this field indicates the name of the page
-     * on which the article is found. Please note that this field is intended for the
-     * exact page name (e.g. A5, B18).
-     *
-     * @param $printPage \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setPrintPage($printPage): static {
-        $this->properties['printPage'] = $printPage;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getPrintPage() {
-        return $this->properties['printPage'];
-    }
-    /**
      * The edition of the print product in which the NewsArticle appears.
      *
      * @param $printEdition \LengthOfRope\JSONLD\DataType\TypeText
@@ -81,6 +61,43 @@ class NewsArticle extends Article
      **/
     public function getPrintEdition() {
         return $this->properties['printEdition'];
+    }
+    /**
+     * If this NewsArticle appears in print, this field indicates the print section in
+     * which the article appeared.
+     *
+     * @param $printSection \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setPrintSection($printSection): static {
+        $this->properties['printSection'] = $printSection;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getPrintSection() {
+        return $this->properties['printSection'];
+    }
+    /**
+     * The number of the column in which the NewsArticle appears in the print edition.
+     *
+     * @param $printColumn \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setPrintColumn($printColumn): static {
+        $this->properties['printColumn'] = $printColumn;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getPrintColumn() {
+        return $this->properties['printColumn'];
     }
     /**
      * A [dateline](https://en.wikipedia.org/wiki/Dateline) is a brief piece of text
@@ -114,13 +131,15 @@ class NewsArticle extends Article
         return $this->properties['dateline'];
     }
     /**
-     * The number of the column in which the NewsArticle appears in the print edition.
+     * If this NewsArticle appears in print, this field indicates the name of the page
+     * on which the article is found. Please note that this field is intended for the
+     * exact page name (e.g. A5, B18).
      *
-     * @param $printColumn \LengthOfRope\JSONLD\DataType\TypeText
+     * @param $printPage \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
-    public function setPrintColumn($printColumn): static {
-        $this->properties['printColumn'] = $printColumn;
+    public function setPrintPage($printPage): static {
+        $this->properties['printPage'] = $printPage;
 
         return $this;
     }
@@ -128,26 +147,7 @@ class NewsArticle extends Article
     /**
      * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
-    public function getPrintColumn() {
-        return $this->properties['printColumn'];
-    }
-    /**
-     * If this NewsArticle appears in print, this field indicates the print section in
-     * which the article appeared.
-     *
-     * @param $printSection \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setPrintSection($printSection): static {
-        $this->properties['printSection'] = $printSection;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getPrintSection() {
-        return $this->properties['printSection'];
+    public function getPrintPage() {
+        return $this->properties['printPage'];
     }
 }

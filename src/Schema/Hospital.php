@@ -40,6 +40,24 @@ class Hospital extends CivicStructure
     }
 
     /**
+     * A medical service available from this provider.
+     *
+     * @param $availableService \LengthOfRope\JSONLD\Schema\MedicalTherapy|\LengthOfRope\JSONLD\Schema\MedicalTest|\LengthOfRope\JSONLD\Schema\MedicalProcedure
+     * @return static
+     **/
+    public function setAvailableService($availableService): static {
+        $this->properties['availableService'] = $availableService;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\MedicalTherapy|\LengthOfRope\JSONLD\Schema\MedicalTest|\LengthOfRope\JSONLD\Schema\MedicalProcedure
+     **/
+    public function getAvailableService() {
+        return $this->properties['availableService'];
+    }
+    /**
      * A medical specialty of the provider.
      *
      * @param $medicalSpecialty \LengthOfRope\JSONLD\Schema\MedicalSpecialty
@@ -58,28 +76,10 @@ class Hospital extends CivicStructure
         return $this->properties['medicalSpecialty'];
     }
     /**
-     * A medical service available from this provider.
-     *
-     * @param $availableService \LengthOfRope\JSONLD\Schema\MedicalTest|\LengthOfRope\JSONLD\Schema\MedicalTherapy|\LengthOfRope\JSONLD\Schema\MedicalProcedure
-     * @return static
-     **/
-    public function setAvailableService($availableService): static {
-        $this->properties['availableService'] = $availableService;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\MedicalTest|\LengthOfRope\JSONLD\Schema\MedicalTherapy|\LengthOfRope\JSONLD\Schema\MedicalProcedure
-     **/
-    public function getAvailableService() {
-        return $this->properties['availableService'];
-    }
-    /**
      * Indicates data describing a hospital, e.g. a CDC [[CDCPMDRecord]] or as some
      * kind of [[Dataset]].
      *
-     * @param $healthcareReportingData \LengthOfRope\JSONLD\Schema\CDCPMDRecord|\LengthOfRope\JSONLD\Schema\Dataset
+     * @param $healthcareReportingData \LengthOfRope\JSONLD\Schema\Dataset|\LengthOfRope\JSONLD\Schema\CDCPMDRecord
      * @return static
      **/
     public function setHealthcareReportingData($healthcareReportingData): static {
@@ -89,7 +89,7 @@ class Hospital extends CivicStructure
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\CDCPMDRecord|\LengthOfRope\JSONLD\Schema\Dataset
+     * @return \LengthOfRope\JSONLD\Schema\Dataset|\LengthOfRope\JSONLD\Schema\CDCPMDRecord
      **/
     public function getHealthcareReportingData() {
         return $this->properties['healthcareReportingData'];

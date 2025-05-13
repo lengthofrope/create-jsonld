@@ -47,7 +47,7 @@ class MedicalTherapy extends TherapeuticProcedure
     /**
      * A contraindication for this therapy.
      *
-     * @param $contraindication \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\MedicalContraindication
+     * @param $contraindication \LengthOfRope\JSONLD\Schema\MedicalContraindication|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setContraindication($contraindication): static {
@@ -57,10 +57,28 @@ class MedicalTherapy extends TherapeuticProcedure
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\MedicalContraindication
+     * @return \LengthOfRope\JSONLD\Schema\MedicalContraindication|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getContraindication() {
         return $this->properties['contraindication'];
+    }
+    /**
+     * A therapy that duplicates or overlaps this one.
+     *
+     * @param $duplicateTherapy \LengthOfRope\JSONLD\Schema\MedicalTherapy
+     * @return static
+     **/
+    public function setDuplicateTherapy($duplicateTherapy): static {
+        $this->properties['duplicateTherapy'] = $duplicateTherapy;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\MedicalTherapy
+     **/
+    public function getDuplicateTherapy() {
+        return $this->properties['duplicateTherapy'];
     }
     /**
      * A possible serious complication and/or serious side effect of this therapy.
@@ -84,23 +102,5 @@ class MedicalTherapy extends TherapeuticProcedure
      **/
     public function getSeriousAdverseOutcome() {
         return $this->properties['seriousAdverseOutcome'];
-    }
-    /**
-     * A therapy that duplicates or overlaps this one.
-     *
-     * @param $duplicateTherapy \LengthOfRope\JSONLD\Schema\MedicalTherapy
-     * @return static
-     **/
-    public function setDuplicateTherapy($duplicateTherapy): static {
-        $this->properties['duplicateTherapy'] = $duplicateTherapy;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\MedicalTherapy
-     **/
-    public function getDuplicateTherapy() {
-        return $this->properties['duplicateTherapy'];
     }
 }

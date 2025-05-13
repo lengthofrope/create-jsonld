@@ -69,7 +69,7 @@ class ReceiveAction extends TransferAction
      * A sub property of participant. The participant who is at the sending end of the
      * action.
      *
-     * @param $sender \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\Audience|\LengthOfRope\JSONLD\Schema\Person
+     * @param $sender \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Audience|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
     public function setSender($sender): static {
@@ -79,7 +79,7 @@ class ReceiveAction extends TransferAction
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\Audience|\LengthOfRope\JSONLD\Schema\Person
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Audience|\LengthOfRope\JSONLD\Schema\Organization
      **/
     public function getSender() {
         return $this->properties['sender'];

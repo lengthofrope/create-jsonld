@@ -40,22 +40,22 @@ class MedicalTest extends MedicalEntity
     }
 
     /**
-     * A condition the test is used to diagnose.
+     * Range of acceptable values for a typical patient, when applicable.
      *
-     * @param $usedToDiagnose \LengthOfRope\JSONLD\Schema\MedicalCondition
+     * @param $normalRange \LengthOfRope\JSONLD\Schema\MedicalEnumeration|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
-    public function setUsedToDiagnose($usedToDiagnose): static {
-        $this->properties['usedToDiagnose'] = $usedToDiagnose;
+    public function setNormalRange($normalRange): static {
+        $this->properties['normalRange'] = $normalRange;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\MedicalCondition
+     * @return \LengthOfRope\JSONLD\Schema\MedicalEnumeration|\LengthOfRope\JSONLD\DataType\TypeText
      **/
-    public function getUsedToDiagnose() {
-        return $this->properties['usedToDiagnose'];
+    public function getNormalRange() {
+        return $this->properties['normalRange'];
     }
     /**
      * A sign detected by the test.
@@ -76,24 +76,6 @@ class MedicalTest extends MedicalEntity
         return $this->properties['signDetected'];
     }
     /**
-     * Drugs that affect the test's results.
-     *
-     * @param $affectedBy \LengthOfRope\JSONLD\Schema\Drug
-     * @return static
-     **/
-    public function setAffectedBy($affectedBy): static {
-        $this->properties['affectedBy'] = $affectedBy;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Drug
-     **/
-    public function getAffectedBy() {
-        return $this->properties['affectedBy'];
-    }
-    /**
      * Device used to perform the test.
      *
      * @param $usesDevice \LengthOfRope\JSONLD\Schema\MedicalDevice
@@ -112,21 +94,39 @@ class MedicalTest extends MedicalEntity
         return $this->properties['usesDevice'];
     }
     /**
-     * Range of acceptable values for a typical patient, when applicable.
+     * Drugs that affect the test's results.
      *
-     * @param $normalRange \LengthOfRope\JSONLD\Schema\MedicalEnumeration|\LengthOfRope\JSONLD\DataType\TypeText
+     * @param $affectedBy \LengthOfRope\JSONLD\Schema\Drug
      * @return static
      **/
-    public function setNormalRange($normalRange): static {
-        $this->properties['normalRange'] = $normalRange;
+    public function setAffectedBy($affectedBy): static {
+        $this->properties['affectedBy'] = $affectedBy;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\MedicalEnumeration|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\Schema\Drug
      **/
-    public function getNormalRange() {
-        return $this->properties['normalRange'];
+    public function getAffectedBy() {
+        return $this->properties['affectedBy'];
+    }
+    /**
+     * A condition the test is used to diagnose.
+     *
+     * @param $usedToDiagnose \LengthOfRope\JSONLD\Schema\MedicalCondition
+     * @return static
+     **/
+    public function setUsedToDiagnose($usedToDiagnose): static {
+        $this->properties['usedToDiagnose'] = $usedToDiagnose;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\MedicalCondition
+     **/
+    public function getUsedToDiagnose() {
+        return $this->properties['usedToDiagnose'];
     }
 }

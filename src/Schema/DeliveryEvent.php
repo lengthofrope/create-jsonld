@@ -40,24 +40,6 @@ class DeliveryEvent extends Event
     }
 
     /**
-     * After this date, the item will no longer be available for pickup.
-     *
-     * @param $availableThrough \LengthOfRope\JSONLD\DataType\TypeDateTime
-     * @return static
-     **/
-    public function setAvailableThrough($availableThrough): static {
-        $this->properties['availableThrough'] = $availableThrough;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime
-     **/
-    public function getAvailableThrough() {
-        return $this->properties['availableThrough'];
-    }
-    /**
      * When the item is available for pickup from the store, locker, etc.
      *
      * @param $availableFrom \LengthOfRope\JSONLD\DataType\TypeDateTime
@@ -110,5 +92,23 @@ class DeliveryEvent extends Event
      **/
     public function getAccessCode() {
         return $this->properties['accessCode'];
+    }
+    /**
+     * After this date, the item will no longer be available for pickup.
+     *
+     * @param $availableThrough \LengthOfRope\JSONLD\DataType\TypeDateTime
+     * @return static
+     **/
+    public function setAvailableThrough($availableThrough): static {
+        $this->properties['availableThrough'] = $availableThrough;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime
+     **/
+    public function getAvailableThrough() {
+        return $this->properties['availableThrough'];
     }
 }

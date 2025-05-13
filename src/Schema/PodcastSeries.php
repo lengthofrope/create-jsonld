@@ -45,7 +45,7 @@ class PodcastSeries extends CreativeWorkSeries
      * in an event. Actors can be associated with individual items or with a series,
      * episode, clip.
      *
-     * @param $actor \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\PerformingGroup
+     * @param $actor \LengthOfRope\JSONLD\Schema\PerformingGroup|\LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setActor($actor): static {
@@ -55,7 +55,7 @@ class PodcastSeries extends CreativeWorkSeries
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\PerformingGroup
+     * @return \LengthOfRope\JSONLD\Schema\PerformingGroup|\LengthOfRope\JSONLD\Schema\Person
      **/
     public function getActor() {
         return $this->properties['actor'];
@@ -64,7 +64,7 @@ class PodcastSeries extends CreativeWorkSeries
      * The URL for a feed, e.g. associated with a podcast series, blog, or series of
      * date-stamped updates. This is usually RSS or Atom.
      *
-     * @param $webFeed \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\DataFeed
+     * @param $webFeed \LengthOfRope\JSONLD\Schema\DataFeed|\LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setWebFeed($webFeed): static {
@@ -74,7 +74,7 @@ class PodcastSeries extends CreativeWorkSeries
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\DataFeed
+     * @return \LengthOfRope\JSONLD\Schema\DataFeed|\LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getWebFeed() {
         return $this->properties['webFeed'];

@@ -47,29 +47,47 @@ class AggregateOffer extends Offer
     }
 
     /**
-     * The lowest price of all offers available.
+     * The number of offers for the product.
      *
-     * Usage guidelines:
-     *
-     * * Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE'
-     * (U+0039)) rather than superficially similar Unicode symbols.
-     * * Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal
-     * point. Avoid using these symbols as a readability separator.
-     *
-     * @param $lowPrice \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeNumber
+     * @param $offerCount \LengthOfRope\JSONLD\DataType\TypeInteger
      * @return static
      **/
-    public function setLowPrice($lowPrice): static {
-        $this->properties['lowPrice'] = $lowPrice;
+    public function setOfferCount($offerCount): static {
+        $this->properties['offerCount'] = $offerCount;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeNumber
+     * @return \LengthOfRope\JSONLD\DataType\TypeInteger
      **/
-    public function getLowPrice() {
-        return $this->properties['lowPrice'];
+    public function getOfferCount() {
+        return $this->properties['offerCount'];
+    }
+    /**
+     * An offer to provide this item&#x2014;for example, an offer to sell a product,
+     * rent the DVD of a movie, perform a service, or give away tickets to an event.
+     * Use [[businessFunction]] to indicate the kind of transaction offered, i.e. sell,
+     * lease, etc. This property can also be used to describe a [[Demand]]. While this
+     * property is listed as expected on a number of common types, it can be used in
+     * others. In that case, using a second type, such as Product or a subtype of
+     * Product, can clarify the nature of the offer.
+     *
+     *
+     * @param $offers \LengthOfRope\JSONLD\Schema\Demand|\LengthOfRope\JSONLD\Schema\Offer
+     * @return static
+     **/
+    public function setOffers($offers): static {
+        $this->properties['offers'] = $offers;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Demand|\LengthOfRope\JSONLD\Schema\Offer
+     **/
+    public function getOffers() {
+        return $this->properties['offers'];
     }
     /**
      * The highest price of all offers available.
@@ -97,46 +115,28 @@ class AggregateOffer extends Offer
         return $this->properties['highPrice'];
     }
     /**
-     * An offer to provide this item&#x2014;for example, an offer to sell a product,
-     * rent the DVD of a movie, perform a service, or give away tickets to an event.
-     * Use [[businessFunction]] to indicate the kind of transaction offered, i.e. sell,
-     * lease, etc. This property can also be used to describe a [[Demand]]. While this
-     * property is listed as expected on a number of common types, it can be used in
-     * others. In that case, using a second type, such as Product or a subtype of
-     * Product, can clarify the nature of the offer.
+     * The lowest price of all offers available.
      *
+     * Usage guidelines:
      *
-     * @param $offers \LengthOfRope\JSONLD\Schema\Offer|\LengthOfRope\JSONLD\Schema\Demand
+     * * Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE'
+     * (U+0039)) rather than superficially similar Unicode symbols.
+     * * Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal
+     * point. Avoid using these symbols as a readability separator.
+     *
+     * @param $lowPrice \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
-    public function setOffers($offers): static {
-        $this->properties['offers'] = $offers;
+    public function setLowPrice($lowPrice): static {
+        $this->properties['lowPrice'] = $lowPrice;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Offer|\LengthOfRope\JSONLD\Schema\Demand
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeNumber
      **/
-    public function getOffers() {
-        return $this->properties['offers'];
-    }
-    /**
-     * The number of offers for the product.
-     *
-     * @param $offerCount \LengthOfRope\JSONLD\DataType\TypeInteger
-     * @return static
-     **/
-    public function setOfferCount($offerCount): static {
-        $this->properties['offerCount'] = $offerCount;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeInteger
-     **/
-    public function getOfferCount() {
-        return $this->properties['offerCount'];
+    public function getLowPrice() {
+        return $this->properties['lowPrice'];
     }
 }

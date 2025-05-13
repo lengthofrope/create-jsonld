@@ -42,25 +42,6 @@ class SellAction extends TradeAction
     }
 
     /**
-     * A sub property of participant. The participant/person/organization that bought
-     * the object.
-     *
-     * @param $buyer \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\Person
-     * @return static
-     **/
-    public function setBuyer($buyer): static {
-        $this->properties['buyer'] = $buyer;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\Person
-     **/
-    public function getBuyer() {
-        return $this->properties['buyer'];
-    }
-    /**
      * The warranty promise(s) included in the offer.
      *
      * @param $warrantyPromise \LengthOfRope\JSONLD\Schema\WarrantyPromise
@@ -77,5 +58,24 @@ class SellAction extends TradeAction
      **/
     public function getWarrantyPromise() {
         return $this->properties['warrantyPromise'];
+    }
+    /**
+     * A sub property of participant. The participant/person/organization that bought
+     * the object.
+     *
+     * @param $buyer \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
+     * @return static
+     **/
+    public function setBuyer($buyer): static {
+        $this->properties['buyer'] = $buyer;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
+     **/
+    public function getBuyer() {
+        return $this->properties['buyer'];
     }
 }

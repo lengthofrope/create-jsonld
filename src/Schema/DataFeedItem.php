@@ -61,7 +61,7 @@ class DataFeedItem extends Intangible
     /**
      * The datetime the item was removed from the DataFeed.
      *
-     * @param $dateDeleted \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
+     * @param $dateDeleted \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
      * @return static
      **/
     public function setDateDeleted($dateDeleted): static {
@@ -71,7 +71,7 @@ class DataFeedItem extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
+     * @return \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
      **/
     public function getDateDeleted() {
         return $this->properties['dateDeleted'];

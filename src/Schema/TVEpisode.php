@@ -40,54 +40,6 @@ class TVEpisode extends Episode
     }
 
     /**
-     * An [EIDR](https://eidr.org/) (Entertainment Identifier Registry) [[identifier]]
-     * representing at the most general/abstract level, a work of film or television.
-     *
-     * For example, the motion picture known as "Ghostbusters" has a titleEIDR of
-     * "10.5240/7EC7-228A-510A-053E-CBB8-J". This title (or work) may have several
-     * variants, which EIDR calls "edits". See [[editEIDR]].
-     *
-     * Since schema.org types like [[Movie]], [[TVEpisode]], [[TVSeason]], and
-     * [[TVSeries]] can be used for both works and their multiple expressions, it is
-     * possible to use [[titleEIDR]] alone (for a general description), or alongside
-     * [[editEIDR]] for a more edit-specific description.
-     *
-     *
-     * @param $titleEIDR \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
-     * @return static
-     **/
-    public function setTitleEIDR($titleEIDR): static {
-        $this->properties['titleEIDR'] = $titleEIDR;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
-     **/
-    public function getTitleEIDR() {
-        return $this->properties['titleEIDR'];
-    }
-    /**
-     * Languages in which subtitles/captions are available, in [IETF BCP 47 standard
-     * format](http://tools.ietf.org/html/bcp47).
-     *
-     * @param $subtitleLanguage \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Language
-     * @return static
-     **/
-    public function setSubtitleLanguage($subtitleLanguage): static {
-        $this->properties['subtitleLanguage'] = $subtitleLanguage;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Language
-     **/
-    public function getSubtitleLanguage() {
-        return $this->properties['subtitleLanguage'];
-    }
-    /**
      * The country of origin of something, including products as well as creative
      * works such as movie and TV content.
      *
@@ -133,5 +85,53 @@ class TVEpisode extends Episode
      **/
     public function getPartOfTVSeries() {
         return $this->properties['partOfTVSeries'];
+    }
+    /**
+     * An [EIDR](https://eidr.org/) (Entertainment Identifier Registry) [[identifier]]
+     * representing at the most general/abstract level, a work of film or television.
+     *
+     * For example, the motion picture known as "Ghostbusters" has a titleEIDR of
+     * "10.5240/7EC7-228A-510A-053E-CBB8-J". This title (or work) may have several
+     * variants, which EIDR calls "edits". See [[editEIDR]].
+     *
+     * Since schema.org types like [[Movie]], [[TVEpisode]], [[TVSeason]], and
+     * [[TVSeries]] can be used for both works and their multiple expressions, it is
+     * possible to use [[titleEIDR]] alone (for a general description), or alongside
+     * [[editEIDR]] for a more edit-specific description.
+     *
+     *
+     * @param $titleEIDR \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setTitleEIDR($titleEIDR): static {
+        $this->properties['titleEIDR'] = $titleEIDR;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getTitleEIDR() {
+        return $this->properties['titleEIDR'];
+    }
+    /**
+     * Languages in which subtitles/captions are available, in [IETF BCP 47 standard
+     * format](http://tools.ietf.org/html/bcp47).
+     *
+     * @param $subtitleLanguage \LengthOfRope\JSONLD\Schema\Language|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setSubtitleLanguage($subtitleLanguage): static {
+        $this->properties['subtitleLanguage'] = $subtitleLanguage;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Language|\LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getSubtitleLanguage() {
+        return $this->properties['subtitleLanguage'];
     }
 }

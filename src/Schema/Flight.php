@@ -40,6 +40,43 @@ class Flight extends Trip
     }
 
     /**
+     * 'carrier' is an out-dated term indicating the 'provider' for parcel delivery and
+     * flights.
+     *
+     * @param $carrier \LengthOfRope\JSONLD\Schema\Organization
+     * @return static
+     **/
+    public function setCarrier($carrier): static {
+        $this->properties['carrier'] = $carrier;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Organization
+     **/
+    public function getCarrier() {
+        return $this->properties['carrier'];
+    }
+    /**
+     * The distance of the flight.
+     *
+     * @param $flightDistance \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Distance
+     * @return static
+     **/
+    public function setFlightDistance($flightDistance): static {
+        $this->properties['flightDistance'] = $flightDistance;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Distance
+     **/
+    public function getFlightDistance() {
+        return $this->properties['flightDistance'];
+    }
+    /**
      * The type of boarding policy used by the airline (e.g. zone-based or
      * group-based).
      *
@@ -57,42 +94,6 @@ class Flight extends Trip
      **/
     public function getBoardingPolicy() {
         return $this->properties['boardingPolicy'];
-    }
-    /**
-     * Identifier of the flight's arrival terminal.
-     *
-     * @param $arrivalTerminal \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setArrivalTerminal($arrivalTerminal): static {
-        $this->properties['arrivalTerminal'] = $arrivalTerminal;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getArrivalTerminal() {
-        return $this->properties['arrivalTerminal'];
-    }
-    /**
-     * Identifier of the flight's departure gate.
-     *
-     * @param $departureGate \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setDepartureGate($departureGate): static {
-        $this->properties['departureGate'] = $departureGate;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getDepartureGate() {
-        return $this->properties['departureGate'];
     }
     /**
      * The airport where the flight originates.
@@ -113,69 +114,13 @@ class Flight extends Trip
         return $this->properties['departureAirport'];
     }
     /**
-     * 'carrier' is an out-dated term indicating the 'provider' for parcel delivery and
-     * flights.
+     * Description of the meals that will be provided or available for purchase.
      *
-     * @param $carrier \LengthOfRope\JSONLD\Schema\Organization
+     * @param $mealService \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
-    public function setCarrier($carrier): static {
-        $this->properties['carrier'] = $carrier;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Organization
-     **/
-    public function getCarrier() {
-        return $this->properties['carrier'];
-    }
-    /**
-     * The kind of aircraft (e.g., "Boeing 747").
-     *
-     * @param $aircraft \LengthOfRope\JSONLD\Schema\Vehicle|\LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setAircraft($aircraft): static {
-        $this->properties['aircraft'] = $aircraft;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Vehicle|\LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getAircraft() {
-        return $this->properties['aircraft'];
-    }
-    /**
-     * An entity which offers (sells / leases / lends / loans) the services / goods.  A
-     * seller may also be a provider.
-     *
-     * @param $seller \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
-     * @return static
-     **/
-    public function setSeller($seller): static {
-        $this->properties['seller'] = $seller;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
-     **/
-    public function getSeller() {
-        return $this->properties['seller'];
-    }
-    /**
-     * Identifier of the flight's arrival gate.
-     *
-     * @param $arrivalGate \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setArrivalGate($arrivalGate): static {
-        $this->properties['arrivalGate'] = $arrivalGate;
+    public function setMealService($mealService): static {
+        $this->properties['mealService'] = $mealService;
 
         return $this;
     }
@@ -183,8 +128,8 @@ class Flight extends Trip
     /**
      * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
-    public function getArrivalGate() {
-        return $this->properties['arrivalGate'];
+    public function getMealService() {
+        return $this->properties['mealService'];
     }
     /**
      * The time when a passenger can check into the flight online.
@@ -223,31 +168,13 @@ class Flight extends Trip
         return $this->properties['estimatedFlightDuration'];
     }
     /**
-     * The distance of the flight.
+     * Identifier of the flight's arrival gate.
      *
-     * @param $flightDistance \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Distance
+     * @param $arrivalGate \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
-    public function setFlightDistance($flightDistance): static {
-        $this->properties['flightDistance'] = $flightDistance;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Distance
-     **/
-    public function getFlightDistance() {
-        return $this->properties['flightDistance'];
-    }
-    /**
-     * Description of the meals that will be provided or available for purchase.
-     *
-     * @param $mealService \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setMealService($mealService): static {
-        $this->properties['mealService'] = $mealService;
+    public function setArrivalGate($arrivalGate): static {
+        $this->properties['arrivalGate'] = $arrivalGate;
 
         return $this;
     }
@@ -255,26 +182,27 @@ class Flight extends Trip
     /**
      * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
-    public function getMealService() {
-        return $this->properties['mealService'];
+    public function getArrivalGate() {
+        return $this->properties['arrivalGate'];
     }
     /**
-     * Identifier of the flight's departure terminal.
+     * An entity which offers (sells / leases / lends / loans) the services / goods.  A
+     * seller may also be a provider.
      *
-     * @param $departureTerminal \LengthOfRope\JSONLD\DataType\TypeText
+     * @param $seller \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
-    public function setDepartureTerminal($departureTerminal): static {
-        $this->properties['departureTerminal'] = $departureTerminal;
+    public function setSeller($seller): static {
+        $this->properties['seller'] = $seller;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
-    public function getDepartureTerminal() {
-        return $this->properties['departureTerminal'];
+    public function getSeller() {
+        return $this->properties['seller'];
     }
     /**
      * The airport where the flight terminates.
@@ -295,6 +223,42 @@ class Flight extends Trip
         return $this->properties['arrivalAirport'];
     }
     /**
+     * The kind of aircraft (e.g., "Boeing 747").
+     *
+     * @param $aircraft \LengthOfRope\JSONLD\Schema\Vehicle|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setAircraft($aircraft): static {
+        $this->properties['aircraft'] = $aircraft;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Vehicle|\LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getAircraft() {
+        return $this->properties['aircraft'];
+    }
+    /**
+     * Identifier of the flight's departure terminal.
+     *
+     * @param $departureTerminal \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setDepartureTerminal($departureTerminal): static {
+        $this->properties['departureTerminal'] = $departureTerminal;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getDepartureTerminal() {
+        return $this->properties['departureTerminal'];
+    }
+    /**
      * The unique identifier for a flight including the airline IATA code. For example,
      * if describing United flight 110, where the IATA code for United is 'UA', the
      * flightNumber is 'UA110'.
@@ -313,5 +277,41 @@ class Flight extends Trip
      **/
     public function getFlightNumber() {
         return $this->properties['flightNumber'];
+    }
+    /**
+     * Identifier of the flight's arrival terminal.
+     *
+     * @param $arrivalTerminal \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setArrivalTerminal($arrivalTerminal): static {
+        $this->properties['arrivalTerminal'] = $arrivalTerminal;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getArrivalTerminal() {
+        return $this->properties['arrivalTerminal'];
+    }
+    /**
+     * Identifier of the flight's departure gate.
+     *
+     * @param $departureGate \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setDepartureGate($departureGate): static {
+        $this->properties['departureGate'] = $departureGate;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getDepartureGate() {
+        return $this->properties['departureGate'];
     }
 }

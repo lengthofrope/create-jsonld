@@ -42,155 +42,6 @@ class MedicalCondition extends MedicalEntity
     }
 
     /**
-     * Changes in the normal mechanical, physical, and biochemical functions that are
-     * associated with this activity or condition.
-     *
-     * @param $pathophysiology \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setPathophysiology($pathophysiology): static {
-        $this->properties['pathophysiology'] = $pathophysiology;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getPathophysiology() {
-        return $this->properties['pathophysiology'];
-    }
-    /**
-     * A possible unexpected and unfavorable evolution of a medical condition.
-     * Complications may include worsening of the signs or symptoms of the disease,
-     * extension of the condition to other organ systems, etc.
-     *
-     * @param $possibleComplication \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setPossibleComplication($possibleComplication): static {
-        $this->properties['possibleComplication'] = $possibleComplication;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getPossibleComplication() {
-        return $this->properties['possibleComplication'];
-    }
-    /**
-     * A possible treatment to address this condition, sign or symptom.
-     *
-     * @param $possibleTreatment \LengthOfRope\JSONLD\Schema\MedicalTherapy
-     * @return static
-     **/
-    public function setPossibleTreatment($possibleTreatment): static {
-        $this->properties['possibleTreatment'] = $possibleTreatment;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\MedicalTherapy
-     **/
-    public function getPossibleTreatment() {
-        return $this->properties['possibleTreatment'];
-    }
-    /**
-     * The likely outcome in either the short term or long term of the medical
-     * condition.
-     *
-     * @param $expectedPrognosis \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setExpectedPrognosis($expectedPrognosis): static {
-        $this->properties['expectedPrognosis'] = $expectedPrognosis;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getExpectedPrognosis() {
-        return $this->properties['expectedPrognosis'];
-    }
-    /**
-     * A preventative therapy used to prevent reoccurrence of the medical condition
-     * after an initial episode of the condition.
-     *
-     * @param $secondaryPrevention \LengthOfRope\JSONLD\Schema\MedicalTherapy
-     * @return static
-     **/
-    public function setSecondaryPrevention($secondaryPrevention): static {
-        $this->properties['secondaryPrevention'] = $secondaryPrevention;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\MedicalTherapy
-     **/
-    public function getSecondaryPrevention() {
-        return $this->properties['secondaryPrevention'];
-    }
-    /**
-     * The stage of the condition, if applicable.
-     *
-     * @param $stage \LengthOfRope\JSONLD\Schema\MedicalConditionStage
-     * @return static
-     **/
-    public function setStage($stage): static {
-        $this->properties['stage'] = $stage;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\MedicalConditionStage
-     **/
-    public function getStage() {
-        return $this->properties['stage'];
-    }
-    /**
-     * A medical test typically performed given this condition.
-     *
-     * @param $typicalTest \LengthOfRope\JSONLD\Schema\MedicalTest
-     * @return static
-     **/
-    public function setTypicalTest($typicalTest): static {
-        $this->properties['typicalTest'] = $typicalTest;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\MedicalTest
-     **/
-    public function getTypicalTest() {
-        return $this->properties['typicalTest'];
-    }
-    /**
-     * Specifying a drug or medicine used in a medication procedure.
-     *
-     * @param $drug \LengthOfRope\JSONLD\Schema\Drug
-     * @return static
-     **/
-    public function setDrug($drug): static {
-        $this->properties['drug'] = $drug;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Drug
-     **/
-    public function getDrug() {
-        return $this->properties['drug'];
-    }
-    /**
      * One of a set of differential diagnoses for the condition. Specifically, a
      * closely-related or competing diagnosis typically considered later in the
      * cognitive process whereby this medical condition is distinguished from others
@@ -213,67 +64,47 @@ class MedicalCondition extends MedicalEntity
         return $this->properties['differentialDiagnosis'];
     }
     /**
-     * A modifiable or non-modifiable factor that increases the risk of a patient
-     * contracting this condition, e.g. age,  coexisting condition.
+     * The characteristics of associated patients, such as age, gender, race etc.
      *
-     * @param $riskFactor \LengthOfRope\JSONLD\Schema\MedicalRiskFactor
+     * @param $epidemiology \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
-    public function setRiskFactor($riskFactor): static {
-        $this->properties['riskFactor'] = $riskFactor;
+    public function setEpidemiology($epidemiology): static {
+        $this->properties['epidemiology'] = $epidemiology;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\MedicalRiskFactor
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
-    public function getRiskFactor() {
-        return $this->properties['riskFactor'];
+    public function getEpidemiology() {
+        return $this->properties['epidemiology'];
     }
     /**
-     * The anatomy of the underlying organ system or structures associated with this
-     * entity.
+     * A possible unexpected and unfavorable evolution of a medical condition.
+     * Complications may include worsening of the signs or symptoms of the disease,
+     * extension of the condition to other organ systems, etc.
      *
-     * @param $associatedAnatomy \LengthOfRope\JSONLD\Schema\AnatomicalStructure|\LengthOfRope\JSONLD\Schema\AnatomicalSystem|\LengthOfRope\JSONLD\Schema\SuperficialAnatomy
+     * @param $possibleComplication \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
-    public function setAssociatedAnatomy($associatedAnatomy): static {
-        $this->properties['associatedAnatomy'] = $associatedAnatomy;
+    public function setPossibleComplication($possibleComplication): static {
+        $this->properties['possibleComplication'] = $possibleComplication;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\AnatomicalStructure|\LengthOfRope\JSONLD\Schema\AnatomicalSystem|\LengthOfRope\JSONLD\Schema\SuperficialAnatomy
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
-    public function getAssociatedAnatomy() {
-        return $this->properties['associatedAnatomy'];
-    }
-    /**
-     * A sign or symptom of this condition. Signs are objective or physically
-     * observable manifestations of the medical condition while symptoms are the
-     * subjective experience of the medical condition.
-     *
-     * @param $signOrSymptom \LengthOfRope\JSONLD\Schema\MedicalSignOrSymptom
-     * @return static
-     **/
-    public function setSignOrSymptom($signOrSymptom): static {
-        $this->properties['signOrSymptom'] = $signOrSymptom;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\MedicalSignOrSymptom
-     **/
-    public function getSignOrSymptom() {
-        return $this->properties['signOrSymptom'];
+    public function getPossibleComplication() {
+        return $this->properties['possibleComplication'];
     }
     /**
      * The status of the study (enumerated).
      *
-     * @param $status \LengthOfRope\JSONLD\Schema\MedicalStudyStatus|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\EventStatusType
+     * @param $status \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\EventStatusType|\LengthOfRope\JSONLD\Schema\MedicalStudyStatus
      * @return static
      **/
     public function setStatus($status): static {
@@ -283,10 +114,28 @@ class MedicalCondition extends MedicalEntity
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\MedicalStudyStatus|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\EventStatusType
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\EventStatusType|\LengthOfRope\JSONLD\Schema\MedicalStudyStatus
      **/
     public function getStatus() {
         return $this->properties['status'];
+    }
+    /**
+     * A possible treatment to address this condition, sign or symptom.
+     *
+     * @param $possibleTreatment \LengthOfRope\JSONLD\Schema\MedicalTherapy
+     * @return static
+     **/
+    public function setPossibleTreatment($possibleTreatment): static {
+        $this->properties['possibleTreatment'] = $possibleTreatment;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\MedicalTherapy
+     **/
+    public function getPossibleTreatment() {
+        return $this->properties['possibleTreatment'];
     }
     /**
      * A preventative therapy used to prevent an initial occurrence of the medical
@@ -327,13 +176,106 @@ class MedicalCondition extends MedicalEntity
         return $this->properties['naturalProgression'];
     }
     /**
-     * The characteristics of associated patients, such as age, gender, race etc.
+     * A medical test typically performed given this condition.
      *
-     * @param $epidemiology \LengthOfRope\JSONLD\DataType\TypeText
+     * @param $typicalTest \LengthOfRope\JSONLD\Schema\MedicalTest
      * @return static
      **/
-    public function setEpidemiology($epidemiology): static {
-        $this->properties['epidemiology'] = $epidemiology;
+    public function setTypicalTest($typicalTest): static {
+        $this->properties['typicalTest'] = $typicalTest;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\MedicalTest
+     **/
+    public function getTypicalTest() {
+        return $this->properties['typicalTest'];
+    }
+    /**
+     * A preventative therapy used to prevent reoccurrence of the medical condition
+     * after an initial episode of the condition.
+     *
+     * @param $secondaryPrevention \LengthOfRope\JSONLD\Schema\MedicalTherapy
+     * @return static
+     **/
+    public function setSecondaryPrevention($secondaryPrevention): static {
+        $this->properties['secondaryPrevention'] = $secondaryPrevention;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\MedicalTherapy
+     **/
+    public function getSecondaryPrevention() {
+        return $this->properties['secondaryPrevention'];
+    }
+    /**
+     * A modifiable or non-modifiable factor that increases the risk of a patient
+     * contracting this condition, e.g. age,  coexisting condition.
+     *
+     * @param $riskFactor \LengthOfRope\JSONLD\Schema\MedicalRiskFactor
+     * @return static
+     **/
+    public function setRiskFactor($riskFactor): static {
+        $this->properties['riskFactor'] = $riskFactor;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\MedicalRiskFactor
+     **/
+    public function getRiskFactor() {
+        return $this->properties['riskFactor'];
+    }
+    /**
+     * The stage of the condition, if applicable.
+     *
+     * @param $stage \LengthOfRope\JSONLD\Schema\MedicalConditionStage
+     * @return static
+     **/
+    public function setStage($stage): static {
+        $this->properties['stage'] = $stage;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\MedicalConditionStage
+     **/
+    public function getStage() {
+        return $this->properties['stage'];
+    }
+    /**
+     * Specifying a drug or medicine used in a medication procedure.
+     *
+     * @param $drug \LengthOfRope\JSONLD\Schema\Drug
+     * @return static
+     **/
+    public function setDrug($drug): static {
+        $this->properties['drug'] = $drug;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Drug
+     **/
+    public function getDrug() {
+        return $this->properties['drug'];
+    }
+    /**
+     * The likely outcome in either the short term or long term of the medical
+     * condition.
+     *
+     * @param $expectedPrognosis \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setExpectedPrognosis($expectedPrognosis): static {
+        $this->properties['expectedPrognosis'] = $expectedPrognosis;
 
         return $this;
     }
@@ -341,7 +283,65 @@ class MedicalCondition extends MedicalEntity
     /**
      * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
-    public function getEpidemiology() {
-        return $this->properties['epidemiology'];
+    public function getExpectedPrognosis() {
+        return $this->properties['expectedPrognosis'];
+    }
+    /**
+     * Changes in the normal mechanical, physical, and biochemical functions that are
+     * associated with this activity or condition.
+     *
+     * @param $pathophysiology \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setPathophysiology($pathophysiology): static {
+        $this->properties['pathophysiology'] = $pathophysiology;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getPathophysiology() {
+        return $this->properties['pathophysiology'];
+    }
+    /**
+     * A sign or symptom of this condition. Signs are objective or physically
+     * observable manifestations of the medical condition while symptoms are the
+     * subjective experience of the medical condition.
+     *
+     * @param $signOrSymptom \LengthOfRope\JSONLD\Schema\MedicalSignOrSymptom
+     * @return static
+     **/
+    public function setSignOrSymptom($signOrSymptom): static {
+        $this->properties['signOrSymptom'] = $signOrSymptom;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\MedicalSignOrSymptom
+     **/
+    public function getSignOrSymptom() {
+        return $this->properties['signOrSymptom'];
+    }
+    /**
+     * The anatomy of the underlying organ system or structures associated with this
+     * entity.
+     *
+     * @param $associatedAnatomy \LengthOfRope\JSONLD\Schema\SuperficialAnatomy|\LengthOfRope\JSONLD\Schema\AnatomicalSystem|\LengthOfRope\JSONLD\Schema\AnatomicalStructure
+     * @return static
+     **/
+    public function setAssociatedAnatomy($associatedAnatomy): static {
+        $this->properties['associatedAnatomy'] = $associatedAnatomy;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\SuperficialAnatomy|\LengthOfRope\JSONLD\Schema\AnatomicalSystem|\LengthOfRope\JSONLD\Schema\AnatomicalStructure
+     **/
+    public function getAssociatedAnatomy() {
+        return $this->properties['associatedAnatomy'];
     }
 }

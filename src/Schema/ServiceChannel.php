@@ -41,23 +41,22 @@ class ServiceChannel extends Intangible
     }
 
     /**
-     * The location (e.g. civic structure, local business, etc.) where a person can go
-     * to access the service.
+     * The number to access the service by text message.
      *
-     * @param $serviceLocation \LengthOfRope\JSONLD\Schema\Place
+     * @param $serviceSmsNumber \LengthOfRope\JSONLD\Schema\ContactPoint
      * @return static
      **/
-    public function setServiceLocation($serviceLocation): static {
-        $this->properties['serviceLocation'] = $serviceLocation;
+    public function setServiceSmsNumber($serviceSmsNumber): static {
+        $this->properties['serviceSmsNumber'] = $serviceSmsNumber;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Place
+     * @return \LengthOfRope\JSONLD\Schema\ContactPoint
      **/
-    public function getServiceLocation() {
-        return $this->properties['serviceLocation'];
+    public function getServiceSmsNumber() {
+        return $this->properties['serviceSmsNumber'];
     }
     /**
      * The phone number to use to access the service.
@@ -78,22 +77,22 @@ class ServiceChannel extends Intangible
         return $this->properties['servicePhone'];
     }
     /**
-     * The number to access the service by text message.
+     * The service provided by this channel.
      *
-     * @param $serviceSmsNumber \LengthOfRope\JSONLD\Schema\ContactPoint
+     * @param $providesService \LengthOfRope\JSONLD\Schema\Service
      * @return static
      **/
-    public function setServiceSmsNumber($serviceSmsNumber): static {
-        $this->properties['serviceSmsNumber'] = $serviceSmsNumber;
+    public function setProvidesService($providesService): static {
+        $this->properties['providesService'] = $providesService;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\ContactPoint
+     * @return \LengthOfRope\JSONLD\Schema\Service
      **/
-    public function getServiceSmsNumber() {
-        return $this->properties['serviceSmsNumber'];
+    public function getProvidesService() {
+        return $this->properties['providesService'];
     }
     /**
      * The website to access the service.
@@ -112,6 +111,45 @@ class ServiceChannel extends Intangible
      **/
     public function getServiceUrl() {
         return $this->properties['serviceUrl'];
+    }
+    /**
+     * The location (e.g. civic structure, local business, etc.) where a person can go
+     * to access the service.
+     *
+     * @param $serviceLocation \LengthOfRope\JSONLD\Schema\Place
+     * @return static
+     **/
+    public function setServiceLocation($serviceLocation): static {
+        $this->properties['serviceLocation'] = $serviceLocation;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Place
+     **/
+    public function getServiceLocation() {
+        return $this->properties['serviceLocation'];
+    }
+    /**
+     * A language someone may use with or at the item, service or place. Please use one
+     * of the language codes from the [IETF BCP 47
+     * standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].
+     *
+     * @param $availableLanguage \LengthOfRope\JSONLD\Schema\Language|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setAvailableLanguage($availableLanguage): static {
+        $this->properties['availableLanguage'] = $availableLanguage;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Language|\LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getAvailableLanguage() {
+        return $this->properties['availableLanguage'];
     }
     /**
      * Estimated processing time for the service using this channel.
@@ -148,43 +186,5 @@ class ServiceChannel extends Intangible
      **/
     public function getServicePostalAddress() {
         return $this->properties['servicePostalAddress'];
-    }
-    /**
-     * The service provided by this channel.
-     *
-     * @param $providesService \LengthOfRope\JSONLD\Schema\Service
-     * @return static
-     **/
-    public function setProvidesService($providesService): static {
-        $this->properties['providesService'] = $providesService;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Service
-     **/
-    public function getProvidesService() {
-        return $this->properties['providesService'];
-    }
-    /**
-     * A language someone may use with or at the item, service or place. Please use one
-     * of the language codes from the [IETF BCP 47
-     * standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].
-     *
-     * @param $availableLanguage \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Language
-     * @return static
-     **/
-    public function setAvailableLanguage($availableLanguage): static {
-        $this->properties['availableLanguage'] = $availableLanguage;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Language
-     **/
-    public function getAvailableLanguage() {
-        return $this->properties['availableLanguage'];
     }
 }

@@ -43,22 +43,30 @@ class FoodEstablishmentReservation extends Reservation
     }
 
     /**
-     * Number of people the reservation should accommodate.
+     * The startTime of something. For a reserved event or service (e.g.
+     * FoodEstablishmentReservation), the time that it is expected to start. For
+     * actions that span a period of time, when the action was performed. E.g. John
+     * wrote a book from *January* to December. For media, including audio and video,
+     * it's the time offset of the start of a clip within a larger file.
      *
-     * @param $partySize \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\TypeInteger
+     * Note that Event uses startDate/endDate instead of startTime/endTime, even when
+     * describing dates with times. This situation may be clarified in future
+     * revisions.
+     *
+     * @param $startTime \LengthOfRope\JSONLD\DataType\TypeTime|\LengthOfRope\JSONLD\DataType\TypeDateTime
      * @return static
      **/
-    public function setPartySize($partySize): static {
-        $this->properties['partySize'] = $partySize;
+    public function setStartTime($startTime): static {
+        $this->properties['startTime'] = $startTime;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\TypeInteger
+     * @return \LengthOfRope\JSONLD\DataType\TypeTime|\LengthOfRope\JSONLD\DataType\TypeDateTime
      **/
-    public function getPartySize() {
-        return $this->properties['partySize'];
+    public function getStartTime() {
+        return $this->properties['startTime'];
     }
     /**
      * The endTime of something. For a reserved event or service (e.g.
@@ -71,7 +79,7 @@ class FoodEstablishmentReservation extends Reservation
      * describing dates with times. This situation may be clarified in future
      * revisions.
      *
-     * @param $endTime \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeTime
+     * @param $endTime \LengthOfRope\JSONLD\DataType\TypeTime|\LengthOfRope\JSONLD\DataType\TypeDateTime
      * @return static
      **/
     public function setEndTime($endTime): static {
@@ -81,35 +89,27 @@ class FoodEstablishmentReservation extends Reservation
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeTime
+     * @return \LengthOfRope\JSONLD\DataType\TypeTime|\LengthOfRope\JSONLD\DataType\TypeDateTime
      **/
     public function getEndTime() {
         return $this->properties['endTime'];
     }
     /**
-     * The startTime of something. For a reserved event or service (e.g.
-     * FoodEstablishmentReservation), the time that it is expected to start. For
-     * actions that span a period of time, when the action was performed. E.g. John
-     * wrote a book from *January* to December. For media, including audio and video,
-     * it's the time offset of the start of a clip within a larger file.
+     * Number of people the reservation should accommodate.
      *
-     * Note that Event uses startDate/endDate instead of startTime/endTime, even when
-     * describing dates with times. This situation may be clarified in future
-     * revisions.
-     *
-     * @param $startTime \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeTime
+     * @param $partySize \LengthOfRope\JSONLD\DataType\TypeInteger|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
-    public function setStartTime($startTime): static {
-        $this->properties['startTime'] = $startTime;
+    public function setPartySize($partySize): static {
+        $this->properties['partySize'] = $partySize;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeTime
+     * @return \LengthOfRope\JSONLD\DataType\TypeInteger|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
-    public function getStartTime() {
-        return $this->properties['startTime'];
+    public function getPartySize() {
+        return $this->properties['partySize'];
     }
 }

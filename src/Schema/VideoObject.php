@@ -40,34 +40,14 @@ class VideoObject extends MediaObject
     }
 
     /**
-     * An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or
-     * in an event. Actors can be associated with individual items or with a series,
-     * episode, clip.
+     * A director of e.g. TV, radio, movie, video games etc. content. Directors can be
+     * associated with individual items or with a series, episode, clip.
      *
-     * @param $actor \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\PerformingGroup
+     * @param $directors \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
-    public function setActor($actor): static {
-        $this->properties['actor'] = $actor;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\PerformingGroup
-     **/
-    public function getActor() {
-        return $this->properties['actor'];
-    }
-    /**
-     * An actor, e.g. in TV, radio, movie, video games etc. Actors can be associated
-     * with individual items or with a series, episode, clip.
-     *
-     * @param $actors \LengthOfRope\JSONLD\Schema\Person
-     * @return static
-     **/
-    public function setActors($actors): static {
-        $this->properties['actors'] = $actors;
+    public function setDirectors($directors): static {
+        $this->properties['directors'] = $directors;
 
         return $this;
     }
@@ -75,8 +55,8 @@ class VideoObject extends MediaObject
     /**
      * @return \LengthOfRope\JSONLD\Schema\Person
      **/
-    public function getActors() {
-        return $this->properties['actors'];
+    public function getDirectors() {
+        return $this->properties['directors'];
     }
     /**
      * If this MediaObject is an AudioObject or VideoObject, the transcript of that
@@ -98,59 +78,22 @@ class VideoObject extends MediaObject
         return $this->properties['transcript'];
     }
     /**
-     * A director of e.g. TV, radio, movie, video games etc. content. Directors can be
-     * associated with individual items or with a series, episode, clip.
+     * The composer of the soundtrack.
      *
-     * @param $directors \LengthOfRope\JSONLD\Schema\Person
+     * @param $musicBy \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\MusicGroup
      * @return static
      **/
-    public function setDirectors($directors): static {
-        $this->properties['directors'] = $directors;
+    public function setMusicBy($musicBy): static {
+        $this->properties['musicBy'] = $musicBy;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Person
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\MusicGroup
      **/
-    public function getDirectors() {
-        return $this->properties['directors'];
-    }
-    /**
-     * The quality of the video.
-     *
-     * @param $videoQuality \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setVideoQuality($videoQuality): static {
-        $this->properties['videoQuality'] = $videoQuality;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getVideoQuality() {
-        return $this->properties['videoQuality'];
-    }
-    /**
-     * The frame size of the video.
-     *
-     * @param $videoFrameSize \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setVideoFrameSize($videoFrameSize): static {
-        $this->properties['videoFrameSize'] = $videoFrameSize;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getVideoFrameSize() {
-        return $this->properties['videoFrameSize'];
+    public function getMusicBy() {
+        return $this->properties['musicBy'];
     }
     /**
      * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event.
@@ -173,41 +116,40 @@ class VideoObject extends MediaObject
         return $this->properties['director'];
     }
     /**
-     * The caption for this object. For downloadable machine formats (closed caption,
-     * subtitles etc.) use MediaObject and indicate the [[encodingFormat]].
+     * The frame size of the video.
      *
-     * @param $caption \LengthOfRope\JSONLD\Schema\MediaObject|\LengthOfRope\JSONLD\DataType\TypeText
+     * @param $videoFrameSize \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
-    public function setCaption($caption): static {
-        $this->properties['caption'] = $caption;
+    public function setVideoFrameSize($videoFrameSize): static {
+        $this->properties['videoFrameSize'] = $videoFrameSize;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\MediaObject|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
-    public function getCaption() {
-        return $this->properties['caption'];
+    public function getVideoFrameSize() {
+        return $this->properties['videoFrameSize'];
     }
     /**
-     * The composer of the soundtrack.
+     * The quality of the video.
      *
-     * @param $musicBy \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\MusicGroup
+     * @param $videoQuality \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
-    public function setMusicBy($musicBy): static {
-        $this->properties['musicBy'] = $musicBy;
+    public function setVideoQuality($videoQuality): static {
+        $this->properties['videoQuality'] = $videoQuality;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\MusicGroup
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
-    public function getMusicBy() {
-        return $this->properties['musicBy'];
+    public function getVideoQuality() {
+        return $this->properties['videoQuality'];
     }
     /**
      * Represents textual captioning from a [[MediaObject]], e.g. text of a 'meme'.
@@ -226,5 +168,63 @@ class VideoObject extends MediaObject
      **/
     public function getEmbeddedTextCaption() {
         return $this->properties['embeddedTextCaption'];
+    }
+    /**
+     * An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or
+     * in an event. Actors can be associated with individual items or with a series,
+     * episode, clip.
+     *
+     * @param $actor \LengthOfRope\JSONLD\Schema\PerformingGroup|\LengthOfRope\JSONLD\Schema\Person
+     * @return static
+     **/
+    public function setActor($actor): static {
+        $this->properties['actor'] = $actor;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\PerformingGroup|\LengthOfRope\JSONLD\Schema\Person
+     **/
+    public function getActor() {
+        return $this->properties['actor'];
+    }
+    /**
+     * The caption for this object. For downloadable machine formats (closed caption,
+     * subtitles etc.) use MediaObject and indicate the [[encodingFormat]].
+     *
+     * @param $caption \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\MediaObject
+     * @return static
+     **/
+    public function setCaption($caption): static {
+        $this->properties['caption'] = $caption;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\MediaObject
+     **/
+    public function getCaption() {
+        return $this->properties['caption'];
+    }
+    /**
+     * An actor, e.g. in TV, radio, movie, video games etc. Actors can be associated
+     * with individual items or with a series, episode, clip.
+     *
+     * @param $actors \LengthOfRope\JSONLD\Schema\Person
+     * @return static
+     **/
+    public function setActors($actors): static {
+        $this->properties['actors'] = $actors;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Person
+     **/
+    public function getActors() {
+        return $this->properties['actors'];
     }
 }

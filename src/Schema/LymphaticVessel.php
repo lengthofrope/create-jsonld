@@ -41,23 +41,22 @@ class LymphaticVessel extends Vessel
     }
 
     /**
-     * The anatomical or organ system drained by this vessel; generally refers to a
-     * specific part of an organ.
+     * The vasculature the lymphatic structure originates, or afferents, from.
      *
-     * @param $regionDrained \LengthOfRope\JSONLD\Schema\AnatomicalSystem|\LengthOfRope\JSONLD\Schema\AnatomicalStructure
+     * @param $originatesFrom \LengthOfRope\JSONLD\Schema\Vessel
      * @return static
      **/
-    public function setRegionDrained($regionDrained): static {
-        $this->properties['regionDrained'] = $regionDrained;
+    public function setOriginatesFrom($originatesFrom): static {
+        $this->properties['originatesFrom'] = $originatesFrom;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\AnatomicalSystem|\LengthOfRope\JSONLD\Schema\AnatomicalStructure
+     * @return \LengthOfRope\JSONLD\Schema\Vessel
      **/
-    public function getRegionDrained() {
-        return $this->properties['regionDrained'];
+    public function getOriginatesFrom() {
+        return $this->properties['originatesFrom'];
     }
     /**
      * The vasculature the lymphatic structure runs, or efferents, to.
@@ -78,21 +77,22 @@ class LymphaticVessel extends Vessel
         return $this->properties['runsTo'];
     }
     /**
-     * The vasculature the lymphatic structure originates, or afferents, from.
+     * The anatomical or organ system drained by this vessel; generally refers to a
+     * specific part of an organ.
      *
-     * @param $originatesFrom \LengthOfRope\JSONLD\Schema\Vessel
+     * @param $regionDrained \LengthOfRope\JSONLD\Schema\AnatomicalSystem|\LengthOfRope\JSONLD\Schema\AnatomicalStructure
      * @return static
      **/
-    public function setOriginatesFrom($originatesFrom): static {
-        $this->properties['originatesFrom'] = $originatesFrom;
+    public function setRegionDrained($regionDrained): static {
+        $this->properties['regionDrained'] = $regionDrained;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Vessel
+     * @return \LengthOfRope\JSONLD\Schema\AnatomicalSystem|\LengthOfRope\JSONLD\Schema\AnatomicalStructure
      **/
-    public function getOriginatesFrom() {
-        return $this->properties['originatesFrom'];
+    public function getRegionDrained() {
+        return $this->properties['regionDrained'];
     }
 }

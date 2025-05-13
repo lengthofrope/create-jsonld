@@ -41,22 +41,22 @@ class ExerciseAction extends PlayAction
     }
 
     /**
-     * A sub property of instrument. The exercise plan used on this action.
+     * A sub property of instrument. The diet used in this action.
      *
-     * @param $exercisePlan \LengthOfRope\JSONLD\Schema\ExercisePlan
+     * @param $exerciseRelatedDiet \LengthOfRope\JSONLD\Schema\Diet
      * @return static
      **/
-    public function setExercisePlan($exercisePlan): static {
-        $this->properties['exercisePlan'] = $exercisePlan;
+    public function setExerciseRelatedDiet($exerciseRelatedDiet): static {
+        $this->properties['exerciseRelatedDiet'] = $exerciseRelatedDiet;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\ExercisePlan
+     * @return \LengthOfRope\JSONLD\Schema\Diet
      **/
-    public function getExercisePlan() {
-        return $this->properties['exercisePlan'];
+    public function getExerciseRelatedDiet() {
+        return $this->properties['exerciseRelatedDiet'];
     }
     /**
      * A sub property of location. The final location of the object or the agent after
@@ -78,22 +78,113 @@ class ExerciseAction extends PlayAction
         return $this->properties['toLocation'];
     }
     /**
-     * A sub property of location. The course where this action was taken.
+     * A sub property of location. The sports activity location where this action
+     * occurred.
      *
-     * @param $exerciseCourse \LengthOfRope\JSONLD\Schema\Place
+     * @param $sportsActivityLocation \LengthOfRope\JSONLD\Schema\SportsActivityLocation
      * @return static
      **/
-    public function setExerciseCourse($exerciseCourse): static {
-        $this->properties['exerciseCourse'] = $exerciseCourse;
+    public function setSportsActivityLocation($sportsActivityLocation): static {
+        $this->properties['sportsActivityLocation'] = $sportsActivityLocation;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Place
+     * @return \LengthOfRope\JSONLD\Schema\SportsActivityLocation
      **/
-    public function getExerciseCourse() {
-        return $this->properties['exerciseCourse'];
+    public function getSportsActivityLocation() {
+        return $this->properties['sportsActivityLocation'];
+    }
+    /**
+     * A sub property of instrument. The exercise plan used on this action.
+     *
+     * @param $exercisePlan \LengthOfRope\JSONLD\Schema\ExercisePlan
+     * @return static
+     **/
+    public function setExercisePlan($exercisePlan): static {
+        $this->properties['exercisePlan'] = $exercisePlan;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\ExercisePlan
+     **/
+    public function getExercisePlan() {
+        return $this->properties['exercisePlan'];
+    }
+    /**
+     * A sub property of participant. The opponent on this action.
+     *
+     * @param $opponent \LengthOfRope\JSONLD\Schema\Person
+     * @return static
+     **/
+    public function setOpponent($opponent): static {
+        $this->properties['opponent'] = $opponent;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Person
+     **/
+    public function getOpponent() {
+        return $this->properties['opponent'];
+    }
+    /**
+     * A sub property of location. The sports event where this action occurred.
+     *
+     * @param $sportsEvent \LengthOfRope\JSONLD\Schema\SportsEvent
+     * @return static
+     **/
+    public function setSportsEvent($sportsEvent): static {
+        $this->properties['sportsEvent'] = $sportsEvent;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\SportsEvent
+     **/
+    public function getSportsEvent() {
+        return $this->properties['sportsEvent'];
+    }
+    /**
+     * A sub property of instrument. The diet used in this action.
+     *
+     * @param $diet \LengthOfRope\JSONLD\Schema\Diet
+     * @return static
+     **/
+    public function setDiet($diet): static {
+        $this->properties['diet'] = $diet;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Diet
+     **/
+    public function getDiet() {
+        return $this->properties['diet'];
+    }
+    /**
+     * The distance travelled, e.g. exercising or travelling.
+     *
+     * @param $distance \LengthOfRope\JSONLD\Schema\Distance
+     * @return static
+     **/
+    public function setDistance($distance): static {
+        $this->properties['distance'] = $distance;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Distance
+     **/
+    public function getDistance() {
+        return $this->properties['distance'];
     }
     /**
      * A sub property of location. The original location of the object or the agent
@@ -115,131 +206,41 @@ class ExerciseAction extends PlayAction
         return $this->properties['fromLocation'];
     }
     /**
-     * A sub property of location. The sports activity location where this action
-     * occurred.
+     * A sub property of location. The course where this action was taken.
      *
-     * @param $sportsActivityLocation \LengthOfRope\JSONLD\Schema\SportsActivityLocation
+     * @param $exerciseCourse \LengthOfRope\JSONLD\Schema\Place
      * @return static
      **/
-    public function setSportsActivityLocation($sportsActivityLocation): static {
-        $this->properties['sportsActivityLocation'] = $sportsActivityLocation;
+    public function setExerciseCourse($exerciseCourse): static {
+        $this->properties['exerciseCourse'] = $exerciseCourse;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\SportsActivityLocation
+     * @return \LengthOfRope\JSONLD\Schema\Place
      **/
-    public function getSportsActivityLocation() {
-        return $this->properties['sportsActivityLocation'];
+    public function getExerciseCourse() {
+        return $this->properties['exerciseCourse'];
     }
     /**
-     * The distance travelled, e.g. exercising or travelling.
+     * Type(s) of exercise or activity, such as strength training, flexibility
+     * training, aerobics, cardiac rehabilitation, etc.
      *
-     * @param $distance \LengthOfRope\JSONLD\Schema\Distance
+     * @param $exerciseType \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
-    public function setDistance($distance): static {
-        $this->properties['distance'] = $distance;
+    public function setExerciseType($exerciseType): static {
+        $this->properties['exerciseType'] = $exerciseType;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Distance
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
-    public function getDistance() {
-        return $this->properties['distance'];
-    }
-    /**
-     * A sub property of instrument. The diet used in this action.
-     *
-     * @param $diet \LengthOfRope\JSONLD\Schema\Diet
-     * @return static
-     **/
-    public function setDiet($diet): static {
-        $this->properties['diet'] = $diet;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Diet
-     **/
-    public function getDiet() {
-        return $this->properties['diet'];
-    }
-    /**
-     * A sub property of instrument. The diet used in this action.
-     *
-     * @param $exerciseRelatedDiet \LengthOfRope\JSONLD\Schema\Diet
-     * @return static
-     **/
-    public function setExerciseRelatedDiet($exerciseRelatedDiet): static {
-        $this->properties['exerciseRelatedDiet'] = $exerciseRelatedDiet;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Diet
-     **/
-    public function getExerciseRelatedDiet() {
-        return $this->properties['exerciseRelatedDiet'];
-    }
-    /**
-     * A sub property of participant. The sports team that participated on this action.
-     *
-     * @param $sportsTeam \LengthOfRope\JSONLD\Schema\SportsTeam
-     * @return static
-     **/
-    public function setSportsTeam($sportsTeam): static {
-        $this->properties['sportsTeam'] = $sportsTeam;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\SportsTeam
-     **/
-    public function getSportsTeam() {
-        return $this->properties['sportsTeam'];
-    }
-    /**
-     * A sub property of location. The sports event where this action occurred.
-     *
-     * @param $sportsEvent \LengthOfRope\JSONLD\Schema\SportsEvent
-     * @return static
-     **/
-    public function setSportsEvent($sportsEvent): static {
-        $this->properties['sportsEvent'] = $sportsEvent;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\SportsEvent
-     **/
-    public function getSportsEvent() {
-        return $this->properties['sportsEvent'];
-    }
-    /**
-     * A sub property of participant. The opponent on this action.
-     *
-     * @param $opponent \LengthOfRope\JSONLD\Schema\Person
-     * @return static
-     **/
-    public function setOpponent($opponent): static {
-        $this->properties['opponent'] = $opponent;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Person
-     **/
-    public function getOpponent() {
-        return $this->properties['opponent'];
+    public function getExerciseType() {
+        return $this->properties['exerciseType'];
     }
     /**
      * A sub property of location. The course where this action was taken.
@@ -260,22 +261,21 @@ class ExerciseAction extends PlayAction
         return $this->properties['course'];
     }
     /**
-     * Type(s) of exercise or activity, such as strength training, flexibility
-     * training, aerobics, cardiac rehabilitation, etc.
+     * A sub property of participant. The sports team that participated on this action.
      *
-     * @param $exerciseType \LengthOfRope\JSONLD\DataType\TypeText
+     * @param $sportsTeam \LengthOfRope\JSONLD\Schema\SportsTeam
      * @return static
      **/
-    public function setExerciseType($exerciseType): static {
-        $this->properties['exerciseType'] = $exerciseType;
+    public function setSportsTeam($sportsTeam): static {
+        $this->properties['sportsTeam'] = $sportsTeam;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\Schema\SportsTeam
      **/
-    public function getExerciseType() {
-        return $this->properties['exerciseType'];
+    public function getSportsTeam() {
+        return $this->properties['sportsTeam'];
     }
 }

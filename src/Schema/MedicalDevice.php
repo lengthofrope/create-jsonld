@@ -40,25 +40,6 @@ class MedicalDevice extends MedicalEntity
     }
 
     /**
-     * A description of the procedure involved in setting up, using, and/or installing
-     * the device.
-     *
-     * @param $procedure \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setProcedure($procedure): static {
-        $this->properties['procedure'] = $procedure;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getProcedure() {
-        return $this->properties['procedure'];
-    }
-    /**
      * A description of the workup, testing, and other preparations required before
      * implanting this device.
      *
@@ -78,30 +59,9 @@ class MedicalDevice extends MedicalEntity
         return $this->properties['preOp'];
     }
     /**
-     * A possible complication and/or side effect of this therapy. If it is known that
-     * an adverse outcome is serious (resulting in death, disability, or permanent
-     * damage; requiring hospitalization; or otherwise life-threatening or requiring
-     * immediate medical attention), tag it as a seriousAdverseOutcome instead.
-     *
-     * @param $adverseOutcome \LengthOfRope\JSONLD\Schema\MedicalEntity
-     * @return static
-     **/
-    public function setAdverseOutcome($adverseOutcome): static {
-        $this->properties['adverseOutcome'] = $adverseOutcome;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\MedicalEntity
-     **/
-    public function getAdverseOutcome() {
-        return $this->properties['adverseOutcome'];
-    }
-    /**
      * A contraindication for this therapy.
      *
-     * @param $contraindication \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\MedicalContraindication
+     * @param $contraindication \LengthOfRope\JSONLD\Schema\MedicalContraindication|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setContraindication($contraindication): static {
@@ -111,7 +71,7 @@ class MedicalDevice extends MedicalEntity
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\MedicalContraindication
+     * @return \LengthOfRope\JSONLD\Schema\MedicalContraindication|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getContraindication() {
         return $this->properties['contraindication'];
@@ -138,6 +98,46 @@ class MedicalDevice extends MedicalEntity
      **/
     public function getSeriousAdverseOutcome() {
         return $this->properties['seriousAdverseOutcome'];
+    }
+    /**
+     * A possible complication and/or side effect of this therapy. If it is known that
+     * an adverse outcome is serious (resulting in death, disability, or permanent
+     * damage; requiring hospitalization; or otherwise life-threatening or requiring
+     * immediate medical attention), tag it as a seriousAdverseOutcome instead.
+     *
+     * @param $adverseOutcome \LengthOfRope\JSONLD\Schema\MedicalEntity
+     * @return static
+     **/
+    public function setAdverseOutcome($adverseOutcome): static {
+        $this->properties['adverseOutcome'] = $adverseOutcome;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\MedicalEntity
+     **/
+    public function getAdverseOutcome() {
+        return $this->properties['adverseOutcome'];
+    }
+    /**
+     * A description of the procedure involved in setting up, using, and/or installing
+     * the device.
+     *
+     * @param $procedure \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setProcedure($procedure): static {
+        $this->properties['procedure'] = $procedure;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getProcedure() {
+        return $this->properties['procedure'];
     }
     /**
      * A description of the postoperative procedures, care, and/or followups for this

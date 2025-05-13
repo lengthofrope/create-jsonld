@@ -40,44 +40,6 @@ class BroadcastChannel extends Intangible
     }
 
     /**
-     * The frequency used for over-the-air broadcasts. Numeric values or simple ranges,
-     * e.g. 87-99. In addition a shortcut idiom is supported for frequencies of AM and
-     * FM radio channels, e.g. "87 FM".
-     *
-     * @param $broadcastFrequency \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\BroadcastFrequencySpecification
-     * @return static
-     **/
-    public function setBroadcastFrequency($broadcastFrequency): static {
-        $this->properties['broadcastFrequency'] = $broadcastFrequency;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\BroadcastFrequencySpecification
-     **/
-    public function getBroadcastFrequency() {
-        return $this->properties['broadcastFrequency'];
-    }
-    /**
-     * The CableOrSatelliteService offering the channel.
-     *
-     * @param $inBroadcastLineup \LengthOfRope\JSONLD\Schema\CableOrSatelliteService
-     * @return static
-     **/
-    public function setInBroadcastLineup($inBroadcastLineup): static {
-        $this->properties['inBroadcastLineup'] = $inBroadcastLineup;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\CableOrSatelliteService
-     **/
-    public function getInBroadcastLineup() {
-        return $this->properties['inBroadcastLineup'];
-    }
-    /**
      * The unique address by which the BroadcastService can be identified in a provider
      * lineup. In US, this is typically a number.
      *
@@ -97,23 +59,24 @@ class BroadcastChannel extends Intangible
         return $this->properties['broadcastChannelId'];
     }
     /**
-     * The type of service required to have access to the channel (e.g. Standard or
-     * Premium).
+     * The frequency used for over-the-air broadcasts. Numeric values or simple ranges,
+     * e.g. 87-99. In addition a shortcut idiom is supported for frequencies of AM and
+     * FM radio channels, e.g. "87 FM".
      *
-     * @param $broadcastServiceTier \LengthOfRope\JSONLD\DataType\TypeText
+     * @param $broadcastFrequency \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\BroadcastFrequencySpecification
      * @return static
      **/
-    public function setBroadcastServiceTier($broadcastServiceTier): static {
-        $this->properties['broadcastServiceTier'] = $broadcastServiceTier;
+    public function setBroadcastFrequency($broadcastFrequency): static {
+        $this->properties['broadcastFrequency'] = $broadcastFrequency;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\BroadcastFrequencySpecification
      **/
-    public function getBroadcastServiceTier() {
-        return $this->properties['broadcastServiceTier'];
+    public function getBroadcastFrequency() {
+        return $this->properties['broadcastFrequency'];
     }
     /**
      * The BroadcastService offered on this channel.
@@ -150,5 +113,42 @@ class BroadcastChannel extends Intangible
      **/
     public function getGenre() {
         return $this->properties['genre'];
+    }
+    /**
+     * The type of service required to have access to the channel (e.g. Standard or
+     * Premium).
+     *
+     * @param $broadcastServiceTier \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setBroadcastServiceTier($broadcastServiceTier): static {
+        $this->properties['broadcastServiceTier'] = $broadcastServiceTier;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getBroadcastServiceTier() {
+        return $this->properties['broadcastServiceTier'];
+    }
+    /**
+     * The CableOrSatelliteService offering the channel.
+     *
+     * @param $inBroadcastLineup \LengthOfRope\JSONLD\Schema\CableOrSatelliteService
+     * @return static
+     **/
+    public function setInBroadcastLineup($inBroadcastLineup): static {
+        $this->properties['inBroadcastLineup'] = $inBroadcastLineup;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\CableOrSatelliteService
+     **/
+    public function getInBroadcastLineup() {
+        return $this->properties['inBroadcastLineup'];
     }
 }

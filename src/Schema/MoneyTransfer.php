@@ -45,7 +45,7 @@ class MoneyTransfer extends TransferAction
      * institution operating the beneficiary’s bank account or releasing funds for
      * the beneficiary.
      *
-     * @param $beneficiaryBank \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\BankOrCreditUnion
+     * @param $beneficiaryBank \LengthOfRope\JSONLD\Schema\BankOrCreditUnion|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setBeneficiaryBank($beneficiaryBank): static {
@@ -55,7 +55,7 @@ class MoneyTransfer extends TransferAction
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\BankOrCreditUnion
+     * @return \LengthOfRope\JSONLD\Schema\BankOrCreditUnion|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getBeneficiaryBank() {
         return $this->properties['beneficiaryBank'];

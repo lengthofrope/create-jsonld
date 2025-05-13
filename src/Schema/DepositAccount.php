@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  * @see https://schema.org/DepositAccount
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class DepositAccount extends BankAccount
+class DepositAccount extends InvestmentOrDeposit
 {
     public static function factory(): DepositAccount
     {

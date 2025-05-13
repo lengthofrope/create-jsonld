@@ -40,23 +40,28 @@ class SportsTeam extends SportsOrganization
     }
 
     /**
-     * A person that acts as performing member of a sports team; a player as opposed to
-     * a coach.
+     * Gender of something, typically a [[Person]], but possibly also fictional
+     * characters, animals, etc. While https://schema.org/Male and
+     * https://schema.org/Female may be used, text strings are also acceptable for
+     * people who do not identify as a binary gender. The [[gender]] property can also
+     * be used in an extended sense to cover e.g. the gender of sports teams. As with
+     * the gender of individuals, we do not try to enumerate all possibilities. A
+     * mixed-gender [[SportsTeam]] can be indicated with a text value of "Mixed".
      *
-     * @param $athlete \LengthOfRope\JSONLD\Schema\Person
+     * @param $gender \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\GenderType
      * @return static
      **/
-    public function setAthlete($athlete): static {
-        $this->properties['athlete'] = $athlete;
+    public function setGender($gender): static {
+        $this->properties['gender'] = $gender;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Person
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\GenderType
      **/
-    public function getAthlete() {
-        return $this->properties['athlete'];
+    public function getGender() {
+        return $this->properties['gender'];
     }
     /**
      * A person that acts in a coaching role for a sports team.
@@ -77,27 +82,22 @@ class SportsTeam extends SportsOrganization
         return $this->properties['coach'];
     }
     /**
-     * Gender of something, typically a [[Person]], but possibly also fictional
-     * characters, animals, etc. While https://schema.org/Male and
-     * https://schema.org/Female may be used, text strings are also acceptable for
-     * people who do not identify as a binary gender. The [[gender]] property can also
-     * be used in an extended sense to cover e.g. the gender of sports teams. As with
-     * the gender of individuals, we do not try to enumerate all possibilities. A
-     * mixed-gender [[SportsTeam]] can be indicated with a text value of "Mixed".
+     * A person that acts as performing member of a sports team; a player as opposed to
+     * a coach.
      *
-     * @param $gender \LengthOfRope\JSONLD\Schema\GenderType|\LengthOfRope\JSONLD\DataType\TypeText
+     * @param $athlete \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
-    public function setGender($gender): static {
-        $this->properties['gender'] = $gender;
+    public function setAthlete($athlete): static {
+        $this->properties['athlete'] = $athlete;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\GenderType|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
-    public function getGender() {
-        return $this->properties['gender'];
+    public function getAthlete() {
+        return $this->properties['athlete'];
     }
 }

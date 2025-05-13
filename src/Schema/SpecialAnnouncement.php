@@ -116,96 +116,25 @@ class SpecialAnnouncement extends CreativeWork
     }
 
     /**
-     * The URL for a feed, e.g. associated with a podcast series, blog, or series of
-     * date-stamped updates. This is usually RSS or Atom.
+     * Indicates a specific [[CivicStructure]] or [[LocalBusiness]] associated with the
+     * SpecialAnnouncement. For example, a specific testing facility or business with
+     * special opening hours. For a larger geographic region like a quarantine of an
+     * entire region, use [[spatialCoverage]].
      *
-     * @param $webFeed \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\DataFeed
+     * @param $announcementLocation \LengthOfRope\JSONLD\Schema\CivicStructure|\LengthOfRope\JSONLD\Schema\LocalBusiness
      * @return static
      **/
-    public function setWebFeed($webFeed): static {
-        $this->properties['webFeed'] = $webFeed;
+    public function setAnnouncementLocation($announcementLocation): static {
+        $this->properties['announcementLocation'] = $announcementLocation;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\DataFeed
+     * @return \LengthOfRope\JSONLD\Schema\CivicStructure|\LengthOfRope\JSONLD\Schema\LocalBusiness
      **/
-    public function getWebFeed() {
-        return $this->properties['webFeed'];
-    }
-    /**
-     * Publication date of an online listing.
-     *
-     * @param $datePosted \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
-     * @return static
-     **/
-    public function setDatePosted($datePosted): static {
-        $this->properties['datePosted'] = $datePosted;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
-     **/
-    public function getDatePosted() {
-        return $this->properties['datePosted'];
-    }
-    /**
-     * Information about disease prevention.
-     *
-     * @param $diseasePreventionInfo \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\WebContent
-     * @return static
-     **/
-    public function setDiseasePreventionInfo($diseasePreventionInfo): static {
-        $this->properties['diseasePreventionInfo'] = $diseasePreventionInfo;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\WebContent
-     **/
-    public function getDiseasePreventionInfo() {
-        return $this->properties['diseasePreventionInfo'];
-    }
-    /**
-     * Information about public transport closures.
-     *
-     * @param $publicTransportClosuresInfo \LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\DataType\TypeURL
-     * @return static
-     **/
-    public function setPublicTransportClosuresInfo($publicTransportClosuresInfo): static {
-        $this->properties['publicTransportClosuresInfo'] = $publicTransportClosuresInfo;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\DataType\TypeURL
-     **/
-    public function getPublicTransportClosuresInfo() {
-        return $this->properties['publicTransportClosuresInfo'];
-    }
-    /**
-     * A category for the item. Greater signs or slashes can be used to informally
-     * indicate a category hierarchy.
-     *
-     * @param $category \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\Schema\PhysicalActivityCategory|\LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
-     * @return static
-     **/
-    public function setCategory($category): static {
-        $this->properties['category'] = $category;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\Schema\PhysicalActivityCategory|\LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
-     **/
-    public function getCategory() {
-        return $this->properties['category'];
+    public function getAnnouncementLocation() {
+        return $this->properties['announcementLocation'];
     }
     /**
      * Information about school closures.
@@ -226,9 +155,158 @@ class SpecialAnnouncement extends CreativeWork
         return $this->properties['schoolClosuresInfo'];
     }
     /**
+     * Information about public transport closures.
+     *
+     * @param $publicTransportClosuresInfo \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\WebContent
+     * @return static
+     **/
+    public function setPublicTransportClosuresInfo($publicTransportClosuresInfo): static {
+        $this->properties['publicTransportClosuresInfo'] = $publicTransportClosuresInfo;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\WebContent
+     **/
+    public function getPublicTransportClosuresInfo() {
+        return $this->properties['publicTransportClosuresInfo'];
+    }
+    /**
+     * Information about getting tested (for a [[MedicalCondition]]), e.g. in the
+     * context of a pandemic.
+     *
+     * @param $gettingTestedInfo \LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\DataType\TypeURL
+     * @return static
+     **/
+    public function setGettingTestedInfo($gettingTestedInfo): static {
+        $this->properties['gettingTestedInfo'] = $gettingTestedInfo;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\DataType\TypeURL
+     **/
+    public function getGettingTestedInfo() {
+        return $this->properties['gettingTestedInfo'];
+    }
+    /**
+     * Indicates a page with news updates and guidelines. This could often be (but is
+     * not required to be) the main page containing [[SpecialAnnouncement]] markup on a
+     * site.
+     *
+     * @param $newsUpdatesAndGuidelines \LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\DataType\TypeURL
+     * @return static
+     **/
+    public function setNewsUpdatesAndGuidelines($newsUpdatesAndGuidelines): static {
+        $this->properties['newsUpdatesAndGuidelines'] = $newsUpdatesAndGuidelines;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\DataType\TypeURL
+     **/
+    public function getNewsUpdatesAndGuidelines() {
+        return $this->properties['newsUpdatesAndGuidelines'];
+    }
+    /**
+     * Information about travel bans, e.g. in the context of a pandemic.
+     *
+     * @param $travelBans \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\WebContent
+     * @return static
+     **/
+    public function setTravelBans($travelBans): static {
+        $this->properties['travelBans'] = $travelBans;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\WebContent
+     **/
+    public function getTravelBans() {
+        return $this->properties['travelBans'];
+    }
+    /**
+     * Publication date of an online listing.
+     *
+     * @param $datePosted \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
+     * @return static
+     **/
+    public function setDatePosted($datePosted): static {
+        $this->properties['datePosted'] = $datePosted;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
+     **/
+    public function getDatePosted() {
+        return $this->properties['datePosted'];
+    }
+    /**
+     * Information about disease prevention.
+     *
+     * @param $diseasePreventionInfo \LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\DataType\TypeURL
+     * @return static
+     **/
+    public function setDiseasePreventionInfo($diseasePreventionInfo): static {
+        $this->properties['diseasePreventionInfo'] = $diseasePreventionInfo;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\DataType\TypeURL
+     **/
+    public function getDiseasePreventionInfo() {
+        return $this->properties['diseasePreventionInfo'];
+    }
+    /**
+     * A category for the item. Greater signs or slashes can be used to informally
+     * indicate a category hierarchy.
+     *
+     * @param $category \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\PhysicalActivityCategory
+     * @return static
+     **/
+    public function setCategory($category): static {
+        $this->properties['category'] = $category;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\PhysicalActivityCategory
+     **/
+    public function getCategory() {
+        return $this->properties['category'];
+    }
+    /**
+     * The URL for a feed, e.g. associated with a podcast series, blog, or series of
+     * date-stamped updates. This is usually RSS or Atom.
+     *
+     * @param $webFeed \LengthOfRope\JSONLD\Schema\DataFeed|\LengthOfRope\JSONLD\DataType\TypeURL
+     * @return static
+     **/
+    public function setWebFeed($webFeed): static {
+        $this->properties['webFeed'] = $webFeed;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\DataFeed|\LengthOfRope\JSONLD\DataType\TypeURL
+     **/
+    public function getWebFeed() {
+        return $this->properties['webFeed'];
+    }
+    /**
      * Guidelines about quarantine rules, e.g. in the context of a pandemic.
      *
-     * @param $quarantineGuidelines \LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\DataType\TypeURL
+     * @param $quarantineGuidelines \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\WebContent
      * @return static
      **/
     public function setQuarantineGuidelines($quarantineGuidelines): static {
@@ -238,7 +316,7 @@ class SpecialAnnouncement extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\DataType\TypeURL
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\WebContent
      **/
     public function getQuarantineGuidelines() {
         return $this->properties['quarantineGuidelines'];
@@ -263,31 +341,13 @@ class SpecialAnnouncement extends CreativeWork
         return $this->properties['governmentBenefitsInfo'];
     }
     /**
-     * Information about travel bans, e.g. in the context of a pandemic.
-     *
-     * @param $travelBans \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\WebContent
-     * @return static
-     **/
-    public function setTravelBans($travelBans): static {
-        $this->properties['travelBans'] = $travelBans;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\WebContent
-     **/
-    public function getTravelBans() {
-        return $this->properties['travelBans'];
-    }
-    /**
      * Statistical information about the spread of a disease, either as [[WebContent]],
      * or
      * described directly as a [[Dataset]], or the specific [[Observation]]s in the
      * dataset. When a [[WebContent]] URL is
      * provided, the page indicated might also contain more such markup.
      *
-     * @param $diseaseSpreadStatistics \LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\Schema\Dataset|\LengthOfRope\JSONLD\Schema\Observation|\LengthOfRope\JSONLD\DataType\TypeURL
+     * @param $diseaseSpreadStatistics \LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\Schema\Dataset|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\Observation
      * @return static
      **/
     public function setDiseaseSpreadStatistics($diseaseSpreadStatistics): static {
@@ -297,69 +357,9 @@ class SpecialAnnouncement extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\Schema\Dataset|\LengthOfRope\JSONLD\Schema\Observation|\LengthOfRope\JSONLD\DataType\TypeURL
+     * @return \LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\Schema\Dataset|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\Observation
      **/
     public function getDiseaseSpreadStatistics() {
         return $this->properties['diseaseSpreadStatistics'];
-    }
-    /**
-     * Information about getting tested (for a [[MedicalCondition]]), e.g. in the
-     * context of a pandemic.
-     *
-     * @param $gettingTestedInfo \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\WebContent
-     * @return static
-     **/
-    public function setGettingTestedInfo($gettingTestedInfo): static {
-        $this->properties['gettingTestedInfo'] = $gettingTestedInfo;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\WebContent
-     **/
-    public function getGettingTestedInfo() {
-        return $this->properties['gettingTestedInfo'];
-    }
-    /**
-     * Indicates a specific [[CivicStructure]] or [[LocalBusiness]] associated with the
-     * SpecialAnnouncement. For example, a specific testing facility or business with
-     * special opening hours. For a larger geographic region like a quarantine of an
-     * entire region, use [[spatialCoverage]].
-     *
-     * @param $announcementLocation \LengthOfRope\JSONLD\Schema\CivicStructure|\LengthOfRope\JSONLD\Schema\LocalBusiness
-     * @return static
-     **/
-    public function setAnnouncementLocation($announcementLocation): static {
-        $this->properties['announcementLocation'] = $announcementLocation;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\CivicStructure|\LengthOfRope\JSONLD\Schema\LocalBusiness
-     **/
-    public function getAnnouncementLocation() {
-        return $this->properties['announcementLocation'];
-    }
-    /**
-     * Indicates a page with news updates and guidelines. This could often be (but is
-     * not required to be) the main page containing [[SpecialAnnouncement]] markup on a
-     * site.
-     *
-     * @param $newsUpdatesAndGuidelines \LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\DataType\TypeURL
-     * @return static
-     **/
-    public function setNewsUpdatesAndGuidelines($newsUpdatesAndGuidelines): static {
-        $this->properties['newsUpdatesAndGuidelines'] = $newsUpdatesAndGuidelines;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\WebContent|\LengthOfRope\JSONLD\DataType\TypeURL
-     **/
-    public function getNewsUpdatesAndGuidelines() {
-        return $this->properties['newsUpdatesAndGuidelines'];
     }
 }

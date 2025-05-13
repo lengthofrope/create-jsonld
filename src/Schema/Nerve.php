@@ -41,23 +41,41 @@ class Nerve extends AnatomicalStructure
     }
 
     /**
-     * The branches that delineate from the nerve bundle. Not to be confused with
-     * [[branchOf]].
+     * The neurological pathway that originates the neurons.
      *
-     * @param $branch \LengthOfRope\JSONLD\Schema\AnatomicalStructure
+     * @param $sourcedFrom \LengthOfRope\JSONLD\Schema\BrainStructure
      * @return static
      **/
-    public function setBranch($branch): static {
-        $this->properties['branch'] = $branch;
+    public function setSourcedFrom($sourcedFrom): static {
+        $this->properties['sourcedFrom'] = $sourcedFrom;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\AnatomicalStructure
+     * @return \LengthOfRope\JSONLD\Schema\BrainStructure
      **/
-    public function getBranch() {
-        return $this->properties['branch'];
+    public function getSourcedFrom() {
+        return $this->properties['sourcedFrom'];
+    }
+    /**
+     * The neurological pathway extension that inputs and sends information to the
+     * brain or spinal cord.
+     *
+     * @param $sensoryUnit \LengthOfRope\JSONLD\Schema\SuperficialAnatomy|\LengthOfRope\JSONLD\Schema\AnatomicalStructure
+     * @return static
+     **/
+    public function setSensoryUnit($sensoryUnit): static {
+        $this->properties['sensoryUnit'] = $sensoryUnit;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\SuperficialAnatomy|\LengthOfRope\JSONLD\Schema\AnatomicalStructure
+     **/
+    public function getSensoryUnit() {
+        return $this->properties['sensoryUnit'];
     }
     /**
      * The neurological pathway extension that involves muscle control.
@@ -78,40 +96,22 @@ class Nerve extends AnatomicalStructure
         return $this->properties['nerveMotor'];
     }
     /**
-     * The neurological pathway extension that inputs and sends information to the
-     * brain or spinal cord.
+     * The branches that delineate from the nerve bundle. Not to be confused with
+     * [[branchOf]].
      *
-     * @param $sensoryUnit \LengthOfRope\JSONLD\Schema\AnatomicalStructure|\LengthOfRope\JSONLD\Schema\SuperficialAnatomy
+     * @param $branch \LengthOfRope\JSONLD\Schema\AnatomicalStructure
      * @return static
      **/
-    public function setSensoryUnit($sensoryUnit): static {
-        $this->properties['sensoryUnit'] = $sensoryUnit;
+    public function setBranch($branch): static {
+        $this->properties['branch'] = $branch;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\AnatomicalStructure|\LengthOfRope\JSONLD\Schema\SuperficialAnatomy
+     * @return \LengthOfRope\JSONLD\Schema\AnatomicalStructure
      **/
-    public function getSensoryUnit() {
-        return $this->properties['sensoryUnit'];
-    }
-    /**
-     * The neurological pathway that originates the neurons.
-     *
-     * @param $sourcedFrom \LengthOfRope\JSONLD\Schema\BrainStructure
-     * @return static
-     **/
-    public function setSourcedFrom($sourcedFrom): static {
-        $this->properties['sourcedFrom'] = $sourcedFrom;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\BrainStructure
-     **/
-    public function getSourcedFrom() {
-        return $this->properties['sourcedFrom'];
+    public function getBranch() {
+        return $this->properties['branch'];
     }
 }

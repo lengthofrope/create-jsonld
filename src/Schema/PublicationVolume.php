@@ -31,7 +31,7 @@ namespace LengthOfRope\JSONLD\Schema;
  * multi-volume work, often numbered. It may represent a time span, such as a year.
  *
  * See also [blog
- * post](http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html).
+ * post](https://blog-schema.org/2014/09/02/schema-org-support-for-bibliographic-relationships-and-periodicals/).
  *
  * @see https://schema.org/PublicationVolume
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
@@ -43,43 +43,6 @@ class PublicationVolume extends CreativeWork
         return new PublicationVolume('https://schema.org/', 'PublicationVolume');
     }
 
-    /**
-     * Any description of pages that is not separated into pageStart and pageEnd; for
-     * example, "1-6, 9, 55" or "10-12, 46-49".
-     *
-     * @param $pagination \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setPagination($pagination): static {
-        $this->properties['pagination'] = $pagination;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getPagination() {
-        return $this->properties['pagination'];
-    }
-    /**
-     * The page on which the work starts; for example "135" or "xiii".
-     *
-     * @param $pageStart \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeInteger
-     * @return static
-     **/
-    public function setPageStart($pageStart): static {
-        $this->properties['pageStart'] = $pageStart;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeInteger
-     **/
-    public function getPageStart() {
-        return $this->properties['pageStart'];
-    }
     /**
      * Identifies the volume of publication or multi-part work; for example, "iii" or
      * "2".
@@ -100,6 +63,25 @@ class PublicationVolume extends CreativeWork
         return $this->properties['volumeNumber'];
     }
     /**
+     * Any description of pages that is not separated into pageStart and pageEnd; for
+     * example, "1-6, 9, 55" or "10-12, 46-49".
+     *
+     * @param $pagination \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setPagination($pagination): static {
+        $this->properties['pagination'] = $pagination;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getPagination() {
+        return $this->properties['pagination'];
+    }
+    /**
      * The page on which the work ends; for example "138" or "xvi".
      *
      * @param $pageEnd \LengthOfRope\JSONLD\DataType\TypeInteger|\LengthOfRope\JSONLD\DataType\TypeText
@@ -116,5 +98,23 @@ class PublicationVolume extends CreativeWork
      **/
     public function getPageEnd() {
         return $this->properties['pageEnd'];
+    }
+    /**
+     * The page on which the work starts; for example "135" or "xiii".
+     *
+     * @param $pageStart \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeInteger
+     * @return static
+     **/
+    public function setPageStart($pageStart): static {
+        $this->properties['pageStart'] = $pageStart;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeInteger
+     **/
+    public function getPageStart() {
+        return $this->properties['pageStart'];
     }
 }

@@ -46,7 +46,7 @@ class GeoCoordinates extends StructuredValue
      * alpha-3](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) country code such as
      * "SGP" or a full country name such as "Singapore" can also be used.
      *
-     * @param $addressCountry \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Country
+     * @param $addressCountry \LengthOfRope\JSONLD\Schema\Country|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setAddressCountry($addressCountry): static {
@@ -56,10 +56,31 @@ class GeoCoordinates extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Country
+     * @return \LengthOfRope\JSONLD\Schema\Country|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getAddressCountry() {
         return $this->properties['addressCountry'];
+    }
+    /**
+     * The elevation of a location ([WGS
+     * 84](https://en.wikipedia.org/wiki/World_Geodetic_System)). Values may be of the
+     * form 'NUMBER UNIT\_OF\_MEASUREMENT' (e.g., '1,000 m', '3,200 ft') while numbers
+     * alone should be assumed to be a value in meters.
+     *
+     * @param $elevation \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeNumber
+     * @return static
+     **/
+    public function setElevation($elevation): static {
+        $this->properties['elevation'] = $elevation;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeNumber
+     **/
+    public function getElevation() {
+        return $this->properties['elevation'];
     }
     /**
      * Physical address of the item.
@@ -98,6 +119,25 @@ class GeoCoordinates extends StructuredValue
         return $this->properties['postalCode'];
     }
     /**
+     * The longitude of a location. For example ```-122.08585``` ([WGS
+     * 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
+     *
+     * @param $longitude \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeNumber
+     * @return static
+     **/
+    public function setLongitude($longitude): static {
+        $this->properties['longitude'] = $longitude;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeNumber
+     **/
+    public function getLongitude() {
+        return $this->properties['longitude'];
+    }
+    /**
      * The latitude of a location. For example ```37.42242``` ([WGS
      * 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
      *
@@ -115,45 +155,5 @@ class GeoCoordinates extends StructuredValue
      **/
     public function getLatitude() {
         return $this->properties['latitude'];
-    }
-    /**
-     * The elevation of a location ([WGS
-     * 84](https://en.wikipedia.org/wiki/World_Geodetic_System)). Values may be of the
-     * form 'NUMBER UNIT\_OF\_MEASUREMENT' (e.g., '1,000 m', '3,200 ft') while numbers
-     * alone should be assumed to be a value in meters.
-     *
-     * @param $elevation \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeNumber
-     * @return static
-     **/
-    public function setElevation($elevation): static {
-        $this->properties['elevation'] = $elevation;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeNumber
-     **/
-    public function getElevation() {
-        return $this->properties['elevation'];
-    }
-    /**
-     * The longitude of a location. For example ```-122.08585``` ([WGS
-     * 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
-     *
-     * @param $longitude \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setLongitude($longitude): static {
-        $this->properties['longitude'] = $longitude;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getLongitude() {
-        return $this->properties['longitude'];
     }
 }

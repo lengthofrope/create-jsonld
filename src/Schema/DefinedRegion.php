@@ -56,13 +56,33 @@ class DefinedRegion extends StructuredValue
     }
 
     /**
+     * The region in which the locality is, and which is in the country. For example,
+     * California or another appropriate first-level [Administrative
+     * division](https://en.wikipedia.org/wiki/List_of_administrative_divisions_by_country).
+     *
+     * @param $addressRegion \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setAddressRegion($addressRegion): static {
+        $this->properties['addressRegion'] = $addressRegion;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getAddressRegion() {
+        return $this->properties['addressRegion'];
+    }
+    /**
      * The country. Recommended to be in 2-letter [ISO 3166-1
      * alpha-2](http://en.wikipedia.org/wiki/ISO_3166-1) format, for example "US". For
      * backward compatibility, a 3-letter [ISO 3166-1
      * alpha-3](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) country code such as
      * "SGP" or a full country name such as "Singapore" can also be used.
      *
-     * @param $addressCountry \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Country
+     * @param $addressCountry \LengthOfRope\JSONLD\Schema\Country|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setAddressCountry($addressCountry): static {
@@ -72,7 +92,7 @@ class DefinedRegion extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Country
+     * @return \LengthOfRope\JSONLD\Schema\Country|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getAddressCountry() {
         return $this->properties['addressCountry'];
@@ -94,26 +114,6 @@ class DefinedRegion extends StructuredValue
      **/
     public function getPostalCode() {
         return $this->properties['postalCode'];
-    }
-    /**
-     * The region in which the locality is, and which is in the country. For example,
-     * California or another appropriate first-level [Administrative
-     * division](https://en.wikipedia.org/wiki/List_of_administrative_divisions_by_country).
-     *
-     * @param $addressRegion \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setAddressRegion($addressRegion): static {
-        $this->properties['addressRegion'] = $addressRegion;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getAddressRegion() {
-        return $this->properties['addressRegion'];
     }
     /**
      * A defined range of postal codes indicated by a common textual prefix. Used for

@@ -32,7 +32,7 @@ namespace LengthOfRope\JSONLD\Schema;
  * @see https://schema.org/EducationalOrganization
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class EducationalOrganization extends CivicStructure
+class EducationalOrganization extends Organization
 {
     public static function factory(): EducationalOrganization
     {

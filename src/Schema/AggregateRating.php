@@ -40,22 +40,22 @@ class AggregateRating extends Rating
     }
 
     /**
-     * The count of total number of ratings.
+     * The item that is being reviewed/rated.
      *
-     * @param $ratingCount \LengthOfRope\JSONLD\DataType\TypeInteger
+     * @param $itemReviewed \LengthOfRope\JSONLD\Schema\Thing
      * @return static
      **/
-    public function setRatingCount($ratingCount): static {
-        $this->properties['ratingCount'] = $ratingCount;
+    public function setItemReviewed($itemReviewed): static {
+        $this->properties['itemReviewed'] = $itemReviewed;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeInteger
+     * @return \LengthOfRope\JSONLD\Schema\Thing
      **/
-    public function getRatingCount() {
-        return $this->properties['ratingCount'];
+    public function getItemReviewed() {
+        return $this->properties['itemReviewed'];
     }
     /**
      * The count of total number of reviews.
@@ -76,21 +76,21 @@ class AggregateRating extends Rating
         return $this->properties['reviewCount'];
     }
     /**
-     * The item that is being reviewed/rated.
+     * The count of total number of ratings.
      *
-     * @param $itemReviewed \LengthOfRope\JSONLD\Schema\Thing
+     * @param $ratingCount \LengthOfRope\JSONLD\DataType\TypeInteger
      * @return static
      **/
-    public function setItemReviewed($itemReviewed): static {
-        $this->properties['itemReviewed'] = $itemReviewed;
+    public function setRatingCount($ratingCount): static {
+        $this->properties['ratingCount'] = $ratingCount;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Thing
+     * @return \LengthOfRope\JSONLD\DataType\TypeInteger
      **/
-    public function getItemReviewed() {
-        return $this->properties['itemReviewed'];
+    public function getRatingCount() {
+        return $this->properties['ratingCount'];
     }
 }

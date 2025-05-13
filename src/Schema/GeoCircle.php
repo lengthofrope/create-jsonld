@@ -46,6 +46,25 @@ class GeoCircle extends GeoShape
     }
 
     /**
+     * Indicates the approximate radius of a GeoCircle (metres unless indicated
+     * otherwise via Distance notation).
+     *
+     * @param $geoRadius \LengthOfRope\JSONLD\Schema\Distance|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeNumber
+     * @return static
+     **/
+    public function setGeoRadius($geoRadius): static {
+        $this->properties['geoRadius'] = $geoRadius;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Distance|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeNumber
+     **/
+    public function getGeoRadius() {
+        return $this->properties['geoRadius'];
+    }
+    /**
      * Indicates the GeoCoordinates at the centre of a GeoShape, e.g. GeoCircle.
      *
      * @param $geoMidpoint \LengthOfRope\JSONLD\Schema\GeoCoordinates
@@ -62,24 +81,5 @@ class GeoCircle extends GeoShape
      **/
     public function getGeoMidpoint() {
         return $this->properties['geoMidpoint'];
-    }
-    /**
-     * Indicates the approximate radius of a GeoCircle (metres unless indicated
-     * otherwise via Distance notation).
-     *
-     * @param $geoRadius \LengthOfRope\JSONLD\Schema\Distance|\LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setGeoRadius($geoRadius): static {
-        $this->properties['geoRadius'] = $geoRadius;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Distance|\LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getGeoRadius() {
-        return $this->properties['geoRadius'];
     }
 }

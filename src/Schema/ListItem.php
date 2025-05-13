@@ -40,6 +40,24 @@ class ListItem extends Intangible
     }
 
     /**
+     * A link to the ListItem that follows the current one.
+     *
+     * @param $nextItem \LengthOfRope\JSONLD\Schema\ListItem
+     * @return static
+     **/
+    public function setNextItem($nextItem): static {
+        $this->properties['nextItem'] = $nextItem;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\ListItem
+     **/
+    public function getNextItem() {
+        return $this->properties['nextItem'];
+    }
+    /**
      * The position of an item in a series or sequence of items.
      *
      * @param $position \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeInteger
@@ -93,23 +111,5 @@ class ListItem extends Intangible
      **/
     public function getPreviousItem() {
         return $this->properties['previousItem'];
-    }
-    /**
-     * A link to the ListItem that follows the current one.
-     *
-     * @param $nextItem \LengthOfRope\JSONLD\Schema\ListItem
-     * @return static
-     **/
-    public function setNextItem($nextItem): static {
-        $this->properties['nextItem'] = $nextItem;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\ListItem
-     **/
-    public function getNextItem() {
-        return $this->properties['nextItem'];
     }
 }

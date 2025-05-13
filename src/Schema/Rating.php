@@ -40,50 +40,29 @@ class Rating extends Intangible
     }
 
     /**
-     * A short explanation (e.g. one to two sentences) providing background context and
-     * other information that led to the conclusion expressed in the rating. This is
-     * particularly applicable to ratings associated with "fact check" markup using
-     * [[ClaimReview]].
+     * The lowest value allowed in this rating system.
      *
-     * @param $ratingExplanation \LengthOfRope\JSONLD\DataType\TypeText
+     * @param $worstRating \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
-    public function setRatingExplanation($ratingExplanation): static {
-        $this->properties['ratingExplanation'] = $ratingExplanation;
+    public function setWorstRating($worstRating): static {
+        $this->properties['worstRating'] = $worstRating;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeNumber
      **/
-    public function getRatingExplanation() {
-        return $this->properties['ratingExplanation'];
-    }
-    /**
-     * The highest value allowed in this rating system.
-     *
-     * @param $bestRating \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setBestRating($bestRating): static {
-        $this->properties['bestRating'] = $bestRating;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getBestRating() {
-        return $this->properties['bestRating'];
+    public function getWorstRating() {
+        return $this->properties['worstRating'];
     }
     /**
      * The author of this content or rating. Please note that author is special in that
      * HTML 5 provides a special mechanism for indicating authorship via the rel tag.
      * That is equivalent to this and may be used interchangeably.
      *
-     * @param $author \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
+     * @param $author \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setAuthor($author): static {
@@ -93,7 +72,7 @@ class Rating extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
+     * @return \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\Person
      **/
     public function getAuthor() {
         return $this->properties['author'];
@@ -117,22 +96,43 @@ class Rating extends Intangible
         return $this->properties['reviewAspect'];
     }
     /**
-     * The lowest value allowed in this rating system.
+     * The highest value allowed in this rating system.
      *
-     * @param $worstRating \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\DataType\TypeText
+     * @param $bestRating \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
-    public function setWorstRating($worstRating): static {
-        $this->properties['worstRating'] = $worstRating;
+    public function setBestRating($bestRating): static {
+        $this->properties['bestRating'] = $bestRating;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeNumber
      **/
-    public function getWorstRating() {
-        return $this->properties['worstRating'];
+    public function getBestRating() {
+        return $this->properties['bestRating'];
+    }
+    /**
+     * A short explanation (e.g. one to two sentences) providing background context and
+     * other information that led to the conclusion expressed in the rating. This is
+     * particularly applicable to ratings associated with "fact check" markup using
+     * [[ClaimReview]].
+     *
+     * @param $ratingExplanation \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setRatingExplanation($ratingExplanation): static {
+        $this->properties['ratingExplanation'] = $ratingExplanation;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getRatingExplanation() {
+        return $this->properties['ratingExplanation'];
     }
     /**
      * The rating for the content.
@@ -144,7 +144,7 @@ class Rating extends Intangible
      * * Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal
      * point. Avoid using these symbols as a readability separator.
      *
-     * @param $ratingValue \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\DataType\TypeText
+     * @param $ratingValue \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setRatingValue($ratingValue): static {
@@ -154,7 +154,7 @@ class Rating extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getRatingValue() {
         return $this->properties['ratingValue'];

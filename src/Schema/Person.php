@@ -40,146 +40,121 @@ class Person extends Thing
     }
 
     /**
-     * The number of interactions for the CreativeWork using the WebSite or
-     * SoftwareApplication. The most specific child type of InteractionCounter should
-     * be used.
+     * The North American Industry Classification System (NAICS) code for a particular
+     * organization or business person.
      *
-     * @param $interactionStatistic \LengthOfRope\JSONLD\Schema\InteractionCounter
+     * @param $naics \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
-    public function setInteractionStatistic($interactionStatistic): static {
-        $this->properties['interactionStatistic'] = $interactionStatistic;
+    public function setNaics($naics): static {
+        $this->properties['naics'] = $naics;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\InteractionCounter
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
-    public function getInteractionStatistic() {
-        return $this->properties['interactionStatistic'];
+    public function getNaics() {
+        return $this->properties['naics'];
     }
     /**
-     * A credential awarded to the Person or Organization.
+     * An honorific suffix following a Person's name such as M.D./PhD/MSCSW.
      *
-     * @param $hasCredential \LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential
+     * @param $honorificSuffix \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
-    public function setHasCredential($hasCredential): static {
-        $this->properties['hasCredential'] = $hasCredential;
+    public function setHonorificSuffix($honorificSuffix): static {
+        $this->properties['honorificSuffix'] = $honorificSuffix;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
-    public function getHasCredential() {
-        return $this->properties['hasCredential'];
+    public function getHonorificSuffix() {
+        return $this->properties['honorificSuffix'];
     }
     /**
-     * A colleague of the person.
+     * A person or organization that supports (sponsors) something through some kind of
+     * financial contribution.
      *
-     * @param $colleague \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\DataType\TypeURL
+     * @param $funder \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
-    public function setColleague($colleague): static {
-        $this->properties['colleague'] = $colleague;
+    public function setFunder($funder): static {
+        $this->properties['funder'] = $funder;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\DataType\TypeURL
+     * @return \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\Person
      **/
-    public function getColleague() {
-        return $this->properties['colleague'];
+    public function getFunder() {
+        return $this->properties['funder'];
     }
     /**
-     * A contact point for a person or organization.
+     * The Person's occupation. For past professions, use Role for expressing dates.
      *
-     * @param $contactPoints \LengthOfRope\JSONLD\Schema\ContactPoint
+     * @param $hasOccupation \LengthOfRope\JSONLD\Schema\Occupation
      * @return static
      **/
-    public function setContactPoints($contactPoints): static {
-        $this->properties['contactPoints'] = $contactPoints;
+    public function setHasOccupation($hasOccupation): static {
+        $this->properties['hasOccupation'] = $hasOccupation;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\ContactPoint
+     * @return \LengthOfRope\JSONLD\Schema\Occupation
      **/
-    public function getContactPoints() {
-        return $this->properties['contactPoints'];
+    public function getHasOccupation() {
+        return $this->properties['hasOccupation'];
     }
     /**
-     * The total financial value of the person as calculated by subtracting assets from
-     * liabilities.
+     * Gender of something, typically a [[Person]], but possibly also fictional
+     * characters, animals, etc. While https://schema.org/Male and
+     * https://schema.org/Female may be used, text strings are also acceptable for
+     * people who do not identify as a binary gender. The [[gender]] property can also
+     * be used in an extended sense to cover e.g. the gender of sports teams. As with
+     * the gender of individuals, we do not try to enumerate all possibilities. A
+     * mixed-gender [[SportsTeam]] can be indicated with a text value of "Mixed".
      *
-     * @param $netWorth \LengthOfRope\JSONLD\Schema\PriceSpecification|\LengthOfRope\JSONLD\Schema\MonetaryAmount
+     * @param $gender \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\GenderType
      * @return static
      **/
-    public function setNetWorth($netWorth): static {
-        $this->properties['netWorth'] = $netWorth;
+    public function setGender($gender): static {
+        $this->properties['gender'] = $gender;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\PriceSpecification|\LengthOfRope\JSONLD\Schema\MonetaryAmount
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\GenderType
      **/
-    public function getNetWorth() {
-        return $this->properties['netWorth'];
+    public function getGender() {
+        return $this->properties['gender'];
     }
     /**
-     * Of a [[Person]], and less typically of an [[Organization]], to indicate a topic
-     * that is known about - suggesting possible expertise but not implying it. We do
-     * not distinguish skill levels here, or relate this to educational content,
-     * events, objectives or [[JobPosting]] descriptions.
+     * An Organization (or ProgramMembership) to which this Person or Organization
+     * belongs.
      *
-     * @param $knowsAbout \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\DataType\TypeText
+     * @param $memberOf \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\MemberProgramTier|\LengthOfRope\JSONLD\Schema\ProgramMembership
      * @return static
      **/
-    public function setKnowsAbout($knowsAbout): static {
-        $this->properties['knowsAbout'] = $knowsAbout;
+    public function setMemberOf($memberOf): static {
+        $this->properties['memberOf'] = $memberOf;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\MemberProgramTier|\LengthOfRope\JSONLD\Schema\ProgramMembership
      **/
-    public function getKnowsAbout() {
-        return $this->properties['knowsAbout'];
-    }
-    /**
-     * The publishingPrinciples property indicates (typically via [[URL]]) a document
-     * describing the editorial principles of an [[Organization]] (or individual, e.g.
-     * a [[Person]] writing a blog) that relate to their activities as a publisher,
-     * e.g. ethics or diversity policies. When applied to a [[CreativeWork]] (e.g.
-     * [[NewsArticle]]) the principles are those of the party primarily responsible for
-     * the creation of the [[CreativeWork]].
-     *
-     * While such policies are most typically expressed in natural language, sometimes
-     * related information (e.g. indicating a [[funder]]) can be expressed using
-     * schema.org terminology.
-     *
-     *
-     * @param $publishingPrinciples \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\CreativeWork
-     * @return static
-     **/
-    public function setPublishingPrinciples($publishingPrinciples): static {
-        $this->properties['publishingPrinciples'] = $publishingPrinciples;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\CreativeWork
-     **/
-    public function getPublishingPrinciples() {
-        return $this->properties['publishingPrinciples'];
+    public function getMemberOf() {
+        return $this->properties['memberOf'];
     }
     /**
      * The International Standard of Industrial Classification of All Economic
@@ -202,262 +177,40 @@ class Person extends Thing
         return $this->properties['isicV4'];
     }
     /**
-     * The telephone number.
+     * Date of birth.
      *
-     * @param $telephone \LengthOfRope\JSONLD\DataType\TypeText
+     * @param $birthDate \LengthOfRope\JSONLD\DataType\TypeDate
      * @return static
      **/
-    public function setTelephone($telephone): static {
-        $this->properties['telephone'] = $telephone;
+    public function setBirthDate($birthDate): static {
+        $this->properties['birthDate'] = $birthDate;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\DataType\TypeDate
      **/
-    public function getTelephone() {
-        return $this->properties['telephone'];
+    public function getBirthDate() {
+        return $this->properties['birthDate'];
     }
     /**
-     * A contact location for a person's residence.
+     * The weight of the product or person.
      *
-     * @param $homeLocation \LengthOfRope\JSONLD\Schema\ContactPoint|\LengthOfRope\JSONLD\Schema\Place
+     * @param $weight \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Mass
      * @return static
      **/
-    public function setHomeLocation($homeLocation): static {
-        $this->properties['homeLocation'] = $homeLocation;
+    public function setWeight($weight): static {
+        $this->properties['weight'] = $weight;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\ContactPoint|\LengthOfRope\JSONLD\Schema\Place
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Mass
      **/
-    public function getHomeLocation() {
-        return $this->properties['homeLocation'];
-    }
-    /**
-     * The Value-added Tax ID of the organization or person.
-     *
-     * @param $vatID \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setVatID($vatID): static {
-        $this->properties['vatID'] = $vatID;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getVatID() {
-        return $this->properties['vatID'];
-    }
-    /**
-     * Of a [[Person]], and less typically of an [[Organization]], to indicate a known
-     * language. We do not distinguish skill levels or reading/writing/speaking/signing
-     * here. Use language codes from the [IETF BCP 47
-     * standard](http://tools.ietf.org/html/bcp47).
-     *
-     * @param $knowsLanguage \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Language
-     * @return static
-     **/
-    public function setKnowsLanguage($knowsLanguage): static {
-        $this->properties['knowsLanguage'] = $knowsLanguage;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Language
-     **/
-    public function getKnowsLanguage() {
-        return $this->properties['knowsLanguage'];
-    }
-    /**
-     * Family name. In the U.S., the last name of a Person.
-     *
-     * @param $familyName \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setFamilyName($familyName): static {
-        $this->properties['familyName'] = $familyName;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getFamilyName() {
-        return $this->properties['familyName'];
-    }
-    /**
-     * An honorific prefix preceding a Person's name such as Dr/Mrs/Mr.
-     *
-     * @param $honorificPrefix \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setHonorificPrefix($honorificPrefix): static {
-        $this->properties['honorificPrefix'] = $honorificPrefix;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getHonorificPrefix() {
-        return $this->properties['honorificPrefix'];
-    }
-    /**
-     * An award won by or for this item.
-     *
-     * @param $award \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setAward($award): static {
-        $this->properties['award'] = $award;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getAward() {
-        return $this->properties['award'];
-    }
-    /**
-     * Physical address of the item.
-     *
-     * @param $address \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\PostalAddress
-     * @return static
-     **/
-    public function setAddress($address): static {
-        $this->properties['address'] = $address;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\PostalAddress
-     **/
-    public function getAddress() {
-        return $this->properties['address'];
-    }
-    /**
-     * A [callsign](https://en.wikipedia.org/wiki/Call_sign), as used in broadcasting
-     * and radio communications to identify people, radio and TV stations, or vehicles.
-     *
-     * @param $callSign \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setCallSign($callSign): static {
-        $this->properties['callSign'] = $callSign;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getCallSign() {
-        return $this->properties['callSign'];
-    }
-    /**
-     * The place where the person was born.
-     *
-     * @param $birthPlace \LengthOfRope\JSONLD\Schema\Place
-     * @return static
-     **/
-    public function setBirthPlace($birthPlace): static {
-        $this->properties['birthPlace'] = $birthPlace;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Place
-     **/
-    public function getBirthPlace() {
-        return $this->properties['birthPlace'];
-    }
-    /**
-     * The most generic uni-directional social relation.
-     *
-     * @param $follows \LengthOfRope\JSONLD\Schema\Person
-     * @return static
-     **/
-    public function setFollows($follows): static {
-        $this->properties['follows'] = $follows;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Person
-     **/
-    public function getFollows() {
-        return $this->properties['follows'];
-    }
-    /**
-     * A [[Grant]] that directly or indirectly provide funding or sponsorship for this
-     * item. See also [[ownershipFundingInfo]].
-     *
-     * @param $funding \LengthOfRope\JSONLD\Schema\Grant
-     * @return static
-     **/
-    public function setFunding($funding): static {
-        $this->properties['funding'] = $funding;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Grant
-     **/
-    public function getFunding() {
-        return $this->properties['funding'];
-    }
-    /**
-     * Indicates an OfferCatalog listing for this Organization, Person, or Service.
-     *
-     * @param $hasOfferCatalog \LengthOfRope\JSONLD\Schema\OfferCatalog
-     * @return static
-     **/
-    public function setHasOfferCatalog($hasOfferCatalog): static {
-        $this->properties['hasOfferCatalog'] = $hasOfferCatalog;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\OfferCatalog
-     **/
-    public function getHasOfferCatalog() {
-        return $this->properties['hasOfferCatalog'];
-    }
-    /**
-     * Certification information about a product, organization, service, place, or
-     * person.
-     *
-     * @param $hasCertification \LengthOfRope\JSONLD\Schema\Certification
-     * @return static
-     **/
-    public function setHasCertification($hasCertification): static {
-        $this->properties['hasCertification'] = $hasCertification;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Certification
-     **/
-    public function getHasCertification() {
-        return $this->properties['hasCertification'];
+    public function getWeight() {
+        return $this->properties['weight'];
     }
     /**
      * Given name. In the U.S., the first name of a Person.
@@ -476,189 +229,6 @@ class Person extends Thing
      **/
     public function getGivenName() {
         return $this->properties['givenName'];
-    }
-    /**
-     * Points-of-Sales operated by the organization or person.
-     *
-     * @param $hasPOS \LengthOfRope\JSONLD\Schema\Place
-     * @return static
-     **/
-    public function setHasPOS($hasPOS): static {
-        $this->properties['hasPOS'] = $hasPOS;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Place
-     **/
-    public function getHasPOS() {
-        return $this->properties['hasPOS'];
-    }
-    /**
-     * A person or organization that supports (sponsors) something through some kind of
-     * financial contribution.
-     *
-     * @param $funder \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
-     * @return static
-     **/
-    public function setFunder($funder): static {
-        $this->properties['funder'] = $funder;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
-     **/
-    public function getFunder() {
-        return $this->properties['funder'];
-    }
-    /**
-     * A parents of the person.
-     *
-     * @param $parents \LengthOfRope\JSONLD\Schema\Person
-     * @return static
-     **/
-    public function setParents($parents): static {
-        $this->properties['parents'] = $parents;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Person
-     **/
-    public function getParents() {
-        return $this->properties['parents'];
-    }
-    /**
-     * The fax number.
-     *
-     * @param $faxNumber \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setFaxNumber($faxNumber): static {
-        $this->properties['faxNumber'] = $faxNumber;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getFaxNumber() {
-        return $this->properties['faxNumber'];
-    }
-    /**
-     * The place where the person died.
-     *
-     * @param $deathPlace \LengthOfRope\JSONLD\Schema\Place
-     * @return static
-     **/
-    public function setDeathPlace($deathPlace): static {
-        $this->properties['deathPlace'] = $deathPlace;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Place
-     **/
-    public function getDeathPlace() {
-        return $this->properties['deathPlace'];
-    }
-    /**
-     * Email address.
-     *
-     * @param $email \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setEmail($email): static {
-        $this->properties['email'] = $email;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getEmail() {
-        return $this->properties['email'];
-    }
-    /**
-     * The North American Industry Classification System (NAICS) code for a particular
-     * organization or business person.
-     *
-     * @param $naics \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setNaics($naics): static {
-        $this->properties['naics'] = $naics;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getNaics() {
-        return $this->properties['naics'];
-    }
-    /**
-     * A child of the person.
-     *
-     * @param $children \LengthOfRope\JSONLD\Schema\Person
-     * @return static
-     **/
-    public function setChildren($children): static {
-        $this->properties['children'] = $children;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Person
-     **/
-    public function getChildren() {
-        return $this->properties['children'];
-    }
-    /**
-     * An Organization (or ProgramMembership) to which this Person or Organization
-     * belongs.
-     *
-     * @param $memberOf \LengthOfRope\JSONLD\Schema\ProgramMembership|\LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\MemberProgramTier
-     * @return static
-     **/
-    public function setMemberOf($memberOf): static {
-        $this->properties['memberOf'] = $memberOf;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\ProgramMembership|\LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\MemberProgramTier
-     **/
-    public function getMemberOf() {
-        return $this->properties['memberOf'];
-    }
-    /**
-     * A contact point for a person or organization.
-     *
-     * @param $contactPoint \LengthOfRope\JSONLD\Schema\ContactPoint
-     * @return static
-     **/
-    public function setContactPoint($contactPoint): static {
-        $this->properties['contactPoint'] = $contactPoint;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\ContactPoint
-     **/
-    public function getContactPoint() {
-        return $this->properties['contactPoint'];
     }
     /**
      * The Tax / Fiscal ID of the organization or person, e.g. the TIN in the US or the
@@ -698,6 +268,71 @@ class Person extends Thing
         return $this->properties['parent'];
     }
     /**
+     * A sibling of the person.
+     *
+     * @param $sibling \LengthOfRope\JSONLD\Schema\Person
+     * @return static
+     **/
+    public function setSibling($sibling): static {
+        $this->properties['sibling'] = $sibling;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Person
+     **/
+    public function getSibling() {
+        return $this->properties['sibling'];
+    }
+    /**
+     * The total financial value of the person as calculated by subtracting the total
+     * value of liabilities from the total value of assets.
+     *
+     * @param $netWorth \LengthOfRope\JSONLD\Schema\PriceSpecification|\LengthOfRope\JSONLD\Schema\MonetaryAmount
+     * @return static
+     **/
+    public function setNetWorth($netWorth): static {
+        $this->properties['netWorth'] = $netWorth;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\PriceSpecification|\LengthOfRope\JSONLD\Schema\MonetaryAmount
+     **/
+    public function getNetWorth() {
+        return $this->properties['netWorth'];
+    }
+    /**
+     * The publishingPrinciples property indicates (typically via [[URL]]) a document
+     * describing the editorial principles of an [[Organization]] (or individual, e.g.
+     * a [[Person]] writing a blog) that relate to their activities as a publisher,
+     * e.g. ethics or diversity policies. When applied to a [[CreativeWork]] (e.g.
+     * [[NewsArticle]]) the principles are those of the party primarily responsible for
+     * the creation of the [[CreativeWork]].
+     *
+     * While such policies are most typically expressed in natural language, sometimes
+     * related information (e.g. indicating a [[funder]]) can be expressed using
+     * schema.org terminology.
+     *
+     *
+     * @param $publishingPrinciples \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\CreativeWork
+     * @return static
+     **/
+    public function setPublishingPrinciples($publishingPrinciples): static {
+        $this->properties['publishingPrinciples'] = $publishingPrinciples;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\CreativeWork
+     **/
+    public function getPublishingPrinciples() {
+        return $this->properties['publishingPrinciples'];
+    }
+    /**
      * The most generic bi-directional social/work relation.
      *
      * @param $knows \LengthOfRope\JSONLD\Schema\Person
@@ -714,6 +349,525 @@ class Person extends Thing
      **/
     public function getKnows() {
         return $this->properties['knows'];
+    }
+    /**
+     * A contact location for a person's place of work.
+     *
+     * @param $workLocation \LengthOfRope\JSONLD\Schema\ContactPoint|\LengthOfRope\JSONLD\Schema\Place
+     * @return static
+     **/
+    public function setWorkLocation($workLocation): static {
+        $this->properties['workLocation'] = $workLocation;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\ContactPoint|\LengthOfRope\JSONLD\Schema\Place
+     **/
+    public function getWorkLocation() {
+        return $this->properties['workLocation'];
+    }
+    /**
+     * Event that this person is a performer or participant in.
+     *
+     * @param $performerIn \LengthOfRope\JSONLD\Schema\Event
+     * @return static
+     **/
+    public function setPerformerIn($performerIn): static {
+        $this->properties['performerIn'] = $performerIn;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Event
+     **/
+    public function getPerformerIn() {
+        return $this->properties['performerIn'];
+    }
+    /**
+     * An organization that this person is affiliated with. For example, a
+     * school/university, a club, or a team.
+     *
+     * @param $affiliation \LengthOfRope\JSONLD\Schema\Organization
+     * @return static
+     **/
+    public function setAffiliation($affiliation): static {
+        $this->properties['affiliation'] = $affiliation;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Organization
+     **/
+    public function getAffiliation() {
+        return $this->properties['affiliation'];
+    }
+    /**
+     * An award won by or for this item.
+     *
+     * @param $award \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setAward($award): static {
+        $this->properties['award'] = $award;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getAward() {
+        return $this->properties['award'];
+    }
+    /**
+     * The telephone number.
+     *
+     * @param $telephone \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setTelephone($telephone): static {
+        $this->properties['telephone'] = $telephone;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getTelephone() {
+        return $this->properties['telephone'];
+    }
+    /**
+     * The person's spouse.
+     *
+     * @param $spouse \LengthOfRope\JSONLD\Schema\Person
+     * @return static
+     **/
+    public function setSpouse($spouse): static {
+        $this->properties['spouse'] = $spouse;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Person
+     **/
+    public function getSpouse() {
+        return $this->properties['spouse'];
+    }
+    /**
+     * Of a [[Person]], and less typically of an [[Organization]], to indicate a topic
+     * that is known about - suggesting possible expertise but not implying it. We do
+     * not distinguish skill levels here, or relate this to educational content,
+     * events, objectives or [[JobPosting]] descriptions.
+     *
+     * @param $knowsAbout \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\Thing
+     * @return static
+     **/
+    public function setKnowsAbout($knowsAbout): static {
+        $this->properties['knowsAbout'] = $knowsAbout;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\Thing
+     **/
+    public function getKnowsAbout() {
+        return $this->properties['knowsAbout'];
+    }
+    /**
+     * The Dun & Bradstreet DUNS number for identifying an organization or business
+     * person.
+     *
+     * @param $duns \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setDuns($duns): static {
+        $this->properties['duns'] = $duns;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getDuns() {
+        return $this->properties['duns'];
+    }
+    /**
+     * A colleague of the person.
+     *
+     * @param $colleagues \LengthOfRope\JSONLD\Schema\Person
+     * @return static
+     **/
+    public function setColleagues($colleagues): static {
+        $this->properties['colleagues'] = $colleagues;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Person
+     **/
+    public function getColleagues() {
+        return $this->properties['colleagues'];
+    }
+    /**
+     * A [callsign](https://en.wikipedia.org/wiki/Call_sign), as used in broadcasting
+     * and radio communications to identify people, radio and TV stations, or vehicles.
+     *
+     * @param $callSign \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setCallSign($callSign): static {
+        $this->properties['callSign'] = $callSign;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getCallSign() {
+        return $this->properties['callSign'];
+    }
+    /**
+     * A child of the person.
+     *
+     * @param $children \LengthOfRope\JSONLD\Schema\Person
+     * @return static
+     **/
+    public function setChildren($children): static {
+        $this->properties['children'] = $children;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Person
+     **/
+    public function getChildren() {
+        return $this->properties['children'];
+    }
+    /**
+     * A contact point for a person or organization.
+     *
+     * @param $contactPoints \LengthOfRope\JSONLD\Schema\ContactPoint
+     * @return static
+     **/
+    public function setContactPoints($contactPoints): static {
+        $this->properties['contactPoints'] = $contactPoints;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\ContactPoint
+     **/
+    public function getContactPoints() {
+        return $this->properties['contactPoints'];
+    }
+    /**
+     * A colleague of the person.
+     *
+     * @param $colleague \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\DataType\TypeURL
+     * @return static
+     **/
+    public function setColleague($colleague): static {
+        $this->properties['colleague'] = $colleague;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\DataType\TypeURL
+     **/
+    public function getColleague() {
+        return $this->properties['colleague'];
+    }
+    /**
+     * A sibling of the person.
+     *
+     * @param $siblings \LengthOfRope\JSONLD\Schema\Person
+     * @return static
+     **/
+    public function setSiblings($siblings): static {
+        $this->properties['siblings'] = $siblings;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Person
+     **/
+    public function getSiblings() {
+        return $this->properties['siblings'];
+    }
+    /**
+     * A [[Grant]] that directly or indirectly provide funding or sponsorship for this
+     * item. See also [[ownershipFundingInfo]].
+     *
+     * @param $funding \LengthOfRope\JSONLD\Schema\Grant
+     * @return static
+     **/
+    public function setFunding($funding): static {
+        $this->properties['funding'] = $funding;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Grant
+     **/
+    public function getFunding() {
+        return $this->properties['funding'];
+    }
+    /**
+     * The number of completed interactions for this entity, in a particular role (the
+     * 'agent'), in a particular action (indicated in the statistic), and in a
+     * particular context (i.e. interactionService).
+     *
+     * @param $agentInteractionStatistic \LengthOfRope\JSONLD\Schema\InteractionCounter
+     * @return static
+     **/
+    public function setAgentInteractionStatistic($agentInteractionStatistic): static {
+        $this->properties['agentInteractionStatistic'] = $agentInteractionStatistic;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\InteractionCounter
+     **/
+    public function getAgentInteractionStatistic() {
+        return $this->properties['agentInteractionStatistic'];
+    }
+    /**
+     * A credential awarded to the Person or Organization.
+     *
+     * @param $hasCredential \LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential
+     * @return static
+     **/
+    public function setHasCredential($hasCredential): static {
+        $this->properties['hasCredential'] = $hasCredential;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential
+     **/
+    public function getHasCredential() {
+        return $this->properties['hasCredential'];
+    }
+    /**
+     * The number of interactions for the CreativeWork using the WebSite or
+     * SoftwareApplication. The most specific child type of InteractionCounter should
+     * be used.
+     *
+     * @param $interactionStatistic \LengthOfRope\JSONLD\Schema\InteractionCounter
+     * @return static
+     **/
+    public function setInteractionStatistic($interactionStatistic): static {
+        $this->properties['interactionStatistic'] = $interactionStatistic;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\InteractionCounter
+     **/
+    public function getInteractionStatistic() {
+        return $this->properties['interactionStatistic'];
+    }
+    /**
+     * An honorific prefix preceding a Person's name such as Dr/Mrs/Mr.
+     *
+     * @param $honorificPrefix \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setHonorificPrefix($honorificPrefix): static {
+        $this->properties['honorificPrefix'] = $honorificPrefix;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getHonorificPrefix() {
+        return $this->properties['honorificPrefix'];
+    }
+    /**
+     * A pointer to products or services sought by the organization or person (demand).
+     *
+     * @param $seeks \LengthOfRope\JSONLD\Schema\Demand
+     * @return static
+     **/
+    public function setSeeks($seeks): static {
+        $this->properties['seeks'] = $seeks;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Demand
+     **/
+    public function getSeeks() {
+        return $this->properties['seeks'];
+    }
+    /**
+     * Organizations that the person works for.
+     *
+     * @param $worksFor \LengthOfRope\JSONLD\Schema\Organization
+     * @return static
+     **/
+    public function setWorksFor($worksFor): static {
+        $this->properties['worksFor'] = $worksFor;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Organization
+     **/
+    public function getWorksFor() {
+        return $this->properties['worksFor'];
+    }
+    /**
+     * Physical address of the item.
+     *
+     * @param $address \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\PostalAddress
+     * @return static
+     **/
+    public function setAddress($address): static {
+        $this->properties['address'] = $address;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\PostalAddress
+     **/
+    public function getAddress() {
+        return $this->properties['address'];
+    }
+    /**
+     * An organization that the person is an alumni of.
+     *
+     * @param $alumniOf \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\EducationalOrganization
+     * @return static
+     **/
+    public function setAlumniOf($alumniOf): static {
+        $this->properties['alumniOf'] = $alumniOf;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\EducationalOrganization
+     **/
+    public function getAlumniOf() {
+        return $this->properties['alumniOf'];
+    }
+    /**
+     * The brand(s) associated with a product or service, or the brand(s) maintained by
+     * an organization or business person.
+     *
+     * @param $brand \LengthOfRope\JSONLD\Schema\Brand|\LengthOfRope\JSONLD\Schema\Organization
+     * @return static
+     **/
+    public function setBrand($brand): static {
+        $this->properties['brand'] = $brand;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Brand|\LengthOfRope\JSONLD\Schema\Organization
+     **/
+    public function getBrand() {
+        return $this->properties['brand'];
+    }
+    /**
+     * Of a [[Person]], and less typically of an [[Organization]], to indicate a known
+     * language. We do not distinguish skill levels or reading/writing/speaking/signing
+     * here. Use language codes from the [IETF BCP 47
+     * standard](http://tools.ietf.org/html/bcp47).
+     *
+     * @param $knowsLanguage \LengthOfRope\JSONLD\Schema\Language|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setKnowsLanguage($knowsLanguage): static {
+        $this->properties['knowsLanguage'] = $knowsLanguage;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Language|\LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getKnowsLanguage() {
+        return $this->properties['knowsLanguage'];
+    }
+    /**
+     * An additional name for a Person, can be used for a middle name.
+     *
+     * @param $additionalName \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setAdditionalName($additionalName): static {
+        $this->properties['additionalName'] = $additionalName;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getAdditionalName() {
+        return $this->properties['additionalName'];
+    }
+    /**
+     * Family name. In the U.S., the last name of a Person.
+     *
+     * @param $familyName \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setFamilyName($familyName): static {
+        $this->properties['familyName'] = $familyName;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getFamilyName() {
+        return $this->properties['familyName'];
+    }
+    /**
+     * Products owned by the organization or person.
+     *
+     * @param $owns \LengthOfRope\JSONLD\Schema\OwnershipInfo|\LengthOfRope\JSONLD\Schema\Product
+     * @return static
+     **/
+    public function setOwns($owns): static {
+        $this->properties['owns'] = $owns;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\OwnershipInfo|\LengthOfRope\JSONLD\Schema\Product
+     **/
+    public function getOwns() {
+        return $this->properties['owns'];
     }
     /**
      * A statement of knowledge, skill, ability, task or any other assertion expressing
@@ -736,59 +890,58 @@ class Person extends Thing
         return $this->properties['skills'];
     }
     /**
-     * Date of birth.
+     * A contact point for a person or organization.
      *
-     * @param $birthDate \LengthOfRope\JSONLD\DataType\TypeDate
+     * @param $contactPoint \LengthOfRope\JSONLD\Schema\ContactPoint
      * @return static
      **/
-    public function setBirthDate($birthDate): static {
-        $this->properties['birthDate'] = $birthDate;
+    public function setContactPoint($contactPoint): static {
+        $this->properties['contactPoint'] = $contactPoint;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeDate
+     * @return \LengthOfRope\JSONLD\Schema\ContactPoint
      **/
-    public function getBirthDate() {
-        return $this->properties['birthDate'];
+    public function getContactPoint() {
+        return $this->properties['contactPoint'];
     }
     /**
-     * An organization that the person is an alumni of.
+     * A parents of the person.
      *
-     * @param $alumniOf \LengthOfRope\JSONLD\Schema\EducationalOrganization|\LengthOfRope\JSONLD\Schema\Organization
+     * @param $parents \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
-    public function setAlumniOf($alumniOf): static {
-        $this->properties['alumniOf'] = $alumniOf;
+    public function setParents($parents): static {
+        $this->properties['parents'] = $parents;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\EducationalOrganization|\LengthOfRope\JSONLD\Schema\Organization
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
-    public function getAlumniOf() {
-        return $this->properties['alumniOf'];
+    public function getParents() {
+        return $this->properties['parents'];
     }
     /**
-     * An organization that this person is affiliated with. For example, a
-     * school/university, a club, or a team.
+     * The most generic uni-directional social relation.
      *
-     * @param $affiliation \LengthOfRope\JSONLD\Schema\Organization
+     * @param $follows \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
-    public function setAffiliation($affiliation): static {
-        $this->properties['affiliation'] = $affiliation;
+    public function setFollows($follows): static {
+        $this->properties['follows'] = $follows;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Organization
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
-    public function getAffiliation() {
-        return $this->properties['affiliation'];
+    public function getFollows() {
+        return $this->properties['follows'];
     }
     /**
      * The most generic familial relation.
@@ -811,7 +964,7 @@ class Person extends Thing
     /**
      * The job title of the person (for example, Financial Manager).
      *
-     * @param $jobTitle \LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\TypeText
+     * @param $jobTitle \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DefinedTerm
      * @return static
      **/
     public function setJobTitle($jobTitle): static {
@@ -821,19 +974,19 @@ class Person extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DefinedTerm
      **/
     public function getJobTitle() {
         return $this->properties['jobTitle'];
     }
     /**
-     * An honorific suffix following a Person's name such as M.D./PhD/MSCSW.
+     * Email address.
      *
-     * @param $honorificSuffix \LengthOfRope\JSONLD\DataType\TypeText
+     * @param $email \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
-    public function setHonorificSuffix($honorificSuffix): static {
-        $this->properties['honorificSuffix'] = $honorificSuffix;
+    public function setEmail($email): static {
+        $this->properties['email'] = $email;
 
         return $this;
     }
@@ -841,180 +994,55 @@ class Person extends Thing
     /**
      * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
-    public function getHonorificSuffix() {
-        return $this->properties['honorificSuffix'];
+    public function getEmail() {
+        return $this->properties['email'];
     }
     /**
-     * The person's spouse.
+     * A person or organization that supports a thing through a pledge, promise, or
+     * financial contribution. E.g. a sponsor of a Medical Study or a corporate sponsor
+     * of an event.
      *
-     * @param $spouse \LengthOfRope\JSONLD\Schema\Person
+     * @param $sponsor \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
-    public function setSpouse($spouse): static {
-        $this->properties['spouse'] = $spouse;
+    public function setSponsor($sponsor): static {
+        $this->properties['sponsor'] = $sponsor;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Person
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
-    public function getSpouse() {
-        return $this->properties['spouse'];
+    public function getSponsor() {
+        return $this->properties['sponsor'];
     }
     /**
-     * A contact location for a person's place of work.
+     * Indicates an OfferCatalog listing for this Organization, Person, or Service.
      *
-     * @param $workLocation \LengthOfRope\JSONLD\Schema\ContactPoint|\LengthOfRope\JSONLD\Schema\Place
+     * @param $hasOfferCatalog \LengthOfRope\JSONLD\Schema\OfferCatalog
      * @return static
      **/
-    public function setWorkLocation($workLocation): static {
-        $this->properties['workLocation'] = $workLocation;
+    public function setHasOfferCatalog($hasOfferCatalog): static {
+        $this->properties['hasOfferCatalog'] = $hasOfferCatalog;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\ContactPoint|\LengthOfRope\JSONLD\Schema\Place
+     * @return \LengthOfRope\JSONLD\Schema\OfferCatalog
      **/
-    public function getWorkLocation() {
-        return $this->properties['workLocation'];
+    public function getHasOfferCatalog() {
+        return $this->properties['hasOfferCatalog'];
     }
     /**
-     * The brand(s) associated with a product or service, or the brand(s) maintained by
-     * an organization or business person.
+     * The fax number.
      *
-     * @param $brand \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\Brand
+     * @param $faxNumber \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
-    public function setBrand($brand): static {
-        $this->properties['brand'] = $brand;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\Brand
-     **/
-    public function getBrand() {
-        return $this->properties['brand'];
-    }
-    /**
-     * A colleague of the person.
-     *
-     * @param $colleagues \LengthOfRope\JSONLD\Schema\Person
-     * @return static
-     **/
-    public function setColleagues($colleagues): static {
-        $this->properties['colleagues'] = $colleagues;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Person
-     **/
-    public function getColleagues() {
-        return $this->properties['colleagues'];
-    }
-    /**
-     * Nationality of the person.
-     *
-     * @param $nationality \LengthOfRope\JSONLD\Schema\Country
-     * @return static
-     **/
-    public function setNationality($nationality): static {
-        $this->properties['nationality'] = $nationality;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Country
-     **/
-    public function getNationality() {
-        return $this->properties['nationality'];
-    }
-    /**
-     * Products owned by the organization or person.
-     *
-     * @param $owns \LengthOfRope\JSONLD\Schema\OwnershipInfo|\LengthOfRope\JSONLD\Schema\Product
-     * @return static
-     **/
-    public function setOwns($owns): static {
-        $this->properties['owns'] = $owns;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\OwnershipInfo|\LengthOfRope\JSONLD\Schema\Product
-     **/
-    public function getOwns() {
-        return $this->properties['owns'];
-    }
-    /**
-     * Event that this person is a performer or participant in.
-     *
-     * @param $performerIn \LengthOfRope\JSONLD\Schema\Event
-     * @return static
-     **/
-    public function setPerformerIn($performerIn): static {
-        $this->properties['performerIn'] = $performerIn;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Event
-     **/
-    public function getPerformerIn() {
-        return $this->properties['performerIn'];
-    }
-    /**
-     * Date of death.
-     *
-     * @param $deathDate \LengthOfRope\JSONLD\DataType\TypeDate
-     * @return static
-     **/
-    public function setDeathDate($deathDate): static {
-        $this->properties['deathDate'] = $deathDate;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeDate
-     **/
-    public function getDeathDate() {
-        return $this->properties['deathDate'];
-    }
-    /**
-     * Organizations that the person works for.
-     *
-     * @param $worksFor \LengthOfRope\JSONLD\Schema\Organization
-     * @return static
-     **/
-    public function setWorksFor($worksFor): static {
-        $this->properties['worksFor'] = $worksFor;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Organization
-     **/
-    public function getWorksFor() {
-        return $this->properties['worksFor'];
-    }
-    /**
-     * An additional name for a Person, can be used for a middle name.
-     *
-     * @param $additionalName \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setAdditionalName($additionalName): static {
-        $this->properties['additionalName'] = $additionalName;
+    public function setFaxNumber($faxNumber): static {
+        $this->properties['faxNumber'] = $faxNumber;
 
         return $this;
     }
@@ -1022,44 +1050,26 @@ class Person extends Thing
     /**
      * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
-    public function getAdditionalName() {
-        return $this->properties['additionalName'];
+    public function getFaxNumber() {
+        return $this->properties['faxNumber'];
     }
     /**
-     * A sibling of the person.
+     * The Value-added Tax ID of the organization or person.
      *
-     * @param $sibling \LengthOfRope\JSONLD\Schema\Person
+     * @param $vatID \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
-    public function setSibling($sibling): static {
-        $this->properties['sibling'] = $sibling;
+    public function setVatID($vatID): static {
+        $this->properties['vatID'] = $vatID;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Person
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
-    public function getSibling() {
-        return $this->properties['sibling'];
-    }
-    /**
-     * A sibling of the person.
-     *
-     * @param $siblings \LengthOfRope\JSONLD\Schema\Person
-     * @return static
-     **/
-    public function setSiblings($siblings): static {
-        $this->properties['siblings'] = $siblings;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Person
-     **/
-    public function getSiblings() {
-        return $this->properties['siblings'];
+    public function getVatID() {
+        return $this->properties['vatID'];
     }
     /**
      * The [Global Location Number](http://www.gs1.org/gln) (GLN, sometimes also
@@ -1083,46 +1093,77 @@ class Person extends Thing
         return $this->properties['globalLocationNumber'];
     }
     /**
-     * The height of the item.
+     * Certification information about a product, organization, service, place, or
+     * person.
      *
-     * @param $height \LengthOfRope\JSONLD\Schema\Distance|\LengthOfRope\JSONLD\Schema\QuantitativeValue
+     * @param $hasCertification \LengthOfRope\JSONLD\Schema\Certification
      * @return static
      **/
-    public function setHeight($height): static {
-        $this->properties['height'] = $height;
+    public function setHasCertification($hasCertification): static {
+        $this->properties['hasCertification'] = $hasCertification;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Distance|\LengthOfRope\JSONLD\Schema\QuantitativeValue
+     * @return \LengthOfRope\JSONLD\Schema\Certification
      **/
-    public function getHeight() {
-        return $this->properties['height'];
+    public function getHasCertification() {
+        return $this->properties['hasCertification'];
     }
     /**
-     * Gender of something, typically a [[Person]], but possibly also fictional
-     * characters, animals, etc. While https://schema.org/Male and
-     * https://schema.org/Female may be used, text strings are also acceptable for
-     * people who do not identify as a binary gender. The [[gender]] property can also
-     * be used in an extended sense to cover e.g. the gender of sports teams. As with
-     * the gender of individuals, we do not try to enumerate all possibilities. A
-     * mixed-gender [[SportsTeam]] can be indicated with a text value of "Mixed".
+     * Nationality of the person.
      *
-     * @param $gender \LengthOfRope\JSONLD\Schema\GenderType|\LengthOfRope\JSONLD\DataType\TypeText
+     * @param $nationality \LengthOfRope\JSONLD\Schema\Country
      * @return static
      **/
-    public function setGender($gender): static {
-        $this->properties['gender'] = $gender;
+    public function setNationality($nationality): static {
+        $this->properties['nationality'] = $nationality;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\GenderType|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\Schema\Country
      **/
-    public function getGender() {
-        return $this->properties['gender'];
+    public function getNationality() {
+        return $this->properties['nationality'];
+    }
+    /**
+     * The place where the person died.
+     *
+     * @param $deathPlace \LengthOfRope\JSONLD\Schema\Place
+     * @return static
+     **/
+    public function setDeathPlace($deathPlace): static {
+        $this->properties['deathPlace'] = $deathPlace;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Place
+     **/
+    public function getDeathPlace() {
+        return $this->properties['deathPlace'];
+    }
+    /**
+     * A contact location for a person's residence.
+     *
+     * @param $homeLocation \LengthOfRope\JSONLD\Schema\ContactPoint|\LengthOfRope\JSONLD\Schema\Place
+     * @return static
+     **/
+    public function setHomeLocation($homeLocation): static {
+        $this->properties['homeLocation'] = $homeLocation;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\ContactPoint|\LengthOfRope\JSONLD\Schema\Place
+     **/
+    public function getHomeLocation() {
+        return $this->properties['homeLocation'];
     }
     /**
      * Awards won by or for this item.
@@ -1143,79 +1184,40 @@ class Person extends Thing
         return $this->properties['awards'];
     }
     /**
-     * The weight of the product or person.
+     * Date of death.
      *
-     * @param $weight \LengthOfRope\JSONLD\Schema\QuantitativeValue
+     * @param $deathDate \LengthOfRope\JSONLD\DataType\TypeDate
      * @return static
      **/
-    public function setWeight($weight): static {
-        $this->properties['weight'] = $weight;
+    public function setDeathDate($deathDate): static {
+        $this->properties['deathDate'] = $deathDate;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
+     * @return \LengthOfRope\JSONLD\DataType\TypeDate
      **/
-    public function getWeight() {
-        return $this->properties['weight'];
+    public function getDeathDate() {
+        return $this->properties['deathDate'];
     }
     /**
-     * The Person's occupation. For past professions, use Role for expressing dates.
+     * The place where the person was born.
      *
-     * @param $hasOccupation \LengthOfRope\JSONLD\Schema\Occupation
+     * @param $birthPlace \LengthOfRope\JSONLD\Schema\Place
      * @return static
      **/
-    public function setHasOccupation($hasOccupation): static {
-        $this->properties['hasOccupation'] = $hasOccupation;
+    public function setBirthPlace($birthPlace): static {
+        $this->properties['birthPlace'] = $birthPlace;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Occupation
+     * @return \LengthOfRope\JSONLD\Schema\Place
      **/
-    public function getHasOccupation() {
-        return $this->properties['hasOccupation'];
-    }
-    /**
-     * The Dun & Bradstreet DUNS number for identifying an organization or business
-     * person.
-     *
-     * @param $duns \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setDuns($duns): static {
-        $this->properties['duns'] = $duns;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getDuns() {
-        return $this->properties['duns'];
-    }
-    /**
-     * A person or organization that supports a thing through a pledge, promise, or
-     * financial contribution. E.g. a sponsor of a Medical Study or a corporate sponsor
-     * of an event.
-     *
-     * @param $sponsor \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
-     * @return static
-     **/
-    public function setSponsor($sponsor): static {
-        $this->properties['sponsor'] = $sponsor;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
-     **/
-    public function getSponsor() {
-        return $this->properties['sponsor'];
+    public function getBirthPlace() {
+        return $this->properties['birthPlace'];
     }
     /**
      * A pointer to products or services offered by the organization or person.
@@ -1236,41 +1238,39 @@ class Person extends Thing
         return $this->properties['makesOffer'];
     }
     /**
-     * A pointer to products or services sought by the organization or person (demand).
+     * Points-of-Sales operated by the organization or person.
      *
-     * @param $seeks \LengthOfRope\JSONLD\Schema\Demand
+     * @param $hasPOS \LengthOfRope\JSONLD\Schema\Place
      * @return static
      **/
-    public function setSeeks($seeks): static {
-        $this->properties['seeks'] = $seeks;
+    public function setHasPOS($hasPOS): static {
+        $this->properties['hasPOS'] = $hasPOS;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Demand
+     * @return \LengthOfRope\JSONLD\Schema\Place
      **/
-    public function getSeeks() {
-        return $this->properties['seeks'];
+    public function getHasPOS() {
+        return $this->properties['hasPOS'];
     }
     /**
-     * The number of completed interactions for this entity, in a particular role (the
-     * 'agent'), in a particular action (indicated in the statistic), and in a
-     * particular context (i.e. interactionService).
+     * The height of the item.
      *
-     * @param $agentInteractionStatistic \LengthOfRope\JSONLD\Schema\InteractionCounter
+     * @param $height \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Distance
      * @return static
      **/
-    public function setAgentInteractionStatistic($agentInteractionStatistic): static {
-        $this->properties['agentInteractionStatistic'] = $agentInteractionStatistic;
+    public function setHeight($height): static {
+        $this->properties['height'] = $height;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\InteractionCounter
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Distance
      **/
-    public function getAgentInteractionStatistic() {
-        return $this->properties['agentInteractionStatistic'];
+    public function getHeight() {
+        return $this->properties['height'];
     }
 }

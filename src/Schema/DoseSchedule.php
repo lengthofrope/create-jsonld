@@ -58,23 +58,22 @@ class DoseSchedule extends MedicalIntangible
         return $this->properties['frequency'];
     }
     /**
-     * Characteristics of the population for which this is intended, or which typically
-     * uses it, e.g. 'adults'.
+     * The value of the dose, e.g. 500.
      *
-     * @param $targetPopulation \LengthOfRope\JSONLD\DataType\TypeText
+     * @param $doseValue \LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
-    public function setTargetPopulation($targetPopulation): static {
-        $this->properties['targetPopulation'] = $targetPopulation;
+    public function setDoseValue($doseValue): static {
+        $this->properties['doseValue'] = $doseValue;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\TypeNumber
      **/
-    public function getTargetPopulation() {
-        return $this->properties['targetPopulation'];
+    public function getDoseValue() {
+        return $this->properties['doseValue'];
     }
     /**
      * The unit of the dose, e.g. 'mg'.
@@ -95,21 +94,22 @@ class DoseSchedule extends MedicalIntangible
         return $this->properties['doseUnit'];
     }
     /**
-     * The value of the dose, e.g. 500.
+     * Characteristics of the population for which this is intended, or which typically
+     * uses it, e.g. 'adults'.
      *
-     * @param $doseValue \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\Schema\QualitativeValue
+     * @param $targetPopulation \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
-    public function setDoseValue($doseValue): static {
-        $this->properties['doseValue'] = $doseValue;
+    public function setTargetPopulation($targetPopulation): static {
+        $this->properties['targetPopulation'] = $targetPopulation;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\Schema\QualitativeValue
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
-    public function getDoseValue() {
-        return $this->properties['doseValue'];
+    public function getTargetPopulation() {
+        return $this->properties['targetPopulation'];
     }
 }

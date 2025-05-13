@@ -45,6 +45,45 @@ class Article extends CreativeWork
     }
 
     /**
+     * The actual body of the article.
+     *
+     * @param $articleBody \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setArticleBody($articleBody): static {
+        $this->properties['articleBody'] = $articleBody;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getArticleBody() {
+        return $this->properties['articleBody'];
+    }
+    /**
+     * For an [[Article]], typically a [[NewsArticle]], the backstory property provides
+     * a textual summary giving a brief explanation of why and how an article was
+     * created. In a journalistic setting this could include information about
+     * reporting process, methods, interviews, data sources, etc.
+     *
+     * @param $backstory \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\CreativeWork
+     * @return static
+     **/
+    public function setBackstory($backstory): static {
+        $this->properties['backstory'] = $backstory;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\CreativeWork
+     **/
+    public function getBackstory() {
+        return $this->properties['backstory'];
+    }
+    /**
      * Any description of pages that is not separated into pageStart and pageEnd; for
      * example, "1-6, 9, 55" or "10-12, 46-49".
      *
@@ -64,52 +103,14 @@ class Article extends CreativeWork
         return $this->properties['pagination'];
     }
     /**
-     * The page on which the work starts; for example "135" or "xiii".
+     * Articles may belong to one or more 'sections' in a magazine or newspaper, such
+     * as Sports, Lifestyle, etc.
      *
-     * @param $pageStart \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeInteger
+     * @param $articleSection \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
-    public function setPageStart($pageStart): static {
-        $this->properties['pageStart'] = $pageStart;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeInteger
-     **/
-    public function getPageStart() {
-        return $this->properties['pageStart'];
-    }
-    /**
-     * For an [[Article]], typically a [[NewsArticle]], the backstory property provides
-     * a textual summary giving a brief explanation of why and how an article was
-     * created. In a journalistic setting this could include information about
-     * reporting process, methods, interviews, data sources, etc.
-     *
-     * @param $backstory \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setBackstory($backstory): static {
-        $this->properties['backstory'] = $backstory;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getBackstory() {
-        return $this->properties['backstory'];
-    }
-    /**
-     * The actual body of the article.
-     *
-     * @param $articleBody \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setArticleBody($articleBody): static {
-        $this->properties['articleBody'] = $articleBody;
+    public function setArticleSection($articleSection): static {
+        $this->properties['articleSection'] = $articleSection;
 
         return $this;
     }
@@ -117,44 +118,8 @@ class Article extends CreativeWork
     /**
      * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
-    public function getArticleBody() {
-        return $this->properties['articleBody'];
-    }
-    /**
-     * The number of words in the text of the Article.
-     *
-     * @param $wordCount \LengthOfRope\JSONLD\DataType\TypeInteger
-     * @return static
-     **/
-    public function setWordCount($wordCount): static {
-        $this->properties['wordCount'] = $wordCount;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeInteger
-     **/
-    public function getWordCount() {
-        return $this->properties['wordCount'];
-    }
-    /**
-     * The page on which the work ends; for example "138" or "xvi".
-     *
-     * @param $pageEnd \LengthOfRope\JSONLD\DataType\TypeInteger|\LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setPageEnd($pageEnd): static {
-        $this->properties['pageEnd'] = $pageEnd;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeInteger|\LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getPageEnd() {
-        return $this->properties['pageEnd'];
+    public function getArticleSection() {
+        return $this->properties['articleSection'];
     }
     /**
      * Indicates sections of a Web page that are particularly 'speakable' in the sense
@@ -200,22 +165,58 @@ class Article extends CreativeWork
         return $this->properties['speakable'];
     }
     /**
-     * Articles may belong to one or more 'sections' in a magazine or newspaper, such
-     * as Sports, Lifestyle, etc.
+     * The page on which the work ends; for example "138" or "xvi".
      *
-     * @param $articleSection \LengthOfRope\JSONLD\DataType\TypeText
+     * @param $pageEnd \LengthOfRope\JSONLD\DataType\TypeInteger|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
-    public function setArticleSection($articleSection): static {
-        $this->properties['articleSection'] = $articleSection;
+    public function setPageEnd($pageEnd): static {
+        $this->properties['pageEnd'] = $pageEnd;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\DataType\TypeInteger|\LengthOfRope\JSONLD\DataType\TypeText
      **/
-    public function getArticleSection() {
-        return $this->properties['articleSection'];
+    public function getPageEnd() {
+        return $this->properties['pageEnd'];
+    }
+    /**
+     * The page on which the work starts; for example "135" or "xiii".
+     *
+     * @param $pageStart \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeInteger
+     * @return static
+     **/
+    public function setPageStart($pageStart): static {
+        $this->properties['pageStart'] = $pageStart;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeInteger
+     **/
+    public function getPageStart() {
+        return $this->properties['pageStart'];
+    }
+    /**
+     * The number of words in the text of the CreativeWork such as an Article, Book,
+     * etc.
+     *
+     * @param $wordCount \LengthOfRope\JSONLD\DataType\TypeInteger
+     * @return static
+     **/
+    public function setWordCount($wordCount): static {
+        $this->properties['wordCount'] = $wordCount;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeInteger
+     **/
+    public function getWordCount() {
+        return $this->properties['wordCount'];
     }
 }

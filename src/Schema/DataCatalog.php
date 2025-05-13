@@ -40,6 +40,25 @@ class DataCatalog extends CreativeWork
     }
 
     /**
+     * A subproperty of [[measurementTechnique]] that can be used for specifying
+     * specific methods, in particular via [[MeasurementMethodEnum]].
+     *
+     * @param $measurementMethod \LengthOfRope\JSONLD\Schema\MeasurementMethodEnum|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\TypeURL
+     * @return static
+     **/
+    public function setMeasurementMethod($measurementMethod): static {
+        $this->properties['measurementMethod'] = $measurementMethod;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\MeasurementMethodEnum|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\TypeURL
+     **/
+    public function getMeasurementMethod() {
+        return $this->properties['measurementMethod'];
+    }
+    /**
      * A dataset contained in this catalog.
      *
      * @param $dataset \LengthOfRope\JSONLD\Schema\Dataset
@@ -56,25 +75,6 @@ class DataCatalog extends CreativeWork
      **/
     public function getDataset() {
         return $this->properties['dataset'];
-    }
-    /**
-     * A subproperty of [[measurementTechnique]] that can be used for specifying
-     * specific methods, in particular via [[MeasurementMethodEnum]].
-     *
-     * @param $measurementMethod \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\MeasurementMethodEnum|\LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setMeasurementMethod($measurementMethod): static {
-        $this->properties['measurementMethod'] = $measurementMethod;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\MeasurementMethodEnum|\LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getMeasurementMethod() {
-        return $this->properties['measurementMethod'];
     }
     /**
      * A technique, method or technology used in an [[Observation]],
@@ -104,7 +104,7 @@ class DataCatalog extends CreativeWork
      * the corresponding [[measurementTechnique]]. The value can also be from an
      * enumeration, organized as a [[MeasurementMetholdEnumeration]].
      *
-     * @param $measurementTechnique \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\MeasurementMethodEnum
+     * @param $measurementTechnique \LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\MeasurementMethodEnum|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setMeasurementTechnique($measurementTechnique): static {
@@ -114,7 +114,7 @@ class DataCatalog extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\MeasurementMethodEnum
+     * @return \LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\MeasurementMethodEnum|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getMeasurementTechnique() {
         return $this->properties['measurementTechnique'];

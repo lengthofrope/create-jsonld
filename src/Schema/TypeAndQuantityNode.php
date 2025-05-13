@@ -41,44 +41,6 @@ class TypeAndQuantityNode extends StructuredValue
     }
 
     /**
-     * The unit of measurement given using the UN/CEFACT Common Code (3 characters) or
-     * a URL. Other codes than the UN/CEFACT Common Code may be used with a prefix
-     * followed by a colon.
-     *
-     * @param $unitCode \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
-     * @return static
-     **/
-    public function setUnitCode($unitCode): static {
-        $this->properties['unitCode'] = $unitCode;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
-     **/
-    public function getUnitCode() {
-        return $this->properties['unitCode'];
-    }
-    /**
-     * The quantity of the goods included in the offer.
-     *
-     * @param $amountOfThisGood \LengthOfRope\JSONLD\DataType\TypeNumber
-     * @return static
-     **/
-    public function setAmountOfThisGood($amountOfThisGood): static {
-        $this->properties['amountOfThisGood'] = $amountOfThisGood;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
-     **/
-    public function getAmountOfThisGood() {
-        return $this->properties['amountOfThisGood'];
-    }
-    /**
      * The product that this structured value is referring to.
      *
      * @param $typeOfGood \LengthOfRope\JSONLD\Schema\Product|\LengthOfRope\JSONLD\Schema\Service
@@ -95,26 +57,6 @@ class TypeAndQuantityNode extends StructuredValue
      **/
     public function getTypeOfGood() {
         return $this->properties['typeOfGood'];
-    }
-    /**
-     * The business function (e.g. sell, lease, repair, dispose) of the offer or
-     * component of a bundle (TypeAndQuantityNode). The default is
-     * http://purl.org/goodrelations/v1#Sell.
-     *
-     * @param $businessFunction \LengthOfRope\JSONLD\Schema\BusinessFunction
-     * @return static
-     **/
-    public function setBusinessFunction($businessFunction): static {
-        $this->properties['businessFunction'] = $businessFunction;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\BusinessFunction
-     **/
-    public function getBusinessFunction() {
-        return $this->properties['businessFunction'];
     }
     /**
      * A string or text indicating the unit of measurement. Useful if you cannot
@@ -135,5 +77,63 @@ class TypeAndQuantityNode extends StructuredValue
      **/
     public function getUnitText() {
         return $this->properties['unitText'];
+    }
+    /**
+     * The quantity of the goods included in the offer.
+     *
+     * @param $amountOfThisGood \LengthOfRope\JSONLD\DataType\TypeNumber
+     * @return static
+     **/
+    public function setAmountOfThisGood($amountOfThisGood): static {
+        $this->properties['amountOfThisGood'] = $amountOfThisGood;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
+     **/
+    public function getAmountOfThisGood() {
+        return $this->properties['amountOfThisGood'];
+    }
+    /**
+     * The unit of measurement given using the UN/CEFACT Common Code (3 characters) or
+     * a URL. Other codes than the UN/CEFACT Common Code may be used with a prefix
+     * followed by a colon.
+     *
+     * @param $unitCode \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
+     * @return static
+     **/
+    public function setUnitCode($unitCode): static {
+        $this->properties['unitCode'] = $unitCode;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
+     **/
+    public function getUnitCode() {
+        return $this->properties['unitCode'];
+    }
+    /**
+     * The business function (e.g. sell, lease, repair, dispose) of the offer or
+     * component of a bundle (TypeAndQuantityNode). The default is
+     * http://purl.org/goodrelations/v1#Sell.
+     *
+     * @param $businessFunction \LengthOfRope\JSONLD\Schema\BusinessFunction
+     * @return static
+     **/
+    public function setBusinessFunction($businessFunction): static {
+        $this->properties['businessFunction'] = $businessFunction;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\BusinessFunction
+     **/
+    public function getBusinessFunction() {
+        return $this->properties['businessFunction'];
     }
 }

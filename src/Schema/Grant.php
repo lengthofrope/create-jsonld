@@ -58,7 +58,7 @@ class Grant extends Intangible
      * A person or organization that supports (sponsors) something through some kind of
      * financial contribution.
      *
-     * @param $funder \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
+     * @param $funder \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setFunder($funder): static {
@@ -68,7 +68,7 @@ class Grant extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
+     * @return \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\Person
      **/
     public function getFunder() {
         return $this->properties['funder'];
@@ -77,7 +77,7 @@ class Grant extends Intangible
      * Indicates something directly or indirectly funded or sponsored through a
      * [[Grant]]. See also [[ownershipFundingInfo]].
      *
-     * @param $fundedItem \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\BioChemEntity|\LengthOfRope\JSONLD\Schema\Event|\LengthOfRope\JSONLD\Schema\MedicalEntity|\LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\Product
+     * @param $fundedItem \LengthOfRope\JSONLD\Schema\Event|\LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\BioChemEntity|\LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\Product|\LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\MedicalEntity
      * @return static
      **/
     public function setFundedItem($fundedItem): static {
@@ -87,7 +87,7 @@ class Grant extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\BioChemEntity|\LengthOfRope\JSONLD\Schema\Event|\LengthOfRope\JSONLD\Schema\MedicalEntity|\LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\Product
+     * @return \LengthOfRope\JSONLD\Schema\Event|\LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\BioChemEntity|\LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\Product|\LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\MedicalEntity
      **/
     public function getFundedItem() {
         return $this->properties['fundedItem'];

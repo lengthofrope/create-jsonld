@@ -43,22 +43,22 @@ class RentalCarReservation extends Reservation
     }
 
     /**
-     * When a taxi will pick up a passenger or a rental car can be picked up.
+     * Where a taxi will pick up a passenger or a rental car can be picked up.
      *
-     * @param $pickupTime \LengthOfRope\JSONLD\DataType\TypeDateTime
+     * @param $pickupLocation \LengthOfRope\JSONLD\Schema\Place
      * @return static
      **/
-    public function setPickupTime($pickupTime): static {
-        $this->properties['pickupTime'] = $pickupTime;
+    public function setPickupLocation($pickupLocation): static {
+        $this->properties['pickupLocation'] = $pickupLocation;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime
+     * @return \LengthOfRope\JSONLD\Schema\Place
      **/
-    public function getPickupTime() {
-        return $this->properties['pickupTime'];
+    public function getPickupLocation() {
+        return $this->properties['pickupLocation'];
     }
     /**
      * When a rental car can be dropped off.
@@ -79,24 +79,6 @@ class RentalCarReservation extends Reservation
         return $this->properties['dropoffTime'];
     }
     /**
-     * Where a taxi will pick up a passenger or a rental car can be picked up.
-     *
-     * @param $pickupLocation \LengthOfRope\JSONLD\Schema\Place
-     * @return static
-     **/
-    public function setPickupLocation($pickupLocation): static {
-        $this->properties['pickupLocation'] = $pickupLocation;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Place
-     **/
-    public function getPickupLocation() {
-        return $this->properties['pickupLocation'];
-    }
-    /**
      * Where a rental car can be dropped off.
      *
      * @param $dropoffLocation \LengthOfRope\JSONLD\Schema\Place
@@ -113,5 +95,23 @@ class RentalCarReservation extends Reservation
      **/
     public function getDropoffLocation() {
         return $this->properties['dropoffLocation'];
+    }
+    /**
+     * When a taxi will pick up a passenger or a rental car can be picked up.
+     *
+     * @param $pickupTime \LengthOfRope\JSONLD\DataType\TypeDateTime
+     * @return static
+     **/
+    public function setPickupTime($pickupTime): static {
+        $this->properties['pickupTime'] = $pickupTime;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime
+     **/
+    public function getPickupTime() {
+        return $this->properties['pickupTime'];
     }
 }

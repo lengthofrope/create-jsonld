@@ -43,7 +43,7 @@ class CookAction extends CreateAction
      * A sub property of location. The specific food establishment where the action
      * occurred.
      *
-     * @param $foodEstablishment \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\FoodEstablishment
+     * @param $foodEstablishment \LengthOfRope\JSONLD\Schema\FoodEstablishment|\LengthOfRope\JSONLD\Schema\Place
      * @return static
      **/
     public function setFoodEstablishment($foodEstablishment): static {
@@ -53,28 +53,10 @@ class CookAction extends CreateAction
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\FoodEstablishment
+     * @return \LengthOfRope\JSONLD\Schema\FoodEstablishment|\LengthOfRope\JSONLD\Schema\Place
      **/
     public function getFoodEstablishment() {
         return $this->properties['foodEstablishment'];
-    }
-    /**
-     * A sub property of location. The specific food event where the action occurred.
-     *
-     * @param $foodEvent \LengthOfRope\JSONLD\Schema\FoodEvent
-     * @return static
-     **/
-    public function setFoodEvent($foodEvent): static {
-        $this->properties['foodEvent'] = $foodEvent;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\FoodEvent
-     **/
-    public function getFoodEvent() {
-        return $this->properties['foodEvent'];
     }
     /**
      * A sub property of instrument. The recipe/instructions used to perform the
@@ -94,5 +76,23 @@ class CookAction extends CreateAction
      **/
     public function getRecipe() {
         return $this->properties['recipe'];
+    }
+    /**
+     * A sub property of location. The specific food event where the action occurred.
+     *
+     * @param $foodEvent \LengthOfRope\JSONLD\Schema\FoodEvent
+     * @return static
+     **/
+    public function setFoodEvent($foodEvent): static {
+        $this->properties['foodEvent'] = $foodEvent;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\FoodEvent
+     **/
+    public function getFoodEvent() {
+        return $this->properties['foodEvent'];
     }
 }
