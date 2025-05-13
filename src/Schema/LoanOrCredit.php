@@ -41,22 +41,60 @@ class LoanOrCredit extends FinancialProduct
     }
 
     /**
-     * The duration of the loan or credit agreement.
+     * Assets required to secure loan or credit repayments. It may take form of third
+     * party pledge, goods, financial instruments (cash, securities, etc.)
      *
-     * @param $loanTerm \LengthOfRope\JSONLD\Schema\QuantitativeValue
+     * @param $requiredCollateral \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Thing
      * @return static
      **/
-    public function setLoanTerm($loanTerm): static {
-        $this->properties['loanTerm'] = $loanTerm;
+    public function setRequiredCollateral($requiredCollateral): static {
+        $this->properties['requiredCollateral'] = $requiredCollateral;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Thing
      **/
-    public function getLoanTerm() {
-        return $this->properties['loanTerm'];
+    public function getRequiredCollateral() {
+        return $this->properties['requiredCollateral'];
+    }
+    /**
+     * The amount of money.
+     *
+     * @param $amount \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\TypeNumber
+     * @return static
+     **/
+    public function setAmount($amount): static {
+        $this->properties['amount'] = $amount;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\TypeNumber
+     **/
+    public function getAmount() {
+        return $this->properties['amount'];
+    }
+    /**
+     * The period of time after any due date that the borrower has to fulfil its
+     * obligations before a default (failure to pay) is deemed to have occurred.
+     *
+     * @param $gracePeriod \LengthOfRope\JSONLD\Schema\Duration
+     * @return static
+     **/
+    public function setGracePeriod($gracePeriod): static {
+        $this->properties['gracePeriod'] = $gracePeriod;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Duration
+     **/
+    public function getGracePeriod() {
+        return $this->properties['gracePeriod'];
     }
     /**
      * The currency in which the monetary amount is expressed.
@@ -84,22 +122,24 @@ class LoanOrCredit extends FinancialProduct
         return $this->properties['currency'];
     }
     /**
-     * The amount of money.
+     * The only way you get the money back in the event of default is the security.
+     * Recourse is where you still have the opportunity to go back to the borrower for
+     * the rest of the money.
      *
-     * @param $amount \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\TypeNumber
+     * @param $recourseLoan \LengthOfRope\JSONLD\DataType\TypeBoolean
      * @return static
      **/
-    public function setAmount($amount): static {
-        $this->properties['amount'] = $amount;
+    public function setRecourseLoan($recourseLoan): static {
+        $this->properties['recourseLoan'] = $recourseLoan;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\TypeNumber
+     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean
      **/
-    public function getAmount() {
-        return $this->properties['amount'];
+    public function getRecourseLoan() {
+        return $this->properties['recourseLoan'];
     }
     /**
      * The type of a loan or credit.
@@ -120,24 +160,22 @@ class LoanOrCredit extends FinancialProduct
         return $this->properties['loanType'];
     }
     /**
-     * The only way you get the money back in the event of default is the security.
-     * Recourse is where you still have the opportunity to go back to the borrower for
-     * the rest of the money.
+     * The duration of the loan or credit agreement.
      *
-     * @param $recourseLoan \LengthOfRope\JSONLD\DataType\TypeBoolean
+     * @param $loanTerm \LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
-    public function setRecourseLoan($recourseLoan): static {
-        $this->properties['recourseLoan'] = $recourseLoan;
+    public function setLoanTerm($loanTerm): static {
+        $this->properties['loanTerm'] = $loanTerm;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
-    public function getRecourseLoan() {
-        return $this->properties['recourseLoan'];
+    public function getLoanTerm() {
+        return $this->properties['loanTerm'];
     }
     /**
      * Whether the terms for payment of interest can be renegotiated during the life of
@@ -159,25 +197,6 @@ class LoanOrCredit extends FinancialProduct
         return $this->properties['renegotiableLoan'];
     }
     /**
-     * The period of time after any due date that the borrower has to fulfil its
-     * obligations before a default (failure to pay) is deemed to have occurred.
-     *
-     * @param $gracePeriod \LengthOfRope\JSONLD\Schema\Duration
-     * @return static
-     **/
-    public function setGracePeriod($gracePeriod): static {
-        $this->properties['gracePeriod'] = $gracePeriod;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Duration
-     **/
-    public function getGracePeriod() {
-        return $this->properties['gracePeriod'];
-    }
-    /**
      * A form of paying back money previously borrowed from a lender. Repayment usually
      * takes the form of periodic payments that normally include part principal plus
      * interest in each payment.
@@ -196,24 +215,5 @@ class LoanOrCredit extends FinancialProduct
      **/
     public function getLoanRepaymentForm() {
         return $this->properties['loanRepaymentForm'];
-    }
-    /**
-     * Assets required to secure loan or credit repayments. It may take form of third
-     * party pledge, goods, financial instruments (cash, securities, etc.)
-     *
-     * @param $requiredCollateral \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setRequiredCollateral($requiredCollateral): static {
-        $this->properties['requiredCollateral'] = $requiredCollateral;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getRequiredCollateral() {
-        return $this->properties['requiredCollateral'];
     }
 }

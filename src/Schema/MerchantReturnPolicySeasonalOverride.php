@@ -40,6 +40,26 @@ class MerchantReturnPolicySeasonalOverride extends Intangible
     }
 
     /**
+     * Specifies either a fixed return date or the number of days (from the delivery
+     * date) that a product can be returned. Used when the [[returnPolicyCategory]]
+     * property is specified as [[MerchantReturnFiniteReturnWindow]].
+     *
+     * @param $merchantReturnDays \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeInteger|\LengthOfRope\JSONLD\DataType\TypeDate
+     * @return static
+     **/
+    public function setMerchantReturnDays($merchantReturnDays): static {
+        $this->properties['merchantReturnDays'] = $merchantReturnDays;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeInteger|\LengthOfRope\JSONLD\DataType\TypeDate
+     **/
+    public function getMerchantReturnDays() {
+        return $this->properties['merchantReturnDays'];
+    }
+    /**
      * The type of return fees for purchased products (for any return reason).
      *
      * @param $returnFees \LengthOfRope\JSONLD\Schema\ReturnFeesEnumeration
@@ -56,61 +76,6 @@ class MerchantReturnPolicySeasonalOverride extends Intangible
      **/
     public function getReturnFees() {
         return $this->properties['returnFees'];
-    }
-    /**
-     * The type of return method offered, specified from an enumeration.
-     *
-     * @param $returnMethod \LengthOfRope\JSONLD\Schema\ReturnMethodEnumeration
-     * @return static
-     **/
-    public function setReturnMethod($returnMethod): static {
-        $this->properties['returnMethod'] = $returnMethod;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\ReturnMethodEnumeration
-     **/
-    public function getReturnMethod() {
-        return $this->properties['returnMethod'];
-    }
-    /**
-     * A refund type, from an enumerated list.
-     *
-     * @param $refundType \LengthOfRope\JSONLD\Schema\RefundTypeEnumeration
-     * @return static
-     **/
-    public function setRefundType($refundType): static {
-        $this->properties['refundType'] = $refundType;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\RefundTypeEnumeration
-     **/
-    public function getRefundType() {
-        return $this->properties['refundType'];
-    }
-    /**
-     * Amount of shipping costs for product returns (for any reason). Applicable when
-     * property [[returnFees]] equals [[ReturnShippingFees]].
-     *
-     * @param $returnShippingFeesAmount \LengthOfRope\JSONLD\Schema\MonetaryAmount
-     * @return static
-     **/
-    public function setReturnShippingFeesAmount($returnShippingFeesAmount): static {
-        $this->properties['returnShippingFeesAmount'] = $returnShippingFeesAmount;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount
-     **/
-    public function getReturnShippingFeesAmount() {
-        return $this->properties['returnShippingFeesAmount'];
     }
     /**
      * The start date and time of the item (in [ISO 8601 date
@@ -132,24 +97,41 @@ class MerchantReturnPolicySeasonalOverride extends Intangible
         return $this->properties['startDate'];
     }
     /**
-     * Specifies either a fixed return date or the number of days (from the delivery
-     * date) that a product can be returned. Used when the [[returnPolicyCategory]]
-     * property is specified as [[MerchantReturnFiniteReturnWindow]].
+     * Amount of shipping costs for product returns (for any reason). Applicable when
+     * property [[returnFees]] equals [[ReturnShippingFees]].
      *
-     * @param $merchantReturnDays \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeInteger|\LengthOfRope\JSONLD\DataType\TypeDateTime
+     * @param $returnShippingFeesAmount \LengthOfRope\JSONLD\Schema\MonetaryAmount
      * @return static
      **/
-    public function setMerchantReturnDays($merchantReturnDays): static {
-        $this->properties['merchantReturnDays'] = $merchantReturnDays;
+    public function setReturnShippingFeesAmount($returnShippingFeesAmount): static {
+        $this->properties['returnShippingFeesAmount'] = $returnShippingFeesAmount;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeInteger|\LengthOfRope\JSONLD\DataType\TypeDateTime
+     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount
      **/
-    public function getMerchantReturnDays() {
-        return $this->properties['merchantReturnDays'];
+    public function getReturnShippingFeesAmount() {
+        return $this->properties['returnShippingFeesAmount'];
+    }
+    /**
+     * The type of return method offered, specified from an enumeration.
+     *
+     * @param $returnMethod \LengthOfRope\JSONLD\Schema\ReturnMethodEnumeration
+     * @return static
+     **/
+    public function setReturnMethod($returnMethod): static {
+        $this->properties['returnMethod'] = $returnMethod;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\ReturnMethodEnumeration
+     **/
+    public function getReturnMethod() {
+        return $this->properties['returnMethod'];
     }
     /**
      * Specifies an applicable return policy (from an enumeration).
@@ -168,6 +150,24 @@ class MerchantReturnPolicySeasonalOverride extends Intangible
      **/
     public function getReturnPolicyCategory() {
         return $this->properties['returnPolicyCategory'];
+    }
+    /**
+     * A refund type, from an enumerated list.
+     *
+     * @param $refundType \LengthOfRope\JSONLD\Schema\RefundTypeEnumeration
+     * @return static
+     **/
+    public function setRefundType($refundType): static {
+        $this->properties['refundType'] = $refundType;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\RefundTypeEnumeration
+     **/
+    public function getRefundType() {
+        return $this->properties['refundType'];
     }
     /**
      * The end date and time of the item (in [ISO 8601 date

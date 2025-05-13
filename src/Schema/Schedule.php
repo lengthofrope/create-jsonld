@@ -48,59 +48,40 @@ class Schedule extends Intangible
     }
 
     /**
-     * Defines the day(s) of the week on which a recurring [[Event]] takes place. May
-     * be specified using either [[DayOfWeek]], or alternatively [[Text]] conforming to
-     * iCal's syntax for byDay recurrence rules.
-     *
-     * @param $byDay \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DayOfWeek
-     * @return static
-     **/
-    public function setByDay($byDay): static {
-        $this->properties['byDay'] = $byDay;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DayOfWeek
-     **/
-    public function getByDay() {
-        return $this->properties['byDay'];
-    }
-    /**
-     * The endTime of something. For a reserved event or service (e.g.
-     * FoodEstablishmentReservation), the time that it is expected to end. For actions
-     * that span a period of time, when the action was performed. E.g. John wrote a
-     * book from January to *December*. For media, including audio and video, it's the
-     * time offset of the end of a clip within a larger file.
+     * The startTime of something. For a reserved event or service (e.g.
+     * FoodEstablishmentReservation), the time that it is expected to start. For
+     * actions that span a period of time, when the action was performed. E.g. John
+     * wrote a book from *January* to December. For media, including audio and video,
+     * it's the time offset of the start of a clip within a larger file.
      *
      * Note that Event uses startDate/endDate instead of startTime/endTime, even when
      * describing dates with times. This situation may be clarified in future
      * revisions.
      *
-     * @param $endTime \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeTime
+     * @param $startTime \LengthOfRope\JSONLD\DataType\TypeTime|\LengthOfRope\JSONLD\DataType\TypeDateTime
      * @return static
      **/
-    public function setEndTime($endTime): static {
-        $this->properties['endTime'] = $endTime;
+    public function setStartTime($startTime): static {
+        $this->properties['startTime'] = $startTime;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeTime
+     * @return \LengthOfRope\JSONLD\DataType\TypeTime|\LengthOfRope\JSONLD\DataType\TypeDateTime
      **/
-    public function getEndTime() {
-        return $this->properties['endTime'];
+    public function getStartTime() {
+        return $this->properties['startTime'];
     }
     /**
-     * Defines the number of times a recurring [[Event]] will take place.
+     * Defines the month(s) of the year on which a recurring [[Event]] takes place.
+     * Specified as an [[Integer]] between 1-12. January is 1.
      *
-     * @param $repeatCount \LengthOfRope\JSONLD\DataType\TypeInteger
+     * @param $byMonth \LengthOfRope\JSONLD\DataType\TypeInteger
      * @return static
      **/
-    public function setRepeatCount($repeatCount): static {
-        $this->properties['repeatCount'] = $repeatCount;
+    public function setByMonth($byMonth): static {
+        $this->properties['byMonth'] = $byMonth;
 
         return $this;
     }
@@ -108,8 +89,27 @@ class Schedule extends Intangible
     /**
      * @return \LengthOfRope\JSONLD\DataType\TypeInteger
      **/
-    public function getRepeatCount() {
-        return $this->properties['repeatCount'];
+    public function getByMonth() {
+        return $this->properties['byMonth'];
+    }
+    /**
+     * The duration of the item (movie, audio recording, event, etc.) in [ISO 8601
+     * duration format](http://en.wikipedia.org/wiki/ISO_8601).
+     *
+     * @param $duration \LengthOfRope\JSONLD\Schema\Duration|\LengthOfRope\JSONLD\Schema\QuantitativeValue
+     * @return static
+     **/
+    public function setDuration($duration): static {
+        $this->properties['duration'] = $duration;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Duration|\LengthOfRope\JSONLD\Schema\QuantitativeValue
+     **/
+    public function getDuration() {
+        return $this->properties['duration'];
     }
     /**
      * Defines the week(s) of the month on which a recurring Event takes place.
@@ -152,107 +152,24 @@ class Schedule extends Intangible
         return $this->properties['startDate'];
     }
     /**
-     * Defines the day(s) of the month on which a recurring [[Event]] takes place.
-     * Specified as an [[Integer]] between 1-31.
+     * Defines the day(s) of the week on which a recurring [[Event]] takes place. May
+     * be specified using either [[DayOfWeek]], or alternatively [[Text]] conforming to
+     * iCal's syntax for byDay recurrence rules.
      *
-     * @param $byMonthDay \LengthOfRope\JSONLD\DataType\TypeInteger
+     * @param $byDay \LengthOfRope\JSONLD\Schema\DayOfWeek|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
-    public function setByMonthDay($byMonthDay): static {
-        $this->properties['byMonthDay'] = $byMonthDay;
+    public function setByDay($byDay): static {
+        $this->properties['byDay'] = $byDay;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeInteger
+     * @return \LengthOfRope\JSONLD\Schema\DayOfWeek|\LengthOfRope\JSONLD\DataType\TypeText
      **/
-    public function getByMonthDay() {
-        return $this->properties['byMonthDay'];
-    }
-    /**
-     * The startTime of something. For a reserved event or service (e.g.
-     * FoodEstablishmentReservation), the time that it is expected to start. For
-     * actions that span a period of time, when the action was performed. E.g. John
-     * wrote a book from *January* to December. For media, including audio and video,
-     * it's the time offset of the start of a clip within a larger file.
-     *
-     * Note that Event uses startDate/endDate instead of startTime/endTime, even when
-     * describing dates with times. This situation may be clarified in future
-     * revisions.
-     *
-     * @param $startTime \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeTime
-     * @return static
-     **/
-    public function setStartTime($startTime): static {
-        $this->properties['startTime'] = $startTime;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeTime
-     **/
-    public function getStartTime() {
-        return $this->properties['startTime'];
-    }
-    /**
-     * Defines the month(s) of the year on which a recurring [[Event]] takes place.
-     * Specified as an [[Integer]] between 1-12. January is 1.
-     *
-     * @param $byMonth \LengthOfRope\JSONLD\DataType\TypeInteger
-     * @return static
-     **/
-    public function setByMonth($byMonth): static {
-        $this->properties['byMonth'] = $byMonth;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeInteger
-     **/
-    public function getByMonth() {
-        return $this->properties['byMonth'];
-    }
-    /**
-     * The duration of the item (movie, audio recording, event, etc.) in [ISO 8601
-     * duration format](http://en.wikipedia.org/wiki/ISO_8601).
-     *
-     * @param $duration \LengthOfRope\JSONLD\Schema\Duration
-     * @return static
-     **/
-    public function setDuration($duration): static {
-        $this->properties['duration'] = $duration;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Duration
-     **/
-    public function getDuration() {
-        return $this->properties['duration'];
-    }
-    /**
-     * Defines the frequency at which [[Event]]s will occur according to a schedule
-     * [[Schedule]]. The intervals between
-     * events should be defined as a [[Duration]] of time.
-     *
-     * @param $repeatFrequency \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Duration
-     * @return static
-     **/
-    public function setRepeatFrequency($repeatFrequency): static {
-        $this->properties['repeatFrequency'] = $repeatFrequency;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Duration
-     **/
-    public function getRepeatFrequency() {
-        return $this->properties['repeatFrequency'];
+    public function getByDay() {
+        return $this->properties['byDay'];
     }
     /**
      * Indicates the timezone for which the time(s) indicated in the [[Schedule]] are
@@ -275,23 +192,30 @@ class Schedule extends Intangible
         return $this->properties['scheduleTimezone'];
     }
     /**
-     * The end date and time of the item (in [ISO 8601 date
-     * format](http://en.wikipedia.org/wiki/ISO_8601)).
+     * The endTime of something. For a reserved event or service (e.g.
+     * FoodEstablishmentReservation), the time that it is expected to end. For actions
+     * that span a period of time, when the action was performed. E.g. John wrote a
+     * book from January to *December*. For media, including audio and video, it's the
+     * time offset of the end of a clip within a larger file.
      *
-     * @param $endDate \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
+     * Note that Event uses startDate/endDate instead of startTime/endTime, even when
+     * describing dates with times. This situation may be clarified in future
+     * revisions.
+     *
+     * @param $endTime \LengthOfRope\JSONLD\DataType\TypeTime|\LengthOfRope\JSONLD\DataType\TypeDateTime
      * @return static
      **/
-    public function setEndDate($endDate): static {
-        $this->properties['endDate'] = $endDate;
+    public function setEndTime($endTime): static {
+        $this->properties['endTime'] = $endTime;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
+     * @return \LengthOfRope\JSONLD\DataType\TypeTime|\LengthOfRope\JSONLD\DataType\TypeDateTime
      **/
-    public function getEndDate() {
-        return $this->properties['endDate'];
+    public function getEndTime() {
+        return $this->properties['endTime'];
     }
     /**
      * Defines a [[Date]] or [[DateTime]] during which a scheduled [[Event]] will not
@@ -318,5 +242,81 @@ class Schedule extends Intangible
      **/
     public function getExceptDate() {
         return $this->properties['exceptDate'];
+    }
+    /**
+     * Defines the frequency at which [[Event]]s will occur according to a schedule
+     * [[Schedule]]. The intervals between
+     * events should be defined as a [[Duration]] of time.
+     *
+     * @param $repeatFrequency \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Duration
+     * @return static
+     **/
+    public function setRepeatFrequency($repeatFrequency): static {
+        $this->properties['repeatFrequency'] = $repeatFrequency;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Duration
+     **/
+    public function getRepeatFrequency() {
+        return $this->properties['repeatFrequency'];
+    }
+    /**
+     * Defines the day(s) of the month on which a recurring [[Event]] takes place.
+     * Specified as an [[Integer]] between 1-31.
+     *
+     * @param $byMonthDay \LengthOfRope\JSONLD\DataType\TypeInteger
+     * @return static
+     **/
+    public function setByMonthDay($byMonthDay): static {
+        $this->properties['byMonthDay'] = $byMonthDay;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeInteger
+     **/
+    public function getByMonthDay() {
+        return $this->properties['byMonthDay'];
+    }
+    /**
+     * Defines the number of times a recurring [[Event]] will take place.
+     *
+     * @param $repeatCount \LengthOfRope\JSONLD\DataType\TypeInteger
+     * @return static
+     **/
+    public function setRepeatCount($repeatCount): static {
+        $this->properties['repeatCount'] = $repeatCount;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeInteger
+     **/
+    public function getRepeatCount() {
+        return $this->properties['repeatCount'];
+    }
+    /**
+     * The end date and time of the item (in [ISO 8601 date
+     * format](http://en.wikipedia.org/wiki/ISO_8601)).
+     *
+     * @param $endDate \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
+     * @return static
+     **/
+    public function setEndDate($endDate): static {
+        $this->properties['endDate'] = $endDate;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
+     **/
+    public function getEndDate() {
+        return $this->properties['endDate'];
     }
 }

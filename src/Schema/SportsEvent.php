@@ -40,42 +40,6 @@ class SportsEvent extends Event
     }
 
     /**
-     * A competitor in a sports event.
-     *
-     * @param $competitor \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\SportsTeam
-     * @return static
-     **/
-    public function setCompetitor($competitor): static {
-        $this->properties['competitor'] = $competitor;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\SportsTeam
-     **/
-    public function getCompetitor() {
-        return $this->properties['competitor'];
-    }
-    /**
-     * The home team in a sports event.
-     *
-     * @param $homeTeam \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\SportsTeam
-     * @return static
-     **/
-    public function setHomeTeam($homeTeam): static {
-        $this->properties['homeTeam'] = $homeTeam;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\SportsTeam
-     **/
-    public function getHomeTeam() {
-        return $this->properties['homeTeam'];
-    }
-    /**
      * The away team in a sports event.
      *
      * @param $awayTeam \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\SportsTeam
@@ -94,6 +58,26 @@ class SportsEvent extends Event
         return $this->properties['awayTeam'];
     }
     /**
+     * An official who watches a game or match closely to enforce the rules and
+     * arbitrate on matters arising from the play such as referees, umpires or judges.
+     * The name of the effective function can vary according to the sport.
+     *
+     * @param $referee \LengthOfRope\JSONLD\Schema\Person
+     * @return static
+     **/
+    public function setReferee($referee): static {
+        $this->properties['referee'] = $referee;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Person
+     **/
+    public function getReferee() {
+        return $this->properties['referee'];
+    }
+    /**
      * A type of sport (e.g. Baseball).
      *
      * @param $sport \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
@@ -110,5 +94,41 @@ class SportsEvent extends Event
      **/
     public function getSport() {
         return $this->properties['sport'];
+    }
+    /**
+     * The home team in a sports event.
+     *
+     * @param $homeTeam \LengthOfRope\JSONLD\Schema\SportsTeam|\LengthOfRope\JSONLD\Schema\Person
+     * @return static
+     **/
+    public function setHomeTeam($homeTeam): static {
+        $this->properties['homeTeam'] = $homeTeam;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\SportsTeam|\LengthOfRope\JSONLD\Schema\Person
+     **/
+    public function getHomeTeam() {
+        return $this->properties['homeTeam'];
+    }
+    /**
+     * A competitor in a sports event.
+     *
+     * @param $competitor \LengthOfRope\JSONLD\Schema\SportsTeam|\LengthOfRope\JSONLD\Schema\Person
+     * @return static
+     **/
+    public function setCompetitor($competitor): static {
+        $this->properties['competitor'] = $competitor;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\SportsTeam|\LengthOfRope\JSONLD\Schema\Person
+     **/
+    public function getCompetitor() {
+        return $this->properties['competitor'];
     }
 }

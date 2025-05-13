@@ -42,25 +42,6 @@ class BuyAction extends TradeAction
     }
 
     /**
-     * An entity which offers (sells / leases / lends / loans) the services / goods.  A
-     * seller may also be a provider.
-     *
-     * @param $seller \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
-     * @return static
-     **/
-    public function setSeller($seller): static {
-        $this->properties['seller'] = $seller;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
-     **/
-    public function getSeller() {
-        return $this->properties['seller'];
-    }
-    /**
      * 'vendor' is an earlier term for 'seller'.
      *
      * @param $vendor \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
@@ -95,5 +76,24 @@ class BuyAction extends TradeAction
      **/
     public function getWarrantyPromise() {
         return $this->properties['warrantyPromise'];
+    }
+    /**
+     * An entity which offers (sells / leases / lends / loans) the services / goods.  A
+     * seller may also be a provider.
+     *
+     * @param $seller \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
+     * @return static
+     **/
+    public function setSeller($seller): static {
+        $this->properties['seller'] = $seller;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
+     **/
+    public function getSeller() {
+        return $this->properties['seller'];
     }
 }

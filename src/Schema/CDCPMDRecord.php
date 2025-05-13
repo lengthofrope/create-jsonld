@@ -65,9 +65,241 @@ class CDCPMDRecord extends StructuredValue
         return $this->properties['cvdNumICUBeds'];
     }
     /**
+     * numvent - MECHANICAL VENTILATORS: Total number of ventilators available.
+     *
+     * @param $cvdNumVent \LengthOfRope\JSONLD\DataType\TypeNumber
+     * @return static
+     **/
+    public function setCvdNumVent($cvdNumVent): static {
+        $this->properties['cvdNumVent'] = $cvdNumVent;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
+     **/
+    public function getCvdNumVent() {
+        return $this->properties['cvdNumVent'];
+    }
+    /**
+     * numtotbeds - ALL HOSPITAL BEDS: Total number of all inpatient and outpatient
+     * beds, including all staffed, ICU, licensed, and overflow (surge) beds used for
+     * inpatients or outpatients.
+     *
+     * @param $cvdNumTotBeds \LengthOfRope\JSONLD\DataType\TypeNumber
+     * @return static
+     **/
+    public function setCvdNumTotBeds($cvdNumTotBeds): static {
+        $this->properties['cvdNumTotBeds'] = $cvdNumTotBeds;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
+     **/
+    public function getCvdNumTotBeds() {
+        return $this->properties['cvdNumTotBeds'];
+    }
+    /**
+     * numicubedsocc - ICU BED OCCUPANCY: Total number of staffed inpatient ICU beds
+     * that are occupied.
+     *
+     * @param $cvdNumICUBedsOcc \LengthOfRope\JSONLD\DataType\TypeNumber
+     * @return static
+     **/
+    public function setCvdNumICUBedsOcc($cvdNumICUBedsOcc): static {
+        $this->properties['cvdNumICUBedsOcc'] = $cvdNumICUBedsOcc;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
+     **/
+    public function getCvdNumICUBedsOcc() {
+        return $this->properties['cvdNumICUBedsOcc'];
+    }
+    /**
+     * numbeds - HOSPITAL INPATIENT BEDS: Inpatient beds, including all staffed,
+     * licensed, and overflow (surge) beds used for inpatients.
+     *
+     * @param $cvdNumBeds \LengthOfRope\JSONLD\DataType\TypeNumber
+     * @return static
+     **/
+    public function setCvdNumBeds($cvdNumBeds): static {
+        $this->properties['cvdNumBeds'] = $cvdNumBeds;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
+     **/
+    public function getCvdNumBeds() {
+        return $this->properties['cvdNumBeds'];
+    }
+    /**
+     * numventuse - MECHANICAL VENTILATORS IN USE: Total number of ventilators in use.
+     *
+     * @param $cvdNumVentUse \LengthOfRope\JSONLD\DataType\TypeNumber
+     * @return static
+     **/
+    public function setCvdNumVentUse($cvdNumVentUse): static {
+        $this->properties['cvdNumVentUse'] = $cvdNumVentUse;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
+     **/
+    public function getCvdNumVentUse() {
+        return $this->properties['cvdNumVentUse'];
+    }
+    /**
+     * numc19died - DEATHS: Patients with suspected or confirmed COVID-19 who died in
+     * the hospital, ED, or any overflow location.
+     *
+     * @param $cvdNumC19Died \LengthOfRope\JSONLD\DataType\TypeNumber
+     * @return static
+     **/
+    public function setCvdNumC19Died($cvdNumC19Died): static {
+        $this->properties['cvdNumC19Died'] = $cvdNumC19Died;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
+     **/
+    public function getCvdNumC19Died() {
+        return $this->properties['cvdNumC19Died'];
+    }
+    /**
+     * Name of the County of the NHSN facility that this data record applies to. Use
+     * [[cvdFacilityId]] to identify the facility. To provide other details,
+     * [[healthcareReportingData]] can be used on a [[Hospital]] entry.
+     *
+     * @param $cvdFacilityCounty \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setCvdFacilityCounty($cvdFacilityCounty): static {
+        $this->properties['cvdFacilityCounty'] = $cvdFacilityCounty;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getCvdFacilityCounty() {
+        return $this->properties['cvdFacilityCounty'];
+    }
+    /**
+     * numc19mechventpats - HOSPITALIZED and VENTILATED: Patients hospitalized in an
+     * NHSN inpatient care location who have suspected or confirmed COVID-19 and are on
+     * a mechanical ventilator.
+     *
+     * @param $cvdNumC19MechVentPats \LengthOfRope\JSONLD\DataType\TypeNumber
+     * @return static
+     **/
+    public function setCvdNumC19MechVentPats($cvdNumC19MechVentPats): static {
+        $this->properties['cvdNumC19MechVentPats'] = $cvdNumC19MechVentPats;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
+     **/
+    public function getCvdNumC19MechVentPats() {
+        return $this->properties['cvdNumC19MechVentPats'];
+    }
+    /**
+     * Identifier of the NHSN facility that this data record applies to. Use
+     * [[cvdFacilityCounty]] to indicate the county. To provide other details,
+     * [[healthcareReportingData]] can be used on a [[Hospital]] entry.
+     *
+     * @param $cvdFacilityId \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setCvdFacilityId($cvdFacilityId): static {
+        $this->properties['cvdFacilityId'] = $cvdFacilityId;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getCvdFacilityId() {
+        return $this->properties['cvdFacilityId'];
+    }
+    /**
+     * numc19hopats - HOSPITAL ONSET: Patients hospitalized in an NHSN inpatient care
+     * location with onset of suspected or confirmed COVID-19 14 or more days after
+     * hospitalization.
+     *
+     * @param $cvdNumC19HOPats \LengthOfRope\JSONLD\DataType\TypeNumber
+     * @return static
+     **/
+    public function setCvdNumC19HOPats($cvdNumC19HOPats): static {
+        $this->properties['cvdNumC19HOPats'] = $cvdNumC19HOPats;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
+     **/
+    public function getCvdNumC19HOPats() {
+        return $this->properties['cvdNumC19HOPats'];
+    }
+    /**
+     * numc19ofmechventpats - ED/OVERFLOW and VENTILATED: Patients with suspected or
+     * confirmed COVID-19 who are in the ED or any overflow location awaiting an
+     * inpatient bed and on a mechanical ventilator.
+     *
+     * @param $cvdNumC19OFMechVentPats \LengthOfRope\JSONLD\DataType\TypeNumber
+     * @return static
+     **/
+    public function setCvdNumC19OFMechVentPats($cvdNumC19OFMechVentPats): static {
+        $this->properties['cvdNumC19OFMechVentPats'] = $cvdNumC19OFMechVentPats;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
+     **/
+    public function getCvdNumC19OFMechVentPats() {
+        return $this->properties['cvdNumC19OFMechVentPats'];
+    }
+    /**
+     * numc19hosppats - HOSPITALIZED: Patients currently hospitalized in an inpatient
+     * care location who have suspected or confirmed COVID-19.
+     *
+     * @param $cvdNumC19HospPats \LengthOfRope\JSONLD\DataType\TypeNumber
+     * @return static
+     **/
+    public function setCvdNumC19HospPats($cvdNumC19HospPats): static {
+        $this->properties['cvdNumC19HospPats'] = $cvdNumC19HospPats;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
+     **/
+    public function getCvdNumC19HospPats() {
+        return $this->properties['cvdNumC19HospPats'];
+    }
+    /**
      * Publication date of an online listing.
      *
-     * @param $datePosted \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
+     * @param $datePosted \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
      * @return static
      **/
     public function setDatePosted($datePosted): static {
@@ -77,7 +309,7 @@ class CDCPMDRecord extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
+     * @return \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
      **/
     public function getDatePosted() {
         return $this->properties['datePosted'];
@@ -102,61 +334,6 @@ class CDCPMDRecord extends StructuredValue
         return $this->properties['cvdNumC19OverflowPats'];
     }
     /**
-     * numvent - MECHANICAL VENTILATORS: Total number of ventilators available.
-     *
-     * @param $cvdNumVent \LengthOfRope\JSONLD\DataType\TypeNumber
-     * @return static
-     **/
-    public function setCvdNumVent($cvdNumVent): static {
-        $this->properties['cvdNumVent'] = $cvdNumVent;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
-     **/
-    public function getCvdNumVent() {
-        return $this->properties['cvdNumVent'];
-    }
-    /**
-     * collectiondate - Date for which patient counts are reported.
-     *
-     * @param $cvdCollectionDate \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setCvdCollectionDate($cvdCollectionDate): static {
-        $this->properties['cvdCollectionDate'] = $cvdCollectionDate;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getCvdCollectionDate() {
-        return $this->properties['cvdCollectionDate'];
-    }
-    /**
-     * numicubedsocc - ICU BED OCCUPANCY: Total number of staffed inpatient ICU beds
-     * that are occupied.
-     *
-     * @param $cvdNumICUBedsOcc \LengthOfRope\JSONLD\DataType\TypeNumber
-     * @return static
-     **/
-    public function setCvdNumICUBedsOcc($cvdNumICUBedsOcc): static {
-        $this->properties['cvdNumICUBedsOcc'] = $cvdNumICUBedsOcc;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
-     **/
-    public function getCvdNumICUBedsOcc() {
-        return $this->properties['cvdNumICUBedsOcc'];
-    }
-    /**
      * numbedsocc - HOSPITAL INPATIENT BED OCCUPANCY: Total number of staffed inpatient
      * beds that are occupied.
      *
@@ -176,198 +353,21 @@ class CDCPMDRecord extends StructuredValue
         return $this->properties['cvdNumBedsOcc'];
     }
     /**
-     * numtotbeds - ALL HOSPITAL BEDS: Total number of all inpatient and outpatient
-     * beds, including all staffed, ICU, licensed, and overflow (surge) beds used for
-     * inpatients or outpatients.
+     * collectiondate - Date for which patient counts are reported.
      *
-     * @param $cvdNumTotBeds \LengthOfRope\JSONLD\DataType\TypeNumber
+     * @param $cvdCollectionDate \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeDateTime
      * @return static
      **/
-    public function setCvdNumTotBeds($cvdNumTotBeds): static {
-        $this->properties['cvdNumTotBeds'] = $cvdNumTotBeds;
+    public function setCvdCollectionDate($cvdCollectionDate): static {
+        $this->properties['cvdCollectionDate'] = $cvdCollectionDate;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeDateTime
      **/
-    public function getCvdNumTotBeds() {
-        return $this->properties['cvdNumTotBeds'];
-    }
-    /**
-     * numc19hosppats - HOSPITALIZED: Patients currently hospitalized in an inpatient
-     * care location who have suspected or confirmed COVID-19.
-     *
-     * @param $cvdNumC19HospPats \LengthOfRope\JSONLD\DataType\TypeNumber
-     * @return static
-     **/
-    public function setCvdNumC19HospPats($cvdNumC19HospPats): static {
-        $this->properties['cvdNumC19HospPats'] = $cvdNumC19HospPats;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
-     **/
-    public function getCvdNumC19HospPats() {
-        return $this->properties['cvdNumC19HospPats'];
-    }
-    /**
-     * numbeds - HOSPITAL INPATIENT BEDS: Inpatient beds, including all staffed,
-     * licensed, and overflow (surge) beds used for inpatients.
-     *
-     * @param $cvdNumBeds \LengthOfRope\JSONLD\DataType\TypeNumber
-     * @return static
-     **/
-    public function setCvdNumBeds($cvdNumBeds): static {
-        $this->properties['cvdNumBeds'] = $cvdNumBeds;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
-     **/
-    public function getCvdNumBeds() {
-        return $this->properties['cvdNumBeds'];
-    }
-    /**
-     * numc19hopats - HOSPITAL ONSET: Patients hospitalized in an NHSN inpatient care
-     * location with onset of suspected or confirmed COVID-19 14 or more days after
-     * hospitalization.
-     *
-     * @param $cvdNumC19HOPats \LengthOfRope\JSONLD\DataType\TypeNumber
-     * @return static
-     **/
-    public function setCvdNumC19HOPats($cvdNumC19HOPats): static {
-        $this->properties['cvdNumC19HOPats'] = $cvdNumC19HOPats;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
-     **/
-    public function getCvdNumC19HOPats() {
-        return $this->properties['cvdNumC19HOPats'];
-    }
-    /**
-     * Identifier of the NHSN facility that this data record applies to. Use
-     * [[cvdFacilityCounty]] to indicate the county. To provide other details,
-     * [[healthcareReportingData]] can be used on a [[Hospital]] entry.
-     *
-     * @param $cvdFacilityId \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setCvdFacilityId($cvdFacilityId): static {
-        $this->properties['cvdFacilityId'] = $cvdFacilityId;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getCvdFacilityId() {
-        return $this->properties['cvdFacilityId'];
-    }
-    /**
-     * numventuse - MECHANICAL VENTILATORS IN USE: Total number of ventilators in use.
-     *
-     * @param $cvdNumVentUse \LengthOfRope\JSONLD\DataType\TypeNumber
-     * @return static
-     **/
-    public function setCvdNumVentUse($cvdNumVentUse): static {
-        $this->properties['cvdNumVentUse'] = $cvdNumVentUse;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
-     **/
-    public function getCvdNumVentUse() {
-        return $this->properties['cvdNumVentUse'];
-    }
-    /**
-     * Name of the County of the NHSN facility that this data record applies to. Use
-     * [[cvdFacilityId]] to identify the facility. To provide other details,
-     * [[healthcareReportingData]] can be used on a [[Hospital]] entry.
-     *
-     * @param $cvdFacilityCounty \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setCvdFacilityCounty($cvdFacilityCounty): static {
-        $this->properties['cvdFacilityCounty'] = $cvdFacilityCounty;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getCvdFacilityCounty() {
-        return $this->properties['cvdFacilityCounty'];
-    }
-    /**
-     * numc19died - DEATHS: Patients with suspected or confirmed COVID-19 who died in
-     * the hospital, ED, or any overflow location.
-     *
-     * @param $cvdNumC19Died \LengthOfRope\JSONLD\DataType\TypeNumber
-     * @return static
-     **/
-    public function setCvdNumC19Died($cvdNumC19Died): static {
-        $this->properties['cvdNumC19Died'] = $cvdNumC19Died;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
-     **/
-    public function getCvdNumC19Died() {
-        return $this->properties['cvdNumC19Died'];
-    }
-    /**
-     * numc19ofmechventpats - ED/OVERFLOW and VENTILATED: Patients with suspected or
-     * confirmed COVID-19 who are in the ED or any overflow location awaiting an
-     * inpatient bed and on a mechanical ventilator.
-     *
-     * @param $cvdNumC19OFMechVentPats \LengthOfRope\JSONLD\DataType\TypeNumber
-     * @return static
-     **/
-    public function setCvdNumC19OFMechVentPats($cvdNumC19OFMechVentPats): static {
-        $this->properties['cvdNumC19OFMechVentPats'] = $cvdNumC19OFMechVentPats;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
-     **/
-    public function getCvdNumC19OFMechVentPats() {
-        return $this->properties['cvdNumC19OFMechVentPats'];
-    }
-    /**
-     * numc19mechventpats - HOSPITALIZED and VENTILATED: Patients hospitalized in an
-     * NHSN inpatient care location who have suspected or confirmed COVID-19 and are on
-     * a mechanical ventilator.
-     *
-     * @param $cvdNumC19MechVentPats \LengthOfRope\JSONLD\DataType\TypeNumber
-     * @return static
-     **/
-    public function setCvdNumC19MechVentPats($cvdNumC19MechVentPats): static {
-        $this->properties['cvdNumC19MechVentPats'] = $cvdNumC19MechVentPats;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
-     **/
-    public function getCvdNumC19MechVentPats() {
-        return $this->properties['cvdNumC19MechVentPats'];
+    public function getCvdCollectionDate() {
+        return $this->properties['cvdCollectionDate'];
     }
 }

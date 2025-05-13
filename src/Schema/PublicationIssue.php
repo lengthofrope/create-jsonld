@@ -32,7 +32,7 @@ namespace LengthOfRope\JSONLD\Schema;
  * as articles.
  *
  * See also [blog
- * post](http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html).
+ * post](https://blog-schema.org/2014/09/02/schema-org-support-for-bibliographic-relationships-and-periodicals/).
  *
  * @see https://schema.org/PublicationIssue
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
@@ -62,6 +62,24 @@ class PublicationIssue extends CreativeWork
      **/
     public function getPagination() {
         return $this->properties['pagination'];
+    }
+    /**
+     * The page on which the work ends; for example "138" or "xvi".
+     *
+     * @param $pageEnd \LengthOfRope\JSONLD\DataType\TypeInteger|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setPageEnd($pageEnd): static {
+        $this->properties['pageEnd'] = $pageEnd;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeInteger|\LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getPageEnd() {
+        return $this->properties['pageEnd'];
     }
     /**
      * The page on which the work starts; for example "135" or "xiii".
@@ -98,23 +116,5 @@ class PublicationIssue extends CreativeWork
      **/
     public function getIssueNumber() {
         return $this->properties['issueNumber'];
-    }
-    /**
-     * The page on which the work ends; for example "138" or "xvi".
-     *
-     * @param $pageEnd \LengthOfRope\JSONLD\DataType\TypeInteger|\LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setPageEnd($pageEnd): static {
-        $this->properties['pageEnd'] = $pageEnd;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeInteger|\LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getPageEnd() {
-        return $this->properties['pageEnd'];
     }
 }

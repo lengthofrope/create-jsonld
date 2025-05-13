@@ -55,24 +55,6 @@ class Claim extends CreativeWork
     }
 
     /**
-     * Indicates the first known occurrence of a [[Claim]] in some [[CreativeWork]].
-     *
-     * @param $firstAppearance \LengthOfRope\JSONLD\Schema\CreativeWork
-     * @return static
-     **/
-    public function setFirstAppearance($firstAppearance): static {
-        $this->properties['firstAppearance'] = $firstAppearance;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\CreativeWork
-     **/
-    public function getFirstAppearance() {
-        return $this->properties['firstAppearance'];
-    }
-    /**
      * Indicates an occurrence of a [[Claim]] in some [[CreativeWork]].
      *
      * @param $appearance \LengthOfRope\JSONLD\Schema\CreativeWork
@@ -95,7 +77,7 @@ class Claim extends CreativeWork
      * [[interpretedAsClaim]] property can be used to indicate a claim contained,
      * implied or refined from the content of a [[MediaObject]].
      *
-     * @param $claimInterpreter \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
+     * @param $claimInterpreter \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setClaimInterpreter($claimInterpreter): static {
@@ -105,9 +87,27 @@ class Claim extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
+     * @return \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\Person
      **/
     public function getClaimInterpreter() {
         return $this->properties['claimInterpreter'];
+    }
+    /**
+     * Indicates the first known occurrence of a [[Claim]] in some [[CreativeWork]].
+     *
+     * @param $firstAppearance \LengthOfRope\JSONLD\Schema\CreativeWork
+     * @return static
+     **/
+    public function setFirstAppearance($firstAppearance): static {
+        $this->properties['firstAppearance'] = $firstAppearance;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork
+     **/
+    public function getFirstAppearance() {
+        return $this->properties['firstAppearance'];
     }
 }

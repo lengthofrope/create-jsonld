@@ -44,6 +44,62 @@ class ComicStory extends CreativeWork
     }
 
     /**
+     * The individual who draws the primary narrative artwork.
+     *
+     * @param $penciler \LengthOfRope\JSONLD\Schema\Person
+     * @return static
+     **/
+    public function setPenciler($penciler): static {
+        $this->properties['penciler'] = $penciler;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Person
+     **/
+    public function getPenciler() {
+        return $this->properties['penciler'];
+    }
+    /**
+     * The primary artist for a work
+     * in a medium other than pencils or digital line art--for example, if the
+     * primary artwork is done in watercolors or digital paints.
+     *
+     * @param $artist \LengthOfRope\JSONLD\Schema\Person
+     * @return static
+     **/
+    public function setArtist($artist): static {
+        $this->properties['artist'] = $artist;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Person
+     **/
+    public function getArtist() {
+        return $this->properties['artist'];
+    }
+    /**
+     * The individual who adds color to inked drawings.
+     *
+     * @param $colorist \LengthOfRope\JSONLD\Schema\Person
+     * @return static
+     **/
+    public function setColorist($colorist): static {
+        $this->properties['colorist'] = $colorist;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Person
+     **/
+    public function getColorist() {
+        return $this->properties['colorist'];
+    }
+    /**
      * The individual who adds lettering, including speech balloons and sound effects,
      * to artwork.
      *
@@ -80,61 +136,5 @@ class ComicStory extends CreativeWork
      **/
     public function getInker() {
         return $this->properties['inker'];
-    }
-    /**
-     * The individual who adds color to inked drawings.
-     *
-     * @param $colorist \LengthOfRope\JSONLD\Schema\Person
-     * @return static
-     **/
-    public function setColorist($colorist): static {
-        $this->properties['colorist'] = $colorist;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Person
-     **/
-    public function getColorist() {
-        return $this->properties['colorist'];
-    }
-    /**
-     * The primary artist for a work
-     * in a medium other than pencils or digital line art--for example, if the
-     * primary artwork is done in watercolors or digital paints.
-     *
-     * @param $artist \LengthOfRope\JSONLD\Schema\Person
-     * @return static
-     **/
-    public function setArtist($artist): static {
-        $this->properties['artist'] = $artist;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Person
-     **/
-    public function getArtist() {
-        return $this->properties['artist'];
-    }
-    /**
-     * The individual who draws the primary narrative artwork.
-     *
-     * @param $penciler \LengthOfRope\JSONLD\Schema\Person
-     * @return static
-     **/
-    public function setPenciler($penciler): static {
-        $this->properties['penciler'] = $penciler;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Person
-     **/
-    public function getPenciler() {
-        return $this->properties['penciler'];
     }
 }

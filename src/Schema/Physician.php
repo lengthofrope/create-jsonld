@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  * @see https://schema.org/Physician
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class Physician extends MedicalOrganization
+class Physician extends MedicalBusiness
 {
     public static function factory(): Physician
     {
@@ -41,30 +41,40 @@ class Physician extends MedicalOrganization
     }
 
     /**
-     * A category describing the job, preferably using a term from a taxonomy such as
-     * [BLS O*NET-SOC](http://www.onetcenter.org/taxonomy.html),
-     * [ISCO-08](https://www.ilo.org/public/english/bureau/stat/isco/isco08/) or
-     * similar, with the property repeated for each applicable value. Ideally the
-     * taxonomy should be identified, and both the textual label and formal code for
-     * the category should be provided.
+     * A hospital with which the physician or office is affiliated.
      *
-     * Note: for historical reasons, any textual label and formal code provided as a
-     * literal may be assumed to be from O*NET-SOC.
-     *
-     * @param $occupationalCategory \LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\TypeText
+     * @param $hospitalAffiliation \LengthOfRope\JSONLD\Schema\Hospital
      * @return static
      **/
-    public function setOccupationalCategory($occupationalCategory): static {
-        $this->properties['occupationalCategory'] = $occupationalCategory;
+    public function setHospitalAffiliation($hospitalAffiliation): static {
+        $this->properties['hospitalAffiliation'] = $hospitalAffiliation;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\Schema\Hospital
      **/
-    public function getOccupationalCategory() {
-        return $this->properties['occupationalCategory'];
+    public function getHospitalAffiliation() {
+        return $this->properties['hospitalAffiliation'];
+    }
+    /**
+     * A medical service available from this provider.
+     *
+     * @param $availableService \LengthOfRope\JSONLD\Schema\MedicalTherapy|\LengthOfRope\JSONLD\Schema\MedicalTest|\LengthOfRope\JSONLD\Schema\MedicalProcedure
+     * @return static
+     **/
+    public function setAvailableService($availableService): static {
+        $this->properties['availableService'] = $availableService;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\MedicalTherapy|\LengthOfRope\JSONLD\Schema\MedicalTest|\LengthOfRope\JSONLD\Schema\MedicalProcedure
+     **/
+    public function getAvailableService() {
+        return $this->properties['availableService'];
     }
     /**
      * A medical specialty of the provider.
@@ -83,24 +93,6 @@ class Physician extends MedicalOrganization
      **/
     public function getMedicalSpecialty() {
         return $this->properties['medicalSpecialty'];
-    }
-    /**
-     * A medical service available from this provider.
-     *
-     * @param $availableService \LengthOfRope\JSONLD\Schema\MedicalTest|\LengthOfRope\JSONLD\Schema\MedicalTherapy|\LengthOfRope\JSONLD\Schema\MedicalProcedure
-     * @return static
-     **/
-    public function setAvailableService($availableService): static {
-        $this->properties['availableService'] = $availableService;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\MedicalTest|\LengthOfRope\JSONLD\Schema\MedicalTherapy|\LengthOfRope\JSONLD\Schema\MedicalProcedure
-     **/
-    public function getAvailableService() {
-        return $this->properties['availableService'];
     }
     /**
      * A <a href="https://en.wikipedia.org/wiki/National_Provider_Identifier">National
@@ -124,21 +116,29 @@ class Physician extends MedicalOrganization
         return $this->properties['usNPI'];
     }
     /**
-     * A hospital with which the physician or office is affiliated.
+     * A category describing the job, preferably using a term from a taxonomy such as
+     * [BLS O*NET-SOC](http://www.onetcenter.org/taxonomy.html),
+     * [ISCO-08](https://www.ilo.org/public/english/bureau/stat/isco/isco08/) or
+     * similar, with the property repeated for each applicable value. Ideally the
+     * taxonomy should be identified, and both the textual label and formal code for
+     * the category should be provided.
      *
-     * @param $hospitalAffiliation \LengthOfRope\JSONLD\Schema\Hospital
+     * Note: for historical reasons, any textual label and formal code provided as a
+     * literal may be assumed to be from O*NET-SOC.
+     *
+     * @param $occupationalCategory \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\CategoryCode
      * @return static
      **/
-    public function setHospitalAffiliation($hospitalAffiliation): static {
-        $this->properties['hospitalAffiliation'] = $hospitalAffiliation;
+    public function setOccupationalCategory($occupationalCategory): static {
+        $this->properties['occupationalCategory'] = $occupationalCategory;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Hospital
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\CategoryCode
      **/
-    public function getHospitalAffiliation() {
-        return $this->properties['hospitalAffiliation'];
+    public function getOccupationalCategory() {
+        return $this->properties['occupationalCategory'];
     }
 }

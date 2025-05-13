@@ -48,7 +48,7 @@ namespace LengthOfRope\JSONLD\Schema;
  * @see https://schema.org/Observation
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class Observation extends QuantitativeValue
+class Observation extends Intangible
 {
     public static function factory(): Observation
     {
@@ -56,32 +56,67 @@ class Observation extends QuantitativeValue
     }
 
     /**
-     * The measuredProperty of an [[Observation]], typically via its
-     * [[StatisticalVariable]]. There are various kinds of applicable [[Property]]: a
-     * schema.org property, a property from other RDF-compatible systems, e.g. W3C RDF
-     * Data Cube, Data Commons, Wikidata, or schema.org extensions such as
-     * [GS1's](https://www.gs1.org/voc/?show=properties).
+     * Identifies the denominator variable when an observation represents a ratio or
+     * percentage.
      *
-     * @param $measuredProperty \LengthOfRope\JSONLD\Schema\Property
+     * @param $measurementDenominator \LengthOfRope\JSONLD\Schema\StatisticalVariable
      * @return static
      **/
-    public function setMeasuredProperty($measuredProperty): static {
-        $this->properties['measuredProperty'] = $measuredProperty;
+    public function setMeasurementDenominator($measurementDenominator): static {
+        $this->properties['measurementDenominator'] = $measurementDenominator;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Property
+     * @return \LengthOfRope\JSONLD\Schema\StatisticalVariable
      **/
-    public function getMeasuredProperty() {
-        return $this->properties['measuredProperty'];
+    public function getMeasurementDenominator() {
+        return $this->properties['measurementDenominator'];
+    }
+    /**
+     * The observationDate of an [[Observation]].
+     *
+     * @param $observationDate \LengthOfRope\JSONLD\DataType\TypeDateTime
+     * @return static
+     **/
+    public function setObservationDate($observationDate): static {
+        $this->properties['observationDate'] = $observationDate;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime
+     **/
+    public function getObservationDate() {
+        return $this->properties['observationDate'];
+    }
+    /**
+     * The length of time an Observation took place over. The format follows
+     * `P[0-9]*[Y|M|D|h|m|s]`. For example, P1Y is Period 1 Year, P3M is Period 3
+     * Months, P3h is Period 3 hours.
+     *
+     * @param $observationPeriod \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setObservationPeriod($observationPeriod): static {
+        $this->properties['observationPeriod'] = $observationPeriod;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getObservationPeriod() {
+        return $this->properties['observationPeriod'];
     }
     /**
      * A subproperty of [[measurementTechnique]] that can be used for specifying
      * specific methods, in particular via [[MeasurementMethodEnum]].
      *
-     * @param $measurementMethod \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\MeasurementMethodEnum|\LengthOfRope\JSONLD\DataType\TypeText
+     * @param $measurementMethod \LengthOfRope\JSONLD\Schema\MeasurementMethodEnum|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setMeasurementMethod($measurementMethod): static {
@@ -91,29 +126,29 @@ class Observation extends QuantitativeValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\MeasurementMethodEnum|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\Schema\MeasurementMethodEnum|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getMeasurementMethod() {
         return $this->properties['measurementMethod'];
     }
     /**
-     * Provides additional qualification to an observation. For example, a GDP
-     * observation measures the Nominal value.
+     * The [[observationAbout]] property identifies an entity, often a [[Place]],
+     * associated with an [[Observation]].
      *
-     * @param $measurementQualifier \LengthOfRope\JSONLD\Schema\Enumeration
+     * @param $observationAbout \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\Thing
      * @return static
      **/
-    public function setMeasurementQualifier($measurementQualifier): static {
-        $this->properties['measurementQualifier'] = $measurementQualifier;
+    public function setObservationAbout($observationAbout): static {
+        $this->properties['observationAbout'] = $observationAbout;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Enumeration
+     * @return \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\Thing
      **/
-    public function getMeasurementQualifier() {
-        return $this->properties['measurementQualifier'];
+    public function getObservationAbout() {
+        return $this->properties['observationAbout'];
     }
     /**
      * The variableMeasured property can indicate (repeated as necessary) the
@@ -121,7 +156,7 @@ class Observation extends QuantitativeValue
      * pairs of identifier and description using PropertyValue, or more explicitly as a
      * [[StatisticalVariable]].
      *
-     * @param $variableMeasured \LengthOfRope\JSONLD\Schema\StatisticalVariable|\LengthOfRope\JSONLD\Schema\Property|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\PropertyValue
+     * @param $variableMeasured \LengthOfRope\JSONLD\Schema\PropertyValue|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\StatisticalVariable|\LengthOfRope\JSONLD\Schema\Property
      * @return static
      **/
     public function setVariableMeasured($variableMeasured): static {
@@ -131,7 +166,7 @@ class Observation extends QuantitativeValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\StatisticalVariable|\LengthOfRope\JSONLD\Schema\Property|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\PropertyValue
+     * @return \LengthOfRope\JSONLD\Schema\PropertyValue|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\StatisticalVariable|\LengthOfRope\JSONLD\Schema\Property
      **/
     public function getVariableMeasured() {
         return $this->properties['variableMeasured'];
@@ -155,60 +190,26 @@ class Observation extends QuantitativeValue
         return $this->properties['marginOfError'];
     }
     /**
-     * The observationDate of an [[Observation]].
+     * The measuredProperty of an [[Observation]], typically via its
+     * [[StatisticalVariable]]. There are various kinds of applicable [[Property]]: a
+     * schema.org property, a property from other RDF-compatible systems, e.g. W3C RDF
+     * Data Cube, Data Commons, Wikidata, or schema.org extensions such as
+     * [GS1's](https://www.gs1.org/voc/?show=properties).
      *
-     * @param $observationDate \LengthOfRope\JSONLD\DataType\TypeDateTime
+     * @param $measuredProperty \LengthOfRope\JSONLD\Schema\Property
      * @return static
      **/
-    public function setObservationDate($observationDate): static {
-        $this->properties['observationDate'] = $observationDate;
+    public function setMeasuredProperty($measuredProperty): static {
+        $this->properties['measuredProperty'] = $measuredProperty;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime
+     * @return \LengthOfRope\JSONLD\Schema\Property
      **/
-    public function getObservationDate() {
-        return $this->properties['observationDate'];
-    }
-    /**
-     * The [[observationAbout]] property identifies an entity, often a [[Place]],
-     * associated with an [[Observation]].
-     *
-     * @param $observationAbout \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\Thing
-     * @return static
-     **/
-    public function setObservationAbout($observationAbout): static {
-        $this->properties['observationAbout'] = $observationAbout;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\Thing
-     **/
-    public function getObservationAbout() {
-        return $this->properties['observationAbout'];
-    }
-    /**
-     * Identifies the denominator variable when an observation represents a ratio or
-     * percentage.
-     *
-     * @param $measurementDenominator \LengthOfRope\JSONLD\Schema\StatisticalVariable
-     * @return static
-     **/
-    public function setMeasurementDenominator($measurementDenominator): static {
-        $this->properties['measurementDenominator'] = $measurementDenominator;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\StatisticalVariable
-     **/
-    public function getMeasurementDenominator() {
-        return $this->properties['measurementDenominator'];
+    public function getMeasuredProperty() {
+        return $this->properties['measuredProperty'];
     }
     /**
      * A technique, method or technology used in an [[Observation]],
@@ -238,7 +239,7 @@ class Observation extends QuantitativeValue
      * the corresponding [[measurementTechnique]]. The value can also be from an
      * enumeration, organized as a [[MeasurementMetholdEnumeration]].
      *
-     * @param $measurementTechnique \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\MeasurementMethodEnum
+     * @param $measurementTechnique \LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\MeasurementMethodEnum|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setMeasurementTechnique($measurementTechnique): static {
@@ -248,29 +249,28 @@ class Observation extends QuantitativeValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\MeasurementMethodEnum
+     * @return \LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\MeasurementMethodEnum|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getMeasurementTechnique() {
         return $this->properties['measurementTechnique'];
     }
     /**
-     * The length of time an Observation took place over. The format follows
-     * `P[0-9]*[Y|M|D|h|m|s]`. For example, P1Y is Period 1 Year, P3M is Period 3
-     * Months, P3h is Period 3 hours.
+     * Provides additional qualification to an observation. For example, a GDP
+     * observation measures the Nominal value.
      *
-     * @param $observationPeriod \LengthOfRope\JSONLD\DataType\TypeText
+     * @param $measurementQualifier \LengthOfRope\JSONLD\Schema\Enumeration
      * @return static
      **/
-    public function setObservationPeriod($observationPeriod): static {
-        $this->properties['observationPeriod'] = $observationPeriod;
+    public function setMeasurementQualifier($measurementQualifier): static {
+        $this->properties['measurementQualifier'] = $measurementQualifier;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\Schema\Enumeration
      **/
-    public function getObservationPeriod() {
-        return $this->properties['observationPeriod'];
+    public function getMeasurementQualifier() {
+        return $this->properties['measurementQualifier'];
     }
 }

@@ -41,23 +41,22 @@ class RsvpAction extends InformAction
     }
 
     /**
-     * If responding yes, the number of guests who will attend in addition to the
-     * invitee.
+     * The response (yes, no, maybe) to the RSVP.
      *
-     * @param $additionalNumberOfGuests \LengthOfRope\JSONLD\DataType\TypeNumber
+     * @param $rsvpResponse \LengthOfRope\JSONLD\Schema\RsvpResponseType
      * @return static
      **/
-    public function setAdditionalNumberOfGuests($additionalNumberOfGuests): static {
-        $this->properties['additionalNumberOfGuests'] = $additionalNumberOfGuests;
+    public function setRsvpResponse($rsvpResponse): static {
+        $this->properties['rsvpResponse'] = $rsvpResponse;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
+     * @return \LengthOfRope\JSONLD\Schema\RsvpResponseType
      **/
-    public function getAdditionalNumberOfGuests() {
-        return $this->properties['additionalNumberOfGuests'];
+    public function getRsvpResponse() {
+        return $this->properties['rsvpResponse'];
     }
     /**
      * Comments, typically from users.
@@ -78,21 +77,22 @@ class RsvpAction extends InformAction
         return $this->properties['comment'];
     }
     /**
-     * The response (yes, no, maybe) to the RSVP.
+     * If responding yes, the number of guests who will attend in addition to the
+     * invitee.
      *
-     * @param $rsvpResponse \LengthOfRope\JSONLD\Schema\RsvpResponseType
+     * @param $additionalNumberOfGuests \LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
-    public function setRsvpResponse($rsvpResponse): static {
-        $this->properties['rsvpResponse'] = $rsvpResponse;
+    public function setAdditionalNumberOfGuests($additionalNumberOfGuests): static {
+        $this->properties['additionalNumberOfGuests'] = $additionalNumberOfGuests;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\RsvpResponseType
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
      **/
-    public function getRsvpResponse() {
-        return $this->properties['rsvpResponse'];
+    public function getAdditionalNumberOfGuests() {
+        return $this->properties['additionalNumberOfGuests'];
     }
 }

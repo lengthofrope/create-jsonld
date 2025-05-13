@@ -47,24 +47,23 @@ class Role extends Intangible
     }
 
     /**
-     * A position played, performed or filled by a person or organization, as part of
-     * an organization. For example, an athlete in a SportsTeam might play in the
-     * position named 'Quarterback'.
+     * The start date and time of the item (in [ISO 8601 date
+     * format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
-     * @param $namedPosition \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
+     * @param $startDate \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
      * @return static
      **/
-    public function setNamedPosition($namedPosition): static {
-        $this->properties['namedPosition'] = $namedPosition;
+    public function setStartDate($startDate): static {
+        $this->properties['startDate'] = $startDate;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
      **/
-    public function getNamedPosition() {
-        return $this->properties['namedPosition'];
+    public function getStartDate() {
+        return $this->properties['startDate'];
     }
     /**
      * A role played, performed or filled by a person or organization. For example, the
@@ -88,23 +87,24 @@ class Role extends Intangible
         return $this->properties['roleName'];
     }
     /**
-     * The start date and time of the item (in [ISO 8601 date
-     * format](http://en.wikipedia.org/wiki/ISO_8601)).
+     * A position played, performed or filled by a person or organization, as part of
+     * an organization. For example, an athlete in a SportsTeam might play in the
+     * position named 'Quarterback'.
      *
-     * @param $startDate \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
+     * @param $namedPosition \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
-    public function setStartDate($startDate): static {
-        $this->properties['startDate'] = $startDate;
+    public function setNamedPosition($namedPosition): static {
+        $this->properties['namedPosition'] = $namedPosition;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\DataType\TypeText
      **/
-    public function getStartDate() {
-        return $this->properties['startDate'];
+    public function getNamedPosition() {
+        return $this->properties['namedPosition'];
     }
     /**
      * The end date and time of the item (in [ISO 8601 date

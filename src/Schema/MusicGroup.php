@@ -41,22 +41,22 @@ class MusicGroup extends PerformingGroup
     }
 
     /**
-     * A music album.
+     * A music recording (track)&#x2014;usually a single song.
      *
-     * @param $album \LengthOfRope\JSONLD\Schema\MusicAlbum
+     * @param $tracks \LengthOfRope\JSONLD\Schema\MusicRecording
      * @return static
      **/
-    public function setAlbum($album): static {
-        $this->properties['album'] = $album;
+    public function setTracks($tracks): static {
+        $this->properties['tracks'] = $tracks;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\MusicAlbum
+     * @return \LengthOfRope\JSONLD\Schema\MusicRecording
      **/
-    public function getAlbum() {
-        return $this->properties['album'];
+    public function getTracks() {
+        return $this->properties['tracks'];
     }
     /**
      * A collection of music albums.
@@ -77,6 +77,25 @@ class MusicGroup extends PerformingGroup
         return $this->properties['albums'];
     }
     /**
+     * A music recording (track)&#x2014;usually a single song. If an ItemList is given,
+     * the list should contain items of type MusicRecording.
+     *
+     * @param $track \LengthOfRope\JSONLD\Schema\MusicRecording|\LengthOfRope\JSONLD\Schema\ItemList
+     * @return static
+     **/
+    public function setTrack($track): static {
+        $this->properties['track'] = $track;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\MusicRecording|\LengthOfRope\JSONLD\Schema\ItemList
+     **/
+    public function getTrack() {
+        return $this->properties['track'];
+    }
+    /**
      * Genre of the creative work, broadcast channel or group.
      *
      * @param $genre \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
@@ -95,43 +114,6 @@ class MusicGroup extends PerformingGroup
         return $this->properties['genre'];
     }
     /**
-     * A music recording (track)&#x2014;usually a single song.
-     *
-     * @param $tracks \LengthOfRope\JSONLD\Schema\MusicRecording
-     * @return static
-     **/
-    public function setTracks($tracks): static {
-        $this->properties['tracks'] = $tracks;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\MusicRecording
-     **/
-    public function getTracks() {
-        return $this->properties['tracks'];
-    }
-    /**
-     * A music recording (track)&#x2014;usually a single song. If an ItemList is given,
-     * the list should contain items of type MusicRecording.
-     *
-     * @param $track \LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\MusicRecording
-     * @return static
-     **/
-    public function setTrack($track): static {
-        $this->properties['track'] = $track;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\MusicRecording
-     **/
-    public function getTrack() {
-        return $this->properties['track'];
-    }
-    /**
      * A member of a music group&#x2014;for example, John, Paul, George, or Ringo.
      *
      * @param $musicGroupMember \LengthOfRope\JSONLD\Schema\Person
@@ -148,5 +130,23 @@ class MusicGroup extends PerformingGroup
      **/
     public function getMusicGroupMember() {
         return $this->properties['musicGroupMember'];
+    }
+    /**
+     * A music album.
+     *
+     * @param $album \LengthOfRope\JSONLD\Schema\MusicAlbum
+     * @return static
+     **/
+    public function setAlbum($album): static {
+        $this->properties['album'] = $album;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\MusicAlbum
+     **/
+    public function getAlbum() {
+        return $this->properties['album'];
     }
 }

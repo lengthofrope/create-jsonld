@@ -40,6 +40,25 @@ class MusicRecording extends CreativeWork
     }
 
     /**
+     * The duration of the item (movie, audio recording, event, etc.) in [ISO 8601
+     * duration format](http://en.wikipedia.org/wiki/ISO_8601).
+     *
+     * @param $duration \LengthOfRope\JSONLD\Schema\Duration|\LengthOfRope\JSONLD\Schema\QuantitativeValue
+     * @return static
+     **/
+    public function setDuration($duration): static {
+        $this->properties['duration'] = $duration;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Duration|\LengthOfRope\JSONLD\Schema\QuantitativeValue
+     **/
+    public function getDuration() {
+        return $this->properties['duration'];
+    }
+    /**
      * The playlist to which this recording belongs.
      *
      * @param $inPlaylist \LengthOfRope\JSONLD\Schema\MusicPlaylist
@@ -56,61 +75,6 @@ class MusicRecording extends CreativeWork
      **/
     public function getInPlaylist() {
         return $this->properties['inPlaylist'];
-    }
-    /**
-     * The International Standard Recording Code for the recording.
-     *
-     * @param $isrcCode \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setIsrcCode($isrcCode): static {
-        $this->properties['isrcCode'] = $isrcCode;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getIsrcCode() {
-        return $this->properties['isrcCode'];
-    }
-    /**
-     * The artist that performed this album or recording.
-     *
-     * @param $byArtist \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\MusicGroup
-     * @return static
-     **/
-    public function setByArtist($byArtist): static {
-        $this->properties['byArtist'] = $byArtist;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\MusicGroup
-     **/
-    public function getByArtist() {
-        return $this->properties['byArtist'];
-    }
-    /**
-     * The duration of the item (movie, audio recording, event, etc.) in [ISO 8601
-     * duration format](http://en.wikipedia.org/wiki/ISO_8601).
-     *
-     * @param $duration \LengthOfRope\JSONLD\Schema\Duration
-     * @return static
-     **/
-    public function setDuration($duration): static {
-        $this->properties['duration'] = $duration;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Duration
-     **/
-    public function getDuration() {
-        return $this->properties['duration'];
     }
     /**
      * The composition this track is a recording of.
@@ -131,6 +95,24 @@ class MusicRecording extends CreativeWork
         return $this->properties['recordingOf'];
     }
     /**
+     * The artist that performed this album or recording.
+     *
+     * @param $byArtist \LengthOfRope\JSONLD\Schema\MusicGroup|\LengthOfRope\JSONLD\Schema\Person
+     * @return static
+     **/
+    public function setByArtist($byArtist): static {
+        $this->properties['byArtist'] = $byArtist;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\MusicGroup|\LengthOfRope\JSONLD\Schema\Person
+     **/
+    public function getByArtist() {
+        return $this->properties['byArtist'];
+    }
+    /**
      * The album to which this recording belongs.
      *
      * @param $inAlbum \LengthOfRope\JSONLD\Schema\MusicAlbum
@@ -147,5 +129,23 @@ class MusicRecording extends CreativeWork
      **/
     public function getInAlbum() {
         return $this->properties['inAlbum'];
+    }
+    /**
+     * The International Standard Recording Code for the recording.
+     *
+     * @param $isrcCode \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setIsrcCode($isrcCode): static {
+        $this->properties['isrcCode'] = $isrcCode;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getIsrcCode() {
+        return $this->properties['isrcCode'];
     }
 }

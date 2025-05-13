@@ -41,27 +41,24 @@ class GeospatialGeometry extends Intangible
     }
 
     /**
-     * Represents spatial relations in which two geometries (or the places they
-     * represent) are topologically equal, as defined in
-     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM). "Two geometries are
-     * topologically equal if their interiors intersect and no part of the interior or
-     * boundary of one geometry intersects the exterior of the other" (a symmetric
-     * relationship).
+     * Represents a relationship between two geometries (or the places they represent),
+     * relating a geometry to another that covers it. As defined in
+     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      *
-     * @param $geoEquals \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
+     * @param $geoCoveredBy \LengthOfRope\JSONLD\Schema\GeospatialGeometry|\LengthOfRope\JSONLD\Schema\Place
      * @return static
      **/
-    public function setGeoEquals($geoEquals): static {
-        $this->properties['geoEquals'] = $geoEquals;
+    public function setGeoCoveredBy($geoCoveredBy): static {
+        $this->properties['geoCoveredBy'] = $geoCoveredBy;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
+     * @return \LengthOfRope\JSONLD\Schema\GeospatialGeometry|\LengthOfRope\JSONLD\Schema\Place
      **/
-    public function getGeoEquals() {
-        return $this->properties['geoEquals'];
+    public function getGeoCoveredBy() {
+        return $this->properties['geoCoveredBy'];
     }
     /**
      * Represents a relationship between two geometries (or the places they represent),
@@ -84,25 +81,48 @@ class GeospatialGeometry extends Intangible
         return $this->properties['geoWithin'];
     }
     /**
-     * Represents a relationship between two geometries (or the places they represent),
-     * relating a covering geometry to a covered geometry. "Every point of b is a point
-     * of (the interior or boundary of) a". As defined in
-     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     * Represents spatial relations in which two geometries (or the places they
+     * represent) are topologically equal, as defined in
+     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM). "Two geometries are
+     * topologically equal if their interiors intersect and no part of the interior or
+     * boundary of one geometry intersects the exterior of the other" (a symmetric
+     * relationship).
      *
-     * @param $geoCovers \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
+     * @param $geoEquals \LengthOfRope\JSONLD\Schema\GeospatialGeometry|\LengthOfRope\JSONLD\Schema\Place
      * @return static
      **/
-    public function setGeoCovers($geoCovers): static {
-        $this->properties['geoCovers'] = $geoCovers;
+    public function setGeoEquals($geoEquals): static {
+        $this->properties['geoEquals'] = $geoEquals;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
+     * @return \LengthOfRope\JSONLD\Schema\GeospatialGeometry|\LengthOfRope\JSONLD\Schema\Place
      **/
-    public function getGeoCovers() {
-        return $this->properties['geoCovers'];
+    public function getGeoEquals() {
+        return $this->properties['geoEquals'];
+    }
+    /**
+     * Represents spatial relations in which two geometries (or the places they
+     * represent) are topologically disjoint: "they have no point in common. They form
+     * a set of disconnected geometries." (A symmetric relationship, as defined in
+     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).)
+     *
+     * @param $geoDisjoint \LengthOfRope\JSONLD\Schema\GeospatialGeometry|\LengthOfRope\JSONLD\Schema\Place
+     * @return static
+     **/
+    public function setGeoDisjoint($geoDisjoint): static {
+        $this->properties['geoDisjoint'] = $geoDisjoint;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\GeospatialGeometry|\LengthOfRope\JSONLD\Schema\Place
+     **/
+    public function getGeoDisjoint() {
+        return $this->properties['geoDisjoint'];
     }
     /**
      * Represents a relationship between two geometries (or the places they represent),
@@ -111,7 +131,7 @@ class GeospatialGeometry extends Intangible
      * than that of at least one of them". As defined in
      * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      *
-     * @param $geoCrosses \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
+     * @param $geoCrosses \LengthOfRope\JSONLD\Schema\GeospatialGeometry|\LengthOfRope\JSONLD\Schema\Place
      * @return static
      **/
     public function setGeoCrosses($geoCrosses): static {
@@ -121,10 +141,51 @@ class GeospatialGeometry extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
+     * @return \LengthOfRope\JSONLD\Schema\GeospatialGeometry|\LengthOfRope\JSONLD\Schema\Place
      **/
     public function getGeoCrosses() {
         return $this->properties['geoCrosses'];
+    }
+    /**
+     * Represents spatial relations in which two geometries (or the places they
+     * represent) have at least one point in common. As defined in
+     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     *
+     * @param $geoIntersects \LengthOfRope\JSONLD\Schema\GeospatialGeometry|\LengthOfRope\JSONLD\Schema\Place
+     * @return static
+     **/
+    public function setGeoIntersects($geoIntersects): static {
+        $this->properties['geoIntersects'] = $geoIntersects;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\GeospatialGeometry|\LengthOfRope\JSONLD\Schema\Place
+     **/
+    public function getGeoIntersects() {
+        return $this->properties['geoIntersects'];
+    }
+    /**
+     * Represents a relationship between two geometries (or the places they represent),
+     * relating a covering geometry to a covered geometry. "Every point of b is a point
+     * of (the interior or boundary of) a". As defined in
+     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     *
+     * @param $geoCovers \LengthOfRope\JSONLD\Schema\GeospatialGeometry|\LengthOfRope\JSONLD\Schema\Place
+     * @return static
+     **/
+    public function setGeoCovers($geoCovers): static {
+        $this->properties['geoCovers'] = $geoCovers;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\GeospatialGeometry|\LengthOfRope\JSONLD\Schema\Place
+     **/
+    public function getGeoCovers() {
+        return $this->properties['geoCovers'];
     }
     /**
      * Represents a relationship between two geometries (or the places they represent),
@@ -149,24 +210,24 @@ class GeospatialGeometry extends Intangible
     }
     /**
      * Represents spatial relations in which two geometries (or the places they
-     * represent) are topologically disjoint: "they have no point in common. They form
-     * a set of disconnected geometries." (A symmetric relationship, as defined in
+     * represent) touch: "they have at least one boundary point in common, but no
+     * interior points." (A symmetric relationship, as defined in
      * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).)
      *
-     * @param $geoDisjoint \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
+     * @param $geoTouches \LengthOfRope\JSONLD\Schema\GeospatialGeometry|\LengthOfRope\JSONLD\Schema\Place
      * @return static
      **/
-    public function setGeoDisjoint($geoDisjoint): static {
-        $this->properties['geoDisjoint'] = $geoDisjoint;
+    public function setGeoTouches($geoTouches): static {
+        $this->properties['geoTouches'] = $geoTouches;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
+     * @return \LengthOfRope\JSONLD\Schema\GeospatialGeometry|\LengthOfRope\JSONLD\Schema\Place
      **/
-    public function getGeoDisjoint() {
-        return $this->properties['geoDisjoint'];
+    public function getGeoTouches() {
+        return $this->properties['geoTouches'];
     }
     /**
      * Represents a relationship between two geometries (or the places they represent),
@@ -189,66 +250,5 @@ class GeospatialGeometry extends Intangible
      **/
     public function getGeoContains() {
         return $this->properties['geoContains'];
-    }
-    /**
-     * Represents spatial relations in which two geometries (or the places they
-     * represent) touch: "they have at least one boundary point in common, but no
-     * interior points." (A symmetric relationship, as defined in
-     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).)
-     *
-     * @param $geoTouches \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
-     * @return static
-     **/
-    public function setGeoTouches($geoTouches): static {
-        $this->properties['geoTouches'] = $geoTouches;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
-     **/
-    public function getGeoTouches() {
-        return $this->properties['geoTouches'];
-    }
-    /**
-     * Represents spatial relations in which two geometries (or the places they
-     * represent) have at least one point in common. As defined in
-     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
-     *
-     * @param $geoIntersects \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
-     * @return static
-     **/
-    public function setGeoIntersects($geoIntersects): static {
-        $this->properties['geoIntersects'] = $geoIntersects;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
-     **/
-    public function getGeoIntersects() {
-        return $this->properties['geoIntersects'];
-    }
-    /**
-     * Represents a relationship between two geometries (or the places they represent),
-     * relating a geometry to another that covers it. As defined in
-     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
-     *
-     * @param $geoCoveredBy \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
-     * @return static
-     **/
-    public function setGeoCoveredBy($geoCoveredBy): static {
-        $this->properties['geoCoveredBy'] = $geoCoveredBy;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeospatialGeometry
-     **/
-    public function getGeoCoveredBy() {
-        return $this->properties['geoCoveredBy'];
     }
 }

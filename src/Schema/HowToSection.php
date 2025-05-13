@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  * @see https://schema.org/HowToSection
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class HowToSection extends ListItem
+class HowToSection extends CreativeWork
 {
     public static function factory(): HowToSection
     {
@@ -44,7 +44,7 @@ class HowToSection extends ListItem
      * A single step item (as HowToStep, text, document, video, etc.) or a HowToSection
      * (originally misnamed 'steps'; 'step' is preferred).
      *
-     * @param $steps \LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\TypeText
+     * @param $steps \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\ItemList
      * @return static
      **/
     public function setSteps($steps): static {
@@ -54,7 +54,7 @@ class HowToSection extends ListItem
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\ItemList
      **/
     public function getSteps() {
         return $this->properties['steps'];

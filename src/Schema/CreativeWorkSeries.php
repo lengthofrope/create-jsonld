@@ -57,6 +57,25 @@ class CreativeWorkSeries extends CreativeWork
     }
 
     /**
+     * The start date and time of the item (in [ISO 8601 date
+     * format](http://en.wikipedia.org/wiki/ISO_8601)).
+     *
+     * @param $startDate \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
+     * @return static
+     **/
+    public function setStartDate($startDate): static {
+        $this->properties['startDate'] = $startDate;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
+     **/
+    public function getStartDate() {
+        return $this->properties['startDate'];
+    }
+    /**
      * The International Standard Serial Number (ISSN) that identifies this serial
      * publication. You can repeat this property to identify different formats of, or
      * the linking ISSN (ISSN-L) for, this serial publication.
@@ -75,25 +94,6 @@ class CreativeWorkSeries extends CreativeWork
      **/
     public function getIssn() {
         return $this->properties['issn'];
-    }
-    /**
-     * The start date and time of the item (in [ISO 8601 date
-     * format](http://en.wikipedia.org/wiki/ISO_8601)).
-     *
-     * @param $startDate \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
-     * @return static
-     **/
-    public function setStartDate($startDate): static {
-        $this->properties['startDate'] = $startDate;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
-     **/
-    public function getStartDate() {
-        return $this->properties['startDate'];
     }
     /**
      * The end date and time of the item (in [ISO 8601 date

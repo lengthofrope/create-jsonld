@@ -41,23 +41,114 @@ class BioChemEntity extends Thing
     }
 
     /**
-     * Subcellular location where this BioChemEntity is located; please use
-     * PropertyValue if you want to include any evidence.
+     * Molecular function performed by this BioChemEntity; please use PropertyValue if
+     * you want to include any evidence.
      *
-     * @param $isLocatedInSubcellularLocation \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\PropertyValue
+     * @param $hasMolecularFunction \LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\PropertyValue
      * @return static
      **/
-    public function setIsLocatedInSubcellularLocation($isLocatedInSubcellularLocation): static {
-        $this->properties['isLocatedInSubcellularLocation'] = $isLocatedInSubcellularLocation;
+    public function setHasMolecularFunction($hasMolecularFunction): static {
+        $this->properties['hasMolecularFunction'] = $hasMolecularFunction;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\PropertyValue
+     * @return \LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\PropertyValue
      **/
-    public function getIsLocatedInSubcellularLocation() {
-        return $this->properties['isLocatedInSubcellularLocation'];
+    public function getHasMolecularFunction() {
+        return $this->properties['hasMolecularFunction'];
+    }
+    /**
+     * Biological process this BioChemEntity is involved in; please use PropertyValue
+     * if you want to include any evidence.
+     *
+     * @param $isInvolvedInBiologicalProcess \LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\PropertyValue|\LengthOfRope\JSONLD\DataType\TypeURL
+     * @return static
+     **/
+    public function setIsInvolvedInBiologicalProcess($isInvolvedInBiologicalProcess): static {
+        $this->properties['isInvolvedInBiologicalProcess'] = $isInvolvedInBiologicalProcess;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\PropertyValue|\LengthOfRope\JSONLD\DataType\TypeURL
+     **/
+    public function getIsInvolvedInBiologicalProcess() {
+        return $this->properties['isInvolvedInBiologicalProcess'];
+    }
+    /**
+     * A role played by the BioChemEntity within a biological context.
+     *
+     * @param $biologicalRole \LengthOfRope\JSONLD\Schema\DefinedTerm
+     * @return static
+     **/
+    public function setBiologicalRole($biologicalRole): static {
+        $this->properties['biologicalRole'] = $biologicalRole;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\DefinedTerm
+     **/
+    public function getBiologicalRole() {
+        return $this->properties['biologicalRole'];
+    }
+    /**
+     * Another BioChemEntity encoding by this one.
+     *
+     * @param $isEncodedByBioChemEntity \LengthOfRope\JSONLD\Schema\Gene
+     * @return static
+     **/
+    public function setIsEncodedByBioChemEntity($isEncodedByBioChemEntity): static {
+        $this->properties['isEncodedByBioChemEntity'] = $isEncodedByBioChemEntity;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Gene
+     **/
+    public function getIsEncodedByBioChemEntity() {
+        return $this->properties['isEncodedByBioChemEntity'];
+    }
+    /**
+     * A similar BioChemEntity, e.g., obtained by fingerprint similarity algorithms.
+     *
+     * @param $bioChemSimilarity \LengthOfRope\JSONLD\Schema\BioChemEntity
+     * @return static
+     **/
+    public function setBioChemSimilarity($bioChemSimilarity): static {
+        $this->properties['bioChemSimilarity'] = $bioChemSimilarity;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\BioChemEntity
+     **/
+    public function getBioChemSimilarity() {
+        return $this->properties['bioChemSimilarity'];
+    }
+    /**
+     * A BioChemEntity that is known to interact with this item.
+     *
+     * @param $bioChemInteraction \LengthOfRope\JSONLD\Schema\BioChemEntity
+     * @return static
+     **/
+    public function setBioChemInteraction($bioChemInteraction): static {
+        $this->properties['bioChemInteraction'] = $bioChemInteraction;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\BioChemEntity
+     **/
+    public function getBioChemInteraction() {
+        return $this->properties['bioChemInteraction'];
     }
     /**
      * A [[Grant]] that directly or indirectly provide funding or sponsorship for this
@@ -79,41 +170,23 @@ class BioChemEntity extends Thing
         return $this->properties['funding'];
     }
     /**
-     * Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity.
+     * The taxonomic grouping of the organism that expresses, encodes, or in some way
+     * related to the BioChemEntity.
      *
-     * @param $isPartOfBioChemEntity \LengthOfRope\JSONLD\Schema\BioChemEntity
+     * @param $taxonomicRange \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\Taxon|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DefinedTerm
      * @return static
      **/
-    public function setIsPartOfBioChemEntity($isPartOfBioChemEntity): static {
-        $this->properties['isPartOfBioChemEntity'] = $isPartOfBioChemEntity;
+    public function setTaxonomicRange($taxonomicRange): static {
+        $this->properties['taxonomicRange'] = $taxonomicRange;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\BioChemEntity
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\Taxon|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DefinedTerm
      **/
-    public function getIsPartOfBioChemEntity() {
-        return $this->properties['isPartOfBioChemEntity'];
-    }
-    /**
-     * Biological process this BioChemEntity is involved in; please use PropertyValue
-     * if you want to include any evidence.
-     *
-     * @param $isInvolvedInBiologicalProcess \LengthOfRope\JSONLD\Schema\PropertyValue|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\DefinedTerm
-     * @return static
-     **/
-    public function setIsInvolvedInBiologicalProcess($isInvolvedInBiologicalProcess): static {
-        $this->properties['isInvolvedInBiologicalProcess'] = $isInvolvedInBiologicalProcess;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\PropertyValue|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\DefinedTerm
-     **/
-    public function getIsInvolvedInBiologicalProcess() {
-        return $this->properties['isInvolvedInBiologicalProcess'];
+    public function getTaxonomicRange() {
+        return $this->properties['taxonomicRange'];
     }
     /**
      * Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part.
@@ -135,46 +208,29 @@ class BioChemEntity extends Thing
         return $this->properties['hasBioChemEntityPart'];
     }
     /**
-     * A BioChemEntity that is known to interact with this item.
+     * Subcellular location where this BioChemEntity is located; please use
+     * PropertyValue if you want to include any evidence.
      *
-     * @param $bioChemInteraction \LengthOfRope\JSONLD\Schema\BioChemEntity
+     * @param $isLocatedInSubcellularLocation \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\PropertyValue|\LengthOfRope\JSONLD\Schema\DefinedTerm
      * @return static
      **/
-    public function setBioChemInteraction($bioChemInteraction): static {
-        $this->properties['bioChemInteraction'] = $bioChemInteraction;
+    public function setIsLocatedInSubcellularLocation($isLocatedInSubcellularLocation): static {
+        $this->properties['isLocatedInSubcellularLocation'] = $isLocatedInSubcellularLocation;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\BioChemEntity
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\PropertyValue|\LengthOfRope\JSONLD\Schema\DefinedTerm
      **/
-    public function getBioChemInteraction() {
-        return $this->properties['bioChemInteraction'];
-    }
-    /**
-     * A similar BioChemEntity, e.g., obtained by fingerprint similarity algorithms.
-     *
-     * @param $bioChemSimilarity \LengthOfRope\JSONLD\Schema\BioChemEntity
-     * @return static
-     **/
-    public function setBioChemSimilarity($bioChemSimilarity): static {
-        $this->properties['bioChemSimilarity'] = $bioChemSimilarity;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\BioChemEntity
-     **/
-    public function getBioChemSimilarity() {
-        return $this->properties['bioChemSimilarity'];
+    public function getIsLocatedInSubcellularLocation() {
+        return $this->properties['isLocatedInSubcellularLocation'];
     }
     /**
      * A common representation such as a protein sequence or chemical structure for
      * this entity. For images use schema.org/image.
      *
-     * @param $hasRepresentation \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\PropertyValue
+     * @param $hasRepresentation \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\PropertyValue|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setHasRepresentation($hasRepresentation): static {
@@ -184,84 +240,10 @@ class BioChemEntity extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\PropertyValue
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\PropertyValue|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getHasRepresentation() {
         return $this->properties['hasRepresentation'];
-    }
-    /**
-     * Another BioChemEntity encoding by this one.
-     *
-     * @param $isEncodedByBioChemEntity \LengthOfRope\JSONLD\Schema\Gene
-     * @return static
-     **/
-    public function setIsEncodedByBioChemEntity($isEncodedByBioChemEntity): static {
-        $this->properties['isEncodedByBioChemEntity'] = $isEncodedByBioChemEntity;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Gene
-     **/
-    public function getIsEncodedByBioChemEntity() {
-        return $this->properties['isEncodedByBioChemEntity'];
-    }
-    /**
-     * Molecular function performed by this BioChemEntity; please use PropertyValue if
-     * you want to include any evidence.
-     *
-     * @param $hasMolecularFunction \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\PropertyValue
-     * @return static
-     **/
-    public function setHasMolecularFunction($hasMolecularFunction): static {
-        $this->properties['hasMolecularFunction'] = $hasMolecularFunction;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\PropertyValue
-     **/
-    public function getHasMolecularFunction() {
-        return $this->properties['hasMolecularFunction'];
-    }
-    /**
-     * A role played by the BioChemEntity within a biological context.
-     *
-     * @param $biologicalRole \LengthOfRope\JSONLD\Schema\DefinedTerm
-     * @return static
-     **/
-    public function setBiologicalRole($biologicalRole): static {
-        $this->properties['biologicalRole'] = $biologicalRole;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\DefinedTerm
-     **/
-    public function getBiologicalRole() {
-        return $this->properties['biologicalRole'];
-    }
-    /**
-     * The taxonomic grouping of the organism that expresses, encodes, or in some way
-     * related to the BioChemEntity.
-     *
-     * @param $taxonomicRange \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\Taxon
-     * @return static
-     **/
-    public function setTaxonomicRange($taxonomicRange): static {
-        $this->properties['taxonomicRange'] = $taxonomicRange;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\Taxon
-     **/
-    public function getTaxonomicRange() {
-        return $this->properties['taxonomicRange'];
     }
     /**
      * Disease associated to this BioChemEntity. Such disease can be a MedicalCondition
@@ -282,5 +264,23 @@ class BioChemEntity extends Thing
      **/
     public function getAssociatedDisease() {
         return $this->properties['associatedDisease'];
+    }
+    /**
+     * Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity.
+     *
+     * @param $isPartOfBioChemEntity \LengthOfRope\JSONLD\Schema\BioChemEntity
+     * @return static
+     **/
+    public function setIsPartOfBioChemEntity($isPartOfBioChemEntity): static {
+        $this->properties['isPartOfBioChemEntity'] = $isPartOfBioChemEntity;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\BioChemEntity
+     **/
+    public function getIsPartOfBioChemEntity() {
+        return $this->properties['isPartOfBioChemEntity'];
     }
 }

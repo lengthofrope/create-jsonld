@@ -41,15 +41,14 @@ class LiveBlogPosting extends BlogPosting
     }
 
     /**
-     * The time when the live blog will begin covering the Event. Note that coverage
-     * may begin before the Event's start time. The LiveBlogPosting may also be created
-     * before coverage begins.
+     * The time when the live blog will stop covering the Event. Note that coverage may
+     * continue after the Event concludes.
      *
-     * @param $coverageStartTime \LengthOfRope\JSONLD\DataType\TypeDateTime
+     * @param $coverageEndTime \LengthOfRope\JSONLD\DataType\TypeDateTime
      * @return static
      **/
-    public function setCoverageStartTime($coverageStartTime): static {
-        $this->properties['coverageStartTime'] = $coverageStartTime;
+    public function setCoverageEndTime($coverageEndTime): static {
+        $this->properties['coverageEndTime'] = $coverageEndTime;
 
         return $this;
     }
@@ -57,8 +56,8 @@ class LiveBlogPosting extends BlogPosting
     /**
      * @return \LengthOfRope\JSONLD\DataType\TypeDateTime
      **/
-    public function getCoverageStartTime() {
-        return $this->properties['coverageStartTime'];
+    public function getCoverageEndTime() {
+        return $this->properties['coverageEndTime'];
     }
     /**
      * An update to the LiveBlog.
@@ -79,14 +78,15 @@ class LiveBlogPosting extends BlogPosting
         return $this->properties['liveBlogUpdate'];
     }
     /**
-     * The time when the live blog will stop covering the Event. Note that coverage may
-     * continue after the Event concludes.
+     * The time when the live blog will begin covering the Event. Note that coverage
+     * may begin before the Event's start time. The LiveBlogPosting may also be created
+     * before coverage begins.
      *
-     * @param $coverageEndTime \LengthOfRope\JSONLD\DataType\TypeDateTime
+     * @param $coverageStartTime \LengthOfRope\JSONLD\DataType\TypeDateTime
      * @return static
      **/
-    public function setCoverageEndTime($coverageEndTime): static {
-        $this->properties['coverageEndTime'] = $coverageEndTime;
+    public function setCoverageStartTime($coverageStartTime): static {
+        $this->properties['coverageStartTime'] = $coverageStartTime;
 
         return $this;
     }
@@ -94,7 +94,7 @@ class LiveBlogPosting extends BlogPosting
     /**
      * @return \LengthOfRope\JSONLD\DataType\TypeDateTime
      **/
-    public function getCoverageEndTime() {
-        return $this->properties['coverageEndTime'];
+    public function getCoverageStartTime() {
+        return $this->properties['coverageStartTime'];
     }
 }

@@ -40,24 +40,22 @@ class EntryPoint extends Intangible
     }
 
     /**
-     * The high level platform(s) where the Action can be performed for the given URL.
-     * To specify a specific application or operating system instance, use
-     * actionApplication.
+     * The supported encoding type(s) for an EntryPoint request.
      *
-     * @param $actionPlatform \LengthOfRope\JSONLD\Schema\DigitalPlatformEnumeration|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
+     * @param $encodingType \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
-    public function setActionPlatform($actionPlatform): static {
-        $this->properties['actionPlatform'] = $actionPlatform;
+    public function setEncodingType($encodingType): static {
+        $this->properties['encodingType'] = $encodingType;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\DigitalPlatformEnumeration|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
-    public function getActionPlatform() {
-        return $this->properties['actionPlatform'];
+    public function getEncodingType() {
+        return $this->properties['encodingType'];
     }
     /**
      * The supported content type(s) for an EntryPoint response.
@@ -96,13 +94,14 @@ class EntryPoint extends Intangible
         return $this->properties['actionApplication'];
     }
     /**
-     * The supported encoding type(s) for an EntryPoint request.
+     * An HTTP method that specifies the appropriate HTTP method for a request to an
+     * HTTP EntryPoint. Values are capitalized strings as used in HTTP.
      *
-     * @param $encodingType \LengthOfRope\JSONLD\DataType\TypeText
+     * @param $httpMethod \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
-    public function setEncodingType($encodingType): static {
-        $this->properties['encodingType'] = $encodingType;
+    public function setHttpMethod($httpMethod): static {
+        $this->properties['httpMethod'] = $httpMethod;
 
         return $this;
     }
@@ -110,8 +109,8 @@ class EntryPoint extends Intangible
     /**
      * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
-    public function getEncodingType() {
-        return $this->properties['encodingType'];
+    public function getHttpMethod() {
+        return $this->properties['httpMethod'];
     }
     /**
      * An url template (RFC6570) that will be used to construct the target of the
@@ -133,25 +132,6 @@ class EntryPoint extends Intangible
         return $this->properties['urlTemplate'];
     }
     /**
-     * An HTTP method that specifies the appropriate HTTP method for a request to an
-     * HTTP EntryPoint. Values are capitalized strings as used in HTTP.
-     *
-     * @param $httpMethod \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setHttpMethod($httpMethod): static {
-        $this->properties['httpMethod'] = $httpMethod;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getHttpMethod() {
-        return $this->properties['httpMethod'];
-    }
-    /**
      * An application that can complete the request.
      *
      * @param $application \LengthOfRope\JSONLD\Schema\SoftwareApplication
@@ -168,5 +148,25 @@ class EntryPoint extends Intangible
      **/
     public function getApplication() {
         return $this->properties['application'];
+    }
+    /**
+     * The high level platform(s) where the Action can be performed for the given URL.
+     * To specify a specific application or operating system instance, use
+     * actionApplication.
+     *
+     * @param $actionPlatform \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\DigitalPlatformEnumeration|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setActionPlatform($actionPlatform): static {
+        $this->properties['actionPlatform'] = $actionPlatform;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\DigitalPlatformEnumeration|\LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getActionPlatform() {
+        return $this->properties['actionPlatform'];
     }
 }

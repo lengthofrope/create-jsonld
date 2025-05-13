@@ -40,24 +40,6 @@ class HealthPlanCostSharingSpecification extends Intangible
     }
 
     /**
-     * The category or type of pharmacy associated with this cost sharing.
-     *
-     * @param $healthPlanPharmacyCategory \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setHealthPlanPharmacyCategory($healthPlanPharmacyCategory): static {
-        $this->properties['healthPlanPharmacyCategory'] = $healthPlanPharmacyCategory;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getHealthPlanPharmacyCategory() {
-        return $this->properties['healthPlanPharmacyCategory'];
-    }
-    /**
      * The copay amount.
      *
      * @param $healthPlanCopay \LengthOfRope\JSONLD\Schema\PriceSpecification
@@ -74,6 +56,43 @@ class HealthPlanCostSharingSpecification extends Intangible
      **/
     public function getHealthPlanCopay() {
         return $this->properties['healthPlanCopay'];
+    }
+    /**
+     * Whether the copay is before or after deductible, etc. TODO: Is this a closed
+     * set?
+     *
+     * @param $healthPlanCopayOption \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setHealthPlanCopayOption($healthPlanCopayOption): static {
+        $this->properties['healthPlanCopayOption'] = $healthPlanCopayOption;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getHealthPlanCopayOption() {
+        return $this->properties['healthPlanCopayOption'];
+    }
+    /**
+     * The category or type of pharmacy associated with this cost sharing.
+     *
+     * @param $healthPlanPharmacyCategory \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setHealthPlanPharmacyCategory($healthPlanPharmacyCategory): static {
+        $this->properties['healthPlanPharmacyCategory'] = $healthPlanPharmacyCategory;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getHealthPlanPharmacyCategory() {
+        return $this->properties['healthPlanPharmacyCategory'];
     }
     /**
      * The rate of coinsurance expressed as a number between 0.0 and 1.0.
@@ -111,24 +130,5 @@ class HealthPlanCostSharingSpecification extends Intangible
      **/
     public function getHealthPlanCoinsuranceOption() {
         return $this->properties['healthPlanCoinsuranceOption'];
-    }
-    /**
-     * Whether the copay is before or after deductible, etc. TODO: Is this a closed
-     * set?
-     *
-     * @param $healthPlanCopayOption \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setHealthPlanCopayOption($healthPlanCopayOption): static {
-        $this->properties['healthPlanCopayOption'] = $healthPlanCopayOption;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getHealthPlanCopayOption() {
-        return $this->properties['healthPlanCopayOption'];
     }
 }

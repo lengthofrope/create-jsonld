@@ -42,6 +42,61 @@ class UserComments extends UserInteraction
     }
 
     /**
+     * The URL at which a reply may be posted to the specified UserComment.
+     *
+     * @param $replyToUrl \LengthOfRope\JSONLD\DataType\TypeURL
+     * @return static
+     **/
+    public function setReplyToUrl($replyToUrl): static {
+        $this->properties['replyToUrl'] = $replyToUrl;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL
+     **/
+    public function getReplyToUrl() {
+        return $this->properties['replyToUrl'];
+    }
+    /**
+     * The text of the UserComment.
+     *
+     * @param $commentText \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setCommentText($commentText): static {
+        $this->properties['commentText'] = $commentText;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getCommentText() {
+        return $this->properties['commentText'];
+    }
+    /**
+     * The creator/author of this CreativeWork. This is the same as the Author property
+     * for CreativeWork.
+     *
+     * @param $creator \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\Person
+     * @return static
+     **/
+    public function setCreator($creator): static {
+        $this->properties['creator'] = $creator;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\Person
+     **/
+    public function getCreator() {
+        return $this->properties['creator'];
+    }
+    /**
      * The time at which the UserComment was made.
      *
      * @param $commentTime \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
@@ -76,60 +131,5 @@ class UserComments extends UserInteraction
      **/
     public function getDiscusses() {
         return $this->properties['discusses'];
-    }
-    /**
-     * The creator/author of this CreativeWork. This is the same as the Author property
-     * for CreativeWork.
-     *
-     * @param $creator \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
-     * @return static
-     **/
-    public function setCreator($creator): static {
-        $this->properties['creator'] = $creator;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
-     **/
-    public function getCreator() {
-        return $this->properties['creator'];
-    }
-    /**
-     * The text of the UserComment.
-     *
-     * @param $commentText \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setCommentText($commentText): static {
-        $this->properties['commentText'] = $commentText;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getCommentText() {
-        return $this->properties['commentText'];
-    }
-    /**
-     * The URL at which a reply may be posted to the specified UserComment.
-     *
-     * @param $replyToUrl \LengthOfRope\JSONLD\DataType\TypeURL
-     * @return static
-     **/
-    public function setReplyToUrl($replyToUrl): static {
-        $this->properties['replyToUrl'] = $replyToUrl;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeURL
-     **/
-    public function getReplyToUrl() {
-        return $this->properties['replyToUrl'];
     }
 }

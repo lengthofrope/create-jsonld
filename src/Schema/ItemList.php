@@ -42,24 +42,23 @@ class ItemList extends Intangible
     }
 
     /**
-     * The number of items in an ItemList. Note that some descriptions might not fully
-     * describe all items in a list (e.g., multi-page pagination); in such cases, the
-     * numberOfItems would be for the entire list.
+     * Indicates a prototype of the elements in the list that is used to hold aggregate
+     * information (ratings, offers, etc.).
      *
-     * @param $numberOfItems \LengthOfRope\JSONLD\DataType\TypeInteger
+     * @param $aggregateElement \LengthOfRope\JSONLD\Schema\Thing
      * @return static
      **/
-    public function setNumberOfItems($numberOfItems): static {
-        $this->properties['numberOfItems'] = $numberOfItems;
+    public function setAggregateElement($aggregateElement): static {
+        $this->properties['aggregateElement'] = $aggregateElement;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeInteger
+     * @return \LengthOfRope\JSONLD\Schema\Thing
      **/
-    public function getNumberOfItems() {
-        return $this->properties['numberOfItems'];
+    public function getAggregateElement() {
+        return $this->properties['aggregateElement'];
     }
     /**
      * For itemListElement values, you can use simple strings (e.g. "Peter", "Paul",
@@ -88,6 +87,26 @@ class ItemList extends Intangible
      **/
     public function getItemListElement() {
         return $this->properties['itemListElement'];
+    }
+    /**
+     * The number of items in an ItemList. Note that some descriptions might not fully
+     * describe all items in a list (e.g., multi-page pagination); in such cases, the
+     * numberOfItems would be for the entire list.
+     *
+     * @param $numberOfItems \LengthOfRope\JSONLD\DataType\TypeInteger
+     * @return static
+     **/
+    public function setNumberOfItems($numberOfItems): static {
+        $this->properties['numberOfItems'] = $numberOfItems;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeInteger
+     **/
+    public function getNumberOfItems() {
+        return $this->properties['numberOfItems'];
     }
     /**
      * Type of ordering (e.g. Ascending, Descending, Unordered).

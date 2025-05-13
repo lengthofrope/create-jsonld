@@ -59,70 +59,6 @@ class UnitPriceSpecification extends PriceSpecification
         return $this->properties['priceComponentType'];
     }
     /**
-     * Defines the type of a price specified for an offered product, for example a list
-     * price, a (temporary) sale price or a manufacturer suggested retail price. If
-     * multiple prices are specified for an offer the [[priceType]] property can be
-     * used to identify the type of each such specified price. The value of priceType
-     * can be specified as a value from enumeration PriceTypeEnumeration or as a free
-     * form text string for price types that are not already predefined in
-     * PriceTypeEnumeration.
-     *
-     * @param $priceType \LengthOfRope\JSONLD\Schema\PriceTypeEnumeration|\LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setPriceType($priceType): static {
-        $this->properties['priceType'] = $priceType;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\PriceTypeEnumeration|\LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getPriceType() {
-        return $this->properties['priceType'];
-    }
-    /**
-     * The unit of measurement given using the UN/CEFACT Common Code (3 characters) or
-     * a URL. Other codes than the UN/CEFACT Common Code may be used with a prefix
-     * followed by a colon.
-     *
-     * @param $unitCode \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
-     * @return static
-     **/
-    public function setUnitCode($unitCode): static {
-        $this->properties['unitCode'] = $unitCode;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
-     **/
-    public function getUnitCode() {
-        return $this->properties['unitCode'];
-    }
-    /**
-     * The reference quantity for which a certain price applies, e.g. 1 EUR per 4 kWh
-     * of electricity. This property is a replacement for unitOfMeasurement for the
-     * advanced cases where the price does not relate to a standard unit.
-     *
-     * @param $referenceQuantity \LengthOfRope\JSONLD\Schema\QuantitativeValue
-     * @return static
-     **/
-    public function setReferenceQuantity($referenceQuantity): static {
-        $this->properties['referenceQuantity'] = $referenceQuantity;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
-     **/
-    public function getReferenceQuantity() {
-        return $this->properties['referenceQuantity'];
-    }
-    /**
      * This property specifies the minimal quantity and rounding increment that will be
      * the basis for the billing. The unit of measurement is specified by the unitCode
      * property.
@@ -148,7 +84,7 @@ class UnitPriceSpecification extends PriceSpecification
      * payment plan. Type can be either a Duration or a Number (in which case the unit
      * of measurement, for example month, is specified by the unitCode property).
      *
-     * @param $billingDuration \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Duration
+     * @param $billingDuration \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\Schema\Duration|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setBillingDuration($billingDuration): static {
@@ -158,10 +94,74 @@ class UnitPriceSpecification extends PriceSpecification
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Duration
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\Schema\Duration|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getBillingDuration() {
         return $this->properties['billingDuration'];
+    }
+    /**
+     * Defines the type of a price specified for an offered product, for example a list
+     * price, a (temporary) sale price or a manufacturer suggested retail price. If
+     * multiple prices are specified for an offer the [[priceType]] property can be
+     * used to identify the type of each such specified price. The value of priceType
+     * can be specified as a value from enumeration PriceTypeEnumeration or as a free
+     * form text string for price types that are not already predefined in
+     * PriceTypeEnumeration.
+     *
+     * @param $priceType \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\PriceTypeEnumeration
+     * @return static
+     **/
+    public function setPriceType($priceType): static {
+        $this->properties['priceType'] = $priceType;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\PriceTypeEnumeration
+     **/
+    public function getPriceType() {
+        return $this->properties['priceType'];
+    }
+    /**
+     * The reference quantity for which a certain price applies, e.g. 1 EUR per 4 kWh
+     * of electricity. This property is a replacement for unitOfMeasurement for the
+     * advanced cases where the price does not relate to a standard unit.
+     *
+     * @param $referenceQuantity \LengthOfRope\JSONLD\Schema\QuantitativeValue
+     * @return static
+     **/
+    public function setReferenceQuantity($referenceQuantity): static {
+        $this->properties['referenceQuantity'] = $referenceQuantity;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
+     **/
+    public function getReferenceQuantity() {
+        return $this->properties['referenceQuantity'];
+    }
+    /**
+     * A string or text indicating the unit of measurement. Useful if you cannot
+     * provide a standard unit code for
+     * <a href='unitCode'>unitCode</a>.
+     *
+     * @param $unitText \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setUnitText($unitText): static {
+        $this->properties['unitText'] = $unitText;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getUnitText() {
+        return $this->properties['unitText'];
     }
     /**
      * Specifies after how much time this price (or price component) becomes valid and
@@ -185,23 +185,23 @@ class UnitPriceSpecification extends PriceSpecification
         return $this->properties['billingStart'];
     }
     /**
-     * A string or text indicating the unit of measurement. Useful if you cannot
-     * provide a standard unit code for
-     * <a href='unitCode'>unitCode</a>.
+     * The unit of measurement given using the UN/CEFACT Common Code (3 characters) or
+     * a URL. Other codes than the UN/CEFACT Common Code may be used with a prefix
+     * followed by a colon.
      *
-     * @param $unitText \LengthOfRope\JSONLD\DataType\TypeText
+     * @param $unitCode \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
-    public function setUnitText($unitText): static {
-        $this->properties['unitText'] = $unitText;
+    public function setUnitCode($unitCode): static {
+        $this->properties['unitCode'] = $unitCode;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      **/
-    public function getUnitText() {
-        return $this->properties['unitText'];
+    public function getUnitCode() {
+        return $this->properties['unitCode'];
     }
 }

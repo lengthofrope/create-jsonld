@@ -40,6 +40,42 @@ class APIReference extends TechArticle
     }
 
     /**
+     * Indicates whether API is managed or unmanaged.
+     *
+     * @param $programmingModel \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setProgrammingModel($programmingModel): static {
+        $this->properties['programmingModel'] = $programmingModel;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getProgrammingModel() {
+        return $this->properties['programmingModel'];
+    }
+    /**
+     * Associated product/technology version. E.g., .NET Framework 4.5.
+     *
+     * @param $assemblyVersion \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setAssemblyVersion($assemblyVersion): static {
+        $this->properties['assemblyVersion'] = $assemblyVersion;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getAssemblyVersion() {
+        return $this->properties['assemblyVersion'];
+    }
+    /**
      * Type of app development: phone, Metro style, desktop, XBox, etc.
      *
      * @param $targetPlatform \LengthOfRope\JSONLD\DataType\TypeText
@@ -74,42 +110,6 @@ class APIReference extends TechArticle
      **/
     public function getExecutableLibraryName() {
         return $this->properties['executableLibraryName'];
-    }
-    /**
-     * Associated product/technology version. E.g., .NET Framework 4.5.
-     *
-     * @param $assemblyVersion \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setAssemblyVersion($assemblyVersion): static {
-        $this->properties['assemblyVersion'] = $assemblyVersion;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getAssemblyVersion() {
-        return $this->properties['assemblyVersion'];
-    }
-    /**
-     * Indicates whether API is managed or unmanaged.
-     *
-     * @param $programmingModel \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setProgrammingModel($programmingModel): static {
-        $this->properties['programmingModel'] = $programmingModel;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getProgrammingModel() {
-        return $this->properties['programmingModel'];
     }
     /**
      * Library file name, e.g., mscorlib.dll, system.web.dll.

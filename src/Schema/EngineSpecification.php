@@ -41,22 +41,20 @@ class EngineSpecification extends StructuredValue
     }
 
     /**
-     * The power of the vehicle's engine.
-     * Typical unit code(s): KWT for kilowatt, BHP for brake horsepower, N12 for
-     * metric horsepower (PS, with 1 PS = 735,49875 W)
+     * The torque (turning force) of the vehicle's engine.
      *
-     * * Note 1: There are many different ways of measuring an engine's power. For an
-     * overview, see
-     * [http://en.wikipedia.org/wiki/Horsepower#Engine\_power\_test\_codes](http://en.wikipedia.org/wiki/Horsepower#Engine_power_test_codes).
-     * * Note 2: You can link to information about how the given value has been
-     * determined using the [[valueReference]] property.
-     * * Note 3: You can use [[minValue]] and [[maxValue]] to indicate ranges.
+     * Typical unit code(s): NU for newton metre (N m), F17 for pound-force per foot,
+     * or F48 for pound-force per inch
      *
-     * @param $enginePower \LengthOfRope\JSONLD\Schema\QuantitativeValue
+     * * Note 1: You can link to information about how the given value has been
+     * determined (e.g. reference RPM) using the [[valueReference]] property.
+     * * Note 2: You can use [[minValue]] and [[maxValue]] to indicate ranges.
+     *
+     * @param $torque \LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
-    public function setEnginePower($enginePower): static {
-        $this->properties['enginePower'] = $enginePower;
+    public function setTorque($torque): static {
+        $this->properties['torque'] = $torque;
 
         return $this;
     }
@@ -64,8 +62,26 @@ class EngineSpecification extends StructuredValue
     /**
      * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
-    public function getEnginePower() {
-        return $this->properties['enginePower'];
+    public function getTorque() {
+        return $this->properties['torque'];
+    }
+    /**
+     * The type of engine or engines powering the vehicle.
+     *
+     * @param $engineType \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\QualitativeValue
+     * @return static
+     **/
+    public function setEngineType($engineType): static {
+        $this->properties['engineType'] = $engineType;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\QualitativeValue
+     **/
+    public function getEngineType() {
+        return $this->properties['engineType'];
     }
     /**
      * The volume swept by all of the pistons inside the cylinders of an internal
@@ -93,38 +109,22 @@ class EngineSpecification extends StructuredValue
         return $this->properties['engineDisplacement'];
     }
     /**
-     * The type of engine or engines powering the vehicle.
+     * The power of the vehicle's engine.
+     * Typical unit code(s): KWT for kilowatt, BHP for brake horsepower, N12 for
+     * metric horsepower (PS, with 1 PS = 735,49875 W)
      *
-     * @param $engineType \LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
+     * * Note 1: There are many different ways of measuring an engine's power. For an
+     * overview, see
+     * [http://en.wikipedia.org/wiki/Horsepower#Engine\_power\_test\_codes](http://en.wikipedia.org/wiki/Horsepower#Engine_power_test_codes).
+     * * Note 2: You can link to information about how the given value has been
+     * determined using the [[valueReference]] property.
+     * * Note 3: You can use [[minValue]] and [[maxValue]] to indicate ranges.
+     *
+     * @param $enginePower \LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
-    public function setEngineType($engineType): static {
-        $this->properties['engineType'] = $engineType;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\QualitativeValue|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
-     **/
-    public function getEngineType() {
-        return $this->properties['engineType'];
-    }
-    /**
-     * The torque (turning force) of the vehicle's engine.
-     *
-     * Typical unit code(s): NU for newton metre (N m), F17 for pound-force per foot,
-     * or F48 for pound-force per inch
-     *
-     * * Note 1: You can link to information about how the given value has been
-     * determined (e.g. reference RPM) using the [[valueReference]] property.
-     * * Note 2: You can use [[minValue]] and [[maxValue]] to indicate ranges.
-     *
-     * @param $torque \LengthOfRope\JSONLD\Schema\QuantitativeValue
-     * @return static
-     **/
-    public function setTorque($torque): static {
-        $this->properties['torque'] = $torque;
+    public function setEnginePower($enginePower): static {
+        $this->properties['enginePower'] = $enginePower;
 
         return $this;
     }
@@ -132,8 +132,8 @@ class EngineSpecification extends StructuredValue
     /**
      * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
-    public function getTorque() {
-        return $this->properties['torque'];
+    public function getEnginePower() {
+        return $this->properties['enginePower'];
     }
     /**
      * The type of fuel suitable for the engine or engines of the vehicle. If the

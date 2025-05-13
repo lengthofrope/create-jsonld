@@ -63,24 +63,6 @@ class FlightReservation extends Reservation
         return $this->properties['passengerPriorityStatus'];
     }
     /**
-     * The passenger's sequence number as assigned by the airline.
-     *
-     * @param $passengerSequenceNumber \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setPassengerSequenceNumber($passengerSequenceNumber): static {
-        $this->properties['passengerSequenceNumber'] = $passengerSequenceNumber;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getPassengerSequenceNumber() {
-        return $this->properties['passengerSequenceNumber'];
-    }
-    /**
      * The airline-specific indicator of boarding order / preference.
      *
      * @param $boardingGroup \LengthOfRope\JSONLD\DataType\TypeText
@@ -115,5 +97,23 @@ class FlightReservation extends Reservation
      **/
     public function getSecurityScreening() {
         return $this->properties['securityScreening'];
+    }
+    /**
+     * The passenger's sequence number as assigned by the airline.
+     *
+     * @param $passengerSequenceNumber \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setPassengerSequenceNumber($passengerSequenceNumber): static {
+        $this->properties['passengerSequenceNumber'] = $passengerSequenceNumber;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getPassengerSequenceNumber() {
+        return $this->properties['passengerSequenceNumber'];
     }
 }

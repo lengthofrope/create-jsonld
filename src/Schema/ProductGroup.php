@@ -69,27 +69,6 @@ class ProductGroup extends Product
         return $this->properties['hasVariant'];
     }
     /**
-     * Indicates the property or properties by which the variants in a [[ProductGroup]]
-     * vary, e.g. their size, color etc. Schema.org properties can be referenced by
-     * their short name e.g. "color"; terms defined elsewhere can be referenced with
-     * their URIs.
-     *
-     * @param $variesBy \LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setVariesBy($variesBy): static {
-        $this->properties['variesBy'] = $variesBy;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getVariesBy() {
-        return $this->properties['variesBy'];
-    }
-    /**
      * Indicates a textual identifier for a ProductGroup.
      *
      * @param $productGroupID \LengthOfRope\JSONLD\DataType\TypeText
@@ -106,5 +85,26 @@ class ProductGroup extends Product
      **/
     public function getProductGroupID() {
         return $this->properties['productGroupID'];
+    }
+    /**
+     * Indicates the property or properties by which the variants in a [[ProductGroup]]
+     * vary, e.g. their size, color etc. Schema.org properties can be referenced by
+     * their short name e.g. "color"; terms defined elsewhere can be referenced with
+     * their URIs.
+     *
+     * @param $variesBy \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DefinedTerm
+     * @return static
+     **/
+    public function setVariesBy($variesBy): static {
+        $this->properties['variesBy'] = $variesBy;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DefinedTerm
+     **/
+    public function getVariesBy() {
+        return $this->properties['variesBy'];
     }
 }

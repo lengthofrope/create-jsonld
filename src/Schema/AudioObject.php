@@ -59,25 +59,6 @@ class AudioObject extends MediaObject
         return $this->properties['transcript'];
     }
     /**
-     * The caption for this object. For downloadable machine formats (closed caption,
-     * subtitles etc.) use MediaObject and indicate the [[encodingFormat]].
-     *
-     * @param $caption \LengthOfRope\JSONLD\Schema\MediaObject|\LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setCaption($caption): static {
-        $this->properties['caption'] = $caption;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\MediaObject|\LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getCaption() {
-        return $this->properties['caption'];
-    }
-    /**
      * Represents textual captioning from a [[MediaObject]], e.g. text of a 'meme'.
      *
      * @param $embeddedTextCaption \LengthOfRope\JSONLD\DataType\TypeText
@@ -94,5 +75,24 @@ class AudioObject extends MediaObject
      **/
     public function getEmbeddedTextCaption() {
         return $this->properties['embeddedTextCaption'];
+    }
+    /**
+     * The caption for this object. For downloadable machine formats (closed caption,
+     * subtitles etc.) use MediaObject and indicate the [[encodingFormat]].
+     *
+     * @param $caption \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\MediaObject
+     * @return static
+     **/
+    public function setCaption($caption): static {
+        $this->properties['caption'] = $caption;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\MediaObject
+     **/
+    public function getCaption() {
+        return $this->properties['caption'];
     }
 }

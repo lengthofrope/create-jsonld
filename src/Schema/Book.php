@@ -40,22 +40,40 @@ class Book extends CreativeWork
     }
 
     /**
-     * The number of pages in the book.
+     * The ISBN of the book.
      *
-     * @param $numberOfPages \LengthOfRope\JSONLD\DataType\TypeInteger
+     * @param $isbn \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
-    public function setNumberOfPages($numberOfPages): static {
-        $this->properties['numberOfPages'] = $numberOfPages;
+    public function setIsbn($isbn): static {
+        $this->properties['isbn'] = $isbn;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeInteger
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
-    public function getNumberOfPages() {
-        return $this->properties['numberOfPages'];
+    public function getIsbn() {
+        return $this->properties['isbn'];
+    }
+    /**
+     * Indicates whether the book is an abridged edition.
+     *
+     * @param $abridged \LengthOfRope\JSONLD\DataType\TypeBoolean
+     * @return static
+     **/
+    public function setAbridged($abridged): static {
+        $this->properties['abridged'] = $abridged;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean
+     **/
+    public function getAbridged() {
+        return $this->properties['abridged'];
     }
     /**
      * The format of the book.
@@ -76,6 +94,24 @@ class Book extends CreativeWork
         return $this->properties['bookFormat'];
     }
     /**
+     * The number of pages in the book.
+     *
+     * @param $numberOfPages \LengthOfRope\JSONLD\DataType\TypeInteger
+     * @return static
+     **/
+    public function setNumberOfPages($numberOfPages): static {
+        $this->properties['numberOfPages'] = $numberOfPages;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeInteger
+     **/
+    public function getNumberOfPages() {
+        return $this->properties['numberOfPages'];
+    }
+    /**
      * The illustrator of the book.
      *
      * @param $illustrator \LengthOfRope\JSONLD\Schema\Person
@@ -94,24 +130,6 @@ class Book extends CreativeWork
         return $this->properties['illustrator'];
     }
     /**
-     * The ISBN of the book.
-     *
-     * @param $isbn \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setIsbn($isbn): static {
-        $this->properties['isbn'] = $isbn;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getIsbn() {
-        return $this->properties['isbn'];
-    }
-    /**
      * The edition of the book.
      *
      * @param $bookEdition \LengthOfRope\JSONLD\DataType\TypeText
@@ -128,23 +146,5 @@ class Book extends CreativeWork
      **/
     public function getBookEdition() {
         return $this->properties['bookEdition'];
-    }
-    /**
-     * Indicates whether the book is an abridged edition.
-     *
-     * @param $abridged \LengthOfRope\JSONLD\DataType\TypeBoolean
-     * @return static
-     **/
-    public function setAbridged($abridged): static {
-        $this->properties['abridged'] = $abridged;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean
-     **/
-    public function getAbridged() {
-        return $this->properties['abridged'];
     }
 }

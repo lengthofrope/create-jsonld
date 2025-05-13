@@ -40,42 +40,23 @@ class HealthInsurancePlan extends Intangible
     }
 
     /**
-     * The standard for interpreting the Plan ID. The preferred is "HIOS". See the
-     * Centers for Medicare & Medicaid Services for more details.
+     * The 14-character, HIOS-generated Plan ID number. (Plan IDs must be unique, even
+     * across different markets.)
      *
-     * @param $usesHealthPlanIdStandard \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
+     * @param $healthPlanId \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
-    public function setUsesHealthPlanIdStandard($usesHealthPlanIdStandard): static {
-        $this->properties['usesHealthPlanIdStandard'] = $usesHealthPlanIdStandard;
+    public function setHealthPlanId($healthPlanId): static {
+        $this->properties['healthPlanId'] = $healthPlanId;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
-    public function getUsesHealthPlanIdStandard() {
-        return $this->properties['usesHealthPlanIdStandard'];
-    }
-    /**
-     * The URL that goes directly to the summary of benefits and coverage for the
-     * specific standard plan or plan variation.
-     *
-     * @param $benefitsSummaryUrl \LengthOfRope\JSONLD\DataType\TypeURL
-     * @return static
-     **/
-    public function setBenefitsSummaryUrl($benefitsSummaryUrl): static {
-        $this->properties['benefitsSummaryUrl'] = $benefitsSummaryUrl;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeURL
-     **/
-    public function getBenefitsSummaryUrl() {
-        return $this->properties['benefitsSummaryUrl'];
+    public function getHealthPlanId() {
+        return $this->properties['healthPlanId'];
     }
     /**
      * The URL that goes directly to the plan brochure for the specific standard plan
@@ -95,6 +76,79 @@ class HealthInsurancePlan extends Intangible
      **/
     public function getHealthPlanMarketingUrl() {
         return $this->properties['healthPlanMarketingUrl'];
+    }
+    /**
+     * TODO.
+     *
+     * @param $healthPlanDrugOption \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setHealthPlanDrugOption($healthPlanDrugOption): static {
+        $this->properties['healthPlanDrugOption'] = $healthPlanDrugOption;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getHealthPlanDrugOption() {
+        return $this->properties['healthPlanDrugOption'];
+    }
+    /**
+     * Formularies covered by this plan.
+     *
+     * @param $includesHealthPlanFormulary \LengthOfRope\JSONLD\Schema\HealthPlanFormulary
+     * @return static
+     **/
+    public function setIncludesHealthPlanFormulary($includesHealthPlanFormulary): static {
+        $this->properties['includesHealthPlanFormulary'] = $includesHealthPlanFormulary;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\HealthPlanFormulary
+     **/
+    public function getIncludesHealthPlanFormulary() {
+        return $this->properties['includesHealthPlanFormulary'];
+    }
+    /**
+     * The standard for interpreting the Plan ID. The preferred is "HIOS". See the
+     * Centers for Medicare & Medicaid Services for more details.
+     *
+     * @param $usesHealthPlanIdStandard \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setUsesHealthPlanIdStandard($usesHealthPlanIdStandard): static {
+        $this->properties['usesHealthPlanIdStandard'] = $usesHealthPlanIdStandard;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getUsesHealthPlanIdStandard() {
+        return $this->properties['usesHealthPlanIdStandard'];
+    }
+    /**
+     * Networks covered by this plan.
+     *
+     * @param $includesHealthPlanNetwork \LengthOfRope\JSONLD\Schema\HealthPlanNetwork
+     * @return static
+     **/
+    public function setIncludesHealthPlanNetwork($includesHealthPlanNetwork): static {
+        $this->properties['includesHealthPlanNetwork'] = $includesHealthPlanNetwork;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\HealthPlanNetwork
+     **/
+    public function getIncludesHealthPlanNetwork() {
+        return $this->properties['includesHealthPlanNetwork'];
     }
     /**
      * A contact point for a person or organization.
@@ -133,76 +187,22 @@ class HealthInsurancePlan extends Intangible
         return $this->properties['healthPlanDrugTier'];
     }
     /**
-     * Formularies covered by this plan.
+     * The URL that goes directly to the summary of benefits and coverage for the
+     * specific standard plan or plan variation.
      *
-     * @param $includesHealthPlanFormulary \LengthOfRope\JSONLD\Schema\HealthPlanFormulary
+     * @param $benefitsSummaryUrl \LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
-    public function setIncludesHealthPlanFormulary($includesHealthPlanFormulary): static {
-        $this->properties['includesHealthPlanFormulary'] = $includesHealthPlanFormulary;
+    public function setBenefitsSummaryUrl($benefitsSummaryUrl): static {
+        $this->properties['benefitsSummaryUrl'] = $benefitsSummaryUrl;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\HealthPlanFormulary
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL
      **/
-    public function getIncludesHealthPlanFormulary() {
-        return $this->properties['includesHealthPlanFormulary'];
-    }
-    /**
-     * Networks covered by this plan.
-     *
-     * @param $includesHealthPlanNetwork \LengthOfRope\JSONLD\Schema\HealthPlanNetwork
-     * @return static
-     **/
-    public function setIncludesHealthPlanNetwork($includesHealthPlanNetwork): static {
-        $this->properties['includesHealthPlanNetwork'] = $includesHealthPlanNetwork;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\HealthPlanNetwork
-     **/
-    public function getIncludesHealthPlanNetwork() {
-        return $this->properties['includesHealthPlanNetwork'];
-    }
-    /**
-     * TODO.
-     *
-     * @param $healthPlanDrugOption \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setHealthPlanDrugOption($healthPlanDrugOption): static {
-        $this->properties['healthPlanDrugOption'] = $healthPlanDrugOption;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getHealthPlanDrugOption() {
-        return $this->properties['healthPlanDrugOption'];
-    }
-    /**
-     * The 14-character, HIOS-generated Plan ID number. (Plan IDs must be unique, even
-     * across different markets.)
-     *
-     * @param $healthPlanId \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setHealthPlanId($healthPlanId): static {
-        $this->properties['healthPlanId'] = $healthPlanId;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getHealthPlanId() {
-        return $this->properties['healthPlanId'];
+    public function getBenefitsSummaryUrl() {
+        return $this->properties['benefitsSummaryUrl'];
     }
 }

@@ -40,6 +40,24 @@ class ParcelDelivery extends Intangible
     }
 
     /**
+     * Shipper tracking number.
+     *
+     * @param $trackingNumber \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setTrackingNumber($trackingNumber): static {
+        $this->properties['trackingNumber'] = $trackingNumber;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getTrackingNumber() {
+        return $this->properties['trackingNumber'];
+    }
+    /**
      * 'carrier' is an out-dated term indicating the 'provider' for parcel delivery and
      * flights.
      *
@@ -59,24 +77,6 @@ class ParcelDelivery extends Intangible
         return $this->properties['carrier'];
     }
     /**
-     * Destination address.
-     *
-     * @param $deliveryAddress \LengthOfRope\JSONLD\Schema\PostalAddress
-     * @return static
-     **/
-    public function setDeliveryAddress($deliveryAddress): static {
-        $this->properties['deliveryAddress'] = $deliveryAddress;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\PostalAddress
-     **/
-    public function getDeliveryAddress() {
-        return $this->properties['deliveryAddress'];
-    }
-    /**
      * New entry added as the package passes through each leg of its journey (from
      * shipment to final delivery).
      *
@@ -94,114 +94,6 @@ class ParcelDelivery extends Intangible
      **/
     public function getDeliveryStatus() {
         return $this->properties['deliveryStatus'];
-    }
-    /**
-     * The overall order the items in this delivery were included in.
-     *
-     * @param $partOfOrder \LengthOfRope\JSONLD\Schema\Order
-     * @return static
-     **/
-    public function setPartOfOrder($partOfOrder): static {
-        $this->properties['partOfOrder'] = $partOfOrder;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Order
-     **/
-    public function getPartOfOrder() {
-        return $this->properties['partOfOrder'];
-    }
-    /**
-     * Shipper tracking number.
-     *
-     * @param $trackingNumber \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setTrackingNumber($trackingNumber): static {
-        $this->properties['trackingNumber'] = $trackingNumber;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getTrackingNumber() {
-        return $this->properties['trackingNumber'];
-    }
-    /**
-     * Shipper's address.
-     *
-     * @param $originAddress \LengthOfRope\JSONLD\Schema\PostalAddress
-     * @return static
-     **/
-    public function setOriginAddress($originAddress): static {
-        $this->properties['originAddress'] = $originAddress;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\PostalAddress
-     **/
-    public function getOriginAddress() {
-        return $this->properties['originAddress'];
-    }
-    /**
-     * Tracking url for the parcel delivery.
-     *
-     * @param $trackingUrl \LengthOfRope\JSONLD\DataType\TypeURL
-     * @return static
-     **/
-    public function setTrackingUrl($trackingUrl): static {
-        $this->properties['trackingUrl'] = $trackingUrl;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeURL
-     **/
-    public function getTrackingUrl() {
-        return $this->properties['trackingUrl'];
-    }
-    /**
-     * Item(s) being shipped.
-     *
-     * @param $itemShipped \LengthOfRope\JSONLD\Schema\Product
-     * @return static
-     **/
-    public function setItemShipped($itemShipped): static {
-        $this->properties['itemShipped'] = $itemShipped;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Product
-     **/
-    public function getItemShipped() {
-        return $this->properties['itemShipped'];
-    }
-    /**
-     * The latest date the package may arrive.
-     *
-     * @param $expectedArrivalUntil \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
-     * @return static
-     **/
-    public function setExpectedArrivalUntil($expectedArrivalUntil): static {
-        $this->properties['expectedArrivalUntil'] = $expectedArrivalUntil;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
-     **/
-    public function getExpectedArrivalUntil() {
-        return $this->properties['expectedArrivalUntil'];
     }
     /**
      * Method used for delivery or shipping.
@@ -242,6 +134,42 @@ class ParcelDelivery extends Intangible
         return $this->properties['provider'];
     }
     /**
+     * The overall order the items in this delivery were included in.
+     *
+     * @param $partOfOrder \LengthOfRope\JSONLD\Schema\Order
+     * @return static
+     **/
+    public function setPartOfOrder($partOfOrder): static {
+        $this->properties['partOfOrder'] = $partOfOrder;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Order
+     **/
+    public function getPartOfOrder() {
+        return $this->properties['partOfOrder'];
+    }
+    /**
+     * Item(s) being shipped.
+     *
+     * @param $itemShipped \LengthOfRope\JSONLD\Schema\Product
+     * @return static
+     **/
+    public function setItemShipped($itemShipped): static {
+        $this->properties['itemShipped'] = $itemShipped;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Product
+     **/
+    public function getItemShipped() {
+        return $this->properties['itemShipped'];
+    }
+    /**
      * The earliest date the package may arrive.
      *
      * @param $expectedArrivalFrom \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
@@ -258,5 +186,77 @@ class ParcelDelivery extends Intangible
      **/
     public function getExpectedArrivalFrom() {
         return $this->properties['expectedArrivalFrom'];
+    }
+    /**
+     * Destination address.
+     *
+     * @param $deliveryAddress \LengthOfRope\JSONLD\Schema\PostalAddress
+     * @return static
+     **/
+    public function setDeliveryAddress($deliveryAddress): static {
+        $this->properties['deliveryAddress'] = $deliveryAddress;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\PostalAddress
+     **/
+    public function getDeliveryAddress() {
+        return $this->properties['deliveryAddress'];
+    }
+    /**
+     * The latest date the package may arrive.
+     *
+     * @param $expectedArrivalUntil \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
+     * @return static
+     **/
+    public function setExpectedArrivalUntil($expectedArrivalUntil): static {
+        $this->properties['expectedArrivalUntil'] = $expectedArrivalUntil;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
+     **/
+    public function getExpectedArrivalUntil() {
+        return $this->properties['expectedArrivalUntil'];
+    }
+    /**
+     * Tracking url for the parcel delivery.
+     *
+     * @param $trackingUrl \LengthOfRope\JSONLD\DataType\TypeURL
+     * @return static
+     **/
+    public function setTrackingUrl($trackingUrl): static {
+        $this->properties['trackingUrl'] = $trackingUrl;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL
+     **/
+    public function getTrackingUrl() {
+        return $this->properties['trackingUrl'];
+    }
+    /**
+     * Shipper's address.
+     *
+     * @param $originAddress \LengthOfRope\JSONLD\Schema\PostalAddress
+     * @return static
+     **/
+    public function setOriginAddress($originAddress): static {
+        $this->properties['originAddress'] = $originAddress;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\PostalAddress
+     **/
+    public function getOriginAddress() {
+        return $this->properties['originAddress'];
     }
 }

@@ -40,25 +40,6 @@ class MenuItem extends Intangible
     }
 
     /**
-     * Indicates a dietary restriction or guideline for which this recipe or menu item
-     * is suitable, e.g. diabetic, halal etc.
-     *
-     * @param $suitableForDiet \LengthOfRope\JSONLD\Schema\RestrictedDiet
-     * @return static
-     **/
-    public function setSuitableForDiet($suitableForDiet): static {
-        $this->properties['suitableForDiet'] = $suitableForDiet;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\RestrictedDiet
-     **/
-    public function getSuitableForDiet() {
-        return $this->properties['suitableForDiet'];
-    }
-    /**
      * Additional menu item(s) such as a side dish of salad or side order of fries that
      * can be added to this menu item. Additionally it can be a menu section containing
      * allowed add-on menu items for this menu item.
@@ -79,6 +60,50 @@ class MenuItem extends Intangible
         return $this->properties['menuAddOn'];
     }
     /**
+     * Indicates a dietary restriction or guideline for which this recipe or menu item
+     * is suitable, e.g. diabetic, halal etc.
+     *
+     * @param $suitableForDiet \LengthOfRope\JSONLD\Schema\RestrictedDiet
+     * @return static
+     **/
+    public function setSuitableForDiet($suitableForDiet): static {
+        $this->properties['suitableForDiet'] = $suitableForDiet;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\RestrictedDiet
+     **/
+    public function getSuitableForDiet() {
+        return $this->properties['suitableForDiet'];
+    }
+    /**
+     * An offer to provide this item&#x2014;for example, an offer to sell a product,
+     * rent the DVD of a movie, perform a service, or give away tickets to an event.
+     * Use [[businessFunction]] to indicate the kind of transaction offered, i.e. sell,
+     * lease, etc. This property can also be used to describe a [[Demand]]. While this
+     * property is listed as expected on a number of common types, it can be used in
+     * others. In that case, using a second type, such as Product or a subtype of
+     * Product, can clarify the nature of the offer.
+     *
+     *
+     * @param $offers \LengthOfRope\JSONLD\Schema\Demand|\LengthOfRope\JSONLD\Schema\Offer
+     * @return static
+     **/
+    public function setOffers($offers): static {
+        $this->properties['offers'] = $offers;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Demand|\LengthOfRope\JSONLD\Schema\Offer
+     **/
+    public function getOffers() {
+        return $this->properties['offers'];
+    }
+    /**
      * Nutrition information about the recipe or menu item.
      *
      * @param $nutrition \LengthOfRope\JSONLD\Schema\NutritionInformation
@@ -95,30 +120,5 @@ class MenuItem extends Intangible
      **/
     public function getNutrition() {
         return $this->properties['nutrition'];
-    }
-    /**
-     * An offer to provide this item&#x2014;for example, an offer to sell a product,
-     * rent the DVD of a movie, perform a service, or give away tickets to an event.
-     * Use [[businessFunction]] to indicate the kind of transaction offered, i.e. sell,
-     * lease, etc. This property can also be used to describe a [[Demand]]. While this
-     * property is listed as expected on a number of common types, it can be used in
-     * others. In that case, using a second type, such as Product or a subtype of
-     * Product, can clarify the nature of the offer.
-     *
-     *
-     * @param $offers \LengthOfRope\JSONLD\Schema\Offer|\LengthOfRope\JSONLD\Schema\Demand
-     * @return static
-     **/
-    public function setOffers($offers): static {
-        $this->properties['offers'] = $offers;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Offer|\LengthOfRope\JSONLD\Schema\Demand
-     **/
-    public function getOffers() {
-        return $this->properties['offers'];
     }
 }

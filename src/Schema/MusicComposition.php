@@ -40,40 +40,22 @@ class MusicComposition extends CreativeWork
     }
 
     /**
-     * The date and place the work was first performed.
+     * The person who wrote the words.
      *
-     * @param $firstPerformance \LengthOfRope\JSONLD\Schema\Event
+     * @param $lyricist \LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
-    public function setFirstPerformance($firstPerformance): static {
-        $this->properties['firstPerformance'] = $firstPerformance;
+    public function setLyricist($lyricist): static {
+        $this->properties['lyricist'] = $lyricist;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Event
+     * @return \LengthOfRope\JSONLD\Schema\Person
      **/
-    public function getFirstPerformance() {
-        return $this->properties['firstPerformance'];
-    }
-    /**
-     * An audio recording of the work.
-     *
-     * @param $recordedAs \LengthOfRope\JSONLD\Schema\MusicRecording
-     * @return static
-     **/
-    public function setRecordedAs($recordedAs): static {
-        $this->properties['recordedAs'] = $recordedAs;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\MusicRecording
-     **/
-    public function getRecordedAs() {
-        return $this->properties['recordedAs'];
+    public function getLyricist() {
+        return $this->properties['lyricist'];
     }
     /**
      * The words in the song.
@@ -112,58 +94,22 @@ class MusicComposition extends CreativeWork
         return $this->properties['iswcCode'];
     }
     /**
-     * Smaller compositions included in this work (e.g. a movement in a symphony).
+     * The key, mode, or scale this composition uses.
      *
-     * @param $includedComposition \LengthOfRope\JSONLD\Schema\MusicComposition
+     * @param $musicalKey \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
-    public function setIncludedComposition($includedComposition): static {
-        $this->properties['includedComposition'] = $includedComposition;
+    public function setMusicalKey($musicalKey): static {
+        $this->properties['musicalKey'] = $musicalKey;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\MusicComposition
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
-    public function getIncludedComposition() {
-        return $this->properties['includedComposition'];
-    }
-    /**
-     * The person who wrote the words.
-     *
-     * @param $lyricist \LengthOfRope\JSONLD\Schema\Person
-     * @return static
-     **/
-    public function setLyricist($lyricist): static {
-        $this->properties['lyricist'] = $lyricist;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Person
-     **/
-    public function getLyricist() {
-        return $this->properties['lyricist'];
-    }
-    /**
-     * An arrangement derived from the composition.
-     *
-     * @param $musicArrangement \LengthOfRope\JSONLD\Schema\MusicComposition
-     * @return static
-     **/
-    public function setMusicArrangement($musicArrangement): static {
-        $this->properties['musicArrangement'] = $musicArrangement;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\MusicComposition
-     **/
-    public function getMusicArrangement() {
-        return $this->properties['musicArrangement'];
+    public function getMusicalKey() {
+        return $this->properties['musicalKey'];
     }
     /**
      * The type of composition (e.g. overture, sonata, symphony, etc.).
@@ -184,22 +130,58 @@ class MusicComposition extends CreativeWork
         return $this->properties['musicCompositionForm'];
     }
     /**
-     * The key, mode, or scale this composition uses.
+     * The date and place the work was first performed.
      *
-     * @param $musicalKey \LengthOfRope\JSONLD\DataType\TypeText
+     * @param $firstPerformance \LengthOfRope\JSONLD\Schema\Event
      * @return static
      **/
-    public function setMusicalKey($musicalKey): static {
-        $this->properties['musicalKey'] = $musicalKey;
+    public function setFirstPerformance($firstPerformance): static {
+        $this->properties['firstPerformance'] = $firstPerformance;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\Schema\Event
      **/
-    public function getMusicalKey() {
-        return $this->properties['musicalKey'];
+    public function getFirstPerformance() {
+        return $this->properties['firstPerformance'];
+    }
+    /**
+     * An arrangement derived from the composition.
+     *
+     * @param $musicArrangement \LengthOfRope\JSONLD\Schema\MusicComposition
+     * @return static
+     **/
+    public function setMusicArrangement($musicArrangement): static {
+        $this->properties['musicArrangement'] = $musicArrangement;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\MusicComposition
+     **/
+    public function getMusicArrangement() {
+        return $this->properties['musicArrangement'];
+    }
+    /**
+     * An audio recording of the work.
+     *
+     * @param $recordedAs \LengthOfRope\JSONLD\Schema\MusicRecording
+     * @return static
+     **/
+    public function setRecordedAs($recordedAs): static {
+        $this->properties['recordedAs'] = $recordedAs;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\MusicRecording
+     **/
+    public function getRecordedAs() {
+        return $this->properties['recordedAs'];
     }
     /**
      * The person or organization who wrote a composition, or who is the composer of a
@@ -219,5 +201,23 @@ class MusicComposition extends CreativeWork
      **/
     public function getComposer() {
         return $this->properties['composer'];
+    }
+    /**
+     * Smaller compositions included in this work (e.g. a movement in a symphony).
+     *
+     * @param $includedComposition \LengthOfRope\JSONLD\Schema\MusicComposition
+     * @return static
+     **/
+    public function setIncludedComposition($includedComposition): static {
+        $this->properties['includedComposition'] = $includedComposition;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\MusicComposition
+     **/
+    public function getIncludedComposition() {
+        return $this->properties['includedComposition'];
     }
 }

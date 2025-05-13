@@ -66,24 +66,6 @@ class MedicalStudy extends MedicalEntity
         return $this->properties['studySubject'];
     }
     /**
-     * The status of the study (enumerated).
-     *
-     * @param $status \LengthOfRope\JSONLD\Schema\MedicalStudyStatus|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\EventStatusType
-     * @return static
-     **/
-    public function setStatus($status): static {
-        $this->properties['status'] = $status;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\MedicalStudyStatus|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\EventStatusType
-     **/
-    public function getStatus() {
-        return $this->properties['status'];
-    }
-    /**
      * Specifying the health condition(s) of a patient, medical study, or other target
      * audience.
      *
@@ -101,6 +83,24 @@ class MedicalStudy extends MedicalEntity
      **/
     public function getHealthCondition() {
         return $this->properties['healthCondition'];
+    }
+    /**
+     * The status of the study (enumerated).
+     *
+     * @param $status \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\EventStatusType|\LengthOfRope\JSONLD\Schema\MedicalStudyStatus
+     * @return static
+     **/
+    public function setStatus($status): static {
+        $this->properties['status'] = $status;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\EventStatusType|\LengthOfRope\JSONLD\Schema\MedicalStudyStatus
+     **/
+    public function getStatus() {
+        return $this->properties['status'];
     }
     /**
      * The location in which the study is taking/took place.

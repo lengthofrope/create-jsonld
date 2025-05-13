@@ -72,7 +72,7 @@ class WorkBasedProgram extends EducationalOccupationalProgram
      * Note: for historical reasons, any textual label and formal code provided as a
      * literal may be assumed to be from O*NET-SOC.
      *
-     * @param $occupationalCategory \LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\TypeText
+     * @param $occupationalCategory \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\CategoryCode
      * @return static
      **/
     public function setOccupationalCategory($occupationalCategory): static {
@@ -82,7 +82,7 @@ class WorkBasedProgram extends EducationalOccupationalProgram
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\CategoryCode
      **/
     public function getOccupationalCategory() {
         return $this->properties['occupationalCategory'];

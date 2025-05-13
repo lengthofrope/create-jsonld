@@ -40,42 +40,6 @@ class DrugStrength extends MedicalIntangible
     }
 
     /**
-     * The units of an active ingredient's strength, e.g. mg.
-     *
-     * @param $strengthUnit \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setStrengthUnit($strengthUnit): static {
-        $this->properties['strengthUnit'] = $strengthUnit;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getStrengthUnit() {
-        return $this->properties['strengthUnit'];
-    }
-    /**
-     * The value of an active ingredient's strength, e.g. 325.
-     *
-     * @param $strengthValue \LengthOfRope\JSONLD\DataType\TypeNumber
-     * @return static
-     **/
-    public function setStrengthValue($strengthValue): static {
-        $this->properties['strengthValue'] = $strengthValue;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
-     **/
-    public function getStrengthValue() {
-        return $this->properties['strengthValue'];
-    }
-    /**
      * The location in which the strength is available.
      *
      * @param $availableIn \LengthOfRope\JSONLD\Schema\AdministrativeArea
@@ -129,5 +93,41 @@ class DrugStrength extends MedicalIntangible
      **/
     public function getActiveIngredient() {
         return $this->properties['activeIngredient'];
+    }
+    /**
+     * The value of an active ingredient's strength, e.g. 325.
+     *
+     * @param $strengthValue \LengthOfRope\JSONLD\DataType\TypeNumber
+     * @return static
+     **/
+    public function setStrengthValue($strengthValue): static {
+        $this->properties['strengthValue'] = $strengthValue;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
+     **/
+    public function getStrengthValue() {
+        return $this->properties['strengthValue'];
+    }
+    /**
+     * The units of an active ingredient's strength, e.g. mg.
+     *
+     * @param $strengthUnit \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setStrengthUnit($strengthUnit): static {
+        $this->properties['strengthUnit'] = $strengthUnit;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getStrengthUnit() {
+        return $this->properties['strengthUnit'];
     }
 }

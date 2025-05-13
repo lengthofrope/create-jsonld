@@ -58,24 +58,6 @@ class BusTrip extends Trip
         return $this->properties['busNumber'];
     }
     /**
-     * The name of the bus (e.g. Bolt Express).
-     *
-     * @param $busName \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setBusName($busName): static {
-        $this->properties['busName'] = $busName;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getBusName() {
-        return $this->properties['busName'];
-    }
-    /**
      * The stop or station from which the bus arrives.
      *
      * @param $arrivalBusStop \LengthOfRope\JSONLD\Schema\BusStop|\LengthOfRope\JSONLD\Schema\BusStation
@@ -110,5 +92,23 @@ class BusTrip extends Trip
      **/
     public function getDepartureBusStop() {
         return $this->properties['departureBusStop'];
+    }
+    /**
+     * The name of the bus (e.g. Bolt Express).
+     *
+     * @param $busName \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setBusName($busName): static {
+        $this->properties['busName'] = $busName;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getBusName() {
+        return $this->properties['busName'];
     }
 }

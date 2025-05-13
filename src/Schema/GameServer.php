@@ -40,22 +40,22 @@ class GameServer extends Intangible
     }
 
     /**
-     * Status of a game server.
+     * Number of players on the server.
      *
-     * @param $serverStatus \LengthOfRope\JSONLD\Schema\GameServerStatus
+     * @param $playersOnline \LengthOfRope\JSONLD\DataType\TypeInteger
      * @return static
      **/
-    public function setServerStatus($serverStatus): static {
-        $this->properties['serverStatus'] = $serverStatus;
+    public function setPlayersOnline($playersOnline): static {
+        $this->properties['playersOnline'] = $playersOnline;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\GameServerStatus
+     * @return \LengthOfRope\JSONLD\DataType\TypeInteger
      **/
-    public function getServerStatus() {
-        return $this->properties['serverStatus'];
+    public function getPlayersOnline() {
+        return $this->properties['playersOnline'];
     }
     /**
      * Video game which is played on this server.
@@ -76,21 +76,21 @@ class GameServer extends Intangible
         return $this->properties['game'];
     }
     /**
-     * Number of players on the server.
+     * Status of a game server.
      *
-     * @param $playersOnline \LengthOfRope\JSONLD\DataType\TypeInteger
+     * @param $serverStatus \LengthOfRope\JSONLD\Schema\GameServerStatus
      * @return static
      **/
-    public function setPlayersOnline($playersOnline): static {
-        $this->properties['playersOnline'] = $playersOnline;
+    public function setServerStatus($serverStatus): static {
+        $this->properties['serverStatus'] = $serverStatus;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeInteger
+     * @return \LengthOfRope\JSONLD\Schema\GameServerStatus
      **/
-    public function getPlayersOnline() {
-        return $this->properties['playersOnline'];
+    public function getServerStatus() {
+        return $this->properties['serverStatus'];
     }
 }

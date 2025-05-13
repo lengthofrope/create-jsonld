@@ -40,22 +40,22 @@ class Joint extends AnatomicalStructure
     }
 
     /**
-     * The biomechanical properties of the bone.
+     * The degree of mobility the joint allows.
      *
-     * @param $biomechnicalClass \LengthOfRope\JSONLD\DataType\TypeText
+     * @param $functionalClass \LengthOfRope\JSONLD\Schema\MedicalEntity|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
-    public function setBiomechnicalClass($biomechnicalClass): static {
-        $this->properties['biomechnicalClass'] = $biomechnicalClass;
+    public function setFunctionalClass($functionalClass): static {
+        $this->properties['functionalClass'] = $functionalClass;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\Schema\MedicalEntity|\LengthOfRope\JSONLD\DataType\TypeText
      **/
-    public function getBiomechnicalClass() {
-        return $this->properties['biomechnicalClass'];
+    public function getFunctionalClass() {
+        return $this->properties['functionalClass'];
     }
     /**
      * The name given to how bone physically connects to each other.
@@ -76,21 +76,21 @@ class Joint extends AnatomicalStructure
         return $this->properties['structuralClass'];
     }
     /**
-     * The degree of mobility the joint allows.
+     * The biomechanical properties of the bone.
      *
-     * @param $functionalClass \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\MedicalEntity
+     * @param $biomechnicalClass \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
-    public function setFunctionalClass($functionalClass): static {
-        $this->properties['functionalClass'] = $functionalClass;
+    public function setBiomechnicalClass($biomechnicalClass): static {
+        $this->properties['biomechnicalClass'] = $biomechnicalClass;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\MedicalEntity
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
-    public function getFunctionalClass() {
-        return $this->properties['functionalClass'];
+    public function getBiomechnicalClass() {
+        return $this->properties['biomechnicalClass'];
     }
 }

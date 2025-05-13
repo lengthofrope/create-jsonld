@@ -44,42 +44,23 @@ class Course extends CreativeWork
     }
 
     /**
-     * Indicates (typically several) Syllabus entities that lay out what each section
-     * of the overall course will cover.
+     * An offering of the course at a specific time and place or through specific media
+     * or mode of study or to a specific section of students.
      *
-     * @param $syllabusSections \LengthOfRope\JSONLD\Schema\Syllabus
+     * @param $hasCourseInstance \LengthOfRope\JSONLD\Schema\CourseInstance
      * @return static
      **/
-    public function setSyllabusSections($syllabusSections): static {
-        $this->properties['syllabusSections'] = $syllabusSections;
+    public function setHasCourseInstance($hasCourseInstance): static {
+        $this->properties['hasCourseInstance'] = $hasCourseInstance;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Syllabus
+     * @return \LengthOfRope\JSONLD\Schema\CourseInstance
      **/
-    public function getSyllabusSections() {
-        return $this->properties['syllabusSections'];
-    }
-    /**
-     * The identifier for the [[Course]] used by the course [[provider]] (e.g. CS101 or
-     * 6.001).
-     *
-     * @param $courseCode \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setCourseCode($courseCode): static {
-        $this->properties['courseCode'] = $courseCode;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getCourseCode() {
-        return $this->properties['courseCode'];
+    public function getHasCourseInstance() {
+        return $this->properties['hasCourseInstance'];
     }
     /**
      * A description of the qualification, award, certificate, diploma or other
@@ -106,7 +87,7 @@ class Course extends CreativeWork
      * textual description like "permission of instructor". Requirements may be a
      * pre-requisite competency, referenced using [[AlignmentObject]].
      *
-     * @param $coursePrerequisites \LengthOfRope\JSONLD\Schema\AlignmentObject|\LengthOfRope\JSONLD\Schema\Course|\LengthOfRope\JSONLD\DataType\TypeText
+     * @param $coursePrerequisites \LengthOfRope\JSONLD\Schema\Course|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\AlignmentObject
      * @return static
      **/
     public function setCoursePrerequisites($coursePrerequisites): static {
@@ -116,29 +97,87 @@ class Course extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\AlignmentObject|\LengthOfRope\JSONLD\Schema\Course|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\Schema\Course|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\AlignmentObject
      **/
     public function getCoursePrerequisites() {
         return $this->properties['coursePrerequisites'];
     }
     /**
-     * An offering of the course at a specific time and place or through specific media
-     * or mode of study or to a specific section of students.
+     * A financial aid type or program which students may use to pay for tuition or
+     * fees associated with the program.
      *
-     * @param $hasCourseInstance \LengthOfRope\JSONLD\Schema\CourseInstance
+     * @param $financialAidEligible \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DefinedTerm
      * @return static
      **/
-    public function setHasCourseInstance($hasCourseInstance): static {
-        $this->properties['hasCourseInstance'] = $hasCourseInstance;
+    public function setFinancialAidEligible($financialAidEligible): static {
+        $this->properties['financialAidEligible'] = $financialAidEligible;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\CourseInstance
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DefinedTerm
      **/
-    public function getHasCourseInstance() {
-        return $this->properties['hasCourseInstance'];
+    public function getFinancialAidEligible() {
+        return $this->properties['financialAidEligible'];
+    }
+    /**
+     * The identifier for the [[Course]] used by the course [[provider]] (e.g. CS101 or
+     * 6.001).
+     *
+     * @param $courseCode \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setCourseCode($courseCode): static {
+        $this->properties['courseCode'] = $courseCode;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getCourseCode() {
+        return $this->properties['courseCode'];
+    }
+    /**
+     * A description of the qualification, award, certificate, diploma or other
+     * educational credential awarded as a consequence of successful completion of this
+     * course or program.
+     *
+     * @param $educationalCredentialAwarded \LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setEducationalCredentialAwarded($educationalCredentialAwarded): static {
+        $this->properties['educationalCredentialAwarded'] = $educationalCredentialAwarded;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getEducationalCredentialAwarded() {
+        return $this->properties['educationalCredentialAwarded'];
+    }
+    /**
+     * The number of credits or units awarded by a Course or required to complete an
+     * EducationalOccupationalProgram.
+     *
+     * @param $numberOfCredits \LengthOfRope\JSONLD\Schema\StructuredValue|\LengthOfRope\JSONLD\DataType\TypeInteger
+     * @return static
+     **/
+    public function setNumberOfCredits($numberOfCredits): static {
+        $this->properties['numberOfCredits'] = $numberOfCredits;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\StructuredValue|\LengthOfRope\JSONLD\DataType\TypeInteger
+     **/
+    public function getNumberOfCredits() {
+        return $this->properties['numberOfCredits'];
     }
     /**
      * The total number of students that have enrolled in the history of the course.
@@ -159,50 +198,11 @@ class Course extends CreativeWork
         return $this->properties['totalHistoricalEnrollment'];
     }
     /**
-     * The number of credits or units awarded by a Course or required to complete an
-     * EducationalOccupationalProgram.
-     *
-     * @param $numberOfCredits \LengthOfRope\JSONLD\DataType\TypeInteger|\LengthOfRope\JSONLD\Schema\StructuredValue
-     * @return static
-     **/
-    public function setNumberOfCredits($numberOfCredits): static {
-        $this->properties['numberOfCredits'] = $numberOfCredits;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeInteger|\LengthOfRope\JSONLD\Schema\StructuredValue
-     **/
-    public function getNumberOfCredits() {
-        return $this->properties['numberOfCredits'];
-    }
-    /**
-     * A description of the qualification, award, certificate, diploma or other
-     * educational credential awarded as a consequence of successful completion of this
-     * course or program.
-     *
-     * @param $educationalCredentialAwarded \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential|\LengthOfRope\JSONLD\DataType\TypeURL
-     * @return static
-     **/
-    public function setEducationalCredentialAwarded($educationalCredentialAwarded): static {
-        $this->properties['educationalCredentialAwarded'] = $educationalCredentialAwarded;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential|\LengthOfRope\JSONLD\DataType\TypeURL
-     **/
-    public function getEducationalCredentialAwarded() {
-        return $this->properties['educationalCredentialAwarded'];
-    }
-    /**
      * A language someone may use with or at the item, service or place. Please use one
      * of the language codes from the [IETF BCP 47
      * standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].
      *
-     * @param $availableLanguage \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Language
+     * @param $availableLanguage \LengthOfRope\JSONLD\Schema\Language|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setAvailableLanguage($availableLanguage): static {
@@ -212,28 +212,28 @@ class Course extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Language
+     * @return \LengthOfRope\JSONLD\Schema\Language|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getAvailableLanguage() {
         return $this->properties['availableLanguage'];
     }
     /**
-     * A financial aid type or program which students may use to pay for tuition or
-     * fees associated with the program.
+     * Indicates (typically several) Syllabus entities that lay out what each section
+     * of the overall course will cover.
      *
-     * @param $financialAidEligible \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DefinedTerm
+     * @param $syllabusSections \LengthOfRope\JSONLD\Schema\Syllabus
      * @return static
      **/
-    public function setFinancialAidEligible($financialAidEligible): static {
-        $this->properties['financialAidEligible'] = $financialAidEligible;
+    public function setSyllabusSections($syllabusSections): static {
+        $this->properties['syllabusSections'] = $syllabusSections;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DefinedTerm
+     * @return \LengthOfRope\JSONLD\Schema\Syllabus
      **/
-    public function getFinancialAidEligible() {
-        return $this->properties['financialAidEligible'];
+    public function getSyllabusSections() {
+        return $this->properties['syllabusSections'];
     }
 }

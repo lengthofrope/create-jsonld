@@ -40,43 +40,6 @@ class MusicRelease extends MusicPlaylist
     }
 
     /**
-     * The album this is a release of.
-     *
-     * @param $releaseOf \LengthOfRope\JSONLD\Schema\MusicAlbum
-     * @return static
-     **/
-    public function setReleaseOf($releaseOf): static {
-        $this->properties['releaseOf'] = $releaseOf;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\MusicAlbum
-     **/
-    public function getReleaseOf() {
-        return $this->properties['releaseOf'];
-    }
-    /**
-     * Format of this release (the type of recording media used, i.e. compact disc,
-     * digital media, LP, etc.).
-     *
-     * @param $musicReleaseFormat \LengthOfRope\JSONLD\Schema\MusicReleaseFormatType
-     * @return static
-     **/
-    public function setMusicReleaseFormat($musicReleaseFormat): static {
-        $this->properties['musicReleaseFormat'] = $musicReleaseFormat;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\MusicReleaseFormatType
-     **/
-    public function getMusicReleaseFormat() {
-        return $this->properties['musicReleaseFormat'];
-    }
-    /**
      * The label that issued the release.
      *
      * @param $recordLabel \LengthOfRope\JSONLD\Schema\Organization
@@ -98,7 +61,7 @@ class MusicRelease extends MusicPlaylist
      * The duration of the item (movie, audio recording, event, etc.) in [ISO 8601
      * duration format](http://en.wikipedia.org/wiki/ISO_8601).
      *
-     * @param $duration \LengthOfRope\JSONLD\Schema\Duration
+     * @param $duration \LengthOfRope\JSONLD\Schema\Duration|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setDuration($duration): static {
@@ -108,7 +71,7 @@ class MusicRelease extends MusicPlaylist
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Duration
+     * @return \LengthOfRope\JSONLD\Schema\Duration|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getDuration() {
         return $this->properties['duration'];
@@ -132,6 +95,43 @@ class MusicRelease extends MusicPlaylist
      **/
     public function getCreditedTo() {
         return $this->properties['creditedTo'];
+    }
+    /**
+     * Format of this release (the type of recording media used, i.e. compact disc,
+     * digital media, LP, etc.).
+     *
+     * @param $musicReleaseFormat \LengthOfRope\JSONLD\Schema\MusicReleaseFormatType
+     * @return static
+     **/
+    public function setMusicReleaseFormat($musicReleaseFormat): static {
+        $this->properties['musicReleaseFormat'] = $musicReleaseFormat;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\MusicReleaseFormatType
+     **/
+    public function getMusicReleaseFormat() {
+        return $this->properties['musicReleaseFormat'];
+    }
+    /**
+     * The album this is a release of.
+     *
+     * @param $releaseOf \LengthOfRope\JSONLD\Schema\MusicAlbum
+     * @return static
+     **/
+    public function setReleaseOf($releaseOf): static {
+        $this->properties['releaseOf'] = $releaseOf;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\MusicAlbum
+     **/
+    public function getReleaseOf() {
+        return $this->properties['releaseOf'];
     }
     /**
      * The catalog number for the release.

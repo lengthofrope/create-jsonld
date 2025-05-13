@@ -40,106 +40,6 @@ class ActionAccessSpecification extends Intangible
     }
 
     /**
-     * The beginning of the availability of the product or service included in the
-     * offer.
-     *
-     * @param $availabilityStarts \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeTime|\LengthOfRope\JSONLD\DataType\TypeDateTime
-     * @return static
-     **/
-    public function setAvailabilityStarts($availabilityStarts): static {
-        $this->properties['availabilityStarts'] = $availabilityStarts;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeTime|\LengthOfRope\JSONLD\DataType\TypeDateTime
-     **/
-    public function getAvailabilityStarts() {
-        return $this->properties['availabilityStarts'];
-    }
-    /**
-     * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the
-     * GeoShape for the geo-political region(s) for which the offer or delivery charge
-     * specification is not valid, e.g. a region where the transaction is not allowed.
-     *
-     * See also [[eligibleRegion]].
-     *
-     *
-     * @param $ineligibleRegion \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\GeoShape
-     * @return static
-     **/
-    public function setIneligibleRegion($ineligibleRegion): static {
-        $this->properties['ineligibleRegion'] = $ineligibleRegion;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\GeoShape
-     **/
-    public function getIneligibleRegion() {
-        return $this->properties['ineligibleRegion'];
-    }
-    /**
-     * An Offer which must be accepted before the user can perform the Action. For
-     * example, the user may need to buy a movie before being able to watch it.
-     *
-     * @param $expectsAcceptanceOf \LengthOfRope\JSONLD\Schema\Offer
-     * @return static
-     **/
-    public function setExpectsAcceptanceOf($expectsAcceptanceOf): static {
-        $this->properties['expectsAcceptanceOf'] = $expectsAcceptanceOf;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Offer
-     **/
-    public function getExpectsAcceptanceOf() {
-        return $this->properties['expectsAcceptanceOf'];
-    }
-    /**
-     * A category for the item. Greater signs or slashes can be used to informally
-     * indicate a category hierarchy.
-     *
-     * @param $category \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\Schema\PhysicalActivityCategory|\LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
-     * @return static
-     **/
-    public function setCategory($category): static {
-        $this->properties['category'] = $category;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\Schema\PhysicalActivityCategory|\LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
-     **/
-    public function getCategory() {
-        return $this->properties['category'];
-    }
-    /**
-     * Indicates if use of the media require a subscription  (either paid or free).
-     * Allowed values are ```true``` or ```false``` (note that an earlier version had
-     * 'yes', 'no').
-     *
-     * @param $requiresSubscription \LengthOfRope\JSONLD\DataType\TypeBoolean|\LengthOfRope\JSONLD\Schema\MediaSubscription
-     * @return static
-     **/
-    public function setRequiresSubscription($requiresSubscription): static {
-        $this->properties['requiresSubscription'] = $requiresSubscription;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean|\LengthOfRope\JSONLD\Schema\MediaSubscription
-     **/
-    public function getRequiresSubscription() {
-        return $this->properties['requiresSubscription'];
-    }
-    /**
      * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the
      * GeoShape for the geo-political region(s) for which the offer or delivery charge
      * specification is valid.
@@ -163,9 +63,86 @@ class ActionAccessSpecification extends Intangible
         return $this->properties['eligibleRegion'];
     }
     /**
+     * An Offer which must be accepted before the user can perform the Action. For
+     * example, the user may need to buy a movie before being able to watch it.
+     *
+     * @param $expectsAcceptanceOf \LengthOfRope\JSONLD\Schema\Offer
+     * @return static
+     **/
+    public function setExpectsAcceptanceOf($expectsAcceptanceOf): static {
+        $this->properties['expectsAcceptanceOf'] = $expectsAcceptanceOf;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Offer
+     **/
+    public function getExpectsAcceptanceOf() {
+        return $this->properties['expectsAcceptanceOf'];
+    }
+    /**
+     * The beginning of the availability of the product or service included in the
+     * offer.
+     *
+     * @param $availabilityStarts \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeTime|\LengthOfRope\JSONLD\DataType\TypeDateTime
+     * @return static
+     **/
+    public function setAvailabilityStarts($availabilityStarts): static {
+        $this->properties['availabilityStarts'] = $availabilityStarts;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeTime|\LengthOfRope\JSONLD\DataType\TypeDateTime
+     **/
+    public function getAvailabilityStarts() {
+        return $this->properties['availabilityStarts'];
+    }
+    /**
+     * Indicates if use of the media require a subscription  (either paid or free).
+     * Allowed values are ```true``` or ```false``` (note that an earlier version had
+     * 'yes', 'no').
+     *
+     * @param $requiresSubscription \LengthOfRope\JSONLD\Schema\MediaSubscription|\LengthOfRope\JSONLD\DataType\TypeBoolean
+     * @return static
+     **/
+    public function setRequiresSubscription($requiresSubscription): static {
+        $this->properties['requiresSubscription'] = $requiresSubscription;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\MediaSubscription|\LengthOfRope\JSONLD\DataType\TypeBoolean
+     **/
+    public function getRequiresSubscription() {
+        return $this->properties['requiresSubscription'];
+    }
+    /**
+     * A category for the item. Greater signs or slashes can be used to informally
+     * indicate a category hierarchy.
+     *
+     * @param $category \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\PhysicalActivityCategory
+     * @return static
+     **/
+    public function setCategory($category): static {
+        $this->properties['category'] = $category;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\PhysicalActivityCategory
+     **/
+    public function getCategory() {
+        return $this->properties['category'];
+    }
+    /**
      * The end of the availability of the product or service included in the offer.
      *
-     * @param $availabilityEnds \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeTime|\LengthOfRope\JSONLD\DataType\TypeDate
+     * @param $availabilityEnds \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeTime|\LengthOfRope\JSONLD\DataType\TypeDateTime
      * @return static
      **/
     public function setAvailabilityEnds($availabilityEnds): static {
@@ -175,9 +152,32 @@ class ActionAccessSpecification extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeTime|\LengthOfRope\JSONLD\DataType\TypeDate
+     * @return \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeTime|\LengthOfRope\JSONLD\DataType\TypeDateTime
      **/
     public function getAvailabilityEnds() {
         return $this->properties['availabilityEnds'];
+    }
+    /**
+     * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the
+     * GeoShape for the geo-political region(s) for which the offer or delivery charge
+     * specification is not valid, e.g. a region where the transaction is not allowed.
+     *
+     * See also [[eligibleRegion]].
+     *
+     *
+     * @param $ineligibleRegion \LengthOfRope\JSONLD\Schema\GeoShape|\LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setIneligibleRegion($ineligibleRegion): static {
+        $this->properties['ineligibleRegion'] = $ineligibleRegion;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\GeoShape|\LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getIneligibleRegion() {
+        return $this->properties['ineligibleRegion'];
     }
 }

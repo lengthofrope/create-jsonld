@@ -40,25 +40,6 @@ class ExchangeRateSpecification extends StructuredValue
     }
 
     /**
-     * The difference between the price at which a broker or other intermediary buys
-     * and sells foreign currency.
-     *
-     * @param $exchangeRateSpread \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\TypeNumber
-     * @return static
-     **/
-    public function setExchangeRateSpread($exchangeRateSpread): static {
-        $this->properties['exchangeRateSpread'] = $exchangeRateSpread;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\TypeNumber
-     **/
-    public function getExchangeRateSpread() {
-        return $this->properties['exchangeRateSpread'];
-    }
-    /**
      * The currency in which the monetary amount is expressed.
      *
      * Use standard formats: [ISO 4217 currency
@@ -100,5 +81,24 @@ class ExchangeRateSpecification extends StructuredValue
      **/
     public function getCurrentExchangeRate() {
         return $this->properties['currentExchangeRate'];
+    }
+    /**
+     * The difference between the price at which a broker or other intermediary buys
+     * and sells foreign currency.
+     *
+     * @param $exchangeRateSpread \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\Schema\MonetaryAmount
+     * @return static
+     **/
+    public function setExchangeRateSpread($exchangeRateSpread): static {
+        $this->properties['exchangeRateSpread'] = $exchangeRateSpread;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\Schema\MonetaryAmount
+     **/
+    public function getExchangeRateSpread() {
+        return $this->properties['exchangeRateSpread'];
     }
 }

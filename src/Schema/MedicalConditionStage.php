@@ -40,24 +40,6 @@ class MedicalConditionStage extends MedicalIntangible
     }
 
     /**
-     * The stage represented as a number, e.g. 3.
-     *
-     * @param $stageAsNumber \LengthOfRope\JSONLD\DataType\TypeNumber
-     * @return static
-     **/
-    public function setStageAsNumber($stageAsNumber): static {
-        $this->properties['stageAsNumber'] = $stageAsNumber;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
-     **/
-    public function getStageAsNumber() {
-        return $this->properties['stageAsNumber'];
-    }
-    /**
      * The substage, e.g. 'a' for Stage IIIa.
      *
      * @param $subStageSuffix \LengthOfRope\JSONLD\DataType\TypeText
@@ -74,5 +56,23 @@ class MedicalConditionStage extends MedicalIntangible
      **/
     public function getSubStageSuffix() {
         return $this->properties['subStageSuffix'];
+    }
+    /**
+     * The stage represented as a number, e.g. 3.
+     *
+     * @param $stageAsNumber \LengthOfRope\JSONLD\DataType\TypeNumber
+     * @return static
+     **/
+    public function setStageAsNumber($stageAsNumber): static {
+        $this->properties['stageAsNumber'] = $stageAsNumber;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
+     **/
+    public function getStageAsNumber() {
+        return $this->properties['stageAsNumber'];
     }
 }

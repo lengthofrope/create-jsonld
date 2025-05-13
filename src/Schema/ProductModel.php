@@ -41,25 +41,6 @@ class ProductModel extends Product
     }
 
     /**
-     * A pointer from a newer variant of a product  to its previous, often discontinued
-     * predecessor.
-     *
-     * @param $successorOf \LengthOfRope\JSONLD\Schema\ProductModel
-     * @return static
-     **/
-    public function setSuccessorOf($successorOf): static {
-        $this->properties['successorOf'] = $successorOf;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\ProductModel
-     **/
-    public function getSuccessorOf() {
-        return $this->properties['successorOf'];
-    }
-    /**
      * A pointer from a previous, often discontinued variant of the product to its
      * newer variant.
      *
@@ -103,5 +84,24 @@ class ProductModel extends Product
      **/
     public function getIsVariantOf() {
         return $this->properties['isVariantOf'];
+    }
+    /**
+     * A pointer from a newer variant of a product  to its previous, often discontinued
+     * predecessor.
+     *
+     * @param $successorOf \LengthOfRope\JSONLD\Schema\ProductModel
+     * @return static
+     **/
+    public function setSuccessorOf($successorOf): static {
+        $this->properties['successorOf'] = $successorOf;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\ProductModel
+     **/
+    public function getSuccessorOf() {
+        return $this->properties['successorOf'];
     }
 }

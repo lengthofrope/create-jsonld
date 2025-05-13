@@ -59,6 +59,42 @@ class Permit extends Intangible
         return $this->properties['issuedBy'];
     }
     /**
+     * The service through which the permit was granted.
+     *
+     * @param $issuedThrough \LengthOfRope\JSONLD\Schema\Service
+     * @return static
+     **/
+    public function setIssuedThrough($issuedThrough): static {
+        $this->properties['issuedThrough'] = $issuedThrough;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Service
+     **/
+    public function getIssuedThrough() {
+        return $this->properties['issuedThrough'];
+    }
+    /**
+     * The target audience for this permit.
+     *
+     * @param $permitAudience \LengthOfRope\JSONLD\Schema\Audience
+     * @return static
+     **/
+    public function setPermitAudience($permitAudience): static {
+        $this->properties['permitAudience'] = $permitAudience;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Audience
+     **/
+    public function getPermitAudience() {
+        return $this->properties['permitAudience'];
+    }
+    /**
      * The geographic area where the item is valid. Applies for example to a
      * [[Permit]], a [[Certification]], or an [[EducationalOccupationalCredential]].
      *
@@ -76,42 +112,6 @@ class Permit extends Intangible
      **/
     public function getValidIn() {
         return $this->properties['validIn'];
-    }
-    /**
-     * The duration of validity of a permit or similar thing.
-     *
-     * @param $validFor \LengthOfRope\JSONLD\Schema\Duration
-     * @return static
-     **/
-    public function setValidFor($validFor): static {
-        $this->properties['validFor'] = $validFor;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Duration
-     **/
-    public function getValidFor() {
-        return $this->properties['validFor'];
-    }
-    /**
-     * The service through which the permit was granted.
-     *
-     * @param $issuedThrough \LengthOfRope\JSONLD\Schema\Service
-     * @return static
-     **/
-    public function setIssuedThrough($issuedThrough): static {
-        $this->properties['issuedThrough'] = $issuedThrough;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Service
-     **/
-    public function getIssuedThrough() {
-        return $this->properties['issuedThrough'];
     }
     /**
      * The date when the item is no longer valid.
@@ -134,7 +134,7 @@ class Permit extends Intangible
     /**
      * The date when the item becomes valid.
      *
-     * @param $validFrom \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
+     * @param $validFrom \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
      * @return static
      **/
     public function setValidFrom($validFrom): static {
@@ -144,27 +144,27 @@ class Permit extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
+     * @return \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
      **/
     public function getValidFrom() {
         return $this->properties['validFrom'];
     }
     /**
-     * The target audience for this permit.
+     * The duration of validity of a permit or similar thing.
      *
-     * @param $permitAudience \LengthOfRope\JSONLD\Schema\Audience
+     * @param $validFor \LengthOfRope\JSONLD\Schema\Duration
      * @return static
      **/
-    public function setPermitAudience($permitAudience): static {
-        $this->properties['permitAudience'] = $permitAudience;
+    public function setValidFor($validFor): static {
+        $this->properties['validFor'] = $validFor;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Audience
+     * @return \LengthOfRope\JSONLD\Schema\Duration
      **/
-    public function getPermitAudience() {
-        return $this->properties['permitAudience'];
+    public function getValidFor() {
+        return $this->properties['validFor'];
     }
 }

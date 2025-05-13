@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  * @see https://schema.org/ProductCollection
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class ProductCollection extends Product
+class ProductCollection extends Collection
 {
     public static function factory(): ProductCollection
     {

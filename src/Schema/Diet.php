@@ -41,6 +41,24 @@ class Diet extends CreativeWork
     }
 
     /**
+     * Specific physiologic risks associated to the diet plan.
+     *
+     * @param $risks \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setRisks($risks): static {
+        $this->properties['risks'] = $risks;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getRisks() {
+        return $this->properties['risks'];
+    }
+    /**
      * Medical expert advice related to the plan.
      *
      * @param $expertConsiderations \LengthOfRope\JSONLD\DataType\TypeText
@@ -57,24 +75,6 @@ class Diet extends CreativeWork
      **/
     public function getExpertConsiderations() {
         return $this->properties['expertConsiderations'];
-    }
-    /**
-     * People or organizations that endorse the plan.
-     *
-     * @param $endorsers \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
-     * @return static
-     **/
-    public function setEndorsers($endorsers): static {
-        $this->properties['endorsers'] = $endorsers;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
-     **/
-    public function getEndorsers() {
-        return $this->properties['endorsers'];
     }
     /**
      * Nutritional information specific to the dietary plan. May include dietary
@@ -116,21 +116,21 @@ class Diet extends CreativeWork
         return $this->properties['physiologicalBenefits'];
     }
     /**
-     * Specific physiologic risks associated to the diet plan.
+     * People or organizations that endorse the plan.
      *
-     * @param $risks \LengthOfRope\JSONLD\DataType\TypeText
+     * @param $endorsers \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      * @return static
      **/
-    public function setRisks($risks): static {
-        $this->properties['risks'] = $risks;
+    public function setEndorsers($endorsers): static {
+        $this->properties['endorsers'] = $endorsers;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
      **/
-    public function getRisks() {
-        return $this->properties['risks'];
+    public function getEndorsers() {
+        return $this->properties['endorsers'];
     }
 }

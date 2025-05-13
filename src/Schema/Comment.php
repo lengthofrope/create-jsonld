@@ -63,6 +63,25 @@ class Comment extends CreativeWork
         return $this->properties['parentItem'];
     }
     /**
+     * The number of upvotes this question, answer or comment has received from the
+     * community.
+     *
+     * @param $upvoteCount \LengthOfRope\JSONLD\DataType\TypeInteger
+     * @return static
+     **/
+    public function setUpvoteCount($upvoteCount): static {
+        $this->properties['upvoteCount'] = $upvoteCount;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeInteger
+     **/
+    public function getUpvoteCount() {
+        return $this->properties['upvoteCount'];
+    }
+    /**
      * The number of downvotes this question, answer or comment has received from the
      * community.
      *
@@ -99,24 +118,5 @@ class Comment extends CreativeWork
      **/
     public function getSharedContent() {
         return $this->properties['sharedContent'];
-    }
-    /**
-     * The number of upvotes this question, answer or comment has received from the
-     * community.
-     *
-     * @param $upvoteCount \LengthOfRope\JSONLD\DataType\TypeInteger
-     * @return static
-     **/
-    public function setUpvoteCount($upvoteCount): static {
-        $this->properties['upvoteCount'] = $upvoteCount;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeInteger
-     **/
-    public function getUpvoteCount() {
-        return $this->properties['upvoteCount'];
     }
 }

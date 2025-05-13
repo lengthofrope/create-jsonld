@@ -42,6 +42,25 @@ class TradeAction extends Action
     }
 
     /**
+     * One or more detailed price specifications, indicating the unit price and
+     * delivery or payment charges.
+     *
+     * @param $priceSpecification \LengthOfRope\JSONLD\Schema\PriceSpecification
+     * @return static
+     **/
+    public function setPriceSpecification($priceSpecification): static {
+        $this->properties['priceSpecification'] = $priceSpecification;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\PriceSpecification
+     **/
+    public function getPriceSpecification() {
+        return $this->properties['priceSpecification'];
+    }
+    /**
      * The offer price of a product, or of a price component when attached to
      * PriceSpecification and its subtypes.
      *
@@ -65,7 +84,7 @@ class TradeAction extends Action
      * (U+0039)) rather than superficially similar Unicode symbols.
      *
      *
-     * @param $price \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeNumber
+     * @param $price \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setPrice($price): static {
@@ -75,29 +94,10 @@ class TradeAction extends Action
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeNumber
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getPrice() {
         return $this->properties['price'];
-    }
-    /**
-     * One or more detailed price specifications, indicating the unit price and
-     * delivery or payment charges.
-     *
-     * @param $priceSpecification \LengthOfRope\JSONLD\Schema\PriceSpecification
-     * @return static
-     **/
-    public function setPriceSpecification($priceSpecification): static {
-        $this->properties['priceSpecification'] = $priceSpecification;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\PriceSpecification
-     **/
-    public function getPriceSpecification() {
-        return $this->properties['priceSpecification'];
     }
     /**
      * The currency of the price, or a price component when attached to

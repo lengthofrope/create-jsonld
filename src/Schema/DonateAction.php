@@ -41,6 +41,44 @@ class DonateAction extends TransferAction
     }
 
     /**
+     * One or more detailed price specifications, indicating the unit price and
+     * delivery or payment charges.
+     *
+     * @param $priceSpecification \LengthOfRope\JSONLD\Schema\PriceSpecification
+     * @return static
+     **/
+    public function setPriceSpecification($priceSpecification): static {
+        $this->properties['priceSpecification'] = $priceSpecification;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\PriceSpecification
+     **/
+    public function getPriceSpecification() {
+        return $this->properties['priceSpecification'];
+    }
+    /**
+     * A sub property of participant. The participant who is at the receiving end of
+     * the action.
+     *
+     * @param $recipient \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Audience|\LengthOfRope\JSONLD\Schema\ContactPoint|\LengthOfRope\JSONLD\Schema\Organization
+     * @return static
+     **/
+    public function setRecipient($recipient): static {
+        $this->properties['recipient'] = $recipient;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Audience|\LengthOfRope\JSONLD\Schema\ContactPoint|\LengthOfRope\JSONLD\Schema\Organization
+     **/
+    public function getRecipient() {
+        return $this->properties['recipient'];
+    }
+    /**
      * The offer price of a product, or of a price component when attached to
      * PriceSpecification and its subtypes.
      *
@@ -64,7 +102,7 @@ class DonateAction extends TransferAction
      * (U+0039)) rather than superficially similar Unicode symbols.
      *
      *
-     * @param $price \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeNumber
+     * @param $price \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setPrice($price): static {
@@ -74,48 +112,10 @@ class DonateAction extends TransferAction
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeNumber
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getPrice() {
         return $this->properties['price'];
-    }
-    /**
-     * A sub property of participant. The participant who is at the receiving end of
-     * the action.
-     *
-     * @param $recipient \LengthOfRope\JSONLD\Schema\Audience|\LengthOfRope\JSONLD\Schema\ContactPoint|\LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
-     * @return static
-     **/
-    public function setRecipient($recipient): static {
-        $this->properties['recipient'] = $recipient;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Audience|\LengthOfRope\JSONLD\Schema\ContactPoint|\LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
-     **/
-    public function getRecipient() {
-        return $this->properties['recipient'];
-    }
-    /**
-     * One or more detailed price specifications, indicating the unit price and
-     * delivery or payment charges.
-     *
-     * @param $priceSpecification \LengthOfRope\JSONLD\Schema\PriceSpecification
-     * @return static
-     **/
-    public function setPriceSpecification($priceSpecification): static {
-        $this->properties['priceSpecification'] = $priceSpecification;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\PriceSpecification
-     **/
-    public function getPriceSpecification() {
-        return $this->properties['priceSpecification'];
     }
     /**
      * The currency of the price, or a price component when attached to

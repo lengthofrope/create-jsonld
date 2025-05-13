@@ -33,7 +33,7 @@ namespace LengthOfRope\JSONLD\Schema;
  * @see https://schema.org/HowToStep
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class HowToStep extends ListItem
+class HowToStep extends ItemList
 {
     public static function factory(): HowToStep
     {

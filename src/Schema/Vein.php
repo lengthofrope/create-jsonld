@@ -40,23 +40,23 @@ class Vein extends Vessel
     }
 
     /**
-     * The anatomical or organ system drained by this vessel; generally refers to a
-     * specific part of an organ.
+     * The anatomical or organ system that the vein flows into; a larger structure that
+     * the vein connects to.
      *
-     * @param $regionDrained \LengthOfRope\JSONLD\Schema\AnatomicalSystem|\LengthOfRope\JSONLD\Schema\AnatomicalStructure
+     * @param $tributary \LengthOfRope\JSONLD\Schema\AnatomicalStructure
      * @return static
      **/
-    public function setRegionDrained($regionDrained): static {
-        $this->properties['regionDrained'] = $regionDrained;
+    public function setTributary($tributary): static {
+        $this->properties['tributary'] = $tributary;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\AnatomicalSystem|\LengthOfRope\JSONLD\Schema\AnatomicalStructure
+     * @return \LengthOfRope\JSONLD\Schema\AnatomicalStructure
      **/
-    public function getRegionDrained() {
-        return $this->properties['regionDrained'];
+    public function getTributary() {
+        return $this->properties['tributary'];
     }
     /**
      * The vasculature that the vein drains into.
@@ -77,22 +77,22 @@ class Vein extends Vessel
         return $this->properties['drainsTo'];
     }
     /**
-     * The anatomical or organ system that the vein flows into; a larger structure that
-     * the vein connects to.
+     * The anatomical or organ system drained by this vessel; generally refers to a
+     * specific part of an organ.
      *
-     * @param $tributary \LengthOfRope\JSONLD\Schema\AnatomicalStructure
+     * @param $regionDrained \LengthOfRope\JSONLD\Schema\AnatomicalSystem|\LengthOfRope\JSONLD\Schema\AnatomicalStructure
      * @return static
      **/
-    public function setTributary($tributary): static {
-        $this->properties['tributary'] = $tributary;
+    public function setRegionDrained($regionDrained): static {
+        $this->properties['regionDrained'] = $regionDrained;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\AnatomicalStructure
+     * @return \LengthOfRope\JSONLD\Schema\AnatomicalSystem|\LengthOfRope\JSONLD\Schema\AnatomicalStructure
      **/
-    public function getTributary() {
-        return $this->properties['tributary'];
+    public function getRegionDrained() {
+        return $this->properties['regionDrained'];
     }
 }

@@ -42,22 +42,23 @@ class ChemicalSubstance extends BioChemEntity
     }
 
     /**
-     * Intended use of the BioChemEntity by humans.
+     * The chemical composition describes the identity and relative ratio of the
+     * chemical elements that make up the substance.
      *
-     * @param $potentialUse \LengthOfRope\JSONLD\Schema\DefinedTerm
+     * @param $chemicalComposition \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
-    public function setPotentialUse($potentialUse): static {
-        $this->properties['potentialUse'] = $potentialUse;
+    public function setChemicalComposition($chemicalComposition): static {
+        $this->properties['chemicalComposition'] = $chemicalComposition;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\DefinedTerm
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
-    public function getPotentialUse() {
-        return $this->properties['potentialUse'];
+    public function getChemicalComposition() {
+        return $this->properties['chemicalComposition'];
     }
     /**
      * A role played by the BioChemEntity within a chemical context.
@@ -78,22 +79,21 @@ class ChemicalSubstance extends BioChemEntity
         return $this->properties['chemicalRole'];
     }
     /**
-     * The chemical composition describes the identity and relative ratio of the
-     * chemical elements that make up the substance.
+     * Intended use of the BioChemEntity by humans.
      *
-     * @param $chemicalComposition \LengthOfRope\JSONLD\DataType\TypeText
+     * @param $potentialUse \LengthOfRope\JSONLD\Schema\DefinedTerm
      * @return static
      **/
-    public function setChemicalComposition($chemicalComposition): static {
-        $this->properties['chemicalComposition'] = $chemicalComposition;
+    public function setPotentialUse($potentialUse): static {
+        $this->properties['potentialUse'] = $potentialUse;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\Schema\DefinedTerm
      **/
-    public function getChemicalComposition() {
-        return $this->properties['chemicalComposition'];
+    public function getPotentialUse() {
+        return $this->properties['potentialUse'];
     }
 }

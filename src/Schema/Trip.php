@@ -40,24 +40,6 @@ class Trip extends Intangible
     }
 
     /**
-     * The expected departure time.
-     *
-     * @param $departureTime \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeTime
-     * @return static
-     **/
-    public function setDepartureTime($departureTime): static {
-        $this->properties['departureTime'] = $departureTime;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeTime
-     **/
-    public function getDepartureTime() {
-        return $this->properties['departureTime'];
-    }
-    /**
      * Identifies that this [[Trip]] is a subTrip of another Trip.  For example Day 1,
      * Day 2, etc. of a multi-day trip.
      *
@@ -75,86 +57,6 @@ class Trip extends Intangible
      **/
     public function getPartOfTrip() {
         return $this->properties['partOfTrip'];
-    }
-    /**
-     * The location of origin of the trip, prior to any destination(s).
-     *
-     * @param $tripOrigin \LengthOfRope\JSONLD\Schema\Place
-     * @return static
-     **/
-    public function setTripOrigin($tripOrigin): static {
-        $this->properties['tripOrigin'] = $tripOrigin;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Place
-     **/
-    public function getTripOrigin() {
-        return $this->properties['tripOrigin'];
-    }
-    /**
-     * Destination(s) ( [[Place]] ) that make up a trip. For a trip where destination
-     * order is important use [[ItemList]] to specify that order (see examples).
-     *
-     * @param $itinerary \LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\Place
-     * @return static
-     **/
-    public function setItinerary($itinerary): static {
-        $this->properties['itinerary'] = $itinerary;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\Place
-     **/
-    public function getItinerary() {
-        return $this->properties['itinerary'];
-    }
-    /**
-     * The expected arrival time.
-     *
-     * @param $arrivalTime \LengthOfRope\JSONLD\DataType\TypeTime|\LengthOfRope\JSONLD\DataType\TypeDateTime
-     * @return static
-     **/
-    public function setArrivalTime($arrivalTime): static {
-        $this->properties['arrivalTime'] = $arrivalTime;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeTime|\LengthOfRope\JSONLD\DataType\TypeDateTime
-     **/
-    public function getArrivalTime() {
-        return $this->properties['arrivalTime'];
-    }
-    /**
-     * An offer to provide this item&#x2014;for example, an offer to sell a product,
-     * rent the DVD of a movie, perform a service, or give away tickets to an event.
-     * Use [[businessFunction]] to indicate the kind of transaction offered, i.e. sell,
-     * lease, etc. This property can also be used to describe a [[Demand]]. While this
-     * property is listed as expected on a number of common types, it can be used in
-     * others. In that case, using a second type, such as Product or a subtype of
-     * Product, can clarify the nature of the offer.
-     *
-     *
-     * @param $offers \LengthOfRope\JSONLD\Schema\Offer|\LengthOfRope\JSONLD\Schema\Demand
-     * @return static
-     **/
-    public function setOffers($offers): static {
-        $this->properties['offers'] = $offers;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Offer|\LengthOfRope\JSONLD\Schema\Demand
-     **/
-    public function getOffers() {
-        return $this->properties['offers'];
     }
     /**
      * The service provider, service operator, or service performer; the goods
@@ -177,6 +79,42 @@ class Trip extends Intangible
         return $this->properties['provider'];
     }
     /**
+     * The location of origin of the trip, prior to any destination(s).
+     *
+     * @param $tripOrigin \LengthOfRope\JSONLD\Schema\Place
+     * @return static
+     **/
+    public function setTripOrigin($tripOrigin): static {
+        $this->properties['tripOrigin'] = $tripOrigin;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Place
+     **/
+    public function getTripOrigin() {
+        return $this->properties['tripOrigin'];
+    }
+    /**
+     * The expected arrival time.
+     *
+     * @param $arrivalTime \LengthOfRope\JSONLD\DataType\TypeTime|\LengthOfRope\JSONLD\DataType\TypeDateTime
+     * @return static
+     **/
+    public function setArrivalTime($arrivalTime): static {
+        $this->properties['arrivalTime'] = $arrivalTime;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeTime|\LengthOfRope\JSONLD\DataType\TypeDateTime
+     **/
+    public function getArrivalTime() {
+        return $this->properties['arrivalTime'];
+    }
+    /**
      * Identifies a [[Trip]] that is a subTrip of this Trip.  For example Day 1, Day 2,
      * etc. of a multi-day trip.
      *
@@ -194,5 +132,67 @@ class Trip extends Intangible
      **/
     public function getSubTrip() {
         return $this->properties['subTrip'];
+    }
+    /**
+     * An offer to provide this item&#x2014;for example, an offer to sell a product,
+     * rent the DVD of a movie, perform a service, or give away tickets to an event.
+     * Use [[businessFunction]] to indicate the kind of transaction offered, i.e. sell,
+     * lease, etc. This property can also be used to describe a [[Demand]]. While this
+     * property is listed as expected on a number of common types, it can be used in
+     * others. In that case, using a second type, such as Product or a subtype of
+     * Product, can clarify the nature of the offer.
+     *
+     *
+     * @param $offers \LengthOfRope\JSONLD\Schema\Demand|\LengthOfRope\JSONLD\Schema\Offer
+     * @return static
+     **/
+    public function setOffers($offers): static {
+        $this->properties['offers'] = $offers;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Demand|\LengthOfRope\JSONLD\Schema\Offer
+     **/
+    public function getOffers() {
+        return $this->properties['offers'];
+    }
+    /**
+     * Destination(s) ( [[Place]] ) that make up a trip. For a trip where destination
+     * order is important use [[ItemList]] to specify that order (see examples).
+     *
+     * @param $itinerary \LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\Place
+     * @return static
+     **/
+    public function setItinerary($itinerary): static {
+        $this->properties['itinerary'] = $itinerary;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\Place
+     **/
+    public function getItinerary() {
+        return $this->properties['itinerary'];
+    }
+    /**
+     * The expected departure time.
+     *
+     * @param $departureTime \LengthOfRope\JSONLD\DataType\TypeTime|\LengthOfRope\JSONLD\DataType\TypeDateTime
+     * @return static
+     **/
+    public function setDepartureTime($departureTime): static {
+        $this->properties['departureTime'] = $departureTime;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeTime|\LengthOfRope\JSONLD\DataType\TypeDateTime
+     **/
+    public function getDepartureTime() {
+        return $this->properties['departureTime'];
     }
 }

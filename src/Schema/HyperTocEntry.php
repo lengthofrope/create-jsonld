@@ -48,25 +48,6 @@ class HyperTocEntry extends CreativeWork
     }
 
     /**
-     * A media object that encodes this CreativeWork. This property is a synonym for
-     * encoding.
-     *
-     * @param $associatedMedia \LengthOfRope\JSONLD\Schema\MediaObject
-     * @return static
-     **/
-    public function setAssociatedMedia($associatedMedia): static {
-        $this->properties['associatedMedia'] = $associatedMedia;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\MediaObject
-     **/
-    public function getAssociatedMedia() {
-        return $this->properties['associatedMedia'];
-    }
-    /**
      * A [[HyperTocEntry]] can have a [[tocContinuation]] indicated, which is another
      * [[HyperTocEntry]] that would be the default next item to play or render.
      *
@@ -103,5 +84,24 @@ class HyperTocEntry extends CreativeWork
      **/
     public function getUtterances() {
         return $this->properties['utterances'];
+    }
+    /**
+     * A media object that encodes this CreativeWork. This property is a synonym for
+     * encoding.
+     *
+     * @param $associatedMedia \LengthOfRope\JSONLD\Schema\MediaObject
+     * @return static
+     **/
+    public function setAssociatedMedia($associatedMedia): static {
+        $this->properties['associatedMedia'] = $associatedMedia;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\MediaObject
+     **/
+    public function getAssociatedMedia() {
+        return $this->properties['associatedMedia'];
     }
 }

@@ -69,6 +69,27 @@ class Suite extends Accommodation
         return $this->properties['occupancy'];
     }
     /**
+     * The number of rooms (excluding bathrooms and closets) of the accommodation or
+     * lodging business.
+     * Typical unit code(s): ROM for room or C62 for no unit. The type of room can be
+     * put in the unitText property of the QuantitativeValue.
+     *
+     * @param $numberOfRooms \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\Schema\QuantitativeValue
+     * @return static
+     **/
+    public function setNumberOfRooms($numberOfRooms): static {
+        $this->properties['numberOfRooms'] = $numberOfRooms;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\Schema\QuantitativeValue
+     **/
+    public function getNumberOfRooms() {
+        return $this->properties['numberOfRooms'];
+    }
+    /**
      * The type of bed or beds included in the accommodation. For the single case of
      * just one bed of a certain type, you use bed directly with a text.
      * If you want to indicate the quantity of a certain kind of bed, use an
@@ -89,26 +110,5 @@ class Suite extends Accommodation
      **/
     public function getBed() {
         return $this->properties['bed'];
-    }
-    /**
-     * The number of rooms (excluding bathrooms and closets) of the accommodation or
-     * lodging business.
-     * Typical unit code(s): ROM for room or C62 for no unit. The type of room can be
-     * put in the unitText property of the QuantitativeValue.
-     *
-     * @param $numberOfRooms \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\TypeNumber
-     * @return static
-     **/
-    public function setNumberOfRooms($numberOfRooms): static {
-        $this->properties['numberOfRooms'] = $numberOfRooms;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\TypeNumber
-     **/
-    public function getNumberOfRooms() {
-        return $this->properties['numberOfRooms'];
     }
 }

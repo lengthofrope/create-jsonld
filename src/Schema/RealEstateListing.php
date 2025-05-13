@@ -44,28 +44,10 @@ class RealEstateListing extends WebPage
     }
 
     /**
-     * Publication date of an online listing.
-     *
-     * @param $datePosted \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
-     * @return static
-     **/
-    public function setDatePosted($datePosted): static {
-        $this->properties['datePosted'] = $datePosted;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
-     **/
-    public function getDatePosted() {
-        return $this->properties['datePosted'];
-    }
-    /**
      * Length of the lease for some [[Accommodation]], either particular to some
      * [[Offer]] or in some cases intrinsic to the property.
      *
-     * @param $leaseLength \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Duration
+     * @param $leaseLength \LengthOfRope\JSONLD\Schema\Duration|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setLeaseLength($leaseLength): static {
@@ -75,9 +57,27 @@ class RealEstateListing extends WebPage
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\Duration
+     * @return \LengthOfRope\JSONLD\Schema\Duration|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getLeaseLength() {
         return $this->properties['leaseLength'];
+    }
+    /**
+     * Publication date of an online listing.
+     *
+     * @param $datePosted \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
+     * @return static
+     **/
+    public function setDatePosted($datePosted): static {
+        $this->properties['datePosted'] = $datePosted;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
+     **/
+    public function getDatePosted() {
+        return $this->properties['datePosted'];
     }
 }

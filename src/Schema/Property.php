@@ -41,25 +41,6 @@ class Property extends Intangible
     }
 
     /**
-     * Relates a property to a class that is (one of) the type(s) the property is
-     * expected to be used on.
-     *
-     * @param $domainIncludes \LengthOfRope\JSONLD\Schema\Class
-     * @return static
-     **/
-    public function setDomainIncludes($domainIncludes): static {
-        $this->properties['domainIncludes'] = $domainIncludes;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Class
-     **/
-    public function getDomainIncludes() {
-        return $this->properties['domainIncludes'];
-    }
-    /**
      * Relates a property to a property that is its inverse. Inverse properties relate
      * the same pairs of items to each other, but in reversed direction. For example,
      * the 'alumni' and 'alumniOf' properties are inverseOf each other. Some properties
@@ -82,23 +63,23 @@ class Property extends Intangible
         return $this->properties['inverseOf'];
     }
     /**
-     * Relates a term (i.e. a property, class or enumeration) to one that supersedes
-     * it.
+     * Relates a property to a class that is (one of) the type(s) the property is
+     * expected to be used on.
      *
-     * @param $supersededBy \LengthOfRope\JSONLD\Schema\Property|\LengthOfRope\JSONLD\Schema\Class|\LengthOfRope\JSONLD\Schema\Enumeration
+     * @param $domainIncludes \LengthOfRope\JSONLD\Schema\Class
      * @return static
      **/
-    public function setSupersededBy($supersededBy): static {
-        $this->properties['supersededBy'] = $supersededBy;
+    public function setDomainIncludes($domainIncludes): static {
+        $this->properties['domainIncludes'] = $domainIncludes;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Property|\LengthOfRope\JSONLD\Schema\Class|\LengthOfRope\JSONLD\Schema\Enumeration
+     * @return \LengthOfRope\JSONLD\Schema\Class
      **/
-    public function getSupersededBy() {
-        return $this->properties['supersededBy'];
+    public function getDomainIncludes() {
+        return $this->properties['domainIncludes'];
     }
     /**
      * Relates a property to a class that constitutes (one of) the expected type(s) for
@@ -118,5 +99,24 @@ class Property extends Intangible
      **/
     public function getRangeIncludes() {
         return $this->properties['rangeIncludes'];
+    }
+    /**
+     * Relates a term (i.e. a property, class or enumeration) to one that supersedes
+     * it.
+     *
+     * @param $supersededBy \LengthOfRope\JSONLD\Schema\Enumeration|\LengthOfRope\JSONLD\Schema\Property|\LengthOfRope\JSONLD\Schema\Class
+     * @return static
+     **/
+    public function setSupersededBy($supersededBy): static {
+        $this->properties['supersededBy'] = $supersededBy;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Enumeration|\LengthOfRope\JSONLD\Schema\Property|\LengthOfRope\JSONLD\Schema\Class
+     **/
+    public function getSupersededBy() {
+        return $this->properties['supersededBy'];
     }
 }

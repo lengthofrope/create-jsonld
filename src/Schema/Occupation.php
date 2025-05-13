@@ -42,7 +42,7 @@ class Occupation extends Intangible
     /**
      * Specific qualifications required for this role or Occupation.
      *
-     * @param $qualifications \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential
+     * @param $qualifications \LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setQualifications($qualifications): static {
@@ -52,28 +52,10 @@ class Occupation extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential
+     * @return \LengthOfRope\JSONLD\Schema\EducationalOccupationalCredential|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getQualifications() {
         return $this->properties['qualifications'];
-    }
-    /**
-     * Description of skills and experience needed for the position or Occupation.
-     *
-     * @param $experienceRequirements \LengthOfRope\JSONLD\Schema\OccupationalExperienceRequirements|\LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setExperienceRequirements($experienceRequirements): static {
-        $this->properties['experienceRequirements'] = $experienceRequirements;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\OccupationalExperienceRequirements|\LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getExperienceRequirements() {
-        return $this->properties['experienceRequirements'];
     }
     /**
      * An estimated salary for a job posting or occupation, based on a variety of
@@ -81,7 +63,7 @@ class Occupation extends Intangible
      * Estimated salaries  are often computed by outside organizations rather than the
      * hiring organization, who may not have committed to the estimated value.
      *
-     * @param $estimatedSalary \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\Schema\MonetaryAmountDistribution
+     * @param $estimatedSalary \LengthOfRope\JSONLD\Schema\MonetaryAmountDistribution|\LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
     public function setEstimatedSalary($estimatedSalary): static {
@@ -91,56 +73,10 @@ class Occupation extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\Schema\MonetaryAmountDistribution
+     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmountDistribution|\LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\TypeNumber
      **/
     public function getEstimatedSalary() {
         return $this->properties['estimatedSalary'];
-    }
-    /**
-     * A statement of knowledge, skill, ability, task or any other assertion expressing
-     * a competency that is either claimed by a person, an organization or desired or
-     * required to fulfill a role or to work in an occupation.
-     *
-     * @param $skills \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DefinedTerm
-     * @return static
-     **/
-    public function setSkills($skills): static {
-        $this->properties['skills'] = $skills;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DefinedTerm
-     **/
-    public function getSkills() {
-        return $this->properties['skills'];
-    }
-    /**
-     * A category describing the job, preferably using a term from a taxonomy such as
-     * [BLS O*NET-SOC](http://www.onetcenter.org/taxonomy.html),
-     * [ISCO-08](https://www.ilo.org/public/english/bureau/stat/isco/isco08/) or
-     * similar, with the property repeated for each applicable value. Ideally the
-     * taxonomy should be identified, and both the textual label and formal code for
-     * the category should be provided.
-     *
-     * Note: for historical reasons, any textual label and formal code provided as a
-     * literal may be assumed to be from O*NET-SOC.
-     *
-     * @param $occupationalCategory \LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setOccupationalCategory($occupationalCategory): static {
-        $this->properties['occupationalCategory'] = $occupationalCategory;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\CategoryCode|\LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getOccupationalCategory() {
-        return $this->properties['occupationalCategory'];
     }
     /**
      * Responsibilities associated with this role or Occupation.
@@ -159,6 +95,24 @@ class Occupation extends Intangible
      **/
     public function getResponsibilities() {
         return $this->properties['responsibilities'];
+    }
+    /**
+     * Description of skills and experience needed for the position or Occupation.
+     *
+     * @param $experienceRequirements \LengthOfRope\JSONLD\Schema\OccupationalExperienceRequirements|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setExperienceRequirements($experienceRequirements): static {
+        $this->properties['experienceRequirements'] = $experienceRequirements;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\OccupationalExperienceRequirements|\LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getExperienceRequirements() {
+        return $this->properties['experienceRequirements'];
     }
     /**
      * The region/country for which this occupational description is appropriate. Note
@@ -196,5 +150,51 @@ class Occupation extends Intangible
      **/
     public function getEducationRequirements() {
         return $this->properties['educationRequirements'];
+    }
+    /**
+     * A statement of knowledge, skill, ability, task or any other assertion expressing
+     * a competency that is either claimed by a person, an organization or desired or
+     * required to fulfill a role or to work in an occupation.
+     *
+     * @param $skills \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DefinedTerm
+     * @return static
+     **/
+    public function setSkills($skills): static {
+        $this->properties['skills'] = $skills;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DefinedTerm
+     **/
+    public function getSkills() {
+        return $this->properties['skills'];
+    }
+    /**
+     * A category describing the job, preferably using a term from a taxonomy such as
+     * [BLS O*NET-SOC](http://www.onetcenter.org/taxonomy.html),
+     * [ISCO-08](https://www.ilo.org/public/english/bureau/stat/isco/isco08/) or
+     * similar, with the property repeated for each applicable value. Ideally the
+     * taxonomy should be identified, and both the textual label and formal code for
+     * the category should be provided.
+     *
+     * Note: for historical reasons, any textual label and formal code provided as a
+     * literal may be assumed to be from O*NET-SOC.
+     *
+     * @param $occupationalCategory \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\CategoryCode
+     * @return static
+     **/
+    public function setOccupationalCategory($occupationalCategory): static {
+        $this->properties['occupationalCategory'] = $occupationalCategory;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\CategoryCode
+     **/
+    public function getOccupationalCategory() {
+        return $this->properties['occupationalCategory'];
     }
 }

@@ -43,6 +43,25 @@ class FoodEstablishment extends LocalBusiness
      * Either the actual menu as a structured representation, as text, or a URL of the
      * menu.
      *
+     * @param $hasMenu \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\Menu|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setHasMenu($hasMenu): static {
+        $this->properties['hasMenu'] = $hasMenu;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\Menu|\LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getHasMenu() {
+        return $this->properties['hasMenu'];
+    }
+    /**
+     * Either the actual menu as a structured representation, as text, or a URL of the
+     * menu.
+     *
      * @param $menu \LengthOfRope\JSONLD\Schema\Menu|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
@@ -59,23 +78,22 @@ class FoodEstablishment extends LocalBusiness
         return $this->properties['menu'];
     }
     /**
-     * Either the actual menu as a structured representation, as text, or a URL of the
-     * menu.
+     * The cuisine of the restaurant.
      *
-     * @param $hasMenu \LengthOfRope\JSONLD\Schema\Menu|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
+     * @param $servesCuisine \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
-    public function setHasMenu($hasMenu): static {
-        $this->properties['hasMenu'] = $hasMenu;
+    public function setServesCuisine($servesCuisine): static {
+        $this->properties['servesCuisine'] = $servesCuisine;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Menu|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
-    public function getHasMenu() {
-        return $this->properties['hasMenu'];
+    public function getServesCuisine() {
+        return $this->properties['servesCuisine'];
     }
     /**
      * An official rating for a lodging business or food establishment, e.g. from
@@ -99,29 +117,11 @@ class FoodEstablishment extends LocalBusiness
         return $this->properties['starRating'];
     }
     /**
-     * The cuisine of the restaurant.
-     *
-     * @param $servesCuisine \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setServesCuisine($servesCuisine): static {
-        $this->properties['servesCuisine'] = $servesCuisine;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getServesCuisine() {
-        return $this->properties['servesCuisine'];
-    }
-    /**
      * Indicates whether a FoodEstablishment accepts reservations. Values can be
      * Boolean, an URL at which reservations can be made or (for backwards
      * compatibility) the strings ```Yes``` or ```No```.
      *
-     * @param $acceptsReservations \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeBoolean|\LengthOfRope\JSONLD\DataType\TypeURL
+     * @param $acceptsReservations \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\DataType\TypeBoolean
      * @return static
      **/
     public function setAcceptsReservations($acceptsReservations): static {
@@ -131,7 +131,7 @@ class FoodEstablishment extends LocalBusiness
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeBoolean|\LengthOfRope\JSONLD\DataType\TypeURL
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\DataType\TypeBoolean
      **/
     public function getAcceptsReservations() {
         return $this->properties['acceptsReservations'];

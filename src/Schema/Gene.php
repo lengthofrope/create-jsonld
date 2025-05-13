@@ -44,10 +44,28 @@ class Gene extends BioChemEntity
     }
 
     /**
+     * Another BioChemEntity encoded by this one.
+     *
+     * @param $encodesBioChemEntity \LengthOfRope\JSONLD\Schema\BioChemEntity
+     * @return static
+     **/
+    public function setEncodesBioChemEntity($encodesBioChemEntity): static {
+        $this->properties['encodesBioChemEntity'] = $encodesBioChemEntity;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\BioChemEntity
+     **/
+    public function getEncodesBioChemEntity() {
+        return $this->properties['encodesBioChemEntity'];
+    }
+    /**
      * Tissue, organ, biological sample, etc in which activity of this gene has been
      * observed experimentally. For example brain, digestive system.
      *
-     * @param $expressedIn \LengthOfRope\JSONLD\Schema\AnatomicalStructure|\LengthOfRope\JSONLD\Schema\AnatomicalSystem|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\BioChemEntity
+     * @param $expressedIn \LengthOfRope\JSONLD\Schema\AnatomicalSystem|\LengthOfRope\JSONLD\Schema\BioChemEntity|\LengthOfRope\JSONLD\Schema\AnatomicalStructure|\LengthOfRope\JSONLD\Schema\DefinedTerm
      * @return static
      **/
     public function setExpressedIn($expressedIn): static {
@@ -57,7 +75,7 @@ class Gene extends BioChemEntity
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\AnatomicalStructure|\LengthOfRope\JSONLD\Schema\AnatomicalSystem|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\BioChemEntity
+     * @return \LengthOfRope\JSONLD\Schema\AnatomicalSystem|\LengthOfRope\JSONLD\Schema\BioChemEntity|\LengthOfRope\JSONLD\Schema\AnatomicalStructure|\LengthOfRope\JSONLD\Schema\DefinedTerm
      **/
     public function getExpressedIn() {
         return $this->properties['expressedIn'];
@@ -80,24 +98,6 @@ class Gene extends BioChemEntity
      **/
     public function getHasBioPolymerSequence() {
         return $this->properties['hasBioPolymerSequence'];
-    }
-    /**
-     * Another BioChemEntity encoded by this one.
-     *
-     * @param $encodesBioChemEntity \LengthOfRope\JSONLD\Schema\BioChemEntity
-     * @return static
-     **/
-    public function setEncodesBioChemEntity($encodesBioChemEntity): static {
-        $this->properties['encodesBioChemEntity'] = $encodesBioChemEntity;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\BioChemEntity
-     **/
-    public function getEncodesBioChemEntity() {
-        return $this->properties['encodesBioChemEntity'];
     }
     /**
      * Another gene which is a variation of this one.

@@ -40,24 +40,22 @@ class Clip extends CreativeWork
     }
 
     /**
-     * An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or
-     * in an event. Actors can be associated with individual items or with a series,
-     * episode, clip.
+     * The series to which this episode or season belongs.
      *
-     * @param $actor \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\PerformingGroup
+     * @param $partOfSeries \LengthOfRope\JSONLD\Schema\CreativeWorkSeries
      * @return static
      **/
-    public function setActor($actor): static {
-        $this->properties['actor'] = $actor;
+    public function setPartOfSeries($partOfSeries): static {
+        $this->properties['partOfSeries'] = $partOfSeries;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\PerformingGroup
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWorkSeries
      **/
-    public function getActor() {
-        return $this->properties['actor'];
+    public function getPartOfSeries() {
+        return $this->properties['partOfSeries'];
     }
     /**
      * The episode to which this clip belongs.
@@ -76,6 +74,139 @@ class Clip extends CreativeWork
      **/
     public function getPartOfEpisode() {
         return $this->properties['partOfEpisode'];
+    }
+    /**
+     * A director of e.g. TV, radio, movie, video games etc. content. Directors can be
+     * associated with individual items or with a series, episode, clip.
+     *
+     * @param $directors \LengthOfRope\JSONLD\Schema\Person
+     * @return static
+     **/
+    public function setDirectors($directors): static {
+        $this->properties['directors'] = $directors;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Person
+     **/
+    public function getDirectors() {
+        return $this->properties['directors'];
+    }
+    /**
+     * The composer of the soundtrack.
+     *
+     * @param $musicBy \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\MusicGroup
+     * @return static
+     **/
+    public function setMusicBy($musicBy): static {
+        $this->properties['musicBy'] = $musicBy;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\MusicGroup
+     **/
+    public function getMusicBy() {
+        return $this->properties['musicBy'];
+    }
+    /**
+     * Position of the clip within an ordered group of clips.
+     *
+     * @param $clipNumber \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeInteger
+     * @return static
+     **/
+    public function setClipNumber($clipNumber): static {
+        $this->properties['clipNumber'] = $clipNumber;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeInteger
+     **/
+    public function getClipNumber() {
+        return $this->properties['clipNumber'];
+    }
+    /**
+     * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event.
+     * Directors can be associated with individual items or with a series, episode,
+     * clip.
+     *
+     * @param $director \LengthOfRope\JSONLD\Schema\Person
+     * @return static
+     **/
+    public function setDirector($director): static {
+        $this->properties['director'] = $director;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Person
+     **/
+    public function getDirector() {
+        return $this->properties['director'];
+    }
+    /**
+     * The end time of the clip expressed as the number of seconds from the beginning
+     * of the work.
+     *
+     * @param $endOffset \LengthOfRope\JSONLD\Schema\HyperTocEntry|\LengthOfRope\JSONLD\DataType\TypeNumber
+     * @return static
+     **/
+    public function setEndOffset($endOffset): static {
+        $this->properties['endOffset'] = $endOffset;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\HyperTocEntry|\LengthOfRope\JSONLD\DataType\TypeNumber
+     **/
+    public function getEndOffset() {
+        return $this->properties['endOffset'];
+    }
+    /**
+     * An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or
+     * in an event. Actors can be associated with individual items or with a series,
+     * episode, clip.
+     *
+     * @param $actor \LengthOfRope\JSONLD\Schema\PerformingGroup|\LengthOfRope\JSONLD\Schema\Person
+     * @return static
+     **/
+    public function setActor($actor): static {
+        $this->properties['actor'] = $actor;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\PerformingGroup|\LengthOfRope\JSONLD\Schema\Person
+     **/
+    public function getActor() {
+        return $this->properties['actor'];
+    }
+    /**
+     * The start time of the clip expressed as the number of seconds from the beginning
+     * of the work.
+     *
+     * @param $startOffset \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\Schema\HyperTocEntry
+     * @return static
+     **/
+    public function setStartOffset($startOffset): static {
+        $this->properties['startOffset'] = $startOffset;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\Schema\HyperTocEntry
+     **/
+    public function getStartOffset() {
+        return $this->properties['startOffset'];
     }
     /**
      * The season to which this episode belongs.
@@ -113,136 +244,5 @@ class Clip extends CreativeWork
      **/
     public function getActors() {
         return $this->properties['actors'];
-    }
-    /**
-     * A director of e.g. TV, radio, movie, video games etc. content. Directors can be
-     * associated with individual items or with a series, episode, clip.
-     *
-     * @param $directors \LengthOfRope\JSONLD\Schema\Person
-     * @return static
-     **/
-    public function setDirectors($directors): static {
-        $this->properties['directors'] = $directors;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Person
-     **/
-    public function getDirectors() {
-        return $this->properties['directors'];
-    }
-    /**
-     * Position of the clip within an ordered group of clips.
-     *
-     * @param $clipNumber \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeInteger
-     * @return static
-     **/
-    public function setClipNumber($clipNumber): static {
-        $this->properties['clipNumber'] = $clipNumber;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeInteger
-     **/
-    public function getClipNumber() {
-        return $this->properties['clipNumber'];
-    }
-    /**
-     * The end time of the clip expressed as the number of seconds from the beginning
-     * of the work.
-     *
-     * @param $endOffset \LengthOfRope\JSONLD\Schema\HyperTocEntry|\LengthOfRope\JSONLD\DataType\TypeNumber
-     * @return static
-     **/
-    public function setEndOffset($endOffset): static {
-        $this->properties['endOffset'] = $endOffset;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\HyperTocEntry|\LengthOfRope\JSONLD\DataType\TypeNumber
-     **/
-    public function getEndOffset() {
-        return $this->properties['endOffset'];
-    }
-    /**
-     * The series to which this episode or season belongs.
-     *
-     * @param $partOfSeries \LengthOfRope\JSONLD\Schema\CreativeWorkSeries
-     * @return static
-     **/
-    public function setPartOfSeries($partOfSeries): static {
-        $this->properties['partOfSeries'] = $partOfSeries;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\CreativeWorkSeries
-     **/
-    public function getPartOfSeries() {
-        return $this->properties['partOfSeries'];
-    }
-    /**
-     * The start time of the clip expressed as the number of seconds from the beginning
-     * of the work.
-     *
-     * @param $startOffset \LengthOfRope\JSONLD\Schema\HyperTocEntry|\LengthOfRope\JSONLD\DataType\TypeNumber
-     * @return static
-     **/
-    public function setStartOffset($startOffset): static {
-        $this->properties['startOffset'] = $startOffset;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\HyperTocEntry|\LengthOfRope\JSONLD\DataType\TypeNumber
-     **/
-    public function getStartOffset() {
-        return $this->properties['startOffset'];
-    }
-    /**
-     * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event.
-     * Directors can be associated with individual items or with a series, episode,
-     * clip.
-     *
-     * @param $director \LengthOfRope\JSONLD\Schema\Person
-     * @return static
-     **/
-    public function setDirector($director): static {
-        $this->properties['director'] = $director;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Person
-     **/
-    public function getDirector() {
-        return $this->properties['director'];
-    }
-    /**
-     * The composer of the soundtrack.
-     *
-     * @param $musicBy \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\MusicGroup
-     * @return static
-     **/
-    public function setMusicBy($musicBy): static {
-        $this->properties['musicBy'] = $musicBy;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\MusicGroup
-     **/
-    public function getMusicBy() {
-        return $this->properties['musicBy'];
     }
 }

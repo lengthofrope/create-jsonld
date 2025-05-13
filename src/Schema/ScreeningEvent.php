@@ -40,6 +40,24 @@ class ScreeningEvent extends Event
     }
 
     /**
+     * The movie presented during this event.
+     *
+     * @param $workPresented \LengthOfRope\JSONLD\Schema\Movie
+     * @return static
+     **/
+    public function setWorkPresented($workPresented): static {
+        $this->properties['workPresented'] = $workPresented;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Movie
+     **/
+    public function getWorkPresented() {
+        return $this->properties['workPresented'];
+    }
+    /**
      * The type of screening or video broadcast used (e.g. IMAX, 3D, SD, HD, etc.).
      *
      * @param $videoFormat \LengthOfRope\JSONLD\DataType\TypeText
@@ -61,7 +79,7 @@ class ScreeningEvent extends Event
      * Languages in which subtitles/captions are available, in [IETF BCP 47 standard
      * format](http://tools.ietf.org/html/bcp47).
      *
-     * @param $subtitleLanguage \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Language
+     * @param $subtitleLanguage \LengthOfRope\JSONLD\Schema\Language|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setSubtitleLanguage($subtitleLanguage): static {
@@ -71,27 +89,9 @@ class ScreeningEvent extends Event
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Language
+     * @return \LengthOfRope\JSONLD\Schema\Language|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getSubtitleLanguage() {
         return $this->properties['subtitleLanguage'];
-    }
-    /**
-     * The movie presented during this event.
-     *
-     * @param $workPresented \LengthOfRope\JSONLD\Schema\Movie
-     * @return static
-     **/
-    public function setWorkPresented($workPresented): static {
-        $this->properties['workPresented'] = $workPresented;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Movie
-     **/
-    public function getWorkPresented() {
-        return $this->properties['workPresented'];
     }
 }

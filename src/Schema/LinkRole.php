@@ -44,24 +44,6 @@ class LinkRole extends Role
     }
 
     /**
-     * Indicates the relationship type of a Web link.
-     *
-     * @param $linkRelationship \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setLinkRelationship($linkRelationship): static {
-        $this->properties['linkRelationship'] = $linkRelationship;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getLinkRelationship() {
-        return $this->properties['linkRelationship'];
-    }
-    /**
      * The language of the content or performance or used in an action. Please use one
      * of the language codes from the [IETF BCP 47
      * standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
@@ -80,5 +62,23 @@ class LinkRole extends Role
      **/
     public function getInLanguage() {
         return $this->properties['inLanguage'];
+    }
+    /**
+     * Indicates the relationship type of a Web link.
+     *
+     * @param $linkRelationship \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setLinkRelationship($linkRelationship): static {
+        $this->properties['linkRelationship'] = $linkRelationship;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getLinkRelationship() {
+        return $this->properties['linkRelationship'];
     }
 }

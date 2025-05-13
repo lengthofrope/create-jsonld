@@ -61,7 +61,7 @@ class ChooseAction extends AssessAction
     /**
      * A sub property of object. The options subject to this action.
      *
-     * @param $actionOption \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\DataType\TypeText
+     * @param $actionOption \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Thing
      * @return static
      **/
     public function setActionOption($actionOption): static {
@@ -71,7 +71,7 @@ class ChooseAction extends AssessAction
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Thing|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Thing
      **/
     public function getActionOption() {
         return $this->properties['actionOption'];

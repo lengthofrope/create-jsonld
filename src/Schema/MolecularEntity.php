@@ -42,6 +42,45 @@ class MolecularEntity extends BioChemEntity
     }
 
     /**
+     * The empirical formula is the simplest whole number ratio of all the atoms in a
+     * molecule.
+     *
+     * @param $molecularFormula \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setMolecularFormula($molecularFormula): static {
+        $this->properties['molecularFormula'] = $molecularFormula;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getMolecularFormula() {
+        return $this->properties['molecularFormula'];
+    }
+    /**
+     * This is the molecular weight of the entity being described, not of the parent.
+     * Units should be included in the form '&lt;Number&gt; &lt;unit&gt;', for example
+     * '12 amu' or as '&lt;QuantitativeValue&gt;.
+     *
+     * @param $molecularWeight \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setMolecularWeight($molecularWeight): static {
+        $this->properties['molecularWeight'] = $molecularWeight;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getMolecularWeight() {
+        return $this->properties['molecularWeight'];
+    }
+    /**
      * Systematic method of naming chemical compounds as recommended by the
      * International Union of Pure and Applied Chemistry (IUPAC).
      *
@@ -59,6 +98,28 @@ class MolecularEntity extends BioChemEntity
      **/
     public function getIupacName() {
         return $this->properties['iupacName'];
+    }
+    /**
+     * The monoisotopic mass is the sum of the masses of the atoms in a molecule using
+     * the unbound, ground-state, rest mass of the principal (most abundant) isotope
+     * for each element instead of the isotopic average mass. Please include the units
+     * in the form '&lt;Number&gt; &lt;unit&gt;', for example '770.230488 g/mol' or as
+     * '&lt;QuantitativeValue&gt;.
+     *
+     * @param $monoisotopicMolecularWeight \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setMonoisotopicMolecularWeight($monoisotopicMolecularWeight): static {
+        $this->properties['monoisotopicMolecularWeight'] = $monoisotopicMolecularWeight;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getMonoisotopicMolecularWeight() {
+        return $this->properties['monoisotopicMolecularWeight'];
     }
     /**
      * A specification in form of a line notation for describing the structure of
@@ -82,43 +143,6 @@ class MolecularEntity extends BioChemEntity
         return $this->properties['smiles'];
     }
     /**
-     * The empirical formula is the simplest whole number ratio of all the atoms in a
-     * molecule.
-     *
-     * @param $molecularFormula \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setMolecularFormula($molecularFormula): static {
-        $this->properties['molecularFormula'] = $molecularFormula;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getMolecularFormula() {
-        return $this->properties['molecularFormula'];
-    }
-    /**
-     * Intended use of the BioChemEntity by humans.
-     *
-     * @param $potentialUse \LengthOfRope\JSONLD\Schema\DefinedTerm
-     * @return static
-     **/
-    public function setPotentialUse($potentialUse): static {
-        $this->properties['potentialUse'] = $potentialUse;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\DefinedTerm
-     **/
-    public function getPotentialUse() {
-        return $this->properties['potentialUse'];
-    }
-    /**
      * InChIKey is a hashed version of the full InChI (using the SHA-256 algorithm).
      *
      * @param $inChIKey \LengthOfRope\JSONLD\DataType\TypeText
@@ -135,46 +159,6 @@ class MolecularEntity extends BioChemEntity
      **/
     public function getInChIKey() {
         return $this->properties['inChIKey'];
-    }
-    /**
-     * This is the molecular weight of the entity being described, not of the parent.
-     * Units should be included in the form '&lt;Number&gt; &lt;unit&gt;', for example
-     * '12 amu' or as '&lt;QuantitativeValue&gt;.
-     *
-     * @param $molecularWeight \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\QuantitativeValue
-     * @return static
-     **/
-    public function setMolecularWeight($molecularWeight): static {
-        $this->properties['molecularWeight'] = $molecularWeight;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\QuantitativeValue
-     **/
-    public function getMolecularWeight() {
-        return $this->properties['molecularWeight'];
-    }
-    /**
-     * Non-proprietary identifier for molecular entity that can be used in printed and
-     * electronic data sources thus enabling easier linking of diverse data
-     * compilations.
-     *
-     * @param $inChI \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setInChI($inChI): static {
-        $this->properties['inChI'] = $inChI;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getInChI() {
-        return $this->properties['inChI'];
     }
     /**
      * A role played by the BioChemEntity within a chemical context.
@@ -195,25 +179,41 @@ class MolecularEntity extends BioChemEntity
         return $this->properties['chemicalRole'];
     }
     /**
-     * The monoisotopic mass is the sum of the masses of the atoms in a molecule using
-     * the unbound, ground-state, rest mass of the principal (most abundant) isotope
-     * for each element instead of the isotopic average mass. Please include the units
-     * in the form '&lt;Number&gt; &lt;unit&gt;', for example '770.230488 g/mol' or as
-     * '&lt;QuantitativeValue&gt;.
+     * Intended use of the BioChemEntity by humans.
      *
-     * @param $monoisotopicMolecularWeight \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\TypeText
+     * @param $potentialUse \LengthOfRope\JSONLD\Schema\DefinedTerm
      * @return static
      **/
-    public function setMonoisotopicMolecularWeight($monoisotopicMolecularWeight): static {
-        $this->properties['monoisotopicMolecularWeight'] = $monoisotopicMolecularWeight;
+    public function setPotentialUse($potentialUse): static {
+        $this->properties['potentialUse'] = $potentialUse;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\Schema\DefinedTerm
      **/
-    public function getMonoisotopicMolecularWeight() {
-        return $this->properties['monoisotopicMolecularWeight'];
+    public function getPotentialUse() {
+        return $this->properties['potentialUse'];
+    }
+    /**
+     * Non-proprietary identifier for molecular entity that can be used in printed and
+     * electronic data sources thus enabling easier linking of diverse data
+     * compilations.
+     *
+     * @param $inChI \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setInChI($inChI): static {
+        $this->properties['inChI'] = $inChI;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getInChI() {
+        return $this->properties['inChI'];
     }
 }

@@ -32,7 +32,7 @@ namespace LengthOfRope\JSONLD\Schema;
  * @see https://schema.org/Dentist
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class Dentist extends MedicalOrganization
+class Dentist extends LocalBusiness
 {
     public static function factory(): Dentist
     {

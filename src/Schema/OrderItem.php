@@ -41,27 +41,9 @@ class OrderItem extends Intangible
     }
 
     /**
-     * The current status of the order item.
-     *
-     * @param $orderItemStatus \LengthOfRope\JSONLD\Schema\OrderStatus
-     * @return static
-     **/
-    public function setOrderItemStatus($orderItemStatus): static {
-        $this->properties['orderItemStatus'] = $orderItemStatus;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\OrderStatus
-     **/
-    public function getOrderItemStatus() {
-        return $this->properties['orderItemStatus'];
-    }
-    /**
      * The item ordered.
      *
-     * @param $orderedItem \LengthOfRope\JSONLD\Schema\Service|\LengthOfRope\JSONLD\Schema\Product|\LengthOfRope\JSONLD\Schema\OrderItem
+     * @param $orderedItem \LengthOfRope\JSONLD\Schema\Product|\LengthOfRope\JSONLD\Schema\OrderItem|\LengthOfRope\JSONLD\Schema\Service
      * @return static
      **/
     public function setOrderedItem($orderedItem): static {
@@ -71,10 +53,28 @@ class OrderItem extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Service|\LengthOfRope\JSONLD\Schema\Product|\LengthOfRope\JSONLD\Schema\OrderItem
+     * @return \LengthOfRope\JSONLD\Schema\Product|\LengthOfRope\JSONLD\Schema\OrderItem|\LengthOfRope\JSONLD\Schema\Service
      **/
     public function getOrderedItem() {
         return $this->properties['orderedItem'];
+    }
+    /**
+     * The identifier of the order item.
+     *
+     * @param $orderItemNumber \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setOrderItemNumber($orderItemNumber): static {
+        $this->properties['orderItemNumber'] = $orderItemNumber;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getOrderItemNumber() {
+        return $this->properties['orderItemNumber'];
     }
     /**
      * The delivery of the parcel related to this order or order item.
@@ -114,21 +114,21 @@ class OrderItem extends Intangible
         return $this->properties['orderQuantity'];
     }
     /**
-     * The identifier of the order item.
+     * The current status of the order item.
      *
-     * @param $orderItemNumber \LengthOfRope\JSONLD\DataType\TypeText
+     * @param $orderItemStatus \LengthOfRope\JSONLD\Schema\OrderStatus
      * @return static
      **/
-    public function setOrderItemNumber($orderItemNumber): static {
-        $this->properties['orderItemNumber'] = $orderItemNumber;
+    public function setOrderItemStatus($orderItemStatus): static {
+        $this->properties['orderItemStatus'] = $orderItemStatus;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\Schema\OrderStatus
      **/
-    public function getOrderItemNumber() {
-        return $this->properties['orderItemNumber'];
+    public function getOrderItemStatus() {
+        return $this->properties['orderItemStatus'];
     }
 }

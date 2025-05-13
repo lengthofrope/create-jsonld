@@ -41,6 +41,32 @@ class InteractionCounter extends StructuredValue
     }
 
     /**
+     * The startTime of something. For a reserved event or service (e.g.
+     * FoodEstablishmentReservation), the time that it is expected to start. For
+     * actions that span a period of time, when the action was performed. E.g. John
+     * wrote a book from *January* to December. For media, including audio and video,
+     * it's the time offset of the start of a clip within a larger file.
+     *
+     * Note that Event uses startDate/endDate instead of startTime/endTime, even when
+     * describing dates with times. This situation may be clarified in future
+     * revisions.
+     *
+     * @param $startTime \LengthOfRope\JSONLD\DataType\TypeTime|\LengthOfRope\JSONLD\DataType\TypeDateTime
+     * @return static
+     **/
+    public function setStartTime($startTime): static {
+        $this->properties['startTime'] = $startTime;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeTime|\LengthOfRope\JSONLD\DataType\TypeDateTime
+     **/
+    public function getStartTime() {
+        return $this->properties['startTime'];
+    }
+    /**
      * The Action representing the type of interaction. For up votes, +1s, etc. use
      * [[LikeAction]]. For down votes use [[DislikeAction]]. Otherwise, use the most
      * specific Action.
@@ -61,30 +87,23 @@ class InteractionCounter extends StructuredValue
         return $this->properties['interactionType'];
     }
     /**
-     * The endTime of something. For a reserved event or service (e.g.
-     * FoodEstablishmentReservation), the time that it is expected to end. For actions
-     * that span a period of time, when the action was performed. E.g. John wrote a
-     * book from January to *December*. For media, including audio and video, it's the
-     * time offset of the end of a clip within a larger file.
+     * The location of, for example, where an event is happening, where an organization
+     * is located, or where an action takes place.
      *
-     * Note that Event uses startDate/endDate instead of startTime/endTime, even when
-     * describing dates with times. This situation may be clarified in future
-     * revisions.
-     *
-     * @param $endTime \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeTime
+     * @param $location \LengthOfRope\JSONLD\Schema\VirtualLocation|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\PostalAddress|\LengthOfRope\JSONLD\Schema\Place
      * @return static
      **/
-    public function setEndTime($endTime): static {
-        $this->properties['endTime'] = $endTime;
+    public function setLocation($location): static {
+        $this->properties['location'] = $location;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeTime
+     * @return \LengthOfRope\JSONLD\Schema\VirtualLocation|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\PostalAddress|\LengthOfRope\JSONLD\Schema\Place
      **/
-    public function getEndTime() {
-        return $this->properties['endTime'];
+    public function getLocation() {
+        return $this->properties['location'];
     }
     /**
      * The number of interactions for the CreativeWork using the WebSite or
@@ -106,23 +125,30 @@ class InteractionCounter extends StructuredValue
         return $this->properties['userInteractionCount'];
     }
     /**
-     * The location of, for example, where an event is happening, where an organization
-     * is located, or where an action takes place.
+     * The endTime of something. For a reserved event or service (e.g.
+     * FoodEstablishmentReservation), the time that it is expected to end. For actions
+     * that span a period of time, when the action was performed. E.g. John wrote a
+     * book from January to *December*. For media, including audio and video, it's the
+     * time offset of the end of a clip within a larger file.
      *
-     * @param $location \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\VirtualLocation|\LengthOfRope\JSONLD\Schema\PostalAddress
+     * Note that Event uses startDate/endDate instead of startTime/endTime, even when
+     * describing dates with times. This situation may be clarified in future
+     * revisions.
+     *
+     * @param $endTime \LengthOfRope\JSONLD\DataType\TypeTime|\LengthOfRope\JSONLD\DataType\TypeDateTime
      * @return static
      **/
-    public function setLocation($location): static {
-        $this->properties['location'] = $location;
+    public function setEndTime($endTime): static {
+        $this->properties['endTime'] = $endTime;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\VirtualLocation|\LengthOfRope\JSONLD\Schema\PostalAddress
+     * @return \LengthOfRope\JSONLD\DataType\TypeTime|\LengthOfRope\JSONLD\DataType\TypeDateTime
      **/
-    public function getLocation() {
-        return $this->properties['location'];
+    public function getEndTime() {
+        return $this->properties['endTime'];
     }
     /**
      * The WebSite or SoftwareApplication where the interactions took place.
@@ -141,31 +167,5 @@ class InteractionCounter extends StructuredValue
      **/
     public function getInteractionService() {
         return $this->properties['interactionService'];
-    }
-    /**
-     * The startTime of something. For a reserved event or service (e.g.
-     * FoodEstablishmentReservation), the time that it is expected to start. For
-     * actions that span a period of time, when the action was performed. E.g. John
-     * wrote a book from *January* to December. For media, including audio and video,
-     * it's the time offset of the start of a clip within a larger file.
-     *
-     * Note that Event uses startDate/endDate instead of startTime/endTime, even when
-     * describing dates with times. This situation may be clarified in future
-     * revisions.
-     *
-     * @param $startTime \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeTime
-     * @return static
-     **/
-    public function setStartTime($startTime): static {
-        $this->properties['startTime'] = $startTime;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeTime
-     **/
-    public function getStartTime() {
-        return $this->properties['startTime'];
     }
 }

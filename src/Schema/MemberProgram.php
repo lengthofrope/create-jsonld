@@ -44,24 +44,6 @@ class MemberProgram extends Intangible
     }
 
     /**
-     * The tiers of a member program.
-     *
-     * @param $hasTiers \LengthOfRope\JSONLD\Schema\MemberProgramTier
-     * @return static
-     **/
-    public function setHasTiers($hasTiers): static {
-        $this->properties['hasTiers'] = $hasTiers;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\MemberProgramTier
-     **/
-    public function getHasTiers() {
-        return $this->properties['hasTiers'];
-    }
-    /**
      * The Organization (airline, travelers' club, retailer, etc.) the membership is
      * made with or which offers the  MemberProgram.
      *
@@ -79,5 +61,23 @@ class MemberProgram extends Intangible
      **/
     public function getHostingOrganization() {
         return $this->properties['hostingOrganization'];
+    }
+    /**
+     * The tiers of a member program.
+     *
+     * @param $hasTiers \LengthOfRope\JSONLD\Schema\MemberProgramTier
+     * @return static
+     **/
+    public function setHasTiers($hasTiers): static {
+        $this->properties['hasTiers'] = $hasTiers;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\MemberProgramTier
+     **/
+    public function getHasTiers() {
+        return $this->properties['hasTiers'];
     }
 }

@@ -32,13 +32,32 @@ namespace LengthOfRope\JSONLD\Schema;
  * @see https://schema.org/Audiobook
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class Audiobook extends AudioObject
+class Audiobook extends Book
 {
     public static function factory(): Audiobook
     {
         return new Audiobook('https://schema.org/', 'Audiobook');
     }
 
+    /**
+     * The duration of the item (movie, audio recording, event, etc.) in [ISO 8601
+     * duration format](http://en.wikipedia.org/wiki/ISO_8601).
+     *
+     * @param $duration \LengthOfRope\JSONLD\Schema\Duration|\LengthOfRope\JSONLD\Schema\QuantitativeValue
+     * @return static
+     **/
+    public function setDuration($duration): static {
+        $this->properties['duration'] = $duration;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Duration|\LengthOfRope\JSONLD\Schema\QuantitativeValue
+     **/
+    public function getDuration() {
+        return $this->properties['duration'];
+    }
     /**
      * A person who reads (performs) the audiobook.
      *
@@ -56,24 +75,5 @@ class Audiobook extends AudioObject
      **/
     public function getReadBy() {
         return $this->properties['readBy'];
-    }
-    /**
-     * The duration of the item (movie, audio recording, event, etc.) in [ISO 8601
-     * duration format](http://en.wikipedia.org/wiki/ISO_8601).
-     *
-     * @param $duration \LengthOfRope\JSONLD\Schema\Duration
-     * @return static
-     **/
-    public function setDuration($duration): static {
-        $this->properties['duration'] = $duration;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Duration
-     **/
-    public function getDuration() {
-        return $this->properties['duration'];
     }
 }

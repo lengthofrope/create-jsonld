@@ -42,47 +42,6 @@ class DeliveryChargeSpecification extends PriceSpecification
     /**
      * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the
      * GeoShape for the geo-political region(s) for which the offer or delivery charge
-     * specification is not valid, e.g. a region where the transaction is not allowed.
-     *
-     * See also [[eligibleRegion]].
-     *
-     *
-     * @param $ineligibleRegion \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\GeoShape
-     * @return static
-     **/
-    public function setIneligibleRegion($ineligibleRegion): static {
-        $this->properties['ineligibleRegion'] = $ineligibleRegion;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\GeoShape
-     **/
-    public function getIneligibleRegion() {
-        return $this->properties['ineligibleRegion'];
-    }
-    /**
-     * The geographic area where a service or offered item is provided.
-     *
-     * @param $areaServed \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeoShape|\LengthOfRope\JSONLD\Schema\AdministrativeArea
-     * @return static
-     **/
-    public function setAreaServed($areaServed): static {
-        $this->properties['areaServed'] = $areaServed;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\Schema\GeoShape|\LengthOfRope\JSONLD\Schema\AdministrativeArea
-     **/
-    public function getAreaServed() {
-        return $this->properties['areaServed'];
-    }
-    /**
-     * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the
-     * GeoShape for the geo-political region(s) for which the offer or delivery charge
      * specification is valid.
      *
      * See also [[ineligibleRegion]].
@@ -104,6 +63,24 @@ class DeliveryChargeSpecification extends PriceSpecification
         return $this->properties['eligibleRegion'];
     }
     /**
+     * The geographic area where a service or offered item is provided.
+     *
+     * @param $areaServed \LengthOfRope\JSONLD\Schema\GeoShape|\LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\AdministrativeArea
+     * @return static
+     **/
+    public function setAreaServed($areaServed): static {
+        $this->properties['areaServed'] = $areaServed;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\GeoShape|\LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\AdministrativeArea
+     **/
+    public function getAreaServed() {
+        return $this->properties['areaServed'];
+    }
+    /**
      * The delivery method(s) to which the delivery charge or payment charge
      * specification applies.
      *
@@ -121,5 +98,28 @@ class DeliveryChargeSpecification extends PriceSpecification
      **/
     public function getAppliesToDeliveryMethod() {
         return $this->properties['appliesToDeliveryMethod'];
+    }
+    /**
+     * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the
+     * GeoShape for the geo-political region(s) for which the offer or delivery charge
+     * specification is not valid, e.g. a region where the transaction is not allowed.
+     *
+     * See also [[eligibleRegion]].
+     *
+     *
+     * @param $ineligibleRegion \LengthOfRope\JSONLD\Schema\GeoShape|\LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setIneligibleRegion($ineligibleRegion): static {
+        $this->properties['ineligibleRegion'] = $ineligibleRegion;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\GeoShape|\LengthOfRope\JSONLD\Schema\Place|\LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getIneligibleRegion() {
+        return $this->properties['ineligibleRegion'];
     }
 }

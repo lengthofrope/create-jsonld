@@ -41,42 +41,6 @@ class AnatomicalStructure extends MedicalEntity
     }
 
     /**
-     * A medical therapy related to this anatomy.
-     *
-     * @param $relatedTherapy \LengthOfRope\JSONLD\Schema\MedicalTherapy
-     * @return static
-     **/
-    public function setRelatedTherapy($relatedTherapy): static {
-        $this->properties['relatedTherapy'] = $relatedTherapy;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\MedicalTherapy
-     **/
-    public function getRelatedTherapy() {
-        return $this->properties['relatedTherapy'];
-    }
-    /**
-     * The anatomical or organ system that this structure is part of.
-     *
-     * @param $partOfSystem \LengthOfRope\JSONLD\Schema\AnatomicalSystem
-     * @return static
-     **/
-    public function setPartOfSystem($partOfSystem): static {
-        $this->properties['partOfSystem'] = $partOfSystem;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\AnatomicalSystem
-     **/
-    public function getPartOfSystem() {
-        return $this->properties['partOfSystem'];
-    }
-    /**
      * An image containing a diagram that illustrates the structure and/or its
      * component substructures and/or connections with other structures.
      *
@@ -94,24 +58,6 @@ class AnatomicalStructure extends MedicalEntity
      **/
     public function getDiagram() {
         return $this->properties['diagram'];
-    }
-    /**
-     * A medical condition associated with this anatomy.
-     *
-     * @param $relatedCondition \LengthOfRope\JSONLD\Schema\MedicalCondition
-     * @return static
-     **/
-    public function setRelatedCondition($relatedCondition): static {
-        $this->properties['relatedCondition'] = $relatedCondition;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\MedicalCondition
-     **/
-    public function getRelatedCondition() {
-        return $this->properties['relatedCondition'];
     }
     /**
      * Component (sub-)structure(s) that comprise this anatomical structure.
@@ -150,22 +96,22 @@ class AnatomicalStructure extends MedicalEntity
         return $this->properties['connectedTo'];
     }
     /**
-     * Location in the body of the anatomical structure.
+     * The anatomical or organ system that this structure is part of.
      *
-     * @param $bodyLocation \LengthOfRope\JSONLD\DataType\TypeText
+     * @param $partOfSystem \LengthOfRope\JSONLD\Schema\AnatomicalSystem
      * @return static
      **/
-    public function setBodyLocation($bodyLocation): static {
-        $this->properties['bodyLocation'] = $bodyLocation;
+    public function setPartOfSystem($partOfSystem): static {
+        $this->properties['partOfSystem'] = $partOfSystem;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\Schema\AnatomicalSystem
      **/
-    public function getBodyLocation() {
-        return $this->properties['bodyLocation'];
+    public function getPartOfSystem() {
+        return $this->properties['partOfSystem'];
     }
     /**
      * If applicable, a description of the pathophysiology associated with the
@@ -186,5 +132,59 @@ class AnatomicalStructure extends MedicalEntity
      **/
     public function getAssociatedPathophysiology() {
         return $this->properties['associatedPathophysiology'];
+    }
+    /**
+     * Location in the body of the anatomical structure.
+     *
+     * @param $bodyLocation \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setBodyLocation($bodyLocation): static {
+        $this->properties['bodyLocation'] = $bodyLocation;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getBodyLocation() {
+        return $this->properties['bodyLocation'];
+    }
+    /**
+     * A medical therapy related to this anatomy.
+     *
+     * @param $relatedTherapy \LengthOfRope\JSONLD\Schema\MedicalTherapy
+     * @return static
+     **/
+    public function setRelatedTherapy($relatedTherapy): static {
+        $this->properties['relatedTherapy'] = $relatedTherapy;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\MedicalTherapy
+     **/
+    public function getRelatedTherapy() {
+        return $this->properties['relatedTherapy'];
+    }
+    /**
+     * A medical condition associated with this anatomy.
+     *
+     * @param $relatedCondition \LengthOfRope\JSONLD\Schema\MedicalCondition
+     * @return static
+     **/
+    public function setRelatedCondition($relatedCondition): static {
+        $this->properties['relatedCondition'] = $relatedCondition;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\MedicalCondition
+     **/
+    public function getRelatedCondition() {
+        return $this->properties['relatedCondition'];
     }
 }

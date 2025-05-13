@@ -50,24 +50,6 @@ class PlayAction extends Action
     }
 
     /**
-     * Upcoming or past event associated with this place, organization, or action.
-     *
-     * @param $event \LengthOfRope\JSONLD\Schema\Event
-     * @return static
-     **/
-    public function setEvent($event): static {
-        $this->properties['event'] = $event;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Event
-     **/
-    public function getEvent() {
-        return $this->properties['event'];
-    }
-    /**
      * An intended audience, i.e. a group for whom something was created.
      *
      * @param $audience \LengthOfRope\JSONLD\Schema\Audience
@@ -84,5 +66,23 @@ class PlayAction extends Action
      **/
     public function getAudience() {
         return $this->properties['audience'];
+    }
+    /**
+     * Upcoming or past event associated with this place, organization, or action.
+     *
+     * @param $event \LengthOfRope\JSONLD\Schema\Event
+     * @return static
+     **/
+    public function setEvent($event): static {
+        $this->properties['event'] = $event;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Event
+     **/
+    public function getEvent() {
+        return $this->properties['event'];
     }
 }

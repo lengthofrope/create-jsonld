@@ -42,25 +42,6 @@ class DDxElement extends MedicalIntangible
     }
 
     /**
-     * One or more alternative conditions considered in the differential diagnosis
-     * process as output of a diagnosis process.
-     *
-     * @param $diagnosis \LengthOfRope\JSONLD\Schema\MedicalCondition
-     * @return static
-     **/
-    public function setDiagnosis($diagnosis): static {
-        $this->properties['diagnosis'] = $diagnosis;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\MedicalCondition
-     **/
-    public function getDiagnosis() {
-        return $this->properties['diagnosis'];
-    }
-    /**
      * One of a set of signs and symptoms that can be used to distinguish this
      * diagnosis from others in the differential diagnosis.
      *
@@ -78,5 +59,24 @@ class DDxElement extends MedicalIntangible
      **/
     public function getDistinguishingSign() {
         return $this->properties['distinguishingSign'];
+    }
+    /**
+     * One or more alternative conditions considered in the differential diagnosis
+     * process as output of a diagnosis process.
+     *
+     * @param $diagnosis \LengthOfRope\JSONLD\Schema\MedicalCondition
+     * @return static
+     **/
+    public function setDiagnosis($diagnosis): static {
+        $this->properties['diagnosis'] = $diagnosis;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\MedicalCondition
+     **/
+    public function getDiagnosis() {
+        return $this->properties['diagnosis'];
     }
 }

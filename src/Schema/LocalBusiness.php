@@ -34,31 +34,13 @@ namespace LengthOfRope\JSONLD\Schema;
  * @see https://schema.org/LocalBusiness
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  **/
-class LocalBusiness extends Place
+class LocalBusiness extends Organization
 {
     public static function factory(): LocalBusiness
     {
         return new LocalBusiness('https://schema.org/', 'LocalBusiness');
     }
 
-    /**
-     * The price range of the business, for example ```$$$```.
-     *
-     * @param $priceRange \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setPriceRange($priceRange): static {
-        $this->properties['priceRange'] = $priceRange;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getPriceRange() {
-        return $this->properties['priceRange'];
-    }
     /**
      * The general opening hours for a business. Opening hours can be specified as a
      * weekly time range, starting with days, then times per day. Multiple days can be
@@ -91,6 +73,49 @@ class LocalBusiness extends Place
      **/
     public function getOpeningHours() {
         return $this->properties['openingHours'];
+    }
+    /**
+     * The price range of the business, for example ```$$$```.
+     *
+     * @param $priceRange \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setPriceRange($priceRange): static {
+        $this->properties['priceRange'] = $priceRange;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getPriceRange() {
+        return $this->properties['priceRange'];
+    }
+    /**
+     * The currency accepted.
+     *
+     * Use standard formats: [ISO 4217 currency
+     * format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker
+     * symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for
+     * cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading
+     * Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and
+     * other currency types, e.g. "Ithaca HOUR".
+     *
+     * @param $currenciesAccepted \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setCurrenciesAccepted($currenciesAccepted): static {
+        $this->properties['currenciesAccepted'] = $currenciesAccepted;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getCurrenciesAccepted() {
+        return $this->properties['currenciesAccepted'];
     }
     /**
      * Cash, Credit Card, Cryptocurrency, Local Exchange Tradings System, etc.
@@ -128,30 +153,5 @@ class LocalBusiness extends Place
      **/
     public function getBranchOf() {
         return $this->properties['branchOf'];
-    }
-    /**
-     * The currency accepted.
-     *
-     * Use standard formats: [ISO 4217 currency
-     * format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker
-     * symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for
-     * cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading
-     * Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and
-     * other currency types, e.g. "Ithaca HOUR".
-     *
-     * @param $currenciesAccepted \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setCurrenciesAccepted($currenciesAccepted): static {
-        $this->properties['currenciesAccepted'] = $currenciesAccepted;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getCurrenciesAccepted() {
-        return $this->properties['currenciesAccepted'];
     }
 }

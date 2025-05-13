@@ -41,24 +41,6 @@ class TechArticle extends Article
     }
 
     /**
-     * Proficiency needed for this content; expected values: 'Beginner', 'Expert'.
-     *
-     * @param $proficiencyLevel \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setProficiencyLevel($proficiencyLevel): static {
-        $this->properties['proficiencyLevel'] = $proficiencyLevel;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getProficiencyLevel() {
-        return $this->properties['proficiencyLevel'];
-    }
-    /**
      * Prerequisites needed to fulfill steps in article.
      *
      * @param $dependencies \LengthOfRope\JSONLD\DataType\TypeText
@@ -75,5 +57,23 @@ class TechArticle extends Article
      **/
     public function getDependencies() {
         return $this->properties['dependencies'];
+    }
+    /**
+     * Proficiency needed for this content; expected values: 'Beginner', 'Expert'.
+     *
+     * @param $proficiencyLevel \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setProficiencyLevel($proficiencyLevel): static {
+        $this->properties['proficiencyLevel'] = $proficiencyLevel;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getProficiencyLevel() {
+        return $this->properties['proficiencyLevel'];
     }
 }

@@ -46,6 +46,24 @@ class DrugCost extends MedicalEntity
     }
 
     /**
+     * The location in which the status applies.
+     *
+     * @param $applicableLocation \LengthOfRope\JSONLD\Schema\AdministrativeArea
+     * @return static
+     **/
+    public function setApplicableLocation($applicableLocation): static {
+        $this->properties['applicableLocation'] = $applicableLocation;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\AdministrativeArea
+     **/
+    public function getApplicableLocation() {
+        return $this->properties['applicableLocation'];
+    }
+    /**
      * The cost per unit of the drug.
      *
      * @param $costPerUnit \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\Schema\QualitativeValue
@@ -62,43 +80,6 @@ class DrugCost extends MedicalEntity
      **/
     public function getCostPerUnit() {
         return $this->properties['costPerUnit'];
-    }
-    /**
-     * Additional details to capture the origin of the cost data. For example,
-     * 'Medicare Part B'.
-     *
-     * @param $costOrigin \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setCostOrigin($costOrigin): static {
-        $this->properties['costOrigin'] = $costOrigin;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getCostOrigin() {
-        return $this->properties['costOrigin'];
-    }
-    /**
-     * The category of cost, such as wholesale, retail, reimbursement cap, etc.
-     *
-     * @param $costCategory \LengthOfRope\JSONLD\Schema\DrugCostCategory
-     * @return static
-     **/
-    public function setCostCategory($costCategory): static {
-        $this->properties['costCategory'] = $costCategory;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\DrugCostCategory
-     **/
-    public function getCostCategory() {
-        return $this->properties['costCategory'];
     }
     /**
      * The unit in which the drug is measured, e.g. '5 mg tablet'.
@@ -138,21 +119,40 @@ class DrugCost extends MedicalEntity
         return $this->properties['costCurrency'];
     }
     /**
-     * The location in which the status applies.
+     * Additional details to capture the origin of the cost data. For example,
+     * 'Medicare Part B'.
      *
-     * @param $applicableLocation \LengthOfRope\JSONLD\Schema\AdministrativeArea
+     * @param $costOrigin \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
-    public function setApplicableLocation($applicableLocation): static {
-        $this->properties['applicableLocation'] = $applicableLocation;
+    public function setCostOrigin($costOrigin): static {
+        $this->properties['costOrigin'] = $costOrigin;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\AdministrativeArea
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
-    public function getApplicableLocation() {
-        return $this->properties['applicableLocation'];
+    public function getCostOrigin() {
+        return $this->properties['costOrigin'];
+    }
+    /**
+     * The category of cost, such as wholesale, retail, reimbursement cap, etc.
+     *
+     * @param $costCategory \LengthOfRope\JSONLD\Schema\DrugCostCategory
+     * @return static
+     **/
+    public function setCostCategory($costCategory): static {
+        $this->properties['costCategory'] = $costCategory;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\DrugCostCategory
+     **/
+    public function getCostCategory() {
+        return $this->properties['costCategory'];
     }
 }

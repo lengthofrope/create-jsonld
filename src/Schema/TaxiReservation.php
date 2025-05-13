@@ -44,9 +44,27 @@ class TaxiReservation extends Reservation
     }
 
     /**
+     * Where a taxi will pick up a passenger or a rental car can be picked up.
+     *
+     * @param $pickupLocation \LengthOfRope\JSONLD\Schema\Place
+     * @return static
+     **/
+    public function setPickupLocation($pickupLocation): static {
+        $this->properties['pickupLocation'] = $pickupLocation;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Place
+     **/
+    public function getPickupLocation() {
+        return $this->properties['pickupLocation'];
+    }
+    /**
      * Number of people the reservation should accommodate.
      *
-     * @param $partySize \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\TypeInteger
+     * @param $partySize \LengthOfRope\JSONLD\DataType\TypeInteger|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setPartySize($partySize): static {
@@ -56,7 +74,7 @@ class TaxiReservation extends Reservation
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\TypeInteger
+     * @return \LengthOfRope\JSONLD\DataType\TypeInteger|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getPartySize() {
         return $this->properties['partySize'];
@@ -78,23 +96,5 @@ class TaxiReservation extends Reservation
      **/
     public function getPickupTime() {
         return $this->properties['pickupTime'];
-    }
-    /**
-     * Where a taxi will pick up a passenger or a rental car can be picked up.
-     *
-     * @param $pickupLocation \LengthOfRope\JSONLD\Schema\Place
-     * @return static
-     **/
-    public function setPickupLocation($pickupLocation): static {
-        $this->properties['pickupLocation'] = $pickupLocation;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Place
-     **/
-    public function getPickupLocation() {
-        return $this->properties['pickupLocation'];
     }
 }

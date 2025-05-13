@@ -44,24 +44,6 @@ class MonetaryAmount extends StructuredValue
     }
 
     /**
-     * The lower value of some characteristic or property.
-     *
-     * @param $minValue \LengthOfRope\JSONLD\DataType\TypeNumber
-     * @return static
-     **/
-    public function setMinValue($minValue): static {
-        $this->properties['minValue'] = $minValue;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
-     **/
-    public function getMinValue() {
-        return $this->properties['minValue'];
-    }
-    /**
      * The upper value of some characteristic or property.
      *
      * @param $maxValue \LengthOfRope\JSONLD\DataType\TypeNumber
@@ -108,7 +90,7 @@ class MonetaryAmount extends StructuredValue
      * The date after when the item is not valid. For example the end of an offer,
      * salary period, or a period of opening hours.
      *
-     * @param $validThrough \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
+     * @param $validThrough \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
      * @return static
      **/
     public function setValidThrough($validThrough): static {
@@ -118,10 +100,28 @@ class MonetaryAmount extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
+     * @return \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
      **/
     public function getValidThrough() {
         return $this->properties['validThrough'];
+    }
+    /**
+     * The lower value of some characteristic or property.
+     *
+     * @param $minValue \LengthOfRope\JSONLD\DataType\TypeNumber
+     * @return static
+     **/
+    public function setMinValue($minValue): static {
+        $this->properties['minValue'] = $minValue;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
+     **/
+    public function getMinValue() {
+        return $this->properties['minValue'];
     }
     /**
      * The value of a [[QuantitativeValue]] (including [[Observation]]) or property
@@ -136,7 +136,7 @@ class MonetaryAmount extends StructuredValue
      * * Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal
      * point. Avoid using these symbols as a readability separator.
      *
-     * @param $value \LengthOfRope\JSONLD\DataType\TypeBoolean|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\Schema\StructuredValue
+     * @param $value \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\Schema\StructuredValue|\LengthOfRope\JSONLD\DataType\TypeBoolean
      * @return static
      **/
     public function setValue($value): static {
@@ -146,7 +146,7 @@ class MonetaryAmount extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeBoolean|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\Schema\StructuredValue
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\Schema\StructuredValue|\LengthOfRope\JSONLD\DataType\TypeBoolean
      **/
     public function getValue() {
         return $this->properties['value'];
@@ -154,7 +154,7 @@ class MonetaryAmount extends StructuredValue
     /**
      * The date when the item becomes valid.
      *
-     * @param $validFrom \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
+     * @param $validFrom \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
      * @return static
      **/
     public function setValidFrom($validFrom): static {
@@ -164,7 +164,7 @@ class MonetaryAmount extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeDateTime|\LengthOfRope\JSONLD\DataType\TypeDate
+     * @return \LengthOfRope\JSONLD\DataType\TypeDate|\LengthOfRope\JSONLD\DataType\TypeDateTime
      **/
     public function getValidFrom() {
         return $this->properties['validFrom'];

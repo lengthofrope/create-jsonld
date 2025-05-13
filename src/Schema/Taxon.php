@@ -42,7 +42,7 @@ class Taxon extends Thing
     /**
      * Closest parent taxon of the taxon in question.
      *
-     * @param $parentTaxon \LengthOfRope\JSONLD\Schema\Taxon|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
+     * @param $parentTaxon \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\Taxon|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setParentTaxon($parentTaxon): static {
@@ -52,48 +52,10 @@ class Taxon extends Thing
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Taxon|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\Taxon|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getParentTaxon() {
         return $this->properties['parentTaxon'];
-    }
-    /**
-     * Closest child taxa of the taxon in question.
-     *
-     * @param $childTaxon \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\Taxon
-     * @return static
-     **/
-    public function setChildTaxon($childTaxon): static {
-        $this->properties['childTaxon'] = $childTaxon;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\Taxon
-     **/
-    public function getChildTaxon() {
-        return $this->properties['childTaxon'];
-    }
-    /**
-     * The taxonomic rank of this taxon given preferably as a URI from a controlled
-     * vocabulary – typically the ranks from TDWG TaxonRank ontology or equivalent
-     * Wikidata URIs.
-     *
-     * @param $taxonRank \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\PropertyValue
-     * @return static
-     **/
-    public function setTaxonRank($taxonRank): static {
-        $this->properties['taxonRank'] = $taxonRank;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\PropertyValue
-     **/
-    public function getTaxonRank() {
-        return $this->properties['taxonRank'];
     }
     /**
      * A Defined Term contained in this term set.
@@ -112,5 +74,43 @@ class Taxon extends Thing
      **/
     public function getHasDefinedTerm() {
         return $this->properties['hasDefinedTerm'];
+    }
+    /**
+     * Closest child taxa of the taxon in question.
+     *
+     * @param $childTaxon \LengthOfRope\JSONLD\Schema\Taxon|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
+     * @return static
+     **/
+    public function setChildTaxon($childTaxon): static {
+        $this->properties['childTaxon'] = $childTaxon;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\Taxon|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
+     **/
+    public function getChildTaxon() {
+        return $this->properties['childTaxon'];
+    }
+    /**
+     * The taxonomic rank of this taxon given preferably as a URI from a controlled
+     * vocabulary – typically the ranks from TDWG TaxonRank ontology or equivalent
+     * Wikidata URIs.
+     *
+     * @param $taxonRank \LengthOfRope\JSONLD\Schema\PropertyValue|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
+     * @return static
+     **/
+    public function setTaxonRank($taxonRank): static {
+        $this->properties['taxonRank'] = $taxonRank;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\PropertyValue|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
+     **/
+    public function getTaxonRank() {
+        return $this->properties['taxonRank'];
     }
 }

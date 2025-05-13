@@ -68,7 +68,7 @@ class ShippingDeliveryTime extends StructuredValue
      * Days of the week when the merchant typically operates, indicated via opening
      * hours markup.
      *
-     * @param $businessDays \LengthOfRope\JSONLD\Schema\OpeningHoursSpecification
+     * @param $businessDays \LengthOfRope\JSONLD\Schema\OpeningHoursSpecification|\LengthOfRope\JSONLD\Schema\DayOfWeek
      * @return static
      **/
     public function setBusinessDays($businessDays): static {
@@ -78,16 +78,23 @@ class ShippingDeliveryTime extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\OpeningHoursSpecification
+     * @return \LengthOfRope\JSONLD\Schema\OpeningHoursSpecification|\LengthOfRope\JSONLD\Schema\DayOfWeek
      **/
     public function getBusinessDays() {
         return $this->properties['businessDays'];
     }
     /**
      * The typical delay the order has been sent for delivery and the goods reach the
-     * final customer. Typical properties: minValue, maxValue, unitCode (d for DAY).
+     * final customer.
      *
-     * @param $transitTime \LengthOfRope\JSONLD\Schema\QuantitativeValue
+     * In the context of [[ShippingDeliveryTime]], use the [[QuantitativeValue]].
+     * Typical properties: minValue, maxValue, unitCode (d for DAY).
+     *
+     * In the context of [[ShippingConditions]], use the [[ServicePeriod]]. It has a
+     * duration (as a [[QuantitativeValue]]) and also business days and a cut-off time.
+     *
+     *
+     * @param $transitTime \LengthOfRope\JSONLD\Schema\ServicePeriod|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
     public function setTransitTime($transitTime): static {
@@ -97,7 +104,7 @@ class ShippingDeliveryTime extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
+     * @return \LengthOfRope\JSONLD\Schema\ServicePeriod|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
     public function getTransitTime() {
         return $this->properties['transitTime'];
@@ -105,11 +112,18 @@ class ShippingDeliveryTime extends StructuredValue
     /**
      * The typical delay between the receipt of the order and the goods either leaving
      * the warehouse or being prepared for pickup, in case the delivery method is on
-     * site pickup. Typical properties: minValue, maxValue, unitCode (d for DAY).  This
-     * is by common convention assumed to mean business days (if a unitCode is used,
-     * coded as "d"), i.e. only counting days when the business normally operates.
+     * site pickup.
      *
-     * @param $handlingTime \LengthOfRope\JSONLD\Schema\QuantitativeValue
+     * In the context of [[ShippingDeliveryTime]], Typical properties: minValue,
+     * maxValue, unitCode (d for DAY).  This is by common convention assumed to mean
+     * business days (if a unitCode is used, coded as "d"), i.e. only counting days
+     * when the business normally operates.
+     *
+     * In the context of [[ShippingService]], use the [[ServicePeriod]] format, that
+     * contains the same information in a structured form, with cut-off time, business
+     * days and duration.
+     *
+     * @param $handlingTime \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\ServicePeriod
      * @return static
      **/
     public function setHandlingTime($handlingTime): static {
@@ -119,7 +133,7 @@ class ShippingDeliveryTime extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\Schema\ServicePeriod
      **/
     public function getHandlingTime() {
         return $this->properties['handlingTime'];

@@ -40,44 +40,6 @@ class ApartmentComplex extends Residence
     }
 
     /**
-     * Indicates whether pets are allowed to enter the accommodation or lodging
-     * business. More detailed information can be put in a text value.
-     *
-     * @param $petsAllowed \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeBoolean
-     * @return static
-     **/
-    public function setPetsAllowed($petsAllowed): static {
-        $this->properties['petsAllowed'] = $petsAllowed;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeBoolean
-     **/
-    public function getPetsAllowed() {
-        return $this->properties['petsAllowed'];
-    }
-    /**
-     * The total integer number of bedrooms in a some [[Accommodation]],
-     * [[ApartmentComplex]] or [[FloorPlan]].
-     *
-     * @param $numberOfBedrooms \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\Schema\QuantitativeValue
-     * @return static
-     **/
-    public function setNumberOfBedrooms($numberOfBedrooms): static {
-        $this->properties['numberOfBedrooms'] = $numberOfBedrooms;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\Schema\QuantitativeValue
-     **/
-    public function getNumberOfBedrooms() {
-        return $this->properties['numberOfBedrooms'];
-    }
-    /**
      * Indicates the number of available accommodation units in an
      * [[ApartmentComplex]], or the number of accommodation units for a specific
      * [[FloorPlan]] (within its specific [[ApartmentComplex]]). See also
@@ -120,6 +82,25 @@ class ApartmentComplex extends Residence
         return $this->properties['numberOfAccommodationUnits'];
     }
     /**
+     * Indicates whether pets are allowed to enter the accommodation or lodging
+     * business. More detailed information can be put in a text value.
+     *
+     * @param $petsAllowed \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeBoolean
+     * @return static
+     **/
+    public function setPetsAllowed($petsAllowed): static {
+        $this->properties['petsAllowed'] = $petsAllowed;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeBoolean
+     **/
+    public function getPetsAllowed() {
+        return $this->properties['petsAllowed'];
+    }
+    /**
      * A page providing information on how to book a tour of some [[Place]], such as an
      * [[Accommodation]] or [[ApartmentComplex]] in a real estate setting, as well as
      * other kinds of tours as appropriate.
@@ -138,5 +119,24 @@ class ApartmentComplex extends Residence
      **/
     public function getTourBookingPage() {
         return $this->properties['tourBookingPage'];
+    }
+    /**
+     * The total integer number of bedrooms in a some [[Accommodation]],
+     * [[ApartmentComplex]] or [[FloorPlan]].
+     *
+     * @param $numberOfBedrooms \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\Schema\QuantitativeValue
+     * @return static
+     **/
+    public function setNumberOfBedrooms($numberOfBedrooms): static {
+        $this->properties['numberOfBedrooms'] = $numberOfBedrooms;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\Schema\QuantitativeValue
+     **/
+    public function getNumberOfBedrooms() {
+        return $this->properties['numberOfBedrooms'];
     }
 }

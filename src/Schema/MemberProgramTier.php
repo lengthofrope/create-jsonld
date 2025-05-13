@@ -41,13 +41,31 @@ class MemberProgramTier extends Intangible
     }
 
     /**
+     * The member program this tier is a part of.
+     *
+     * @param $isTierOf \LengthOfRope\JSONLD\Schema\MemberProgram
+     * @return static
+     **/
+    public function setIsTierOf($isTierOf): static {
+        $this->properties['isTierOf'] = $isTierOf;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\MemberProgram
+     **/
+    public function getIsTierOf() {
+        return $this->properties['isTierOf'];
+    }
+    /**
      * A requirement for a user to join a membership tier, for example: a CreditCard if
      * the tier requires sign up for a credit card, A UnitPriceSpecification if the
      * user is required to pay a (periodic) fee, or a MonetaryAmount if the user needs
      * to spend a minimum amount to join the tier. If a tier is free to join then this
      * property does not need to be specified.
      *
-     * @param $hasTierRequirement \LengthOfRope\JSONLD\Schema\CreditCard|\LengthOfRope\JSONLD\Schema\UnitPriceSpecification|\LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\TypeText
+     * @param $hasTierRequirement \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\Schema\UnitPriceSpecification|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\CreditCard
      * @return static
      **/
     public function setHasTierRequirement($hasTierRequirement): static {
@@ -57,30 +75,10 @@ class MemberProgramTier extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\CreditCard|\LengthOfRope\JSONLD\Schema\UnitPriceSpecification|\LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\Schema\UnitPriceSpecification|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\CreditCard
      **/
     public function getHasTierRequirement() {
         return $this->properties['hasTierRequirement'];
-    }
-    /**
-     * The number of membership points earned by the member. If necessary, the unitText
-     * can be used to express the units the points are issued in. (E.g. stars, miles,
-     * etc.)
-     *
-     * @param $membershipPointsEarned \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\Schema\QuantitativeValue
-     * @return static
-     **/
-    public function setMembershipPointsEarned($membershipPointsEarned): static {
-        $this->properties['membershipPointsEarned'] = $membershipPointsEarned;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeNumber|\LengthOfRope\JSONLD\Schema\QuantitativeValue
-     **/
-    public function getMembershipPointsEarned() {
-        return $this->properties['membershipPointsEarned'];
     }
     /**
      * A member benefit for a particular tier of a loyalty program.
@@ -101,21 +99,23 @@ class MemberProgramTier extends Intangible
         return $this->properties['hasTierBenefit'];
     }
     /**
-     * The member program this tier is a part of.
+     * The number of membership points earned by the member. If necessary, the unitText
+     * can be used to express the units the points are issued in. (E.g. stars, miles,
+     * etc.)
      *
-     * @param $isTierOf \LengthOfRope\JSONLD\Schema\MemberProgram
+     * @param $membershipPointsEarned \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
-    public function setIsTierOf($isTierOf): static {
-        $this->properties['isTierOf'] = $isTierOf;
+    public function setMembershipPointsEarned($membershipPointsEarned): static {
+        $this->properties['membershipPointsEarned'] = $membershipPointsEarned;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\MemberProgram
+     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\TypeNumber
      **/
-    public function getIsTierOf() {
-        return $this->properties['isTierOf'];
+    public function getMembershipPointsEarned() {
+        return $this->properties['membershipPointsEarned'];
     }
 }

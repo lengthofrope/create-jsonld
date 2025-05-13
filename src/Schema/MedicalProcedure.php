@@ -42,43 +42,6 @@ class MedicalProcedure extends MedicalEntity
     }
 
     /**
-     * Typical preparation that a patient must undergo before having the procedure
-     * performed.
-     *
-     * @param $preparation \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\MedicalEntity
-     * @return static
-     **/
-    public function setPreparation($preparation): static {
-        $this->properties['preparation'] = $preparation;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\MedicalEntity
-     **/
-    public function getPreparation() {
-        return $this->properties['preparation'];
-    }
-    /**
-     * The type of procedure, for example Surgical, Noninvasive, or Percutaneous.
-     *
-     * @param $procedureType \LengthOfRope\JSONLD\Schema\MedicalProcedureType
-     * @return static
-     **/
-    public function setProcedureType($procedureType): static {
-        $this->properties['procedureType'] = $procedureType;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\MedicalProcedureType
-     **/
-    public function getProcedureType() {
-        return $this->properties['procedureType'];
-    }
-    /**
      * How the procedure is performed.
      *
      * @param $howPerformed \LengthOfRope\JSONLD\DataType\TypeText
@@ -99,7 +62,7 @@ class MedicalProcedure extends MedicalEntity
     /**
      * The status of the study (enumerated).
      *
-     * @param $status \LengthOfRope\JSONLD\Schema\MedicalStudyStatus|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\EventStatusType
+     * @param $status \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\EventStatusType|\LengthOfRope\JSONLD\Schema\MedicalStudyStatus
      * @return static
      **/
     public function setStatus($status): static {
@@ -109,28 +72,28 @@ class MedicalProcedure extends MedicalEntity
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\MedicalStudyStatus|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\EventStatusType
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\EventStatusType|\LengthOfRope\JSONLD\Schema\MedicalStudyStatus
      **/
     public function getStatus() {
         return $this->properties['status'];
     }
     /**
-     * Typical or recommended followup care after the procedure is performed.
+     * The type of procedure, for example Surgical, Noninvasive, or Percutaneous.
      *
-     * @param $followup \LengthOfRope\JSONLD\DataType\TypeText
+     * @param $procedureType \LengthOfRope\JSONLD\Schema\MedicalProcedureType
      * @return static
      **/
-    public function setFollowup($followup): static {
-        $this->properties['followup'] = $followup;
+    public function setProcedureType($procedureType): static {
+        $this->properties['procedureType'] = $procedureType;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\Schema\MedicalProcedureType
      **/
-    public function getFollowup() {
-        return $this->properties['followup'];
+    public function getProcedureType() {
+        return $this->properties['procedureType'];
     }
     /**
      * Location in the body of the anatomical structure.
@@ -149,5 +112,42 @@ class MedicalProcedure extends MedicalEntity
      **/
     public function getBodyLocation() {
         return $this->properties['bodyLocation'];
+    }
+    /**
+     * Typical preparation that a patient must undergo before having the procedure
+     * performed.
+     *
+     * @param $preparation \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\MedicalEntity
+     * @return static
+     **/
+    public function setPreparation($preparation): static {
+        $this->properties['preparation'] = $preparation;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\MedicalEntity
+     **/
+    public function getPreparation() {
+        return $this->properties['preparation'];
+    }
+    /**
+     * Typical or recommended followup care after the procedure is performed.
+     *
+     * @param $followup \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setFollowup($followup): static {
+        $this->properties['followup'] = $followup;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getFollowup() {
+        return $this->properties['followup'];
     }
 }

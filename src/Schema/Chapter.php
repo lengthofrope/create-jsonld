@@ -60,24 +60,6 @@ class Chapter extends CreativeWork
         return $this->properties['pagination'];
     }
     /**
-     * The page on which the work starts; for example "135" or "xiii".
-     *
-     * @param $pageStart \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeInteger
-     * @return static
-     **/
-    public function setPageStart($pageStart): static {
-        $this->properties['pageStart'] = $pageStart;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeInteger
-     **/
-    public function getPageStart() {
-        return $this->properties['pageStart'];
-    }
-    /**
      * The page on which the work ends; for example "138" or "xvi".
      *
      * @param $pageEnd \LengthOfRope\JSONLD\DataType\TypeInteger|\LengthOfRope\JSONLD\DataType\TypeText
@@ -94,5 +76,23 @@ class Chapter extends CreativeWork
      **/
     public function getPageEnd() {
         return $this->properties['pageEnd'];
+    }
+    /**
+     * The page on which the work starts; for example "135" or "xiii".
+     *
+     * @param $pageStart \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeInteger
+     * @return static
+     **/
+    public function setPageStart($pageStart): static {
+        $this->properties['pageStart'] = $pageStart;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeInteger
+     **/
+    public function getPageStart() {
+        return $this->properties['pageStart'];
     }
 }

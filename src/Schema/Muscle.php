@@ -41,24 +41,6 @@ class Muscle extends AnatomicalStructure
     }
 
     /**
-     * The blood vessel that carries blood from the heart to the muscle.
-     *
-     * @param $bloodSupply \LengthOfRope\JSONLD\Schema\Vessel
-     * @return static
-     **/
-    public function setBloodSupply($bloodSupply): static {
-        $this->properties['bloodSupply'] = $bloodSupply;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Vessel
-     **/
-    public function getBloodSupply() {
-        return $this->properties['bloodSupply'];
-    }
-    /**
      * The muscle whose action counteracts the specified muscle.
      *
      * @param $antagonist \LengthOfRope\JSONLD\Schema\Muscle
@@ -75,6 +57,24 @@ class Muscle extends AnatomicalStructure
      **/
     public function getAntagonist() {
         return $this->properties['antagonist'];
+    }
+    /**
+     * The movement the muscle generates.
+     *
+     * @param $muscleAction \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setMuscleAction($muscleAction): static {
+        $this->properties['muscleAction'] = $muscleAction;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getMuscleAction() {
+        return $this->properties['muscleAction'];
     }
     /**
      * The place of attachment of a muscle, or what the muscle moves.
@@ -95,22 +95,22 @@ class Muscle extends AnatomicalStructure
         return $this->properties['insertion'];
     }
     /**
-     * The movement the muscle generates.
+     * The blood vessel that carries blood from the heart to the muscle.
      *
-     * @param $muscleAction \LengthOfRope\JSONLD\DataType\TypeText
+     * @param $bloodSupply \LengthOfRope\JSONLD\Schema\Vessel
      * @return static
      **/
-    public function setMuscleAction($muscleAction): static {
-        $this->properties['muscleAction'] = $muscleAction;
+    public function setBloodSupply($bloodSupply): static {
+        $this->properties['bloodSupply'] = $bloodSupply;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\Schema\Vessel
      **/
-    public function getMuscleAction() {
-        return $this->properties['muscleAction'];
+    public function getBloodSupply() {
+        return $this->properties['bloodSupply'];
     }
     /**
      * The underlying innervation associated with the muscle.

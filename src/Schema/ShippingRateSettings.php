@@ -44,31 +44,11 @@ class ShippingRateSettings extends StructuredValue
     }
 
     /**
-     * A monetary value above (or at) which the shipping rate becomes free. Intended to
-     * be used via an [[OfferShippingDetails]] with [[shippingSettingsLink]] matching
-     * this [[ShippingRateSettings]].
-     *
-     * @param $freeShippingThreshold \LengthOfRope\JSONLD\Schema\DeliveryChargeSpecification|\LengthOfRope\JSONLD\Schema\MonetaryAmount
-     * @return static
-     **/
-    public function setFreeShippingThreshold($freeShippingThreshold): static {
-        $this->properties['freeShippingThreshold'] = $freeShippingThreshold;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\DeliveryChargeSpecification|\LengthOfRope\JSONLD\Schema\MonetaryAmount
-     **/
-    public function getFreeShippingThreshold() {
-        return $this->properties['freeShippingThreshold'];
-    }
-    /**
      * The shipping rate is the cost of shipping to the specified destination.
      * Typically, the maxValue and currency values (of the [[MonetaryAmount]]) are most
      * appropriate.
      *
-     * @param $shippingRate \LengthOfRope\JSONLD\Schema\MonetaryAmount
+     * @param $shippingRate \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\Schema\ShippingRateSettings
      * @return static
      **/
     public function setShippingRate($shippingRate): static {
@@ -78,29 +58,48 @@ class ShippingRateSettings extends StructuredValue
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount
+     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\Schema\ShippingRateSettings
      **/
     public function getShippingRate() {
         return $this->properties['shippingRate'];
     }
     /**
-     * indicates (possibly multiple) shipping destinations. These can be defined in
-     * several ways, e.g. postalCode ranges.
+     * A monetary value above (or at) which the shipping rate becomes free. Intended to
+     * be used via an [[OfferShippingDetails]] with [[shippingSettingsLink]] matching
+     * this [[ShippingRateSettings]].
      *
-     * @param $shippingDestination \LengthOfRope\JSONLD\Schema\DefinedRegion
+     * @param $freeShippingThreshold \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\Schema\DeliveryChargeSpecification
      * @return static
      **/
-    public function setShippingDestination($shippingDestination): static {
-        $this->properties['shippingDestination'] = $shippingDestination;
+    public function setFreeShippingThreshold($freeShippingThreshold): static {
+        $this->properties['freeShippingThreshold'] = $freeShippingThreshold;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\DefinedRegion
+     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\Schema\DeliveryChargeSpecification
      **/
-    public function getShippingDestination() {
-        return $this->properties['shippingDestination'];
+    public function getFreeShippingThreshold() {
+        return $this->properties['freeShippingThreshold'];
+    }
+    /**
+     * Fraction of the weight that is used to compute the shipping price.
+     *
+     * @param $weightPercentage \LengthOfRope\JSONLD\DataType\TypeNumber
+     * @return static
+     **/
+    public function setWeightPercentage($weightPercentage): static {
+        $this->properties['weightPercentage'] = $weightPercentage;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
+     **/
+    public function getWeightPercentage() {
+        return $this->properties['weightPercentage'];
     }
     /**
      * This can be marked 'true' to indicate that some published
@@ -127,6 +126,25 @@ class ShippingRateSettings extends StructuredValue
         return $this->properties['isUnlabelledFallback'];
     }
     /**
+     * indicates (possibly multiple) shipping destinations. These can be defined in
+     * several ways, e.g. postalCode ranges.
+     *
+     * @param $shippingDestination \LengthOfRope\JSONLD\Schema\DefinedRegion
+     * @return static
+     **/
+    public function setShippingDestination($shippingDestination): static {
+        $this->properties['shippingDestination'] = $shippingDestination;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\DefinedRegion
+     **/
+    public function getShippingDestination() {
+        return $this->properties['shippingDestination'];
+    }
+    /**
      * Indicates when shipping to a particular [[shippingDestination]] is not
      * available.
      *
@@ -146,22 +164,21 @@ class ShippingRateSettings extends StructuredValue
         return $this->properties['doesNotShip'];
     }
     /**
-     * Label to match an [[OfferShippingDetails]] with a [[ShippingRateSettings]]
-     * (within the context of a [[shippingSettingsLink]] cross-reference).
+     * Fraction of the value of the order that is charged as shipping cost.
      *
-     * @param $shippingLabel \LengthOfRope\JSONLD\DataType\TypeText
+     * @param $orderPercentage \LengthOfRope\JSONLD\DataType\TypeNumber
      * @return static
      **/
-    public function setShippingLabel($shippingLabel): static {
-        $this->properties['shippingLabel'] = $shippingLabel;
+    public function setOrderPercentage($orderPercentage): static {
+        $this->properties['orderPercentage'] = $orderPercentage;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\DataType\TypeNumber
      **/
-    public function getShippingLabel() {
-        return $this->properties['shippingLabel'];
+    public function getOrderPercentage() {
+        return $this->properties['orderPercentage'];
     }
 }

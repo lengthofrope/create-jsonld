@@ -57,6 +57,66 @@ class StatisticalVariable extends ConstraintNode
     }
 
     /**
+     * Identifies the denominator variable when an observation represents a ratio or
+     * percentage.
+     *
+     * @param $measurementDenominator \LengthOfRope\JSONLD\Schema\StatisticalVariable
+     * @return static
+     **/
+    public function setMeasurementDenominator($measurementDenominator): static {
+        $this->properties['measurementDenominator'] = $measurementDenominator;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\StatisticalVariable
+     **/
+    public function getMeasurementDenominator() {
+        return $this->properties['measurementDenominator'];
+    }
+    /**
+     * A subproperty of [[measurementTechnique]] that can be used for specifying
+     * specific methods, in particular via [[MeasurementMethodEnum]].
+     *
+     * @param $measurementMethod \LengthOfRope\JSONLD\Schema\MeasurementMethodEnum|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\TypeURL
+     * @return static
+     **/
+    public function setMeasurementMethod($measurementMethod): static {
+        $this->properties['measurementMethod'] = $measurementMethod;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\MeasurementMethodEnum|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\TypeURL
+     **/
+    public function getMeasurementMethod() {
+        return $this->properties['measurementMethod'];
+    }
+    /**
+     * Indicates the kind of statistic represented by a [[StatisticalVariable]], e.g.
+     * mean, count etc. The value of statType is a property, either from within
+     * Schema.org (e.g. [[median]], [[marginOfError]], [[maxValue]], [[minValue]]) or
+     * from other compatible (e.g. RDF) systems such as DataCommons.org or
+     * Wikidata.org.
+     *
+     * @param $statType \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Property
+     * @return static
+     **/
+    public function setStatType($statType): static {
+        $this->properties['statType'] = $statType;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Property
+     **/
+    public function getStatType() {
+        return $this->properties['statType'];
+    }
+    /**
      * The measuredProperty of an [[Observation]], typically via its
      * [[StatisticalVariable]]. There are various kinds of applicable [[Property]]: a
      * schema.org property, a property from other RDF-compatible systems, e.g. W3C RDF
@@ -79,83 +139,24 @@ class StatisticalVariable extends ConstraintNode
         return $this->properties['measuredProperty'];
     }
     /**
-     * Indicates the kind of statistic represented by a [[StatisticalVariable]], e.g.
-     * mean, count etc. The value of statType is a property, either from within
-     * Schema.org (e.g. [[median]], [[marginOfError]], [[maxValue]], [[minValue]]) or
-     * from other compatible (e.g. RDF) systems such as DataCommons.org or
-     * Wikidata.org.
+     * Indicates the populationType common to all members of a
+     * [[StatisticalPopulation]] or all cases within the scope of a
+     * [[StatisticalVariable]].
      *
-     * @param $statType \LengthOfRope\JSONLD\Schema\Property|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
+     * @param $populationType \LengthOfRope\JSONLD\Schema\Class
      * @return static
      **/
-    public function setStatType($statType): static {
-        $this->properties['statType'] = $statType;
+    public function setPopulationType($populationType): static {
+        $this->properties['populationType'] = $populationType;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Property|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL
+     * @return \LengthOfRope\JSONLD\Schema\Class
      **/
-    public function getStatType() {
-        return $this->properties['statType'];
-    }
-    /**
-     * A subproperty of [[measurementTechnique]] that can be used for specifying
-     * specific methods, in particular via [[MeasurementMethodEnum]].
-     *
-     * @param $measurementMethod \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\MeasurementMethodEnum|\LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setMeasurementMethod($measurementMethod): static {
-        $this->properties['measurementMethod'] = $measurementMethod;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\MeasurementMethodEnum|\LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getMeasurementMethod() {
-        return $this->properties['measurementMethod'];
-    }
-    /**
-     * Provides additional qualification to an observation. For example, a GDP
-     * observation measures the Nominal value.
-     *
-     * @param $measurementQualifier \LengthOfRope\JSONLD\Schema\Enumeration
-     * @return static
-     **/
-    public function setMeasurementQualifier($measurementQualifier): static {
-        $this->properties['measurementQualifier'] = $measurementQualifier;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\Enumeration
-     **/
-    public function getMeasurementQualifier() {
-        return $this->properties['measurementQualifier'];
-    }
-    /**
-     * Identifies the denominator variable when an observation represents a ratio or
-     * percentage.
-     *
-     * @param $measurementDenominator \LengthOfRope\JSONLD\Schema\StatisticalVariable
-     * @return static
-     **/
-    public function setMeasurementDenominator($measurementDenominator): static {
-        $this->properties['measurementDenominator'] = $measurementDenominator;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\StatisticalVariable
-     **/
-    public function getMeasurementDenominator() {
-        return $this->properties['measurementDenominator'];
+    public function getPopulationType() {
+        return $this->properties['populationType'];
     }
     /**
      * A technique, method or technology used in an [[Observation]],
@@ -185,7 +186,7 @@ class StatisticalVariable extends ConstraintNode
      * the corresponding [[measurementTechnique]]. The value can also be from an
      * enumeration, organized as a [[MeasurementMetholdEnumeration]].
      *
-     * @param $measurementTechnique \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\MeasurementMethodEnum
+     * @param $measurementTechnique \LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\MeasurementMethodEnum|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setMeasurementTechnique($measurementTechnique): static {
@@ -195,29 +196,28 @@ class StatisticalVariable extends ConstraintNode
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\Schema\MeasurementMethodEnum
+     * @return \LengthOfRope\JSONLD\Schema\DefinedTerm|\LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\MeasurementMethodEnum|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getMeasurementTechnique() {
         return $this->properties['measurementTechnique'];
     }
     /**
-     * Indicates the populationType common to all members of a
-     * [[StatisticalPopulation]] or all cases within the scope of a
-     * [[StatisticalVariable]].
+     * Provides additional qualification to an observation. For example, a GDP
+     * observation measures the Nominal value.
      *
-     * @param $populationType \LengthOfRope\JSONLD\Schema\Class
+     * @param $measurementQualifier \LengthOfRope\JSONLD\Schema\Enumeration
      * @return static
      **/
-    public function setPopulationType($populationType): static {
-        $this->properties['populationType'] = $populationType;
+    public function setMeasurementQualifier($measurementQualifier): static {
+        $this->properties['measurementQualifier'] = $measurementQualifier;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Class
+     * @return \LengthOfRope\JSONLD\Schema\Enumeration
      **/
-    public function getPopulationType() {
-        return $this->properties['populationType'];
+    public function getMeasurementQualifier() {
+        return $this->properties['measurementQualifier'];
     }
 }

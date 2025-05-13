@@ -46,7 +46,7 @@ class DefinedTerm extends Intangible
     /**
      * A [[DefinedTermSet]] that contains this term.
      *
-     * @param $inDefinedTermSet \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\DefinedTermSet
+     * @param $inDefinedTermSet \LengthOfRope\JSONLD\Schema\DefinedTermSet|\LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
     public function setInDefinedTermSet($inDefinedTermSet): static {
@@ -56,7 +56,7 @@ class DefinedTerm extends Intangible
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\DefinedTermSet
+     * @return \LengthOfRope\JSONLD\Schema\DefinedTermSet|\LengthOfRope\JSONLD\DataType\TypeURL
      **/
     public function getInDefinedTermSet() {
         return $this->properties['inDefinedTermSet'];

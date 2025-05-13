@@ -40,13 +40,33 @@ class PostalAddress extends ContactPoint
     }
 
     /**
+     * The region in which the locality is, and which is in the country. For example,
+     * California or another appropriate first-level [Administrative
+     * division](https://en.wikipedia.org/wiki/List_of_administrative_divisions_by_country).
+     *
+     * @param $addressRegion \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setAddressRegion($addressRegion): static {
+        $this->properties['addressRegion'] = $addressRegion;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getAddressRegion() {
+        return $this->properties['addressRegion'];
+    }
+    /**
      * The country. Recommended to be in 2-letter [ISO 3166-1
      * alpha-2](http://en.wikipedia.org/wiki/ISO_3166-1) format, for example "US". For
      * backward compatibility, a 3-letter [ISO 3166-1
      * alpha-3](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) country code such as
      * "SGP" or a full country name such as "Singapore" can also be used.
      *
-     * @param $addressCountry \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Country
+     * @param $addressCountry \LengthOfRope\JSONLD\Schema\Country|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
     public function setAddressCountry($addressCountry): static {
@@ -56,10 +76,64 @@ class PostalAddress extends ContactPoint
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\Country
+     * @return \LengthOfRope\JSONLD\Schema\Country|\LengthOfRope\JSONLD\DataType\TypeText
      **/
     public function getAddressCountry() {
         return $this->properties['addressCountry'];
+    }
+    /**
+     * The post office box number for PO box addresses.
+     *
+     * @param $postOfficeBoxNumber \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setPostOfficeBoxNumber($postOfficeBoxNumber): static {
+        $this->properties['postOfficeBoxNumber'] = $postOfficeBoxNumber;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getPostOfficeBoxNumber() {
+        return $this->properties['postOfficeBoxNumber'];
+    }
+    /**
+     * An address extension such as an apartment number, C/O or alternative name.
+     *
+     * @param $extendedAddress \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setExtendedAddress($extendedAddress): static {
+        $this->properties['extendedAddress'] = $extendedAddress;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getExtendedAddress() {
+        return $this->properties['extendedAddress'];
+    }
+    /**
+     * The street address. For example, 1600 Amphitheatre Pkwy.
+     *
+     * @param $streetAddress \LengthOfRope\JSONLD\DataType\TypeText
+     * @return static
+     **/
+    public function setStreetAddress($streetAddress): static {
+        $this->properties['streetAddress'] = $streetAddress;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
+     **/
+    public function getStreetAddress() {
+        return $this->properties['streetAddress'];
     }
     /**
      * The postal code. For example, 94043.
@@ -97,61 +171,5 @@ class PostalAddress extends ContactPoint
      **/
     public function getAddressLocality() {
         return $this->properties['addressLocality'];
-    }
-    /**
-     * The street address. For example, 1600 Amphitheatre Pkwy.
-     *
-     * @param $streetAddress \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setStreetAddress($streetAddress): static {
-        $this->properties['streetAddress'] = $streetAddress;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getStreetAddress() {
-        return $this->properties['streetAddress'];
-    }
-    /**
-     * The post office box number for PO box addresses.
-     *
-     * @param $postOfficeBoxNumber \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setPostOfficeBoxNumber($postOfficeBoxNumber): static {
-        $this->properties['postOfficeBoxNumber'] = $postOfficeBoxNumber;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getPostOfficeBoxNumber() {
-        return $this->properties['postOfficeBoxNumber'];
-    }
-    /**
-     * The region in which the locality is, and which is in the country. For example,
-     * California or another appropriate first-level [Administrative
-     * division](https://en.wikipedia.org/wiki/List_of_administrative_divisions_by_country).
-     *
-     * @param $addressRegion \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setAddressRegion($addressRegion): static {
-        $this->properties['addressRegion'] = $addressRegion;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getAddressRegion() {
-        return $this->properties['addressRegion'];
     }
 }

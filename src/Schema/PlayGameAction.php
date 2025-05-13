@@ -43,7 +43,7 @@ class PlayGameAction extends ConsumeAction
      * Indicates the availability type of the game content associated with this action,
      * such as whether it is a full version or a demo.
      *
-     * @param $gameAvailabilityType \LengthOfRope\JSONLD\Schema\GameAvailabilityEnumeration|\LengthOfRope\JSONLD\DataType\TypeText
+     * @param $gameAvailabilityType \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\GameAvailabilityEnumeration
      * @return static
      **/
     public function setGameAvailabilityType($gameAvailabilityType): static {
@@ -53,7 +53,7 @@ class PlayGameAction extends ConsumeAction
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\GameAvailabilityEnumeration|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\GameAvailabilityEnumeration
      **/
     public function getGameAvailabilityType() {
         return $this->properties['gameAvailabilityType'];

@@ -76,22 +76,24 @@ class SuperficialAnatomy extends MedicalEntity
         return $this->properties['significance'];
     }
     /**
-     * A medical therapy related to this anatomy.
+     * If applicable, a description of the pathophysiology associated with the
+     * anatomical system, including potential abnormal changes in the mechanical,
+     * physical, and biochemical functions of the system.
      *
-     * @param $relatedTherapy \LengthOfRope\JSONLD\Schema\MedicalTherapy
+     * @param $associatedPathophysiology \LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
-    public function setRelatedTherapy($relatedTherapy): static {
-        $this->properties['relatedTherapy'] = $relatedTherapy;
+    public function setAssociatedPathophysiology($associatedPathophysiology): static {
+        $this->properties['associatedPathophysiology'] = $associatedPathophysiology;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\MedicalTherapy
+     * @return \LengthOfRope\JSONLD\DataType\TypeText
      **/
-    public function getRelatedTherapy() {
-        return $this->properties['relatedTherapy'];
+    public function getAssociatedPathophysiology() {
+        return $this->properties['associatedPathophysiology'];
     }
     /**
      * Anatomical systems or structures that relate to the superficial anatomy.
@@ -112,6 +114,24 @@ class SuperficialAnatomy extends MedicalEntity
         return $this->properties['relatedAnatomy'];
     }
     /**
+     * A medical therapy related to this anatomy.
+     *
+     * @param $relatedTherapy \LengthOfRope\JSONLD\Schema\MedicalTherapy
+     * @return static
+     **/
+    public function setRelatedTherapy($relatedTherapy): static {
+        $this->properties['relatedTherapy'] = $relatedTherapy;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\Schema\MedicalTherapy
+     **/
+    public function getRelatedTherapy() {
+        return $this->properties['relatedTherapy'];
+    }
+    /**
      * A medical condition associated with this anatomy.
      *
      * @param $relatedCondition \LengthOfRope\JSONLD\Schema\MedicalCondition
@@ -128,25 +148,5 @@ class SuperficialAnatomy extends MedicalEntity
      **/
     public function getRelatedCondition() {
         return $this->properties['relatedCondition'];
-    }
-    /**
-     * If applicable, a description of the pathophysiology associated with the
-     * anatomical system, including potential abnormal changes in the mechanical,
-     * physical, and biochemical functions of the system.
-     *
-     * @param $associatedPathophysiology \LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setAssociatedPathophysiology($associatedPathophysiology): static {
-        $this->properties['associatedPathophysiology'] = $associatedPathophysiology;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getAssociatedPathophysiology() {
-        return $this->properties['associatedPathophysiology'];
     }
 }

@@ -41,42 +41,42 @@ class HowTo extends CreativeWork
     }
 
     /**
-     * The length of time it takes to prepare the items to be used in instructions or a
-     * direction, in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
+     * The estimated cost of the supply or supplies consumed when performing
+     * instructions.
      *
-     * @param $prepTime \LengthOfRope\JSONLD\Schema\Duration
+     * @param $estimatedCost \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
-    public function setPrepTime($prepTime): static {
-        $this->properties['prepTime'] = $prepTime;
+    public function setEstimatedCost($estimatedCost): static {
+        $this->properties['estimatedCost'] = $estimatedCost;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Duration
+     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\TypeText
      **/
-    public function getPrepTime() {
-        return $this->properties['prepTime'];
+    public function getEstimatedCost() {
+        return $this->properties['estimatedCost'];
     }
     /**
-     * A sub property of instrument. An object used (but not consumed) when performing
-     * instructions or a direction.
+     * A single step item (as HowToStep, text, document, video, etc.) or a
+     * HowToSection.
      *
-     * @param $tool \LengthOfRope\JSONLD\Schema\HowToTool|\LengthOfRope\JSONLD\DataType\TypeText
+     * @param $step \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\HowToSection|\LengthOfRope\JSONLD\Schema\HowToStep|\LengthOfRope\JSONLD\DataType\TypeText
      * @return static
      **/
-    public function setTool($tool): static {
-        $this->properties['tool'] = $tool;
+    public function setStep($step): static {
+        $this->properties['step'] = $step;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\HowToTool|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\Schema\HowToSection|\LengthOfRope\JSONLD\Schema\HowToStep|\LengthOfRope\JSONLD\DataType\TypeText
      **/
-    public function getTool() {
-        return $this->properties['tool'];
+    public function getStep() {
+        return $this->properties['step'];
     }
     /**
      * The total time required to perform instructions or a direction (including time
@@ -99,10 +99,29 @@ class HowTo extends CreativeWork
         return $this->properties['totalTime'];
     }
     /**
+     * A sub-property of instrument. A supply consumed when performing instructions or
+     * a direction.
+     *
+     * @param $supply \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\HowToSupply
+     * @return static
+     **/
+    public function setSupply($supply): static {
+        $this->properties['supply'] = $supply;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\HowToSupply
+     **/
+    public function getSupply() {
+        return $this->properties['supply'];
+    }
+    /**
      * A single step item (as HowToStep, text, document, video, etc.) or a HowToSection
      * (originally misnamed 'steps'; 'step' is preferred).
      *
-     * @param $steps \LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\TypeText
+     * @param $steps \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\ItemList
      * @return static
      **/
     public function setSteps($steps): static {
@@ -112,29 +131,29 @@ class HowTo extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\ItemList|\LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\ItemList
      **/
     public function getSteps() {
         return $this->properties['steps'];
     }
     /**
-     * The estimated cost of the supply or supplies consumed when performing
-     * instructions.
+     * The quantity that results by performing instructions. For example, a paper
+     * airplane, 10 personalized candles.
      *
-     * @param $estimatedCost \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\TypeText
+     * @param $yield \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      * @return static
      **/
-    public function setEstimatedCost($estimatedCost): static {
-        $this->properties['estimatedCost'] = $estimatedCost;
+    public function setYield($yield): static {
+        $this->properties['yield'] = $yield;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\MonetaryAmount|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\QuantitativeValue
      **/
-    public function getEstimatedCost() {
-        return $this->properties['estimatedCost'];
+    public function getYield() {
+        return $this->properties['yield'];
     }
     /**
      * The length of time it takes to perform instructions or a direction (not
@@ -157,60 +176,41 @@ class HowTo extends CreativeWork
         return $this->properties['performTime'];
     }
     /**
-     * A sub-property of instrument. A supply consumed when performing instructions or
-     * a direction.
+     * A sub property of instrument. An object used (but not consumed) when performing
+     * instructions or a direction.
      *
-     * @param $supply \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\HowToSupply
+     * @param $tool \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\HowToTool
      * @return static
      **/
-    public function setSupply($supply): static {
-        $this->properties['supply'] = $supply;
+    public function setTool($tool): static {
+        $this->properties['tool'] = $tool;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\HowToSupply
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\HowToTool
      **/
-    public function getSupply() {
-        return $this->properties['supply'];
+    public function getTool() {
+        return $this->properties['tool'];
     }
     /**
-     * A single step item (as HowToStep, text, document, video, etc.) or a
-     * HowToSection.
+     * The length of time it takes to prepare the items to be used in instructions or a
+     * direction, in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
      *
-     * @param $step \LengthOfRope\JSONLD\Schema\HowToSection|\LengthOfRope\JSONLD\Schema\HowToStep|\LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\TypeText
+     * @param $prepTime \LengthOfRope\JSONLD\Schema\Duration
      * @return static
      **/
-    public function setStep($step): static {
-        $this->properties['step'] = $step;
+    public function setPrepTime($prepTime): static {
+        $this->properties['prepTime'] = $prepTime;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\HowToSection|\LengthOfRope\JSONLD\Schema\HowToStep|\LengthOfRope\JSONLD\Schema\CreativeWork|\LengthOfRope\JSONLD\DataType\TypeText
+     * @return \LengthOfRope\JSONLD\Schema\Duration
      **/
-    public function getStep() {
-        return $this->properties['step'];
-    }
-    /**
-     * The quantity that results by performing instructions. For example, a paper
-     * airplane, 10 personalized candles.
-     *
-     * @param $yield \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setYield($yield): static {
-        $this->properties['yield'] = $yield;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\QuantitativeValue|\LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getYield() {
-        return $this->properties['yield'];
+    public function getPrepTime() {
+        return $this->properties['prepTime'];
     }
 }

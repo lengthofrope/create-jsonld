@@ -44,46 +44,28 @@ class WebPage extends CreativeWork
     }
 
     /**
-     * A link related to this web page, for example to other related web pages.
+     * Indicates if this web page element is the main subject of the page.
      *
-     * @param $relatedLink \LengthOfRope\JSONLD\DataType\TypeURL
+     * @param $mainContentOfPage \LengthOfRope\JSONLD\Schema\WebPageElement
      * @return static
      **/
-    public function setRelatedLink($relatedLink): static {
-        $this->properties['relatedLink'] = $relatedLink;
+    public function setMainContentOfPage($mainContentOfPage): static {
+        $this->properties['mainContentOfPage'] = $mainContentOfPage;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeURL
+     * @return \LengthOfRope\JSONLD\Schema\WebPageElement
      **/
-    public function getRelatedLink() {
-        return $this->properties['relatedLink'];
-    }
-    /**
-     * A set of links that can help a user understand and navigate a website hierarchy.
-     *
-     * @param $breadcrumb \LengthOfRope\JSONLD\Schema\BreadcrumbList|\LengthOfRope\JSONLD\DataType\TypeText
-     * @return static
-     **/
-    public function setBreadcrumb($breadcrumb): static {
-        $this->properties['breadcrumb'] = $breadcrumb;
-
-        return $this;
-    }
-
-    /**
-     * @return \LengthOfRope\JSONLD\Schema\BreadcrumbList|\LengthOfRope\JSONLD\DataType\TypeText
-     **/
-    public function getBreadcrumb() {
-        return $this->properties['breadcrumb'];
+    public function getMainContentOfPage() {
+        return $this->properties['mainContentOfPage'];
     }
     /**
      * People or organizations that have reviewed the content on this web page for
      * accuracy and/or completeness.
      *
-     * @param $reviewedBy \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
+     * @param $reviewedBy \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\Person
      * @return static
      **/
     public function setReviewedBy($reviewedBy): static {
@@ -93,10 +75,53 @@ class WebPage extends CreativeWork
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\Person|\LengthOfRope\JSONLD\Schema\Organization
+     * @return \LengthOfRope\JSONLD\Schema\Organization|\LengthOfRope\JSONLD\Schema\Person
      **/
     public function getReviewedBy() {
         return $this->properties['reviewedBy'];
+    }
+    /**
+     * Indicates sections of a Web page that are particularly 'speakable' in the sense
+     * of being highlighted as being especially appropriate for text-to-speech
+     * conversion. Other sections of a page may also be usefully spoken in particular
+     * circumstances; the 'speakable' property serves to indicate the parts most likely
+     * to be generally useful for speech.
+     *
+     * The *speakable* property can be repeated an arbitrary number of times, with
+     * three kinds of possible 'content-locator' values:
+     *
+     * 1.) *id-value* URL references - uses *id-value* of an element in the page being
+     * annotated. The simplest use of *speakable* has (potentially relative) URL
+     * values, referencing identified sections of the document concerned.
+     *
+     * 2.) CSS Selectors - addresses content in the annotated page, e.g. via class
+     * attribute. Use the [[cssSelector]] property.
+     *
+     * 3.)  XPaths - addresses content via XPaths (assuming an XML view of the
+     * content). Use the [[xpath]] property.
+     *
+     *
+     * For more sophisticated markup of speakable sections beyond simple ID references,
+     * either CSS selectors or XPath expressions to pick out document section(s) as
+     * speakable. For this
+     * we define a supporting type, [[SpeakableSpecification]]  which is defined to be
+     * a possible value of the *speakable* property.
+     *
+     *
+     * @param $speakable \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\SpeakableSpecification
+     * @return static
+     **/
+    public function setSpeakable($speakable): static {
+        $this->properties['speakable'] = $speakable;
+
+        return $this;
+    }
+
+    /**
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\SpeakableSpecification
+     **/
+    public function getSpeakable() {
+        return $this->properties['speakable'];
     }
     /**
      * One of the more significant URLs on the page. Typically, these are the
@@ -118,23 +143,22 @@ class WebPage extends CreativeWork
         return $this->properties['significantLink'];
     }
     /**
-     * Date on which the content on this web page was last reviewed for accuracy and/or
-     * completeness.
+     * A link related to this web page, for example to other related web pages.
      *
-     * @param $lastReviewed \LengthOfRope\JSONLD\DataType\TypeDate
+     * @param $relatedLink \LengthOfRope\JSONLD\DataType\TypeURL
      * @return static
      **/
-    public function setLastReviewed($lastReviewed): static {
-        $this->properties['lastReviewed'] = $lastReviewed;
+    public function setRelatedLink($relatedLink): static {
+        $this->properties['relatedLink'] = $relatedLink;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeDate
+     * @return \LengthOfRope\JSONLD\DataType\TypeURL
      **/
-    public function getLastReviewed() {
-        return $this->properties['lastReviewed'];
+    public function getRelatedLink() {
+        return $this->properties['relatedLink'];
     }
     /**
      * Indicates the main image on the page.
@@ -192,64 +216,40 @@ class WebPage extends CreativeWork
         return $this->properties['specialty'];
     }
     /**
-     * Indicates if this web page element is the main subject of the page.
+     * Date on which the content on this web page was last reviewed for accuracy and/or
+     * completeness.
      *
-     * @param $mainContentOfPage \LengthOfRope\JSONLD\Schema\WebPageElement
+     * @param $lastReviewed \LengthOfRope\JSONLD\DataType\TypeDate
      * @return static
      **/
-    public function setMainContentOfPage($mainContentOfPage): static {
-        $this->properties['mainContentOfPage'] = $mainContentOfPage;
+    public function setLastReviewed($lastReviewed): static {
+        $this->properties['lastReviewed'] = $lastReviewed;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\Schema\WebPageElement
+     * @return \LengthOfRope\JSONLD\DataType\TypeDate
      **/
-    public function getMainContentOfPage() {
-        return $this->properties['mainContentOfPage'];
+    public function getLastReviewed() {
+        return $this->properties['lastReviewed'];
     }
     /**
-     * Indicates sections of a Web page that are particularly 'speakable' in the sense
-     * of being highlighted as being especially appropriate for text-to-speech
-     * conversion. Other sections of a page may also be usefully spoken in particular
-     * circumstances; the 'speakable' property serves to indicate the parts most likely
-     * to be generally useful for speech.
+     * A set of links that can help a user understand and navigate a website hierarchy.
      *
-     * The *speakable* property can be repeated an arbitrary number of times, with
-     * three kinds of possible 'content-locator' values:
-     *
-     * 1.) *id-value* URL references - uses *id-value* of an element in the page being
-     * annotated. The simplest use of *speakable* has (potentially relative) URL
-     * values, referencing identified sections of the document concerned.
-     *
-     * 2.) CSS Selectors - addresses content in the annotated page, e.g. via class
-     * attribute. Use the [[cssSelector]] property.
-     *
-     * 3.)  XPaths - addresses content via XPaths (assuming an XML view of the
-     * content). Use the [[xpath]] property.
-     *
-     *
-     * For more sophisticated markup of speakable sections beyond simple ID references,
-     * either CSS selectors or XPath expressions to pick out document section(s) as
-     * speakable. For this
-     * we define a supporting type, [[SpeakableSpecification]]  which is defined to be
-     * a possible value of the *speakable* property.
-     *
-     *
-     * @param $speakable \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\SpeakableSpecification
+     * @param $breadcrumb \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\BreadcrumbList
      * @return static
      **/
-    public function setSpeakable($speakable): static {
-        $this->properties['speakable'] = $speakable;
+    public function setBreadcrumb($breadcrumb): static {
+        $this->properties['breadcrumb'] = $breadcrumb;
 
         return $this;
     }
 
     /**
-     * @return \LengthOfRope\JSONLD\DataType\TypeURL|\LengthOfRope\JSONLD\Schema\SpeakableSpecification
+     * @return \LengthOfRope\JSONLD\DataType\TypeText|\LengthOfRope\JSONLD\Schema\BreadcrumbList
      **/
-    public function getSpeakable() {
-        return $this->properties['speakable'];
+    public function getBreadcrumb() {
+        return $this->properties['breadcrumb'];
     }
 }
